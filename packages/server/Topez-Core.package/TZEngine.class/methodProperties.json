@@ -1,5 +1,10 @@
 {
 	"class" : {
-		 },
+		"put:onStream:" : "dkh 09/26/2012 16:41",
+		"toString:" : "dkh 09/26/2012 16:41",
+		"writer" : "dkh 09/26/2012 16:42" },
 	"instance" : {
-		"simpleResult" : "dkh 09/26/2012 14:51" } }
+		"level" : "dkh 09/26/2012 16:53",
+		"level1Result" : "dkh 09/26/2012 16:49",
+		"level:" : "dkh 09/26/2012 16:52",
+		"simpleResult" : "dkh 09/26/2012 16:40" } }
