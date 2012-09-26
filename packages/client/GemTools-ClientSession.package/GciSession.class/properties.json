@@ -1,0 +1,33 @@
+{
+	"category" : "GemTools-ClientSession",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"AutoAbort",
+		"AutoCommit",
+		"AutoMigrate",
+		"CallInProgressSemaphore",
+		"FullCompressionEnabled",
+		"GsCursor",
+		"HostPassword",
+		"HostUserName" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"number",
+		"gemNRS",
+		"stoneNRS",
+		"userID",
+		"server",
+		"cache",
+		"nbSemaphore",
+		"clientForwarderCache",
+		"updateDistributor",
+		"jadeServer",
+		"supportsAutoAbort",
+		"supportsInspectingUndefined",
+		"windowLabel" ],
+	"name" : "GciSession",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

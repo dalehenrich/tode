@@ -15,6 +15,7 @@ baseline: spec
                 yourself.
             spec
                 package: 'GemTools-ClientGCI' with: [ spec requires: #('FFI') ];
+                package: 'GemTools-ClientSession' with: [ spec requires: #('GemTools-ClientGCI') ];
                 yourself.
             spec
                 group: 'default' with: #('GemTools-ClientGCI');

@@ -1,0 +1,14 @@
+{
+	"category" : "GemTools-ClientSession",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GsRuntimeError",
+	"pools" : [
+		 ],
+	"super" : "GsError",
+	"type" : "normal" }

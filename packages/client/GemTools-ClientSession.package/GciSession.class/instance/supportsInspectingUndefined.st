@@ -1,0 +1,4 @@
+Accessors
+supportsInspectingUndefined
+
+	^supportsInspectingUndefined

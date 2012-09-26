@@ -1,0 +1,4 @@
+Testing
+isValid
+
+	^number ~~ nil
