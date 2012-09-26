@@ -18,11 +18,12 @@ session := GciSession new
 		(session 
 			login: desc password
 			osUser: (desc isGuest ifTrue: [''] ifFalse: [ desc osUserId ])
-			osPassword: (desc isGuest ifTrue: [''] ifFalse: [ desc osPassword ])
-			initializeServer: false)
+			osPassword: (desc isGuest ifTrue: [''] ifFalse: [ desc osPassword ]))
 				ifFalse: [ | gciError messageText |
 					gciError := session getAndClearLastError.
 					messageText := gciError message.
 					session := nil.
 					^Error signal: messageText, ' For further information about login failures, check the gem log file' ].
+Transcript cr; show: 'Successful login: ', session printString.
+session logout.
 	
