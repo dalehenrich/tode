@@ -1,6 +1,6 @@
 # Topez Programming Environment
 
-**Topez** is based upon [**Topaz Programming Environment**][3] for GemStone/S.
+**Topez** is based upon the [**Topaz Programming Environment**][3] for GemStone/S.
 
 The current implementation uses a [Pharo1.4][1] image as the GCI client running against a [GemStone/S 3.1.0.1][2] stone.
 
