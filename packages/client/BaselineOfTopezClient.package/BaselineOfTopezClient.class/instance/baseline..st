@@ -21,4 +21,4 @@ baseline: spec
                 group: 'Tests' with: #() ].
     spec
         for: #'pharo'
-        do: [ spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:pharo/packages' ] ]
+        do: [ spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ] ]

@@ -15,4 +15,4 @@ baseline: spec
                 group: 'Tests' with: #('Topez-Tests') ].
     spec
         for: #'gemstone'
-        do: [ spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:gemstone/packages' ] ]
+        do: [ spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ] ]
