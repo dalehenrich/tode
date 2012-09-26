@@ -4,9 +4,15 @@ baseline: spec
     spec
         for: #'common'
         do: [ 
-            spec package: 'Topez-Core'.
-            spec package: 'Topez-Tests' with: [ spec requires: 'Topez-Core' ].
+            spec baseline: 'Ston'.
+            spec
+                package: 'Topez-Core' with: [ spec requires: 'Ston' ];
+                package: 'Topez-Tests' with: [ spec requires: 'Topez-Core' ];
+                yourself.
             spec
                 group: 'default' with: #('Core');
                 group: 'Core' with: #('Topez-Core');
-                group: 'Tests' with: #('Topez-Tests') ]
+                group: 'Tests' with: #('Topez-Tests') ].
+    spec
+        for: #'gemstone'
+        do: [ spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:gemstone/packages' ] ]

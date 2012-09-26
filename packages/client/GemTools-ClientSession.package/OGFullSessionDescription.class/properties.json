@@ -1,0 +1,14 @@
+{
+	"category" : "GemTools-ClientSession",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OGFullSessionDescription",
+	"pools" : [
+		 ],
+	"super" : "OGCustomSessionDescription",
+	"type" : "normal" }
