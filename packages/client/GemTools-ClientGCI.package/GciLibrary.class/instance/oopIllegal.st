@@ -1,0 +1,5 @@
+Constants
+oopIllegal
+
+	self subclassResponsibility.
+	

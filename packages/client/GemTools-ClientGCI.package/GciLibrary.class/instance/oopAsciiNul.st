@@ -1,0 +1,5 @@
+Constants
+oopAsciiNul
+
+	self subclassResponsibility.
+	

@@ -1,0 +1,5 @@
+Constants
+oopMinusOne
+
+	self subclassResponsibility.
+	

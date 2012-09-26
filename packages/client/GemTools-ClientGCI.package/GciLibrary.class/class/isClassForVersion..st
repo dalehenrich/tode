@@ -1,0 +1,5 @@
+singleton
+isClassForVersion: aString
+
+	^false.
+	

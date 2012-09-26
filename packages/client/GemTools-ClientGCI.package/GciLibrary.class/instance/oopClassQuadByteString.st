@@ -1,0 +1,4 @@
+Constants
+oopClassQuadByteString
+
+	self subclassResponsibility.

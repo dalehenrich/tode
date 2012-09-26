@@ -1,0 +1,5 @@
+Constants
+oopRemoteNil
+
+	self subclassResponsibility.
+	

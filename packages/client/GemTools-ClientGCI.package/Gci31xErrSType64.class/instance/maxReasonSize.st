@@ -1,0 +1,4 @@
+private
+maxReasonSize
+
+	^ self maxMessageSize

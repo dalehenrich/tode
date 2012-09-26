@@ -1,0 +1,17 @@
+{
+	"category" : "GemTools-ClientGCI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Current",
+		"LibraryPath",
+		"NullPtr" ],
+	"commentStamp" : "JGF 12/15/2006 14:53",
+	"instvars" : [
+		"nbEndAddress",
+		"nbEndAssociation" ],
+	"name" : "GciLibrary",
+	"pools" : [
+		 ],
+	"super" : "ExternalLibrary",
+	"type" : "normal" }

@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"library:" : "JGF 2/1/2007 16:01" },
+	"instance" : {
+		"address" : "dkh 7/17/2007 08:55",
+		"argCount" : "JGF 2/1/2007 15:38",
+		"args" : "JGF 2/1/2007 15:38",
+		"category" : "JGF 2/1/2007 15:37",
+		"context" : "JGF 2/1/2007 15:37",
+		"fatal" : "JGF 2/1/2007 15:38",
+		"initialize:" : "dkh 8/4/2007 08:41",
+		"message" : "JGF 2/1/2007 15:37",
+		"number" : "JGF 2/1/2007 15:37",
+		"oopTypeAt:" : "dkh 7/18/2007 06:16",
+		"readMessage" : "dkh 2/4/2008 21:01",
+		"startOfMessage" : "JGF 4/13/2007 14:02",
+		"structSize" : "JGF 4/13/2007 13:31",
+		"unsignedLongAt:" : "JGF 2/1/2007 16:12" } }

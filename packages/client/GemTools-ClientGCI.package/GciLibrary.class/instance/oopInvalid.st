@@ -1,0 +1,5 @@
+Constants
+oopInvalid
+
+	self subclassResponsibility.
+	

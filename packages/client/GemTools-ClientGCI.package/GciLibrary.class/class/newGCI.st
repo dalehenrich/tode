@@ -1,0 +1,4 @@
+singleton
+newGCI
+
+	^super new.

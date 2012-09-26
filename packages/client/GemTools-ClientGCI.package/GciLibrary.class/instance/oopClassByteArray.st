@@ -1,0 +1,5 @@
+Constants
+oopClassByteArray
+
+	self subclassResponsibility.
+	

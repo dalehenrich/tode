@@ -1,0 +1,5 @@
+converting
+asOopType
+
+	^self.
+	

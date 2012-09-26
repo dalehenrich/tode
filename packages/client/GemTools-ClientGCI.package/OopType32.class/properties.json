@@ -1,0 +1,14 @@
+{
+	"category" : "GemTools-ClientGCI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OopType32",
+	"pools" : [
+		 ],
+	"super" : "OopType",
+	"type" : "normal" }

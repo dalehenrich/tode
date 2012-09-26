@@ -1,0 +1,4 @@
+Wrapper
+getAndClearLastError
+
+	self subclassResponsibility.

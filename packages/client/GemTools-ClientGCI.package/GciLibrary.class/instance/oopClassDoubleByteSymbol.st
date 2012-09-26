@@ -1,0 +1,5 @@
+Constants
+oopClassDoubleByteSymbol
+
+	self subclassResponsibility.
+	

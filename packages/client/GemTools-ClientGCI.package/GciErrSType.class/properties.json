@@ -1,0 +1,21 @@
+{
+	"category" : "GemTools-ClientGCI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JGF 4/13/2007 13:48",
+	"instvars" : [
+		"library",
+		"category",
+		"number",
+		"context",
+		"message",
+		"args",
+		"fatal",
+		"address" ],
+	"name" : "GciErrSType",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

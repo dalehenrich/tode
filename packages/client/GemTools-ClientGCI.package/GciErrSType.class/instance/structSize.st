@@ -1,0 +1,5 @@
+Private
+structSize
+
+	self subclassResponsibility.
+	

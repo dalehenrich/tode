@@ -1,0 +1,5 @@
+Constants
+oopClassSystem
+
+	self subclassResponsibility.
+	

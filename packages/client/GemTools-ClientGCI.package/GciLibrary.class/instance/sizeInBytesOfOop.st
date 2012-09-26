@@ -1,0 +1,5 @@
+Constants
+sizeInBytesOfOop
+
+	self subclassResponsibility.
+	
