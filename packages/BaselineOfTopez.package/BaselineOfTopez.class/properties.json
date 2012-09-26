@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfTopez",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 09/26/2012 10:12",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfTopez",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

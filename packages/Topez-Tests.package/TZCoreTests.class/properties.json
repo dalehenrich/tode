@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZCoreTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
