@@ -1,0 +1,14 @@
+{
+	"category" : "GemTools-ClientPlatform",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"suspendedContext" ],
+	"name" : "GciUserInterrupt",
+	"pools" : [
+		 ],
+	"super" : "Exception",
+	"type" : "normal" }

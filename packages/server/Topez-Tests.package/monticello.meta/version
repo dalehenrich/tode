@@ -1,1 +1,1 @@
-(name 'Topez-Tests-dkh.1' message 'initial version' id '53de9a81-4673-4321-a536-46ec526f654d' date '09/26/2012' time '10:18:21' author 'dkh' ancestors () stepChildren ())
+(name 'Topez-Tests-dkh.2' message 'simpleResult test setup' id '44dd6df7-2c5e-4f0a-b8c9-bb45465e04ac' date '09/26/2012' time '15:31:52' author 'dkh' ancestors ((name 'Topez-Tests-dkh.1' message 'initial version' id '53de9a81-4673-4321-a536-46ec526f654d' date '09/26/2012' time '10:18:21' author 'dkh' ancestors () stepChildren ())) stepChildren ())

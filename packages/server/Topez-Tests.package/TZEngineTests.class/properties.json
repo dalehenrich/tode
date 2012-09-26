@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 09/26/2012 14:48",
 	"instvars" : [
 		 ],
-	"name" : "TZCoreTests",
+	"name" : "TZEngineTests",
 	"pools" : [
 		 ],
 	"super" : "TestCase",

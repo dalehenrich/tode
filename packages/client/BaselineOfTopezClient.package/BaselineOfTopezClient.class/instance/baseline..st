@@ -13,12 +13,19 @@ baseline: spec
                                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 yourself.
             spec
-                package: 'GemTools-ClientGCI' with: [ spec requires: #('FFI' 'Ston') ];
-                package: 'GemTools-ClientSession' with: [ spec requires: #('GemTools-ClientGCI') ];
+                package: 'GemTools-ClientGCI' with: [ spec requires: #('FFI') ];
+                package: 'GemTools-ClientSession'
+                    with: [ 
+                            spec
+                                includes: #('GemTools-ClientPlatform');
+                                requires: #('GemTools-ClientGCI') ];
+                package: 'GemTools-ClientPlatform' with: [ spec requires: #('GemTools-ClientSession') ];
+                package: 'TopezClient-Core' with: [ spec requires: #('GemTools-ClientSession' 'Ston') ];
+                package: 'TopezClient-Tests' with: [ spec requires: #('TopezClient-Core') ];
                 yourself.
             spec
-                group: 'default' with: #('GemTools-ClientGCI');
-                group: 'Tests' with: #() ].
+                group: 'default' with: #('TopezClient-Core');
+                group: 'Tests' with: #('TopezClient-Tests') ].
     spec
         for: #'pharo'
         do: [ spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ] ]
