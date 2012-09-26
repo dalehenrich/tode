@@ -20,7 +20,8 @@ baseline: spec
                                 includes: #('GemTools-ClientPlatform');
                                 requires: #('GemTools-ClientGCI') ];
                 package: 'GemTools-ClientPlatform' with: [ spec requires: #('GemTools-ClientSession') ];
-                package: 'TopezClient-Core' with: [ spec requires: #('GemTools-ClientSession' 'Ston') ];
+                package: 'TopezClient-STON' with: [ spec requires: #('Ston') ];
+                package: 'TopezClient-Core' with: [ spec requires: #('GemTools-ClientSession' 'TopezClient-STON') ];
                 package: 'TopezClient-Tests' with: [ spec requires: #('TopezClient-Core') ];
                 yourself.
             spec

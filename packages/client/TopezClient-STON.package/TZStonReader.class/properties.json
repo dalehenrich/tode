@@ -1,0 +1,14 @@
+{
+	"category" : "TopezClient-STON",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZStonReader",
+	"pools" : [
+		 ],
+	"super" : "STONReader",
+	"type" : "normal" }
