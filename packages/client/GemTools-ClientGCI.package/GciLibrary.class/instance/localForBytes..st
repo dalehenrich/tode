@@ -3,6 +3,7 @@ localForBytes: anOopType
 
 	| class |
 	class := self apiGciFetchClass: anOopType.
+	class := self oopTypeFor: class.
 	class = self oopClassString ifTrue: [^self fetchChars: anOopType].
 	class = self oopClassUnicode7 ifTrue: [^self fetchChars: anOopType].
 	class = self oopClassSymbol ifTrue: [^(self fetchChars: anOopType) asSymbol].
