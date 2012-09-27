@@ -1,3 +1,3 @@
 private
 executeStringInSession: aString
-    self subclassResponsibility
+   ^ self subclassResponsibility
