@@ -13,6 +13,7 @@ stonOn: stonWriter
                     self header namedSize > 0
                         ifTrue: [ 
                             stonWriter
+                                mapElementSeparator;
                                 nextPut: #'named';
                                 prettyPrintSpace;
                                 pairSeparator;
@@ -23,6 +24,7 @@ stonOn: stonWriter
                     self header indexedSize > 0
                         ifTrue: [ 
                             stonWriter
+                                mapElementSeparator;
                                 nextPut: #'indexed';
                                 prettyPrintSpace;
                                 pairSeparator;
