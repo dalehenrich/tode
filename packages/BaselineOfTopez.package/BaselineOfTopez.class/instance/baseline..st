@@ -18,7 +18,7 @@ baseline: spec
             spec
                 group: 'Client' with: #('TopezClient-Core');
                 group: 'Client Tests' with: #('TopezClient-Tests');
-                group: 'Server' with: #('Topez-Core' 'Core');
+                group: 'Server' with: #('Topez-Core');
                 group: 'Server Tests' with: #('Topez-Tests');
                 group: 'Dev' with: #('Client Tests' 'Server Tests');
                 yourself ].
