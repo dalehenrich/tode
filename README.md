@@ -9,7 +9,7 @@ The current implementation uses a [Pharo1.4][1] image as the GCI client running 
 ```Smalltalk
 Metacello new
     baseline: 'Topez';
-    repository: 'github://dalehenrich/topez:master/packages/server';
+    repository: 'github://dalehenrich/topez:master/packages';
     load.
 ```
 
@@ -19,7 +19,7 @@ Metacello new
 ```Smalltalk
 Metacello new
     baseline: 'Topez';
-    repository: 'github://dalehenrich/topez:master/packages/client';
+    repository: 'github://dalehenrich/topez:master/packages';
     load.
 ``` 
 
