@@ -7,13 +7,14 @@ baseline: spec
             spec baseline: 'Ston'.
             spec
                 package: 'Topez-STON' with: [ spec requires: #('Ston') ];
+                package: 'Topez-STONTests' with: [ spec requires: #('Topez-STON') ];
                 package: 'TopezClient-STON' with: [ spec requires: #('Topez-STON') ];
                 package: 'TopezClient-Core' with: [ spec requires: #('TopezClient-STON') ];
-                package: 'TopezClient-Tests' with: [ spec requires: #('TopezClient-Core') ];
+                package: 'TopezClient-Tests' with: [ spec requires: #('TopezClient-Core' 'Topez-STONTests') ];
                 yourself.
             spec
                 package: 'Topez-Core' with: [ spec requires: 'Topez-STON' ];
-                package: 'Topez-Tests' with: [ spec requires: 'Topez-Core' ];
+                package: 'Topez-Tests' with: [ spec requires: #('Topez-Core' 'Topez-STONTests') ];
                 yourself.
             spec
                 group: 'Client' with: #('TopezClient-Core');

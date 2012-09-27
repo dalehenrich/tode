@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TZEngineTests",
+	"name" : "TZTestClientTopez",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "TZTopez",
 	"type" : "normal" }

@@ -1,13 +1,13 @@
 {
-	"category" : "TopezClient-Tests",
+	"category" : "Topez-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"sessionDescription" ],
-	"name" : "TZClientTests",
+		 ],
+	"name" : "TZServerTests",
 	"pools" : [
 		 ],
 	"super" : "TZCommonTests",

@@ -16,6 +16,6 @@ testRun2
 	#1 true
 	#2 false
 #5 ''a''->42
-	 key			''a''
 	 value			42
+	 key			''a''
 '

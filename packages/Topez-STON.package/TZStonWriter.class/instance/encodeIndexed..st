@@ -6,6 +6,6 @@ encodeIndexed: anObject
     self
         indentedDo: [ 
             self newlineIndent.
-            1 to: anObject basicSize do: [ :each | listWriter add: (anObject basicAt: each) ] ].
+            1 to: anObject basicSize - anObject class allInstVarNames size do: [ :each | listWriter add: (anObject basicAt: each) ] ].
     self newlineIndent.
     writeStream nextPut: $]

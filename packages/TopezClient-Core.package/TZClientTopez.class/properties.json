@@ -8,8 +8,8 @@
 	"instvars" : [
 		"session",
 		"sessionDescription" ],
-	"name" : "TZTopez",
+	"name" : "TZClientTopez",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TZTopez",
 	"type" : "normal" }
