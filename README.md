@@ -10,7 +10,7 @@ The current implementation uses a [Pharo1.4][1] image as the GCI client running 
 Metacello new
     baseline: 'Topez';
     repository: 'github://dalehenrich/topez:master/packages';
-    load.
+    load: 'Server'.
 ```
 
 ### Pharo Client Installation
@@ -20,7 +20,7 @@ Metacello new
 Metacello new
     baseline: 'Topez';
     repository: 'github://dalehenrich/topez:master/packages';
-    load.
+    load: 'Client'.
 ``` 
 
 *See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
