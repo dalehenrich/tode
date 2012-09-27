@@ -1,14 +1,13 @@
 {
-	"category" : "TopezClient-Core",
+	"category" : "Topez-STON",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"session",
-		"sessionDescription" ],
-	"name" : "TZClient",
+		"options" ],
+	"name" : "TZTopezCmd",
 	"pools" : [
 		 ],
 	"super" : "Object",

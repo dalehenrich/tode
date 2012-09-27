@@ -1,4 +1,4 @@
 running
 tearDown
     super tearDown.
-    self session logout
+    self topez logout

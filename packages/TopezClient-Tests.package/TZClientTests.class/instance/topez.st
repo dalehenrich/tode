@@ -1,8 +1,8 @@
 accessing
-session
-    session
+topez
+    topez
         ifNil: [ 
-            session := self clientClass new
+            topez := self clientClass new
                 sessionDescription: self sessionDescription;
                 login ].
-    ^ session
+    ^ topez

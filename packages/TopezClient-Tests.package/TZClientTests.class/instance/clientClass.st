@@ -1,3 +1,3 @@
 accessing
 clientClass
-    ^ TZClient
+    ^ TZTopez
