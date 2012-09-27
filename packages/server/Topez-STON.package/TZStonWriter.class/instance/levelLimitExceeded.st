@@ -1,0 +1,5 @@
+testing
+levelLimitExceeded
+
+
+	^objectLevel  > levelLimit

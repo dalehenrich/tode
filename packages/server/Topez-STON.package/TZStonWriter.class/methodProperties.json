@@ -2,9 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
+		"decrementObjectLimit" : "dkh 09/26/2012 21:21",
 		"getProxyFor:" : "dkh 9/26/2012 20:26",
-		"levelLimit" : "dkh 09/26/2012 16:45",
+		"incrementObjectLimit" : "dkh 09/26/2012 21:18",
+		"initialize" : "dkh 09/26/2012 21:20",
+		"levelLimit" : "dkh 09/26/2012 21:09",
 		"levelLimit:" : "dkh 09/26/2012 16:45",
+		"levelLimitExceeded" : "dkh 09/26/2012 21:24",
 		"nextPut:" : "dkh 9/26/2012 20:44",
 		"noProxy" : "dkh 9/26/2012 20:20",
 		"noProxy:" : "dkh 9/26/2012 20:19",

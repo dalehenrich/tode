@@ -9,7 +9,8 @@
 		"oop",
 		"size",
 		"classOop",
-		"className" ],
+		"className",
+		"printString" ],
 	"name" : "TZHeaderObject",
 	"pools" : [
 		 ],

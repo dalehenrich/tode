@@ -1,3 +1,12 @@
+```Smalltalk
+| stream |
+stream := WriteStream on: String new.
+(TZStonWriter on: stream) 
+	levelLimit: 1;
+	nextPut: {1. 2. true . false. 5. 'a' -> 42}.
+stream contents 
+```
+
 ```
 topaz 1> run
 {1. 2. true . false. 5. 'a' -> 42}
