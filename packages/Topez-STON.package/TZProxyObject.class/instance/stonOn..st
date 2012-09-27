@@ -9,11 +9,25 @@ stonOn: stonWriter
             stonWriter levelLimitExceeded
                 ifTrue: [ stonWriter noProxy: false ]
                 ifFalse: [ 
-                    stonWriter
-                        nextPut: #'body';
-                        prettyPrintSpace;
-                        pairSeparator;
-                        prettyPrintSpace;
-                        noProxy: false.
-                    self body stonOn: stonWriter ].
+                    stonWriter noProxy: true.
+                    self header namedSize > 0
+                        ifTrue: [ 
+                            stonWriter
+                                nextPut: #'named';
+                                prettyPrintSpace;
+                                pairSeparator;
+                                prettyPrintSpace;
+                                noProxy: false.
+                            stonWriter encodeNamed: self body ].
+                    stonWriter noProxy: true.
+                    self header indexedSize > 0
+                        ifTrue: [ 
+                            stonWriter
+                                nextPut: #'indexed';
+                                prettyPrintSpace;
+                                pairSeparator;
+                                prettyPrintSpace;
+                                noProxy: false.
+                            stonWriter encodeIndexed: self body ].
+                    stonWriter noProxy: false ].
             stonWriter decrementObjectLimit ]

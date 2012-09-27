@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"header",
-		"body",
-		"named",
-		"indexed" ],
-	"name" : "TZProxyObject",
+		 ],
+	"name" : "TZStonMapWriter",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "STONStreamWriter",
 	"type" : "normal" }

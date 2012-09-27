@@ -8,6 +8,8 @@
 	"instvars" : [
 		"oop",
 		"size",
+		"namedSize",
+		"indexedSize",
 		"classOop",
 		"className",
 		"printString" ],
