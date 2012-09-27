@@ -6,9 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"level",
-		"displayOops" ],
-	"name" : "TZTopezOptions",
+		"displayOptions" ],
+	"name" : "TZSharedObject",
 	"pools" : [
 		 ],
 	"super" : "Object",

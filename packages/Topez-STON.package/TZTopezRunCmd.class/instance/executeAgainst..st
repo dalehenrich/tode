@@ -1,3 +1,3 @@
 execution
 executeAgainst: aTZEngine
-    aTZEngine executeRunCmd: self
+    ^aTZEngine executeRunCmd: self

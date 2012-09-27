@@ -1,5 +1,5 @@
 printing
-printOn: aStream indent: indent
+printOn: aStream indent: indent withOptions: options
     "[124298753 sz:6 cls: 66817 Array] a Array
   #1 [10 sz:0 cls: 74241 SmallInteger] 1 == 0x1
   #2 [18 sz:0 cls: 74241 SmallInteger] 2 == 0x2
@@ -11,4 +11,6 @@ printOn: aStream indent: indent
       1 'a'                       61
     value               [338 sz:0 cls: 74241 SmallInteger] 42 == 0x2a"
 
-    self printOn: aStream indent: indent withOptions: self displayOptions
+    self header printOn: aStream withOptions: options.
+    self printNamedOn: aStream indent: indent withOptions: options.
+    self printIndexedOn: aStream indent: indent withOptions: options

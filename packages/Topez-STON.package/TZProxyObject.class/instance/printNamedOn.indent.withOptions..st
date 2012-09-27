@@ -1,5 +1,5 @@
 printing
-printNamedOn: aStream indent: indent
+printNamedOn: aStream indent: indent withOptions: options
     "[124298753 sz:6 cls: 66817 Array] a Array
   #1 [10 sz:0 cls: 74241 SmallInteger] 1 == 0x1
   #2 [18 sz:0 cls: 74241 SmallInteger] 2 == 0x2
@@ -19,4 +19,4 @@ printNamedOn: aStream indent: indent
                 space;
                 nextPutAll: key asString;
                 tab: 3.
-            proxy printOn: aStream indent: indent + 1 ]
+            proxy printOn: aStream indent: indent + 1 withOptions: options ]

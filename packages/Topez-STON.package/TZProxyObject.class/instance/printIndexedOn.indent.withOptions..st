@@ -1,5 +1,5 @@
 printing
-printIndexedOn: aStream indent: indent
+printIndexedOn: aStream indent: indent withOptions: options
     "[124298753 sz:6 cls: 66817 Array] a Array
   #1 [10 sz:0 cls: 74241 SmallInteger] 1 == 0x1
   #2 [18 sz:0 cls: 74241 SmallInteger] 2 == 0x2
@@ -22,4 +22,4 @@ printIndexedOn: aStream indent: indent
             nextPut: $#;
             nextPutAll: index printString;
             space.
-        proxy printOn: aStream indent: indent + 1 ]
+        proxy printOn: aStream indent: indent + 1 withOptions: options ]

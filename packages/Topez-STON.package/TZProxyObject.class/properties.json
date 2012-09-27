@@ -13,5 +13,5 @@
 	"name" : "TZProxyObject",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TZSharedObject",
 	"type" : "normal" }
