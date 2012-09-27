@@ -1,0 +1,3 @@
+api
+reset
+    Current := nil

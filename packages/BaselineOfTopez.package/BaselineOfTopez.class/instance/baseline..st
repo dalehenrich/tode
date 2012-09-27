@@ -47,7 +47,12 @@ baseline: spec
                 yourself ].
     spec
         for: #'pharo'
-        do: [ spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ] ].
+        do: [ 
+            spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ].
+            spec
+                package: 'Topez-STON' with: [ spec includes: #('Topez-Pharo-STON') ];
+                package: 'Topez-Pharo-STON';
+                yourself ].
     spec
         for: #'gemstone'
         do: [ 
