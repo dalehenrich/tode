@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-STON",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZTopezAbortCmd",
+	"pools" : [
+		 ],
+	"super" : "TZTopezCmd",
+	"type" : "normal" }
