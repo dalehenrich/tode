@@ -4,12 +4,14 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 9/26/2012 19:15",
+	"commentStamp" : "",
 	"instvars" : [
-		"levelLimit",
-		"noProxy" ],
-	"name" : "TZStonWriter",
+		"oop",
+		"size",
+		"classOop",
+		"className" ],
+	"name" : "TZHeaderObject",
 	"pools" : [
 		 ],
-	"super" : "STONWriter",
+	"super" : "Object",
 	"type" : "normal" }

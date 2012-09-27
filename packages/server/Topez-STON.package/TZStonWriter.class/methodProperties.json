@@ -2,6 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"indentedDo:" : "dkh 09/26/2012 16:47",
+		"getProxyFor:" : "dkh 9/26/2012 20:26",
 		"levelLimit" : "dkh 09/26/2012 16:45",
-		"levelLimit:" : "dkh 09/26/2012 16:45" } }
+		"levelLimit:" : "dkh 09/26/2012 16:45",
+		"nextPut:" : "dkh 9/26/2012 20:44",
+		"noProxy" : "dkh 9/26/2012 20:20",
+		"noProxy:" : "dkh 9/26/2012 20:19",
+		"pairSeparator" : "dkh 9/26/2012 20:37",
+		"writeList:" : "dkh 9/26/2012 18:32",
+		"writeMap:" : "dkh 9/26/2012 18:33" } }

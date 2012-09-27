@@ -1,0 +1,3 @@
+private
+pairSeparator
+    writeStream nextPut: $:
