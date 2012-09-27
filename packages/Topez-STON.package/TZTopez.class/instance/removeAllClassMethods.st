@@ -1,0 +1,3 @@
+coding
+removeAllClassMethods
+    

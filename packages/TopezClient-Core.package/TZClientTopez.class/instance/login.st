@@ -1,4 +1,4 @@
-session control
+api
 login
     | desc |
     desc := self sessionDescription.

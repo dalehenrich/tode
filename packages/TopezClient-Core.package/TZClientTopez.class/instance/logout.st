@@ -1,3 +1,3 @@
-session control
+api
 logout
     self session ifNotNil: [ session logout ]
