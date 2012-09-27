@@ -1,5 +1,3 @@
 testing
 levelLimitExceeded
-
-
-	^objectLevel  > levelLimit
+    ^ objectLevel > levelLimit

@@ -1,1 +1,1 @@
-SystemOrganization addCategory: 'Topez-STON'!
+SystemOrganization addCategory: #'Topez-STON'!

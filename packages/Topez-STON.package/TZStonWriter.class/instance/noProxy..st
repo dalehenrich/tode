@@ -1,3 +1,3 @@
 accessing
 noProxy: anObject
-	noProxy := anObject
+    noProxy := anObject
