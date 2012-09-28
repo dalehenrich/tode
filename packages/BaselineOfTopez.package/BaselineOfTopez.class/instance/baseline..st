@@ -52,7 +52,7 @@ baseline: spec
             spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ].
             spec
                 package: 'Topez-STON' with: [ spec includes: #('Topez-Pharo-STON') ];
-                package: 'Topez-Pharo-STON';
+                package: 'Topez-Pharo-STON' with: [ spec requires: #('GemTools-ClientGCI') ];
                 yourself ].
     spec
         for: #'gemstone'
