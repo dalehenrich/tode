@@ -1,3 +1,3 @@
 private
 executeStringInSession: aString
-    ^ aString evaluate
+    ^ STON fromString: aString evaluate

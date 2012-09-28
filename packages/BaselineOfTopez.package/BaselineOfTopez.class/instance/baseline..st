@@ -13,15 +13,9 @@ baseline: spec
                 package: 'TopezClient-Tests' with: [ spec requires: #('TopezClient-Core' 'Topez-STONTests') ];
                 yourself.
             spec
-                package: 'Topez-Core' with: [ spec requires: 'Topez-STON' ];
-                package: 'Topez-Tests' with: [ spec requires: #('Topez-Core' 'Topez-STONTests') ];
-                yourself.
-            spec
                 group: 'Client' with: #('TopezClient-Core');
                 group: 'Client Tests' with: #('TopezClient-Tests');
-                group: 'Server' with: #('Topez-Core');
-                group: 'Server Tests' with: #('Topez-Tests');
-                group: 'Dev' with: #('Client Tests' 'Server Tests');
+                group: 'Dev' with: #('Client Tests');
                 yourself ].
     spec
         for: #'squeakCommon'
@@ -59,5 +53,12 @@ baseline: spec
         do: [ 
             spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
             spec
+                package: 'Topez-Core' with: [ spec requires: 'Topez-STON' ];
+                package: 'Topez-Tests' with: [ spec requires: #('Topez-Core' 'Topez-STONTests') ];
+                yourself.
+            spec
                 group: 'default' with: #('Server');
+                group: 'Server' with: #('Topez-Core');
+                group: 'Server Tests' with: #('Topez-Tests');
+                group: 'Dev' with: #('Server Tests');
                 yourself ]

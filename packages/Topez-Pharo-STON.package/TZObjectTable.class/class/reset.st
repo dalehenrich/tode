@@ -1,3 +1,0 @@
-api
-reset
-    Current := nil

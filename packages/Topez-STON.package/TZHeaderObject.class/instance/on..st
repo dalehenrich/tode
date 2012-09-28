@@ -1,11 +1,12 @@
 initialize-release
 on: anObject
-    oop := anObject asOop.
-    indexedSize := anObject class isVariable
-        ifTrue: [ anObject size ]
-        ifFalse: [ 0 ].
+    | objectClass |
+    oop := Reflection oopOf: anObject .
+    size := Reflection sizeOf: anObject.
+    "namedSize := Reflection namedSizeOf: anObject. ---> BUG #42522"
     namedSize := anObject class allInstVarNames size.
-    size := namedSize + indexedSize.
-    printString := anObject printString.
-    classOop := anObject class asOop.
-    className := anObject class name asString
+    indexedSize := size - namedSize.
+    printString := [anObject printString] on: Error do: [:ignored | 'error printing'].
+    objectClass := Reflection classOf: anObject.
+    classOop := Reflection oopOf: objectClass.
+    className := objectClass name asString
