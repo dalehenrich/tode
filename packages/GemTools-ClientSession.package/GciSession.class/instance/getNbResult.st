@@ -24,4 +24,7 @@ getNbResult
                 session: self;
                 tag: error;
                 signal ].
-    ^ error asTopezProxy
+    GsRuntimeError new
+        session: self;
+        tag: error;
+        signal
