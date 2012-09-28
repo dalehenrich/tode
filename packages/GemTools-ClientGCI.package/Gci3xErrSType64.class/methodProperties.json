@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"exceptionObj" : "dkh 9/28/2012 07:56",
 		"maxMessageSize" : "DaleHenrichs 12/14/2010 10:38",
 		"readArguments" : "dkh 11/2/2009 14:04",
 		"readSimpleFields" : "dkh 11/2/2009 14:03",

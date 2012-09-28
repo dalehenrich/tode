@@ -1,4 +1,4 @@
-storing
+ston
 tzStonOn: stonWriter
     "don't wrap proxy objects"
 

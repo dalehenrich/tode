@@ -1,4 +1,4 @@
-storing
+ston
 stonOn: stonWriter
     stonWriter
         writeObject: self

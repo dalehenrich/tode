@@ -1,10 +1,13 @@
 {
 	"class" : {
-		"on:" : "dkh 9/27/2012 04:46" },
+		"on:" : "dkh 9/27/2012 04:46",
+		"oop:" : "dkh 9/28/2012 08:14",
+		"oop:indexedSize:namedSize:printString:classOop:className:" : "dkh 9/28/2012 08:06" },
 	"instance" : {
 		"indexedSize" : "dkh 9/27/2012 05:59",
 		"namedSize" : "dkh 9/27/2012 05:58",
 		"on:" : "dkh 9/27/2012 06:40",
+		"oop:indexedSize:namedSize:printString:classOop:className:" : "dkh 9/28/2012 08:06",
 		"printOn:" : "dkh 9/27/2012 14:14",
 		"printOn:indent:" : "dkh 9/27/2012 14:14",
 		"printOn:indent:withOptions:" : "dkh 9/27/2012 14:15",
