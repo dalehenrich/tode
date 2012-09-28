@@ -7,7 +7,7 @@ getNbResult
 	Because we don't know how the answer should be interpreted, we simply
 	return it as an Integer."
 
-    | assoc result error actionArgs i cursor continueWith |
+    | assoc result error actionArgs i continueWith |
     i := 0.
     [ 
     assoc := self library nbEnd.
@@ -24,7 +24,6 @@ getNbResult
                 session: self;
                 tag: error;
                 signal ].
-    cursor := Sensor currentCursor.
     actionArgs := error number == 4100
         ifTrue: [ 
             "Session is invalid ... session died out from under us, so clean up session and throw the error"
@@ -33,7 +32,6 @@ getNbResult
         session: self;
         tag: error;
         signal.
-    [ cursor show ] fork.
     actionArgs isArray
         ifTrue: [ 
             (actionArgs at: 1) == #'resume'

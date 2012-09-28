@@ -1,3 +1,3 @@
 accessing
 defaultSessionDescription
-    ^ self defaultSessionDescription_c3101
+    ^ self defaultSessionDescription3101

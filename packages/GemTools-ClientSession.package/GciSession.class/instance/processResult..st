@@ -1,6 +1,6 @@
 Private
 processResult: result
-    | error actionArray cursor |
+    | error actionArray  |
     result = self library oopNil
         ifFalse: [ ^ self library localFor: result ].
     (error := self getAndClearLastError) isNil
@@ -11,12 +11,10 @@ processResult: result
                 session: self;
                 tag: error;
                 signal ].
-    cursor := Sensor currentCursor.
     actionArray := GsRuntimeError new
         session: self;
         tag: error;
         signal.
-    [ cursor show ] fork.
     actionArray isArray
         ifTrue: [ 
             (actionArray at: 1) == #'resume'
