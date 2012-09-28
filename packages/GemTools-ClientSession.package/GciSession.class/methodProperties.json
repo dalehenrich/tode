@@ -5,11 +5,9 @@
 		"fullCompressionEnabled" : "dkh 2/27/2008 12:02",
 		"new" : "JGF 4/2/2007 12:59" },
 	"instance" : {
-		"abort" : "dkh 3/30/2009 12:25",
 		"actAsExecutor" : "dkh 2/17/2009 15:41",
 		"changeLFToCR:" : "JGF 4/4/2007 11:41",
 		"clearStack:" : "dkh 9/28/2012 15:00",
-		"commit" : "dkh 8/1/2009 12:04",
 		"continueWith:" : "dkh 9/28/2012 15:01",
 		"continueWith:replaceTopOfStackWith:" : "dkh 9/28/2012 15:13",
 		"executeString:" : "dkh 9/28/2012 07:12",

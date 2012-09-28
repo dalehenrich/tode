@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"topez",
 		"sessionDescription" ],
 	"name" : "TZClientTests",
 	"pools" : [
 		 ],
-	"super" : "TZCommonTests",
+	"super" : "TestCase",
 	"type" : "normal" }

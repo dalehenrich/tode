@@ -2,7 +2,7 @@ testing
 testRun1
     | result doit x |
     doit := '{ 1. 0. -1. {true. false.}. nil }'.
-    result := self topez run: doit.
+    result := self runNoError: doit.
     result displayOptions: (TZTopezOptions new displayOops: false).
     self
         assert:

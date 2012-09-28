@@ -1,12 +1,11 @@
 testing
-testAbort
+testCommit
     | result x |
-    self topez commandOptions level: 0.
-    result := self topez abort.
+    result := self doNoError: [ self topez commit ].
     result displayOptions: (TZTopezOptions new displayOops: false).
     self
         assert:
             (x := result printString)
                 =
-                    'System
+                    'true
 '

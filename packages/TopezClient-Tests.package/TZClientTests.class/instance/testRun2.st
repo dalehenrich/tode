@@ -3,7 +3,7 @@ testRun2
     | result doit x |
     self topez commandOptions level: 1.
     doit := '{ 1. 0. -1. {true. false.}. (''a'' -> 42) }'.
-    result := self topez run: doit.
+    result := self runNoError: doit.
     result displayOptions: (TZTopezOptions new displayOops: false).
     self
         assert:

@@ -2,7 +2,8 @@ accessing
 topez
     topez
         ifNil: [ 
-            super topez
+            topez := self clientClass new.
+            topez
                 sessionDescription: self sessionDescription;
                 login ].
     ^ topez

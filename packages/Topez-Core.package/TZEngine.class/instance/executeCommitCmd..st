@@ -1,3 +1,3 @@
 command execution
 executeCommitCmd: aTZTopezCommitCmd
-    ^ self class toString: System commitTransaction withOptions: aTZTopezCommitCmd options
+    ^ self class toString: System commit withOptions: aTZTopezCommitCmd options
