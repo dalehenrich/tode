@@ -1,3 +1,5 @@
 *topez-ston
 asTopezProxy
-    ^ self
+    ^ TZProxyNative new
+        body: self;
+        yourself

@@ -6,7 +6,7 @@ printOn: aStream indent: indent withOptions: options
     options displayOops
         ifTrue: [ 
             aStream
-                nextPut: $[;
+                nextPut: self leadingChar;
                 nextPutAll: oop printString;
                 nextPutAll: ' sz:';
                 nextPutAll: size printString;
@@ -14,7 +14,7 @@ printOn: aStream indent: indent withOptions: options
                 nextPutAll: classOop printString;
                 space;
                 nextPutAll: className asString;
-                nextPut: $];
+                nextPut: self trailingChar;
                 space ].
     aStream
         nextPutAll: printString;

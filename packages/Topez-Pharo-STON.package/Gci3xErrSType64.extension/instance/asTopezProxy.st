@@ -1,5 +1,5 @@
 *topez-pharo-ston
 asTopezProxy
-    ^ TZProxyObject new
-        gciError: self;
+    ^ TZProxyError new
+        body: self;
         yourself
