@@ -1,8 +1,7 @@
 Library
 executeStringNB: aString
-    | ans result |
+    | result |
     self setSession.
     self library apiGciNbExecuteStr: aString a: self library oopNil.
     result := self getNbResultAsOop.
-    ans := self library localFor: result.
-    ^ ans
+    ^ self library localFor: result

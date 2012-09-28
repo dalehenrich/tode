@@ -2,7 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"executeStringInSession:" : "dkh 9/28/2012 10:12",
+		"continueWith:" : "dkh 9/28/2012 15:19",
+		"doInSession:" : "dkh 9/28/2012 15:18",
+		"executeStringInSession:" : "dkh 9/28/2012 15:20",
 		"login" : "dkh 9/27/2012 14:49",
 		"logout" : "dkh 9/27/2012 14:49",
 		"logoutIfLoggedIn" : "dkh 9/27/2012 16:17",

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-STON",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"errorProxy" ],
+	"name" : "TZTopezErrorNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

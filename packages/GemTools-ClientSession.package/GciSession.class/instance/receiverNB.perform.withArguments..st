@@ -4,7 +4,7 @@ receiverNB: anObject perform: aString withArguments: anArray
     self setSession.
     address := self library addressOfArrayOfOopsForObjects: anArray.
     self library
-        apiGciNbPerform: anObject asOopType
+        apiGciNbPerform: (anObject asOopTypeWith: self library oopTypeClass)
         a: aString asString
         a: address asInteger
         a: anArray size.

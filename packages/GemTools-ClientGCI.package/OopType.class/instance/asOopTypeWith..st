@@ -1,0 +1,3 @@
+converting
+asOopTypeWith: anOopTypeClass
+    ^ self

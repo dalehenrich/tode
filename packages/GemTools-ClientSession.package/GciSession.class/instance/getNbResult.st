@@ -18,12 +18,6 @@ getNbResult
     result := assoc value.
     (error := self getAndClearLastError) isNil
         ifTrue: [ ^ result ].
-    (self isCompileError: error)
-        ifTrue: [ 
-            GsCompileError new
-                session: self;
-                tag: error;
-                signal ].
     GsRuntimeError new
         session: self;
         tag: error;
