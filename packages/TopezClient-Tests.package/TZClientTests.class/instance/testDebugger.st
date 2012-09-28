@@ -17,4 +17,5 @@ Arg 4: [108666113 sz:2 cls: 66817 Array] anArray
 
     | result doit |
     doit := '1 foor: 23 with: {1.2.}'.
-    result := self topez run: doit
+    result := self topez run: doit.
+    self halt

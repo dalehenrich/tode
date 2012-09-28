@@ -1,3 +1,3 @@
 *topez-ston
-asTopezOop
+asTopezProxy
     ^ self

@@ -14,6 +14,6 @@ gciError: aGci3xErrSType64
         at: #'category' put: (self class new header: (TZHeaderObject oop: aGci3xErrSType64 category asOop));
         at: #'number' put: aGci3xErrSType64 number;
         at: #'context' put: (self class new header: (TZHeaderObject oop: aGci3xErrSType64 context asOop));
-        at: #'args' put: (aGci3xErrSType64 args collect: [ :each | each asTopezOop ]);
+        at: #'args' put: (aGci3xErrSType64 args collect: [ :each | each asTopezProxy ]);
         at: #'fatal' put: aGci3xErrSType64 fatal;
         at: #'address' put: nil
