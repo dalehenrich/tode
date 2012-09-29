@@ -23,6 +23,7 @@
 		"apiGciNewSymbol:" : "JGF 4/13/2007 16:15",
 		"apiGciOopToChr:" : "JGF 4/13/2007 16:15",
 		"apiGciPerform:a:a:a:" : "JGF 4/13/2007 16:15",
+		"apiGciPerformNoDebug:a:a:a:a:" : "dkh 9/28/2012 19:48",
 		"floatFromOop:" : "dkh 4/14/2008 12:42",
 		"floatToSmallDouble:" : "dkh 4/14/2008 15:58",
 		"getAndClearLastError" : "JGF 4/13/2007 13:28",
