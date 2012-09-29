@@ -1,3 +1,3 @@
 debugging
 stepOver: aProcessContext
-    ^ self doInSession: [ self session stepOverWith: aProcessContext ]
+    ^ self doInSession: [ :sess | sess stepOverWith: aProcessContext ]

@@ -1,4 +1,4 @@
-Non-Blocking
+private gci calls
 terminateCurrentNbCall
 	"The client process was terminated, so do the same to the server one."
 

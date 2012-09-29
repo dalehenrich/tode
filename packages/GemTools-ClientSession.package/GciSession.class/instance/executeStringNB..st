@@ -1,4 +1,4 @@
-Library
+public gci calls
 executeStringNB: aString
     | result |
     self setSession.

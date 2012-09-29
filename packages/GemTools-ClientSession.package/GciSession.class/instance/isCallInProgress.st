@@ -1,4 +1,4 @@
-Library
+public gci calls
 isCallInProgress
 
 	self setSession.

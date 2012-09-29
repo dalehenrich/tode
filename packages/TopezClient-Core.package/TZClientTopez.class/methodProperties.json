@@ -2,16 +2,18 @@
 	"class" : {
 		 },
 	"instance" : {
-		"continueWith:" : "dkh 9/28/2012 15:19",
-		"continueWith:replaceTopOfStackWith:" : "dkh 9/28/2012 16:21",
-		"doInSession:" : "dkh 9/28/2012 15:18",
-		"executeStringInSession:" : "dkh 9/28/2012 15:20",
+		"classMethod:" : "dkh 9/29/2012 14:15",
+		"continueWith:" : "dkh 9/29/2012 13:33",
+		"continueWith:replaceTopOfStackWith:" : "dkh 9/29/2012 13:33",
+		"doInSession:" : "dkh 9/29/2012 13:32",
+		"executeStringInSession:" : "dkh 9/29/2012 13:33",
 		"finalize" : "dkh 9/28/2012 18:37",
 		"login" : "dkh 9/27/2012 14:49",
 		"logout" : "dkh 9/27/2012 14:49",
 		"logoutIfLoggedIn" : "dkh 9/27/2012 16:17",
+		"method:" : "dkh 9/29/2012 14:14",
 		"session" : "dkh 9/27/2012 14:50",
 		"sessionDescription" : "dkh 9/27/2012 14:50",
 		"sessionDescription:" : "dkh 9/27/2012 14:50",
-		"stepInto:" : "dkh 9/29/2012 09:58",
-		"stepOver:" : "dkh 9/29/2012 09:59" } }
+		"stepInto:" : "dkh 9/29/2012 13:33",
+		"stepOver:" : "dkh 9/29/2012 13:34" } }

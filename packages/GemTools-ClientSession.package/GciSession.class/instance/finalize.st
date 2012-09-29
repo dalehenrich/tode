@@ -1,4 +1,4 @@
-Private
+private
 finalize
 
 	self release.

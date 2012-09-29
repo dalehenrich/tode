@@ -1,4 +1,4 @@
-Accessors
+accessing
 gemNRS: aString
 
 	gemNRS := aString.

@@ -1,2 +1,0 @@
-coding
-category: categoryName

@@ -1,3 +1,3 @@
 debugging
 continueWith: aProcessContext
-    ^ self doInSession: [ self session continueWith: aProcessContext ]
+    ^ self doInSession: [ :sess | sess continueWith: aProcessContext ]

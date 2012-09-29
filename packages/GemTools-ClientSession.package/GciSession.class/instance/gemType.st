@@ -1,4 +1,4 @@
-Accessors
+accessing
 gemType
 
 	^gemNRS isNil

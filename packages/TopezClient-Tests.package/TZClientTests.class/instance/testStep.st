@@ -1,4 +1,4 @@
-tests
+test debugging
 testStep
     | result doit processProxy |
     doit := '| ans | ans := 3. ^ans halt + 4 + 3'.

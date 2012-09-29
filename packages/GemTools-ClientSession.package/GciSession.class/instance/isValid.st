@@ -1,4 +1,4 @@
-Testing
+testing
 isValid
 
 	^number ~~ nil

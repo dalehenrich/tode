@@ -1,4 +1,4 @@
-Library
+public gci calls
 logout
 
 	number isNil ifTrue: [^self].

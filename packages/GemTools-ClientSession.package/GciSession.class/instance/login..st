@@ -1,4 +1,4 @@
-Public
+initialization
 login: gsPassword 
 
 	^self

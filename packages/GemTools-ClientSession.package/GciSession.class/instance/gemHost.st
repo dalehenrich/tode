@@ -1,4 +1,4 @@
-Accessors
+accessing
 gemHost
 
 	gemNRS isNil ifTrue: [^''].

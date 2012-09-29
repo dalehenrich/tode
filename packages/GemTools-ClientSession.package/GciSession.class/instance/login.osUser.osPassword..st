@@ -1,4 +1,4 @@
-Public
+initialization
 login: gsPassword osUser: osUser osPassword: osPassword
     | result |
     result := self library

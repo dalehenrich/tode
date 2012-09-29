@@ -1,4 +1,4 @@
-Accessors
+accessing
 library
 
 	^GciLibrary current.

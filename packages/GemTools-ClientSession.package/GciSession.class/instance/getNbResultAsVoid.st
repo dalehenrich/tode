@@ -1,4 +1,4 @@
-Non-Blocking
+private gci calls
 getNbResultAsVoid
 
 	self getNbResult.

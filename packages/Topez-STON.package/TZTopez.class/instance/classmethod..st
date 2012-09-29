@@ -1,2 +1,0 @@
-coding
-classmethod: className

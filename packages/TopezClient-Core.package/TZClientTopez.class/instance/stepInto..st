@@ -1,3 +1,3 @@
 debugging
 stepInto: aProcessContext
-    ^ self doInSession: [ self session stepIntoWith: aProcessContext ]
+    ^ self doInSession: [ :sess | sess stepIntoWith: aProcessContext ]

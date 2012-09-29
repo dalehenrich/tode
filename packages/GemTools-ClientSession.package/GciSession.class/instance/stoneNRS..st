@@ -1,4 +1,4 @@
-Accessors
+accessing
 stoneNRS: aString
 
 	stoneNRS := aString.

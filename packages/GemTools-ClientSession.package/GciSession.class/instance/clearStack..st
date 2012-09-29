@@ -1,4 +1,4 @@
-Library
+public gci calls
 clearStack: aGsProcess
     number == nil
         ifTrue: [ ^ self ].

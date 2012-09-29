@@ -1,4 +1,4 @@
-Accessors
+accessing
 stoneName
 
 	^(stoneNRS subStrings: '!') last.	

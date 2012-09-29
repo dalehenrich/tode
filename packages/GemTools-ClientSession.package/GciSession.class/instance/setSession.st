@@ -1,4 +1,4 @@
-Library
+private gci calls
 setSession
 
 	number == nil ifTrue: [ ^self error: 'Session no longer logged in.'].

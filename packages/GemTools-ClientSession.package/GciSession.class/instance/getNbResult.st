@@ -1,4 +1,4 @@
-Non-Blocking
+private gci calls
 getNbResult
     "The call that initiated the non-blocking call will be one of three types:
 		1. expecting nothing--e.g., GciNbAbort();

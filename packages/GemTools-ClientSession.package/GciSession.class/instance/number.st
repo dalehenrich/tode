@@ -1,4 +1,4 @@
-Accessors
+accessing
 number
 
 	^number.

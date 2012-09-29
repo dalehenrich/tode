@@ -1,4 +1,4 @@
-tests
+test debugging
 testHaltAndContinueReplacingTopOfStack
     "incorrect result at the moment due to bug 42524 ... result should be 134"
 

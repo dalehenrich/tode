@@ -1,4 +1,4 @@
-Accessors
+accessing
 userID: aString
 
 	userID := aString.
