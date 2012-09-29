@@ -1,4 +1,4 @@
-testing
+tests
 testRun2
     | result doit x |
     self topez commandOptions level: 1.

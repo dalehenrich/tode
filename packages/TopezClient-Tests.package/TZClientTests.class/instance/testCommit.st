@@ -1,4 +1,4 @@
-testing
+tests
 testCommit
     | result x |
     result := self doNoError: [ self topez commit ].

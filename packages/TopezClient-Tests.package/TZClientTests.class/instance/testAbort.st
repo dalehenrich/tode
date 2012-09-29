@@ -1,4 +1,4 @@
-testing
+tests
 testAbort
     | result x |
     self topez commandOptions level: 0.

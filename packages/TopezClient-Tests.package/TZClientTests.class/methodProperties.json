@@ -19,6 +19,7 @@
 		"testError" : "dkh 9/28/2012 15:06",
 		"testHalt" : "dkh 9/28/2012 15:06",
 		"testHaltAndContinue" : "dkh 9/28/2012 15:27",
+		"testHaltAndContinueReplacingTopOfStack" : "dkh 9/28/2012 17:06",
 		"testRun1" : "dkh 9/28/2012 16:05",
 		"testRun2" : "dkh 9/28/2012 16:05",
 		"testRun3" : "dkh 9/28/2012 16:05",

@@ -1,4 +1,4 @@
-testing
+tests
 testRun1
     | result doit x |
     doit := '{ 1. 0. -1. {true. false.}. nil }'.
