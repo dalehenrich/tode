@@ -1,5 +1,5 @@
-API
-apiGciPerformNoDebug: anOopType a: aString a: anArray a: anInteger a: flagInteger
+API-non-blocking
+apiGciNbPerformNoDebug: anOopType a: selector a: args a: numArgs a: flags
 "  EXTERN_GCI_DEC(OopType)
 GciPerformNoDebug( OopType receiver, const char selector[],
         const OopType args[], int numArgs, int flags);
@@ -27,5 +27,5 @@ GciPerformNoDebug( OopType receiver, const char selector[],
  actual definitions in gcicmn.ht
 */
 "
-	<apicall: OopType64 'GciPerformNoDebug' (OopType64 char* ulong long long) >
+	<apicall: OopType64 'GciNbPerformNoDebug' (OopType64 char* ulong long long) >
 	^self externalCallFailed

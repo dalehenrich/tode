@@ -1,3 +1,3 @@
-api
+session management
 logoutIfLoggedIn
     
