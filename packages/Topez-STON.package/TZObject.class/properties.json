@@ -1,13 +1,13 @@
 {
 	"category" : "Topez-STON",
 	"classinstvars" : [
-		 ],
+		"printBlocks" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		"displayOptions" ],
-	"name" : "TZSharedObject",
+	"name" : "TZObject",
 	"pools" : [
 		 ],
 	"super" : "Object",
