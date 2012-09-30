@@ -4,5 +4,5 @@ stackFor: aGsProcess level: level
 	| stack stream writer |
 	stack := Array new.
 	1 to: aGsProcess stackDepth do: [:frameIndex |
-		stack add: (TZStackFrame from: (aGsProcess _frameContentsAt: frameIndex))].
+		stack add: (TZStackFrame for: aGsProcess at: frameIndex) ].
 	^self toString: stack level: level

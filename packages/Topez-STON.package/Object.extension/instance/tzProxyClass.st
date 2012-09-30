@@ -1,0 +1,3 @@
+*topez-ston
+tzProxyClass
+    ^ TZProxyObject

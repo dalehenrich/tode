@@ -25,6 +25,7 @@
 		"getNbResultAsVoid" : "JGF 4/6/2007 15:00",
 		"hardBreak" : "dkh 4/13/2009 15:41",
 		"initialize" : "dkh 9/26/2012 13:51",
+		"integerToOop:" : "dkh 9/30/2012 15:47",
 		"isCallInProgress" : "JGF 4/2/2007 13:47",
 		"isValid" : "dkh 8/16/2007 13:39",
 		"library" : "JGF 4/2/2007 11:37",
