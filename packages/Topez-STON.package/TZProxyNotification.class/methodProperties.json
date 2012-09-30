@@ -1,7 +1,10 @@
 {
 	"class" : {
-		"initialize" : "dkh 9/30/2012 11:41" },
+		"initialize" : "dkh 9/30/2012 12:38" },
 	"instance" : {
 		"body:" : "dkh 9/29/2012 16:33",
 		"context" : "dkh 9/29/2012 16:33",
-		"description" : "dkh 9/29/2012 17:14" } }
+		"description" : "dkh 9/29/2012 17:14",
+		"stonOn:" : "dkh 9/30/2012 12:32",
+		"topezClient" : "dkh 9/30/2012 12:37",
+		"topezClient:" : "dkh 9/30/2012 12:32" } }
