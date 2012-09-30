@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		 ],
+		"inputMark" ],
 	"name" : "StashShellWindowMorph",
 	"pools" : [
 		 ],

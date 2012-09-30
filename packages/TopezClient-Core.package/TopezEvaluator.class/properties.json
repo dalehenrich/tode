@@ -8,7 +8,12 @@
 	"instvars" : [
 		"topezClient",
 		"tty",
-		"context" ],
+		"context",
+		"collectText",
+		"inputStream",
+		"accumulationAction",
+		"promptString",
+		"oldPromptString" ],
 	"name" : "TopezEvaluator",
 	"pools" : [
 		 ],

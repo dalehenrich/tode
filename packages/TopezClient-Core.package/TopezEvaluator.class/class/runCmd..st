@@ -5,15 +5,8 @@ runCmd: commands
     commands
         at: 'run'
         put: [ :evaluator :topez :tokens | 
-            | doit |
-            doit := UIManager default
-                multiLineRequest: 'Edit class definition:'
-                initialAnswer: '"doit"'
-                answerHeight: 150.
-            evaluator tty
-                show: doit;
-                cr;
-                show: '%';
-                cr.
-            evaluator context: nil.
-            topez run: doit ]
+            evaluator
+                accumulateTextAndDo: [ :doitStream | 
+                    evaluator context: nil.
+                    topez run: doitStream contents ].
+            '' ]

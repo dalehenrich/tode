@@ -1,4 +1,6 @@
 menu commands
 accept
-
-	self model cr; flush; processCommand: self commandLineInput asString
+    self model
+        cr;
+        flush;
+        readEvalPrint: self commandLineInput asString

@@ -2,10 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"accept" : "dtl 5/27/2002 08:57",
-		"appendEntry" : "dtl 1/21/2007 13:02",
+		"accept" : "dkh 9/30/2012 09:44",
+		"appendEntry" : "dkh 9/30/2012 10:10",
 		"commandLineInput" : "dtl 3/18/2001 18:17",
-		"positionAfterPromptString" : "dtl 4/7/2001 12:21",
+		"initialize" : "dkh 9/30/2012 10:06",
+		"inputMark" : "dkh 9/30/2012 10:07",
+		"markInput" : "dkh 9/30/2012 10:10",
+		"positionAfterPromptString" : "dkh 9/30/2012 10:15",
 		"setText:" : "dkh 9/30/2012 02:25",
 		"textStyle" : "dkh 9/30/2012 02:27",
-		"update:" : "dtl 6/3/2001 19:02" } }
+		"update:" : "dkh 9/30/2012 10:12" } }
