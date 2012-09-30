@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"initialize" : "dkh 9/29/2012 16:56" },
 	"instance" : {
 		"exceptionObj" : "dkh 9/28/2012 07:56",
 		"maxMessageSize" : "DaleHenrichs 12/14/2010 10:38",

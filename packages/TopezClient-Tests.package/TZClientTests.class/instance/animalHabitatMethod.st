@@ -1,5 +1,5 @@
 test coding
-habitatMethod
+animalHabitatMethod
     ^ 'habitat
 "Return the value of the instance variable ''habitat''."
    ^habitat'

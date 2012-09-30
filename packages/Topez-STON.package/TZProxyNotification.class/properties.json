@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TZProxyError",
+	"name" : "TZProxyNotification",
 	"pools" : [
 		 ],
-	"super" : "TZProxyNotification",
+	"super" : "TZProxyObject",
 	"type" : "normal" }

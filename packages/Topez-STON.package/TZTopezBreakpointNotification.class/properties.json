@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TZProxyError",
+	"name" : "TZTopezBreakpointNotification",
 	"pools" : [
 		 ],
-	"super" : "TZProxyNotification",
+	"super" : "TZTopezNotification",
 	"type" : "normal" }

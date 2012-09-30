@@ -5,4 +5,8 @@ doInSession: aBlock
     result := aBlock value: self session.
     ^ STON fromString: result ]
         on: GsRuntimeError
-        do: [ :ex | ^ ex tag asTopezProxy ]
+        do: [ :ex | 
+            | proxy |
+            proxy := ex tag asTopezProxy.
+            proxy signalNotifications.
+            ^ proxy ]

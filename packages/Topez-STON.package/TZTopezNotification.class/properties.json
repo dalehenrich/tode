@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TZProxyError",
+		"exceptionProxy" ],
+	"name" : "TZTopezNotification",
 	"pools" : [
 		 ],
-	"super" : "TZProxyNotification",
+	"super" : "Notification",
 	"type" : "normal" }

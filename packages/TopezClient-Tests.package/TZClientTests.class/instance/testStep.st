@@ -1,9 +1,16 @@
 test debugging
 testStep
-    | result doit processProxy |
-    doit := '| ans | ans := 3. ^ans halt + 4 + 3'.
-    result := [ self topez run: doit ]
-        on: TZTopezErrorNotification
-        do: [ :ex | 
-            processProxy := ex errorProxy context.
-            ex resume ]
+    | errorResult debuggerContext stepResult |
+    self
+        do: [ :tpz | 
+            tpz
+                run: self debugTestClassDefinition;
+                setClass: 'TestStep';
+                setCategory: 'tests';
+                method: self stepTestCallMethod;
+                method: self stepTestHalt1Method;
+                yourself ].
+    errorResult := self runExpectingError: 'TestStep new halt1Method'.
+    debuggerContext := errorResult context.
+    stepResult := self doExpectingBreakpoint: [ :tpz | tpz stepOver: debuggerContext ].
+    self halt

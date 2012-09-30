@@ -1,5 +1,5 @@
 private
 doNoError: aBlock
     ^ aBlock
-        on: TZTopezErrorNotification
+        on: TZTopezErrorNotification , TZTopezBreakpointNotification
         do: [ :ex | self assert: false ]

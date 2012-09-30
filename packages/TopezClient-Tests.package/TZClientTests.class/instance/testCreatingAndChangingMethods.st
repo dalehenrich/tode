@@ -7,10 +7,10 @@ testCreatingAndChangingMethods
                 run: self animalClassDefinition;
                 setClass: 'Animal';
                 setCategory: 'accessing';
-                method: self habitatMethod;
-                method: self habitatUpdateMethod;
+                method: self animalHabitatMethod;
+                method: self animalHabitatUpdateMethod;
                 setCategory: 'example';
-                classMethod: self returnAsStringMethod ].
+                classMethod: self animalClassReturnAsStringMethod ].
     self
         run: 'Animal new'
         validate: [ :result | 

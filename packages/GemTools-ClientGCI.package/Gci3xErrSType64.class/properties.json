@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"ERR_Breakpoint" ],
 	"commentStamp" : "dkh 4/18/2012 15:21",
 	"instvars" : [
 		"exceptionObj" ],

@@ -1,5 +1,5 @@
 API-non-blocking
-apiGciNbGciStep: anOopType a: level 
+apiGciNbStep: anOopType a: level 
 "  *   level  0 means step-into semantics starting from top of stack
   *          1 means step-over semantics starting from top of stack
   *          > 1 means step-over semantics from specified level on stack.
