@@ -1,6 +1,7 @@
 test coding
 testCreatingAndChangingMethods
     | x |
+    self installPrintBlocks.
     self
         do: [ :tpz | 
             tpz
@@ -14,46 +15,42 @@ testCreatingAndChangingMethods
     self
         run: 'Animal new'
         validate: [ :result | 
-            result displayOptions: (TZTopezOptions new displayOops: false).
             self
                 assert:
                     (x := result printString)
                         =
-                            'anAnimal
- favoriteFood			nil
- habitat			nil
- name			nil
+                            '[Animal] anAnimal
+ favoriteFood			[UndefinedObject] nil
+ habitat			[UndefinedObject] nil
+ name			[UndefinedObject] nil
 ' ].
     self
         run: 'Animal new habitat: 1'
         validate: [ :result | 
-            result displayOptions: (TZTopezOptions new displayOops: false).
             self
                 assert:
                     (x := result printString)
                         =
-                            'anAnimal
- favoriteFood			nil
- habitat			1
- name			nil
+                            '[Animal] anAnimal
+ favoriteFood			[UndefinedObject] nil
+ habitat			[SmallInteger] 1
+ name			[UndefinedObject] nil
 ' ].
     self
         run: 'Animal new habitat'
         validate: [ :result | 
-            result displayOptions: (TZTopezOptions new displayOops: false).
             self
                 assert:
                     (x := result printString)
                         =
-                            'nil
+                            '[UndefinedObject] nil
 ' ].
     self
         run: 'Animal returnAsString'
         validate: [ :result | 
-            result displayOptions: (TZTopezOptions new displayOops: false).
             self
                 assert:
                     (x := result printString)
                         =
-                            '''''
+                            '[String] ''''
 ' ]

@@ -2,10 +2,10 @@
 	"class" : {
 		"initialize" : "dkh 9/30/2012 11:40",
 		"lookupPrintBlock:ifAbsent:" : "dkh 9/30/2012 11:29",
-		"printBlocks" : "dkh 9/30/2012 10:59" },
+		"printBlocks" : "dkh 9/30/2012 10:59",
+		"printBlocks:" : "dkh 9/30/2012 11:50" },
 	"instance" : {
 		"asTopezProxy" : "dkh 9/28/2012 11:42",
 		"basicPrintOn:indent:" : "dkh 9/30/2012 11:10",
-		"displayOptions:" : "dkh 9/27/2012 14:10",
 		"printOn:" : "dkh 9/30/2012 11:06",
 		"printOn:indent:" : "dkh 9/30/2012 11:25" } }
