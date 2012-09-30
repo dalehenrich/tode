@@ -6,6 +6,6 @@ stepWith: processObj level: level
 
     | result |
     self setSession.
-    result := self library apiGciNbStep: (processObj asOopTypeWith: self library oopTypeClass) a: level.
+    result := self library apiGciNbStep: (self asOopType: processObj) a: level.
     result := self getNbResultAsOop.
     ^ self library localFor: result

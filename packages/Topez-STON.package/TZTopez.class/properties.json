@@ -8,7 +8,8 @@
 	"instvars" : [
 		"commandOptions",
 		"currentClass",
-		"currentCategory" ],
+		"currentCategory",
+		"currentEngine" ],
 	"name" : "TZTopez",
 	"pools" : [
 		 ],

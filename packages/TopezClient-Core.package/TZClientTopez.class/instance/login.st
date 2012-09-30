@@ -22,4 +22,5 @@ login
             gciError := session getAndClearLastError.
             messageText := gciError message.
             session := nil.
-            ^ Error signal: messageText , ' For further information about login failures, check the gem log file' ]
+            ^ Error signal: messageText , ' For further information about login failures, check the gem log file' ].
+    currentEngine := self run: 'TZEngine'

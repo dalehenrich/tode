@@ -5,18 +5,18 @@ oopFor: anObject
     (anObject isKindOf: OopType)
         ifTrue: [ ^ anObject asOop ].
     (anObject isKindOf: Integer)
-        ifTrue: [ ^ (self apiGciLongToOop: anObject) asOop ].
+        ifTrue: [ ^ self apiGciLongToOop: anObject ].
     (anObject isKindOf: ByteString)
-        ifTrue: [ ^ (self apiGciNewString: anObject) asOop ].
+        ifTrue: [ ^ self apiGciNewString: anObject ].
     (anObject isKindOf: Boolean)
         ifTrue: [ 
             ^ (anObject
                 ifTrue: [ self oopTrue ]
                 ifFalse: [ self oopFalse ]) asOop ].
     (anObject isKindOf: Character)
-        ifTrue: [ ^ (self oopForChar: anObject) asOop ].
+        ifTrue: [ ^ self oopForChar: anObject ].
     (anObject isKindOf: ByteSymbol)
-        ifTrue: [ ^ (self apiGciNewSymbol: anObject asString) asOop ].
+        ifTrue: [ ^ self apiGciNewSymbol: anObject asString ].
     (anObject isKindOf: Float)
         ifTrue: [ ^ (self floatToSmallDouble: anObject) asOop ].
     (anObject isKindOf: WideString)

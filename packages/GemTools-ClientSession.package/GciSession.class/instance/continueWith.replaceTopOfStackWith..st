@@ -3,8 +3,8 @@ continueWith: processObj replaceTopOfStackWith: replacementObj
     | result |
     self setSession.
     self library
-        apiGciNbContinueWith: (processObj asOopTypeWith: self library oopTypeClass)
-        a: (replacementObj asOopTypeWith: self library oopTypeClass)
+        apiGciNbContinueWith: (self asOopType: processObj)
+        a: (self asOopType: replacementObj)
         a: 1.
     result := self getNbResultAsOop.
     ^ self library localFor: result

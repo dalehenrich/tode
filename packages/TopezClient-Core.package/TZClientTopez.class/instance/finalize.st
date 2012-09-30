@@ -1,4 +1,4 @@
-finalization
+private-finalization
 finalize
     session ifNil: [ ^ self ].
     session isValid

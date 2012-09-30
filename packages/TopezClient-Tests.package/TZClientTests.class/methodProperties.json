@@ -35,6 +35,7 @@
 		"testCommit" : "dkh 9/28/2012 16:05",
 		"testContinueReplacingTopOfStack" : "dkh 9/29/2012 14:44",
 		"testCreatingAndChangingMethods" : "dkh 9/29/2012 14:25",
+		"testCurrentEngine" : "dkh 9/29/2012 18:36",
 		"testError" : "dkh 9/28/2012 15:06",
 		"testHalt" : "dkh 9/28/2012 15:06",
 		"testHaltAndContinue" : "dkh 9/28/2012 15:27",
@@ -49,5 +50,5 @@
 		"testRun4" : "dkh 9/29/2012 13:19",
 		"testSetCategory" : "dkh 9/29/2012 13:27",
 		"testSetClass" : "dkh 9/29/2012 11:19",
-		"testStep" : "dkh 9/29/2012 17:11",
+		"testStep" : "dkh 9/29/2012 19:17",
 		"topez" : "dkh 9/28/2012 16:05" } }

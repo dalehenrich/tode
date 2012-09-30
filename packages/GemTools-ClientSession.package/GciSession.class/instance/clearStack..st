@@ -3,4 +3,4 @@ clearStack: aGsProcess
     number == nil
         ifTrue: [ ^ self ].
     self setSession.
-    self library apiGciClearStack: (aGsProcess asOopTypeWith: self library oopTypeClass)
+    self library apiGciClearStack: (self asOopType: aGsProcess)
