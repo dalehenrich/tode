@@ -1,0 +1,23 @@
+{
+	"category" : "Topez-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"method",
+		"ipOffset",
+		"frameOffset",
+		"varContext",
+		"saveProtectedMode",
+		"markerOrException",
+		"stackSelf",
+		"argAndTempNames",
+		"receiver",
+		"argsAnTemps" ],
+	"name" : "TZStackFrame",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
