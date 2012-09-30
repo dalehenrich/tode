@@ -12,5 +12,4 @@ testStep
                 yourself ].
     errorResult := self runExpectingError: 'TestStep new halt1Method'.
     debuggerContext := errorResult context.
-    stepResult := self doExpectingBreakpoint: [ :tpz | tpz stepOver: debuggerContext ].
-    self halt
+    stepResult := self doExpectingBreakpoint: [ :tpz | tpz stepOver: debuggerContext ]

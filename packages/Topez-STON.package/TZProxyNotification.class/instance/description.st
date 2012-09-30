@@ -1,3 +1,3 @@
 accessing
-errorMessage
+description
     ^ self header proxyPrintString
