@@ -1,0 +1,16 @@
+{
+	"category" : "TopezClient-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Commands" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topezClient",
+		"tty",
+		"context" ],
+	"name" : "TopezEvaluator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
