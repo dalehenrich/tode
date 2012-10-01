@@ -2,11 +2,11 @@ evaluating
 accumulateTextAndDo: resultBlock
     inputStream := WriteStream on: String new.
     accumulationAction := [ :input | 
-    self context: nil.
+    self exception: nil.
     [ resultBlock value: input ]
         on: TZTopezNotification
         do: [ :ex | 
-            self context: ex exceptionProxy context.
+            self exception: ex exceptionProxy.
             ex resume ] ].
     collectText := true.
     oldPromptString := self promptString.

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZStack",
+	"pools" : [
+		 ],
+	"super" : "Array",
+	"type" : "normal" }

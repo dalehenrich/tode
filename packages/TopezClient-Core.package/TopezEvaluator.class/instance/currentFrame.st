@@ -1,0 +1,3 @@
+frame
+currentFrame
+    ^ currentFrame

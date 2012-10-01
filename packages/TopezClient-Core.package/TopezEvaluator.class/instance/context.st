@@ -1,3 +1,3 @@
 accessing
 context
-	^ context
+    ^ self exception context

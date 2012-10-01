@@ -5,6 +5,5 @@ initialize
     Commands := Dictionary new.
     self
         runCmd: Commands;
-        continueCmd: Commands;
-        stepCmd: Commands;
+        debuggerCmds: Commands;
         yourself

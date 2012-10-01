@@ -7,6 +7,6 @@ runCmd: commands
         put: [ :evaluator :topez :tokens | 
             evaluator
                 accumulateTextAndDo: [ :doitStream | 
-                    evaluator context: nil.
+                    evaluator exception: nil.
                     topez run: doitStream contents ].
             '' ]

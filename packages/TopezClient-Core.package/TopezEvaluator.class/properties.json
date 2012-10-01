@@ -8,7 +8,8 @@
 	"instvars" : [
 		"topezClient",
 		"tty",
-		"context",
+		"exception",
+		"currentFrame",
 		"collectText",
 		"inputStream",
 		"accumulationAction",
