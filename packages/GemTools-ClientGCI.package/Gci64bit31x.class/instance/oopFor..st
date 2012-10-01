@@ -6,7 +6,7 @@ oopFor: anObject
     (anObject isKindOf: OopType)
         ifTrue: [ ^ anObject asOop ].
     (anObject isKindOf: Integer)
-        ifTrue: [ ^ self apiGciLongToOop: anObject ].
+        ifTrue: [ ^ self apiGciI64ToOop: anObject ].
     (anObject isKindOf: ByteString)
         ifTrue: [ ^ self apiGciNewString: anObject ].
     (anObject isKindOf: Boolean)

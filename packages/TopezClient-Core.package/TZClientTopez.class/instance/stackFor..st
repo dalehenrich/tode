@@ -6,5 +6,5 @@ stackFor: aProcessContext
                 receiverNB: self currentEngine
                 performNoDebug: 'stackFor:level:'
                 withArgs:
-                    {(sess asOopType: aProcessContext).
+                    {aProcessContext.
                     2} ]

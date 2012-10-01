@@ -1,8 +1,7 @@
 public gci calls
-receiverNB: receiver performNoDebug: aString withArgs: anArray
-    | result address argsArray |
+receiverNB: receiver performNoDebug: aString withArgs: argsArray
+    | result address |
     self setSession.
-    argsArray := anArray collect: [ :each | self asOopType: each ].
     address := self library addressOfArrayOfOopsForObjects: argsArray.
     self library
         apiGciNbPerformNoDebug: (self asOopType: receiver)
