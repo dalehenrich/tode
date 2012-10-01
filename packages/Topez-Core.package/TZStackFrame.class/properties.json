@@ -17,7 +17,6 @@
 		"stepPointLineNumber",
 		"receiver",
 		"frameSelf",
-		"argsAndTempNames",
 		"argsAndTemps" ],
 	"name" : "TZStackFrame",
 	"pools" : [
