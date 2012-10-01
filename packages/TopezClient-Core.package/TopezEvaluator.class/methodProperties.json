@@ -1,8 +1,9 @@
 {
 	"class" : {
 		"continueCmd:" : "dkh 9/30/2012 02:54",
-		"initialize" : "dkh 9/30/2012 02:44",
-		"runCmd:" : "dkh 9/30/2012 10:18" },
+		"initialize" : "dkh 9/30/2012 18:24",
+		"runCmd:" : "dkh 9/30/2012 10:18",
+		"stepCmd:" : "dkh 9/30/2012 18:23" },
 	"instance" : {
 		"accumulateText:" : "dkh 9/30/2012 10:18",
 		"accumulateTextAndDo:" : "dkh 9/30/2012 10:25",

@@ -1,5 +1,5 @@
 {
 	"class" : {
-		 },
+		"initialize" : "dkh 9/30/2012 18:00" },
 	"instance" : {
-		 } }
+		"printSummaryOn:indent:" : "dkh 9/30/2012 18:11" } }

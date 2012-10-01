@@ -6,4 +6,5 @@ initialize
     self
         runCmd: Commands;
         continueCmd: Commands;
+        stepCmd: Commands;
         yourself
