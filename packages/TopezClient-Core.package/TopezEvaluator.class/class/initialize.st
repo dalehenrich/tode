@@ -3,7 +3,8 @@ initialize
     "self initialize"
 
     Commands := Dictionary new.
+    SubCommands := Dictionary new.
     self
-        runCmd: Commands;
-        debuggerCmds: Commands;
+        runCmds;
+        debuggerCmds;
         yourself

@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Commands" ],
+		"Commands",
+		"SubCommands" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"topezClient",
