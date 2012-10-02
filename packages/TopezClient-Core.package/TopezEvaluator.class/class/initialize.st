@@ -7,4 +7,5 @@ initialize
     self
         runCmds;
         debuggerCmds;
+        listCmds;
         yourself

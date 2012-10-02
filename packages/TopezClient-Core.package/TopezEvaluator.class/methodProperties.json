@@ -1,7 +1,8 @@
 {
 	"class" : {
 		"debuggerCmds" : "dkh 10/1/2012 20:44",
-		"initialize" : "dkh 10/1/2012 20:47",
+		"initialize" : "dkh 10/1/2012 20:57",
+		"listCmds" : "dkh 10/1/2012 21:32",
 		"runCmds" : "dkh 10/1/2012 20:48" },
 	"instance" : {
 		"accumulateText:" : "dkh 9/30/2012 10:18",
