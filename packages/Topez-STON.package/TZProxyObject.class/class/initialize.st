@@ -5,6 +5,22 @@ initialize
 
     self
         at: #'basic'
+            forClass: 'TZStack'
+            put: [ :proxy :aStream :indent | 
+                    | currentFrame stack indexed |
+                    currentFrame := proxy named at: #'currentFrame'.
+                    stack := proxy indexed.
+                    indexed := proxy indexed.
+                    1 to: indexed size do: [ :frameIndex | 
+                        | stackFrame |
+                        stackFrame := indexed at: frameIndex.
+                        frameIndex = currentFrame
+                            ifTrue: [ aStream nextPutAll: '==> ' ].
+                        Transcript
+                            cr;
+                            show: frameIndex printString , ' ' , currentFrame printString.
+                        stackFrame printOn: aStream indent: indent ] ];
+        at: #'basic'
             forClass: 'TZStackFrame'
             put: [ :proxy :aStream :indent | 
                     aStream

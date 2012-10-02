@@ -1,3 +1,3 @@
 frame
 currentFrame: anInteger
-    currentFrame := anInteger
+    self exception stack named at: #'currentFrame' put: anInteger

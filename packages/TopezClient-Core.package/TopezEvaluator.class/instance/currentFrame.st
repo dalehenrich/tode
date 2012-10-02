@@ -1,3 +1,3 @@
 frame
 currentFrame
-    ^ currentFrame
+    ^ self exception stack named at: #'currentFrame'

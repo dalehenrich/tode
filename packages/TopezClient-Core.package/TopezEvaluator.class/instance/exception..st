@@ -1,4 +1,3 @@
 accessing
 exception: anObject
-    exception := anObject.
-    currentFrame := 1
+    exception := anObject

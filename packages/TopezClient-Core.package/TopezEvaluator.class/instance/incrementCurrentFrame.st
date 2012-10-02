@@ -1,8 +1,8 @@
 frame
 incrementCurrentFrame
     | stack |
-    currentFrame := currentFrame + 1.
+    self currentFrame: self currentFrame + 1.
     stack := exception stack indexed.
-    currentFrame > stack size
-        ifTrue: [ currentFrame := stack size ].
-    ^ stack at: currentFrame
+    self currentFrame > stack size
+        ifTrue: [ self currentFrame: stack size ].
+    ^ stack at: self currentFrame
