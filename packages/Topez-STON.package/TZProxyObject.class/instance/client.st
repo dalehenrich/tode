@@ -1,4 +1,4 @@
 accessing
 client
-    client ifNil: [ client := Dictionary new ].
+    client ifNil: [ client := self initClient ].
     ^ client

@@ -1,7 +1,11 @@
 accessing
 stack
-    stack
-        ifNil: [ 
-            stack := self topezClient stackFor: self context.
-            stack named at: #'currentFrameIndex' put: 1 ].
-    ^ stack
+    | stk |
+    ^ self client
+        at: #'stack'
+        ifAbsent: [ 
+            stk := self topezClient stackFor: self context.
+            self client at: #'stack' put: stk.
+            stk client at: #'currentFrameIndex' put: 1.
+            stk client at: #'currentFrame' put: nil.
+            stk ]
