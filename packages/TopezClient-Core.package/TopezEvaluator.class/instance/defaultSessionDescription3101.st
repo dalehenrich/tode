@@ -1,4 +1,4 @@
-accessing
+session management
 defaultSessionDescription3101
     ^ OGCustomSessionDescription new
         name: '3.1.0.1';

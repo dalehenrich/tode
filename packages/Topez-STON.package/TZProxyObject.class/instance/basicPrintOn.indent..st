@@ -1,5 +1,5 @@
 printing
 basicPrintOn: aStream indent: indent
     self header printOn: aStream.
-    self printNamedOn: aStream indent: indent.
-    self printIndexedOn: aStream indent: indent
+    self basicPrintNamedOn: aStream indent: indent.
+    self basicPrintIndexedOn: aStream indent: indent

@@ -1,4 +1,3 @@
-accessing
+session management
 exit
-    topezClient ifNil: [ ^ self ].
-    topezClient logout
+    self logout

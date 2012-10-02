@@ -1,4 +1,4 @@
-evaluating
+evaluator engine
 accumulateText: line
     (line beginsWith: '%')
         ifFalse: [ 

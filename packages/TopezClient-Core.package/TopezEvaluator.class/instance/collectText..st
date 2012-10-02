@@ -1,3 +1,3 @@
-accessing
+evaluator engine
 collectText: anObject
 	collectText := anObject

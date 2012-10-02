@@ -1,4 +1,4 @@
-evaluating
+evaluator engine
 evaluateCommand: line
     | tokens |
     tokens := line trimBoth findTokens: {(Character space)}.

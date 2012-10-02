@@ -1,4 +1,4 @@
-frame
+proxy frame
 incrementCurrentFrame
     | stack |
     self currentFrameIndex: self currentFrameIndex + 1.

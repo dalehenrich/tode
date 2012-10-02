@@ -1,4 +1,4 @@
-evaluating
+evaluator engine
 accumulateTextAndDo: resultBlock
     inputStream := WriteStream on: String new.
     accumulationAction := [ :input | 

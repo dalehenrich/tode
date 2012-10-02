@@ -8,6 +8,7 @@
 	"instvars" : [
 		"header",
 		"body",
+		"client",
 		"named",
 		"indexed" ],
 	"name" : "TZProxyObject",

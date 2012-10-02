@@ -1,3 +1,3 @@
-accessing
+proxy exception
 exception
     ^ exception

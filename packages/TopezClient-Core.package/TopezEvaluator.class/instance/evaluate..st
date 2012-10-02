@@ -1,4 +1,4 @@
-evaluating
+evaluator engine
 evaluate: line
     ^ self collectText
         ifTrue: [ self accumulateText: line ]

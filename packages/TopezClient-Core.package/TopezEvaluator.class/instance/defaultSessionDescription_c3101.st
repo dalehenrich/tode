@@ -1,4 +1,4 @@
-accessing
+session management
 defaultSessionDescription_c3101
     ^ OGStandardSessionDescription new
         name: 'c_gs64stone_3101';
