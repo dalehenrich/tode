@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"initialize" : "dkh 10/1/2012 15:52" },
+		"initialize" : "dkh 10/1/2012 18:33" },
 	"instance" : {
 		"asOopTypeWith:" : "dkh 9/28/2012 14:59",
 		"basicPrintIndexedOn:indent:" : "dkh 9/30/2012 11:11",
@@ -13,9 +13,12 @@
 		"header" : "dkh 9/26/2012 19:43",
 		"header:" : "dkh 9/28/2012 08:09",
 		"indexed" : "dkh 9/29/2012 11:41",
+		"indexed:" : "dkh 10/1/2012 18:02",
 		"named" : "dkh 9/29/2012 11:41",
+		"named:" : "dkh 10/1/2012 18:02",
 		"objectForOop" : "dkh 9/28/2012 18:57",
 		"oop" : "dkh 9/29/2012 11:09",
+		"printBlockNamed:on:indent:" : "dkh 10/1/2012 18:28",
 		"printIndexedOn:indent:" : "dkh 10/1/2012 15:51",
 		"printNamedOn:indent:" : "dkh 10/1/2012 15:51",
 		"printOn:indent:" : "dkh 10/1/2012 16:50",

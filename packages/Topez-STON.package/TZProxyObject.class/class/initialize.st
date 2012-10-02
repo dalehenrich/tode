@@ -1,6 +1,7 @@
 class initialization
 initialize
-    "self initialize"
+    "super initialize.
+	self initialize"
 
     self
         at: #'basic'
