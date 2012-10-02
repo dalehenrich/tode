@@ -1,7 +1,7 @@
 test coding
 testCreatingAndChangingMethods
     | x |
-    self installPrintBlocks.
+    self pushPrintBlocks.
     self
         do: [ :tpz | 
             tpz

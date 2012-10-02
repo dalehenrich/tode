@@ -1,7 +1,7 @@
 test coding
 testSetCategory
     | category x currentCategory |
-    self installPrintBlocks.
+    self pushPrintBlocks.
     category := 'testing'.
     self doNoError: [ self topez setCategory: category ].
     currentCategory := self topez currentCategory.

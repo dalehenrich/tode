@@ -1,12 +1,18 @@
 {
 	"class" : {
-		"initialize" : "dkh 9/30/2012 11:40",
-		"lookupPrintBlock:ifAbsent:" : "dkh 9/30/2012 11:29",
-		"printBlocks" : "dkh 9/30/2012 10:59",
-		"printBlocks:" : "dkh 9/30/2012 11:50" },
+		"at:forClass:ifAbsent:" : "dkh 10/1/2012 15:58",
+		"at:forClass:push:" : "dkh 10/1/2012 16:00",
+		"at:forClass:put:" : "dkh 10/1/2012 15:58",
+		"at:forClasses:push:" : "dkh 10/1/2012 15:58",
+		"at:forClasses:put:" : "dkh 10/1/2012 15:53",
+		"initialize" : "dkh 10/1/2012 15:35",
+		"pop:forClass:" : "dkh 10/1/2012 16:51",
+		"pop:forClasses:" : "dkh 10/1/2012 16:44",
+		"printBlocks" : "dkh 10/1/2012 15:36",
+		"printBlocks:" : "dkh 10/1/2012 15:36" },
 	"instance" : {
 		"asTopezProxy" : "dkh 9/28/2012 11:42",
 		"basicPrintOn:indent:" : "dkh 9/30/2012 11:10",
 		"printOn:" : "dkh 9/30/2012 11:06",
-		"printOn:indent:" : "dkh 9/30/2012 11:25",
+		"printOn:indent:" : "dkh 10/1/2012 16:50",
 		"topezClient:" : "dkh 9/30/2012 12:34" } }

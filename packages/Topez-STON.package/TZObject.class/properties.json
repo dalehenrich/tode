@@ -1,9 +1,9 @@
 {
 	"category" : "Topez-STON",
 	"classinstvars" : [
-		"printBlocks" ],
-	"classvars" : [
 		 ],
+	"classvars" : [
+		"PrintBlocks" ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],

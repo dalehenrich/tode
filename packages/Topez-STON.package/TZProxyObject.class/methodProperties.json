@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"initialize" : "dkh 10/1/2012 15:52" },
 	"instance" : {
 		"asOopTypeWith:" : "dkh 9/28/2012 14:59",
 		"basicPrintIndexedOn:indent:" : "dkh 9/30/2012 11:11",
@@ -16,8 +16,9 @@
 		"named" : "dkh 9/29/2012 11:41",
 		"objectForOop" : "dkh 9/28/2012 18:57",
 		"oop" : "dkh 9/29/2012 11:09",
-		"printIndexedOn:indent:" : "dkh 9/30/2012 11:25",
-		"printNamedOn:indent:" : "dkh 9/30/2012 11:25",
+		"printIndexedOn:indent:" : "dkh 10/1/2012 15:51",
+		"printNamedOn:indent:" : "dkh 10/1/2012 15:51",
+		"printOn:indent:" : "dkh 10/1/2012 16:50",
 		"proxyPrintString" : "dkh 9/30/2012 18:05",
 		"signalNotifications" : "dkh 9/28/2012 12:49",
 		"stonOn:" : "dkh 9/27/2012 07:09",

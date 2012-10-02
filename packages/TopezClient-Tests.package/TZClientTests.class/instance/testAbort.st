@@ -2,7 +2,7 @@ tests
 testAbort
     | result x |
     self topez commandOptions level: 0.
-    self installPrintBlocks.
+    self pushPrintBlocks.
     result := self doNoError: [ self topez abort ].
     self
         assert:

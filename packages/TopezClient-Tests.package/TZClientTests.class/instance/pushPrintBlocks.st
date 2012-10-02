@@ -1,10 +1,9 @@
-private
-installPrintBlocks
-    "don't want to see oops in printStrings, because they are not constant"
-
-    TZHeaderObject printBlocks
+printBlock handling
+pushPrintBlocks
+    TZObject
         at: #'basic'
-        put: [ :proxy :aStream :indent | 
+        forClass: 'TZHeaderObject'
+        push: [ :proxy :aStream :indent | 
             aStream
                 tab: indent;
                 nextPut: proxy leadingChar;

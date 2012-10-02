@@ -1,7 +1,7 @@
 tests
 testRun4
     | result doit x |
-    self installPrintBlocks.
+    self pushPrintBlocks.
     self topez commandOptions level: 0.
     doit := 'Object class'.
     result := self runNoError: doit.

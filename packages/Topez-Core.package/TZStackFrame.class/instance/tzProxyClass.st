@@ -1,4 +1,0 @@
-accessing
-tzProxyClass
-
-	^TZProxyFrame

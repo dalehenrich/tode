@@ -1,8 +1,8 @@
 printing
-printIndexedOn: aStream indent: indent
+printOn: aStream indent: indent
     | printBlock |
     printBlock := self class
-        at: #'basicIndexed'
+        at: #'basic'
         forClass: self header className
-        ifAbsent: [ ^ self basicPrintIndexedOn: aStream indent: indent ].
+        ifAbsent: [ ^ self basicPrintOn: aStream indent: indent ].
     printBlock value: self value: aStream value: indent

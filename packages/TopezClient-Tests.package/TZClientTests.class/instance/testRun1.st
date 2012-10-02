@@ -1,7 +1,7 @@
 tests
 testRun1
     | result doit x |
-    self installPrintBlocks.
+    self pushPrintBlocks.
     doit := '{ 1. 0. -1. {true. false.}. nil }'.
     result := self runNoError: doit.
     self

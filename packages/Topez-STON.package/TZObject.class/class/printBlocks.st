@@ -1,4 +1,4 @@
-accessing
+accessing printing
 printBlocks
-    printBlocks ifNil: [ printBlocks := Dictionary new ].
-    ^ printBlocks
+    PrintBlocks ifNil: [ PrintBlocks := Dictionary new ].
+    ^ PrintBlocks

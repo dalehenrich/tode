@@ -1,7 +1,7 @@
 tests
 testRun2
     | result doit x |
-    self installPrintBlocks.
+    self pushPrintBlocks.
     self topez commandOptions level: 1.
     doit := '{ 1. 0. -1. {true. false.}. (''a'' -> 42) }'.
     result := self runNoError: doit.

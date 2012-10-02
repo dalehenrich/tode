@@ -1,3 +1,3 @@
-accessing
+accessing printing
 printBlocks: aDictionary
-    printBlocks := aDictionary
+    PrintBlocks := aDictionary
