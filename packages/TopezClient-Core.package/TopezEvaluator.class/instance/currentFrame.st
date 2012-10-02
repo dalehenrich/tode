@@ -1,3 +1,3 @@
 proxy frame
 currentFrame
-    ^ self exception stack named at: #'currentFrame'
+    ^ self exception stack currentFrame
