@@ -1,3 +1,4 @@
 accessing
 sessionDescription
-    ^ self defaultSessionDescription
+    sessionDescription ifNil: [ self defaultSessionDescription ].
+    ^ sessionDescription

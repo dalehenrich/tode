@@ -1,0 +1,14 @@
+{
+	"category" : "TopezClient-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZClientTopezTests",
+	"pools" : [
+		 ],
+	"super" : "TZClientTests",
+	"type" : "normal" }

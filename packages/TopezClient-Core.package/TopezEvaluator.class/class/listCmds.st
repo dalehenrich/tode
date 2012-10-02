@@ -8,8 +8,7 @@ listCmds
             tokens size = 1
                 ifTrue: [ 
                     | method |
-                    self halt: 'confusion between currentFrame and indexOfCurrentFrame ... need two methods'.
-                    method := (evaluator stack indexed at: evaluator currentFrame) named at: #'method'.
+                    method := (evaluator stack indexed at: evaluator currentFrameIndex) named at: #'method'.
                     topez sourceForMethod: method ]
                 ifFalse: [ 
                     | sub selector block |

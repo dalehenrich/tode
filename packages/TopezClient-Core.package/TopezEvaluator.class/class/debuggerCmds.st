@@ -28,7 +28,7 @@ debuggerCmds
                             | context |
                             context := evaluator context.
                             evaluator exception: nil.
-                            topez stepWith: context level: evaluator currentFrame ];
+                            topez stepWith: context level: evaluator currentFrameIndex ];
                 at: #'into'
                     put: [ :evaluator :topez :tokens | 
                             | context |

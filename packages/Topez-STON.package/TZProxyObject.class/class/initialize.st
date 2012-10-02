@@ -8,7 +8,7 @@ initialize
             forClass: 'TZStack'
             put: [ :proxy :aStream :indent | 
                     | currentFrame stack indexed |
-                    currentFrame := proxy named at: #'currentFrame'.
+                    currentFrame := proxy named at: #'currentFrameIndex'.
                     stack := proxy indexed.
                     indexed := proxy indexed.
                     1 to: indexed size do: [ :frameIndex | 

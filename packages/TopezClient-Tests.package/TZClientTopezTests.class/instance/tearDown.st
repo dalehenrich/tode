@@ -1,4 +1,4 @@
 running
 tearDown
     super tearDown.
-    self popPrintBlocks
+    self topez logout
