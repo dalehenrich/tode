@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"currentFrame" ],
+		"currentFrame",
+		"currentFrameIndex" ],
 	"name" : "TZStack",
 	"pools" : [
 		 ],
