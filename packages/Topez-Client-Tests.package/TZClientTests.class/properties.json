@@ -1,13 +1,14 @@
 {
-	"category" : "Topez-CommonTests",
+	"category" : "Topez-Client-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TZSTONTests",
+		"topez",
+		"sessionDescription" ],
+	"name" : "TZClientTests",
 	"pools" : [
 		 ],
 	"super" : "TestCase",
