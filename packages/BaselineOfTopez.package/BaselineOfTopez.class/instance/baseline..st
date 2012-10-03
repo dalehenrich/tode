@@ -7,13 +7,13 @@ baseline: spec
             spec baseline: 'Ston'.
             spec
                 package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
-                package: 'Topez-CommonTests' with: [ spec requires: #('Topez-Common-Core') ];
-                package: 'TopezClient-Core' with: [ spec requires: #('Topez-Common-Core') ];
-                package: 'TopezClient-Tests' with: [ spec requires: #('TopezClient-Core' 'Topez-CommonTests') ];
+                package: 'Topez-Common-Tests' with: [ spec requires: #('Topez-Common-Core') ];
+                package: 'Topez-Client-Core' with: [ spec requires: #('Topez-Common-Core') ];
+                package: 'Topez-Client-Tests' with: [ spec requires: #('Topez-Client-Core' 'Topez-Common-Tests') ];
                 yourself.
             spec
-                group: 'Client' with: #('TopezClient-Core');
-                group: 'Client Tests' with: #('TopezClient-Tests');
+                group: 'Client' with: #('Topez-Client-Core');
+                group: 'Client Tests' with: #('Topez-Client-Tests');
                 group: 'Dev' with: #('Client Tests');
                 yourself ].
     spec
@@ -34,7 +34,7 @@ baseline: spec
                                 includes: #('GemTools-ClientPlatform');
                                 requires: #('GemTools-ClientGCI') ];
                 package: 'GemTools-ClientPlatform' with: [ spec requires: #('GemTools-ClientSession') ];
-                package: 'TopezClient-Core' with: [ spec requires: #('GemTools-ClientSession') ];
+                package: 'Topez-Client-Core' with: [ spec requires: #('GemTools-ClientSession') ];
                 yourself.
             spec
                 group: 'default' with: #('Client');
@@ -52,12 +52,12 @@ baseline: spec
         do: [ 
             spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
             spec
-                package: 'Topez-Core' with: [ spec requires: 'Topez-Common-Core' ];
-                package: 'Topez-Tests' with: [ spec requires: #('Topez-Core' 'Topez-CommonTests') ];
+                package: 'Topez-Server-Core' with: [ spec requires: 'Topez-Common-Core' ];
+                package: 'Topez-Server-Tests' with: [ spec requires: #('Topez-Server-Core' 'Topez-Common-Tests') ];
                 yourself.
             spec
                 group: 'default' with: #('Server');
-                group: 'Server' with: #('Topez-Core');
-                group: 'Server Tests' with: #('Topez-Tests');
+                group: 'Server' with: #('Topez-Server-Core');
+                group: 'Server Tests' with: #('Topez-Server-Tests');
                 group: 'Dev' with: #('Server Tests');
                 yourself ]
