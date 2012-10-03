@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"PrintBlocks" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

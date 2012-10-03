@@ -1,3 +1,0 @@
-*topez-ston
-objectForOop
-    ^ self

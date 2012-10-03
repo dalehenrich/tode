@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"StashAccessSema" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"cliShell" ],
+	"name" : "StashShellTranscriptStream",
+	"pools" : [
+		 ],
+	"super" : "ThreadSafeTranscript",
+	"type" : "normal" }

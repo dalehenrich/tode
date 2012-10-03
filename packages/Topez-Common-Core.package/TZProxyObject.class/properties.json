@@ -1,0 +1,18 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"header",
+		"body",
+		"client",
+		"named",
+		"indexed" ],
+	"name" : "TZProxyObject",
+	"pools" : [
+		 ],
+	"super" : "TZObject",
+	"type" : "normal" }

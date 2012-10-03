@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"commandOptions",
+		"currentClass",
+		"currentCategory",
+		"currentEngine" ],
+	"name" : "TZTopez",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
