@@ -6,11 +6,10 @@ baseline: spec
         do: [ 
             spec baseline: 'Ston'.
             spec
-                package: 'Topez-STON' with: [ spec requires: #('Ston') ];
-                package: 'Topez-STONTests' with: [ spec requires: #('Topez-STON') ];
-                package: 'TopezClient-STON' with: [ spec requires: #('Topez-STON') ];
-                package: 'TopezClient-Core' with: [ spec requires: #('TopezClient-STON') ];
-                package: 'TopezClient-Tests' with: [ spec requires: #('TopezClient-Core' 'Topez-STONTests') ];
+                package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
+                package: 'Topez-CommonTests' with: [ spec requires: #('Topez-Common-Core') ];
+                package: 'TopezClient-Core' with: [ spec requires: #('Topez-Common-Core') ];
+                package: 'TopezClient-Tests' with: [ spec requires: #('TopezClient-Core' 'Topez-CommonTests') ];
                 yourself.
             spec
                 group: 'Client' with: #('TopezClient-Core');
@@ -45,16 +44,16 @@ baseline: spec
         do: [ 
             spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ].
             spec
-                package: 'Topez-STON' with: [ spec includes: #('Topez-Pharo-STON') ];
-                package: 'Topez-Pharo-STON' with: [ spec requires: #('GemTools-ClientGCI') ];
+                package: 'Topez-Common-Core' with: [ spec includes: #('Topez-Pharo-Common') ];
+                package: 'Topez-Pharo-Common' with: [ spec requires: #('GemTools-ClientGCI') ];
                 yourself ].
     spec
         for: #'gemstone'
         do: [ 
             spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
             spec
-                package: 'Topez-Core' with: [ spec requires: 'Topez-STON' ];
-                package: 'Topez-Tests' with: [ spec requires: #('Topez-Core' 'Topez-STONTests') ];
+                package: 'Topez-Core' with: [ spec requires: 'Topez-Common-Core' ];
+                package: 'Topez-Tests' with: [ spec requires: #('Topez-Core' 'Topez-CommonTests') ];
                 yourself.
             spec
                 group: 'default' with: #('Server');
