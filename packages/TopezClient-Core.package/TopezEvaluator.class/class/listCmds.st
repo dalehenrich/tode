@@ -8,7 +8,7 @@ listCmds
             tokens size = 1
                 ifTrue: [ 
                     | method |
-                    method := (evaluator stack indexed at: evaluator currentFrameIndex) named at: #'method'.
+                    method := (evaluator stack at: evaluator currentFrameIndex) named at: #'method'.
                     topez sourceForMethod: method ]
                 ifFalse: [ 
                     | sub selector block |

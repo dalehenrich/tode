@@ -1,9 +1,11 @@
 proxy
 print: proxy on: aStream indent: indent
-    <TZProxy>
-    | cf stack indexed |
-    cf := proxy currentFrame.
-    proxy do: [ :stackFrame |
-        stackFrame frameIndex = cf
+    <TZProxy: #'basic'>
+    | currentFrameIndex |
+    currentFrameIndex := proxy currentFrameIndex.
+    1 to: proxy indexed size do: [ :frameIndex | 
+        | stackFrame |
+        stackFrame := proxy at: frameIndex.
+        frameIndex = currentFrameIndex
             ifTrue: [ aStream nextPutAll: '==> ' ].
         stackFrame printOn: aStream indent: indent ]

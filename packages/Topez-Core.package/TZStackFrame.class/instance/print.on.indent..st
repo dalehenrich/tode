@@ -1,15 +1,15 @@
 proxy
 print: proxy on: aStream indent: indent
-    <TZProxyMethod>
+    <TZProxy: #'basic'>
     aStream
         tab: indent;
-        nextPutAll: (proxy named at: #'frameIndex') proxyPrintString;
+        nextPutAll: proxy frameIndex proxyPrintString;
         space;
-        nextPutAll: (proxy named at: #'inClass') className;
+        nextPutAll: proxy inClass className;
         nextPutAll: ' >> ';
-        nextPutAll: (proxy named at: #'selector') proxyPrintString;
+        nextPutAll: proxy selector proxyPrintString;
         tab: 2;
-        nextPutAll: '@' , (proxy named at: #'stepPoint') proxyPrintString;
+        nextPutAll: '@' , proxy stepPoint proxyPrintString;
         nextPutAll: ' line ';
-        nextPutAll: (proxy named at: #'stepPointLineNumber') proxyPrintString;
+        nextPutAll: proxy stepPointLineNumber proxyPrintString;
         cr
