@@ -5,12 +5,11 @@ evaluateCommand: line
     tokens isEmpty
         ifTrue: [ ^ '' ].
     [ 
-    | result |
-    result := (Commands at: (tokens at: 1) ifAbsent: [ ^ 'unknown command' asText allBold ])
-        value: self
-        value: self topezClient
-        value: tokens.
-    ^ Text string: result asString attribute: TextEmphasis italic ]
+    | commandBlock |
+    commandBlock := Commands at: (tokens at: 1) ifAbsent: [ ^ 'unknown command' asText allBold ].
+    ^ Text
+        string: (commandBlock value: self value: self topezClient value: tokens) asString
+        attribute: (TextColor color: Color blue) ]
         on: TZTopezNotification
         do: [ :ex | 
             self exception: ex exceptionProxy.

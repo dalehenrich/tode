@@ -7,5 +7,4 @@ accumulateText: line
             ^ '' ].
     collectText := false.
     promptString := oldPromptString.
-    result := accumulationAction value: inputStream.
-    ^ Text string: result asString attribute: TextEmphasis italic
+    ^ Text string: (accumulationAction value: inputStream) asString attribute: (TextColor color: Color blue)
