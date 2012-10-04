@@ -8,7 +8,7 @@ testHalt
         evaluate: '%'.
     self
         assert:
-            (x := result printString)
+            (x := result asString)
                 =
                     '[nil] a Halt occurred (error 2709)
 1 AbstractException class >> #''_signalWith:''		@6 line 25

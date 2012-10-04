@@ -3,11 +3,28 @@ renderText: attribute on: textStream indent: indent
     | printBlock |
     printBlock := self class
         at: attribute
-        forClass: self header className
+        forClass: self renderLookupKey
         ifAbsent: [ 
-            | stream |
-            stream := WriteStream on: String new.
-            self basicPrintOn: stream indent: indent.
-            textStream nextPutAll: (Text string: stream contents attribute: (TextColor color: Color blue)).
+            self header renderText: attribute on: textStream.
+            named
+                ifNotNil: [ 
+                    named
+                        keysAndValuesDo: [ :key :proxy | 
+                            textStream
+                                tab: indent;
+                                space;
+                                nextPutAll: key asString;
+                                tab: 3.
+                            proxy renderText: attribute on: textStream indent: indent + 1 ] ].
+            indexed ifNil: [ ^ self ].
+            1 to: indexed size do: [ :index | 
+                | proxy |
+                proxy := indexed at: index.
+                textStream
+                    tab: indent;
+                    nextPut: $#;
+                    nextPutAll: index printString;
+                    space.
+                proxy renderText: attribute on: textStream indent: indent + 1 ].
             ^ self ].
     printBlock value: self value: textStream value: indent

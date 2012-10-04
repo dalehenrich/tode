@@ -12,7 +12,7 @@ testHaltUpUpDownWhere
         evaluate: 'where'.
     self
         assert:
-            (x := result printString)
+            (x := result asString)
                 =
                     '1 AbstractException class >> #''_signalWith:''		@6 line 25
 ==> 2 Metaclass3 >> #''signal''		@3 line 5

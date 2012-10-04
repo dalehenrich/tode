@@ -4,6 +4,15 @@ initialize
 	self initialize"
 
     self
+        at: #'error'
+            forClass: 'TZHeaderObject'
+            put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color red) on: aStream indent: indent ];
+        at: #'breakpoint'
+            forClass: 'TZHeaderObject'
+            put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color magenta) on: aStream indent: indent ];
+        at: #'basic'
+            forClass: 'TZHeaderObject'
+            put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color blue) on: aStream indent: indent ];
         at: #'basic'
             forClass: 'TZStack'
             put: [ :stack :aStream :indent | 
@@ -13,8 +22,15 @@ initialize
                         | stackFrame |
                         stackFrame := stack at: frameIndex.
                         frameIndex = currentFrameIndex
-                            ifTrue: [ aStream nextPutAll: '==> ' ].
-                        stackFrame printOn: aStream indent: indent ] ];
+                            ifTrue: [ 
+                                aStream
+                                    nextPutAll:
+                                        (Text
+                                            string: '==> '
+                                            attributes:
+                                                {(TextEmphasis bold).
+                                                (TextColor red)}) ].
+                        stackFrame renderText: #'basic' on: aStream indent: indent ] ];
         at: #'basic'
             forClass: 'TZStackFrame'
             put: [ :proxy :aStream :indent | 
@@ -22,9 +38,19 @@ initialize
                         tab: indent;
                         nextPutAll: proxy frameIndex proxyPrintString;
                         space;
-                        nextPutAll: proxy inClass className;
-                        nextPutAll: ' >> ';
-                        nextPutAll: proxy selector proxyPrintString;
+                        nextPutAll: (Text string: proxy inClass className attribute: TextEmphasis bold);
+                        nextPutAll:
+                                (Text
+                                        string: ' >> '
+                                        attributes:
+                                            {(TextEmphasis bold).
+                                            (TextColor gray)});
+                        nextPutAll:
+                                (Text
+                                        string: proxy selector proxyPrintString
+                                        attributes:
+                                            {(TextEmphasis bold).
+                                            (TextColor blue)});
                         tab: 2;
                         nextPutAll: '@' , proxy stepPoint proxyPrintString;
                         nextPutAll: ' line ';
@@ -33,5 +59,5 @@ initialize
         at: #'basic'
             forClasses: #('TZProxyError' 'TZProxyBreakpoint')
             put: [ :proxy :aStream :indent | 
-                    proxy header printOn: aStream.
-                    (proxy stack at: 1) printOn: aStream ]
+                    proxy header renderText: proxy renderAttribute on: aStream.
+                    (proxy stack at: 1) renderTextOn: aStream ]

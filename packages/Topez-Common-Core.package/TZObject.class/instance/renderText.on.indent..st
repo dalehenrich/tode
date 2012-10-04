@@ -3,6 +3,6 @@ renderText: attribute on: textStream indent: indent
     | printBlock |
     printBlock := self class
         at: attribute
-        forClass: self class name asString
+        forClass: self renderLookupKey
         ifAbsent: [ ^ self basicPrintOn: textStream indent: indent ].
     printBlock value: self value: textStream value: indent

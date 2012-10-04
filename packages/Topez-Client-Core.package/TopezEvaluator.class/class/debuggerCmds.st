@@ -25,10 +25,11 @@ debuggerCmds
             (Dictionary new
                 at: #'over'
                     put: [ :evaluator :topez :tokens | 
-                            | context |
+                            | frameIndex context |
+                            frameIndex := evaluator currentFrameIndex.
                             context := evaluator context.
                             evaluator exception: nil.
-                            topez stepWith: context level: evaluator currentFrameIndex ];
+                            topez stepWith: context level: frameIndex ];
                 at: #'into'
                     put: [ :evaluator :topez :tokens | 
                             | context |

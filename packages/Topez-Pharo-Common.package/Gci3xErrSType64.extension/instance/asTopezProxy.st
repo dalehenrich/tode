@@ -1,7 +1,10 @@
 *topez-pharo-common
 asTopezProxy
-    ^ (number = ERR_Breakpoint
+    | proxyNotificationClass |
+    proxyNotificationClass := ({ERR_Breakpoint.
+    ERR_StackBreakpoint} includes: number)
         ifTrue: [ TZProxyBreakpoint ]
-        ifFalse: [ TZProxyError ]) new
+        ifFalse: [ TZProxyError ].
+    ^ proxyNotificationClass new
         body: self;
         yourself

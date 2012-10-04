@@ -1,3 +1,3 @@
 rendering
 renderTextColor
-    ^ Color magenta
+    ^ Color blue

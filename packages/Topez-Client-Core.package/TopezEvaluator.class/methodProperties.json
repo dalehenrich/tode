@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"debuggerCmds" : "dkh 10/2/2012 07:53",
+		"debuggerCmds" : "dkh 10/4/2012 14:37",
 		"editCmds" : "dkh 10/3/2012 16:48",
 		"initialize" : "dkh 10/3/2012 16:48",
 		"listCmds" : "dkh 10/2/2012 11:18",
@@ -16,7 +16,7 @@
 		"currentFrameIndex" : "dkh 10/2/2012 11:11",
 		"currentFrameIndex:" : "dkh 10/2/2012 11:09",
 		"decrementCurrentFrame" : "dkh 10/2/2012 07:54",
-		"defaultSessionDescription" : "dkh 10/4/2012 06:25",
+		"defaultSessionDescription" : "dkh 10/4/2012 12:21",
 		"defaultSessionDescription3101" : "dkh 10/1/2012 10:50",
 		"defaultSessionDescription_c3101" : "dkh 10/1/2012 10:50",
 		"defaultSessionDescription_r" : "dkh 10/1/2012 10:50",
