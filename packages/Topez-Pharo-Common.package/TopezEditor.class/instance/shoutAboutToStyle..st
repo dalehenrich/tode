@@ -1,3 +1,4 @@
 styling
-shoutAboutToStyle: aPluggableShoutMorphOrView 
-	^ self stylingActive
+shoutAboutToStyle: aPluggableShoutMorphOrView
+    aPluggableShoutMorphOrView classOrMetaClass: Object.
+    ^ self stylingActive

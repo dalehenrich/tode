@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"openContents:label:" : "dkh 10/3/2012 16:37" },
+		"openContents:label:" : "dkh 10/4/2012 16:35" },
 	"instance" : {
 		"acceptContents:" : "dkh 10/3/2012 16:44",
 		"contents:" : "dkh 10/3/2012 16:38",
 		"initialExtent" : "dkh 10/3/2012 16:38",
 		"initialize" : "dkh 10/3/2012 16:38",
 		"openLabel:" : "dkh 10/3/2012 16:40",
-		"shoutAboutToStyle:" : "dkh 10/3/2012 16:41",
+		"shoutAboutToStyle:" : "dkh 10/4/2012 16:40",
 		"stylingActive" : "dkh 10/3/2012 16:41",
 		"stylingActive:" : "dkh 10/3/2012 16:42" } }
