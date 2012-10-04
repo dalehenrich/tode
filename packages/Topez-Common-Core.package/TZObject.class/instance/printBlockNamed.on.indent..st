@@ -1,4 +1,4 @@
-printing
+rendering
 printBlockNamed: printBlockName on: aStream indent: indent
     | printBlock |
     printBlock := self class

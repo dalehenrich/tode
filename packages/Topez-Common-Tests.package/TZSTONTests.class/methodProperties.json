@@ -4,6 +4,4 @@
 	"instance" : {
 		"proxyObject1" : "dkh 10/1/2012 18:16",
 		"tearDown" : "dkh 10/1/2012 18:30",
-		"testPrintBlockAt" : "dkh 10/1/2012 18:29",
-		"testPrintBlockPushPop" : "dkh 10/1/2012 18:39",
 		"testPrintBlockPushPopPop" : "dkh 10/1/2012 18:44" } }

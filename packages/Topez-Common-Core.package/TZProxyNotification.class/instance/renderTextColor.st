@@ -1,0 +1,3 @@
+rendering
+renderTextColor
+    ^ Color red

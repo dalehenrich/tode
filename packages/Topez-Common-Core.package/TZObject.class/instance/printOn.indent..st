@@ -1,8 +1,6 @@
 printing
 printOn: aStream indent: indent
-    | printBlock |
-    printBlock := self class
-        at: #'basic'
-        forClass: self class name asString
-        ifAbsent: [ ^ self basicPrintOn: aStream indent: indent ].
-    printBlock value: self value: aStream value: indent
+    | textStream |
+    textStream := TextStream on: Text new.
+    self renderText: #'basic' on: textStream indent: indent.
+    aStream nextPutAll: textStream contents asString

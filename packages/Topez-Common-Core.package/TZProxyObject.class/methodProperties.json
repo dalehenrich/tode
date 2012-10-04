@@ -24,11 +24,9 @@
 		"named:" : "dkh 10/1/2012 18:02",
 		"objectForOop" : "dkh 9/28/2012 18:57",
 		"oop" : "dkh 9/29/2012 11:09",
-		"printBlockNamed:on:indent:" : "dkh 10/1/2012 18:28",
-		"printIndexedOn:indent:" : "dkh 10/1/2012 15:51",
-		"printNamedOn:indent:" : "dkh 10/1/2012 15:51",
 		"printOn:indent:" : "dkh 10/1/2012 16:50",
 		"proxyPrintString" : "dkh 9/30/2012 18:05",
+		"renderText:on:indent:" : "dkh 10/4/2012 08:24",
 		"signalNotifications" : "dkh 9/28/2012 12:49",
 		"stonOn:" : "dkh 9/27/2012 07:09",
 		"tzStonOn:" : "dkh 9/27/2012 04:45" } }

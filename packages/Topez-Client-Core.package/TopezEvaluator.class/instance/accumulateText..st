@@ -7,4 +7,4 @@ accumulateText: line
             ^ '' ].
     collectText := false.
     promptString := oldPromptString.
-    ^ Text string: (accumulationAction value: inputStream) asString attribute: (TextColor color: Color blue)
+    ^ (accumulationAction value: inputStream) renderText

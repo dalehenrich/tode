@@ -4,5 +4,6 @@
 	"instance" : {
 		"body:" : "dkh 9/29/2012 16:33",
 		"description" : "dkh 9/29/2012 17:14",
-		"printOn:indent:" : "dkh 10/1/2012 17:00",
+		"renderText:on:indent:" : "dkh 10/4/2012 08:23",
+		"renderTextColor" : "dkh 10/4/2012 08:21",
 		"stack" : "dkh 10/2/2012 10:18" } }
