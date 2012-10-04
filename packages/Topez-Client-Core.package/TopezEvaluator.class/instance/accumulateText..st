@@ -1,9 +1,11 @@
 evaluator engine
 accumulateText: line
+    | result |
     (line beginsWith: '%')
         ifFalse: [ 
             inputStream nextPutAll: line.
             ^ '' ].
     collectText := false.
     promptString := oldPromptString.
-    ^ accumulationAction value: inputStream
+    result := accumulationAction value: inputStream.
+    ^ Text string: result asString emphasis: TextEmphasis italic

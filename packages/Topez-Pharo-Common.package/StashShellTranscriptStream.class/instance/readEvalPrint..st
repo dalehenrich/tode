@@ -4,12 +4,12 @@ readEvalPrint: aCommandString
 	user interface to remain responsive."
 
     (self cliShell evaluate: aCommandString)
-        ifNotNil: [ :output | 
+        ifNotNil: [ :outputStringOrText | 
             | str |
-            (str := output asString) isEmpty
+            (str := outputStringOrText) isEmpty
                 ifTrue: [ self markInput ]
                 ifFalse: [ 
                     self
-                        show: output asString;
+                        show: outputStringOrText;
                         cr ] ].
     self prompt

@@ -8,4 +8,5 @@ initialize
         runCmds;
         debuggerCmds;
         listCmds;
+        editCmds;
         yourself

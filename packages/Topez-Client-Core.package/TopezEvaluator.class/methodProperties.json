@@ -1,11 +1,12 @@
 {
 	"class" : {
 		"debuggerCmds" : "dkh 10/2/2012 07:53",
-		"initialize" : "dkh 10/1/2012 20:57",
+		"editCmds" : "dkh 10/3/2012 16:48",
+		"initialize" : "dkh 10/3/2012 16:48",
 		"listCmds" : "dkh 10/2/2012 11:18",
 		"runCmds" : "dkh 10/1/2012 20:48" },
 	"instance" : {
-		"accumulateText:" : "dkh 9/30/2012 10:18",
+		"accumulateText:" : "dkh 10/3/2012 18:24",
 		"accumulateTextAndDo:" : "dkh 9/30/2012 18:33",
 		"collectText" : "dkh 9/30/2012 09:24",
 		"collectText:" : "dkh 9/30/2012 09:23",
@@ -21,7 +22,7 @@
 		"defaultSessionDescription_r" : "dkh 10/1/2012 10:50",
 		"doEndOfFile" : "dkh 9/30/2012 02:18",
 		"evaluate:" : "dkh 9/30/2012 09:25",
-		"evaluateCommand:" : "dkh 9/30/2012 18:33",
+		"evaluateCommand:" : "dkh 10/3/2012 18:21",
 		"exception" : "dkh 9/30/2012 18:32",
 		"exception:" : "dkh 10/1/2012 20:07",
 		"exit" : "dkh 10/2/2012 09:45",
