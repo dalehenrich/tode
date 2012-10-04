@@ -11,5 +11,5 @@ testHalt
             (x := result asString)
                 =
                     '[nil] a Halt occurred (error 2709)
-1 AbstractException class >> #''_signalWith:''		@6 line 25
+1 AbstractException class >> _signalWith:		@6 line 25
 '

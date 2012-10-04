@@ -11,6 +11,6 @@ testHaltAndContinueReplacingTopOfStack
         assert:
             (x := result printString)
                 =
-                   '[String] ''1''
+                   '[String] 1
 #1 [SmallInteger] 49
 '

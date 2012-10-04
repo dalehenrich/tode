@@ -9,7 +9,7 @@ testSetCategory
         assert:
             (x := currentCategory printString)
                 =
-                    '[String] ''testing''
+                    '[String] testing
 #1 [SmallInteger] 116
 #2 [SmallInteger] 101
 #3 [SmallInteger] 115

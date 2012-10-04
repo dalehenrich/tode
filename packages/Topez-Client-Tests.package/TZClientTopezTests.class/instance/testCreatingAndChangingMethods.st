@@ -52,5 +52,5 @@ testCreatingAndChangingMethods
                 assert:
                     (x := result printString)
                         =
-                            '[String] ''''
+                            '[String] 
 ' ]
