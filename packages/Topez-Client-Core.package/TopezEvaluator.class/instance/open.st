@@ -1,5 +1,7 @@
 stash
 open
+    | window |
     tty := StashShellTranscriptStream stashShell: self.
-    tty open.
+    window := tty open.
+    self stStyler view: window paneMorphs first.
     ^ tty

@@ -7,9 +7,12 @@ listCmds
         put: [ :evaluator :topez :tokens | 
             tokens size = 1
                 ifTrue: [ 
-                    | method |
+                    | method text styler |
                     method := (evaluator stack at: evaluator currentFrameIndex) named at: #'method'.
-                    topez sourceForMethod: method ]
+                    styler := evaluator stStyler.
+                    text := (topez sourceForMethod: method) asText copy.
+                    styler privateStyle: text.
+                    text ]
                 ifFalse: [ 
                     | sub selector block |
                     self halt.

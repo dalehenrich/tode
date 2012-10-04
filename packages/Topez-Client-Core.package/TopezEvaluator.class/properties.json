@@ -15,7 +15,8 @@
 		"inputStream",
 		"accumulationAction",
 		"promptString",
-		"oldPromptString" ],
+		"oldPromptString",
+		"stStyler" ],
 	"name" : "TopezEvaluator",
 	"pools" : [
 		 ],
