@@ -2,6 +2,7 @@
 	"class" : {
 		"initialize" : "dkh 10/5/2012 07:51" },
 	"instance" : {
+		"asOopTypeWith:" : "dkh 10/5/2012 08:08",
 		"at:" : "dkh 10/5/2012 07:50",
 		"basicPrintIndexedOn:indent:" : "dkh 10/5/2012 07:50",
 		"basicPrintNamedOn:indent:" : "dkh 10/5/2012 07:50",

@@ -1,3 +1,6 @@
 api
 setClass: aString
-    ^ self status currentClass: (self run: 'Smalltalk classNamed: ' , aString printString)
+    | proxy |
+    proxy := self run: 'Smalltalk classNamed: ' , aString printString.
+    self status currentClass: proxy.
+    ^ proxy

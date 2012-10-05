@@ -2,7 +2,7 @@ printBlock handling
 pushPrintBlocks
     TZObject
         at: #'basic'
-            forClass: 'TZHeaderObject'
+            forClass: 'TZHeaderGemStone'
             push: [ :proxy :aStream :indent | 
                     aStream
                         tab: indent;
@@ -13,7 +13,7 @@ pushPrintBlocks
                         nextPutAll: proxy proxyPrintString;
                         cr ];
         at: #'error'
-            forClass: 'TZHeaderObject'
+            forClass: 'TZHeaderGemStone'
             put: [ :proxy :aStream :indent | 
                     aStream
                         tab: indent;
@@ -24,7 +24,7 @@ pushPrintBlocks
                         nextPutAll: proxy proxyPrintString;
                         cr ];
         at: #'breakpoint'
-            forClass: 'TZHeaderObject'
+            forClass: 'TZHeaderGemStone'
             put: [ :proxy :aStream :indent | 
                     aStream
                         tab: indent;
