@@ -1,3 +1,4 @@
 accessing
 session
-    ^ self
+    session ifNil: [ session := TopezPharoSession new ].
+    ^ session

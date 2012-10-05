@@ -4,6 +4,7 @@ run: aString
 
     | result |
     result := self executeCommand: (TZTopezRunCmd new doit: aString).
-    result topezClient: self.
-    result signalNotifications.
     ^ result
+        topezClient: self;
+        signalNotifications;
+        yourself

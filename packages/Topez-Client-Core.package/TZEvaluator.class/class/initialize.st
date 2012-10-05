@@ -1,6 +1,6 @@
 class initialization
 initialize
-    "TZGemStoneEvaluator initialize.
+    "TZGsEvaluator initialize.
 	TZNativeEvaluator initialize"
 
     commands := Dictionary new.

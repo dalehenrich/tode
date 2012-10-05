@@ -1,3 +1,3 @@
-*topez-common-core
+*topez-server-core
 tzProxyClass
     ^ TZProxyGemStone

@@ -1,10 +1,8 @@
 {
 	"class" : {
-		"put:onStream:withOptions:" : "dkh 10/5/2012 08:38",
-		"toString:" : "dkh 10/5/2012 08:37",
-		"toString:level:" : "dkh 10/5/2012 08:38",
-		"toString:withOptions:" : "dkh 10/5/2012 08:37",
-		"writer" : "dkh 10/5/2012 08:38" },
+		 },
 	"instance" : {
-		"run:" : "dkh 10/5/2012 08:39",
-		"session" : "dkh 10/5/2012 08:26" } }
+		"doInSession:" : "dkh 10/5/2012 11:17",
+		"run:" : "dkh 10/5/2012 11:24",
+		"session" : "dkh 10/5/2012 10:40",
+		"stackFor:" : "dkh 10/5/2012 13:45" } }

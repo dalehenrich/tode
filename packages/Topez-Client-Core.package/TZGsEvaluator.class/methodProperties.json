@@ -1,11 +1,12 @@
 {
 	"class" : {
-		 },
+		"defaultSessionDescription" : "dkh 10/5/2012 09:56",
+		"defaultSessionDescription3101" : "dkh 10/5/2012 09:56",
+		"defaultSessionDescription:" : "dkh 10/5/2012 09:56",
+		"defaultSessionDescription_c3101" : "dkh 10/5/2012 09:56",
+		"defaultSessionDescription_r" : "dkh 10/5/2012 09:56" },
 	"instance" : {
-		"defaultSessionDescription" : "dkh 10/4/2012 17:54",
-		"defaultSessionDescription3101" : "dkh 10/1/2012 10:50",
-		"defaultSessionDescription_c3101" : "dkh 10/1/2012 10:50",
-		"defaultSessionDescription_r" : "dkh 10/1/2012 10:50",
+		"defaultSessionDescription" : "dkh 10/5/2012 09:56",
 		"exit" : "dkh 10/2/2012 09:45",
 		"initTopezClient" : "dkh 10/5/2012 08:20",
 		"logout" : "dkh 10/2/2012 09:45",

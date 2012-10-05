@@ -5,13 +5,13 @@ initialize
 
     self
         at: #'error'
-            forClass: 'TZHeaderObject'
+            forClasses: #('TZHeaderObject' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color red) on: aStream indent: indent ];
         at: #'breakpoint'
-            forClass: 'TZHeaderObject'
+            forClasses: #('TZHeaderObject' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color magenta) on: aStream indent: indent ];
         at: #'basic'
-            forClass: 'TZHeaderObject'
+            forClasses: #('TZHeaderObject' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color blue) on: aStream indent: indent ];
         at: #'basic'
             forClass: 'TZStack'
@@ -55,6 +55,27 @@ initialize
                         nextPutAll: '@' , proxy stepPoint proxyPrintString;
                         nextPutAll: ' line ';
                         nextPutAll: proxy stepPointLineNumber proxyPrintString;
+                        cr ];
+        at: #'basic'
+            forClass: 'TZNativeStackFrame'
+            put: [ :proxy :aStream :indent | 
+                    aStream
+                        tab: indent;
+                        nextPutAll: proxy frameIndex proxyPrintString;
+                        space;
+                        nextPutAll: (Text string: proxy inClass className attribute: TextEmphasis bold);
+                        nextPutAll:
+                                (Text
+                                        string: ' >> '
+                                        attributes:
+                                            {(TextEmphasis bold).
+                                            (TextColor gray)});
+                        nextPutAll:
+                                (Text
+                                        string: proxy selector proxyPrintString
+                                        attributes:
+                                            {(TextEmphasis bold).
+                                            (TextColor blue)});
                         cr ];
         at: #'basic'
             forClasses: #('TZProxyError' 'TZProxyBreakpoint')

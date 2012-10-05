@@ -1,3 +1,3 @@
 session management
 defaultSessionDescription
-    ^ self defaultSessionDescription3101
+    ^ self class defaultSessionDescription
