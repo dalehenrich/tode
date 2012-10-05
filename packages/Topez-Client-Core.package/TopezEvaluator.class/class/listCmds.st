@@ -15,7 +15,6 @@ listCmds
                     text ]
                 ifFalse: [ 
                     | sub selector block |
-                    self halt.
                     sub := (selector := tokens at: 2) asSymbol.
                     block := (SubCommands at: #'list') at: sub ifAbsent: [  ].
                     block == nil
@@ -33,4 +32,5 @@ listCmds
         put:
             (Dictionary new
                 at: #'method:' put: [ :evaluator :topez :tokens |  ];
+                at: #'selectors' put: [ :evaluator :topez :tokens |  ];
                 yourself)

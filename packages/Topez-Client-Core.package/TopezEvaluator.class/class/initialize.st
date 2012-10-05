@@ -7,6 +7,8 @@ initialize
     self
         runCmds;
         debuggerCmds;
-        listCmds;
         editCmds;
+        listCmds;
+        runCmds;
+        statusCmds;
         yourself

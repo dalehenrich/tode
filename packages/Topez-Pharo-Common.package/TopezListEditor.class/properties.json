@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"stylingActive" ],
-	"name" : "TopezEditor",
+		"list",
+		"listIndex" ],
+	"name" : "TopezListEditor",
 	"pools" : [
 		 ],
-	"super" : "StringHolder",
+	"super" : "Model",
 	"type" : "normal" }

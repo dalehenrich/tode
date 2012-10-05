@@ -16,7 +16,8 @@
 		"accumulationAction",
 		"promptString",
 		"oldPromptString",
-		"stStyler" ],
+		"stStyler",
+		"status" ],
 	"name" : "TopezEvaluator",
 	"pools" : [
 		 ],
