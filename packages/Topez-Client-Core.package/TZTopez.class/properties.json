@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Client-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"status",
+		"commandOptions" ],
+	"name" : "TZTopez",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

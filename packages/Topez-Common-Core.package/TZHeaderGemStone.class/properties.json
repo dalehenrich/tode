@@ -1,0 +1,20 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"oop",
+		"size",
+		"namedSize",
+		"indexedSize",
+		"classOop",
+		"className",
+		"printString" ],
+	"name" : "TZHeaderGemStone",
+	"pools" : [
+		 ],
+	"super" : "TZHeaderObject",
+	"type" : "normal" }

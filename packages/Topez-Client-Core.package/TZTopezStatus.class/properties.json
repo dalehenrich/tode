@@ -1,0 +1,19 @@
+{
+	"category" : "Topez-Client-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project",
+		"package",
+		"currentClass",
+		"classOrInstance",
+		"category",
+		"selector" ],
+	"name" : "TZTopezStatus",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

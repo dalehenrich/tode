@@ -1,0 +1,3 @@
+proxy exception
+exception
+    ^ exception

@@ -1,0 +1,24 @@
+{
+	"category" : "Topez-Client-Core",
+	"classinstvars" : [
+		"commands",
+		"subCommands" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topezClient",
+		"tty",
+		"exception",
+		"collectText",
+		"inputStream",
+		"accumulationAction",
+		"promptString",
+		"oldPromptString",
+		"stStyler",
+		"status" ],
+	"name" : "TZEvaluator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

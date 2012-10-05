@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Client-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZNativeEvaluator",
+	"pools" : [
+		 ],
+	"super" : "TZEvaluator",
+	"type" : "normal" }

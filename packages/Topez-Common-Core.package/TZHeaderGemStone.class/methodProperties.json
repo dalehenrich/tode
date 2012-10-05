@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"on:" : "dkh 9/27/2012 04:46",
+		"oop:" : "dkh 9/28/2012 08:14",
+		"oop:indexedSize:namedSize:printString:classOop:className:" : "dkh 9/28/2012 08:06" },
+	"instance" : {
+		"asOopTypeWith:" : "dkh 9/28/2012 14:58",
+		"basicPrintOn:indent:" : "dkh 9/30/2012 11:06",
+		"className" : "dkh 9/29/2012 11:08",
+		"classOop" : "dkh 9/29/2012 11:00",
+		"indexedSize" : "dkh 9/27/2012 05:59",
+		"leadingChar" : "dkh 9/28/2012 11:49",
+		"namedSize" : "dkh 9/27/2012 05:58",
+		"objectForOop" : "dkh 9/28/2012 19:00",
+		"on:" : "dkh 10/4/2012 16:25",
+		"oop" : "dkh 9/29/2012 11:00",
+		"oop:indexedSize:namedSize:printString:classOop:className:" : "dkh 9/28/2012 08:06",
+		"proxyOop" : "dkh 10/4/2012 14:55",
+		"proxyPrintString" : "dkh 9/29/2012 13:44",
+		"proxySize" : "dkh 10/4/2012 14:55",
+		"renderWith:on:indent:" : "dkh 10/4/2012 15:21",
+		"trailingChar" : "dkh 9/28/2012 11:50" } }
