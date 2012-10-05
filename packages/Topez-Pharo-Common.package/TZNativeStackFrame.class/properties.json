@@ -7,9 +7,10 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"context",
-		"frameIndex" ],
+		"frameIndex",
+		"process" ],
 	"name" : "TZNativeStackFrame",
 	"pools" : [
 		 ],
 	"super" : "Object",
-	"type" : "variable" }
+	"type" : "normal" }
