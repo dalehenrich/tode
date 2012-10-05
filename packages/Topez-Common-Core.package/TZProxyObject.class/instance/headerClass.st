@@ -1,0 +1,3 @@
+initialization
+headerClass
+    self subclassResponsibility
