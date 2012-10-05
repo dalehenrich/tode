@@ -17,9 +17,9 @@ asTopezProxy
     named := Dictionary new.
     proxy named: named.
     named
-        at: #'category' put: (proxyNotificationClass new header: (TZHeaderGemStone oop: self category asOop));
+        at: #'category' put: (TZProxyGemStone new header: (TZHeaderGemStone oop: self category asOop));
         at: #'number' put: self number asTopezProxy;
-        at: #'context' put: (proxyNotificationClass new header: (TZHeaderGemStone oop: self context asOop));
+        at: #'context' put: (TZProxyGemStone new header: (TZHeaderGemStone oop: self context asOop));
         at: #'args'
             put:
                 (self args asTopezProxy

@@ -12,5 +12,5 @@ asTopezProxy
         | messageName selector |
         messageName := messageMap at: index.
         selector := messageMap at: index + 1.
-        named at: messageName put: (proxyNotificationClass new header: (TZHeaderNative on: (self perform: selector))) ].
+        named at: messageName put: (TZProxyNative new header: (TZHeaderNative on: (self perform: selector))) ].
     ^ proxy

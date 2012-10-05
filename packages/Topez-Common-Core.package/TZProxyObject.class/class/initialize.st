@@ -5,13 +5,13 @@ initialize
 
     self
         at: #'error'
-            forClasses: #('TZHeaderObject' 'TZHeaderNative')
+            forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color red) on: aStream indent: indent ];
         at: #'breakpoint'
-            forClasses: #('TZHeaderObject' 'TZHeaderNative')
+            forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color magenta) on: aStream indent: indent ];
         at: #'basic'
-            forClasses: #('TZHeaderObject' 'TZHeaderNative')
+            forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color blue) on: aStream indent: indent ];
         at: #'basic'
             forClass: 'TZStack'
@@ -55,7 +55,11 @@ initialize
                         nextPutAll: '@' , proxy stepPoint proxyPrintString;
                         nextPutAll: ' line ';
                         nextPutAll: proxy stepPointLineNumber proxyPrintString;
-                        cr ];
+                        cr;
+                        tab: indent + 1;
+                        nextPutAll: 'receiver';
+                        space.
+                    proxy receiver renderText: #'basic' on: aStream ];
         at: #'basic'
             forClass: 'TZNativeStackFrame'
             put: [ :proxy :aStream :indent | 
@@ -76,9 +80,11 @@ initialize
                                         attributes:
                                             {(TextEmphasis bold).
                                             (TextColor blue)});
-                        cr ];
+                        cr;
+                        tab: indent + 1;
+                        nextPutAll: 'receiver';
+                        space.
+                    proxy receiver renderText: #'basic' on: aStream ];
         at: #'basic'
             forClasses: #('TZProxyError' 'TZProxyBreakpoint')
-            put: [ :proxy :aStream :indent | 
-                    proxy header renderText: proxy renderAttribute on: aStream.
-                    (proxy stack at: 1) renderTextOn: aStream ]
+            put: [ :proxy :aStream :indent | proxy header renderText: proxy renderAttribute on: aStream ]

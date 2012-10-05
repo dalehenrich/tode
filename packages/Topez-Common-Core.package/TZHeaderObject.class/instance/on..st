@@ -7,7 +7,7 @@ on: anObject
         ifFalse: [ 0 ].
     namedSize := anObject class allInstVarNames size.
     indexedSize := size - namedSize.
-    printString := [ anObject asTZString ]
+    printString := [ anObject asTZString withSeparatorsCompacted ]
         on: Error
         do: [ :ignored | 'error printing' ].
     className := objectClass name asString

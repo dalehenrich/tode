@@ -1,5 +1,5 @@
-api
-stackFor: contextProxy
+debugging
+stackFor: execeptionProxy
     | stack |
-    stack := (self session stackFor: contextProxy) collect: [ :each | each asTopezProxy ].
+    stack := (self session stackFor: execeptionProxy) collect: [ :each | each asTopezProxy ].
     ^ stack asTopezProxy

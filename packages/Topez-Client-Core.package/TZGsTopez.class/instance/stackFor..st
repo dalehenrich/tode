@@ -1,10 +1,10 @@
 debugging
-stackFor: aProcessContext
+stackFor: execeptionProxy
     ^ self
         doInSession: [ :sess | 
             sess
                 receiverNB: self currentEngine
                 performNoDebug: 'stackFor:level:'
                 withArgs:
-                    {aProcessContext.
+                    {execeptionProxy context.
                     2} ]
