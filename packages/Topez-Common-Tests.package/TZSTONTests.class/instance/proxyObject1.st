@@ -1,8 +1,8 @@
 private
 proxyObject1
-    ^ TZProxyObject new
+    ^ TZProxyGemStone new
         header:
-                (TZHeaderObject
+                (TZHeaderGemStone
                         oop: 1
                         indexedSize: 1
                         namedSize: 1
@@ -13,9 +13,9 @@ proxyObject1
                 (Dictionary new
                         at: 'iv1'
                             put:
-                                (TZProxyObject new
+                                (TZProxyGemStone new
                                         header:
-                                                (TZHeaderObject
+                                                (TZHeaderGemStone
                                                         oop: 2
                                                         indexedSize: 0
                                                         namedSize: 0
@@ -25,9 +25,9 @@ proxyObject1
                                         yourself);
                         yourself);
         indexed:
-                {(TZProxyObject new
+                {(TZProxyGemStone new
                         header:
-                                (TZHeaderObject
+                                (TZHeaderGemStone
                                         oop: 3
                                         indexedSize: 0
                                         namedSize: 0

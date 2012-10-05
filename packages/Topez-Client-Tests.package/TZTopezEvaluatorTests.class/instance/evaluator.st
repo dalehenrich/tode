@@ -2,6 +2,6 @@ accessing
 evaluator
     evaluator 
         ifNil: [ 
-            evaluator := TopezEvaluator new.
+            evaluator := TZGsEvaluator new.
             evaluator sessionDescription: self sessionDescription ].
     ^ evaluator

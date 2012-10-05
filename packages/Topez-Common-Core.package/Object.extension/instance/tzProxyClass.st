@@ -1,3 +1,3 @@
 *topez-common-core
 tzProxyClass
-    ^ TZProxyObject
+    ^ TZProxyGemStone

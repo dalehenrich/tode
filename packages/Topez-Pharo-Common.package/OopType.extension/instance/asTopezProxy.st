@@ -1,3 +1,3 @@
 *topez-pharo-common
 asTopezProxy
-    ^ TZProxyObject new header: (TZHeaderObject oop: self asOop)
+    ^ TZProxyGemStone new header: (TZHeaderGemStone oop: self asOop)

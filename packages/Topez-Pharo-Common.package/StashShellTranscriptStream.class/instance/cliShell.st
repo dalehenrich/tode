@@ -4,6 +4,6 @@ cliShell
 
     ^ cliShell
         ifNil: [ 
-            cliShell := TopezEvaluator new
+            cliShell := TZGsEvaluator new
                 tty: self;
                 yourself ]
