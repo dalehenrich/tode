@@ -3,6 +3,12 @@ debuggerCmds
     "self initialize"
 
     Commands
+        at: 'frame'
+            put: [ :evaluator :topez :tokens | 
+                    | context |
+                    tokens size >= 2
+                        ifTrue: [ evaluator currentFrameIndex: (tokens at: 2) asNumber ].	"I want to display a lot more when we do the frame command"
+                    evaluator exception stack at: evaluator currentFrameIndex ];
         at: 'continue'
             put: [ :evaluator :topez :tokens | 
                     | context |
