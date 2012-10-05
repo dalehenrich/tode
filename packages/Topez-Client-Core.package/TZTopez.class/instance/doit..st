@@ -1,2 +1,0 @@
-execution
-doit: aString
