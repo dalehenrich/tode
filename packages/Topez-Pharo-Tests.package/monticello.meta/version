@@ -1,0 +1,1 @@
+(name 'Topez-Pharo-Tests-dkh.1' message 'implement `list method:` and `list classmethod:` commands ... get variants too, add TZNativeEvaluator tests' id 'b09d9b1c-93b8-4580-9ecf-9c27bdb1f3a2' date '5 October 2012' time '8:54:50.375 pm' author 'dkh' ancestors () stepChildren ())

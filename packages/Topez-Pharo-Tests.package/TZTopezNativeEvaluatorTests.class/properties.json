@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"evaluator" ],
+	"name" : "TZTopezNativeEvaluatorTests",
+	"pools" : [
+		 ],
+	"super" : "TZClientTests",
+	"type" : "normal" }

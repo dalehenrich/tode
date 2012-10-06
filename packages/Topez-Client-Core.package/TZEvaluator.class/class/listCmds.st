@@ -32,6 +32,8 @@ listCmds
         at: #'list'
         put:
             (Dictionary new
-                at: #'method:' put: [ :evaluator :topez :tokens |  ];
+                at: #'classes' put: [ :evaluator :topez :tokens |  ];
+                at: #'method:' put: [ :evaluator :topez :tokens | topez sourceForMethod: (tokens at: 3) ];
+                at: #'classmethod:' put: [ :evaluator :topez :tokens | topez sourceForClassMethod: (tokens at: 3) ];
                 at: #'selectors' put: [ :evaluator :topez :tokens |  ];
                 yourself)

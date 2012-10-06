@@ -46,6 +46,10 @@ baseline: spec
             spec
                 package: 'Topez-Common-Core' with: [ spec includes: #('Topez-Pharo-Common') ];
                 package: 'Topez-Pharo-Common' with: [ spec requires: #('GemTools-ClientGCI') ];
+                package: 'Topez-Pharo-Tests' with: [ spec requires: #('Topez-Client-Tests') ];
+                yourself.
+            spec
+                group: 'Client Tests' with: #('Topez-Client-Tests');
                 yourself ].
     spec
         for: #'gemstone'

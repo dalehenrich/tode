@@ -1,3 +1,5 @@
 coding
-sourceForMethod: methodProxy
-    ^ self rawInSession: [ :sess | sess sourceForMethod: methodProxy ]
+sourceForMethod: selector
+    self currentClass == nil
+        ifTrue: [ self error: 'currentClass  must be set' ].
+    ^ self rawInSession: [ :sess | sess sourceForMethod: selector inClass: self currentClass ]

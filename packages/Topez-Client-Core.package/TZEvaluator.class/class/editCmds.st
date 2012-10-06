@@ -34,7 +34,16 @@ editCmds
                     put: [ :evaluator :topez :tokens | 
                             TopezCodeEditor openContents: (topez classDefinition: evaluator status currentClass) label: 'Class'.
                             '' ];
-                at: #'method:' put: [ :evaluator :topez :tokens |  ];
+                at: #'method:'
+                    put: [ :evaluator :topez :tokens | 
+                            | source |
+                            source := (subCommands at: #'method:') value: evaluator value: topez value: tokens.
+                            TopezCodeEditor openContents: source label: 'Method' ];
+                at: #'classmethod:'
+                    put: [ :evaluator :topez :tokens | 
+                            | source |
+                            source := (subCommands at: #'classmethod:') value: evaluator value: topez value: tokens.
+                            TopezCodeEditor openContents: source label: 'Method' ];
                 at: #'selectors'
                     put: [ :evaluator :topez :tokens | 
                             TopezListEditor

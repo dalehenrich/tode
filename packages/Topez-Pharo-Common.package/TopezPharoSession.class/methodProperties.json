@@ -11,5 +11,7 @@
 		"compileClassMethod:class:category:" : "dkh 10/5/2012 17:17",
 		"compileMethod:class:category:" : "dkh 10/5/2012 17:10",
 		"evaluate:" : "dkh 10/5/2012 14:25",
+		"sourceForClassMethod:inClass:" : "dkh 10/5/2012 19:48",
 		"sourceForMethod:" : "dkh 10/5/2012 16:04",
+		"sourceForMethod:inClass:" : "dkh 10/5/2012 19:48",
 		"stackFor:" : "dkh 10/5/2012 14:27" } }
