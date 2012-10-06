@@ -2,4 +2,4 @@ initialization
 initialExtent
     "Start small.  Window aspect ratio is 5 sqrt::1 . Good asthetics. -wiz"
 
-    ^ 250 @ 200
+    ^ 350 @ 400

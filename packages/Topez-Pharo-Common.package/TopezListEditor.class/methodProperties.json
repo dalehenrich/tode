@@ -3,13 +3,20 @@
 		"openList:label:" : "dkh 10/4/2012 19:17" },
 	"instance" : {
 		"buildListMorph" : "dkh 10/4/2012 19:06",
-		"initialExtent" : "dkh 10/6/2012 03:57",
+		"initialExtent" : "dkh 10/6/2012 13:40",
+		"initialize" : "dkh 10/6/2012 13:39",
+		"isCodeEditor" : "dkh 10/6/2012 13:26",
+		"isListEditor" : "dkh 10/6/2012 13:26",
+		"label:" : "dkh 10/6/2012 13:38",
+		"labelString" : "dkh 10/6/2012 13:38",
 		"list" : "dkh 10/4/2012 19:19",
-		"list:" : "dkh 10/4/2012 19:07",
+		"list:" : "dkh 10/6/2012 13:43",
 		"listIndex" : "dkh 10/4/2012 19:19",
 		"listIndex:" : "dkh 10/4/2012 19:30",
 		"listKeystroke:" : "dkh 10/4/2012 19:09",
 		"listKeystrokeDown" : "dkh 10/4/2012 19:10",
 		"listKeystrokeUp" : "dkh 10/4/2012 19:10",
 		"ok" : "dkh 10/4/2012 19:23",
-		"openLabel:" : "dkh 10/4/2012 19:05" } }
+		"openLabel:" : "dkh 10/6/2012 13:38",
+		"windowId" : "dkh 10/6/2012 13:39",
+		"windowId:" : "dkh 10/6/2012 13:39" } }

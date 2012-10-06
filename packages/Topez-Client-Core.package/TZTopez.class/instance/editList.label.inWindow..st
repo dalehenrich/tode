@@ -1,20 +1,19 @@
 editting
-editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowIdOrNil
+editList: aCollectionOfStringsOrText label: labelString inWindow: windowIdOrNil
     | windowId label |
     windowId := windowIdOrNil ifNil: [ windowId := self currentWindowId ].
     self currentWindowId: windowId.
     label := windowId asString , ': ' , labelString.
     (self status windowAt: windowId)
         ifNotNil: [ :window | 
-            window isListEditor
-                ifTrue: [ ^ 'select a code editor' ].
+            window isCodeEditor
+                ifTrue: [ ^ 'select a list editor' ].
             window
-                classOrMetaClass: classProxy asBehavior;
-                contents: aStringOrText;
+                list: aCollectionOfStringsOrText;
                 label: label ]
         ifNil: [ 
             | window |
-            window := TopezCodeEditor openContents: aStringOrText inClass: classProxy asBehavior label: label.
+            window := TopezListEditor openList: aCollectionOfStringsOrText label: label.
             window windowId: windowId.
             self status windowAt: windowId put: window ].
     ^ ''

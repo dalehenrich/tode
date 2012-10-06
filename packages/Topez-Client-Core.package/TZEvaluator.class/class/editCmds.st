@@ -10,8 +10,11 @@ editCmds
                 ifTrue: [ 
                     | method |
                     method := (evaluator stack at: evaluator currentFrameIndex) method.
-                    TopezCodeEditor openContents: (topez sourceForMethod: method) inClass: Object label: 'Method'.
-                    '' ]
+                    topez
+                        editCode: (topez sourceForMethod: method)
+                        inClass: evaluator status currentClass
+                        label: 'Method'
+                        inWindow: nil ]
                 ifFalse: [ 
                     | sub selector block theTokens windowId |
                     theTokens := tokens.
@@ -48,11 +51,11 @@ editCmds
             (Dictionary new
                 at: #'class'
                     put: [ :evaluator :topez :tokens :windowId | 
-                            TopezCodeEditor
-                                openContents: (topez classDefinition: evaluator status currentClass)
-                                inClass: topez currentClass asBehavior
-                                label: 'Class'.
-                            '' ];
+                            topez
+                                editCode: (topez classDefinition: evaluator status currentClass)
+                                inClass: evaluator status currentClass
+                                label: 'Class'
+                                inWindow: windowId ];
                 at: #'method:'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | source |
@@ -72,12 +75,23 @@ editCmds
                                 value: evaluator
                                 value: topez
                                 value: tokens.
-                            TopezCodeEditor openContents: source inClass: topez currentClass asBehavior label: 'Method' ];
+                            topez
+                                editCode: source
+                                inClass: evaluator status currentClass
+                                label: 'Method'
+                                inWindow: windowId ];
                 at: #'selectors'
                     put: [ :evaluator :topez :tokens :windowId | 
-                            TopezListEditor
-                                openList:
-                                    ((topez classInstanceSelectors: evaluator status currentClass) collect: [ :each | each proxyPrintString ])
-                                label: 'Selectors'.
-                            '' ];
+                            topez
+                                editList:
+                                    ((topez instanceSelectors: evaluator status currentClass) collect: [ :each | each proxyPrintString ])
+                                label: 'Selectors'
+                                inWindow: windowId ];
+                at: #'cselectors'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            topez
+                                editList:
+                                    ((topez classSelectors: evaluator status currentClass) collect: [ :each | each proxyPrintString ])
+                                label: 'Class Selectors'
+                                inWindow: windowId ];
                 yourself)

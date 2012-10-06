@@ -7,7 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"list",
-		"listIndex" ],
+		"listIndex",
+		"label",
+		"windowId" ],
 	"name" : "TopezListEditor",
 	"pools" : [
 		 ],
