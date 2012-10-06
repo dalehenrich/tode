@@ -8,9 +8,14 @@
 		"classOrInstance:" : "dkh 10/4/2012 18:17",
 		"currentClass" : "dkh 10/5/2012 07:31",
 		"currentClass:" : "dkh 10/5/2012 07:31",
+		"currentWindowId" : "dkh 10/6/2012 04:57",
+		"currentWindowId:" : "dkh 10/6/2012 04:58",
+		"initialize" : "dkh 10/6/2012 05:14",
 		"package" : "dkh 10/4/2012 18:04",
 		"package:" : "dkh 10/4/2012 18:04",
 		"project" : "dkh 10/4/2012 18:05",
 		"project:" : "dkh 10/4/2012 18:05",
 		"selector" : "dkh 10/4/2012 18:18",
-		"selector:" : "dkh 10/4/2012 18:18" } }
+		"selector:" : "dkh 10/4/2012 18:18",
+		"windowAt:" : "dkh 10/6/2012 04:18",
+		"windowAt:put:" : "dkh 10/6/2012 04:22" } }

@@ -11,7 +11,9 @@
 		"currentClass",
 		"classOrInstance",
 		"category",
-		"selector" ],
+		"selector",
+		"currentWindowId",
+		"windows" ],
 	"name" : "TZTopezStatus",
 	"pools" : [
 		 ],
