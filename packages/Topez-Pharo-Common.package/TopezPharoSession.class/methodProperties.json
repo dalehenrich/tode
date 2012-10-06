@@ -6,5 +6,10 @@
 		"toString:withOptions:" : "dkh 10/5/2012 10:42",
 		"writer" : "dkh 10/5/2012 10:42" },
 	"instance" : {
+		"classDefinition:" : "dkh 10/5/2012 16:55",
+		"classInstanceSelectors:" : "dkh 10/5/2012 16:58",
+		"compileClassMethod:class:category:" : "dkh 10/5/2012 17:17",
+		"compileMethod:class:category:" : "dkh 10/5/2012 17:10",
 		"evaluate:" : "dkh 10/5/2012 14:25",
+		"sourceForMethod:" : "dkh 10/5/2012 16:04",
 		"stackFor:" : "dkh 10/5/2012 14:27" } }

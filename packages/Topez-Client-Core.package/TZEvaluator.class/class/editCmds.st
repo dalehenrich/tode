@@ -1,6 +1,6 @@
 command definition
 editCmds
-    "TZGemStoneEvaluator initialize.
+    "TZGsEvaluator initialize.
 	TZNativeEvaluator initialize"
 
     commands
@@ -9,7 +9,7 @@ editCmds
             tokens size = 1
                 ifTrue: [ 
                     | method |
-                    method := (evaluator stack at: evaluator currentFrameIndex) named at: #'method'.
+                    method := (evaluator stack at: evaluator currentFrameIndex) method.
                     TopezCodeEditor openContents: (topez sourceForMethod: method) inClass: Object label: 'Method'.
                     '' ]
                 ifFalse: [ 
@@ -39,7 +39,7 @@ editCmds
                     put: [ :evaluator :topez :tokens | 
                             TopezListEditor
                                 openList:
-                                    ((topez classInstanceSelectors: evaluator status selectedClass) collect: [ :each | each proxyPrintString ])
+                                    ((topez classInstanceSelectors: evaluator status currentClass) collect: [ :each | each proxyPrintString ])
                                 label: 'Selectors'.
                             '' ];
                 yourself)

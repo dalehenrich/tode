@@ -1,6 +1,6 @@
 command definition
 listCmds
-    "TZGemStoneEvaluator initialize.
+    "TZGsEvaluator initialize.
 	TZNativeEvaluator initialize"
 
     commands
@@ -9,7 +9,7 @@ listCmds
             tokens size = 1
                 ifTrue: [ 
                     | method text styler |
-                    method := (evaluator stack at: evaluator currentFrameIndex) named at: #'method'.
+                    method := (evaluator stack at: evaluator currentFrameIndex) method.
                     styler := evaluator stStyler.
                     text := (topez sourceForMethod: method) asText copy.
                     styler privateStyle: text.
