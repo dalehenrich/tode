@@ -15,8 +15,7 @@
 		"accumulationAction",
 		"promptString",
 		"oldPromptString",
-		"stStyler",
-		"status" ],
+		"stStyler" ],
 	"name" : "TZEvaluator",
 	"pools" : [
 		 ],

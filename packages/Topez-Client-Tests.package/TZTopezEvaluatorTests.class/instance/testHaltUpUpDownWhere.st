@@ -15,7 +15,7 @@ testHaltUpUpDownWhere
             (x := result asString)
                 =
                     '1 AbstractException class >> _signalWith:		@6 line 25
-	receiver [Halt] a Halt occurred (error 2709)
+	receiver [Halt] a Halt occurred (err...etc...
 ==> 2 Metaclass3 >> signal		@3 line 5
 	receiver [Halt class] Halt
 3 Object class >> halt		@2 line 5

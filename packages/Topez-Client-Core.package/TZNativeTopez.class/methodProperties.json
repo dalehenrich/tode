@@ -3,10 +3,11 @@
 		 },
 	"instance" : {
 		"classDefinition:" : "dkh 10/5/2012 16:54",
-		"classInstanceSelectors:" : "dkh 10/5/2012 16:57",
 		"classMethod:" : "dkh 10/5/2012 17:15",
+		"classSelectors:" : "dkh 10/6/2012 11:05",
 		"continueWith:" : "dkh 10/5/2012 17:19",
 		"doInSession:" : "dkh 10/5/2012 14:23",
+		"instanceSelectors:" : "dkh 10/6/2012 11:15",
 		"method:" : "dkh 10/5/2012 17:15",
 		"rawInSession:" : "dkh 10/5/2012 16:02",
 		"run:" : "dkh 10/5/2012 11:24",

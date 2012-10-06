@@ -8,8 +8,11 @@ renderText: attribute on: textStream indent: indent
             self header renderText: attribute on: textStream.
             named
                 ifNotNil: [ 
+                    | namedSize count |
                     named notEmpty
                         ifTrue: [ textStream cr ].
+                    namedSize := named size.
+                    count := 0.
                     named
                         keysAndValuesDo: [ :key :proxy | 
                             textStream
@@ -17,7 +20,10 @@ renderText: attribute on: textStream indent: indent
                                 space;
                                 nextPutAll: key asString;
                                 tab: 3.
-                            proxy renderText: attribute on: textStream indent: indent + 1 ] ].
+                            proxy renderText: attribute on: textStream indent: indent + 1.
+                            count := count + 1.
+                            count < namedSize
+                                ifTrue: [ textStream cr ] ] ].
             indexed ifNil: [ ^ self ].
             indexed notEmpty
                 ifTrue: [ textStream cr ].
@@ -29,6 +35,8 @@ renderText: attribute on: textStream indent: indent
                     nextPut: $#;
                     nextPutAll: index printString;
                     space.
-                proxy renderText: attribute on: textStream indent: indent + 1 ].
+                proxy renderText: attribute on: textStream indent: indent + 1.
+                index < indexed size
+                    ifTrue: [ textStream cr ] ].
             ^ self ].
     printBlock value: self value: textStream value: indent

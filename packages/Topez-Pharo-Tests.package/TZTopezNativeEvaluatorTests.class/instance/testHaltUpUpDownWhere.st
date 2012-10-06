@@ -14,7 +14,7 @@ testHaltUpUpDownWhere
         assert:
             (x := result asString)
                 =
-                    '1 Object class >> halt
+                   '1 Object class >> halt
 	receiver { sz:0 SmallInteger} 1
 ==> 2 UndefinedObject class >> DoIt
 	receiver { sz:0 UndefinedObject} nil
@@ -29,8 +29,8 @@ testHaltUpUpDownWhere
 7 TopezPharoSession class >> evaluate:
 	receiver { sz:0 TopezPharoSession} a TopezPharoSession
 8 BlockClosure class >> on:do:
-	receiver { sz:2 BlockClosure} [result := Compiler evaluate: aString]
+	receiver { sz:2 BlockClosure} [result := Compiler ...etc...
 9 TopezPharoSession class >> evaluate:
 	receiver { sz:0 TopezPharoSession} a TopezPharoSession
 10 BlockClosure class >> newProcess
-	receiver { sz:3 BlockClosure} [[result := Compiler evaluate: aString] on: Error , Halt do: [:ex | result := ex asTopezProxy. result client at: #process put: Processor activeProcess. semaphore signal. Processor activeProcess suspend]. semaphore signal]'
+	receiver { sz:3 BlockClosure} [[result := Compiler...etc...'
