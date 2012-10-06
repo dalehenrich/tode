@@ -1,3 +1,3 @@
 as yet unclassified
 instanceSelectors: classProxy
-    ^ classProxy native selectors collect: [ :each | each asString ]
+    ^ (classProxy native selectors collect: [ :each | each asString ]) sort
