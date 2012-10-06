@@ -9,4 +9,6 @@ basicPrintIndexedOn: aStream indent: indent
             nextPut: $#;
             nextPutAll: index printString;
             space.
-        proxy printOn: aStream indent: indent + 1 ]
+        proxy printOn: aStream indent: indent + 1.
+        index < indexed size
+            ifTrue: [ aStream cr ] ]

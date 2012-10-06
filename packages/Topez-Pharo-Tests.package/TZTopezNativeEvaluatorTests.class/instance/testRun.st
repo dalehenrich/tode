@@ -9,5 +9,4 @@ testRun
         assert:
             (x := result asString)
                 =
-                   '{ sz:0 SmallInteger} 7
-'
+                   '{ sz:0 SmallInteger} 7'

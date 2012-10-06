@@ -10,5 +10,4 @@ testHalt
         assert:
             (x := result asString)
                 =
-                    '{ sz:0 Halt} Halt
-'
+                    '{ sz:0 Halt} Halt'

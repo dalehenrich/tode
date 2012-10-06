@@ -8,6 +8,8 @@ renderText: attribute on: textStream indent: indent
             self header renderText: attribute on: textStream.
             named
                 ifNotNil: [ 
+                    named notEmpty
+                        ifTrue: [ textStream cr ].
                     named
                         keysAndValuesDo: [ :key :proxy | 
                             textStream
@@ -17,6 +19,8 @@ renderText: attribute on: textStream indent: indent
                                 tab: 3.
                             proxy renderText: attribute on: textStream indent: indent + 1 ] ].
             indexed ifNil: [ ^ self ].
+            indexed notEmpty
+                ifTrue: [ textStream cr ].
             1 to: indexed size do: [ :index | 
                 | proxy |
                 proxy := indexed at: index.

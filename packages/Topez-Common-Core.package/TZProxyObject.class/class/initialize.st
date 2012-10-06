@@ -16,9 +16,10 @@ initialize
         at: #'basic'
             forClass: 'TZStack'
             put: [ :stack :aStream :indent | 
-                    | currentFrameIndex |
+                    | currentFrameIndex size |
                     currentFrameIndex := stack currentFrameIndex.
-                    1 to: stack indexed size do: [ :frameIndex | 
+                    size := stack indexed size.
+                    1 to: size do: [ :frameIndex | 
                         | stackFrame |
                         stackFrame := stack at: frameIndex.
                         frameIndex = currentFrameIndex
@@ -30,7 +31,9 @@ initialize
                                             attributes:
                                                 {(TextEmphasis bold).
                                                 (TextColor red)}) ].
-                        stackFrame renderText: #'basic' on: aStream indent: indent ] ];
+                        stackFrame renderText: #'basic' on: aStream indent: indent.
+                        frameIndex < size
+                            ifTrue: [ aStream cr ] ] ];
         at: #'basic'
             forClass: 'TZStackFrame'
             put: [ :proxy :aStream :indent | 

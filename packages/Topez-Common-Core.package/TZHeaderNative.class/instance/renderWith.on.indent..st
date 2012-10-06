@@ -13,5 +13,4 @@ renderWith: aTextAttribute on: aStream indent: indent
     aStream
         nextPut: self trailingChar;
         space;
-        nextPutAll: (Text string: self proxyPrintString attribute: aTextAttribute);
-        cr
+        nextPutAll: (Text string: self proxyPrintString attribute: aTextAttribute)

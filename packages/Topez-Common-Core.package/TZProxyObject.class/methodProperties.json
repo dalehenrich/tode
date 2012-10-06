@@ -1,13 +1,13 @@
 {
 	"class" : {
-		"initialize" : "dkh 10/5/2012 15:31",
+		"initialize" : "dkh 10/6/2012 10:41",
 		"on:" : "dkh 10/5/2012 11:06" },
 	"instance" : {
 		"asOopTypeWith:" : "dkh 10/5/2012 08:08",
 		"at:" : "dkh 10/5/2012 07:50",
-		"basicPrintIndexedOn:indent:" : "dkh 10/5/2012 07:50",
-		"basicPrintNamedOn:indent:" : "dkh 10/5/2012 07:50",
-		"basicPrintOn:indent:" : "dkh 10/5/2012 07:50",
+		"basicPrintIndexedOn:indent:" : "dkh 10/6/2012 10:37",
+		"basicPrintNamedOn:indent:" : "dkh 10/6/2012 10:37",
+		"basicPrintOn:indent:" : "dkh 10/6/2012 10:23",
 		"body" : "dkh 10/5/2012 07:48",
 		"body:" : "dkh 10/5/2012 07:49",
 		"className" : "dkh 10/5/2012 07:50",
@@ -27,7 +27,7 @@
 		"printOn:indent:" : "dkh 10/5/2012 07:50",
 		"proxyPrintString" : "dkh 10/5/2012 07:50",
 		"renderLookupKey" : "dkh 10/5/2012 07:50",
-		"renderText:on:indent:" : "dkh 10/5/2012 07:50",
+		"renderText:on:indent:" : "dkh 10/6/2012 10:25",
 		"renderTextColor" : "dkh 10/5/2012 07:50",
 		"signalNotifications" : "dkh 10/5/2012 07:49",
 		"stonOn:" : "dkh 10/5/2012 07:51",

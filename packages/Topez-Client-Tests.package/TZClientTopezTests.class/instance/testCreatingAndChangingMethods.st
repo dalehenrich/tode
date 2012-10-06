@@ -22,8 +22,7 @@ testCreatingAndChangingMethods
                             '[Animal] anAnimal
  favoriteFood			[UndefinedObject] nil
  habitat			[UndefinedObject] nil
- name			[UndefinedObject] nil
-' ].
+ name			[UndefinedObject] nil' ].
     self
         run: 'Animal new habitat: 1'
         validate: [ :result | 
@@ -34,23 +33,8 @@ testCreatingAndChangingMethods
                             '[Animal] anAnimal
  favoriteFood			[UndefinedObject] nil
  habitat			[SmallInteger] 1
- name			[UndefinedObject] nil
-' ].
+ name			[UndefinedObject] nil' ].
     self
         run: 'Animal new habitat'
-        validate: [ :result | 
-            self
-                assert:
-                    (x := result printString)
-                        =
-                            '[UndefinedObject] nil
-' ].
-    self
-        run: 'Animal returnAsString'
-        validate: [ :result | 
-            self
-                assert:
-                    (x := result printString)
-                        =
-                            '[String] 
-' ]
+        validate: [ :result | self assert: (x := result printString) = '[UndefinedObject] nil' ].
+    self run: 'Animal returnAsString' validate: [ :result | self assert: (x := result printString) = '[String] ' ]

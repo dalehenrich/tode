@@ -10,5 +10,4 @@ basicPrintOn: aStream indent: indent
         nextPutAll: className asString;
         nextPut: self trailingChar;
         space;
-        nextPutAll: printString;
-        cr
+        nextPutAll: printString

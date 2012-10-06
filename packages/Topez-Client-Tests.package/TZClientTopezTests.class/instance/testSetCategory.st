@@ -16,5 +16,4 @@ testSetCategory
 #4 [SmallInteger] 116
 #5 [SmallInteger] 105
 #6 [SmallInteger] 110
-#7 [SmallInteger] 103
-'
+#7 [SmallInteger] 103'

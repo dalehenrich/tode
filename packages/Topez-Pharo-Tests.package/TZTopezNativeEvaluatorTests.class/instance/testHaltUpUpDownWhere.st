@@ -33,5 +33,4 @@ testHaltUpUpDownWhere
 9 TopezPharoSession class >> evaluate:
 	receiver { sz:0 TopezPharoSession} a TopezPharoSession
 10 BlockClosure class >> newProcess
-	receiver { sz:3 BlockClosure} [[result := Compiler evaluate: aString] on: Error , Halt do: [:ex | result := ex asTopezProxy. result client at: #process put: Processor activeProcess. semaphore signal. Processor activeProcess suspend]. semaphore signal]
-'
+	receiver { sz:3 BlockClosure} [[result := Compiler evaluate: aString] on: Error , Halt do: [:ex | result := ex asTopezProxy. result client at: #process put: Processor activeProcess. semaphore signal. Processor activeProcess suspend]. semaphore signal]'

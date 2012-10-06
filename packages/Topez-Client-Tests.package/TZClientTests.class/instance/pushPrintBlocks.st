@@ -10,8 +10,7 @@ pushPrintBlocks
                         nextPutAll: proxy className asString;
                         nextPut: proxy trailingChar;
                         space;
-                        nextPutAll: proxy proxyPrintString;
-                        cr ];
+                        nextPutAll: proxy proxyPrintString ];
         at: #'error'
             forClass: 'TZHeaderGemStone'
             put: [ :proxy :aStream :indent | 
@@ -21,8 +20,7 @@ pushPrintBlocks
                         nextPutAll: proxy className asString;
                         nextPut: proxy trailingChar;
                         space;
-                        nextPutAll: proxy proxyPrintString;
-                        cr ];
+                        nextPutAll: proxy proxyPrintString ];
         at: #'breakpoint'
             forClass: 'TZHeaderGemStone'
             put: [ :proxy :aStream :indent | 
@@ -32,5 +30,4 @@ pushPrintBlocks
                         nextPutAll: proxy className asString;
                         nextPut: proxy trailingChar;
                         space;
-                        nextPutAll: proxy proxyPrintString;
-                        cr ]
+                        nextPutAll: proxy proxyPrintString ]

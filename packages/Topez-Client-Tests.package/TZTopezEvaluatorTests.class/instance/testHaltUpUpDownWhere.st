@@ -33,5 +33,4 @@ testHaltUpUpDownWhere
 9 UndefinedObject >> nil		@2 line 1
 	receiver [UndefinedObject] nil
 10 Metaclass3 >> _gsReturnToC		@1 line 1
-	receiver [UndefinedObject] nil
-'
+	receiver [UndefinedObject] nil'
