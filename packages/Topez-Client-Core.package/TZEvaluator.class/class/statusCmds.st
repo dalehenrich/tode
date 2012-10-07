@@ -4,12 +4,17 @@ statusCmds
 	TZNativeEvaluator initialize"
 
     commands
+        at: 'level'
+            put: [ :evaluator :topez :tokens | 
+                    topez level: (tokens at: 2) asNumber.
+                    '' ];
         at: 'set'
-        put: [ :evaluator :topez :tokens | 
-            | sub block |
-            sub := (tokens at: 2) asSymbol.
-            block := (subCommands at: #'set') at: sub.
-            block value: evaluator value: topez value: tokens ].
+            put: [ :evaluator :topez :tokens | 
+                    | sub block |
+                    sub := (tokens at: 2) asSymbol.
+                    block := (subCommands at: #'set') at: sub.
+                    block value: evaluator value: topez value: tokens ];
+        yourself.
     subCommands
         at: #'set'
         put:
@@ -25,12 +30,15 @@ statusCmds
                                     evaluator status currentClass: (topez run: (tokens at: 3)).
                                     '' ]
                                 ifFalse: [ evaluator status currentClass ] ];
+                at: #'project'
+                    put: [ :evaluator :topez :tokens | 
+                            tokens size = 3
+                                ifTrue: [ 
+                                    evaluator status project: (topez metacelloProject: (tokens at: 3)).
+                                    '' ]
+                                ifFalse: [ topez send: 'name' to: evaluator status project withArgs: #() ] ];
                 at: #'package'
                     put: [ :evaluator :topez :tokens | 
                             evaluator status package: (tokens at: 3).
-                            '' ];
-                at: #'project'
-                    put: [ :evaluator :topez :tokens | 
-                            evaluator status project: (tokens at: 3).
                             '' ];
                 yourself)
