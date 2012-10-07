@@ -1,3 +1,0 @@
-testing
-isCodeEditor
-    ^ false

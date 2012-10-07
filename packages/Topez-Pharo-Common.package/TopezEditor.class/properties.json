@@ -6,9 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"list",
-		"listIndex" ],
-	"name" : "TopezListEditor",
+		"listEditor",
+		"codeEditor",
+		"activeEditor",
+		"label",
+		"windowId" ],
+	"name" : "TopezEditor",
 	"pools" : [
 		 ],
 	"super" : "Model",

@@ -1,21 +1,15 @@
 {
 	"class" : {
-		"openContents:inClass:label:" : "dkh 10/4/2012 20:02",
-		"openContents:label:" : "dkh 10/4/2012 20:03" },
+		 },
 	"instance" : {
 		"acceptContents:" : "dkh 10/3/2012 16:44",
 		"classOrMetaClass" : "dkh 10/4/2012 20:01",
 		"classOrMetaClass:" : "dkh 10/4/2012 20:01",
 		"contents:" : "dkh 10/3/2012 16:38",
 		"initialExtent" : "dkh 10/6/2012 04:09",
-		"initialize" : "dkh 10/6/2012 04:37",
-		"isCodeEditor" : "dkh 10/6/2012 13:26",
-		"isListEditor" : "dkh 10/6/2012 13:26",
-		"label:" : "dkh 10/6/2012 04:38",
-		"labelString" : "dkh 10/6/2012 04:37",
-		"openLabel:" : "dkh 10/6/2012 04:37",
+		"initialize" : "dkh 10/7/2012 09:01",
+		"morph" : "dkh 10/7/2012 11:31",
 		"shoutAboutToStyle:" : "dkh 10/4/2012 20:06",
 		"stylingActive" : "dkh 10/3/2012 16:41",
 		"stylingActive:" : "dkh 10/3/2012 16:42",
-		"windowId" : "dkh 10/6/2012 05:00",
-		"windowId:" : "dkh 10/6/2012 05:00" } }
+		"textMorph" : "dkh 10/7/2012 12:29" } }

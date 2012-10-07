@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"list",
-		"listIndex" ],
-	"name" : "TopezListEditor",
+		"codeMorph",
+		"listMorph" ],
+	"name" : "TZSystemWindow",
 	"pools" : [
 		 ],
-	"super" : "Model",
+	"super" : "SystemWindow",
 	"type" : "normal" }

@@ -7,9 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"stylingActive",
-		"classOrMetaClass",
-		"label",
-		"windowId" ],
+		"classOrMetaClass" ],
 	"name" : "TopezCodeEditor",
 	"pools" : [
 		 ],

@@ -38,7 +38,8 @@ editCmds
                                         value:
                                             {'list'.
                                             'method:'.
-                                            selector} ]
+                                            selector}
+                                        value: windowId ]
                                 ifFalse: [ 
                                     block
                                         value: evaluator
