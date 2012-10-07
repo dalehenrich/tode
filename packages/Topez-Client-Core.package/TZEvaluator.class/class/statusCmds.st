@@ -21,24 +21,30 @@ statusCmds
             (Dictionary new
                 at: #'category'
                     put: [ :evaluator :topez :tokens | 
-                            evaluator status category: (tokens at: 3).
-                            '' ];
+                            tokens size = 3
+                                ifTrue: [ 
+                                    topez setCategory: (tokens at: 3).
+                                    '' ]
+                                ifFalse: [ topez currentCategory ] ];
                 at: #'class'
                     put: [ :evaluator :topez :tokens | 
                             tokens size = 3
                                 ifTrue: [ 
-                                    evaluator status currentClass: (topez run: (tokens at: 3)).
+                                    topez setClass: (topez run: (tokens at: 3)).
                                     '' ]
-                                ifFalse: [ evaluator status currentClass ] ];
+                                ifFalse: [ topez currentClass ] ];
                 at: #'project'
                     put: [ :evaluator :topez :tokens | 
                             tokens size = 3
                                 ifTrue: [ 
-                                    evaluator status project: (topez metacelloProject: (tokens at: 3)).
+                                    topez setProject: (topez metacelloProject: (tokens at: 3)).
                                     '' ]
-                                ifFalse: [ topez send: 'name' to: evaluator status project withArgs: #() ] ];
+                                ifFalse: [ topez send: 'name' to: topez currentProject withArgs: #() ] ];
                 at: #'package'
                     put: [ :evaluator :topez :tokens | 
-                            evaluator status package: (tokens at: 3).
-                            '' ];
+                            tokens size = 3
+                                ifTrue: [ 
+                                    topez setPackage: (tokens at: 3).
+                                    '' ]
+                                ifFalse: [ topez currentPackage ] ];
                 yourself)
