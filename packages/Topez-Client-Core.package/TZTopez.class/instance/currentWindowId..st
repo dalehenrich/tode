@@ -3,6 +3,7 @@ currentWindowId: anInteger
     self status currentWindowId: anInteger.
     (self status windowAt: anInteger)
         ifNotNil: [ :window | 
-            window 
+            window
                 expand;
-                makeSecondTopmost ]
+                makeSecondTopmost.
+            window model updateStatus: self status ]

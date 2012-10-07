@@ -6,7 +6,7 @@
 		"initialize" : "dkh 10/5/2012 09:57",
 		"listCmds" : "dkh 10/6/2012 11:58",
 		"runCmds" : "dkh 10/5/2012 07:18",
-		"statusCmds" : "dkh 10/5/2012 07:31" },
+		"statusCmds" : "dkh 10/7/2012 13:33" },
 	"instance" : {
 		"accumulateText:" : "dkh 10/5/2012 07:28",
 		"accumulateTextAndDo:" : "dkh 10/5/2012 07:28",
@@ -28,7 +28,7 @@
 		"initTopezClient" : "dkh 10/5/2012 08:19",
 		"open" : "dkh 10/5/2012 15:16",
 		"promptString" : "dkh 10/5/2012 07:28",
-		"stStyler" : "dkh 10/5/2012 07:28",
+		"stStyler" : "dkh 10/7/2012 13:49",
 		"stack" : "dkh 10/5/2012 07:28",
 		"status" : "dkh 10/5/2012 07:34",
 		"topezClient" : "dkh 10/5/2012 08:19",

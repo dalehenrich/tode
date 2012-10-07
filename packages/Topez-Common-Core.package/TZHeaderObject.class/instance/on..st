@@ -2,11 +2,11 @@ initialize-release
 on: anObject
     | objectClass |
     objectClass := anObject class.
-    size := objectClass isVariable
+    indexedSize := objectClass isVariable
         ifTrue: [ anObject size ]
         ifFalse: [ 0 ].
     namedSize := anObject class allInstVarNames size.
-    indexedSize := size - namedSize.
+    size := namedSize + indexedSize.
     printString := [ anObject asTZString withSeparatorsCompacted ]
         on: Error
         do: [ :ignored | 'error printing' ].

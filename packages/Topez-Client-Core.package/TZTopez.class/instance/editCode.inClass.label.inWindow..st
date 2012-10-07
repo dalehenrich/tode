@@ -6,7 +6,7 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
     label := windowId asString , ': ' , labelString.
     (self windowAt: windowId) model
         activateCodeEditor;
-        classOrMetaClass: classProxy asBehavior;
+        classOrMetaClass: classProxy;
         contents: aStringOrText;
         label: label;
         windowId: windowId.

@@ -7,6 +7,7 @@ testHarness
         ifTrue: [ ^ self ].
     result := self evaluator
         evaluate: 'set class Object';
-        evaluate: 'edit method: at:put:'.
-    result := self evaluator evaluate: 'edit 1 method: at:'.
-    self assert: false
+        evaluate: 'edit method: at:put:';
+        evaluate: 'set class Association';
+        evaluate: 'edit 2 method: key:value:';
+        yourself

@@ -1,4 +1,4 @@
 styling
 shoutAboutToStyle: aPluggableShoutMorphOrView
-    aPluggableShoutMorphOrView classOrMetaClass: self classOrMetaClass.
+    classOrMetaClass ifNotNil: [ aPluggableShoutMorphOrView classOrMetaClass: self classOrMetaClass asBehavior ].
     ^ self stylingActive

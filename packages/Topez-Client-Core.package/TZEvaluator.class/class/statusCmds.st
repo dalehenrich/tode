@@ -1,6 +1,6 @@
 command definition
 statusCmds
-    "TZGemStoneEvaluator initialize.
+    "TZGsEvaluator initialize.
 	TZNativeEvaluator initialize"
 
     commands
@@ -20,8 +20,11 @@ statusCmds
                             '' ];
                 at: #'class'
                     put: [ :evaluator :topez :tokens | 
-                            evaluator status currentClass: (topez run: (tokens at: 3)).
-                            '' ];
+                            tokens size = 3
+                                ifTrue: [ 
+                                    evaluator status currentClass: (topez run: (tokens at: 3)).
+                                    '' ]
+                                ifFalse: [ evaluator status currentClass ] ];
                 at: #'package'
                     put: [ :evaluator :topez :tokens | 
                             evaluator status package: (tokens at: 3).
