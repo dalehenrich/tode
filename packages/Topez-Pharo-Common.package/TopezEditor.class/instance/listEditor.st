@@ -3,5 +3,7 @@ listEditor
     listEditor
         ifNil: [ 
             listEditor := TopezListEditor new.
-            listEditor addDependent: self ].
+            listEditor
+                editor: self;
+                addDependent: self ].
     ^ listEditor

@@ -11,7 +11,10 @@
 		"codeEditor",
 		"activeEditor",
 		"label",
-		"windowId" ],
+		"windowId",
+		"classDefinitionWindowId",
+		"classSelectorsWindowId",
+		"methodWindowId" ],
 	"name" : "TopezEditor",
 	"pools" : [
 		 ],

@@ -1,4 +1,5 @@
 accessing
 contents: stringOrText
-	contents := stringOrText.
-	self changed: #contents.
+(stringOrText isKindOf: TZSourceElement) ifTrue: [ 
+    self sourceElement: stringOrText] ifFalse: [ self halt].
+    self changed: #'contents'

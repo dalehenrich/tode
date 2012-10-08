@@ -13,5 +13,5 @@
 	"name" : "TZClassHierarchyElement",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TZElement",
 	"type" : "normal" }

@@ -7,7 +7,7 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
     (self windowAt: windowId) model
         activateCodeEditor;
         classOrMetaClass: classProxy;
-        contents: aStringOrText;
+        contents: (TZDoItElement new source: aStringOrText; yourself);
         label: label;
         windowId: windowId.
     ^ ''

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"editor" ],
+	"name" : "TopezCommonEditor",
+	"pools" : [
+		 ],
+	"super" : "Model",
+	"type" : "normal" }

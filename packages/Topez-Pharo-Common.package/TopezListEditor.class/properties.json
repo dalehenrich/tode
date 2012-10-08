@@ -11,5 +11,5 @@
 	"name" : "TopezListEditor",
 	"pools" : [
 		 ],
-	"super" : "Model",
+	"super" : "TopezCommonEditor",
 	"type" : "normal" }

@@ -4,8 +4,10 @@ update: aspect
         ifTrue: [ 
             self listEditor listIndex
                 ifNotNil: [ :listIndex | 
-                    | classElement |
-                    classElement := self listEditor list at: listIndex.
-                    self topez setClass: classElement elementName ] ].
+                    | element |
+                    element := self listEditor list at: listIndex.
+                    self topez setClass: element elementClassName ] ].
     aspect == #'listDoubleClick'
-        ifTrue: [ self listEditor listIndex ifNotNil: [ :listIndex | (self listEditor list at: listIndex) doubleClick: self topez ] ]
+        ifTrue: [ 
+            self listEditor listIndex
+                ifNotNil: [ :listIndex | (self listEditor list at: listIndex) doubleClick: self topez from: self ] ]

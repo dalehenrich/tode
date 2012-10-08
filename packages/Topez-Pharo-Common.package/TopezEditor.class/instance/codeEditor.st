@@ -3,5 +3,7 @@ codeEditor
     codeEditor
         ifNil: [ 
             codeEditor := TopezCodeEditor new.
-            codeEditor addDependent: self ].
+            codeEditor
+                editor: self;
+                addDependent: self ].
     ^ codeEditor
