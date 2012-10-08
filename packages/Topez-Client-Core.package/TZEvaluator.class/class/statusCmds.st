@@ -30,7 +30,7 @@ statusCmds
                     put: [ :evaluator :topez :tokens | 
                             tokens size = 3
                                 ifTrue: [ 
-                                    topez setClass: (topez run: (tokens at: 3)).
+                                    topez setClass: (tokens at: 3).
                                     '' ]
                                 ifFalse: [ topez currentClass ] ];
                 at: #'project'
