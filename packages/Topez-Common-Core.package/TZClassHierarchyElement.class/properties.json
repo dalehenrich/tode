@@ -6,8 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TZClassHierarchyRenderer",
+		"element",
+		"elementName",
+		"indent",
+		"inExtensionClassList" ],
+	"name" : "TZClassHierarchyElement",
 	"pools" : [
 		 ],
 	"super" : "Object",

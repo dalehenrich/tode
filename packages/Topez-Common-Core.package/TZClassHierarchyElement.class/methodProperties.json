@@ -1,9 +1,10 @@
 {
 	"class" : {
-		 },
+		"hierarchyForClasses:extensionClasses:" : "dkh 10/7/2012 21:01" },
 	"instance" : {
-		"className" : "dkh 10/7/2012 19:08",
-		"className:" : "dkh 10/7/2012 18:52",
+		"element" : "dkh 10/7/2012 21:00",
+		"element:" : "dkh 10/7/2012 21:06",
+		"elementName" : "dkh 10/7/2012 21:06",
 		"inExtensionClassList" : "dkh 10/7/2012 18:53",
 		"inExtensionClassList:" : "dkh 10/7/2012 18:53",
 		"indent" : "dkh 10/7/2012 18:53",

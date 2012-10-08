@@ -17,4 +17,4 @@ classesInMetacelloProject: projectProxy
                     wc packageInfo extensionClasses
                         do: [ :cl | extensionClasses at: cl put: (wc packageInfo extensionCategoriesForClass: cl) ] ] ]
         groupDo: [ :ignored |  ].
-    ^ TZClassHierarchyRenderer new rendererDataForClasses: classes extensionClasses: extensionClasses
+    ^ TZClassHierarchyElement hierarchyForClasses: classes extensionClasses: extensionClasses

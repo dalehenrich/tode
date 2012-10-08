@@ -14,6 +14,20 @@ initialize
             forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color blue) on: aStream indent: indent ];
         at: #'basic'
+            forClass: 'TZClassHierarchyElement'
+            put: [ :proxy :aStream :indent | 
+                    | space |
+                    space := ''.
+                    proxy indent timesRepeat: [ space := space , '   ' ].
+                    aStream
+                        nextPutAll:
+                            (Text
+                                string: space , proxy elementName
+                                attribute:
+                                    (proxy inExtensionClassList
+                                        ifTrue: [ TextEmphasis italic ]
+                                        ifFalse: [ TextEmphasis bold ])) ];
+        at: #'basic'
             forClass: 'TZStack'
             put: [ :stack :aStream :indent | 
                     | currentFrameIndex size |

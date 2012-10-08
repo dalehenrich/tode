@@ -1,5 +1,5 @@
 accessing
 list: anObject
-    list := anObject asArray.
+    list := anObject.
     listIndex := 0.
     self changed: #'list'

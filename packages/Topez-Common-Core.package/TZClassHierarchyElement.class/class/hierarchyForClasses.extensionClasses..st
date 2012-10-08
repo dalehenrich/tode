@@ -1,5 +1,5 @@
-rendering
-rendererDataForClasses: classList extensionClasses: extensionClassList
+instance creation
+hierarchyForClasses: classList extensionClasses: extensionClassList
     | order classes indents displayString results |
     order := SortedCollection
         sortBlock: [ :assoc1 :assoc2 | 
@@ -31,13 +31,12 @@ rendererDataForClasses: classList extensionClasses: extensionClassList
     results := OrderedCollection new.
     order
         do: [ :assoc | 
-            | cl |
+            | cl element |
             cl := assoc value.
-            results
-                add:
-                    (TZClassHierarchyRendererData new
-                        className: cl name asString;
-                        indent: (indents at: cl);
-                        inExtensionClassList: (extensionClassList includesKey: cl);
-                        yourself) ].
-    ^ results asArray
+            element := TZClassHierarchyElement new
+                element: cl;
+                indent: (indents at: cl);
+                inExtensionClassList: (extensionClassList includesKey: cl);
+                yourself.
+            results add: element ].
+    ^ results asArray 

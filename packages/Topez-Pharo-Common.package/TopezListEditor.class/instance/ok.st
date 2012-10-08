@@ -1,3 +1,3 @@
 updating
 ok
-    self halt
+    (self list at: self listIndex) halt

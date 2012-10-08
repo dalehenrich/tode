@@ -1,6 +1,7 @@
 accessing
-acceptContents: aString 
-	"Set aString to be the contents of the receiver.  Return true cuz happy"
+acceptContents: aString
+    "Set aString to be the contents of the receiver.  Return true cuz happy"
 
-	self contents: aString.
-	^ true
+    self contents: aString.
+    self halt.
+    ^ true

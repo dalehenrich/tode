@@ -1,12 +1,12 @@
 editting
-editList: aCollectionOfStringsOrText label: labelString inWindow: windowIdOrNil
+editList: aCollectionOfObjects label: labelString inWindow: windowIdOrNil
     | windowId label |
     windowId := windowIdOrNil ifNil: [ windowId := self currentWindowId ].
     self currentWindowId: windowId.
     label := windowId asString , ': ' , labelString.
     (self windowAt: windowId) model
         activateListEditor;
-        list: (aCollectionOfStringsOrText collect: [ :each | each proxyPrintString ]);
+        list: aCollectionOfObjects ;
         label: label;
         windowId: windowId.
     ^ ''
