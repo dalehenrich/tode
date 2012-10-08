@@ -6,7 +6,7 @@ editList: aCollectionOfStringsOrText label: labelString inWindow: windowIdOrNil
     label := windowId asString , ': ' , labelString.
     (self windowAt: windowId) model
         activateListEditor;
-        list: aCollectionOfStringsOrText;
+        list: (aCollectionOfStringsOrText collect: [ :each | each proxyPrintString ]);
         label: label;
         windowId: windowId.
     ^ ''

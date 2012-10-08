@@ -57,6 +57,14 @@ editCmds
                                 inClass: evaluator status currentClass
                                 label: 'Class'
                                 inWindow: windowId ];
+                at: #'prclasses'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list |
+                            list := ((subCommands at: #'list') at: #'prclasses')
+                                value: evaluator
+                                value: topez
+                                value: tokens.
+                            topez halt editList: list label: 'Project Classes' inWindow: windowId ];
                 at: #'method:'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | source |
@@ -82,17 +90,7 @@ editCmds
                                 label: 'Method'
                                 inWindow: windowId ];
                 at: #'selectors'
-                    put: [ :evaluator :topez :tokens :windowId | 
-                            topez
-                                editList:
-                                    ((topez instanceSelectors: evaluator status currentClass) collect: [ :each | each proxyPrintString ])
-                                label: 'Selectors'
-                                inWindow: windowId ];
+                    put: [ :evaluator :topez :tokens :windowId | topez editList: (topez instanceSelectors: evaluator status currentClass) label: 'Selectors' inWindow: windowId ];
                 at: #'cselectors'
-                    put: [ :evaluator :topez :tokens :windowId | 
-                            topez
-                                editList:
-                                    ((topez classSelectors: evaluator status currentClass) collect: [ :each | each proxyPrintString ])
-                                label: 'Class Selectors'
-                                inWindow: windowId ];
+                    put: [ :evaluator :topez :tokens :windowId | topez editList: (topez classSelectors: evaluator status currentClass) label: 'Class Selectors' inWindow: windowId ];
                 yourself)
