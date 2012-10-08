@@ -9,7 +9,6 @@ testListSelectors
         assert:
             (x := result asString)
                 =
-                    '[Array] anArray( #''executeAb...etc...
-#1 [Symbol] executeAbortCmd:
-#2 [Symbol] executeCommitCmd:
-#3 [Symbol] executeRunCmd:'
+                    'executeAbortCmd:
+executeCommitCmd:
+executeRunCmd:'
