@@ -34,7 +34,6 @@ baseline: spec
                                 includes: #('GemTools-ClientPlatform');
                                 requires: #('GemTools-ClientGCI') ];
                 package: 'GemTools-ClientPlatform' with: [ spec requires: #('GemTools-ClientSession') ];
-                package: 'Topez-Client-Core' with: [ spec requires: #('GemTools-ClientSession') ];
                 yourself.
             spec
                 group: 'default' with: #('Client');
@@ -44,12 +43,17 @@ baseline: spec
         do: [ 
             spec baseline: 'Ston' with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ].
             spec
-                package: 'Topez-Common-Core' with: [ spec includes: #('Topez-Pharo-Common') ];
-                package: 'Topez-Pharo-Common' with: [ spec requires: #('GemTools-ClientGCI') ];
+                package: 'Topez-Client-GemStone'
+                    with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common' 'GemTools-ClientGCI') ];
+                package: 'Topez-Pharo-Common';
+                package: 'Topez-Client-Pharo'
+                    with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common' 'Topez-Pharo-Client') ];
+                package: 'Topez-Pharo-Client';
                 package: 'Topez-Pharo-Tests' with: [ spec requires: #('Topez-Client-Tests') ];
                 yourself.
             spec
                 group: 'Client Tests' with: #('Topez-Client-Tests');
+                group: 'Client' with: #('Topez-Client-GemStone' 'Topez-Client-Pharo');
                 yourself ].
     spec
         for: #'gemstone'

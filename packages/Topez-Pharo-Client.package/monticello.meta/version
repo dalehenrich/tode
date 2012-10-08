@@ -1,0 +1,1 @@
+(name 'Topez-Pharo-Client-dkh.1' message 'begin job of making the pharo client and gemstone clients independently loadable ... at the point where I need to split up tests ... methinks' id '08000000-1508-5a0a-1508-5a0a14000000' date '8 October 2012' time '4:56:56.432 pm' author 'dkh' ancestors () stepChildren ())

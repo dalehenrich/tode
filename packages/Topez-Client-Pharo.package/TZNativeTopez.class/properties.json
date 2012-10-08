@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Client-Pharo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"session" ],
+	"name" : "TZNativeTopez",
+	"pools" : [
+		 ],
+	"super" : "TZTopez",
+	"type" : "normal" }
