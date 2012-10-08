@@ -53,8 +53,8 @@ editCmds
                 at: #'class'
                     put: [ :evaluator :topez :tokens :windowId | 
                             topez
-                                editCode: (topez classDefinition: evaluator status currentClass)
-                                inClass: evaluator status currentClass
+                                editCode: (topez classDefinition: topez currentClass)
+                                inClass: topez currentClass
                                 label: 'Class'
                                 inWindow: windowId ];
                 at: #'prclasses'
