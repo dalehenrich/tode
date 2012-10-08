@@ -18,16 +18,19 @@ listCmds
                     | sub selector block |
                     sub := (selector := tokens at: 2) asSymbol.
                     block := (subCommands at: #'list') at: sub ifAbsent: [  ].
-                    block == nil
-                        ifTrue: [ 
-                            ((subCommands at: #'list') at: #'method:')
-                                value: evaluator
-                                value: topez
-                                value:
-                                    {'list'.
-                                    'method:'.
-                                    selector} ]
-                        ifFalse: [ block value: evaluator value: topez value: tokens ] ] ].
+                    TZLister new
+                        listProxy:
+                                (block == nil
+                                        ifTrue: [ 
+                                            ((subCommands at: #'list') at: #'method:')
+                                                value: evaluator
+                                                value: topez
+                                                value:
+                                                    {'list'.
+                                                    'method:'.
+                                                    selector} ]
+                                        ifFalse: [ block value: evaluator value: topez value: tokens ]);
+                        yourself ] ].
     subCommands
         at: #'list'
         put:
@@ -36,8 +39,6 @@ listCmds
                 at: #'prclasses' put: [ :evaluator :topez :tokens | topez classesInMetacelloProject ];
                 at: #'method:' put: [ :evaluator :topez :tokens | topez sourceForMethod: (tokens at: 3) ];
                 at: #'classmethod:' put: [ :evaluator :topez :tokens | topez sourceForClassMethod: (tokens at: 3) ];
-                at: #'selectors'
-                    put: [ :evaluator :topez :tokens | topez instanceSelectors: evaluator status currentClass ];
-                at: #'cselectors'
-                    put: [ :evaluator :topez :tokens | topez classSelectors: evaluator status currentClass ];
+                at: #'selectors' put: [ :evaluator :topez :tokens | topez instanceSelectors: topez currentClass ];
+                at: #'cselectors' put: [ :evaluator :topez :tokens | topez classSelectors: topez currentClass ];
                 yourself)
