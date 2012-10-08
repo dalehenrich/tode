@@ -1,4 +1,4 @@
 accessing
 level
-    level ifNil: [ level := 2 ].
+    level ifNil: [ level := 1 ].
     ^ level

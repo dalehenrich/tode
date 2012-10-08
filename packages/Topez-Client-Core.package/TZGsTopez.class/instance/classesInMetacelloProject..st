@@ -1,10 +1,10 @@
 metacello
-classesInMetacelloProject
+classesInMetacelloProject: projectProxy
     ^ self
         doInSession: [ :sess | 
             sess
                 receiverNB: self currentEngine
                 performNoDebug: 'classesInMetacelloProject:level:'
                 withArgs:
-                    {(self currentProject).
+                    {projectProxy.
                     1} ]

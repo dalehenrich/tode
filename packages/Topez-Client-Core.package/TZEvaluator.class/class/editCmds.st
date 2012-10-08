@@ -64,7 +64,7 @@ editCmds
                                 value: evaluator
                                 value: topez
                                 value: tokens.
-                            topez halt editList: list label: 'Project Classes' inWindow: windowId ];
+                            topez editList: list label: 'Project Classes' inWindow: windowId ];
                 at: #'method:'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | source |
