@@ -33,7 +33,19 @@ listCmds
         put:
             (Dictionary new
                 at: #'classes' put: [ :evaluator :topez :tokens |  ];
-                at: #'prclasses' put: [ :evaluator :topez :tokens | topez classesInMetacelloProject ];
+                at: #'prclasses'
+                    put: [ :evaluator :topez :tokens | 
+                            | space |
+                            topez classesInMetacelloProject
+                                collect: [ :data | 
+                                    space := ''.
+                                    data indent timesRepeat: [ space := space , '   ' ].
+                                    Text
+                                        string: space , data className
+                                        attribute:
+                                            (data inExtensionClassList
+                                                ifTrue: [ TextEmphasis italic ]
+                                                ifFalse: [ TextEmphasis bold ]) ] ];
                 at: #'method:' put: [ :evaluator :topez :tokens | topez sourceForMethod: (tokens at: 3) ];
                 at: #'classmethod:' put: [ :evaluator :topez :tokens | topez sourceForClassMethod: (tokens at: 3) ];
                 at: #'selectors'
