@@ -10,5 +10,5 @@
 	"name" : "TZTopezNativeEvaluatorTests",
 	"pools" : [
 		 ],
-	"super" : "AnObsoleteTZClientTests",
+	"super" : "TZClientTests",
 	"type" : "normal" }
