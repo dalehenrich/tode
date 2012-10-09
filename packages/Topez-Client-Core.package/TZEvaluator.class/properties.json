@@ -8,14 +8,14 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"topezClient",
-		"tty",
 		"exception",
 		"collectText",
 		"inputStream",
 		"accumulationAction",
 		"promptString",
 		"oldPromptString",
-		"stStyler" ],
+		"stStyler",
+		"evaluatorWindow" ],
 	"name" : "TZEvaluator",
 	"pools" : [
 		 ],
