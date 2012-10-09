@@ -13,7 +13,9 @@ initialize
         at: #'basic'
             forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color blue) on: aStream indent: indent ];
-        at: #'basic' forClass: 'TZMethodElement' put: [ :proxy :aStream :indent | aStream nextPutAll: proxy selector ];
+        at: #'basic'
+            forClass: 'TZMethodElement'
+            put: [ :proxy :aStream :indent | aStream nextPutAll: proxy selector proxyPrintString ];
         at: #'basic'
             forClass: 'TZClassHierarchyElement'
             put: [ :proxy :aStream :indent | 

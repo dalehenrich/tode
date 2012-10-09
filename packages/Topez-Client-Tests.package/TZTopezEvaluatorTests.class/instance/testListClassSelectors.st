@@ -12,6 +12,7 @@ testListClassSelectors
                    'classesInMetacelloProject:level:
 executeCommandFrom:
 put:onStream:withOptions:
+selectorsForClass:inClass:level:
 stackFor:level:
 toString:
 toString:level:

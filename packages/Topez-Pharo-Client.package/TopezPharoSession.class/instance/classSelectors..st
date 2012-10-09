@@ -1,3 +1,8 @@
 api
 classSelectors: classProxy
-    ^ (classProxy native class selectors collect: [ :each | each asString ]) sort
+    ^ classProxy native class selectors sort
+        collect: [ :each | 
+            TZMethodElement new
+                methodClass: classProxy native;
+                selector: each asString;
+                yourself ]

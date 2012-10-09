@@ -7,7 +7,7 @@ renderText
     1 to: listProxy size do: [ :index | 
         | element |
         element := (listProxy at: index) asTopezProxy.
-        textStream nextPutAll: element proxyPrintString.
+        textStream nextPutAll: element renderText.
         index < listProxy size
             ifTrue: [ textStream cr ] ].
     ^ textStream contents
