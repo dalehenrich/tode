@@ -13,7 +13,8 @@
 		"category",
 		"selector",
 		"currentWindowId",
-		"windows" ],
+		"windows",
+		"namedWindows" ],
 	"name" : "TZTopezStatus",
 	"pools" : [
 		 ],

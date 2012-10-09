@@ -11,12 +11,13 @@
 		"currentProject" : "dkh 10/7/2012 16:26",
 		"currentWindowId" : "dkh 10/6/2012 04:58",
 		"currentWindowId:" : "dkh 10/7/2012 13:39",
-		"editCode:inClass:label:inWindow:" : "dkh 10/8/2012 12:09",
-		"editList:label:inWindow:" : "dkh 10/7/2012 20:51",
+		"editCode:inClass:label:inWindow:" : "dkh 10/9/2012 07:17",
+		"editList:label:inWindow:" : "dkh 10/9/2012 07:17",
 		"executeCommand:" : "dkh 9/28/2012 10:10",
 		"executeStringInSession:" : "dkh 10/5/2012 08:25",
 		"level:" : "dkh 10/7/2012 16:01",
 		"metacelloProject:" : "dkh 10/7/2012 15:20",
+		"namedWindows" : "dkh 10/9/2012 07:26",
 		"nextAvailableWindowId" : "dkh 10/8/2012 07:43",
 		"setCategory:" : "dkh 10/5/2012 07:40",
 		"setClass:" : "dkh 10/5/2012 08:12",
@@ -24,4 +25,5 @@
 		"setProject:" : "dkh 10/7/2012 16:25",
 		"status" : "dkh 10/5/2012 07:36",
 		"status:" : "dkh 10/5/2012 07:35",
-		"windowAt:" : "dkh 10/8/2012 07:31" } }
+		"windowAt:" : "dkh 10/8/2012 07:31",
+		"windowNamed:" : "dkh 10/9/2012 07:34" } }

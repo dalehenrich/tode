@@ -23,6 +23,10 @@ editCmds
                         ifTrue: [ 
                             windowId := (tokens at: 2) asNumber.
                             theTokens := tokens copyWithoutIndex: 2 ].
+                    ((tokens at: 2) beginsWith: '#')
+                        ifTrue: [ 
+                            windowId := topez windowNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
+                            theTokens := tokens copyWithoutIndex: 2 ].
                     theTokens size = 1
                         ifTrue: [ 
                             topez activateWindow: windowId.

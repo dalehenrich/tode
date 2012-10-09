@@ -4,4 +4,4 @@ singleClick: topez from: anEditor
         editCode: (topez sourceForMethod: self selector)
         inClass: topez currentClass
         label: 'Code'
-        inWindow: anEditor methodWindowId
+        inWindow: (topez windowNamed: #'methodSource')
