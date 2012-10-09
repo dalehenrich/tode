@@ -9,11 +9,12 @@ baseline: spec
                 package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
                 package: 'Topez-Common-Tests' with: [ spec requires: #('Topez-Common-Core') ];
                 package: 'Topez-Client-Core' with: [ spec requires: #('Topez-Common-Core') ];
-                package: 'Topez-Client-Tests' with: [ spec requires: #('Topez-Client-Core' 'Topez-Common-Tests') ];
+                package: 'Topez-Client-Tests-Common'
+                    with: [ spec requires: #('Topez-Client-Core' 'Topez-Common-Tests') ];
                 yourself.
             spec
                 group: 'Client' with: #('Topez-Client-Core');
-                group: 'Client Tests' with: #('Topez-Client-Tests');
+                group: 'Client Tests' with: #('Topez-Client-Tests-Common');
                 group: 'Dev' with: #('Client Tests');
                 yourself ].
     spec
@@ -45,14 +46,15 @@ baseline: spec
             spec
                 package: 'Topez-Client-GemStone'
                     with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common' 'GemTools-ClientGCI') ];
+                package: 'Topez-Client-Tests-GemStone' with: [ spec requires: #('Topez-Client-Tests-Common') ];
                 package: 'Topez-Pharo-Common';
                 package: 'Topez-Client-Pharo'
                     with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common' 'Topez-Pharo-Client') ];
                 package: 'Topez-Pharo-Client';
-                package: 'Topez-Pharo-Tests' with: [ spec requires: #('Topez-Client-Tests') ];
+                package: 'Topez-Client-Tests-Pharo' with: [ spec requires: #('Topez-Client-Tests-Common') ];
                 yourself.
             spec
-                group: 'Client Tests' with: #('Topez-Client-Tests');
+                group: 'Client Tests' with: #('Topez-Client-Tests-GemStone' #'Topez-Clien-Tests-Pharo');
                 group: 'Client' with: #('Topez-Client-GemStone' 'Topez-Client-Pharo');
                 yourself ].
     spec

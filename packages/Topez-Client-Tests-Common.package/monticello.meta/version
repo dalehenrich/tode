@@ -1,0 +1,1 @@
+(name 'Topez-Client-Tests-Common-dkh.1' message 'refactor tests packages: split into common, pharo, and gemstone ... preparation to make GemStone and Pharo clients independently loadable' id '1d1c2af7-89a9-4ebd-9ec5-fd001241f6a4' date '8 October 2012' time '7:18:45.058 pm' author 'dkh' ancestors () stepChildren ())

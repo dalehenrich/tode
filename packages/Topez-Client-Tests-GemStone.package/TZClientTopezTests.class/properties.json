@@ -1,13 +1,13 @@
 {
-	"category" : "Topez-Pharo-Tests",
+	"category" : "Topez-Client-Tests-GemStone",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"evaluator" ],
-	"name" : "TZTopezNativeEvaluatorTests",
+		 ],
+	"name" : "TZClientTopezTests",
 	"pools" : [
 		 ],
 	"super" : "TZClientTests",
