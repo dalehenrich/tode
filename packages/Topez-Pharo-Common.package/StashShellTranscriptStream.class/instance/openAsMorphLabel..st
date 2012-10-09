@@ -3,7 +3,7 @@ openAsMorphLabel: labelString
     "Build a morph viewing this transcriptStream"
 
     | window textMorph |
-    window := (SystemWindow labelled: labelString) model: self.
+    window := (TZSystemWindow labelled: labelString) model: self.
     textMorph := StashShellWindowMorph
         on: self
         text: nil

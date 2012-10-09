@@ -4,4 +4,4 @@ handlesKeyboard: evt
 
     (super handlesKeyboard: evt)
         ifTrue: [ ^ true ].
-    ^ evt keyCharacter = Character escape
+    ^ evt keyCharacter = Character escape or: [ evt keyString = '<Ctrl-x>' ]
