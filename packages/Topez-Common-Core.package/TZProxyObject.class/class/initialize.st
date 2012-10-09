@@ -25,7 +25,7 @@ initialize
                     aStream
                         nextPutAll:
                             (Text
-                                string: space , proxy elementName
+                                string: space , proxy proxyClassName
                                 attribute:
                                     (proxy inExtensionClassList
                                         ifTrue: [ TextEmphasis italic ]

@@ -1,3 +1,3 @@
 accessing
 updateStatus: aTZTopezStatus
-    classOrMetaClass ifNotNil: [ aTZTopezStatus currentClass: self classOrMetaClass ]
+    self sourceElement updateStatus: aTZTopezStatus

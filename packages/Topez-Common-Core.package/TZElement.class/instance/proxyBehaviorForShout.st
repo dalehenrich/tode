@@ -1,0 +1,3 @@
+accessing
+proxyBehaviorForShout
+    ^ proxyClass asBehavior

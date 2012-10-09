@@ -8,12 +8,9 @@ listCmds
         put: [ :evaluator :topez :tokens | 
             tokens size = 1
                 ifTrue: [ 
-                    | method text styler |
+                    | method |
                     method := (evaluator stack at: evaluator currentFrameIndex) method.
-                    styler := evaluator stStyler.
-                    text := (topez sourceForMethod: method) asText copy.
-                    styler privateStyle: text.
-                    text ]
+                    (topez sourceForMethod: method) asText copy ]
                 ifFalse: [ 
                     | sub selector block |
                     sub := (selector := tokens at: 2) asSymbol.

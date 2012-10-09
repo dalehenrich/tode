@@ -1,5 +1,5 @@
 editting
-editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowIdOrNil
+editCodeElement: aTZElement label: labelString inWindow: windowIdOrNil
     | windowId label |
     windowId := windowIdOrNil ifNil: [ windowId := self currentWindowId ].
     windowId == 0
@@ -8,12 +8,7 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
     label := windowId asString , ': ' , labelString.
     (self windowAt: windowId) model
         activateCodeEditor;
-        contents:
-                (TZDoItElement new
-                        proxyClass: classProxy;
-                        proxyClassName: classProxy className;
-                        source: aStringOrText;
-                        yourself);
+        contents: aTZElement;
         label: label;
         windowId: windowId.
     ^ ''

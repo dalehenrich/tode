@@ -1,7 +1,3 @@
-as yet unclassified
+accessing
 singleClick: topez from: anEditor
-    topez
-        editCode: (topez sourceForMethod: self selector)
-        inClass: topez currentClass
-        label: 'Code'
-        inWindow: (topez windowNamed: #'methodSource')
+    topez editCodeElement: self label: 'Code' inWindow: (topez windowNamed: #'methodSource')

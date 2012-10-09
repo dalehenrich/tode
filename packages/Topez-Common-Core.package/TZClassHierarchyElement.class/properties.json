@@ -6,8 +6,6 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"element",
-		"elementName",
 		"indent",
 		"inExtensionClassList" ],
 	"name" : "TZClassHierarchyElement",

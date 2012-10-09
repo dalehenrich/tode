@@ -2,21 +2,19 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptContents:" : "dkh 10/7/2012 20:32",
+		"acceptContents:" : "dkh 10/9/2012 16:29",
 		"bindingOf:" : "dkh 10/8/2012 10:59",
 		"buildTextMorph" : "dkh 10/8/2012 11:05",
-		"classOrMetaClass" : "dkh 10/4/2012 20:01",
-		"classOrMetaClass:" : "dkh 10/4/2012 20:01",
-		"contents" : "dkh 10/8/2012 12:07",
-		"contents:" : "dkh 10/8/2012 12:10",
+		"contents" : "dkh 10/9/2012 16:24",
+		"contents:" : "dkh 10/9/2012 16:02",
 		"hasBindingThatBeginsWith:" : "dkh 10/8/2012 11:52",
 		"initialExtent" : "dkh 10/6/2012 04:09",
 		"initialize" : "dkh 10/7/2012 09:01",
 		"morph" : "dkh 10/7/2012 11:31",
-		"shoutAboutToStyle:" : "dkh 10/9/2012 07:42",
+		"shoutAboutToStyle:" : "dkh 10/9/2012 16:34",
 		"sourceElement" : "dkh 10/8/2012 11:57",
 		"sourceElement:" : "dkh 10/8/2012 11:57",
 		"stylingActive" : "dkh 10/3/2012 16:41",
 		"stylingActive:" : "dkh 10/3/2012 16:42",
 		"textMorph" : "dkh 10/7/2012 12:29",
-		"updateStatus:" : "dkh 10/7/2012 14:28" } }
+		"updateStatus:" : "dkh 10/9/2012 16:25" } }

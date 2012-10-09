@@ -4,7 +4,7 @@
 		"debuggerCmds" : "dkh 10/5/2012 07:21",
 		"editCmds" : "dkh 10/9/2012 07:36",
 		"initialize" : "dkh 10/5/2012 09:57",
-		"listCmds" : "dkh 10/8/2012 08:05",
+		"listCmds" : "dkh 10/9/2012 16:13",
 		"runCmds" : "dkh 10/5/2012 07:18",
 		"statusCmds" : "dkh 10/7/2012 17:33" },
 	"instance" : {
@@ -27,9 +27,8 @@
 		"filterAndForwardEvent:" : "dkh 10/5/2012 07:28",
 		"incrementCurrentFrame" : "dkh 10/5/2012 07:28",
 		"initTopezClient" : "dkh 10/5/2012 08:19",
-		"open" : "dkh 10/9/2012 11:43",
+		"open" : "dkh 10/9/2012 16:14",
 		"promptString" : "dkh 10/5/2012 07:28",
-		"stStyler" : "dkh 10/7/2012 13:49",
 		"stack" : "dkh 10/5/2012 07:28",
 		"status" : "dkh 10/5/2012 07:34",
 		"topezClient" : "dkh 10/9/2012 11:53" } }

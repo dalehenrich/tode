@@ -1,3 +1,0 @@
-accessing
-elementClassName
-    self subclassResponsibility
