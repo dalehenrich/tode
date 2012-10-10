@@ -6,7 +6,7 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
         ifTrue: [ windowId := self nextAvailableWindowId ].
     self currentWindowId: windowId.
     label := windowId asString , ': ' , labelString.
-    (self windowAt: windowId) model
+    (self editorWindowAt: windowId) model
         activateCodeEditor;
         contents:
                 (TZDoItElement new

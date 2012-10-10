@@ -11,9 +11,12 @@
 		"currentProject" : "dkh 10/7/2012 16:26",
 		"currentWindowId" : "dkh 10/6/2012 04:58",
 		"currentWindowId:" : "dkh 10/9/2012 12:02",
-		"editCode:inClass:label:inWindow:" : "dkh 10/9/2012 15:46",
-		"editCodeElement:label:inWindow:" : "dkh 10/9/2012 16:32",
-		"editList:label:inWindow:" : "dkh 10/9/2012 07:17",
+		"editCode:inClass:label:inWindow:" : "dkh 10/10/2012 12:16",
+		"editCodeElement:label:inWindow:" : "dkh 10/10/2012 12:16",
+		"editList:label:inWindow:" : "dkh 10/10/2012 12:16",
+		"editorModelNamed:" : "dkh 10/10/2012 12:38",
+		"editorWindowAt:" : "dkh 10/10/2012 12:15",
+		"editorWindowNamed:" : "dkh 10/10/2012 12:17",
 		"executeCommand:" : "dkh 9/28/2012 10:10",
 		"executeStringInSession:" : "dkh 10/5/2012 08:25",
 		"level:" : "dkh 10/7/2012 16:01",
@@ -26,5 +29,4 @@
 		"setProject:" : "dkh 10/7/2012 16:25",
 		"status" : "dkh 10/5/2012 07:36",
 		"status:" : "dkh 10/5/2012 07:35",
-		"windowAt:" : "dkh 10/8/2012 07:31",
-		"windowNamed:" : "dkh 10/9/2012 07:34" } }
+		"windowIdNamed:" : "dkh 10/10/2012 12:09" } }

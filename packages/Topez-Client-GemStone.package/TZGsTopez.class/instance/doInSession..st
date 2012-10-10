@@ -8,5 +8,5 @@ doInSession: aBlock
         on: GsRuntimeError
         do: [ :ex | ex return: ex tag asTopezProxy ].
     ^ proxy
-        topezClient: self;
+        topez: self;
         signalNotifications

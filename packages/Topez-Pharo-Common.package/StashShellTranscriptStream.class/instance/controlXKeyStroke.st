@@ -5,6 +5,6 @@ controlXKeyStroke
     names := namesAndIds collect: [ :assoc | assoc key ].
     ids := namesAndIds collect: [ :assoc | assoc value ].
     index := UIManager default chooseFrom: names.
-    evaluator := self topez windowAt: (ids at: index).
+    evaluator := self topez editorWindowAt: (ids at: index).
     evaluator activate.
     ^ true

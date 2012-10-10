@@ -5,6 +5,6 @@ rawInSession: aBlock
         do: [ :ex | 
             | proxy |
             proxy := ex tag asTopezProxy.
-            proxy topezClient: self.
+            proxy topez: self.
             proxy signalNotifications.
             ^ proxy ]

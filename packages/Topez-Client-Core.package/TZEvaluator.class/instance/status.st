@@ -1,3 +1,3 @@
 accessing
 status
-    ^ self topezClient status
+    ^ self topez status

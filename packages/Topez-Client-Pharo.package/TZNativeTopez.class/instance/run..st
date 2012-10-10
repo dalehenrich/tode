@@ -5,6 +5,6 @@ run: aString
     | result |
     result := self doInSession: [ :ignored | self session evaluate: aString ].
     ^ result
-        topezClient: self;
+        topez: self;
         signalNotifications;
         yourself

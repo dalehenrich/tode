@@ -1,4 +1,4 @@
 accessing
 list
     list ifNil: [ list := #() ].
-    ^ list
+    ^ list select: self listFilter

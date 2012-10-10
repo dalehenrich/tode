@@ -1,5 +1,5 @@
 accessing
 initClient
     ^ Dictionary new
-        at: #'topezClient' put: nil;
+        at: #'topez' put: nil;
         yourself

@@ -1,5 +1,5 @@
 accessing
 initTopezClient
-    topezClient
+    topez
         sessionDescription: self sessionDescription;
         login

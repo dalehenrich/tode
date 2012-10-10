@@ -1,3 +1,3 @@
 accessing
 topez
-    ^ self cliShell topezClient
+    ^ self cliShell topez

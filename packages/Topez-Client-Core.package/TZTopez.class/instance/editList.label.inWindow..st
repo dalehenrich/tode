@@ -6,7 +6,7 @@ editList: aCollectionOfObjects label: labelString inWindow: windowIdOrNil
         ifTrue: [ windowId := self nextAvailableWindowId ].
     self currentWindowId: windowId.
     label := windowId asString , ': ' , labelString.
-    (self windowAt: windowId) model
+    (self editorWindowAt: windowId) model
         activateListEditor;
         list: aCollectionOfObjects;
         label: label;

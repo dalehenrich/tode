@@ -1,3 +1,3 @@
 conversion
 asTopezNative
-    ^ self header nativeIn: self topezClient
+    ^ self header nativeIn: self topez
