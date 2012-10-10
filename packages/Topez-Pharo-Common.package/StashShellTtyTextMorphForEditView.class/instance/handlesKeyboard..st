@@ -1,0 +1,3 @@
+editing
+handlesKeyboard: anEvent
+    ^ true
