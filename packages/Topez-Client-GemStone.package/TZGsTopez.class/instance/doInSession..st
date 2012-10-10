@@ -1,13 +1,12 @@
 private
 doInSession: aBlock
-    [ 
+    | proxy |
+    proxy := [ 
     | result |
     result := aBlock value: self session.
-    ^ STON fromString: result ]
+    STON fromString: result ]
         on: GsRuntimeError
-        do: [ :ex | 
-            | proxy |
-            proxy := ex tag asTopezProxy.
-            proxy topezClient: self.
-            proxy signalNotifications.
-            ^ proxy ]
+        do: [ :ex | ex return: ex tag asTopezProxy ].
+    ^ proxy
+        topezClient: self;
+        signalNotifications

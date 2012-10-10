@@ -21,13 +21,13 @@ initialize
             put: [ :proxy :aStream :indent | 
                     | space |
                     space := ''.
-                    proxy indent timesRepeat: [ space := space , '   ' ].
+                    proxy indent asTopezNative timesRepeat: [ space := space , '   ' ].
                     aStream
                         nextPutAll:
                             (Text
-                                string: space , proxy proxyClassName
+                                string: space , proxy proxyClassName asTopezNative
                                 attribute:
-                                    (proxy inExtensionClassList
+                                    (proxy inExtensionClassList asTopezNative
                                         ifTrue: [ TextEmphasis italic ]
                                         ifFalse: [ TextEmphasis bold ])) ];
         at: #'basic'

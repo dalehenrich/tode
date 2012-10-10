@@ -10,7 +10,8 @@
 		"namedSize",
 		"indexedSize",
 		"className",
-		"printString" ],
+		"printString",
+		"native" ],
 	"name" : "TZHeaderObject",
 	"pools" : [
 		 ],

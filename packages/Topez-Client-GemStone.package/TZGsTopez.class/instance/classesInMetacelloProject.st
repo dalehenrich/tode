@@ -7,4 +7,4 @@ classesInMetacelloProject
                 performNoDebug: 'classesInMetacelloProject:level:'
                 withArgs:
                     {(self currentProject).
-                    1} ]
+                    2} ]

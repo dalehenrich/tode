@@ -1,10 +1,10 @@
 {
 	"class" : {
-		"initialize" : "dkh 10/9/2012 15:19",
+		"initialize" : "dkh 10/10/2012 08:40",
 		"on:" : "dkh 10/5/2012 11:06" },
 	"instance" : {
 		"asOopTypeWith:" : "dkh 10/5/2012 08:08",
-		"at:" : "dkh 10/5/2012 07:50",
+		"at:" : "dkh 10/10/2012 08:48",
 		"basicPrintIndexedOn:indent:" : "dkh 10/6/2012 10:37",
 		"basicPrintNamedOn:indent:" : "dkh 10/6/2012 10:37",
 		"basicPrintOn:indent:" : "dkh 10/6/2012 10:23",
@@ -13,7 +13,7 @@
 		"className" : "dkh 10/5/2012 07:50",
 		"client" : "dkh 10/5/2012 07:48",
 		"client:" : "dkh 10/5/2012 07:48",
-		"doesNotUnderstand:" : "dkh 10/5/2012 13:38",
+		"doesNotUnderstand:" : "dkh 10/10/2012 08:05",
 		"header" : "dkh 10/5/2012 07:48",
 		"header:" : "dkh 10/5/2012 07:48",
 		"headerClass" : "dkh 10/5/2012 07:49",
@@ -22,6 +22,7 @@
 		"initClient" : "dkh 10/5/2012 07:48",
 		"named" : "dkh 10/5/2012 07:48",
 		"named:" : "dkh 10/5/2012 07:48",
+		"nativeDoesNotUnderstand:" : "dkh 10/10/2012 08:04",
 		"printOn:indent:" : "dkh 10/5/2012 07:50",
 		"proxyPrintString" : "dkh 10/5/2012 07:50",
 		"renderLookupKey" : "dkh 10/5/2012 07:50",

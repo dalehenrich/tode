@@ -1,10 +1,9 @@
 private
 rawInSession: aBlock
-    [ ^ aBlock value: self session ]
+    | proxy |
+    proxy := [ aBlock value: self session ]
         on: GsRuntimeError
-        do: [ :ex | 
-            | proxy |
-            proxy := ex tag asTopezProxy.
-            proxy topezClient: self.
-            proxy signalNotifications.
-            ^ proxy ]
+        do: [ :ex | ex return: ex tag asTopezProxy ].
+    ^ proxy
+        topezClient: self;
+        signalNotifications

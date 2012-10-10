@@ -1,0 +1,3 @@
+conversion
+asTopezNative
+    ^ self native
