@@ -2,7 +2,8 @@
 	"category" : "Topez-Client-Core",
 	"classinstvars" : [
 		"commands",
-		"subCommands" ],
+		"subCommands",
+		"scripts" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

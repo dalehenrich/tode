@@ -1,7 +1,8 @@
 styling
 shoutAboutToStyle: aPluggableShoutMorphOrView
-    self sourceElement
+    ^ self sourceElement
         ifNotNil: [ 
             aPluggableShoutMorphOrView classOrMetaClass: self sourceElement proxyBehaviorForShout.
-            aPluggableShoutMorphOrView styler environment: self ].
-    ^ self stylingActive
+            aPluggableShoutMorphOrView styler environment: self.
+            self sourceElement stylingActive ]
+        ifNil: [ self stylingActive ]

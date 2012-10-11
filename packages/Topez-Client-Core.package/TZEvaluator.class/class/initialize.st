@@ -5,6 +5,7 @@ initialize
 
     commands := Dictionary new.
     subCommands := Dictionary new.
+    scripts := Dictionary new.
     self
         runCmds;
         debuggerCmds;
@@ -12,4 +13,5 @@ initialize
         listCmds;
         runCmds;
         statusCmds;
+        defaultScripts;
         yourself

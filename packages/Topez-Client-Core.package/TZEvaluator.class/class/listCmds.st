@@ -32,6 +32,23 @@ listCmds
         at: #'list'
         put:
             (Dictionary new
+                at: #'scripts'
+                    put: [ :evaluator :topez :tokens | 
+                            | stream |
+                            stream := WriteStream on: String new.
+                            self scripts associations
+                                do: [ :assoc | 
+                                    stream nextPutAll: assoc key asString.
+                                    assoc value notEmpty
+                                        ifTrue: [ stream cr ].
+                                    assoc value keys
+                                        do: [ :scriptName | 
+                                            stream
+                                                tab;
+                                                nextPutAll: scriptName ]
+                                        separatedBy: [ stream cr ] ]
+                                separatedBy: [ stream cr ].
+                            stream contents ];
                 at: #'classes' put: [ :evaluator :topez :tokens |  ];
                 at: #'prclasses' put: [ :evaluator :topez :tokens | topez classesInMetacelloProject ];
                 at: #'method:' put: [ :evaluator :topez :tokens | topez sourceForMethod: (tokens at: 3) ];
