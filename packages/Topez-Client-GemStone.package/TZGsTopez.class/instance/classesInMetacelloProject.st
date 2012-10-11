@@ -1,10 +1,5 @@
 metacello
 classesInMetacelloProject
-    ^ self
-        doInSession: [ :sess | 
-            sess
-                receiverNB: self currentEngine
-                performNoDebug: 'classesInMetacelloProject:level:'
-                withArgs:
-                    {(self currentProject).
-                    2} ]
+    self currentProject == nil
+        ifTrue: [ self error: 'currentProject must be set' ].
+    ^ self classesInMetacelloProject: self currentProject

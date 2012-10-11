@@ -8,7 +8,7 @@
 	"instvars" : [
 		"indent",
 		"inExtensionClassList" ],
-	"name" : "TZClassHierarchyElement",
+	"name" : "TZClassElement",
 	"pools" : [
 		 ],
 	"super" : "TZElement",

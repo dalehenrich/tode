@@ -49,7 +49,8 @@ listCmds
                                         separatedBy: [ stream cr ] ]
                                 separatedBy: [ stream cr ].
                             stream contents ];
-                at: #'classes' put: [ :evaluator :topez :tokens |  ];
+                at: #'hierarchy' put: [ :evaluator :topez :tokens | topez classHierarchyFor: topez currentClass ];
+                at: #'subclasses' put: [ :evaluator :topez :tokens | topez subclassesOf: topez currentClass ];
                 at: #'prclasses' put: [ :evaluator :topez :tokens | topez classesInMetacelloProject ];
                 at: #'method:' put: [ :evaluator :topez :tokens | topez sourceForMethod: (tokens at: 3) ];
                 at: #'classmethod:' put: [ :evaluator :topez :tokens | topez sourceForClassMethod: (tokens at: 3) ];

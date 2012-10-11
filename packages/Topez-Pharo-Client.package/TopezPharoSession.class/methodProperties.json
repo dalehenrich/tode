@@ -7,8 +7,9 @@
 		"writer" : "dkh 10/5/2012 10:42" },
 	"instance" : {
 		"classDefinition:" : "dkh 10/5/2012 16:55",
+		"classHierarchyFor:" : "dkh 10/11/2012 07:36",
 		"classSelectors:" : "dkh 10/9/2012 16:36",
-		"classesInMetacelloProject:" : "dkh 10/7/2012 20:40",
+		"classesInMetacelloProject:" : "dkh 10/11/2012 07:11",
 		"compileClassMethod:class:category:" : "dkh 10/5/2012 17:17",
 		"compileMethod:class:category:" : "dkh 10/5/2012 17:10",
 		"evaluate:" : "dkh 10/5/2012 14:25",
@@ -16,4 +17,5 @@
 		"sourceForClassMethod:inClass:" : "dkh 10/5/2012 19:48",
 		"sourceForMethod:" : "dkh 10/5/2012 16:04",
 		"sourceForMethod:inClass:" : "dkh 10/5/2012 19:48",
-		"stackFor:" : "dkh 10/5/2012 14:27" } }
+		"stackFor:" : "dkh 10/5/2012 14:27",
+		"subclassesOf:" : "dkh 10/11/2012 07:41" } }

@@ -58,7 +58,7 @@ editCmds
                     put: [ :evaluator :topez :tokens :windowId | 
                             | text type id |
                             text := (self scripts at: (type := (tokens at: 3) asSymbol)) at: (tokens at: 4) asSymbol.
-                            id := windowId == nil
+                            id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'script' ].
                             type == #'input'
@@ -72,7 +72,7 @@ editCmds
                 at: #'class'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | id |
-                            id := windowId == nil
+                            id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'class' ].
                             topez
@@ -80,10 +80,32 @@ editCmds
                                 inClass: topez currentClass
                                 label: 'Class'
                                 inWindow: id ];
+                at: #'hierarchy'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list id |
+                            id := windowId notNil
+                                ifTrue: [ windowId ]
+                                ifFalse: [ topez windowIdNamed: #'hierarchy' ].
+                            list := ((subCommands at: #'list') at: #'hierarchy')
+                                value: evaluator
+                                value: topez
+                                value: tokens.
+                            topez editList: list label: 'Hierarchy' inWindow: id ];
+                at: #'subclasses'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list id |
+                            id := windowId notNil
+                                ifTrue: [ windowId ]
+                                ifFalse: [ topez windowIdNamed: #'subclasses' ].
+                            list := ((subCommands at: #'list') at: #'subclasses')
+                                value: evaluator
+                                value: topez
+                                value: tokens.
+                            topez editList: list label: 'Subclasses' inWindow: id ];
                 at: #'prclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
-                            id := windowId == nil
+                            id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'classes' ].
                             list := ((subCommands at: #'list') at: #'prclasses')
@@ -98,7 +120,7 @@ editCmds
                                 value: evaluator
                                 value: topez
                                 value: tokens.
-                            id := windowId == nil
+                            id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'method' ].
                             topez
@@ -113,7 +135,7 @@ editCmds
                                 value: evaluator
                                 value: topez
                                 value: tokens.
-                            id := windowId == nil
+                            id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'method' ].
                             topez
@@ -124,7 +146,7 @@ editCmds
                 at: #'selectors'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | id |
-                            id := windowId == nil
+                            id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'selectors' ].
                             topez
@@ -134,7 +156,7 @@ editCmds
                 at: #'cselectors'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | id |
-                            id := windowId == nil
+                            id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'selectors' ].
                             topez

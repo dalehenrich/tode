@@ -13,6 +13,7 @@ evaluate: aString
     ^ result ]
         on: Error
         do: [ :ex | 
+            self halt.
             ^ 'Topez ERROR: ' asText
                 ,
                     (Text

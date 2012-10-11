@@ -6,6 +6,6 @@ windowNamesAndIds
         | name |
         (windows at: windowId)
             ifNotNil: [ 
-                name := self namedWindows keyAtValue: windowId ifAbsent: [ windowId printString ].
+                name := windowId printString , '. ' , (self namedWindows keyAtValue: windowId ifAbsent: [ '' ]).
                 namesAndIds add: name -> windowId ] ].
     ^ namesAndIds sort: [ :a :b | a key <= b key ]

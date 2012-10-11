@@ -5,6 +5,14 @@ singleClick: topez from: anEditor
         inClass: self proxyClass
         label: 'Class'
         inWindow: (topez windowIdNamed: #'classDefinition').
+    topez
+        editList: (topez classHierarchyFor: self proxyClass)
+        label: 'Hierarchy'
+        inWindow: (topez windowIdNamed: #'hierarchy').
+    topez
+        editList: (topez subclassesOf: self proxyClass)
+        label: 'Subclasses'
+        inWindow: (topez windowIdNamed: #'subclasses').
     Sensor shiftPressed
         ifTrue: [ 
             topez

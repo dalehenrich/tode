@@ -1,6 +1,6 @@
 instance creation
-hierarchyForClasses: classList extensionClasses: extensionClassList
-    | order classes indents displayString results |
+subclassesOf: classList
+    | order classes indents results |
     order := SortedCollection
         sortBlock: [ :assoc1 :assoc2 | 
             | result chain1 chain2 max i |
@@ -17,8 +17,8 @@ hierarchyForClasses: classList extensionClasses: extensionClassList
             result isNil
                 ifTrue: [ chain1 size < chain2 size ]
                 ifFalse: [ result ] ].
-    classList do: [ :cl | extensionClassList removeKey: cl ifAbsent: [  ] ].
-    classes := classList , extensionClassList keys asArray.
+    classes := Set new.
+    classList do: [ :class | classes addAll: class allSubclasses ].
     classes
         do: [ :cl | 
             | supersChain |
@@ -33,11 +33,10 @@ hierarchyForClasses: classList extensionClasses: extensionClassList
         do: [ :assoc | 
             | cl element |
             cl := assoc value.
-            element := TZClassHierarchyElement new
+            element := TZClassElement new
                 proxyClass: cl asTopezProxy;
                 proxyClassName: cl name asString;
                 indent: (indents at: cl);
-                inExtensionClassList: (extensionClassList includesKey: cl);
                 yourself.
             results add: element ].
     ^ results asArray

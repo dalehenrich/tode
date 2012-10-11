@@ -17,7 +17,7 @@ initialize
             forClass: 'TZMethodElement'
             put: [ :proxy :aStream :indent | aStream nextPutAll: proxy selector proxyPrintString ];
         at: #'basic'
-            forClass: 'TZClassHierarchyElement'
+            forClass: 'TZClassElement'
             put: [ :proxy :aStream :indent | 
                     | space |
                     space := ''.

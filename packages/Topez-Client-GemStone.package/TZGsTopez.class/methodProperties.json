@@ -5,9 +5,10 @@
 		"abort" : "dkh 10/5/2012 08:25",
 		"begin" : "dkh 10/5/2012 08:25",
 		"classDefinition:" : "dkh 10/4/2012 19:55",
+		"classHierarchyFor:" : "dkh 10/11/2012 07:39",
 		"classMethod:" : "dkh 10/5/2012 17:14",
 		"classSelectors:" : "dkh 10/8/2012 18:42",
-		"classesInMetacelloProject" : "dkh 10/10/2012 07:32",
+		"classesInMetacelloProject" : "dkh 10/11/2012 07:23",
 		"classesInMetacelloProject:" : "dkh 10/7/2012 18:24",
 		"commit" : "dkh 10/5/2012 08:25",
 		"continueWith:" : "dkh 9/29/2012 13:33",
@@ -32,4 +33,5 @@
 		"sourceForMethod:" : "dkh 10/8/2012 11:28",
 		"stackFor:" : "dkh 10/5/2012 15:08",
 		"stepInto:" : "dkh 9/29/2012 13:33",
-		"stepWith:level:" : "dkh 9/30/2012 18:49" } }
+		"stepWith:level:" : "dkh 9/30/2012 18:49",
+		"subclassesOf:" : "dkh 10/11/2012 07:40" } }

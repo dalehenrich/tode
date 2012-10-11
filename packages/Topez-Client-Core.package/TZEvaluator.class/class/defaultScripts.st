@@ -16,10 +16,17 @@ defaultScripts
         at: 'input'
             put:
                 (Dictionary new
-                        at: 'topez'
+                        at: 'topezFilter'
                             put:
                                 'set project Topez
 edit #topezClasses prclasses
 topez filterClasses';
+                        at: 'topez'
+                            put:
+                                'set project Topez
+set class TZEvaluator
+edit  prclasses
+edit hierarchy
+edit subclasses';
                         yourself);
         yourself
