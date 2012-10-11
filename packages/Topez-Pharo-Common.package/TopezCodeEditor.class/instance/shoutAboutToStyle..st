@@ -4,5 +4,5 @@ shoutAboutToStyle: aPluggableShoutMorphOrView
         ifNotNil: [ 
             aPluggableShoutMorphOrView classOrMetaClass: self sourceElement proxyBehaviorForShout.
             aPluggableShoutMorphOrView styler environment: self.
-            self sourceElement stylingActive ]
+            self sourceElement className ~= 'TZTextElement' ]
         ifNil: [ self stylingActive ]

@@ -9,6 +9,7 @@ selectorsForClass: aClass inClass: classBoolean level: level
 		TZMethodElement new
                 proxyClass: targetClass ;
                 selector: selector asString;
-			isMeta: classBoolean not;
+			isMeta: classBoolean ;
+			setSource;
                 yourself ].
 	^self toString: result level: level

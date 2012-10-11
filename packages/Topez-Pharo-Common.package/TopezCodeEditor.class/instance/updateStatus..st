@@ -1,3 +1,3 @@
 accessing
 updateStatus: aTZTopezStatus
-    self sourceElement updateStatus: aTZTopezStatus
+    aTZTopezStatus currentClass: self sourceElement proxyClass
