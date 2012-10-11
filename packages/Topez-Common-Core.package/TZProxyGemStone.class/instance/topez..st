@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 topez: topez
     self client at: #'topez' put: topez.
     self named values do: [ :proxy | proxy topez: topez ].

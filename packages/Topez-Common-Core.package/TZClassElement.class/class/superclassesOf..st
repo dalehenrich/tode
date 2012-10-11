@@ -37,6 +37,7 @@ superclassesOf: classList
                 proxyClass: cl;
                 proxyClassName: cl name asString;
                 indent: (indents at: cl);
+                inExtensionClassList: false;
                 yourself.
             results add: element ].
     ^ results asArray
