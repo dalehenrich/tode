@@ -7,7 +7,7 @@ selectorsForClass: aClass inClass: classBoolean level: level
 		ifFalse: [ aClass ].
 	result := targetClass selectors sort collect: [:selector | 
 		TZMethodElement new
-                proxyClass: targetClass ;
+                proxyClass: aClass ;
                 selector: selector asString;
 			isMeta: classBoolean ;
 			setSource;
