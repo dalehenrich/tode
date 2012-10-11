@@ -1,5 +1,6 @@
 evaluator engine
 evaluate: aString
+    [ 
     | line stream result |
     stream := aString readStream.
     [ 
@@ -9,4 +10,13 @@ evaluate: aString
             result := self collectText
                 ifTrue: [ self accumulateText: line ]
                 ifFalse: [ self evaluateCommand: line ] ].
-    ^ result
+    ^ result ]
+        on: Error
+        do: [ :ex | 
+            ^ 'Topez ERROR: ' asText
+                ,
+                    (Text
+                        string: ex description
+                        attributes:
+                            {(TextColor red).
+                            (TextEmphasis bold)}) ]

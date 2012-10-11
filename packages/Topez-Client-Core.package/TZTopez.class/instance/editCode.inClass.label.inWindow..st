@@ -1,12 +1,13 @@
 editting
 editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowIdOrNil
-    | windowId label |
+    | windowId label newWindow win |
     windowId := windowIdOrNil ifNil: [ windowId := self currentWindowId ].
     windowId == 0
         ifTrue: [ windowId := self nextAvailableWindowId ].
     self currentWindowId: windowId.
     label := windowId asString , ': ' , labelString.
-    (self editorWindowAt: windowId) model
+    newWindow := (self status windowAt: windowId) isNil.
+    (win := self editorWindowAt: windowId) model
         activateCodeEditor;
         contents:
                 (TZDoItElement new
@@ -16,4 +17,6 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
                         yourself);
         label: label;
         windowId: windowId.
+    newWindow
+        ifTrue: [ win extent: self codeExtent ].
     ^ ''

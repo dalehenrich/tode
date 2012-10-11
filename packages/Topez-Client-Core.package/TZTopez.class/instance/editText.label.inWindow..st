@@ -1,12 +1,13 @@
 editting
 editText: aStringOrText label: labelString inWindow: windowIdOrNil
-    | windowId label |
+    | windowId label newWindow win |
     windowId := windowIdOrNil ifNil: [ windowId := self currentWindowId ].
     windowId == 0
         ifTrue: [ windowId := self nextAvailableWindowId ].
     self currentWindowId: windowId.
     label := windowId asString , ': ' , labelString.
-    (self editorWindowAt: windowId) model
+    newWindow := (self status windowAt: windowId) isNil.
+    (win := self editorWindowAt: windowId) model
         activateCodeEditor;
         contents:
                 (TZTextElement new
@@ -14,4 +15,6 @@ editText: aStringOrText label: labelString inWindow: windowIdOrNil
                         yourself);
         label: label;
         windowId: windowId.
+    newWindow
+        ifTrue: [ win extent: self codeExtent ].
     ^ ''

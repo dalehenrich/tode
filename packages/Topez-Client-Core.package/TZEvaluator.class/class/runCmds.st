@@ -18,7 +18,7 @@ runCmds
             put: [ :evaluator :topez :tokens | 
                     tokens size = 1
                         ifTrue: [ 
-                            evaluator accumulateTextAndDo: [ :doitStream | topez runInTopez: doitStream content ].
+                            evaluator accumulateTextAndDo: [ :doitStream | topez runInTopez: doitStream contents ].
                             '' ]
                         ifFalse: [ topez runInTopez: ((self scripts at: 'topez') at: (tokens at: 2)) ] ];
         at: 'input'

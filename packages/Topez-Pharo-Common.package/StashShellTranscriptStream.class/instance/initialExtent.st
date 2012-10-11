@@ -1,3 +1,3 @@
 ui building
 initialExtent
-    ^ 647 @ 600
+    ^ 647 @ 300
