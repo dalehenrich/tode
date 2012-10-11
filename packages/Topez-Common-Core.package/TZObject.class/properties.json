@@ -3,6 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
+		"ClickBlocks",
 		"PrintBlocks" ],
 	"commentStamp" : "",
 	"instvars" : [

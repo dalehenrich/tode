@@ -1,3 +1,4 @@
 accessing
 source
-    ^ self subclassResponsibility
+    source ifNil: [ source := '' ].
+    ^ source

@@ -1,3 +1,3 @@
 api
 superclassesOf: classProxy
-    ^ TZClassElement superclassesOf: {(classProxy asBehavior)}
+    ^ TZClassElement superclassesOf: {(classProxy asTopezProxy asBehavior)}

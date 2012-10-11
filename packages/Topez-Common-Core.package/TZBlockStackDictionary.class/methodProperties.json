@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"at:forClass:ifAbsent:" : "dkh 10/11/2012 14:24",
+		"at:forClass:push:" : "dkh 10/11/2012 14:24",
+		"at:forClass:put:" : "dkh 10/11/2012 14:24",
+		"at:forClasses:push:" : "dkh 10/11/2012 14:24",
+		"at:forClasses:put:" : "dkh 10/11/2012 14:24",
+		"pop:forClass:" : "dkh 10/11/2012 14:25",
+		"pop:forClasses:" : "dkh 10/11/2012 14:24" } }

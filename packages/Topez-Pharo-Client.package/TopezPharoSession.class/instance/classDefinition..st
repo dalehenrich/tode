@@ -1,3 +1,3 @@
 api
 classDefinition: classProxy
-    ^ classProxy native definition
+    ^ classProxy asTopezProxy native  definition

@@ -1,6 +1,6 @@
 printBlock handling
 pushPrintBlocks
-    TZObject
+    TZObject printBlocks
         at: #'basic'
             forClass: 'TZHeaderGemStone'
             push: [ :proxy :aStream :indent | 

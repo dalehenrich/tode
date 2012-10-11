@@ -1,3 +1,3 @@
 accessing printing
-printBlocks: aDictionary
-    PrintBlocks := aDictionary
+printBlocks: aTZBlockStackDictionary
+    PrintBlocks := aTZBlockStackDictionary

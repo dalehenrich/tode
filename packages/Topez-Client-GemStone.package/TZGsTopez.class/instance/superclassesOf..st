@@ -1,6 +1,6 @@
 as yet unclassified
 superclassesOf: classProxy
-    self
+    ^ self
         doInSession: [ :sess | 
             sess
                 receiverNB: self currentEngine

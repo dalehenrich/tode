@@ -7,4 +7,4 @@ classesInMetacelloProject: projectProxy
                 performNoDebug: 'classesInMetacelloProject:level:'
                 withArgs:
                     {projectProxy.
-                    1} ]
+                    2} ]

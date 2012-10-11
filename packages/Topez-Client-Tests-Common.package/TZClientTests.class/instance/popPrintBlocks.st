@@ -1,3 +1,3 @@
 printBlock handling
 popPrintBlocks
-    TZObject pop: #'basic' forClass: 'TZHeaderGemStone'
+    TZObject printBlocks pop: #'basic' forClass: 'TZHeaderGemStone'

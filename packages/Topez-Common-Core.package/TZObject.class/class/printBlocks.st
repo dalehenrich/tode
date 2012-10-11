@@ -1,4 +1,4 @@
 accessing printing
 printBlocks
-    PrintBlocks ifNil: [ PrintBlocks := Dictionary new ].
+    PrintBlocks ifNil: [ PrintBlocks := TZBlockStackDictionary new ].
     ^ PrintBlocks

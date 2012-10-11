@@ -4,13 +4,12 @@ update: aspect
         ifTrue: [ 
             self listEditor listIndex
                 ifNotNil: [ :listIndex | 
+                    | elementProxy clickBlock |
                     listIndex < 1
                         ifTrue: [ ^ self ].
-                    (self listEditor list at: listIndex) asTopezNative singleClick: self topez from: self ] ].
-    aspect == #'listDoubleClick'
-        ifTrue: [ 
-            self listEditor listIndex
-                ifNotNil: [ :listIndex | 
-                    listIndex < 1
-                        ifTrue: [ ^ self ].
-                    (self listEditor list at: listIndex) asTopezNative doubleClick: self topez from: self ] ]
+                    elementProxy := self listEditor list at: listIndex.
+                    clickBlock := TZProxyObject clickBlocks
+                        at: #'singleClick'
+                        forClass: elementProxy className
+                        ifAbsent: [ ^ self ].
+                    clickBlock value: elementProxy value: self topez value: self ] ]
