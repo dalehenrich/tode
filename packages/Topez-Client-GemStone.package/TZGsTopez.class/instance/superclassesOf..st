@@ -1,10 +1,10 @@
 as yet unclassified
-classHierarchyFor: classProxy
+superclassesOf: classProxy
     self
         doInSession: [ :sess | 
             sess
                 receiverNB: self currentEngine
-                performNoDebug: 'classHierarchyFor:level:'
+                performNoDebug: 'superclassesOf:level:'
                 withArgs:
                     {classProxy.
                     2} ]

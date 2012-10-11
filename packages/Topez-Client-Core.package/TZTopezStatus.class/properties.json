@@ -12,6 +12,7 @@
 		"classOrInstance",
 		"category",
 		"selector",
+		"history",
 		"currentWindowId",
 		"windows",
 		"namedWindows" ],

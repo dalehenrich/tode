@@ -6,7 +6,7 @@ singleClick: topez from: anEditor
         label: 'Class'
         inWindow: (topez windowIdNamed: #'classDefinition').
     topez
-        editList: (topez classHierarchyFor: self proxyClass)
+        editList: (topez superclassesOf: self proxyClass)
         label: 'Hierarchy'
         inWindow: (topez windowIdNamed: #'hierarchy').
     topez

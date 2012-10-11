@@ -1,4 +1,4 @@
-metacello
+as yet unclassified
 classesInMetacelloProject: aMetacelloProjectSpec level: level
     | version classes extensionClasses dict |
     classes := Set new.
@@ -18,5 +18,5 @@ classesInMetacelloProject: aMetacelloProjectSpec level: level
                         do: [ :cl | extensionClasses at: cl put: (wc packageInfo extensionCategoriesForClass: cl) ] ] ]
         groupDo: [ :ignored |  ].
  	^self 
-		toString:  (TZClassHierarchyElement hierarchyForClasses: classes extensionClasses: extensionClasses) 
+		toString:  (TZClassElement hierarchyForClasses: classes extensionClasses: extensionClasses) 
 		level: level

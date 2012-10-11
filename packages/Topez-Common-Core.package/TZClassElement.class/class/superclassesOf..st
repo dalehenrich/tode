@@ -1,5 +1,5 @@
 instance creation
-hierarchyForClasses: classList
+superclassesOf: classList
     | order classes indents results |
     order := SortedCollection
         sortBlock: [ :assoc1 :assoc2 | 

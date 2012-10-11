@@ -8,7 +8,7 @@ evaluateCommand: line
     [ 
     | commandBlock |
     commandBlock := self class commands at: (tokens at: 1) ifAbsent: [ ^ 'unknown command' asText allBold ].
-    ^ (commandBlock value: self value: self topez value: tokens) renderText ]
+    ^ (self topez recordHistory: (commandBlock value: self value: self topez value: tokens)) renderText ]
         on: TZTopezNotification
         do: [ :ex | 
             self exception: ex exceptionProxy.

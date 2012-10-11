@@ -14,6 +14,8 @@ executeCommandFrom:
 put:onStream:withOptions:
 selectorsForClass:inClass:level:
 stackFor:level:
+subclassesOf:level:
+superclassesOf:level:
 toString:
 toString:level:
 toString:withOptions:

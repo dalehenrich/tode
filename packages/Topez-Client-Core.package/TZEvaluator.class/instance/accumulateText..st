@@ -7,4 +7,4 @@ accumulateText: line
             ^ '' ].
     collectText := false.
     promptString := oldPromptString.
-    ^ (accumulationAction value: inputStream) renderText
+    ^ (self topez recordHistory: (accumulationAction value: inputStream)) renderText
