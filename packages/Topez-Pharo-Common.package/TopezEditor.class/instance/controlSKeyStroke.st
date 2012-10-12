@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 controlSKeyStroke
 self activeEditor spawnWindow.
  ^true

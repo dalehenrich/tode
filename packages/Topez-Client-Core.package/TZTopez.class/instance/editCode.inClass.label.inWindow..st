@@ -5,7 +5,7 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
     windowId == 0
         ifTrue: [ windowId := self nextAvailableWindowId ].
     self currentWindowId: windowId.
-    label := windowId asString , ': ' , labelString.
+    label := labelString.
     newWindow := (self status windowAt: windowId) isNil.
     (win := self editorWindowAt: windowId) model
         activateCodeEditor;

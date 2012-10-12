@@ -3,10 +3,10 @@ spawnWindow
     | windowId label win |
     windowId := editor topez nextAvailableWindowId.
     editor topez currentWindowId: windowId.
-    label := editor labelString.
+    label := editor label.
     (win := editor topez editorWindowAt: windowId) model
         activateListEditor;
         list: self list;
-        label: label;
-        windowId: windowId.
+        windowId: windowId;
+        label: label.
     win extent: editor topez listExtent

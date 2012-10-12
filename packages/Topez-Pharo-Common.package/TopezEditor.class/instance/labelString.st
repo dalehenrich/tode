@@ -1,3 +1,3 @@
 accessing
 labelString
-    ^ label
+    ^ label , '(' , windowId asString , ')'
