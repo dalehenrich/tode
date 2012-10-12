@@ -9,7 +9,8 @@ testListClassSelectors
         assert:
             (x := result asString)
                 =
-                   'classesInMetacelloProject:level:
+                   'classElementForClass:level:
+classesInMetacelloProject:level:
 executeCommandFrom:
 put:onStream:withOptions:
 selectorsForClass:inClass:level:
