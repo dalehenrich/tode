@@ -1,10 +1,11 @@
 {
 	"class" : {
 		"initialize" : "dkh 10/12/2012 10:30",
-		"initializeBounds" : "dkh 10/12/2012 10:36" },
+		"initializeBounds" : "dkh 10/12/2012 13:11" },
 	"instance" : {
 		"activateWindow:" : "dkh 10/10/2012 17:54",
 		"bounds" : "dkh 10/12/2012 10:28",
+		"classElementForCurrentClass" : "dkh 10/12/2012 15:01",
 		"codeExtent" : "dkh 10/10/2012 18:27",
 		"commandOptions" : "dkh 9/27/2012 15:42",
 		"commandOptions:" : "dkh 9/27/2012 15:42",

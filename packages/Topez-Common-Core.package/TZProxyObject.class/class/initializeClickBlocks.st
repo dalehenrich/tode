@@ -30,18 +30,15 @@ initializeClickBlocks
                         label: 'Subclasses'
                         inWindow: (topez windowIdNamed: #'subclasses')
                         at: 'subclasses'.
-                    Sensor shiftPressed
-                        ifTrue: [ 
-                            topez
-                                editList: (topez classSelectors: proxy proxyClass)
-                                label: 'Class Selectors for: ' , proxy proxyClassName
-                                inWindow: (topez windowIdNamed: #'selectors')
-                                at: 'selectors' ]
-                        ifFalse: [ 
-                            topez
-                                editList: (topez instanceSelectors: proxy proxyClass)
-                                label: 'Selectors for: ' , proxy proxyClassName
-                                inWindow: (topez windowIdNamed: #'selectors')
-                                at: 'selectors' ].
+                    topez
+                        editList: (topez classSelectors: proxy proxyClass)
+                        label: proxy proxyClassName , ' class'
+                        inWindow: (topez windowIdNamed: #'classSelectors')
+                        at: 'classSelectors'.
+                    topez
+                        editList: (topez instanceSelectors: proxy proxyClass)
+                        label: proxy proxyClassName
+                        inWindow: (topez windowIdNamed: #'instanceSelectors')
+                        at: 'instanceSelectors'.
                     topez setClass: proxy proxyClassName ];
         yourself

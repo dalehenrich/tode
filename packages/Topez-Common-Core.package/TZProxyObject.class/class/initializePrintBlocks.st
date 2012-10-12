@@ -32,7 +32,7 @@ initializePrintBlocks
                     aStream
                         nextPutAll:
                             (Text
-                                string: space , proxy proxyClassName asTopezNative
+                                string: space , proxy proxyClassName proxyPrintString
                                 attribute:
                                     (proxy inExtensionClassList asTopezNative
                                         ifTrue: [ TextEmphasis italic ]

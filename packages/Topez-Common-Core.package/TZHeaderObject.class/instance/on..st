@@ -4,7 +4,7 @@ on: anObject
     objectClass := anObject isBehavior
         ifTrue: [ anObject ]
         ifFalse: [ anObject class ].
-    indexedSize := objectClass isVariable
+    indexedSize := anObject class isVariable
         ifTrue: [ anObject size ]
         ifFalse: [ 0 ].
     namedSize := anObject class allInstVarNames size.

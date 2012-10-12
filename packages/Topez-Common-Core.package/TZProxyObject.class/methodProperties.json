@@ -1,8 +1,8 @@
 {
 	"class" : {
 		"initialize" : "dkh 10/11/2012 15:17",
-		"initializeClickBlocks" : "dkh 10/12/2012 11:26",
-		"initializePrintBlocks" : "dkh 10/11/2012 19:40",
+		"initializeClickBlocks" : "dkh 10/12/2012 13:10",
+		"initializePrintBlocks" : "dkh 10/12/2012 15:47",
 		"on:" : "dkh 10/5/2012 11:06" },
 	"instance" : {
 		"asOopTypeWith:" : "dkh 10/5/2012 08:08",
@@ -28,7 +28,7 @@
 		"printOn:indent:" : "dkh 10/11/2012 14:27",
 		"proxyPrintString" : "dkh 10/5/2012 07:50",
 		"renderLookupKey" : "dkh 10/5/2012 07:50",
-		"renderText:on:indent:" : "dkh 10/11/2012 14:27",
+		"renderText:on:indent:" : "dkh 10/12/2012 15:45",
 		"renderTextColor" : "dkh 10/5/2012 07:50",
 		"signalNotifications" : "dkh 10/5/2012 07:49",
 		"size" : "dkh 10/6/2012 14:05",

@@ -17,5 +17,6 @@ initializeBounds
         at: 'subclasses' put: (classListsOrigin @ (top + (halfHeight + fullHeight)) extent: listWidth @ halfHeight);
         at: 'classDef' put: (classDefOrigin @ top extent: codeWidth @ halfHeight);
         at: 'method' put: (classDefOrigin @ (top + halfHeight) extent: codeWidth @ (fullHeight + halfHeight));
-        at: 'selectors' put: ((classDefOrigin + codeWidth) @ top extent: listWidth @ fullHeight);
+        at: 'instanceSelectors' put: ((classDefOrigin + codeWidth) @ top extent: listWidth @ fullHeight);
+        at: 'classSelectors' put: ((Bounds at: 'instanceSelectors') translateBy: 25);
         yourself

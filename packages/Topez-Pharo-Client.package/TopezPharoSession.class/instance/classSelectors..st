@@ -1,11 +1,14 @@
 api
 classSelectors: classProxy
-    ^ classProxy asTopezProxy native class selectors sort
+    | cl |
+    cl := classProxy asTopezProxy native class.
+    ^ cl selectors sort
         collect: [ :each | 
             TZMethodElement new
                 isMeta: true;
                 proxyClass: classProxy;
                 proxyClassName: classProxy asTopezProxy className;
                 selector: each asString;
+                category: (cl organization categoryOfElement: each asSymbol);
                 setSource;
                 yourself ]

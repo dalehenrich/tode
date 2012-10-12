@@ -78,11 +78,10 @@ editCmds
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'class' ].
                             topez
-                                editCode: (topez classDefinition: topez currentClass)
-                                inClass: topez currentClass
-                                label: 'Class'
+                                editList: {(topez classElementForCurrentClass)}
+                                label: topez currentClass className
                                 inWindow: id
-                                at: 'classDef' ];
+                                at: 'classes' ];
                 at: #'superclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
