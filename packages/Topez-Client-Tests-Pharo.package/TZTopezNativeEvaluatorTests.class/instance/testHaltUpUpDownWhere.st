@@ -21,11 +21,11 @@ testHaltUpUpDownWhere
 3 Compiler class >> evaluate:in:to:notifying:ifFail:logged:
 	receiver { sz:6 Compiler} a Compiler
 4 Metaclass >> evaluate:for:notifying:logged:
-	receiver { sz:13 Compiler class} Compiler
+	receiver { sz:13 Compiler} Compiler
 5 Metaclass >> evaluate:for:logged:
-	receiver { sz:13 Compiler class} Compiler
+	receiver { sz:13 Compiler} Compiler
 6 Metaclass >> evaluate:
-	receiver { sz:13 Compiler class} Compiler
+	receiver { sz:13 Compiler} Compiler
 7 TopezPharoSession class >> evaluate:
 	receiver { sz:0 TopezPharoSession} a TopezPharoSession
 8 BlockClosure class >> on:do:
