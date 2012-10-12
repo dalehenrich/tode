@@ -9,4 +9,4 @@ spawnWindow
         contents: self sourceElement;
         label: label;
         windowId: windowId.
-    win extent: editor topez listExtent
+    win extent: editor topez codeExtent
