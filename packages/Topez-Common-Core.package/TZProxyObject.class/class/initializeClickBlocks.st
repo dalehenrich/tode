@@ -23,7 +23,7 @@ initializeClickBlocks
                     topez
                         editList: (topez superclassesOf: proxy proxyClass)
                         label: 'Superclasses'
-                        inWindow: (topez windowIdNamed: #'superclass')
+                        inWindow: (topez windowIdNamed: #'superclasses')
                         at: 'superclasses'.
                     topez
                         editList: (topez subclassesOf: proxy proxyClass)
@@ -34,13 +34,13 @@ initializeClickBlocks
                         ifTrue: [ 
                             topez
                                 editList: (topez classSelectors: proxy proxyClass)
-                                label: 'Class Selectors'
+                                label: 'Class Selectors for: ' , proxy proxyClassName
                                 inWindow: (topez windowIdNamed: #'selectors')
                                 at: 'selectors' ]
                         ifFalse: [ 
                             topez
                                 editList: (topez instanceSelectors: proxy proxyClass)
-                                label: 'Selectors'
+                                label: 'Selectors for: ' , proxy proxyClassName
                                 inWindow: (topez windowIdNamed: #'selectors')
                                 at: 'selectors' ].
                     topez setClass: proxy proxyClassName ];
