@@ -8,5 +8,9 @@ keyStroke: evt
             ^ self model escapeKeyStroke ].
     (evt keyString = '<Ctrl-x>' or: [ evt keyString = '<Ctrl-g>'	"mac hack ... don't ask" ])
         ifTrue: [ ^ self model controlXKeyStroke ].
-    super keyStroke: evt.
-    ^ false
+    (evt keyString = '<Ctrl-s>'
+        or: [ false
+            "evt keyString = '<Ctrl-g>'"
+             ])
+        ifTrue: [ ^ self model controlSKeyStroke ].
+    ^super keyStroke: evt

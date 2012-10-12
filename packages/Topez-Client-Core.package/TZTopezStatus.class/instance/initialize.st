@@ -1,4 +1,4 @@
 initialize-release
 initialize
     currentWindowId := 1.
-    windows := WeakArray new: 10 withAll: nil
+    windows := WeakArray new: 100 withAll: nil
