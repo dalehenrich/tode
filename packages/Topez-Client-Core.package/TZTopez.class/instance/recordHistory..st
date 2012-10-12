@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 recordHistory: aProxyOrObject
     (aProxyOrObject isString and: [ aProxyOrObject isEmpty ])
         ifTrue: [ ^ aProxyOrObject ].

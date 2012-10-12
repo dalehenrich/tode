@@ -1,5 +1,5 @@
 editting
-editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowIdOrNil
+editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowIdOrNil at: windowLocation
     | windowId label newWindow win |
     windowId := windowIdOrNil ifNil: [ windowId := self nextAvailableWindowId ].
     windowId == 0
@@ -18,5 +18,10 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
         windowId: windowId;
         label: label.
     newWindow
-        ifTrue: [ win extent: self codeExtent ].
+        ifTrue: [ 
+            | bounds |
+            bounds := self bounds at: windowLocation.
+            win
+                extent: bounds extent;
+                position: bounds origin ].
     ^ ''

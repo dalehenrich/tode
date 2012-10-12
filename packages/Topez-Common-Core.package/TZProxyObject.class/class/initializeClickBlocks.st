@@ -5,7 +5,12 @@ initializeClickBlocks
     self clickBlocks
         at: #'singleClick'
             forClass: 'TZMethodElement'
-            put: [ :proxy :topez :editor | topez editCodeElement: proxy label: 'Code' inWindow: (topez windowIdNamed: #'methodSource') ];
+            put: [ :proxy :topez :editor | 
+                    topez
+                        editCodeElement: proxy
+                        label: 'Code'
+                        inWindow: (topez windowIdNamed: #'methodSource')
+                        at: 'method' ];
         at: #'singleClick'
             forClass: 'TZClassElement'
             put: [ :proxy :topez :editor | 
@@ -13,25 +18,30 @@ initializeClickBlocks
                         editCode: (topez classDefinition: proxy proxyClass)
                         inClass: proxy proxyClass
                         label: 'Class'
-                        inWindow: (topez windowIdNamed: #'classDefinition').
+                        inWindow: (topez windowIdNamed: #'classDefinition')
+                        at: 'classDef'.
                     topez
                         editList: (topez superclassesOf: proxy proxyClass)
-                        label: 'Hierarchy'
-                        inWindow: (topez windowIdNamed: #'hierarchy').
+                        label: 'Superclasses'
+                        inWindow: (topez windowIdNamed: #'superclass')
+                        at: 'superclasses'.
                     topez
                         editList: (topez subclassesOf: proxy proxyClass)
                         label: 'Subclasses'
-                        inWindow: (topez windowIdNamed: #'subclasses').
+                        inWindow: (topez windowIdNamed: #'subclasses')
+                        at: 'subclasses'.
                     Sensor shiftPressed
                         ifTrue: [ 
                             topez
                                 editList: (topez classSelectors: proxy proxyClass)
                                 label: 'Class Selectors'
-                                inWindow: (topez windowIdNamed: #'selectors') ]
+                                inWindow: (topez windowIdNamed: #'selectors')
+                                at: 'selectors' ]
                         ifFalse: [ 
                             topez
                                 editList: (topez instanceSelectors: proxy proxyClass)
                                 label: 'Selectors'
-                                inWindow: (topez windowIdNamed: #'selectors') ].
+                                inWindow: (topez windowIdNamed: #'selectors')
+                                at: 'selectors' ].
                     topez setClass: proxy proxyClassName ];
         yourself

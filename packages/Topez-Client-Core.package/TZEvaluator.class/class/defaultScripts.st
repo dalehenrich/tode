@@ -26,7 +26,7 @@ topez filterClasses';
                                 'set project Topez
 set class TZEvaluator
 edit  prclasses
-edit hierarchy
+edit superclasses
 edit subclasses';
                         yourself);
         yourself

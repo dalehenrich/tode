@@ -14,7 +14,8 @@ editCmds
                         editCode: (topez sourceForMethod: method)
                         inClass: evaluator status currentClass
                         label: 'Method'
-                        inWindow: nil ]
+                        inWindow: nil
+                        at: 'method' ]
                 ifFalse: [ 
                     | sub selector block theTokens windowId |
                     theTokens := tokens.
@@ -68,7 +69,8 @@ editCmds
                                         editCode: text
                                         inClass: nil
                                         label: 'Script'
-                                        inWindow: id ] ];
+                                        inWindow: id
+                                        at: 'method' ] ];
                 at: #'class'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | id |
@@ -79,18 +81,23 @@ editCmds
                                 editCode: (topez classDefinition: topez currentClass)
                                 inClass: topez currentClass
                                 label: 'Class'
-                                inWindow: id ];
-                at: #'hierarchy'
+                                inWindow: id
+                                at: 'classDef' ];
+                at: #'superclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
                             id := windowId notNil
                                 ifTrue: [ windowId ]
-                                ifFalse: [ topez windowIdNamed: #'hierarchy' ].
-                            list := ((subCommands at: #'list') at: #'hierarchy')
+                                ifFalse: [ topez windowIdNamed: #'superclasses' ].
+                            list := ((subCommands at: #'list') at: #'superclasses')
                                 value: evaluator
                                 value: topez
                                 value: tokens.
-                            topez editList: list label: 'Hierarchy' inWindow: id ];
+                            topez
+                                editList: list
+                                label: 'Superclasses'
+                                inWindow: id
+                                at: 'superclasses' ];
                 at: #'subclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
@@ -101,7 +108,11 @@ editCmds
                                 value: evaluator
                                 value: topez
                                 value: tokens.
-                            topez editList: list label: 'Subclasses' inWindow: id ];
+                            topez
+                                editList: list
+                                label: 'Subclasses'
+                                inWindow: id
+                                at: 'subclasses' ];
                 at: #'prclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
@@ -112,7 +123,11 @@ editCmds
                                 value: evaluator
                                 value: topez
                                 value: tokens.
-                            topez editList: list label: 'Project Classes' inWindow: id ];
+                            topez
+                                editList: list
+                                label: 'Project Classes'
+                                inWindow: id
+                                at: 'classes' ];
                 at: #'method:'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | source id |
@@ -127,7 +142,8 @@ editCmds
                                 editCode: source
                                 inClass: topez currentClass
                                 label: 'Method'
-                                inWindow: id ];
+                                inWindow: id
+                                at: 'method' ];
                 at: #'classmethod:'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | source id |
@@ -142,7 +158,8 @@ editCmds
                                 editCode: source
                                 inClass: evaluator status currentClass
                                 label: 'Method'
-                                inWindow: id ];
+                                inWindow: id
+                                at: 'method' ];
                 at: #'selectors'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | id |
@@ -152,7 +169,8 @@ editCmds
                             topez
                                 editList: (topez instanceSelectors: evaluator status currentClass)
                                 label: 'Selectors'
-                                inWindow: id ];
+                                inWindow: id
+                                at: 'selectors' ];
                 at: #'cselectors'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | id |
@@ -162,5 +180,6 @@ editCmds
                             topez
                                 editList: (topez classSelectors: evaluator status currentClass)
                                 label: 'Class Selectors'
-                                inWindow: id ];
+                                inWindow: id
+                                at: 'selectors' ];
                 yourself)

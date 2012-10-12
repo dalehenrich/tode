@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"Bounds" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"status",
