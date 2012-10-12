@@ -5,7 +5,7 @@ classSelectors: classProxy
             TZMethodElement new
                 isMeta: true;
                 proxyClass: classProxy;
-                proxyClassName: classProxy className;
+                proxyClassName: classProxy asTopezProxy className;
                 selector: each asString;
                 setSource;
                 yourself ]

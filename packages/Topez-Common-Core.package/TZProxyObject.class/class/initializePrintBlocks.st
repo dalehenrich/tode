@@ -15,6 +15,14 @@ initializePrintBlocks
         at: #'basic'
             forClass: 'TZMethodElement'
             put: [ :proxy :aStream :indent | aStream nextPutAll: proxy selector proxyPrintString ];
+        at: #'label'
+            forClass: 'TZMethodElement'
+            put: [ :proxy :aStream :indent | 
+                    aStream nextPutAll: proxy proxyClassName asTopezNative.
+                    proxy isMeta
+                        ifTrue: [ aStream nextPutAll: ' class>>' ]
+                        ifFalse: [ aStream nextPutAll: '>>' ].
+                    aStream nextPutAll: proxy selector asTopezNative ];
         at: #'basic'
             forClass: 'TZClassElement'
             put: [ :proxy :aStream :indent | 
@@ -29,6 +37,9 @@ initializePrintBlocks
                                     (proxy inExtensionClassList asTopezNative
                                         ifTrue: [ TextEmphasis italic ]
                                         ifFalse: [ TextEmphasis bold ])) ];
+        at: #'label'
+            forClass: 'TZClassElement'
+            put: [ :proxy :aStream :indent | aStream nextPutAll: proxy proxyClassName asTopezNative ];
         at: #'basic'
             forClass: 'TZStack'
             put: [ :stack :aStream :indent | 

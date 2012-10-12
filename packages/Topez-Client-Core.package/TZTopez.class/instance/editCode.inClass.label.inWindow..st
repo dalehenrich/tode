@@ -15,8 +15,8 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
                         proxyClassName: classProxy className;
                         source: aStringOrText;
                         yourself);
-        label: label;
-        windowId: windowId.
+        windowId: windowId;
+        label: label.
     newWindow
         ifTrue: [ win extent: self codeExtent ].
     ^ ''

@@ -13,8 +13,8 @@ editText: aStringOrText label: labelString inWindow: windowIdOrNil
                 (TZTextElement new
                         source: aStringOrText;
                         yourself);
-        label: label;
-        windowId: windowId.
+        windowId: windowId;
+        label: label.
     newWindow
         ifTrue: [ win extent: self codeExtent ].
     ^ ''

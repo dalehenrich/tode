@@ -10,8 +10,8 @@ editList: aCollectionOfObjects label: labelString inWindow: windowIdOrNil
     (win := self editorWindowAt: windowId) model
         activateListEditor;
         list: aCollectionOfObjects;
-        label: label;
-        windowId: windowId.
+        windowId: windowId;
+        label: label.
     newWindow
         ifTrue: [ win extent: self listExtent ].
     ^ ''

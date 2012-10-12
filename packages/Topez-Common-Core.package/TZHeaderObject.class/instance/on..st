@@ -1,7 +1,9 @@
 initialize-release
 on: anObject
     | objectClass |
-    objectClass := anObject class.
+    objectClass := anObject isBehavior
+        ifTrue: [ anObject ]
+        ifFalse: [ anObject class ].
     indexedSize := objectClass isVariable
         ifTrue: [ anObject size ]
         ifFalse: [ 0 ].
