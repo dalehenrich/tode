@@ -11,6 +11,7 @@ defaultScripts
                             put:
                                 '(self editorModelNamed: #topezClasses) listEditor
   listFilter: [:element | element inExtensionClassList]';
+                        at: 'testing' put: '3+4';
                         yourself);
         at: 'run'
             put:
@@ -22,6 +23,7 @@ TZNativeEvaluator initialize.
 TZObject initialize.
 TZProxyObject initialize.
 TZTopez initialize.';
+                        at: 'testing' put: '3+4';
                         yourself);
         at: 'input'
             put:
@@ -38,5 +40,10 @@ set class TZEvaluator
 edit  prclasses
 edit superclasses
 edit subclasses';
+                        at: 'testing'
+                            put:
+                                'run
+3+4
+%';
                         yourself);
         yourself

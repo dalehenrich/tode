@@ -27,7 +27,8 @@ runCmds
                         ifTrue: [ 
                             self error: 'must provide an input source'.
                             '' ]
-                        ifFalse: [ 
-                            evaluator evaluate: ((self scripts at: 'input') at: (tokens at: 2)).
-                            '' ] ];
-        at: 'exit' put: [ :evaluator :topez :tokens | evaluator exit ]
+                        ifFalse: [ evaluator evaluate: ((self scripts at: 'input') at: (tokens at: 2)) ] ];
+        at: 'exit'
+            put: [ :evaluator :topez :tokens | 
+                    evaluator exit.
+                    '' ]

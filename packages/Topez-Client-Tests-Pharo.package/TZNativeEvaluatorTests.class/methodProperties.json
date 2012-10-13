@@ -5,4 +5,10 @@
 		"evaluator" : "dkh 10/13/2012 07:59",
 		"testHalt" : "dkh 10/13/2012 07:37",
 		"testHaltUpUpDownWhere" : "dkh 10/13/2012 07:50",
-		"testRun" : "dkh 10/13/2012 07:51" } }
+		"testInput" : "dkh 10/13/2012 08:24",
+		"testRun" : "dkh 10/13/2012 07:51",
+		"testRunScript" : "dkh 10/13/2012 08:39",
+		"testSetCategory" : "dkh 10/13/2012 09:03",
+		"testSetClass" : "dkh 10/13/2012 09:05",
+		"testSetPackage" : "dkh 10/13/2012 09:03",
+		"testSetProject" : "dkh 10/13/2012 09:05" } }
