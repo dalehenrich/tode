@@ -89,8 +89,8 @@ editCmds
                                         editList: list
                                         label: topez currentClass className
                                         inWindow: id
-                                        at: 'classes' ]
-                                ifFalse: [ 'no classes found' ] ];
+                                        at: 'classes' ].
+                            '' ];
                 at: #'superclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
@@ -134,6 +134,21 @@ editCmds
                             topez
                                 editList: list
                                 label: 'Project Classes'
+                                inWindow: id
+                                at: 'classes' ];
+                at: #'prtests'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list id |
+                            id := windowId notNil
+                                ifTrue: [ windowId ]
+                                ifFalse: [ topez windowIdNamed: #'tests' ].
+                            list := ((subCommands at: #'list') at: #'prtests')
+                                value: evaluator
+                                value: topez
+                                value: tokens.
+                            topez
+                                editList: list
+                                label: 'Project Tests'
                                 inWindow: id
                                 at: 'classes' ];
                 at: #'method:'
