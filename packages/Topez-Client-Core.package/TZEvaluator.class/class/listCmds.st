@@ -57,4 +57,5 @@ listCmds
                 at: #'classmethod:' put: [ :evaluator :topez :tokens | topez sourceForClassMethod: (tokens at: 3) ];
                 at: #'selectors' put: [ :evaluator :topez :tokens | topez instanceSelectors: topez currentClass ];
                 at: #'cselectors' put: [ :evaluator :topez :tokens | topez classSelectors: topez currentClass ];
+                at: #'class' put: [ :evaluator :topez :tokens | topez findClass: (tokens at: 3) ];
                 yourself)

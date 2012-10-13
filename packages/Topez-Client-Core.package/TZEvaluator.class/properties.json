@@ -5,7 +5,7 @@
 		"subCommands",
 		"scripts" ],
 	"classvars" : [
-		 ],
+		"DebugMode" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"topez",

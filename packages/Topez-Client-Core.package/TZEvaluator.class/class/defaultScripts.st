@@ -22,7 +22,8 @@ defaultScripts
 TZNativeEvaluator initialize.
 TZObject initialize.
 TZProxyObject initialize.
-TZTopez initialize.';
+TZTopez initialize.
+TZEvaluator debugMode: true.';
                         at: 'testing' put: '3+4';
                         yourself);
         at: 'input'

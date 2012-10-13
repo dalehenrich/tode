@@ -15,7 +15,8 @@ evaluateCommand: line
             ex resume ] ]
         on: Error
         do: [ :ex | 
-            self halt.
+            self class debugMode
+                ifTrue: [ self halt ].
             ^ 'Topez ERROR: ' asText
                 ,
                     (Text

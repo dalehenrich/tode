@@ -7,6 +7,7 @@ initialize
     subCommands := Dictionary new.
     scripts := Dictionary new.
     self
+        findCmds;
         runCmds;
         debuggerCmds;
         editCmds;
