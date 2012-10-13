@@ -3,7 +3,8 @@ initializeBounds
     "self initialize"
 
     | classListsOrigin methodOrigin methodListOrigin top listWidth fullHeight halfHeight codeWidth classDefOrigin |
-    top := classListsOrigin := 25.
+    top := 10.
+    classListsOrigin := 25.
     fullHeight := 400.
     halfHeight := 200.
     listWidth := 350.
