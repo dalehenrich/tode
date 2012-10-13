@@ -26,6 +26,11 @@ Metacello new
 *See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
 for details on installing Metacello.*
 
+Here's a recent screen shot:
+
+<img style="border: 2px solid #000000;" src="https://raw.github.com/dalehenrich/topez/master/docs/screenShot_2012-10-13.png" />
+
 [1]: http://www.pharo-project.org/pharo-download/release-1-4
 [2]: http://gemstonesoup.wordpress.com/2012/09/21/gemstones-3-1-0-1-is-shipping/
 [3]: http://community.gemstone.com/download/attachments/6816350/GS64-Topaz-3.0.pdf?version=1
+ 
