@@ -2,11 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptContents:notifying:" : "dkh 10/12/2012 14:12",
+		"acceptContents:notifying:" : "dkh 10/12/2012 16:09",
 		"bindingOf:" : "dkh 10/8/2012 10:59",
 		"buildTextMorph" : "dkh 10/12/2012 13:20",
 		"contents" : "dkh 10/9/2012 16:24",
 		"contents:" : "dkh 10/9/2012 16:02",
+		"format:" : "dkh 10/12/2012 16:08",
 		"hasBindingThatBeginsWith:" : "dkh 10/8/2012 11:52",
 		"initialize" : "dkh 10/7/2012 09:01",
 		"morph" : "dkh 10/7/2012 11:31",

@@ -77,6 +77,8 @@ editCmds
                             id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'class' ].
+                            tokens size = 3
+                                ifTrue: [ topez setClass: (tokens at: 3) ].
                             topez
                                 editList: {(topez classElementForCurrentClass)}
                                 label: topez currentClass className
