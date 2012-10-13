@@ -12,7 +12,17 @@ defaultScripts
                                 '(self editorModelNamed: #topezClasses) listEditor
   listFilter: [:element | element inExtensionClassList]';
                         yourself);
-        at: 'run' put: Dictionary new;
+        at: 'run'
+            put:
+                (Dictionary new
+                        at: 'init'
+                            put:
+                                'TZGsEvaluator initialize.
+TZNativeEvaluator initialize.
+TZObject initialize.
+TZProxyObject initialize.
+TZTopez initialize.';
+                        yourself);
         at: 'input'
             put:
                 (Dictionary new

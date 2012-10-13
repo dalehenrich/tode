@@ -52,6 +52,7 @@ listCmds
                 at: #'superclasses' put: [ :evaluator :topez :tokens | topez superclassesOf: topez currentClass ];
                 at: #'subclasses' put: [ :evaluator :topez :tokens | topez subclassesOf: topez currentClass ];
                 at: #'prclasses' put: [ :evaluator :topez :tokens | topez classesInMetacelloProject ];
+                at: #'prtests' put: [ :evaluator :topez :tokens | topez testClassesInMetacelloProject ];
                 at: #'method:' put: [ :evaluator :topez :tokens | topez sourceForMethod: (tokens at: 3) ];
                 at: #'classmethod:' put: [ :evaluator :topez :tokens | topez sourceForClassMethod: (tokens at: 3) ];
                 at: #'selectors' put: [ :evaluator :topez :tokens | topez instanceSelectors: topez currentClass ];

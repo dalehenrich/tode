@@ -73,17 +73,24 @@ editCmds
                                         at: 'method' ] ];
                 at: #'class'
                     put: [ :evaluator :topez :tokens :windowId | 
-                            | id |
+                            | id list |
                             id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'class' ].
-                            tokens size = 3
-                                ifTrue: [ topez setClass: (tokens at: 3) ].
-                            topez
-                                editList: {(topez classElementForCurrentClass)}
-                                label: topez currentClass className
-                                inWindow: id
-                                at: 'classes' ];
+                            list := tokens size = 3
+                                ifTrue: [ 
+                                    (topez findClass: (tokens at: 3)) == nil
+                                        ifTrue: [ #() ]
+                                        ifFalse: [ {(topez classElementForCurrentClass)} ] ]
+                                ifFalse: [ {(topez classElementForCurrentClass)} ].
+                            list notEmpty
+                                ifTrue: [ 
+                                    topez
+                                        editList: list
+                                        label: topez currentClass className
+                                        inWindow: id
+                                        at: 'classes' ]
+                                ifFalse: [ 'no classes found' ] ];
                 at: #'superclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
