@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"evaluator" ],
+		 ],
 	"name" : "TZNativeEvaluatorTests",
 	"pools" : [
 		 ],
-	"super" : "TZClientTests",
+	"super" : "TZEvaluatorTests",
 	"type" : "normal" }

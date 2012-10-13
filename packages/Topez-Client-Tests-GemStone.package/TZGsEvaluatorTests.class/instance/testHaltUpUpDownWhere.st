@@ -1,15 +1,7 @@
 testing
 testHaltUpUpDownWhere
     | result x |
-    self pushPrintBlocks.
-    result := self evaluator
-        evaluate: 'run';
-        evaluate: '1 halt';
-        evaluate: '%';
-        evaluate: 'up';
-        evaluate: 'up';
-        evaluate: 'down';
-        evaluate: 'where'.
+    result := self runHaltUpUpDownWhere.
     self
         assert:
             (x := result asString)

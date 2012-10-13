@@ -1,20 +1,12 @@
 testing
 testHaltUpUpDownWhere
     | result x |
-    self pushPrintBlocks.
-    result := self evaluator
-        evaluate: 'run';
-        evaluate: '1 halt';
-        evaluate: '%';
-        evaluate: 'up';
-        evaluate: 'up';
-        evaluate: 'down';
-        evaluate: 'where'.
+    result := self runHaltUpUpDownWhere.
     self
         assert:
             (x := result asString)
                 =
-                  '1 Object class >> halt
+                    '1 Object class >> halt
 	receiver { sz:0 SmallInteger} 1
 ==> 2 UndefinedObject class >> DoIt
 	receiver { sz:0 UndefinedObject} nil

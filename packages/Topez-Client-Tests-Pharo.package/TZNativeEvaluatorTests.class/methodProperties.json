@@ -2,12 +2,7 @@
 	"class" : {
 		"classTestMethod" : "dkh 10/5/2012 20:50" },
 	"instance" : {
-		"evaluator" : "dkh 10/8/2012 17:43",
-		"testHalt" : "dkh 10/7/2012 14:34",
-		"testHaltUpUpDownWhere" : "dkh 10/11/2012 20:20",
-		"testHarness" : "dkh 10/7/2012 14:29",
-		"testListClassMethod" : "dkh 10/5/2012 20:51",
-		"testListClassSelectors" : "dkh 10/8/2012 17:44",
-		"testListMethod" : "dkh 10/5/2012 20:43",
-		"testListSelectors" : "dkh 10/8/2012 17:57",
-		"testRun" : "dkh 10/6/2012 10:43" } }
+		"evaluator" : "dkh 10/13/2012 07:59",
+		"testHalt" : "dkh 10/13/2012 07:37",
+		"testHaltUpUpDownWhere" : "dkh 10/13/2012 07:50",
+		"testRun" : "dkh 10/13/2012 07:51" } }
