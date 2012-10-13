@@ -79,7 +79,7 @@ editCmds
                                 ifFalse: [ topez windowIdNamed: #'class' ].
                             list := tokens size = 3
                                 ifTrue: [ 
-                                    (topez findClass: (tokens at: 3)) == nil
+                                    (topez findMatchingClassNames: (tokens at: 3)) == nil
                                         ifTrue: [ #() ]
                                         ifFalse: [ {(topez classElementForCurrentClass)} ] ]
                                 ifFalse: [ {(topez classElementForCurrentClass)} ].

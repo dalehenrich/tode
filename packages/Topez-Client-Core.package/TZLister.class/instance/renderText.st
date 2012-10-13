@@ -6,7 +6,9 @@ renderText
     textStream := TextStream on: Text new.
     1 to: listProxy size do: [ :index | 
         | element |
-        element := (listProxy at: index) asTopezProxy.
+        element := (listProxy at: index) asTopezNative.
+        (element isString or: [ element isText ])
+            ifFalse: [ element := (listProxy at: index) asTopezProxy ].
         textStream nextPutAll: element renderText.
         index < listProxy size
             ifTrue: [ textStream cr ] ].

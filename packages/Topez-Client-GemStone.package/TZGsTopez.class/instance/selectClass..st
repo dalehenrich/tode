@@ -1,4 +1,4 @@
-coding
+as yet unclassified
 selectClass: aString
     | classList className |
     classList := self findMatchingClassNames: aString.

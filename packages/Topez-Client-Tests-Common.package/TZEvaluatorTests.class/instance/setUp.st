@@ -1,3 +1,5 @@
 running
 setUp
-    super setUp
+    super setUp.
+    debugMode := TZEvaluator debugMode.
+    TZEvaluator debugMode: false
