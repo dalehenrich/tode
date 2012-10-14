@@ -1,15 +1,17 @@
 metacello
 selectorsForClass: aClass inClass: classBoolean level: level
-
-	| targetClass result |
-	targetClass := classBoolean 
-		ifTrue: [ aClass class ] 
-		ifFalse: [ aClass ].
-	result := targetClass selectors sort collect: [:selector | 
-		TZMethodElement new
-                proxyClass: aClass ;
+    | targetClass result |
+    targetClass := classBoolean
+        ifTrue: [ aClass class ]
+        ifFalse: [ aClass ].
+    result := targetClass selectors sort
+        collect: [ :selector | 
+            TZMethodElement new
+                proxyClass: aClass;
+                proxyClassName: aClass name asString;
                 selector: selector asString;
-			isMeta: classBoolean ;
-			setSource;
+                category: (aClass categoryOfSelector: selector asSymbol);
+                isMeta: classBoolean;
+                setSource;
                 yourself ].
-	^self toString: result level: level
+    ^ self toString: result level: level
