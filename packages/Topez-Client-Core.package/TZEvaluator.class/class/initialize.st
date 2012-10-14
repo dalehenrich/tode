@@ -14,5 +14,5 @@ initialize
         listCmds;
         runCmds;
         statusCmds;
-        defaultScripts;
+        commonScripts;
         yourself

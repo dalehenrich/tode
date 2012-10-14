@@ -1,7 +1,9 @@
 command definition
-defaultScripts
+commonScripts
     "TZGsEvaluator initialize.
 	TZNativeEvaluator initialize"
+
+    "scripts that apply to gemstone and native"
 
     scripts
         at: 'topez'
@@ -16,14 +18,6 @@ defaultScripts
         at: 'run'
             put:
                 (Dictionary new
-                        at: 'init'
-                            put:
-                                'TZGsEvaluator initialize.
-TZNativeEvaluator initialize.
-TZObject initialize.
-TZProxyObject initialize.
-TZTopez initialize.
-TZEvaluator debugMode: true.';
                         at: 'testing' put: '3+4';
                         yourself);
         at: 'input'

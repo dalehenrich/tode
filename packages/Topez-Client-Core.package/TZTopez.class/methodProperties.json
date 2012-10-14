@@ -1,13 +1,14 @@
 {
 	"class" : {
+		"codeWindowExtent" : "dkh 10/14/2012 10:59",
 		"initialize" : "dkh 10/12/2012 10:30",
-		"initializeBounds" : "dkh 10/12/2012 18:35" },
+		"initializeBounds" : "dkh 10/14/2012 11:04",
+		"listWindowExtent" : "dkh 10/14/2012 11:00" },
 	"instance" : {
 		"activateWindow:" : "dkh 10/10/2012 17:54",
 		"bounds" : "dkh 10/12/2012 10:28",
 		"classElementForCurrentClass" : "dkh 10/12/2012 15:01",
 		"close" : "dkh 10/14/2012 09:01",
-		"codeExtent" : "dkh 10/10/2012 18:27",
 		"collapse" : "dkh 10/13/2012 17:59",
 		"commandOptions" : "dkh 9/27/2012 15:42",
 		"commandOptions:" : "dkh 9/27/2012 15:42",
@@ -28,7 +29,6 @@
 		"executeStringInSession:" : "dkh 10/5/2012 08:25",
 		"expand" : "dkh 10/13/2012 17:59",
 		"level:" : "dkh 10/7/2012 16:01",
-		"listExtent" : "dkh 10/10/2012 18:30",
 		"metacelloProject:" : "dkh 10/7/2012 15:20",
 		"namedWindows" : "dkh 10/9/2012 07:26",
 		"nextAvailableWindowId" : "dkh 10/8/2012 07:43",

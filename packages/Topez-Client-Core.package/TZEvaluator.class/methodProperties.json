@@ -1,13 +1,13 @@
 {
 	"class" : {
 		"commands" : "dkh 10/5/2012 07:23",
+		"commonScripts" : "dkh 10/14/2012 10:52",
 		"debugMode" : "dkh 10/13/2012 10:06",
 		"debugMode:" : "dkh 10/13/2012 10:07",
 		"debuggerCmds" : "dkh 10/5/2012 07:21",
-		"defaultScripts" : "dkh 10/13/2012 13:36",
 		"editCmds" : "dkh 10/13/2012 17:02",
 		"findCmds" : "dkh 10/13/2012 10:18",
-		"initialize" : "dkh 10/13/2012 10:12",
+		"initialize" : "dkh 10/14/2012 10:44",
 		"listCmds" : "dkh 10/13/2012 11:37",
 		"runCmds" : "dkh 10/14/2012 09:13",
 		"scripts" : "dkh 10/10/2012 16:43",
