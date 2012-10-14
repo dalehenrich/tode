@@ -1,15 +1,16 @@
 {
 	"class" : {
 		"oop:" : "dkh 9/28/2012 08:14",
+		"oop:classOop:className:" : "dkh 10/14/2012 08:54",
 		"oop:indexedSize:namedSize:printString:classOop:className:" : "dkh 9/28/2012 08:06" },
 	"instance" : {
 		"asOopTypeWith:" : "dkh 10/5/2012 08:07",
 		"basicPrintOn:indent:" : "dkh 10/6/2012 10:38",
 		"classOop" : "dkh 9/29/2012 11:00",
 		"leadingChar" : "dkh 9/28/2012 11:49",
-		"nativeIn:" : "dkh 10/10/2012 08:33",
+		"nativeIn:" : "dkh 10/14/2012 09:12",
 		"objectForOop" : "dkh 9/28/2012 19:00",
-		"on:" : "dkh 10/4/2012 16:25",
+		"on:" : "dkh 10/14/2012 09:18",
 		"oop" : "dkh 9/29/2012 11:00",
 		"oop:indexedSize:namedSize:printString:classOop:className:" : "dkh 9/28/2012 08:06",
 		"proxyOop" : "dkh 10/4/2012 14:55",

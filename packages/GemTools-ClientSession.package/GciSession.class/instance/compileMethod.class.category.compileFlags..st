@@ -4,7 +4,7 @@ compileMethod: sourceString class: class category: category compileFlags: compil
       0 - compile instance method
       1 - compile class method"
 
-    ^ self
+    self
         compileMethod: sourceString
         class: class
         category: category

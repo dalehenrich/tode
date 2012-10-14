@@ -10,4 +10,4 @@ on: anObject
         do: [ :ignored | 'error printing' ].
     objectClass := Reflection classOf: anObject.
     classOop := Reflection oopOf: objectClass.
-    className := objectClass name asString
+    className := objectClass name	"converting to String exposes the string to gc"

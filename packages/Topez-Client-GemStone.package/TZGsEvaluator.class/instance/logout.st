@@ -1,4 +1,8 @@
 session management
 logout
-    topez ifNil: [ ^ self ].
-    topez logout
+    | tpz |
+    tpz := topez.
+    super logout.
+    tpz ifNil: [ ^ self ].
+    topez := nil.
+    tpz logout

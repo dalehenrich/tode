@@ -2,6 +2,7 @@
 	"class" : {
 		"isAbstract" : "dkh 10/13/2012 14:09" },
 	"instance" : {
+		"runClose" : "dkh 10/14/2012 09:21",
 		"runEditClass" : "dkh 10/13/2012 15:30",
 		"runEditClassMethod" : "dkh 10/13/2012 15:46",
 		"runEditClassSelectors" : "dkh 10/13/2012 15:49",
@@ -12,6 +13,8 @@
 		"runEditSelectors" : "dkh 10/13/2012 15:47",
 		"runEditSubclasses" : "dkh 10/13/2012 15:40",
 		"runEditSuperclasses" : "dkh 10/13/2012 15:32",
+		"runLogout" : "dkh 10/14/2012 09:22",
+		"testClose" : "dkh 10/14/2012 09:20",
 		"testEditClass" : "dkh 10/13/2012 15:33",
 		"testEditClassMethod" : "dkh 10/13/2012 15:46",
 		"testEditClassSelectors" : "dkh 10/13/2012 15:49",
@@ -21,4 +24,5 @@
 		"testEditScripts" : "dkh 10/13/2012 15:33",
 		"testEditSelectors" : "dkh 10/13/2012 15:48",
 		"testEditSubclasses" : "dkh 10/13/2012 15:40",
-		"testEditSuperclasses" : "dkh 10/13/2012 15:39" } }
+		"testEditSuperclasses" : "dkh 10/13/2012 15:39",
+		"testLogout" : "dkh 10/14/2012 09:21" } }
