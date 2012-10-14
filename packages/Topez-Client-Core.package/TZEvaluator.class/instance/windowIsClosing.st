@@ -1,5 +1,7 @@
 accessing
 windowIsClosing
+    | tpz |
     topez ifNil: [ ^ self ].
-    "self status windowAt: 1 put: nil."
-    topez windowIsClosing
+    tpz := topez.
+    topez := nil.
+    tpz windowIsClosing
