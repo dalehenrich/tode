@@ -10,6 +10,6 @@ update: aspect
                     elementProxy := self listEditor list at: listIndex.
                     clickBlock := TZProxyObject clickBlocks
                         at: #'singleClick'
-                        forClass: elementProxy className
+                        forClass: elementProxy asTopezProxy proxyClassName
                         ifAbsent: [ ^ self ].
                     clickBlock value: elementProxy value: self topez value: self ] ]

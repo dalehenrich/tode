@@ -8,8 +8,8 @@ selectClass: aString
     classList size > 1
         ifTrue: [ 
             | index |
-            index := UIManager default chooseFrom: (classList collect: [:each | each proxyClassName asTopezNative]).
+            index := UIManager default chooseFrom: (classList collect: [ :each | each elementClassName asTopezNative ]).
             index = 0
                 ifTrue: [ ^ nil ].
-            className := (classList at: index) proxyClassName asTopezNative].
+            className := (classList at: index) elementClassName asTopezNative ].
     ^ self setClass: className

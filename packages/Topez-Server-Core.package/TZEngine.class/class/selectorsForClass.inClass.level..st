@@ -9,7 +9,7 @@ selectorsForClass: aClass inClass: classBoolean level: level
             TZMethodElement new
                 proxyClass: aClass;
                 proxyClassName: aClass name;
-                selector: selector asString;
+                selector: selector ;
                 category: (aClass categoryOfSelector: selector asSymbol);
                 isMeta: classBoolean;
                 setSource;

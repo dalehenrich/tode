@@ -1,3 +1,3 @@
 accessing
 proxyClassName: anObject
-    proxyClassName := anObject
+    elementClassName := anObject

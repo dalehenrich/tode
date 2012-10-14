@@ -9,7 +9,7 @@
 		"proxyProject",
 		"proxyPackage",
 		"proxyClass",
-		"proxyClassName" ],
+		"elementClassName" ],
 	"name" : "TZElement",
 	"pools" : [
 		 ],

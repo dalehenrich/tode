@@ -1,3 +1,3 @@
 accessing
 proxyClassName
-    ^ proxyClassName
+    ^ self halt: 'use elementClassName'

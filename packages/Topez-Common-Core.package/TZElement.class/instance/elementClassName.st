@@ -1,3 +1,3 @@
 accessing
 elementClassName
-    ^ proxyClassName
+    ^ elementClassName

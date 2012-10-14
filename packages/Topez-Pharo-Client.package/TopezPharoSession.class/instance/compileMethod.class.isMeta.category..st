@@ -9,7 +9,7 @@ compileMethod: source class: classProxy isMeta: isMeta category: categoryName
         isMeta: isMeta;
         proxyClass: classProxy;
         proxyClassName: classProxy asTopezProxy proxyClassName;
-        selector: selector asString;
+        selector: selector;
         category: categoryName;
         setSource;
         yourself

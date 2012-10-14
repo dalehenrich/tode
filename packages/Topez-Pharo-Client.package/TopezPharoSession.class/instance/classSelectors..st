@@ -8,7 +8,7 @@ classSelectors: classProxy
                 isMeta: true;
                 proxyClass: classProxy;
                 proxyClassName: classProxy asTopezProxy proxyClassName;
-                selector: each asString;
+                selector: each;
                 category: (cl organization categoryOfElement: each asSymbol);
                 setSource;
                 yourself ]

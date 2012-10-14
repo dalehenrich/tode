@@ -18,7 +18,7 @@ initializePrintBlocks
         at: #'label'
             forClass: 'TZMethodElement'
             put: [ :proxy :aStream :indent | 
-                    aStream nextPutAll: proxy proxyClassName asTopezNative.
+                    aStream nextPutAll: proxy elementClassName asTopezNative.
                     proxy isMeta asTopezNative
                         ifTrue: [ aStream nextPutAll: ' class>>' ]
                         ifFalse: [ aStream nextPutAll: '>>' ].

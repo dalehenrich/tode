@@ -7,4 +7,4 @@ findMatchingClasses: aString
                 performNoDebug: 'findMatchingClasses:level:'
                 withArgs:
                     {aString.
-                    1} ]
+                    3} ]
