@@ -6,7 +6,7 @@ compileMethod: source class: classProxy category: category forMeta: forMeta
         doInSession: [ :sess | 
             sess
                 receiverNB: self currentEngine
-                performNoDebug: 'compileMethod:class:category:forMeta: '
+                performNoDebug: 'compileMethod:class:category:forMeta:level:'
                 withArgs:
                     {oSource.
                     classProxy.
