@@ -7,8 +7,11 @@ testListPrtests
             (x := result asString)
                 =
                    'TZClientTests
-   TZClientTopezTests
+   TZEvaluatorEditTests
+      TZGsEvaluatorEditTests
+      TZNativeEvaluatorEditTests
    TZEvaluatorTests
       TZGsEvaluatorTests
       TZNativeEvaluatorTests
+   TZGsTopezApiTests
 TZSTONTests'

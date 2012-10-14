@@ -1,10 +1,12 @@
 {
 	"class" : {
-		 },
+		"isAbstract" : "dkh 10/13/2012 14:36" },
 	"instance" : {
 		"defaultSessionDescription" : "dkh 10/8/2012 17:41",
+		"evaluator" : "dkh 10/13/2012 13:53",
 		"popPrintBlocks" : "dkh 10/11/2012 14:29",
 		"pushPrintBlocks" : "dkh 10/11/2012 14:28",
 		"sessionDescription" : "dkh 9/26/2012 15:04",
 		"sessionDescription:" : "dkh 9/26/2012 15:04",
-		"tearDown" : "dkh 10/2/2012 08:13" } }
+		"setUp" : "dkh 10/13/2012 17:03",
+		"tearDown" : "dkh 10/13/2012 14:28" } }

@@ -44,10 +44,13 @@ testListPrclasses
    String
    TZBlockStackDictionary
    TZClientTests
-      TZClientTopezTests
+      TZEvaluatorEditTests
+         TZGsEvaluatorEditTests
+         TZNativeEvaluatorEditTests
       TZEvaluatorTests
          TZGsEvaluatorTests
          TZNativeEvaluatorTests
+      TZGsTopezApiTests
    TZElement
       TZClassElement
       TZSourceElement

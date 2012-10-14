@@ -33,14 +33,16 @@ TZEvaluator debugMode: true.';
                             put:
                                 'set project Topez
 edit #topezClasses prclasses
-topez filterClasses';
+topez filterClasses
+edit prtests';
                         at: 'topez'
                             put:
                                 'set project Topez
 set class TZEvaluator
 edit  prclasses
 edit superclasses
-edit subclasses';
+edit subclasses
+edit prtests';
                         at: 'testing'
                             put:
                                 'run

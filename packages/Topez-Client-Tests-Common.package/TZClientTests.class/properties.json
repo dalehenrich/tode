@@ -7,7 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"topez",
-		"sessionDescription" ],
+		"sessionDescription",
+		"evaluator",
+		"debugMode" ],
 	"name" : "TZClientTests",
 	"pools" : [
 		 ],

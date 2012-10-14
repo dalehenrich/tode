@@ -63,7 +63,12 @@ editCmds
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'script' ].
                             type == #'input'
-                                ifTrue: [ topez editText: text label: 'Script' inWindow: id ]
+                                ifTrue: [ 
+                                    topez
+                                        editText: text
+                                        label: 'Script'
+                                        inWindow: id
+                                        at: 'method' ]
                                 ifFalse: [ 
                                     topez
                                         editCode: text
@@ -188,21 +193,21 @@ editCmds
                             | id |
                             id := windowId notNil
                                 ifTrue: [ windowId ]
-                                ifFalse: [ topez windowIdNamed: #'selectors' ].
+                                ifFalse: [ topez windowIdNamed: #'instanceSelectors' ].
                             topez
                                 editList: (topez instanceSelectors: evaluator status currentClass)
                                 label: 'Selectors'
                                 inWindow: id
-                                at: 'selectors' ];
+                                at: 'instanceSelectors' ];
                 at: #'cselectors'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | id |
                             id := windowId notNil
                                 ifTrue: [ windowId ]
-                                ifFalse: [ topez windowIdNamed: #'selectors' ].
+                                ifFalse: [ topez windowIdNamed: #'classSelectors' ].
                             topez
                                 editList: (topez classSelectors: evaluator status currentClass)
                                 label: 'Class Selectors'
                                 inWindow: id
-                                at: 'selectors' ];
+                                at: 'classSelectors' ];
                 yourself)

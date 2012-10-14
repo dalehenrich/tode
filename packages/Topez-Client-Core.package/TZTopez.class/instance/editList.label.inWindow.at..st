@@ -15,7 +15,7 @@ editList: aCollectionOfObjects label: labelString inWindow: windowIdOrNil at: wi
     newWindow
         ifTrue: [ 
             | bounds |
-            bounds := self bounds at: windowLocation.
+            bounds := self bounds at: windowLocation ifAbsent: [self error: 'Unknown window location: ', windowLocation printString].
             win
                 extent: bounds extent;
                 position: bounds origin ].

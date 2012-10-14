@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Client-Tests-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZGsTopezApiTests",
+	"pools" : [
+		 ],
+	"super" : "TZClientTests",
+	"type" : "normal" }

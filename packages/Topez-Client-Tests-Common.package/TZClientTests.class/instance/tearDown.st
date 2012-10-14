@@ -1,4 +1,6 @@
 running
 tearDown
     super tearDown.
-    self popPrintBlocks
+    self popPrintBlocks.
+    evaluator ifNotNil: [ self evaluator exit ].
+    TZEvaluator debugMode: debugMode
