@@ -11,11 +11,11 @@ renderWith: aTextAttribute on: aStream indent: indent
             aStream
                 nextPutAll: ' cls: ';
                 nextPutAll: self classOop printString ].
-    self className
+    self proxyClassName
         ifNotNil: [ 
             aStream
                 space;
-                nextPutAll: (Text string: self className attribute: TextEmphasis bold) ].
+                nextPutAll: (Text string: self proxyClassName attribute: TextEmphasis bold) ].
     aStream
         nextPut: self trailingChar;
         space;

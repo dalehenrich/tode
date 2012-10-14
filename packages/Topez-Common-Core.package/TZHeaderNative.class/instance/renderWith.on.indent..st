@@ -5,11 +5,11 @@ renderWith: aTextAttribute on: aStream indent: indent
         nextPut: self leadingChar;
         nextPutAll: ' sz:';
         nextPutAll: self proxySize printString.
-    self className
+    self proxyClassName
         ifNotNil: [ 
             aStream
                 space;
-                nextPutAll: (Text string: self className attribute: TextEmphasis bold) ].
+                nextPutAll: (Text string: self proxyClassName attribute: TextEmphasis bold) ].
     aStream
         nextPut: self trailingChar;
         space;

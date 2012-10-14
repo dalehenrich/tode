@@ -12,7 +12,7 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
         contents:
                 (TZDoItElement new
                         proxyClass: classProxy;
-                        proxyClassName: classProxy className;
+                        proxyClassName: classProxy asTopezProxy proxyClassName;
                         source: aStringOrText;
                         yourself);
         windowId: windowId;

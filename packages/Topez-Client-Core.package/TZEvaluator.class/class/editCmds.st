@@ -78,24 +78,26 @@ editCmds
                                         at: 'method' ] ];
                 at: #'class'
                     put: [ :evaluator :topez :tokens :windowId | 
-                            | id list |
+                            | id list label |
                             id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'class' ].
                             list := tokens size = 3
                                 ifTrue: [ 
-                                    (topez findMatchingClassNames: (tokens at: 3)) == nil
-                                        ifTrue: [ #() ]
-                                        ifFalse: [ {(topez classElementForCurrentClass)} ] ]
-                                ifFalse: [ {(topez classElementForCurrentClass)} ].
-                            list notEmpty
-                                ifTrue: [ 
+                                    label := tokens at: 3.
+                                    topez findMatchingClasses: (tokens at: 3) ]
+                                ifFalse: [ 
+                                    label := topez currentClass proxyClassName.
+                                    {(topez classElementForCurrentClass)} ].
+                            list isEmpty
+                                ifTrue: [ 'No matching classes found' ]
+                                ifFalse: [ 
                                     topez
                                         editList: list
-                                        label: topez currentClass className
+                                        label: label
                                         inWindow: id
-                                        at: 'classes' ].
-                            '' ];
+                                        at: 'classes'.
+                                    '' ] ];
                 at: #'superclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |

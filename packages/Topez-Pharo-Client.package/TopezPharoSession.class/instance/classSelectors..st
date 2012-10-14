@@ -7,7 +7,7 @@ classSelectors: classProxy
             TZMethodElement new
                 isMeta: true;
                 proxyClass: classProxy;
-                proxyClassName: classProxy asTopezProxy className;
+                proxyClassName: classProxy asTopezProxy proxyClassName;
                 selector: each asString;
                 category: (cl organization categoryOfElement: each asSymbol);
                 setSource;

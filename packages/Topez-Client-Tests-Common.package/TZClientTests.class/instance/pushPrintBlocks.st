@@ -7,7 +7,7 @@ pushPrintBlocks
                     aStream
                         tab: indent;
                         nextPut: proxy leadingChar;
-                        nextPutAll: proxy className asString;
+                        nextPutAll: proxy proxyClassName asString;
                         nextPut: proxy trailingChar;
                         space;
                         nextPutAll: proxy proxyPrintString ];
@@ -17,7 +17,7 @@ pushPrintBlocks
                     aStream
                         tab: indent;
                         nextPut: proxy leadingChar;
-                        nextPutAll: proxy className asString;
+                        nextPutAll: proxy proxyClassName asString;
                         nextPut: proxy trailingChar;
                         space;
                         nextPutAll: proxy proxyPrintString ];
@@ -27,7 +27,7 @@ pushPrintBlocks
                     aStream
                         tab: indent;
                         nextPut: proxy leadingChar;
-                        nextPutAll: proxy className asString;
+                        nextPutAll: proxy proxyClassName asString;
                         nextPut: proxy trailingChar;
                         space;
                         nextPutAll: proxy proxyPrintString ]

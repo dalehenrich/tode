@@ -8,7 +8,7 @@ compileMethod: source class: classProxy isMeta: isMeta category: categoryName
     ^ TZMethodElement new
         isMeta: isMeta;
         proxyClass: classProxy;
-        proxyClassName: classProxy asTopezProxy className;
+        proxyClassName: classProxy asTopezProxy proxyClassName;
         selector: selector asString;
         category: categoryName;
         setSource;
