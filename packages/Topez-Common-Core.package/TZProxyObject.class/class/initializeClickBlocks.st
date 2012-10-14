@@ -32,12 +32,12 @@ initializeClickBlocks
                         at: 'subclasses'.
                     topez
                         editList: (topez classSelectors: proxy proxyClass)
-                        label: proxy proxyClassName , ' class'
+                        label: proxy proxyClassName asTopezNative , ' class'
                         inWindow: (topez windowIdNamed: #'classSelectors')
                         at: 'classSelectors'.
                     topez
                         editList: (topez instanceSelectors: proxy proxyClass)
-                        label: proxy proxyClassName
+                        label: proxy proxyClassName asTopezNative
                         inWindow: (topez windowIdNamed: #'instanceSelectors')
                         at: 'instanceSelectors'.
                     topez setClass: proxy proxyClassName ];
