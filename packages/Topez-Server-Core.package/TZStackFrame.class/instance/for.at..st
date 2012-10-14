@@ -14,7 +14,7 @@ for: aGsProcess  at: index
 		ifTrue:[ method inClass]
 		ifFalse:[ method ].
 	inClass := homeMethod inClass.
-	selector := homeMethod selector asString.
+	selector := homeMethod selector.
 	stepPtAr := process _localStepPointAt: index.
 	stepPtAr ~~ nil
 		ifTrue: [ 

@@ -5,8 +5,8 @@ methodElementForClass: aClass isMeta: isMeta selector: selector level: level
 	element := TZMethodElement new
         isMeta: isMeta;
         proxyClass: aClass;
-        proxyClassName: aClass name asString;
-        selector: selector asString;
+        proxyClassName: aClass name;
+        selector: selector;
         category: (aClass categoryOfSelector: selector asSymbol);
         setSource;
         yourself.

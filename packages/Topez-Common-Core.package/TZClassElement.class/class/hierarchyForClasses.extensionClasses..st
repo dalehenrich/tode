@@ -35,7 +35,7 @@ hierarchyForClasses: classList extensionClasses: extensionClassList
             cl := assoc value.
             element := TZClassElement new
                 proxyClass: cl;
-                proxyClassName: cl name asString;
+                proxyClassName: cl name;
                 indent: (indents at: cl);
                 inExtensionClassList: (extensionClassList includesKey: cl);
                 yourself.
