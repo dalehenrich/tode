@@ -12,6 +12,7 @@ testListPrclasses
    Text
    TZBlockStackDictionary
    TZClientTests
+      TZEvaluatorEditTests
       TZEvaluatorTests
    TZElement
       TZClassElement
