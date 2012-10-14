@@ -3,9 +3,6 @@ minimizeOrRestore
     "Collapse or expand the window, depending on existing state"
 
     | mc windowEvent |
-    Transcript
-        cr;
-        show: 'hehe'.
     isCollapsed
         ifTrue: [ 
             "Expand -- restore panes to morphics structure"
