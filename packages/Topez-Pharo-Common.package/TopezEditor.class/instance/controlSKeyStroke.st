@@ -1,4 +1,4 @@
 accessing
 controlSKeyStroke
-self activeEditor spawnWindow.
- ^true
+    self activeEditor spawnWindow.
+    ^ true

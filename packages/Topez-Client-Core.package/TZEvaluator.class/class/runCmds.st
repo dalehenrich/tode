@@ -31,4 +31,13 @@ runCmds
         at: 'exit'
             put: [ :evaluator :topez :tokens | 
                     evaluator exit.
-                    '' ]
+                    '' ];
+        at: 'collapse'
+            put: [ :evaluator :topez :tokens | 
+                    evaluator collapse.
+                    '' ];
+        at: 'expand'
+            put: [ :evaluator :topez :tokens | 
+                    evaluator expand.
+                    '' ];
+        yourself
