@@ -9,4 +9,5 @@ messageElementFor: behavior selector: selector messagePattern: aString
         selector: selector;
         category: (behavior organization categoryOfElement: selector asSymbol);
         messagePattern: aString;
+        setSource;
         yourself

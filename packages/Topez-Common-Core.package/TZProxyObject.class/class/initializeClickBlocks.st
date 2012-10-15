@@ -10,7 +10,16 @@ initializeClickBlocks
                         editCodeElement: proxy
                         label: 'Code'
                         inWindow: (topez windowIdNamed: #'methodSource')
-                        at: 'method' ];
+                        at: 'method'.
+                    topez setClass: proxy elementClassName ];
+        at: #'singleClick'
+            forClass: 'TZMessageElement'
+            put: [ :proxy :topez :editor | 
+                    ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first value: proxy value: topez value: editor.
+                    ((self clickBlocks at: 'TZMethodElement') at: #'singleClick') first
+                        value: proxy
+                        value: topez
+                        value: editor ];
         at: #'singleClick'
             forClass: 'TZClassElement'
             put: [ :proxy :topez :editor | 

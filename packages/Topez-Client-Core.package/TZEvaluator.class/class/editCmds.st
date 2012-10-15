@@ -212,4 +212,34 @@ editCmds
                                 label: 'Class Selectors'
                                 inWindow: id
                                 at: 'classSelectors' ];
+                at: #'implementors'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list id |
+                            id := windowId notNil
+                                ifTrue: [ windowId ]
+                                ifFalse: [ topez windowIdNamed: #'messages' ].
+                            list := ((subCommands at: #'list') at: #'implementors')
+                                value: evaluator
+                                value: topez
+                                value: tokens.
+                            topez
+                                editList: list
+                                label: 'Implementors'
+                                inWindow: id
+                                at: 'classes' ];
+                at: #'senders'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list id |
+                            id := windowId notNil
+                                ifTrue: [ windowId ]
+                                ifFalse: [ topez windowIdNamed: #'messages' ].
+                            list := ((subCommands at: #'list') at: #'senders')
+                                value: evaluator
+                                value: topez
+                                value: tokens.
+                            topez
+                                editList: list
+                                label: 'senders'
+                                inWindow: id
+                                at: 'classes' ];
                 yourself)

@@ -2,5 +2,10 @@ menu messages
 sendersOf: selectedSelector
     " opens a Browser on the given selector"
 
-    self halt.
-    self model systemNavigation browseAllCallsOn: selectedSelector
+    (self evaluator class commands at: 'edit')
+        value: self evaluator
+        value: self topez
+        value:
+            {'edit'.
+            'senders'.
+            selectedSelector}
