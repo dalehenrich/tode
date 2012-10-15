@@ -1,3 +1,3 @@
 initialize-release
 buildTextMorph
-    ^ PluggableTextMorph on: self text: #'contents' accept: #'acceptContents:notifying:'
+    ^ TZPluggableTextMorph on: self text: #'contents' accept: #'acceptContents:notifying:'

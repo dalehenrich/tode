@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"initialize" : "dkh 10/14/2012 19:34" },
+	"instance" : {
+		"browseClassFrom:" : "dkh 10/14/2012 20:06",
+		"debugIt" : "dkh 10/14/2012 19:28",
+		"doIt" : "dkh 10/14/2012 19:27",
+		"evaluateSelection" : "dkh 10/14/2012 19:28",
+		"evaluateSelectionAndDo:" : "dkh 10/14/2012 20:15",
+		"evaluator" : "dkh 10/14/2012 20:05",
+		"exploreIt" : "dkh 10/14/2012 19:27",
+		"implementorsOf:" : "dkh 10/14/2012 19:28",
+		"inspectIt" : "dkh 10/14/2012 19:22",
+		"printIt" : "dkh 10/14/2012 19:27",
+		"referencesTo:" : "dkh 10/14/2012 19:28",
+		"sendersOf:" : "dkh 10/14/2012 19:28",
+		"topez" : "dkh 10/14/2012 20:06" } }

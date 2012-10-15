@@ -4,9 +4,11 @@
 	"instance" : {
 		"acceptContents:notifying:" : "dkh 10/14/2012 12:54",
 		"bindingOf:" : "dkh 10/8/2012 10:59",
-		"buildTextMorph" : "dkh 10/12/2012 13:20",
+		"buildTextMorph" : "dkh 10/14/2012 17:31",
 		"contents" : "dkh 10/9/2012 16:24",
 		"contents:" : "dkh 10/9/2012 16:02",
+		"doItContext" : "dkh 10/14/2012 20:22",
+		"doItReceiver" : "dkh 10/14/2012 20:21",
 		"format:" : "dkh 10/12/2012 16:08",
 		"hasBindingThatBeginsWith:" : "dkh 10/8/2012 11:52",
 		"initialize" : "dkh 10/7/2012 09:01",

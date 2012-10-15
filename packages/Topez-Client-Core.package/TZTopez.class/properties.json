@@ -7,6 +7,7 @@
 		"Bounds" ],
 	"commentStamp" : "",
 	"instvars" : [
+		"evaluator",
 		"status",
 		"commandOptions" ],
 	"name" : "TZTopez",
