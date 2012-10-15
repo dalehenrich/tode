@@ -6,9 +6,9 @@ testListClass
         assert:
             (x := result asString)
                 =
-                    'TZProxyBreakpoint
-TZProxyError
-TZProxyGemStone
-TZProxyNative
-TZProxyNotification
-TZProxyObject'
+                    'TZProxyObject
+   TZProxyGemStone
+   TZProxyNative
+   TZProxyNotification
+      TZProxyBreakpoint
+      TZProxyError'
