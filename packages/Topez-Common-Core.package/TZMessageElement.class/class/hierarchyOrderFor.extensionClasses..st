@@ -39,11 +39,12 @@ hierarchyOrderFor: messageList extensionClasses: extensionClassList
     results := OrderedCollection new.
     order
         do: [ :assoc | 
-            | cl element |
+            | cl |
             cl := assoc value.
-            element := (classMap at: cl)
-                indent: (indents at: cl);
-                inExtensionClassList: (extensionClassList includesKey: cl);
-                yourself.
-            results add: element ].
+            (classMap at: cl)
+                do: [ :element | 
+                    element
+                        indent: (indents at: cl);
+                        inExtensionClassList: (extensionClassList includesKey: cl).
+                    results add: element ] ].
     ^ results asArray

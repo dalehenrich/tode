@@ -24,4 +24,6 @@ initializeBounds
         at: 'method' put: (classDefOrigin @ (top + thirdHeight) extent: codeWindowExtent);
         at: 'instanceSelectors' put: ((classDefOrigin + codeWidth) @ top extent: listWidth @ twoThirdHeight);
         at: 'classSelectors' put: ((classDefOrigin + codeWidth + listWidth) @ top extent: listWidth @ twoThirdHeight);
+        at: #'implementors'
+            put: ((classDefOrigin + codeWidth) @ (top + twoThirdHeight) extent: (2 * listWidth) @ fullHeight);
         yourself

@@ -26,12 +26,14 @@ initializePrintBlocks
         at: #'basic'
             forClass: 'TZMessageElement'
             put: [ :proxy :aStream :indent | 
-                    | className |
+                    | className space |
+                    space := ''.
+                    proxy indent asTopezNative timesRepeat: [ space := space , '   ' ].
                     className := proxy elementClassName asTopezNative.
                     proxy isMeta asTopezNative
                         ifTrue: [ className := className , ' class' ].
                     aStream
-                        nextPutAll: (Text string: className attribute: TextEmphasis bold);
+                        nextPutAll: (Text string: space , className attribute: TextEmphasis bold);
                         nextPutAll: '>>';
                         nextPutAll: (Text string: proxy selector asTopezNative attribute: TextEmphasis italic) ];
         at: #'basic'

@@ -7,4 +7,4 @@ implementorsOf: aString
         allBehaviorsDo: [ :behavior | 
             (behavior includesSelector: selector)
                 ifTrue: [ aCollection add: (self messageElementFor: behavior selector: selector messagePattern: aString) ] ].
-    ^ aCollection
+    ^ TZMessageElement hierarchyOrderFor: aCollection

@@ -239,9 +239,9 @@ editCmds
                                 value: tokens.
                             topez
                                 editList: list
-                                label: 'Implementors'
+                                label: 'Implementors of ' , (tokens at: 3)
                                 inWindow: id
-                                at: 'classes' ];
+                                at: 'implementors' ];
                 at: #'senders'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
@@ -254,7 +254,7 @@ editCmds
                                 value: tokens.
                             topez
                                 editList: list
-                                label: 'senders'
+                                label: 'Senders of ' , (tokens at: 3)
                                 inWindow: id
-                                at: 'classes' ];
+                                at: 'implementors' ];
                 yourself)

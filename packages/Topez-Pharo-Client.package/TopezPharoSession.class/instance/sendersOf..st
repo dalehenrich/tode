@@ -8,4 +8,4 @@ sendersOf: aString
         allBehaviorsDo: [ :behavior | 
             (behavior thoroughWhichSelectorsReferTo: selector special: special byte: byte)
                 do: [ :sel | aCollection add: (self messageElementFor: behavior selector: sel messagePattern: aString) ] ].
-    ^ aCollection
+    ^ TZMessageElement hierarchyOrderFor: aCollection
