@@ -13,7 +13,7 @@ referencesTo: aVariableOrClassName isMeta: isMeta in: aClassProxyOrNil
                     env
                         withAllSubAndSuperclassesDo: [ :cl | 
                             (cl whichSelectorsAccess: aVariableOrClassName)
-                                do: [ :sel | aCollection add: (self messageElementFor: env selector: sel messagePattern: aVariableOrClassName) ] ].
+                                do: [ :sel | aCollection add: (self messageElementFor: cl selector: sel messagePattern: aVariableOrClassName) ] ].
                     ^ TZMessageElement hierarchyOrderFor: aCollection ] ].
     ref := (env bindingOf: aVariableOrClassName) ifNil: [ ^ aCollection ].
     special := Smalltalk hasSpecialSelector: ref ifTrueSetByte: [ :value | byte := value ].

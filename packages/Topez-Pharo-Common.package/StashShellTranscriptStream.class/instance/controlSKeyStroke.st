@@ -1,5 +1,0 @@
-accessing
-controlSKeyStroke
-    "noop"
-
-    ^ false

@@ -1,3 +1,0 @@
-editing
-handlesKeyboard: anEvent
-    ^ true

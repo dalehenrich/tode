@@ -1,6 +1,6 @@
 initialization
 buildListMorph
-    ^ PluggableListMorph new
+    ^ TZPluggableListMorph new
         hResizing: #'spaceFill';
         vResizing: #'spaceFill';
         on: self
