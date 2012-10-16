@@ -2,12 +2,12 @@ menu messages
 referencesTo: aVariableOrClassName
     "Open a references browser on the given symbol"
 
-    | env ref |
-    self halt.	" ugly dispatch, but current Browser protocol names aren't really cool "
-    env := self modelCurrentSelectedClass ifNil: [ Smalltalk globals ].
-    env isBehavior
-        ifTrue: [ 
-            (env instVarIndexFor: aVariableOrClassName) > 0
-                ifTrue: [ ^ self systemNavigation browseAllAccessesTo: aVariableOrClassName from: env ] ].
-    ref := (env bindingOf: aVariableOrClassName) ifNil: [ ^ self ].
-    self systemNavigation browseAllCallsOn: ref
+    | list |
+    self halt.
+
+    list := self topez referencesTo: aVariableOrClassName isMeta: self model sourceElement isMeta in: self model sourceElement proxyClass.
+    self topez
+        editList: list
+        label: 'References to ' , aVariableOrClassName
+        inWindow: (self topez windowIdNamed: #'messages')
+        at: 'implementors'

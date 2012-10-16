@@ -257,4 +257,19 @@ editCmds
                                 label: 'Senders of ' , (tokens at: 3)
                                 inWindow: id
                                 at: 'implementors' ];
+                at: #'references'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list id |
+                            id := windowId notNil
+                                ifTrue: [ windowId ]
+                                ifFalse: [ topez windowIdNamed: #'messages' ].
+                            list := ((subCommands at: #'list') at: #'references')
+                                value: evaluator
+                                value: topez
+                                value: tokens.
+                            topez
+                                editList: list
+                                label: 'References to ' , (tokens at: 3)
+                                inWindow: id
+                                at: 'implementors' ];
                 yourself)

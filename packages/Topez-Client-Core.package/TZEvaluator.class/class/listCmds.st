@@ -61,4 +61,5 @@ listCmds
                 at: #'class' put: [ :evaluator :topez :tokens | topez findMatchingClasses: (tokens at: 3) ];
                 at: #'implementors' put: [ :evaluator :topez :tokens | topez implementorsOf: (tokens at: 3) ];
                 at: #'senders' put: [ :evaluator :topez :tokens | topez sendersOf: (tokens at: 3) ];
+                at: #'references' put: [ :evaluator :topez :tokens | topez referencesTo: (tokens at: 3) ];
                 yourself)
