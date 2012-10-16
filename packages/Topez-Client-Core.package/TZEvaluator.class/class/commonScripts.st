@@ -33,10 +33,8 @@ edit prtests';
                             put:
                                 'set project Topez
 set class TZEvaluator
-edit  prclasses
-edit superclasses
-edit subclasses
-edit prtests';
+edit prtests
+edit prclasses';
                         at: 'testing'
                             put:
                                 'run

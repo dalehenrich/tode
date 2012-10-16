@@ -113,6 +113,21 @@ editCmds
                                 label: 'Superclasses'
                                 inWindow: id
                                 at: 'superclasses' ];
+                at: #'hierarchy'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list id |
+                            id := windowId notNil
+                                ifTrue: [ windowId ]
+                                ifFalse: [ topez windowIdNamed: #'hierarchy' ].
+                            list := ((subCommands at: #'list') at: #'hierarchy')
+                                value: evaluator
+                                value: topez
+                                value: tokens.
+                            topez
+                                editList: list
+                                label: 'Hierarchy'
+                                inWindow: id
+                                at: 'superclasses' ];
                 at: #'subclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |

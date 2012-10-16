@@ -1,3 +1,3 @@
 tests
-testImplementors
+testListSenders
     self assert: false

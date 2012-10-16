@@ -51,6 +51,7 @@ listCmds
                             stream contents ];
                 at: #'superclasses' put: [ :evaluator :topez :tokens | topez superclassesOf: topez currentClass ];
                 at: #'subclasses' put: [ :evaluator :topez :tokens | topez subclassesOf: topez currentClass ];
+                at: #'hierarchy' put: [ :evaluator :topez :tokens | topez hierarchyOf: topez currentClass ];
                 at: #'prclasses' put: [ :evaluator :topez :tokens | topez classesInMetacelloProject ];
                 at: #'prtests' put: [ :evaluator :topez :tokens | topez testClassesInMetacelloProject ];
                 at: #'method:' put: [ :evaluator :topez :tokens | topez sourceForMethod: (tokens at: 3) ];

@@ -23,22 +23,23 @@ initializeClickBlocks
         at: #'singleClick'
             forClass: 'TZClassElement'
             put: [ :proxy :topez :editor | 
+                    | hierarchyElements selectedElement |
                     topez
                         editCode: (topez classDefinition: proxy proxyClass)
                         inClass: proxy proxyClass
                         label: 'Class'
                         inWindow: (topez windowIdNamed: #'classDefinition')
                         at: 'classDef'.
+                    hierarchyElements := topez hierarchyOf: proxy proxyClass.
+                    selectedElement := hierarchyElements
+                        detect: [ :element | element elementClassName asTopezNative asString = proxy elementClassName asTopezNative asString ]
+                        ifNone: [  ].
                     topez
-                        editList: (topez superclassesOf: proxy proxyClass)
-                        label: 'Superclasses'
-                        inWindow: (topez windowIdNamed: #'superclasses')
+                        editList: hierarchyElements
+                        selection: selectedElement
+                        label: 'Hierarchy'
+                        inWindow: (topez windowIdNamed: #'hierarchy')
                         at: 'superclasses'.
-                    topez
-                        editList: (topez subclassesOf: proxy proxyClass)
-                        label: 'Subclasses'
-                        inWindow: (topez windowIdNamed: #'subclasses')
-                        at: 'subclasses'.
                     topez
                         editList: (topez classSelectors: proxy proxyClass)
                         label: proxy elementClassName asTopezNative , ' class'

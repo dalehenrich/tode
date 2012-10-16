@@ -18,7 +18,7 @@ superclassesOf: classList
                 ifTrue: [ chain1 size < chain2 size ]
                 ifFalse: [ result ] ].
     classes := Set new.
-    classList do: [ :class | classes addAll: class allSuperclasses ].
+    classList do: [ :cl | classes addAll: cl allSuperclasses ].
     classes
         do: [ :cl | 
             | supersChain |

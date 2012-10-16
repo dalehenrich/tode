@@ -7,5 +7,5 @@ sendersOf: aString
     SystemNavigation default
         allBehaviorsDo: [ :behavior | 
             (behavior thoroughWhichSelectorsReferTo: selector special: special byte: byte)
-                do: [ :sel | aCollection add: (self messageElementFor: behavior selector: selector messagePattern: aString) ] ].
+                do: [ :sel | aCollection add: (self messageElementFor: behavior selector: sel messagePattern: aString) ] ].
     ^ aCollection

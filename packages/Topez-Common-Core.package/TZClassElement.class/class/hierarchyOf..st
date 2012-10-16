@@ -1,5 +1,5 @@
 instance creation
-subclassesOf: classList
+hierarchyOf: classList
     | order classes indents results |
     order := SortedCollection
         sortBlock: [ :assoc1 :assoc2 | 
@@ -18,7 +18,11 @@ subclassesOf: classList
                 ifTrue: [ chain1 size < chain2 size ]
                 ifFalse: [ result ] ].
     classes := Set new.
-    classList do: [ :cl | classes addAll: cl allSubclasses ].
+    classList
+        do: [ :cl | 
+            classes addAll: cl allSuperclasses.
+            classes add: cl.
+            classes addAll: cl allSubclasses ].
     classes
         do: [ :cl | 
             | supersChain |
