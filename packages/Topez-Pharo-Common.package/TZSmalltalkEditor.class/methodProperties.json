@@ -1,6 +1,8 @@
 {
 	"class" : {
-		"initialize" : "dkh 10/14/2012 19:34" },
+		"initialize" : "dkh 10/14/2012 19:34",
+		"initializeBasicCmdKeyShortcuts" : "dkh 10/16/2012 10:34",
+		"initializeBasicShiftCmdKeyShortcuts" : "dkh 10/16/2012 11:03" },
 	"instance" : {
 		"browseClassFrom:" : "dkh 10/14/2012 20:06",
 		"debugIt" : "dkh 10/14/2012 19:28",
@@ -12,6 +14,8 @@
 		"implementorsOf:" : "dkh 10/15/2012 15:02",
 		"inspectIt" : "dkh 10/14/2012 19:22",
 		"printIt" : "dkh 10/14/2012 19:27",
-		"referencesTo:" : "dkh 10/15/2012 21:19",
+		"referencesTo:" : "dkh 10/16/2012 10:51",
+		"selectTopezWidows:" : "dkh 10/16/2012 11:07",
 		"sendersOf:" : "dkh 10/15/2012 15:02",
+		"spawnWindow:" : "dkh 10/16/2012 10:38",
 		"topez" : "dkh 10/14/2012 20:06" } }

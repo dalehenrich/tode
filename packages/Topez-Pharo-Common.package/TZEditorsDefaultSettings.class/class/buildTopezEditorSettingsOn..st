@@ -1,10 +1,5 @@
 settings
 buildTopezEditorSettingsOn: aBuilder
-    (aBuilder shortcut: #'redo')
-        category: #'TextEditor';
-        shortcutName: #'redo';
-        label: 'Redo' translated;
-        description: 'editor shortcut to redo changes' translated.
     (aBuilder shortcut: #'selectWindow')
         category: #'TopezEditor';
         shortcutName: #'selectWindow';

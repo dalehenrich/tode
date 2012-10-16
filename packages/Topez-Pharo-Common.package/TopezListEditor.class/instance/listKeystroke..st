@@ -8,8 +8,8 @@ listKeystroke: event
         ifTrue: [ 
             event keyCharacter = $C
                 ifTrue: [ ^ self controlShiftCKeyStroke ].
-            event keyCharacter = $X
-                ifTrue: [ ^ self controlShiftXKeyStroke ] ].
+            event keyCharacter = $L
+                ifTrue: [ ^ self controlShiftLKeyStroke ] ].
     false
         ifTrue: [ 
             | stream |

@@ -1,5 +1,5 @@
 as yet unclassified
-controlShiftXKeyStroke
+controlShiftLKeyStroke
     | evaluator names ids namesAndIds index |
     namesAndIds := self topez status windowNamesAndIds.
     names := namesAndIds collect: [ :assoc | assoc key ].

@@ -2,11 +2,11 @@ accessing
 keyStroke: event
     "Handle a keystroke. Deal with navigation keys also."
 
-    | stream |
-    stream := WriteStream on: String new.
-    event printKeyStringOn: stream.
     false
         ifTrue: [ 
+            | stream |
+            stream := WriteStream on: String new.
+            event printKeyStringOn: stream.
             Transcript
                 cr;
                 show: 'TextMorph stroke: ' , stream contents;
