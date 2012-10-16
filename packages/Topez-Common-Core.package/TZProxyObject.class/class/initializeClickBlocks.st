@@ -3,6 +3,58 @@ initializeClickBlocks
     "self initialize"
 
     self clickBlocks
+        at: #'cmdMKeyStroke'
+            forClasses: #('TZMethodElement' 'TZMessageElement')
+            put: [ :proxy :topez :editor | 
+                    (topez evaluator class commands at: 'edit')
+                        value: topez evaluator
+                        value: topez
+                        value:
+                            {'edit'.
+                            'implementors'.
+                            (proxy selector asTopezNative)}.
+                    true ];
+        at: #'cmdNKeyStroke'
+            forClasses: #('TZMethodElement' 'TZMessageElement')
+            put: [ :proxy :topez :editor | 
+                    (topez evaluator class commands at: 'edit')
+                        value: topez evaluator
+                        value: topez
+                        value:
+                            {'edit'.
+                            'senders'.
+                            (proxy selector asTopezNative)}.
+                    true ];
+        at: #'cmdShiftNKeyStroke'
+            forClass: 'TZClassElement'
+            put: [ :proxy :topez :editor | 
+                    | list |
+                    list := topez referencesTo: proxy elementClassName asTopezNative isMeta: false in: nil.
+                    topez
+                        editList: list
+                        label: 'References to ' , proxy elementClassName asTopezNative
+                        inWindow: (topez windowIdNamed: #'messages')
+                        at: 'implementors'.
+                    true ];
+        at: #'cmdVKeyStroke'
+            forClass: 'TZClassElement'
+            put: [ :proxy :topez :editor | 
+                    ElementCopyPasteBuffer
+                        ifNotNil: [ :methodElement | editor selectedElement ifNotNil: [ :classElement | topez addMethodElement: methodElement toClassElement: classElement ] ].
+                    true ];
+        at: #'cmdCKeyStroke'
+            forClasses: #('TZMethodElement' 'TZMessageElement')
+            put: [ :proxy :topez :editor | 
+                    ElementCopyPasteBuffer := proxy.
+                    true ];
+        at: #'cmdXKeyStroke'
+            forClass: 'TZClassElement'
+            put: [ :proxy :topez :editor | topez deleteClassElement: proxy ];
+        at: #'cmdXKeyStroke'
+            forClasses: #('TZMethodElement' 'TZMessageElement')
+            put: [ :proxy :topez :editor | 
+                    ElementCopyPasteBuffer := proxy.
+                    topez deleteMethodElement: proxy ];
         at: #'singleClick'
             forClass: 'TZMethodElement'
             put: [ :proxy :topez :editor | 

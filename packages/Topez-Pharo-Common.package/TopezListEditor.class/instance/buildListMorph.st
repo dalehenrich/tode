@@ -12,4 +12,5 @@ buildListMorph
         getListElementSelector: #'listAt:';
         keystrokeSelector: #'listKeystroke:';
         doubleClickSelector: #'ok';
+        handleBasicKeys: true;
         yourself
