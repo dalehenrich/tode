@@ -226,8 +226,7 @@ editCmds
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
                             id := windowId notNil
-                                ifTrue: [ windowId ]
-                                ifFalse: [ topez windowIdNamed: #'messages' ].
+                                ifTrue: [ windowId ].
                             list := ((subCommands at: #'list') at: #'implementors')
                                 value: evaluator
                                 value: topez
@@ -241,8 +240,7 @@ editCmds
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
                             id := windowId notNil
-                                ifTrue: [ windowId ]
-                                ifFalse: [ topez windowIdNamed: #'messages' ].
+                                ifTrue: [ windowId ].
                             list := ((subCommands at: #'list') at: #'senders')
                                 value: evaluator
                                 value: topez
