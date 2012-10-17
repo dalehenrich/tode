@@ -92,15 +92,7 @@ initializeClickBlocks
                         label: 'Hierarchy'
                         inWindow: (topez windowIdNamed: #'hierarchy')
                         at: 'superclasses'.
-                    topez
-                        editList: (topez classSelectors: proxy proxyClass)
-                        label: proxy elementClassName asTopezNative , ' class'
-                        inWindow: (topez windowIdNamed: #'classSelectors')
-                        at: 'classSelectors'.
-                    topez
-                        editList: (topez instanceSelectors: proxy proxyClass)
-                        label: proxy elementClassName asTopezNative
-                        inWindow: (topez windowIdNamed: #'instanceSelectors')
-                        at: 'instanceSelectors'.
+                    topez editClassSelectorsFor: proxy.
+                    topez editInstanceSelectorsFor: proxy.
                     topez setClass: proxy elementClassName ];
         yourself

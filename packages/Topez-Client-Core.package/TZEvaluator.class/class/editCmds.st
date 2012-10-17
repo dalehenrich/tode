@@ -212,8 +212,7 @@ editCmds
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'instanceSelectors' ].
                             topez
-                                editList: (topez instanceSelectors: evaluator status currentClass)
-                                label: 'Selectors'
+                                editInstanceSelectorsFor: evaluator status currentClass
                                 inWindow: id
                                 at: 'instanceSelectors' ];
                 at: #'cselectors'
@@ -222,11 +221,7 @@ editCmds
                             id := windowId notNil
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'classSelectors' ].
-                            topez
-                                editList: (topez classSelectors: evaluator status currentClass)
-                                label: 'Class Selectors'
-                                inWindow: id
-                                at: 'classSelectors' ];
+                            topez editClassSelectorsFor: evaluator status currentClass inWindow: id at: 'classSelectors' ];
                 at: #'implementors'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
