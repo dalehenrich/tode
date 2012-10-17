@@ -1,8 +1,7 @@
 {
 	"category" : "Topez-Client-Core",
 	"classinstvars" : [
-		"listWindowExtent",
-		"codeWindowExtent" ],
+		 ],
 	"classvars" : [
 		"Bounds" ],
 	"commentStamp" : "",

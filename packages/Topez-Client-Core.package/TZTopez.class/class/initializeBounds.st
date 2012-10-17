@@ -2,7 +2,7 @@ class initialization
 initializeBounds
     "self initialize"
 
-    | classListsOrigin methodOrigin methodListOrigin top listWidth fullHeight halfHeight codeWidth classDefOrigin thirdHeight twoThirdHeight thirdListWindowExtent |
+    | classListsOrigin methodOrigin methodListOrigin top listWidth fullHeight halfHeight codeWidth classDefOrigin thirdHeight twoThirdHeight thirdListWindowExtent listWindowExtent codeWindowExtent |
     top := 10.
     classListsOrigin := 35.
     fullHeight := 380.

@@ -9,4 +9,4 @@ spawnWindow
         list: self list;
         windowId: windowId;
         label: label.
-    win extent: TZTopez listWindowExtent
+    win extent: self editor topView extent

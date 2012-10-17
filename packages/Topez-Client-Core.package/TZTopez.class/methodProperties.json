@@ -1,9 +1,7 @@
 {
 	"class" : {
-		"codeWindowExtent" : "dkh 10/14/2012 10:59",
 		"initialize" : "dkh 10/12/2012 10:30",
-		"initializeBounds" : "dkh 10/16/2012 16:57",
-		"listWindowExtent" : "dkh 10/14/2012 11:00" },
+		"initializeBounds" : "dkh 10/16/2012 18:28" },
 	"instance" : {
 		"activateWindow:" : "dkh 10/10/2012 17:54",
 		"bounds" : "dkh 10/12/2012 10:28",
