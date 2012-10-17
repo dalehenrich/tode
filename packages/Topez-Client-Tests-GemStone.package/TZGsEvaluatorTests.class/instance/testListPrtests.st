@@ -9,4 +9,5 @@ testListPrtests
                     'TZClientTests
    TZEvaluatorEditTests
    TZEvaluatorTests
+   TZTopezApiTests
 TZSTONTests'

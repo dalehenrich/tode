@@ -1,3 +1,3 @@
 standard tests
 runListClass
-    ^ self evaluator evaluate: 'list class ^TZP'
+    ^ self evaluator evaluate: 'list class ^TZPr'

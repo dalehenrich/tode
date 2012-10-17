@@ -6,9 +6,7 @@ testListClass
         assert:
             (x := result asString)
                 =
-                    'TZPluggableListMorph
-TZPluggableTextMorph
-TZProxyObject
+                    'TZProxyObject
    TZProxyGemStone
    TZProxyNative
    TZProxyNotification

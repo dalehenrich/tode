@@ -6,7 +6,7 @@ testListPrclasses
         assert:
             (x := result asString)
                 =
-                    'Object
+                   'Object
    SmallInteger
    String
    Text
@@ -14,12 +14,14 @@ testListPrclasses
    TZClientTests
       TZEvaluatorEditTests
       TZEvaluatorTests
+      TZTopezApiTests
    TZElement
       TZClassElement
       TZSourceElement
          TZDoItElement
             TZTextElement
          TZMethodElement
+            TZMessageElement
    TZEngine
    TZEvaluator
    TZLister
