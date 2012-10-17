@@ -4,6 +4,7 @@
 		"initializeBounds" : "dkh 10/16/2012 18:28" },
 	"instance" : {
 		"activateWindow:" : "dkh 10/10/2012 17:54",
+		"addElement:toClassElement:" : "dkh 10/17/2012 14:00",
 		"bounds" : "dkh 10/12/2012 10:28",
 		"classElementForCurrentClass" : "dkh 10/12/2012 15:01",
 		"close" : "dkh 10/14/2012 09:01",

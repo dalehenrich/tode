@@ -1,3 +1,3 @@
 debugging
 stepWith: aProcessContext level: level
-    self halt
+    self error: 'not yet implemented'

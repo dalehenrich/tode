@@ -1,8 +1,5 @@
 tests
 testRun4
-    | result doit x |
-    self pushPrintBlocks.
-    self topez commandOptions level: 0.
-    doit := 'Object class'.
-    result := self runNoError: doit.
+    | result x |
+    result := self runRun4.
     self assert: (x := result printString) = '[Metaclass3] Object class'

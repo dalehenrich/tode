@@ -1,3 +1,3 @@
 debugging
 continueWith: aProcessContext
-    self halt
+    self error: 'not yet implemented'

@@ -5,5 +5,5 @@ deleteMethodElement: aTZMethodElementProxy
     aTZMethodElementProxy isMeta asTopezNative
         ifTrue: [ cl := cl class ].
     selector := aTZMethodElementProxy selector asTopezNative.
-    cl removeSelector: selector.
+    cl removeSelector: selector asSymbol.
     ^ true

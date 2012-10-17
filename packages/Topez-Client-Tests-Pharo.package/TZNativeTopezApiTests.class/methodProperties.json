@@ -3,4 +3,16 @@
 		 },
 	"instance" : {
 		"clientClass" : "dkh 10/16/2012 14:43",
+		"expectedFailures" : "dkh 10/17/2012 11:25",
+		"tearDown" : "dkh 10/17/2012 14:58",
+		"testCreatingAndChangingMethods" : "dkh 10/17/2012 14:27",
+		"testObjectClassClassClassProxy" : "dkh 10/17/2012 11:42",
+		"testObjectClassClassProxy" : "dkh 10/17/2012 11:42",
+		"testObjectClassProxy" : "dkh 10/17/2012 11:42",
+		"testObjectProxy" : "dkh 10/17/2012 11:42",
+		"testRun1" : "dkh 10/17/2012 13:56",
+		"testRun2" : "dkh 10/17/2012 13:56",
+		"testRun3" : "dkh 10/17/2012 13:56",
+		"testRun4" : "dkh 10/17/2012 13:57",
+		"testSetClass" : "dkh 10/17/2012 13:57",
 		"topez" : "dkh 10/16/2012 14:46" } }

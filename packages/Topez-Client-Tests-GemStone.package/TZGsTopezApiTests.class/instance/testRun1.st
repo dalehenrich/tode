@@ -1,9 +1,7 @@
 tests
 testRun1
-    | result doit x |
-    self pushPrintBlocks.
-    doit := '{ 1. 0. -1. {true. false.}. nil }'.
-    result := self runNoError: doit.
+    | result x |
+    result := self runRun1.
     self
         assert:
             (x := result printString)

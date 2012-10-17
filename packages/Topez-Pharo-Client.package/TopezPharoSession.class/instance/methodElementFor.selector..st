@@ -1,14 +1,13 @@
 api
-messageElementFor: behaviorProxy selector: selector messagePattern: aString
+methodElementFor: behaviorProxy selector: selector
     | theClass theBehavior |
     theBehavior := behaviorProxy asTopezProxy native.
     theClass := theBehavior theNonMetaClass.
-    ^ TZMessageElement new
-        isMeta: theBehavior isMeta;
+    ^ TZMethodElement new
         elementClass: behaviorProxy;
-        elementClassName: theClass name;
+        isMeta: theBehavior isMeta;
+        elementClassName: theClass className;
         selector: selector;
         category: (theBehavior organization categoryOfElement: selector asSymbol);
-        messagePattern: aString;
         setSource;
         yourself
