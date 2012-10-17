@@ -1,5 +1,5 @@
 editting
-editList: aCollectionOfObjects selection: selectedObject parentElement: parentElement label: labelString inWindow: windowIdOrNil at: windowLocation
+editList: aCollectionOfObjects selection: selectedObject templateElement: templateElement label: labelString inWindow: windowIdOrNil at: windowLocation
     | windowId label newWindow win selectedIndex |
     windowId := windowIdOrNil ifNil: [ windowId := self nextAvailableWindowId ].
     windowId == 0
@@ -15,7 +15,7 @@ editList: aCollectionOfObjects selection: selectedObject parentElement: parentEl
         list: aCollectionOfObjects;
         windowId: windowId;
         label: label.
-    win model activeEditor parentElement: parentElement.
+    win model activeEditor emptyTemplateElement: templateElement.
     newWindow
         ifTrue: [ 
             | bounds |

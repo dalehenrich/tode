@@ -3,7 +3,7 @@ editList: aCollectionOfObjects selection: selectedObject label: labelString inWi
     ^ self
         editList: aCollectionOfObjects
         selection: selectedObject
-        parentElement: nil
+        templateElement: nil
         label: labelString
         inWindow: windowIdOrNil
         at: windowLocation

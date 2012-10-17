@@ -1,7 +1,6 @@
 as yet unclassified
 referencesTo: aVariableOrClassName isMeta: isMeta in: aClassProxyOrNil
     | aCollection env ref special byte symbol |
-    self halt.
     aCollection := OrderedCollection new.
     env := aClassProxyOrNil ifNil: [ Smalltalk globals ].
     env isBehavior
