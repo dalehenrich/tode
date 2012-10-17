@@ -7,8 +7,8 @@ selectorsForClass: aClass inClass: classBoolean level: level
     result := targetClass selectors sort
         collect: [ :selector | 
             TZMethodElement new
-                proxyClass: aClass;
-                proxyClassName: aClass name;
+                elementClass: aClass;
+                elementClassName: aClass name;
                 selector: selector ;
                 category: (aClass categoryOfSelector: selector asSymbol);
                 isMeta: classBoolean;
