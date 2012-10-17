@@ -39,13 +39,15 @@ initializeClickBlocks
         at: #'cmdVKeyStroke'
             forClass: 'TZClassElement'
             put: [ :proxy :topez :editor | 
-                    ElementCopyPasteBuffer
-                        ifNotNil: [ :methodElement | editor selectedElement ifNotNil: [ :classElement | topez addMethodElement: methodElement toClassElement: classElement ] ].
+                    editor objectClipboard
+                        ifNotNil: [ :elementProxy | 
+                            editor selectedElement
+                                ifNotNil: [ :classElementProxy | topez addElement: elementProxy toClassElement: classElementProxy ] ].
                     true ];
         at: #'cmdCKeyStroke'
-            forClasses: #('TZMethodElement' 'TZMessageElement')
+            forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
             put: [ :proxy :topez :editor | 
-                    ElementCopyPasteBuffer := proxy.
+                    editor addToClipboard: proxy.
                     true ];
         at: #'cmdXKeyStroke'
             forClass: 'TZClassElement'
@@ -53,7 +55,7 @@ initializeClickBlocks
         at: #'cmdXKeyStroke'
             forClasses: #('TZMethodElement' 'TZMessageElement')
             put: [ :proxy :topez :editor | 
-                    ElementCopyPasteBuffer := proxy.
+                    editor addToClipboard: proxy.
                     topez deleteMethodElement: proxy ];
         at: #'singleClick'
             forClass: 'TZMethodElement'

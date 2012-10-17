@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addElement:toClassElement:" : "dkh 10/17/2012 07:39",
 		"addMethodElement:toClassElement:" : "dkh 10/16/2012 15:43",
 		"classDefinition:" : "dkh 10/5/2012 16:54",
 		"classElementForClass:" : "dkh 10/12/2012 14:59",

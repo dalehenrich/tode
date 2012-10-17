@@ -4,7 +4,6 @@
 		 ],
 	"classvars" : [
 		"ClickBlocks",
-		"ElementCopyPasteBuffer",
 		"PrintBlocks" ],
 	"commentStamp" : "",
 	"instvars" : [
