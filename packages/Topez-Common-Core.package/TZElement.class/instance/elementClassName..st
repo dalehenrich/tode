@@ -1,3 +1,3 @@
 accessing
-proxyClassName: anObject
+elementClassName: anObject
     elementClassName := anObject

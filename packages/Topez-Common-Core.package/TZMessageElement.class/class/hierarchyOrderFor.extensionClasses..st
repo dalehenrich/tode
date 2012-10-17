@@ -5,7 +5,7 @@ hierarchyOrderFor: messageList extensionClasses: extensionClassList
     messageList
         do: [ :msg | 
             | cl coll |
-            cl := msg proxyClass asTopezNative.
+            cl := msg elementClass asTopezNative.
             coll := classMap at: cl ifAbsent: [ classMap at: cl put: OrderedCollection new ].
             coll add: msg ].
     classList := classMap keys.

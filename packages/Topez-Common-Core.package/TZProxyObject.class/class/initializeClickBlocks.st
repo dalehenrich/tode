@@ -77,12 +77,12 @@ initializeClickBlocks
             put: [ :proxy :topez :editor | 
                     | hierarchyElements selectedElement |
                     topez
-                        editCode: (topez classDefinition: proxy proxyClass)
-                        inClass: proxy proxyClass
+                        editCode: (topez classDefinition: proxy elementClass)
+                        inClass: proxy elementClass
                         label: 'Class'
                         inWindow: (topez windowIdNamed: #'classDefinition')
                         at: 'classDef'.
-                    hierarchyElements := topez hierarchyOf: proxy proxyClass.
+                    hierarchyElements := topez hierarchyOf: proxy elementClass.
                     selectedElement := hierarchyElements
                         detect: [ :element | element elementClassName asTopezNative asString = proxy elementClassName asTopezNative asString ]
                         ifNone: [  ].
@@ -92,7 +92,7 @@ initializeClickBlocks
                         label: 'Hierarchy'
                         inWindow: (topez windowIdNamed: #'hierarchy')
                         at: 'superclasses'.
-                    topez editClassSelectorsFor: proxy.
-                    topez editInstanceSelectorsFor: proxy.
+                    topez editClassSelectorsFor: proxy elementClass.
+                    topez editInstanceSelectorsFor: proxy elementClass.
                     topez setClass: proxy elementClassName ];
         yourself

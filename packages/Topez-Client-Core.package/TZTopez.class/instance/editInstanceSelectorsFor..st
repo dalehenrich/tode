@@ -1,6 +1,6 @@
 editting
-editInstanceSelectorsFor: proxyClassElement
+editInstanceSelectorsFor: proxyClass
     ^ self
-        editInstanceSelectorsFor: proxyClassElement
+        editInstanceSelectorsFor: proxyClass
         inWindow: (self windowIdNamed: #'instanceSelectors')
         at: 'instanceSelectors'

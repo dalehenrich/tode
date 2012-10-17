@@ -13,5 +13,7 @@ testListPrtests
    TZEvaluatorTests
       TZGsEvaluatorTests
       TZNativeEvaluatorTests
-   TZGsTopezApiTests
+   TZTopezApiTests
+      TZGsTopezApiTests
+      TZNativeTopezApiTests
 TZSTONTests'

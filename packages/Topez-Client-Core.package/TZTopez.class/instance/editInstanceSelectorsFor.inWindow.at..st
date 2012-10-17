@@ -1,18 +1,18 @@
 editting
-editInstanceSelectorsFor: proxyClassElement inWindow: windowIdOrNil at: windowLocation
+editInstanceSelectorsFor: classProxy inWindow: windowIdOrNil at: windowLocation
     | templateElement |
     templateElement := TZMethodElement new
-        proxyClass: proxyClassElement proxyClass;
+        elementClass: classProxy;
         isMeta: false;
-        proxyClassName: proxyClassElement elementClassName;
+        elementClassName: classProxy asTopezProxy proxyClassName;
         selector: #'the newMethodTemplate';
         category: ClassOrganizer default;
         source: Object sourceCodeTemplate;
         yourself.
     ^ self
-        editList: (self instanceSelectors: proxyClassElement proxyClass)
+        editList: (self instanceSelectors: classProxy asTopezProxy )
         selection: nil
         templateElement: templateElement asTopezProxy
-        label: proxyClassElement elementClassName asTopezNative
+        label: classProxy asTopezProxy proxyClassName asTopezNative
         inWindow: (self windowIdNamed: #'instanceSelectors')
         at: 'instanceSelectors'

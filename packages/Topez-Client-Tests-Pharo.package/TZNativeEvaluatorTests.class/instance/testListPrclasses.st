@@ -37,9 +37,9 @@ testListPrclasses
    OopType
       OopType32
       OopType64
-   PluggableListMorph
    PluggableTextMorph
       StashShellWindowMorph
+      TZPluggableTextMorph
    StashShellTranscriptStream
    String
    TZBlockStackDictionary
@@ -50,13 +50,17 @@ testListPrclasses
       TZEvaluatorTests
          TZGsEvaluatorTests
          TZNativeEvaluatorTests
-      TZGsTopezApiTests
+      TZTopezApiTests
+         TZGsTopezApiTests
+         TZNativeTopezApiTests
+   TZEditorsDefaultSettings
    TZElement
       TZClassElement
       TZSourceElement
          TZDoItElement
             TZTextElement
          TZMethodElement
+            TZMessageElement
    TZEvaluator
       TZGsEvaluator
       TZNativeEvaluator
@@ -72,7 +76,9 @@ testListPrclasses
          TZProxyNotification
             TZProxyBreakpoint
             TZProxyError
+   TZPluggableListMorph
    TZSTONTests
+   TZSmalltalkEditor
    TZStack
    TZStonMapWriter
    TZStonWriter
@@ -90,6 +96,7 @@ testListPrclasses
    Text
    TextMorphForEditView
       StashShellTtyTextMorphForEditView
+      TZTextMorphForEditView
    TopezCommonEditor
       TopezCodeEditor
       TopezListEditor

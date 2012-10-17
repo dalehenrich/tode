@@ -4,8 +4,8 @@ messageElementFor: behavior selector: selector messagePattern: aString
     theClass := behavior theNonMetaClass.
     ^ TZMessageElement new
         isMeta: behavior isMeta;
-        proxyClass: theClass asTopezProxy;
-        proxyClassName: theClass name;
+        elementClass: theClass asTopezProxy;
+        elementClassName: theClass name;
         selector: selector;
         category: (behavior organization categoryOfElement: selector asSymbol);
         messagePattern: aString;

@@ -6,8 +6,8 @@ classSelectors: classProxy
         collect: [ :each | 
             TZMethodElement new
                 isMeta: true;
-                proxyClass: classProxy;
-                proxyClassName: classProxy asTopezProxy proxyClassName;
+                elementClass: classProxy;
+                elementClassName: classProxy asTopezProxy proxyClassName;
                 selector: each;
                 category: (cl organization categoryOfElement: each asSymbol);
                 setSource;

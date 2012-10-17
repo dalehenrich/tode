@@ -1,3 +1,3 @@
 accessing
 doItReceiver
-    ^ self sourceElement proxyClass
+    ^ self sourceElement elementClass

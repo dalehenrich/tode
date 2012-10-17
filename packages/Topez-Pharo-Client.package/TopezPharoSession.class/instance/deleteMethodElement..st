@@ -1,7 +1,7 @@
 api
 deleteMethodElement: aTZMethodElementProxy
     | cl selector |
-    cl := aTZMethodElementProxy proxyClass asTopezNative.
+    cl := aTZMethodElementProxy elementClass asTopezNative.
     aTZMethodElementProxy isMeta asTopezNative
         ifTrue: [ cl := cl class ].
     selector := aTZMethodElementProxy selector asTopezNative.

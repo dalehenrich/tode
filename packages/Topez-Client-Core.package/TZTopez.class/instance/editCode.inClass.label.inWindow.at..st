@@ -11,8 +11,8 @@ editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowI
         activateCodeEditor;
         contents:
                 (TZDoItElement new
-                        proxyClass: classProxy;
-                        proxyClassName: classProxy asTopezProxy proxyClassName;
+                        elementClass: classProxy;
+                        elementClassName: classProxy asTopezProxy proxyClassName;
                         source: aStringOrText;
                         yourself);
         windowId: windowId;

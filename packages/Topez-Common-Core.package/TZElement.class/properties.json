@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"proxyProject",
-		"proxyPackage",
-		"proxyClass",
+		"elementProject",
+		"elementPackage",
+		"elementClass",
 		"elementClassName" ],
 	"name" : "TZElement",
 	"pools" : [

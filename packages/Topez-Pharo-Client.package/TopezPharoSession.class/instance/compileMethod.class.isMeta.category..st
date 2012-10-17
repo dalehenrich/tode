@@ -7,8 +7,8 @@ compileMethod: source class: classProxy isMeta: isMeta category: categoryName
     selector := cls compile: source classified: categoryName.
     ^ TZMethodElement new
         isMeta: isMeta;
-        proxyClass: classProxy;
-        proxyClassName: classProxy asTopezProxy proxyClassName;
+        elementClass: classProxy;
+        elementClassName: classProxy asTopezProxy proxyClassName;
         selector: selector;
         category: categoryName;
         setSource;

@@ -38,8 +38,8 @@ hierarchyOf: classList
             | cl element |
             cl := assoc value.
             element := TZClassElement new
-                proxyClass: cl;
-                proxyClassName: cl name;
+                elementClass: cl;
+                elementClassName: cl name;
                 indent: (indents at: cl);
                 inExtensionClassList: false;
                 yourself.
