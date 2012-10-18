@@ -1,5 +1,5 @@
 running
 tearDown
     super tearDown.
-    Smalltalk at: #'Animal' ifPresent: [ :cl | cl removeFromSystem ].
-    Smalltalk at: #'TestStep' ifPresent: [ :cl | cl removeFromSystem ]
+    #(#'Animal' #'AnimalShadow' #'AnimalShadowRef' #'TestStep')
+        do: [ :clName | Smalltalk at: clName ifPresent: [ :cl | cl removeFromSystem ] ]

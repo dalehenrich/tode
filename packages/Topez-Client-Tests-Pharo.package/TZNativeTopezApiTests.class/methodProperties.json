@@ -4,7 +4,7 @@
 	"instance" : {
 		"clientClass" : "dkh 10/16/2012 14:43",
 		"expectedFailures" : "dkh 10/17/2012 11:25",
-		"tearDown" : "dkh 10/17/2012 14:58",
+		"tearDown" : "dkh 10/18/2012 07:17",
 		"testCreatingAndChangingMethods" : "dkh 10/17/2012 14:27",
 		"testObjectClassClassClassProxy" : "dkh 10/17/2012 11:42",
 		"testObjectClassClassProxy" : "dkh 10/17/2012 11:42",

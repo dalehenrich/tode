@@ -7,10 +7,20 @@ runLoadAnimalClass
             tpz
                 run: self animalClassDefinition;
                 run: self animalClassClassDefinition;
+                run: self animalShadowClassDefinition;
+                run: self animalShadowRefClassDefinition;
                 setClass: 'Animal';
                 setCategory: 'accessing';
                 method: self animalHabitatMethod;
                 method: self animalHabitatUpdateMethod;
+                method: self animalShadowMethod;
                 setCategory: 'example';
                 classMethod: self animalClassReturnAsStringMethod;
-                classMethod: self animalClassReferenceClassVarMethod ]
+                classMethod: self animalClassReferenceClassVarMethod;
+                classMethod: self animalShadowMethod;
+                setClass: 'AnimalShadowRef';
+                setCategory: 'accessing';
+                method: self animalShadowMethod;
+                setCategory: 'accessing';
+                classMethod: self animalShadowMethod;
+                yourself ]
