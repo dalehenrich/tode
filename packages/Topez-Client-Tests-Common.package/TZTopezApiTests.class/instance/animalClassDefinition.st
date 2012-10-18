@@ -2,6 +2,6 @@ test coding
 animalClassDefinition
     ^ 'Object subclass: #''Animal''
   instanceVariableNames: ''name favoriteFood habitat''
-  classVariableNames: ''''
+  classVariableNames: ''AnimalClassVar''
   poolDictionaries: ''''
   category: ''Animals'''

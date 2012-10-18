@@ -6,8 +6,11 @@ testListHierarchy
         assert:
             (x := result asString)
                 =
-                    'TZProxyGemStone
-TZProxyNative
-TZProxyNotification
-   TZProxyBreakpoint
-   TZProxyError'
+                    'Object
+   TZObject
+      TZProxyObject
+         TZProxyGemStone
+         TZProxyNative
+         TZProxyNotification
+            TZProxyBreakpoint
+            TZProxyError'

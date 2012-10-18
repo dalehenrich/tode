@@ -1,0 +1,11 @@
+transactions
+referencesTo: aString isMeta: isMeta in: aClassProxyOrNil
+    ^ self
+        doInSession: [ :sess | 
+            sess
+                receiverNB: self currentEngine
+                performNoDebug: 'referencesTo:isMeta:in:level:'
+                withArgs:
+                    {aString.
+                    isMeta.
+                    aClassProxyOrNil} ]
