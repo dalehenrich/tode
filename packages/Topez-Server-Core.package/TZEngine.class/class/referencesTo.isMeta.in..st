@@ -19,17 +19,17 @@ referencesTo: aVariableOrClassName isMeta: isMeta in: aClassProxyOrNil
 					detect: [:ea | ea key = aVariableOrClassName asSymbol] ifNone: [].
 		literal 
 			ifNotNil:  [ | classes |
-				"class vars not quite correct ...."
+				"class vars."
 				classes := ClassSet new.
-				classes add: env theNonMetaclass.
-				aCollection addAll: ((ClassOrganizer cachedOrganizer referencesTo: literal key in: classes) 
-					collect: [:method | 
-						self 
+				classes add: env theNonMetaClass.
+				((ClassOrganizer cachedOrganizer referencesTo: literal key in: classes) at: 1)
+					do: [:method | 
+						aCollection add: (self 
 							messageElementFor: method inClass 
 							selector: method selector 
-							messagePattern: aVariableOrClassName]).
+							messagePattern: aVariableOrClassName)].
 				^TZMessageElement hierarchyOrderFor: aCollection]].
-		
+	"globals"
 	aCollection addAll: ((SystemNavigation default allReferencesTo: aVariableOrClassName asSymbol) 
 		collect: [:methodRef | 
 			self 
