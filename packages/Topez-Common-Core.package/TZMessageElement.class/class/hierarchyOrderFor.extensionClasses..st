@@ -6,7 +6,16 @@ hierarchyOrderFor: messageList extensionClasses: extensionClassList
         do: [ :msg | 
             | cl coll |
             cl := msg elementClass asTopezNative.
-            coll := classMap at: cl ifAbsent: [ classMap at: cl put: OrderedCollection new ].
+            coll := classMap
+                at: cl
+                ifAbsent: [ 
+                    | sorted "sort order for selectors in same class" |
+                    sorted := SortedCollection
+                        sortBlock: [ :a :b | 
+                            a isMeta asTopezNative == b isMeta asTopezNative
+                                ifTrue: [ a selector asTopezNative < b selector asTopezNative ]
+                                ifFalse: [ a isMeta asTopezNative not ] ].
+                    classMap at: cl put: sorted ].
             coll add: msg ].
     classList := classMap keys.
     order := SortedCollection

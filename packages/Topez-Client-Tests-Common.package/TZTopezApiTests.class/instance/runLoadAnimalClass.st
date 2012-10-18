@@ -11,9 +11,11 @@ runLoadAnimalClass
                 run: self animalShadowRefClassDefinition;
                 setClass: 'Animal';
                 setCategory: 'accessing';
+                method: self animalAHabitatMethod;
                 method: self animalHabitatMethod;
                 method: self animalHabitatUpdateMethod;
                 method: self animalShadowMethod;
+                method: self animalZHabitatMethod;
                 setCategory: 'example';
                 classMethod: self animalClassReturnAsStringMethod;
                 classMethod: self animalClassReferenceClassVarMethod;

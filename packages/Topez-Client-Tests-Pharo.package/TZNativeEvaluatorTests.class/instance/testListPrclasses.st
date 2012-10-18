@@ -37,10 +37,8 @@ testListPrclasses
    OopType
       OopType32
       OopType64
-   PluggableTextMorph
-      StashShellWindowMorph
-      TZPluggableTextMorph
    StashShellTranscriptStream
+   StashShellWindowMorph
    String
    TZBlockStackDictionary
    TZClientTests
@@ -77,6 +75,7 @@ testListPrclasses
             TZProxyBreakpoint
             TZProxyError
    TZPluggableListMorph
+   TZPluggableTextMorph
    TZSTONTests
    TZSmalltalkEditor
    TZStack
