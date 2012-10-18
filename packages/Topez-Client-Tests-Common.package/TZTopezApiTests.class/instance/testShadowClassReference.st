@@ -6,5 +6,7 @@ testShadowClassReference
         assert:
             (x := results renderText asString)
                 =
-                    'AnimalShadowRef>>shadow
+                    'Animal>>shadow
+Animal class>>shadow
+AnimalShadowRef>>shadow
 AnimalShadowRef class>>shadow'

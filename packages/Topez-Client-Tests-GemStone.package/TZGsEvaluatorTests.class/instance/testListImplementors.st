@@ -1,13 +1,12 @@
 tests
 testListImplementors
     | result x |
-    result := self runListImplementors.
     self
-        assert:
-            (x := result asString)
-                =
-                    'TZProxyGemStone
-TZProxyNative
-TZProxyNotification
-   TZProxyBreakpoint
-   TZProxyError'
+        doNoError: [ 
+            result := self runListImplementors.
+            self
+                assert:
+                    (x := result asString)
+                        =
+                            'Object>>asTopezProxy
+   TZObject>>asTopezProxy' ]

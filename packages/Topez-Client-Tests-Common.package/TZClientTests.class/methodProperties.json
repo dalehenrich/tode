@@ -3,9 +3,12 @@
 		"isAbstract" : "dkh 10/13/2012 14:36" },
 	"instance" : {
 		"defaultSessionDescription" : "dkh 10/8/2012 17:41",
+		"doNoError:" : "dkh 10/18/2012 13:41",
 		"evaluator" : "dkh 10/13/2012 13:53",
 		"popPrintBlocks" : "dkh 10/11/2012 14:29",
 		"pushPrintBlocks" : "dkh 10/14/2012 11:38",
+		"run:onError:onBreakpoint:" : "dkh 10/18/2012 13:39",
+		"runNoError:" : "dkh 10/18/2012 13:38",
 		"sessionDescription" : "dkh 9/26/2012 15:04",
 		"sessionDescription:" : "dkh 9/26/2012 15:04",
 		"setUp" : "dkh 10/16/2012 20:37",

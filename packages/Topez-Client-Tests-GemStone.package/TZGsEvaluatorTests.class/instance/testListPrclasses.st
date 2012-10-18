@@ -1,20 +1,18 @@
 tests
 testListPrclasses
     | result x |
-    result := self runListPrclasses.
     self
-        assert:
-            (x := result asString)
-                =
-                   'Object
+        doNoError: [ 
+            result := self runListPrclasses.
+            self
+                assert:
+                    (x := result asString)
+                        =
+                            'Object
    SmallInteger
    String
    Text
    TZBlockStackDictionary
-   TZClientTests
-      TZEvaluatorEditTests
-      TZEvaluatorTests
-      TZTopezApiTests
    TZElement
       TZClassElement
       TZSourceElement
@@ -50,4 +48,4 @@ testListPrclasses
       TZTopezBreakpointNotification
       TZTopezErrorNotification
    TZTopezOptions
-   TZTopezStatus'
+   TZTopezStatus' ]
