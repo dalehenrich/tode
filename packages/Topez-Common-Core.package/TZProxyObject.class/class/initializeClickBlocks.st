@@ -33,7 +33,7 @@ initializeClickBlocks
                     topez
                         editList: list
                         label: 'References to ' , proxy elementClassName asTopezNative
-                        inWindow: (topez windowIdNamed: #'messages')
+                        inWindow: nil
                         at: 'implementors'.
                     true ];
         at: #'cmdVKeyStroke'

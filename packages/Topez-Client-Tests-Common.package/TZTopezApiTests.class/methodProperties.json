@@ -31,6 +31,7 @@
 		"runRun4" : "dkh 10/17/2012 11:34",
 		"stepTestCallMethod" : "dkh 10/17/2012 10:20",
 		"stepTestHalt1Method" : "dkh 10/17/2012 10:20",
+		"testAddClassMethodElementToClassElement" : "dkh 10/17/2012 19:36",
 		"testAddElementToClassElement" : "dkh 10/17/2012 14:48",
 		"testAddMethodElementToClassElement" : "dkh 10/17/2012 14:48",
 		"testContinueReplacingTopOfStack" : "dkh 10/17/2012 10:20",

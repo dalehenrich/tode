@@ -4,7 +4,7 @@ methodElementFor: behaviorProxy selector: selector
     theBehavior := behaviorProxy asTopezProxy native.
     theClass := theBehavior theNonMetaClass.
     ^ TZMethodElement new
-        elementClass: behaviorProxy;
+        elementClass: theClass asTopezProxy;
         isMeta: theBehavior isMeta;
         elementClassName: theClass className;
         selector: selector;
