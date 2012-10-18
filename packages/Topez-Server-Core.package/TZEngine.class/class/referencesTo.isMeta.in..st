@@ -30,10 +30,9 @@ referencesTo: aVariableOrClassName isMeta: isMeta in: aClassProxyOrNil
 							messagePattern: aVariableOrClassName)].
 				^TZMessageElement hierarchyOrderFor: aCollection]].
 	"globals"
-	aCollection addAll: ((SystemNavigation default allReferencesTo: aVariableOrClassName asSymbol) 
-		collect: [:methodRef | 
-			self 
-				messageElementFor: methodRef actualClass 
-				selector: methodRef selector 
-				messagePattern: aVariableOrClassName]).
+	(ClassOrganizer cachedOrganizer referencesToObject: (env associationAt: aVariableOrClassName asSymbol)) do: [:method | 
+		aCollection add: (self 
+			messageElementFor: method inClass 
+			selector: method selector 
+			messagePattern: aVariableOrClassName)].
     ^TZMessageElement hierarchyOrderFor: aCollection
