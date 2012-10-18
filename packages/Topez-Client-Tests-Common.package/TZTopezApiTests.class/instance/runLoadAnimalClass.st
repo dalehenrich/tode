@@ -3,8 +3,8 @@ runLoadAnimalClass
     | classProxy |
     self pushPrintBlocks.
     self
-        do: [ :tpz | 
-            tpz
+        doNoError: [ 
+            self topez
                 run: self animalClassDefinition;
                 run: self animalClassClassDefinition;
                 run: self animalShadowClassDefinition;

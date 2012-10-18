@@ -62,4 +62,8 @@ listCmds
                 at: #'implementors' put: [ :evaluator :topez :tokens | topez implementorsOf: (tokens at: 3) ];
                 at: #'senders' put: [ :evaluator :topez :tokens | topez sendersOf: (tokens at: 3) ];
                 at: #'references' put: [ :evaluator :topez :tokens | topez referencesTo: (tokens at: 3) ];
+                at: #'creferences'
+                    put: [ :evaluator :topez :tokens | topez referencesTo: (tokens at: 3) isMeta: true in: topez currentClass ];
+                at: #'ireferences'
+                    put: [ :evaluator :topez :tokens | topez referencesTo: (tokens at: 3) isMeta: false in: topez currentClass ];
                 yourself)

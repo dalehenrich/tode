@@ -8,4 +8,5 @@ referencesTo: aString isMeta: isMeta in: aClassProxyOrNil
                 withArgs:
                     {aString.
                     isMeta.
-                    aClassProxyOrNil} ]
+                    aClassProxyOrNil.
+                    2} ]

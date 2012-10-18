@@ -4,7 +4,7 @@ messageElementFor: aBehavior selector: selector messagePattern: aString
     theClass := aBehavior theNonMetaClass.
     ^ TZMessageElement new
         isMeta: aBehavior isMeta;
-        elementClass: theClass asTopezProxy;
+        elementClass: theClass;
         elementClassName: theClass name;
         selector: selector;
         category: (aBehavior  categoryOfSelector: selector asSymbol);
