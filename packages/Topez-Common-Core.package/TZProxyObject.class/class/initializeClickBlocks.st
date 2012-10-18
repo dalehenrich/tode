@@ -26,7 +26,7 @@ initializeClickBlocks
                             (proxy selector asTopezNative)}.
                     true ];
         at: #'cmdShiftNKeyStroke'
-            forClass: 'TZClassElement'
+            forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
             put: [ :proxy :topez :editor | 
                     | list |
                     list := topez referencesTo: proxy elementClassName asTopezNative isMeta: false in: nil.
