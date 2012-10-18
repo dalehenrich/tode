@@ -10,7 +10,7 @@ selectorsForClass: aClass inClass: classBoolean level: level
                 elementClass: aClass;
                 elementClassName: aClass name;
                 selector: selector ;
-                category: (aClass categoryOfSelector: selector asSymbol);
+                category: (targetClass categoryOfSelector: selector asSymbol);
                 isMeta: classBoolean;
                 setSource;
                 yourself ].
