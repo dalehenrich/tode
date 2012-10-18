@@ -1,0 +1,3 @@
+transactions
+adornmentColor
+    ^ Color lightBlue
