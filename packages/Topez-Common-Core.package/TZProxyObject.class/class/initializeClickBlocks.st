@@ -58,6 +58,14 @@ initializeClickBlocks
                     editor addToClipboard: proxy.
                     topez deleteMethodElement: proxy ];
         at: #'singleClick'
+            forClass: 'TZInstanceElement'
+            put: [ :proxy :topez :editor | 
+                    topez
+                        editList: (topez instanceElementFor: proxy halt instance)
+                        label: 'inspect'
+                        inWindow: nil
+                        at: 'implementors' ];
+        at: #'singleClick'
             forClass: 'TZMethodElement'
             put: [ :proxy :topez :editor | 
                     topez
