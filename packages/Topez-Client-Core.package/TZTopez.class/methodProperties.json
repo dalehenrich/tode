@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"initialize" : "dkh 10/12/2012 10:30",
-		"initializeBounds" : "dkh 10/16/2012 18:28" },
+		"initializeBounds" : "dkh 10/19/2012 13:59" },
 	"instance" : {
 		"activateWindow:" : "dkh 10/10/2012 17:54",
 		"addElement:toClassElement:" : "dkh 10/17/2012 14:00",
@@ -47,6 +47,7 @@
 		"runInTopez:" : "dkh 10/10/2012 16:36",
 		"setCategory:" : "dkh 10/5/2012 07:40",
 		"setClass:" : "dkh 10/13/2012 11:00",
+		"setInstance:" : "dkh 10/19/2012 14:10",
 		"setPackage:" : "dkh 10/7/2012 16:25",
 		"setProject:" : "dkh 10/7/2012 16:25",
 		"status" : "dkh 10/5/2012 07:36",

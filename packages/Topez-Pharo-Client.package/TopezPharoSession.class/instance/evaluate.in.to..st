@@ -7,7 +7,7 @@ evaluate: aString in: ctxtProxy to: rcvrProxy
         to: rcvrProxy asTopezNative
         notifying: nil
         ifFail: [ 
-            self halt.
+            self error: 'failed evaluation of: ' , aString printString.
             ^ nil ]
         logged: false ]
         on: OutOfScopeNotification

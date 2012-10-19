@@ -13,5 +13,5 @@ instanceElementFor: instanceProxy level: level
             instanceProxy named
                 keysAndValuesDo: [ :instVarName :valueProxy | coll add: (self createInstanceElementFor: valueProxy asTopezProxy label: instVarName asString indent: indent) ].
             instanceProxy indexed
-                withIndexDo: [ :valueProxy :index | coll add: (self createInstanceElementFor: valueProxy asTopezProxy label: index printString , '.' indent: indent) ] ].
+                doWithIndex: [ :valueProxy :index | coll add: (self createInstanceElementFor: valueProxy asTopezProxy label: index printString , '.' indent: indent) ] ].
     ^ coll asArray

@@ -4,5 +4,5 @@ instance: aString
 
     | result |
     result := self run: aString.
-    self status instance: result.
+    self setInstance: result.
     ^ result

@@ -10,10 +10,10 @@ initializeBounds
     thirdHeight := 140.
     twoThirdHeight := 2 * thirdHeight.
     listWidth := 250.
-    codeWidth := 600.
+    codeWidth := 540.
     listWindowExtent := listWidth @ twoThirdHeight.
     thirdListWindowExtent := listWidth @ thirdHeight.
-    codeWindowExtent := codeWidth @ (fullHeight + halfHeight).
+    codeWindowExtent := codeWidth @ (fullHeight + (halfHeight / 2)).
     methodOrigin := classListsOrigin + listWidth.
     methodListOrigin := methodOrigin + codeWidth.
     classDefOrigin := classListsOrigin + listWidth.
