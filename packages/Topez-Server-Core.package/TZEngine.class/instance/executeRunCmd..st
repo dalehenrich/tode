@@ -1,3 +1,3 @@
 command execution
 executeRunCmd: aTZTopezRunCmd
-   ^self class toString: aTZTopezRunCmd doit evaluate withOptions: aTZTopezRunCmd options
+    ^ self class toString: aTZTopezRunCmd doit evaluate withOptions: aTZTopezRunCmd options

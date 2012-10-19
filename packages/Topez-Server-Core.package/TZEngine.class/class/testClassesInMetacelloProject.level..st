@@ -12,12 +12,12 @@ testClassesInMetacelloProject: aMetacelloProjectSpec level: level
                 on: Error
                 do: [ :ex | ex return: nil ].
             wc ~~ nil
-                ifTrue: [ | selectedClasses |
-			selectedClasses := wc packageInfo classes select: [ :cl | cl inheritsFrom: TestCase ].                    			classes addAll: selectedClasses.
-                  selectedClasses := wc packageInfo extensionClasses select: [ :cl | cl inheritsFrom: TestCase ].
-			selectedClasses do: [ :cl | 
-				extensionClasses at: cl put: (wc packageInfo extensionCategoriesForClass: cl) ] ] ]
+                ifTrue: [ 
+                    | selectedClasses |
+                    selectedClasses := wc packageInfo classes select: [ :cl | cl inheritsFrom: TestCase ].
+                    classes addAll: selectedClasses.
+                    selectedClasses := wc packageInfo extensionClasses select: [ :cl | cl inheritsFrom: TestCase ].
+                    selectedClasses
+                        do: [ :cl | extensionClasses at: cl put: (wc packageInfo extensionCategoriesForClass: cl) ] ] ]
         groupDo: [ :ignored |  ].
- 	^self 
-		toString:  (TZClassElement hierarchyForClasses: classes extensionClasses: extensionClasses) 
-		level: level
+    ^ self toString: (TZClassElement hierarchyForClasses: classes extensionClasses: extensionClasses) level: level

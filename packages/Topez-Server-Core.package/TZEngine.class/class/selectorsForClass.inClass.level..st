@@ -9,7 +9,7 @@ selectorsForClass: aClass inClass: classBoolean level: level
             TZMethodElement new
                 elementClass: aClass;
                 elementClassName: aClass name;
-                selector: selector ;
+                selector: selector;
                 category: (targetClass categoryOfSelector: selector asSymbol);
                 isMeta: classBoolean;
                 setSource;
