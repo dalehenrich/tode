@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"messagePattern",
-		"inExtensionClassList" ],
-	"name" : "TZMessageElement",
+		"instance",
+		"displayString" ],
+	"name" : "TZInstanceElement",
 	"pools" : [
 		 ],
-	"super" : "TZMethodElement",
+	"super" : "TZElement",
 	"type" : "normal" }

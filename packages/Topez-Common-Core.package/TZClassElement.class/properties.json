@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"indent",
 		"inExtensionClassList" ],
 	"name" : "TZClassElement",
 	"pools" : [

@@ -49,6 +49,7 @@ listCmds
                                         separatedBy: [ stream cr ] ]
                                 separatedBy: [ stream cr ].
                             stream contents ];
+                at: #'instance' put: [ :evaluator :topez :tokens | topez instanceElementFor: topez instance ];
                 at: #'superclasses' put: [ :evaluator :topez :tokens | topez superclassesOf: topez currentClass ];
                 at: #'subclasses' put: [ :evaluator :topez :tokens | topez subclassesOf: topez currentClass ];
                 at: #'hierarchy' put: [ :evaluator :topez :tokens | topez hierarchyOf: topez currentClass ];

@@ -54,6 +54,13 @@ initializePrintBlocks
             forClass: 'TZClassElement'
             put: [ :proxy :aStream :indent | aStream nextPutAll: proxy elementClassName asTopezNative ];
         at: #'basic'
+            forClass: 'TZInstanceElement'
+            put: [ :proxy :aStream :indent | 
+                    aStream
+                        nextPutAll: proxy displayString asTopezNative;
+                        space;
+                        nextPutAll: '(' , proxy elementClassName asTopezNative , ')' ];
+        at: #'basic'
             forClass: 'TZStack'
             put: [ :stack :aStream :indent | 
                     | currentFrameIndex size |

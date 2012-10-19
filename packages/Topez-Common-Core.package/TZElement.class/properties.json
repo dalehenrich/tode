@@ -9,7 +9,8 @@
 		"elementProject",
 		"elementPackage",
 		"elementClass",
-		"elementClassName" ],
+		"elementClassName",
+		"indent" ],
 	"name" : "TZElement",
 	"pools" : [
 		 ],
