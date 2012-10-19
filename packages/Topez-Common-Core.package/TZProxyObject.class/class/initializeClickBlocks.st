@@ -65,7 +65,11 @@ initializeClickBlocks
                         label: 'inspect'
                         inWindow: nil
                         at: 'implementors'.
-                    topez setInstance: proxy instance ];
+                    topez setInstance: proxy instance.
+                    ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first
+                        value: proxy
+                        value: topez
+                        value: editor ];
         at: #'singleClick'
             forClass: 'TZMethodElement'
             put: [ :proxy :topez :editor | 
