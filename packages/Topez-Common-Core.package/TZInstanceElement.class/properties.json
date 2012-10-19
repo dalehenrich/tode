@@ -6,6 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"label",
 		"instance" ],
 	"name" : "TZInstanceElement",
 	"pools" : [
