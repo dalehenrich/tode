@@ -1,3 +1,3 @@
 as yet unclassified
 stylerClass
-    ^ self model stylerClass
+    ^ self topez stylerClass
