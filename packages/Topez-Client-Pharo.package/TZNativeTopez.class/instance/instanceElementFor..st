@@ -1,3 +1,3 @@
 coding
 instanceElementFor: instanceProxy
-    ^ self doInSession: [ :sess | sess instanceElementFor: instanceProxy ]
+    ^ self instanceElementFor: instanceProxy level: self level

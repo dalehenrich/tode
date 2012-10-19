@@ -37,6 +37,9 @@ initializePrintBlocks
                         nextPutAll: '>>';
                         nextPutAll: (Text string: proxy selector asTopezNative attribute: TextEmphasis italic) ];
         at: #'basic'
+            forClass: 'TZInstanceElement'
+            put: [ :proxy :aStream :indent | proxy instance renderText: #'instance' on: aStream ];
+        at: #'basic'
             forClass: 'TZClassElement'
             put: [ :proxy :aStream :indent | 
                     | space |
@@ -53,13 +56,6 @@ initializePrintBlocks
         at: #'label'
             forClass: 'TZClassElement'
             put: [ :proxy :aStream :indent | aStream nextPutAll: proxy elementClassName asTopezNative ];
-        at: #'basic'
-            forClass: 'TZInstanceElement'
-            put: [ :proxy :aStream :indent | 
-                    aStream
-                        nextPutAll: proxy displayString asTopezNative;
-                        space;
-                        nextPutAll: '(' , proxy elementClassName asTopezNative , ')' ];
         at: #'basic'
             forClass: 'TZStack'
             put: [ :stack :aStream :indent | 

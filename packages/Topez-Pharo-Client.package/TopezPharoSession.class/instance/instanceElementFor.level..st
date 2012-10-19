@@ -1,5 +1,7 @@
 api
-instanceElementFor: instanceProxy
+instanceElementFor: instanceProxy level: level
+    "assuming depth 0 for now"
+
     | instance cl |
     instance := instanceProxy asTopezProxy native.
     cl := instance class.
@@ -8,5 +10,4 @@ instanceElementFor: instanceProxy
         elementClassName: cl name asString;
         indent: 0;
         instance: instanceProxy;
-        displayString: instance printString;
         yourself)}
