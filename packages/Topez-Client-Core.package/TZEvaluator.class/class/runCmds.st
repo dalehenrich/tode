@@ -14,6 +14,10 @@ runCmds
                                     topez run: doitStream contents ].
                             '' ]
                         ifFalse: [ topez run: ((self scripts at: 'run') at: (tokens at: 2)) ] ];
+        at: 'instance'
+            put: [ :evaluator :topez :tokens | 
+                    evaluator accumulateTextAndDo: [ :doitStream | topez instance: doitStream contents ].
+                    '' ];
         at: 'topez'
             put: [ :evaluator :topez :tokens | 
                     tokens size = 1
