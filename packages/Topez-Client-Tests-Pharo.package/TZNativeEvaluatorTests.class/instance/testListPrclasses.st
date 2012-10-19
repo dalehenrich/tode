@@ -74,6 +74,7 @@ testListPrclasses
          TZProxyNotification
             TZProxyBreakpoint
             TZProxyError
+   TZParserST80
    TZPluggableListMorph
    TZPluggableTextMorph
    TZSTONTests
@@ -82,6 +83,7 @@ testListPrclasses
    TZStonMapWriter
    TZStonWriter
    TZSystemWindow
+   TZTextStylerST80
    TZTopez
       TZGsTopez
       TZNativeTopez
@@ -100,4 +102,6 @@ testListPrclasses
       TopezCodeEditor
       TopezListEditor
    TopezEditor
-   TopezPharoSession'
+   TopezPharoSession
+   UITheme
+      UIThemeWatery'
