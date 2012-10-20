@@ -1,3 +1,6 @@
 private
 runInInstance: aString
-    ^ self executeString: aString receiver: self instance level: self level
+    | result |
+    result := self executeString: aString receiver: self instance level: self level.
+    self setInstance: result.
+    ^ result

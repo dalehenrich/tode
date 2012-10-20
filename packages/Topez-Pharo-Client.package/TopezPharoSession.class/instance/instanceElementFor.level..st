@@ -6,12 +6,9 @@ instanceElementFor: instanceProxy level: level
     indent := 0.
     coll := OrderedCollection new.
     coll add: (self createInstanceElementFor: instanceProxy label: '' indent: indent).
-    [ 
-    indent := indent + 1.
-    indent <= level ]
-        whileTrue: [ 
-            instanceProxy named
-                keysAndValuesDo: [ :instVarName :valueProxy | coll add: (self createInstanceElementFor: valueProxy asTopezProxy label: instVarName asString indent: indent) ].
-            instanceProxy indexed
-                doWithIndex: [ :valueProxy :index | coll add: (self createInstanceElementFor: valueProxy asTopezProxy label: index printString , '.' indent: indent) ] ].
+    self
+        internalInstanceElementsFor: instanceProxy
+        indent: indent
+        limit: level
+        into: coll.
     ^ coll asArray
