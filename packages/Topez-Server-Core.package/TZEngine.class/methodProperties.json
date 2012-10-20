@@ -6,7 +6,6 @@
 		"compileMethod:class:category:forMeta:level:" : "DataCurator 10/18/2012 19:39",
 		"deleteClassElement:" : "DataCurator 10/18/2012 19:40",
 		"deleteMethodElement:" : "DataCurator 10/18/2012 19:40",
-		"executeCommandFrom:" : "DataCurator 10/18/2012 19:40",
 		"executeExpressionFrom:inContext:level:" : "DataCurator 10/19/2012 16:41",
 		"findMatchingClasses:level:" : "DataCurator 10/18/2012 19:40",
 		"hierarchyOf:level:" : "DataCurator 10/18/2012 19:40",
@@ -32,6 +31,4 @@
 		"toStringFromOop:level:" : "DataCurator 10/18/2012 19:42",
 		"writer" : "DataCurator 10/18/2012 19:41" },
 	"instance" : {
-		"executeAbortCmd:" : "DataCurator 10/18/2012 19:39",
-		"executeCommitCmd:" : "DataCurator 10/18/2012 19:39",
-		"executeRunCmd:" : "DataCurator 10/18/2012 19:39" } }
+		 } }
