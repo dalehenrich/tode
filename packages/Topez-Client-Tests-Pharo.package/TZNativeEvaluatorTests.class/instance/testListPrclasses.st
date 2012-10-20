@@ -54,6 +54,7 @@ testListPrclasses
    TZEditorsDefaultSettings
    TZElement
       TZClassElement
+      TZInstanceElement
       TZSourceElement
          TZDoItElement
             TZTextElement
@@ -87,11 +88,6 @@ testListPrclasses
    TZTopez
       TZGsTopez
       TZNativeTopez
-   TZTopezCmd
-      TZTopezAbortCmd
-      TZTopezCommitCmd
-      TZTopezContinueCmd
-      TZTopezRunCmd
    TZTopezOptions
    TZTopezStatus
    Text

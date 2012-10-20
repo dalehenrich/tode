@@ -1,7 +1,7 @@
 printing
 basicPrintOn: aStream indent: indent
     self header printOn: aStream.
-    self named notEmpty
+    (named notNil and: [self named notEmpty])
         ifTrue: [ 
             aStream cr.
             self basicPrintNamedOn: aStream indent: indent ].

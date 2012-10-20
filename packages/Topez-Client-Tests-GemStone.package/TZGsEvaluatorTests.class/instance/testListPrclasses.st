@@ -15,6 +15,7 @@ testListPrclasses
    TZBlockStackDictionary
    TZElement
       TZClassElement
+      TZInstanceElement
       TZSourceElement
          TZDoItElement
             TZTextElement
@@ -39,11 +40,6 @@ testListPrclasses
    TZSTONTests
    TZStonWriter
    TZTopez
-   TZTopezCmd
-      TZTopezAbortCmd
-      TZTopezCommitCmd
-      TZTopezContinueCmd
-      TZTopezRunCmd
    TZTopezNotification
       TZTopezBreakpointNotification
       TZTopezErrorNotification
