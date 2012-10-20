@@ -1,3 +1,3 @@
-transactions
+coding
 abort
-    ^ self executeCommand: TZTopezAbortCmd new
+    ^ self executeString: 'System abort. ^true'

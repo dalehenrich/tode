@@ -9,6 +9,6 @@ executeCommandForClickBlock: clickBlockSelector
         at: clickBlockSelector
         forClass: elementProxy asTopezProxy proxyClassName
         ifAbsent: [ ^ self ].
-    (clickBlock value: elementProxy value: self topez value: self)
+    (clickBlock value: elementProxy value: self topez value: self) asTopezProxy asTopezNative
         ifTrue: [ self changed: #'list' ].
     ^ true

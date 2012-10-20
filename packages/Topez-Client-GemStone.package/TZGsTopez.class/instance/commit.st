@@ -1,3 +1,3 @@
-transactions
+coding
 commit
-    ^ self executeCommand: TZTopezCommitCmd new
+    ^ self executeString: 'System commit'

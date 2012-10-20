@@ -7,6 +7,7 @@
 		"deleteClassElement:" : "DataCurator 10/18/2012 19:40",
 		"deleteMethodElement:" : "DataCurator 10/18/2012 19:40",
 		"executeCommandFrom:" : "DataCurator 10/18/2012 19:40",
+		"executeExpressionFrom:inContext:level:" : "DataCurator 10/19/2012 16:41",
 		"findMatchingClasses:level:" : "DataCurator 10/18/2012 19:40",
 		"hierarchyOf:level:" : "DataCurator 10/18/2012 19:40",
 		"implementorsOf:level:" : "DataCurator 10/18/2012 19:40",
