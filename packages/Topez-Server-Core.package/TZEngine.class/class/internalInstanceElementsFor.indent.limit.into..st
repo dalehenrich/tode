@@ -14,7 +14,7 @@ internalInstanceElementsFor: instance indent: indent limit: limit into: coll
                         into: coll ] ].
     instance class isVariable
         ifTrue: [ 
-            1 to: anObject _basicSize do: [ :index | 
+            1 to: instance _basicSize do: [ :index | 
                 | value |
                 value := instance _at: index.
                 coll add: (self createInstanceElementFor: value label: index printString , '.' indent: indent).

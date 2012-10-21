@@ -9,6 +9,6 @@ instanceElementFor: instance level: level
     self
         internalInstanceElementsFor: instance
         indent: indent
-        limit: limit
+        limit: level
         into: coll.
     ^ self toString: coll level: level + 1
