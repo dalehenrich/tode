@@ -40,5 +40,21 @@ edit prclasses';
                                 'run
 3+4
 %';
+                        at: 'tz'
+                            put:
+                                'instance
+| str |
+str := TextStream on: Text new.
+str 
+  nextPutAll: ''No emphasis''; 
+  space; 
+  nextPutAll: (Text string: ''bold'' attribute: TextEmphasis bold);
+  space; 
+  nextPutAll: (Text string: ''blue'' attribute: TextColor blue);
+  space; 
+  nextPutAll: (Text string: ''bold n blue'' attributes: {TextEmphasis bold. TextColor blue});
+  yourself.
+str contents
+%';
                         yourself);
         yourself
