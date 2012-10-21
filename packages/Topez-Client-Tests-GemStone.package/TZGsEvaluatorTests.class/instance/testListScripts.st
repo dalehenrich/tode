@@ -9,6 +9,7 @@ testListScripts
                     'run
 	testing
 input
+	tz
 	testing
 	topezFilter
 	topez

@@ -10,6 +10,7 @@ testListScripts
 	testing
 	init
 input
+	tz
 	testing
 	topezFilter
 	topez

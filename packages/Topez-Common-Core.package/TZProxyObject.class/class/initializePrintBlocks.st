@@ -39,13 +39,16 @@ initializePrintBlocks
         at: #'basic'
             forClass: 'TZInstanceElement'
             put: [ :proxy :aStream :indent | 
-                    | space |
+                    | space label |
                     space := ''.
                     proxy indent asTopezNative timesRepeat: [ space := space , '   ' ].
-                    aStream
-                        nextPutAll: space;
-                        nextPutAll: proxy label asTopezNative;
-                        space.
+                    label := proxy label asTopezNative.
+                    label notEmpty
+                        ifTrue: [ 
+                            aStream
+                                nextPutAll: space;
+                                nextPutAll: proxy label asTopezNative;
+                                space ].
                     proxy instance renderText: #'instance' on: aStream ];
         at: #'basic'
             forClass: 'TZClassElement'

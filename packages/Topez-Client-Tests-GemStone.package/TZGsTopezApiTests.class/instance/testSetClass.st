@@ -1,7 +1,7 @@
 test coding
 testSetClass
     | result x |
-    self topez commandOptions level: 0.
+    self topez level: 0.
     result := self doNoError: [ self topez setClass: 'Object' ].
     self assert: result oop == 72193.
     self assert: result classOop == 206081.
