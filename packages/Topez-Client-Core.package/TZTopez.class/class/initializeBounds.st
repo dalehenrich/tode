@@ -2,7 +2,7 @@ class initialization
 initializeBounds
     "self initialize"
 
-    | classListsOrigin methodOrigin methodListOrigin top listWidth fullHeight halfHeight codeWidth classDefOrigin thirdHeight twoThirdHeight thirdListWindowExtent listWindowExtent codeWindowExtent |
+    | classListsOrigin methodOrigin methodListOrigin top listWidth fullHeight halfHeight codeWidth classDefOrigin thirdHeight twoThirdHeight thirdListWindowExtent listWindowExtent codeWindowExtent debuggerWidth |
     top := 10.
     classListsOrigin := 35.
     fullHeight := 380.
@@ -10,7 +10,7 @@ initializeBounds
     thirdHeight := 140.
     twoThirdHeight := 2 * thirdHeight.
     listWidth := 250.
-    codeWidth := 540.
+    debuggerWidth := codeWidth := 540.
     listWindowExtent := listWidth @ twoThirdHeight.
     thirdListWindowExtent := listWidth @ thirdHeight.
     codeWindowExtent := codeWidth @ (fullHeight + (halfHeight / 2)).
@@ -27,4 +27,5 @@ initializeBounds
         at: 'classSelectors' put: ((classDefOrigin + codeWidth + listWidth) @ top extent: listWindowExtent);
         at: #'implementors'
             put: ((classDefOrigin + codeWidth) @ (top + twoThirdHeight) extent: (2 * listWidth) @ fullHeight);
+        at: #'debugger' put: ((classDefOrigin + codeWidth) @ (top + twoThirdHeight) extent: debuggerWidth @ fullHeight);
         yourself

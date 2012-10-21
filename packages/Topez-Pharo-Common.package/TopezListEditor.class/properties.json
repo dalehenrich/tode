@@ -8,7 +8,8 @@
 	"instvars" : [
 		"list",
 		"listIndex",
-		"listFilter" ],
+		"listFilter",
+		"renderAttribute" ],
 	"name" : "TopezListEditor",
 	"pools" : [
 		 ],

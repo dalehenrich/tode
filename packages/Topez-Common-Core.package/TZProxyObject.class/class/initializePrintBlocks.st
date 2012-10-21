@@ -117,6 +117,24 @@ initializePrintBlocks
                         nextPutAll: 'receiver';
                         space.
                     proxy receiver renderText: #'basic' on: aStream ];
+        at: #'debugger'
+            forClass: 'TZStackFrame'
+            put: [ :proxy :aStream :indent | 
+                    aStream
+                        tab: indent;
+                        nextPutAll: (Text string: proxy inClass proxyClassName attribute: TextEmphasis bold);
+                        nextPutAll:
+                                (Text
+                                        string: ' >> '
+                                        attributes:
+                                            {(TextEmphasis bold).
+                                            (TextColor gray)});
+                        nextPutAll:
+                                (Text
+                                        string: proxy selector proxyPrintString
+                                        attributes:
+                                            {(TextEmphasis bold).
+                                            (TextColor blue)}) ];
         at: #'basic'
             forClass: 'TZNativeStackFrame'
             put: [ :proxy :aStream :indent | 

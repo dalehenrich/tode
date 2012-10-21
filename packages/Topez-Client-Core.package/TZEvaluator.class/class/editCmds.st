@@ -127,6 +127,20 @@ editCmds
                                 label: 'Inspect'
                                 inWindow: id
                                 at: 'implementors' ];
+                at: #'stack'
+                    put: [ :evaluator :topez :tokens :windowId | 
+                            | list id |
+                            id := windowId notNil
+                                ifTrue: [ windowId ].
+                            list := evaluator stack.
+                            topez
+                                editList: list
+                                selection: (list at: list currentFrameIndex)
+                                renderAttribute: #'debugger'
+                                templateElement: nil
+                                label: 'Debug'
+                                inWindow: id
+                                at: 'debugger' ];
                 at: #'hierarchy'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
