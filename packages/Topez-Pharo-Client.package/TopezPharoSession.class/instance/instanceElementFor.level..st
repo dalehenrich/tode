@@ -8,7 +8,7 @@ instanceElementFor: instanceProxy level: level
     coll add: (self createInstanceElementFor: instanceProxy label: '' indent: indent).
     self
         internalInstanceElementsFor: instanceProxy
-        indent: indent
+        indent: indent + 1
         limit: level
         into: coll.
     ^ coll asArray

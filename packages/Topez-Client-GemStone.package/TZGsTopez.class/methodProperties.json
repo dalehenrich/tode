@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"windowOffset" : "dkh 10/22/2012 10:11" },
 	"instance" : {
 		"abort" : "dkh 10/19/2012 17:18",
 		"activeShout" : "dkh 10/18/2012 15:39",
@@ -20,7 +20,7 @@
 		"currentEngine" : "dkh 10/5/2012 07:40",
 		"deleteClassElement:" : "dkh 10/18/2012 11:54",
 		"deleteMethodElement:" : "dkh 10/18/2012 11:55",
-		"doInSession:" : "dkh 10/10/2012 11:36",
+		"doInSession:" : "dkh 10/22/2012 10:32",
 		"executeString:" : "dkh 10/19/2012 16:50",
 		"executeString:receiver:" : "dkh 10/20/2012 07:39",
 		"executeString:receiver:level:" : "dkh 10/20/2012 07:38",
@@ -29,7 +29,7 @@
 		"findMatchingClasses:" : "dkh 10/14/2012 13:03",
 		"hierarchyOf:" : "dkh 10/17/2012 19:47",
 		"implementorsOf:" : "dkh 10/22/2012 08:12",
-		"instanceElementFor:level:" : "dkh 10/20/2012 15:32",
+		"instanceElementFor:level:" : "dkh 10/22/2012 10:32",
 		"instanceSelectors:" : "dkh 10/8/2012 18:42",
 		"login" : "dkh 10/19/2012 17:50",
 		"logout" : "dkh 9/27/2012 14:49",
@@ -39,7 +39,7 @@
 		"methodElementFor:selector:" : "dkh 10/18/2012 12:00",
 		"methodElementForClass:isMeta:selector:" : "dkh 10/14/2012 07:55",
 		"proxyForOop:level:" : "dkh 10/6/2012 11:57",
-		"rawInSession:" : "dkh 10/10/2012 11:36",
+		"rawInSession:" : "dkh 10/22/2012 10:32",
 		"referencesTo:isMeta:in:" : "dkh 10/22/2012 08:12",
 		"run:" : "dkh 10/19/2012 17:32",
 		"runInInstance:" : "dkh 10/20/2012 14:29",

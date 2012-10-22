@@ -1,7 +1,8 @@
 {
 	"category" : "Topez-Client-Core",
 	"classinstvars" : [
-		 ],
+		"bounds",
+		"windowOffset" ],
 	"classvars" : [
 		"Bounds" ],
 	"commentStamp" : "",

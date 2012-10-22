@@ -1,3 +1,3 @@
 accessing
 bounds
-    ^ Bounds
+    ^ self class bounds

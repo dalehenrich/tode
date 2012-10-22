@@ -8,7 +8,7 @@ instanceElementFor: instance level: level
     coll add: (self createInstanceElementFor: instance label: '' indent: indent).
     self
         internalInstanceElementsFor: instance
-        indent: indent
+        indent: indent + 1
         limit: level
         into: coll.
     ^ self toString: coll level: level + 1

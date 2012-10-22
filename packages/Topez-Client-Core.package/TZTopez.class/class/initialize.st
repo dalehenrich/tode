@@ -3,4 +3,5 @@ initialize
     "self initialize"
 
     Bounds := Dictionary new.
-    self initializeBounds
+    self initializeBounds.
+    bounds := self offsetBounds: self windowOffset

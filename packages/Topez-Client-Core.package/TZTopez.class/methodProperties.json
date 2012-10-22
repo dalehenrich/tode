@@ -1,11 +1,15 @@
 {
 	"class" : {
-		"initialize" : "dkh 10/12/2012 10:30",
-		"initializeBounds" : "dkh 10/21/2012 20:14" },
+		"bounds" : "dkh 10/22/2012 10:00",
+		"initialize" : "dkh 10/22/2012 10:05",
+		"initializeBounds" : "dkh 10/21/2012 20:14",
+		"offsetBounds:" : "dkh 10/22/2012 10:09",
+		"windowOffset" : "dkh 10/22/2012 10:06",
+		"windowOffset:" : "dkh 10/22/2012 10:06" },
 	"instance" : {
 		"activateWindow:" : "dkh 10/10/2012 17:54",
 		"addElement:toClassElement:" : "dkh 10/17/2012 14:00",
-		"bounds" : "dkh 10/12/2012 10:28",
+		"bounds" : "dkh 10/22/2012 10:02",
 		"classElementForCurrentClass" : "dkh 10/12/2012 15:01",
 		"close" : "dkh 10/14/2012 09:01",
 		"collapse" : "dkh 10/13/2012 17:59",
