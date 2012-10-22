@@ -68,8 +68,12 @@ initializeClickBlocks
         at: #'singleClick'
             forClass: 'TZInstanceElement'
             put: [ :proxy :topez :editor | 
+                    | list |
                     topez
-                        editList: (topez instanceElementFor: proxy instance)
+                        editList: (list := topez instanceElementFor: proxy instance)
+                        selection: (list at: 1)
+                        renderAttribute: #'inspector'
+                        templateElement: nil
                         label: 'inspect'
                         inWindow: nil
                         at: 'implementors'.

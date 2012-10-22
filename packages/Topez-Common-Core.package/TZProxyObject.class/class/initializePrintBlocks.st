@@ -49,7 +49,7 @@ initializePrintBlocks
                                 nextPutAll: space;
                                 nextPutAll: proxy label asTopezNative;
                                 space ].
-                    proxy instance renderText: #'instance' on: aStream ];
+                    proxy instance renderText: #'inspector' on: aStream ];
         at: #'basic'
             forClass: 'TZClassElement'
             put: [ :proxy :aStream :indent | 
@@ -120,9 +120,15 @@ initializePrintBlocks
         at: #'debugger'
             forClass: 'TZStackFrame'
             put: [ :proxy :aStream :indent | 
+                    | mclassName rclassName |
+                    mclassName := proxy inClass proxyClassName.
+                    rclassName := proxy receiver proxyClassName.
                     aStream
                         tab: indent;
-                        nextPutAll: (Text string: proxy inClass proxyClassName attribute: TextEmphasis bold);
+                        nextPutAll: (Text string: rclassName attribute: TextEmphasis bold).
+                    mclassName = rclassName
+                        ifFalse: [ aStream nextPutAll: '(' , mclassName , ')' ].
+                    aStream
                         nextPutAll:
                                 (Text
                                         string: ' >> '

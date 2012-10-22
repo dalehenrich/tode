@@ -124,6 +124,9 @@ editCmds
                                 value: tokens.
                             topez
                                 editList: list
+                                selection: list
+                                renderAttribute: #'inspector'
+                                templateElement: nil
                                 label: 'Inspect'
                                 inWindow: id
                                 at: 'implementors' ];
