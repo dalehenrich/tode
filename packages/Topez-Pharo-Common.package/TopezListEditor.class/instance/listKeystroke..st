@@ -33,7 +33,7 @@ listKeystroke: event
             event keyCharacter = $N
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdShiftNKeyStroke' ].
             event keyCharacter = $o
-                ifTrue: [ ^ self listKeystrokeCmdOKeyStroke ].
+                ifTrue: [ ^ self executeCommandForClickBlock: #'cmdOKeyStroke' ].
             event keyCharacter = $v
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdVKeyStroke' ].
             event keyCharacter = $x

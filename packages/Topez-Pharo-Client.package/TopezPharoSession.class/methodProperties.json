@@ -6,7 +6,7 @@
 		"toString:withOptions:" : "dkh 10/5/2012 10:42",
 		"writer" : "dkh 10/5/2012 10:42" },
 	"instance" : {
-		"addMethodElement:toClassElement:" : "dkh 10/16/2012 20:15",
+		"addMethodElement:toElement:" : "dkh 10/22/2012 14:02",
 		"classDefinition:" : "dkh 10/11/2012 15:09",
 		"classElementForClass:" : "dkh 10/17/2012 15:03",
 		"classSelectors:" : "dkh 10/16/2012 20:18",

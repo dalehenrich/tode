@@ -41,6 +41,18 @@ initializeClickBlocks
                         inWindow: nil
                         at: 'implementors'.
                     true ];
+        at: #'cmdOKeyStroke'
+            forClasses: #('TZMethodElement' 'TZTemplateMethodElement')
+            put: [ :proxy :topez :editor | 
+                    editor emptyTemplateElement ~~ nil
+                        ifTrue: [ 
+                            topez
+                                editCodeElement: editor emptyTemplateElement asTopezProxy
+                                label: 'Code'
+                                inWindow: (topez windowIdNamed: #'methodSource')
+                                at: 'method'.
+                            true ]
+                        ifFalse: [ false ] ];
         at: #'cmdVKeyStroke'
             forClass: 'TZClassElement'
             put: [ :proxy :topez :editor | 
@@ -48,6 +60,11 @@ initializeClickBlocks
                         ifNotNil: [ :elementProxy | 
                             editor selectedElement
                                 ifNotNil: [ :classElementProxy | topez addElement: elementProxy toClassElement: classElementProxy ] ].
+                    true ];
+        at: #'cmdVKeyStroke'
+            forClasses: #('TZMethodElement' 'TZTemplateMethodElement')
+            put: [ :proxy :topez :editor | 
+                    editor objectClipboard ifNotNil: [ :elementProxy | topez addElement: elementProxy toMethodElement: proxy ].
                     true ];
         at: #'cmdXKeyStroke'
             forClass: 'TZClassElement'

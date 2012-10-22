@@ -1,7 +1,7 @@
 api
-addMethodElement: methodElementProxy toClassElement: classProxy
+addMethodElement: methodElementProxy toElement: anElementProxy
     ^ self
         compileMethod: methodElementProxy source asTopezNative
-        class: classProxy elementClass asTopezProxy
+        class: anElementProxy elementClass asTopezProxy
         isMeta: methodElementProxy isMeta asTopezNative
         category: methodElementProxy category asTopezNative

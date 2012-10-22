@@ -1,7 +1,7 @@
 as yet unclassified
-addMethodElement: methodElementProxy toClassElement: classProxy
+addMethodElement: methodElementProxy toElement: anElementProxy
     ^ self
         compileMethod: methodElementProxy source asTopezNative
-        class: classProxy elementClass
+        class: anElementProxy elementClass
         category: methodElementProxy category asTopezNative
         forMeta: methodElementProxy isMeta asTopezNative

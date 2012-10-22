@@ -2,13 +2,13 @@ accessing
 executeCommandForClickBlock: clickBlockSelector
     | index elementProxy clickBlock |
     index := self listIndex.
-    index = 0
-        ifTrue: [ ^ false ].
-    elementProxy := self list at: index.
+    elementProxy := index = 0
+        ifTrue: [ self emptyTemplateElement ifNil: [ ^ false ] ]
+        ifFalse: [ self list at: index ].
     clickBlock := TZProxyObject clickBlocks
         at: clickBlockSelector
         forClass: elementProxy asTopezProxy proxyClassName
-        ifAbsent: [ ^ self ].
+        ifAbsent: [ ^ false ].
     (clickBlock value: elementProxy value: self topez value: self) asTopezProxy asTopezNative
         ifTrue: [ self changed: #'list' ].
     ^ true

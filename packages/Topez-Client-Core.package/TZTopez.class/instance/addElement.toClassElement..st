@@ -5,4 +5,4 @@ addElement: element toClassElement: classElement
     self flag: #'hack'.	"deserves place in clickBlock land"
     (#('TZMethodElement' 'TZMessageElement') includes: element asTopezProxy proxyClassName)
         ifFalse: [ ^ false ].
-    ^ self addMethodElement: element toClassElement: classElement
+    ^ self addMethodElement: element toElement: classElement
