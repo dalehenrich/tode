@@ -23,4 +23,4 @@ login
             messageText := gciError message.
             session := nil.
             ^ Error signal: messageText , ' For further information about login failures, check the gem log file' ].
-    currentEngine := self executeStringInSession: 'TZEngine toString: TZEngine level: 0'
+    currentEngine := self executeStringInSession: 'TZEngine toString: TZEngine default level: 0'
