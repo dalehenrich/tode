@@ -11,6 +11,6 @@ testAddClassMethodElementToElement
             self topez setClass: 'Animal'.
             classProxy := self topez currentClass.
             classElement := self topez classElementForClass: classProxy.
-            self topez addMethodElement: methodElement toElement: classElement.
+            self topez addMethodElement: methodElement toElement: classElement isMeta: classElement isMeta.
             selectors := TZLister new listProxy: (self topez classSelectors: classProxy).
             self assert: (x := selectors renderText asString) = 'initialize' ]

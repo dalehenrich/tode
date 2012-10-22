@@ -9,4 +9,4 @@ spawnWindow
         contents: self sourceElement;
         windowId: windowId;
         label: label.
-    win extent: (self editor topView extent * (1 @ 1.5)) rounded
+    win extent: (self editor topView extent * (1 @ 1.25)) rounded
