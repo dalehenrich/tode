@@ -27,6 +27,6 @@ referencesTo: aVariableOrClassName isMeta: isMeta in: aClassProxyOrNil
                     ((ClassOrganizer cachedOrganizer referencesTo: literal key in: classes) at: 1)
                         do: [ :method | aCollection add: (self messageElementFor: method inClass selector: method selector messagePattern: aVariableOrClassName) ].
                     ^ TZMessageElement hierarchyOrderFor: aCollection ] ].	"globals"
-    (ClassOrganizer cachedOrganizer referencesToObject: (env associationAt: aVariableOrClassName asSymbol))
+    (ClassOrganizer cachedOrganizer referencesToObject: (Smalltalk globals associationAt: aVariableOrClassName asSymbol))
         do: [ :method | aCollection add: (self messageElementFor: method inClass selector: method selector messagePattern: aVariableOrClassName) ].
     ^ TZMessageElement hierarchyOrderFor: aCollection

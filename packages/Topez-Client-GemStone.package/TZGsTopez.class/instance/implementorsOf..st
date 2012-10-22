@@ -1,5 +1,6 @@
 transactions
 implementorsOf: aString
+    self setFindText: aString.
     ^ self
         doInSession: [ :sess | 
             sess

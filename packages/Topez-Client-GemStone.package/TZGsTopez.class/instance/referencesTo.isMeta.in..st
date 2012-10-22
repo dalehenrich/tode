@@ -1,5 +1,6 @@
 transactions
 referencesTo: aString isMeta: isMeta in: aClassProxyOrNil
+    self setFindText: aString.
     ^ self
         doInSession: [ :sess | 
             sess
