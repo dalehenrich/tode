@@ -3,6 +3,11 @@ initializeClickBlocks
     "self initialize"
 
     self clickBlocks
+        at: #'cmdCKeyStroke'
+            forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
+            put: [ :proxy :topez :editor | 
+                    editor addToClipboard: proxy.
+                    true ];
         at: #'cmdMKeyStroke'
             forClasses: #('TZMethodElement' 'TZMessageElement')
             put: [ :proxy :topez :editor | 
@@ -43,11 +48,6 @@ initializeClickBlocks
                         ifNotNil: [ :elementProxy | 
                             editor selectedElement
                                 ifNotNil: [ :classElementProxy | topez addElement: elementProxy toClassElement: classElementProxy ] ].
-                    true ];
-        at: #'cmdCKeyStroke'
-            forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
-            put: [ :proxy :topez :editor | 
-                    editor addToClipboard: proxy.
                     true ];
         at: #'cmdXKeyStroke'
             forClass: 'TZClassElement'
@@ -94,7 +94,11 @@ initializeClickBlocks
         at: #'singleClick'
             forClass: 'TZMessageElement'
             put: [ :proxy :topez :editor | 
-                    ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first value: proxy value: topez value: editor.
+                    topez setFindText: proxy messagePattern asTopezNative.
+                    ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first
+                        value: proxy
+                        value: topez
+                        value: editor.
                     ((self clickBlocks at: 'TZMethodElement') at: #'singleClick') first
                         value: proxy
                         value: topez

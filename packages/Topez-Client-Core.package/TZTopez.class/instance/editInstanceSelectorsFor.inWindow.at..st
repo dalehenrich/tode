@@ -1,7 +1,7 @@
 editting
 editInstanceSelectorsFor: classProxy inWindow: windowIdOrNil at: windowLocation
     | templateElement |
-    templateElement := TZMethodElement new
+    templateElement := TZTemplateMethodElement new
         elementClass: classProxy;
         isMeta: false;
         elementClassName: classProxy asTopezProxy proxyClassName;
@@ -10,7 +10,7 @@ editInstanceSelectorsFor: classProxy inWindow: windowIdOrNil at: windowLocation
         source: Object sourceCodeTemplate;
         yourself.
     ^ self
-        editList: (self instanceSelectors: classProxy asTopezProxy )
+        editList: (self instanceSelectors: classProxy asTopezProxy)
         selection: nil
         templateElement: templateElement asTopezProxy
         label: classProxy asTopezProxy proxyClassName asTopezNative

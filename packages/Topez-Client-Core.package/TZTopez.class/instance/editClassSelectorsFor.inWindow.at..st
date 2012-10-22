@@ -1,7 +1,7 @@
 editting
 editClassSelectorsFor: classProxy inWindow: windowIdOrNil at: windowLocation
     | templateElement |
-    templateElement := TZMethodElement new
+    templateElement := TZTemplateMethodElement new
         elementClass: classProxy;
         isMeta: true;
         elementClassName: classProxy asTopezProxy proxyClassName;
