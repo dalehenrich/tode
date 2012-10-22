@@ -58,6 +58,14 @@ initializeClickBlocks
                     editor addToClipboard: proxy.
                     topez deleteMethodElement: proxy ];
         at: #'singleClick'
+            forClass: 'TZStackFrame'
+            put: [ :proxy :topez :editor | 
+                    topez
+                        editList: (topez instanceElementFor: proxy receiver)
+                        label: 'receiver'
+                        inWindow: nil
+                        at: 'receiver' ];
+        at: #'singleClick'
             forClass: 'TZInstanceElement'
             put: [ :proxy :topez :editor | 
                     topez
