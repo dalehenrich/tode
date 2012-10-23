@@ -16,7 +16,16 @@ runCmds
                         ifFalse: [ topez run: ((self scripts at: 'run') at: (tokens at: 2)) ] ];
         at: 'instance'
             put: [ :evaluator :topez :tokens | 
-                    evaluator accumulateTextAndDo: [ :doitStream | topez runInInstance: doitStream contents ].
+                    evaluator
+                        accumulateTextAndDo: [ :doitStream | 
+                            | result |
+                            result := topez runInInstance: doitStream contents.
+                            ((subCommands at: #'edit') at: #'instance')
+                                value: evaluator
+                                value: topez
+                                value: tokens
+                                value: nil.
+                            result ].
                     '' ];
         at: 'topez'
             put: [ :evaluator :topez :tokens | 
