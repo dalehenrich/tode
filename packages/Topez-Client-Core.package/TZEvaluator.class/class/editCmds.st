@@ -124,7 +124,7 @@ editCmds
                                 value: tokens.
                             topez
                                 editList: list
-                                selection: list
+                                selection: (list at: 1)
                                 renderAttribute: #'basic'
                                 templateElement: nil
                                 label: 'Inspect'
