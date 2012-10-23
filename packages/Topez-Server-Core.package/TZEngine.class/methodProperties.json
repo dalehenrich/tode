@@ -22,6 +22,8 @@
 		"methodElementFor:selector:level:" : "DataCurator 10/22/2012 15:32",
 		"methodElementForClass:isMeta:selector:" : "DataCurator 10/22/2012 15:32",
 		"methodElementForClass:isMeta:selector:level:" : "DataCurator 10/22/2012 15:32",
+		"methodTemplateElementFor:isMeta:" : "dkh 10/22/2012 23:46",
+		"methodTemplateElementFor:isMeta:level:" : "dkh 10/22/2012 23:48",
 		"put:onStream:withOptions:" : "DataCurator 10/22/2012 15:32",
 		"referencesTo:isMeta:in:" : "DataCurator 10/22/2012 15:33",
 		"referencesTo:isMeta:in:level:" : "DataCurator 10/22/2012 15:33",
