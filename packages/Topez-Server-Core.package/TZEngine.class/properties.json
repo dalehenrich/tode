@@ -6,7 +6,7 @@
 		"Default" ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"elementCache" ],
 	"name" : "TZEngine",
 	"pools" : [
 		 ],

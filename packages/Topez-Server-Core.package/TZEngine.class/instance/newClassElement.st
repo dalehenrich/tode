@@ -1,0 +1,3 @@
+metacello
+newClassElement
+    ^ TZClassElement new

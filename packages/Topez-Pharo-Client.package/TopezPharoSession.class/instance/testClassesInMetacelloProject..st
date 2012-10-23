@@ -20,4 +20,4 @@ testClassesInMetacelloProject: projectProxy
                     selectedClasses
                         do: [ :cl | extensionClasses at: cl put: (wc packageInfo extensionCategoriesForClass: cl) ] ] ]
         groupDo: [ :ignored |  ].
-    ^ TZClassElement hierarchyForClasses: classes extensionClasses: extensionClasses
+    ^ TZClassElement hierarchyForClasses: classes extensionClasses: extensionClasses classElementFactory: self

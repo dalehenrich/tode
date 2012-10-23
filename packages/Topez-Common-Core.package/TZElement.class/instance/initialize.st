@@ -1,3 +1,4 @@
 accessing
 initialize
-    isMeta := false
+    isMeta := false.
+    indent := 0
