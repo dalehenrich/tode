@@ -10,7 +10,8 @@
 		"elementPackage",
 		"elementClass",
 		"elementClassName",
-		"indent" ],
+		"indent",
+		"isMeta" ],
 	"name" : "TZElement",
 	"pools" : [
 		 ],

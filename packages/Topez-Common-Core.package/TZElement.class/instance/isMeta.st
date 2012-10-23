@@ -1,3 +1,4 @@
 accessing
 isMeta
-    ^ false
+    isMeta ifNil: [ isMeta := false ].
+    ^ isMeta
