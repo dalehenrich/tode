@@ -60,6 +60,8 @@ testListPrclasses
             TZTextElement
          TZMethodElement
             TZMessageElement
+            TZTemplateMethodElement
+      TZStackFrameElement
    TZEvaluator
       TZGsEvaluator
       TZNativeEvaluator

@@ -21,6 +21,8 @@ testListPrclasses
             TZTextElement
          TZMethodElement
             TZMessageElement
+            TZTemplateMethodElement
+      TZStackFrameElement
    TZEngine
    TZEvaluator
    TZLister
@@ -44,4 +46,4 @@ testListPrclasses
       TZTopezBreakpointNotification
       TZTopezErrorNotification
    TZTopezOptions
-   TZTopezStatus' ]
+   TZTopezStatus']

@@ -1,3 +1,4 @@
 tests
 testCurrentEngine
-    self assert: (self topez currentEngine proxyClassName = 'TZEngine class')
+    | x |
+    self assert: ((x := self topez currentEngine proxyClassName asString)  = 'TZEngine')

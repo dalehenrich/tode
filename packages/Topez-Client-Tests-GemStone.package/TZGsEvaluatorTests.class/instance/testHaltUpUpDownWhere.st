@@ -16,7 +16,7 @@ testHaltUpUpDownWhere
 	receiver [UndefinedObject] nil
 5 String class >> evaluateInContext:symbolList:		@3 line 10
 	receiver [String] 1 halt
-6 Metaclass3 >> executeExpressionFrom:inContext:level:		@4 line 3
-	receiver [TZEngine class] TZEngine
+6 TZEngine class >> executeExpressionFrom:inContext:level:		@4 line 3
+	receiver [TZEngine] aTZEngine
 7 Metaclass3 >> _gsReturnToC		@1 line 1
 	receiver [UndefinedObject] nil'

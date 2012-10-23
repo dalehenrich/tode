@@ -8,13 +8,11 @@ testListMethod
                 =
                     'on: anObject
     | objectClass |
-    objectClass := anObject isBehavior
-        ifTrue: [ anObject ]
-        ifFalse: [ anObject class ].
-    indexedSize := anObject class isVariable
+    objectClass := anObject class.
+    indexedSize := objectClass isVariable
         ifTrue: [ anObject size ]
         ifFalse: [ 0 ].
-    namedSize := anObject class allInstVarNames size.
+    namedSize := objectClass allInstVarNames size.
     size := namedSize + indexedSize.
     printString := [ anObject asTZString withSeparatorsCompacted ]
         on: Error
