@@ -34,10 +34,10 @@ initializeClickBlocks
             forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
             put: [ :proxy :topez :editor | 
                     | list |
-                    list := topez referencesTo: proxy elementClassName asTopezNative isMeta: false in: nil.
+                    list := topez referencesTo: proxy elementClassName asTopezNative asString isMeta: false in: nil.
                     topez
                         editList: list
-                        label: 'References to ' , proxy elementClassName asTopezNative
+                        label: 'References to ' , proxy elementClassName asTopezNative asString
                         inWindow: nil
                         at: 'implementors'.
                     true ];
@@ -107,7 +107,7 @@ initializeClickBlocks
                         label: 'Code'
                         inWindow: (topez windowIdNamed: #'methodSource')
                         at: 'method'.
-                    topez setClass: proxy elementClassName ];
+                    topez setClass: proxy elementClassName asTopezNative asString ];
         at: #'singleClick'
             forClass: 'TZMessageElement'
             put: [ :proxy :topez :editor | 
@@ -142,5 +142,5 @@ initializeClickBlocks
                         at: 'superclasses'.
                     topez editClassSelectorsFor: proxy elementClass.
                     topez editInstanceSelectorsFor: proxy elementClass.
-                    topez setClass: proxy elementClassName ];
+                    topez setClass: proxy elementClassName asTopezNative asString ];
         yourself
