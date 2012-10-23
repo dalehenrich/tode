@@ -18,14 +18,12 @@ runCmds
             put: [ :evaluator :topez :tokens | 
                     evaluator
                         accumulateTextAndDo: [ :doitStream | 
-                            | result |
-                            result := topez runInInstance: doitStream contents.
+                            topez runInInstance: doitStream contents.
                             ((subCommands at: #'edit') at: #'instance')
                                 value: evaluator
                                 value: topez
                                 value: tokens
-                                value: nil.
-                            result ].
+                                value: nil ].
                     '' ];
         at: 'topez'
             put: [ :evaluator :topez :tokens | 
