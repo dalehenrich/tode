@@ -11,12 +11,14 @@ createStackFrameElementFor: aGsProcess at: aFrameIndex
     selector := homeMethod selector.
     methodElement := self methodElementForClass: inClass isMeta: inClass isMeta selector: selector.
     receiverElement := self instanceElementFor: receiver level: 1.
-    ^ TZStackFrameElement new
-        process: aGsProcess;
-        methodElement: methodElement;
-        receiverInstanceElement: receiverElement;
-        frameIndex: aFrameIndex;
-        elementClass: cl;
-        elementClassName: cl name asString;
-        indent: 0;
-        yourself
+    ^ self elementCache
+        add:
+            (TZStackFrameElement new
+                process: aGsProcess;
+                methodElement: methodElement;
+                receiverInstanceElement: receiverElement;
+                frameIndex: aFrameIndex;
+                elementClass: cl;
+                elementClassName: cl name asString;
+                indent: 0;
+                yourself)

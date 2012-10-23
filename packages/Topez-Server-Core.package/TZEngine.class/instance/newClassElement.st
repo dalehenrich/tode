@@ -1,3 +1,3 @@
 metacello
 newClassElement
-    ^ TZClassElement new
+    ^ self elementCache add: TZClassElement new

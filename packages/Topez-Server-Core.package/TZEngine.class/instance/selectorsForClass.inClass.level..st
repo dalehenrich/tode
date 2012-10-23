@@ -5,13 +5,5 @@ selectorsForClass: aClass inClass: classBoolean level: level
         ifTrue: [ aClass class ]
         ifFalse: [ aClass ].
     result := targetClass selectors sort
-        collect: [ :selector | 
-            TZMethodElement new
-                elementClass: aClass;
-                elementClassName: aClass name;
-                selector: selector;
-                category: (targetClass categoryOfSelector: selector asSymbol);
-                isMeta: classBoolean;
-                setSource;
-                yourself ].
+        collect: [ :selector | self methodElementForClass: aClass isMeta: classBoolean selector: selector ].
     ^ self toString: result level: level

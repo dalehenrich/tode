@@ -17,4 +17,7 @@ classesInMetacelloProject: aMetacelloProjectSpec level: level
                     wc packageInfo extensionClasses
                         do: [ :cl | extensionClasses at: cl put: (wc packageInfo extensionCategoriesForClass: cl) ] ] ]
         groupDo: [ :ignored |  ].
-    ^ self toString: (TZClassElement hierarchyForClasses: classes extensionClasses: extensionClasses) level: level
+    ^ self
+        toString: (TZClassElement hierarchyForClasses: classes extensionClasses: extensionClasses)
+        level: level
+        classElementFactory: self

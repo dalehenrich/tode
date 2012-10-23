@@ -1,6 +1,6 @@
 metacello
 classElementForClass: aClass
-    ^ TZClassElement new
+    ^ self newClassElement
         elementClass: aClass;
         elementClassName: aClass name;
         indent: 0;
