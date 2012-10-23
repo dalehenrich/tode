@@ -6,7 +6,7 @@ methodElementFor: behaviorProxy selector: selector
     ^ TZMethodElement new
         elementClass: theClass asTopezProxy;
         isMeta: theBehavior isMeta;
-        elementClassName: theClass className;
+        elementClassName: theClass name;
         selector: selector;
         category: (theBehavior organization categoryOfElement: selector asSymbol);
         setSource;

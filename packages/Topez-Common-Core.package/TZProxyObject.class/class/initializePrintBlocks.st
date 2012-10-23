@@ -148,7 +148,7 @@ initializePrintBlocks
                         tab: indent;
                         nextPutAll: proxy frameIndex proxyPrintString;
                         space;
-                        nextPutAll: (Text string: proxy inClass className attribute: TextEmphasis bold);
+                        nextPutAll: (Text string: proxy inClass name attribute: TextEmphasis bold);
                         nextPutAll:
                                 (Text
                                         string: ' >> '
