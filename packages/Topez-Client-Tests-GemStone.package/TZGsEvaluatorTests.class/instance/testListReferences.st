@@ -12,10 +12,10 @@ testListReferences
 TZClassElement class>>hierarchyOf:
 TZClassElement class>>subclassesOf:
 TZClassElement class>>superclassesOf:
-TZEngine>>classElementForClass:
 TZEngine>>classesInMetacelloProject:level:
 TZEngine>>findMatchingClasses:level:
 TZEngine>>hierarchyOf:level:
+TZEngine>>newClassElement
 TZEngine>>subclassesOf:level:
 TZEngine>>superclassesOf:level:
-TZEngine>>testClassesInMetacelloProject:level:' ]
+TZEngine>>testClassesInMetacelloProject:level:']

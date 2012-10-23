@@ -14,6 +14,7 @@ TopezPharoSession>>classElementForClass:
 TopezPharoSession>>classesInMetacelloProject:
 TopezPharoSession>>findMatchingClasses:
 TopezPharoSession>>hierarchyOf:
+TopezPharoSession>>newClassElement
 TopezPharoSession>>subclassesOf:
 TopezPharoSession>>superclassesOf:
 TopezPharoSession>>testClassesInMetacelloProject:'
