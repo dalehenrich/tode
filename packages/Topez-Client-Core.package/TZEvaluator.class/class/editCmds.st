@@ -125,7 +125,7 @@ editCmds
                             topez
                                 editList: list
                                 selection: list
-                                renderAttribute: #'inspector'
+                                renderAttribute: #'basic'
                                 templateElement: nil
                                 label: 'Inspect'
                                 inWindow: id
