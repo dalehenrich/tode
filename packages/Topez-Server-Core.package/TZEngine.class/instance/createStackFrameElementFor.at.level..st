@@ -1,5 +1,5 @@
 as yet unclassified
-createStackFrameElementFor: aGsProcess at: aFrameIndex
+createStackFrameElementFor: aGsProcess at: aFrameIndex level: level
     | frameContents receiver cl homeMethod inClass selector |
     receiver := frameContents at: 10.
     cl := receiver class.
@@ -10,7 +10,7 @@ createStackFrameElementFor: aGsProcess at: aFrameIndex
     inClass := homeMethod inClass.
     selector := homeMethod selector.
     methodElement := self methodElementForClass: inClass isMeta: inClass isMeta selector: selector.
-    receiverElement := self instanceElementFor: receiver level: 1.
+    receiverElement := self instanceElementFor: receiver level: level.
     ^ self elementCache
         add:
             (TZStackFrameElement new
@@ -20,5 +20,4 @@ createStackFrameElementFor: aGsProcess at: aFrameIndex
                 frameIndex: aFrameIndex;
                 elementClass: cl;
                 elementClassName: cl name asString;
-                indent: 0;
                 yourself)
