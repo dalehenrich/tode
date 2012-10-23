@@ -4,7 +4,7 @@
 	"instance" : {
 		"classElementForClass:" : "DataCurator 10/23/2012 07:35",
 		"classElementForClass:level:" : "DataCurator 10/22/2012 15:30",
-		"classesInMetacelloProject:level:" : "DataCurator 10/23/2012 07:36",
+		"classesInMetacelloProject:level:" : "dkh 10/23/2012 09:33",
 		"compileMethod:class:category:forMeta:level:" : "DataCurator 10/22/2012 15:31",
 		"createInstanceElementFor:label:indent:" : "DataCurator 10/23/2012 07:39",
 		"createStackFrameElementFor:at:" : "DataCurator 10/23/2012 07:39",
@@ -34,7 +34,7 @@
 		"stackFor:level:" : "DataCurator 10/22/2012 15:33",
 		"subclassesOf:level:" : "DataCurator 10/23/2012 07:36",
 		"superclassesOf:level:" : "DataCurator 10/23/2012 07:36",
-		"testClassesInMetacelloProject:level:" : "DataCurator 10/23/2012 07:37",
+		"testClassesInMetacelloProject:level:" : "dkh 10/23/2012 09:33",
 		"toString:" : "DataCurator 10/22/2012 15:33",
 		"toString:level:" : "DataCurator 10/22/2012 15:33",
 		"toString:withOptions:" : "DataCurator 10/22/2012 15:33",
