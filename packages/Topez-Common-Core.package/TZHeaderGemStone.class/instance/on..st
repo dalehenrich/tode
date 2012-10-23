@@ -8,8 +8,6 @@ on: anObject
     printString := [ anObject asTZString ]
         on: Error
         do: [ :ignored | 'error printing' ].
-    objectClass := anObject isBehavior
-        ifTrue: [ anObject ]
-        ifFalse: [ anObject class ].
+    objectClass := Reflection classOf: anObject.
     classOop := Reflection oopOf: objectClass.
     className := objectClass name	"converting to String exposes the string to gc"
