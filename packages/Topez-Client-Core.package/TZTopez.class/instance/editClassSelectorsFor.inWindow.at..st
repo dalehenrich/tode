@@ -13,6 +13,6 @@ editClassSelectorsFor: classProxy inWindow: windowIdOrNil at: windowLocation
         editList: (self classSelectors: classProxy asTopezProxy)
         selection: nil
         templateElement: templateElement asTopezProxy
-        label: classProxy asTopezProxy proxyClassName asTopezNative , ' class'
+        label: classProxy asTopezProxy proxyPrintString asTopezNative , ' class'
         inWindow: windowIdOrNil
         at: windowLocation

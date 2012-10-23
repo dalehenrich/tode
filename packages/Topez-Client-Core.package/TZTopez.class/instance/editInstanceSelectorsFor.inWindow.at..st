@@ -13,6 +13,6 @@ editInstanceSelectorsFor: classProxy inWindow: windowIdOrNil at: windowLocation
         editList: (self instanceSelectors: classProxy asTopezProxy)
         selection: nil
         templateElement: templateElement asTopezProxy
-        label: classProxy asTopezProxy proxyClassName asTopezNative
+        label: classProxy asTopezProxy proxyPrintString asTopezNative
         inWindow: (self windowIdNamed: #'instanceSelectors')
         at: 'instanceSelectors'
