@@ -5,6 +5,4 @@ classElementForClass: classProxy
     ^ TZClassElement new
         elementClass: cl asTopezProxy;
         elementClassName: cl name asString;
-        indent: 0;
-        inExtensionClassList: false;
         yourself
