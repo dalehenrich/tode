@@ -1,5 +1,9 @@
 accessing
 default
-
-	Default ifNil: [ Default := self new].
-	^Default
+    | singleton |
+    singleton := SessionTemps current at: #'TZEngine_Default' otherwise: nil.
+    singleton == nil
+        ifTrue: [ 
+            singleton := self new.
+            SessionTemps current at: #'TZEngine_Default' put: singleton ].
+    ^ singleton
