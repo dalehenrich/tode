@@ -9,10 +9,13 @@ testListScripts
                     'run
 	testing
 input
-	tz
+	log
 	testing
+	boom
 	topezFilter
 	topez
+	tz
+	emptyLog
 topez
 	filterClasses
 	testing'

@@ -6,23 +6,23 @@ testHaltUpUpDownWhere
         assert:
             (x := result asString)
                 =
-                    '1 Object class >> halt
+                   '1 Object >> halt
 	receiver { sz:0 SmallInteger} 1
-==> 2 UndefinedObject class >> DoIt
+==> 2 UndefinedObject >> DoIt
 	receiver { sz:0 UndefinedObject} nil
-3 Compiler class >> evaluate:in:to:notifying:ifFail:logged:
+3 Compiler >> evaluate:in:to:notifying:ifFail:logged:
 	receiver { sz:6 Compiler} a Compiler
-4 Metaclass >> evaluate:for:notifying:logged:
+4 Compiler class >> evaluate:for:notifying:logged:
 	receiver { sz:13 Compiler class} Compiler
-5 Metaclass >> evaluate:for:logged:
+5 Compiler class >> evaluate:for:logged:
 	receiver { sz:13 Compiler class} Compiler
-6 Metaclass >> evaluate:
+6 Compiler class >> evaluate:
 	receiver { sz:13 Compiler class} Compiler
-7 TopezPharoSession class >> evaluate:
+7 TopezPharoSession >> evaluate:
 	receiver { sz:0 TopezPharoSession} a TopezPharoSession
-8 BlockClosure class >> on:do:
+8 BlockClosure >> on:do:
 	receiver { sz:5 BlockClosure} [result := Compiler ...etc...
-9 TopezPharoSession class >> evaluate:
+9 TopezPharoSession >> evaluate:
 	receiver { sz:0 TopezPharoSession} a TopezPharoSession
-10 BlockClosure class >> newProcess
+10 BlockClosure >> newProcess
 	receiver { sz:6 BlockClosure} [[result := Compiler...etc...'

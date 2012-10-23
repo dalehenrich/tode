@@ -8,11 +8,7 @@ testListReferences
                 assert:
                     (x := result asString)
                         =
-                          'TZClassElement class>>hierarchyForClasses:extensionClasses:
-TZClassElement class>>hierarchyOf:
-TZClassElement class>>subclassesOf:
-TZClassElement class>>superclassesOf:
-TZEngine>>classesInMetacelloProject:level:
+                          'TZEngine>>classesInMetacelloProject:level:
 TZEngine>>findMatchingClasses:level:
 TZEngine>>hierarchyOf:level:
 TZEngine>>newClassElement

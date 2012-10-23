@@ -6,7 +6,7 @@ testListPrclasses
         assert:
             (x := result asString)
                 =
-                    'Object
+                   'Object
    Exception
       GciUserInterrupt
       GsError
@@ -38,6 +38,7 @@ testListPrclasses
       OopType32
       OopType64
    StashShellTranscriptStream
+   StashShellTtyTextMorphForEditView
    StashShellWindowMorph
    String
    TZBlockStackDictionary
@@ -86,6 +87,7 @@ testListPrclasses
    TZStonMapWriter
    TZStonWriter
    TZSystemWindow
+   TZTextMorphForEditView
    TZTextStylerST80
    TZTopez
       TZGsTopez
@@ -93,9 +95,6 @@ testListPrclasses
    TZTopezOptions
    TZTopezStatus
    Text
-   TextMorphForEditView
-      StashShellTtyTextMorphForEditView
-      TZTextMorphForEditView
    TopezCommonEditor
       TopezCodeEditor
       TopezListEditor
