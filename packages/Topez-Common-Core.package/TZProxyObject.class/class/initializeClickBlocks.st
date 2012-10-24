@@ -9,7 +9,16 @@ initializeClickBlocks
                     editor addToClipboard: proxy.
                     true ];
         at: #'cmdMKeyStroke'
-            forClasses: #('TZMethodElement' 'TZMessageElement')
+            forClass: 'TZStackFrameElement'
+            put: [ :proxy :topez :editor | 
+                    | methodElement block |
+                    methodElement := proxy methodElement.
+                    block := self clickBlocks at: #'cmdMKeyStroke' forClass: methodElement proxyClassName ifAbsent: [  ].
+                    block == nil
+                        ifTrue: [ false ]
+                        ifFalse: [ block value: methodElement value: topez value: editor ] ];
+        at: #'cmdMKeyStroke'
+            forClasses: #('TZMethodElement' 'TZMessageElement' 'TZFrameMethodElement')
             put: [ :proxy :topez :editor | 
                     (topez evaluator class commands at: 'edit')
                         value: topez evaluator
@@ -20,7 +29,16 @@ initializeClickBlocks
                             (proxy selector asTopezNative)}.
                     true ];
         at: #'cmdNKeyStroke'
-            forClasses: #('TZMethodElement' 'TZMessageElement')
+            forClass: 'TZStackFrameElement'
+            put: [ :proxy :topez :editor | 
+                    | methodElement block |
+                    methodElement := proxy methodElement.
+                    block := self clickBlocks at: #'cmdNKeyStroke' forClass: methodElement proxyClassName ifAbsent: [  ].
+                    block == nil
+                        ifTrue: [ false ]
+                        ifFalse: [ block value: methodElement value: topez value: editor ] ];
+        at: #'cmdNKeyStroke'
+            forClasses: #('TZMethodElement' 'TZMessageElement' 'TZFrameMethodElement')
             put: [ :proxy :topez :editor | 
                     (topez evaluator class commands at: 'edit')
                         value: topez evaluator
@@ -31,7 +49,19 @@ initializeClickBlocks
                             (proxy selector asTopezNative)}.
                     true ];
         at: #'cmdShiftNKeyStroke'
-            forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
+            forClass: 'TZStackFrameElement'
+            put: [ :proxy :topez :editor | 
+                    | methodElement block |
+                    methodElement := proxy methodElement.
+                    block := self clickBlocks
+                        at: #'cmdShiftNKeyStroke'
+                        forClass: methodElement proxyClassName
+                        ifAbsent: [  ].
+                    block == nil
+                        ifTrue: [ false ]
+                        ifFalse: [ block value: methodElement value: topez value: editor ] ];
+        at: #'cmdShiftNKeyStroke'
+            forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement' 'TZFrameMethodElement')
             put: [ :proxy :topez :editor | 
                     | list |
                     list := topez referencesTo: proxy elementClassName asTopezNative asString isMeta: false in: nil.
@@ -120,6 +150,31 @@ initializeClickBlocks
                         inWindow: (topez windowIdNamed: #'methodSource')
                         at: 'method'.
                     topez setClass: proxy elementClassName asTopezNative asString ];
+        at: #'singleClick'
+            forClass: 'TZStackFrameElement'
+            put: [ :proxy :topez :editor | 
+                    | methodElement |
+                    methodElement := proxy methodElement.
+                    (self clickBlocks at: #'singleClick' forClass: methodElement proxyClassName ifAbsent: [  ])
+                        value: methodElement
+                        value: topez
+                        value: editor ];
+        at: #'singleClick'
+            forClass: 'TZFrameMethodElement'
+            put: [ :proxy :topez :editor | 
+                    ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first value: proxy value: topez value: editor.
+                    ((self clickBlocks at: 'TZMethodElement') at: #'singleClick') first
+                        value: proxy
+                        value: topez
+                        value: editor ];
+        at: #'singleClick'
+            forClass: 'TZExecutedCodeElement'
+            put: [ :proxy :topez :editor | 
+                    topez
+                        editCodeElement: proxy
+                        label: 'Execute Code'
+                        inWindow: (topez windowIdNamed: #'methodSource')
+                        at: 'method' ];
         at: #'singleClick'
             forClass: 'TZMessageElement'
             put: [ :proxy :topez :editor | 
