@@ -2,12 +2,14 @@
 	"class" : {
 		"default" : "dkh 10/23/2012 10:15" },
 	"instance" : {
+		"calculateSourceRangeEnd:in:" : "DataCurator 10/24/2012 08:19",
+		"calculateSourceRangeFor:frameIndex:ipOffset:in:for:" : "DataCurator 10/24/2012 08:40",
 		"classElementForClass:" : "DataCurator 10/23/2012 07:35",
 		"classElementForClass:level:" : "DataCurator 10/22/2012 15:30",
 		"classesInMetacelloProject:level:" : "dkh 10/23/2012 09:33",
 		"compileMethod:class:category:forMeta:level:" : "DataCurator 10/22/2012 15:31",
 		"createInstanceElementFor:label:indent:" : "DataCurator 10/23/2012 07:39",
-		"createStackFrameElementFor:at:level:" : "DataCurator 10/24/2012 00:21",
+		"createStackFrameElementFor:at:level:" : "DataCurator 10/24/2012 08:36",
 		"deleteClassElement:" : "DataCurator 10/22/2012 15:31",
 		"deleteMethodElement:" : "DataCurator 10/22/2012 15:31",
 		"elementCache" : "DataCurator 10/23/2012 06:41",

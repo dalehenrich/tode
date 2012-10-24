@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"methodForBlock" ],
+		"methodForBlock",
+		"selectionBegin",
+		"selectionEnd" ],
 	"name" : "TZFrameMethodElement",
 	"pools" : [
 		 ],

@@ -16,6 +16,12 @@ createStackFrameElementFor: aGsProcess at: aFrameIndex level: level
                         source: method sourceString;
                         yourself) ]
         ifFalse: [ self frameMethodElementFor: inClass selector: selector ].
+    self
+        calculateSourceRangeFor: methodElement
+        frameIndex: aFrameIndex
+        ipOffset: (frameContents at: 2)
+        in: method
+        for: aGsProcess.
     methodElement methodForBlock: method isMethodForBlock.
     receiverElement := self createInstanceElementFor: receiver label: '' indent: 0.
     ^ self elementCache
