@@ -9,8 +9,14 @@ createStackFrameElementFor: aGsProcess at: aFrameIndex level: level
     inClass := homeMethod inClass.
     selector := homeMethod selector.
     methodElement := inClass == nil
-        ifTrue: [ self elementCache add: TZExecutedCodeElement new ]
-        ifFalse: [ self messageElementFor: inClass selector: selector messagePattern: '' ].
+        ifTrue: [ 
+            self elementCache
+                add:
+                    (TZExecutedCodeElement new
+                        source: method sourceString;
+                        yourself) ]
+        ifFalse: [ self frameMethodElementFor: inClass selector: selector ].
+    methodElement methodForBlock: method isMethodForBlock.
     receiverElement := self createInstanceElementFor: receiver label: '' indent: 0.
     ^ self elementCache
         add:

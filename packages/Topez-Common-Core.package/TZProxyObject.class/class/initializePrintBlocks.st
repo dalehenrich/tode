@@ -112,6 +112,8 @@ initializePrintBlocks
                     methodElement := proxy methodElement.
                     receiverElement := proxy receiverInstanceElement.
                     mclassName := methodElement elementClassName asTopezNative asString.
+                    methodElement methodForBlock asTopezNative
+                        ifTrue: [ aStream nextPutAll: (Text string: ' [] in ' attribute: TextEmphasis bold) ].
                     mclassName = 'Executed Code'
                         ifTrue: [ 
                             aStream
