@@ -14,6 +14,8 @@
 		"runEditSelectors" : "dkh 10/13/2012 15:47",
 		"runEditSubclasses" : "dkh 10/13/2012 15:40",
 		"runEditSuperclasses" : "dkh 10/13/2012 15:32",
+		"runInstance" : "dkh 10/23/2012 18:25",
+		"runInstanceSelfRef" : "dkh 10/23/2012 18:25",
 		"runLogout" : "dkh 10/14/2012 09:22",
 		"testClose" : "dkh 10/14/2012 09:20",
 		"testEditClass" : "dkh 10/13/2012 15:33",
@@ -27,4 +29,6 @@
 		"testEditSelectors" : "dkh 10/13/2012 15:48",
 		"testEditSubclasses" : "dkh 10/13/2012 15:40",
 		"testEditSuperclasses" : "dkh 10/13/2012 15:39",
+		"testInstance" : "dkh 10/23/2012 18:25",
+		"testInstanceSelfRef" : "dkh 10/23/2012 18:29",
 		"testLogout" : "dkh 10/14/2012 09:21" } }

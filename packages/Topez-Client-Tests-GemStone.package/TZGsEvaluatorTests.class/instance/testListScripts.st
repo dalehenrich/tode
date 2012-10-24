@@ -11,10 +11,11 @@ testListScripts
 input
 	log
 	testing
-	boom
 	topezFilter
 	topez
+	boom
 	tz
+	ar
 	emptyLog
 topez
 	filterClasses
