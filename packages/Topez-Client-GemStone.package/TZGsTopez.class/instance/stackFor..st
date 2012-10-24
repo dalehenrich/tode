@@ -6,5 +6,5 @@ stackFor: execeptionProxy
                 receiverNB: self currentEngine
                 performNoDebug: 'stackFor:level:'
                 withArgs:
-                    {execeptionProxy context.
-                    2} ]
+                    {(execeptionProxy context).
+                    3} ]

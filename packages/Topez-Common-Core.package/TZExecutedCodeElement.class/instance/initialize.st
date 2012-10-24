@@ -1,3 +1,4 @@
 accessing
 initialize
-    super initialize
+    super initialize.
+    elementClassName := 'Executed Code'

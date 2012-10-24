@@ -95,6 +95,49 @@ initializePrintBlocks
                         frameIndex < size
                             ifTrue: [ aStream cr ] ] ];
         at: #'basic'
+            forClass: 'TZStackFrameElement'
+            put: [ :proxy :aStream :indent | 
+                    aStream
+                        tab: indent;
+                        nextPutAll: proxy frameIndex proxyPrintString;
+                        space.
+                    (self printBlocks at: #'debugger' forClass: 'TZStackFrameElement' ifAbsent: [  ])
+                        value: proxy
+                        value: aStream
+                        value: indent ];
+        at: #'debugger'
+            forClass: 'TZStackFrameElement'
+            put: [ :proxy :aStream :indent | 
+                    | methodElement receiverElement mclassName rclassName |
+                    methodElement := proxy methodElement.
+                    receiverElement := proxy receiverInstanceElement.
+                    mclassName := methodElement proxyClassName.
+                    mclassName = 'Executed Code'
+                        ifTrue: [ 
+                            aStream
+                                tab: indent;
+                                nextPutAll: (Text string: mclassName attribute: TextEmphasis bold) ]
+                        ifFalse: [ 
+                            rclassName := receiverElement proxyClassName.
+                            aStream
+                                tab: indent;
+                                nextPutAll: (Text string: rclassName attribute: TextEmphasis bold).
+                            mclassName = rclassName
+                                ifFalse: [ aStream nextPutAll: '(' , mclassName , ')' ].
+                            aStream
+                                nextPutAll:
+                                        (Text
+                                                string: ' >> '
+                                                attributes:
+                                                    {(TextEmphasis bold).
+                                                    (TextColor gray)});
+                                nextPutAll:
+                                        (Text
+                                                string: methodElement selector proxyPrintString
+                                                attributes:
+                                                    {(TextEmphasis bold).
+                                                    (TextColor blue)}) ] ];
+        at: #'basic'
             forClass: 'TZStackFrame'
             put: [ :proxy :aStream :indent | 
                     aStream

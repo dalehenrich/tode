@@ -7,9 +7,11 @@ createStackFrameElementFor: aGsProcess at: aFrameIndex level: level
     method := frameContents at: 1.
     homeMethod := method homeMethod.
     inClass := homeMethod inClass.
-    selector := homeMethod selector.	"getting hung up when the stack entry is not really a method but for executed code (anonymous method) or for a block ... (look at senders of isMethodForBlock to untangle ... stakc report and stack to level should help as well as OBStack framt ... I think that the method can be found, but we may have to keep some extra state around (perhaps in context element) that tells us whether we are a nested block/context or not ... really need pc data for calculating where in method we're at for highlighting"
-    methodElement := self methodElementForClass: inClass theNonMetaClass isMeta: inClass isMeta selector: selector.
-    receiverElement := self instanceElementFor: receiver level: level.
+    selector := homeMethod selector.
+    methodElement := inClass == nil
+        ifTrue: [ self elementCache add: TZExecutedCodeElement new ]
+        ifFalse: [ self messageElementFor: inClass selector: selector messagePattern: '' ].
+    receiverElement := self instanceElementFor: receiver limit: 0.
     ^ self elementCache
         add:
             (TZStackFrameElement new
