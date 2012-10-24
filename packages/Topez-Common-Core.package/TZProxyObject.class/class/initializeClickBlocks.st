@@ -53,6 +53,18 @@ initializeClickBlocks
                                 at: 'method'.
                             true ]
                         ifFalse: [ false ] ];
+        at: #'cmdPKeyStroke'
+            forClass: 'TZInstanceElement'
+            put: [ :proxy :topez :editor | 
+                    topez
+                        editCodeElement:
+                            (TZTextElement new
+                                source: proxy instance inspect proxyPrintString;
+                                yourself)
+                        label: 'Print'
+                        inWindow: (topez windowIdNamed: #'printer')
+                        at: 'method'.
+                    true ];
         at: #'cmdVKeyStroke'
             forClass: 'TZClassElement'
             put: [ :proxy :topez :editor | 
@@ -89,7 +101,7 @@ initializeClickBlocks
                     topez
                         editList: (list := topez instanceElementFor: proxy instance)
                         selection: (list at: 1)
-                        renderAttribute: #'inspector'
+                        renderAttribute: #'basic'
                         templateElement: nil
                         label: 'inspect'
                         inWindow: nil

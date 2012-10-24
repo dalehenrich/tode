@@ -18,7 +18,7 @@ listKeystroke: event
         ifTrue: [ ^ self listKeystrokeLeft ].
     event keyCharacter = Character arrowUp
         ifTrue: [ ^ self listKeystrokeUp ].
-    (event anyModifierKeyPressed and: [ #($C $L $N $c $m $n $o $v $x) includes: event keyCharacter ])
+    (event anyModifierKeyPressed and: [ #($C $L $N $c $m $n $o $p $v $x) includes: event keyCharacter ])
         ifTrue: [ 
             event keyCharacter = $C
                 ifTrue: [ ^ self controlShiftCKeyStroke ].
@@ -34,6 +34,8 @@ listKeystroke: event
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdShiftNKeyStroke' ].
             event keyCharacter = $o
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdOKeyStroke' ].
+            event keyCharacter = $p
+                ifTrue: [ ^ self executeCommandForClickBlock: #'cmdPKeyStroke' ].
             event keyCharacter = $v
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdVKeyStroke' ].
             event keyCharacter = $x

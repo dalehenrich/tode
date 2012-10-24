@@ -11,8 +11,9 @@ gsScripts
 %';
         at: 'boom'
             put:
-                'level 3
-set class TZEngine';
+                'run
+1 halt
+%';
         at: 'emptyLog'
             put:
                 'run
