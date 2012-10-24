@@ -2,7 +2,8 @@
 
 **Topez** is based upon the [**Topaz Programming Environment**][3] for GemStone/S.
 
-The current implementation uses a [Pharo1.4][1] image as the GCI client running against a [GemStone/S 3.1.0.1][2] stone.
+The current implementation uses a [Pharo1.4][1] image as the GCI client running against a [GemStone/S 3.1.0.1][2] stone using
+version 1.0-beta.9 of GLASS.
 
 ### GemStone Server Installation
 
@@ -28,7 +29,7 @@ for details on installing Metacello.*
 
 Here's a recent screen shot:
 
-<img style="border: 2px solid #000000;" src="https://raw.github.com/dalehenrich/topez/keymapping/docs/Screenshot_2012-10-15.png" />
+<img style="border: 2px solid #000000;" src="https://raw.github.com/dalehenrich/topez/debugger/docs/screenShot_2012-10-24.png" />
 
 [1]: http://www.pharo-project.org/pharo-download/release-1-4
 [2]: http://gemstonesoup.wordpress.com/2012/09/21/gemstones-3-1-0-1-is-shipping/
