@@ -111,14 +111,14 @@ initializePrintBlocks
                     | methodElement receiverElement mclassName rclassName |
                     methodElement := proxy methodElement.
                     receiverElement := proxy receiverInstanceElement.
-                    mclassName := methodElement proxyClassName.
+                    mclassName := methodElement elementClassName asTopezNative asString.
                     mclassName = 'Executed Code'
                         ifTrue: [ 
                             aStream
                                 tab: indent;
                                 nextPutAll: (Text string: mclassName attribute: TextEmphasis bold) ]
                         ifFalse: [ 
-                            rclassName := receiverElement proxyClassName.
+                            rclassName := receiverElement elementClassName asTopezNative asString.
                             aStream
                                 tab: indent;
                                 nextPutAll: (Text string: rclassName attribute: TextEmphasis bold).
@@ -133,7 +133,7 @@ initializePrintBlocks
                                                     (TextColor gray)});
                                 nextPutAll:
                                         (Text
-                                                string: methodElement selector proxyPrintString
+                                                string: methodElement selector asTopezNative asString
                                                 attributes:
                                                     {(TextEmphasis bold).
                                                     (TextColor blue)}) ] ];
