@@ -1,5 +1,11 @@
 styling
 shoutAboutToStyle: aPluggableShoutMorphOrView
+    self sourceElement className asString = 'TZProxyGemStone'
+        ifTrue: [ 
+            (#('TZExecutedCodeElement' 'TZTextElement') includes: self sourceElement proxyClassName)
+                ifTrue: [ 
+                    aPluggableShoutMorphOrView classOrMetaClass: nil.
+                    ^ true ] ].
     ^ self sourceElement
         ifNotNil: [ 
             self activeShout
@@ -8,6 +14,5 @@ shoutAboutToStyle: aPluggableShoutMorphOrView
                     self sourceElement className asString = 'TZDoItElement'
                         ifTrue: [ aPluggableShoutMorphOrView classOrMetaClass: nil ]
                         ifFalse: [ aPluggableShoutMorphOrView classOrMetaClass: Object ] ].
-            aPluggableShoutMorphOrView styler environment: self.
-            self sourceElement className ~= 'TZTextElement' ]
+            true ]
         ifNil: [ self stylingActive ]
