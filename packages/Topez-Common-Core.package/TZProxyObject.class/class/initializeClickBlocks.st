@@ -3,6 +3,17 @@ initializeClickBlocks
     "self initialize"
 
     self clickBlocks
+        at: #'cmdBKeyStroke'
+            forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement' 'TZStackFrameElement')
+            put: [ :proxy :topez :editor | 
+                    (topez evaluator class commands at: 'edit')
+                        value: topez evaluator
+                        value: topez
+                        value:
+                            {'edit'.
+                            'class'.
+                            (proxy elementClassName asTopezNative asString)}.
+                    true ];
         at: #'cmdCKeyStroke'
             forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
             put: [ :proxy :topez :editor | 
