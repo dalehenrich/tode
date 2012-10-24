@@ -141,7 +141,7 @@ editCmds
                                 selection: (list at: list currentFrameIndex)
                                 renderAttribute: #'debugger'
                                 templateElement: nil
-                                label: 'Debug'
+                                label: evaluator exception proxyPrintString
                                 inWindow: id
                                 at: 'debugger' ];
                 at: #'hierarchy'

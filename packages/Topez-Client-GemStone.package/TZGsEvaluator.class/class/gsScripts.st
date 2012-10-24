@@ -12,7 +12,7 @@ gsScripts
         at: 'boom'
             put:
                 'run
-1 halt
+[1 halt] value
 %';
         at: 'emptyLog'
             put:
