@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TZExecutedCodeElement",
+		"methodForBlock" ],
+	"name" : "TZFrameMethodElement",
 	"pools" : [
 		 ],
-	"super" : "TZFrameMethodElement",
+	"super" : "TZMethodElement",
 	"type" : "normal" }
