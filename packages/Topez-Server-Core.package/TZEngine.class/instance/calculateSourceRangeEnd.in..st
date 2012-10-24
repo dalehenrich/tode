@@ -1,6 +1,7 @@
 as yet unclassified
 calculateSourceRangeEnd: start in: string
     | scan i char stack beginners enders |
+    i := start.
     (string at: i) = $^
         ifTrue: [ ^ string size - 1 ].
     (char := string at: i) isCompilerSpecial
