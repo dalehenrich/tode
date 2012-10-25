@@ -23,7 +23,8 @@ runCmds
                                 value: evaluator
                                 value: topez
                                 value: tokens
-                                value: nil ].
+                                value: nil.
+                            topez instance ].
                     '' ];
         at: 'topez'
             put: [ :evaluator :topez :tokens | 

@@ -1,4 +1,4 @@
 accessing
 listIndex: anInteger
-    listIndex := anInteger.
-    self changed: #'listIndex'
+    self setListIndex: anInteger.
+    self changed: #'listIndexChanged'	"tell editor we've been  clicked"

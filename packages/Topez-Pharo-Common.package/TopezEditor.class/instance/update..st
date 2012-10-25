@@ -1,6 +1,6 @@
 updating
 update: aspect
-    aspect == #'listIndex'
+    aspect == #'listIndexChanged'
         ifTrue: [ 
             self listEditor listIndex
                 ifNotNil: [ :listIndex | 

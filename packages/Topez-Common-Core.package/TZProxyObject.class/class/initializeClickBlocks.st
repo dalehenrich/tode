@@ -209,9 +209,9 @@ initializeClickBlocks
                         label: 'inspect'
                         inWindow: nil
                         at: 'implementors')
+                        setListIndex: 1;
                         renderAttribute: #'basic';
-                        yourself.
-                    topez setInstance: proxy instance ];
+                        yourself ];
         at: #'singleClick'
             forClass: 'TZMethodElement'
             put: [ :proxy :topez :editor | 
