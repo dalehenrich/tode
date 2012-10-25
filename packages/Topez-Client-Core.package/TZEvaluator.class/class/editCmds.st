@@ -11,7 +11,7 @@ editCmds
                     | method |
                     method := (evaluator stack at: evaluator currentFrameIndex) method.
                     topez
-                        editCode: (topez sourceForMethod: method)
+                        editDoIt: (topez sourceForMethod: method)
                         inClass: evaluator status currentClass
                         label: 'Method'
                         inWindow: nil
@@ -29,9 +29,7 @@ editCmds
                             windowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
                             theTokens := tokens copyWithoutIndex: 2 ].
                     theTokens size = 1
-                        ifTrue: [ 
-                            topez activateWindow: windowId.
-                            '' ]
+                        ifTrue: [ topez activateWindow: windowId ]
                         ifFalse: [ 
                             sub := (selector := theTokens at: 2) asSymbol.
                             block := (subCommands at: #'edit') at: sub ifAbsent: [  ].
@@ -50,7 +48,8 @@ editCmds
                                         value: evaluator
                                         value: topez
                                         value: theTokens
-                                        value: windowId ] ] ] ].
+                                        value: windowId ] ] ].
+            '' ].
     subCommands
         at: #'edit'
         put:
@@ -71,7 +70,7 @@ editCmds
                                         at: 'method' ]
                                 ifFalse: [ 
                                     topez
-                                        editCode: text
+                                        editDoIt: text
                                         inClass: nil
                                         label: 'Script'
                                         inWindow: id
@@ -96,8 +95,7 @@ editCmds
                                         editList: list
                                         label: label
                                         inWindow: id
-                                        at: 'classes'.
-                                    '' ] ];
+                                        at: 'classes' ] ];
                 at: #'superclasses'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
@@ -122,28 +120,28 @@ editCmds
                                 value: evaluator
                                 value: topez
                                 value: tokens.
-                            topez
+                            (topez
                                 editList: list
-                                selection: (list at: 1)
-                                renderAttribute: #'basic'
-                                templateElement: nil
                                 label: 'Inspect'
                                 inWindow: id
-                                at: 'implementors' ];
+                                at: 'implementors')
+                                setListIndex: 1;
+                                renderAttribute: #'basic';
+                                yourself ];
                 at: #'stack'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
                             id := windowId notNil
                                 ifTrue: [ windowId ].
                             list := evaluator stack.
-                            topez
+                            (topez
                                 editList: list
-                                selection: (list at: list currentFrameIndex)
-                                renderAttribute: #'debugger'
-                                templateElement: nil
                                 label: evaluator exception proxyPrintString
                                 inWindow: id
-                                at: 'debugger' ];
+                                at: 'debugger')
+                                setListIndex: list currentFrameIndex;
+                                renderAttribute: #'debugger';
+                                yourself ];
                 at: #'hierarchy'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
@@ -215,7 +213,7 @@ editCmds
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'method' ].
                             topez
-                                editCode: source
+                                editDoIt: source
                                 inClass: topez currentClass
                                 label: 'Method'
                                 inWindow: id
@@ -231,7 +229,7 @@ editCmds
                                 ifTrue: [ windowId ]
                                 ifFalse: [ topez windowIdNamed: #'method' ].
                             topez
-                                editCode: source
+                                editDoIt: source
                                 inClass: evaluator status currentClass
                                 label: 'Method'
                                 inWindow: id

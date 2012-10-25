@@ -1,5 +1,5 @@
 editting
-editCode: aStringOrText inClass: classProxy label: labelString inWindow: windowIdOrNil at: windowLocation
+editDoIt: aStringOrText inClass: classProxy label: labelString inWindow: windowIdOrNil at: windowLocation
     ^ self
         editCodeElement:
             (TZDoItElement new

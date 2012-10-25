@@ -101,7 +101,7 @@ initializeClickBlocks
                     editor emptyTemplateElement ~~ nil
                         ifTrue: [ 
                             topez
-                                editCodeElement: editor emptyTemplateElement asTopezProxy
+                                editMethod: editor emptyTemplateElement asTopezProxy
                                 label: 'Code'
                                 inWindow: (topez windowIdNamed: #'methodSource')
                                 at: 'method'.
@@ -111,7 +111,7 @@ initializeClickBlocks
             forClass: 'TZInstanceElement'
             put: [ :proxy :topez :editor | 
                     topez
-                        editCodeElement:
+                        editMethod:
                             (TZTextElement new
                                 source: proxy instance inspect proxyPrintString;
                                 yourself)
@@ -152,14 +152,14 @@ initializeClickBlocks
             forClass: 'TZInstanceElement'
             put: [ :proxy :topez :editor | 
                     | list |
-                    topez
+                    (topez
                         editList: (list := topez instanceElementFor: proxy instance)
-                        selection: (list at: 1)
-                        renderAttribute: #'basic'
-                        templateElement: nil
                         label: 'inspect'
                         inWindow: nil
-                        at: 'implementors'.
+                        at: 'implementors')
+                        setListIndex: 1;
+                        renderAttribute: #'basic';
+                        yourself.
                     topez setInstance: proxy instance.
                     ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first
                         value: proxy
@@ -169,7 +169,7 @@ initializeClickBlocks
             forClass: 'TZMethodElement'
             put: [ :proxy :topez :editor | 
                     topez
-                        editCodeElement: proxy
+                        editMethod: proxy
                         label: 'Code'
                         inWindow: (topez windowIdNamed: #'methodSource')
                         at: 'method'.
@@ -195,7 +195,7 @@ initializeClickBlocks
             forClass: 'TZExecutedCodeElement'
             put: [ :proxy :topez :editor | 
                     topez
-                        editCodeElement: proxy
+                        editMethod: proxy
                         label: 'Execute Code'
                         inWindow: (topez windowIdNamed: #'methodSource')
                         at: 'method' ];
@@ -216,7 +216,7 @@ initializeClickBlocks
             put: [ :proxy :topez :editor | 
                     | hierarchyElements selectedElement |
                     topez
-                        editCode: (topez classDefinition: proxy elementClass)
+                        editDoIt: (topez classDefinition: proxy elementClass)
                         inClass: proxy elementClass
                         label: 'Class'
                         inWindow: (topez windowIdNamed: #'classDefinition')
@@ -225,12 +225,13 @@ initializeClickBlocks
                     selectedElement := hierarchyElements
                         detect: [ :element | element elementClassName asTopezNative asString = proxy elementClassName asTopezNative asString ]
                         ifNone: [  ].
-                    topez
+                    (topez
                         editList: hierarchyElements
-                        selection: selectedElement
                         label: 'Hierarchy'
                         inWindow: (topez windowIdNamed: #'hierarchy')
-                        at: 'superclasses'.
+                        at: 'superclasses')
+                        setListIndex: (hierarchyElements indexOf: selectedElement);
+                        yourself.
                     topez editClassSelectorsFor: proxy elementClass.
                     topez editInstanceSelectorsFor: proxy elementClass.
                     topez setClass: proxy elementClassName asTopezNative asString ];

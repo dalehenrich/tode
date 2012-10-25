@@ -29,6 +29,8 @@ initializePrintBlocks
         at: #'label'
             forClass: 'TZExecutedCodeElement'
             put: [ :proxy :aStream :indent | aStream nextPutAll: 'Executed Code' ];
+        at: #'label' forClass: 'TZDoItElement' put: [ :proxy :aStream :indent | aStream nextPutAll: 'DoIt' ];
+        at: #'label' forClass: 'TZTextElement' put: [ :proxy :aStream :indent | aStream nextPutAll: 'Text' ];
         at: #'basic'
             forClass: 'TZMessageElement'
             put: [ :proxy :aStream :indent | 

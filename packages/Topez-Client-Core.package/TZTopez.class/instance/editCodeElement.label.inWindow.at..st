@@ -5,7 +5,7 @@ editCodeElement: aTZElement label: labelString inWindow: windowIdOrNil at: windo
     windowId == 0
         ifTrue: [ windowId := self nextAvailableWindowId ].
     self currentWindowId: windowId.
-    label := labelString , ': ' , aTZElement renderLabel asString.
+    label := labelString.
     newWindow := (self status windowAt: windowId) isNil.
     (win := self editorWindowAt: windowId) model
         activateCodeEditor;
@@ -19,4 +19,4 @@ editCodeElement: aTZElement label: labelString inWindow: windowIdOrNil at: windo
             win
                 extent: bounds extent;
                 position: bounds origin ].
-    ^ ''
+    ^ win model
