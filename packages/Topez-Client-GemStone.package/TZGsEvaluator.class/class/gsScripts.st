@@ -13,7 +13,8 @@ gsScripts
             put:
                 'run
 [1 halt] value
-%';
+%
+edit stack';
         at: 'emptyLog'
             put:
                 'run

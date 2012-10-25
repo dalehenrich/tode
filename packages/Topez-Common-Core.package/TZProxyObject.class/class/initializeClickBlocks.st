@@ -3,6 +3,19 @@ initializeClickBlocks
     "self initialize"
 
     self clickBlocks
+        at: #'cmdJKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
+        at: #'cmdKKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
+        at: #'cmdShiftKKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
+        at: #'cmdTKeyStroke'
+            forClasses: #('TZStackFrameElement')
+            put: [ :proxy :topez :editor | 
+                    [ topez stepWith: proxy process level: proxy frameIndex asTopezNative ]
+                        on: TZTopezNotification
+                        do: [ :ex | 
+                            topez evaluator exception: ex exceptionProxy.
+                            editor list: topez evaluator stack ].
+                    true ];
+        at: #'cmdUKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
         at: #'cmdBKeyStroke'
             forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement' 'TZStackFrameElement')
             put: [ :proxy :topez :editor | 

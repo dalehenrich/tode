@@ -18,7 +18,8 @@ listKeystroke: event
         ifTrue: [ ^ self listKeystrokeLeft ].
     event keyCharacter = Character arrowUp
         ifTrue: [ ^ self listKeystrokeUp ].
-    (event anyModifierKeyPressed and: [ #($C $L $N $b $c $m $n $o $p $v $x) includes: event keyCharacter ])
+    (event anyModifierKeyPressed
+        and: [ #($C $K $L $N $b $c $m $n $o $p $t $u $j $k $v $x) includes: event keyCharacter ])
         ifTrue: [ 
             event keyCharacter = $C
                 ifTrue: [ ^ self controlShiftCKeyStroke ].
@@ -28,6 +29,12 @@ listKeystroke: event
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdBKeyStroke' ].
             event keyCharacter = $c
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdCKeyStroke' ].
+            event keyCharacter = $j
+                ifTrue: [ ^ self executeCommandForClickBlock: #'cmdJKeyStroke' ].
+            event keyCharacter = $k
+                ifTrue: [ ^ self executeCommandForClickBlock: #'cmdKKeyStroke' ].
+            event keyCharacter = $K
+                ifTrue: [ ^ self executeCommandForClickBlock: #'cmdShiftKKeyStroke' ].
             event keyCharacter = $m
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdMKeyStroke' ].
             event keyCharacter = $n
@@ -38,6 +45,10 @@ listKeystroke: event
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdOKeyStroke' ].
             event keyCharacter = $p
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdPKeyStroke' ].
+            event keyCharacter = $t
+                ifTrue: [ ^ self executeCommandForClickBlock: #'cmdTKeyStroke' ].
+            event keyCharacter = $u
+                ifTrue: [ ^ self executeCommandForClickBlock: #'cmdUKeyStroke' ].
             event keyCharacter = $v
                 ifTrue: [ ^ self executeCommandForClickBlock: #'cmdVKeyStroke' ].
             event keyCharacter = $x
