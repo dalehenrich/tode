@@ -13,12 +13,14 @@ evaluate: aString
     ^ result ]
         on: Error
         do: [ :ex | 
-            self class debugMode
-                ifTrue: [ self halt ].
-            ^ 'Topez ERROR: ' asText
+            | errorMessage |
+            errorMessage := 'Topez ERROR: ' asText
                 ,
                     (Text
                         string: ex description
                         attributes:
                             {(TextColor red).
-                            (TextEmphasis bold)}) ]
+                            (TextEmphasis bold)}).
+            self class debugMode
+                ifTrue: [ self halt: errorMessage asString ].
+            ^ errorMessage ]

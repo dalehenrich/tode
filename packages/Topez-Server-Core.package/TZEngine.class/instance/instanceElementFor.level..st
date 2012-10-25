@@ -1,3 +1,3 @@
 as yet unclassified
 instanceElementFor: instance level: level
-    ^ self toString: (self instanceElementFor: instance lmit: level) level: level + 1
+    ^ self toString: (self instanceElementFor: instance limit: level) level: level + 1

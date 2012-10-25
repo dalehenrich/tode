@@ -125,7 +125,7 @@ editCmds
                                 label: 'Inspect'
                                 inWindow: id
                                 at: 'implementors')
-                                listIndex: 1;
+                                setListIndex: 1;
                                 renderAttribute: #'basic';
                                 yourself ];
                 at: #'stack'
