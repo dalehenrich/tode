@@ -6,7 +6,9 @@ accumulateTextAndDo: resultBlock
     [ resultBlock value: input ]
         on: TZTopezNotification
         do: [ :ex | 
-            self exception: ex exceptionProxy.
+            self class enableDebugger
+                ifTrue: [ ex pass ]
+                ifFalse: [ self exception: ex exceptionProxy ].
             ex resume ] ].
     collectText := true.
     oldPromptString := self promptString.

@@ -11,7 +11,9 @@ evaluateCommand: line
     ^ (self topez recordHistory: (commandBlock value: self value: self topez value: tokens)) renderText ]
         on: TZTopezNotification
         do: [ :ex | 
-            self exception: ex exceptionProxy.
+            self class enableDebugger
+                ifTrue: [ ex pass ]
+                ifFalse: [ self exception: ex exceptionProxy ].
             ex resume ] ]
         on: Error
         do: [ :ex | 

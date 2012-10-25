@@ -9,7 +9,8 @@
 		"topez",
 		"sessionDescription",
 		"evaluator",
-		"debugMode" ],
+		"debugMode",
+		"enableDebugger" ],
 	"name" : "TZClientTests",
 	"pools" : [
 		 ],
