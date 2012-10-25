@@ -5,8 +5,8 @@ initializeBounds
     | classListsOrigin methodOrigin methodListOrigin top listWidth fullHeight halfHeight codeWidth classDefOrigin thirdHeight twoThirdHeight thirdListWindowExtent listWindowExtent codeWindowExtent debuggerWidth |
     top := 10.
     classListsOrigin := 35.
-    fullHeight := 380.
-    halfHeight := 190.
+    fullHeight := 420.
+    halfHeight := 210.
     thirdHeight := 140.
     twoThirdHeight := 2 * thirdHeight.
     listWidth := 250.
@@ -26,8 +26,9 @@ initializeBounds
         at: 'instanceSelectors' put: ((classDefOrigin + codeWidth) @ top extent: listWindowExtent);
         at: 'classSelectors' put: ((classDefOrigin + codeWidth + listWidth) @ top extent: listWindowExtent);
         at: #'implementors'
-            put: ((classDefOrigin + codeWidth) @ (top + twoThirdHeight) extent: (2 * listWidth) @ fullHeight);
-        at: #'debugger' put: ((classDefOrigin + codeWidth) @ (top + twoThirdHeight) extent: debuggerWidth @ fullHeight);
+            put: ((classDefOrigin + codeWidth) @ (top + twoThirdHeight) extent: (2 * listWidth) @ twoThirdHeight);
+        at: #'debugger'
+            put: ((classDefOrigin + codeWidth) @ (top + twoThirdHeight) extent: debuggerWidth @ twoThirdHeight);
         at: #'receiver'
             put: (classDefOrigin @ (top + thirdHeight + codeWindowExtent y) extent: (2 * listWidth) @ halfHeight);
         yourself

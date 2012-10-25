@@ -2,7 +2,8 @@
 	"class" : {
 		"initialize" : "dkh 10/14/2012 19:34",
 		"initializeBasicCmdKeyShortcuts" : "dkh 10/16/2012 10:34",
-		"initializeBasicShiftCmdKeyShortcuts" : "dkh 10/16/2012 11:03" },
+		"initializeBasicShiftCmdKeyShortcuts" : "dkh 10/24/2012 23:10",
+		"initializeShiftCmdKeyShortcuts" : "dkh 10/24/2012 23:11" },
 	"instance" : {
 		"browseClassFrom:" : "dkh 10/14/2012 20:06",
 		"debugIt" : "dkh 10/14/2012 19:28",
@@ -15,6 +16,7 @@
 		"inspectIt" : "dkh 10/14/2012 19:22",
 		"printIt" : "dkh 10/14/2012 19:27",
 		"referencesTo:" : "dkh 10/16/2012 20:17",
+		"selectSourceClass:" : "dkh 10/24/2012 23:07",
 		"selectTopezWidows:" : "dkh 10/16/2012 11:07",
 		"selectedSymbol" : "dkh 10/21/2012 11:05",
 		"sendersOf:" : "dkh 10/15/2012 15:02",

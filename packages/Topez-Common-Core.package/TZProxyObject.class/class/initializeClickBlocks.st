@@ -33,6 +33,21 @@ initializeClickBlocks
                             'class'.
                             (proxy elementClassName asTopezNative asString)}.
                     true ];
+        at: #'cmdShiftBKeyStroke'
+            forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
+            put: [ :proxy :topez :editor | 
+                    ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first value: proxy value: topez value: editor.
+                    true ];
+        at: #'cmdShiftBKeyStroke'
+            forClass: 'TZStackFrameElement'
+            put: [ :proxy :topez :editor | 
+                    | methodElement |
+                    methodElement := proxy methodElement.
+                    methodElement proxyClassName asTopezNative asString = 'TZFrameMethodElement'
+                        ifTrue: [ 
+                            ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first value: methodElement value: topez value: editor.
+                            true ]
+                        ifFalse: [ false ] ];
         at: #'cmdCKeyStroke'
             forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement')
             put: [ :proxy :topez :editor | 
@@ -204,10 +219,6 @@ initializeClickBlocks
             forClass: 'TZMessageElement'
             put: [ :proxy :topez :editor | 
                     topez setFindText: proxy messagePattern asTopezNative.
-                    ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first
-                        value: proxy
-                        value: topez
-                        value: editor.
                     ((self clickBlocks at: 'TZMethodElement') at: #'singleClick') first
                         value: proxy
                         value: topez
