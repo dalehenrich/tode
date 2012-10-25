@@ -2,6 +2,7 @@ initialization
 open
     | window listPane codePane |
     label := ''.
+    updating := false.
     window := TZSystemWindow new model: self.
     listPane := self listEditor buildListMorph.
     window addMorph: listPane frame: (0 @ 0 corner: 1 @ 1).

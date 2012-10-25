@@ -11,7 +11,8 @@
 		"codeEditor",
 		"activeEditor",
 		"label",
-		"windowId" ],
+		"windowId",
+		"updating" ],
 	"name" : "TopezEditor",
 	"pools" : [
 		 ],

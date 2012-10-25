@@ -125,7 +125,7 @@ editCmds
                                 label: 'Inspect'
                                 inWindow: id
                                 at: 'implementors')
-                                setListIndex: 1;
+                                listIndex: 1;
                                 renderAttribute: #'basic';
                                 yourself ];
                 at: #'stack'
@@ -139,7 +139,7 @@ editCmds
                                 label: evaluator exception proxyPrintString
                                 inWindow: id
                                 at: 'debugger')
-                                setListIndex: list currentFrameIndex;
+                                listIndex: list currentFrameIndex;
                                 renderAttribute: #'debugger';
                                 yourself ];
                 at: #'hierarchy'

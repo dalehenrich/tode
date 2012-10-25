@@ -157,7 +157,7 @@ initializeClickBlocks
                         label: 'inspect'
                         inWindow: nil
                         at: 'implementors')
-                        setListIndex: 1;
+                        listIndex: 1;
                         renderAttribute: #'basic';
                         yourself.
                     topez setInstance: proxy instance.
@@ -230,7 +230,7 @@ initializeClickBlocks
                         label: 'Hierarchy'
                         inWindow: (topez windowIdNamed: #'hierarchy')
                         at: 'superclasses')
-                        setListIndex: (hierarchyElements indexOf: selectedElement);
+                        listIndex: (hierarchyElements indexOf: selectedElement);
                         yourself.
                     topez editClassSelectorsFor: proxy elementClass.
                     topez editInstanceSelectorsFor: proxy elementClass.

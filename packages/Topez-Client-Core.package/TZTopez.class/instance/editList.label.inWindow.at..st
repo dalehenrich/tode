@@ -9,6 +9,7 @@ editList: aCollectionOfObjects label: labelString inWindow: windowIdOrNil at: wi
     newWindow := (self status windowAt: windowId) isNil.
     (win := self editorWindowAt: windowId) model
         activateListEditor;
+        setListIndex: 0;
         list: aCollectionOfObjects;
         windowId: windowId;
         label: label.
