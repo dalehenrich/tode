@@ -13,4 +13,7 @@ openAsMorphLabel: labelString
     textMorph acceptOnCR: true.
     window addMorph: textMorph frame: (0 @ 0 corner: 1 @ 1).
     self prompt.
-    ^ window openInWorld
+    ^ window
+        openInWorld;
+        bounds: (self cliShell topez class bounds at: #'evaluator');
+        yourself
