@@ -12,8 +12,14 @@ initializeClickBlocks
                     [ topez stepWith: proxy process level: proxy frameIndex asTopezNative ]
                         on: TZTopezNotification
                         do: [ :ex | 
-                            topez evaluator exception: ex exceptionProxy.
-                            editor list: topez evaluator stack ].
+                            | stack evaluator frameIndex |
+                            evaluator := topez evaluator.
+                            evaluator exception: ex exceptionProxy.
+                            stack := evaluator stack.
+                            frameIndex := evaluator currentFrameIndex.
+                            editor
+                                list: stack;
+                                listIndex: frameIndex ].
                     true ];
         at: #'cmdUKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
         at: #'cmdBKeyStroke'
@@ -185,12 +191,7 @@ initializeClickBlocks
                         value: editor ];
         at: #'singleClick'
             forClass: 'TZFrameMethodElement'
-            put: [ :proxy :topez :editor | 
-                    ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first value: proxy value: topez value: editor.
-                    ((self clickBlocks at: 'TZMethodElement') at: #'singleClick') first
-                        value: proxy
-                        value: topez
-                        value: editor ];
+            put: [ :proxy :topez :editor | ((self clickBlocks at: 'TZMethodElement') at: #'singleClick') first value: proxy value: topez value: editor ];
         at: #'singleClick'
             forClass: 'TZExecutedCodeElement'
             put: [ :proxy :topez :editor | 
