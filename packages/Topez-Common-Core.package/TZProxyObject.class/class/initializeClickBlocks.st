@@ -223,12 +223,22 @@ initializeClickBlocks
         at: #'singleClick'
             forClass: 'TZStackFrameElement'
             put: [ :proxy :topez :editor | 
-                    | methodElement |
+                    | methodElement list id |
                     methodElement := proxy methodElement.
                     (self clickBlocks at: #'singleClick' forClass: methodElement proxyClassName ifAbsent: [  ])
                         value: methodElement
                         value: topez
-                        value: editor ];
+                        value: editor.
+                    list := topez instanceElementFor: proxy receiverInstanceElement instance.
+                    id := topez windowIdNamed: #'receiver'.
+                    (topez
+                        editList: list
+                        label: 'receiver'
+                        inWindow: id
+                        at: 'receiver')
+                        setListIndex: 1;
+                        renderAttribute: #'basic';
+                        yourself ];
         at: #'singleClick'
             forClass: 'TZFrameMethodElement'
             put: [ :proxy :topez :editor | ((self clickBlocks at: 'TZMethodElement') at: #'singleClick') first value: proxy value: topez value: editor ];

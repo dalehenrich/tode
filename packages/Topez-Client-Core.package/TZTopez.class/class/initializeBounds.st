@@ -10,7 +10,8 @@ initializeBounds
     thirdHeight := 140.
     twoThirdHeight := 2 * thirdHeight.
     listWidth := 250.
-    debuggerWidth := codeWidth := 540.
+    debuggerWidth := 2 * listWidth.
+    codeWidth := 540.
     listWindowExtent := listWidth @ twoThirdHeight.
     thirdListWindowExtent := listWidth @ thirdHeight.
     codeWindowExtent := codeWidth @ fullHeight.
@@ -30,7 +31,11 @@ initializeBounds
         at: #'debugger'
             put: ((classDefOrigin + codeWidth) @ (top + twoThirdHeight) extent: debuggerWidth @ twoThirdHeight);
         at: #'receiver'
-            put: (classDefOrigin @ (top + thirdHeight + codeWindowExtent y) extent: (2 * listWidth) @ halfHeight);
+            put:
+                ((classDefOrigin + codeWidth) @ (top + thirdHeight + codeWindowExtent y) extent: listWidth @ twoThirdHeight);
+        at: #'context'
+            put:
+                ((classDefOrigin + codeWidth + listWidth) @ (top + thirdHeight + codeWindowExtent y) extent: listWidth @ twoThirdHeight);
         at: #'evaluator'
             put: (classListsOrigin @ (top + thirdHeight + codeWindowExtent y) extent: codeWidth @ twoThirdHeight);
         yourself
