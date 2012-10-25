@@ -3,7 +3,23 @@ initializeClickBlocks
     "self initialize"
 
     self clickBlocks
-        at: #'cmdJKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
+        at: #'cmdJKeyStroke'
+            forClasses: #('TZStackFrameElement')
+            put: [ :proxy :topez :editor | 
+                    [ 
+                    topez continueWith: proxy process.
+                    (topez editorWindowAt: editor windowId) delete ]
+                        on: TZTopezNotification
+                        do: [ :ex | 
+                            | stack evaluator frameIndex |
+                            evaluator := topez evaluator.
+                            evaluator exception: ex exceptionProxy.
+                            stack := evaluator stack.
+                            frameIndex := evaluator currentFrameIndex.
+                            editor
+                                list: stack;
+                                listIndex: frameIndex ].
+                    true ];
         at: #'cmdKKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
         at: #'cmdShiftKKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
         at: #'cmdTKeyStroke'
@@ -21,7 +37,21 @@ initializeClickBlocks
                                 list: stack;
                                 listIndex: frameIndex ].
                     true ];
-        at: #'cmdUKeyStroke' forClasses: #('TZStackFrameElement') put: [ :proxy :topez :editor |  ];
+        at: #'cmdUKeyStroke'
+            forClasses: #('TZStackFrameElement')
+            put: [ :proxy :topez :editor | 
+                    [ topez stepInto: proxy process ]
+                        on: TZTopezNotification
+                        do: [ :ex | 
+                            | stack evaluator frameIndex |
+                            evaluator := topez evaluator.
+                            evaluator exception: ex exceptionProxy.
+                            stack := evaluator stack.
+                            frameIndex := evaluator currentFrameIndex.
+                            editor
+                                list: stack;
+                                listIndex: frameIndex ].
+                    true ];
         at: #'cmdBKeyStroke'
             forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement' 'TZStackFrameElement')
             put: [ :proxy :topez :editor | 

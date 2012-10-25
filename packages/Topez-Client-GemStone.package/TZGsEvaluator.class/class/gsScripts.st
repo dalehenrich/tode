@@ -12,7 +12,10 @@ gsScripts
         at: 'boom'
             put:
                 'run
-[1 halt] value
+| coll |
+coll := #(1 2 3 4).
+[1 halt] value.
+^coll collect: [:each | each printString ].
 %
 edit stack';
         at: 'emptyLog'
