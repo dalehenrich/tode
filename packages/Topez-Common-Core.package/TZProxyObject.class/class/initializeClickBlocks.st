@@ -239,7 +239,7 @@ initializeClickBlocks
                         setListIndex: 1;
                         renderAttribute: #'basic';
                         yourself.
-                    list := topez instanceElementFor: proxy contextInstanceElement level: 1.
+                    list := proxy contextInstanceElement.
                     id := topez windowIdNamed: #'context'.
                     (topez
                         editList: list
