@@ -238,6 +238,16 @@ initializeClickBlocks
                         at: 'receiver')
                         setListIndex: 1;
                         renderAttribute: #'basic';
+                        yourself.
+                    list := topez instanceElementFor: proxy contextInstanceElement level: 1.
+                    id := topez windowIdNamed: #'context'.
+                    (topez
+                        editList: list
+                        label: 'context'
+                        inWindow: id
+                        at: 'context')
+                        setListIndex: 1;
+                        renderAttribute: #'basic';
                         yourself ];
         at: #'singleClick'
             forClass: 'TZFrameMethodElement'
