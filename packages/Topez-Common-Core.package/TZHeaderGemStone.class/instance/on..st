@@ -10,4 +10,5 @@ on: anObject
         do: [ :ignored | 'error printing' ].
     objectClass := Reflection classOf: anObject.
     classOop := Reflection oopOf: objectClass.
-    className := objectClass name	"converting to String exposes the string to gc"
+    className := objectClass name.	"converting to String exposes the string to gc"
+	anObject tzStoreNativeLiteralInHeader: self	"see if any literals can be passed through in native slot"

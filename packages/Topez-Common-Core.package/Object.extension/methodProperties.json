@@ -12,4 +12,5 @@
 		"renderText:on:indent:" : "dkh 10/4/2012 12:27",
 		"renderTextOn:" : "dkh 10/4/2012 07:57",
 		"tzNativeStonOn:" : "dkh 9/28/2012 12:18",
-		"tzProxyStonOn:" : "dkh 9/26/2012 20:43" } }
+		"tzProxyStonOn:" : "dkh 9/26/2012 20:43",
+		"tzStoreNativeLiteralInHeader:" : "dkh 10/25/2012 23:54" } }
