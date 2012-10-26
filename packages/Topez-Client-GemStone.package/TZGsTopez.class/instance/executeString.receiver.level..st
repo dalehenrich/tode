@@ -1,3 +1,11 @@
 private
 executeString: aString receiver: receiverProxy level: level
-    ^ self doInSession: [ :sess | self executeStringRaw: aString receiver: receiverProxy level: level ]
+    ^ self
+        doInSession: [ :sess | 
+            sess
+                receiverNB: self currentEngine
+                performNoDebug: 'executeExpressionFrom:inContext:level:'
+                withArgs:
+                    {aString.
+                    receiverProxy.
+                    level} ]
