@@ -10,6 +10,7 @@
 		"package",
 		"currentClass",
 		"instance",
+		"currentWorkingNode",
 		"category",
 		"selector",
 		"history",

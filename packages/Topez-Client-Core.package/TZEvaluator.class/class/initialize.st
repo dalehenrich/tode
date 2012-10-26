@@ -5,7 +5,7 @@ initialize
 
     commands := Dictionary new.
     subCommands := Dictionary new.
-    scripts := Dictionary new.
+    rootNode := nil.
     self
         findCmds;
         runCmds;
@@ -14,5 +14,6 @@ initialize
         listCmds;
         runCmds;
         statusCmds;
-        commonScripts;
+        installNodes;
+        nodeCmds;
         yourself

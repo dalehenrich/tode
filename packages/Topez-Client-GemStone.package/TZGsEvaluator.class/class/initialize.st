@@ -6,5 +6,4 @@ initialize
     super initialize.
     self
         gsStatusCmds;
-        gsScripts;
         yourself

@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addChild:" : "dkh 10/26/2012 12:05",
+		"addLeaf:contents:" : "dkh 10/26/2012 11:51",
+		"childNamed:addIfAbsent:" : "dkh 10/26/2012 12:06",
+		"childNamed:ifAbsent:" : "dkh 10/26/2012 12:39",
+		"contents:" : "dkh 10/26/2012 12:05",
+		"isLeaf" : "dkh 10/26/2012 11:17",
+		"listContents" : "dkh 10/26/2012 15:55" } }
