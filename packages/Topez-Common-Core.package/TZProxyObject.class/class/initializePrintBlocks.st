@@ -12,6 +12,9 @@ initializePrintBlocks
         at: #'basic'
             forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
             put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color blue) on: aStream indent: indent ];
+        at: #'inspect'
+            forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
+            put: [ :proxy :aStream :indent | aStream nextPutAll: (Text string: proxy proxyPrintString attribute: (TextColor color: Color blue)) ];
         at: #'basic'
             forClass: 'TZMethodElement'
             put: [ :proxy :aStream :indent | aStream nextPutAll: proxy selector proxyPrintString ];
@@ -58,6 +61,20 @@ initializePrintBlocks
                                 nextPutAll: proxy label asTopezNative;
                                 space ].
                     proxy instance renderText: #'basic' on: aStream ];
+        at: #'inspect'
+            forClass: 'TZInstanceElement'
+            put: [ :proxy :aStream :indent | 
+                    | space label |
+                    space := ''.
+                    proxy indent asTopezNative timesRepeat: [ space := space , '   ' ].
+                    label := proxy label asTopezNative.
+                    label notEmpty
+                        ifTrue: [ 
+                            aStream
+                                nextPutAll: space;
+                                nextPutAll: label;
+                                space: (15 - label size max: 3) ].
+                    proxy instance renderText: #'inspect' on: aStream ];
         at: #'basic'
             forClass: 'TZClassElement'
             put: [ :proxy :aStream :indent | 
@@ -75,27 +92,6 @@ initializePrintBlocks
         at: #'label'
             forClass: 'TZClassElement'
             put: [ :proxy :aStream :indent | aStream nextPutAll: proxy elementClassName asTopezNative ];
-        at: #'basic'
-            forClass: 'TZStack'
-            put: [ :stack :aStream :indent | 
-                    | currentFrameIndex size |
-                    currentFrameIndex := stack currentFrameIndex.
-                    size := stack indexed size.
-                    1 to: size do: [ :frameIndex | 
-                        | stackFrame |
-                        stackFrame := stack at: frameIndex.
-                        frameIndex = currentFrameIndex
-                            ifTrue: [ 
-                                aStream
-                                    nextPutAll:
-                                        (Text
-                                            string: '==> '
-                                            attributes:
-                                                {(TextEmphasis bold).
-                                                (TextColor red)}) ].
-                        stackFrame renderText: #'basic' on: aStream indent: indent.
-                        frameIndex < size
-                            ifTrue: [ aStream cr ] ] ];
         at: #'basic'
             forClass: 'TZStackFrameElement'
             put: [ :proxy :aStream :indent | 

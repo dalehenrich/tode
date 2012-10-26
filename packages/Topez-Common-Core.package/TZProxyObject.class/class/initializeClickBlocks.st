@@ -193,14 +193,6 @@ initializeClickBlocks
                     editor addToClipboard: proxy.
                     topez deleteMethodElement: proxy ];
         at: #'singleClick'
-            forClass: 'TZStackFrame'
-            put: [ :proxy :topez :editor | 
-                    topez
-                        editList: (topez instanceElementFor: proxy receiver)
-                        label: 'receiver'
-                        inWindow: nil
-                        at: 'receiver' ];
-        at: #'singleClick'
             forClass: 'TZInstanceElement'
             put: [ :proxy :topez :editor | 
                     | list |
@@ -210,7 +202,7 @@ initializeClickBlocks
                         inWindow: nil
                         at: 'implementors')
                         setListIndex: 1;
-                        renderAttribute: #'basic';
+                        renderAttribute: #'inspect';
                         yourself ];
         at: #'singleClick'
             forClass: 'TZMethodElement'
@@ -237,7 +229,7 @@ initializeClickBlocks
                         inWindow: id
                         at: 'receiver')
                         setListIndex: 1;
-                        renderAttribute: #'basic';
+                        renderAttribute: #'inspect';
                         yourself.
                     list := proxy contextInstanceElement.
                     id := topez windowIdNamed: #'context'.
@@ -247,7 +239,7 @@ initializeClickBlocks
                         inWindow: id
                         at: 'context')
                         setListIndex: 1;
-                        renderAttribute: #'basic';
+                        renderAttribute: #'inspect';
                         yourself ];
         at: #'singleClick'
             forClass: 'TZFrameMethodElement'
