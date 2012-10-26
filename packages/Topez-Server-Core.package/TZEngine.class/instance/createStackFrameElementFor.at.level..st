@@ -1,6 +1,6 @@
 as yet unclassified
 createStackFrameElementFor: aGsProcess at: aFrameIndex level: level
-    | frameContents receiver cl homeMethod inClass selector method receiverElement methodElement contextArray contextElement |
+    | frameContents receiver cl homeMethod inClass selector method receiverElement methodElement contextArray |
     frameContents := aGsProcess _frameContentsAt: aFrameIndex.
     receiver := frameContents at: 10.
     cl := receiver class.
@@ -26,15 +26,14 @@ createStackFrameElementFor: aGsProcess at: aFrameIndex level: level
     receiverElement := self createInstanceElementFor: receiver label: '' indent: 0.
     contextArray := Array new.
     self createContextElementsFrom: frameContents indent: 0 into: contextArray.
-    contextElement := self elementCache
-        add:(TZFrameContextElement new argsAndTemps: contextArray; yourself).
+    self elementCache add: contextArray.
     ^ self elementCache
         add:
             (TZStackFrameElement new
                 process: aGsProcess;
                 methodElement: methodElement;
                 receiverInstanceElement: receiverElement;
-                contextInstanceElement: contextElement;
+                contextInstanceElement: contextArray;
                 frameIndex: aFrameIndex;
                 elementClass: cl;
                 elementClassName: cl name asString;
