@@ -51,27 +51,6 @@ editCmds
         at: #'edit'
         put:
             (Dictionary new
-                at: #'script'
-                    put: [ :evaluator :topez :tokens :windowId | 
-                            | text type id |
-                            text := (self scripts at: (type := (tokens at: 3) asSymbol)) at: (tokens at: 4) asSymbol.
-                            id := windowId notNil
-                                ifTrue: [ windowId ]
-                                ifFalse: [ topez windowIdNamed: #'script' ].
-                            type == #'input'
-                                ifTrue: [ 
-                                    topez
-                                        editText: text
-                                        label: 'Script'
-                                        inWindow: id
-                                        at: 'method' ]
-                                ifFalse: [ 
-                                    topez
-                                        editDoIt: text
-                                        inClass: nil
-                                        label: 'Script'
-                                        inWindow: id
-                                        at: 'method' ] ];
                 at: #'class'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | id list label |

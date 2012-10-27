@@ -1,7 +1,12 @@
 styling
 shoutAboutToStyle: aPluggableShoutMorphOrView
     self edittingCode
-        ifFalse: [ ^ false ].
+        ifFalse: [ 
+            self stylingActive
+                ifTrue: [ 
+                    aPluggableShoutMorphOrView classOrMetaClass: nil.
+                    ^ true ].
+            ^ false ].
     self sourceElement className asString = 'TZProxyGemStone'
         ifTrue: [ 
             (#('TZExecutedCodeElement' 'TZTextElement') includes: self sourceElement proxyClassName)

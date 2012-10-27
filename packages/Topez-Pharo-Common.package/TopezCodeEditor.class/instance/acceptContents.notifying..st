@@ -12,5 +12,5 @@ acceptContents: aStringOrText notifying: aController
                 ifTrue: [ self topez classMethod: formattedString ]
                 ifFalse: [ self topez method: formattedString ].
             self contents: newMethodElement ]
-        ifFalse: [ self halt ].
+        ifFalse: [ self sourceElement source: aStringOrText asString ].
     ^ true

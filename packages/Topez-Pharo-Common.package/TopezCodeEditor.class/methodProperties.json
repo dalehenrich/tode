@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptContents:notifying:" : "dkh 10/26/2012 18:59",
+		"acceptContents:notifying:" : "dkh 10/26/2012 22:46",
 		"bindingOf:" : "dkh 10/8/2012 10:59",
 		"buildTextMorph" : "dkh 10/24/2012 16:33",
 		"contents" : "dkh 10/9/2012 16:24",
@@ -17,7 +17,7 @@
 		"initialize" : "dkh 10/7/2012 09:01",
 		"morph" : "dkh 10/7/2012 11:31",
 		"selectSourceClass" : "dkh 10/26/2012 19:00",
-		"shoutAboutToStyle:" : "dkh 10/26/2012 19:02",
+		"shoutAboutToStyle:" : "dkh 10/26/2012 22:41",
 		"sourceElement" : "dkh 10/8/2012 11:57",
 		"sourceElement:" : "dkh 10/24/2012 16:43",
 		"spawnWindow" : "dkh 10/23/2012 16:03",
