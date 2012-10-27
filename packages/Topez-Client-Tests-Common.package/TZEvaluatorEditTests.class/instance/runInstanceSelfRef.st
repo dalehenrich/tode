@@ -3,6 +3,6 @@ runInstanceSelfRef
     self runInstance.
     ^ self evaluator
         evaluate:
-            'instance
+            'inspect
 self+4
 %'

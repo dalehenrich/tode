@@ -10,6 +10,11 @@ nodeCmds
                         ifTrue: [ topez setCurrentNode: (topez lookup: '/home') ]
                         ifFalse: [ topez setCurrentNode: (topez lookup: (tokens at: 2)) ] ];
         at: 'pwd' put: [ :evaluator :topez :tokens | topez currentNode ];
+        at: 'cat'
+            put: [ :evaluator :topez :tokens | 
+                    tokens size = 1
+                        ifTrue: [ topez currentNode cat ]
+                        ifFalse: [ (topez lookup: (tokens at: 2)) cat ] ];
         at: 'ls'
             put: [ :evaluator :topez :tokens | 
                     tokens size = 1

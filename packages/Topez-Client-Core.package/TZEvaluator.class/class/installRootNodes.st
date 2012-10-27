@@ -1,6 +1,6 @@
 command definition
 installRootNodes
+    rootNode := nil.
     self rootNode
-        childNamed: 'scripts' addIfAbsent: true;
         childNamed: 'home' addIfAbsent: true;
         yourself

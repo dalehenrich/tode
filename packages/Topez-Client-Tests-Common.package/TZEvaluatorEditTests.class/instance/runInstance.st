@@ -2,6 +2,6 @@ standard tests
 runInstance
     ^ self evaluator
         evaluate:
-            'instance
+            'inspect
 3+4
 %'

@@ -5,7 +5,6 @@ initialize
 
     commands := Dictionary new.
     subCommands := Dictionary new.
-    rootNode := nil.
     self
         findCmds;
         runCmds;

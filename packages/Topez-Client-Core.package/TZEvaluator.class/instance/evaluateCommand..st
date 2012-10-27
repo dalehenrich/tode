@@ -2,6 +2,8 @@ evaluator engine
 evaluateCommand: line
     [ 
     | tokens |
+    line first = $#
+        ifTrue: [ ^ '' ].
     tokens := line trimBoth findTokens: {(Character space)}.
     tokens isEmpty
         ifTrue: [ ^ '' ].

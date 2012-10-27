@@ -111,7 +111,7 @@ editCmds
                                 label: 'Superclasses'
                                 inWindow: id
                                 at: 'superclasses' ];
-                at: #'instance'
+                at: #'inspect'
                     put: [ :evaluator :topez :tokens :windowId | 
                             | list id |
                             id := windowId notNil

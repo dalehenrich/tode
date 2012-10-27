@@ -1,10 +1,7 @@
 command definition
 installNodes
-    | scriptsNode gsNode |
     super installNodes.
-    scriptsNode := self rootNode childNamed: 'scripts' addIfAbsent: true.
-    gsNode := scriptsNode childNamed: 'client' addIfAbsent: true.
-    (gsNode childNamed: 'run' addIfAbsent: true)
+    (self rootNode childNamed: 'home' addIfAbsent: true)
         addLeaf: 'init'
             contents:
                 'TZGsEvaluator initialize.

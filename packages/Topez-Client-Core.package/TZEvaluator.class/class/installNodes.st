@@ -1,50 +1,53 @@
 command definition
 installNodes
-    | scriptsNode commonNode |
+    | testNode homeNode |
     self installRootNodes.
-    scriptsNode := self rootNode childNamed: 'scripts' addIfAbsent: true.
-    commonNode := scriptsNode childNamed: 'common' addIfAbsent: true.
-    (commonNode childNamed: 'topez' addIfAbsent: true)
-        addLeaf: 'filterClasses'
+    homeNode := self rootNode childNamed: 'home' addIfAbsent: true.
+    homeNode
+        addLeaf: 'array'
             contents:
-                '(self editorModelNamed: #topezClasses) listEditor
-  listFilter: [:element | element inExtensionClassList]';
-        addLeaf: 'testing' contents: '3+4';
-        yourself.
-    (commonNode childNamed: 'run' addIfAbsent: true)
-        addLeaf: 'testing' contents: '3+4';
-        yourself.
-    (commonNode childNamed: 'input' addIfAbsent: true)
-        addLeaf: 'topezFilter'
+                '#!/bin/input
+inspect
+{1. 2. 3. { 1. 2. {1. 2. }. 3. }. 4. }
+%';
+        addLeaf: 'boom'
             contents:
-                'set project Topez
-edit #topezClasses prclasses
-topez filterClasses
-edit prtests';
+                '#!/bin/input
+run
+| coll |
+coll := #(1 2 3 4).
+[1 halt] value.
+^coll collect: [:each | each printString ].
+%
+edit stack';
         addLeaf: 'topez'
             contents:
-                'set project Topez
+                '#!/bin/input
+set project Topez
 edit prtests
 edit prclasses';
-        addLeaf: 'testing'
+        yourself.
+    testNode := self rootNode childNamed: 'testScripts' addIfAbsent: true.
+    testNode
+        addLeaf: 'test_topez'
             contents:
-                'run
+                '#!/bin/input
+run
 3+4
 %';
-        addLeaf: 'tz'
+        addLeaf: 'test_st' contents: '3+4';
+        yourself.
+    (testNode childNamed: 'input' addIfAbsent: true)
+        addLeaf: 'testing'
             contents:
-                'instance
-| str |
-str := TextStream on: Text new.
-str 
-  nextPutAll: ''No emphasis''; 
-  space; 
-  nextPutAll: (Text string: ''bold'' attribute: TextEmphasis bold);
-  space; 
-  nextPutAll: (Text string: ''blue'' attribute: TextColor blue);
-  space; 
-  nextPutAll: (Text string: ''bold n blue'' attributes: {TextEmphasis bold. TextColor blue});
-  yourself.
-str contents
+                '#!/bin/input
+run
+3+4
 %';
+        yourself.
+    (testNode childNamed: 'topez' addIfAbsent: true)
+        addLeaf: 'testing' contents: '3+4';
+        yourself.
+    (testNode childNamed: 'run' addIfAbsent: true)
+        addLeaf: 'testing' contents: '3+4';
         yourself

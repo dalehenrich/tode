@@ -2,7 +2,7 @@ standard tests
 runEditInstance
     ^ self evaluator
         evaluate:
-            'instance
+            'inspect
 3+4
 %
-edit instance'
+edit inspect'

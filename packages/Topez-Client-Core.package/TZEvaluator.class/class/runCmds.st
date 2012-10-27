@@ -14,12 +14,12 @@ runCmds
                                     topez run: doitStream contents ].
                             '' ]
                         ifFalse: [ topez run: (topez lookup: (tokens at: 2)) contents ] ];
-        at: 'instance'
+        at: 'inspect'
             put: [ :evaluator :topez :tokens | 
                     evaluator
                         accumulateTextAndDo: [ :doitStream | 
                             topez runInInstance: doitStream contents.
-                            ((subCommands at: #'edit') at: #'instance')
+                            ((subCommands at: #'edit') at: #'inspect')
                                 value: evaluator
                                 value: topez
                                 value: tokens
