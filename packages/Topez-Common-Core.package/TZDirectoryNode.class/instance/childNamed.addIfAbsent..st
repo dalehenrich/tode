@@ -1,7 +1,7 @@
 as yet unclassified
 childNamed: childName addIfAbsent: addIfAbsent
-    ^ self contents
-        at: childName
+    ^ self
+        childNamed: childName
         ifAbsent: [ 
             addIfAbsent
                 ifFalse: [ ^ nil ].

@@ -4,13 +4,13 @@
 	"instance" : {
 		"addChild:" : "dkh 10/26/2012 18:28",
 		"addChildNode:" : "dkh 10/26/2012 18:24",
+		"addLeaf:" : "dkh 10/27/2012 07:39",
 		"addLeaf:contents:" : "dkh 10/26/2012 18:25",
-		"childNamed:addIfAbsent:" : "dkh 10/26/2012 18:28",
+		"childNamed:addIfAbsent:" : "dkh 10/27/2012 07:30",
 		"childNamed:ifAbsent:" : "dkh 10/26/2012 18:25",
 		"contents" : "dkh 10/26/2012 18:26",
 		"edit:topez:tokens:windowId:" : "dkh 10/26/2012 18:46",
+		"leafTemplate" : "dkh 10/27/2012 07:39",
 		"lookup:" : "dkh 10/26/2012 20:51",
 		"lookupPath:ifAbsent:" : "dkh 10/26/2012 20:50",
-		"mkdir:in:" : "dkh 10/26/2012 21:13",
-		"removeChildNode:" : "dkh 10/26/2012 20:56",
-		"touch:in:" : "dkh 10/26/2012 21:12" } }
+		"removeChildNode:" : "dkh 10/26/2012 20:56" } }

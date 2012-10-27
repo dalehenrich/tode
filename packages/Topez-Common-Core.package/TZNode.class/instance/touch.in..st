@@ -7,4 +7,4 @@ touch: destinationPath in: baseNode
     destinationNode := baseNode lookupPath: path ifAbsent: [ ^ self error: 'Node does not exist: ' , destinationPath ].
     destinationNode canEnter
         ifFalse: [ self error: 'Cannot touch: ' , destinationNode printString ].
-    ^ destinationNode addLeaf: newName contents: ''
+    ^ destinationNode addLeaf: newName

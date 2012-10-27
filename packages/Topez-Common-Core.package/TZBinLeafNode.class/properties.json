@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"addBlock",
-		"listBlock",
-		"removeBlock" ],
-	"name" : "TZBinNode",
+		 ],
+	"name" : "TZBinLeafNode",
 	"pools" : [
 		 ],
-	"super" : "TZDirectoryNode",
+	"super" : "TZLeafNode",
 	"type" : "normal" }

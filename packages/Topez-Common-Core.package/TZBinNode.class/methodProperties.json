@@ -2,10 +2,20 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addBlock" : "dkh 10/27/2012 07:20",
+		"addBlock:" : "dkh 10/27/2012 07:21",
+		"addChildNode:" : "dkh 10/27/2012 07:28",
+		"addLeaf:contents:" : "dkh 10/27/2012 07:48",
+		"addLeaf:source:" : "dkh 10/27/2012 09:06",
 		"canMove" : "dkh 10/26/2012 23:18",
-		"childNamed:ifAbsent:" : "dkh 10/27/2012 00:08",
+		"childNamed:ifAbsent:" : "dkh 10/27/2012 08:48",
 		"contents" : "dkh 10/26/2012 23:21",
+		"createBlockFromSource:" : "dkh 10/27/2012 08:28",
+		"leafTemplate" : "dkh 10/27/2012 08:29",
 		"listBlock" : "dkh 10/26/2012 23:21",
 		"listBlock:" : "dkh 10/26/2012 23:22",
-		"listContents" : "dkh 10/27/2012 00:04",
-		"lookupPath:ifAbsent:" : "dkh 10/26/2012 23:28" } }
+		"listContents" : "dkh 10/27/2012 07:16",
+		"lookupPath:ifAbsent:" : "dkh 10/26/2012 23:28",
+		"removeBlock" : "dkh 10/27/2012 07:21",
+		"removeBlock:" : "dkh 10/27/2012 07:21",
+		"removeChildNode:" : "dkh 10/27/2012 07:32" } }
