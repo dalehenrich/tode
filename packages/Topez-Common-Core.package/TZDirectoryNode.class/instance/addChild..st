@@ -2,6 +2,6 @@ as yet unclassified
 addChild: childName
     ^ self
         addChildNode:
-            (TZNode new
+            (self class new
                 name: childName;
                 yourself)

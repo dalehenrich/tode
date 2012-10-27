@@ -1,3 +1,5 @@
 accessing
 doItReceiver
-    ^ self sourceElement elementClass
+    ^ self edittingCode
+        ifTrue: [ self sourceElement elementClass ]
+        ifFalse: [ nil ]

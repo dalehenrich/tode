@@ -1,7 +1,10 @@
 command definition
 installNodes
-    | testNode homeNode |
-    self installRootNodes.
+    | homeNode |
+    self
+        installRootNodes;
+        installDebugNodes;
+        installTestNodes.
     homeNode := self rootNode childNamed: 'home' addIfAbsent: true.
     homeNode
         addLeaf: 'array'
@@ -26,28 +29,4 @@ edit stack';
 set project Topez
 edit prtests
 edit prclasses';
-        yourself.
-    testNode := self rootNode childNamed: 'testScripts' addIfAbsent: true.
-    testNode
-        addLeaf: 'test_topez'
-            contents:
-                '#!/bin/input
-run
-3+4
-%';
-        addLeaf: 'test_st' contents: '3+4';
-        yourself.
-    (testNode childNamed: 'input' addIfAbsent: true)
-        addLeaf: 'testing'
-            contents:
-                '#!/bin/input
-run
-3+4
-%';
-        yourself.
-    (testNode childNamed: 'topez' addIfAbsent: true)
-        addLeaf: 'testing' contents: '3+4';
-        yourself.
-    (testNode childNamed: 'run' addIfAbsent: true)
-        addLeaf: 'testing' contents: '3+4';
         yourself

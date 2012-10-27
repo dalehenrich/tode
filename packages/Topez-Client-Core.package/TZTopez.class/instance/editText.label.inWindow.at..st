@@ -1,7 +1,7 @@
 editting
 editText: aStringOrText label: labelString inWindow: windowIdOrNil at: windowLocation
     ^ self
-        editCodeElement:
+        editTextElement:
             (TZTextElement new
                 source: aStringOrText;
                 yourself)

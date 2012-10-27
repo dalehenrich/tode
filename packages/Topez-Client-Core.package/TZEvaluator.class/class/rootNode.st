@@ -1,4 +1,4 @@
 accessing
 rootNode
-    rootNode ifNil: [ rootNode := TZNode new ].
+    rootNode ifNil: [ rootNode := TZDirectoryNode new ].
     ^ rootNode

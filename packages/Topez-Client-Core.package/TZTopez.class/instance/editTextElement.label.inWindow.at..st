@@ -1,8 +1,8 @@
 editting
-editCodeElement: aTZElement label: labelString inWindow: windowIdOrNil at: windowLocation
+editTextElement: aTZElement label: labelString inWindow: windowIdOrNil at: windowLocation
     ^ self
         editElement: aTZElement
-        edittingCode: true
+        edittingCode: false
         label: labelString
         inWindow: windowIdOrNil
         at: windowLocation

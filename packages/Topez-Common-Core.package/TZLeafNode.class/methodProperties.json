@@ -2,14 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addChild:" : "dkh 10/26/2012 12:05",
-		"addLeaf:contents:" : "dkh 10/26/2012 11:51",
 		"cat" : "dkh 10/26/2012 17:15",
-		"childNamed:addIfAbsent:" : "dkh 10/26/2012 12:06",
-		"childNamed:ifAbsent:" : "dkh 10/26/2012 12:39",
 		"contents:" : "dkh 10/26/2012 12:05",
+		"edit:topez:tokens:windowId:" : "dkh 10/26/2012 19:08",
 		"isLeaf" : "dkh 10/26/2012 11:17",
 		"isTopezSourceNode" : "dkh 10/26/2012 17:00",
 		"listContents" : "dkh 10/26/2012 15:55",
 		"renderNameTextOn:" : "dkh 10/26/2012 17:20",
-		"renderText:on:indent:" : "dkh 10/26/2012 17:04" } }
+		"renderText:on:indent:" : "dkh 10/26/2012 17:04",
+		"source" : "dkh 10/26/2012 19:04" } }

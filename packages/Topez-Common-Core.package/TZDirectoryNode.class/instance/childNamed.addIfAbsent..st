@@ -5,4 +5,4 @@ childNamed: childName addIfAbsent: addIfAbsent
         ifAbsent: [ 
             addIfAbsent
                 ifFalse: [ ^ nil ].
-            self addChildNode: (TZNode new name: childName) ]
+            self addChildNode: (self class new name: childName) ]

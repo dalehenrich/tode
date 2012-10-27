@@ -1,4 +1,4 @@
 accessing
-contents: stringOrText
-    self sourceElement: stringOrText.
+contents: aTZElement
+    self sourceElement: aTZElement.
     self changed: #'contents'

@@ -35,14 +35,11 @@ editCmds
                             block := (subCommands at: #'edit') at: sub ifAbsent: [  ].
                             block == nil
                                 ifTrue: [ 
-                                    ((subCommands at: #'edit') at: #'method:')
-                                        value: evaluator
-                                        value: topez
-                                        value:
-                                            {'list'.
-                                            'method:'.
-                                            selector}
-                                        value: windowId ]
+                                    (topez lookup: (tokens at: 2))
+                                        edit: evaluator
+                                        topez: topez
+                                        tokens: theTokens
+                                        windowId: windowId ]
                                 ifFalse: [ 
                                     block
                                         value: evaluator
