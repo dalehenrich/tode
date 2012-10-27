@@ -5,9 +5,9 @@ edit: evaluator topez: topez tokens: theTokens windowId: windowId
         ifTrue: [ windowId ]
         ifFalse: [ topez windowIdNamed: #'method' ].
     codeEditor := topez
-        editTextElement: self
+        editElement: self
+        edittingCode: false
+        stylingActive: self isTopezSourceNode not
         label: self printString
         inWindow: id
-        at: #'method'.
-    self isTopezSourceNode
-        ifFalse: [ codeEditor stylingActive: true ]
+        at: #'method'

@@ -1,3 +1,3 @@
 accessing
 stylingActive: aBool
-    self activeEditor stylingActive: aBool
+    self codeEditor stylingActive: aBool

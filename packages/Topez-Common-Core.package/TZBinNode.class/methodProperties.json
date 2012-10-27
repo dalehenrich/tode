@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"canMove" : "dkh 10/26/2012 23:18",
+		"childNamed:ifAbsent:" : "dkh 10/27/2012 00:08",
+		"contents" : "dkh 10/26/2012 23:21",
+		"listBlock" : "dkh 10/26/2012 23:21",
+		"listBlock:" : "dkh 10/26/2012 23:22",
+		"listContents" : "dkh 10/27/2012 00:04",
+		"lookupPath:ifAbsent:" : "dkh 10/26/2012 23:28" } }

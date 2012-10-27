@@ -5,6 +5,12 @@ installNodes
         installRootNodes;
         installDebugNodes;
         installTestNodes.
+    self rootNode
+        addChildNode:
+            (TZBinNode new
+                name: 'bin';
+                listBlock: [ self commands ];
+                yourself).
     homeNode := self rootNode childNamed: 'home' addIfAbsent: true.
     homeNode
         addLeaf: 'array'

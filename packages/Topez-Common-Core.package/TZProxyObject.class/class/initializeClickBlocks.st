@@ -163,10 +163,7 @@ initializeClickBlocks
             forClass: 'TZInstanceElement'
             put: [ :proxy :topez :editor | 
                     topez
-                        editMethod:
-                            (TZTextElement new
-                                source: proxy instance inspect proxyPrintString;
-                                yourself)
+                        editText: proxy instance proxyPrintString
                         label: 'Print'
                         inWindow: (topez windowIdNamed: #'printer')
                         at: 'method'.

@@ -3,6 +3,8 @@ asTZString
     "in-lined printStinglImitTo:"
 
     | count stream res limit |
+    true
+        ifTrue: [ ^ self printString ].
     count := 0.
     limit := 20.
     stream := WriteStream on: String new.

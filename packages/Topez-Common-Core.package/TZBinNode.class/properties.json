@@ -3,14 +3,12 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"FloatingNodes" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"parent",
-		"name",
-		"contents" ],
-	"name" : "TZNode",
+		"listBlock" ],
+	"name" : "TZBinNode",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TZNode",
 	"type" : "normal" }

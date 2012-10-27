@@ -6,6 +6,8 @@ spawnWindow
     label := editor label.
     (win := editor topez editorWindowAt: windowId) model
         activateCodeEditor;
+        stylingActive: self stylingActive;
+        edittingCode: self edittingCode;
         contents: self sourceElement;
         windowId: windowId;
         label: label.
