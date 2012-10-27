@@ -15,5 +15,5 @@ openAsMorphLabel: labelString
     self prompt.
     ^ window
         openInWorld;
-        bounds: (self cliShell topez class bounds at: #'evaluator');
+        bounds: (self cliShell topezClientClass bounds at: #'evaluator');
         yourself
