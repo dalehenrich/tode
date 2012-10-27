@@ -3,13 +3,16 @@
 		 },
 	"instance" : {
 		"canEnter" : "dkh 10/26/2012 18:18",
+		"canMove" : "dkh 10/26/2012 20:38",
 		"cat" : "dkh 10/26/2012 18:27",
 		"contents" : "dkh 10/26/2012 18:30",
+		"cp:in:" : "dkh 10/26/2012 20:57",
 		"edit:topez:tokens:windowId:" : "dkh 10/26/2012 18:45",
 		"isLeaf" : "dkh 10/26/2012 11:17",
 		"isRoot" : "dkh 10/26/2012 11:04",
 		"isTopezSourceNode" : "dkh 10/26/2012 17:00",
 		"listContents" : "dkh 10/26/2012 17:11",
+		"mv:in:" : "dkh 10/26/2012 20:56",
 		"name" : "dkh 10/26/2012 11:04",
 		"name:" : "dkh 10/26/2012 11:04",
 		"parent" : "dkh 10/26/2012 11:04",
@@ -18,4 +21,5 @@
 		"printOn:" : "dkh 10/26/2012 16:02",
 		"renderNameText" : "dkh 10/26/2012 17:12",
 		"renderNameTextOn:" : "dkh 10/26/2012 17:09",
-		"renderText:on:indent:" : "dkh 10/26/2012 17:08" } }
+		"renderText:on:indent:" : "dkh 10/26/2012 17:08",
+		"rm" : "dkh 10/26/2012 20:59" } }

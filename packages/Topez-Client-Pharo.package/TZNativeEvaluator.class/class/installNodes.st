@@ -11,6 +11,6 @@ TZProxyObject initialize.
 TZTopez initialize.
 TZGsTopez initialize.
 TZNativeTopez initialize.
-TZEvaluator debugMode: true.
+"TZEvaluator debugMode: true."
 TZSmalltalkEditor initialize';
         yourself
