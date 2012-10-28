@@ -102,7 +102,7 @@ editCmds
                                 inWindow: id
                                 at: 'implementors')
                                 setListIndex: 1;
-                                renderAttribute: #'basic';
+                                renderAttribute: #'inspect';
                                 yourself ];
                 at: #'stack'
                     put: [ :evaluator :topez :tokens :windowId | 
