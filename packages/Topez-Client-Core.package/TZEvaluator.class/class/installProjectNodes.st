@@ -15,6 +15,12 @@ installProjectNodes
                                             TZObjectNode new
                                                 name: className;
                                                 elementBlock: [ :classNode :bName :bBlock | self halt ];
+                                                collectionBlock: [ :classNode | 
+                                                            classNode topez session
+                                                                classesInMetacelloProject:
+                                                                    (Metacello image
+                                                                        project: classNode parent name;
+                                                                        list) asTopezProxy ];
                                                 listBlock: [ :classNode | 
                                                             | ar classes |
                                                             ar := classNode topez session
@@ -27,8 +33,10 @@ installProjectNodes
                                                                 asSet asArray.
                                                             (classes collect: [ :cl | cl name asString ]) sorted ];
                                                 yourself ];
+                                collectionBlock: [ :elementNode | self halt ];
                                 listBlock: [ :classNode | #('classes' 'groups' 'packages' 'projects') ];
                                 yourself ];
+                collectionBlock: [ :projectNode | self halt ];
                 listBlock: [ :projectNode | 
                             ((Metacello image
                                 project: [ :spec | true ];
