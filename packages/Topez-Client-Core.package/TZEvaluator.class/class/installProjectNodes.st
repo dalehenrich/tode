@@ -34,7 +34,7 @@ installProjectNodes
                                                             (classes collect: [ :cl | cl name asString ]) sorted ];
                                                 yourself ];
                                 collectionBlock: [ :elementNode | self halt ];
-                                listBlock: [ :classNode | #('classes' 'groups' 'packages' 'projects') ];
+                                listBlock: [ :classNode | #('classes' 'groups' 'packages' 'projects' 'tests') ];
                                 yourself ];
                 collectionBlock: [ :projectNode | self halt ];
                 listBlock: [ :projectNode | 
