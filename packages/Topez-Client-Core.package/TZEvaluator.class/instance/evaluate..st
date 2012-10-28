@@ -1,5 +1,6 @@
 evaluator engine
 evaluate: aString
+    lastCommand := aString.
     [ 
     | line stream result |
     stream := aString readStream.

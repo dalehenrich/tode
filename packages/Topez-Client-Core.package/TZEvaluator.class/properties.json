@@ -14,7 +14,8 @@
 		"inputStream",
 		"actionStack",
 		"promptString",
-		"evaluatorWindow" ],
+		"evaluatorWindow",
+		"lastCommand" ],
 	"name" : "TZEvaluator",
 	"pools" : [
 		 ],
