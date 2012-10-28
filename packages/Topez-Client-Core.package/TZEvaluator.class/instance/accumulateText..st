@@ -1,7 +1,7 @@
 evaluator engine
 accumulateText: line
     | actionArray result stream |
-    (line notNil and: [ line beginsWith: '%' ])
+    (line isNil or: [ line beginsWith: '%' ])
         ifFalse: [ 
             inputStream nextPutAll: line.
             ^ '' ].

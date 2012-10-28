@@ -16,6 +16,7 @@ evaluateCommand: line
             errorMessage := 'unknown command: ' , (tokens at: 1).
             self class debugMode
                 ifTrue: [ self halt: errorMessage asString ].
+            self resetStack.
             ^ errorMessage asText allBold ].
     ^ (self topez recordHistory: (commandBlock value: self value: self topez value: tokens)) renderText ]
         on: TZTopezNotification
@@ -36,4 +37,5 @@ evaluateCommand: line
                             (TextEmphasis bold)}).
             self class debugMode
                 ifTrue: [ self halt: errorMessage asString ].
+            self resetStack.
             ^ errorMessage ]

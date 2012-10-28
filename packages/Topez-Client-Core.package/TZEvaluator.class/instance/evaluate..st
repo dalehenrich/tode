@@ -23,4 +23,5 @@ evaluate: aString
                             (TextEmphasis bold)}).
             self class debugMode
                 ifTrue: [ self halt: errorMessage asString ].
+            self resetStack.
             ^ errorMessage ]
