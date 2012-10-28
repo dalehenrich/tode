@@ -2,14 +2,21 @@ evaluator engine
 evaluateCommand: line
     [ 
     | tokens |
-    line first = $#
+    (line notEmpty and: [ line first = $# ])
         ifTrue: [ ^ '' ].
     tokens := line trimBoth findTokens: {(Character space)}.
     tokens isEmpty
         ifTrue: [ ^ '' ].
     [ 
     | commandBlock |
-    commandBlock := self class commands at: (tokens at: 1) ifAbsent: [ ^ 'unknown command' asText allBold ].
+    commandBlock := self class commands
+        at: (tokens at: 1)
+        ifAbsent: [ 
+            | errorMessage |
+            errorMessage := 'unknown command: ' , (tokens at: 1).
+            self class debugMode
+                ifTrue: [ self halt: errorMessage asString ].
+            ^ errorMessage asText allBold ].
     ^ (self topez recordHistory: (commandBlock value: self value: self topez value: tokens)) renderText ]
         on: TZTopezNotification
         do: [ :ex | 

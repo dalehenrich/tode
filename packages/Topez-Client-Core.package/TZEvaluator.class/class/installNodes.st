@@ -50,6 +50,10 @@ TZGsTopez initialize.
 TZNativeTopez initialize.
 TZSmalltalkEditor initialize.
 (self lookup: ''/bin'') addLeaf: ''init'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/init''].
-''...initialization complete''
-%';
+(self lookup: ''/bin'') addLeaf: ''topez'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/topez''].
+(self lookup: ''/bin'') addLeaf: ''enableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/debug/enableDebugMode''].
+(self lookup: ''/bin'') addLeaf: ''disableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/debug/disableDebugMode''].
+''...initialization complete''.
+%
+';
         yourself
