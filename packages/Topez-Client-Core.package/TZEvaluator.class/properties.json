@@ -11,11 +11,9 @@
 	"instvars" : [
 		"topez",
 		"exception",
-		"collectText",
 		"inputStream",
-		"accumulationAction",
+		"actionStack",
 		"promptString",
-		"oldPromptString",
 		"evaluatorWindow" ],
 	"name" : "TZEvaluator",
 	"pools" : [
