@@ -16,7 +16,7 @@
 		"listCmds" : "dkh 10/22/2012 08:07",
 		"nodeCmds" : "dkh 10/26/2012 21:13",
 		"rootNode" : "dkh 10/26/2012 18:27",
-		"runCmds" : "dkh 10/27/2012 17:57",
+		"runCmds" : "dkh 10/27/2012 18:29",
 		"statusCmds" : "dkh 10/23/2012 14:22" },
 	"instance" : {
 		"accumulateText:" : "dkh 10/27/2012 18:17",
@@ -33,7 +33,7 @@
 		"currentFrameIndex:" : "dkh 10/5/2012 07:28",
 		"decrementCurrentFrame" : "dkh 10/5/2012 07:28",
 		"doEndOfFile" : "dkh 10/5/2012 07:28",
-		"evaluate:" : "dkh 10/27/2012 18:15",
+		"evaluate:" : "dkh 10/27/2012 18:36",
 		"evaluateCommand:" : "dkh 10/27/2012 18:15",
 		"evaluatorWindow" : "dkh 10/9/2012 11:07",
 		"exception" : "dkh 10/5/2012 07:28",

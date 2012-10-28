@@ -16,16 +16,26 @@ runCmds
                         ifFalse: [ topez run: (topez lookup: (tokens at: 2)) contents ] ];
         at: 'inspect'
             put: [ :evaluator :topez :tokens | 
-                    evaluator
-                        accumulateTextAndDo: [ :doitStream | 
-                            topez runInInstance: doitStream contents.
+                    tokens size = 1
+                        ifTrue: [ 
+                            evaluator
+                                accumulateTextAndDo: [ :doitStream | 
+                                    topez runInInstance: doitStream contents.
+                                    ((subCommands at: #'edit') at: #'inspect')
+                                        value: evaluator
+                                        value: topez
+                                        value: tokens
+                                        value: nil.
+                                    topez instance ].
+                            '' ]
+                        ifFalse: [ 
+                            topez runInInstance: (topez lookup: (tokens at: 2)) contents.
                             ((subCommands at: #'edit') at: #'inspect')
                                 value: evaluator
                                 value: topez
                                 value: tokens
                                 value: nil.
-                            topez instance ].
-                    '' ];
+                            topez instance ] ];
         at: 'topez'
             put: [ :evaluator :topez :tokens | 
                     tokens size = 1

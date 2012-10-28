@@ -5,7 +5,7 @@ evaluate: aString
     stream := aString readStream.
     [ 
     line := stream nextLine.
-    line ~~ nil or: [ actionStack notEmpty ] ]
+    line ~~ nil ]
         whileTrue: [ 
             result := self actionStack notEmpty
                 ifTrue: [ self accumulateText: line ]
