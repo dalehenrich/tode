@@ -4,14 +4,23 @@ installNodes
     self
         installRootNodes;
         installDebugNodes;
-        installTestNodes.
+        installTestNodes;
+        installProjectNodes.
     self rootNode
         addChildNode:
-            (TZBinNode new
+            (TZObjectNode new
                 name: 'bin';
-                listBlock: [ self commands ];
-                addBlock: [ :commandName :block | self commands at: commandName put: block ];
-                removeBlock: [ :commandName | self commands removeKey: commandName ];
+                extension: '*';
+                listBlock: [ :binDir | self commands keys sorted ];
+                elementBlock: [ :binDir :elementName :absentBlock | 
+                            | block |
+                            block := self commands at: elementName ifAbsent: absentBlock.
+                            TZBinLeafNode new
+                                name: elementName;
+                                contents: block asString;
+                                yourself ];
+                addBlock: [ :binDir :commandName :block | self commands at: commandName put: block ];
+                removeBlock: [ :binDir :commandName | self commands removeKey: commandName ];
                 yourself).
     homeNode := self rootNode childNamed: 'home' addIfAbsent: true.
     homeNode
@@ -52,6 +61,7 @@ TZSmalltalkEditor initialize.
 (self lookup: ''/bin'') addLeaf: ''init'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/init''].
 (self lookup: ''/bin'') addLeaf: ''enableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/debug/enableDebugMode''].
 (self lookup: ''/bin'') addLeaf: ''disableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/debug/disableDebugMode''].
+(self lookup: ''/bin'') addLeaf: ''refresh'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/topez''].
 ''...initialization complete''.
 %
 ';

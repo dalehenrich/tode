@@ -8,7 +8,8 @@
 	"instvars" : [
 		"parent",
 		"name",
-		"contents" ],
+		"contents",
+		"topez" ],
 	"name" : "TZNode",
 	"pools" : [
 		 ],

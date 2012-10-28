@@ -12,7 +12,7 @@
 		"isRoot" : "dkh 10/26/2012 11:04",
 		"isTopezSourceNode" : "dkh 10/26/2012 17:00",
 		"listContents" : "dkh 10/26/2012 17:11",
-		"lookup:" : "dkh 10/26/2012 23:26",
+		"lookup:with:" : "dkh 10/28/2012 08:51",
 		"lookupPath:ifAbsent:" : "dkh 10/26/2012 23:27",
 		"mkdir:in:" : "dkh 10/27/2012 07:25",
 		"mv:in:" : "dkh 10/26/2012 20:56",
@@ -26,4 +26,6 @@
 		"renderNameTextOn:" : "dkh 10/26/2012 17:09",
 		"renderText:on:indent:" : "dkh 10/26/2012 17:08",
 		"rm" : "dkh 10/26/2012 20:59",
+		"topez" : "dkh 10/28/2012 08:50",
+		"topez:" : "dkh 10/28/2012 08:50",
 		"touch:in:" : "dkh 10/27/2012 07:38" } }
