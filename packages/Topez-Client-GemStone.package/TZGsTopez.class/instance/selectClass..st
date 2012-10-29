@@ -11,5 +11,5 @@ selectClass: aString
             index := UIManager default chooseFrom: (classList collect: [ :each | each elementClassName asTopezNative ]).
             index = 0
                 ifTrue: [ ^ nil ].
-            className := (classList at: index) elementClassName asTopezNative ].
+            ^ self setClassProxy: (classList at: index) elementClass ].
     ^ self setClass: className

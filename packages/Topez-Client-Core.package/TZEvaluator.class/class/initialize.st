@@ -15,5 +15,4 @@ initialize
         statusCmds;
         installNodes;
         nodeCmds;
-        lintCmds;
         yourself

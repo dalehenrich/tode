@@ -67,7 +67,7 @@ initializeClickBlocks
             forClasses: #('TZClassElement' 'TZMethodElement' 'TZMessageElement' 'TZInstanceElement')
             put: [ :proxy :topez :editor | 
                     ((self clickBlocks at: 'TZClassElement') at: #'singleClick') first value: proxy value: topez value: editor.
-                    topez setClass: proxy elementClassName asTopezNative asString.
+                    topez setClassProxy: proxy elementClass asString.
                     true ];
         at: #'cmdShiftBKeyStroke'
             forClass: 'TZStackFrameElement'
@@ -280,5 +280,5 @@ initializeClickBlocks
                         yourself.
                     topez editClassSelectorsFor: proxy elementClass.
                     topez editInstanceSelectorsFor: proxy elementClass.
-                    topez setClass: proxy elementClassName asTopezNative asString ];
+                    topez setClassProxy: proxy elementClass ];
         yourself
