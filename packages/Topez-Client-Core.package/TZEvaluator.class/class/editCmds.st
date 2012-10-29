@@ -34,12 +34,7 @@ editCmds
                             sub := (selector := theTokens at: 2) asSymbol.
                             block := (subCommands at: #'edit') at: sub ifAbsent: [  ].
                             block == nil
-                                ifTrue: [ 
-                                    (topez lookup: (tokens at: 2))
-                                        edit: evaluator
-                                        topez: topez
-                                        tokens: theTokens
-                                        windowId: windowId ]
+                                ifTrue: [ (topez lookup: (tokens at: 2)) edit: evaluator tokens: theTokens windowId: windowId ]
                                 ifFalse: [ 
                                     block
                                         value: evaluator

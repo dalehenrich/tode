@@ -1,5 +1,5 @@
 as yet unclassified
-edit: evaluator topez: topez tokens: theTokens windowId: windowId
+edit: evaluator tokens: theTokens windowId: windowId
     | id codeEditor |
     id := windowId notNil
         ifTrue: [ windowId ]

@@ -17,13 +17,13 @@ lintCmds
                                 tokens: tokens ]
                         ifFalse: [ 
                             | rule |
+                            "(RBCompositeLintRule rulesFor: RBInstVarInSubclassesRule)"
                             (tokens at: 3) = 'topez'
                                 ifTrue: [ 
                                     rule := RBCompositeLintRule
                                         rules:
                                             (RBCompositeLintRule rulesFor: RBTempVarOverridesInstVarRule)
                                                 , (RBCompositeLintRule rulesFor: RBUndeclaredReferenceRule)
-                                                , (RBCompositeLintRule rulesFor: RBInstVarInSubclassesRule)
                                         name: 'Topez checks' ]
                                 ifFalse: [ self error: 'unknown lint option: ' , (tokens at: 2) printString ].
                             TZLintChecker
