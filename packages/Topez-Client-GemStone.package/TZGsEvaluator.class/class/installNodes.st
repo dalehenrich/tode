@@ -13,7 +13,7 @@ ObjectLogEntry emptyLog.
         addLeaf: 'log'
             contents:
                 '#!/bin/input
-instance
+inspect
 ObjectLogEntry objectLog
 %';
         yourself

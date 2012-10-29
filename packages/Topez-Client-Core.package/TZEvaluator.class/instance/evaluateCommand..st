@@ -14,6 +14,9 @@ evaluateCommand: line
         ifAbsent: [ 
             | errorMessage |
             errorMessage := 'unknown command: ' , (tokens at: 1).
+            Transcript
+                cr;
+                show: errorMessage.
             self class debugMode
                 ifTrue: [ self halt: errorMessage asString ].
             self resetStack.
