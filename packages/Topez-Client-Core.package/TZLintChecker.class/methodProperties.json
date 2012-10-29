@@ -1,7 +1,8 @@
 {
 	"class" : {
-		"buildStructureFor:parentNode:" : "dkh 10/28/2012 21:32",
-		"leafNodeForClass:selector:" : "dkh 10/28/2012 21:33",
-		"runLintCheckIn:topez:tokens:" : "dkh 10/28/2012 21:26" },
+		"buildStructureFor:topez:parentNode:" : "dkh 10/28/2012 23:27",
+		"conditionLabel:problemCount:" : "dkh 10/28/2012 23:22",
+		"nodeForResult:topez:" : "dkh 10/28/2012 23:36",
+		"runLintCheckIn:topez:tokens:" : "dkh 10/29/2012 00:12" },
 	"instance" : {
 		 } }

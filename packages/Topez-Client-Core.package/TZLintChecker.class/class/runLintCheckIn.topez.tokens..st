@@ -21,5 +21,5 @@ runLintCheckIn: evaluator topez: topez tokens: tokens
     (dot childNamed: 'lint' ifAbsent: [ nil ]) ifNotNil: [ :node | dot removeChildNode: node ].
     lint := dot childNamed: 'lint' addIfAbsent: true.
     parent := lint.
-    rules rules do: [ :rule | self buildStructureFor: rule parentNode: parent ].
+    rules rules do: [ :rule | self buildStructureFor: rule topez: topez parentNode: parent ].
     ^ rules problemCount printString , ' rule violations'
