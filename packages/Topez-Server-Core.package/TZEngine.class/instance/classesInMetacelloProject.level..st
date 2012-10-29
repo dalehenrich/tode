@@ -1,22 +1,11 @@
 as yet unclassified
 classesInMetacelloProject: aMetacelloProjectSpec level: level
-    | version classes extensionClasses dict |
-    classes := Set new.
-    extensionClasses := Dictionary new.
-    version := aMetacelloProjectSpec versionOrNil ifNil: [ ^ #() ].
-    version spec
-        projectDo: [ :ignored |  ]
-        packageDo: [ :packageSpec | 
-            | wc |
-            wc := [ packageSpec workingCopy ]
-                on: Error
-                do: [ :ex | ex return: nil ].
-            wc ~~ nil
-                ifTrue: [ 
-                    classes addAll: wc packageInfo classes.
-                    wc packageInfo extensionClasses
-                        do: [ :cl | extensionClasses at: cl put: (wc packageInfo extensionCategoriesForClass: cl) ] ] ]
-        groupDo: [ :ignored |  ].
-    ^ self
-        toString: (TZClassElement hierarchyForClasses: classes extensionClasses: extensionClasses classElementFactory: self)
-        level: level
+    | classes extensionClasses ar hierarchyOrder |
+    ar := self rawClassesInMetacelloProject: aMetacelloProjectSpec.
+    classes := ar at: 1.
+    extensionClasses := ar at: 2.
+    hierarchyOrder := TZClassElement
+        hierarchyForClasses: classes
+        extensionClasses: extensionClasses
+        classElementFactory: self.
+    ^ self toString: hierarchyOrder level: level

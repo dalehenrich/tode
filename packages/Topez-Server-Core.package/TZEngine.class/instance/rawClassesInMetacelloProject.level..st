@@ -1,9 +1,9 @@
-api
-rawClassesInMetacelloProject: project
+metacello
+rawClassesInMetacelloProject: aMetacelloProjectSpec level: level
     | version classes extensionClasses dict |
     classes := Set new.
     extensionClasses := Dictionary new.
-    version := project asTopezNative versionOrNil ifNil: [ ^ #() ].
+    version := aMetacelloProjectSpec versionOrNil ifNil: [ ^ #() ].
     version spec
         projectDo: [ :ignored |  ]
         packageDo: [ :packageSpec | 

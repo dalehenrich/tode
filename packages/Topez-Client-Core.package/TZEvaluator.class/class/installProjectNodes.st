@@ -16,22 +16,11 @@ installProjectNodes
                                                 name: className;
                                                 elementBlock: [ :classNode :bName :bBlock | self halt ];
                                                 collectionBlock: [ :classNode | 
-                                                            classNode topez session
-                                                                classesInMetacelloProject:
-                                                                    (Metacello image
-                                                                        project: classNode parent name;
-                                                                        list) asTopezProxy ];
-                                                listBlock: [ :classNode | 
-                                                            | ar classes |
-                                                            ar := classNode topez session
-                                                                rawClassesInMetacelloProject:
-                                                                    (Metacello image
-                                                                        project: classNode parent name;
-                                                                        list) asTopezProxy.
-                                                            classes := (ar at: 1) , (ar at: 2) keys.
-                                                            classes := (classes collect: [ :cl | cl theNonMetaClass ])
-                                                                asSet asArray.
-                                                            (classes collect: [ :cl | cl name asString ]) sorted ];
+                                                            | projectProxy |
+                                                            projectProxy := classNode topez
+                                                                metacelloProjectNamed: classNode parent name.
+                                                            classNode topez classesInMetacelloProject: projectProxy ];
+                                                listBlock: [ :classNode | classNode topez classNamesInMetacelloProject: classNode parent name ];
                                                 yourself ];
                                 collectionBlock: [ :elementNode | self halt ];
                                 listBlock: [ :classNode | #('classes' 'groups' 'packages' 'projects' 'tests') ];
