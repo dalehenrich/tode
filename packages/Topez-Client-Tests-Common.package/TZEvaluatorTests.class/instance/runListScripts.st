@@ -1,3 +1,3 @@
 standard tests
 runListScripts
-    ^ self evaluator evaluate: 'list scripts'
+    ^ self evaluator evaluate: 'ls /testScripts/'

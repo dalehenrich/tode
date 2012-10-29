@@ -9,23 +9,34 @@ testListPrclasses
                     (x := result asString)
                         =
                             'Object
+   Boolean
    SmallInteger
    String
    Text
    TZBlockStackDictionary
    TZElement
       TZClassElement
+      TZFrameContextElement
       TZInstanceElement
+         TZProjectSpecElement
       TZSourceElement
          TZDoItElement
             TZTextElement
          TZMethodElement
+            TZFrameMethodElement
+               TZExecutedCodeElement
             TZMessageElement
             TZTemplateMethodElement
       TZStackFrameElement
    TZEngine
    TZEvaluator
+   TZLintChecker
    TZLister
+   TZNode
+      TZDirectoryNode
+         TZObjectNode
+      TZLeafNode
+         TZBinLeafNode
    TZObject
       TZHeaderObject
          TZHeaderGemStone
@@ -37,7 +48,6 @@ testListPrclasses
             TZProxyBreakpoint
             TZProxyError
    TZStack
-   TZStackFrame
    TZStonMapWriter
    TZSTONTests
    TZStonWriter
@@ -46,4 +56,5 @@ testListPrclasses
       TZTopezBreakpointNotification
       TZTopezErrorNotification
    TZTopezOptions
-   TZTopezStatus']
+   TZTopezStatus
+   UndefinedObject']

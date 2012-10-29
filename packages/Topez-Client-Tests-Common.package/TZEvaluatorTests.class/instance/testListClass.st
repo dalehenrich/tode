@@ -6,7 +6,8 @@ testListClass
         assert:
             (x := result asString)
                 =
-                    'TZProxyObject
+                    'TZProjectSpecElement
+TZProxyObject
    TZProxyGemStone
    TZProxyNative
    TZProxyNotification

@@ -15,7 +15,7 @@
 		"createInstanceElementFor:label:indent:" : "dkh 10/19/2012 10:36",
 		"deleteClassElement:" : "dkh 10/16/2012 20:15",
 		"deleteMethodElement:" : "dkh 10/17/2012 14:59",
-		"evaluate:" : "dkh 10/26/2012 12:51",
+		"evaluate:" : "dkh 10/29/2012 11:15",
 		"evaluate:in:to:" : "dkh 10/19/2012 16:02",
 		"evaluateX:" : "dkh 10/26/2012 12:50",
 		"findMatchingClasses:" : "dkh 10/23/2012 07:24",
@@ -34,7 +34,7 @@
 		"sourceForClassMethod:inClass:" : "dkh 10/5/2012 19:48",
 		"sourceForMethod:" : "dkh 10/5/2012 16:04",
 		"sourceForMethod:inClass:" : "dkh 10/5/2012 19:48",
-		"stackFor:" : "dkh 10/5/2012 14:27",
+		"stackFor:" : "dkh 10/29/2012 11:34",
 		"subclassesOf:" : "dkh 10/23/2012 07:25",
 		"superclassesOf:" : "dkh 10/23/2012 07:26",
 		"testClassesInMetacelloProject:" : "dkh 10/23/2012 07:26" } }

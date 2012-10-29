@@ -1,3 +1,3 @@
 standard tests
 runRunScript
-    ^ self evaluator evaluate: 'run testing'
+    ^ self evaluator evaluate: 'run /testScripts/test_st'

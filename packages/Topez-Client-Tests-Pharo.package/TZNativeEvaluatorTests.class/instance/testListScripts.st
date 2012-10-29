@@ -6,14 +6,4 @@ testListScripts
         assert:
             (x := result asString withSqueakLineEndings)
                 =
-                    'run
-	testing
-	init
-input
-	tz
-	testing
-	topezFilter
-	topez
-topez
-	filterClasses
-	testing'
+                    'input/  run/  test_st  test_topez  topez/'

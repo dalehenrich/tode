@@ -1,3 +1,3 @@
 standard tests
 runInput
-    ^ self evaluator evaluate: 'input testing'
+    ^ self evaluator evaluate: 'input /testScripts/test_topez'

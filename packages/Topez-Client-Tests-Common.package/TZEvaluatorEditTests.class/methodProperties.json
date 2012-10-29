@@ -10,7 +10,7 @@
 		"runEditMethod" : "dkh 10/13/2012 15:45",
 		"runEditPrclasses" : "dkh 10/13/2012 15:42",
 		"runEditPrtests" : "dkh 10/13/2012 15:43",
-		"runEditScripts" : "dkh 10/13/2012 14:06",
+		"runEditScripts" : "dkh 10/29/2012 11:19",
 		"runEditSelectors" : "dkh 10/13/2012 15:47",
 		"runEditSubclasses" : "dkh 10/13/2012 15:40",
 		"runEditSuperclasses" : "dkh 10/13/2012 15:32",
@@ -29,6 +29,4 @@
 		"testEditSelectors" : "dkh 10/13/2012 15:48",
 		"testEditSubclasses" : "dkh 10/13/2012 15:40",
 		"testEditSuperclasses" : "dkh 10/13/2012 15:39",
-		"testInstance" : "dkh 10/23/2012 18:25",
-		"testInstanceSelfRef" : "dkh 10/23/2012 18:29",
 		"testLogout" : "dkh 10/14/2012 09:21" } }

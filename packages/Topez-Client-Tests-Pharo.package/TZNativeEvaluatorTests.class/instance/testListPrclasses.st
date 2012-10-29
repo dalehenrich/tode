@@ -27,7 +27,6 @@ testListPrclasses
          Gci64bit3x
             Gci64bit31x
    GciSession
-   GciUserInterruptHandler
    Integer
       SmallInteger
    OGCustomSessionDescription
@@ -55,19 +54,29 @@ testListPrclasses
    TZEditorsDefaultSettings
    TZElement
       TZClassElement
+      TZFrameContextElement
       TZInstanceElement
+         TZProjectSpecElement
       TZSourceElement
          TZDoItElement
             TZTextElement
          TZMethodElement
+            TZFrameMethodElement
+               TZExecutedCodeElement
             TZMessageElement
             TZTemplateMethodElement
       TZStackFrameElement
    TZEvaluator
       TZGsEvaluator
       TZNativeEvaluator
+   TZLintChecker
    TZLister
    TZNativeStackFrame
+   TZNode
+      TZDirectoryNode
+         TZObjectNode
+      TZLeafNode
+         TZBinLeafNode
    TZObject
       TZHeaderObject
          TZHeaderGemStone

@@ -6,17 +6,11 @@ testHaltUpUpDownWhere
         assert:
             (x := result asString)
                 =
-                    '1 AbstractException class >> _signalWith:		@6 line 25
-	receiver [Halt] a Halt occurred (err...etc...
-==> 2 Metaclass3 >> signal		@3 line 5
-	receiver [Halt class] Halt
-3 Object class >> halt		@2 line 5
-	receiver [SmallInteger] 1
-4 UndefinedObject >> nil		@2 line 1
-	receiver [UndefinedObject] nil
-5 String class >> evaluateInContext:symbolList:		@3 line 10
-	receiver [String] 1 halt
-6 TZEngine class >> executeExpressionFrom:inContext:level:		@4 line 3
-	receiver [TZEngine] aTZEngine
-7 Metaclass3 >> _gsReturnToC		@1 line 1
-	receiver [UndefinedObject] nil'
+                    '[TZStack] aTZStack( aTZStackFrameElement, aTZStackFrameElement, aTZStackFrameElement, aTZStackFrameElement, aTZStackFrameElement, aTZStackFrameElement, aTZStackFrameElement)
+#1 	1 	Halt(AbstractException) >> _signalWith:
+#2 	2 	Halt class(AbstractException) >> signal
+#3 	3 	SmallInteger(Object) >> halt
+#4 	4 	Executed Code
+#5 	5 	String >> evaluateInContext:symbolList:
+#6 	6 	TZEngine >> executeExpressionFrom:inContext:level:
+#7 	7 	UndefinedObject(GsNMethod) >> _gsReturnToC'

@@ -6,5 +6,5 @@ testRun2
         assert:
             (x := result printString)
                 =
-                    '{ sz:5 Array} {1. 0. -1. #(true fa...etc...
+                    '{ sz:5 Array} {1. 0. -1. #(true false). ''a''->42}
 '

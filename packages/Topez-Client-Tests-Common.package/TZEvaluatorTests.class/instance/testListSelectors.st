@@ -9,4 +9,5 @@ on:
 proxyClassName
 proxyPrintString
 proxySize
-renderWith:on:indent:'
+renderWith:on:indent:
+storeLiteralAsNative:'

@@ -6,5 +6,6 @@ testListSenders
             (x := result asString)
                 =
                     'TZProxyObject class>>initializeClickBlocks
+TopezCodeEditor>>selectSourceClass
 TopezEditor>>update:
 TopezListEditor>>executeCommandForClickBlock:'
