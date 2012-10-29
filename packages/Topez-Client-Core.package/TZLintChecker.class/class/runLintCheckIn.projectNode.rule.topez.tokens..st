@@ -1,14 +1,11 @@
 as yet unclassified
-runLintCheckIn: evaluator topez: topez tokens: tokens
-    | projectNode spec packages env rules checker dot lint parent |
-    "lint /projects/Topez"
-    projectNode := topez lookup: (tokens at: 2).
+runLintCheckIn: evaluator projectNode: projectNode rule: rules topez: topez tokens: tokens
+    | spec packages env checker dot lint parent |
     spec := Metacello image
         project: projectNode name;
         list.
     packages := spec version packages collect: [ :each | PackageInfo named: each name ].
     env := RBBrowserEnvironment new forPackages: packages.
-    rules := RBCompositeLintRule lintChecks.
     checker := RBSmalllintChecker new.
     checker
         rule: rules;
