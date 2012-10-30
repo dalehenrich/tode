@@ -276,7 +276,7 @@ initializeClickBlocks
                         label: 'Hierarchy'
                         inWindow: (topez windowIdNamed: #'hierarchy')
                         at: 'superclasses')
-                        listIndex: (hierarchyElements indexOf: selectedElement);
+                        setListIndex: (hierarchyElements indexOf: selectedElement);
                         yourself.
                     topez editClassSelectorsFor: proxy elementClass.
                     topez editInstanceSelectorsFor: proxy elementClass.

@@ -2,6 +2,7 @@ writing
 encodeIndexed: anObject
     | listWriter |
     listWriter := STONListWriter on: self.
+    self with: Array new do: []. "keep object accounting straight"
     writeStream nextPut: $[.
     self
         indentedDo: [ 

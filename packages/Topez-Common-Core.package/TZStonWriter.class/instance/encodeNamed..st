@@ -2,6 +2,7 @@ writing
 encodeNamed: anObject
     | dictionary |
     dictionary := TZStonMapWriter on: self.
+    self with: Dictionary new do: []. "keep object accounting straight"
     writeStream nextPut: ${.
     self
         indentedDo: [ 

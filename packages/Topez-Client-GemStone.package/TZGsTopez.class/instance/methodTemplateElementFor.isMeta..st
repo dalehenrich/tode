@@ -8,4 +8,4 @@ methodTemplateElementFor: classProxy isMeta: isMeta
                 withArgs:
                     {classProxy.
                     isMeta.
-                    2} ]
+                    1} ]

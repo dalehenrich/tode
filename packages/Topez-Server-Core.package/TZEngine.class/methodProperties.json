@@ -36,7 +36,7 @@
 		"methodElementFor:selector:level:" : "DataCurator 10/22/2012 15:32",
 		"methodElementForClass:isMeta:selector:" : "DataCurator 10/23/2012 07:41",
 		"methodElementForClass:isMeta:selector:level:" : "DataCurator 10/22/2012 15:32",
-		"methodTemplateElementFor:isMeta:" : "DataCurator 10/23/2012 07:42",
+		"methodTemplateElementFor:isMeta:" : "dkh 10/30/2012 15:23",
 		"methodTemplateElementFor:isMeta:level:" : "dkh 10/22/2012 23:48",
 		"newClassElement" : "DataCurator 10/23/2012 07:38",
 		"put:onStream:withOptions:" : "DataCurator 10/22/2012 15:32",
@@ -53,4 +53,4 @@
 		"toString:level:" : "DataCurator 10/22/2012 15:33",
 		"toString:withOptions:" : "DataCurator 10/22/2012 15:33",
 		"toStringFromOop:level:" : "DataCurator 10/22/2012 15:33",
-		"writer" : "DataCurator 10/22/2012 15:33" } }
+		"writer" : "dkh 10/30/2012 15:43" } }

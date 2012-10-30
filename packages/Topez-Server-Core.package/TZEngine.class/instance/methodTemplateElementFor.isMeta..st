@@ -3,7 +3,7 @@ methodTemplateElementFor: aClass isMeta: isMeta
     ^ self elementCache
         add:
             (TZTemplateMethodElement new
-                elementClass: aClass;
+                elementClass: aClass theNonMetaClass;
                 isMeta: isMeta;
                 elementClassName: aClass name;
                 selector: #'the newMethodTemplate';
