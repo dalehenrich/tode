@@ -37,7 +37,7 @@ statusCmds
                     put: [ :evaluator :topez :tokens | 
                             tokens size = 3
                                 ifTrue: [ 
-                                    topez setProject: (topez metacelloProject: (tokens at: 3)).
+                                    topez setProject: (topez metacelloProjectNamed: (tokens at: 3)).
                                     '' ]
                                 ifFalse: [ topez send: 'name' to: topez currentProject withArgs: #() ] ];
                 at: #'package'

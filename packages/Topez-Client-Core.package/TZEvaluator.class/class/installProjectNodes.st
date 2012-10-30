@@ -26,10 +26,7 @@ installProjectNodes
                                 listBlock: [ :classNode | #('classes' 'groups' 'packages' 'projects' 'tests') ];
                                 yourself ];
                 collectionBlock: [ :projectNode | self halt ];
-                listBlock: [ :projectNode | 
-                            ((Metacello image
-                                project: [ :spec | true ];
-                                list) collect: [ :spec | spec name ]) sorted ];
+                listBlock: [ :projectNode | projectNode topez metacelloProjectNames ];
                 addBlock: [ :projectNode :projectName :block | self halt ];
                 removeBlock: [ :projectNode :projectName | self halt ];
                 yourself)
