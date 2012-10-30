@@ -1,5 +1,5 @@
 metacello
-rawClassesInMetacelloProject: aMetacelloProjectSpec level: level
+rawClassesInMetacelloProject: aMetacelloProjectSpec
     | version classes extensionClasses dict |
     classes := Set new.
     extensionClasses := Dictionary new.
