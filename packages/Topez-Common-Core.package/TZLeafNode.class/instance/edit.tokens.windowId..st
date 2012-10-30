@@ -1,10 +1,10 @@
 as yet unclassified
 edit: evaluator tokens: theTokens windowId: windowId
-    | id codeEditor |
+    | id |
     id := windowId notNil
         ifTrue: [ windowId ]
         ifFalse: [ topez windowIdNamed: #'method' ].
-    codeEditor := topez
+    topez
         editElement: self
         edittingCode: false
         stylingActive: self isTopezSourceNode not

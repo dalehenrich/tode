@@ -14,7 +14,18 @@ installProjectNodes
                                                 ifFalse: [ self error: 'only classes supported' ].
                                             TZObjectNode new
                                                 name: className;
-                                                elementBlock: [ :classNode :bName :bBlock | self halt ];
+                                                elementBlock: [ :classNode :bName :bBlock | 
+                                                            | projectProxy classElementProxy |
+                                                            projectProxy := classNode topez
+                                                                metacelloProjectNamed: classNode parent name.
+                                                            classElementProxy := ((classNode topez
+                                                                classesInMetacelloProject: projectProxy)
+                                                                select: [ :classProxy | classProxy elementClassName asTopezNative asString = bName ])
+                                                                first.
+                                                            TZClassLeafNode new
+                                                                name: bName;
+                                                                contents: classElementProxy;
+                                                                yourself ];
                                                 collectionBlock: [ :classNode | 
                                                             | projectProxy |
                                                             projectProxy := classNode topez
