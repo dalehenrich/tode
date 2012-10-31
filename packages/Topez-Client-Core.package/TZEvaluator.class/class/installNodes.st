@@ -1,12 +1,14 @@
 command definition
 installNodes
-    | homeNode topezNode scriptNode |
+    | homeNode |
+    rootNode := nil.
     self
-        installRootNodes;
         installDebugNodes;
         installTestNodes;
-        installProjectNodes.
-    self rootNode
+        installEventNodes;
+        installProjectNodes;
+        installEventNodes.
+    self topezNode
         addChildNode:
             (TZObjectNode new
                 name: 'bin';
@@ -22,10 +24,8 @@ installNodes
                 addBlock: [ :binDir :commandName :block | self commands at: commandName put: block ];
                 removeBlock: [ :binDir :commandName | self commands removeKey: commandName ];
                 yourself).
-    topezNode := self rootNode childNamed: 'topez' addIfAbsent: true.
-    scriptNode := topezNode childNamed: 'scripts' addIfAbsent: true.
     homeNode := self rootNode childNamed: 'home' addIfAbsent: true.
-    scriptNode
+    self scriptNode
         addLeaf: 'array'
             contents:
                 '#!/bin/input
@@ -60,10 +60,10 @@ TZTopez initialize.
 TZGsTopez initialize.
 TZNativeTopez initialize.
 TZSmalltalkEditor initialize.
-(self lookup: ''/bin'') addLeaf: ''init'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/init''].
-(self lookup: ''/bin'') addLeaf: ''enableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/debug/enableDebugMode''].
-(self lookup: ''/bin'') addLeaf: ''disableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/debug/disableDebugMode''].
-(self lookup: ''/bin'') addLeaf: ''refresh'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/topez''].
+(self lookup: ''/topez/bin'') addLeaf: ''init'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/init''].
+(self lookup: ''/topez/bin'') addLeaf: ''enableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/debug/enableDebugMode''].
+(self lookup: ''/topez/bin'') addLeaf: ''disableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/debug/disableDebugMode''].
+(self lookup: ''/topez/bin'') addLeaf: ''refresh'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/topez''].
 ''...initialization complete''.
 %
 ';
