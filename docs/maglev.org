@@ -1,0 +1,84 @@
+* Notes on adding MagLev support to Topez
+** Feature list
+   + List env1 methods
+   + Handle bridge methods (list/don't list)
+   + Add ruby classes and modules to hierarchy
+   + How to indicate modules
+   + View the Ruby namespace of an object (constants etc)
+   + How to indicate singleton classes
+   + Dynamic inst vars
+
+
+** Random commands
+
+   | blue | edit implementors findMatchingClasses: |
+   |      |                                        |
+
+
+   If I change the list of commands in TZEvaluator, then I need to
+   re-initialize so that the dictionary with the new / changed block gets
+   updated.
+
+   In the blue pill: "input /topez/scripts/init". And then in the topez
+   window run "init"
+
+** Detailed notes on implementing "list rclass hash"
+
+   The idea is to be able to open a Topez session on GemStone (green):
+   #+begin_src smalltalk
+     TZGsEvaluator new open.
+   #+end_src
+
+   And in the resulting green topez session on GSS, to type:
+   #+begin_src smalltalk
+     topez > list rclass hash
+   #+end_src
+
+   And the ruby classes with "hash" in their name should display in the
+   topez window.
+
+*** Overview of how the pieces fit together
+
+    When I type "edit rclass hash" in a green topez window, the following
+    things happen (at a high level, i.e., I'm skipping some stuff):
+
+**** BLUE WORLD: 1. Method Lookup  (TZEvaluator / subclass)
+
+     1. When I type the string "list rclass hash", the TZEvaluator (native
+        or gss?) looks at the first token #list, and finds the entry in
+        TZEvaluator>>listCmds.  The #list command has subcommands (e.g.,
+        "list selectors", "list class", "list senders", etc.), and
+        eventually finds the proper block to evaluate:
+
+        #+begin_src smalltalk
+          at: #rclass put: [ :evaluator :topez :tokens | topez findMatchingRubyClasses: (tokens at: 3) ];
+        #+end_src
+
+     2. So it invokes the block, passing the current evaluator, topez
+        instance and the tokens: "list", "rclass", "hash".
+
+**** BLUE WORLD: 2. Dispatch to Green world
+     1. TZNativeTopez>>findMatchingClasses: grabs "edit rclass hash" and
+        TZNativeTopez>>forwards the message to the raw session.
+
+     2. TZGsTopez>>findMatchingClasses: does a GCI call to the green world
+        to run findMatchingClasses:level:
+**** GREEN WORLD: 1. Do stuff
+
+*** Add the "rclass" "binary" into /bin
+
+    1. In a native session:
+       #+begin_src smalltalk
+         TZNativeEvaluator new open.
+       #+end_src
+
+       Edit the TZEvaluator class
+       #+begin_src smalltalk
+         topez > edit class tzev
+       #+end_src
+       Then click on "TZEvaluator" in the list of classes on the left.
+       Then click on "listCmds" in the class side method list.
+
+       When we type "edit class tzev" in the  topez window, a
+       native instance of TZNativeEvaluator grabs the string "edit class
+       tzev" and sends it to
