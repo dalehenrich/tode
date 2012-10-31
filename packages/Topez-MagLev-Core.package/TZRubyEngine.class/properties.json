@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-MagLev-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZRubyEngine",
+	"pools" : [
+		 ],
+	"super" : "TZEngine",
+	"type" : "normal" }

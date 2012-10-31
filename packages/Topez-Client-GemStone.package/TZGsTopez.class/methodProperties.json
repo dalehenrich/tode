@@ -28,6 +28,7 @@
 		"fetchFrameFor:frameId:level:" : "dkh 9/29/2012 19:15",
 		"finalize" : "dkh 9/28/2012 18:37",
 		"findMatchingClasses:" : "dkh 10/30/2012 14:41",
+		"findMatchingRubyClasses:" : "pbm 10/31/2012 16:07",
 		"hierarchyOf:" : "dkh 10/30/2012 14:43",
 		"implementorsOf:" : "dkh 10/22/2012 08:12",
 		"instanceElementFor:level:" : "dkh 10/22/2012 10:32",
