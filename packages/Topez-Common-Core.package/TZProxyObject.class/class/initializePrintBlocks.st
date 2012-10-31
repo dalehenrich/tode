@@ -164,4 +164,25 @@ initializePrintBlocks
                     proxy receiver renderText: #'basic' on: aStream ];
         at: #'basic'
             forClasses: #('TZProxyError' 'TZProxyBreakpoint')
-            put: [ :proxy :aStream :indent | proxy header renderText: proxy renderAttribute on: aStream ]
+            put: [ :proxy :aStream :indent | proxy header renderText: proxy renderAttribute on: aStream ];
+        at: #'basic'
+            forClass: 'TZStack'
+            put: [ :stack :aStream :indent | 
+                    | currentFrameIndex size |
+                    currentFrameIndex := stack currentFrameIndex.
+                    size := stack indexed size.
+                    1 to: size do: [ :frameIndex | 
+                        | stackFrame |
+                        stackFrame := stack at: frameIndex.
+                        frameIndex = currentFrameIndex
+                            ifTrue: [ 
+                                aStream
+                                    nextPutAll:
+                                        (Text
+                                            string: '==> '
+                                            attributes:
+                                                {(TextEmphasis bold).
+                                                (TextColor red)}) ].
+                        stackFrame renderText: #'basic' on: aStream indent: indent.
+                        frameIndex < size
+                            ifTrue: [ aStream cr ] ] ]

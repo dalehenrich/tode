@@ -1,7 +1,8 @@
 command definition
 installTestNodes
-    | testNode |
-    testNode := self rootNode childNamed: 'testScripts' addIfAbsent: true.
+    | testNode topezNode |
+    topezNode := self rootNode childNamed: 'topez' addIfAbsent: true.
+    testNode := topezNode childNamed: 'tests' addIfAbsent: true.
     testNode
         addLeaf: 'test_topez'
             contents:
