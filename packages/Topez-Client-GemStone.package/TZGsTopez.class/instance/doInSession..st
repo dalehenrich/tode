@@ -4,7 +4,7 @@ doInSession: aBlock
     proxy := [ 
     | result |
     result := aBlock value: self session.
-    STON fromString: result ]
+    (self readerClass on: result readStream) next ]
         on: GsRuntimeError
         do: [ :ex | 
             proxy := ex tag asTopezProxy.

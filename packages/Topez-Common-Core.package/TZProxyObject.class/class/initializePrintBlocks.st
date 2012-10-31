@@ -17,7 +17,7 @@ initializePrintBlocks
             put: [ :proxy :aStream :indent | aStream nextPutAll: (Text string: proxy proxyPrintString attribute: (TextColor color: Color blue)) ];
         at: #'basic'
             forClass: 'TZMethodElement'
-            put: [ :proxy :aStream :indent | aStream nextPutAll: proxy selector proxyPrintString ];
+            put: [ :proxy :aStream :indent | aStream nextPutAll: proxy selector asTopezNative ];
         at: #'label'
             forClasses: #('TZMethodElement' 'TZMessageElement')
             put: [ :proxy :aStream :indent | 
@@ -97,7 +97,7 @@ initializePrintBlocks
             put: [ :proxy :aStream :indent | 
                     aStream
                         tab: indent;
-                        nextPutAll: proxy frameIndex proxyPrintString;
+                        nextPutAll: proxy frameIndex asTopezNative printString;
                         space.
                     (self printBlocks at: #'debugger' forClass: 'TZStackFrameElement' ifAbsent: [  ])
                         value: proxy
@@ -142,7 +142,7 @@ initializePrintBlocks
             put: [ :proxy :aStream :indent | 
                     aStream
                         tab: indent;
-                        nextPutAll: proxy frameIndex proxyPrintString;
+                        nextPutAll: proxy frameIndex asTopezNative printString;
                         space;
                         nextPutAll: (Text string: proxy inClass name attribute: TextEmphasis bold);
                         nextPutAll:
@@ -153,7 +153,7 @@ initializePrintBlocks
                                             (TextColor gray)});
                         nextPutAll:
                                 (Text
-                                        string: proxy selector proxyPrintString
+                                        string: proxy selector asTopezNative
                                         attributes:
                                             {(TextEmphasis bold).
                                             (TextColor blue)});

@@ -1,3 +1,5 @@
 *topez-common-core
 asTZString
-    ^ self
+	"native string reference is better ... need to cut down on the size of the STON string"
+
+    ^ ''

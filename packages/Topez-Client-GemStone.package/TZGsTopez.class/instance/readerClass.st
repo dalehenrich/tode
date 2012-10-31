@@ -1,0 +1,3 @@
+metacello
+readerClass
+    ^ TZStonReader
