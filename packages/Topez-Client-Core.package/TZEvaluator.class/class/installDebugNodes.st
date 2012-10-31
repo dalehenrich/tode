@@ -1,8 +1,9 @@
 command definition
 installDebugNodes
-    | debugNode homeNode |
-    homeNode := self rootNode childNamed: 'home' addIfAbsent: true.
-    debugNode := homeNode childNamed: 'debug' addIfAbsent: true.
+    | debugNode topezNode scriptNode |
+    topezNode := self rootNode childNamed: 'topez' addIfAbsent: true.
+    scriptNode := topezNode childNamed: 'scripts' addIfAbsent: true.
+    debugNode := scriptNode childNamed: 'debug' addIfAbsent: true.
     debugNode
         addLeaf: 'debugMode'
             contents:

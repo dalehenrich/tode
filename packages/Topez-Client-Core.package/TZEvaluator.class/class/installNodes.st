@@ -1,6 +1,6 @@
 command definition
 installNodes
-    | homeNode |
+    | homeNode topezNode scriptNode |
     self
         installRootNodes;
         installDebugNodes;
@@ -22,8 +22,10 @@ installNodes
                 addBlock: [ :binDir :commandName :block | self commands at: commandName put: block ];
                 removeBlock: [ :binDir :commandName | self commands removeKey: commandName ];
                 yourself).
+    topezNode := self rootNode childNamed: 'topez' addIfAbsent: true.
+    scriptNode := topezNode childNamed: 'scripts' addIfAbsent: true.
     homeNode := self rootNode childNamed: 'home' addIfAbsent: true.
-    homeNode
+    scriptNode
         addLeaf: 'array'
             contents:
                 '#!/bin/input
@@ -58,10 +60,10 @@ TZTopez initialize.
 TZGsTopez initialize.
 TZNativeTopez initialize.
 TZSmalltalkEditor initialize.
-(self lookup: ''/bin'') addLeaf: ''init'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/init''].
-(self lookup: ''/bin'') addLeaf: ''enableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/debug/enableDebugMode''].
-(self lookup: ''/bin'') addLeaf: ''disableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/debug/disableDebugMode''].
-(self lookup: ''/bin'') addLeaf: ''refresh'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /home/topez''].
+(self lookup: ''/bin'') addLeaf: ''init'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/init''].
+(self lookup: ''/bin'') addLeaf: ''enableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/debug/enableDebugMode''].
+(self lookup: ''/bin'') addLeaf: ''disableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/debug/disableDebugMode''].
+(self lookup: ''/bin'') addLeaf: ''refresh'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/topez''].
 ''...initialization complete''.
 %
 ';
