@@ -66,4 +66,18 @@ TZEvaluator systemReinitialize.
 ''...initialization complete''.
 %
 input /topez/scripts/init';
+        addLeaf: 'reload'
+            contents:
+                '#!/bin/input
+run
+Metacello image
+	baseline: #(''Topez'');
+	silently;
+	get.
+
+Metacello image
+	baseline: #(''Topez'');
+	silently;
+	load.
+%';
         yourself
