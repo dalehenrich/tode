@@ -45,26 +45,25 @@ edit stack';
         addLeaf: 'topez'
             contents:
                 '#!/bin/input
-set project Topez
-edit prtests
-edit prclasses';
+edit /projects/Topez/classes';
         addLeaf: 'init'
             contents:
                 '#!/bin/input
 topez
-TZGsEvaluator initialize.
-TZNativeEvaluator initialize.
-TZObject initialize.
-TZProxyObject initialize.
-TZTopez initialize.
-TZGsTopez initialize.
-TZNativeTopez initialize.
-TZSmalltalkEditor initialize.
 (self lookup: ''/topez/bin'') addLeaf: ''init'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/init''].
 (self lookup: ''/topez/bin'') addLeaf: ''enableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/debug/enableDebugMode''].
 (self lookup: ''/topez/bin'') addLeaf: ''disableDebug'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/debug/disableDebugMode''].
 (self lookup: ''/topez/bin'') addLeaf: ''refresh'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/topez''].
+(self lookup: ''/topez/bin'') addLeaf: ''sysinit'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/sysinit''].
+(self lookup: ''/topez/bin'') addLeaf: ''reload'' contents: [ :eval :topez :tokens |  eval evaluate: ''input /topez/scripts/reload''].
+''...initialization complete''.
+%';
+        addLeaf: 'sysinit'
+            contents:
+                '#!/bin/input
+topez
+TZEvaluator systemReinitialize.
 ''...initialization complete''.
 %
-';
+input /topez/scripts/init';
         yourself

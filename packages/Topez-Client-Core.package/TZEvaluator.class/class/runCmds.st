@@ -14,6 +14,36 @@ runCmds
                                     topez run: doitStream contents ].
                             '' ]
                         ifFalse: [ topez run: (topez lookup: (tokens at: 2)) contents ] ];
+        at: 'save'
+            put: [ :evaluator :topez :tokens | 
+                    | projectNode |
+                    projectNode := topez lookup: '/projects/' , (tokens at: 2).
+                    evaluator
+                        accumulateTextAndDo: [ :doitStream | 
+                            evaluator exception: nil.
+                            topez
+                                saveModifiedPackagesForProjectNamed: projectNode name
+                                commitMessage: doitStream contents ].
+                    '' ];
+        at: 'reload'
+            put: [ :evaluator :topez :tokens | 
+                    | projectNode |
+                    projectNode := topez lookup: '/projects/' , (tokens at: 2).
+                    evaluator exception: nil.
+                    topez
+                        run:
+                            'Metacello image
+	baseline: #(' , projectNode name printString
+                                ,
+                                    ');
+	silently;
+	get.
+Metacello image
+	baseline: #(' , projectNode name printString
+                                ,
+                                    ');
+	silently;
+	load.' ];
         at: 'inspect'
             put: [ :evaluator :topez :tokens | 
                     tokens size = 1

@@ -3,7 +3,9 @@ accumulateText: line
     | actionArray result stream |
     (line isNil or: [ line beginsWith: '%' ])
         ifFalse: [ 
-            inputStream nextPutAll: line.
+            inputStream
+                nextPutAll: line;
+                cr.
             ^ '' ].
     actionArray := self actionStack removeLast.
     stream := inputStream.
