@@ -22,6 +22,27 @@
    In the blue pill: "input /topez/scripts/init". And then in the topez
    window run "init"
 
+** How does TZEngine get instantiated on the GemStone system
+   In the blue world: TZGsTopez>>login
+   Takes the gemNRS spec and does a gciLogin
+   and then executes the following string in session (on GemStone):
+   #+begin_src smalltalk
+     TZEngine default toString: TZEngine default level: 0
+   #+end_src
+
+** Getting TZRubyClassElement to work
+
+   When I changed the TZRubyEngine>>findMatchingRubyClass:level: to create
+   TZRubyClassElements, rather than TZClassElements, it started displaying
+   in an "ugly" manner.  To fix that, I went to
+   TZProxyObject(c)>>initializePrintBlocks
+   and added (original code from the forClass 'TZClassElement' code):
+   #+begin_src smalltalk
+     at: #'label'
+       forClass: 'TZRubyClassElement'
+       put: [ :proxy :aStream :indent | aStream nextPutAll: proxy elementClassName asTopezNative ];
+   #+end_src
+
 ** Detailed notes on implementing "list rclass hash"
 
    The idea is to be able to open a Topez session on GemStone (green):
