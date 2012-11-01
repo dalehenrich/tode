@@ -43,6 +43,8 @@
 		"rawClassesInMetacelloProject:" : "DataCurator 10/29/2012 19:28",
 		"referencesTo:isMeta:in:" : "DataCurator 10/23/2012 16:23",
 		"referencesTo:isMeta:in:level:" : "DataCurator 10/22/2012 15:33",
+		"saveModifiedPackagesForProjectNamed:commitMessage:" : "DataCurator 11/01/2012 16:19",
+		"saveModifiedPackagesForProjectNamed:commitMessage:level:" : "DataCurator 11/01/2012 16:18",
 		"selectorsForClass:inClass:level:" : "DataCurator 10/23/2012 07:45",
 		"sendersOf:level:" : "DataCurator 10/22/2012 15:33",
 		"stackFor:level:" : "DataCurator 10/25/2012 22:45",
