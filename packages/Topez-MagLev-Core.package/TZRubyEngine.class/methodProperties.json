@@ -2,4 +2,5 @@
 	"class" : {
 		"default" : "DataCurator 10/25/2012 14:34" },
 	"instance" : {
+		"findMatchingRubyClasses:level:" : "DataCurator 11/01/2012 11:46",
 		"newRubyClassElement" : "DataCurator 10/25/2012 15:45" } }
