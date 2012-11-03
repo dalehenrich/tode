@@ -8,7 +8,8 @@ mczCmds
             put: [ :evaluator :topez :tokens | 
                     | projectNode diff |
                     projectNode := topez lookup: '/projects/' , (tokens at: 2).
-                    diff := '#!/bin/input' , String cr , (topez diffModifiedPackagesForProjectNamed: projectNode name).
+                    diff := '#!/bin/input' , String cr
+                        , (topez diffModifiedPackagesForProjectNamed: projectNode name) asTopezNative.
                     topez currentNode
                         addChildNode:
                             (TZBinLeafNode new
