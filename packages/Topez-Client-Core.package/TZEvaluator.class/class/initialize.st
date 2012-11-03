@@ -6,11 +6,11 @@ initialize
     commands := Dictionary new.
     subCommands := Dictionary new.
     self
-        findCmds;
-        runCmds;
         debuggerCmds;
         editCmds;
+        findCmds;
         listCmds;
+        mczCmds;
         runCmds;
         statusCmds;
         installNodes;
