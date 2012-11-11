@@ -1,9 +1,9 @@
 {
 	"class" : {
 		"hierarchyForClasses:classElementFactory:" : "dkh 10/23/2012 07:19",
-		"hierarchyForClasses:extensionClasses:classElementFactory:" : "dkh 10/23/2012 07:10",
+		"hierarchyForClasses:extensionClasses:classElementFactory:" : "dkh 11/09/2012 09:57",
 		"hierarchyOf:classElementFactory:" : "dkh 10/23/2012 07:19",
-		"processClassesBlock:classElementFactory:" : "dkh 10/23/2012 07:17",
+		"processClassesBlock:classElementFactory:" : "dkh 11/09/2012 09:59",
 		"processClassesBlock:elementBlock:" : "dkh 10/23/2012 07:25",
 		"subclassesOf:classElementFactory:" : "dkh 10/23/2012 07:20",
 		"superclassesOf:classElementFactory:" : "dkh 10/23/2012 07:20" },

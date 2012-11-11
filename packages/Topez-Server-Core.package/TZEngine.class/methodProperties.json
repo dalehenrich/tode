@@ -4,7 +4,7 @@
 	"instance" : {
 		"calculateSourceRangeEnd:in:" : "DataCurator 10/24/2012 12:03",
 		"calculateSourceRangeFor:frameIndex:ipOffset:in:for:" : "DataCurator 10/24/2012 08:40",
-		"classElementForClass:" : "DataCurator 10/23/2012 07:35",
+		"classElementForClass:" : "dkh 11/09/2012 09:48",
 		"classElementForClass:level:" : "DataCurator 10/22/2012 15:30",
 		"classNamesInMetacelloProject:" : "DataCurator 10/29/2012 15:32",
 		"classNamesInMetacelloProject:level:" : "DataCurator 10/29/2012 15:31",
@@ -58,4 +58,4 @@
 		"toString:level:" : "DataCurator 10/22/2012 15:33",
 		"toString:withOptions:" : "DataCurator 10/22/2012 15:33",
 		"toStringFromOop:level:" : "DataCurator 10/22/2012 15:33",
-		"writer" : "DataCurator 11/01/2012 10:31" } }
+		"writer" : "DataCurator 11/03/2012 15:21" } }

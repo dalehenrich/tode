@@ -6,5 +6,6 @@ processClassesBlock: classesBlock classElementFactory: classElementFactory
             classElementFactory newClassElement
                 elementClass: cl;
                 elementClassName: cl name;
+                elementSuperClassName: cl superclass name;
                 indent: (indents at: cl);
                 yourself ]

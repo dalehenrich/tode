@@ -1,3 +1,3 @@
 accessing
 writer
-    ^ TZGsStonWriter new
+    ^ TZStonWriter new

@@ -8,6 +8,7 @@ hierarchyForClasses: classList extensionClasses: extensionClassList classElement
             classElementFactory newClassElement
                 elementClass: cl;
                 elementClassName: cl name;
+                elementSuperClassName: cl superclass name;
                 indent: (indents at: cl);
                 inExtensionClassList: (extensionClassList includesKey: cl);
                 yourself ]
