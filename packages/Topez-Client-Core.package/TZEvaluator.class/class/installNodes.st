@@ -25,23 +25,16 @@ installNodes
                 removeBlock: [ :binDir :commandName | self commands removeKey: commandName ];
                 yourself).
     homeNode := self rootNode childNamed: 'home' addIfAbsent: true.
-    self scriptNode
-        addLeaf: 'array'
-            contents:
-                '#!/bin/input
-inspect
-{1. 2. 3. { 1. 2. {1. 2. }. 3. }. 4. }
-%';
+    homeNode
+        addLeaf: 'array' contents: '{1. 2. 3. { 1. 2. {1. 2. }. 3. }. 4. }';
         addLeaf: 'boom'
             contents:
-                '#!/bin/input
-run
-| coll |
+                '| coll |
 coll := #(1 2 3 4).
 [1 halt] value.
-^coll collect: [:each | each printString ].
-%
-edit stack';
+^coll collect: [:each | each printString ]';
+        yourself.
+    self scriptNode
         addLeaf: 'topez'
             contents:
                 '#!/bin/input

@@ -2,8 +2,7 @@ metacello
 diffModifiedPackagesForProjectNamed: projectName
     ^ self
         doInSession: [ :sess | 
-            self halt.
-            sess
+             sess
                 receiverNB: self currentEngine
                 performNoDebug: 'diffModifiedPackagesForProjectNamed:level:'
                 withArgs:

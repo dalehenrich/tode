@@ -15,4 +15,5 @@ initialize
         statusCmds;
         installNodes;
         nodeCmds;
-        yourself
+        demoCmds;
+        yourself	"demoCmds shoud be last, since it replaces soem commands"

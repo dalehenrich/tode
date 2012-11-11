@@ -10,6 +10,7 @@
 		"elementPackage",
 		"elementClass",
 		"elementClassName",
+		"elementSuperClassName",
 		"indent",
 		"isMeta" ],
 	"name" : "TZElement",
