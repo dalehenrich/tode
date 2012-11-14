@@ -17,15 +17,15 @@ shoutAboutToStyle: aPluggableShoutMorphOrView
                 ifTrue: [ 
                     self sourceElement proxyClassName = 'TZClassElement'
                         ifTrue: [ 
-                            aPluggableShoutMorphOrView classOrMetaClass: self sourceElement elementClass asBehavior.
+                            aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asBehavior.
                             ^ true ]
                         ifFalse: [ 
                             (#('TZMethodElement' 'TZFrameMethodElement' 'TZExecutedCodeElement' 'TZMessageElement' 'TZTemplateMethodElement')
                                 includes: self sourceElement proxyClassName)
                                 ifTrue: [ 
                                     self sourceElement isMeta asTopezNative
-                                        ifTrue: [ aPluggableShoutMorphOrView classOrMetaClass: self sourceElement elementClass asClassBehavior ]
-                                        ifFalse: [ aPluggableShoutMorphOrView classOrMetaClass: self sourceElement elementClass asBehavior ].
+                                        ifTrue: [ aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asClassBehavior ]
+                                        ifFalse: [ aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asBehavior ].
                                     ^ true ] ] ].
             self sourceElement className asString = 'TZDoItElement'
                 ifTrue: [ aPluggableShoutMorphOrView classOrMetaClass: nil ]

@@ -2,14 +2,15 @@ conversion
 asClassBehavior
     "have to get oop of class"
 
-    | classOop |
-    classOop := (TZGsMessageSend new
+    | messageSend classOop |
+    messageSend := TZGsMessageSend new
         topez: self topez;
-        receiver: (TZHeaderGemStone oop: self oop);
+        receiver: (TZHeaderGemStone oop: self elementClass oop);
         selector: 'class';
         arguments: {};
         transform: #'raw' -> nil;
-        yourself) value.
+        yourself.
+    TZGemStoneProxyBehavior critical: [ classOop := messageSend value ].
     ^ TZGemStoneProxyBehavior new
         behaviorOop: classOop;
         topez: self topez;
