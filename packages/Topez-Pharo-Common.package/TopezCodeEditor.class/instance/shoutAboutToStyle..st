@@ -20,7 +20,7 @@ shoutAboutToStyle: aPluggableShoutMorphOrView
                             aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asBehavior.
                             ^ true ]
                         ifFalse: [ 
-                            (#('TZMethodElement' 'TZFrameMethodElement' 'TZExecutedCodeElement' 'TZMessageElement')
+                            (#('TZMethodElement' 'TZFrameMethodElement' 'TZExecutedCodeElement' 'TZMessageElement' 'TZTemplateMethodElement')
                                 includes: self sourceElement proxyClassName)
                                 ifTrue: [ 
                                     self sourceElement isMeta asTopezNative

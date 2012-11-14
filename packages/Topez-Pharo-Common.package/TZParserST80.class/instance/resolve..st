@@ -19,8 +19,13 @@ resolve: aString
                 ifTrue: [ ^ #'workspaceVar' ] ].
     classOrMetaClass notNil
         ifTrue: [ 
-            (classOrMetaClass bindingOfClassPool: aString) ifNotNil: [ ^ #'classVar' ].
-            (classOrMetaClass bindingOfSharedPool: aString) ifNotNil: [ ^ #'poolConstant' ].
-            (classOrMetaClass bindingOfGlobal: aString) ifNotNil: [ ^ #'globalVar' ] ]
-        ifFalse: [ (environment bindingOfGlobal: aString asSymbol) ifNotNil: [ ^ #'globalVar' ] ].
+            (classOrMetaClass bindingOfClassPool: aString)
+                ifTrue: [ ^ #'classVar' ].
+            (classOrMetaClass bindingOfSharedPool: aString)
+                ifTrue: [ ^ #'poolConstant' ].
+            (classOrMetaClass bindingOfGlobal: aString)
+                ifTrue: [ ^ #'globalVar' ] ]
+        ifFalse: [ 
+            (environment bindingOfGlobal: aString asSymbol)
+                ifTrue: [ ^ #'globalVar' ] ].
     ^ #'undefinedIdentifier'

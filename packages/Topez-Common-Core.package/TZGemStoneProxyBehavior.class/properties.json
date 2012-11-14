@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"AllGlobalNames" ],
+		"AllGlobalNames",
+		"GciMutex" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"behaviorOop",
