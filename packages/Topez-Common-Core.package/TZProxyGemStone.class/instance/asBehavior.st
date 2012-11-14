@@ -1,6 +1,6 @@
 conversion
 asBehavior
     ^ TZGemStoneProxyBehavior new
-        behaviorOop: self classOop;
+        behaviorOop: self oop;
         topez: self topez;
         yourself
