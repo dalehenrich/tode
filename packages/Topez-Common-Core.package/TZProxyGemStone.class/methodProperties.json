@@ -2,7 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"asBehavior" : "dkh 10/6/2012 04:06",
+		"asBehavior" : "dkh 11/14/2012 06:45",
+		"asClassBehavior" : "dkh 11/14/2012 06:52",
 		"asTopezNative" : "dkh 10/10/2012 11:37",
 		"classOop" : "dkh 10/5/2012 07:50",
 		"collect:" : "dkh 10/7/2012 17:57",
@@ -11,6 +12,5 @@
 		"nativeDoesNotUnderstand:" : "dkh 10/10/2012 11:53",
 		"objectForOop" : "dkh 9/28/2012 18:57",
 		"oop" : "dkh 10/5/2012 07:50",
-		"proxyBehaviorForShout" : "dkh 10/11/2012 15:21",
 		"topez:" : "dkh 11/1/2012 10:15",
 		"topez:visited:" : "dkh 11/1/2012 10:16" } }

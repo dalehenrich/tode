@@ -1,5 +1,6 @@
 identifier testing
 resolve: aString
+    | sym |
     (#('self' 'super' 'true' 'false' 'nil' 'thisContext') includes: aString)
         ifTrue: [ ^ aString asSymbol ].
     (self isBlockTempName: aString)
@@ -10,4 +11,16 @@ resolve: aString
         ifTrue: [ ^ #'tempVar' ].
     (self isMethodArgName: aString)
         ifTrue: [ ^ #'methodArg' ].
-    ^ #'instVar'
+    (instanceVariables includes: aString)
+        ifTrue: [ ^ #'instVar' ].
+    workspace
+        ifNotNil: [ 
+            (workspace hasBindingOf: aString)
+                ifTrue: [ ^ #'workspaceVar' ] ].
+    classOrMetaClass notNil
+        ifTrue: [ 
+            (classOrMetaClass bindingOfClassPool: aString) ifNotNil: [ ^ #'classVar' ].
+            (classOrMetaClass bindingOfSharedPool: aString) ifNotNil: [ ^ #'poolConstant' ].
+            (classOrMetaClass bindingOfGlobal: aString) ifNotNil: [ ^ #'globalVar' ] ]
+        ifFalse: [ (environment bindingOfGlobal: aString asSymbol) ifNotNil: [ ^ #'globalVar' ] ].
+    ^ #'undefinedIdentifier'

@@ -1,6 +1,6 @@
 conversion
 asBehavior
-    "hackety hack"
-
-    self flag: #'hack'.
-    ^ Object
+    ^ TZGemStoneProxyBehavior new
+        behaviorOop: self classOop;
+        topez: self topez;
+        yourself

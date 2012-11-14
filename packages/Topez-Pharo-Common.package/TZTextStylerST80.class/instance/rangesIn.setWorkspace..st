@@ -7,4 +7,7 @@ rangesIn: aText setWorkspace: aBoolean
         workspace:
             (aBoolean
                 ifTrue: [ workspace ])
-        environment: environment
+        environment:
+            (TZGemStoneProxyBehavior new
+                topez: view model topez;
+                yourself)

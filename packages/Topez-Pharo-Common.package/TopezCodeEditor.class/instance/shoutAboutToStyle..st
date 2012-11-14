@@ -12,7 +12,25 @@ shoutAboutToStyle: aPluggableShoutMorphOrView
             (#('TZExecutedCodeElement' 'TZTextElement') includes: self sourceElement proxyClassName)
                 ifTrue: [ 
                     aPluggableShoutMorphOrView classOrMetaClass: nil.
-                    ^ true ] ].
+                    ^ true ].
+            self activeShout
+                ifTrue: [ 
+                    self sourceElement proxyClassName = 'TZClassElement'
+                        ifTrue: [ 
+                            aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asBehavior.
+                            ^ true ]
+                        ifFalse: [ 
+                            (#('TZMethodElement' 'TZFrameMethodElement' 'TZExecutedCodeElement' 'TZMessageElement')
+                                includes: self sourceElement proxyClassName)
+                                ifTrue: [ 
+                                    self sourceElement isMeta asTopezNative
+                                        ifTrue: [ aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asClassBehavior ]
+                                        ifFalse: [ aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asBehavior ].
+                                    ^ true ] ] ].
+            self sourceElement className asString = 'TZDoItElement'
+                ifTrue: [ aPluggableShoutMorphOrView classOrMetaClass: nil ]
+                ifFalse: [ aPluggableShoutMorphOrView classOrMetaClass: Object ].
+            ^ true ].
     ^ self sourceElement
         ifNotNil: [ 
             self activeShout
