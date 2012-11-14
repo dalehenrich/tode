@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Client-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"blockOopType",
+		"numArgs",
+		"blockSource" ],
+	"name" : "TZGsBlockSend",
+	"pools" : [
+		 ],
+	"super" : "TZGsExecutable",
+	"type" : "normal" }

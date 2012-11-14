@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Client-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topez",
+		"transform" ],
+	"name" : "TZGsExecutable",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
