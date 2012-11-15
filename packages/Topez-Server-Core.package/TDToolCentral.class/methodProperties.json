@@ -8,6 +8,7 @@
 		"installCommand:block:at:" : "DataCurator 11/14/2012 16:13",
 		"lookup:" : "DataCurator 11/14/2012 15:29",
 		"put:onStream:withOptions:" : "DataCurator 11/14/2012 10:31",
+		"removeChildrenAt:" : "DataCurator 11/14/2012 16:30",
 		"rootNode" : "DataCurator 11/14/2012 15:33",
 		"toString:" : "DataCurator 11/14/2012 10:29",
 		"toString:level:" : "DataCurator 11/14/2012 10:30",

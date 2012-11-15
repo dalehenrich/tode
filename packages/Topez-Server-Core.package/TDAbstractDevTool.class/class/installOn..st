@@ -1,5 +1,6 @@
 as yet unclassified
 installOn: aTDToolCentral
+    aTDToolCentral removeChildrenAt: self commandPath.
     ^ (Pragma allNamed: #'topezCommand:' in: self class)
         collect: [ :pragma | 
             | block |
