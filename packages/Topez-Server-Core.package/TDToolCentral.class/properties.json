@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		"rootNode" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"currentNode" ],
+	"name" : "TDToolCentral",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

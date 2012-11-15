@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"implementors" : "DataCurator 11/14/2012 15:05",
+		"references" : "DataCurator 11/14/2012 15:05",
+		"senders" : "DataCurator 11/14/2012 15:06",
+		"toolName" : "DataCurator 11/14/2012 15:27" },
+	"instance" : {
+		"implementorsOf:" : "DataCurator 11/14/2012 14:42",
+		"messageElementFor:selector:messagePattern:" : "DataCurator 11/14/2012 14:40",
+		"referencesTo:isMeta:in:" : "DataCurator 11/14/2012 14:43",
+		"sendersOf:" : "DataCurator 11/14/2012 14:36" } }

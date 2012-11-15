@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"elementCache" ],
+	"name" : "TDAbstractDevTool",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
