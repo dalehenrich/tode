@@ -9,7 +9,7 @@ defaultSessionDescription3101
                 stoneHost: 'localhost';
                 stoneName: 'seaside31';
                 gemHost: 'localhost';
-                netLDI: '49186';
+                netLDI: '50377';
                 gemTask: 'gemnetobject';
                 userId: 'DataCurator';
                 password: 'swordfish';

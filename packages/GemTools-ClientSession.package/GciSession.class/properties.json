@@ -10,7 +10,8 @@
 		"number",
 		"gemNRS",
 		"stoneNRS",
-		"userID" ],
+		"userID",
+		"clientForwarderCache" ],
 	"name" : "GciSession",
 	"pools" : [
 		 ],

@@ -18,7 +18,29 @@ getNbResult
     result := assoc value.
     (error := self getAndClearLastError) isNil
         ifTrue: [ ^ result ].
-    GsRuntimeError new
-        session: self;
-        tag: error;
-        signal
+    actionArgs := error number == 2336
+        ifTrue: [ 
+            GsClientForwarderSendNotification new
+                session: self;
+                tag: error;
+                signal ]
+        ifFalse: [ 
+            error number == 4100
+                ifTrue: [ 
+                    "Session is invalid ... session died out from under us, so clean up session and throw the error"
+                    self release ].
+            GsRuntimeError new
+                session: self;
+                tag: error;
+                signal ].
+    actionArgs isArray
+        ifTrue: [ 
+            (actionArgs at: 1) == #'resume'
+                ifTrue: [ continueWith := self library oopFor: (actionArgs at: 2) ]
+                ifFalse: [ ^ actionArgs halt: 'incorrect return value from GsRuntimeError handler' ] ]
+        ifFalse: [ 
+            actionArgs = #'resume'
+                ifTrue: [ continueWith := self library oopIllegal asOop ]
+                ifFalse: [ ^ actionArgs halt: 'incorrect return value from GsRuntimeError handler' ] ].
+    self library apiGciNbContinueWith: error context a: (self library oopTypeClass fromInteger: continueWith) a: 1.
+    ^ self getNbResult
