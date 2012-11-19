@@ -5,7 +5,9 @@
 	"instance" : {
 		"baseNodeFor:" : "dkh 11/18/2012 15:30",
 		"currentNode" : "dkh 11/18/2012 15:30",
-		"editList:label:inWindow:at:level:" : "DataCurator 11/18/2012 16:14",
+		"editElement:edittingCode:stylingActive:label:inWindow:at:level:" : "DataCurator 11/19/2012 13:39",
+		"editList:label:inWindow:at:level:" : "DataCurator 11/19/2012 13:38",
+		"evaluateTokens:" : "DataCurator 11/19/2012 15:36",
 		"installCommand:block:at:" : "dkh 11/18/2012 15:30",
 		"lookup:" : "dkh 11/18/2012 15:30",
 		"put:onStream:withOptions:" : "dkh 11/18/2012 15:30",

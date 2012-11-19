@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Client-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"windows",
+		"namedWindows" ],
+	"name" : "TDWindowStatus",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

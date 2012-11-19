@@ -5,7 +5,7 @@ performTransformOn: anOoptype
             | stonString |
             [ 
             stonString := self session
-                receiverNB: self topez currentEngine
+                receiverNB: self topez topezServerProxy
                 perform: 'toString:level:'
                 withArgs:
                     {anOoptype.

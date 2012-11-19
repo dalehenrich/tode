@@ -1,5 +1,5 @@
 as yet unclassified
-editStonList: aStonTZElement edittingCode: edittingCode stylingActive: stylingActive label: labelString inWindow: windowIdOrNil at: windowLocation
+editStonElement: aStonTZElement edittingCode: edittingCode stylingActive: stylingActive label: labelString inWindow: windowIdOrNil at: windowLocation
     | proxy |
     [ proxy := (self readerClass on: aStonTZElement readStream) next ]
         on: GsRuntimeError

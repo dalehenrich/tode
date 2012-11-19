@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"close" : "dkh 11/19/2012 14:54",
+		"collapse" : "dkh 11/19/2012 14:54",
+		"expand" : "dkh 11/19/2012 14:54",
+		"initialize" : "dkh 11/19/2012 15:11",
+		"namedWindows" : "dkh 11/19/2012 14:54",
+		"namedWindows:" : "dkh 11/19/2012 14:54",
+		"nextAvailableWindowId" : "dkh 11/19/2012 14:54",
+		"windowAt:" : "dkh 11/19/2012 14:54",
+		"windowAt:put:" : "dkh 11/19/2012 14:54",
+		"windowIsClosing" : "dkh 11/19/2012 14:54",
+		"windowNamesAndIds" : "dkh 11/19/2012 14:54" } }

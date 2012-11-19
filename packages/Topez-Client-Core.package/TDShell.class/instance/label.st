@@ -1,0 +1,3 @@
+stash
+label
+    ^ 'GemStone Shell'

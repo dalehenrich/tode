@@ -1,0 +1,22 @@
+{
+	"category" : "Topez-Client-Core",
+	"classinstvars" : [
+		"commands",
+		"subCommands",
+		"rootNode" ],
+	"classvars" : [
+		"DebugMode",
+		"EnableDebugger" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"windowStatus",
+		"topezClient",
+		"inputStream",
+		"actionStack",
+		"promptString",
+		"shellWindow" ],
+	"name" : "TDShell",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

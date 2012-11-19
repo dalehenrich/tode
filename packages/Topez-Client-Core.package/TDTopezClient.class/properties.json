@@ -1,0 +1,19 @@
+{
+	"category" : "Topez-Client-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"DefaultSessionDescription" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"exception",
+		"shell",
+		"session",
+		"sessionDescription",
+		"topezServerProxy",
+		"evaluateTokenMessage" ],
+	"name" : "TDTopezClient",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

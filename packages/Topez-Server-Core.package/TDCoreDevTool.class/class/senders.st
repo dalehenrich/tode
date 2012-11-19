@@ -2,13 +2,11 @@ as yet unclassified
 senders
     <topezCommand: 'senders'>
     ^ [ :topez :tokens :windowId | 
-    | id list |
-    id := windowId notNil
-        ifTrue: [ windowId ].
+    | list |
     list := TDCoreDevTool new sendersOf: (tokens at: 2).
     topez
         editList: list
         label: 'Senders of ' , (tokens at: 2)
-        inWindow: id
+        inWindow: windowId
         at: 'implementors'
         level: 2 ]

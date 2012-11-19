@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"implementors" : "DataCurator 11/18/2012 15:46",
-		"references" : "DataCurator 11/18/2012 15:45",
-		"senders" : "DataCurator 11/18/2012 15:45",
+		"implementors" : "DataCurator 11/19/2012 13:23",
+		"references" : "DataCurator 11/19/2012 13:23",
+		"senders" : "DataCurator 11/19/2012 13:24",
 		"toolName" : "DataCurator 11/14/2012 15:27" },
 	"instance" : {
 		"implementorsOf:" : "DataCurator 11/14/2012 14:42",
