@@ -6,8 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"topezClientForwarder",
 		"currentNode" ],
-	"name" : "TDToolCentral",
+	"name" : "TDTopezServer",
 	"pools" : [
 		 ],
 	"super" : "Object",
