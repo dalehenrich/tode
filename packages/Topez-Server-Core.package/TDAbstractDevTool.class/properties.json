@@ -6,7 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"elementCache" ],
+		"elementCache",
+		"topez",
+		"tokens",
+		"windowId" ],
 	"name" : "TDAbstractDevTool",
 	"pools" : [
 		 ],

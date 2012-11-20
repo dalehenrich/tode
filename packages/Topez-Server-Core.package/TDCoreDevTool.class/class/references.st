@@ -2,11 +2,11 @@ as yet unclassified
 references
     <topezCommand: 'references'>
     ^ [ :topez :tokens :windowId | 
-    | list |
-    list := TDCoreDevTool new referencesTo: (tokens at: 2).
-    topez
+    | tool list |
+    tool := TDCoreDevTool topez: topez tokens: tokens windowId: windowId.
+    list := tool referencesTo: (tokens at: 2).
+    tool
         editList: list
         label: 'References to ' , (tokens at: 2)
-        inWindow: windowId
         at: 'implementors'
         level: 2 ]

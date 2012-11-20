@@ -2,7 +2,16 @@
 	"class" : {
 		"basePath" : "DataCurator 11/14/2012 15:26",
 		"commandPath" : "DataCurator 11/14/2012 15:26",
-		"installOn:" : "DataCurator 11/14/2012 16:31",
-		"toolName" : "DataCurator 11/14/2012 15:27" },
+		"installOn:" : "DataCurator 11/20/2012 11:42",
+		"toolName" : "DataCurator 11/14/2012 15:27",
+		"topez:tokens:windowId:" : "DataCurator 11/20/2012 11:04" },
 	"instance" : {
-		"elementCache" : "DataCurator 11/14/2012 14:39" } }
+		"editList:label:at:level:" : "DataCurator 11/20/2012 11:12",
+		"editList:label:inWindow:at:level:" : "DataCurator 11/20/2012 11:13",
+		"elementCache" : "DataCurator 11/14/2012 14:39",
+		"tokens" : "DataCurator 11/20/2012 11:03",
+		"tokens:" : "DataCurator 11/20/2012 11:04",
+		"topez" : "DataCurator 11/20/2012 11:03",
+		"topez:" : "DataCurator 11/20/2012 11:03",
+		"windowId" : "DataCurator 11/20/2012 11:03",
+		"windowId:" : "DataCurator 11/20/2012 11:04" } }

@@ -2,11 +2,11 @@ as yet unclassified
 implementors
     <topezCommand: 'implementors'>
     ^ [ :topez :tokens :windowId | 
-    | list |
-    list := TDCoreDevTool new implementorsOf: (tokens at: 2).
-    topez
+    | tool list |
+    tool := TDCoreDevTool topez: topez tokens: tokens windowId: windowId.
+    list := tool implementorsOf: (tokens at: 2).
+    tool
         editList: list
         label: 'Implementors of ' , (tokens at: 2)
-        inWindow: windowId
         at: 'implementors'
         level: 2 ]
