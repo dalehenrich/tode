@@ -1,3 +1,3 @@
 evaluator engine
 adornmentColor
-    ^ Color yellow
+    ^ Color lightRed

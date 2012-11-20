@@ -1,5 +1,5 @@
 {
-	"category" : "Topez-Client-Core",
+	"category" : "Topez-Client-GemStone",
 	"classinstvars" : [
 		"commands",
 		"subCommands",
