@@ -1,3 +1,5 @@
 as yet unclassified
 evaluateTokens: tokens
-    ^ self evaluateTokenMessage value: tokens
+    | stonString |
+    stonString := STON toString: tokens.
+    ^ self evaluateTokenMessage value: {stonString}

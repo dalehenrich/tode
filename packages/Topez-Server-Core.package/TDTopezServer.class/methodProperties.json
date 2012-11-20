@@ -1,14 +1,15 @@
 {
 	"class" : {
-		"default" : "dkh 11/18/2012 15:30",
+		"commands" : "DataCurator 11/20/2012 09:01",
+		"default" : "DataCurator 11/20/2012 08:57",
 		"rootNode" : "dkh 11/18/2012 15:30" },
 	"instance" : {
 		"baseNodeFor:" : "dkh 11/18/2012 15:30",
-		"commands" : "DataCurator 11/19/2012 16:35",
+		"commands" : "DataCurator 11/20/2012 09:02",
 		"currentNode" : "dkh 11/18/2012 15:30",
 		"editElement:edittingCode:stylingActive:label:inWindow:at:level:" : "DataCurator 11/19/2012 13:39",
 		"editList:label:inWindow:at:level:" : "DataCurator 11/19/2012 13:38",
-		"evaluateTokens:" : "DataCurator 11/19/2012 16:41",
+		"evaluateTokens:" : "DataCurator 11/20/2012 10:18",
 		"installCommand:block:at:" : "DataCurator 11/19/2012 16:36",
 		"lookup:" : "dkh 11/18/2012 15:30",
 		"put:onStream:withOptions:" : "dkh 11/18/2012 15:30",

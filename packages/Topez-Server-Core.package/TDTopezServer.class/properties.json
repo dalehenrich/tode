@@ -1,14 +1,14 @@
 {
 	"category" : "Topez-Server-Core",
 	"classinstvars" : [
+		"commands",
 		"rootNode" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		"topezClientForwarder",
-		"currentNode",
-		"commands" ],
+		"currentNode" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],
