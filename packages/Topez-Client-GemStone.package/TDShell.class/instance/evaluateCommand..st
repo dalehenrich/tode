@@ -8,7 +8,7 @@ evaluateCommand: line
         ifTrue: [ ^ '' ].
     (self builtIns includes: (tokens at: 1))
         ifTrue: [ ^ self executeBuiltIn: tokens ].
-    [ ^ (self topezClient evaluateTokens: tokens) renderText ]
+    [ ^ (self topezClient evaluateTokens: tokens) convertTDEvaluateTokenResponseToText ]
         on: TZTopezNotification
         do: [ :ex | 
             self class enableDebugger

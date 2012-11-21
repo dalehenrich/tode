@@ -1,3 +1,3 @@
 accessing
 setCurrentNode: aTZNode
-    currentNode := aTZNode
+    ^ currentNode := aTZNode

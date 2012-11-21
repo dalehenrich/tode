@@ -7,5 +7,5 @@ evaluateTokenMessage
                 receiver: (TZHeaderGemStone oop: self topezServerOop);
                 selector: 'evaluateTokens:';
                 arguments: {#()};
-                transform: #'ston' -> 2 ].
+                transform: #'native' -> nil ].
     ^ evaluateTokenMessage

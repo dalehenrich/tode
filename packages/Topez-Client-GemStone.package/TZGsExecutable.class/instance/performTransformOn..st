@@ -15,4 +15,6 @@ performTransformOn: anOoptype
                     "internal error"
                     self halt ].
             ^ (self topez readerClass on: stonString readStream) next ].
+    self transform key == #'native'
+        ifTrue: [ ^ self session library localFor: anOoptype ].
     ^ anOoptype	"self transform key == #'raw'"
