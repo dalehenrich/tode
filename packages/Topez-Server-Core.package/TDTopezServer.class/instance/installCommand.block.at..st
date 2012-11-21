@@ -7,5 +7,5 @@ installCommand: commandName block: commandBlock at: commandPath
         addChildNode:
             (TZBinLeafNode new
                 name: commandName;
-                contents: commandBlock;
+                contents: commandBlock _sourceString;
                 yourself)
