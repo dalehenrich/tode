@@ -1,3 +1,7 @@
 as yet unclassified
 initialize
-    self installOn: TDTopezServer default
+    "self initialize"
+
+    | topez |
+    topez := TDTopezServer default.
+    self installOn: topez
