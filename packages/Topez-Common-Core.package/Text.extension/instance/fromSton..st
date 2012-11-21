@@ -2,6 +2,4 @@
 fromSton: stonReader
     "workaround for https://github.com/svenvc/ston/issues/4"
 
-    ^ self new
-        fromSton: stonReader;
-        yourself
+    stonReader parseMapDo: [ :instVarName :value | self instVarNamed: instVarName put: value ]
