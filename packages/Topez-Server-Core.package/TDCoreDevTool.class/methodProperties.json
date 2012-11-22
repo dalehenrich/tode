@@ -1,7 +1,9 @@
 {
 	"class" : {
+		"abort" : "DataCurator 11/21/2012 16:19",
 		"cat" : "DataCurator 11/20/2012 11:39",
 		"cd" : "DataCurator 11/20/2012 11:39",
+		"commit" : "DataCurator 11/21/2012 16:19",
 		"cp" : "DataCurator 11/20/2012 11:39",
 		"implementors" : "DataCurator 11/20/2012 11:13",
 		"initialize" : "DataCurator 11/20/2012 13:20",
@@ -16,11 +18,13 @@
 		"toolName" : "DataCurator 11/14/2012 15:27",
 		"touch" : "DataCurator 11/20/2012 11:41" },
 	"instance" : {
+		"abort" : "DataCurator 11/21/2012 16:18",
 		"cat" : "DataCurator 11/20/2012 11:31",
 		"cd" : "DataCurator 11/20/2012 11:32",
+		"commit" : "DataCurator 11/21/2012 16:19",
 		"cp" : "DataCurator 11/20/2012 11:33",
 		"implementorsOf:" : "DataCurator 11/14/2012 14:42",
-		"ls" : "DataCurator 11/20/2012 11:33",
+		"ls" : "DataCurator 11/21/2012 16:20",
 		"messageElementFor:selector:messagePattern:" : "DataCurator 11/14/2012 14:40",
 		"mkdir" : "DataCurator 11/20/2012 11:33",
 		"mv" : "DataCurator 11/20/2012 11:34",

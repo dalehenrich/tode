@@ -11,7 +11,8 @@
 		"session",
 		"sessionDescription",
 		"topezServerProxy",
-		"evaluateTokenMessage" ],
+		"evaluateTokenMessage",
+		"setExceptionMessage" ],
 	"name" : "TDTopezClient",
 	"pools" : [
 		 ],

@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"evaluator" : "dkh 11/21/2012 16:02",
 		"perform:" : "dkh 11/13/2012 14:45",
 		"performTransformOn:" : "dkh 11/20/2012 16:35",
 		"session" : "dkh 11/13/2012 14:06",
