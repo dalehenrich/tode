@@ -2,5 +2,5 @@ accessing
 exception: anException
     Transcript
         cr;
-        show: 'exception: ' , exception description printString.
+        show: 'exception: ' , exception class name printString.
     exception := anException

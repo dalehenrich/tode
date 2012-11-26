@@ -5,6 +5,13 @@
 		"defaultSessionDescription:" : "dkh 11/19/2012 16:10",
 		"defaultSessionDescription_c3101" : "dkh 11/19/2012 16:11" },
 	"instance" : {
+		"adornmentColor" : "dkh 11/26/2012 15:16",
+		"bounds" : "dkh 11/26/2012 15:06",
+		"editElement:edittingCode:stylingActive:label:inWindow:at:" : "dkh 11/26/2012 15:08",
+		"editList:label:inWindow:at:" : "dkh 11/26/2012 15:04",
+		"editStonElement:edittingCode:stylingActive:label:inWindow:at:" : "dkh 11/26/2012 15:11",
+		"editStonList:label:inWindow:at:" : "dkh 11/26/2012 15:10",
+		"editorWindowAt:" : "dkh 11/26/2012 15:05",
 		"evaluateTokenMessage" : "dkh 11/20/2012 16:32",
 		"evaluateTokens:" : "dkh 11/20/2012 10:16",
 		"evaluator" : "dkh 11/21/2012 16:02",
@@ -12,6 +19,7 @@
 		"exception:" : "dkh 11/21/2012 16:06",
 		"login" : "dkh 11/19/2012 16:02",
 		"logout" : "dkh 11/19/2012 15:43",
+		"nextAvailableWindowId" : "dkh 11/26/2012 15:04",
 		"readerClass" : "dkh 11/19/2012 15:57",
 		"session" : "dkh 11/19/2012 16:02",
 		"sessionDescription" : "dkh 11/19/2012 16:13",
@@ -19,5 +27,8 @@
 		"setExceptionMessage" : "dkh 11/21/2012 15:57",
 		"shell" : "dkh 11/19/2012 15:30",
 		"shell:" : "dkh 11/19/2012 15:30",
+		"stylerClass" : "dkh 11/26/2012 15:12",
 		"topezServerOop" : "dkh 11/19/2012 15:38",
-		"topezServerProxy" : "dkh 11/21/2012 12:13" } }
+		"topezServerProxy" : "dkh 11/21/2012 12:13",
+		"windowIdNamed:" : "dkh 11/26/2012 15:03",
+		"windowStatus" : "dkh 11/26/2012 15:03" } }
