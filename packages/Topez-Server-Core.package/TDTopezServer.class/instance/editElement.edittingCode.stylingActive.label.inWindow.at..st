@@ -1,7 +1,7 @@
 accessing
-editElement: anElement edittingCode: edittingCode stylingActive: stylingActive label: labelString inWindow: windowIdOrNil at: windowLocation
+editElement: aServerElement edittingCode: edittingCode stylingActive: stylingActive label: labelString inWindow: windowIdOrNil at: windowLocation
     ^ self
-        editElement: anElement
+        editElement: aServerElement
         edittingCode: edittingCode
         stylingActive: stylingActive
         label: labelString
