@@ -7,7 +7,7 @@ allInstVarNames
                 topez: self topez;
                 receiver: (TZHeaderGemStone oop: self behaviorOop);
                 selector: 'allInstVarNames';
-                arguments: {};
+                arguments: #();
                 transform: #'ston' -> 2.
             list := self critical: [ message value ].
             allInstVarNames := list collect: [ :each | each asTopezNative asString ] ].

@@ -4,5 +4,5 @@ getMessageSend
         topez: self topez;
         receiver: (self session asOopType: self serverElementOop);
         selector: self getSelector;
-        arguments: {#()};
+        arguments: #();
         transform: #'native' -> nil

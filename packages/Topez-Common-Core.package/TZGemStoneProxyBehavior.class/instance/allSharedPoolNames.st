@@ -7,7 +7,7 @@ allSharedPoolNames
                 topez: self topez;
                 receiver: (TZHeaderGemStone oop: self behaviorOop);
                 selector: 'allSharedPools';
-                arguments: {};
+                arguments: #();
                 transform: #'raw' -> nil.
             allSharedPoolsOop := self critical: [ message value ].
             block := TZGsBlockSend new

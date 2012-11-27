@@ -4,10 +4,10 @@
 		"mutex" : "dkh 11/14/2012 14:48",
 		"resetAllGlobalNames" : "dkh 11/14/2012 15:04" },
 	"instance" : {
-		"allClassVarNames" : "dkh 11/14/2012 10:17",
+		"allClassVarNames" : "dkh 11/26/2012 20:54",
 		"allGlobalNames" : "dkh 11/14/2012 10:16",
-		"allInstVarNames" : "dkh 11/14/2012 14:25",
-		"allSharedPoolNames" : "dkh 11/14/2012 10:19",
+		"allInstVarNames" : "dkh 11/26/2012 20:54",
+		"allSharedPoolNames" : "dkh 11/26/2012 20:55",
 		"behaviorOop" : "dkh 11/14/2012 06:10",
 		"behaviorOop:" : "dkh 11/14/2012 06:10",
 		"bindingOfClassPool:" : "dkh 11/14/2012 10:59",

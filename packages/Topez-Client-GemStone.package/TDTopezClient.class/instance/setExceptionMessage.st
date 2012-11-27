@@ -6,6 +6,6 @@ setExceptionMessage
                 topez: self;
                 receiver: (TZHeaderGemStone oop: self topezServerOop);
                 selector: 'exception:';
-                arguments: {#()};
+                arguments: #();
                 transform: #'raw' -> nil ].
     ^ setExceptionMessage

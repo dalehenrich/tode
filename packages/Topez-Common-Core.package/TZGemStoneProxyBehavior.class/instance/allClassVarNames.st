@@ -7,7 +7,7 @@ allClassVarNames
                 topez: self topez;
                 receiver: (TZHeaderGemStone oop: self behaviorOop);
                 selector: 'allClassVarNames';
-                arguments: {};
+                arguments: #();
                 transform: #'ston' -> 2.
             list := self critical: [ message value ].
             allClassVarNames := list collect: [ :each | each asTopezNative asString ] ].

@@ -1,5 +1,5 @@
 as yet unclassified
-edit
+editY
     tokens size = 1
         ifTrue: [ 
             "
@@ -34,5 +34,19 @@ edit
                     sub := (selector := theTokens at: 2) asSymbol.
                     block := topez commands at: sub ifAbsent: [  ].
                     block == nil
-                        ifTrue: [ (topez lookup: (tokens at: 2)) editElement: theTokens windowId: windowId ]
+                        ifTrue: [ 
+                            | node |
+                            node := topez lookup: (tokens at: 2).
+                            topez
+                                editElement:
+                                    (TZDoItElement new
+                                        elementClass: TZDoItElement;
+                                        elementClassName: 'TZDoItElement';
+                                        source: node contents;
+                                        yourself)
+                                edittingCode: false
+                                stylingActive: true
+                                label: node printString
+                                inWindow: windowId
+                                at: #'method' ]
                         ifFalse: [ block value: topez value: theTokens value: windowId ] ] ]

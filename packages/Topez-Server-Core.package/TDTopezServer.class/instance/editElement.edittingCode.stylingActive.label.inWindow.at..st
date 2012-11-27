@@ -3,7 +3,7 @@ editElement: aServerElement edittingCode: edittingCode stylingActive: stylingAct
     | clientElement |
     clientElement := TDClientSourceElement new
         clientForwarderOop: ClientForwarder new asOop;
-        serverElementOop: self asOop;
+        serverElementOop: aServerElement asOop;
         getSelector: #'source';
         setSelector: #'source';
         yourself.

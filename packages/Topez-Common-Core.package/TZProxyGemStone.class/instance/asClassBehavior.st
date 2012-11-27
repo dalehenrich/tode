@@ -7,7 +7,7 @@ asClassBehavior
         topez: self topez;
         receiver: (TZHeaderGemStone oop: self elementClass oop);
         selector: 'class';
-        arguments: {};
+        arguments: #();
         transform: #'raw' -> nil;
         yourself.
     TZGemStoneProxyBehavior critical: [ classOop := messageSend value ].
