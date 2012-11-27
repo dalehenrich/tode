@@ -44,7 +44,7 @@ edit
                                         elementClassName: 'TZDoItElement';
                                         source: node contents;
                                         yourself)
-                                edittingCode: true
+                                edittingCode: false
                                 stylingActive: true
                                 label: node printString
                                 inWindow: windowId
