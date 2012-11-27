@@ -8,4 +8,4 @@ saveModifiedPackagesForProjectNamed: projectName commitMessage: commitMessage
                 withArgs:
                     {projectName.
                     commitMessage.
-                    2} ]
+                    1} ]
