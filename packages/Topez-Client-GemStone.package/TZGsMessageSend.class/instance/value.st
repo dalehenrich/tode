@@ -1,3 +1,3 @@
 accessing
 value
-    ^ self value: self arguments asArray
+    ^ self perform: [ self session rawReceiverNB: self receiver perform: self selector asString withArgs: {} ]
