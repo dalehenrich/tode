@@ -7,10 +7,11 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"topez",
-		"clientForwarderOop",
 		"getSelector",
 		"setSelector",
-		"serverElementOop" ],
+		"serverElementOop",
+		"getMessageSend",
+		"setMessageSend" ],
 	"name" : "TDClientElement",
 	"pools" : [
 		 ],
