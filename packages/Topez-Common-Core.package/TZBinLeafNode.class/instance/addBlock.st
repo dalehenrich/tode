@@ -1,3 +1,3 @@
 as yet unclassified
 addBlock
-    ^ self parent addBlock
+    ^ [ :node :commandName :block | self parent addBlock value: node parent value: commandName value: block ]

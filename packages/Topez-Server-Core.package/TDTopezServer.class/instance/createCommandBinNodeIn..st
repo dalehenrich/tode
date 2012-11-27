@@ -4,20 +4,19 @@ createCommandBinNodeIn: node
     binNode := TZObjectNode new
         name: 'bin';
         extension: '*';
-        listBlock: [ :binDir | binDir basicContents keys sorted ];
-        elementBlock: [ :binDir :elementName :absentBlock | binDir basicContents at: elementName ];
-        addBlock: [ :binDir :commandName :block | 
+        listBlock: [ :objNode | objNode basicContents keys sorted ];
+        elementBlock: [ :objNode :elementName :absentBlock | objNode basicContents at: elementName ];
+        addBlock: [ :objNode :commandName :block | 
                     self commands at: commandName put: block.
-                    binDir basicContents
-                        at: commandName
-                        put:
+                    objNode
+                        addChildNode:
                             (TZBinLeafNode new
                                 name: commandName;
                                 contents: block _sourceString;
                                 yourself) ];
-        removeBlock: [ :binDir :commandName | 
+        removeBlock: [ :objNode :commandName | 
                     self commands removeKey: commandName.
-                    binDir basicContents removeKey: commandName ];
+                    objNode basicContents removeKey: commandName ];
         yourself.
     node addChildNode: binNode.
     ^ binNode
