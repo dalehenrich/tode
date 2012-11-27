@@ -2,4 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"clientForwarderOop" : "DataCurator 11/26/2012 19:48",
+		"clientForwarderOop:" : "DataCurator 11/26/2012 19:48",
+		"getSelector" : "DataCurator 11/26/2012 19:49",
+		"getSelector:" : "DataCurator 11/26/2012 19:49",
+		"serverElementOop" : "DataCurator 11/26/2012 19:53",
+		"serverElementOop:" : "DataCurator 11/26/2012 19:53",
+		"setSelector" : "DataCurator 11/26/2012 19:49",
+		"setSelector:" : "DataCurator 11/26/2012 19:49" } }

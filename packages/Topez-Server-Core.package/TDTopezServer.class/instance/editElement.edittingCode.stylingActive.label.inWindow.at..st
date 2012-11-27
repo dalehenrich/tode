@@ -1,7 +1,14 @@
 accessing
 editElement: aServerElement edittingCode: edittingCode stylingActive: stylingActive label: labelString inWindow: windowIdOrNil at: windowLocation
+    | clientElement |
+    clientElement := TDClientSourceElement new
+        clientForwarderOop: ClientForwarder new asOop;
+        serverElementOop: self asOop;
+        getSelector: #'source';
+        setSelector: #'source';
+        yourself.
     ^ self
-        editElement: aServerElement
+        editElement: clientElement
         edittingCode: edittingCode
         stylingActive: stylingActive
         label: labelString

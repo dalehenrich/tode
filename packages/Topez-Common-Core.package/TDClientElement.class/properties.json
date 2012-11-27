@@ -6,7 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"clientForwarderOop",
+		"getSelector",
+		"setSelector",
+		"serverElementOop" ],
 	"name" : "TDClientElement",
 	"pools" : [
 		 ],
