@@ -1,14 +1,16 @@
 as yet unclassified
 editElement: theTokens windowId: windowId
-    | id element |
+    | id clientElement |
     id := windowId notNil
         ifTrue: [ windowId ]
         ifFalse: [ topez windowIdNamed: #'method' ].
-    element := TDServerNodeElement new
-        node: self;
+    clientElement := TDClientSourceElement new
+        serverElementOop: self asOop;
+        getSelector: #'source';
+        setSelector: #'source';
         yourself.
     topez
-        editElement: element
+        editElement: clientElement
         edittingCode: false
         stylingActive: true
         label: self printString
