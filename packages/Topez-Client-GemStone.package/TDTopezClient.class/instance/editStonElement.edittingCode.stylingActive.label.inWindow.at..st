@@ -7,4 +7,4 @@ editStonElement: aStonString edittingCode: edittingCode stylingActive: styleingA
         label: labelString
         inWindow: windowIdOrNil
         at: windowLocation.
-    ^ nil
+    ^ ''

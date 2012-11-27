@@ -5,4 +5,4 @@ editStonList: aStonString label: labelString inWindow: windowIdOrNil at: windowL
         label: labelString
         inWindow: windowIdOrNil
         at: windowLocation.
-    ^ nil
+    ^ ''

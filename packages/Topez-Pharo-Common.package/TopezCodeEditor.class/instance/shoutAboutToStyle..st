@@ -27,7 +27,7 @@ shoutAboutToStyle: aPluggableShoutMorphOrView
                                         ifTrue: [ aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asClassBehavior ]
                                         ifFalse: [ aPluggableShoutMorphOrView classOrMetaClass: self sourceElement asBehavior ].
                                     ^ true ] ] ].
-            self sourceElement className asString = 'TZDoItElement'
+            self sourceElement proxyClassName asString = 'TZDoItElement'
                 ifTrue: [ aPluggableShoutMorphOrView classOrMetaClass: nil ]
                 ifFalse: [ aPluggableShoutMorphOrView classOrMetaClass: Object ].
             ^ true ].
