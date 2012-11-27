@@ -1,9 +1,10 @@
 accessing
 installCommand: commandName block: commandBlock at: commandPath
-    | node |
+    | node binNode |
     self commands at: commandName put: commandBlock.
     node := self installChildrenAt: commandPath.
-    ^ node
+    binNode := node childNamed: 'bin' ifAbsent: [ self createCommandBinNodeIn: node ].
+    ^ binNode
         addChildNode:
             (TZBinLeafNode new
                 name: commandName;

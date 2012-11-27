@@ -7,7 +7,7 @@ editElement: theTokens windowId: windowId
     clientElement := TDClientSourceElement new
         serverElementOop: self asOop;
         getSelector: #'source';
-        setSelector: #'source';
+        setSelector: #'source:';
         yourself.
     topez
         editElement: clientElement
