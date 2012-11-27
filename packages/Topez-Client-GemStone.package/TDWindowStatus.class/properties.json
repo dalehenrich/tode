@@ -7,7 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"windows",
-		"namedWindows" ],
+		"namedWindows",
+		"activeWindowIndex" ],
 	"name" : "TDWindowStatus",
 	"pools" : [
 		 ],
