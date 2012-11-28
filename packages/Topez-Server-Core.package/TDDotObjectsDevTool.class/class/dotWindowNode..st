@@ -9,17 +9,19 @@ dotWindowNode: aTDTopezServer
                 name: '.window';
                 listBlock: [ :winDir | #('model') ];
                 elementBlock: [ :winDir :elementName :absentBlock | 
-                            | serverModelOop |
                             elementName = 'model'
-                                ifFalse: [ self error: 'no such element: ' , elementName printString ].
-                            serverModelOop := winDir topez topezClientForwarder activeWindowServerModel.
-                            Transcript
-                                cr;
-                                show: 'dotWindowNode: [0]: ' , serverModelOop printString.
-                            TZLeafNode new
-                                name: 'model';
-                                contents: serverModelOop printString;
-                                yourself ];
+                                ifTrue: [ 
+                                    | serverModelOop serverObject |
+                                    serverModelOop := winDir topez topezClientForwarder activeWindowServerModel.
+                                    Transcript
+                                        cr;
+                                        show: 'dotWindowNode: [0]: ' , serverModelOop printString.
+                                    serverModelOop ifNotNil: [ serverObject := Object _objectForOop: serverModelOop ].
+                                    TZLeafNode new
+                                        name: 'model';
+                                        contents: serverModelOop printString;
+                                        yourself ]
+                                ifFalse: [ self error: 'no such element: ' , elementName printString ] ];
                 addBlock: [ :winDir :commandName :block |  ];
                 removeBlock: [ :winDir :commandName |  ];
                 yourself)
