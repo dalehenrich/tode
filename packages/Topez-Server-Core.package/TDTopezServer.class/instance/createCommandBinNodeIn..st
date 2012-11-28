@@ -1,7 +1,7 @@
 accessing
 createCommandBinNodeIn: node
     | binNode |
-    binNode := TZObjectNode new
+    binNode := TDObjectNode new
         name: 'bin';
         extension: '*';
         listBlock: [ :objNode | objNode basicContents keys sorted ];
@@ -10,7 +10,7 @@ createCommandBinNodeIn: node
                     self commands at: commandName put: block.
                     objNode
                         addChildNode:
-                            (TZBinLeafNode new
+                            (TDBinLeafNode new
                                 name: commandName;
                                 contents: block _sourceString;
                                 yourself) ];

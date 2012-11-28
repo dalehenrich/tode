@@ -5,7 +5,7 @@ dotWindowNode: aTDTopezServer
     node := aTDTopezServer installChildrenAt: '/home'.
     node
         addChildNode:
-            (TZObjectNode new
+            (TDObjectNode new
                 name: '.window';
                 listBlock: [ :winDir | #('model') ];
                 elementBlock: [ :winDir :elementName :absentBlock | 
@@ -17,7 +17,7 @@ dotWindowNode: aTDTopezServer
                                         cr;
                                         show: 'dotWindowNode: [0]: ' , serverModelOop printString.
                                     serverModelOop ifNotNil: [ serverObject := Object _objectForOop: serverModelOop ].
-                                    TZLeafNode new
+                                    TDLeafNode new
                                         name: 'model';
                                         contents: serverModelOop printString;
                                         yourself ]

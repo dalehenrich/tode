@@ -2,12 +2,12 @@
 	"class" : {
 		"commands" : "DataCurator 11/20/2012 09:01",
 		"default" : "DataCurator 11/20/2012 08:57",
-		"rootNode" : "dkh 11/18/2012 15:30" },
+		"rootNode" : "DataCurator 11/28/2012 05:40" },
 	"instance" : {
 		"baseNodeFor:" : "dkh 11/18/2012 15:30",
 		"commands" : "DataCurator 11/20/2012 09:02",
 		"createBlockFromSource:" : "DataCurator 11/27/2012 11:55",
-		"createCommandBinNodeIn:" : "DataCurator 11/27/2012 12:30",
+		"createCommandBinNodeIn:" : "DataCurator 11/28/2012 05:41",
 		"currentNode" : "dkh 11/18/2012 15:30",
 		"editElement:edittingCode:stylingActive:label:inWindow:at:" : "DataCurator 11/27/2012 03:07",
 		"editList:label:inWindow:at:" : "DataCurator 11/26/2012 14:13",
@@ -15,7 +15,7 @@
 		"evaluateTokens:" : "DataCurator 11/20/2012 16:23",
 		"exception:" : "DataCurator 11/26/2012 14:44",
 		"installChildrenAt:" : "DataCurator 11/20/2012 13:15",
-		"installCommand:block:at:" : "DataCurator 11/27/2012 11:04",
+		"installCommand:block:at:" : "DataCurator 11/28/2012 05:41",
 		"lookup:" : "dkh 11/18/2012 15:30",
 		"put:onStream:withOptions:" : "dkh 11/18/2012 15:30",
 		"removeChildrenAt:" : "DataCurator 11/27/2012 15:12",

@@ -6,7 +6,7 @@ installCommand: commandName block: commandBlock at: commandPath
     binNode := node childNamed: 'bin' ifAbsent: [ self createCommandBinNodeIn: node ].
     ^ binNode
         addChildNode:
-            (TZBinLeafNode new
+            (TDBinLeafNode new
                 name: commandName;
                 contents: commandBlock _sourceString;
                 yourself)
