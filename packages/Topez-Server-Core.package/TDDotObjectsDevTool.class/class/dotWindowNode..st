@@ -19,14 +19,12 @@ dotWindowNode: aTDTopezServer
                 yourself ].
     node
         addChildNode:
-            (TDObjectNode new
+            (TDBlockNode new
                 name: '.window';
                 basicContents: directory;
-                listBlock: [ :winDir | winDir basicContents keys sorted ];
-                elementBlock: [ :winDir :elementName :absentBlock | 
+                listBlock: [ :theNode | theNode basicContents keys sorted ];
+                elementBlock: [ :theNode :elementName :absentBlock | 
                             | block |
-                            block := winDir basicContents at: elementName ifAbsent: absentBlock.
-                            block value: winDir topez ];
-                addBlock: [ :winDir :commandName :block | self error: 'not allowed to add elements' ];
-                removeBlock: [ :winDir :commandName | self error: 'not allowed to remove elements' ];
+                            block := theNode basicContents at: elementName ifAbsent: absentBlock.
+                            block value: theNode topez ];
                 yourself)

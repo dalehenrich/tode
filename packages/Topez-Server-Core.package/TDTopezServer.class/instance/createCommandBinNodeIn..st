@@ -4,19 +4,19 @@ createCommandBinNodeIn: node
     binNode := TDBlockNode new
         name: 'bin';
         extension: '*';
-        listBlock: [ :objNode | objNode basicContents keys sorted ];
-        elementBlock: [ :objNode :elementName :absentBlock | objNode basicContents at: elementName ];
-        addBlock: [ :objNode :commandName :block | 
+        listBlock: [ :theNode | theNode basicContents keys sorted ];
+        elementBlock: [ :theNode :elementName :absentBlock | theNode basicContents at: elementName ];
+        addBlock: [ :theNode :commandName :block | 
                     self commands at: commandName put: block.
-                    objNode
+                    theNode
                         addChildNode:
                             (TDBinLeafNode new
                                 name: commandName;
                                 contents: block _sourceString;
                                 yourself) ];
-        removeBlock: [ :objNode :commandName | 
+        removeBlock: [ :theNode :commandName | 
                     self commands removeKey: commandName.
-                    objNode basicContents removeKey: commandName ];
+                    theNode basicContents removeKey: commandName ];
         yourself.
     node addChildNode: binNode.
     ^ binNode
