@@ -1,5 +1,5 @@
 *topez-server-core
-topezEdit: aTopez tokens: theTokens windowId: windowId
+topezEdit: aTopez aspect: aspect tokens: theTokens windowId: windowId
     | clientElement |
     clientElement := TDClientSourceElement new
         serverElementOop: self asOop;

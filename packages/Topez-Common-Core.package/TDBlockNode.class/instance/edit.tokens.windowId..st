@@ -4,4 +4,4 @@ edit: evaluator tokens: theTokens windowId: windowId
         editList: self objectCollection
         label: self printString
         inWindow: windowId
-        at: 'classes'
+        at: #'method'

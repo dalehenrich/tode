@@ -14,7 +14,8 @@ edit
                     ((tokens at: 2) beginsWith: '#')
                         ifTrue: [ 
                             windowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
-                            theTokens := tokens copyWithoutIndex: 2 ] ].
+                            theTokens := tokens copyWithoutIndex: 2 ]
+                        ifFalse: [ windowId := topez windowIdNamed: #'edit' ] ].
             ^ theTokens size = 1
                 ifTrue: [ topez activateWindow: windowId ]
                 ifFalse: [ 
