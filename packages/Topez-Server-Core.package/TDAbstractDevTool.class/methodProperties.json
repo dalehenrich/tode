@@ -2,7 +2,8 @@
 	"class" : {
 		"basePath" : "DataCurator 11/14/2012 15:26",
 		"commandPath" : "DataCurator 11/27/2012 10:06",
-		"installOn:" : "DataCurator 11/20/2012 11:42",
+		"initialize" : "DataCurator 11/27/2012 15:15",
+		"installOn:" : "DataCurator 11/27/2012 15:27",
 		"toolName" : "DataCurator 11/14/2012 15:27",
 		"topez:tokens:windowId:" : "DataCurator 11/20/2012 11:04" },
 	"instance" : {

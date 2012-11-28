@@ -4,4 +4,4 @@ initialize
 
     | topez |
     topez := TDTopezServer default.
-    self installOn: topez
+    self subclasses do: [ :cl | cl installOn: topez ]

@@ -24,4 +24,6 @@ oopFor: anObject
         ifTrue: [ ^ self oopForWideString: anObject ].
     (anObject isKindOf: WideSymbol)
         ifTrue: [ ^ self oopForWideSymbol: anObject ].
-    ^(anObject asOopTypeWith: self oopTypeClass) asOop
+    ^ (anObject respondsTo: #'asOopTypeWith:')
+        ifTrue: [ ^ (anObject asOopTypeWith: self oopTypeClass) asOop ]
+        ifFalse: [ self oopNil asOop ]
