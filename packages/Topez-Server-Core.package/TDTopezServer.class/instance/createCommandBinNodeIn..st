@@ -1,7 +1,7 @@
 accessing
 createCommandBinNodeIn: node
     | binNode |
-    binNode := TDObjectNode new
+    binNode := TDBlockNode new
         name: 'bin';
         extension: '*';
         listBlock: [ :objNode | objNode basicContents keys sorted ];

@@ -2,14 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"cat" : "dkh 11/28/2012 05:32",
+		"cat" : "DataCurator 11/28/2012 07:23",
 		"contents:" : "dkh 11/28/2012 05:32",
-		"edit:tokens:windowId:" : "dkh 11/28/2012 05:32",
-		"editElement:windowId:" : "dkh 11/28/2012 05:32",
+		"edit:tokens:windowId:" : "DataCurator 11/28/2012 07:17",
 		"isLeaf" : "dkh 11/28/2012 05:32",
 		"isTopezSourceNode" : "dkh 11/28/2012 05:32",
 		"listContents" : "dkh 11/28/2012 05:32",
 		"renderNameTextOn:" : "dkh 11/28/2012 05:32",
-		"renderText:on:indent:" : "dkh 11/28/2012 05:32",
-		"source" : "dkh 11/28/2012 05:32",
-		"source:" : "dkh 11/28/2012 05:32" } }
+		"renderText:on:indent:" : "dkh 11/28/2012 05:32" } }

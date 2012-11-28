@@ -1,3 +1,3 @@
 *topez-common-core
 cat
-    ^ self contents
+    ^ self contents asString

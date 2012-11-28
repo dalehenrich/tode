@@ -1,19 +1,9 @@
 as yet unclassified
 edit
     tokens size = 1
-        ifTrue: [ 
-            "
-                    | method |
-                    method := (evaluator stack at: evaluator currentFrameIndex) method.
-                    topez
-                        editDoIt: (topez sourceForMethod: method)
-                        inClass: evaluator status currentClass
-                        label: 'Method'
-                        inWindow: nil
-                        at: 'method' "
-             ]
+        ifTrue: [ self error: 'must supply an arg to edit command' ]
         ifFalse: [ 
-            | sub selector block theTokens |
+            | selector block theTokens |
             theTokens := tokens.
             windowId := nil.
             (tokens at: 2) isAllDigits
@@ -21,9 +11,6 @@ edit
                     windowId := (tokens at: 2) asNumber.
                     theTokens := tokens copyWithoutIndex: 2 ]
                 ifFalse: [ 
-                    Transcript
-                        cr;
-                        show: (tokens at: 2).
                     ((tokens at: 2) beginsWith: '#')
                         ifTrue: [ 
                             windowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
@@ -31,8 +18,8 @@ edit
             ^ theTokens size = 1
                 ifTrue: [ topez activateWindow: windowId ]
                 ifFalse: [ 
-                    sub := (selector := theTokens at: 2) asSymbol.
-                    block := topez commands at: sub ifAbsent: [  ].
+                    selector := (theTokens at: 2) asSymbol.
+                    block := topez commands at: selector ifAbsent: [  ].
                     block == nil
-                        ifTrue: [ (topez lookup: (tokens at: 2)) editElement: theTokens windowId: windowId ]
+                        ifTrue: [ (topez lookup: (tokens at: 2)) edit: topez tokens: theTokens windowId: windowId ]
                         ifFalse: [ block value: topez value: theTokens value: windowId ] ] ]

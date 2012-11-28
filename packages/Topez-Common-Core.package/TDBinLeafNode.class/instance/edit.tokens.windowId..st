@@ -1,15 +1,15 @@
 as yet unclassified
-editElement: theTokens windowId: windowId
+edit: aTopez tokens: theTokens windowId: windowId
     | id clientElement |
     id := windowId notNil
         ifTrue: [ windowId ]
-        ifFalse: [ topez windowIdNamed: #'method' ].
+        ifFalse: [ aTopez windowIdNamed: #'method' ].
     clientElement := TDClientSourceElement new
         serverElementOop: self asOop;
         getSelector: #'source';
         setSelector: #'source:';
         yourself.
-    topez
+    aTopez
         editElement: clientElement
         edittingCode: false
         stylingActive: true

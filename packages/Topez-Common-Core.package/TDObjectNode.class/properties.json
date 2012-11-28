@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"addBlock",
-		"collectionBlock",
-		"listBlock",
-		"elementBlock",
-		"removeBlock",
-		"extension" ],
+		 ],
 	"name" : "TDObjectNode",
 	"pools" : [
 		 ],
-	"super" : "TDDirectoryNode",
+	"super" : "TDBlockNode",
 	"type" : "normal" }
