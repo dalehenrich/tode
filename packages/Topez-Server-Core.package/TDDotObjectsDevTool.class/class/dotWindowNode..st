@@ -15,7 +15,7 @@ dotWindowNode: aTDTopezServer
             serverModelOop ifNotNil: [ serverObject := Object _objectForOop: serverModelOop ].
             TDLeafNode new
                 name: 'model';
-                contents: serverModelOop printString;
+                contents: serverObject;
                 yourself ].
     node
         addChildNode:

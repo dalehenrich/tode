@@ -3,7 +3,7 @@ topezEdit: aTopez tokens: theTokens windowId: windowId
     | clientElement |
     clientElement := TDClientSourceElement new
         serverElementOop: self asOop;
-        getSelector: #'printString';
+        getSelector: #'asString';
         readOnly: true;
         yourself.
     aTopez
