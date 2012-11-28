@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"readOnly" ],
 	"name" : "TDClientSourceElement",
 	"pools" : [
 		 ],

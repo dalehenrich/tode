@@ -1,15 +1,15 @@
-as yet unclassified
-edit: aTopez tokens: theTokens windowId: windowId
+*topez-server-core
+topezEdit: aTopez tokens: theTokens windowId: windowId
     | clientElement |
     clientElement := TDClientSourceElement new
         serverElementOop: self asOop;
-        getSelector: #'source';
-        setSelector: #'source:';
+        getSelector: #'printString';
+        readOnly: true;
         yourself.
     aTopez
         editElement: clientElement
         edittingCode: false
-        stylingActive: true
+        stylingActive: false
         label: self printString
         inWindow: windowId
         at: #'method'
