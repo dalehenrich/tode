@@ -11,8 +11,7 @@
 		"collectionBlock",
 		"listBlock",
 		"elementBlock",
-		"removeBlock",
-		"extension" ],
+		"removeBlock" ],
 	"name" : "TDBlockNode",
 	"pools" : [
 		 ],

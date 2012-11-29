@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"manPage",
+		"block" ],
 	"name" : "TDBinLeafNode",
 	"pools" : [
 		 ],

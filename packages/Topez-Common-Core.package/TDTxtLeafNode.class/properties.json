@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"readMe" ],
-	"name" : "TDDirectoryNode",
+		 ],
+	"name" : "TDTxtLeafNode",
 	"pools" : [
 		 ],
-	"super" : "TDNode",
+	"super" : "TDLeafNode",
 	"type" : "normal" }

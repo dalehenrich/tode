@@ -1,12 +1,11 @@
 accessing
 installCommand: commandName block: commandBlock at: commandPath
-    | node binNode |
-    self commands at: commandName put: commandBlock.
+    | node binNode commandNode |
     node := self installChildrenAt: commandPath.
     binNode := node childNamed: 'bin' ifAbsent: [ self createCommandBinNodeIn: node ].
-    ^ binNode
-        addChildNode:
-            (TDBinLeafNode new
-                name: commandName;
-                contents: commandBlock _sourceString;
-                yourself)
+    commandNode := TDBinLeafNode new
+        name: commandName;
+        block: commandBlock;
+        yourself.
+    binNode addBlock value: binNode value: commandNode.
+    ^ commandNode

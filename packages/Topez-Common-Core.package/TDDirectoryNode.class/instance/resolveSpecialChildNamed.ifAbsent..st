@@ -16,4 +16,10 @@ resolveSpecialChildNamed: childName ifAbsent: absentBlock
                 name: childName;
                 parent: self;
                 yourself ].
+    childName = '.readme'
+        ifTrue: [ 
+            ^ (self asTDObjectNode: self topez aspect: #'self')
+                name: childName;
+                parent: self;
+                yourself ].
     ^ absentBlock value

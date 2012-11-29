@@ -1,6 +1,6 @@
 as yet unclassified
 senders
-    <topezCommand: 'senders'>
+    <topezCommand: 'senders' manPage: #'emptyManPage'>
     ^ [ :topez :tokens :windowId | 
     | tool list |
     tool := TDCoreDevTool topez: topez tokens: tokens windowId: windowId.

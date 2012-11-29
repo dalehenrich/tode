@@ -1,6 +1,6 @@
 as yet unclassified
 references
-    <topezCommand: 'references'>
+    <topezCommand: 'references' manPage: #'emptyManPage'>
     ^ [ :topez :tokens :windowId | 
     | tool list |
     tool := TDCoreDevTool topez: topez tokens: tokens windowId: windowId.

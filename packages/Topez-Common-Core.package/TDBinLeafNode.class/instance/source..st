@@ -1,4 +1,5 @@
 as yet unclassified
 source: aString
     self contents: aString.
-    self addBlock value: self value: self name value: (self createBlockFromSource: aString)
+    block := self createBlockFromSource: aString.
+    self parent addBlock value: self parent value: self

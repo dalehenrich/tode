@@ -1,6 +1,6 @@
 as yet unclassified
 implementors
-    <topezCommand: 'implementors'>
+    <topezCommand: 'implementors' manPage: #'emptyManPage'>
     ^ [ :topez :tokens :windowId | 
     | tool list |
     tool := TDCoreDevTool topez: topez tokens: tokens windowId: windowId.

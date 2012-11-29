@@ -1,10 +1,11 @@
 as yet unclassified
 installOn: aTDTopezServer
     aTDTopezServer removeChildrenAt: self commandPath.
-    (Pragma allNamed: #'topezCommand:' in: self class)
+    (Pragma allNamed: #'topezCommand:manPage:' in: self class)
         collect: [ :pragma | 
-            | block |
+            | block node |
             block := self perform: pragma selector.
-            aTDTopezServer installCommand: (pragma argumentAt: 1) block: block at: self commandPath ].
+            node := aTDTopezServer installCommand: (pragma argumentAt: 1) block: block at: self commandPath.
+            node manPage: (self perform: (pragma argumentAt: 2)) ].
     (Pragma allNamed: #'topezNode:' in: self class)
         collect: [ :pragma | self perform: pragma selector with: aTDTopezServer ]

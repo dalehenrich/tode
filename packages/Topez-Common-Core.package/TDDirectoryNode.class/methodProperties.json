@@ -4,8 +4,6 @@
 	"instance" : {
 		"addChild:" : "dkh 11/28/2012 05:31",
 		"addChildNode:" : "dkh 11/28/2012 05:31",
-		"addLeaf:" : "dkh 11/28/2012 05:31",
-		"addLeaf:contents:" : "DataCurator 11/28/2012 05:40",
 		"basicContents" : "dkh 11/28/2012 05:31",
 		"childNamed:addIfAbsent:" : "dkh 11/28/2012 05:31",
 		"childNamed:ifAbsent:" : "DataCurator 11/28/2012 16:27",
@@ -14,5 +12,7 @@
 		"leafTemplate" : "dkh 11/28/2012 05:31",
 		"lookup:with:" : "dkh 11/28/2012 05:31",
 		"lookupPath:ifAbsent:" : "dkh 11/28/2012 05:31",
+		"readMe" : "DataCurator 11/29/2012 07:20",
+		"readMe:" : "DataCurator 11/29/2012 07:21",
 		"removeChildNode:" : "dkh 11/28/2012 05:31",
-		"resolveSpecialChildNamed:ifAbsent:" : "DataCurator 11/28/2012 16:33" } }
+		"resolveSpecialChildNamed:ifAbsent:" : "DataCurator 11/29/2012 07:22" } }

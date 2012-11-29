@@ -1,9 +1,9 @@
 accessing
 evaluateTokens: stonTokens
-    | tokens commandBlock text |
+    | tokens commandNode text |
     tokens := STON fromString: stonTokens.
-    commandBlock := self commands
+    commandNode := self commands
         at: (tokens at: 1)
         ifAbsent: [ ^ self error: 'Unknown command: ' , (tokens at: 1) printString ].
-    text := (commandBlock value: self value: tokens value: nil) renderText.
+    text := (commandNode block value: self value: tokens value: nil) renderText.
     ^ STON toString: text
