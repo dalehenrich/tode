@@ -18,8 +18,9 @@ resolveSpecialChildNamed: childName ifAbsent: absentBlock
                 yourself ].
     childName = '.readme'
         ifTrue: [ 
-            ^ (self asTDObjectNode: self topez aspect: #'self')
+            ^ TDTxtLeafNode new
                 name: childName;
                 parent: self;
+                contents: self readMe;
                 yourself ].
     ^ absentBlock value
