@@ -1,12 +1,4 @@
 as yet unclassified
 references
-    <topezCommand: 'references' manPage: #'emptyManPage'>
-    ^ [ :topez :tokens :windowId | 
-    | tool list |
-    tool := TDCoreDevTool topez: topez tokens: tokens windowId: windowId.
-    list := tool referencesTo: (tokens at: 2).
-    tool
-        editList: list
-        label: 'References to ' , (tokens at: 2)
-        at: 'implementors'
-        level: 2 ]
+    <topezCommand: 'references' manPage: #'referencesManPage'>
+    ^ [ :topez :tokens :windowId | (TDCoreDevTool topez: topez tokens: tokens windowId: windowId) referencesTo: (tokens at: 2) ]

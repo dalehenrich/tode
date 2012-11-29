@@ -4,11 +4,13 @@ cpManPage
     cp - copy nodes
 
 SYNOPSIS
-    cp source_node target_node
+    cp source_path target_path
 
 DESCRIPTION
     A copy (using the #copy message) is made of the 
-    `source_node` and installed in place of the `target_node`.
+    node at the location specified by `source_path`.
+    The copy is installed at the location specified by
+    `target_path`.
 
-    The `target_node` is returned.
+    The node at `target_path` is returned.
 '

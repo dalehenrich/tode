@@ -26,4 +26,8 @@ DESCRIPTION
 
     If no window exists with the given windowId, then a new
     window with the given name is created. 
+
+    A `windowId` is a purely numeric token (Integer) and a 
+    `windowName`  is the `#` character followed by alphanueric
+    characters (Symbol).
 '
