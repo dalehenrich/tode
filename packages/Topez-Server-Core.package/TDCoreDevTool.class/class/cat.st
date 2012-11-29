@@ -1,4 +1,4 @@
 as yet unclassified
 cat
-    <topezCommand: 'cat' manPage: #'emptyManPage'>
+    <topezCommand: 'cat' manPage: #'catManPage'>
     ^ [ :topez :tokens :windowId | (TDCoreDevTool topez: topez tokens: tokens windowId: windowId) cat ]

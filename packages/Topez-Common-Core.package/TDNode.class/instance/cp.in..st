@@ -11,4 +11,4 @@ cp: destinationPath in: baseNode
         ifFalse: [ self error: 'Cannot copy: ' , self printString , ' to: ' , destinationNode printString ].
     copy := self copy.
     copy name: newName.
-    destinationNode addChildNode: copy
+    ^ destinationNode addChildNode: copy

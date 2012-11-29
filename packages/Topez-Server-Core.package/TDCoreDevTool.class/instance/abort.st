@@ -1,4 +1,4 @@
 as yet unclassified
 abort
-    System abort.
+    System abortTransaction.
     ^ true
