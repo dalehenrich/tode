@@ -11,7 +11,9 @@ globalNames := IdentitySet new.
 System myUserProfile symbolList do: [:symbolDict |
 	globalNames addAll: symbolDict keys].
 globalNames asArray]';
-                transform: #'ston' -> 2.
-            list := self critical: [ block value ].
-            AllGlobalNames := list collect: [ :each | each asTopezNative ] ].
+                transform: #'ston' -> 1.
+            self
+                critical: [ 
+                    list := block value.
+                    AllGlobalNames := list collect: [ :each | each asTopezNative ] ] ].
     ^ AllGlobalNames

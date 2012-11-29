@@ -18,7 +18,9 @@ allSharedPoolNames
 						allSharedPools do: [:poolDict |
                          		sharedPoolNames addAll: poolDict keys].
 						allSharedPools asArray]';
-                transform: #'ston' -> 2.
-            list := self critical: [ block value: (TZHeaderGemStone oop: allSharedPoolsOop) ].
-            allSharedPoolNames := list collect: [ :each | each asTopezNative ] ].
+                transform: #'ston' -> 1.
+            self
+                critical: [ 
+                    list := block value: (TZHeaderGemStone oop: allSharedPoolsOop).
+                    allSharedPoolNames := list collect: [ :each | each asTopezNative ] ] ].
     ^ allSharedPoolNames

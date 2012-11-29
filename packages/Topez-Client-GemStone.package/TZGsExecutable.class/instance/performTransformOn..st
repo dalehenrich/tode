@@ -12,8 +12,10 @@ performTransformOn: anOoptype
                     (self transform value)} ]
                 on: GsRuntimeError
                 do: [ :ex | 
-                    "internal error"
-                    self halt ].
+                    Transcript
+                        cr;
+                        show: ex description.
+                    ex pass ].
             ^ (self topez readerClass on: stonString readStream) next ].
     self transform key == #'native'
         ifTrue: [ ^ self session library localFor: anOoptype ].
