@@ -2,6 +2,7 @@
 	"class" : {
 		"commands" : "DataCurator 11/20/2012 09:01",
 		"default" : "DataCurator 11/20/2012 08:57",
+		"reset" : "DataCurator 11/28/2012 16:15",
 		"rootNode" : "DataCurator 11/28/2012 05:40" },
 	"instance" : {
 		"baseNodeFor:" : "dkh 11/18/2012 15:30",

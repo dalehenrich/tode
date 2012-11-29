@@ -8,9 +8,11 @@
 		"addLeaf:contents:" : "DataCurator 11/28/2012 05:40",
 		"basicContents" : "dkh 11/28/2012 05:31",
 		"childNamed:addIfAbsent:" : "dkh 11/28/2012 05:31",
-		"childNamed:ifAbsent:" : "dkh 11/28/2012 05:31",
+		"childNamed:ifAbsent:" : "DataCurator 11/28/2012 16:27",
 		"contents" : "dkh 11/28/2012 05:31",
+		"dotSelfObject" : "DataCurator 11/28/2012 16:30",
 		"leafTemplate" : "dkh 11/28/2012 05:31",
 		"lookup:with:" : "dkh 11/28/2012 05:31",
 		"lookupPath:ifAbsent:" : "dkh 11/28/2012 05:31",
-		"removeChildNode:" : "dkh 11/28/2012 05:31" } }
+		"removeChildNode:" : "dkh 11/28/2012 05:31",
+		"resolveSpecialChildNamed:ifAbsent:" : "DataCurator 11/28/2012 16:33" } }

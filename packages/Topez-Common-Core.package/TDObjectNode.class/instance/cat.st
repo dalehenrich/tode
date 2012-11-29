@@ -1,3 +1,3 @@
 *topez-common-core
 cat
-    ^ self basicContents asString
+    ^ self basicContents class name describeClassName , '(' , self basicContents printString , ')'
