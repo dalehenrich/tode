@@ -1,5 +1,5 @@
 *topez-server-core
-topezEdit: aTopez aspect: aspect tokens: theTokens windowId: windowId
+topezEdit: aTopez label: labelString aspect: aspect tokens: theTokens windowId: windowId
     | clientElement |
     clientElement := TDClientSourceElement new
         serverElementOop: self asOop;
@@ -10,6 +10,6 @@ topezEdit: aTopez aspect: aspect tokens: theTokens windowId: windowId
         editElement: clientElement
         edittingCode: false
         stylingActive: false
-        label: self printString
+        label: labelString
         inWindow: windowId
         at: #'method'
