@@ -1,14 +1,14 @@
 {
-	"category" : "Topez-Common-Core",
+	"category" : "Topez-Server-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"block" ],
-	"name" : "TDScriptLeafNode",
+		 ],
+	"name" : "TDCoreNodeTool",
 	"pools" : [
 		 ],
-	"super" : "TDExecutableLeafNode",
+	"super" : "TDAbstractDevTool",
 	"type" : "normal" }

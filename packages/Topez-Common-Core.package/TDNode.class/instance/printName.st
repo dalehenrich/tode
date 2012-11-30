@@ -4,4 +4,4 @@ printName
         ifTrue: [ ^ '' ].
     ^ self isLeaf
         ifTrue: [ self name , self extension ]
-        ifFalse: [ self name , '/' ]
+        ifFalse: [ self name , self class directoryExtension ]
