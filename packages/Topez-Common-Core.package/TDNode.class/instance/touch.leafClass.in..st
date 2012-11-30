@@ -1,5 +1,5 @@
 as yet unclassified
-touch: destinationPath in: baseNode
+touch: destinationPath leafClass: leafClass in: baseNode
     | path newName destinationNode |
     path := destinationPath findTokens: '/'.
     newName := path last.
@@ -7,4 +7,8 @@ touch: destinationPath in: baseNode
     destinationNode := baseNode lookupPath: path ifAbsent: [ ^ self error: 'Node does not exist: ' , destinationPath ].
     destinationNode canEnter
         ifFalse: [ self error: 'Cannot touch: ' , destinationNode printString ].
-    ^ destinationNode addLeaf: newName
+    ^ destinationNode
+        addChildNode:
+            (leafClass new
+                name: newName;
+                yourself)
