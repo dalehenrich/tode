@@ -1,3 +1,3 @@
 as yet unclassified
-executableTextAttributes
+scriptTextAttributes
     ^ {(TextColor color: Color blue)}

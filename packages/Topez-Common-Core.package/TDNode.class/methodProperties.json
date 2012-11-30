@@ -1,9 +1,11 @@
 {
 	"class" : {
 		"directoryTextAttributes" : "DataCurator 11/29/2012 18:20",
-		"executableTextAttributes" : "DataCurator 11/29/2012 18:24",
 		"leafTextAttributes" : "DataCurator 11/29/2012 18:23",
-		"objectTextAttributes" : "DataCurator 11/29/2012 19:45" },
+		"objectTextAttributes" : "DataCurator 11/29/2012 19:45",
+		"scriptTextAttributes" : "dkh 11/29/2012 20:08",
+		"smalltalkTextAttributes" : "DataCurator 11/29/2012 20:34",
+		"topezTextAttributes" : "DataCurator 11/29/2012 20:36" },
 	"instance" : {
 		"canEnter" : "dkh 11/28/2012 05:31",
 		"canMove" : "dkh 11/28/2012 05:31",
