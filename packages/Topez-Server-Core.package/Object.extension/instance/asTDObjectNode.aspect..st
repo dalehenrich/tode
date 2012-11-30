@@ -6,10 +6,13 @@ asTDObjectNode: aTopez aspect: aspect
         basicContents: self;
         listBlock: [ :theNode | 
                     | indexedSize coll |
-                    coll := (theNode basicContents class allInstVarNames
-                        collect: [ :each | each asString , theNode extension ]) sorted.
+                    coll := theNode basicContents class allInstVarNames sorted
+                        collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ].
                     indexedSize := (Reflection sizeOf: theNode basicContents) - coll size.
-                    coll , ((1 to: indexedSize) collect: [ :each | each asString , theNode extension ]) ];
+                    coll
+                        ,
+                            ((1 to: indexedSize)
+                                collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ]) ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | obj |
                     obj := elementName isAllDigits

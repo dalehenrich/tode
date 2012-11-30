@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"FloatingNodes" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		"parent",

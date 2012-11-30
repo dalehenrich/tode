@@ -1,0 +1,19 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 11/29/2012 17:59",
+	"instvars" : [
+		"addBlock",
+		"editBlock",
+		"collectionBlock",
+		"listBlock",
+		"elementBlock",
+		"removeBlock" ],
+	"name" : "TDPluggableNode",
+	"pools" : [
+		 ],
+	"super" : "TDDirectoryNode",
+	"type" : "normal" }

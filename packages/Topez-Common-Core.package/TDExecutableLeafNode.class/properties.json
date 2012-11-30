@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"addBlock",
-		"editBlock",
-		"collectionBlock",
-		"listBlock",
-		"elementBlock",
-		"removeBlock" ],
-	"name" : "TDBlockNode",
+		"manPage" ],
+	"name" : "TDExecutableLeafNode",
 	"pools" : [
 		 ],
-	"super" : "TDDirectoryNode",
+	"super" : "TDLeafNode",
 	"type" : "normal" }

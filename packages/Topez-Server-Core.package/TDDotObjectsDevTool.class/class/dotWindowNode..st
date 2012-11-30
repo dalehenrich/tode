@@ -22,7 +22,9 @@ dotWindowNode: aTopez
             (TDObjectNode new
                 name: '.window';
                 basicContents: directory;
-                listBlock: [ :theNode | (theNode basicContents keys collect: [ :each | each , '@' ]) sorted ];
+                listBlock: [ :theNode | 
+                            theNode basicContents keys sorted
+                                collect: [ :each | theNode renderNameText: each , theNode extension textAttributes: theNode class objectTextAttributes ] ];
                 elementBlock: [ :theNode :elementName :absentBlock | 
                             | block |
                             block := theNode basicContents at: elementName ifAbsent: absentBlock.

@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"manPage",
 		"block" ],
 	"name" : "TDBinLeafNode",
 	"pools" : [
 		 ],
-	"super" : "TDLeafNode",
+	"super" : "TDExecutableLeafNode",
 	"type" : "normal" }

@@ -1,6 +1,3 @@
 as yet unclassified
 renderNameText
-    | textStream |
-    textStream := TextStream on: Text new.
-    self renderNameTextOn: textStream.
-    ^ textStream contents
+    ^ self renderNameText: self printName textAttributes: self renderNameTextAttributes

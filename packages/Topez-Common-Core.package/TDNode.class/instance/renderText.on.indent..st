@@ -1,3 +1,3 @@
 *topez-common-core
 renderText: attribute on: textStream indent: indent
-    textStream nextPutAll: (Text string: self printString attribute: TextEmphasis bold)
+    self renderNameText: self printString textAttributes: self renderNameTextAttributes on: textStream
