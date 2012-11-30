@@ -16,6 +16,7 @@ dotWindowNode: aTopez
             (serverObject asTDObjectNode: parentNode topez aspect: #'edit')
                 name: nodeName;
                 parent: parentNode;
+                topez: parentNode topez;
                 yourself ].
     node
         addChildNode:

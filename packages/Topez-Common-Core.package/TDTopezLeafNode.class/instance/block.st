@@ -1,3 +1,3 @@
 rendering
 block
-^ [ :topez :tokens :windowId | self contents ]
+    ^ [ :aTopez :tokens :windowId | aTopez evaluate: self contents ]

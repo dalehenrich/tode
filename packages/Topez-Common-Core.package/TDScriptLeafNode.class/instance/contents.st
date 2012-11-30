@@ -1,4 +1,4 @@
 as yet unclassified
 contents
-    contents ifNil: [ ^ '[ :evaluator :topez :tokens |  ]' ].
+    contents ifNil: [ ^ '[ :topez :tokens :windowId |  ]' ].
     ^ contents

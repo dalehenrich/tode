@@ -14,6 +14,6 @@ installExampleOn: aTDTopezServer
         addChildNode:
                 (TDScriptLeafNode new
                         name: 'script';
-                        contents: '[ :topez :tokens :windowId | ''hello world'' ]';
+                        block: [ :topez :tokens :windowId | 'hello world' ];
                         yourself);
         yourself

@@ -18,7 +18,7 @@ asTDObjectNode: aTopez aspect: aspect
                     obj := elementName isAllDigits
                         ifTrue: [ theNode basicContents at: elementName asNumber ]
                         ifFalse: [ theNode basicContents instVarNamed: elementName ].
-                    (obj asTDObjectNode: aTopez aspect: aspect)
+                    (obj asTDObjectNode: theNode topez aspect: aspect)
                         name: elementName;
                         parent: theNode;
                         yourself ];
