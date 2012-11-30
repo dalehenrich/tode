@@ -8,4 +8,7 @@ installOn: aTDTopezServer
             node := aTDTopezServer installCommand: (pragma argumentAt: 1) block: block at: self commandPath.
             node manPage: (self perform: (pragma argumentAt: 2)) ].
     (Pragma allNamed: #'topezNode:' in: self class)
-        collect: [ :pragma | self perform: pragma selector with: aTDTopezServer ]
+        collect: [ :pragma | self perform: pragma selector with: aTDTopezServer ].
+    (aTDTopezServer lookup: self commandPath)
+        readMe: self toolReadMe;
+        yourself
