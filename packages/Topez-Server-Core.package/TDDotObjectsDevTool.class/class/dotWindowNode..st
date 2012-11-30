@@ -9,14 +9,10 @@ dotWindowNode: aTopez
         put: [ :parentNode :nodeName | 
             | serverModelOop serverObject serverNode |
             serverModelOop := parentNode topez topezClientForwarder activeWindowServerModel.
-            Transcript
-                cr;
-                show: 'dotWindowNode: [0]: ' , serverModelOop printString.
             serverModelOop ifNotNil: [ serverObject := Object _objectForOop: serverModelOop ].
             (serverObject asTDObjectNode: parentNode topez aspect: #'edit')
                 name: nodeName;
                 parent: parentNode;
-                topez: parentNode topez;
                 yourself ].
     node
         addChildNode:
