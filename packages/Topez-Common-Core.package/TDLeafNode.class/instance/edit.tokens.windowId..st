@@ -1,8 +1,15 @@
 as yet unclassified
 edit: aTopez tokens: theTokens windowId: windowId
-    self contents
-        topezEdit: aTopez
+    | clientElement |
+    clientElement := TDClientSourceElement new
+        serverElementOop: self asOop;
+        getSelector: #'contents';
+        setSelector: #'contents:';
+        yourself.
+    aTopez
+        editElement: clientElement
+        edittingCode: false
+        stylingActive: true
         label: self printString
-        aspect: #'edit'
-        tokens: theTokens
-        windowId: windowId
+        inWindow: windowId
+        at: #'method'
