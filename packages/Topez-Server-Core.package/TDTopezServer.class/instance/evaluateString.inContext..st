@@ -1,3 +1,8 @@
 accessing
 evaluateString: aString inContext: anObject
-    ^ aString evaluateInContext: anObject symbolList: GsSession currentSession symbolList
+    | result |
+    result := aString evaluateInContext: anObject symbolList: GsSession currentSession symbolList.
+    self serverStatus
+        evaluateString: aString;
+        evaluateStringResult: result.
+    ^ result

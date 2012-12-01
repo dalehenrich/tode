@@ -1,3 +1,4 @@
 accessing
-setCurrentNode: aTZNode
-    ^ currentNode := aTZNode
+setCurrentNode: aTDNode
+    self serverStatus currentNode: aTDNode.
+    ^ aTDNode

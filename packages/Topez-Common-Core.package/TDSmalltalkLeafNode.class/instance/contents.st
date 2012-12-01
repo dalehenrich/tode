@@ -5,4 +5,4 @@ contents
             contents := '| tmp |
 tmp := 3 +4.
 ^tmp' ].
-    ^ contents
+    ^ contents value
