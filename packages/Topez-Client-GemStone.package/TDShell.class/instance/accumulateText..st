@@ -11,4 +11,4 @@ accumulateText: line
     stream := inputStream.
     promptString := actionArray at: 2.
     inputStream := actionArray at: 1.
-    ^ (self topez recordHistory: ((actionArray at: 3) value: stream)) renderText
+    ^ ((actionArray at: 3) value: stream) convertTDEvaluateTokenResponseToText

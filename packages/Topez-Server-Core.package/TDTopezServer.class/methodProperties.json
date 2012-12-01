@@ -5,6 +5,7 @@
 		"reset" : "DataCurator 11/28/2012 16:15",
 		"rootNode" : "DataCurator 11/28/2012 05:40" },
 	"instance" : {
+		"accumulateTextAndDo:" : "DataCurator 11/30/2012 18:13",
 		"baseNodeFor:" : "dkh 11/18/2012 15:30",
 		"commands" : "DataCurator 11/20/2012 09:02",
 		"createBlockFromSource:" : "DataCurator 11/27/2012 11:55",
@@ -15,6 +16,7 @@
 		"editList:label:inWindow:at:level:" : "DataCurator 11/19/2012 13:38",
 		"evaluate:" : "DataCurator 11/30/2012 15:26",
 		"evaluateSTONTokens:" : "DataCurator 11/30/2012 14:35",
+		"evaluateString:inContext:" : "DataCurator 11/30/2012 19:42",
 		"evaluateTokens:" : "DataCurator 11/30/2012 14:33",
 		"exception:" : "DataCurator 11/26/2012 14:44",
 		"installChildrenAt:" : "DataCurator 11/20/2012 13:15",
@@ -24,6 +26,7 @@
 		"removeChildrenAt:" : "DataCurator 11/27/2012 15:12",
 		"removeChildrenAt:select:" : "DataCurator 11/27/2012 15:11",
 		"rootNode" : "dkh 11/18/2012 15:30",
+		"serverTextDo:with:" : "DataCurator 11/30/2012 19:33",
 		"setCurrentNode:" : "DataCurator 11/20/2012 16:40",
 		"toString:" : "dkh 11/18/2012 15:30",
 		"toString:level:" : "dkh 11/18/2012 15:30",

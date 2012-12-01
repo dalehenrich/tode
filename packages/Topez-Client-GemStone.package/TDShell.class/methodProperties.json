@@ -5,8 +5,9 @@
 		"enableDebugger" : "dkh 11/19/2012 14:41",
 		"enableDebugger:" : "dkh 11/19/2012 14:41" },
 	"instance" : {
-		"accumulateText:" : "dkh 11/19/2012 14:41",
-		"accumulateTextAndDo:" : "dkh 11/19/2012 14:41",
+		"accumulateText:" : "dkh 11/30/2012 19:31",
+		"accumulateTextAndDo:" : "dkh 11/30/2012 18:27",
+		"accumulateTextAndServerDo:" : "dkh 11/30/2012 19:35",
 		"actionStack" : "dkh 11/19/2012 14:41",
 		"adornmentColor" : "dkh 11/19/2012 16:26",
 		"builtIns" : "dkh 11/19/2012 15:41",

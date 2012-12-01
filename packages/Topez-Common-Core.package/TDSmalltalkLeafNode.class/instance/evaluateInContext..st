@@ -1,3 +1,3 @@
 rendering
 evaluateInContext: anObject
-    ^ self contents evaluateInContext: anObject symbolList: GsSession currentSession symbolList
+    ^ self topez evaluateString: self context inContext: anObject
