@@ -1,5 +1,5 @@
 as yet unclassified
-dotRunStNode: aTDTopezServer
+haloRunStNode: aTDTopezServer
     <topezNode: '.run.st'>
     | node |
     node := aTDTopezServer installChildrenAt: '/home'.

@@ -1,5 +1,5 @@
 as yet unclassified
-dotWindowNode: aTopez
+haloWindowNode: aTopez
     <topezNode: '.window'>
     | node directory |
     node := aTopez installChildrenAt: '/home'.
