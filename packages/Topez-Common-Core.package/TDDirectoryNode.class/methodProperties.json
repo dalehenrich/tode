@@ -7,7 +7,7 @@
 		"basicContents" : "dkh 11/28/2012 05:31",
 		"block" : "DataCurator 12/01/2012 10:52",
 		"childNamed:addIfAbsent:" : "dkh 11/28/2012 05:31",
-		"childNamed:ifAbsent:" : "DataCurator 11/28/2012 16:27",
+		"childNamed:ifAbsent:" : "DataCurator 12/01/2012 16:26",
 		"contents" : "dkh 11/28/2012 05:31",
 		"dotSelfObject" : "DataCurator 11/28/2012 16:30",
 		"lookupPath:ifAbsent:" : "DataCurator 11/30/2012 15:00",
@@ -15,4 +15,4 @@
 		"readMe:" : "DataCurator 11/29/2012 07:21",
 		"removeChildNode:" : "dkh 11/28/2012 05:31",
 		"renderNameTextAttributes" : "DataCurator 11/29/2012 18:22",
-		"resolveSpecialChildNamed:ifAbsent:" : "DataCurator 11/29/2012 10:39" } }
+		"resolveSpecialChildNamed:ifAbsent:" : "DataCurator 12/01/2012 15:30" } }

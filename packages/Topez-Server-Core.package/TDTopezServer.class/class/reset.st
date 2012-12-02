@@ -1,3 +1,3 @@
 accessing
 reset
-    commands := rootNode := nil
+    halos := commands := rootNode := nil

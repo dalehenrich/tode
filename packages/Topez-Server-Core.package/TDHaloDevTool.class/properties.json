@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 12/01/2012 13:16",
+	"commentStamp" : "dkh 12/01/2012 16:44",
 	"instvars" : [
 		 ],
-	"name" : "TDHaloObjectsDevTool",
+	"name" : "TDHaloDevTool",
 	"pools" : [
 		 ],
 	"super" : "TDAbstractDevTool",
