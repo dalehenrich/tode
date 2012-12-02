@@ -1,3 +1,3 @@
 as yet unclassified
 contents
-    ^ self contentsBlock value: self
+    ^ self getContentsBlock value: self

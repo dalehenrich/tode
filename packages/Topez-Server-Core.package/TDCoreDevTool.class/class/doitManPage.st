@@ -4,7 +4,7 @@ doitManPage
     doit - evaluate smalltalk expressions in nodes
 
 SYNOPSIS
-    doit st_path [ context_path ]
+    doit st_path [ doit_receiver ]
 
 DESCRIPTION
 '

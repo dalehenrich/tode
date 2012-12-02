@@ -8,7 +8,8 @@ haloRunBlock: aTDTopezServer
                     TDPluggableLeafNode new
                         name: nodeName;
                         parent: parentNode;
-                        contentsBlock: [ :theNode | theNode topez serverStatus evaluateString ];
+                        getContentsBlock: [ :theNode | theNode topez serverStatus evaluateString ];
+                        setContentsBlock: [ :theNode :newContents | theNode topez serverStatus evaluateString: newContents ];
                         extensionBlock: [ :theNode | theNode class executableExtension ];
                         renderAttributeBlock: [ :theNode | theNode class smalltalkTextAttributes ];
                         yourself ];

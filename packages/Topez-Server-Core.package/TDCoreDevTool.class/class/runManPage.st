@@ -4,7 +4,7 @@ runManPage
     run - evaluate smalltalk expressions input from stdin
 
 SYNOPSIS
-    run [ receiver ]
+    run [ doit_receiver ]
 
 DESCRIPTION
 '
