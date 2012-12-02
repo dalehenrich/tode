@@ -1,3 +1,6 @@
 *topez-common-core
 renderText: attribute on: textStream indent: indent
-    textStream nextPutAll: self asString asText
+
+	attribute == #display
+		ifTrue: [ self tzNodeDisplayOn: textStream ] 
+		ifFalse: [ textStream nextPutAll: self asString asText ]
