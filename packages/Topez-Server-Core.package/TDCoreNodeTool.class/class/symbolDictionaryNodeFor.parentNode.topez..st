@@ -5,6 +5,8 @@ symbolDictionaryNodeFor: aSymbolDictionary parentNode: parentNode topez: aTopez
         parent: parentNode;
         readMe: (self symbolDictionaryReadMe: aSymbolDictionary name asString);
         basicContents: aSymbolDictionary;
+        extensionBlock: [ :theNode | theNode class directoryExtension ];
+        renderAttributeBlock: [ :theNode | theNode class directoryTextAttributes ];
         listBlock: [ :theNode | 
                     (theNode basicContents associations sort: [ :a :b | a key <= b key ])
                         collect: [ :assoc | 

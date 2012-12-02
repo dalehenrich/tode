@@ -4,14 +4,16 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 11/29/2012 17:59",
+	"commentStamp" : "",
 	"instvars" : [
 		"addBlock",
 		"editBlock",
 		"collectionBlock",
 		"listBlock",
 		"elementBlock",
-		"removeBlock" ],
+		"removeBlock",
+		"extensionBlock",
+		"renderAttributeBlock" ],
 	"name" : "TDPluggableNode",
 	"pools" : [
 		 ],
