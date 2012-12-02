@@ -8,7 +8,9 @@
 	"instvars" : [
 		"currentNode",
 		"evaluateString",
-		"evaluateStringResult" ],
+		"evaluateStringResult",
+		"exception",
+		"exceptionProcess" ],
 	"name" : "TDServerStatus",
 	"pools" : [
 		 ],

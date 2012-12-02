@@ -10,20 +10,20 @@ haloExceptionBlock: aTDTopezServer
                         parent: parentNode;
                         getContentsBlock: [ :theNode | 
                                     | ex |
-                                    ex := theNode topez exception.
+                                    ex := theNode topez serverStatus exception.
                                     ex == nil
                                         ifTrue: [ 'no exception' ]
                                         ifFalse: [ ex description ] ];
                         yourself ];
         at: 'ex'
             put: [ :parentNode :nodeName | 
-                    (parentNode topez exception asTDObjectNode: parentNode topez aspect: #'edit')
+                    (parentNode topez serverStatus exception asTDObjectNode: parentNode topez aspect: #'edit')
                         name: nodeName;
                         parent: parentNode;
                         yourself ];
         at: 'process'
             put: [ :parentNode :nodeName | 
-                    (parentNode topez exceptionProcess asTDObjectNode: parentNode topez aspect: #'edit')
+                    (parentNode topez serverStatus exceptionProcess asTDObjectNode: parentNode topez aspect: #'edit')
                         name: nodeName;
                         parent: parentNode;
                         yourself ];

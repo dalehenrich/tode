@@ -9,9 +9,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"topezClientForwarder",
-		"serverStatus",
-		"exception",
-		"exceptionProcess" ],
+		"serverStatus" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

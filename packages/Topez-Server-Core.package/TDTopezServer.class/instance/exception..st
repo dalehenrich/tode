@@ -1,3 +1,3 @@
 accessing
 exception: anException
-    self exception: anException process: nil
+    self serverStatus exception: anException process: nil
