@@ -1,28 +1,36 @@
 as yet unclassified
-haloRunBlock: aTDTopezServer
+haloExceptionBlock: aTDTopezServer
     | directory |
     directory := Dictionary new.
     directory
-        at: 'st'
+        at: 'description'
             put: [ :parentNode :nodeName | 
                     TDPluggableLeafNode new
                         name: nodeName;
                         parent: parentNode;
-                        getContentsBlock: [ :theNode | theNode topez serverStatus evaluateString ];
-                        setContentsBlock: [ :theNode :newContents | theNode topez serverStatus evaluateString: newContents ];
-                        extensionBlock: [ :theNode | theNode class executableExtension ];
-                        renderAttributeBlock: [ :theNode | theNode class smalltalkTextAttributes ];
+                        getContentsBlock: [ :theNode | 
+                                    | ex |
+                                    ex := theNode topez exception.
+                                    ex == nil
+                                        ifTrue: [ 'no exception' ]
+                                        ifFalse: [ ex description ] ];
                         yourself ];
-        at: 'result'
+        at: 'ex'
             put: [ :parentNode :nodeName | 
-                    (parentNode topez serverStatus evaluateStringResult asTDObjectNode: parentNode topez aspect: #'edit')
+                    (parentNode topez exception asTDObjectNode: parentNode topez aspect: #'edit')
+                        name: nodeName;
+                        parent: parentNode;
+                        yourself ];
+        at: 'process'
+            put: [ :parentNode :nodeName | 
+                    (parentNode topez exceptionProcess asTDObjectNode: parentNode topez aspect: #'edit')
                         name: nodeName;
                         parent: parentNode;
                         yourself ];
         yourself.
     ^ [ :parentNode | 
     TDObjectNode new
-        name: '.run';
+        name: '.exception';
         basicContents: directory;
         parent: parentNode;
         listBlock: [ :theNode | 

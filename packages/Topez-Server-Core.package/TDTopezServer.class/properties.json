@@ -10,7 +10,8 @@
 	"instvars" : [
 		"topezClientForwarder",
 		"serverStatus",
-		"exception" ],
+		"exception",
+		"exceptionProcess" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

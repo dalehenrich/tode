@@ -1,6 +1,3 @@
 accessing
 exception: anException
-    Transcript
-        cr;
-        show: 'exception: ' , exception class name printString.
-    exception := anException
+    self exception: anException process: nil

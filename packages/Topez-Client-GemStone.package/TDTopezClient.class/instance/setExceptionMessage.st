@@ -5,7 +5,7 @@ setExceptionMessage
             setExceptionMessage := TZGsMessageSend new
                 topez: self;
                 receiver: (TZHeaderGemStone oop: self topezServerOop);
-                selector: 'exception:';
+                selector: 'exception:process:';
                 arguments: #();
                 transform: #'raw' -> nil ].
     ^ setExceptionMessage

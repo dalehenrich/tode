@@ -1,4 +1,9 @@
 as yet unclassified
 exception: anException
+    | context |
     exception := anException.
-    self setExceptionMessage value: anException
+    context := exception ifNotNil: [ exception context ].
+    self setExceptionMessage
+        valueWithArguments:
+            {exception.
+            context}
