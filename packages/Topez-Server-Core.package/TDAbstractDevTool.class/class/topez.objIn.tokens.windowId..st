@@ -1,7 +1,8 @@
 as yet unclassified
-topez: aTopez tokens: anArray windowId: anInteger
+topez: aTopez objIn: anObject tokens: anArray windowId: anInteger
     ^ self new
         topez: aTopez;
+        objIn: anObject;
         tokens: anArray;
         windowId: anInteger;
         yourself

@@ -1,3 +1,3 @@
 *topez-common-core
 block
-    ^ [ :aTopez :tokens :windowId | self contents ]
+    ^ [ :aTopez :objIn :tokens :windowId | self contents ]

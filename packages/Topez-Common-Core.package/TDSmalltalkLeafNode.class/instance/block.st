@@ -1,3 +1,3 @@
 rendering
 block
-    ^ [ :aTopez :tokens :windowId | self evaluateInContext: nil ]
+    ^ [ :aTopez :objIn :tokens :windowId | self evaluateInContext: nil ]

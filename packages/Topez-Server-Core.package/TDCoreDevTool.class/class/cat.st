@@ -1,4 +1,9 @@
 as yet unclassified
 cat
     <topezCommand: 'cat' manPage: #'catManPage'>
-    ^ [ :topez :tokens :windowId | (TDCoreDevTool topez: topez tokens: tokens windowId: windowId) cat ]
+    ^ [ :topez :objIn :tokens :windowId | 
+    (TDCoreDevTool
+        topez: topez
+        objIn: objIn
+        tokens: tokens
+        windowId: windowId) cat ]

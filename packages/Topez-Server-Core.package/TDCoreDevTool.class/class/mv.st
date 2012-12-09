@@ -1,4 +1,9 @@
 as yet unclassified
 mv
     <topezCommand: 'mv' manPage: #'mvManPage'>
-    ^ [ :topez :tokens :windowId | (TDCoreDevTool topez: topez tokens: tokens windowId: windowId) mv ]
+    ^ [ :topez :objIn :tokens :windowId | 
+    (TDCoreDevTool
+        topez: topez
+        objIn: objIn
+        tokens: tokens
+        windowId: windowId) mv ]

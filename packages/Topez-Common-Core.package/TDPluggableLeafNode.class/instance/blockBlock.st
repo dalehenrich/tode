@@ -1,5 +1,5 @@
 as yet unclassified
 blockBlock
     blockBlock
-        ifNil: [ blockBlock := [ :aTopez :tokens :windowId | self topez evaluateString: self contents inContext: nil ] ].
+        ifNil: [ blockBlock := [ :aTopez :objIn :tokens :windowId | self topez evaluateString: self contents inContext: objIn ] ].
     ^ blockBlock

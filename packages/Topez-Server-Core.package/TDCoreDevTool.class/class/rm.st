@@ -1,4 +1,9 @@
 as yet unclassified
 rm
     <topezCommand: 'rm' manPage: #'rmManPage'>
-    ^ [ :topez :tokens :windowId | (TDCoreDevTool topez: topez tokens: tokens windowId: windowId) rm ]
+    ^ [ :topez :objIn :tokens :windowId | 
+    (TDCoreDevTool
+        topez: topez
+        objIn: objIn
+        tokens: tokens
+        windowId: windowId) rm ]

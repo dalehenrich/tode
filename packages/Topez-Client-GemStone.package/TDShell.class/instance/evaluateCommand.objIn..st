@@ -1,5 +1,5 @@
 evaluator engine
-evaluateCommand: line
+evaluateCommand: line objIn: objIn
     | tokens |
     (line notEmpty and: [ line first = $# ])
         ifTrue: [ ^ '' ].
@@ -7,8 +7,8 @@ evaluateCommand: line
     tokens isEmpty
         ifTrue: [ ^ '' ].
     (self builtIns includes: (tokens at: 1))
-        ifTrue: [ ^ self executeBuiltIn: tokens ].
-    [ ^ (self topezClient evaluateTokens: tokens) convertTDEvaluateTokenResponseToText ]
+        ifTrue: [ ^ self executeBuiltIn: tokens objIn: objIn ].
+    [ ^ (self topezClient evaluateTokens: tokens objIn: objIn) convertTDEvaluateTokenResponseToText ]
         on: TZTopezNotification
         do: [ :ex | 
             self class enableDebugger

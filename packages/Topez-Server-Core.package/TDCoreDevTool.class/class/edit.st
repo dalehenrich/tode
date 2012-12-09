@@ -1,4 +1,9 @@
 as yet unclassified
 edit
     <topezCommand: 'edit' manPage: #'editManPage'>
-    ^ [ :topez :tokens :windowId | (TDCoreDevTool topez: topez tokens: tokens windowId: windowId) edit ]
+    ^ [ :topez :objIn :tokens :windowId | 
+    (TDCoreDevTool
+        topez: topez
+        objIn: objIn
+        tokens: tokens
+        windowId: windowId) edit ]

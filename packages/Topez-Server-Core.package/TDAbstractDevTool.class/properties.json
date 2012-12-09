@@ -8,6 +8,7 @@
 	"instvars" : [
 		"elementCache",
 		"topez",
+		"objIn",
 		"tokens",
 		"windowId" ],
 	"name" : "TDAbstractDevTool",

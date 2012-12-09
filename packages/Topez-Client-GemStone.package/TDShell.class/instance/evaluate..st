@@ -7,9 +7,20 @@ evaluate: aString
     line := stream nextLine.
     line ~~ nil ]
         whileTrue: [ 
-            result := self actionStack notEmpty
-                ifTrue: [ self accumulateText: line ]
-                ifFalse: [ self evaluateCommand: line ] ].
+            self actionStack notEmpty
+                ifTrue: [ result := self accumulateText: line ]
+                ifFalse: [ 
+                    | isolatedCommands objIn |
+                    isolatedCommands := line findTokens: ';'.
+                    objIn := nil.
+                    isolatedCommands
+                        do: [ :isolatedCommand | 
+                            | pipedCommands |
+                            pipedCommands := isolatedCommand findTokens: '|'.
+                            pipedCommands
+                                do: [ :pipedCommand | 
+                                    result := self evaluateCommand: line objIn: objIn.
+                                    objIn := result ] ] ] ].
     ^ result ]
         on: Error
         do: [ :ex | 
