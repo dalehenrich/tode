@@ -9,7 +9,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"topezClientForwarder",
-		"serverStatus" ],
+		"serverStatus",
+		"lastResult" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

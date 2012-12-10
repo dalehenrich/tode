@@ -5,7 +5,7 @@ evaluateTokenMessage
             evaluateTokenMessage := TZGsMessageSend new
                 topez: self;
                 receiver: (TZHeaderGemStone oop: self topezServerOop);
-                selector: 'evaluateSTONTokens:objIn:';
+                selector: 'evaluateSTONTokens:';
                 arguments: #();
                 transform: #'native' -> nil ].
     ^ evaluateTokenMessage

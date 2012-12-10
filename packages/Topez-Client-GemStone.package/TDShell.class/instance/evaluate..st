@@ -10,17 +10,13 @@ evaluate: aString
             self actionStack notEmpty
                 ifTrue: [ result := self accumulateText: line ]
                 ifFalse: [ 
-                    | isolatedCommands objIn |
+                    | isolatedCommands |
                     isolatedCommands := line findTokens: ';'.
-                    objIn := nil.
                     isolatedCommands
                         do: [ :isolatedCommand | 
                             | pipedCommands |
                             pipedCommands := isolatedCommand findTokens: '|'.
-                            pipedCommands
-                                do: [ :pipedCommand | 
-                                    result := self evaluateCommand: line objIn: objIn.
-                                    objIn := result ] ] ] ].
+                            pipedCommands do: [ :pipedCommand | result := self evaluateCommand: pipedCommand ] ] ] ].
     ^ result ]
         on: Error
         do: [ :ex | 
