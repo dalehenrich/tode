@@ -1,5 +1,5 @@
 as yet unclassified
-edit: aTopez tokens: theTokens windowId: windowId
+edit: aTopez windowId: windowId
     ^ self editBlock
         value: self
         value: aTopez
