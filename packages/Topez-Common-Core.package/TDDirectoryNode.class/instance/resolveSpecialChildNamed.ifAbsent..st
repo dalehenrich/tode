@@ -4,4 +4,5 @@ resolveSpecialChildNamed: childName ifAbsent: absentBlock
         ifTrue: [ ^ self parent ].
     childName = '.'
         ifTrue: [ ^ self ].
+    self topez ifNil: [ ^ absentBlock value ].
     ^ self topez resolveHaloNamed: childName for: self ifAbsent: absentBlock
