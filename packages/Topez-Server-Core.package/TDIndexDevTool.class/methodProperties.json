@@ -2,9 +2,20 @@
 	"class" : {
 		"analyzeNsc" : "DataCurator 12/11/2012 20:55",
 		"analyzeNscManPage" : "DataCurator 12/11/2012 20:33",
-		"installHalosOn:" : "DataCurator 12/11/2012 20:45",
-		"installOn:" : "DataCurator 12/11/2012 20:38",
+		"installOn:" : "DataCurator 12/12/2012 10:03",
 		"toolName" : "DataCurator 12/11/2012 20:43",
 		"toolReadMe" : "DataCurator 12/11/2012 20:44" },
 	"instance" : {
-		"analyzeNsc" : "DataCurator 12/11/2012 21:22" } }
+		"analyzeNsc" : "DataCurator 12/12/2012 10:10",
+		"btreeNode:" : "DataCurator 12/12/2012 11:59",
+		"depListNode:" : "DataCurator 12/12/2012 11:34",
+		"indexDictionaryNode:" : "DataCurator 12/12/2012 13:34",
+		"indexDictionaryTupleNode:" : "DataCurator 12/12/2012 13:39",
+		"indexElementNode:" : "DataCurator 12/12/2012 11:25",
+		"indexListNode:" : "DataCurator 12/12/2012 13:44",
+		"indexNode:" : "DataCurator 12/12/2012 13:51",
+		"nodes" : "DataCurator 12/12/2012 11:26",
+		"nscNode:" : "DataCurator 12/12/2012 11:20",
+		"pathNameForIndex:" : "DataCurator 12/12/2012 11:56",
+		"pathTermNode:" : "DataCurator 12/12/2012 13:45",
+		"pathTermsNode:label:" : "DataCurator 12/12/2012 13:43" } }
