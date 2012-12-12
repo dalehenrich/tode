@@ -4,6 +4,6 @@ lookupPath: path ifAbsent: absentBlock
     node := self.
     path
         do: [ :elementName | 
-            node := node childNamed: elementName ifAbsent: absentBlock.
+            node := node childNamed: elementName ifAbsent: [ ^ absentBlock value ].
             node topez: self topez ].
     ^ node
