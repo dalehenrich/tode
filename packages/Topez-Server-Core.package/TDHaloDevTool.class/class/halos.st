@@ -2,7 +2,7 @@ as yet unclassified
 halos
     <topezCommand: 'halos' manPage: #'halosManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (TDHaloDevTool
         topez: topez
         objIn: objIn
         tokens: tokens
