@@ -14,7 +14,7 @@ pathTermNode: pathTerm
         topez: topez;
         basicContents: pathTerm;
         listBlock: [ :theNode | 
-                    ivNames , indexNameMap keys
+                    ivNames , indexNameMap keys asArray
                         collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | childNode |

@@ -4,6 +4,7 @@ depListNode: depList
     self nodes at: depList ifPresent: [ :theNode | ^ theNode ].
     map := Dictionary new.
     node := TDObjectNode new
+        name: 'depList';
         topez: topez;
         basicContents: depList;
         listBlock: [ :theNode | 
