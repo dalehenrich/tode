@@ -22,8 +22,8 @@ stGlobalsNode: aTopez
                                 ifFalse: [ 
                                     "selector == #'global'"
                                     symbolList resolveSymbol: globalName asSymbol ] ];
-                elementExtensionBlock: [ :theNode | theNode class objectExtension ];
-                elementRenderAttributeBlock: [ :theNode | theNode class objectTextAttributes ];
+                elementExtensionBlock: [ :theNode :elementName | theNode class objectExtension ];
+                elementRenderAttributeBlock: [ :theNode :elementName | theNode class objectTextAttributes ];
                 listBlock: [ :theNode | (theNode basicContents value: #'list' value: nil) collect: [ :assoc | assoc key asString ] ];
                 elementBlock: [ :theNode :elementName :absentBlock | 
                             | assoc |

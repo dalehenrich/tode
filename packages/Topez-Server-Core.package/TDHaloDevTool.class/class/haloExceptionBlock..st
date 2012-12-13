@@ -33,8 +33,8 @@ haloExceptionBlock: aTDTopezServer
         name: '.exception';
         basicContents: directory;
         parent: parentNode;
-        elementExtensionBlock: [ :theNode | theNode class objectExtension ];
-        elementRenderAttributeBlock: [ :theNode | theNode class objectTextAttributes ];
+        elementExtensionBlock: [ :theNode :elementName | theNode class objectExtension ];
+        elementRenderAttributeBlock: [ :theNode :elementName | theNode class objectTextAttributes ];
         listBlock: [ :theNode | theNode basicContents keys sorted ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | block |
