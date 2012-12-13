@@ -1,9 +1,9 @@
 as yet unclassified
-display
-    <topezCommand: 'display' manPage: #'displayManPage'>
+ds
+    <topezCommand: 'ds' manPage: #'dsManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
     (TDCoreDevTool
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) display ]
+        windowId: windowId) ds ]

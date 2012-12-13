@@ -1,5 +1,5 @@
 as yet unclassified
-display
+ds
     | node stream |
     node := tokens size = 1
         ifTrue: [ topez currentNode ]
@@ -7,9 +7,10 @@ display
     node isLeaf
         ifTrue: [ ^ node contents tzNodeDisplay ].
     stream := TextStream on: Text new.
-    node contents
-        do: [ :childName | 
-            | child |
-            child := node childNamed: childName ifAbsent: [  ].
-            child tzNodeDisplayOn: stream ].
+    node
+        childrenDo: [ :child | 
+            child renderNameTextOn: stream.
+            stream nextPutAll: ' -> '.
+            child dotSelfObject tzNodeDisplayOn: stream.
+            stream cr ].
     ^ stream contents
