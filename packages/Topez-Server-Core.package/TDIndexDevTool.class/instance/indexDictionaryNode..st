@@ -3,7 +3,6 @@ indexDictionaryNode: indexDictionary
     | collBkt tuples key value term node |
     indexDictionary == nil
         ifTrue: [ ^ nil ].
-    self nodes at: indexDictionary ifPresent: [ :theNode | ^ theNode ].
     tuples := Array new.
     1 to: indexDictionary _basicSize do: [ :i | 
         collBkt := indexDictionary _at: i.
@@ -18,10 +17,11 @@ indexDictionaryNode: indexDictionary
         basicContents: indexDictionary;
         listBlock: [ :theNode | (1 to: tuples size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
+                    elementName isAllDigits
+                        ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
                     (self indexDictionaryTupleNode: (tuples at: elementName asNumber))
                         parent: theNode;
                         name: elementName;
                         yourself ];
         yourself.
-    self nodes at: indexDictionary put: node.
     ^ node

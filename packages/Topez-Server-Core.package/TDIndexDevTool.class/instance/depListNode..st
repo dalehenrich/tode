@@ -1,7 +1,6 @@
 as yet unclassified
 depListNode: depList
     | node map |
-    self nodes at: depList ifPresent: [ :theNode | ^ theNode ].
     map := Dictionary new.
     node := TDObjectNode new
         name: 'depList';
@@ -23,10 +22,9 @@ depListNode: depList
                         names add: name asString ].
                     names ];
         elementBlock: [ :theNode :elementName :absentBlock | 
-                    (self pathTermsNode: (map at: elementName) label: elementName)
+                    (self pathTermsNode: (map at: elementName))
                         parent: theNode;
                         name: elementName;
                         yourself ];
         yourself.
-    self nodes at: depList put: node.
     ^ node

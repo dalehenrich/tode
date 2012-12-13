@@ -1,7 +1,6 @@
 as yet unclassified
 indexElementNode: nscElement
     | node depList depVars |
-    self nodes at: nscElement ifPresent: [ :theNode | ^ theNode ].
     depList := DependencyList for: nscElement.
     depVars := #('depList') copy.
     1 to: depList size by: 2 do: [ :index | depVars add: (depList at: index) name ].
@@ -27,5 +26,4 @@ indexElementNode: nscElement
                         parent: theNode;
                         yourself ];
         yourself.
-    self nodes at: nscElement put: node.
     ^ node

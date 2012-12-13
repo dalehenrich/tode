@@ -1,7 +1,6 @@
 as yet unclassified
 nscNode: nsc
     | node |
-    self nodes at: nsc ifPresent: [ :theNode | ^ theNode ].
     node := TDObjectNode new
         name: 'nsc';
         topez: topez;
@@ -11,11 +10,13 @@ nscNode: nsc
                     | childNode |
                     childNode := elementName = 'indexedPaths'
                         ifTrue: [ self indexListNode: nsc _indexedPaths ]
-                        ifFalse: [ self indexElementNode: (nsc _at: elementName asNumber) ].
+                        ifFalse: [ 
+                            elementName isAllDigits
+                                ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
+                            self indexElementNode: (nsc _at: elementName asNumber) ].
                     childNode
                         name: elementName;
                         parent: theNode;
                         yourself ];
         yourself.
-    self nodes at: nsc put: node.
     ^ node

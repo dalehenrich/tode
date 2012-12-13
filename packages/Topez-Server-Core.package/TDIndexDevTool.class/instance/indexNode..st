@@ -1,14 +1,16 @@
 as yet unclassified
 indexNode: theIndex
     | node |
-    self nodes at: theIndex ifPresent: [ :theNode | ^ theNode ].
     node := TDObjectNode new
         name: self printString;
         topez: topez;
         basicContents: theIndex;
         listBlock: [ :theNode | 
-                    #('indexDictionary' 'nscRoot' 'btreeRoot' 'lastElementClass')
-                        , ((1 to: theIndex size) collect: [ :each | each asString ]) ];
+                    #('indexDictionary')
+                        ,
+                            (theIndex isRangeEqualityIndex
+                                ifTrue: [ #('nscRoot' 'btreeRoot' 'lastElementClass') ]
+                                ifFalse: [ #() ]) , ((1 to: theIndex size) collect: [ :each | each asString ]) ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | childNode |
                     childNode := elementName = 'nscRoot'
@@ -17,12 +19,15 @@ indexNode: theIndex
                             elementName = 'indexDictionary'
                                 ifTrue: [ self indexDictionaryNode: (theIndex instVarNamed: elementName) ]
                                 ifFalse: [ 
-                                    elementName = 'btreeRoot'
-                                        ifTrue: [ self btreeNode: (theIndex instVarNamed: elementName) rootTerms label: elementName ]
+                                    (theIndex isRangeEqualityIndex and: [ elementName = 'btreeRoot' ])
+                                        ifTrue: [ self btreeNode: (theIndex instVarNamed: elementName) ]
                                         ifFalse: [ 
-                                            elementName = 'lastElementClass'
+                                            (theIndex isRangeEqualityIndex and: [ elementName = 'lastElementClass' ])
                                                 ifTrue: [ (theIndex instVarNamed: elementName) asTDObjectNode: self topez aspect: #'index' ]
-                                                ifFalse: [ self pathTermNode: (theIndex at: elementName asNumber) ] ] ] ].
+                                                ifFalse: [ 
+                                                    elementName isAllDigits
+                                                        ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
+                                                    self pathTermNode: (theIndex at: elementName asNumber) ] ] ] ].
                     childNode == nil
                         ifTrue: [ childNode := nil asTDObjectNode: self topez aspect: #'index' ].
                     childNode
@@ -30,5 +35,4 @@ indexNode: theIndex
                         name: elementName;
                         yourself ];
         yourself.
-    self nodes at: theIndex put: node.
     ^ node

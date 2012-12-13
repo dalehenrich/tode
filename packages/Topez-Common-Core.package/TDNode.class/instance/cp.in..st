@@ -28,11 +28,8 @@ cp: destinationPath in: baseNode
                     newName := self name ] ].
     destinationNode canEnter
         ifFalse: [ ^ self error: 'Cannot copy: ' , self printString , ' to: ' , destinationNode printString ].
-    destinationNode name = self parent name
-        ifTrue: [ 
-            self
-                error:
-                    'Source node: ' self parent name printString , ' and destination node: ' , destinationNode name , ' are the same.' ].
+    newName = self name
+        ifTrue: [ self error: 'Source node: ' , self name printString , ' and destination node: ' , newName , ' are the same.' ].
     copy := self copy.
     copy name: newName.
     ^ destinationNode addChildNode: copy

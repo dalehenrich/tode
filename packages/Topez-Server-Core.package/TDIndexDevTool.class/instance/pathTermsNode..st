@@ -1,17 +1,17 @@
 as yet unclassified
-pathTermsNode: array label: label
+pathTermsNode: array
     | node |
-    self nodes at: array ifPresent: [ :theNode | ^ theNode ].
     node := TDObjectNode new
-        name: label;
+        name: 'pathTermArray';
         topez: topez;
         basicContents: array;
         listBlock: [ :theNode | (1 to: array size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
+                    elementName isAllDigits
+                        ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
                     (self pathTermNode: (array at: elementName asNumber))
                         parent: theNode;
                         name: elementName;
                         yourself ];
         yourself.
-    self nodes at: array put: node.
     ^ node

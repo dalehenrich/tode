@@ -1,7 +1,6 @@
 as yet unclassified
 pathTermNode: pathTerm
     | node ivNames indexNameMap |
-    self nodes at: pathTerm ifPresent: [ :theNode | ^ theNode ].
     ivNames := #('name' 'updateBtree' 'updateDict' 'children').
     indexNameMap := Dictionary new.
     1 to: pathTerm size do: [ :index | 
@@ -26,7 +25,7 @@ pathTermNode: pathTerm
                                         ifTrue: [ self indexDictionaryNode: (pathTerm instVarNamed: elementName) ]
                                         ifFalse: [ 
                                             elementName = 'children'
-                                                ifTrue: [ self pathTermsNode: (pathTerm instVarNamed: elementName) label: elementName ]
+                                                ifTrue: [ self pathTermsNode: (pathTerm instVarNamed: elementName) ]
                                                 ifFalse: [ self indexNode: (indexNameMap at: elementName) ] ] ] ].
                     childNode == nil
                         ifTrue: [ childNode := nil asTDObjectNode: self topez aspect: #'index' ].
@@ -35,5 +34,4 @@ pathTermNode: pathTerm
                         name: elementName;
                         yourself ];
         yourself.
-    self nodes at: pathTerm put: node.
     ^ node

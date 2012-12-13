@@ -4,11 +4,24 @@ ds
     node := tokens size = 1
         ifTrue: [ topez currentNode ]
         ifFalse: [ topez lookup: (tokens at: 2) ].
-    node isLeaf
-        ifTrue: [ ^ node contents tzNodeDisplay ].
     stream := TextStream on: Text new.
+    node isLeaf
+        ifTrue: [ 
+            stream
+                nextPutAll: (node printString , ':') asText allBold;
+                cr;
+                nextPutAll: node contents tzNodeDisplay.
+            ^ stream contents ].
+    stream
+        nextPutAll: node printString asText allBold;
+        nextPutAll: ' ('.
+    node dotSelfObject tzNodeDisplayOn: stream.
+    stream
+        nextPutAll: '):';
+        cr.
     node
         childrenDo: [ :child | 
+            stream tab.
             child renderNameTextOn: stream.
             stream nextPutAll: ' -> '.
             child dotSelfObject tzNodeDisplayOn: stream.

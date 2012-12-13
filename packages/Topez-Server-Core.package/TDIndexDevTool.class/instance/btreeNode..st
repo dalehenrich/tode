@@ -3,7 +3,17 @@ btreeNode: btree
     | node |
     btree == nil
         ifTrue: [ ^ nil ].
-    self nodes at: btree ifPresent: [ :theNode | ^ theNode ].
-    node := btree asTDObjectNode: self topez aspect: #'index'.
-    self nodes at: btree put: node.
+    node := TDObjectNode new
+        name: btree printString;
+        topez: topez;
+        basicContents: btree;
+        listBlock: [ :theNode | (1 to: btree numElements) collect: [ :each | each asString ] ];
+        elementBlock: [ :theNode :elementName :absentBlock | 
+                    elementName isAllDigits
+                        ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
+                    (self btreeLeaf: btree at: elementName asNumber)
+                        name: elementName;
+                        parent: theNode;
+                        yourself ];
+        yourself.
     ^ node
