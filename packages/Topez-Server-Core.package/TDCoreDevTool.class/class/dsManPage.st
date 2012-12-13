@@ -15,4 +15,7 @@ DESCRIPTION
 
     The ds command can only be used with internal nodes (directory-like).
 
+    The ds command is analagous to the ls command except that object 
+    info is displayed along with the names of the nodes. ds is useful
+    when traversing object graphs.
 '

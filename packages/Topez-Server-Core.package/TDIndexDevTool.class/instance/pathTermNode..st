@@ -27,6 +27,7 @@ pathTermNode: pathTerm
                                         ifFalse: [ self indexNode: (indexNameMap at: elementName) ] ] ].
                     childNode
                         parent: theNode;
+                        name: elementName;
                         yourself ];
         yourself.
     self nodes at: pathTerm put: node.

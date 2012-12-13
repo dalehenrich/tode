@@ -28,6 +28,7 @@ depListNode: depList
         elementBlock: [ :theNode :elementName :absentBlock | 
                     (self pathTermNode: ((map at: elementName) at: 1))
                         parent: theNode;
+                        name: elementName;
                         yourself ];
         yourself.
     self nodes at: depList put: node.

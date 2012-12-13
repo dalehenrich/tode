@@ -25,6 +25,7 @@ indexNode: theIndex
                                                 ifFalse: [ self pathTermNode: (theIndex at: elementName asNumber) ] ] ] ].
                     childNode
                         parent: theNode;
+                        name: elementName;
                         yourself ];
         yourself.
     self nodes at: theIndex put: node.

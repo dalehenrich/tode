@@ -18,6 +18,7 @@ indexDictionaryNode: indexDictionary
         elementBlock: [ :theNode :elementName :absentBlock | 
                     (self indexDictionaryTupleNode: (tuples at: elementName asNumber))
                         parent: theNode;
+                        name: elementName;
                         yourself ];
         yourself.
     self nodes at: indexDictionary put: node.

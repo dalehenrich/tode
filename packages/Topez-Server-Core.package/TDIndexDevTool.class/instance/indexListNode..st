@@ -12,6 +12,7 @@ indexListNode: indexList
                         ifTrue: [ self pathTermsNode: indexList rootTerms label: elementName ]
                         ifFalse: [ self indexNode: (indexList at: elementName asNumber) ])
                         parent: theNode;
+                        name: elementName;
                         yourself ];
         yourself.
     self nodes at: indexList put: node.

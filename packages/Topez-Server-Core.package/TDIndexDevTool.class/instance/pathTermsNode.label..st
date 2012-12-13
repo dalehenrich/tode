@@ -10,6 +10,7 @@ pathTermsNode: array label: label
         elementBlock: [ :theNode :elementName :absentBlock | 
                     (self pathTermNode: (array at: elementName asNumber))
                         parent: theNode;
+                        name: elementName;
                         yourself ];
         yourself.
     self nodes at: array put: node.

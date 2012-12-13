@@ -31,6 +31,7 @@ indexElementNode: nscElement
                         ifTrue: [ self depListNode: depList ]
                         ifFalse: [ self indexElementNode: (nscElement instVarNamed: elementName) ].
                     childNode
+                        name: elementName;
                         parent: theNode;
                         yourself ];
         yourself.

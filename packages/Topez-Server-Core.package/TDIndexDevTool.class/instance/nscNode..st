@@ -13,6 +13,7 @@ nscNode: nsc
                         ifTrue: [ self indexListNode: nsc _indexedPaths ]
                         ifFalse: [ self indexElementNode: (nsc _at: elementName asNumber) ].
                     childNode
+                        name: elementName;
                         parent: theNode;
                         yourself ];
         yourself.

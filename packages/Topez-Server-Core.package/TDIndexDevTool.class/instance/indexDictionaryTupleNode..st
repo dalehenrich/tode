@@ -14,6 +14,7 @@ indexDictionaryTupleNode: tuple
                     (index <= 2
                         ifTrue: [ self indexElementNode: (tuple at: index) ]
                         ifFalse: [ self pathTermNode: (tuple at: index) ])
+                        name: elementName;
                         parent: theNode;
                         yourself ];
         yourself.
