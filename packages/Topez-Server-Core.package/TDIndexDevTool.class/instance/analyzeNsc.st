@@ -13,5 +13,8 @@ analyzeNsc
         ifFalse: [ ^ 'Not an nsc' ].
     nsc _hasIndexes
         ifFalse: [ ^ 'No indexes on the nsc' ].
-    indexNode addChildNode: (self nscNode: nsc).
+    indexNode
+        addChildNode: (self nscNode: nsc);
+        addChildNode: (self indexListNode: nsc _indexedPaths);
+        yourself.
     ^ 'analysis results in ./index'
