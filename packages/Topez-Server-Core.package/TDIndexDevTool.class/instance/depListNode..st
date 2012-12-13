@@ -8,25 +8,22 @@ depListNode: depList
         topez: topez;
         basicContents: depList;
         listBlock: [ :theNode | 
-                    | names |
+                    | names name |
                     names := Array new.
+                    name := 0.
                     1 to: depList size by: 2 do: [ :index | 
-                        | dependencyType |
-                        dependencyType := depList at: index + 1.
-                        dependencyType > 0
-                            ifTrue: [ 
-                                | pathTerm name |
-                                pathTerm := depList at: index.
-                                name := pathTerm name , '_' , dependencyType asString.
-                                map
-                                    at: name
-                                    put:
-                                        {pathTerm.
-                                        dependencyType}.
-                                names add: name ] ].
+                        | pathTerm |
+                        pathTerm := depList at: index.
+                        name := name + 1.
+                        map
+                            at: name asString
+                            put:
+                                {pathTerm.
+                                (depList at: index + 1)}.
+                        names add: name asString ].
                     names ];
         elementBlock: [ :theNode :elementName :absentBlock | 
-                    (self pathTermNode: ((map at: elementName) at: 1))
+                    (self pathTermsNode: (map at: elementName) label: elementName)
                         parent: theNode;
                         name: elementName;
                         yourself ];

@@ -7,7 +7,7 @@ pathTermNode: pathTerm
     1 to: pathTerm size do: [ :index | 
         | theIndex indexName |
         theIndex := pathTerm at: index.
-        indexName := self pathNameForIndex: theIndex.
+        indexName := index printString.
         indexNameMap at: indexName put: theIndex ].
     node := TDObjectNode new
         name: pathTerm name;
@@ -23,8 +23,10 @@ pathTermNode: pathTerm
                                 ifTrue: [ self indexDictionaryNode: (pathTerm instVarNamed: elementName) ]
                                 ifFalse: [ 
                                     elementName = 'children'
-                                        ifTrue: [ self pathTermsNode: (pathTerm instVarNamed: elementName) rootTerms label: elementName ]
+                                        ifTrue: [ self pathTermsNode: (pathTerm instVarNamed: elementName) label: elementName ]
                                         ifFalse: [ self indexNode: (indexNameMap at: elementName) ] ] ].
+                    childNode == nil
+                        ifTrue: [ childNode := nil asTDObjectNode: self topez aspect: #'index' ].
                     childNode
                         parent: theNode;
                         name: elementName;

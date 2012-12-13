@@ -3,7 +3,7 @@ indexNode: theIndex
     | node |
     self nodes at: theIndex ifPresent: [ :theNode | ^ theNode ].
     node := TDObjectNode new
-        name: (self pathNameForIndex: theIndex);
+        name: self printString;
         topez: topez;
         basicContents: theIndex;
         listBlock: [ :theNode | 
@@ -23,6 +23,8 @@ indexNode: theIndex
                                             elementName = 'lastElementClass'
                                                 ifTrue: [ (theIndex instVarNamed: elementName) asTDObjectNode: self topez aspect: #'index' ]
                                                 ifFalse: [ self pathTermNode: (theIndex at: elementName asNumber) ] ] ] ].
+                    childNode == nil
+                        ifTrue: [ childNode := nil asTDObjectNode: self topez aspect: #'index' ].
                     childNode
                         parent: theNode;
                         name: elementName;

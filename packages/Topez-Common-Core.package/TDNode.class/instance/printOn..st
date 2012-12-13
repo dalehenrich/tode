@@ -5,4 +5,4 @@ printOn: aStream
             aStream nextPut: $/.
             ^ self ].
     self parent printOn: aStream.
-    aStream nextPutAll: self printName
+    aStream nextPutAll: self name , '/'

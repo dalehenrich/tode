@@ -1,6 +1,8 @@
 as yet unclassified
 indexDictionaryNode: indexDictionary
     | collBkt tuples key value term node |
+    indexDictionary == nil
+        ifTrue: [ ^ nil ].
     self nodes at: indexDictionary ifPresent: [ :theNode | ^ theNode ].
     tuples := Array new.
     1 to: indexDictionary _basicSize do: [ :i | 
