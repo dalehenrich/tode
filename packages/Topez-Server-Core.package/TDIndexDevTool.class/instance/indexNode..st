@@ -8,8 +8,7 @@ indexNode: theIndex
         basicContents: theIndex;
         listBlock: [ :theNode | 
                     #('indexDictionary' 'nscRoot' 'btreeRoot' 'lastElementClass')
-                        , ((1 to: theIndex size) collect: [ :each | each asString ])
-                        collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ] ];
+                        , ((1 to: theIndex size) collect: [ :each | each asString ]) ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | childNode |
                     childNode := elementName = 'nscRoot'

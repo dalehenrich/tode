@@ -5,14 +5,10 @@ symbolDictionaryNodeFor: aSymbolDictionary parentNode: parentNode topez: aTopez
         parent: parentNode;
         readMe: (self symbolDictionaryReadMe: aSymbolDictionary name asString);
         basicContents: aSymbolDictionary;
-        extensionBlock: [ :theNode | theNode class directoryExtension ];
         renderAttributeBlock: [ :theNode | theNode class directoryTextAttributes ];
-        listBlock: [ :theNode | 
-                    (theNode basicContents associations sort: [ :a :b | a key <= b key ])
-                        collect: [ :assoc | 
-                            theNode
-                                renderNameText: assoc key asString , theNode class objectExtension
-                                textAttributes: theNode class objectTextAttributes ] ];
+        elementExtensionBlock: [ :theNode | theNode class objectExtension ];
+        elementRenderAttributeBlock: [ :theNode | theNode class objectTextAttributes ];
+        listBlock: [ :theNode | (theNode basicContents associations sort: [ :a :b | a key <= b key ]) collect: [ :assoc | assoc key asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | obj |
                     obj := theNode basicContents at: elementName asSymbol.

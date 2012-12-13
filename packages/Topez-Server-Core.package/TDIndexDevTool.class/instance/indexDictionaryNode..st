@@ -14,9 +14,7 @@ indexDictionaryNode: indexDictionary
         name: 'indexDictionary';
         topez: topez;
         basicContents: indexDictionary;
-        listBlock: [ :theNode | 
-                    ((1 to: tuples size) collect: [ :each | each asString ])
-                        collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ] ];
+        listBlock: [ :theNode | (1 to: tuples size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     (self indexDictionaryTupleNode: (tuples at: elementName asNumber))
                         parent: theNode;

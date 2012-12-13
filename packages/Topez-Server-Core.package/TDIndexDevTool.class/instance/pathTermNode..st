@@ -13,9 +13,7 @@ pathTermNode: pathTerm
         name: pathTerm name;
         topez: topez;
         basicContents: pathTerm;
-        listBlock: [ :theNode | 
-                    ivNames , indexNameMap keys asArray
-                        collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ] ];
+        listBlock: [ :theNode | ivNames , indexNameMap keys asArray ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | childNode |
                     childNode := elementName = 'updateBtree'

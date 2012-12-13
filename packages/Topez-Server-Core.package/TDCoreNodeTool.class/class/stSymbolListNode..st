@@ -17,12 +17,8 @@ stSymbolListNode: aTopez
                                 ifFalse: [ 
                                     "selector == #'symbolList'"
                                     symbolList detect: [ :dict | dict name == symbolDictionaryName asSymbol ] ] ];
-                listBlock: [ :theNode | 
-                            (theNode basicContents value: #'list' value: nil)
-                                collect: [ :dict | 
-                                    theNode
-                                        renderNameText: dict name asString , theNode class directoryExtension
-                                        textAttributes: theNode class directoryTextAttributes ] ];
+                elementRenderAttributeBlock: [ :theNode | theNode class directoryTextAttributes ];
+                listBlock: [ :theNode | (theNode basicContents value: #'list' value: nil) collect: [ :dict | dict name asString ] ];
                 elementBlock: [ :theNode :elementName :absentBlock | 
                             | dict |
                             dict := theNode basicContents value: #'symbolList' value: elementName.

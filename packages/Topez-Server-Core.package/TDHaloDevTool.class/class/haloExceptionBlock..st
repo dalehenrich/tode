@@ -33,9 +33,9 @@ haloExceptionBlock: aTDTopezServer
         name: '.exception';
         basicContents: directory;
         parent: parentNode;
-        listBlock: [ :theNode | 
-                    theNode basicContents keys sorted
-                        collect: [ :each | theNode renderNameText: each , theNode extension textAttributes: theNode class objectTextAttributes ] ];
+        elementExtensionBlock: [ :theNode | theNode class objectExtension ];
+        elementRenderAttributeBlock: [ :theNode | theNode class objectTextAttributes ];
+        listBlock: [ :theNode | theNode basicContents keys sorted ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | block |
                     block := theNode basicContents at: elementName ifAbsent: absentBlock.

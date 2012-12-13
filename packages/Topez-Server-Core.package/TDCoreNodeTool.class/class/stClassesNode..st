@@ -14,12 +14,9 @@ stClassesNode: aTopez
                                 ifFalse: [ 
                                     "selector == #'class'"
                                     Smalltalk at: className asSymbol ] ];
-                listBlock: [ :theNode | 
-                            (theNode basicContents value: #'list' value: nil)
-                                collect: [ :each | 
-                                    theNode
-                                        renderNameText: each name asString , theNode class objectExtension
-                                        textAttributes: theNode class objectTextAttributes ] ];
+                elementExtensionBlock: [ :theNode | theNode class objectExtension ];
+                elementRenderAttributeBlock: [ :theNode | theNode class objectTextAttributes ];
+                listBlock: [ :theNode | (theNode basicContents value: #'list' value: nil) collect: [ :each | each name asString ] ];
                 elementBlock: [ :theNode :elementName :absentBlock | 
                             | cls |
                             cls := theNode basicContents value: #'class' value: elementName.

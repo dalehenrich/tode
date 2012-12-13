@@ -4,7 +4,7 @@ createCommandBinNodeIn: node
     binNode := TDPluggableNode new
         name: 'bin';
         basicContents: Dictionary new;
-        listBlock: [ :theNode | (theNode basicContents values sort: [ :a :b | a name <= b name ]) collect: [ :each | each renderNameText ] ];
+        listBlock: [ :theNode | theNode basicContents keys asArray sort ];
         elementBlock: [ :theNode :elementName :absentBlock | theNode basicContents at: elementName ];
         addBlock: [ :theNode :newCommandNode | 
                     self commands at: newCommandNode name put: newCommandNode.

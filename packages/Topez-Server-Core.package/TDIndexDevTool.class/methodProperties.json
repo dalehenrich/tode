@@ -8,14 +8,14 @@
 	"instance" : {
 		"analyzeNsc" : "DataCurator 12/12/2012 14:04",
 		"btreeNode:" : "DataCurator 12/12/2012 11:59",
-		"depListNode:" : "DataCurator 12/12/2012 14:20",
-		"indexDictionaryNode:" : "DataCurator 12/12/2012 13:34",
-		"indexDictionaryTupleNode:" : "DataCurator 12/12/2012 13:39",
-		"indexElementNode:" : "DataCurator 12/12/2012 14:18",
-		"indexListNode:" : "DataCurator 12/12/2012 13:44",
-		"indexNode:" : "DataCurator 12/12/2012 13:51",
+		"depListNode:" : "DataCurator 12/12/2012 15:51",
+		"indexDictionaryNode:" : "DataCurator 12/12/2012 15:49",
+		"indexDictionaryTupleNode:" : "DataCurator 12/12/2012 15:53",
+		"indexElementNode:" : "DataCurator 12/12/2012 15:53",
+		"indexListNode:" : "DataCurator 12/12/2012 15:53",
+		"indexNode:" : "DataCurator 12/12/2012 15:54",
 		"nodes" : "DataCurator 12/12/2012 11:26",
-		"nscNode:" : "DataCurator 12/12/2012 11:20",
+		"nscNode:" : "DataCurator 12/12/2012 15:54",
 		"pathNameForIndex:" : "DataCurator 12/12/2012 11:56",
-		"pathTermNode:" : "DataCurator 12/12/2012 14:25",
-		"pathTermsNode:label:" : "DataCurator 12/12/2012 13:43" } }
+		"pathTermNode:" : "DataCurator 12/12/2012 15:54",
+		"pathTermsNode:label:" : "DataCurator 12/12/2012 15:55" } }

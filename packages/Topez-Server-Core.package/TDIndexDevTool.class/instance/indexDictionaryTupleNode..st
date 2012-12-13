@@ -7,9 +7,7 @@ indexDictionaryTupleNode: tuple
         name: 'indexDictionary';
         topez: topez;
         basicContents: tuple;
-        listBlock: [ :theNode | 
-                    tupleNames
-                        collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ] ];
+        listBlock: [ :theNode | tupleNames ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | index |
                     index := tupleNames indexOf: elementName.

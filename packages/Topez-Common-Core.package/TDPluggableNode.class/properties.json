@@ -13,7 +13,9 @@
 		"elementBlock",
 		"removeBlock",
 		"extensionBlock",
-		"renderAttributeBlock" ],
+		"renderAttributeBlock",
+		"elementExtensionBlock",
+		"elementRenderAttributeBlock" ],
 	"name" : "TDPluggableNode",
 	"pools" : [
 		 ],

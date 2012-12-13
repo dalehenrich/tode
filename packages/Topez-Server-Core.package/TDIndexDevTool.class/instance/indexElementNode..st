@@ -24,9 +24,7 @@ indexElementNode: nscElement
         name: nscElement printString;
         topez: topez;
         basicContents: nscElement;
-        listBlock: [ :theNode | 
-                    #('depList') , map keys asArray
-                        collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ] ];
+        listBlock: [ :theNode | #('depList') , map keys asArray ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | childNode |
                     childNode := elementName = 'depList'

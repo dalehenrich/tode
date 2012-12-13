@@ -6,9 +6,7 @@ indexListNode: indexList
         name: 'indexList';
         topez: topez;
         basicContents: indexList;
-        listBlock: [ :theNode | 
-                    #('rootTerms') , ((1 to: indexList size) collect: [ :each | each asString ])
-                        collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ] ];
+        listBlock: [ :theNode | #('rootTerms') , ((1 to: indexList size) collect: [ :each | each asString ]) ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     (elementName = 'rootTerms'
                         ifTrue: [ self pathTermsNode: indexList rootTerms label: elementName ]

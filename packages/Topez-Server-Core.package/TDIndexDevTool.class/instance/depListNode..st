@@ -24,8 +24,7 @@ depListNode: depList
                                         {pathTerm.
                                         dependencyType}.
                                 names add: name ] ].
-                    names
-                        collect: [ :each | theNode renderNameText: each asString , theNode extension textAttributes: theNode class objectTextAttributes ] ];
+                    names ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     (self pathTermNode: ((map at: elementName) at: 1))
                         parent: theNode;
