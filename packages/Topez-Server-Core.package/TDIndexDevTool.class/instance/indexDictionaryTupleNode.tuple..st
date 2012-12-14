@@ -9,33 +9,20 @@ indexDictionaryTupleNode: indexDict tuple: tuple
         listBlock: [ :theNode | tupleNames ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     (elementName = 'parentLink'
-                        ifTrue: [ 
-                            | parent bucket childPathTerm depList pathTerm tupleIndex |
-                            parent := tuple at: 2.
-                            childPathTerm := tuple at: 3.
-                            depList := DependencyList for: parent.
-                            1 to: depList size by: 2 do: [ :index | 
-                                | term |
-                                term := depList at: index.
-                                (term children includesIdentical: childPathTerm)
-                                    ifTrue: [ pathTerm := term ] ].
-                            pathTerm == nil
-                                ifTrue: [ nil asTDObjectNode: self topez aspect: #'index' ]
-                                ifFalse: [ 
-                                    bucket := indexDict indexBucketFor: parent.
-                                    tupleIndex := bucket searchForKey: parent term: pathTerm.
-                                    self
-                                        indexDictionaryTupleNode: indexDict
-                                        tuple:
-                                            {(bucket keyAt: tupleIndex).
-                                            (bucket valueAt: tupleIndex).
-                                            (bucket termAt: tupleIndex)} ] ]
+                        ifTrue: [ self nodeFor: indexDict tuple: tuple ]
                         ifFalse: [ 
-                            | index |
+                            | index value |
                             index := tupleNames indexOf: elementName.
-                            index <= 2
-                                ifTrue: [ self indexElementNode: (tuple at: index) ]
-                                ifFalse: [ self pathTermNode: (tuple at: index) ] ])
+                            value := tuple at: index.
+                            index = 1
+                                ifTrue: [ self indexElementNode: value ]
+                                ifFalse: [ 
+                                    index = 2
+                                        ifTrue: [ 
+                                            (BucketValueBag _hasInstance: value)
+                                                ifTrue: [ self bucketValueBagNode: value ]
+                                                ifFalse: [ self indexElementNode: value ] ]
+                                        ifFalse: [ self pathTermNode: value ] ] ])
                         name: elementName;
                         parent: theNode;
                         yourself ];

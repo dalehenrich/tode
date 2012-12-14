@@ -4,13 +4,13 @@ btreeLeaf: btree at: index
     node := TDObjectNode new
         name: index printString;
         topez: topez;
-        basicContents: (btree at: (index - 1) * btree entrySize + 1);
+        basicContents: (btree at: (index - 1) * btree entrySize + 2);
         listBlock: [ :theNode | #('key' 'value') ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | childNode |
                     childNode := elementName = 'key'
-                        ifTrue: [ self indexElementNode: (btree at: (index - 1) * btree entrySize + 1) ]
-                        ifFalse: [ self indexElementNode: (btree at: (index - 1) * btree entrySize + 2) ].
+                        ifTrue: [ self indexElementNode: (btree at: (index - 1) * btree entrySize + 2) ]
+                        ifFalse: [ self indexElementNode: (btree at: (index - 1) * btree entrySize + 1) ].
                     childNode
                         name: elementName;
                         parent: theNode;
