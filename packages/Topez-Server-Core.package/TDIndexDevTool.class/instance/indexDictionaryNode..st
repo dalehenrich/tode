@@ -19,7 +19,7 @@ indexDictionaryNode: indexDictionary
         elementBlock: [ :theNode :elementName :absentBlock | 
                     elementName isAllDigits
                         ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
-                    (self indexDictionaryTupleNode: (tuples at: elementName asNumber))
+                    (self indexDictionaryTupleNode: indexDictionary tuple: (tuples at: elementName asNumber))
                         parent: theNode;
                         name: elementName;
                         yourself ];

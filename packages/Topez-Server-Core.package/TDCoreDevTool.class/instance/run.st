@@ -11,4 +11,4 @@ run
         accumulateTextAndDo: [ :doitString | 
             topez exception: nil.
             self topez evaluateString: doitString inContext: doitContext ].
-    'receiver: ' , doitContext printString
+    ^ 'receiver: ' , doitContext printString

@@ -1,3 +1,4 @@
 accessing
 accumulateTextAndDo: aBlock
-    self topezClientForwarder accumulateTextAndServerDo: aBlock asOop
+    self topezClientForwarder accumulateTextAndServerDo: aBlock asOop.
+    ^ lastResult
