@@ -1,0 +1,43 @@
+customer.address.city
+=========================
+/home/index/indexList/9/ ([116781825 sz:10 RangeEqualityIndex] aRangeEqualityIndex):
+	indexDictionary@/ -> [116792065 sz:2008 RcIndexDictionary] aRcIndexDictionary( aLMAddress->aBucketValueBag( aLMCustomer, aLMCustomer, aLMCustomer, aLMCustomer), aLMCustomer->aBucketValueBag( aLMOrder, aLMOrder, aLMOrder, aLMOrder), aLMAddress->aBucketValueBag( aLMCustomer, aLMCustomer, aLMCustomer, aLMCustomer), aLMCustomer->aBucketValueBag( aLMOrder, aLMOrder, aLMOrder, aLMOrder))
+	nscRoot@/ -> [116582145 sz:12 IdentityBag] anIdentityBag( aLMOrder, aLMOrder, aLMOrder, aLMOrder, aLMOrder, aLMOrder, aLMOrder, aLMOrder)
+	btreeRoot@/ -> [116524545 sz:2001 BtreeBasicLeafNode] aBtreeBasicLeafNode
+	lastElementClass@/ -> [74753 sz:19 String class] String
+	1@/ -> [116791553 sz:10 PathTerm] aPathTerm( anIdentityIndex, aRangeEqualityIndex, aRangeEqualityIndex)
+	    name@/ -> [172955905 sz:8 Symbol] #'customer'
+	2@/ -> [116776449 sz:8 PathTerm] aPathTerm( aRangeEqualityIndex)
+	    name@/ -> [5217537 sz:7 Symbol] #'address'
+	3@/ -> [116696065 sz:8 PathTerm] aPathTerm( aRangeEqualityIndex)
+	    name@/ -> [235528705 sz:4 Symbol] #'city'
+=========================
+/home/index/indexList/9/btreeRoot/1/ ([117285121 sz:7 String] 'Gresham'):
+	key@/ -> [117285121 sz:7 String] 'Gresham'
+	value@/ -> [117287169 sz:3 LMAddress] aLMAddress
+=========================
+/home/index/indexList/9/indexDictionary/3/ ([106192897 sz:3 Array] anArray( aLMAddress, aBucketValueBag( aLMCustomer, aLMCustomer, aLMCustomer, aLMCustomer), aPathTerm( aRangeEqualityIndex))):
+	child@/ -> [117287169 sz:3 LMAddress] aLMAddress
+	parent@/ -> [116648449 sz:8 BucketValueBag] aBucketValueBag( aLMCustomer, aLMCustomer, aLMCustomer, aLMCustomer)
+	term@/ -> [116776449 sz:8 PathTerm] aPathTerm( aRangeEqualityIndex)
+	parentLink@/ -> [20 sz:0 UndefinedObject] nil
+=========================
+/home/index/indexList/9/indexDictionary/3/parent/ ([116648449 sz:8 BucketValueBag] aBucketValueBag( aLMCustomer, aLMCustomer, aLMCustomer, aLMCustomer)):
+	1@/ -> [117366785 sz:4 LMCustomer] aLMCustomer
+	2@/ -> [117366785 sz:4 LMCustomer] aLMCustomer
+	3@/ -> [117366785 sz:4 LMCustomer] aLMCustomer
+	4@/ -> [117366785 sz:4 LMCustomer] aLMCustomer
+=========================
+/home/index/indexList/9/indexDictionary/2/ ([106192641 sz:3 Array] anArray( aLMCustomer, aBucketValueBag( aLMOrder, aLMOrder, aLMOrder, aLMOrder), aPathTerm( anIdentityIndex, aRangeEqualityIndex, aRangeEqualityIndex))):
+	child@/ -> [117366785 sz:4 LMCustomer] aLMCustomer
+	parent@/ -> [116788225 sz:8 BucketValueBag] aBucketValueBag( aLMOrder, aLMOrder, aLMOrder, aLMOrder)
+	term@/ -> [116791553 sz:10 PathTerm] aPathTerm( anIdentityIndex, aRangeEqualityIndex, aRangeEqualityIndex)
+	parentLink@/ -> [20 sz:0 UndefinedObject] nil
+=========================
+/home/index/indexList/9/indexDictionary/2/parent/ ([116788225 sz:8 BucketValueBag] aBucketValueBag( aLMOrder, aLMOrder, aLMOrder, aLMOrder)):
+	1@/ -> [117367553 sz:4 LMOrder] aLMOrder
+	2@/ -> [117367809 sz:4 LMOrder] aLMOrder
+	3@/ -> [117368321 sz:4 LMOrder] aLMOrder
+	4@/ -> [117368577 sz:4 LMOrder] aLMOrder
+=========================
+
