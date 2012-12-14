@@ -4,6 +4,7 @@ pathTermsNode: array
     node := TDObjectNode new
         name: 'pathTermArray';
         topez: topez;
+        readMe: 'TDIndexDevTool>>pathTermsNode:';
         basicContents: array;
         listBlock: [ :theNode | (1 to: array size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 

@@ -4,6 +4,7 @@ btreeLeaf: btree at: index
     node := TDObjectNode new
         name: index printString;
         topez: topez;
+        readMe: 'TDIndexDevTool>>btreeLeaf:at:';
         basicContents: (btree at: (index - 1) * btree entrySize + 2);
         listBlock: [ :theNode | #('key' 'value') ];
         elementBlock: [ :theNode :elementName :absentBlock | 

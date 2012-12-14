@@ -4,6 +4,7 @@ nscNode: nsc
     node := TDObjectNode new
         name: 'nsc';
         topez: topez;
+        readMe: 'TDIndexDevTool>>nscNode:';
         basicContents: nsc;
         listBlock: [ :theNode | #('indexedPaths') , ((1 to: nsc size) collect: [ :each | each asString ]) ];
         elementBlock: [ :theNode :elementName :absentBlock | 

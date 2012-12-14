@@ -5,6 +5,7 @@ bucketValueBagNode: bucketValueBag
     node := TDObjectNode new
         name: bucketValueBag printString;
         topez: topez;
+        readMe: 'TDIndexDevTool>>bucketValueBagNode:';
         basicContents: bucketValueBag;
         listBlock: [ :theNode | (1 to: array size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 

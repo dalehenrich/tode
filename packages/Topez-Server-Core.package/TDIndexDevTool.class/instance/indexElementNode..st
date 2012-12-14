@@ -7,6 +7,7 @@ indexElementNode: nscElement
     node := TDObjectNode new
         name: nscElement printString;
         topez: topez;
+        readMe: 'TDIndexDevTool>>indexElementNode:';
         basicContents: nscElement;
         elementRenderAttributeBlock: [ :theNode :elementName | 
                     (depVars includes: elementName)

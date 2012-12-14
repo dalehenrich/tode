@@ -6,6 +6,7 @@ btreeNode: btree
     node := TDObjectNode new
         name: btree printString;
         topez: topez;
+        readMe: 'TDIndexDevTool>>btreeNode:';
         basicContents: btree;
         listBlock: [ :theNode | (1 to: btree numElements) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 

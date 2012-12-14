@@ -4,6 +4,7 @@ indexNode: theIndex
     node := TDObjectNode new
         name: self printString;
         topez: topez;
+        readMe: 'TDIndexDevTool>>indexNode:';
         basicContents: theIndex;
         listBlock: [ :theNode | 
                     #('indexDictionary')

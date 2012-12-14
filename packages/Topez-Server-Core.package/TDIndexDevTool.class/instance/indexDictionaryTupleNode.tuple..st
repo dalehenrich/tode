@@ -5,6 +5,7 @@ indexDictionaryTupleNode: indexDict tuple: tuple
     node := TDObjectNode new
         name: 'indexDictionary';
         topez: topez;
+        readMe: 'TDIndexDevTool>>indexDictionaryTupleNode:tuple:';
         basicContents: tuple;
         listBlock: [ :theNode | tupleNames ];
         elementBlock: [ :theNode :elementName :absentBlock | 

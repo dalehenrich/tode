@@ -5,6 +5,7 @@ depListNode: depList
     node := TDObjectNode new
         name: 'depList';
         topez: topez;
+        readMe: 'TDIndexDevTool>>depListNode:';
         basicContents: depList;
         listBlock: [ :theNode | 
                     | names |

@@ -11,6 +11,7 @@ pathTermNode: pathTerm
     node := TDObjectNode new
         name: pathTerm name;
         topez: topez;
+        readMe: 'TDIndexDevTool>>pathTermNode:';
         basicContents: pathTerm;
         listBlock: [ :theNode | ivNames , indexNameMap keys asArray ];
         elementBlock: [ :theNode :elementName :absentBlock | 

@@ -14,6 +14,7 @@ indexDictionaryNode: indexDictionary
     node := TDObjectNode new
         name: 'indexDictionary';
         topez: topez;
+        readMe: 'TDIndexDevTool>>indexDictionaryNode:';
         basicContents: indexDictionary;
         listBlock: [ :theNode | (1 to: tuples size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 

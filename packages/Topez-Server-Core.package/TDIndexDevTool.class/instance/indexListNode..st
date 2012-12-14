@@ -4,6 +4,7 @@ indexListNode: indexList
     node := TDObjectNode new
         name: 'indexList';
         topez: topez;
+        readMe: 'TDIndexDevTool>>indexListNode:';
         basicContents: indexList;
         listBlock: [ :theNode | #('rootTerms') , ((1 to: indexList size) collect: [ :each | each asString ]) ];
         elementBlock: [ :theNode :elementName :absentBlock | 
