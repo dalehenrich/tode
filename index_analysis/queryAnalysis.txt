@@ -7,10 +7,13 @@ customer.address.city
 	lastElementClass@/ -> [74753 sz:19 String class] String
 	1@/ -> [116791553 sz:10 PathTerm] aPathTerm( anIdentityIndex, aRangeEqualityIndex, aRangeEqualityIndex)
 	    name@/ -> [172955905 sz:8 Symbol] #'customer'
+	    offset@/ -> [10 sz:0 SmallInteger] 1
 	2@/ -> [116776449 sz:8 PathTerm] aPathTerm( aRangeEqualityIndex)
 	    name@/ -> [5217537 sz:7 Symbol] #'address'
+	    offset@/ -> [18 sz:0 SmallInteger] 2
 	3@/ -> [116696065 sz:8 PathTerm] aPathTerm( aRangeEqualityIndex)
 	    name@/ -> [235528705 sz:4 Symbol] #'city'
+	    offset@/ -> [26 sz:0 SmallInteger] 3
 =========================
 /home/index/indexList/9/btreeRoot/1/ ([117285121 sz:7 String] 'Gresham'):
 	key@/ -> [117285121 sz:7 String] 'Gresham'
@@ -39,5 +42,12 @@ customer.address.city
 	2@/ -> [117367809 sz:4 LMOrder] aLMOrder
 	3@/ -> [117368321 sz:4 LMOrder] aLMOrder
 	4@/ -> [117368577 sz:4 LMOrder] aLMOrder
+=========================
+=========================
+/home/index/indexList/9/indexDictionary/1/parentLink/4/parent/ ([116790017 sz:8 BucketValueBag] aBucketValueBag( aLMOrder, aLMOrder, aLMOrder, aLMOrder)):
+	1@/ -> [117365761 sz:4 LMOrder] aLMOrder
+	2@/ -> [117366017 sz:4 LMOrder] aLMOrder
+	3@/ -> [117366273 sz:4 LMOrder] aLMOrder
+	4@/ -> [117366529 sz:4 LMOrder] aLMOrder
 =========================
 

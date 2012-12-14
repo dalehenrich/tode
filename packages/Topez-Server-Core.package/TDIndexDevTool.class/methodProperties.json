@@ -16,8 +16,10 @@
 		"indexElementNode:" : "DataCurator 12/13/2012 12:18",
 		"indexListNode:" : "DataCurator 12/13/2012 13:03",
 		"indexNode:" : "DataCurator 12/13/2012 13:03",
-		"nodeFor:tuple:" : "DataCurator 12/13/2012 20:27",
+		"nodeFor:array:pathTerm:" : "DataCurator 12/13/2012 21:11",
+		"nodeFor:tuple:" : "DataCurator 12/13/2012 21:12",
 		"nodes" : "DataCurator 12/12/2012 11:26",
 		"nscNode:" : "DataCurator 12/13/2012 13:04",
 		"pathTermNode:" : "DataCurator 12/13/2012 14:45",
-		"pathTermsNode:" : "DataCurator 12/13/2012 13:04" } }
+		"pathTermsNode:" : "DataCurator 12/13/2012 13:04",
+		"tupleNodeFor:parent:pathTerm:" : "DataCurator 12/13/2012 21:06" } }
