@@ -10,7 +10,7 @@ bucketValueBagNode: bucketValueBag
         listBlock: [ :theNode | (1 to: array size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     elementName isAllDigits
-                        ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
+                        ifFalse: [ ^ absentBlock value ].
                     (self indexElementNode: (array at: elementName asNumber))
                         name: elementName;
                         parent: theNode;

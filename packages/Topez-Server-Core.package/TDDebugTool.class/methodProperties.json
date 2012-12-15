@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"haloExceptionBlock:" : "DataCurator 12/15/2012 12:26",
+		"installHalosOn:" : "DataCurator 12/15/2012 11:44",
+		"installOn:" : "DataCurator 12/15/2012 11:45",
+		"toolName" : "DataCurator 12/15/2012 11:56",
+		"toolReadMe" : "DataCurator 12/15/2012 11:57",
+		"where" : "DataCurator 12/15/2012 11:48",
+		"whereManPage" : "DataCurator 12/15/2012 11:53" },
+	"instance" : {
+		"debugNode:exception:" : "DataCurator 12/15/2012 12:16",
+		"frameNode:process:" : "DataCurator 12/15/2012 12:22",
+		"where" : "DataCurator 12/15/2012 11:55" } }

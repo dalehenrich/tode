@@ -22,5 +22,4 @@ installHalosOn: aTDTopezServer
                         yourself ];
         installHalo: '.window' block: (self haloWindowBlock: aTDTopezServer);
         installHalo: '.run' block: (self haloRunBlock: aTDTopezServer);
-        installHalo: '.ex' block: (self haloExceptionBlock: aTDTopezServer);
         yourself

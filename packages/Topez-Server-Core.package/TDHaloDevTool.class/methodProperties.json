@@ -1,11 +1,10 @@
 {
 	"class" : {
-		"haloExceptionBlock:" : "DataCurator 12/13/2012 08:25",
 		"haloRunBlock:" : "DataCurator 12/15/2012 08:48",
 		"haloWindowBlock:" : "DataCurator 12/13/2012 08:25",
 		"halos" : "DataCurator 12/11/2012 20:54",
 		"halosManPage" : "dkh 12/01/2012 16:44",
-		"installHalosOn:" : "DataCurator 12/01/2012 17:44",
+		"installHalosOn:" : "DataCurator 12/15/2012 11:45",
 		"installOn:" : "dkh 12/01/2012 16:44",
 		"toolName" : "dkh 12/01/2012 16:44",
 		"toolReadMe" : "dkh 12/01/2012 16:44" },
