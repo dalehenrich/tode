@@ -1,6 +1,6 @@
 as yet unclassified
 ds
-    | node stream |
+    | node stream count |
     node := tokens size = 1
         ifTrue: [ topez currentNode ]
         ifFalse: [ topez lookup: (tokens at: 2) ].
@@ -19,9 +19,17 @@ ds
     stream
         nextPutAll: '):';
         cr.
+    count := 0.
     node
         childrenDo: [ :child | 
             stream tab.
+            count := count + 1.
+            (self listLimit > 0 and: [ count > self listLimit ])
+                ifTrue: [ 
+                    stream
+                        nextPutAll: '...';
+                        cr.
+                    ^ stream contents ].
             node
                 renderNameText: child name , (node elementExtension: child name)
                 textAttributes: (node elementRenderNameTextAttributes: child name)
