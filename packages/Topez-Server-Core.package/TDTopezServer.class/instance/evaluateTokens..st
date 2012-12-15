@@ -1,3 +1,3 @@
 accessing
 evaluateTokens: tokens
-    ^ self evaluateTokens: tokens objIn: lastResult
+    ^ self evaluateTokens: tokens objIn: objIn

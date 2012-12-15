@@ -2,6 +2,6 @@ accessing
 evaluateSTONTokens: stonTokens
     | tokens text |
     tokens := STON fromString: stonTokens.
-    lastResult := self evaluateTokens: tokens objIn: lastResult.
-    text := lastResult renderText: #'display'.
+    objIn := self evaluateTokens: tokens objIn: objIn.
+    text := objIn renderText: #'display'.
     ^ STON toString: text

@@ -10,7 +10,7 @@
 	"instvars" : [
 		"topezClientForwarder",
 		"serverStatus",
-		"lastResult" ],
+		"objIn" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

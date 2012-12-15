@@ -19,9 +19,9 @@ haloRunBlock: aTDTopezServer
                         name: nodeName;
                         parent: parentNode;
                         yourself ];
-        at: 'last'
+        at: 'objIn'
             put: [ :parentNode :nodeName | 
-                    (parentNode topez lastResult asTDObjectNode: parentNode topez aspect: #'edit')
+                    (parentNode topez objIn asTDObjectNode: parentNode topez aspect: #'edit')
                         name: nodeName;
                         parent: parentNode;
                         yourself ];
