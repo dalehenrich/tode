@@ -19,12 +19,6 @@ haloRunBlock: aTDTopezServer
                         name: nodeName;
                         parent: parentNode;
                         yourself ];
-        at: 'objIn'
-            put: [ :parentNode :nodeName | 
-                    (parentNode topez objIn asTDObjectNode: parentNode topez aspect: #'edit')
-                        name: nodeName;
-                        parent: parentNode;
-                        yourself ];
         yourself.
     ^ [ :parentNode | 
     TDObjectNode new
