@@ -1,4 +1,4 @@
 as yet unclassified
 listLimit
-    listLimit ifNil: [ listLimit := 100 ].
+    listLimit ifNil: [ listLimit := 20 ].
     ^ listLimit
