@@ -1,13 +1,15 @@
 as yet unclassified
 indexElementNode: nscElement
-    | node depList depVars |
+    | node depList depVars instVars |
     depList := DependencyList for: nscElement.
-    depVars := #('depList') copy.
-    1 to: depList size by: 2 do: [ :index | depVars add: (depList at: index) name ].
+    depVars := Array new.
+    1 to: depList size by: 2 do: [ :index | depVars add: (depList at: index) name asString ].
+    instVars := (nscElement class allInstVarNames collect: [ :each | each asString ]) sorted.
     node := TDObjectNode new
         name: nscElement printString;
         topez: topez;
-        readMe: 'TDIndexDevTool>>indexElementNode:';
+        readMe:
+                'TDIndexDevTool>>indexElementNode: ... bold name indicates that the instance variable is on an index path';
         basicContents: nscElement;
         elementRenderAttributeBlock: [ :theNode :elementName | 
                     (depVars includes: elementName)
@@ -16,7 +18,7 @@ indexElementNode: nscElement
         listBlock: [ :theNode | 
                     (depList == nil
                         ifTrue: [ #() ]
-                        ifFalse: [ #('depList') ]) , nscElement class allInstVarNames sorted ];
+                        ifFalse: [ #('depList') ]) , instVars ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | childNode |
                     childNode := elementName = 'depList'

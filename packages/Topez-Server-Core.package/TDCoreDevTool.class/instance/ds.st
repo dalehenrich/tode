@@ -22,7 +22,10 @@ ds
     node
         childrenDo: [ :child | 
             stream tab.
-            child renderNameTextOn: stream.
+            node
+                renderNameText: child name , (node elementExtension: child name)
+                textAttributes: (node elementRenderNameTextAttributes: child name)
+                on: stream.
             stream nextPutAll: ' -> '.
             child dotSelfObject tzNodeDisplayOn: stream.
             stream cr ].
