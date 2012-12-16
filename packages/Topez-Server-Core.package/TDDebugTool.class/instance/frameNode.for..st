@@ -1,10 +1,7 @@
 as yet unclassified
-frameNode: frameIndex process: aGsProcess
+frameNode: frameIndex for: aTDStack
     | node stackFrame |
-    stackFrame := TDStackFrame new
-        process: aGsProcess;
-        frameIndex: frameIndex;
-        yourself.
+    stackFrame := aTDStack frames at: frameIndex.
     node := TDObjectNode new
         name: frameIndex asString;
         topez: topez;
