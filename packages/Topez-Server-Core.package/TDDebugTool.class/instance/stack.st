@@ -1,3 +1,3 @@
 as yet unclassified
 stack
-    ^ self stackNode basicContents
+    ^ self stackNode basicContents stack

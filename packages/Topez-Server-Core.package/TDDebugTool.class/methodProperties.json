@@ -1,9 +1,11 @@
 {
 	"class" : {
 		"debug" : "DataCurator 12/16/2012 09:40",
-		"debugManPage" : "DataCurator 12/16/2012 09:42",
+		"debugManPage" : "DataCurator 12/16/2012 14:00",
 		"down" : "DataCurator 12/16/2012 11:44",
 		"downManPage" : "DataCurator 12/16/2012 13:14",
+		"frame" : "DataCurator 12/16/2012 13:58",
+		"frameManPage" : "DataCurator 12/16/2012 14:07",
 		"haloExceptionBlock:" : "DataCurator 12/15/2012 19:06",
 		"installHalosOn:" : "DataCurator 12/15/2012 11:44",
 		"installOn:" : "DataCurator 12/15/2012 11:45",
@@ -17,9 +19,10 @@
 		"debug" : "DataCurator 12/16/2012 13:20",
 		"debugNode:exception:" : "DataCurator 12/16/2012 13:02",
 		"down" : "DataCurator 12/16/2012 11:52",
+		"frame" : "DataCurator 12/16/2012 14:20",
 		"frameNode:for:" : "DataCurator 12/16/2012 13:20",
 		"navigateStack:" : "DataCurator 12/16/2012 13:28",
-		"stack" : "DataCurator 12/16/2012 13:01",
+		"stack" : "DataCurator 12/16/2012 14:04",
 		"stackNode" : "DataCurator 12/16/2012 13:04",
 		"up" : "DataCurator 12/16/2012 11:52",
 		"where" : "DataCurator 12/15/2012 11:55" } }

@@ -7,5 +7,5 @@ SYNOPSIS
     debug
 
 DESCRIPTION
-    cd to .ex/debug node.
+    Navigate to .ex/debug node and list stack.
 '
