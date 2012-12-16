@@ -7,7 +7,7 @@ debugNode: aGsProcess exception: anException
         topez: topez;
         readMe: 'frames for: ' , anException description;
         basicContents: aGsProcess;
-        listBlock: [ :theNode | namedElements , (1 to: aGsProcess stackDepth collect: [ :each | each asString ]) ];
+        listBlock: [ :theNode | namedElements , ((1 to: aGsProcess stackDepth) collect: [ :each | each asString ]) ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     (elementName = 'exception'
                         ifTrue: [ anException asTDObjectNode: topez aspect: #'edit' ]

@@ -29,18 +29,16 @@ haloExceptionBlock: aTDTopezServer
                         yourself ];
         at: 'debug'
             put: [ :parentNode :nodeName | 
-                    parentNode
-                        addChildNode:
-                            (((self
-                                topez: aTDTopezServer
-                                objIn: nil
-                                tokens: #()
-                                windowId: nil)
-                                debugNode: parentNode topez serverStatus exceptionProcess
-                                exception: parentNode topez serverStatus exception)
-                                name: nodeName;
-                                parent: parentNode;
-                                yourself) ];
+                    ((self
+                        topez: aTDTopezServer
+                        objIn: nil
+                        tokens: #()
+                        windowId: nil)
+                        debugNode: parentNode topez serverStatus exceptionProcess
+                        exception: parentNode topez serverStatus exception)
+                        name: nodeName;
+                        parent: parentNode;
+                        yourself ];
         yourself.
     ^ [ :parentNode | 
     TDObjectNode new
