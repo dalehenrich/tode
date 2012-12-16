@@ -1,9 +1,15 @@
 as yet unclassified
 frameNode: frameIndex process: aGsProcess
     | frameContents receiver cl homeMethod inClass selector method receiverElement methodElement contextArray |
-    frameContents := aGsProcess _frameContentsAt: frameIndex.
     true
-        ifTrue: [ ^ frameContents asTDObjectNode: topez aspect: #'debug' ].
+        ifTrue: [ 
+            | stackFrame |
+            stackFrame := TDStackFrame new
+                process: aGsProcess;
+                frameIndex: frameIndex;
+                yourself.
+            ^ stackFrame asTDObjectNode: topez aspect: #'debug' ].
+    frameContents := aGsProcess _frameContentsAt: frameIndex.
     receiver := frameContents at: 10.
     cl := receiver class.
     method := frameContents at: 1.
