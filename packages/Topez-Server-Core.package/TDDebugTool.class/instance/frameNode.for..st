@@ -1,7 +1,6 @@
 as yet unclassified
 frameNode: frameIndex for: aTDStack
     | node stackFrame |
-    self nodes at: frameIndex ifPresent: [ :aNode | ^ aNode ].
     stackFrame := aTDStack frames at: frameIndex.
     node := TDObjectNode new
         name: frameIndex asString;
@@ -15,5 +14,4 @@ frameNode: frameIndex for: aTDStack
                         parent: theNode;
                         yourself ];
         yourself.
-    self nodes at: frameIndex put: node.
     ^ node

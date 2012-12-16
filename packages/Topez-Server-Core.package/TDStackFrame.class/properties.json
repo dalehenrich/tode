@@ -10,7 +10,8 @@
 		"frameIndex",
 		"frameContents",
 		"next",
-		"previous" ],
+		"previous",
+		"argAndTempNames" ],
 	"name" : "TDStackFrame",
 	"pools" : [
 		 ],

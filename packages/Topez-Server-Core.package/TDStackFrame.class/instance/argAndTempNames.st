@@ -1,3 +1,4 @@
 as yet unclassified
 argAndTempNames
-    ^ self frameContents at: 9
+    argAndTempNames ifNil: [ argAndTempNames := (self frameContents at: 9) collect: [ :each | each asString ] ].
+    ^ argAndTempNames
