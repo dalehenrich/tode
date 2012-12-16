@@ -19,7 +19,7 @@ indexDictionaryNode: indexDictionary
         listBlock: [ :theNode | (1 to: tuples size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     elementName isAllDigits
-                        ifFalse: [ ^ absentBlock value ].
+                        ifFalse: [ absentBlock value ].
                     (self indexDictionaryTupleNode: indexDictionary tuple: (tuples at: elementName asNumber))
                         parent: theNode;
                         name: elementName;

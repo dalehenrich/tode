@@ -12,7 +12,7 @@ indexListNode: indexList
                         ifTrue: [ self pathTermsNode: indexList rootTerms ]
                         ifFalse: [ 
                             elementName isAllDigits
-                                ifFalse: [ ^ absentBlock value ].
+                                ifFalse: [ absentBlock value ].
                             self indexNode: (indexList at: elementName asNumber) ])
                         parent: theNode;
                         name: elementName;

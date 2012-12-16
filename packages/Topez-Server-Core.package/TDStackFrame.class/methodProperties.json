@@ -2,9 +2,22 @@
 	"class" : {
 		 },
 	"instance" : {
+		"argAndTempNames" : "DataCurator 12/16/2012 07:20",
+		"argAndTempNamesAt:" : "DataCurator 12/16/2012 08:28",
+		"baseNodeMap" : "DataCurator 12/16/2012 09:40",
+		"baseNodeNames" : "DataCurator 12/16/2012 08:10",
+		"elementNodeNames" : "DataCurator 12/16/2012 08:10",
 		"frameContents" : "DataCurator 12/15/2012 19:14",
 		"frameIndex" : "DataCurator 12/15/2012 19:15",
 		"frameIndex:" : "DataCurator 12/15/2012 19:15",
+		"frameSelf" : "DataCurator 12/16/2012 07:21",
+		"homeMethod" : "DataCurator 12/16/2012 07:35",
+		"inClass" : "DataCurator 12/16/2012 07:43",
+		"isMethodForBlock" : "DataCurator 12/16/2012 07:39",
+		"method" : "DataCurator 12/16/2012 07:18",
+		"nodeFor:topez:ifAbsent:" : "DataCurator 12/16/2012 08:28",
+		"printOn:" : "DataCurator 12/16/2012 07:59",
 		"process" : "DataCurator 12/15/2012 19:12",
 		"process:" : "DataCurator 12/15/2012 19:13",
-		"receiver" : "DataCurator 12/15/2012 19:18" } }
+		"receiver" : "DataCurator 12/15/2012 19:18",
+		"selector" : "DataCurator 12/16/2012 07:46" } }

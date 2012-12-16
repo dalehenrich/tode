@@ -9,7 +9,7 @@ nodeFor: indexDict array: parentArray pathTerm: pathTerm
         listBlock: [ :theNode | (1 to: parentArray size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     elementName isAllDigits
-                        ifFalse: [ ^ absentBlock value ].
+                        ifFalse: [ absentBlock value ].
                     (self tupleNodeFor: indexDict parent: (parentArray at: elementName asNumber) pathTerm: pathTerm)
                         parent: theNode;
                         name: elementName;

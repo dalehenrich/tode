@@ -13,7 +13,7 @@ nscNode: nsc
                         ifTrue: [ self indexListNode: nsc _indexedPaths ]
                         ifFalse: [ 
                             elementName isAllDigits
-                                ifFalse: [ ^ absentBlock value ].
+                                ifFalse: [ absentBlock value ].
                             self indexElementNode: (nsc _at: elementName asNumber) ].
                     childNode
                         name: elementName;
