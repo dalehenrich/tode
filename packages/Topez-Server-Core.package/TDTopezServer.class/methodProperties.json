@@ -6,7 +6,8 @@
 		"reset" : "DataCurator 12/01/2012 15:36",
 		"rootNode" : "DataCurator 11/28/2012 05:40" },
 	"instance" : {
-		"accumulateTextAndDo:" : "DataCurator 12/15/2012 08:33",
+		"accumulateBlocks" : "DataCurator 12/16/2012 14:51",
+		"accumulateTextAndDo:" : "DataCurator 12/16/2012 14:53",
 		"baseNodeFor:" : "dkh 11/18/2012 15:30",
 		"commands" : "DataCurator 11/20/2012 09:02",
 		"createBlockFromSource:" : "DataCurator 11/27/2012 11:55",
@@ -35,7 +36,7 @@
 		"resolveHaloNamed:for:ifAbsent:" : "DataCurator 12/01/2012 16:36",
 		"rootNode" : "dkh 11/18/2012 15:30",
 		"serverStatus" : "DataCurator 12/01/2012 07:57",
-		"serverTextDo:with:" : "dkh 12/01/2012 19:39",
+		"serverTextDo:with:" : "DataCurator 12/16/2012 14:52",
 		"setCurrentNode:" : "DataCurator 12/01/2012 08:02",
 		"toString:" : "dkh 11/18/2012 15:30",
 		"toString:level:" : "dkh 11/18/2012 15:30",

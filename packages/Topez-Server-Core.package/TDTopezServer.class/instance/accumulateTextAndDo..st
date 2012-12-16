@@ -1,4 +1,4 @@
 accessing
-accumulateTextAndDo: aBlock
-    self topezClientForwarder accumulateTextAndServerDo: aBlock asOop.
-    ^ objIn
+accumulateTextAndDo: accumulateBlock
+    self accumulateBlocks add: accumulateBlock.
+    self topezClientForwarder accumulateTextAndServerDo: accumulateBlock asOop

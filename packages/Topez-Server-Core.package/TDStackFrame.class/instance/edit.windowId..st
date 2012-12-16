@@ -4,7 +4,7 @@ edit: aTopez windowId: windowId
     clientElement := TDClientSourceElement new
         serverElementOop: self asOop;
         getSelector: #'homeMethodSource';
-        getSelector: #'homeMethodSource:';
+        setSelector: #'homeMethodSource:';
         yourself.
     aTopez
         editElement: clientElement

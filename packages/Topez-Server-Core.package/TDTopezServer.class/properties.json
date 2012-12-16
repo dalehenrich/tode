@@ -10,7 +10,8 @@
 	"instvars" : [
 		"topezClientForwarder",
 		"serverStatus",
-		"objIn" ],
+		"objIn",
+		"accumulateBlocks" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],
