@@ -5,7 +5,7 @@ baseNodeMap
     map
         add: 'method' -> #'method';
         add: 'receiver' -> #'receiver';
-        add: 'context' -> #'self'.
+        yourself.
     self isMethodForBlock
         ifTrue: [ map add: 'home' -> #'homeMethod' ].
     ^ map
