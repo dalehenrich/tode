@@ -10,6 +10,16 @@ debugNode: aGsProcess exception: anException
         topez: topez;
         readMe: 'debugger for: ' , stack printString;
         basicContents: stack;
+        elementExtensionBlock: [ :theNode :elementName | 
+                    theNode basicContents currentFrame frameIndex asString = elementName
+                        ifTrue: [ '==>' , theNode class objectExtension ]
+                        ifFalse: [ theNode class objectExtension ] ];
+        elementRenderAttributeBlock: [ :theNode :elementName | 
+                    theNode basicContents currentFrame frameIndex asString = elementName
+                        ifTrue: [ 
+                            {(TextColor color: Color red).
+                            (TextEmphasis bold)} ]
+                        ifFalse: [ theNode class objectTextAttributes ] ];
         listBlock: [ :theNode | theNode basicContents frames collect: [ :frame | frame frameIndex asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     elementName isAllDigits

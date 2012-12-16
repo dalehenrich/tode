@@ -8,7 +8,8 @@
 	"instvars" : [
 		"process",
 		"exception",
-		"frames" ],
+		"frames",
+		"currentFrame" ],
 	"name" : "TDStack",
 	"pools" : [
 		 ],

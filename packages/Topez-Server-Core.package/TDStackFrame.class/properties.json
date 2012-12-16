@@ -8,7 +8,9 @@
 	"instvars" : [
 		"stack",
 		"frameIndex",
-		"frameContents" ],
+		"frameContents",
+		"next",
+		"previous" ],
 	"name" : "TDStackFrame",
 	"pools" : [
 		 ],
