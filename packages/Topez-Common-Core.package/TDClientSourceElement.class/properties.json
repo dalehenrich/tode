@@ -7,7 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"inClassOop",
-		"readOnly" ],
+		"readOnly",
+		"sourceRange" ],
 	"name" : "TDClientSourceElement",
 	"pools" : [
 		 ],

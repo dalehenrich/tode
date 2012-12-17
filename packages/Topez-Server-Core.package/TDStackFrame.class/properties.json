@@ -11,7 +11,8 @@
 		"frameContents",
 		"next",
 		"previous",
-		"argAndTempNames" ],
+		"argAndTempNames",
+		"selectionRange" ],
 	"name" : "TDStackFrame",
 	"pools" : [
 		 ],
