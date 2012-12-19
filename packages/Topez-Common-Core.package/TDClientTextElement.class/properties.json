@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"block" ],
-	"name" : "TDScriptLeafNode",
+		"readOnly" ],
+	"name" : "TDClientTextElement",
 	"pools" : [
 		 ],
-	"super" : "TDExecutableLeafNode",
+	"super" : "TDClientElement",
 	"type" : "normal" }

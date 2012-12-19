@@ -7,10 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"inClassOop",
-		"readOnly",
 		"sourceRange" ],
 	"name" : "TDClientSourceElement",
 	"pools" : [
 		 ],
-	"super" : "TDClientElement",
+	"super" : "TDClientTextElement",
 	"type" : "normal" }
