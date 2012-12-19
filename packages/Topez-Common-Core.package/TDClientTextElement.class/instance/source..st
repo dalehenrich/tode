@@ -1,3 +1,9 @@
 as yet unclassified
 source: aStringOrText
-    self setMessageSend value: (STON toString: (aStringOrText asText removeAttribute: TextFontChange defaultFontChange))
+    | stonString |
+    self halt.
+    stonString := STON toString: (aStringOrText asText removeAttribute: TextFontChange defaultFontChange).
+    Transcript
+        cr;
+        show: 'set: ' , stonString.
+    self setMessageSend value: stonString

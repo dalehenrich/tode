@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptContents:notifying:" : "dkh 12/18/2012 22:29",
+		"acceptContents:notifying:" : "dkh 12/19/2012 09:52",
 		"bindingOf:" : "dkh 10/8/2012 10:59",
 		"buildTextMorph" : "dkh 10/24/2012 16:33",
 		"clientElement" : "dkh 11/27/2012 15:50",
@@ -21,8 +21,8 @@
 		"sourceElement" : "dkh 10/8/2012 11:57",
 		"sourceElement:" : "dkh 10/24/2012 16:43",
 		"spawnWindow" : "dkh 10/26/2012 23:00",
-		"stylerClass" : "dkh 10/18/2012 20:57",
+		"stylerClass" : "dkh 12/19/2012 10:04",
 		"stylingActive" : "dkh 10/3/2012 16:41",
-		"stylingActive:" : "dkh 10/3/2012 16:42",
+		"stylingActive:" : "dkh 12/19/2012 10:13",
 		"textMorph" : "dkh 10/7/2012 12:29",
 		"updateStatus:" : "dkh 12/16/2012 15:29" } }

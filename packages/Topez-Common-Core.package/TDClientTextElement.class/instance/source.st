@@ -1,3 +1,8 @@
 as yet unclassified
 source
-    ^ STON fromString: self getMessageSend value
+    | stonString |
+    stonString := self getMessageSend value.
+    Transcript
+        cr;
+        show: 'get: ' , stonString.
+    ^ STON fromString: stonString
