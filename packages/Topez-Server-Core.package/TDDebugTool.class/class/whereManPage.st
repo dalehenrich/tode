@@ -1,11 +1,11 @@
 as yet unclassified
 whereManPage
     ^ 'NAME
-    where - list exception stack
+    where - list current exception stack
 
 SYNOPSIS
-    where
+    where 
 
 DESCRIPTION
-    Perform a cat command on .ex/process node.
+    Display the stack for .ex/process. 
 '

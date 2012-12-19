@@ -1,15 +1,17 @@
 as yet unclassified
 navigateStack: increment
-    stackNode := tokens size = 1
-        ifTrue: [ topez currentNode ]
-        ifFalse: [ topez lookup: (tokens at: 2) ].
+    | stackPath |
+    stackPath := tokens size > 1
+        ifTrue: [ tokens at: 2 ]
+        ifFalse: [ self defaultStackPath ].
+    stackNode := topez lookup: stackPath.
     topez setCurrentNode: self stackNode.
-    self stack navigateStack: increment.
-    self stack currentFrame edit: topez windowId: nil.
+    self dbStack navigateStack: increment.
+    self dbStack currentFrame edit: topez windowId: nil.
     ^ (topez commands at: 'ds') block
         value: topez
         value: self stackNode
         value:
             {'ds'.
-            (self stack currentFrame frameIndex asString)}
+            (stackNode printString , self dbStack currentFrame frameIndex asString)}
         value: nil

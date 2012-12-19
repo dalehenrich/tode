@@ -4,8 +4,11 @@ debugManPage
     debug - initiate debugging session
 
 SYNOPSIS
-    debug
+    debug [stack-path]
 
 DESCRIPTION
-    Navigate to .ex/debug node and list stack.
+    Copy the .ex/debug node to <stack-path>, change node to
+    <stack-path> and list the stack using the `ds` command.
+
+    The default <stack-path> is /home/stk. 
 '
