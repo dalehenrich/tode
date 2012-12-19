@@ -3,8 +3,8 @@ edit: aTopez windowId: windowId
     | clientElement |
     clientElement := TDClientTextElement new
         serverElementOop: self asOop;
-        getSelector: #'contents';
-        setSelector: #'contents:';
+        getSelector: #'stonContents';
+        setSelector: #'stonContents:';
         yourself.
     aTopez
         editElement: clientElement

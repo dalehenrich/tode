@@ -1,3 +1,3 @@
 as yet unclassified
 getMessageTransform
-    ^ #'ston' -> 1
+    ^ #'native' -> nil
