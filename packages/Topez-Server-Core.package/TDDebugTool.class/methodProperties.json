@@ -15,7 +15,8 @@
 		"whereManPage" : "DataCurator 12/19/2012 11:13" },
 	"instance" : {
 		"dbStack" : "DataCurator 12/19/2012 13:00",
-		"debug" : "DataCurator 12/19/2012 13:04",
+		"dbStep:for:" : "DataCurator 12/19/2012 14:14",
+		"debug" : "DataCurator 12/19/2012 14:42",
 		"debugNode:exception:" : "DataCurator 12/16/2012 13:02",
 		"defaultStackPath" : "DataCurator 12/19/2012 11:10",
 		"down" : "DataCurator 12/16/2012 11:52",
@@ -24,5 +25,6 @@
 		"navigateStack:" : "DataCurator 12/19/2012 13:03",
 		"stack" : "DataCurator 12/19/2012 13:02",
 		"stackNode" : "DataCurator 12/16/2012 13:04",
+		"step" : "DataCurator 12/19/2012 13:21",
 		"up" : "DataCurator 12/16/2012 11:52",
 		"where" : "DataCurator 12/15/2012 11:55" } }
