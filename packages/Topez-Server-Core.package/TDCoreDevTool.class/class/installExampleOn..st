@@ -7,6 +7,18 @@ installExampleOn: aTDTopezServer
                         contents: '3+4';
                         yourself);
         addChildNode:
+                (TDTxtLeafNode new
+                        name: 'text';
+                        contents:
+                                'This is ' asText
+                                        ,
+                                            (Text
+                                                string: 'REAL'
+                                                attributes:
+                                                    {(TextColor red).
+                                                    (TextEmphasis bold)}) , ' text.' asText;
+                        yourself);
+        addChildNode:
                 (TDTopezLeafNode new
                         name: 'topez';
                         contents: 'cat /home/.window/model';

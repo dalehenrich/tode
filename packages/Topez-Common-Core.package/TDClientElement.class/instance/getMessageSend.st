@@ -7,5 +7,5 @@ getMessageSend
                 receiver: (self session asOopType: self serverElementOop);
                 selector: self getSelector;
                 arguments: #();
-                transform: #'native' -> nil ].
+                transform: self getMessageTransform ].
     ^ getMessageSend

@@ -1,7 +1,7 @@
 as yet unclassified
 edit: aTopez windowId: windowId
     | clientElement |
-    clientElement := TDClientSourceElement new
+    clientElement := TDClientTextElement new
         serverElementOop: self asOop;
         getSelector: #'contents';
         setSelector: #'contents:';
