@@ -1,8 +1,7 @@
 as yet unclassified
 dbStep: level forProcessOop: processOop
     | result |
-    result := #'done'.
-    [ self session stepWith: (TZHeaderGemStone oop: processOop) level: level ]
+    [ result := self session stepWith: (TZHeaderGemStone oop: processOop) level: level ]
         on: TZTopezBreakpointNotification
         do: [ :ex | 
             | errorNumber |

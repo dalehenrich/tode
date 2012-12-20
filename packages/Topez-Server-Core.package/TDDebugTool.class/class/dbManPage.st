@@ -11,7 +11,8 @@ DESCRIPTION
     db up [stack-path]
     db frame <frame-index> [stack-path]
     db stack [stack-path]
-    db step [into|over] [stack-path]
+    db into [stack-path]
+    db over [stack-path]
     db continue [stack-path]
 
     The default <stack-path> is /home/stk. If you use the `debug`

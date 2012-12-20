@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"stackNode" ],
+		"stackNode",
+		"processResult" ],
 	"name" : "TDDebugTool",
 	"pools" : [
 		 ],
