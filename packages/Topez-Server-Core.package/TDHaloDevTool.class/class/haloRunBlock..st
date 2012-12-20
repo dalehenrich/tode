@@ -25,6 +25,7 @@ haloRunBlock: aTDTopezServer
         name: '.run';
         basicContents: directory;
         parent: parentNode;
+        readMe: self readMeRun;
         elementExtensionBlock: [ :theNode :elementName | theNode class objectExtension ];
         elementRenderAttributeBlock: [ :theNode :elementName | theNode class objectTextAttributes ];
         listBlock: [ :theNode | theNode basicContents keys sorted ];

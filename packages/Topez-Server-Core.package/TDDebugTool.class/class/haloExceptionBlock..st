@@ -45,6 +45,7 @@ haloExceptionBlock: aTDTopezServer
         name: '.ex';
         basicContents: directory;
         parent: parentNode;
+        readMe: self haloReadMe;
         elementExtensionBlock: [ :theNode :elementName | theNode class objectExtension ];
         elementRenderAttributeBlock: [ :theNode :elementName | theNode class objectTextAttributes ];
         listBlock: [ :theNode | theNode basicContents keys sorted ];
