@@ -7,9 +7,9 @@ SYNOPSIS
   ps <command> [args]
 
 DESCRIPTION
-  ps kill <process-index>
-  ps kill9 <process-index>
+  ps kill <process-oop>
+  ps kill9 <process-oop>
   ps list
-  ps terminate <process-index>
+  ps terminate <process-oop>
   ps yield
 '

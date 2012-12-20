@@ -1,7 +1,5 @@
 as yet unclassified
 kill9
-  "ps kill9 <process-index>"
+  "ps kill9 <process-oop>"
 
-  | process |
-  process := self lookupProcess: (tokens at: 2) asNumber.
-  ^ process terminate9
+  ^ (Object _objectForOop: (tokens at: 2) asNumber) terminate9

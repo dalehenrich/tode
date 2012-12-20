@@ -1,7 +1,5 @@
 as yet unclassified
 terminate
-  "ps terminate <process-index>"
+  "ps terminate <process-oop>"
 
-  | process |
-  process := self lookupProcess: (tokens at: 2) asNumber.
-  ^ process terminate
+  ^ (Object _objectForOop: (tokens at: 2) asNumber) terminate
