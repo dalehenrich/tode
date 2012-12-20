@@ -1,3 +1,3 @@
 as yet unclassified
-listContents
+listContents: limit
     ^ self name

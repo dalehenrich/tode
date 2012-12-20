@@ -27,10 +27,22 @@ haloExceptionBlock: aTDTopezServer
                         name: nodeName;
                         parent: parentNode;
                         yourself ];
+        at: 'debug'
+            put: [ :parentNode :nodeName | 
+                    ((self
+                        topez: aTDTopezServer
+                        objIn: nil
+                        tokens: #()
+                        windowId: nil)
+                        debugNode: parentNode topez serverStatus exceptionProcess
+                        exception: parentNode topez serverStatus exception)
+                        name: nodeName;
+                        parent: parentNode;
+                        yourself ];
         yourself.
     ^ [ :parentNode | 
     TDObjectNode new
-        name: '.exception';
+        name: '.ex';
         basicContents: directory;
         parent: parentNode;
         elementExtensionBlock: [ :theNode :elementName | theNode class objectExtension ];

@@ -1,4 +1,4 @@
 evaluator engine
-executeBuiltIn: tokens objIn: objIn
+executeBuiltIn: tokens
     self perform: (tokens at: 1) asSymbol.
     ^ tokens at: 1

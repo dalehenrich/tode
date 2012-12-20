@@ -27,7 +27,7 @@ indexNode: theIndex
                                                 ifTrue: [ (theIndex instVarNamed: elementName) asTDObjectNode: self topez aspect: #'index' ]
                                                 ifFalse: [ 
                                                     elementName isAllDigits
-                                                        ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
+                                                        ifFalse: [ absentBlock value ].
                                                     self pathTermNode: (theIndex at: elementName asNumber) ] ] ] ].
                     childNode == nil
                         ifTrue: [ childNode := nil asTDObjectNode: self topez aspect: #'index' ].

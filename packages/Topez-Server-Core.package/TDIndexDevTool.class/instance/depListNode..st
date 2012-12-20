@@ -17,7 +17,7 @@ depListNode: depList
         elementBlock: [ :theNode :elementName :absentBlock | 
                     | index |
                     elementName isAllDigits
-                        ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
+                        ifFalse: [ absentBlock value ].
                     index := elementName asNumber.
                     (index even
                         ifTrue: [ (map at: elementName) asTDObjectNode: self topez aspect: #'index' ]

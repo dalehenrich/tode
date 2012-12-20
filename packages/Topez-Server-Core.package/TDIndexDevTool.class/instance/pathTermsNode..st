@@ -9,7 +9,7 @@ pathTermsNode: array
         listBlock: [ :theNode | (1 to: array size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
                     elementName isAllDigits
-                        ifFalse: [ ^ self error: 'No such node: ' , elementName printString ].
+                        ifFalse: [ absentBlock value ].
                     (self pathTermNode: (array at: elementName asNumber))
                         parent: theNode;
                         name: elementName;

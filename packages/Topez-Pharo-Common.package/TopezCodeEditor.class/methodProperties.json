@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptContents:notifying:" : "dkh 10/29/2012 13:55",
+		"acceptContents:notifying:" : "dkh 12/19/2012 10:19",
 		"bindingOf:" : "dkh 10/8/2012 10:59",
 		"buildTextMorph" : "dkh 10/24/2012 16:33",
 		"clientElement" : "dkh 11/27/2012 15:50",
@@ -13,7 +13,7 @@
 		"edittingCode" : "dkh 10/26/2012 18:56",
 		"edittingCode:" : "dkh 10/26/2012 18:56",
 		"format:" : "dkh 10/12/2012 16:08",
-		"getSelection" : "dkh 10/26/2012 19:00",
+		"getSelection" : "dkh 12/17/2012 08:23",
 		"hasBindingThatBeginsWith:" : "dkh 10/8/2012 11:52",
 		"morph" : "dkh 10/7/2012 11:31",
 		"selectSourceClass" : "dkh 10/26/2012 19:00",
@@ -21,8 +21,8 @@
 		"sourceElement" : "dkh 10/8/2012 11:57",
 		"sourceElement:" : "dkh 10/24/2012 16:43",
 		"spawnWindow" : "dkh 10/26/2012 23:00",
-		"stylerClass" : "dkh 10/18/2012 20:57",
+		"stylerClass" : "dkh 12/19/2012 10:19",
 		"stylingActive" : "dkh 10/3/2012 16:41",
-		"stylingActive:" : "dkh 10/3/2012 16:42",
+		"stylingActive:" : "dkh 12/19/2012 10:13",
 		"textMorph" : "dkh 10/7/2012 12:29",
-		"updateStatus:" : "dkh 10/26/2012 19:02" } }
+		"updateStatus:" : "dkh 12/16/2012 15:29" } }

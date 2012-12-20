@@ -1,5 +1,6 @@
 convenience
 serverTextDo: accumulateBlock with: doitString
     | text |
-    text := (accumulateBlock value: doitString) renderText: #display.
+    self accumulateBlocks remove: accumulateBlock ifAbsent: [  ].
+    text := (accumulateBlock value: doitString) renderText: #'display'.
     ^ STON toString: text

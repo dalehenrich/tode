@@ -1,3 +1,3 @@
 as yet unclassified
-source: aString
-    self setMessageSend value: aString
+source: aStringOrText
+    self setMessageSend value: aStringOrText asString

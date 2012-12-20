@@ -1,0 +1,3 @@
+accessing
+resetObjIn
+    objIn := nil

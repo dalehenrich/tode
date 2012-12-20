@@ -1,4 +1,4 @@
 accessing
 updateStatus: aTZTopezStatus
-    self edittingCode
+    (self edittingCode and: [aTZTopezStatus wantsClassUpdate])
         ifTrue: [ aTZTopezStatus currentClass: self sourceElement elementClass ]

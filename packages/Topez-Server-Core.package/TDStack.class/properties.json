@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"process",
+		"exception",
+		"frames",
+		"currentFrame" ],
+	"name" : "TDStack",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
