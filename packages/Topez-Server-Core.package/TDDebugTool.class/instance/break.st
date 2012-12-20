@@ -7,12 +7,17 @@ break
     db break disable <list_item> 
 "
 
-    | breakTokens |
-    breakTokens := tokens copyFrom: 3 to: tokens size.
-    (breakTokens at: 1) beginsWith: '@' ifTrue: [ ^ self breakSet: breakTokens ].
-    (breakTokens at: 1) = 'clear'
+    | breakTokens command |
+    breakTokens := tokens copyFrom: 2 to: tokens size.
+    command := breakTokens at: 1.
+    Transcript
+        cr;
+        show: command.
+    (command beginsWith: '@')
+        ifTrue: [ ^ self breakSet: breakTokens ].
+    command = 'clear'
         ifTrue: [ ^ self breakClear: breakTokens ].
-    (breakTokens at: 1) = 'enable'
+    command = 'enable'
         ifTrue: [ ^ self breakEnable: breakTokens ].
-    (breakTokens at: 1) = 'disable'
+    command = 'disable'
         ifTrue: [ ^ self breakDisable: breakTokens ]
