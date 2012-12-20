@@ -1,9 +1,13 @@
 as yet unclassified
 breakEnable: breakTokens
-    "enable [list-item]"
+    "enable [break-list-index] "
 
+    | breakReport breakRow breakNumber |
     breakTokens size = 1
         ifTrue: [ 
             "enable all breakpoints"
             ^ GsNMethod _enableAllBreaks ].
-    GsNMethod _enableBreakNumber: (breakTokens at: 2) asNumber
+    breakReport := (GsNMethod _breakReport: false) at: 2.
+    breakRow := breakReport at: (breakTokens at: 2) asNumber.
+    breakNumber := breakRow at: 1.
+    ^ GsNMethod _enableBreakNumber: breakNumber

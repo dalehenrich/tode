@@ -8,9 +8,9 @@ SYNOPSIS
 
 DESCRIPTION
     db break @<step-point> <class>[ class]>><selector> 
-    db break clear [@<step-point> <class>[ class]>><selector>] 
-    db break enable [list-item]
-    db break disable [list_item>]
+    db break clear [break-list-index] 
+    db break enable [break-list-index]
+    db break disable [break-list-index]
     db break list 
     db continue [stack-path]
     db down [stack-path]

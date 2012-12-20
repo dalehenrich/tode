@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"breakpointNode" : "DataCurator 12/20/2012 08:55",
+		"breakpointNode" : "DataCurator 12/20/2012 10:00",
 		"db" : "DataCurator 12/19/2012 11:16",
-		"dbManPage" : "DataCurator 12/20/2012 08:48",
+		"dbManPage" : "DataCurator 12/20/2012 09:15",
 		"debug" : "DataCurator 12/16/2012 09:40",
 		"debugManPage" : "DataCurator 12/20/2012 07:51",
 		"haloExceptionBlock:" : "DataCurator 12/20/2012 08:21",
@@ -17,10 +17,10 @@
 		"where" : "DataCurator 12/15/2012 11:48",
 		"whereManPage" : "DataCurator 12/19/2012 11:13" },
 	"instance" : {
-		"break" : "DataCurator 12/20/2012 08:49",
-		"breakClear:" : "DataCurator 12/19/2012 20:57",
-		"breakDisable:" : "DataCurator 12/19/2012 20:58",
-		"breakEnable:" : "DataCurator 12/19/2012 20:59",
+		"break" : "DataCurator 12/20/2012 09:16",
+		"breakClear:" : "DataCurator 12/20/2012 10:01",
+		"breakDisable:" : "DataCurator 12/20/2012 09:59",
+		"breakEnable:" : "DataCurator 12/20/2012 09:57",
 		"breakList:" : "DataCurator 12/20/2012 08:54",
 		"breakSet:" : "DataCurator 12/19/2012 21:16",
 		"continue" : "DataCurator 12/20/2012 08:58",
