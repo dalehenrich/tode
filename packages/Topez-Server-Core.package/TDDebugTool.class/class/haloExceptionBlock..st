@@ -15,7 +15,7 @@ haloExceptionBlock: aTDTopezServer
                                         ifTrue: [ 'no exception' ]
                                         ifFalse: [ ex description ] ];
                         yourself ];
-        at: 'ex'
+        at: 'exception'
             put: [ :parentNode :nodeName | 
                     (parentNode topez serverStatus exception asTDObjectNode: parentNode topez aspect: #'edit')
                         name: nodeName;
@@ -27,7 +27,7 @@ haloExceptionBlock: aTDTopezServer
                         name: nodeName;
                         parent: parentNode;
                         yourself ];
-        at: 'debug'
+        at: 'stack'
             put: [ :parentNode :nodeName | 
                     ((self
                         topez: aTDTopezServer
@@ -42,7 +42,7 @@ haloExceptionBlock: aTDTopezServer
         yourself.
     ^ [ :parentNode | 
     TDObjectNode new
-        name: '.ex';
+        name: '.debug';
         basicContents: directory;
         parent: parentNode;
         readMe: self haloReadMe;

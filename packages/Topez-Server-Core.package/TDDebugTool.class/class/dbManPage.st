@@ -20,7 +20,8 @@ DESCRIPTION
     db steps <class>[ class]>><selector>
     db up [stack-path]
 
-    The default <stack-path> is /home/stk. If you use the `debug`
-    command to initiate debugging, then the stack is 
-    automatically copied from .ex/debug to /home/stk.
+    The default <stack-path> is /home/stack. If you use 
+    the `debug` command to initiate debugging, then the 
+    stack is automatically copied from .debug/stack to 
+    /home/stack.
 '

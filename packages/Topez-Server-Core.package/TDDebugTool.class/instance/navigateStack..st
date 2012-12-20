@@ -3,7 +3,7 @@ navigateStack: increment
     | stackPath |
     stackPath := tokens size > 1
         ifTrue: [ tokens at: 2 ]
-        ifFalse: [ self defaultStackPath ].
+        ifFalse: [ self defaultHomeStackPath ].
     stackNode := topez lookup: stackPath.
     topez setCurrentNode: self stackNode.
     self dbStack navigateStack: increment.

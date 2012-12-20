@@ -3,7 +3,7 @@ frame
     | frameIndex stackPath |
     stackPath := tokens size > 2
         ifTrue: [ tokens at: 3 ]
-        ifFalse: [ self defaultStackPath ].
+        ifFalse: [ self defaultHomeStackPath ].
     stackNode := topez lookup: stackPath.
     frameIndex := tokens size > 1
         ifTrue: [ (tokens at: 2) asNumber ]

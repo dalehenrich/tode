@@ -7,8 +7,9 @@ SYNOPSIS
     debug [stack-path]
 
 DESCRIPTION
-    Copy the .ex/debug node to <stack-path>, change node to
-    <stack-path> and list the stack using the `ds` command.
+    Copy the .debug/stack node to <stack-path>, change 
+    node to <stack-path> and list the stack using the 
+    `ds` command.
 
-    The default <stack-path> is /home/stk. 
+    The default <stack-path> is /home/stack. 
 '
