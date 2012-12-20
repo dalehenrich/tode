@@ -1,5 +1,6 @@
 as yet unclassified
 printOn: aStream
+  [ 
   aStream
     nextPutAll: process class name;
     nextPutAll: '(oop=';
@@ -22,7 +23,9 @@ printOn: aStream
     ifTrue: [ 
       aStream
         nextPutAll: 'group=';
-        nextPutAll: process _group printString ].
+        nextPutAll: process _group printString ] ]
+    on: Error
+    do: [ :ex | aStream nextPutAll: '...problem printing process' ].
   aStream
     nextPut: ')';
     cr.

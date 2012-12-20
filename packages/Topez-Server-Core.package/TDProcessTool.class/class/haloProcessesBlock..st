@@ -12,7 +12,7 @@ haloProcessesBlock: aTDTopezServer
           elementName isAllDigits
             ifFalse: [ absentBlock value ].
           process := theNode basicContents at: elementName asNumber ifAbsent: absentBlock.
-          ((self
+          ((TDDebugTool
             topez: parentNode topez
             objIn: nil
             tokens: #()

@@ -3,11 +3,9 @@ installExampleOn: aTDTopezServer
   (aTDTopezServer lookup: '/home')
     addChildNode:
         (TDSmalltalkLeafNode new
-            name: 'halt';
+            name: 'fork';
             contents:
-                '"opportunity to use debugger"
-| block |
-block := [:arg | arg halt].
-block value: 100';
+                '"opportunity to work with processes and yield command"
+[ (Delay forSeconds: 10) wait ] fork';
             yourself);
     yourself

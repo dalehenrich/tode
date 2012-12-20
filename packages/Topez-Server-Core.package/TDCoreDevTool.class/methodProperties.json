@@ -47,9 +47,7 @@
 		"toolName" : "DataCurator 11/14/2012 15:27",
 		"toolReadMe" : "DataCurator 11/29/2012 15:59",
 		"touch" : "DataCurator 12/09/2012 13:55",
-		"touchManPage" : "DataCurator 11/30/2012 08:22",
-		"yield" : "DataCurator 12/20/2012 12:33",
-		"yieldManPage" : "DataCurator 12/20/2012 12:34" },
+		"touchManPage" : "DataCurator 11/30/2012 08:22" },
 	"instance" : {
 		"abort" : "DataCurator 11/29/2012 12:00",
 		"cat" : "DataCurator 11/20/2012 11:31",
@@ -72,5 +70,4 @@
 		"rm" : "DataCurator 11/20/2012 11:35",
 		"run" : "DataCurator 12/16/2012 14:49",
 		"sendersOf:" : "DataCurator 11/14/2012 14:36",
-		"touch" : "DataCurator 11/30/2012 08:28",
-		"yield" : "DataCurator 12/20/2012 12:35" } }
+		"touch" : "DataCurator 11/30/2012 08:28" } }

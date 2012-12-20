@@ -2,6 +2,8 @@ as yet unclassified
 createFrames
   | previous stackFrame stackDepth |
   frames := OrderedCollection new.
+  self process == nil
+    ifTrue: [ ^ frames ].
   previous := nil.
   stackDepth := self process stackDepth.
   1 to: stackDepth do: [ :frameIndex | 
