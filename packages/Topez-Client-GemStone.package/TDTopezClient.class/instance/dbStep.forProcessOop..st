@@ -10,6 +10,10 @@ dbStep: level forProcessOop: processOop
                 ifTrue: [ 
                     "single step breakpoint ... as expected"
                     ^ #'singleStep' ].
+            errorNumber = 6005
+                ifTrue: [ 
+                    "method breakpoint"
+                    ^ #'breakpoint' ].
             errorNumber = 6006
                 ifTrue: [ 
                     "return from method or block breakpoint ... as expected"
