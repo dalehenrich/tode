@@ -11,6 +11,7 @@ DESCRIPTION
     db break clear [@<step-point> <class>[ class]>><selector>] 
     db break enable [list-item]
     db break disable [list_item>]
+    db break list 
     db continue [stack-path]
     db down [stack-path]
     db frame <frame-index> [stack-path]

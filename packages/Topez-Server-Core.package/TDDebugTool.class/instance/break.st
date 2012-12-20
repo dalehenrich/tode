@@ -5,6 +5,7 @@ break
     db break clear [@<step-point> <class>[ class]>><selector>] 
     db break enable <list-item>
     db break disable <list_item> 
+    db break list 
 "
 
     | breakTokens command |
@@ -20,4 +21,6 @@ break
     command = 'enable'
         ifTrue: [ ^ self breakEnable: breakTokens ].
     command = 'disable'
-        ifTrue: [ ^ self breakDisable: breakTokens ]
+        ifTrue: [ ^ self breakDisable: breakTokens ].
+    command = 'list'
+        ifTrue: [ ^ self breakList: breakTokens ]

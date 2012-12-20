@@ -3,6 +3,12 @@ haloExceptionBlock: aTDTopezServer
     | directory |
     directory := Dictionary new.
     directory
+        at: 'breakpoints'
+            put: [ :parentNode :nodeName | 
+                    self breakpointNode
+                        name: nodeName;
+                        parent: parentNode;
+                        yourself ];
         at: 'description'
             put: [ :parentNode :nodeName | 
                     TDPluggableLeafNode new

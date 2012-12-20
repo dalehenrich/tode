@@ -1,3 +1,3 @@
 as yet unclassified
 defaultStackPath
-    ^ '.debug/stack'
+    ^ self defaultPath , 'stack'
