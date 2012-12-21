@@ -6,6 +6,5 @@ postCopy
   shellId := self shellId + 1.
   topezClient := self topezClient copy
     shell: self;
-    halt;
     topezServerProxy;
     yourself
