@@ -16,6 +16,7 @@ haloWindowBlock: aTDTopezServer
     TDObjectNode new
         name: '.window';
         basicContents: directory;
+        readMe: self readMeWindow;
         parent: parentNode;
         elementExtensionBlock: [ :theNode :elementName | theNode class objectExtension ];
         elementRenderAttributeBlock: [ :theNode :elementName | theNode class objectTextAttributes ];

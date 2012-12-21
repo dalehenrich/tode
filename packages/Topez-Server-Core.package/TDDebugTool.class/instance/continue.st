@@ -1,9 +1,9 @@
 as yet unclassified
 continue
-    "db continue [stack-path]"
+    "continue [stack-path]"
 
     | stackPath |
-    stackPath := tokens size > 2
-        ifTrue: [ tokens at: 3 ]
-        ifFalse: [ self defaultStackPath ].
+    stackPath := tokens size > 1
+        ifTrue: [ tokens at: 2 ]
+        ifFalse: [ self defaultHomeStackPath ].
     ^ self dbContinue: nil for: stackPath

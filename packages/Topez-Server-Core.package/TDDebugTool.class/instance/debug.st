@@ -1,10 +1,10 @@
 as yet unclassified
 debug
     | stack stackPath debugNode baseNode path defaultNodeName destinationNode |
-    debugNode := self topez lookup: '.ex/debug'.
+    debugNode := self topez lookup: self defaultStackPath.
     stackPath := tokens size > 1
         ifTrue: [ tokens at: 2 ]
-        ifFalse: [ self defaultStackPath ].
+        ifFalse: [ self defaultHomeStackPath ].
     baseNode := topez baseNodeFor: stackPath.
     path := stackPath findTokens: '/'.
     defaultNodeName := path last.

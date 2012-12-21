@@ -1,3 +1,3 @@
 as yet unclassified
 toolReadMe
-    ^ self commandPath , ' provides node-level debugger support.'
+    ^ self commandPath , ' provides debugger support.'

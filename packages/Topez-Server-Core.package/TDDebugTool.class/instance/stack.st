@@ -3,7 +3,7 @@ stack
     | stackPath |
     stackPath := tokens size > 2
         ifTrue: [ tokens at: 3 ]
-        ifFalse: [ self defaultStackPath ].
+        ifFalse: [ self defaultHomeStackPath ].
     stackNode := topez lookup: stackPath.
     ^ (topez commands at: 'ds') block
         value: topez

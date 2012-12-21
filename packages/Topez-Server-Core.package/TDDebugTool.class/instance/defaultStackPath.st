@@ -1,3 +1,3 @@
 as yet unclassified
 defaultStackPath
-    ^ '/home/stk'
+    ^ self defaultPath , 'stack'
