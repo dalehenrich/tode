@@ -16,5 +16,5 @@ createFrames
     stackFrame previous: previous.
     previous := stackFrame ].
   stackDepth > 0
-    ifTrue: [ currentFrame := frames at: 1 ].
+    ifTrue: [ currentFrame := self signallerFrame: (frames at: 1) ].
   ^ frames
