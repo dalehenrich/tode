@@ -1,6 +1,6 @@
 as yet unclassified
 dbManPage
-    ^ 'NAME
+  ^ 'NAME
     db - execute debugger commands
 
 SYNOPSIS
@@ -12,13 +12,13 @@ DESCRIPTION
     db break enable [break-list-index]
     db break disable [break-list-index]
     db break list 
+    db break steps <class>[ class]>><selector>
     db continue [stack-path]
     db down [stack-path]
     db frame <frame-index> [stack-path]
     db into [stack-path]
     db over [stack-path]
     db stack [stack-path]
-    db steps <class>[ class]>><selector>
     db up [stack-path]
 
     The default <stack-path> is /home/stack. If you use 
