@@ -1,9 +1,9 @@
 as yet unclassified
-man
-    <topezCommand: 'man' manPage: #'manManPage'>
+ds
+    <topezCommand: 'ds' manPage: #'dsManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) man ]
+        windowId: windowId) ds ]

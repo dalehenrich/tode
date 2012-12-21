@@ -1,9 +1,9 @@
 as yet unclassified
-pwd
-    <topezCommand: 'pwd' manPage: #'pwdManPage'>
+commit
+    <topezCommand: 'commit' manPage: #'commitManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) pwd ]
+        windowId: windowId) commit ]

@@ -1,9 +1,9 @@
 as yet unclassified
-commit
-    <topezCommand: 'commit' manPage: #'commitManPage'>
+mkdir
+    <topezCommand: 'mkdir' manPage: #'mkdirManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) commit ]
+        windowId: windowId) mkdir ]

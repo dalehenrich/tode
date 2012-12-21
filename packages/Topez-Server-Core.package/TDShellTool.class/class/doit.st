@@ -1,9 +1,9 @@
 as yet unclassified
-run
-    <topezCommand: 'run' manPage: #'runManPage'>
+doit
+    <topezCommand: 'doit' manPage: #'doitManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) run ]
+        windowId: windowId) doit ]

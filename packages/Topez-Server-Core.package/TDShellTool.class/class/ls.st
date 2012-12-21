@@ -1,9 +1,9 @@
 as yet unclassified
-doit
-    <topezCommand: 'doit' manPage: #'doitManPage'>
+ls
+    <topezCommand: 'ls' manPage: #'lsManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) doit ]
+        windowId: windowId) ls ]

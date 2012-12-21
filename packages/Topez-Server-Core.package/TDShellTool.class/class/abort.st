@@ -1,9 +1,9 @@
 as yet unclassified
-cd
-    <topezCommand: 'cd' manPage: #'cdManPage'>
+abort
+    <topezCommand: 'abort' manPage: #'abortManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) cd ]
+        windowId: windowId) abort ]

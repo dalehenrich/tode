@@ -1,9 +1,9 @@
 as yet unclassified
-cp
-    <topezCommand: 'cp' manPage: #'cpManPage'>
+run
+    <topezCommand: 'run' manPage: #'runManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) cp ]
+        windowId: windowId) run ]

@@ -1,9 +1,9 @@
 as yet unclassified
-edit
-    <topezCommand: 'edit' manPage: #'editManPage'>
+mv
+    <topezCommand: 'mv' manPage: #'mvManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) edit ]
+        windowId: windowId) mv ]

@@ -1,9 +1,9 @@
 as yet unclassified
-cat
-    <topezCommand: 'cat' manPage: #'catManPage'>
+edit
+    <topezCommand: 'edit' manPage: #'editManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) cat ]
+        windowId: windowId) edit ]

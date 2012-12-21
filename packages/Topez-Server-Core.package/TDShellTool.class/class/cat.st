@@ -1,9 +1,9 @@
 as yet unclassified
-abort
-    <topezCommand: 'abort' manPage: #'abortManPage'>
+cat
+    <topezCommand: 'cat' manPage: #'catManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) abort ]
+        windowId: windowId) cat ]

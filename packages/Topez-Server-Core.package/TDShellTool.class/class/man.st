@@ -1,9 +1,9 @@
 as yet unclassified
-touch
-    <topezCommand: 'touch' manPage: #'touchManPage'>
+man
+    <topezCommand: 'man' manPage: #'manManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) touch ]
+        windowId: windowId) man ]

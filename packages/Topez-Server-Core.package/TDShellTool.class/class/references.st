@@ -2,7 +2,7 @@ as yet unclassified
 references
     <topezCommand: 'references' manPage: #'referencesManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens

@@ -1,9 +1,9 @@
 as yet unclassified
-ls
-    <topezCommand: 'ls' manPage: #'lsManPage'>
+pwd
+    <topezCommand: 'pwd' manPage: #'pwdManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) ls ]
+        windowId: windowId) pwd ]

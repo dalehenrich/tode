@@ -1,9 +1,9 @@
 as yet unclassified
-mkdir
-    <topezCommand: 'mkdir' manPage: #'mkdirManPage'>
+cd
+    <topezCommand: 'cd' manPage: #'cdManPage'>
     ^ [ :topez :objIn :tokens :windowId | 
-    (TDCoreDevTool
+    (self
         topez: topez
         objIn: objIn
         tokens: tokens
-        windowId: windowId) mkdir ]
+        windowId: windowId) cd ]
