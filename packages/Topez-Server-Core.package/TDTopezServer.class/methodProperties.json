@@ -1,8 +1,9 @@
 {
 	"class" : {
 		"commands" : "DataCurator 11/20/2012 09:01",
-		"default" : "DataCurator 11/20/2012 08:57",
+		"for:" : "DataCurator 12/21/2012 09:32",
 		"halos" : "DataCurator 12/01/2012 15:36",
+		"instanceMap" : "DataCurator 12/21/2012 09:31",
 		"reset" : "DataCurator 12/01/2012 15:36",
 		"rootNode" : "DataCurator 11/28/2012 05:40" },
 	"instance" : {
