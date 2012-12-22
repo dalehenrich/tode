@@ -1,9 +1,11 @@
 as yet unclassified
 test
-  "test <directory-name>"
+  "test <smalltalk-node-name> [ <node-name> ]"
 
-  | node testNode suiteOrTestCase suite results directoryName |
-  directoryName := tokens at: 2.
+  | suitePath suiteNode suite node testNode results resultsNodeName resultsNode |
+  suitePath := tokens at: 2.
+  suiteNode := self topez lookup: suitePath.
+  suite := suiteNode evaluateInContext: objIn.
   node := topez lookup: '/home'.
   testNode := node
     childNamed: 'tests'
@@ -14,14 +16,16 @@ test
             name: 'tests';
             readMe: 'test results';
             yourself) ].
-  suiteOrTestCase := objIn.
-  suite := (suiteOrTestCase isKindOf: TestSuite)
-    ifTrue: [ suiteOrTestCase ]
-    ifFalse: [ 
-      (TestSuite named: directoryName)
-        addTest: suiteOrTestCase;
-        yourself ].
-  suite name: directoryName.
   results := suite run.
-  testNode addChildNode: (self testNode: directoryName suite: suite results: results).
-  ^ results
+  resultsNodeName := tokens size >= 3
+    ifTrue: [ tokens at: 3 ]
+    ifFalse: [ suiteNode name ].
+  resultsNode := testNode addChildNode: (self testNode: resultsNodeName suite: suite results: results).
+  topez setCurrentNode: resultsNode.
+  ^ (topez commands at: 'ds') block
+    value: topez
+    value: resultsNode
+    value:
+      {'ds'.
+      (resultsNode printString , 'results')}
+    value: nil

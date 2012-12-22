@@ -10,5 +10,5 @@ renderNameAttributesFor: results
           {(TextColor color: Color orange).
           (TextEmphasis bold)} ]
         ifFalse: [ 
-          {(TextColor color: Color green).
+          {(TDNode smalltalkTextColor).
           (TextEmphasis bold)} ] ]

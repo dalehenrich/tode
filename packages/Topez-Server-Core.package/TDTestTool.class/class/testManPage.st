@@ -4,11 +4,18 @@ testManPage
   test - execute sunit commands
 
 SYNOPSIS
-  test <directory-name>
+  test <smalltalk-node-name> [ <node-name> ]
 
 DESCRIPTION
-  The `test` command expects a TestSuite or a TestCase instance on `objIn`.
+  Run a test suite and put the test results in the node
+  /home/tests/<node-name>. If <node-name> is not supplied,
+  the name of <smalltalk-node-name> is used.
 
-  The test case or suite is run and the test results are collected in the
-  /home/tests/<directory-name> node.
+  The TestSuite instance is derived from the results of evaluating
+  <smalltalk-node-name> using objIn as the smalltalk node context.
+
+  Examples:
+
+    test sunit
+    test ./sunit xxx
 '

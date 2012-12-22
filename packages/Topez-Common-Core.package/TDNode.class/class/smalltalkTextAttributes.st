@@ -1,5 +1,5 @@
 as yet unclassified
 smalltalkTextAttributes
-    "dark green"
+  "dark green"
 
-    ^ {(TextColor color: (Color r: 0 g: 0.5 b: 0))}
+  ^ {(self smalltalkTextColor)}

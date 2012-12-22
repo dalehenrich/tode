@@ -4,12 +4,13 @@
 		"installOn:" : "DataCurator 12/21/2012 14:02",
 		"priority" : "DataCurator 12/21/2012 11:43",
 		"test" : "DataCurator 12/21/2012 13:15",
-		"testManPage" : "DataCurator 12/21/2012 13:32",
+		"testManPage" : "DataCurator 12/21/2012 18:01",
 		"toolName" : "DataCurator 12/21/2012 11:43",
 		"toolReadMe" : "DataCurator 12/21/2012 11:43" },
 	"instance" : {
-		"renderNameAttributesFor:" : "DataCurator 12/21/2012 17:12",
+		"renderNameAttributesFor:" : "DataCurator 12/21/2012 18:10",
+		"renderNameAttributesFor:elementName:" : "DataCurator 12/21/2012 18:10",
 		"resultsNode:" : "DataCurator 12/21/2012 13:40",
 		"suiteNode:" : "DataCurator 12/21/2012 13:40",
-		"test" : "DataCurator 12/21/2012 14:28",
-		"testNode:suite:results:" : "DataCurator 12/21/2012 17:12" } }
+		"test" : "DataCurator 12/21/2012 18:08",
+		"testNode:suite:results:" : "DataCurator 12/21/2012 17:58" } }

@@ -17,19 +17,7 @@ testNode: dirName suite: suite results: results
           childNode := elementName = 'results'
             ifTrue: [ 
               (self resultsNode: results)
-                elementRenderAttributeBlock: [ :theNode :elementName | 
-                      elementName = 'errors'
-                        ifTrue: [ 
-                          {(TextColor color: Color red).
-                          (TextEmphasis bold)} ]
-                        ifFalse: [ 
-                          elementName = 'failures'
-                            ifTrue: [ 
-                              {(TextColor color: Color orange).
-                              (TextEmphasis bold)} ]
-                            ifFalse: [ 
-                              {(TextColor color: Color green).
-                              (TextEmphasis bold)} ] ] ];
+                elementRenderAttributeBlock: [ :theNode :elementName | self renderNameAttributesFor: theNode basicContents elementName: elementName ];
                 yourself ]
             ifFalse: [ 
               elementName = 'suite'
