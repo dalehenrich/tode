@@ -25,7 +25,7 @@ testNode: dirName suite: suite results: results
                         ifFalse: [ 
                           elementName = 'failures'
                             ifTrue: [ 
-                              {(TextColor color: Color yellow).
+                              {(TextColor color: Color orange).
                               (TextEmphasis bold)} ]
                             ifFalse: [ 
                               {(TextColor color: Color green).

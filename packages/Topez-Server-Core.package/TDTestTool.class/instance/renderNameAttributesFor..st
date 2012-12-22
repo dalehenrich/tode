@@ -7,7 +7,7 @@ renderNameAttributesFor: results
     ifFalse: [ 
       results failures size > 0
         ifTrue: [ 
-          {(TextColor color: Color yellow).
+          {(TextColor color: Color orange).
           (TextEmphasis bold)} ]
         ifFalse: [ 
           {(TextColor color: Color green).
