@@ -7,7 +7,6 @@ run: suite testNode: testNode
     renderAttributeBlock: [ :theNode | self renderNameAttributesFor: theNode basicContents ];
     yourself.
   testNode
-    addChildNode: (self suiteNode: suite);
     addChildNode: resultsNode;
     yourself.
   topez setCurrentNode: testNode.

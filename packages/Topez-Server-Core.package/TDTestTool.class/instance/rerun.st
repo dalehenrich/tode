@@ -9,4 +9,5 @@ rerun
   suiteNode := self topez lookup: suitePath.
   testNode := self topez lookup: self defaultHomeTestPath.
   suite := suiteNode basicContents.
+  testNode addChildNode: (self suiteNode: suite).
   ^ self run: suite testNode: testNode

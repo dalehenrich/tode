@@ -16,4 +16,5 @@ test
             readMe: 'test results';
             yourself) ].
   suite := suiteNode evaluateInContext: objIn.
+  testNode addChildNode: (self suiteNode: suite).
   ^ self run: suite testNode: testNode
