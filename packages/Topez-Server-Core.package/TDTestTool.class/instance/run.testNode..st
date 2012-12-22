@@ -1,7 +1,7 @@
 as yet unclassified
 run: suite testNode: testNode
   | results resultsNode |
-  results := suite run.
+  results := TestResult new.
   resultsNode := (self resultsNode: results)
     elementRenderAttributeBlock: [ :theNode :elementName | self renderNameAttributesFor: theNode basicContents elementName: elementName ];
     renderAttributeBlock: [ :theNode | self renderNameAttributesFor: theNode basicContents ];
@@ -10,6 +10,7 @@ run: suite testNode: testNode
     addChildNode: resultsNode;
     yourself.
   topez setCurrentNode: testNode.
+  suite run: results.
   ^ (topez commands at: 'ds') block
     value: topez
     value: testNode

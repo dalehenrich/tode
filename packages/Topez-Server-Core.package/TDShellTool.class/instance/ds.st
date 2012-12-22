@@ -1,9 +1,14 @@
 as yet unclassified
 ds
-  | node stream count |
+  "ds [<path>] [<level>]"
+
+  | node stream count level |
+  level := 1.
   node := tokens size = 1
     ifTrue: [ topez currentNode ]
     ifFalse: [ topez lookup: (tokens at: 2) ].
+  tokens size > 2
+    ifTrue: [ level := (tokens at: 3) asNumber ].
   stream := TextStream on: Text new.
   node isLeaf
     ifTrue: [ 
@@ -15,26 +20,14 @@ ds
   stream
     nextPutAll: node printString asText allBold;
     nextPutAll: ' ('.
-  node dotSelfObject tzNodeDisplayOn: stream.
+  node dotSelfObject tzNodeDisplayOn: stream limit: 160.
   stream
     nextPutAll: '):';
     cr.
   count := 0.
-  node
-    childrenDo: [ :child | 
-      stream tab.
-      count := count + 1.
-      (self listLimit > 0 and: [ count > self listLimit ])
-        ifTrue: [ 
-          stream
-            nextPutAll: '...';
-            cr.
-          ^ stream contents ].
-      node
-        renderNameText: child name , (node elementExtension: child name)
-        textAttributes: (node elementRenderNameTextAttributes: child name)
-        on: stream.
-      stream nextPutAll: ' -> '.
-      child dotSelfObject tzNodeDisplayOn: stream.
-      stream cr ].
+  self
+    dsChildren: node
+    indent: 1
+    level: level
+    on: stream.
   ^ stream contents

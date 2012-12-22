@@ -9,7 +9,7 @@ SYNOPSIS
 DESCRIPTION
   ps kill <process-oop>
   ps kill9 <process-oop>
-  ps list
+  ps list [<level>]
   ps terminate <process-oop>
   ps yield
 '

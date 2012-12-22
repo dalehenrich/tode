@@ -1,15 +1,18 @@
 as yet unclassified
 dsManPage
-    ^ 'NAME
+  ^ 'NAME
     ds - display object info
 
 SYNOPSIS
-    ds [path]
+    ds [<path>] [<level>]
 
 DESCRIPTION
-    Display the object info for the given node. With no `path` specified the
-    object info for the current node are listed. Otherwise the `path` is 
+    Display the object info for the given node. With no <path> specified the
+    object info for the current node are listed. Otherwise the <path> is 
     resolved and the object info for the node is listed.
+
+    If <level> is specified (> 1) then sub nodes to the specified depth
+    are listed.
 
     The directory listing (a String) is returned.
 

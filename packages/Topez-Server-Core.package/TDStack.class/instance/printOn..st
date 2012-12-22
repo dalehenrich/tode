@@ -26,7 +26,5 @@ printOn: aStream
         nextPutAll: process _group printString ] ]
     on: Error
     do: [ :ex | aStream nextPutAll: '...problem printing process' ].
-  aStream
-    nextPut: ')';
-    cr.
+  aStream nextPut: ')'.
   ^ aStream contents
