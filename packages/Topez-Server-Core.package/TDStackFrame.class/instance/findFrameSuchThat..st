@@ -6,7 +6,9 @@ findFrameSuchThat: testBlock
   frame := self.
   [ frame isNil ]
     whileFalse: [ 
-      (testBlock value: frame)
-        ifTrue: [ ^ frame ].
+      self frameContents ~~ nil
+        ifTrue: [ 
+          (testBlock value: frame)
+            ifTrue: [ ^ frame ] ].
       frame := frame next ].
   ^ nil

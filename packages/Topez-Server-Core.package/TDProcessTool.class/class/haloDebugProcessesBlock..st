@@ -1,10 +1,10 @@
 as yet unclassified
-haloProcessesBlock: aTDTopezServer
+haloDebugProcessesBlock: aTDTopezServer
   ^ [ :parentNode | 
   | processes |
-  processes := ProcessorScheduler scheduler allProcesses asArray.
+  processes := (SystemRepository listInstancesInMemory: {GsProcess}) at: 1.
   TDObjectNode new
-    name: '.processes';
+    name: '.debugProcesses';
     basicContents: processes;
     parent: parentNode;
     readMe: self readMeProcesses;

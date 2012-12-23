@@ -1,3 +1,4 @@
 as yet unclassified
 currentFrame
-    ^ currentFrame
+  currentFrame ifNil: [ currentFrame := self frames at: 1 ].
+  ^ currentFrame

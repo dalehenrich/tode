@@ -1,8 +1,9 @@
 {
 	"class" : {
-		"haloProcessesBlock:" : "DataCurator 12/22/2012 09:52",
+		"haloDebugProcessesBlock:" : "DataCurator 12/22/2012 18:24",
+		"haloProcessesBlock:" : "DataCurator 12/22/2012 17:51",
 		"installExampleOn:" : "DataCurator 12/20/2012 14:11",
-		"installHalosOn:" : "DataCurator 12/20/2012 14:11",
+		"installHalosOn:" : "DataCurator 12/22/2012 17:54",
 		"installOn:" : "DataCurator 12/20/2012 14:12",
 		"priority" : "DataCurator 12/20/2012 14:11",
 		"ps" : "DataCurator 12/20/2012 14:07",

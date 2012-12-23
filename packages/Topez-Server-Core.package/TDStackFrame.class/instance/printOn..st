@@ -1,6 +1,7 @@
 as yet unclassified
 printOn: aStream
   | frameSelf |
+  self frameContents ifNil: [ ^ aStream nextPutAll: '..bad frame...' ].
   self isMethodForBlock
     ifTrue: [ aStream nextPutAll: '[] in ' ].
   self inClass == nil
