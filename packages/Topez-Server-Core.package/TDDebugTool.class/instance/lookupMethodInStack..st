@@ -8,10 +8,12 @@ lookupMethodInStack: methodTokens
   strippedToken := strippedToken copyFrom: index + 1 to: strippedToken size.
   methodTokens size < 2
     ifTrue: [ 
-      "instance-side .. get rid of trailing $)"
-      strippedToken := strippedToken copyFrom: 1 to: strippedToken size - 1.
+      | className |
+      "instance-side"
       statement := strippedToken findTokens: '>>'.
-      cls := Smalltalk at: (statement at: 1) asSymbol.
+      className := statement at: 1.
+      className := className copyFrom: 1 to: className size - 1.
+      cls := Smalltalk at: className asSymbol.
       selector := statement at: 2 ]
     ifFalse: [ 
       "class-side"
