@@ -5,7 +5,7 @@ dsChildren: node indent: indent level: level on: stream
     ifTrue: [ ^ self ].
   count := 0.
   node
-    childrenDo: [ :child | 
+    childrenAndNamesDo: [ :child :nameText | 
       stream tab: indent.
       count := count + 1.
       (self listLimit > 0 and: [ count > self listLimit ])
@@ -14,10 +14,7 @@ dsChildren: node indent: indent level: level on: stream
             nextPutAll: '...';
             cr.
           ^ self ].
-      node
-        renderNameText: child name , (node elementExtension: child name)
-        textAttributes: (node elementRenderNameTextAttributes: child name)
-        on: stream.
+      stream nextPutAll: nameText.
       stream nextPutAll: ' -> '.
       child dotSelfObject tzNodeDisplayOn: stream limit: 160 compacted: true.
       stream cr.
