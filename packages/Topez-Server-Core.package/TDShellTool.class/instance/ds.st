@@ -20,7 +20,7 @@ ds
   stream
     nextPutAll: node printString asText allBold;
     nextPutAll: ' ('.
-  node dotSelfObject tzNodeDisplayOn: stream limit: 160.
+  node dotSelfObject tzNodeDisplayOn: stream limit: 160 compacted: true.
   stream
     nextPutAll: '):';
     cr.

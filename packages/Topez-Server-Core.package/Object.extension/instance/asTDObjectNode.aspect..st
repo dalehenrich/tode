@@ -1,7 +1,10 @@
 *topez-server-core
 asTDObjectNode: aTopez aspect: aspect
   ^ TDObjectNode new
-    name: self printString;
+    name:
+        ([ self printString ]
+            on: Error
+            do: [ :ex | 'error printing' ]);
     topez: aTopez;
     basicContents: self;
     listBlock: [ :theNode | 

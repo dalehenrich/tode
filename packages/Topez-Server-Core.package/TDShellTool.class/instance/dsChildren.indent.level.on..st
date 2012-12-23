@@ -19,7 +19,7 @@ dsChildren: node indent: indent level: level on: stream
         textAttributes: (node elementRenderNameTextAttributes: child name)
         on: stream.
       stream nextPutAll: ' -> '.
-      child dotSelfObject tzNodeDisplayOn: stream limit: 160.
+      child dotSelfObject tzNodeDisplayOn: stream limit: 160 compacted: true.
       stream cr.
       self
         dsChildren: child
