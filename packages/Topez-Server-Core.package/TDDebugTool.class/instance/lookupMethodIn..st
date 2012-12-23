@@ -8,6 +8,7 @@ lookupMethodIn: methodTokens
     ifTrue: [ 
       "<class>[ class]>><selector>"
       "xxx(<class>[ class])>><selector>"
+      "xxx class(<class>[ class])>><selector>"
       ^ self lookupMethodInCompact: methodTokens ].
   selector := methodTokens at: sepIndex + 1.
   isMeta := sepIndex = 3.

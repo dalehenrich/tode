@@ -1,5 +1,5 @@
 as yet unclassified
-rerun: suiteName tests: subPath
+runSuite: suiteName tests: subPath
   | testsPath testsNode testNode suite |
   testsPath := (tokens size > 1
     ifTrue: [ tokens at: 2 ]

@@ -1,3 +1,3 @@
 as yet unclassified
 defaultHomeResultsPath
-  ^ self defaultHomeTestPath , 'results'
+  ^ self defaultHomeTestPath , 'result'

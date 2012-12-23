@@ -15,6 +15,10 @@ lookupMethodInCompact: methodTokens
       selector := statement at: 2 ]
     ifFalse: [ 
       "class-side"
+      ((methodTokens at: 2) includes: $()
+        ifTrue: [ 
+          "xxx class(<class>[ class])>><selector>"
+          ^ self lookupClassMethodInStack: methodTokens ].
       cls := (Smalltalk at: (methodTokens at: 1) asSymbol) class.
       statement := (methodTokens at: 2) findTokens: '>>'.
       selector := statement at: 2 ].

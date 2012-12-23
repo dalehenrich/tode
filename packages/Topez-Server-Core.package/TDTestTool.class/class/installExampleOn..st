@@ -7,7 +7,7 @@ installExampleOn: aTDTopezServer
             contents:
                 '| suite result |
 
-suite := TestSuite new.
+suite := TestSuite named: ''Simple SUnit Suite''.
 suite 
 	addTest: (SUnitTest selector: #noop);
 	addTest: (SUnitTest selector: #fail);

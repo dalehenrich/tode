@@ -8,11 +8,17 @@ SYNOPSIS
 
 DESCRIPTION
   ts debug <test-spec>
-  ts errors [<test-path>]
-  ts failures [<test-path>]
   ts list [<test-path>]
-  ts rerun [<test-path>]
+  ts run [<test-path>]
 
   The default <test-path> is /home/tests. If you use 
-  the `test` command to initiate testinging..
+  the `test` command to initiate testinging.
+
+  If <test-spec> is `errors` or `failures`, then the set of the test cases
+  in the corresponding category are selected.
+
+  Otherwise, <test-spec> is of the form:
+
+    TestCaseClass>>testSelector
+  
 '

@@ -9,12 +9,5 @@ run: suite testNode: testNode
   testNode
     addChildNode: resultsNode;
     yourself.
-  topez setCurrentNode: testNode.
   suite run: results.
-  ^ (topez commands at: 'ds') block
-    value: topez
-    value: testNode
-    value:
-      {'ds'.
-      (testNode printString , 'results')}
-    value: nil
+  ^ self testSummary: testNode

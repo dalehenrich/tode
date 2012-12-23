@@ -1,6 +1,6 @@
 as yet unclassified
-rerun
-  "rerun <test-path>"
+run
+  "run <test-path>"
 
   | suitePath suiteNode testNode suite |
   suitePath := (tokens size > 1

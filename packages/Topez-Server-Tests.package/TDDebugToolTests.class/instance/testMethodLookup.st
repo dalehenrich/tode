@@ -8,10 +8,16 @@ testMethodLookup
   {'TDDebugToolTests class>>sampleClassMethod'.
   {(self class class name).
   #'sampleClassMethod'}}.
-  {'Undefined(TDDebugToolTests)>>testMethodLookup'.
+  {'Object(TDDebugToolTests)>>testMethodLookup'.
   {(self class name).
   #'testMethodLookup'}}.
-  {'Undefined(TDDebugToolTests class)>>sampleClassMethod'.
+  {'Object(TDDebugToolTests class)>>sampleClassMethod'.
+  {(self class class name).
+  #'sampleClassMethod'}}.
+  {'Object class(TDDebugToolTests)>>testMethodLookup'.
+  {(self class name).
+  #'testMethodLookup'}}.
+  {'Object class(TDDebugToolTests class)>>sampleClassMethod'.
   {(self class class name).
   #'sampleClassMethod'}}}
     do: [ :spec | 

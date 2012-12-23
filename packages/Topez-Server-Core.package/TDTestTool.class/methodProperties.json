@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"installExampleOn:" : "DataCurator 12/21/2012 14:03",
+		"installExampleOn:" : "DataCurator 12/23/2012 13:36",
 		"installOn:" : "DataCurator 12/21/2012 14:02",
 		"priority" : "DataCurator 12/21/2012 11:43",
 		"test" : "DataCurator 12/21/2012 13:15",
@@ -8,20 +8,19 @@
 		"toolName" : "DataCurator 12/21/2012 11:43",
 		"toolReadMe" : "DataCurator 12/21/2012 11:43",
 		"ts" : "DataCurator 12/21/2012 18:58",
-		"tsManPage" : "DataCurator 12/21/2012 20:23" },
+		"tsManPage" : "DataCurator 12/23/2012 13:28" },
 	"instance" : {
 		"debug" : "DataCurator 12/23/2012 11:57",
 		"debugTestSet:" : "DataCurator 12/23/2012 12:08",
-		"defaultHomeResultsPath" : "DataCurator 12/21/2012 18:56",
+		"defaultHomeResultsPath" : "DataCurator 12/23/2012 13:28",
 		"defaultHomeTestPath" : "DataCurator 12/21/2012 18:55",
-		"errors" : "DataCurator 12/21/2012 20:04",
-		"failures" : "DataCurator 12/21/2012 20:04",
-		"list" : "DataCurator 12/21/2012 20:24",
+		"list" : "DataCurator 12/23/2012 13:22",
 		"renderNameAttributesFor:" : "DataCurator 12/21/2012 19:36",
 		"renderNameAttributesFor:elementName:" : "DataCurator 12/21/2012 18:10",
-		"rerun" : "DataCurator 12/21/2012 19:59",
-		"rerun:tests:" : "DataCurator 12/21/2012 20:04",
-		"resultsNode:" : "DataCurator 12/21/2012 13:40",
-		"run:testNode:" : "DataCurator 12/22/2012 07:57",
+		"resultsNode:" : "DataCurator 12/23/2012 13:29",
+		"run" : "DataCurator 12/23/2012 12:26",
+		"run:testNode:" : "DataCurator 12/23/2012 13:22",
+		"runSuite:tests:" : "DataCurator 12/23/2012 12:27",
 		"suiteNode:" : "DataCurator 12/21/2012 13:40",
-		"test" : "DataCurator 12/21/2012 19:59" } }
+		"test" : "DataCurator 12/21/2012 19:59",
+		"testSummary:" : "DataCurator 12/23/2012 13:29" } }
