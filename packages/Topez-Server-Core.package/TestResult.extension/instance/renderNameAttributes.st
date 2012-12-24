@@ -1,11 +1,11 @@
-as yet unclassified
-renderNameAttributesFor: results
-  ^ results errors size > 0
+*topez-server-core
+renderNameAttributes
+  ^ self errors size > 0
     ifTrue: [ 
       {(TextColor color: Color red).
       (TextEmphasis bold)} ]
     ifFalse: [ 
-      results failures size > 0
+      self failures size > 0
         ifTrue: [ 
           {(TextColor color: Color orange).
           (TextEmphasis bold)} ]
