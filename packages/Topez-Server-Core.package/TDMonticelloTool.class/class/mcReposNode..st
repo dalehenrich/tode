@@ -8,10 +8,12 @@ mcReposNode: aTopez
       (TDPluggableNode new
         name: 'repos';
         readMe: self readMeRepos;
-        basicContents: [ self buildRepositoryMap ];
-        listBlock: [ :theNode | theNode basicContents value keys sorted ];
+        basicContents: [ self buildRepositoryList ];
+        listBlock: [ :theNode | (1 to: theNode basicContents value size) collect: [ :each | each asString ] ];
         elementBlock: [ :theNode :elementName :absentBlock | 
-              (self packagesNode: (theNode basicContents value at: elementName))
+              | repos |
+              repos := theNode basicContents value at: elementName asNumber.
+              (self packagesNode: repos)
                 name: elementName;
                 parent: theNode;
                 yourself ];
