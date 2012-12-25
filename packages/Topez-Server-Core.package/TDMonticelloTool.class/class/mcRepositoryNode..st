@@ -1,5 +1,5 @@
 as yet unclassified
-mcReposNode: aTopez
+mcRepositoryNode: aTopez
   <topezNode: 'repos'>
   | node |
   node := aTopez installChildrenAt: '/mc'.
