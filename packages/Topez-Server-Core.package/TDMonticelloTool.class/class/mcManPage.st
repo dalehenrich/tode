@@ -8,9 +8,11 @@ SYNOPSIS
 
 DESCRIPTION
   mc commit <pkg>
-  mc diff <pkg-1> [<pkg2>]
+  mc diff <pkg-spec> [<pkg-spec>|<repositoryGroup-index>]
   mc dirty 
   mc halo <name> <pkg-spec> 
-  mc history <pkg-spec> 
-  mc revert <pkg-spec> [<ancestor-id>]
+  mc halorm <name> 
+  mc history <pkg-spec> [<limit>]
+  mc list <pkg-spec>
+  mc revert <pkg-spec> [<ancestor-index>]
 '
