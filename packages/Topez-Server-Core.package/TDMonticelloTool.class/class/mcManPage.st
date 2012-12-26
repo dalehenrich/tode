@@ -8,7 +8,8 @@ SYNOPSIS
 
 DESCRIPTION
   mc commit <pkg>
-  mc diff <pkg-spec> [<pkg-spec>|<repositoryGroup-index>]
+  mc compare <pkg-spec> [<pkg-spec>]
+  mc diff [<pkg-spec>]
   mc dirty 
   mc halo <name> <pkg-spec> 
   mc halorm <name> 

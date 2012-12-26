@@ -13,7 +13,7 @@
 		"installHalosOn:" : "DataCurator 12/25/2012 06:45",
 		"installOn:" : "DataCurator 12/25/2012 06:46",
 		"mc" : "DataCurator 12/25/2012 06:02",
-		"mcManPage" : "DataCurator 12/25/2012 08:56",
+		"mcManPage" : "DataCurator 12/26/2012 08:01",
 		"mcRepositoryNode:" : "DataCurator 12/24/2012 16:22",
 		"mcWorkingCopiesNode:" : "DataCurator 12/24/2012 17:25",
 		"packagesNode:" : "DataCurator 12/24/2012 13:25",
@@ -28,7 +28,8 @@
 		"workingCopiesNode:" : "DataCurator 12/25/2012 07:35",
 		"workingCopyNode:" : "DataCurator 12/24/2012 17:33" },
 	"instance" : {
-		"diff" : "DataCurator 12/26/2012 07:42",
+		"compareChangesFor:on:" : "DataCurator 12/26/2012 08:14",
+		"diff" : "DataCurator 12/26/2012 08:22",
 		"dirty" : "dkh 12/25/2012 06:20",
 		"dirtyPath" : "DataCurator 12/25/2012 09:02",
 		"findMatchingPackages:topez:" : "DataCurator 12/25/2012 07:29",
