@@ -1,3 +1,5 @@
 as yet unclassified
 source
-  ^ self session rawReceiverNB: self getBlockOopType perform: 'value' withArgs: #()
+  | oopType |
+  oopType := self session rawReceiverNB: self getBlockOopType perform: 'value' withArgs: #().
+  ^ self session library localFor: oopType
