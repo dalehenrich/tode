@@ -7,8 +7,6 @@ edit: aTopez windowId: inWindowId
     ifTrue: [ windowId := aTopez windowIdNamed: #'debugger' ].
   ^ aTopez
     editElement: clientElement
-    edittingCode: true
-    stylingActive: true
     label: self printString
     inWindow: windowId
     at: #'method'
