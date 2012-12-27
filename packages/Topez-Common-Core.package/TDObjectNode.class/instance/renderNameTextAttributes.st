@@ -1,3 +1,4 @@
 *topez-common-core
 renderNameTextAttributes
-    ^ self class objectTextAttributes
+  self renderAttributeBlock ifNil: [ ^ self class objectTextAttributes ].
+  ^ self renderAttributeBlock value: self

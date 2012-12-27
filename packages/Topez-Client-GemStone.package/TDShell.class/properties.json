@@ -14,7 +14,8 @@
 		"inputStream",
 		"actionStack",
 		"promptString",
-		"shellWindow" ],
+		"shellWindow",
+		"shellId" ],
 	"name" : "TDShell",
 	"pools" : [
 		 ],

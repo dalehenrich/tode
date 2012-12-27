@@ -1,3 +1,3 @@
 as yet unclassified
 where
-    ^ (self topez lookup: '.ex/process') cat
+  ^ (self topez lookup: self defaultPath , 'stack/.self/process') cat

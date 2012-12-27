@@ -1,18 +1,20 @@
 {
 	"class" : {
-		"haloProcessesBlock:" : "DataCurator 12/20/2012 14:16",
+		"haloDebugProcessesBlock:" : "DataCurator 12/22/2012 18:24",
+		"haloProcessesBlock:" : "DataCurator 12/22/2012 17:51",
 		"installExampleOn:" : "DataCurator 12/20/2012 14:11",
-		"installHalosOn:" : "DataCurator 12/20/2012 14:11",
+		"installHalosOn:" : "DataCurator 12/22/2012 17:54",
 		"installOn:" : "DataCurator 12/20/2012 14:12",
 		"priority" : "DataCurator 12/20/2012 14:11",
 		"ps" : "DataCurator 12/20/2012 14:07",
-		"psManPage" : "DataCurator 12/20/2012 15:47",
+		"psManPage" : "DataCurator 12/22/2012 09:28",
 		"readMeProcesses" : "DataCurator 12/20/2012 14:07",
 		"toolName" : "DataCurator 12/20/2012 14:10",
 		"toolReadMe" : "DataCurator 12/20/2012 14:10" },
 	"instance" : {
 		"kill" : "DataCurator 12/20/2012 15:47",
 		"kill9" : "DataCurator 12/20/2012 15:49",
-		"list" : "DataCurator 12/20/2012 14:05",
+		"list" : "DataCurator 12/22/2012 09:09",
+		"stacks" : "DataCurator 12/22/2012 09:28",
 		"terminate" : "DataCurator 12/20/2012 15:49",
 		"yield" : "DataCurator 12/20/2012 14:06" } }

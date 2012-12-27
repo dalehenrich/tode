@@ -10,7 +10,8 @@
 		"evaluateString",
 		"evaluateStringResult",
 		"exception",
-		"exceptionProcess" ],
+		"exceptionProcess",
+		"autoCommit" ],
 	"name" : "TDServerStatus",
 	"pools" : [
 		 ],

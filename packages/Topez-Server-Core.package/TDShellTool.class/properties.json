@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		"listLimit" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 12/21/2012 11:23",
+	"instvars" : [
+		 ],
+	"name" : "TDShellTool",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractDevTool",
+	"type" : "normal" }

@@ -1,9 +1,11 @@
 as yet unclassified
 haloProcessesBlock: aTDTopezServer
   ^ [ :parentNode | 
+  | processes |
+  processes := ProcessorScheduler scheduler allProcesses asArray.
   TDObjectNode new
     name: '.processes';
-    basicContents: ProcessorScheduler scheduler allProcesses asArray;
+    basicContents: processes;
     parent: parentNode;
     readMe: self readMeProcesses;
     listBlock: [ :theNode | (1 to: theNode basicContents size) collect: [ :each | each asString ] ];
