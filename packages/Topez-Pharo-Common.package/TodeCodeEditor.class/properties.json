@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"edittingCode" ],
+	"name" : "TodeCodeEditor",
+	"pools" : [
+		 ],
+	"super" : "TodeCommonEditor",
+	"type" : "normal" }

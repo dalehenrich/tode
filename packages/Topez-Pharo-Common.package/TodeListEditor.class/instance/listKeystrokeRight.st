@@ -1,3 +1,3 @@
 accessing
-wantsClassUpdate
+listKeystrokeRight
     ^ false

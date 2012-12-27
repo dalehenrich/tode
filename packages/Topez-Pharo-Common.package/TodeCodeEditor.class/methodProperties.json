@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptContents:notifying:" : "dkh 12/27/2012 08:39",
+		"bindingOf:" : "dkh 12/27/2012 09:50",
+		"buildTextMorph" : "dkh 12/27/2012 08:10",
+		"clientElement:" : "dkh 12/27/2012 08:51",
+		"contents" : "dkh 12/27/2012 09:51",
+		"doItContext" : "dkh 12/27/2012 08:10",
+		"doItReceiver" : "dkh 12/27/2012 08:49",
+		"edittingCode" : "dkh 12/27/2012 08:10",
+		"edittingCode:" : "dkh 12/27/2012 08:10",
+		"getSelection" : "dkh 12/27/2012 09:53",
+		"hasBindingThatBeginsWith:" : "dkh 12/27/2012 08:10",
+		"morph" : "dkh 12/27/2012 08:10",
+		"shoutAboutToStyle:" : "dkh 12/27/2012 08:44",
+		"spawnWindow" : "dkh 12/27/2012 08:53",
+		"stylerClass" : "dkh 12/27/2012 08:10",
+		"textMorph" : "dkh 12/27/2012 08:10" } }

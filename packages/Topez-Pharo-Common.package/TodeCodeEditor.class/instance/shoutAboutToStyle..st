@@ -1,0 +1,3 @@
+styling
+shoutAboutToStyle: aPluggableShoutMorphOrView
+  ^ self clientElement shoutAboutToStyle: aPluggableShoutMorphOrView

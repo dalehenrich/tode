@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"list",
+		"listIndex",
+		"listFilter",
+		"renderAttribute" ],
+	"name" : "TodeListEditor",
+	"pools" : [
+		 ],
+	"super" : "TodeCommonEditor",
+	"type" : "normal" }
