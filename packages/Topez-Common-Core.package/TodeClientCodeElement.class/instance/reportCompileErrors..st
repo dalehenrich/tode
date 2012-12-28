@@ -7,6 +7,6 @@ reportCompileErrors: compilerErrorOoptype
         '[:ex |"return an array with errorNote and errorStart" 
 	| errorDetails|
 	errorDetails := ex errorDetails at: 1.
-	STON toString: {errorDetails at: 3. errorDetails at: 2}]';
+	{errorDetails at: 3. errorDetails at: 2}]';
     transform: #'ston' -> 1.
-  ^ block value: compilerErrorOoptype
+  ^ (block value: compilerErrorOoptype) collect: [ :each | each asTopezNative ]
