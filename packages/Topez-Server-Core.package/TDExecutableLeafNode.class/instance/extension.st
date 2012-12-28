@@ -1,3 +1,3 @@
-*topez-common-core
+as yet unclassified
 extension
     ^ self class executableExtension

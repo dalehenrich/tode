@@ -3,4 +3,10 @@
 		 },
 	"instance" : {
 		"addChildNode:" : "DataCurator 11/28/2012 06:58",
-		"dotSelfObject" : "DataCurator 11/28/2012 16:31" } }
+		"cat" : "dkh 12/27/2012 16:41",
+		"dotSelfObject" : "DataCurator 11/28/2012 16:31",
+		"elementExtension:" : "dkh 12/27/2012 16:41",
+		"elementRenderNameTextAttributes:" : "dkh 12/27/2012 16:41",
+		"extension" : "dkh 12/27/2012 16:41",
+		"readMe" : "dkh 12/27/2012 16:42",
+		"renderNameTextAttributes" : "dkh 12/27/2012 16:42" } }
