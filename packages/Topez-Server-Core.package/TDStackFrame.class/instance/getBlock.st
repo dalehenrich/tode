@@ -5,7 +5,7 @@ getBlock
   self inClass == nil
     ifTrue: [ self homeMethodSource ]
     ifFalse: [ 
-      cl := Smalltalk at self inClass theNonMetaClass name asSymbol.
+      cl := Smalltalk at: self inClass theNonMetaClass name asSymbol.
       self inClass isMeta
         ifTrue: [ cl := cl class ].
       selector := self selector.

@@ -1,3 +1,7 @@
 as yet unclassified
 source
-  ^ self format: super source
+  | src |
+  src := super source.
+  ^ self formatOnDisplay
+    ifTrue: [ self format: src ]
+    ifFalse: [ src ]

@@ -8,6 +8,7 @@ clientSourceElement
     sourceRange:
         {(self selectionRange first).
           (self selectionRange last)};
+    formatOnDisplay: false;
     yourself.
   clientElement clientElementOop: clientElement asOop.
   ^ clientElement
