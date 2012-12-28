@@ -2,5 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
+		"elementBehaviorForShout" : "DataCurator 12/27/2012 17:19",
 		"format:" : "dkh 12/27/2012 16:47",
-		"shoutAboutToStyle:" : "dkh 12/27/2012 10:00" } }
+		"inClassOop" : "DataCurator 12/27/2012 17:12",
+		"inClassOop:" : "DataCurator 12/27/2012 17:12",
+		"shoutAboutToStyle:" : "dkh 12/27/2012 10:00",
+		"sourceRange" : "DataCurator 12/27/2012 17:15",
+		"sourceRange:" : "DataCurator 12/27/2012 17:15" } }
