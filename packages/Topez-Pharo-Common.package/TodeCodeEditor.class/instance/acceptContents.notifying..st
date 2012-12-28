@@ -5,6 +5,12 @@ acceptContents: aStringOrText notifying: aController
   [ self clientElement source: aStringOrText ]
     on: TZTopezNotification
     do: [ :ex | 
-      self topez exception: ex exceptionProxy.
-      self error: 'server error during accept: ' , ex description ].
+      (ex isKindOf: TZTopezCompilerErrorNotification)
+        ifTrue: [ 
+          | report |
+          report := self clientElement halt reportCompileErrors: ex exceptionProxy.
+          aController notify: (report at: 1) at: (report at: 2) in: aStringOrText ]
+        ifFalse: [ 
+          self topez exception: ex exceptionProxy.
+          self error: 'server error during accept: ' , ex description ] ].
   ^ true
