@@ -1,4 +1,4 @@
 exceptiondescription
-standardDefaultAction
+customDefaultAction
   ^ {#'debug'.
   self}

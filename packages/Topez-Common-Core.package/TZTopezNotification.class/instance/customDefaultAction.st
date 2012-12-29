@@ -1,8 +1,8 @@
 exceptiondescription
-standardDefaultAction
+customDefaultAction
   | answer process |
   answer := UIManager default
-    confirm: self class name asString , ' defaultAction: ' , self exceptionProxy printString
+    confirm: self exceptionProxy header printString
     trueChoice: 'Proceed'
     falseChoice: 'Abort'
     cancelChoice: 'Debug'
