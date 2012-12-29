@@ -1,0 +1,14 @@
+{
+	"class" : {
+		"typeSignature" : "DataCurator 11/30/2012 08:00" },
+	"instance" : {
+		"block" : "dkh 11/29/2012 20:07",
+		"block:" : "dkh 11/29/2012 20:07",
+		"clientElementClass" : "DataCurator 12/27/2012 11:32",
+		"contents" : "DataCurator 12/01/2012 08:09",
+		"createBlockFromSource:" : "DataCurator 11/30/2012 15:53",
+		"getBlock" : "DataCurator 12/27/2012 11:29",
+		"renderNameTextAttributes" : "dkh 11/29/2012 20:12",
+		"setBlock" : "DataCurator 12/27/2012 11:29",
+		"source" : "DataCurator 11/30/2012 08:36",
+		"source:" : "DataCurator 12/27/2012 16:57" } }

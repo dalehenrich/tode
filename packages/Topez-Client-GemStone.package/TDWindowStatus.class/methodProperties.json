@@ -4,8 +4,8 @@
 	"instance" : {
 		"activeWindowIndex" : "dkh 11/27/2012 14:53",
 		"activeWindowModel" : "dkh 11/27/2012 15:47",
-		"close" : "dkh 11/19/2012 14:54",
-		"collapse" : "dkh 11/19/2012 14:54",
+		"close" : "dkh 12/27/2012 08:59",
+		"collapse" : "dkh 12/27/2012 08:59",
 		"expand" : "dkh 11/19/2012 14:54",
 		"initialize" : "dkh 11/27/2012 14:50",
 		"namedWindows" : "dkh 11/19/2012 14:54",
@@ -14,7 +14,6 @@
 		"registerShellWindow:" : "dkh 12/21/2012 10:08",
 		"shellWindows" : "dkh 12/21/2012 10:15",
 		"unregisterShellWindow:" : "dkh 12/21/2012 10:09",
-		"wantsClassUpdate" : "dkh 12/16/2012 15:30",
 		"windowActive:" : "dkh 11/28/2012 07:32",
 		"windowAt:" : "dkh 11/19/2012 14:54",
 		"windowAt:put:" : "dkh 11/27/2012 14:57",

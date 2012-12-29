@@ -1,0 +1,3 @@
+accessing
+setListIndex
+    ^ self listIndex
