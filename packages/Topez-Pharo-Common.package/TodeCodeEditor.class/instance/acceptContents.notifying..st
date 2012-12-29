@@ -9,7 +9,7 @@ acceptContents: aStringOrText notifying: aController
         ifTrue: [ 
           | report |
           report := self clientElement reportCompileErrors: ex exceptionProxy.
-          aController notify: (report at: 1) at: (report at: 2) in: aStringOrText.
+          aController notify: (report at: 1) , '->' at: (report at: 2) in: aStringOrText.
           ^ false ]
         ifFalse: [ 
           self topez exception: ex exceptionProxy.
