@@ -8,7 +8,7 @@ topezServerProxy
         executeStringNB:
           '(TDTopezServer for: ' , self shell shellId asString , ') toString: (TDTopezServer for: ' , self shell shellId asString
             , ') level: 0' ]
-        on: GsRuntimeError
+        on: TZTopezErrorNotification
         do: [ :ex | self error: 'Unable to log into server' ].
       topezServerProxy := (self readerClass on: stonString readStream) next.
       transcriptOop := self session registerClientObjectForwarder: Transcript.

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Client-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topez" ],
+	"name" : "TodeSession",
+	"pools" : [
+		 ],
+	"super" : "GciSession",
+	"type" : "normal" }
