@@ -1,4 +1,4 @@
-public gci calls
+*topez-client-gemstone
 compileMethod: sourceString class: class category: category symbolList: symbolList overrideSelector: overrideSelector compileFlags: compileFlags
     | result |
     self setSession.

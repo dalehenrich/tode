@@ -1,5 +1,5 @@
 notifications
 signalNotifications
-  TZTopezCompilerErrorNotification new
+  ^TZTopezCompilerErrorNotification new
     exceptionProxy: self;
     signal

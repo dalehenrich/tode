@@ -1,5 +1,5 @@
 notifications
 signalNotifications
-    TZTopezBreakpointNotification new
+    ^TZTopezBreakpointNotification new
         exceptionProxy: self;
         signal

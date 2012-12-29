@@ -1,4 +1,4 @@
-public gci calls
+*topez-client-gemstone
 compileMethod: sourceString class: class category: category compileFlags: compileFlags
     "compileFlags:
       0 - compile instance method

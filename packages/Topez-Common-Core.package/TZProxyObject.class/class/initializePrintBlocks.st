@@ -163,7 +163,7 @@ initializePrintBlocks
             space.
           proxy receiver renderText: #'basic' on: aStream ];
     at: #'basic'
-      forClasses: #('TZProxyError' 'TZProxyBreakpoint')
+      forClasses: #('TZProxyError' 'TZProxyBreakpoint' 'TZProxyTodeCommandError')
       put: [ :proxy :aStream :indent | proxy header renderText: proxy renderAttribute on: aStream ];
     at: #'basic'
       forClass: 'TZStack'

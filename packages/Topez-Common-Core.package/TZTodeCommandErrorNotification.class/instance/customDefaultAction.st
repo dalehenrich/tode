@@ -1,0 +1,4 @@
+exceptiondescription
+customDefaultAction
+  ^ {#'debug'.
+  self}

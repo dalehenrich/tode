@@ -1,4 +1,7 @@
 private gci calls
 getNbResultAsOop
-
-	^self library oopTypeFromInteger: self getNbResult.
+  | result |
+  result := self getNbResult.
+  result isInteger
+    ifFalse: [ ^ result ].
+  ^ self library oopTypeFromInteger: result

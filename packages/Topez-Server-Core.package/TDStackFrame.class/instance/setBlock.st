@@ -3,7 +3,7 @@ setBlock
   ^ [ :methodSource | 
   | beh selector category |
   self inClass == nil
-    ifTrue: [ self homeMethodSource ]
+    ifTrue: [ self error: 'Cannot edit Executable Code' ]
     ifFalse: [ 
       beh := Smalltalk at: self inClass theNonMetaClass name asSymbol.
       self inClass isMeta
