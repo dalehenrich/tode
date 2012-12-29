@@ -6,6 +6,7 @@
 		"ERR_Breakpoint",
 		"ERR_CodeBreakpoint",
 		"ERR_CompilerError",
+		"ERR_Error",
 		"ERR_StackBreakpoint" ],
 	"commentStamp" : "dkh 4/18/2012 15:21",
 	"instvars" : [
