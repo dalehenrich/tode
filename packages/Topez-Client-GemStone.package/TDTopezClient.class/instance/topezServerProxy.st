@@ -9,7 +9,7 @@ topezServerProxy
           '(TDTopezServer for: ' , self shell shellId asString , ') toString: (TDTopezServer for: ' , self shell shellId asString
             , ') level: 0' ]
         on: TZTopezErrorNotification
-        do: [ :ex | self error: 'Unable to log into server' ].
+        do: [ :ex | self error: 'Unable to log into server:' , ex exceptionProxy header printString ].
       topezServerProxy := (self readerClass on: stonString readStream) next.
       transcriptOop := self session registerClientObjectForwarder: Transcript.
       topezOop := self session registerClientObjectForwarder: self.
