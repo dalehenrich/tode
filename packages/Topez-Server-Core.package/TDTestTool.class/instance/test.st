@@ -5,7 +5,7 @@ test
   | suitePath suiteNode suite node testNode |
   suitePath := tokens at: 2.
   suiteNode := self topez lookup: suitePath.
-  node := topez lookup: '/home'.
+  node := topez homeNode.
   testNode := node
     childNamed: 'tests'
     ifAbsent: [ 
