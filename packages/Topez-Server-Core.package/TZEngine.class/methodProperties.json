@@ -50,6 +50,7 @@
 		"saveModifiedPackagesForProjectNamed:commitMessage:level:" : "DataCurator 11/01/2012 16:18",
 		"selectorsForClass:inClass:level:" : "DataCurator 10/23/2012 07:45",
 		"sendersOf:level:" : "DataCurator 10/22/2012 15:33",
+		"sourceContainingIt:level:" : "DataCurator 12/29/2012 11:20",
 		"stackFor:level:" : "DataCurator 10/25/2012 22:45",
 		"subclassesOf:level:" : "DataCurator 10/23/2012 07:36",
 		"superclassesOf:level:" : "DataCurator 10/23/2012 07:36",
