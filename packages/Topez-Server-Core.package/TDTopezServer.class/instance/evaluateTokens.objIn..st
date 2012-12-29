@@ -4,7 +4,7 @@ evaluateTokens: tokens objIn: anObject
   commandOrPath := tokens at: 1.
   commandNode := (commandOrPath includes: $/)
     ifTrue: [ self lookup: (tokens at: 1) ]
-    ifFalse: [ self commands at: (tokens at: 1) ifAbsent: [ ^ self error: 'Unknown command: ' , (tokens at: 1) printString ] ].
+    ifFalse: [ self commands at: (tokens at: 1) ifAbsent: [ ^ TDUnknownCommandError signal: (tokens at: 1) ] ].
   commandResult := commandNode block
     value: self
     value: anObject

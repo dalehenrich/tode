@@ -8,10 +8,8 @@ asTopezProxy
       number = ERR_CompilerError
         ifTrue: [ TZProxyCompileError ]
         ifFalse: [ 
-          number = ERR_Error
-            ifTrue: [ 
-              "get class name of exceptionObj, so we handle topex errors differently"
-              TZProxyError ]
+          number = 121000
+            ifTrue: [ TZProxyTodeCommandError ]
             ifFalse: [ TZProxyError ] ] ].
   proxy := proxyNotificationClass new.
   header := TZHeaderGemStone
