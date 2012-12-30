@@ -21,4 +21,4 @@ editElement: aClientElement aspect: aspectSelector label: labelString inWindow: 
       win
         extent: bounds extent;
         position: bounds origin ].
-  ^ win model
+  ^ windowId
