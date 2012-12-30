@@ -3,7 +3,7 @@ clientListElement
   | clientListElement |
   clientListElement := TodeClientListElement new
     listBlockOop: self listBlock asOop;
-    listAtBlockOop: self listAtBlock asOop;
+    itemSelectedBlockOop: self itemSelectedBlock asOop;
     yourself.
   clientListElement clientElementOop: clientListElement asOop.
   ^ clientListElement

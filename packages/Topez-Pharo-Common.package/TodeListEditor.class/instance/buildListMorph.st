@@ -9,7 +9,6 @@ buildListMorph
       changeSelected: #'listIndex:'
       menu: nil
       keystroke: nil;
-    getListElementSelector: #'listAt:';
     keystrokeSelector: #'listKeystroke:';
     handleBasicKeys: true;
     yourself

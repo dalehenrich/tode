@@ -1,4 +1,4 @@
 accessing
 listIndex: anInteger
-    self setListIndex: anInteger.
-    self changed: #'listIndexChanged'	"tell editor we've been  clicked"
+  self setListIndex: anInteger.
+  self clientElement itemSelected: anInteger

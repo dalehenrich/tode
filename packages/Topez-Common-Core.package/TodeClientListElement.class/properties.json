@@ -7,7 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"listBlockOop",
-		"listAtBlockOop" ],
+		"itemSelectedBlockOop" ],
 	"name" : "TodeClientListElement",
 	"pools" : [
 		 ],
