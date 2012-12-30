@@ -3,7 +3,7 @@ edit: aTopez windowId: inWindowId
   | windowId |
   windowId := inWindowId.
   windowId == nil
-    ifTrue: [ windowId := aTopez windowIdNamed: #'debugger' ].
+    ifTrue: [ windowId := aTopez windowIdNamed: #'debugMethod' ].
   ^ aTopez
     editSourceElement: self sourceElement
     label: self printString
