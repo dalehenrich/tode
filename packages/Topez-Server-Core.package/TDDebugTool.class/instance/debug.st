@@ -11,13 +11,4 @@ debug
   topez
     homeNode: stackNode;
     currentNode: stackNode.
-  false
-    ifTrue: [ 
-      self dbStack currentFrame edit: topez windowId: nil.
-      ^ (topez commands at: 'ds') block
-        value: topez
-        value: stackNode
-        value:
-          {'ds'.
-          'stack'}
-        value: nil ]
+  self dbStack currentFrame edit: topez windowId: nil
