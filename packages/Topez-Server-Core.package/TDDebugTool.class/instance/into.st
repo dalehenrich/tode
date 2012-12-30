@@ -1,10 +1,8 @@
 as yet unclassified
 into
-    "db into [stack-path]"
+  "db into"
 
-    | stackPath |
-    stackPath := tokens size > 2
-        ifTrue: [ tokens at: 3 ]
-        ifFalse: [ self defaultHomeStackPath ].
-    self dbStep: #'into' for: stackPath.
-    ^ self dbFinishStep: stackPath
+  | node |
+  node := self defaultHomeNode.
+  self dbStep: #'into' for: node.
+  ^ self dbFinishStep: stackNode

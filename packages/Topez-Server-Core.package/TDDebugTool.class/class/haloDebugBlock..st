@@ -1,5 +1,5 @@
 as yet unclassified
-haloExceptionBlock: aTDTopezServer
+haloDebugBlock: aTDTopezServer
   | directory |
   directory := Dictionary new.
   directory

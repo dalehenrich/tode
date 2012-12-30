@@ -2,8 +2,8 @@
 	"class" : {
 		"initialize" : "dkh 10/14/2012 19:34",
 		"initializeBasicCmdKeyShortcuts" : "dkh 10/16/2012 10:34",
-		"initializeBasicShiftCmdKeyShortcuts" : "dkh 10/24/2012 23:10",
-		"initializeShiftCmdKeyShortcuts" : "dkh 10/24/2012 23:11" },
+		"initializeBasicShiftCmdKeyShortcuts" : "dkh 12/29/2012 11:03",
+		"initializeShiftCmdKeyShortcuts" : "dkh 12/29/2012 11:04" },
 	"instance" : {
 		"browseClassFrom:" : "dkh 10/14/2012 20:06",
 		"debugIt" : "dkh 10/14/2012 19:28",
@@ -15,6 +15,8 @@
 		"findAgain" : "dkh 11/11/2012 15:08",
 		"implementorsOf:" : "dkh 10/15/2012 15:02",
 		"inspectIt" : "dkh 10/14/2012 19:22",
+		"methodSourceContainingIt" : "dkh 12/29/2012 11:07",
+		"methodSourceContainingIt:" : "dkh 12/29/2012 11:05",
 		"printIt" : "dkh 10/14/2012 19:27",
 		"referencesTo:" : "dkh 10/26/2012 18:58",
 		"selectSourceClass:" : "dkh 10/24/2012 23:07",

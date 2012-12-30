@@ -11,7 +11,8 @@
 		"topezClientForwarder",
 		"serverStatus",
 		"objIn",
-		"accumulateBlocks" ],
+		"accumulateBlocks",
+		"homeNode" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

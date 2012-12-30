@@ -1,7 +1,7 @@
 as yet unclassified
-dbContinue: stackPath
+dbContinue: node
   | processOop stack |
-  stack := (topez lookup: stackPath) basicContents stack.
+  stack := node basicContents stack.
   processOop := stack process asOop.
   processResult := self topez topezClientForwarder dbContinue: processOop.
   ^ STON fromString: processResult

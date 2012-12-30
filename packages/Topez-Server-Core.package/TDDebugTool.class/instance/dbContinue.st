@@ -1,3 +1,3 @@
 as yet unclassified
 dbContinue
-  ^ self dbContinue: self defaultStackPath
+  ^ self dbContinue: (self topez lookup: self haloStackPath)
