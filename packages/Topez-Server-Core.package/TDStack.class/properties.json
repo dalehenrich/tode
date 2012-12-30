@@ -9,7 +9,8 @@
 		"process",
 		"exception",
 		"frames",
-		"currentFrame" ],
+		"currentFrame",
+		"listElement" ],
 	"name" : "TDStack",
 	"pools" : [
 		 ],

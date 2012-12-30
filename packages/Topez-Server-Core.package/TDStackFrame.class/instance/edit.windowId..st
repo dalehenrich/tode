@@ -1,12 +1,11 @@
 as yet unclassified
 edit: aTopez windowId: inWindowId
-  | clientElement windowId |
-  clientElement := self clientSourceElement.
+  | windowId |
   windowId := inWindowId.
   windowId == nil
     ifTrue: [ windowId := aTopez windowIdNamed: #'debugger' ].
   ^ aTopez
-    editSourceElement: clientElement
+    editSourceElement: self sourceElement
     label: self printString
     inWindow: windowId
     at: #'method'

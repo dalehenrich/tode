@@ -9,7 +9,7 @@
 		"calculateSelectionRange" : "DataCurator 12/17/2012 08:18",
 		"calculateSourceRangeEnd:in:" : "DataCurator 12/17/2012 08:11",
 		"clientSourceElement" : "DataCurator 12/30/2012 11:07",
-		"edit:windowId:" : "DataCurator 12/30/2012 08:06",
+		"edit:windowId:" : "DataCurator 12/30/2012 11:22",
 		"elementNodeNames" : "DataCurator 12/16/2012 08:10",
 		"findFrameSuchThat:" : "DataCurator 12/22/2012 17:38",
 		"frameContents" : "DataCurator 12/15/2012 19:14",
@@ -35,5 +35,6 @@
 		"selectionRange" : "DataCurator 12/19/2012 14:12",
 		"selector" : "DataCurator 12/16/2012 07:46",
 		"setBlock" : "DataCurator 12/29/2012 09:24",
+		"sourceElement" : "DataCurator 12/30/2012 11:21",
 		"stack" : "DataCurator 12/16/2012 10:17",
 		"stack:" : "DataCurator 12/16/2012 10:17" } }

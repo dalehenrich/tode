@@ -1,12 +1,11 @@
 as yet unclassified
 edit: aTopez windowId: inWindowId
-  | clientListElement windowId |
-  clientListElement := self clientListElement.
+  | windowId |
   windowId := inWindowId.
   windowId == nil
     ifTrue: [ windowId := aTopez windowIdNamed: #'stack' ].
   ^ aTopez
-    editListElement: clientListElement
+    editListElement: self listElement
     label: self exception description
     inWindow: windowId
     at: #'debugger'
