@@ -6,7 +6,7 @@ edit: aTopez windowId: inWindowId
   windowId == nil
     ifTrue: [ windowId := aTopez windowIdNamed: #'debugger' ].
   ^ aTopez
-    editElement: clientElement
+    editSourceElement: clientElement
     label: self printString
     inWindow: windowId
     at: #'method'

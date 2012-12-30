@@ -7,7 +7,7 @@ edit: aTopez windowId: windowId
     yourself.
   clientElement clientElementOop: clientElement asOop.
   ^ aTopez
-    editElement: clientElement
+    editSourceElement: clientElement
     label: self printString
     inWindow: windowId
     at: #'method'

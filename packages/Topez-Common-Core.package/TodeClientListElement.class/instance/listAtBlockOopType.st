@@ -1,3 +1,3 @@
 accessing
 listAtBlockOopType
-  ^ TZHeaderGemStone oop: self listAtBlock
+  ^ TZHeaderGemStone oop: self listAtBlockOop

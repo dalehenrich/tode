@@ -1,9 +1,9 @@
 as yet unclassified
-debug
-  <topezCommand: 'debug' manPage: #'debugManPage'>
+debugX
+  <topezCommand: 'debugX' manPage: #'debugManPage'>
   ^ [ :topez :objIn :tokens :windowId | 
   (self
     topez: topez
     objIn: objIn
     tokens: tokens
-    windowId: windowId) debug ]
+    windowId: windowId) debugX ]

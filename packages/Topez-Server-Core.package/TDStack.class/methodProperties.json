@@ -2,11 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
+		"clientListElement" : "DataCurator 12/30/2012 08:11",
 		"createFrames" : "DataCurator 12/20/2012 20:34",
 		"currentFrame" : "DataCurator 12/22/2012 17:40",
+		"edit:windowId:" : "DataCurator 12/30/2012 08:09",
 		"exception" : "DataCurator 12/16/2012 10:05",
 		"exception:" : "DataCurator 12/16/2012 10:05",
 		"frames" : "DataCurator 12/16/2012 10:12",
+		"listAtBlock" : "DataCurator 12/30/2012 08:48",
+		"listBlock" : "DataCurator 12/30/2012 08:21",
 		"navigateFrame:" : "DataCurator 12/16/2012 14:10",
 		"navigateStack:" : "DataCurator 12/16/2012 14:10",
 		"printOn:" : "DataCurator 12/22/2012 08:16",

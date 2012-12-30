@@ -1,5 +1,5 @@
 as yet unclassified
-debug
+debugX
   "debug"
 
   | exceptionProcess exception |
@@ -10,5 +10,4 @@ debug
   stackNode := topez lookup: self haloStackPath.
   topez
     homeNode: stackNode;
-    currentNode: stackNode.
-  self dbStack edit: topez windowId: nil
+    currentNode: stackNode
