@@ -1,7 +1,7 @@
 as yet unclassified
-dbContinueWith: replacementObj for: stackPath
+dbContinueWith: replacementObj for: node
   | processOop stack |
-  stack := (topez lookup: stackPath) basicContents stack.
+  stack := node basicContents stack.
   processOop := stack process asOop.
   processResult := self topez topezClientForwarder dbContinue: replacementObj asOop forProcessOop: processOop.
   ^ STON fromString: processResult
