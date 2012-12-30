@@ -1,7 +1,7 @@
 as yet unclassified
 clientSourceElement
   ^ TodeClientMethodElement new
-    clientElement;
+    clientElementOop;
     getBlock: self getBlock;
     setBlock: self setBlock;
     inClass: self inClass;
