@@ -2,8 +2,8 @@ as yet unclassified
 clientListElement
   | clientListElement |
   clientListElement := TodeClientListElement new
-    listBlockOop: self listBlock asOop;
-    itemSelectedBlockOop: self itemSelectedBlock asOop;
+    clientElementOop;
+    listBlock: self listBlock;
+    itemSelectedBlock: self itemSelectedBlock;
     yourself.
-  clientListElement clientElementOop: clientListElement asOop.
   ^ clientListElement
