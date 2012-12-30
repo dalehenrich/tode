@@ -5,5 +5,6 @@ clientListElement
     clientElementOop;
     listBlock: self listBlock;
     itemSelectedBlock: self itemSelectedBlock;
+    selectedIndex: self currentFrame frameIndex;
     yourself.
   ^ clientListElement
