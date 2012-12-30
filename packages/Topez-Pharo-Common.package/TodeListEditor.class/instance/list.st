@@ -1,4 +1,4 @@
 accessing
 list
-    list ifNil: [ list := #() ].
-    ^ list select: self listFilter
+  self clientElement ifNil: [ ^ #() ].
+  ^ self clientElement list

@@ -7,4 +7,4 @@ activeWindowServerModel
   clientElement := model activeEditor clientElement.
   clientElement == nil
     ifTrue: [ ^ nil ].
-  ^ clientElement serverElementOop
+  ^ clientElement clientElementOop

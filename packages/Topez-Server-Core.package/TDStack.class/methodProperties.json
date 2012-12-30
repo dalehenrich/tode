@@ -2,11 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
+		"clientListElement" : "DataCurator 12/30/2012 11:01",
 		"createFrames" : "DataCurator 12/20/2012 20:34",
 		"currentFrame" : "DataCurator 12/22/2012 17:40",
+		"edit:windowId:" : "DataCurator 12/30/2012 11:20",
 		"exception" : "DataCurator 12/16/2012 10:05",
 		"exception:" : "DataCurator 12/16/2012 10:05",
 		"frames" : "DataCurator 12/16/2012 10:12",
+		"itemSelectedBlock" : "DataCurator 12/30/2012 11:50",
+		"listBlock" : "DataCurator 12/30/2012 08:21",
+		"listElement" : "DataCurator 12/30/2012 11:19",
 		"navigateFrame:" : "DataCurator 12/16/2012 14:10",
 		"navigateStack:" : "DataCurator 12/16/2012 14:10",
 		"printOn:" : "DataCurator 12/22/2012 08:16",

@@ -11,7 +11,8 @@
 		"evaluateStringResult",
 		"exception",
 		"exceptionProcess",
-		"autoCommit" ],
+		"autoCommit",
+		"elementCache" ],
 	"name" : "TDServerStatus",
 	"pools" : [
 		 ],

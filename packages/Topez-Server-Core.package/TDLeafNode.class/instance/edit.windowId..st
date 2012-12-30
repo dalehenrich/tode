@@ -2,12 +2,12 @@ as yet unclassified
 edit: aTopez windowId: windowId
   | clientElement |
   clientElement := self clientElementClass new
-    getBlockOop: self getBlock asOop;
-    setBlockOop: self setBlock asOop;
+    clientElement;
+    getBlock: self getBlock;
+    setBlock: self setBlock;
     yourself.
-  clientElement clientElementOop: clientElement asOop.
   ^ aTopez
-    editElement: clientElement
+    editSourceElement: clientElement
     label: self printString
     inWindow: windowId
     at: #'method'

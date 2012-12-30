@@ -1,5 +1,5 @@
 as yet unclassified
-editElement: aTZElement label: labelString inWindow: windowIdOrNil at: windowLocation
+editElement: aClientElement aspect: aspectSelector label: labelString inWindow: windowIdOrNil at: windowLocation
   | windowId label newWindow win |
   windowId := windowIdOrNil ifNil: [ windowId := self nextAvailableWindowId ].
   windowId == 0
@@ -8,14 +8,16 @@ editElement: aTZElement label: labelString inWindow: windowIdOrNil at: windowLoc
   label := labelString.
   newWindow := (self windowStatus windowAt: windowId) isNil.
   (win := self editorWindowAt: windowId) model
-    activateCodeEditor;
-    clientElement: aTZElement;
+    perform: aspectSelector;
+    clientElement: aClientElement;
     windowId: windowId;
     label: label.
   newWindow
     ifTrue: [ 
       | bounds |
-      bounds := self bounds at: windowLocation.
+      bounds := self bounds
+        at: windowLocation
+        ifAbsent: [ self error: 'Unknown window location: ' , windowLocation printString ].
       win
         extent: bounds extent;
         position: bounds origin ].

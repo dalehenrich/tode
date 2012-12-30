@@ -12,7 +12,8 @@
 		"next",
 		"previous",
 		"argAndTempNames",
-		"selectionRange" ],
+		"selectionRange",
+		"sourceElement" ],
 	"name" : "TDStackFrame",
 	"pools" : [
 		 ],

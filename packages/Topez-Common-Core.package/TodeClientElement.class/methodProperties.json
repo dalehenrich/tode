@@ -2,14 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"clientElementOop" : "dkh 12/27/2012 09:09",
-		"clientElementOop:" : "dkh 12/27/2012 09:09",
-		"getBlockOop" : "dkh 12/27/2012 09:12",
-		"getBlockOop:" : "dkh 12/27/2012 09:12",
-		"getBlockOopType" : "dkh 12/27/2012 09:46",
+		"blockCache" : "dkh 12/30/2012 10:53",
+		"clientElementOop" : "dkh 12/30/2012 11:00",
+		"excludedInstVarNames" : "DataCurator 12/30/2012 11:38",
 		"session" : "DataCurator 12/27/2012 10:28",
-		"setBlockOop" : "dkh 12/27/2012 09:12",
-		"setBlockOop:" : "dkh 12/27/2012 09:12",
-		"setBlockOopType" : "dkh 12/27/2012 09:46",
+		"stonInstVarNames" : "DataCurator 12/30/2012 11:44",
+		"stonOn:" : "dkh 12/30/2012 11:10",
 		"topez" : "dkh 12/27/2012 09:08",
 		"topez:" : "dkh 12/27/2012 09:08" } }
