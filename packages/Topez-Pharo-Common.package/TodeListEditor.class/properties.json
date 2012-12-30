@@ -6,10 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"list",
-		"listIndex",
-		"listFilter",
-		"renderAttribute" ],
+		"listIndex" ],
 	"name" : "TodeListEditor",
 	"pools" : [
 		 ],

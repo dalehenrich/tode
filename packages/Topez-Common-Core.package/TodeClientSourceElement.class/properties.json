@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"getBlockOop",
+		"setBlockOop" ],
 	"name" : "TodeClientSourceElement",
 	"pools" : [
 		 ],

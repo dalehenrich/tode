@@ -6,7 +6,7 @@ spawnWindow
   label := editor label.
   (win := editor topez editorWindowAt: windowId) model
     activateCodeEditor;
-    clientElement: self sourceElement;
+    clientElement: self clientElement;
     windowId: windowId;
     label: label.
   win extent: self editor topView extent * (1 @ 1.25)

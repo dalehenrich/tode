@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"topez",
-		"clientElementOop" ],
-	"name" : "TodeClientElement",
+		"listBlockOop",
+		"listAtBlockOop" ],
+	"name" : "TodeClientListElement",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TodeClientElement",
 	"type" : "normal" }
