@@ -6,7 +6,7 @@ dbFinishStep: node
   self dbStack navigateFrame: frameIndex.
   self dbStack currentFrame frameContents == nil
     ifTrue: [ ^ STON fromString: processResult ].
-  self dbStack currentFrame edit: topez windowId: nil.
+  self dbStack edit: topez windowId: nil.
   ^ (topez commands at: 'ds') block
     value: topez
     value: self stackNode

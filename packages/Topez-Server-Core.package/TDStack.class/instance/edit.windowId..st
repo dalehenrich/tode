@@ -5,7 +5,7 @@ edit: aTopez windowId: inWindowId
   aWindowId == nil
     ifTrue: [ aWindowId := aTopez windowIdNamed: #'debugStack' ].
   ^ aTopez
-    editListElement: self listElement
+    editListElement: self clientListElement
     label: self exception description
     inWindow: aWindowId
     at: #'debugger'
