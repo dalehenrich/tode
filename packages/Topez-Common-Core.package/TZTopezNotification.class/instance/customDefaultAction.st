@@ -13,6 +13,5 @@ customDefaultAction
       self} ].
   answer
     ifTrue: [ ^ #'resume' ].
-  process := Processor activeProcess.
-  UIManager default spawnNewProcessIfThisIsUI: process.
-  process terminate
+  ^ {#'abort'.
+  (STON toString: 'Aborted...')}
