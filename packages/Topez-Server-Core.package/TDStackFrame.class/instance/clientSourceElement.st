@@ -6,7 +6,7 @@ clientSourceElement
     setBlock: self setBlock;
     inClass: self inClass;
     sourceRange:
-        {(self selectionRange first).
-          (self selectionRange last)};
+        {(self selectionRange begin).
+          (self selectionRange end)};
     formatOnDisplay: false;
     yourself
