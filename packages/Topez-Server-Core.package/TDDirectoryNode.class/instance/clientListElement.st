@@ -7,6 +7,5 @@ clientListElement
     itemSelectedBlock: [ :listElement :index | 
           (listElement itemCache at: index) edit: listElement topezServerProxy windowId: nil.
           nil ];
-    selectedIndex: self currentFrame frameIndex;
     yourself.
   ^ clientListElement

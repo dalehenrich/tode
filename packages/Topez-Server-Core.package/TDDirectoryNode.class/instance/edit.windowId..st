@@ -6,6 +6,6 @@ edit: aTopez windowId: inWindowId
     ifTrue: [ aWindowId := aTopez windowIdNamed: #'inspector' ].
   ^ aTopez
     editListElement: self clientListElement
-    label: self exception description
+    label: self printString
     inWindow: aWindowId
     at: #'debugger'
