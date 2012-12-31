@@ -3,10 +3,9 @@ clientListElement
   | clientListElement |
   clientListElement := TodeClientListElement new
     clientElementOop;
-    listBlock: [ :listElement | STON toString: (self frames withIndexCollect: [ :frame :index | index asString , '. ' , frame printString ]) ];
+    listBlock: self clientListElementBlock;
     itemSelectedBlock: [ :listElement :index | 
-          self navigateFrame: index.
-          currentFrame edit: listElement topezServerProxy windowId: nil.
+          (listElement itemCache at: index) edit: listElement topezServerProxy windowId: nil.
           nil ];
     selectedIndex: self currentFrame frameIndex;
     yourself.
