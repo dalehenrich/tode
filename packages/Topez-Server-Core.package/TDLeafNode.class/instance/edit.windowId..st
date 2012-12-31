@@ -2,7 +2,7 @@ as yet unclassified
 edit: aTopez windowId: windowId
   | clientElement |
   clientElement := self clientElementClass new
-    clientElement;
+    clientElementOop;
     getBlock: self getBlock;
     setBlock: self setBlock;
     yourself.

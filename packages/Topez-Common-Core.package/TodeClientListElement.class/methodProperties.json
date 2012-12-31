@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"excludedInstVarNames" : "DataCurator 12/31/2012 08:43",
 		"itemCache" : "DataCurator 12/31/2012 08:10",
 		"itemCache:" : "DataCurator 12/31/2012 08:10",
 		"itemSelected:" : "DataCurator 12/31/2012 08:39",
