@@ -3,10 +3,9 @@ editStonElement: aStonString aspect: aspectSelector label: labelString inWindow:
   | clientElement |
   clientElement := STON fromString: aStonString.
   clientElement topez: self.
-  self
+  ^ self
     editElement: clientElement
     aspect: aspectSelector
     label: labelString
     inWindow: windowIdOrNil
-    at: windowLocation.
-  ^ ''
+    at: windowLocation

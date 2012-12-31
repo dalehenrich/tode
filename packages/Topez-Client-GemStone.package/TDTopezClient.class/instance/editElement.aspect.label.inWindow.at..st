@@ -21,4 +21,5 @@ editElement: aClientElement aspect: aspectSelector label: labelString inWindow: 
       win
         extent: bounds extent;
         position: bounds origin ].
-  ^ win model
+  aClientElement selectedIndex ifNotNil: [ :selectedIndex | win model listIndex: selectedIndex ].
+  ^ windowId
