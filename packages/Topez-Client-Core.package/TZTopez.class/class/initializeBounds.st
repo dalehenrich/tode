@@ -36,4 +36,7 @@ initializeBounds
         ((classDefOrigin + codeWidth + listWidth) @ (top + thirdHeight + codeWindowExtent y) extent: listWidth @ twoThirdHeight);
     at: #'evaluator'
       put: (classListsOrigin @ (top + thirdHeight + codeWindowExtent y) extent: codeWidth @ twoThirdHeight);
+    at: #'inspector'
+      put:
+        ((classListsOrigin + codeWidth) @ (top + thirdHeight + codeWindowExtent y) extent: codeWidth @ twoThirdHeight);
     yourself
