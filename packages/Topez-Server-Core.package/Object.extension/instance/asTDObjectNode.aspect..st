@@ -1,5 +1,5 @@
 *topez-server-core
-asTDObjectNode: aTopez aspect: aspect
+asTDObjectNode: aTopez aspect: anAspect
   ^ TDObjectNode new
     name:
         ([ self printString ]
@@ -17,7 +17,7 @@ asTDObjectNode: aTopez aspect: aspect
           obj := elementName isAllDigits
             ifTrue: [ theNode basicContents _at: elementName asNumber ]
             ifFalse: [ theNode basicContents instVarNamed: elementName ].
-          (obj asTDObjectNode: theNode topez aspect: aspect)
+          (obj asTDObjectNode: theNode topez aspect: anAspect)
             name: elementName;
             parent: theNode;
             yourself ];

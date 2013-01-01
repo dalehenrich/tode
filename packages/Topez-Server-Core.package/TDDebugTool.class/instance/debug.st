@@ -11,4 +11,4 @@ debug
   topez
     homeNode: stackNode;
     currentNode: stackNode.
-  self dbStack edit: topez windowId: nil
+  self dbStack edit: topez aspect: #'debug' windowId: nil

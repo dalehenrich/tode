@@ -6,7 +6,7 @@ clientListElement
     clientElementOop;
     listBlock: self clientListElementBlock;
     itemSelectedBlock: [ :listElement :index | 
-          (listElement itemCache at: index) edit: listElement topez windowId: nil.
+          (listElement itemCache at: index) edit: listElement topez aspect: listElement aspectwindowId: nil.
           nil ];
     yourself.
   ^ clientListElement

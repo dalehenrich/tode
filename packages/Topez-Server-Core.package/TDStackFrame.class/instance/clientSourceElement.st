@@ -2,6 +2,7 @@ as yet unclassified
 clientSourceElement
   ^ TodeClientMethodElement new
     clientElementOop;
+    aspect: #'edit';
     getBlock: self getBlock;
     setBlock: self setBlock;
     inClass: self inClass;
