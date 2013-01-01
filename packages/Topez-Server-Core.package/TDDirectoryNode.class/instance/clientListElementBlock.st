@@ -1,17 +1,32 @@
 as yet unclassified
 clientListElementBlock
   ^ [ :listElement | 
-  | ar items |
-  ar := Array new.
+  | components max ar items |
   items := Array new.
+  components := Array new.
+  max := 0.
   self
     childrenAndNamesDo: [ :child :nameText | 
       | stream |
+      max := max max: nameText size.
       stream := TextStream on: Text new.
-      stream nextPutAll: nameText.
-      stream nextPutAll: ' -> '.
       child dotSelfObject tzNodeDisplayOn: stream limit: 80 compacted: true.
-      ar add: stream contents.
+      components
+        add:
+          {nameText.
+          (stream contents)}.
       items add: child ].
+  ar := Array new.
+  max := max + 1.
+  components
+    do: [ :compAr | 
+      | stream |
+      stream := TextStream on: Text new.
+      stream
+        nextPutAll: (compAr at: 1);
+        space: max - (compAr at: 1) size;
+        nextPutAll: '-> ';
+        nextPutAll: (compAr at: 2).
+      ar add: stream contents ].
   listElement itemCache: items.
   STON toString: ar ]
