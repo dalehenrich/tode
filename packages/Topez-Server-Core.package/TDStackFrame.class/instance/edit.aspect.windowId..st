@@ -1,15 +1,10 @@
 as yet unclassified
 edit: aTopez aspect: anAspect windowId: inWindowId
-  "anAspect: #edit, #debug, #inspect"
+  "anAspect: #edit, #debug, #inspect,
+   #source, #contents"
 
-  | windowId |
-  anAspect == #'inspect'
-    ifTrue: [ ^ super edit: aTopez aspect: anAspect windowId: inWindowId ].
-  windowId := inWindowId.
-  windowId == nil
-    ifTrue: [ windowId := aTopez windowIdNamed: #'debugMethod' ].
-  ^ aTopez
-    editSourceElement: self sourceElement
-    label: self printString
-    inWindow: windowId
-    at: #'method'
+  anAspect == #'source'
+    ifTrue: [ ^ self editSource: aTopez windowId: inWindowId ].
+  anAspect == #'contents'
+    ifTrue: [ ^ self editContents: aTopez windowId: inWindowId ].
+  ^ super edit: aTopez aspect: anAspect windowId: inWindowId

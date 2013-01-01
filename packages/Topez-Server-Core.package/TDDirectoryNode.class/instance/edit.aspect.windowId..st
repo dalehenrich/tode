@@ -8,8 +8,7 @@ edit: aTopez aspect: anAspect windowId: inWindowId
   aWindowId := inWindowId.
   aWindowId == nil
     ifTrue: [ aWindowId := aTopez windowIdNamed: #'inspector' ].
-  clientListElement := self
-    clientListElement;
+  clientListElement := self clientListElement
     aspect: anAspect;
     yourself.
   ^ aTopez

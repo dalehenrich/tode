@@ -5,8 +5,14 @@ clientListElement
     clientElementOop;
     listBlock: [ :listElement | STON toString: (self frames withIndexCollect: [ :frame :index | index asString , '. ' , frame printString ]) ];
     itemSelectedBlock: [ :listElement :index | 
+          | frameNode |
           self navigateFrame: index.
-          currentFrame edit: listElement topez aspect: listElement aspect windowId: nil.
+          currentFrame
+            edit: listElement topez aspect: #'source' windowId: nil;
+            edit: listElement topez aspect: #'contents' windowId: nil.
+          frameNode := listElement topez
+            lookup: listElement topez homeNode printString , currentFrame frameIndex asString.
+          listElement topez currentNode: frameNode.
           nil ];
     selectedIndex: self currentFrame frameIndex;
     yourself.

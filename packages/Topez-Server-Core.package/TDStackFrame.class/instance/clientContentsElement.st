@@ -1,12 +1,10 @@
 as yet unclassified
-clientListElement
-  | clientListElement |
-  clientListElement := TodeClientListElement new
-    topez: self topez;
+clientContentsElement
+  ^ TodeClientListElement new
     clientElementOop;
-    listBlock: self clientListElementBlock;
+    aspect: #'edit';
+    listBlock: self clientContentsListElementBlock;
     itemSelectedBlock: [ :listElement :index | 
           (listElement itemCache at: index) edit: listElement topez aspect: listElement aspect windowId: nil.
           nil ];
-    yourself.
-  ^ clientListElement
+    yourself

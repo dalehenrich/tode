@@ -6,11 +6,11 @@ frame
     ifTrue: [ (tokens at: 2) asNumber ]
     ifFalse: [ self dbStack currentFrame frameIndex ].
   self dbStack navigateFrame: frameIndex.
-  self dbStack currentFrame edit: topez aspect: #'debug' windowId: nil.
-  ^ (topez commands at: 'ds') block
+  self dbStack edit: topez aspect: #'debug' windowId: nil.
+  ^ (topez commands at: 'cd') block
     value: topez
     value: self stackNode
     value:
-      {'ds'.
+      {'cd'.
       (stackNode printString , frameIndex asString)}
     value: nil
