@@ -1,10 +1,15 @@
 as yet unclassified
-edit: aTopez aspect: anAspect windowId: inWindowId
+edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
   "anAspect: #edit, #debug, #inspect"
 
   | aWindowId clientListElement |
   anAspect == #'inspect'
-    ifTrue: [ ^ super edit: aTopez aspect: anAspect windowId: inWindowId ].
+    ifTrue: [ 
+      ^ super
+        edit: parentNode
+        topez: aTopez
+        aspect: anAspect
+        windowId: inWindowId ].
   aWindowId := inWindowId.
   aWindowId == nil
     ifTrue: [ aWindowId := aTopez windowIdNamed: #'debugStack' ].

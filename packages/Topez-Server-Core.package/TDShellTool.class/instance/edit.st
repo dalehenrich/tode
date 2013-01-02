@@ -19,5 +19,12 @@ edit
               windowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
               theTokens := tokens copyWithoutIndex: 2 ] ].
       theTokens size > 0
-        ifTrue: [ contextObject := topez lookup: (theTokens at: 1) ] ].
+        ifTrue: [ 
+          | contextNode |
+          contextNode := topez lookup: (theTokens at: 1).
+          contextNode
+            edit: contextNode parent
+            topez: topez
+            aspect: #'edit'
+            windowId: windowId ] ].
   ^ contextObject edit: topez aspect: #'edit' windowId: windowId

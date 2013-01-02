@@ -6,6 +6,7 @@ asTDObjectNode: parentNode topez: aTopez aspect: anAspect
             on: Error
             do: [ :ex | 'error printing' ]);
     parent: parentNode;
+    aspect: anAspect;
     topez: aTopez;
     basicContents: self;
     listBlock: [ :theNode | 

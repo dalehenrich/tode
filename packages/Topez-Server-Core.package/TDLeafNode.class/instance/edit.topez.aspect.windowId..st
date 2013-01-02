@@ -1,10 +1,15 @@
 as yet unclassified
-edit: aTopez aspect: anAspect windowId: windowId
+edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
   "anAspect: #edit, #debug, #inspect"
 
   | clientElement |
   anAspect == #'inspect'
-    ifTrue: [ ^ super edit: aTopez aspect: anAspect windowId: windowId ].
+    ifTrue: [ 
+      ^ super
+        edit: parentNode
+        topez: aTopez
+        aspect: anAspect
+        windowId: inWindowId ].
   clientElement := self clientElementClass new
     clientElementOop;
     aspect: anAspect;
@@ -14,5 +19,5 @@ edit: aTopez aspect: anAspect windowId: windowId
   ^ aTopez
     editSourceElement: clientElement
     label: self printString
-    inWindow: windowId
+    inWindow: inWindowId
     at: #'method'

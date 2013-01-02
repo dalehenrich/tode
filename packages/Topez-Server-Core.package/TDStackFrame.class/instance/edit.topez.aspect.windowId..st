@@ -1,5 +1,5 @@
 as yet unclassified
-edit: aTopez aspect: anAspect windowId: inWindowId
+edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
   "anAspect: #edit, #debug, #inspect,
    #source, #contents"
 
@@ -7,4 +7,8 @@ edit: aTopez aspect: anAspect windowId: inWindowId
     ifTrue: [ ^ self editSource: aTopez windowId: inWindowId ].
   anAspect == #'contents'
     ifTrue: [ ^ self editContents: aTopez windowId: inWindowId ].
-  ^ super edit: aTopez aspect: anAspect windowId: inWindowId
+  ^ super
+    edit: parentNode
+    topez: aTopez
+    aspect: anAspect
+    windowId: inWindowId

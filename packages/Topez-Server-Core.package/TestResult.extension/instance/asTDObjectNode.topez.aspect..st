@@ -1,6 +1,8 @@
 *topez-server-core
 asTDObjectNode: parentNode topez: aTopez aspect: aspect
   | map |
+  aspect ~~ #'test'
+    ifTrue: [ ^ super asTDObjectNode: parentNode topez: aTopez aspect: aspect ].
   map := Dictionary new
     at: 'errors' put: #'unexpectedErrors';
     at: 'failures' put: #'unexpectedFailures';

@@ -5,4 +5,4 @@ debugNode: parentNode process: aGsProcess exception: anException
     process: aGsProcess;
     exception: anException;
     yourself.
-  ^ stack asTDObjectNode: parentNode topez: parentNode topez self topez aspect: #'debug'
+  ^ stack asTDObjectNode: parentNode topez: parentNode topez aspect: #'debug'
