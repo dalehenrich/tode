@@ -8,8 +8,7 @@ ancestryNode: anArrayOfMCVersionInfo
     elementBlock: [ :theNode :elementName :absentBlock | 
           | versionInfo |
           versionInfo := theNode basicContents detect: [ :each | each name = elementName ] ifNone: absentBlock.
-          (versionInfo message asTDObjectNode: theNode topez aspect: #'edit')
+          (versionInfo message asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
             name: elementName;
-            parent: theNode;
             yourself ];
     yourself

@@ -1,5 +1,5 @@
 as yet unclassified
-pathTermNode: pathTerm
+pathTermNode: parentNode pathTerm: pathTerm
   | node ivNames indexNameMap |
   ivNames := #('name' 'updateBtree' 'updateDict' 'children' 'offset' 'needsDepList').
   indexNameMap := Dictionary new.
@@ -10,6 +10,7 @@ pathTermNode: pathTerm
     indexNameMap at: indexName put: theIndex ].
   node := TDObjectNode new
     name: pathTerm name;
+    parent: parentNode;
     topez: topez;
     readMe: 'TDIndexDevTool>>pathTermNode:';
     basicContents: pathTerm;
@@ -17,27 +18,26 @@ pathTermNode: pathTerm
     elementBlock: [ :theNode :elementName :absentBlock | 
           | childNode |
           childNode := elementName = 'name'
-            ifTrue: [ self indexElementNode: (pathTerm instVarNamed: elementName) ]
+            ifTrue: [ self indexElementNode: theNode element: (pathTerm instVarNamed: elementName) ]
             ifFalse: [ 
-              childNode := elementName = 'updateBtree'
-                ifTrue: [ self btreeNode: (pathTerm instVarNamed: elementName) ]
+              elementName = 'updateBtree'
+                ifTrue: [ self btreeNode: theNode btree: (pathTerm instVarNamed: elementName) ]
                 ifFalse: [ 
                   elementName = 'updateDict'
-                    ifTrue: [ self indexDictionaryNode: (pathTerm instVarNamed: elementName) ]
+                    ifTrue: [ self indexDictionaryNode: theNode indexDictionary: (pathTerm instVarNamed: elementName) ]
                     ifFalse: [ 
                       elementName = 'children'
-                        ifTrue: [ self pathTermsNode: (pathTerm instVarNamed: elementName) ]
+                        ifTrue: [ self pathTermsNode: theNode pathTerms: (pathTerm instVarNamed: elementName) ]
                         ifFalse: [ 
                           elementName = 'offset'
-                            ifTrue: [ (pathTerm instVarNamed: elementName) asTDObjectNode: self topez aspect: #'edit' ]
+                            ifTrue: [ (pathTerm instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
                             ifFalse: [ 
                               elementName = 'needsDepList'
-                                ifTrue: [ (pathTerm instVarNamed: elementName) asTDObjectNode: self topez aspect: #'edit' ]
-                                ifFalse: [ self indexNode: (indexNameMap at: elementName) ] ] ] ] ] ].
+                                ifTrue: [ (pathTerm instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
+                                ifFalse: [ self indexNode: theNode index: (indexNameMap at: elementName) ] ] ] ] ] ].
           childNode == nil
-            ifTrue: [ childNode := nil asTDObjectNode: self topez aspect: #'edit' ].
+            ifTrue: [ childNode := nil asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ].
           childNode
-            parent: theNode;
             name: elementName;
             yourself ];
     yourself.

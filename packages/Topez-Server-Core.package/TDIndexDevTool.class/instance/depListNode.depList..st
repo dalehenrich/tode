@@ -1,9 +1,10 @@
 as yet unclassified
-depListNode: depList
+depListNode: parentNode depList: depList
   | node map |
   map := Dictionary new.
   node := TDObjectNode new
     name: 'depList';
+    parent: parentNode;
     topez: topez;
     readMe: 'TDIndexDevTool>>depListNode:';
     basicContents: depList;
@@ -20,9 +21,8 @@ depListNode: depList
             ifFalse: [ absentBlock value ].
           index := elementName asNumber.
           (index even
-            ifTrue: [ (map at: elementName) asTDObjectNode: self topez aspect: #'edit' ]
-            ifFalse: [ self pathTermNode: (map at: elementName) ])
-            parent: theNode;
+            ifTrue: [ (map at: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
+            ifFalse: [ self pathTermNode: theNode pathTerm: (map at: elementName) ])
             name: elementName;
             yourself ];
     yourself.

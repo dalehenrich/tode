@@ -10,16 +10,17 @@ haloDebugProcessesBlock: aTDTopezServer
     readMe: self readMeProcesses;
     listBlock: [ :theNode | (1 to: theNode basicContents size) collect: [ :each | each asString ] ];
     elementBlock: [ :theNode :elementName :absentBlock | 
-          | process |
+          | process debugTool debugNode |
           elementName isAllDigits
             ifFalse: [ absentBlock value ].
           process := theNode basicContents at: elementName asNumber ifAbsent: absentBlock.
-          ((TDDebugTool
+          debugTool := TDDebugTool
             topez: parentNode topez
             objIn: nil
             tokens: #()
-            windowId: nil) debugNode: process exception: nil)
+            windowId: nil.
+          debugNode := debugTool debugNode: theNode process: process exception: nil.
+          debugNode
             name: elementName;
-            parent: theNode;
             yourself ];
     yourself ]

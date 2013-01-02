@@ -5,6 +5,12 @@ clientContentsElement
     aspect: #'edit';
     listBlock: self clientContentsListElementBlock;
     itemSelectedBlock: [ :listElement :index | 
-          (listElement itemCache at: index) edit: listElement topez aspect: listElement aspect windowId: nil.
+          | aspect |
+          aspect := listElement aspect.
+          index == 1
+            ifTrue: [ 
+              "."
+              aspect := #'inspect' ].
+          (listElement itemCache at: index) edit: listElement topez aspect: aspect windowId: nil.
           nil ];
     yourself

@@ -6,8 +6,10 @@ filesNode: aTDMonticelloVersion
     basicContents: aTDMonticelloVersion;
     listBlock: [ :theNode | (theNode basicContents versionReferenceMap values sorted collect: [ :versionRef | versionRef name ]) reversed ];
     elementBlock: [ :theNode :elementName :absentBlock | 
-          ((theNode basicContents versionReferenceMap at: elementName) asTDObjectNode: theNode topez aspect: #'edit')
+          ((theNode basicContents versionReferenceMap at: elementName)
+            asTDObjectNode: theNode
+            topez: theNode topez
+            aspect: #'edit')
             name: elementName;
-            parent: theNode;
             yourself ];
     yourself

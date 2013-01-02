@@ -1,5 +1,5 @@
 *topez-server-core
-asTDObjectNode: aTopez aspect: aspect
+asTDObjectNode: parentNode topez: aTopez aspect: aspect
   | map |
   map := Dictionary new
     at: 'errors' put: #'unexpectedErrors';
@@ -14,6 +14,7 @@ asTDObjectNode: aTopez aspect: aspect
             on: Error
             do: [ :ex | 'error printing' ]);
     topez: aTopez;
+    parent: parentNode;
     basicContents: self;
     elementRenderAttributeBlock: [ :theNode :elementName | self renderNameAttributesFor: elementName ];
     renderAttributeBlock: [ :theNode | self renderNameAttributes ];
@@ -21,8 +22,7 @@ asTDObjectNode: aTopez aspect: aspect
     elementBlock: [ :theNode :elementName :absentBlock | 
           | obj |
           obj := (theNode basicContents perform: (map at: elementName)) asArray.
-          (obj asTDObjectNode: theNode topez aspect: aspect)
+          (obj asTDObjectNode: theNode topez: theNode topez aspect: aspect)
             name: elementName;
-            parent: theNode;
             yourself ];
     yourself

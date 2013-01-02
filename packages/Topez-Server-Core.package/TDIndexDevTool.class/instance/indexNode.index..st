@@ -1,8 +1,9 @@
 as yet unclassified
-indexNode: theIndex
+indexNode: parentNode index: theIndex
   | node |
   node := TDObjectNode new
     name: self printString;
+    parent: parentNode;
     topez: topez;
     readMe: 'TDIndexDevTool>>indexNode:';
     basicContents: theIndex;
@@ -15,24 +16,23 @@ indexNode: theIndex
     elementBlock: [ :theNode :elementName :absentBlock | 
           | childNode |
           childNode := elementName = 'nscRoot'
-            ifTrue: [ self nscNode: (theIndex instVarNamed: elementName) ]
+            ifTrue: [ self nscNode: theNode nsc: (theIndex instVarNamed: elementName) ]
             ifFalse: [ 
               elementName = 'indexDictionary'
-                ifTrue: [ self indexDictionaryNode: (theIndex instVarNamed: elementName) ]
+                ifTrue: [ self indexDictionaryNode: theNode indexDictionary: (theIndex instVarNamed: elementName) ]
                 ifFalse: [ 
                   (theIndex isRangeEqualityIndex and: [ elementName = 'btreeRoot' ])
-                    ifTrue: [ self btreeNode: (theIndex instVarNamed: elementName) ]
+                    ifTrue: [ self btreeNode: theNode btree: (theIndex instVarNamed: elementName) ]
                     ifFalse: [ 
                       (theIndex isRangeEqualityIndex and: [ elementName = 'lastElementClass' ])
-                        ifTrue: [ (theIndex instVarNamed: elementName) asTDObjectNode: self topez aspect: #'edit' ]
+                        ifTrue: [ (theIndex instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
                         ifFalse: [ 
                           elementName isAllDigits
                             ifFalse: [ absentBlock value ].
-                          self pathTermNode: (theIndex at: elementName asNumber) ] ] ] ].
+                          self pathTermNode: theNode pathTerm: (theIndex at: elementName asNumber) ] ] ] ].
           childNode == nil
-            ifTrue: [ childNode := nil asTDObjectNode: self topez aspect: #'edit' ].
+            ifTrue: [ childNode := nil asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ].
           childNode
-            parent: theNode;
             name: elementName;
             yourself ];
     yourself.

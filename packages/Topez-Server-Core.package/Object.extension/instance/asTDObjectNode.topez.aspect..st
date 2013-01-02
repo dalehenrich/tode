@@ -1,10 +1,11 @@
 *topez-server-core
-asTDObjectNode: aTopez aspect: anAspect
+asTDObjectNode: parentNode topez: aTopez aspect: anAspect
   ^ TDObjectNode new
     name:
         ([ self printString ]
             on: Error
             do: [ :ex | 'error printing' ]);
+    parent: parentNode;
     topez: aTopez;
     basicContents: self;
     listBlock: [ :theNode | 
@@ -17,8 +18,7 @@ asTDObjectNode: aTopez aspect: anAspect
           obj := elementName isAllDigits
             ifTrue: [ theNode basicContents _at: elementName asNumber ]
             ifFalse: [ theNode basicContents instVarNamed: elementName ].
-          (obj asTDObjectNode: theNode topez aspect: anAspect)
+          (obj asTDObjectNode: theNode topez: theNode topez aspect: anAspect)
             name: elementName;
-            parent: theNode;
             yourself ];
     yourself

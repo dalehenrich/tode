@@ -1,5 +1,5 @@
 as yet unclassified
-breakpointNode
+breakpointNode: parentNode
   | node breakReport count rawBreakReport breakSummary |
   count := 0.
   rawBreakReport := GsNMethod _breakReport: false.
@@ -16,6 +16,7 @@ breakpointNode
       reportString ].
   node := TDObjectNode new
     name: 'breakpoints';
+    parent: parentNode;
     readMe: self readMeBreakpoint;
     basicContents: breakReport;
     listBlock: [ :theNode | 
@@ -27,8 +28,7 @@ breakpointNode
           elementName isAllDigits
             ifFalse: [ absentBlock value ].
           report := theNode basicContents.
-          ((report at: elementName asNumber) asTDObjectNode: theNode topez aspect: #'edit')
-            parent: theNode;
+          ((report at: elementName asNumber) asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
             name: elementName;
             yourself ];
     yourself.

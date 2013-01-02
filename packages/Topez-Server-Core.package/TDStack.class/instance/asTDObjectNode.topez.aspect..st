@@ -1,9 +1,10 @@
 as yet unclassified
-asTDObjectNode: aTopez aspect: anAspect
+asTDObjectNode: parentNode topez: aTopez aspect: anAspect
   anAspect ~~ #'debug'
-    ifTrue: [ ^ super asTDObjectNode: aTopez aspect: anAspect ].
+    ifTrue: [ ^ super asTDObjectNode: parentNode topez: aTopez aspect: anAspect ].
   ^ TDObjectNode new
     name: 'debug';
+    parent: parentNode;
     topez: aTopez;
     readMe: 'debugger for: ' , self printString;
     basicContents: self;
@@ -21,7 +22,7 @@ asTDObjectNode: aTopez aspect: anAspect
     elementBlock: [ :theNode :elementName :absentBlock | 
           elementName isAllDigits
             ifFalse: [ absentBlock value ].
-          (theNode basicContents frameNode: elementName asNumber topez: theNode topez)
+          (theNode basicContents frameNode: theNode index: elementName asNumber topez: theNode topez)
             parent: theNode;
             name: elementName;
             yourself ];

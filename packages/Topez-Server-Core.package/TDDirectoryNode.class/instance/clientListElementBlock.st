@@ -4,7 +4,19 @@ clientListElementBlock
   | components max ar items |
   items := Array new.
   components := Array new.
-  max := 0.
+  max := 'parent' size.
+  components
+    add:
+      {'.'.
+      'self'}.
+  items add: self.
+  self parent ~~ nil
+    ifTrue: [ 
+      components
+        add:
+          {'..'.
+          'parent'}.
+      items add: self parent ].
   self
     childrenAndNamesDo: [ :child :nameText | 
       | stream |

@@ -7,10 +7,4 @@ frame
     ifFalse: [ self dbStack currentFrame frameIndex ].
   self dbStack navigateFrame: frameIndex.
   self dbStack edit: topez aspect: #'debug' windowId: nil.
-  ^ (topez commands at: 'cd') block
-    value: topez
-    value: self stackNode
-    value:
-      {'cd'.
-      (stackNode printString , frameIndex asString)}
-    value: nil
+  ^ topez currentNode

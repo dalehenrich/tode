@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"ancestryNode:" : "DataCurator 01/01/2013 08:50",
+		"ancestryNode:" : "DataCurator 01/01/2013 14:35",
 		"buildDirtyWorkingCopyList" : "DataCurator 12/25/2012 06:08",
 		"buildRepositoryList" : "DataCurator 12/24/2012 17:19",
 		"buildRepositoryList:" : "DataCurator 12/24/2012 17:17",
 		"buildWorkingCopyList" : "DataCurator 12/25/2012 06:07",
 		"buildWorkingCopyList:" : "DataCurator 12/25/2012 07:42",
-		"filesNode:" : "DataCurator 01/01/2013 08:50",
+		"filesNode:" : "DataCurator 01/01/2013 14:36",
 		"haloMonticelloBlock:" : "DataCurator 12/25/2012 09:28",
 		"halos" : "DataCurator 12/25/2012 07:24",
 		"halos:" : "DataCurator 12/25/2012 07:25",
@@ -26,7 +26,7 @@
 		"toolReadMe" : "DataCurator 12/24/2012 08:09",
 		"versionInfoNode:" : "DataCurator 12/25/2012 09:19",
 		"workingCopiesNode:" : "DataCurator 12/25/2012 07:35",
-		"workingCopyNode:" : "DataCurator 01/01/2013 08:50" },
+		"workingCopyNode:" : "DataCurator 01/01/2013 14:36" },
 	"instance" : {
 		"compareChangesFor:on:" : "DataCurator 12/26/2012 08:14",
 		"diff" : "DataCurator 12/26/2012 08:22",
