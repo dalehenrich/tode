@@ -8,14 +8,14 @@ clientListElementBlock
   components
     add:
       {'.'.
-      'self'}.
+      (self tzNodeDisplay: 80 compacted: true)}.
   items add: self.
   self parent ~~ nil
     ifTrue: [ 
       components
         add:
           {'..'.
-          'parent'}.
+          (self parent tzNodeDisplay: 80 compacted: true)}.
       items add: self parent ].
   self
     childrenAndNamesDo: [ :child :nameText | 
@@ -39,6 +39,6 @@ clientListElementBlock
         space: max - (compAr at: 1) size;
         nextPutAll: '-> ';
         nextPutAll: (compAr at: 2).
-      ar add: stream contents ].
+      ar add: stream contents asString ].
   listElement itemCache: items.
   STON toString: ar ]

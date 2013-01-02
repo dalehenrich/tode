@@ -3,13 +3,13 @@ installHalosOn: aTDTopezServer
   aTDTopezServer
     installHalo: '.self'
       block: [ :theNode | 
-          (theNode dotSelfObject asTDObjectNode: theNode topez: self topez aspect: #'edit')
+          (theNode dotSelfObject asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
             name: '.self';
             readMe: self readMeSelf;
             yourself ];
     installHalo: '.node'
       block: [ :theNode | 
-          (theNode asTDObjectNode: theNode topez: self topez aspect: #'edit')
+          (theNode asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
             name: '.node';
             readMe: self readMeNode;
             yourself ];

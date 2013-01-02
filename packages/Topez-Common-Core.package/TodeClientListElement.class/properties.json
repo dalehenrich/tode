@@ -9,7 +9,8 @@
 		"itemCache",
 		"listBlockOop",
 		"itemSelectedBlockOop",
-		"selectedIndex" ],
+		"selectedIndex",
+		"parentNode" ],
 	"name" : "TodeClientListElement",
 	"pools" : [
 		 ],

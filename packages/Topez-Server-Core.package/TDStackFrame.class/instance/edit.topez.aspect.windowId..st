@@ -3,12 +3,14 @@ edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
   "anAspect: #edit, #debug, #inspect,
    #source, #contents"
 
+  | frameNode |
   anAspect == #'source'
     ifTrue: [ ^ self editSource: aTopez windowId: inWindowId ].
+  frameNode := parentNode childNamed: self frameIndex asString ifAbsent: [  ].
   anAspect == #'contents'
-    ifTrue: [ ^ self editContents: aTopez windowId: inWindowId ].
+    ifTrue: [ ^ self editContents: frameNode topez: aTopez windowId: inWindowId ].
   ^ super
-    edit: parentNode
+    edit: frameNode
     topez: aTopez
     aspect: anAspect
     windowId: inWindowId

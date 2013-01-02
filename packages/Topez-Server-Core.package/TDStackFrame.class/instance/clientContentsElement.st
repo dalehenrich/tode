@@ -11,6 +11,10 @@ clientContentsElement
             ifTrue: [ 
               "."
               aspect := #'inspect' ].
-          (listElement itemCache at: index) edit: listElement topez aspect: aspect windowId: nil.
+          (listElement itemCache at: index)
+            edit: listElement parentNode
+            topez: listElement topez
+            aspect: aspect
+            windowId: nil.
           nil ];
     yourself

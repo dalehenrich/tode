@@ -16,6 +16,7 @@ edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
   clientListElement := self clientListElement
     topez: aTopez;
     aspect: anAspect;
+    parentNode: parentNode;
     yourself.
   ^ aTopez
     editListElement: clientListElement

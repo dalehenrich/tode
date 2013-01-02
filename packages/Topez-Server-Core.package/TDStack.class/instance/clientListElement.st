@@ -8,8 +8,14 @@ clientListElement
           | frameNode |
           self navigateFrame: index.
           currentFrame
-            edit: listElement topez aspect: #'source' windowId: nil;
-            edit: listElement topez aspect: #'contents' windowId: nil.
+            edit: listElement parentNode
+              topez: listElement topez
+              aspect: #'source'
+              windowId: nil;
+            edit: listElement parentNode
+              topez: listElement topez
+              aspect: #'contents'
+              windowId: nil.
           frameNode := listElement topez
             lookup: listElement topez homeNode printString , currentFrame frameIndex asString.
           listElement topez currentNode: frameNode.

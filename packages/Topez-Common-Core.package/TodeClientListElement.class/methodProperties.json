@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"excludedInstVarNames" : "DataCurator 12/31/2012 08:43",
+		"excludedInstVarNames" : "DataCurator 01/01/2013 21:15",
 		"itemCache" : "DataCurator 12/31/2012 08:10",
 		"itemCache:" : "DataCurator 12/31/2012 08:10",
 		"itemSelected:" : "DataCurator 12/31/2012 08:39",
@@ -13,5 +13,7 @@
 		"listBlock:" : "dkh 12/30/2012 10:56",
 		"listBlockOop" : "dkh 12/30/2012 07:46",
 		"listBlockOopType" : "DataCurator 12/30/2012 07:48",
+		"parentNode" : "DataCurator 01/01/2013 17:43",
+		"parentNode:" : "DataCurator 01/01/2013 17:43",
 		"selectedIndex" : "dkh 12/30/2012 12:36",
 		"selectedIndex:" : "dkh 12/30/2012 12:37" } }

@@ -25,6 +25,6 @@ clientContentsListElementBlock
         ifFalse: [ self objectFor: elementName ifAbsent: [ self error: 'missing element' ] ].
       items add: object.
       object tzNodeDisplayOn: stream limit: 80 compacted: true.
-      ar add: stream contents ].
+      ar add: stream contents asString ].
   listElement itemCache: items.
   STON toString: ar ]

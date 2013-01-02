@@ -6,5 +6,9 @@ frame
     ifTrue: [ (tokens at: 2) asNumber ]
     ifFalse: [ self dbStack currentFrame frameIndex ].
   self dbStack navigateFrame: frameIndex.
-  self dbStack edit: topez aspect: #'debug' windowId: nil.
+  self dbStack
+    edit: stackNode
+    topez: topez
+    aspect: #'debug'
+    windowId: nil.
   ^ topez currentNode

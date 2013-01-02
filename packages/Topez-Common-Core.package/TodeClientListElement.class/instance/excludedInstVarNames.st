@@ -1,3 +1,3 @@
 as yet unclassified
 excludedInstVarNames
-  ^ super excludedInstVarNames , #(#'itemCache')
+  ^ super excludedInstVarNames , #(#'itemCache' #'parentNode')
