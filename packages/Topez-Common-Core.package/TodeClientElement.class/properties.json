@@ -9,7 +9,12 @@
 		"topez",
 		"blockCache",
 		"clientElementOop",
-		"aspect" ],
+		"aspect",
+		"editorAspectSelector",
+		"editorWindowLabel",
+		"editorWindowId",
+		"editorWindowLocation",
+		"editorWindowName" ],
 	"name" : "TodeClientElement",
 	"pools" : [
 		 ],
