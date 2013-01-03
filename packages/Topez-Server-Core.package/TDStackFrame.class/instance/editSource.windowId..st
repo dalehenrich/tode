@@ -1,11 +1,11 @@
 as yet unclassified
 editSource: aTopez windowId: inWindowId
-  | windowId |
-  windowId := inWindowId.
-  windowId == nil
-    ifTrue: [ windowId := aTopez windowIdNamed: #'debugMethod' ].
-  ^ aTopez
-    editSourceElement: self sourceElement
-    label: self printString
-    inWindow: windowId
-    at: #'method'
+  | clientElement |
+  clientElement := self sourceElement
+    editorWindowLabel: self printString;
+    editorWindowId: inWindowId;
+    editorWindowName: #'debugMethod';
+    editorWindowLocation: #'method';
+    editorAspectSelector: #'activateCodeEditor';
+    yourself.
+  ^ aTopez editElement: clientElement

@@ -1,15 +1,13 @@
 as yet unclassified
 editContents: parentNode topez: aTopez windowId: inWindowId
-  | windowId element |
-  windowId := inWindowId.
-  windowId == nil
-    ifTrue: [ windowId := aTopez windowIdNamed: #'inspector' ].
+  | element |
   element := self contentsElement
     topez: aTopez;
     parentNode: parentNode;
+    editorWindowLabel: self printString;
+    editorWindowId: inWindowId;
+    editorWindowName: #'inspector';
+    editorWindowLocation: #'inspector';
+    editorAspectSelector: #'activateListEditor';
     yourself.
-  ^ aTopez
-    editListElement: element
-    label: self printString
-    inWindow: windowId
-    at: #'inspector'
+  ^ aTopez editElement: element

@@ -15,9 +15,10 @@ edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
     aspect: anAspect;
     getBlock: self getBlock;
     setBlock: self setBlock;
+    editorWindowLabel: self printString;
+    editorWindowId: inWindowId;
+    editorWindowName: #'editor';
+    editorWindowLocation: #'method';
+    editorAspectSelector: #'activateCodeEditor';
     yourself.
-  ^ aTopez
-    editSourceElement: clientElement
-    label: self printString
-    inWindow: inWindowId
-    at: #'method'
+  ^ aTopez editElement: clientElement

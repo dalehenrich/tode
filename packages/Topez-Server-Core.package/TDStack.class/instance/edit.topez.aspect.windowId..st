@@ -2,7 +2,7 @@ as yet unclassified
 edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
   "anAspect: #edit, #debug, #inspect"
 
-  | aWindowId clientListElement |
+  | clientListElement |
   anAspect == #'inspect'
     ifTrue: [ 
       ^ super
@@ -10,16 +10,14 @@ edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
         topez: aTopez
         aspect: anAspect
         windowId: inWindowId ].
-  aWindowId := inWindowId.
-  aWindowId == nil
-    ifTrue: [ aWindowId := aTopez windowIdNamed: #'debugStack' ].
   clientListElement := self clientListElement
     topez: aTopez;
     aspect: anAspect;
     parentNode: parentNode;
+    editorWindowLabel: self exception description;
+    editorWindowId: inWindowId;
+    editorWindowName: #'debugStack';
+    editorWindowLocation: #'debugger';
+    editorAspectSelector: #'activateListEditor';
     yourself.
-  ^ aTopez
-    editListElement: clientListElement
-    label: self exception description
-    inWindow: aWindowId
-    at: #'debugger'
+  ^ aTopez editElement: clientListElement
