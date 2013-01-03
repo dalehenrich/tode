@@ -1,3 +1,6 @@
 Wrapper
 localFor: anOopType
-  ^anOopType gciLocalForLibrary: self
+  Transcript
+    cr;
+    show: 'GciLibrary>>localFor: ' , anOopType printString.
+  ^ anOopType gciLocalForLibrary: self

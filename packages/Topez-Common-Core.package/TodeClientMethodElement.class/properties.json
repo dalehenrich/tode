@@ -7,7 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"inClassOop",
-		"sourceRange" ],
+		"sourceRange",
+		"elementBehaviorForShout" ],
 	"name" : "TodeClientMethodElement",
 	"pools" : [
 		 ],

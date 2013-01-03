@@ -15,7 +15,8 @@ evaluate: aString
           isolatedCommands
             do: [ :isolatedCommand | 
               | pipedCommands |
-              self topezClient resetObjIn.
+              false
+                ifTrue: [ self topezClient resetObjIn ].
               pipedCommands := isolatedCommand findTokens: '|'.
               pipedCommands do: [ :pipedCommand | result := self evaluateCommand: pipedCommand ] ] ] ].
   ^ result ]

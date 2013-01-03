@@ -1,13 +1,16 @@
 public gci calls
 receiverNB: receiver performNoDebug: aString withArgs: argsArray
-    | result address |
-    self setSession.
-    address := self library addressOfArrayOfOopsForObjects: argsArray.
-    self library
-        apiGciNbPerformNoDebug: (self asOopType: receiver)
-        a: aString
-        a: address asInteger
-        a: argsArray size
-        a: 0.
-    result := self getNbResultAsOop.
-    ^ self library localFor: result
+  | result address |
+  Transcript
+    cr;
+    show: 'GciSession>>receiverNB:performNoDebug:withArgs: ' , aString.
+  self setSession.
+  address := self library addressOfArrayOfOopsForObjects: argsArray.
+  self library
+    apiGciNbPerformNoDebug: (self asOopType: receiver)
+    a: aString
+    a: address asInteger
+    a: argsArray size
+    a: 0.
+  result := self getNbResultAsOop.
+  ^ self library localFor: result

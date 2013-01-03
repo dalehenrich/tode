@@ -1,4 +1,7 @@
 as yet unclassified
 shoutAboutToStyle: aPluggableShoutMorphOrView
-  aPluggableShoutMorphOrView classOrMetaClass: self elementBehaviorForShout.
-  ^ true
+  false
+    ifTrue: [ 
+      aPluggableShoutMorphOrView classOrMetaClass: self elementBehaviorForShout.
+      ^ true ].
+  ^ false
