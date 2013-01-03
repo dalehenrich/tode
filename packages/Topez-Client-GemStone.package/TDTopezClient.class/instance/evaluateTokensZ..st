@@ -1,5 +1,5 @@
 as yet unclassified
-evaluateTokens: tokens
+evaluateTokensZ: tokens
   | stonString |
   stonString := STON toString: tokens.
   ^ self session
