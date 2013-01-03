@@ -1,3 +1,3 @@
 as yet unclassified
 excludedInstVarNames
-  ^ #(#'blockCache')
+  ^ #(#'blockCache' #'topez')

@@ -5,5 +5,5 @@ itemSelected: index
     rawReceiverNB: self itemSelectedBlockOopType
     perform: 'value:value:'
     withArgs:
-      {(self topez topezServerProxy).
+      {(self clientElementOopType).
       index}

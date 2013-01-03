@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"asTDObjectNode:aspect:" : "DataCurator 12/22/2012 17:07",
-		"edit:windowId:" : "DataCurator 12/30/2012 11:03",
-		"topezEdit:label:aspect:tokens:windowId:" : "DataCurator 11/30/2012 15:47",
+		"asTDObjectNode:topez:aspect:" : "DataCurator 01/01/2013 17:04",
+		"edit:aspect:windowId:" : "DataCurator 01/01/2013 16:14",
+		"edit:topez:aspect:windowId:" : "DataCurator 01/01/2013 17:00",
 		"tzProxyClass" : "dkh 10/05/2012 10:24" } }

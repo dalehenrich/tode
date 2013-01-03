@@ -4,28 +4,29 @@ haloDebugBlock: aTDTopezServer
   directory := Dictionary new.
   directory
     at: 'breakpoints'
-      put: [ :parentNode :nodeName | 
-          self breakpointNode
+      put: [ :theNode :nodeName | 
+          (self breakpointNode: theNode)
             name: nodeName;
-            parent: parentNode;
             yourself ];
     at: 'exception'
-      put: [ :parentNode :nodeName | 
-          (parentNode topez serverStatus exception asTDObjectNode: parentNode topez aspect: #'edit')
+      put: [ :theNode :nodeName | 
+          (theNode topez serverStatus exception asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
             name: nodeName;
-            parent: parentNode;
             yourself ];
     at: 'stack'
-      put: [ :parentNode :nodeName | 
-          ((self
+      put: [ :theNode :nodeName | 
+          | debugTool debugNode |
+          debugTool := self
             topez: aTDTopezServer
             objIn: nil
             tokens: #()
-            windowId: nil)
-            debugNode: parentNode topez serverStatus exceptionProcess
-            exception: parentNode topez serverStatus exception)
+            windowId: nil.
+          debugNode := debugTool
+            debugNode: theNode
+            process: theNode topez serverStatus exceptionProcess
+            exception: theNode topez serverStatus exception.
+          debugNode
             name: nodeName;
-            parent: parentNode;
             yourself ];
     yourself.
   ^ [ :parentNode | 

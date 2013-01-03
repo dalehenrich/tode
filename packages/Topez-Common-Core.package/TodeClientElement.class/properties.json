@@ -8,7 +8,13 @@
 	"instvars" : [
 		"topez",
 		"blockCache",
-		"clientElementOop" ],
+		"clientElementOop",
+		"aspect",
+		"editorAspectSelector",
+		"editorWindowLabel",
+		"editorWindowId",
+		"editorWindowLocation",
+		"editorWindowName" ],
 	"name" : "TodeClientElement",
 	"pools" : [
 		 ],
