@@ -1,4 +1,3 @@
 Wrapper
 getAndClearLastError
-
-	self subclassResponsibility.
+  ^ self gciErrSTypeClass library: self

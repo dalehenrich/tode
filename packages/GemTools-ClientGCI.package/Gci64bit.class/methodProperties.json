@@ -31,7 +31,7 @@
 		"apiGciStep:a:" : "dkh 9/29/2012 09:12",
 		"floatFromOop:" : "dkh 4/14/2008 12:42",
 		"floatToSmallDouble:" : "dkh 4/14/2008 15:58",
-		"getAndClearLastError" : "JGF 4/13/2007 13:28",
+		"gciErrSTypeClass" : "dkh 1/4/2013 07:16",
 		"localForSpecial:" : "dkh 4/14/2008 12:10",
 		"oopAsciiNul" : "JGF 12/17/2006 10:03",
 		"oopClassArray" : "JGF 4/16/2007 16:20",
