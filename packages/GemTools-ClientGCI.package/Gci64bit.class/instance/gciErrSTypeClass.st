@@ -1,0 +1,3 @@
+Wrapper
+gciErrSTypeClass
+  ^ GciErrSType64
