@@ -15,7 +15,7 @@ getNbResult
       Transcript
         cr;
         show: 'GciSession>>getNbResult curtailed....'.
-      self hardBreak.
+      self terminateCurrentNbCall.
       Transcript show: 'DONE' ].
   error isNil
     ifTrue: [ ^ result ].

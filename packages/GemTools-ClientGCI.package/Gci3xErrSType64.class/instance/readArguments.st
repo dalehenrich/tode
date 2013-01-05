@@ -9,6 +9,7 @@ readArguments
   Transcript
     cr;
     show: 'GciErrSType64>>readArguments: ' , argsSize printString.
+  self halt.
   1 to: argsSize do: [ :i | 
     args at: i put: (library localFor: (self oopTypeAt: ofs)).
     ofs := ofs + 8 ]
