@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		"AllGlobalNames",
-		"GciMutex" ],
+		"GciSemaphore" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"behaviorOop",

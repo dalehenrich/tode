@@ -4,7 +4,7 @@ initializeUsingSton: aGciLibrary session: aTodeSession
   address := ExternalAddress gcallocate: self structSize.
   (aGciLibrary apiGciErr: address asInteger)
     ifFalse: [ ^ self ].
-  self
+  self halt
     readSimpleFields;
     readMessage;
     readArgumentsAndExceptionClassUsingStonIn: aTodeSession;

@@ -7,17 +7,16 @@ getNbResult
 	Because we don't know how the answer should be interpreted, we simply
 	return it as an Integer."
 
-  | assoc result error actionArgs i continueWith |
-  i := 0.
+  | result error actionArgs continueWith |
   [ 
-  assoc := self library nbEnd.
-  assoc key < 2 ]
-    whileTrue: [ 
-      i := i + 5 min: 50.
-      self nbSleep: i ].
-  result := assoc value.
+  result := self nbPollForResult.
   (error := self getAndClearLastError) isNil
-    ifTrue: [ ^ result ].
+    ifTrue: [ ^ result ] ]
+    ifCurtailed: [ 
+      Transcript
+        cr;
+        show: 'GciSession>>getNbResult curtailed'.
+      self hardBreak ].
   actionArgs := error number == 2336
     ifTrue: [ 
       GsClientForwarderSendNotification new
