@@ -10,5 +10,5 @@ nbPollForResult
       self nbSleep: i ].
   Transcript
     cr;
-    show: 'GciSession>>getNbResult nbEnd'.
+    show: 'GciSession>>getNbResult nbEnd: ' , assoc value printString.
   ^ assoc value

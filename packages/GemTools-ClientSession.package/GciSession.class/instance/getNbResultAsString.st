@@ -7,4 +7,4 @@ getNbResultAsString
       "must be an error notification"
       ^ result exceptionProxy ].
   oopType := self library oopTypeFromInteger: result.
-  ^ self library fetchChars: oopType
+  ^ self library critical: [ :lib | lib fetchChars: oopType ]

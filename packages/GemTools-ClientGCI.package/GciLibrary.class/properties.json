@@ -9,7 +9,8 @@
 	"commentStamp" : "JGF 12/15/2006 14:53",
 	"instvars" : [
 		"nbEndAddress",
-		"nbEndAssociation" ],
+		"nbEndAssociation",
+		"mutex" ],
 	"name" : "GciLibrary",
 	"pools" : [
 		 ],
