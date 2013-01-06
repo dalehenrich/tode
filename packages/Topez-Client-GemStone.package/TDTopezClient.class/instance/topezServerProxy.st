@@ -17,6 +17,5 @@ topezServerProxy
       topezClientOopType := self session asOopType: (resultArray at: 3).
       topezServerProxy := TZHeaderGemStone oop: topezServerOop.
       self session clientForwarderCache at: transcriptOopType put: Transcript.
-      self session clientForwarderCache at: topezClientOopType put: self.
-      self halt ].
+      self session clientForwarderCache at: topezClientOopType put: self ].
   ^ topezServerProxy

@@ -7,7 +7,8 @@ asTDObjectNode: parentNode topez: aTopez aspect: anAspect
     parent: parentNode;
     aspect: anAspect;
     topez: aTopez;
-    readMe: '';
+    readMe:
+        'A client forwarder represents an object on the client. All messages (well almost all) are forwarded to the instance on the client.';
     basicContents: self;
     listBlock: [ :theNode | #() ];
     elementBlock: [ :theNode :elementName :absentBlock | absentBlock value ];

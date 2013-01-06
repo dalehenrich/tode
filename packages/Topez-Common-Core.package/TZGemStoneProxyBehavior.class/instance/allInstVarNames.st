@@ -3,7 +3,6 @@ allInstVarNames
   allInstVarNames
     ifNil: [ 
       | message list |
-      self halt.
       message := TZGsMessageSend new
         topez: self topez;
         receiver: (TZHeaderGemStone oop: self behaviorOop);

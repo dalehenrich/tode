@@ -8,7 +8,8 @@
 	"instvars" : [
 		"sourceElement",
 		"stylingActive",
-		"edittingCode" ],
+		"edittingCode",
+		"shoutClassOrMetaClass" ],
 	"name" : "TopezCodeEditor",
 	"pools" : [
 		 ],
