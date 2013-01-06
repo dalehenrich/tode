@@ -3,7 +3,7 @@ topezServerProxy
   topezServerProxy
     ifNil: [ 
       | stonString transcriptOop topezOop resultArray topezServerOop topezClientOop |
-      [ stonString := self session executeStringNB: 'TDTopezServer loginFrom: ' , self shell shellId asString ]
+      [ stonString := self session executeStringExpectingStringNB: 'TDTopezServer loginFrom: ' , self shell shellId asString ]
         on: TZTopezErrorNotification
         do: [ :ex | self error: 'Unable to log into server:' , ex exceptionProxy header printString ].
       resultArray := STON fromString: stonString.
