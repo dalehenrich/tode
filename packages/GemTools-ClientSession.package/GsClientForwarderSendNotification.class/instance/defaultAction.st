@@ -7,7 +7,6 @@ defaultAction
   args := self tag args.
   clientForwarderOop := session asOopType: (args at: 1).
   forwarder := session clientObjectForwardedFrom: clientForwarderOop.
-  self halt.
   forwarder == nil
     ifTrue: [ self resume: (Array with: #'resume' with: nil) ].
   Transcript
