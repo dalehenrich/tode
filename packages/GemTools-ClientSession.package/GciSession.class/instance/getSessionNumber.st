@@ -1,5 +1,5 @@
 private gci calls
-setSession
+getSessionNumber
   number == nil
     ifTrue: [ ^ self error: 'Session no longer logged in.' ].
-  self library critical: [ :lib | lib apiGciSetSessionId: number ]
+  ^ number

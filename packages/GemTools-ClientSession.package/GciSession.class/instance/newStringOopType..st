@@ -1,4 +1,8 @@
 public gci calls
 newStringOopType: aString
-    self setSession.
-    ^ self library oopTypeFromInteger: (self library apiGciNewString: aString)
+  | result |
+  result := self library
+    critical: [ :lib | 
+      lib apiGciSetSessionId: self getSessionNumber.
+      lib apiGciNewString: aString ].
+  ^ self library oopTypeFromInteger: result
