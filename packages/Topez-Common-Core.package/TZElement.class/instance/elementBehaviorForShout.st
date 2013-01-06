@@ -1,3 +1,4 @@
 accessing
 elementBehaviorForShout
-    ^ elementClass asTopezProxy asBehavior
+  elementBehaviorForShout ifNil: [ elementBehaviorForShout := elementClass asTopezProxy asBehavior ].
+  ^ elementBehaviorForShout

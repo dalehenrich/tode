@@ -12,7 +12,8 @@
 		"elementClassName",
 		"elementSuperClassName",
 		"indent",
-		"isMeta" ],
+		"isMeta",
+		"elementBehaviorForShout" ],
 	"name" : "TZElement",
 	"pools" : [
 		 ],

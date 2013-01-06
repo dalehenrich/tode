@@ -2,15 +2,21 @@ as yet unclassified
 topezServerProxy
   topezServerProxy
     ifNil: [ 
-      | stonString transcriptOop topezOop resultArray topezServerOop topezClientOop |
-      [ stonString := self session executeStringExpectingStringNB: 'TDTopezServer loginFrom: ' , self shell shellId asString ]
+      | stonString transcriptOopType topezOop resultArray topezServerOop topezClientOopType |
+      [ 
+      Transcript
+        cr;
+        show: self shell shellId asString.
+      stonString := self session
+        executeStringExpectingStringNB: 'TDTopezServer createFor: ' , self shell shellId asString ]
         on: TZTopezErrorNotification
         do: [ :ex | self error: 'Unable to log into server:' , ex exceptionProxy header printString ].
       resultArray := STON fromString: stonString.
       topezServerOop := resultArray at: 1.
-      transcriptOop := resultArray at: 2.
-      topezClientOop := resultArray at: 3.
+      transcriptOopType := self session asOopType: (resultArray at: 2).
+      topezClientOopType := self session asOopType: (resultArray at: 3).
       topezServerProxy := TZHeaderGemStone oop: topezServerOop.
-      self session clientForwarderCache at: transcriptOop put: Transcript.
-      self session clientForwarderCache at: topezClientOop put: self ].
+      self session clientForwarderCache at: transcriptOopType put: Transcript.
+      self session clientForwarderCache at: topezClientOopType put: self.
+      self halt ].
   ^ topezServerProxy

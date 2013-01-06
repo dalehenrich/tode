@@ -1,5 +1,8 @@
 accessing
 elementBehaviorForShout
-    self isMeta
+  elementBehaviorForShout
+    ifNil: [ 
+      self isMeta
         ifFalse: [ ^ super elementBehaviorForShout ].
-    ^ elementClass asTopezProxy asBehavior class
+      elementBehaviorForShout := elementClass asTopezProxy asBehavior class ].
+  ^ elementBehaviorForShout

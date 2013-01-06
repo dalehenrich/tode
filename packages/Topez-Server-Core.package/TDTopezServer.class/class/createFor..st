@@ -1,5 +1,5 @@
 accessing
-loginFrom: aShellId
+createFor: aShellId
   | topezServer transcriptClientForwarder topezClientClientForwarder resultArray |
   topezServer := self for: aShellId.
   transcriptClientForwarder := ClientForwarder new.
@@ -7,6 +7,6 @@ loginFrom: aShellId
   Smalltalk at: #'TranscriptProxy' ifPresent: [ :cl | cl registerTranscriptClientForwarder: transcriptClientForwarder ].
   topezServer topezClientForwarder: topezClientClientForwarder.
   resultArray := {(topezServer asOop).
-  (transcriptClientForwarder asOop).
-  (topezClientClientForwarder asOop)}.
+  (Reflection oopOf: transcriptClientForwarder).
+  (Reflection oopOf: topezClientClientForwarder)}.
   ^ STON toString: resultArray
