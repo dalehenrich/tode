@@ -2,22 +2,15 @@ as yet unclassified
 topezServerProxy
   topezServerProxy
     ifNil: [ 
-      | stonString transcriptOop topezOop |
-      [ 
-      stonString := self session
-        executeStringNB:
-          '(TDTopezServer for: ' , self shell shellId asString , ') toString: (TDTopezServer for: ' , self shell shellId asString
-            , ') level: 0' ]
+      | stonString transcriptOop topezOop resultArray topezServerOop topezClientOop |
+      [ stonString := self session executeStringNB: 'TDTopezServer loginFrom: ' , self shell shellId asString ]
         on: TZTopezErrorNotification
         do: [ :ex | self error: 'Unable to log into server:' , ex exceptionProxy header printString ].
-      topezServerProxy := (self readerClass on: stonString readStream) next.
-      transcriptOop := self session registerClientObjectForwarder: Transcript.
-      topezOop := self session registerClientObjectForwarder: self.
-      (TZGsBlockSend new
-        topez: self;
-        blockSource:
-            [ :transcript :topezClient :topezServer | 
-              Smalltalk at: #'TranscriptProxy' ifPresent: [ :cl | cl registerTranscriptClientForwarder: transcript ].
-              topezServer topezClientForwarder: topezClient ] printString;
-        transform: #'raw' -> nil) value: transcriptOop value: topezOop value: topezServerProxy ].
+      resultArray := STON fromString: stonString.
+      topezServerOop := resultArray at: 1.
+      transcriptOop := resultArray at: 2.
+      topezClientOop := resultArray at: 3.
+      topezServerProxy := TZHeaderGemStone oop: topezServerOop.
+      self session clientForwarderCache at: transcriptOop put: Transcript.
+      self session clientForwarderCache at: topezClientOop put: self ].
   ^ topezServerProxy
