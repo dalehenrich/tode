@@ -12,7 +12,7 @@ readArgumentsAndExceptionClassUsingStonIn: aTodeSession
   expressionStream
     nextPutAll: '(TDTopezServer for: ';
     nextPutAll: aTodeSession shell shellId printString;
-    nextPutAll: ') reifyOopList: {'.
+    nextPutAll: ') reifyExceptionArgsForOopList: {'.
   ofs := 25.
   1 to: argsSize do: [ :i | 
     expressionStream
@@ -30,4 +30,4 @@ readArgumentsAndExceptionClassUsingStonIn: aTodeSession
     args at: i put: (objectArray at: i).
     ofs := ofs + 8 ].
   classNameArray := answerArray at: 2.
-  exceptionObjClassName := classNameArray at: 1.
+  exceptionObjClassName := classNameArray at: 1
