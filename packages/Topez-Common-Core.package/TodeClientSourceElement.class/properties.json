@@ -6,6 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"firstSource",
 		"getBlockOop",
 		"setBlockOop" ],
 	"name" : "TodeClientSourceElement",

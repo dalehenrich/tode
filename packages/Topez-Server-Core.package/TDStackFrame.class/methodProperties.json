@@ -2,6 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"allClassVarNames" : "DataCurator 01/07/2013 07:44",
+		"allInstVarNames" : "DataCurator 01/07/2013 07:44",
+		"allSharedPoolNames" : "DataCurator 01/07/2013 07:47",
 		"argAndTempNames" : "DataCurator 12/16/2012 12:31",
 		"argAndTempNamesAt:" : "DataCurator 12/16/2012 08:28",
 		"asTDObjectNode:topez:aspect:" : "DataCurator 01/01/2013 16:02",
@@ -11,7 +14,7 @@
 		"calculateSourceRangeEnd:in:" : "DataCurator 12/17/2012 08:11",
 		"clientContentsElement" : "DataCurator 01/02/2013 07:58",
 		"clientContentsListElementBlock" : "DataCurator 01/02/2013 07:04",
-		"clientSourceElement" : "DataCurator 01/01/2013 08:37",
+		"clientSourceElement" : "DataCurator 01/07/2013 07:48",
 		"contentsElement" : "DataCurator 01/01/2013 08:39",
 		"edit:topez:aspect:windowId:" : "DataCurator 01/01/2013 21:23",
 		"editContents:topez:windowId:" : "DataCurator 01/02/2013 21:07",

@@ -10,6 +10,9 @@ elementBehaviorForShout
         show: 'TodeClientMethodelement>>elementBehaviorForShout ' , self editorWindowLabel.
       elementBehaviorForShout := TZGemStoneProxyBehavior new
         behaviorOop: self inClassOop;
+        allClassVarNames: self allClassVarNames;
+        allInstVarNames: self allInstVarNames;
+        allSharedPoolNames: self allSharedPoolNames;
         topez: self topez;
         yourself ].
   ^ elementBehaviorForShout

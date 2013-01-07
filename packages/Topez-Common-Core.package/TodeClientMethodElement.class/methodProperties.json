@@ -2,7 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"elementBehaviorForShout" : "dkh 1/2/2013 21:40",
+		"allClassVarNames" : "dkh 1/7/2013 07:36",
+		"allClassVarNames:" : "dkh 1/7/2013 07:36",
+		"allInstVarNames" : "dkh 1/7/2013 07:37",
+		"allInstVarNames:" : "dkh 1/7/2013 07:37",
+		"allSharedPoolNames" : "dkh 1/7/2013 07:37",
+		"allSharedPoolNames:" : "dkh 1/7/2013 07:38",
+		"elementBehaviorForShout" : "dkh 1/7/2013 07:51",
 		"format:" : "dkh 12/27/2012 16:47",
 		"getSelectedSourceInterval" : "dkh 12/27/2012 17:26",
 		"inClass:" : "dkh 12/30/2012 11:07",

@@ -3,6 +3,9 @@ clientSourceElement
   ^ TodeClientMethodElement new
     clientElementOop;
     aspect: #'edit';
+    allClassVarNames: self allClassVarNames;
+    allInstVarNames: self allInstVarNames;
+    allSharedPoolNames: self allSharedPoolNames;
     getBlock: [ self homeMethodSource ];
     setBlock: [ :methodSource | 
           | beh selector category |

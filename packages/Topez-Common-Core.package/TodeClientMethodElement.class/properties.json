@@ -8,7 +8,10 @@
 	"instvars" : [
 		"inClassOop",
 		"sourceRange",
-		"elementBehaviorForShout" ],
+		"elementBehaviorForShout",
+		"allInstVarNames",
+		"allClassVarNames",
+		"allSharedPoolNames" ],
 	"name" : "TodeClientMethodElement",
 	"pools" : [
 		 ],
