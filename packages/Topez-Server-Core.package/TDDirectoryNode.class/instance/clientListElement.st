@@ -5,7 +5,8 @@ clientListElement
     aspect: #'edit';
     topez: self topez;
     clientElementOop;
-    listBlock: self clientListElementBlock;
+    firstList: (self clientList: nil);
+    listBlock: [ :listElement | STON toString: (self clientList: listElement) ];
     itemSelectedBlock: [ :listElement :index | 
           | aspect parent |
           aspect := listElement aspect.

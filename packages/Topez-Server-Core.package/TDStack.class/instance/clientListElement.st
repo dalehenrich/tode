@@ -3,7 +3,8 @@ clientListElement
   | clientListElement |
   clientListElement := TodeClientListElement new
     clientElementOop;
-    listBlock: [ :listElement | STON toString: (self frames withIndexCollect: [ :frame :index | index asString , '. ' , frame printString ]) ];
+    firstList: (self clientList: nil);
+    listBlock: [ :listElement | STON toString: (self clientList: listElement) ];
     itemSelectedBlock: [ :listElement :index | 
           | frameNode |
           self navigateFrame: index.

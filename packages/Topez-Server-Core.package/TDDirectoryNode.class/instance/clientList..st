@@ -1,6 +1,5 @@
 as yet unclassified
-clientListElementBlock
-  ^ [ :listElement | 
+clientList: listElement
   | components max ar items |
   items := Array new.
   components := Array new.
@@ -40,5 +39,5 @@ clientListElementBlock
         nextPutAll: '-> ';
         nextPutAll: (compAr at: 2).
       ar add: stream contents asString ].
-  listElement itemCache: items.
-  STON toString: ar ]
+  listElement ifNotNil: [ listElement itemCache: items ].
+  ^ ar
