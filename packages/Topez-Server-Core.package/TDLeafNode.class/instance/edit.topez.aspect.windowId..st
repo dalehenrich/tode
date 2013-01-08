@@ -13,7 +13,8 @@ edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
   clientElement := self clientElementClass new
     clientElementOop;
     aspect: anAspect;
-    getBlock: self getBlock;
+    firstSource: self elementSource;
+    getBlock: [ self elementSource ];
     setBlock: self setBlock;
     editorWindowLabel: self printString;
     editorWindowId: inWindowId;

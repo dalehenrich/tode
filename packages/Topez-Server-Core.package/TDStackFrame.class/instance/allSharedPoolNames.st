@@ -1,8 +1,8 @@
 as yet unclassified
 allSharedPoolNames
-  | allSharedPools sharedPoolNames |
+  | allSharedPools |
   self inClass ifNil: [ ^ nil ].
-  sharedPoolNames := IdentitySet new.
-  self inClass allSharedPools do: [ :poolDict | sharedPoolNames addAll: poolDict keys ].
+  allSharedPools := IdentitySet new.
+  self inClass allSharedPools do: [ :poolDict | allSharedPools addAll: poolDict keys ].
   allSharedPools asArray.
   ^ allSharedPools

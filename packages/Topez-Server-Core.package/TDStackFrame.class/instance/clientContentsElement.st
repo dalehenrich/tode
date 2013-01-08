@@ -3,7 +3,8 @@ clientContentsElement
   ^ TodeClientListElement new
     clientElementOop;
     aspect: #'edit';
-    listBlock: self clientContentsListElementBlock;
+    firstList: (self clientContentsList: nil);
+    listBlock: [ :listElement | STON toString: (self clientContentsList: listElement) ];
     itemSelectedBlock: [ :listElement :index | 
           | aspect parent |
           aspect := listElement aspect.

@@ -1,6 +1,5 @@
 as yet unclassified
-clientContentsListElementBlock
-  ^ [ :listElement | 
+clientContentsList: listElement
   | max ar items elementNames specialNames |
   items := Array new.
   max := 0.
@@ -26,5 +25,6 @@ clientContentsListElementBlock
       items add: object.
       object tzNodeDisplayOn: stream limit: 80 compacted: true.
       ar add: stream contents asString ].
-  listElement itemCache: items.
-  STON toString: ar ]
+  listElement ~~ nil
+    ifTrue: [ listElement itemCache: items ].
+  ^ ar

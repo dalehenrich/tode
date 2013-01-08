@@ -6,6 +6,7 @@ clientSourceElement
     allClassVarNames: self allClassVarNames;
     allInstVarNames: self allInstVarNames;
     allSharedPoolNames: self allSharedPoolNames;
+    firstSource: self homeMethodSource;
     getBlock: [ self homeMethodSource ];
     setBlock: [ :methodSource | 
           | beh selector category |
