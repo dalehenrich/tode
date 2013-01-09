@@ -2,4 +2,8 @@
 	"class" : {
 		"isClassForVersion:" : "dkh 4/18/2012 15:36" },
 	"instance" : {
-		"gciErrSTypeClass" : "dkh 1/4/2013 07:16" } }
+		"gciErrSTypeClass" : "dkh 1/4/2013 07:16",
+		"oopClassDoubleByteString" : "dkh 1/8/2013 12:51",
+		"oopClassDoubleByteSymbol" : "dkh 1/8/2013 12:52",
+		"oopClassQuadByteString" : "dkh 1/8/2013 12:53",
+		"oopClassQuadByteSymbol" : "dkh 1/8/2013 12:53" } }

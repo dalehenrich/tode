@@ -1,0 +1,14 @@
+{
+	"category" : "GemTools-ClientGCI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "Gci64bit32x",
+	"pools" : [
+		 ],
+	"super" : "Gci64bit31x",
+	"type" : "normal" }
