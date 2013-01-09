@@ -1,11 +1,11 @@
 as yet unclassified
 clientListElement
   | clientListElement |
-  clientListElement := TodeClientListElement new
+  (clientListElement := TodeClientListElement new)
     aspect: #'edit';
     topez: self topez;
     clientElementOop;
-    firstList: (self clientList: nil);
+    firstList: (self clientList: clientListElement);
     listBlock: [ :listElement | STON toString: (self clientList: listElement) ];
     itemSelectedBlock: [ :listElement :index | 
           | aspect parent |

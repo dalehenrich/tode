@@ -1,9 +1,10 @@
 as yet unclassified
 clientContentsElement
-  ^ TodeClientListElement new
+  | element |
+  (element := TodeClientListElement new)
     clientElementOop;
     aspect: #'edit';
-    firstList: (self clientContentsList: nil);
+    firstList: (self clientContentsList: element);
     listBlock: [ :listElement | STON toString: (self clientContentsList: listElement) ];
     itemSelectedBlock: [ :listElement :index | 
           | aspect parent |
@@ -25,4 +26,5 @@ clientContentsElement
             aspect: aspect
             windowId: nil.
           nil ];
-    yourself
+    yourself.
+  ^ element
