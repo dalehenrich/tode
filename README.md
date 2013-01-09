@@ -27,6 +27,11 @@ Metacello new
 *See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
 for details on installing Metacello.*
 
+Here's a video of my 
+[Smalltalks 2012](http://www.fast.org.ar/smalltalks2012?_s=bvlW29Av2dix9EWt&_k=OGfhqoGSxR431Tth) 
+presentation:
+[topez: A Stepping Stone to tODE](http://www.youtube.com/watch?v=pIp_Y46iB_I&list=PLCGAAdUizzH31VumrhrK2HHepHu3DBpY0&index=14).
+
 Here's a recent screen shot:
 
 <img style="border: 2px solid #000000;" src="https://raw.github.com/dalehenrich/topez/debugger/docs/screenShot_2012-10-24.png" />
