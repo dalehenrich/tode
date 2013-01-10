@@ -41,5 +41,5 @@ haloDebugBlock: aTDTopezServer
     elementBlock: [ :theNode :elementName :absentBlock | 
           | block |
           block := theNode basicContents at: elementName ifAbsent: absentBlock.
-          block value: theNode value: elementName ];
+          block ifNotNil: [ block value: theNode value: elementName ] ];
     yourself ]

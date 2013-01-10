@@ -10,16 +10,17 @@ clientContentsElement
           | aspect parent |
           aspect := listElement aspect.
           parent := listElement parentNode.
-          aspect == 1
+          parent ~~ nil
             ifTrue: [ 
-              "."
-              aspect := #'inspect'.
-              parent := parent parent ].
-          index == 2
-            ifTrue: [ 
-              ".."
-              aspect := listElement parentNode aspect.
-              parent := parent parent parent ].
+              aspect == 1
+                ifTrue: [ 
+                  "."
+                  aspect := #'inspect' ].
+              index == 2
+                ifTrue: [ 
+                  ".."
+                  aspect := listElement parentNode aspect.
+                  parent := parent parent ] ].
           (listElement itemCache at: index)
             edit: parent
             topez: listElement topez

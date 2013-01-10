@@ -17,7 +17,10 @@ asTDObjectNode: parentNode topez: aTopez aspect: anAspect
     elementBlock: [ :theNode :elementName :absentBlock | 
           | obj |
           obj := elementName isAllDigits
-            ifTrue: [ theNode basicContents _at: elementName asNumber ]
+            ifTrue: [ 
+              [ theNode basicContents _at: elementName asNumber ]
+                on: Error
+                do: [ :ex | 'error accessing index: ' , elementName printString , ' --> ' , ex description ] ]
             ifFalse: [ theNode basicContents instVarNamed: elementName ].
           (obj asTDObjectNode: theNode topez: theNode topez aspect: anAspect)
             name: elementName;

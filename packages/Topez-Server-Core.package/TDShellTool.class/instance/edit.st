@@ -22,7 +22,7 @@ edit
         ifTrue: [ 
           | contextNode |
           contextNode := topez lookup: (theTokens at: 1).
-          contextNode
+          ^ contextNode
             edit: contextNode parent
             topez: topez
             aspect: #'edit'
