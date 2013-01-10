@@ -5,12 +5,14 @@ installHalosOn: aTDTopezServer
       block: [ :theNode | 
           (theNode dotSelfObject asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
             name: '.self';
+            parent: theNode;
             readMe: self readMeSelf;
             yourself ];
     installHalo: '.node'
       block: [ :theNode | 
           (theNode asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
             name: '.node';
+            parent: theNode;
             readMe: self readMeNode;
             yourself ];
     installHalo: '.readme'

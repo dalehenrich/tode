@@ -9,7 +9,7 @@ editClient: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
     editorWindowLabel: self printString;
     editorWindowId: inWindowId;
     editorWindowName: #'inspector';
-    editorWindowLocation: #'debugger';
+    editorWindowLocation: #'inspector';
     editorAspectSelector: #'activateListEditor';
     yourself.
   ^ aTopez editElement: clientListElement
