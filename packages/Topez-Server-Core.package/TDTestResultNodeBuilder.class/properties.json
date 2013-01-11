@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 01/10/2013 20:55",
+	"instvars" : [
+		 ],
+	"name" : "TDTestResultNodeBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDNodeBuilder",
+	"type" : "normal" }

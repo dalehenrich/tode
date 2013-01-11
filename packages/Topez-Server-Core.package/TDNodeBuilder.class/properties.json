@@ -1,20 +1,13 @@
 {
 	"category" : "Topez-Server-Core",
 	"classinstvars" : [
-		"halos",
-		"commands",
-		"rootNode",
-		"nodeBuilders" ],
+		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"topezClientForwarder",
-		"serverStatus",
-		"objIn",
-		"accumulateBlocks",
-		"homeNode" ],
-	"name" : "TDTopezServer",
+		"object" ],
+	"name" : "TDNodeBuilder",
 	"pools" : [
 		 ],
 	"super" : "Object",
