@@ -1,5 +1,5 @@
 {
-	"category" : "Topez-Server-Tests",
+	"category" : "Topez-Server-DebugTools",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TDDebugToolTests",
+	"name" : "TDDebugStackFrameNodeBuilder",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "TDObjectNodeBuilder",
 	"type" : "normal" }

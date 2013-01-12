@@ -1,15 +1,14 @@
 {
-	"category" : "Topez-Server-Core",
+	"category" : "Topez-Server-DebugTools-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"stackNode",
-		"processResult" ],
-	"name" : "TDDebugTool",
+		 ],
+	"name" : "TDDebugToolTests",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractDevTool",
+	"super" : "TestCase",
 	"type" : "normal" }
