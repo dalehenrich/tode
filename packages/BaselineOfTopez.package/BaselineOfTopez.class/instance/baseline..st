@@ -64,11 +64,12 @@ baseline: spec
 				package: 'Topez-Server-Core' with: [ spec requires: 'Topez-Common-Core' ];
 				package: 'Topez-Server-Tests' with: [ spec requires: #('Topez-Server-Core' 'Topez-Common-Tests') ];
 				package: 'Topez-Server-DebugTools' with: [ spec requires: 'Topez-Server-Core' ];
+				package: 'Topez-Server-TestTools' with: [ spec requires: 'Topez-Server-Core' ];
 				package: 'Topez-Server-DebugTools-Tests' with: [ spec requires: 'Topez-Server-DebugTools' ];
 				yourself.
 			spec
 				group: 'default' with: #('GemStone Server');
-				group: 'GemStone Server' with: #('Topez-Server-Core' 'Topez-Server-DebugTools');
+				group: 'GemStone Server' with: #('Topez-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-TestTools');
 				group: 'GemStone Server Tests' with: #('Topez-Server-Tests' 'Topez-Server-DebugTools-Tests');
 				group: 'Dev' with: #('GemStone Server Tests');
 				yourself ].

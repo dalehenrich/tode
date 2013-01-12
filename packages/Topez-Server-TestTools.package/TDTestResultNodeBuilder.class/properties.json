@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-TestTools",
+	"classinstvars" : [
+		"labelMap" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDTestResultNodeBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDObjectNodeBuilder",
+	"type" : "normal" }
