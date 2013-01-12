@@ -10,5 +10,5 @@
 	"name" : "TDCharacterCollectionNodeBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDNodeBuilder",
+	"super" : "TDNodeXBuilder",
 	"type" : "normal" }

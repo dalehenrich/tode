@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"object" ],
+	"name" : "TDAbstractAspectBuilder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

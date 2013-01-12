@@ -10,5 +10,5 @@
 	"name" : "TDObjectNodeBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDPluggableNodeBuilder",
+	"super" : "TDNodeBuilder",
 	"type" : "normal" }

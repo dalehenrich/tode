@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"object" ],
+		 ],
 	"name" : "TDNodeBuilder",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TDAbstractAspectBuilder",
 	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 01/11/2013 14:01",
+	"instvars" : [
+		 ],
+	"name" : "TDPrintBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractAspectBuilder",
+	"type" : "normal" }

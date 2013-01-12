@@ -4,7 +4,7 @@ clientContentsList: listElement
   items := Array new.
   max := 0.
   specialNames := #('.' '..').
-  elementNames := specialNames , self elementNodeNames.
+  elementNames := specialNames , self object elementNodeNames.
   elementNames do: [ :elementName | max := max max: elementName size ].
   ar := Array new.
   max := max + 1.
