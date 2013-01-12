@@ -1,15 +1,15 @@
 accessing
 builderFor: anObject aspect: anAspect
-  | builders class builderMap builderClass |
+  | builders class builderClassMap builderClassName |
   builders := self class nodeBuilders.
   class := anObject class.
-  [ builderMap notNil ]
+  [ builderClassMap isNil ]
     whileTrue: [ 
-      builderMap := builders at: class className ifAbsent: [  ].
-      builderMap ifNil: [ class := class superclass ] ].
-  builderClass := builderMap == nil
-    ifTrue: [ TDNodeBuilder ]
-    ifFalse: [ builderMap at: anAspect ifAbsent: [ builderMap at: #'default' ifAbsent: [ TDNodeBuilder ] ] ].
-  ^ builderClass new
+      builderClassMap := builders at: class className ifAbsent: [  ].
+      builderClassMap ifNil: [ class := class superclass ] ].
+  builderClassName := builderClassMap == nil
+    ifTrue: [ 'TDNodeBuilder' ]
+    ifFalse: [ builderClassMap at: anAspect ifAbsent: [ builderClassMap at: #'default' ifAbsent: [ 'TDNodeBuilder' ] ] ].
+  ^ (Smalltalk at: builderClassName asSymbol) new
     object: anObject;
     yourself
