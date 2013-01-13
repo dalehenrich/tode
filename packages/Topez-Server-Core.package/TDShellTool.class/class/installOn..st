@@ -7,5 +7,6 @@ installOn: aTDTopezServer
   super installOn: aTDTopezServer.
   self
     installExampleOn: aTDTopezServer;
-    installOptionsOn: aTDTopezServer.
+    installOptionsOn: aTDTopezServer;
+    installTestSpecOn: aTDTopezServer.
   TDTopezServer registerBuilderClass: TDTxtLeafNodeBuilder for: CharacterCollection aspect: #'edit'

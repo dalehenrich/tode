@@ -1,16 +1,13 @@
 as yet unclassified
 nodeBuilderTestFixture
-  "object aspect expectedBuilderClass"
+  "object aspect expectedNodeSpec"
 
-  ^ {{(Object new).
+  ^ {{{1.
+  2.
+  {3}.
+  4}.
   #'edit'.
-  TDObjectNodeBuilder}.
-  {''.
+  {}}.
+  {'123'.
   #'edit'.
-  TDTxtLeafNodeBuilder}.
-  {''.
-  #'bubba'.
-  TDNodeBuilder}.
-  {1.
-  #'edit'.
-  TDObjectNodeBuilder}}
+  {}}}

@@ -2,7 +2,7 @@ as yet unclassified
 testNodeBuilderLookup
   | topez |
   topez := TDTopezServer new.
-  self nodeBuilderTestFixture
+  self nodeBuilderLookupTestFixture
     do: [ :ar | 
       | object aspect answer expectedBuilderClass |
       object := ar at: 1.
