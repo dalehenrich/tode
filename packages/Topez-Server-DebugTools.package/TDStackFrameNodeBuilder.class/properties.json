@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-DebugTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 01/12/2013 09:39",
+	"instvars" : [
+		 ],
+	"name" : "TDStackFrameNodeBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDObjectNodeBuilder",
+	"type" : "normal" }

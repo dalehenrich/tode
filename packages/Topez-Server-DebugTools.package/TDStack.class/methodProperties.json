@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"initialize" : "DataCurator 01/11/2013 16:56" },
+		 },
 	"instance" : {
 		"asTDObjectNode:topez:aspect:" : "DataCurator 01/01/2013 16:00",
 		"clientList:" : "DataCurator 01/08/2013 16:47",

@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"nodeBuilderDictionary" : "DataCurator 01/12/2013 15:22",
+		"nodeBuilderTestFixture" : "DataCurator 01/12/2013 15:23",
+		"setUp" : "DataCurator 01/12/2013 14:33",
+		"tearDown" : "DataCurator 01/12/2013 14:32",
+		"testNodeBuilderLookup" : "DataCurator 01/12/2013 15:24" } }

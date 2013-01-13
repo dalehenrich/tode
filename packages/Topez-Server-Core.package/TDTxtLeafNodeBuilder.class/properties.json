@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 11/29/2012 20:07",
+	"commentStamp" : "dkh 01/12/2013 15:13",
 	"instvars" : [
-		"block" ],
-	"name" : "TDScriptLeafNode",
+		 ],
+	"name" : "TDTxtLeafNodeBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDExecutableLeafNode",
+	"super" : "TDLeafNodeBuilder",
 	"type" : "normal" }

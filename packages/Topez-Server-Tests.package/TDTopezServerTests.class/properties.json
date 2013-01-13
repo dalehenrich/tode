@@ -1,14 +1,14 @@
 {
-	"category" : "Topez-Server-Core",
+	"category" : "Topez-Server-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TDPrintBuilder",
+		"nodeBuilders" ],
+	"name" : "TDTopezServerTests",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractAspectBuilder",
+	"super" : "TestCase",
 	"type" : "normal" }
