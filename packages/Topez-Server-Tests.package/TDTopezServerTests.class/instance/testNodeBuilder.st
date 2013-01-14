@@ -1,6 +1,6 @@
 as yet unclassified
 testNodeBuilder
-  | topez |
+  | topez stream x |
   topez := TDTopezServer new.
   self nodeBuilderTestFixture
     do: [ :ar | 
@@ -9,4 +9,14 @@ testNodeBuilder
       aspect := ar at: 2.
       expectedNodeSpec := ar at: 3.
       tdNode := topez buildNode: nil for: object aspect: aspect.
-      self assert: false	"need to test bits and pieces of the ObjectNode" ]
+      stream := WriteStream on: String new.
+      (TDShellTool
+        topez: topez
+        objIn: nil
+        tokens: {}
+        windowId: nil)
+        dsNode: tdNode
+        level: 1
+        displayOops: false
+        on: stream.
+      self assert: (x := stream contents) = expectedNodeSpec ]

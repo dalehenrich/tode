@@ -1,5 +1,5 @@
 as yet unclassified
-dsChildren: node indent: indent level: level on: stream
+dsChildren: node indent: indent level: level displayOops: displayOops on: stream
   | count |
   (node isLeaf or: [ level = 0 ])
     ifTrue: [ ^ self ].
@@ -16,10 +16,15 @@ dsChildren: node indent: indent level: level on: stream
           ^ self ].
       stream nextPutAll: nameText.
       stream nextPutAll: ' -> '.
-      child dotSelfObject tzNodeDisplayOn: stream limit: 160 compacted: true.
+      child dotSelfObject
+        tzNodeDisplayOn: stream
+        limit: 160
+        displayOops: displayOops
+        compacted: true.
       stream cr.
       self
         dsChildren: child
         indent: indent + 1
         level: level - 1
+        displayOops: displayOops
         on: stream ]
