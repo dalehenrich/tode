@@ -4,7 +4,9 @@
 		"halos",
 		"commands",
 		"rootNode",
-		"nodeBuilders" ],
+		"nodeBuilders",
+		"nodeEditors",
+		"nodePrinters" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

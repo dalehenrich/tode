@@ -9,4 +9,6 @@ installOn: aTDTopezServer
     installExampleOn: aTDTopezServer;
     installOptionsOn: aTDTopezServer;
     installTestSpecOn: aTDTopezServer.
-  TDTopezServer registerBuilderClass: TDTxtLeafNodeBuilder for: CharacterCollection aspect: #'edit'
+  TDTopezServer
+    registerBuilderClass: TDTxtLeafNodeBuilder for: CharacterCollection aspect: #'edit';
+    registerEditorClass: TDDirectoryNodeClientListElementBuilder for: TDDirectoryNode aspect: #'edit'

@@ -1,5 +1,5 @@
 as yet unclassified
-edit: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
+editNode: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
   | clientElement |
   clientElement := self clientSourceElement
     clientElementOop;
