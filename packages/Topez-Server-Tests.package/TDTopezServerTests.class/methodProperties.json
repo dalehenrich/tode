@@ -2,10 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
+		"directoryNodeStructure" : "DataCurator 01/15/2013 08:21",
 		"nodeBuilderDictionary" : "DataCurator 01/12/2013 15:22",
 		"nodeBuilderLookupTestFixture" : "DataCurator 01/12/2013 16:41",
 		"nodeBuilderTestFixture" : "DataCurator 01/14/2013 08:18",
 		"setUp" : "DataCurator 01/12/2013 14:33",
 		"tearDown" : "DataCurator 01/12/2013 14:32",
 		"testNodeBuilder" : "DataCurator 01/14/2013 07:37",
-		"testNodeBuilderLookup" : "DataCurator 01/12/2013 16:41" } }
+		"testNodeBuilderLookup" : "DataCurator 01/12/2013 16:41",
+		"testWindowBuilder" : "DataCurator 01/15/2013 08:15",
+		"windowBuilderTestFixture" : "DataCurator 01/15/2013 08:22" } }

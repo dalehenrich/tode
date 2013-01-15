@@ -1,7 +1,6 @@
 as yet unclassified
-editNode: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
-  | clientElement |
-  clientElement := self clientSourceElement
+buildClientElement: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
+  ^ self clientSourceElement
     clientElementOop;
     aspect: anAspect;
     firstSource: self firstSource;
@@ -12,5 +11,4 @@ editNode: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;
     editorAspectSelector: #'activateCodeEditor';
-    yourself.
-  ^ aTopez editElement: clientElement
+    yourself
