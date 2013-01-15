@@ -1,4 +1,4 @@
 stash
 shellId
-  shellId ifNil: [ shellId := 1 ].
+  shellId ifNil: [ shellId := self windowStatus nextShellWindowId ].
   ^ shellId

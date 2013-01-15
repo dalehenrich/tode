@@ -2,8 +2,7 @@ stash
 postCopy
   "windowStatus is shared"
 
-  promptString := actionStack := inputStream := shellWindow := nil.
-  shellId := self shellId + 1.
+  shellId := promptString := actionStack := inputStream := shellWindow := nil.
   topezClient := self topezClient copy
     shell: self;
     topezServerProxy;

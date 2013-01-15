@@ -9,6 +9,7 @@
 		"windows",
 		"namedWindows",
 		"activeWindowIndex",
+		"shellWindowCount",
 		"shellWindows" ],
 	"name" : "TDWindowStatus",
 	"pools" : [
