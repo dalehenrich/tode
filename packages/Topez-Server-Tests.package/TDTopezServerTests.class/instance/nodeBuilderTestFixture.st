@@ -1,6 +1,6 @@
 as yet unclassified
 nodeBuilderTestFixture
-  "object aspect expectedNodeSpec"
+  "object aspect expected"
 
   ^ {{((TDTodeTestClass
     with: 1

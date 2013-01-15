@@ -1,11 +1,11 @@
 as yet unclassified
 installTestSpecOn: aTDTopezServer
   | path |
-  path := self commandPath , '/tests'.
+  path := self commandPath.
   (aTDTopezServer installChildrenAt: path)
     addChildNode:
         (TDSmalltalkLeafNode new
-            name: 'suite';
+            name: 'testSuite';
             contents:
                 '| suite |
 suite := TestSuite named: ''Shell Suite (' , path

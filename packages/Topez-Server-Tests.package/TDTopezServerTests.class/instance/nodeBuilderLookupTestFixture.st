@@ -1,6 +1,6 @@
 as yet unclassified
 nodeBuilderLookupTestFixture
-  "object aspect expectedBuilderClass"
+  "object aspect expected"
 
   ^ {{(Object new).
   #'edit'.
@@ -10,7 +10,7 @@ nodeBuilderLookupTestFixture
   TDTxtLeafNodeBuilder}.
   {''.
   #'bubba'.
-  TDNodeBuilder}.
+  TDObjectNodeBuilder}.
   {Object.
   #'edit'.
   TDObjectNodeBuilder}.
