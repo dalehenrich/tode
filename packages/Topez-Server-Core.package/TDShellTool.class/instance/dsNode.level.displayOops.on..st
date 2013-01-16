@@ -9,7 +9,7 @@ dsNode: node level: level displayOops: displayOops on: stream
         cr.
       node contents
         tzNodeDisplayOn: stream
-        limit: 160
+        limit: self characterLimit
         displayOops: displayOops
         compacted: true.
       ^ stream contents ].
@@ -18,7 +18,7 @@ dsNode: node level: level displayOops: displayOops on: stream
     nextPutAll: ' ('.
   node dotSelfObject
     tzNodeDisplayOn: stream
-    limit: 160
+    limit: self characterLimit
     displayOops: displayOops
     compacted: true.
   stream

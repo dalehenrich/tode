@@ -12,7 +12,10 @@
 		"exception",
 		"exceptionProcess",
 		"autoCommit",
-		"elementCache" ],
+		"elementCache",
+		"listLimit",
+		"displayOops",
+		"characterLimit" ],
 	"name" : "TDServerStatus",
 	"pools" : [
 		 ],

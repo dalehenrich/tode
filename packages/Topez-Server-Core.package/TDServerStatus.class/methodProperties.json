@@ -4,8 +4,12 @@
 	"instance" : {
 		"autoCommit" : "DataCurator 12/21/2012 11:20",
 		"autoCommit:" : "DataCurator 12/21/2012 11:17",
+		"characterLimit" : "DataCurator 01/16/2013 15:12",
+		"characterLimit:" : "DataCurator 01/16/2013 15:13",
 		"currentNode" : "DataCurator 12/01/2012 07:59",
 		"currentNode:" : "DataCurator 12/01/2012 07:59",
+		"displayOops" : "DataCurator 01/16/2013 09:51",
+		"displayOops:" : "DataCurator 01/16/2013 09:50",
 		"elementCache" : "DataCurator 12/30/2012 11:25",
 		"evaluateString" : "DataCurator 12/01/2012 08:23",
 		"evaluateString:" : "DataCurator 12/01/2012 08:24",
@@ -13,4 +17,6 @@
 		"evaluateStringResult:" : "DataCurator 12/01/2012 08:00",
 		"exception" : "DataCurator 12/01/2012 18:18",
 		"exception:process:" : "DataCurator 12/01/2012 18:17",
-		"exceptionProcess" : "DataCurator 12/01/2012 18:18" } }
+		"exceptionProcess" : "DataCurator 12/01/2012 18:18",
+		"listLimit" : "DataCurator 01/16/2013 09:51",
+		"listLimit:" : "DataCurator 01/16/2013 09:52" } }

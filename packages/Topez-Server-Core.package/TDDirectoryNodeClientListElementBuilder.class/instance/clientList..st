@@ -7,21 +7,25 @@ clientList: listElement
   components
     add:
       {'.'.
-      (self object tzNodeDisplay: 80 compacted: true)}.
+      (self object tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true)}.
   items add: self object.
   self object parent ~~ nil
     ifTrue: [ 
       components
         add:
           {'..'.
-          (self object parent tzNodeDisplay: 80 compacted: true)}.
+          (self object parent tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true)}.
       items add: self parent ].
   self object
     childrenAndNamesDo: [ :child :nameText | 
       | stream |
       max := max max: nameText size.
       stream := TextStream on: Text new.
-      child dotSelfObject tzNodeDisplayOn: stream limit: 80 compacted: true.
+      child dotSelfObject
+        tzNodeDisplayOn: stream
+        limit: 80
+        displayOops: listElement topez displayOops
+        compacted: true.
       components
         add:
           {nameText.

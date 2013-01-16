@@ -1,10 +1,12 @@
 {
 	"category" : "Topez-Server-Core",
 	"classinstvars" : [
-		"listLimit" ],
+		"listLimit",
+		"displayOops",
+		"characterLimit" ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 12/21/2012 11:23",
+	"commentStamp" : "",
 	"instvars" : [
 		 ],
 	"name" : "TDShellTool",

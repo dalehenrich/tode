@@ -1,6 +1,7 @@
 as yet unclassified
 buildClientElement: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
-  ^ self clientListElement
+  | clientListElement |
+  ^ (clientListElement := self clientListElement)
     topez: aTopez;
     aspect: anAspect;
     parentNode: parentNode;
@@ -9,4 +10,5 @@ buildClientElement: parentNode topez: aTopez aspect: anAspect windowId: inWindow
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;
     editorAspectSelector: #'activateListEditor';
+    firstList: (self firstList: clientListElement);
     yourself

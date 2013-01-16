@@ -18,7 +18,7 @@ dsChildren: node indent: indent level: level displayOops: displayOops on: stream
       stream nextPutAll: ' -> '.
       child dotSelfObject
         tzNodeDisplayOn: stream
-        limit: 160
+        limit: self characterLimit
         displayOops: displayOops
         compacted: true.
       stream cr.

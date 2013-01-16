@@ -6,5 +6,4 @@ clientListElement
     listBlock: self listBlock;
     itemSelectedBlock: self itemSelectedBlock;
     selectedIndex: self selectedIndex;
-    firstList: (self firstList: clientListElement);
     yourself

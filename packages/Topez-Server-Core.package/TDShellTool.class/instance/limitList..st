@@ -6,5 +6,5 @@ limitList: cmdTokens
   cmdTokens size = 1
     ifTrue: [ ^ self listLimit ].
   limit := (cmdTokens at: 2) asNumber.
-  self class listLimit: limit.
+  self topez listLimit: limit.
   ^ limit

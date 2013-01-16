@@ -13,5 +13,5 @@ ds
   ^ self
     dsNode: node
     level: level
-    displayOops: true
+    displayOops: self displayOops
     on: stream

@@ -1,3 +1,3 @@
 as yet unclassified
 listLimit
-    ^ self class listLimit
+  ^ self topez listLimit

@@ -1,4 +1,8 @@
 as yet unclassified
 topez
-  topez ifNil: [ topez := TDTopezServer new ].
+  topez
+    ifNil: [ 
+      topez := TDTopezServer new
+        displayOops: false;
+        yourself ].
   ^ topez
