@@ -6,7 +6,6 @@ installOn: aTDTopezServer
     installExampleOn: aTDTopezServer;
     yourself.
   super installOn: aTDTopezServer.
-  self installTestSpecOn: aTDTopezServer.
   TDTopezServer
     registerBuilderClass: TDStackNodeBuilder for: TDStack aspect: #'edit';
     registerBuilderClass: TDStackFrameNodeBuilder for: TDStackFrame aspect: #'edit'

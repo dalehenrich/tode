@@ -17,4 +17,5 @@ initialize
       cl installOn: topez ].
   (topez lookup: self basePath)
     readMe: self basePathReadMe;
-    yourself
+    yourself.
+  self installMasterTestSpecOn: topez

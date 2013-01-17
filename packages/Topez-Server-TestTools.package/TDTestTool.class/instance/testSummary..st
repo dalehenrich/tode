@@ -2,7 +2,7 @@ as yet unclassified
 testSummary: testNode
   | resultsText stream suiteNode |
   stream := TextStream on: Text new.
-  suiteNode := self topez lookup: testNode printString , '/suite'.
+  suiteNode := self topez lookup: testNode printString , 'suite'.
   stream
     nextPutAll: suiteNode printString asText allBold;
     nextPutAll: '-> '.

@@ -7,7 +7,6 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"addBlock",
-		"editBlock",
 		"collectionBlock",
 		"listBlock",
 		"elementBlock",

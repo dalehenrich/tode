@@ -10,7 +10,6 @@ buildNode: parentNode topez: aTopez aspect: anAspect
     listBlock: self listBlock;
     elementBlock: self elementBlock;
     addBlock: self addBlock;
-    editBlock: self editBlock;
     collectionBlock: self collectionBlock;
     removeBlock: self removeBlock;
     extensionBlock: self extensionBlock;
