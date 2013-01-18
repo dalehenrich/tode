@@ -8,5 +8,5 @@ nodeClassFor: anObject aspect: anAspect in: nodeDictionary ifAbsent: defaultClas
       classMap ifNil: [ class := class superclass ] ].
   className := classMap == nil
     ifTrue: [ defaultClassname ]
-    ifFalse: [ classMap at: anAspect ifAbsent: [ classMap at: #'default' ifAbsent: [ defaultClassname ] ] ].
+    ifFalse: [ classMap at: anAspect ifAbsent: [ classMap at: #'edit' ifAbsent: [ defaultClassname ] ] ].
   ^ Smalltalk at: className asSymbol

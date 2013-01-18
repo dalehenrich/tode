@@ -23,4 +23,7 @@ nodeBuilderTestFixture
   {'123'.
   #'edit'.
   '/:
-[String] ''123'''}}
+[String] ''123'''}.
+  {'123'.
+  #'inspect'.
+  ''}}

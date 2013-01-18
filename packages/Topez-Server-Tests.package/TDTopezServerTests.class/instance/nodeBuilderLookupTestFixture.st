@@ -10,7 +10,7 @@ nodeBuilderLookupTestFixture
   TDTxtLeafNodeBuilder}.
   {''.
   #'bubba'.
-  TDObjectNodeBuilder}.
+  TDTxtLeafNodeBuilder}.
   {Object.
   #'edit'.
   TDObjectNodeBuilder}.
