@@ -12,4 +12,4 @@ installOn: aTDTopezServer
     registerBuilderClass: TDTxtLeafNodeBuilder for: CharacterCollection aspect: #'edit';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder for: TDDirectoryNode aspect: #'edit';
-    registerEditorClass: TDDirectoryNodeClientListElementBuilder for: TDObjectNodeBuilder aspect: #'inspect'
+    registerEditorClass: TDDirectoryNodeClientListElementBuilder for: TDObjectNode aspect: #'inspect'

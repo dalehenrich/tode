@@ -1,3 +1,3 @@
 accessing
 reset
-  nodeBuilders := halos := commands := rootNode := nil
+  nodeEditors := nodePrinters := nodeBuilders := halos := commands := rootNode := nil
