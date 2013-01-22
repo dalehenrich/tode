@@ -26,4 +26,8 @@ nodeBuilderTestFixture
 [String] ''123'''}.
   {'123'.
   #'inspect'.
-  'I want to see the bytes in the string...'}}
+  '/ ([String] ''123''):
+	1@ -> [Character] $1
+	2@ -> [Character] $2
+	3@ -> [Character] $3
+'}}

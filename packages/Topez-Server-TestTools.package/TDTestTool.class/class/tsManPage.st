@@ -7,17 +7,16 @@ SYNOPSIS
   ts <command> [args]
 
 DESCRIPTION
-  ts debug <test-spec>
+  ts debug [errors|failures|
+    passed|expectedDefects|unexpectedPassed|
+    <test-spec>]
   ts list [<test-path>]
   ts run [<test-path>]
 
   The default <test-path> is /home/tests. If you use 
   the `test` command to initiate testinging.
 
-  If <test-spec> is `errors` or `failures`, then the set of the test cases
-  in the corresponding category are selected.
-
-  Otherwise, <test-spec> is of the form:
+  The <test-spec> is of the form:
 
     TestCaseClass>>testSelector
   

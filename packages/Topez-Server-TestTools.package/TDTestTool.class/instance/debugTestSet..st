@@ -1,6 +1,6 @@
 as yet unclassified
 debugTestSet: subPath
-  "'errors' 'failures'  'unexpectedPassed'"
+  "ts debug [errors|failures|passed|expectedDefects|unexpectedPassed|<test-spec>]"
 
   | tests map passed |
   passed := (self topez lookup: self defaultHomeResultsPath) dotSelfObject passed.
