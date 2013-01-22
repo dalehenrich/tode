@@ -5,12 +5,6 @@ windowBuilderLookupTestFixture
   ^ {{(TDObjectNode new).
   #'edit'.
   TDDirectoryNodeClientListElementBuilder}.
-  {(TDObjectNode new).
-  #'inspect'.
-  TDDirectoryNodeClientListElementBuilder}.
   {(TDDirectoryNode new).
   #'edit'.
-  TDDirectoryNodeClientListElementBuilder}.
-  {(TDDirectoryNode new).
-  #'inspect'.
   TDDirectoryNodeClientListElementBuilder}}
