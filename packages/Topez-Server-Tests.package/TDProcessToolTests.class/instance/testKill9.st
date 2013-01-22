@@ -19,4 +19,4 @@ testKill9
       (process asOop)}
     windowId: nil.
   self shouldnt: [ result := ps kill ] raise: Error.
-  self deny: ensureRun
+  self assert: ensureRun

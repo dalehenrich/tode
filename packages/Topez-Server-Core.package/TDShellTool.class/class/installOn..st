@@ -16,4 +16,4 @@ installOn: aTDTopezServer
     registerEditorClass: TDClientSourceElementBuilder for: TDLeafNode aspect: #'edit';
     registerEditorClass: TDClientCodeElementBuilder for: TDScriptLeafNode aspect: #'edit';
     registerEditorClass: TDClientCodeElementBuilder for: TDSmalltalkLeafNode aspect: #'edit';
-    registerEditorClass: TDTxtLeafNodeBuilder for: TDTxtLeafNode aspect: #'edit'
+    registerEditorClass: TDClientTextElementBuilder for: TDTxtLeafNode aspect: #'edit'

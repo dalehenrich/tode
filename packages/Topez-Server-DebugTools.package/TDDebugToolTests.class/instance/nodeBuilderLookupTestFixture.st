@@ -4,9 +4,7 @@ nodeBuilderLookupTestFixture
 
   ^ {{(TDStack new).
   #'edit'.
-  nil.
   TDStackNodeBuilder}.
   {(TDStackFrame new).
   #'edit'.
-  nil.
   TDStackFrameNodeBuilder}}

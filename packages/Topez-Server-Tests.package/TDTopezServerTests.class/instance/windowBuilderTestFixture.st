@@ -33,19 +33,19 @@ windowBuilderTestFixture
   #'edit'.
   nil.
   '/:
-[String] ''/a/'''}.
+[String] ''[ :topez :tokens :windowId | ]'''}.
   {(self directoryNodeStructure childNamed: 'b' ifAbsent: [  ]).
   #'edit'.
   nil.
   '/:
-[String] ''/b/'''}.
+[String] ''3+4'''}.
   {(self directoryNodeStructure childNamed: 'c' ifAbsent: [  ]).
   #'edit'.
   nil.
   '/:
-[String] ''/c/'''}.
+[String] ''cat /home/.window/model'''}.
   {(self directoryNodeStructure childNamed: 'd' ifAbsent: [  ]).
   #'edit'.
   nil.
   '/:
-[String] ''/d/'''}}
+[String] ''This is a string'''}}

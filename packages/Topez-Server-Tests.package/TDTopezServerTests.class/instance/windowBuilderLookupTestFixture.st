@@ -22,4 +22,4 @@ windowBuilderLookupTestFixture
   TDClientSourceElementBuilder}.
   {(TDTxtLeafNode new).
   #'edit'.
-  TDTxtLeafNodeBuilder}}
+  TDClientTextElementBuilder}}
