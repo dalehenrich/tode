@@ -14,7 +14,7 @@ windowBuilderLookupTestFixture
   {(TDScriptLeafNode new).
   #'edit'.
   TDClientCodeElementBuilder}.
-  {(TDSmaltalkLeafNode new).
+  {(TDSmalltalkLeafNode new).
   #'edit'.
   TDClientCodeElementBuilder}.
   {(TDTopezLeafNode new).

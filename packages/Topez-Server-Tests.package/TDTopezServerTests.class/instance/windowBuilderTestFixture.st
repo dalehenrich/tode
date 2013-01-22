@@ -27,19 +27,19 @@ windowBuilderTestFixture
   #'edit'.
   nil.
   '1->''1'''}.
-  {(self directoryNodeStructure childNamed: 'a').
+  {(self directoryNodeStructure childNamed: 'a' ifAbsent: [  ]).
   #'edit'.
   nil.
   ''}.
-  {(self directoryNodeStructure childNamed: 'b').
+  {(self directoryNodeStructure childNamed: 'b' ifAbsent: [  ]).
   #'edit'.
   nil.
   ''}.
-  {(self directoryNodeStructure childNamed: 'c').
+  {(self directoryNodeStructure childNamed: 'c' ifAbsent: [  ]).
   #'edit'.
   nil.
   ''}.
-  {(self directoryNodeStructure childNamed: 'd').
+  {(self directoryNodeStructure childNamed: 'd' ifAbsent: [  ]).
   #'edit'.
   nil.
   ''}}
