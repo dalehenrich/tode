@@ -1,3 +1,3 @@
 accessing
 resetObjIn
-    objIn := nil
+  objIn value: nil

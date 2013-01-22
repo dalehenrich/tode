@@ -1,3 +1,3 @@
 accessing
 objIn
-    ^ objIn
+  ^ objIn value

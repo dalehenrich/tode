@@ -1,6 +1,9 @@
 accessing
 initialize
+  "do not persist objIn ... preserve isolation from instances that cannot be persisted: socket, semaphore, processScheduler, etc."
+
   super initialize.
+  objIn := TransientValue new.
   Warning
     addDefaultHandler: [ :ex | 
       | action |

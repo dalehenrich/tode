@@ -1,3 +1,3 @@
 accessing
 evaluateTokens: tokens
-    ^ self evaluateTokens: tokens objIn: objIn
+  ^ self evaluateTokens: tokens objIn: objIn value

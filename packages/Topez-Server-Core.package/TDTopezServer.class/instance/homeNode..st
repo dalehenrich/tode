@@ -1,4 +1,3 @@
 accessing
 homeNode: aNode
-
-homeNode := aNode
+  homeNode := TransientValue value: aNode
