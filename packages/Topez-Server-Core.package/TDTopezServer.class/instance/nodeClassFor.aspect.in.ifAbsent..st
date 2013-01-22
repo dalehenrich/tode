@@ -23,10 +23,6 @@ nodeClassFor: anObject aspect: anAspect in: nodeDictionary ifAbsent: defaultClas
             aspect: #'edit'
             in: nodeDictionary
             ifAbsent: defaultClassname ].
-      'TDClientListElementBuilder' = defaultClassname
-        ifTrue: [ 
-          "TDClientListElementBuilder is not a FUNCTIONAL default"
-          self halt ].
       defaultClassname ]
     ifFalse: [ classMap at: anAspect ifAbsent: [ self error: 'did not expect to get here' ] ].
   ^ Smalltalk at: className asSymbol

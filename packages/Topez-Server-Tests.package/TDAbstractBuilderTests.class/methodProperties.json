@@ -1,0 +1,14 @@
+{
+	"class" : {
+		"isAbstract" : "DataCurator 01/21/2013 16:52" },
+	"instance" : {
+		"dsDisplayFor:level:" : "DataCurator 01/21/2013 16:53",
+		"nodeBuilderLookupTestFixture" : "DataCurator 01/21/2013 18:15",
+		"nodeBuilderTestFixture" : "DataCurator 01/21/2013 18:15",
+		"testNodeBuilder" : "DataCurator 01/21/2013 18:14",
+		"testNodeBuilderLookup" : "DataCurator 01/21/2013 18:14",
+		"testWindowBuilder" : "DataCurator 01/21/2013 18:06",
+		"testWindowBuilderLookup" : "DataCurator 01/21/2013 18:07",
+		"topez" : "DataCurator 01/21/2013 16:53",
+		"windowBuilderLookupTestFixture" : "DataCurator 01/21/2013 18:08",
+		"windowBuilderTestFixture" : "DataCurator 01/21/2013 18:08" } }

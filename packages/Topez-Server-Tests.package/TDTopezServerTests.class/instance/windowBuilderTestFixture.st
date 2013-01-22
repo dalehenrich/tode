@@ -22,4 +22,24 @@ windowBuilderTestFixture
 	5@ -> [String] ''parent@ -> [UndefinedObject] nil''
 	6@ -> [String] ''readMe@ -> [UndefinedObject] nil''
 	7@ -> [String] ''topez@ -> [UndefinedObject] nil''
-'}}
+'}.
+  {(1 -> '1').
+  #'edit'.
+  nil.
+  '1->''1'''}.
+  {(self directoryNodeStructure childNamed: 'a').
+  #'edit'.
+  nil.
+  ''}.
+  {(self directoryNodeStructure childNamed: 'b').
+  #'edit'.
+  nil.
+  ''}.
+  {(self directoryNodeStructure childNamed: 'c').
+  #'edit'.
+  nil.
+  ''}.
+  {(self directoryNodeStructure childNamed: 'd').
+  #'edit'.
+  nil.
+  ''}}

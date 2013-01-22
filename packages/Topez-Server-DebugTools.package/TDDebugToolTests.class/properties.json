@@ -10,5 +10,5 @@
 	"name" : "TDDebugToolTests",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "TDAbstractBuilderTests",
 	"type" : "normal" }

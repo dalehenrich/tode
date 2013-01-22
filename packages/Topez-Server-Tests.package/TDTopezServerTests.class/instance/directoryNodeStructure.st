@@ -4,16 +4,23 @@ directoryNodeStructure
   rootNode := TDDirectoryNode new.
   rootNode
     addChildNode:
-        (TDDirectoryNode new
+        (TDScriptLeafNode new
             name: 'a';
             yourself);
     addChildNode:
-        (TDDirectoryNode new
+        (TDSmalltalkLeafNode new
             name: 'b';
+            contents: '3+4';
             yourself);
     addChildNode:
-        (TDDirectoryNode new
+        (TDTopezLeafNode new
             name: 'c';
+            contents: 'cat /home/.window/model';
+            yourself);
+    addChildNode:
+        (TDTxtLeafNode new
+            name: 'd';
+            contents: 'This is a string';
             yourself);
     yourself.
   ^ rootNode

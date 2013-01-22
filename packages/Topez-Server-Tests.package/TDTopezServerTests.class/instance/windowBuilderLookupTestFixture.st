@@ -7,4 +7,19 @@ windowBuilderLookupTestFixture
   TDDirectoryNodeClientListElementBuilder}.
   {(TDDirectoryNode new).
   #'edit'.
-  TDDirectoryNodeClientListElementBuilder}}
+  TDDirectoryNodeClientListElementBuilder}.
+  {(Object new).
+  #'edit'.
+  TDClientObjectElementBuilder}.
+  {(TDScriptLeafNode new).
+  #'edit'.
+  TDClientCodeElementBuilder}.
+  {(TDSmaltalkLeafNode new).
+  #'edit'.
+  TDClientCodeElementBuilder}.
+  {(TDTopezLeafNode new).
+  #'edit'.
+  TDClientSourceElementBuilder}.
+  {(TDTxtLeafNode new).
+  #'edit'.
+  TDTxtLeafNodeBuilder}}

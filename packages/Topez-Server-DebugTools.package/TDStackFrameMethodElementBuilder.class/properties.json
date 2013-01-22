@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-DebugTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDStackFrameMethodElementBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDClientMethodElementBuilder",
+	"type" : "normal" }

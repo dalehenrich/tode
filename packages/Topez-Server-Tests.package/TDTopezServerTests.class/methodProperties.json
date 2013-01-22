@@ -2,16 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"directoryNodeStructure" : "DataCurator 01/15/2013 08:21",
-		"dsDisplayFor:level:" : "DataCurator 01/16/2013 10:25",
+		"directoryNodeStructure" : "DataCurator 01/21/2013 18:00",
 		"nodeBuilderLookupTestFixture" : "DataCurator 01/21/2013 14:49",
 		"nodeBuilderTestFixture" : "DataCurator 01/21/2013 16:11",
-		"setUp" : "DataCurator 01/15/2013 10:17",
-		"tearDown" : "DataCurator 01/15/2013 10:17",
-		"testNodeBuilder" : "DataCurator 01/21/2013 16:11",
-		"testNodeBuilderLookup" : "DataCurator 01/15/2013 10:28",
-		"testWindowBuilder" : "DataCurator 01/16/2013 15:41",
-		"testWindowBuilderLookup" : "DataCurator 01/21/2013 14:23",
-		"topez" : "DataCurator 01/16/2013 10:27",
-		"windowBuilderLookupTestFixture" : "DataCurator 01/21/2013 16:37",
-		"windowBuilderTestFixture" : "DataCurator 01/18/2013 07:48" } }
+		"windowBuilderLookupTestFixture" : "DataCurator 01/21/2013 17:56",
+		"windowBuilderTestFixture" : "DataCurator 01/21/2013 18:02" } }

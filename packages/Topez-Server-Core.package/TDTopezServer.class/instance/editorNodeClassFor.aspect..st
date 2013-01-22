@@ -4,4 +4,4 @@ editorNodeClassFor: anObject aspect: anAspect
     nodeClassFor: anObject
     aspect: anAspect
     in: self class nodeEditors
-    ifAbsent: 'TDClientListElementBuilder'
+    ifAbsent: 'TDClientObjectElementBuilder'
