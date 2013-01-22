@@ -10,29 +10,23 @@ nodeClassFor: anObject aspect: anAspect in: nodeDictionary ifAbsent: defaultClas
           classMap
             at: anAspect
             ifAbsent: [ 
-              classMap
-                at: #'edit'
-                ifAbsent: [ 
-                  "force lookup"
-                  classMap := nil ] ] ].
+              "force lookup up class hierarchy for exact match"
+              classMap := nil ] ].
       classMap ifNil: [ class := class superclass ] ].
   className := classMap == nil
     ifTrue: [ 
+      anAspect ~~ #'edit'
+        ifTrue: [ 
+          "if anAspect is not found at all, default to #edit"
+          ^ self
+            nodeClassFor: anObject
+            aspect: #'edit'
+            in: nodeDictionary
+            ifAbsent: defaultClassname ].
       'TDClientListElementBuilder' = defaultClassname
         ifTrue: [ 
           "TDClientListElementBuilder is not a FUNCTIONAL default"
           self halt ].
       defaultClassname ]
-    ifFalse: [ 
-      classMap
-        at: anAspect
-        ifAbsent: [ 
-          classMap
-            at: #'edit'
-            ifAbsent: [ 
-              'TDClientListElementBuilder' = defaultClassname
-                ifTrue: [ 
-                  "TDClientListElementBuilder is not a FUNCTIONAL default"
-                  self halt ].
-              defaultClassname ] ] ].
+    ifFalse: [ classMap at: anAspect ifAbsent: [ self error: 'did not expect to get here' ] ].
   ^ Smalltalk at: className asSymbol

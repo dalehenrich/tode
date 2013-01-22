@@ -11,6 +11,9 @@ nodeBuilderLookupTestFixture
   {''.
   #'bubba'.
   TDTxtLeafNodeBuilder}.
+  {''.
+  #'inspect'.
+  TDObjectNodeBuilder}.
   {Object.
   #'edit'.
   TDObjectNodeBuilder}.
