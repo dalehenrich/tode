@@ -1,3 +1,5 @@
 as yet unclassified
 elementSource
-  self subclassResponsibility
+  "override as needed"
+
+  ^ self object contents
