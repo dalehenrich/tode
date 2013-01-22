@@ -2,11 +2,14 @@ as yet unclassified
 nodeBuilderTestFixture
   "object aspect expected"
 
-  ^ {{(TDStack new).
+  | stack frame |
+  stack := TDStack new.
+  frame := stack currentFrame.
+  ^ {{stack.
   #'edit'.
-  nil.
-  ''}.
-  {(TDStackFrame new).
+  '/ ([TDStack] UndefinedObject(oop=20, status=...problem printing process)):
+'}.
+  {frame.
   #'edit'.
-  nil.
-  ''}}
+  '/ ([TDStackFrame] error printing):
+'}}
