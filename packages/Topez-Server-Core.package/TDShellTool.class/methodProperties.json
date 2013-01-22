@@ -19,7 +19,7 @@
 		"ds" : "dkh 12/21/2012 11:25",
 		"dsManPage" : "DataCurator 12/22/2012 08:45",
 		"edit" : "dkh 12/21/2012 11:25",
-		"editManPage" : "dkh 12/21/2012 11:23",
+		"editManPage" : "DataCurator 01/21/2013 16:20",
 		"emptyManPage" : "dkh 12/21/2012 11:23",
 		"homeReadMe" : "dkh 12/21/2012 11:23",
 		"implementors" : "dkh 12/21/2012 11:26",
@@ -50,6 +50,8 @@
 		"runManPage" : "dkh 12/21/2012 11:23",
 		"senders" : "dkh 12/21/2012 11:25",
 		"sendersManPage" : "dkh 12/21/2012 11:23",
+		"shellInspect" : "DataCurator 01/21/2013 16:34",
+		"shellInspectManPage" : "DataCurator 01/21/2013 16:34",
 		"testSuiteClasses" : "DataCurator 01/16/2013 16:40",
 		"toolName" : "dkh 12/21/2012 11:26",
 		"toolReadMe" : "dkh 12/21/2012 11:23",
@@ -85,4 +87,5 @@
 		"rm" : "dkh 12/21/2012 11:23",
 		"run" : "dkh 12/21/2012 11:23",
 		"sendersOf:" : "dkh 12/21/2012 11:23",
+		"shellInspect" : "DataCurator 01/21/2013 16:31",
 		"touch" : "dkh 12/21/2012 11:23" } }

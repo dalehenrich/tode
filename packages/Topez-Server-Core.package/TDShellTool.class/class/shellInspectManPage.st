@@ -1,13 +1,13 @@
 as yet unclassified
-editManPage
+shellInspectManPage
   ^ 'NAME
-    edit - open a window on path or objIn
+    inspect - open an inspector window on path or objIn
 
 SYNOPSIS
-    edit [ windowId | windowName ] [ path ]
+    inspect [ windowId | windowName ] [ path ]
 
 DESCRIPTION
-    Open a window on an object.
+    Open an inspector window on an object.
 
     When a `windowId` or `windowName` is specified, the 
     contens of window with the given `windowId` or 
