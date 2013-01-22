@@ -2,9 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testKill" : "DataCurator 01/22/2013 11:31",
-		"testKill9" : "DataCurator 01/22/2013 11:32",
-		"testList" : "DataCurator 01/22/2013 11:27",
-		"testStacks" : "DataCurator 01/22/2013 11:26",
-		"testTerminate" : "DataCurator 01/22/2013 11:30",
-		"testYield" : "DataCurator 01/22/2013 11:28" } }
+		"processToolClass" : "DataCurator 01/22/2013 11:40",
+		"testKill" : "DataCurator 01/22/2013 11:40",
+		"testKill9" : "DataCurator 01/22/2013 11:40",
+		"testList" : "DataCurator 01/22/2013 11:43",
+		"testStacks" : "DataCurator 01/22/2013 11:40",
+		"testTerminate" : "DataCurator 01/22/2013 11:40",
+		"testYield" : "DataCurator 01/22/2013 11:40" } }

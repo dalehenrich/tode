@@ -11,7 +11,7 @@ testKill9
     ensure: [ ensureRun := true ] ] fork.
   Processor yield.
   process suspend.
-  ps := self
+  ps := self processToolClass
     topez: self topez
     objIn: nil
     tokens:

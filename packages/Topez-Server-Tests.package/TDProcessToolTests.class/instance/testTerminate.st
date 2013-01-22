@@ -8,7 +8,7 @@ testTerminate
   (Delay forSeconds: 1) wait ] fork.
   Processor yield.
   process suspend.
-  ps := self
+  ps := self processToolClass
     topez: self topez
     objIn: nil
     tokens:
