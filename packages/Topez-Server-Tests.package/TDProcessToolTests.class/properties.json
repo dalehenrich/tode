@@ -3,10 +3,11 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"DoProcessTerminate" ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"doPsTerminate",
+		"doProcessTerminate" ],
 	"name" : "TDProcessToolTests",
 	"pools" : [
 		 ],

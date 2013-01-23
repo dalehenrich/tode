@@ -6,7 +6,7 @@ stack
   3 + 4.
   sema wait ] fork.
   Processor yield.
-  process suspend.
+  GsFile gciLogServer: 'TDDebugToolTests>>stack: ' , process asOop printString.
   ^ TDStack new
     process: process;
     yourself
