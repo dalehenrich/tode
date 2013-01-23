@@ -20,6 +20,11 @@ directoryNodeStructure
     addChildNode:
         (TDTxtLeafNode new
             name: 'd';
+            contents: 'This is a string' asText allBold;
+            yourself);
+    addChildNode:
+        (TDTxtLeafNode new
+            name: 'e';
             contents: 'This is a string';
             yourself);
     yourself.

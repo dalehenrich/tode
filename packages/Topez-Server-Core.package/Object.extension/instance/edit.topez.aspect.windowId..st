@@ -2,8 +2,8 @@
 edit: parentNode topez: aTopez aspect: anAspect windowId: windowId
   "anAspect: #edit, #debug, #inspect"
 
-  ^ (self asTDObjectNode: parentNode topez: aTopez aspect: anAspect)
-    edit: parentNode
-    topez: aTopez
+  ^ aTopez
+    editElement: parentNode
+    for: self
     aspect: anAspect
     windowId: windowId

@@ -1,3 +1,3 @@
 as yet unclassified
 elementSource: source
-  self object contents: source
+  self object source: source

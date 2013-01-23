@@ -13,7 +13,7 @@ windowBuilderLookupTestFixture
   TDClientObjectElementBuilder}.
   {(TDScriptLeafNode new).
   #'edit'.
-  TDClientCodeElementBuilder}.
+  TDClientScriptElementBuilder}.
   {(TDSmalltalkLeafNode new).
   #'edit'.
   TDClientCodeElementBuilder}.

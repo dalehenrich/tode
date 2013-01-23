@@ -7,7 +7,9 @@ itemSelected: listElement at: index
     ifTrue: [ 
       aspect == 1
         ifTrue: [ 
+          "itemCache entry asObjectNode with inspect aspect then just edit"
           "."
+          self halt.
           aspect := #'inspect' ].
       index == 2
         ifTrue: [ 

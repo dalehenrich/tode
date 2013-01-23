@@ -10,7 +10,7 @@ windowBuilderTestFixture
 	2@ -> [String] ''a* -> [String] ''''[ :topez :tokens :windowId | ]''''''
 	3@ -> [String] ''b* -> [String] ''''3+4''''''
 	4@ -> [String] ''c* -> [String] ''''cat /home/.window/model''''''
-	5@ -> [String] ''d -> [String] ''''This is a string''''''
+	5@ -> [String] ''d -> [Text] This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g...''
 '}.
   {(self directoryNodeStructure asTDObjectNode: nil topez: self topez aspect: #'edit').
   #'edit'.
