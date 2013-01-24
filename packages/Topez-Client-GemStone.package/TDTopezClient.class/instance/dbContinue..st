@@ -1,3 +1,6 @@
 as yet unclassified
 dbContinue: processOop
-  ^ self session continue: (TZHeaderGemStone oop: processOop)
+  | result |
+  result := self session continue: (TZHeaderGemStone oop: processOop).
+  self halt.
+  ^ result	"convertTDEvaluateTokenResponseToText"

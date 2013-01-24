@@ -14,7 +14,7 @@
 		"registerBuilderClass:for:aspect:" : "DataCurator 01/11/2013 16:48",
 		"registerEditorClass:for:aspect:" : "DataCurator 01/14/2013 12:50",
 		"registerPrinterClass:for:aspect:" : "DataCurator 01/14/2013 12:51",
-		"reset" : "DataCurator 01/21/2013 14:04",
+		"reset" : "DataCurator 01/23/2013 20:16",
 		"rootNode" : "DataCurator 11/28/2012 05:40" },
 	"instance" : {
 		"accumulateBlocks" : "DataCurator 01/22/2013 14:21",
@@ -62,6 +62,7 @@
 		"reifyExceptionArgsForOopList:classNamesForOopList:" : "DataCurator 01/06/2013 15:00",
 		"removeChildrenAt:" : "DataCurator 11/27/2012 15:12",
 		"removeChildrenAt:select:" : "DataCurator 11/27/2012 15:11",
+		"reset" : "DataCurator 01/23/2013 19:37",
 		"resetObjIn" : "DataCurator 01/22/2013 14:05",
 		"resolveHaloNamed:for:ifAbsent:" : "DataCurator 12/01/2012 16:36",
 		"rootNode" : "dkh 11/18/2012 15:30",

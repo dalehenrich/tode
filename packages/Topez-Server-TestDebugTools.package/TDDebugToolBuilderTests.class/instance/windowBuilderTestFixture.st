@@ -14,7 +14,7 @@ windowBuilderTestFixture
 	3@ -> [String] ''3. ProcessorScheduler>>_waitOnSema: @7 line 8''
 	4@ -> [String] ''4. Semaphore>>wait @13 line 15''
 	5@ -> [String] ''5. TransientSemaphore>>wait @3 line 3''
-	6@ -> [String] ''6. [] in ExecBlock(TDDebugToolTests)>>stack @3 line 6''
+	6@ -> [String] ''6. [] in ExecBlock(TDDebugToolBuilderTests)>>stack @3 line 6''
 	7@ -> [String] ''7. GsProcess>>_start @7 line 16''
 	8@ -> [String] ''8. UndefinedObject(GsNMethod class)>>_gsReturnToC @1 line 1''
 '}.
