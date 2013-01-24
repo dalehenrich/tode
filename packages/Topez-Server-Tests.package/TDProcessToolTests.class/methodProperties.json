@@ -1,14 +1,11 @@
 {
 	"class" : {
-		"doProcessTerminate" : "dkh 01/23/2013 14:52",
-		"doProcessTerminate:" : "dkh 01/23/2013 14:52" },
+		 },
 	"instance" : {
-		"process" : "dkh 01/23/2013 14:52",
-		"processToolClass" : "dkh 01/23/2013 14:52",
-		"setUp" : "dkh 01/23/2013 14:52",
-		"testKill" : "dkh 01/23/2013 14:52",
-		"testKill9" : "dkh 01/23/2013 14:52",
-		"testList" : "dkh 01/23/2013 14:52",
-		"testStacks" : "dkh 01/23/2013 14:52",
-		"testTerminate" : "dkh 01/23/2013 14:52",
-		"testYield" : "dkh 01/23/2013 14:52" } }
+		"testList" : "DataCurator 01/23/2013 23:27",
+		"testStacks" : "DataCurator 01/23/2013 23:27",
+		"testYield" : "DataCurator 01/23/2013 23:28",
+		"toolClass" : "DataCurator 01/23/2013 23:28",
+		"xtestKill" : "DataCurator 01/23/2013 23:25",
+		"xtestKill9" : "DataCurator 01/23/2013 23:25",
+		"xtestTerminate" : "DataCurator 01/23/2013 23:26" } }

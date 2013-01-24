@@ -2,6 +2,5 @@
 	"class" : {
 		"isAbstract" : "DataCurator 01/23/2013 16:16" },
 	"instance" : {
-		"testToolCommands" : "DataCurator 01/23/2013 16:09",
-		"toolClass" : "DataCurator 01/23/2013 16:06",
-		"toolCommandFixtures" : "DataCurator 01/23/2013 16:10" } }
+		"executeCommandSpecs:" : "DataCurator 01/23/2013 23:36",
+		"toolClass" : "DataCurator 01/23/2013 16:06" } }

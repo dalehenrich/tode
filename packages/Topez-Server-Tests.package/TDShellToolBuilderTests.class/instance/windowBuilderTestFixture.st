@@ -11,6 +11,7 @@ windowBuilderTestFixture
 	3@ -> [String] ''b* -> [String] ''''3+4''''''
 	4@ -> [String] ''c* -> [String] ''''cat /home/.window/model''''''
 	5@ -> [String] ''d -> [Text] This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g...''
+	6@ -> [String] ''e -> [String] ''''This is a string''''''
 '}.
   {(self directoryNodeStructure asTDObjectNode: nil topez: self topez aspect: #'edit').
   #'edit'.
@@ -18,7 +19,7 @@ windowBuilderTestFixture
   '/ ([Array] anArray( ''. -> [TDObjectNode] /'', ''aspect@ -> [UndefinedObject] nil'', ''contents@ -> [Dictionary] aDictionary( ''''a''''->/a/, ''''d''''->/d/, ''''b''''->/b/, ''''c''...):
 	1@ -> [String] ''. -> [TDObjectNode] /''
 	2@ -> [String] ''aspect@ -> [UndefinedObject] nil''
-	3@ -> [String] ''contents@ -> [Dictionary] aDictionary( ''''a''''->/a/, ''''d''''->/d/, ''''b''''->/b/, ''''c''''->/c/)''
+	3@ -> [String] ''contents@ -> [Dictionary] aDictionary( ''''a''''->/a/, ''''d''''->/d/, ''''b''''->/b/, ''''c''''->/c/, ''''e''''->/e/)''
 	4@ -> [String] ''name@ -> [UndefinedObject] nil''
 	5@ -> [String] ''parent@ -> [UndefinedObject] nil''
 	6@ -> [String] ''readMe@ -> [UndefinedObject] nil''

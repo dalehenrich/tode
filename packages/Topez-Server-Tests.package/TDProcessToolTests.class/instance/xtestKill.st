@@ -1,6 +1,6 @@
 as yet unclassified
-process
-  | ps result process ensureRun sem |
+xtestKill
+  | process ensureRun sem |
   ensureRun := false.
   sem := Semaphore new.
   process := [ 
@@ -9,4 +9,10 @@ process
   sem wait ]
     ensure: [ ensureRun := true ] ] fork.
   Processor yield.
-  ^ process
+  self
+    executeCommandSpecs:
+      {{{'kill'.
+      (process asOop)}.
+      #'kill'.
+      nil}}.
+  self assert: ensureRun
