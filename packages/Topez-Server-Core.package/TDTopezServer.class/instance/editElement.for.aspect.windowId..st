@@ -1,8 +1,8 @@
 accessing
-editElement: parentNode for: anObject aspect: anAspect windowId: windowId
+editElement: parentObject for: anObject aspect: anAspect windowId: windowId
   | element |
   element := (self editorNodeFor: anObject aspect: anAspect)
-    buildClientElement: parentNode
+    buildClientElement: parentObject
     topez: self
     aspect: anAspect
     windowId: windowId.

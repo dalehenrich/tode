@@ -1,10 +1,10 @@
 as yet unclassified
-buildClientElement: parentNode topez: aTopez aspect: anAspect windowId: inWindowId
+buildClientElement: parentObject topez: aTopez aspect: anAspect windowId: inWindowId
   | clientListElement |
   ^ (clientListElement := self clientListElement)
     topez: aTopez;
     aspect: anAspect;
-    parentNode: parentNode;
+    parent: parentObject;
     editorWindowLabel: self editorWindowLabel;
     editorWindowId: inWindowId;
     editorWindowName: self editorWindowName;

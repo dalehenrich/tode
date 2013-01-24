@@ -3,11 +3,11 @@ itemSelected: listElement at: index
   | frameNode |
   self object navigateFrame: index.
   self object currentFrame
-    edit: listElement parentNode
+    edit: listElement parent
       topez: listElement topez
       aspect: #'source'
       windowId: nil;
-    edit: listElement parentNode
+    edit: listElement parent
       topez: listElement topez
       aspect: #'contents'
       windowId: nil.

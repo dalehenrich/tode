@@ -2,7 +2,7 @@ as yet unclassified
 itemSelected: listElement at: index
   | aspect parent |
   aspect := listElement aspect.
-  parent := listElement parentNode.
+  parent := listElement parent
   parent ~~ nil
     ifTrue: [ 
       aspect == 1
@@ -14,7 +14,7 @@ itemSelected: listElement at: index
       index == 2
         ifTrue: [ 
           ".."
-          aspect := listElement parentNode aspect.
+          aspect := listElement parent aspect.
           parent := parent parent ] ].
   (listElement itemCache at: index)
     edit: parent

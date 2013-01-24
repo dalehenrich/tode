@@ -11,7 +11,7 @@
 		"listBlockOop",
 		"itemSelectedBlockOop",
 		"selectedIndex",
-		"parentNode" ],
+		"parent" ],
 	"name" : "TodeClientListElement",
 	"pools" : [
 		 ],
