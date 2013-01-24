@@ -26,11 +26,9 @@ clientList: listElement
               parentObject := nil.
               self object stack ] ]
         ifFalse: [ 
-          | parentNode |
           parentObject := self object.
           object := self object objectFor: elementName ifAbsent: [ self error: 'missing element' ].
-          parentNode := self objectNodeFor: listElement.
-          itemObject := object asTDObjectNode: parentNode topez: listElement topez aspect: listElement aspect ].
+          itemObject := object asTDObjectNode: parentObject topez: listElement topez aspect: listElement aspect ].
       items add: itemObject -> parentObject.
       object tzNodeDisplayOn: stream limit: 80 compacted: true.
       ar add: stream contents asString ].

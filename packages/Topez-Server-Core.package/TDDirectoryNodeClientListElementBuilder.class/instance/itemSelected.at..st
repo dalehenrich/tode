@@ -8,11 +8,9 @@ itemSelected: listElement at: index
     ifTrue: [ 
       index == 1
         ifTrue: [ 
-          | parentObjectNode |
           "."
           "inspect subject of list"
-          parentObjectNode := self objectNodeFor: listElement.
-          obj := (obj asTDObjectNode: parentObjectNode topez: listElement topez aspect: #'inspect')
+          obj := (obj asTDObjectNode: obj topez: listElement topez aspect: #'inspect')
             name: (self object tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true);
             yourself ].
       index == 2

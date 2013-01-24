@@ -1,3 +1,3 @@
 as yet unclassified
-parent: aNode
-    parent := aNode
+parent: anObject
+  parent := anObject

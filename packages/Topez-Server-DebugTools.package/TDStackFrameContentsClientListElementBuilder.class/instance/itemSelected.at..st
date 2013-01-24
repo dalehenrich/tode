@@ -9,12 +9,10 @@ itemSelected: listElement at: index
     ifTrue: [ 
       index == 1
         ifTrue: [ 
-          | parentNode |
           "."
           "inspect subject of list"
-          parentNode := self objectNodeFor: listElement.
           parentObj := self object.
-          obj := (obj asTDObjectNode: parentNode topez: listElement topez aspect: #'inspect')
+          obj := (obj asTDObjectNode: parentObj topez: listElement topez aspect: #'inspect')
             name: self objectPrintString;
             yourself ].
       index == 2
