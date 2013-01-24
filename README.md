@@ -2,7 +2,7 @@
 
 **Topez** is based upon the [**Topaz Programming Environment**][3] for GemStone/S.
 
-The current implementation uses a [Pharo1.4][1] image as the GCI client running against a [GemStone/S 3.1.0.1][2] stone using
+The current implementation (still in development) uses a [Pharo1.4][1] image as the GCI client running against a [GemStone/S 3.1.0.1][2] stone using
 version 1.0-beta.9 of GLASS.
 
 ### GemStone Server Installation
@@ -26,6 +26,11 @@ Metacello new
 
 *See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
 for details on installing Metacello.*
+
+Here's a video of my 
+[Smalltalks 2012](http://www.fast.org.ar/smalltalks2012?_s=bvlW29Av2dix9EWt&_k=OGfhqoGSxR431Tth) 
+presentation:
+[topez: A Stepping Stone to tODE](http://www.youtube.com/watch?v=pIp_Y46iB_I&list=PLCGAAdUizzH31VumrhrK2HHepHu3DBpY0&index=14).
 
 Here's a recent screen shot:
 
