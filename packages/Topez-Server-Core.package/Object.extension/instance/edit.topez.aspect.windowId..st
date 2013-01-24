@@ -2,8 +2,9 @@
 edit: parentObject topez: aTopez aspect: anAspect windowId: windowId
   "anAspect: #edit, #debug, #inspect"
 
-  ^ aTopez
-    editElement: parentObject
-    for: self
+  ^ self
+    edit: parentObject
+    topez: aTopez
     aspect: anAspect
+    windowName: nil
     windowId: windowId

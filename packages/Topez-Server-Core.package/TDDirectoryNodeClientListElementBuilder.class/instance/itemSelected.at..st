@@ -22,5 +22,6 @@ itemSelected: listElement at: index
     edit: parentNode
     topez: listElement topez
     aspect: aspect
+    windowName: self editorWindowName
     windowId: nil.
   ^ nil

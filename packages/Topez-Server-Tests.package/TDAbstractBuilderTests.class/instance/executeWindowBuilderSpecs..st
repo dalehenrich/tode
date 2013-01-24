@@ -4,7 +4,7 @@ executeWindowBuilderSpecs: windowBuilderSpecs
 
   windowBuilderSpecs
     do: [ :ar | 
-      | object expected actual node aspect windowBuilder clientElement windowId |
+      | object expected actual node aspect windowBuilder clientElement windowId actualPrintString |
       object := ar at: 1.
       aspect := ar at: 2.
       windowId := ar at: 3.
@@ -14,7 +14,9 @@ executeWindowBuilderSpecs: windowBuilderSpecs
         buildClientElement: nil
         topez: self topez
         aspect: aspect
+        windowName: nil
         windowId: windowId.
       node := clientElement first asTDObjectNode: nil topez: self topez aspect: aspect.
       actual := self dsDisplayFor: node level: 1.
+      actualPrintString := actual printString.
       self assert: actual = expected ]

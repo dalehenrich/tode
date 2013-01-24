@@ -1,3 +1,4 @@
 as yet unclassified
 editorWindowName
-  ^ nil
+  theWindowName ifNil: [ ^ self defaultEditorWindowName ].
+  ^ theWindowName
