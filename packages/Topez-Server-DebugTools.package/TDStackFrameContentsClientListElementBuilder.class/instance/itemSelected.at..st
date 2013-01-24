@@ -1,6 +1,6 @@
 as yet unclassified
 itemSelected: listElement at: index
-  | aspect parent |
+  | aspect parent obj |
   aspect := listElement aspect.
   parent := listElement parentNode.
   parent ~~ nil
@@ -16,7 +16,8 @@ itemSelected: listElement at: index
           ".."
           aspect := listElement parentNode aspect.
           parent := parent parent ] ].
-  (listElement itemCache at: index)
+  obj := listElement itemCache at: index.
+  obj
     edit: parent
     topez: listElement topez
     aspect: aspect

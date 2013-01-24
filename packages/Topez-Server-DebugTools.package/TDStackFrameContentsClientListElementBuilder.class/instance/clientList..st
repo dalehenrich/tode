@@ -10,19 +10,23 @@ clientList: listElement
   max := max + 1.
   elementNames
     do: [ :elementName | 
-      | object stream |
+      | object objectNode stream |
       stream := TextStream on: Text new.
       stream
         nextPutAll: elementName;
         space: max - elementName size;
         nextPutAll: '-> '.
-      object := (specialNames includes: elementName)
+      (specialNames includes: elementName)
         ifTrue: [ 
-          elementName = '.'
+          objectNode := object := elementName = '.'
             ifTrue: [ self object ]
             ifFalse: [ self object stack ] ]
-        ifFalse: [ self object objectFor: elementName ifAbsent: [ self error: 'missing element' ] ].
-      items add: object.
+        ifFalse: [ 
+          | parentNode |
+          object := self object objectFor: elementName ifAbsent: [ self error: 'missing element' ].
+          parentNode := self objectNodeFor: listElement.
+          objectNode := object asTDObjectNode: parentNode topez: listElement topez aspect: listElement aspect ].
+      items add: objectNode.
       object tzNodeDisplayOn: stream limit: 80 compacted: true.
       ar add: stream contents asString ].
   listElement ~~ nil
