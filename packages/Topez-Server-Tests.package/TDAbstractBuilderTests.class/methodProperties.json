@@ -3,11 +3,7 @@
 		"isAbstract" : "DataCurator 01/21/2013 16:52" },
 	"instance" : {
 		"dsDisplayFor:level:" : "DataCurator 01/21/2013 16:53",
-		"nodeBuilderLookupTestFixture" : "DataCurator 01/21/2013 18:15",
-		"nodeBuilderTestFixture" : "DataCurator 01/21/2013 18:15",
-		"testNodeBuilder" : "DataCurator 01/23/2013 16:25",
-		"testNodeBuilderLookup" : "DataCurator 01/22/2013 15:10",
-		"testWindowBuilder" : "DataCurator 01/23/2013 16:24",
-		"testWindowBuilderLookup" : "DataCurator 01/22/2013 15:10",
-		"windowBuilderLookupTestFixture" : "DataCurator 01/21/2013 18:08",
-		"windowBuilderTestFixture" : "DataCurator 01/21/2013 18:08" } }
+		"executeNodeBuilderLookupSpecs:" : "DataCurator 01/24/2013 09:18",
+		"executeNodeBuilderSpecs:" : "DataCurator 01/24/2013 09:18",
+		"executeWindowBuilderLookupSpecs:" : "DataCurator 01/24/2013 09:18",
+		"executeWindowBuilderSpecs:" : "DataCurator 01/24/2013 09:18" } }

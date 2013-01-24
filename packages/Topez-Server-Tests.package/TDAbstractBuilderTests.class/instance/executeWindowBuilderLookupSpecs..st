@@ -1,6 +1,8 @@
 as yet unclassified
-testWindowBuilderLookup
-  self windowBuilderLookupTestFixture
+executeWindowBuilderLookupSpecs: windowBuilderLookupSpecs
+  "object aspect expected"
+
+  windowBuilderLookupSpecs
     do: [ :ar | 
       | object expected actual aspect |
       object := ar at: 1.

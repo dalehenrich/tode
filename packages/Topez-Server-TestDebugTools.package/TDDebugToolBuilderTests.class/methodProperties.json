@@ -2,9 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"expectedFailures" : "DataCurator 01/23/2013 18:41",
-		"nodeBuilderLookupTestFixture" : "dkh 01/23/2013 14:50",
-		"nodeBuilderTestFixture" : "dkh 01/23/2013 14:50",
+		"expectedFailures" : "DataCurator 01/24/2013 09:24",
 		"stack" : "dkh 01/23/2013 14:50",
-		"windowBuilderLookupTestFixture" : "dkh 01/23/2013 14:50",
-		"windowBuilderTestFixture" : "DataCurator 01/23/2013 18:34" } }
+		"testNodeEdit" : "DataCurator 01/24/2013 09:22",
+		"testNodeLookup" : "DataCurator 01/24/2013 09:22",
+		"testWindowEdit" : "DataCurator 01/24/2013 09:24",
+		"testWindowLookup" : "DataCurator 01/24/2013 09:23" } }

@@ -1,6 +1,8 @@
 as yet unclassified
-testNodeBuilderLookup
-  self nodeBuilderLookupTestFixture
+executeNodeBuilderLookupSpecs: nodeBuilderLookupSpecs
+  "object aspect expected"
+
+  nodeBuilderLookupSpecs
     do: [ :ar | 
       | object expected actual aspect |
       object := ar at: 1.

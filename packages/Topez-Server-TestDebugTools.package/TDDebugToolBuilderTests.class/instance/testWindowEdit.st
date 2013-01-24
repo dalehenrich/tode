@@ -1,14 +1,16 @@
 as yet unclassified
-windowBuilderTestFixture
+testWindowEdit
   "object aspect windowId expected"
 
   | stack frame |
   stack := self stack.
   frame := stack currentFrame.
-  ^ {{stack.
-  #'edit'.
-  nil.
-  '/ ([OrderedCollection] anOrderedCollection( ''1. ProcessorScheduler>>_switchFrom:to: @2 line 8'', ''2. ProcessorScheduler>>_reschedule @5 line 10'', ''3. ProcessorScheduler>>_waitOnSema: @...):
+  self
+    executeWindowBuilderSpecs:
+      {{stack.
+      #'edit'.
+      nil.
+      '/ ([OrderedCollection] anOrderedCollection( ''1. ProcessorScheduler>>_switchFrom:to: @2 line 8'', ''2. ProcessorScheduler>>_reschedule @5 line 10'', ''3. ProcessorScheduler>>_waitOnSema: @...):
 	1@ -> [String] ''1. ProcessorScheduler>>_switchFrom:to: @2 line 8''
 	2@ -> [String] ''2. ProcessorScheduler>>_reschedule @5 line 10''
 	3@ -> [String] ''3. ProcessorScheduler>>_waitOnSema: @7 line 8''
@@ -18,8 +20,8 @@ windowBuilderTestFixture
 	7@ -> [String] ''7. GsProcess>>_start @7 line 16''
 	8@ -> [String] ''8. UndefinedObject(GsNMethod class)>>_gsReturnToC @1 line 1''
 '}.
-  {frame.
-  #'edit'.
-  nil.
-  '/:
+      {frame.
+      #'edit'.
+      nil.
+      '/:
 [String] ''ProcessorScheduler>>_switchFrom:to: @2 line 8'''}}

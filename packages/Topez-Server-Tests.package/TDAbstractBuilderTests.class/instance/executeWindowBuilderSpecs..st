@@ -1,6 +1,8 @@
 as yet unclassified
-testWindowBuilder
-  self windowBuilderTestFixture
+executeWindowBuilderSpecs: windowBuilderSpecs
+  "object aspect windowId expected"
+
+  windowBuilderSpecs
     do: [ :ar | 
       | object expected actual node aspect windowBuilder clientElement windowId |
       object := ar at: 1.

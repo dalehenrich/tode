@@ -1,6 +1,6 @@
 as yet unclassified
 executeCommandSpecs: commandSpecs
-  "tokens command expected"
+  "tokens command expected [ block ]"
 
   commandSpecs
     do: [ :ar | 

@@ -1,6 +1,8 @@
 as yet unclassified
-testNodeBuilder
-  self nodeBuilderTestFixture
+executeNodeBuilderSpecs: nodeBuilderSpecs
+  "object aspect expected"
+
+  nodeBuilderSpecs
     do: [ :ar | 
       | object expected actual aspect tdNode |
       object := ar at: 1.

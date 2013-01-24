@@ -3,7 +3,9 @@
 		 },
 	"instance" : {
 		"directoryNodeStructure" : "dkh 01/23/2013 14:49",
-		"nodeBuilderLookupTestFixture" : "dkh 01/23/2013 14:49",
-		"nodeBuilderTestFixture" : "dkh 01/23/2013 14:49",
-		"windowBuilderLookupTestFixture" : "dkh 01/23/2013 14:49",
-		"windowBuilderTestFixture" : "DataCurator 01/23/2013 23:08" } }
+		"testNodeEdit" : "DataCurator 01/24/2013 09:27",
+		"testNodeInspect" : "DataCurator 01/24/2013 09:27",
+		"testNodeookup" : "DataCurator 01/24/2013 09:26",
+		"testTxtLeafNodeEdit" : "DataCurator 01/24/2013 09:33",
+		"testWindowEdit" : "DataCurator 01/24/2013 09:33",
+		"testWndowLookup" : "DataCurator 01/24/2013 09:28" } }
