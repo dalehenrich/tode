@@ -1,3 +1,3 @@
 as yet unclassified
 testSuiteClasses
-  ^ {TDTopezServerTests}
+  ^ {TDShellToolBuilderTests. TDShellToolTests}

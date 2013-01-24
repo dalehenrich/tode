@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topez" ],
+	"name" : "TDAbstractTopezTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

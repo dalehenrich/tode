@@ -15,7 +15,7 @@ clientList: listElement
         add:
           {'..'.
           (self object parent tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true)}.
-      items add: self parent ].
+      items add: self object parent ].
   self object
     childrenAndNamesDo: [ :child :nameText | 
       | stream |

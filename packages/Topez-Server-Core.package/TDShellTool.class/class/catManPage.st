@@ -1,14 +1,11 @@
 as yet unclassified
 catManPage
-    ^ 'NAME
-    cat - display contents of node
+  ^ 'NAME
+  cat - display contents of node
 
 SYNOPSIS
-    cat [ path ]
+  cat path
 
 DESCRIPTION
-    Resolve `path` and return result of #cat message.
-
-    If `path` is not specified, the #cat message is sent to the 
-    current node.
+  Resolve `path` and return result of #cat message.
 '

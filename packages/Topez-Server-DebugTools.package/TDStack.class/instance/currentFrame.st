@@ -1,5 +1,9 @@
 as yet unclassified
 currentFrame
+  frames
+    ifNil: [ 
+      "currentFrame may be set while lazily building frames"
+      self frames ].
   currentFrame
     ifNil: [ 
       self frames size == 0

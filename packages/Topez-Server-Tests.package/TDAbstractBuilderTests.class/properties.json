@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"topez" ],
+		 ],
 	"name" : "TDAbstractBuilderTests",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "TDAbstractTopezTests",
 	"type" : "normal" }

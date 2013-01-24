@@ -1,3 +1,4 @@
 as yet unclassified
 testSuiteClasses
-  ^ {TDDebugToolTests}
+  ^ {TDDebugToolBuilderTests.
+  TDDebugToolTests}

@@ -1,14 +1,14 @@
 {
 	"class" : {
-		"doProcessTerminate" : "DataCurator 01/22/2013 17:50",
-		"doProcessTerminate:" : "DataCurator 01/22/2013 17:50" },
+		"doProcessTerminate" : "dkh 01/23/2013 14:52",
+		"doProcessTerminate:" : "dkh 01/23/2013 14:52" },
 	"instance" : {
-		"process" : "DataCurator 01/22/2013 17:33",
-		"processToolClass" : "DataCurator 01/22/2013 11:40",
-		"setUp" : "DataCurator 01/22/2013 17:52",
-		"testKill" : "DataCurator 01/22/2013 18:05",
-		"testKill9" : "DataCurator 01/22/2013 18:06",
-		"testList" : "DataCurator 01/22/2013 11:43",
-		"testStacks" : "DataCurator 01/22/2013 11:40",
-		"testTerminate" : "DataCurator 01/22/2013 18:06",
-		"testYield" : "DataCurator 01/22/2013 11:40" } }
+		"process" : "dkh 01/23/2013 14:52",
+		"processToolClass" : "dkh 01/23/2013 14:52",
+		"setUp" : "dkh 01/23/2013 14:52",
+		"testKill" : "dkh 01/23/2013 14:52",
+		"testKill9" : "dkh 01/23/2013 14:52",
+		"testList" : "dkh 01/23/2013 14:52",
+		"testStacks" : "dkh 01/23/2013 14:52",
+		"testTerminate" : "dkh 01/23/2013 14:52",
+		"testYield" : "dkh 01/23/2013 14:52" } }
