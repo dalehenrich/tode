@@ -1,23 +1,29 @@
 as yet unclassified
 itemSelected: listElement at: index
-  | aspect parent obj |
+  | aspect assoc obj parentObj |
   aspect := listElement aspect.
-  parent := listElement parent.
-  obj := listElement itemCache at: index.
-  parent ~~ nil
+  assoc := listElement itemCache at: index.
+  obj := assoc key.
+  parentObj := assoc value.
+  parentObj ~~ nil
     ifTrue: [ 
-      aspect == 1
+      index == 1
         ifTrue: [ 
+          | parentNode |
           "."
           "inspect subject of list"
-          obj := obj asTDObjectNode: listElement parent topez: listElement topez aspect: #'inspect' ].
+          parentNode := self objectNodeFor: listElement.
+          parentObj := self object.
+          obj := (obj asTDObjectNode: parentNode topez: listElement topez aspect: #'inspect')
+            name: self objectPrintString;
+            yourself ].
       index == 2
         ifTrue: [ 
           ".."
-          "return to parent ... what's the parents parent"
-          parent := parent parent ] ].
+          "nothing special"
+           ] ].
   obj
-    edit: parent
+    edit: parentObj
     topez: listElement topez
     aspect: aspect
     windowId: nil.
