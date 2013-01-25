@@ -12,7 +12,6 @@ itemSelected: listElement at: index
       aspect := aspect == #'inspect'
         ifTrue: [ #'edit' ]
         ifFalse: [ #'inspect' ].
-      itemAttribute aspect: aspect.
       obj := (obj asTDObjectNode: obj topez: listElement topez aspect: aspect)
         name: (self object tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true);
         yourself ].

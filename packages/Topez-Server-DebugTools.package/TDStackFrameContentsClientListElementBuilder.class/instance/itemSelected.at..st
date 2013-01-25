@@ -12,7 +12,6 @@ itemSelected: listElement at: index
       aspect := aspect == #'inspect'
         ifTrue: [ #'edit' ]
         ifFalse: [ #'inspect' ].
-      itemAttribute aspect: aspect.
       parentObj := self object.
       obj := (obj asTDObjectNode: parentObj topez: listElement topez aspect: aspect)
         name: self objectPrintString;
