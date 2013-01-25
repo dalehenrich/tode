@@ -1,0 +1,9 @@
+{
+	"class" : {
+		"object:parent:aspect:" : "DataCurator 01/24/2013 17:12" },
+	"instance" : {
+		"aspect" : "DataCurator 01/24/2013 17:11",
+		"aspect:" : "DataCurator 01/24/2013 17:16",
+		"object" : "DataCurator 01/24/2013 16:59",
+		"object:parent:aspect:" : "DataCurator 01/24/2013 17:11",
+		"parent" : "DataCurator 01/24/2013 16:59" } }

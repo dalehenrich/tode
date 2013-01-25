@@ -8,14 +8,14 @@ clientList: listElement
     add:
       {'.'.
       (self object tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true)}.
-  items add: self object.
+  items add: (TDClientListItemAttributes object: self object parent: nil aspect: listElement aspect).
   self object parent ~~ nil
     ifTrue: [ 
       components
         add:
           {'..'.
           (self object parent tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true)}.
-      items add: self object parent ].
+      items add: (TDClientListItemAttributes object: self object parent parent: nil aspect: listElement aspect) ].
   self object
     childrenAndNamesDo: [ :child :nameText | 
       | stream |
@@ -30,7 +30,7 @@ clientList: listElement
         add:
           {nameText.
           (stream contents)}.
-      items add: child ].
+      items add: (TDClientListItemAttributes object: child parent: nil aspect: listElement aspect) ].
   ar := Array new.
   max := max + 1.
   components

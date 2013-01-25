@@ -4,7 +4,7 @@ shellInspect
 
   | contextObject parentNode |
   contextObject := objIn.
-  parentNode := windowId := nil.
+  parentNode := nil.
   tokens size > 1
     ifTrue: [ 
       | theTokens |
@@ -26,5 +26,5 @@ shellInspect
           contextObject := contextNode dotSelfObject ] ].
   ^ (contextObject asTDObjectNode: parentNode topez: topez aspect: #'inspect')
     edit: topez
-    aspect: #'edit'
+    aspect: #'inspect'
     windowId: windowId

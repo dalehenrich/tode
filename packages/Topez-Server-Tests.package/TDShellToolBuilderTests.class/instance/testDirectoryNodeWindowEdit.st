@@ -1,5 +1,5 @@
 as yet unclassified
-testWindowEdit
+testDirectoryNodeWindowEdit
   "object aspect windowId expected"
 
   self
@@ -27,11 +27,6 @@ testWindowEdit
 	6@ -> [String] ''readMe@ -> [UndefinedObject] nil''
 	7@ -> [String] ''topez@ -> [UndefinedObject] nil''
 '}.
-      {(1 -> '1').
-      #'edit'.
-      nil.
-      '/:
-[String] ''1->''''1'''''''}.
       {(self directoryNodeStructure childNamed: 'a' ifAbsent: [  ]).
       #'edit'.
       nil.

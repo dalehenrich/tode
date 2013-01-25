@@ -1,25 +1,28 @@
 as yet unclassified
 itemSelected: listElement at: index
-  | aspect parentNode obj |
-  aspect := listElement aspect.
-  parentNode := listElement parent.
-  obj := listElement itemCache at: index.
-  parentNode ~~ nil
+  | aspect parent obj itemAttribute |
+  itemAttribute := listElement itemCache at: index.
+  obj := itemAttribute object.
+  parent := itemAttribute parent.
+  aspect := itemAttribute aspect.
+  index == 1
     ifTrue: [ 
-      index == 1
-        ifTrue: [ 
-          "."
-          "inspect subject of list"
-          obj := (obj asTDObjectNode: obj topez: listElement topez aspect: #'inspect')
-            name: (self object tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true);
-            yourself ].
-      index == 2
-        ifTrue: [ 
-          ".."
-          "nothing special"
-           ] ].
+      "."
+      "toggle between edit and inspect on subject of list"
+      aspect := aspect == #'inspect'
+        ifTrue: [ #'edit' ]
+        ifFalse: [ #'inspect' ].
+      itemAttribute aspect: aspect.
+      obj := (obj asTDObjectNode: obj topez: listElement topez aspect: aspect)
+        name: (self object tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true);
+        yourself ].
+  index == 2
+    ifTrue: [ 
+      ".."
+      "nothing special"
+       ].
   obj
-    edit: parentNode
+    edit: parent
     topez: listElement topez
     aspect: aspect
     windowName: self editorWindowName

@@ -2,6 +2,8 @@
 	"class" : {
 		"abort" : "dkh 12/21/2012 11:24",
 		"abortManPage" : "dkh 12/21/2012 11:23",
+		"browse" : "DataCurator 01/24/2013 15:37",
+		"browseManPage" : "DataCurator 01/24/2013 15:38",
 		"cat" : "dkh 12/21/2012 11:25",
 		"catManPage" : "DataCurator 01/23/2013 16:20",
 		"cd" : "dkh 12/21/2012 11:23",
@@ -23,7 +25,7 @@
 		"implementors" : "dkh 12/21/2012 11:26",
 		"implementorsManPage" : "dkh 12/21/2012 11:23",
 		"installExampleOn:" : "dkh 12/21/2012 11:23",
-		"installOn:" : "DataCurator 01/22/2013 22:13",
+		"installOn:" : "DataCurator 01/24/2013 16:37",
 		"installOptionsOn:" : "DataCurator 01/16/2013 15:16",
 		"limit" : "DataCurator 12/24/2012 08:37",
 		"limitManPage" : "DataCurator 01/16/2013 15:17",
@@ -57,6 +59,7 @@
 		"touchManPage" : "dkh 12/21/2012 11:23" },
 	"instance" : {
 		"abort" : "dkh 12/21/2012 11:23",
+		"browse" : "DataCurator 01/24/2013 15:41",
 		"cat" : "DataCurator 01/23/2013 16:20",
 		"cd" : "DataCurator 12/29/2012 11:45",
 		"characterLimit" : "DataCurator 01/16/2013 15:14",
@@ -66,7 +69,7 @@
 		"ds" : "DataCurator 01/16/2013 09:37",
 		"dsChildren:indent:level:displayOops:on:" : "DataCurator 01/16/2013 15:30",
 		"dsNode:level:displayOops:on:" : "DataCurator 01/16/2013 15:26",
-		"edit" : "DataCurator 01/09/2013 18:20",
+		"edit" : "DataCurator 01/24/2013 15:42",
 		"implementorsOf:" : "dkh 12/21/2012 11:23",
 		"limit" : "DataCurator 01/16/2013 15:20",
 		"limitChars:" : "DataCurator 01/16/2013 15:21",
@@ -84,5 +87,5 @@
 		"rm" : "dkh 12/21/2012 11:23",
 		"run" : "DataCurator 01/23/2013 12:07",
 		"sendersOf:" : "dkh 12/21/2012 11:23",
-		"shellInspect" : "DataCurator 01/21/2013 16:31",
+		"shellInspect" : "DataCurator 01/24/2013 16:52",
 		"touch" : "dkh 12/21/2012 11:23" } }

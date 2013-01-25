@@ -4,7 +4,6 @@ edit
 
   | contextObject |
   contextObject := objIn.
-  windowId := nil.
   tokens size > 1
     ifTrue: [ 
       | theTokens |

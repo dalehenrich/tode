@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TDClientObjectElementBuilder",
+		"object",
+		"parent",
+		"aspect" ],
+	"name" : "TDClientListItemAttributes",
 	"pools" : [
 		 ],
-	"super" : "TDDirectoryNodeClientListElementBuilder",
+	"super" : "Object",
 	"type" : "normal" }

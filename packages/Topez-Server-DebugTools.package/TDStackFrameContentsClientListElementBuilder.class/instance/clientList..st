@@ -29,7 +29,7 @@ clientList: listElement
           parentObject := self object.
           object := self object objectFor: elementName ifAbsent: [ self error: 'missing element' ].
           itemObject := object asTDObjectNode: parentObject topez: listElement topez aspect: listElement aspect ].
-      items add: itemObject -> parentObject.
+      items add: (TDClientListItemAttributes object: itemObject parent: parentObject aspect: listElement aspect).
       object tzNodeDisplayOn: stream limit: 80 compacted: true.
       ar add: stream contents asString ].
   listElement ~~ nil
