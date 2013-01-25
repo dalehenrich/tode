@@ -1,5 +1,5 @@
 as yet unclassified
-itemSelected: listElement at: index
+itemSelected: listElement at: index shiftPressed: shiftPressed
   | frameNode |
   self object navigateFrame: index.
   self object currentFrame

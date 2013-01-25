@@ -1,5 +1,5 @@
 as yet unclassified
-itemSelected: listElement at: index
+itemSelected: listElement at: index shiftPressed: shiftPressed
   | aspect parent obj itemAttribute |
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
@@ -20,10 +20,19 @@ itemSelected: listElement at: index
       ".."
       "nothing special"
        ].
-  obj
-    edit: parent
-    topez: listElement topez
-    aspect: aspect
-    windowName: self editorWindowName
-    windowId: nil.
+  shiftPressed
+    ifTrue: [ 
+      obj
+        edit: parent
+        topez: listElement topez
+        aspect: #'browse'
+        windowName: nil
+        windowId: nil ]
+    ifFalse: [ 
+      obj
+        edit: parent
+        topez: listElement topez
+        aspect: aspect
+        windowName: self editorWindowName
+        windowId: nil ].
   ^ nil

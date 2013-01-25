@@ -1,3 +1,3 @@
 as yet unclassified
 itemSelectedBlock
-  ^ [ :listElement :index | self itemSelected: listElement at: index ]
+  ^ [ :listElement :index :shiftPressed | self itemSelected: listElement at: index shiftPressed: shiftPressed ]
