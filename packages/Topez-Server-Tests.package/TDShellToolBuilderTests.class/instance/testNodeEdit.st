@@ -25,4 +25,19 @@ testNodeEdit
       {'123'.
       #'edit'.
       '/:
-[String] ''123'''}}
+[String] ''123'''}.
+      {$o.
+      #'edit'.
+      ''}.
+      {117.
+      #'edit'.
+      ''}.
+      {117.145.
+      #'edit'.
+      ''}.
+      {117.145s3.
+      #'edit'.
+      ''}.
+      {(FixedPoint fromString: '117.145').
+      #'edit'.
+      ''}}

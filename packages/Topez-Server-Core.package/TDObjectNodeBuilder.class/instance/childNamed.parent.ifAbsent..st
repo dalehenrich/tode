@@ -6,7 +6,10 @@ childNamed: elementName parent: parentNode ifAbsent: absentBlock
       [ parentNode basicContents _at: elementName asNumber ]
         on: Error
         do: [ :ex | 'error accessing index: ' , elementName printString , ' --> ' , ex description ] ]
-    ifFalse: [ parentNode basicContents instVarNamed: elementName ].
+    ifFalse: [ 
+      (#('(class)' '(oop)' '(value)') includes: elementName)
+        ifTrue: [ self objectValueForSpecialElementName: elementName for: parentNode basicContents ]
+        ifFalse: [ parentNode basicContents instVarNamed: elementName ] ].
   ^ (obj asTDObjectNode: parentNode topez: parentNode topez aspect: parentNode aspect)
     name: elementName;
     yourself

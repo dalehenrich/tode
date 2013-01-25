@@ -10,4 +10,7 @@ testNodeInspect
 	1@ -> [Character] $1
 	2@ -> [Character] $2
 	3@ -> [Character] $3
-'}}
+'}.
+      {$o.
+      #'inspect'.
+      ''}}

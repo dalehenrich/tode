@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 01/24/2013 21:24",
 	"instvars" : [
 		 ],
-	"name" : "TDStackClientListElementBuilder",
+	"name" : "TDSpecialNodeBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDClientListElementBuilder",
+	"super" : "TDObjectNodeBuilder",
 	"type" : "normal" }

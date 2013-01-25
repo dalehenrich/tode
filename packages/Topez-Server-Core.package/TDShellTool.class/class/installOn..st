@@ -9,6 +9,16 @@ installOn: aTDTopezServer
     installExampleOn: aTDTopezServer;
     installOptionsOn: aTDTopezServer.
   TDTopezServer
+    registerBuilderClass: TDSpecialNodeBuilder for: Boolean aspect: #'edit';
+    registerBuilderClass: TDSpecialNodeBuilder for: Boolean aspect: #'inspect';
+    registerBuilderClass: TDSpecialNodeBuilder for: UndefinedObject aspect: #'edit';
+    registerBuilderClass: TDSpecialNodeBuilder for: UndefinedObject aspect: #'inspect';
+    registerBuilderClass: TDSpecialNodeBuilder for: Number aspect: #'edit';
+    registerBuilderClass: TDSpecialNodeBuilder for: Number aspect: #'inspect';
+    registerBuilderClass: TDIntegerNodeBuilder for: Integer aspect: #'edit';
+    registerBuilderClass: TDIntegerNodeBuilder for: Integer aspect: #'inspect';
+    registerBuilderClass: TDCharacterNodeBuilder for: Character aspect: #'edit';
+    registerBuilderClass: TDCharacterNodeBuilder for: Character aspect: #'inspect';
     registerBuilderClass: TDTxtLeafNodeBuilder for: CharacterCollection aspect: #'edit';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
     registerEditorClass: TDClassHierarchyListElementBuilder for: Object aspect: #'browse';

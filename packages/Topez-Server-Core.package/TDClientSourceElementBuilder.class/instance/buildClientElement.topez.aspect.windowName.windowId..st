@@ -6,7 +6,7 @@ buildClientElement: parentObject topez: aTopez aspect: anAspect windowName: igno
     firstSource: self firstSource;
     getBlock: self getBlock;
     setBlock: self setBlock;
-    editorWindowLabel: self editorWindowLabel , ' {' , anAspect asString , '}';
+    editorWindowLabel: self editorWindowLabel;
     editorWindowId: inWindowId;
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;
