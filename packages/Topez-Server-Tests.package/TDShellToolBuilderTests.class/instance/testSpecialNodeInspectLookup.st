@@ -1,33 +1,33 @@
 as yet unclassified
-testSpecialNodeLookup
+testSpecialNodeInspectLookup
   "object aspect expected"
 
   self
     executeNodeBuilderLookupSpecs:
       {{$o.
-      #'view'.
+      #'inspect'.
       TDCharacterNodeBuilder}.
       {117.
-      #'view'.
+      #'inspect'.
       TDIntegerNodeBuilder}.
       {(SmallInteger maximumValue + 1).
-      #'view'.
+      #'inspect'.
       TDIntegerNodeBuilder}.
       {(SmallInteger minimumValue - 1).
-      #'view'.
+      #'inspect'.
       TDIntegerNodeBuilder}.
       {117.145.
-      #'view'.
+      #'inspect'.
       TDSpecialNodeBuilder}.
       {117.145s3.
-      #'view'.
+      #'inspect'.
       TDSpecialNodeBuilder}.
       {(FixedPoint fromString: '117.145').
-      #'view'.
+      #'inspect'.
       TDSpecialNodeBuilder}.
       {true.
-      #'view'.
+      #'inspect'.
       TDSpecialNodeBuilder}.
       {nil.
-      #'view'.
+      #'inspect'.
       TDSpecialNodeBuilder}}

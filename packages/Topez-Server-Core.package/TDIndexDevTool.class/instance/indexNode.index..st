@@ -25,13 +25,13 @@ indexNode: parentNode index: theIndex
                     ifTrue: [ self btreeNode: theNode btree: (theIndex instVarNamed: elementName) ]
                     ifFalse: [ 
                       (theIndex isRangeEqualityIndex and: [ elementName = 'lastElementClass' ])
-                        ifTrue: [ (theIndex instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
+                        ifTrue: [ (theIndex instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'view' ]
                         ifFalse: [ 
                           elementName isAllDigits
                             ifFalse: [ absentBlock value ].
                           self pathTermNode: theNode pathTerm: (theIndex at: elementName asNumber) ] ] ] ].
           childNode == nil
-            ifTrue: [ childNode := nil asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ].
+            ifTrue: [ childNode := nil asTDObjectNode: theNode topez: theNode topez aspect: #'view' ].
           childNode
             name: elementName;
             yourself ];

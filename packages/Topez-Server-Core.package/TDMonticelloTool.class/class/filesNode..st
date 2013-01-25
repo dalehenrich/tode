@@ -9,7 +9,7 @@ filesNode: aTDMonticelloVersion
           ((theNode basicContents versionReferenceMap at: elementName)
             asTDObjectNode: theNode
             topez: theNode topez
-            aspect: #'edit')
+            aspect: #'view')
             name: elementName;
             yourself ];
     yourself

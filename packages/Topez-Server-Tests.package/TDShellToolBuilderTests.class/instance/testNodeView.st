@@ -1,5 +1,5 @@
 as yet unclassified
-testNodeEdit
+testNodeView
   "object aspect expected"
 
   self
@@ -12,7 +12,7 @@ testNodeEdit
         x: 'x';
         y: 'y';
         z: 'z').
-      #'edit'.
+      #'view'.
       '[x: ''x'' y: ''y'' z: ''z'']
 (1 2 anArray( 3) 4)/ ([TDTodeTestClass] [x: ''x'' y: ''y'' z: ''z''] (1 2 anArray( 3) 4)):
 	(class)@ -> [TDTodeTestClass class] TDTodeTestClass
@@ -26,6 +26,10 @@ testNodeEdit
 	4@ -> [SmallInteger] 4
 '}.
       {'123'.
-      #'edit'.
+      #'view'.
+      '''123''/:
+[String] ''123'''}.
+      {'123'.
+      #'browse'.
       '''123''/:
 [String] ''123'''}}

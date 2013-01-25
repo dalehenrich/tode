@@ -20,7 +20,7 @@ stClassesNode: aTopez
         elementBlock: [ :theNode :elementName :absentBlock | 
               | cls |
               cls := theNode basicContents value: #'class' value: elementName.
-              (cls asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
+              (cls asTDObjectNode: theNode topez: theNode topez aspect: #'view')
                 name: cls name asString;
                 yourself ];
         yourself)

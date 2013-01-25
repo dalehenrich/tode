@@ -1,21 +1,18 @@
 as yet unclassified
-testNodeLookup
+testNodeInspectLookup
   "object aspect expected"
 
   self
     executeNodeBuilderLookupSpecs:
       {{(Object new).
-      #'view'.
+      #'inspect'.
       TDObjectNodeBuilder}.
       {''.
-      #'view'.
-      TDTxtLeafNodeBuilder}.
-      {''.
-      #'bubba'.
-      TDTxtLeafNodeBuilder}.
+      #'inspect'.
+      TDObjectNodeBuilder}.
       {Object.
-      #'view'.
+      #'inspect'.
       TDObjectNodeBuilder}.
       {(Object class).
-      #'view'.
+      #'inspect'.
       TDObjectNodeBuilder}}

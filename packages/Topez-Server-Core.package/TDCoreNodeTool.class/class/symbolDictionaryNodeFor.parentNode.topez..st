@@ -12,7 +12,7 @@ symbolDictionaryNodeFor: aSymbolDictionary parentNode: parentNode topez: aTopez
     elementBlock: [ :theNode :elementName :absentBlock | 
           | obj |
           obj := theNode basicContents at: elementName asSymbol.
-          (obj asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
+          (obj asTDObjectNode: theNode topez: theNode topez aspect: #'view')
             name: elementName;
             yourself ];
     yourself

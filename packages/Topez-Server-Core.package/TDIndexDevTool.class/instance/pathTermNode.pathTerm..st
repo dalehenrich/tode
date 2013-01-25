@@ -30,13 +30,13 @@ pathTermNode: parentNode pathTerm: pathTerm
                         ifTrue: [ self pathTermsNode: theNode pathTerms: (pathTerm instVarNamed: elementName) ]
                         ifFalse: [ 
                           elementName = 'offset'
-                            ifTrue: [ (pathTerm instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
+                            ifTrue: [ (pathTerm instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'view' ]
                             ifFalse: [ 
                               elementName = 'needsDepList'
-                                ifTrue: [ (pathTerm instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
+                                ifTrue: [ (pathTerm instVarNamed: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'view' ]
                                 ifFalse: [ self indexNode: theNode index: (indexNameMap at: elementName) ] ] ] ] ] ].
           childNode == nil
-            ifTrue: [ childNode := nil asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ].
+            ifTrue: [ childNode := nil asTDObjectNode: theNode topez: theNode topez aspect: #'view' ].
           childNode
             name: elementName;
             yourself ];

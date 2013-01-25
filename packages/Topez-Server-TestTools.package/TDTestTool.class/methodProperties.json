@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"installExampleOn:" : "DataCurator 12/23/2012 13:36",
-		"installOn:" : "DataCurator 01/16/2013 16:41",
+		"installOn:" : "DataCurator 01/25/2013 10:21",
 		"priority" : "DataCurator 12/21/2012 11:43",
 		"test" : "DataCurator 12/21/2012 13:15",
 		"testManPage" : "DataCurator 12/21/2012 19:20",
@@ -15,9 +15,9 @@
 		"defaultHomeResultsPath" : "DataCurator 12/23/2012 13:28",
 		"defaultHomeTestPath" : "DataCurator 12/21/2012 18:55",
 		"list" : "DataCurator 12/23/2012 13:22",
-		"resultsNode:results:" : "DataCurator 01/15/2013 08:28",
+		"resultsNode:results:" : "DataCurator 01/25/2013 10:21",
 		"run" : "DataCurator 01/21/2013 14:05",
 		"runSuite:testNode:" : "DataCurator 01/01/2013 15:57",
-		"suiteNode:suite:" : "DataCurator 01/15/2013 08:28",
+		"suiteNode:suite:" : "DataCurator 01/25/2013 10:21",
 		"test" : "DataCurator 01/23/2013 18:21",
 		"testSummary:" : "DataCurator 01/16/2013 16:55" } }

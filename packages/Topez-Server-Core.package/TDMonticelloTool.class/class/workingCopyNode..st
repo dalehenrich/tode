@@ -7,11 +7,11 @@ workingCopyNode: aTDMonticelloWorkingCopy
     listBlock: [ :theNode | #('workingCopy' 'repositoryGroup') ];
     elementBlock: [ :theNode :elementName :absentBlock | 
           (elementName = 'workingCopy'
-            ifTrue: [ theNode basicContents workingCopy asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
+            ifTrue: [ theNode basicContents workingCopy asTDObjectNode: theNode topez: theNode topez aspect: #'view' ]
             ifFalse: [ 
               elementName = 'repositoryGroup'
                 ifTrue: [ self repositoryGroupNode: theNode basicContents workingCopy repositoryGroup ]
-                ifFalse: [ nil asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ] ])
+                ifFalse: [ nil asTDObjectNode: theNode topez: theNode topez aspect: #'view' ] ])
             name: elementName;
             yourself ];
     yourself

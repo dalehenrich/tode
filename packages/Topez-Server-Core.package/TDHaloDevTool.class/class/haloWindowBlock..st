@@ -8,7 +8,7 @@ haloWindowBlock: aTDTopezServer
       | serverModelOop serverObject serverNode |
       serverModelOop := parentNode topez topezClientForwarder activeWindowServerModel.
       serverModelOop ifNotNil: [ serverObject := Object _objectForOop: serverModelOop ].
-      (serverObject asTDObjectNode: parentNode topez: parentNode topez aspect: #'edit')
+      (serverObject asTDObjectNode: parentNode topez: parentNode topez aspect: #'view')
         name: nodeName;
         yourself ].
   ^ [ :parentNode | 

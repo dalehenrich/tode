@@ -15,12 +15,12 @@ nodeClassFor: anObject aspect: anAspect in: nodeDictionary ifAbsent: defaultClas
       classMap ifNil: [ class := class superclass ] ].
   className := classMap == nil
     ifTrue: [ 
-      anAspect ~~ #'edit'
+      anAspect ~~ #'view'
         ifTrue: [ 
-          "if anAspect is not found at all, default to #edit"
+          "if anAspect is not found at all, default to #view"
           ^ self
             nodeClassFor: anObject
-            aspect: #'edit'
+            aspect: #'view'
             in: nodeDictionary
             ifAbsent: defaultClassname ].
       defaultClassname ]

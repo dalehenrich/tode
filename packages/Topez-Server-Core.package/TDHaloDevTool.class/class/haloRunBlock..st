@@ -15,7 +15,7 @@ haloRunBlock: aTDTopezServer
             yourself ];
     at: 'result'
       put: [ :parentNode :nodeName | 
-          (parentNode topez serverStatus evaluateStringResult asTDObjectNode: parentNode topez: parentNode topez aspect: #'edit')
+          (parentNode topez serverStatus evaluateStringResult asTDObjectNode: parentNode topez: parentNode topez aspect: #'view')
             name: nodeName;
             yourself ];
     yourself.

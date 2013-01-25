@@ -28,7 +28,7 @@ breakpointNode: parentNode
           elementName isAllDigits
             ifFalse: [ absentBlock value ].
           report := theNode basicContents.
-          ((report at: elementName asNumber) asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
+          ((report at: elementName asNumber) asTDObjectNode: theNode topez: theNode topez aspect: #'view')
             name: elementName;
             yourself ];
     yourself.

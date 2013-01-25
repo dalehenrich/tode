@@ -21,7 +21,7 @@ depListNode: parentNode depList: depList
             ifFalse: [ absentBlock value ].
           index := elementName asNumber.
           (index even
-            ifTrue: [ (map at: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'edit' ]
+            ifTrue: [ (map at: elementName) asTDObjectNode: theNode topez: theNode topez aspect: #'view' ]
             ifFalse: [ self pathTermNode: theNode pathTerm: (map at: elementName) ])
             name: elementName;
             yourself ];

@@ -28,7 +28,7 @@ stGlobalsNode: aTopez
         elementBlock: [ :theNode :elementName :absentBlock | 
               | assoc |
               assoc := theNode basicContents value: #'global' value: elementName.
-              (assoc value asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
+              (assoc value asTDObjectNode: theNode topez: theNode topez aspect: #'view')
                 name: assoc key asString;
                 yourself ];
         yourself)

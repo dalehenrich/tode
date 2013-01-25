@@ -1,22 +1,11 @@
 as yet unclassified
 editManPage
   ^ 'NAME
-    edit - open a window on path or objIn
+  edit - open a browser window
 
 SYNOPSIS
-    edit [ windowId | windowName ] [ path ]
+  edit [ path ]
 
 DESCRIPTION
-    Open a window on an object.
-
-    When a `windowId` or `windowName` is specified, the 
-    contens of window with the given `windowId` or 
-    `windowName` is replaced. 
-
-    If no window exists with the given windowId, then a new
-    window with the given name is created. 
-
-    A `windowId` is a purely numeric token (Integer) and a 
-    `windowName`  is the `#` character followed by alphanueric
-    characters (Symbol).
+  objIn too...using #browse aspect
 '

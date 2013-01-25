@@ -9,6 +9,6 @@ frame
   self dbStack
     edit: stackNode
     topez: topez
-    aspect: #'edit'
+    aspect: #'view'
     windowId: nil.
   ^ topez currentNode

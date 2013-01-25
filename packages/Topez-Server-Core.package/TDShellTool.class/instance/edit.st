@@ -24,6 +24,6 @@ edit
           ^ contextNode
             edit: contextNode parent
             topez: topez
-            aspect: #'edit'
+            aspect: #'browse'
             windowId: windowId ] ].
-  ^ contextObject edit: topez aspect: #'edit' windowId: windowId
+  ^ contextObject edit: topez aspect: #'browse' windowId: windowId

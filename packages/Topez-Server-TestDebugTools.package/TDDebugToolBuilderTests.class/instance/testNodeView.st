@@ -1,5 +1,5 @@
 as yet unclassified
-testNodeEdit
+testNodeView
   "object aspect expected"
 
   | stack frame |
@@ -8,10 +8,10 @@ testNodeEdit
   self
     executeNodeBuilderSpecs:
       {{stack.
-      #'edit'.
+      #'view'.
       'debug/ ([TDStack] UndefinedObject(oop=20, status=...problem printing process)):
 '}.
       {frame.
-      #'edit'.
+      #'view'.
       'nil/ ([TDStackFrame] error printing):
 '}}

@@ -8,9 +8,9 @@ itemSelected: listElement at: index
   index == 1
     ifTrue: [ 
       "."
-      "toggle between edit and inspect on subject of list"
+      "toggle between view and inspect on subject of list"
       aspect := aspect == #'inspect'
-        ifTrue: [ #'edit' ]
+        ifTrue: [ #'view' ]
         ifFalse: [ #'inspect' ].
       parentObj := self object.
       obj := (obj asTDObjectNode: parentObj topez: listElement topez aspect: aspect)

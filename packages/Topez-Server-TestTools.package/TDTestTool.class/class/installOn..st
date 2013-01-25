@@ -1,6 +1,12 @@
 as yet unclassified
 installOn: aTDTopezServer
+  "#browse #view #inspect ... #view is default"
+
+  "`edit` ---> #browse [[editor only aspect]]
+   `view` ---> #view
+   `inspect` ---> #inspect"
+
   aTDTopezServer installChildrenAt: self commandPath.
   self installExampleOn: aTDTopezServer.
   super installOn: aTDTopezServer.
-  TDTopezServer registerBuilderClass: TDTestResultNodeBuilder for: TestResult aspect: #'edit'
+  TDTopezServer registerBuilderClass: TDTestResultNodeBuilder for: TestResult aspect: #'view'

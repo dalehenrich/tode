@@ -1,9 +1,9 @@
 as yet unclassified
-browse
-  <topezCommand: 'browse' manPage: #'browseManPage'>
+view
+  <topezCommand: 'view' manPage: #'viewManPage'>
   ^ [ :topez :objIn :tokens :windowId | 
   (self
     topez: topez
     objIn: objIn
     tokens: tokens
-    windowId: windowId) browse ]
+    windowId: windowId) view ]

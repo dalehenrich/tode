@@ -10,7 +10,7 @@ haloDebugBlock: aTDTopezServer
             yourself ];
     at: 'exception'
       put: [ :theNode :nodeName | 
-          (theNode topez serverStatus exception asTDObjectNode: theNode topez: theNode topez aspect: #'edit')
+          (theNode topez serverStatus exception asTDObjectNode: theNode topez: theNode topez aspect: #'view')
             name: nodeName;
             yourself ];
     at: 'stack'

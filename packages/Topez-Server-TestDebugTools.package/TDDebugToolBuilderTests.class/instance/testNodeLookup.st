@@ -3,8 +3,8 @@ testNodeLookup
   self
     executeNodeBuilderLookupSpecs:
       {{(TDStack new).
-      #'edit'.
+      #'view'.
       TDStackNodeBuilder}.
       {(TDStackFrame new).
-      #'edit'.
+      #'view'.
       TDStackFrameNodeBuilder}}
