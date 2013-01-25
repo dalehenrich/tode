@@ -1,3 +1,5 @@
 as yet unclassified
 childNodeNameList: parentNode
-  ^ #('(class)' '(oop)' '(value)')
+  ^ (parentNode topez displayOops or: [ parentNode basicContents isSpecial ])
+    ifTrue: [ #('(class)' '(oop)' '(value)') ]
+    ifFalse: [ #('(class)' '(value)') ]

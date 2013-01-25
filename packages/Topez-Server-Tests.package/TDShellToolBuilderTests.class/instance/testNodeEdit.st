@@ -13,7 +13,10 @@ testNodeEdit
         y: 'y';
         z: 'z').
       #'edit'.
-      '/ ([TDTodeTestClass] [x: ''x'' y: ''y'' z: ''z''] (1 2 anArray( 3) 4)):
+      '[x: ''x'' y: ''y'' z: ''z'']
+(1 2 anArray( 3) 4)/ ([TDTodeTestClass] [x: ''x'' y: ''y'' z: ''z''] (1 2 anArray( 3) 4)):
+	(class)@ -> [TDTodeTestClass class] TDTodeTestClass
+	(value)@ -> [String] ''aTDTodeTestClass''
 	x@ -> [String] ''x''
 	y@ -> [String] ''y''
 	z@ -> [String] ''z''
@@ -24,20 +27,5 @@ testNodeEdit
 '}.
       {'123'.
       #'edit'.
-      '/:
-[String] ''123'''}.
-      {$o.
-      #'edit'.
-      ''}.
-      {117.
-      #'edit'.
-      ''}.
-      {117.145.
-      #'edit'.
-      ''}.
-      {117.145s3.
-      #'edit'.
-      ''}.
-      {(FixedPoint fromString: '117.145').
-      #'edit'.
-      ''}}
+      '''123''/:
+[String] ''123'''}}

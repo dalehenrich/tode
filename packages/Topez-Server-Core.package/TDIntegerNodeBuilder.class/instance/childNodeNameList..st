@@ -1,3 +1,5 @@
 as yet unclassified
 childNodeNameList: parentNode
-  ^ #('(class)' '(oop)' '(hex)' '(value)')
+  ^ (parentNode topez displayOops or: [ parentNode basicContents isLarge not ])
+    ifTrue: [ #('(class)' '(oop)' '(hex)' '(value)') ]
+    ifFalse: [ #('(class)' '(hex)' '(value)') ]

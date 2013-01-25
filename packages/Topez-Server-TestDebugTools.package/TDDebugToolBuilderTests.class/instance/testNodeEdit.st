@@ -9,9 +9,9 @@ testNodeEdit
     executeNodeBuilderSpecs:
       {{stack.
       #'edit'.
-      '/ ([TDStack] UndefinedObject(oop=20, status=...problem printing process)):
+      'debug/ ([TDStack] UndefinedObject(oop=20, status=...problem printing process)):
 '}.
       {frame.
       #'edit'.
-      '/ ([TDStackFrame] error printing):
+      'nil/ ([TDStackFrame] error printing):
 '}}

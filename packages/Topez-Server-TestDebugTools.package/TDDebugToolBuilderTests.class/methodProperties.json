@@ -4,7 +4,7 @@
 	"instance" : {
 		"expectedFailures" : "DataCurator 01/24/2013 09:24",
 		"stack" : "dkh 01/23/2013 14:50",
-		"testNodeEdit" : "DataCurator 01/24/2013 09:22",
+		"testNodeEdit" : "DataCurator 01/24/2013 23:00",
 		"testNodeLookup" : "DataCurator 01/24/2013 09:22",
 		"testWindowEdit" : "DataCurator 01/24/2013 09:24",
 		"testWindowLookup" : "DataCurator 01/24/2013 09:23" } }

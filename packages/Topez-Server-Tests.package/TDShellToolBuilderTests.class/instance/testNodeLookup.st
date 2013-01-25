@@ -1,5 +1,5 @@
 as yet unclassified
-testNodeookup
+testNodeLookup
   "object aspect expected"
 
   self
@@ -20,8 +20,5 @@ testNodeookup
       #'edit'.
       TDObjectNodeBuilder}.
       {(Object class).
-      #'edit'.
-      TDObjectNodeBuilder}.
-      {1.
       #'edit'.
       TDObjectNodeBuilder}}

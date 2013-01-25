@@ -3,10 +3,12 @@
 		 },
 	"instance" : {
 		"directoryNodeStructure" : "dkh 01/23/2013 14:49",
-		"testDirectoryNodeWindowEdit" : "DataCurator 01/24/2013 16:39",
-		"testNodeEdit" : "DataCurator 01/24/2013 21:14",
-		"testNodeInspect" : "DataCurator 01/24/2013 20:41",
-		"testNodeookup" : "DataCurator 01/24/2013 09:26",
-		"testObjectWindowEdit" : "DataCurator 01/24/2013 16:38",
-		"testTxtLeafNodeEdit" : "DataCurator 01/24/2013 15:16",
+		"testDirectoryNodeWindowEdit" : "DataCurator 01/24/2013 23:07",
+		"testNodeEdit" : "DataCurator 01/24/2013 23:04",
+		"testNodeInspect" : "DataCurator 01/24/2013 23:02",
+		"testNodeLookup" : "DataCurator 01/24/2013 22:42",
+		"testObjectWindowEdit" : "DataCurator 01/24/2013 22:54",
+		"testSpecialNodeEdit" : "DataCurator 01/24/2013 23:33",
+		"testSpecialNodeLookup" : "DataCurator 01/24/2013 22:46",
+		"testTxtLeafNodeEdit" : "DataCurator 01/24/2013 22:58",
 		"testWndowLookup" : "DataCurator 01/24/2013 16:37" } }
