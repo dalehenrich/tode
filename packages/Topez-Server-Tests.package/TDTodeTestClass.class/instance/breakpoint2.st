@@ -1,6 +1,6 @@
 as yet unclassified
 breakpoint2
-  "set break1 and break2 ... execute method, debug, db continue, should hit second breakpoint and update stack and stack frame:
+  "db over to breakpoint:
 
     db break @2 TDTodeTestClass>>breakpoint2
     db break @2 TDTodeTestClass>>breakpoint3
@@ -9,4 +9,4 @@ breakpoint2
     db over
 "
 
-  self breakpoint3	"first breakpoint @2 second breakpoint in breakpoint3"
+  self breakpoint3	"first breakpoint ... db over"

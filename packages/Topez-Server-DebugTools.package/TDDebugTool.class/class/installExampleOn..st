@@ -29,6 +29,16 @@ block value: 100';
             contents: 'TDTodeTestClass new breakpoint2';
             yourself);
     addChildNode:
+        (TDSmalltalkLeafNode new
+            name: 'st3';
+            contents: 'TDTodeTestClass new breakpoint4';
+            yourself);
+    addChildNode:
+        (TDSmalltalkLeafNode new
+            name: 'st4';
+            contents: 'TDTodeTestClass new breakpoint4';
+            yourself);
+    addChildNode:
         (TDTopezLeafNode new
             name: 'ex1';
             contents:
@@ -51,6 +61,30 @@ db continue';
 db break @2 TDTodeTestClass>>breakpoint2
 db break @2 TDTodeTestClass>>breakpoint3
 /tools/debug/examples/st2
+debug
+db over';
+            yourself);
+    addChildNode:
+        (TDTopezLeafNode new
+            name: 'ex3';
+            contents:
+                '#
+# Example3: use `db over` to hit next halt & update debugger
+#
+db break @2 TDTodeTestClass>>breakpoint4
+/tools/debug/examples/st3
+debug
+db over';
+            yourself);
+    addChildNode:
+        (TDTopezLeafNode new
+            name: 'ex4';
+            contents:
+                '#
+# Example4: use `db over` to hit next error & update debugger
+#
+db break @2 TDTodeTestClass>>breakpoint6
+/tools/debug/examples/st4
 debug
 db over';
             yourself);
