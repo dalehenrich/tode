@@ -1,0 +1,72 @@
+==============================
+db break @4 TDTodeTestClass>>thru1
+db break @5 TDTodeTestClass>>thru1
+db break @7 TDTodeTestClass>>thru1
+db break @13 TDTodeTestClass>>thru1 ... last step point in inner block
+==============================
+   # breakpointNumber1 . method . ipOffset1 .
+allBreakPoints@ -> [412487937 sz:9 Array] anArray( 1, aGsNMethod, 112,
+2, aGsNMethod, 136, 3, aGsNMethod, 160)
+allBreakPointseakPoints@ -> [413197057 sz:12 Array] anArray( 16,
+aGsNMethod, 112, 17, aGsNMethod, 136, 18, aGsNMethod, 160, 19,
+aGsNMethod, 112)
+allBreakPoints@ ->allBreakPoints [413046785 sz:12 Array] anArray( 20,
+'aGsNMethod: 399063297', 112, 21, 'aGsNMethod: 399063297', 136, 22,
+'aGsNMethod: 399063297', 160, 23, 'aGsNMethod: 398607617', 112)
+# "This method builds a marker Array for the receiver's source code
+string.
+      containing IPs of all step points, not including step points in
+inner blocks.
+      The result Array is the same size as the source string and 
+      contains IP numbers at offsets corresponding to the source
+string."
+ipMarkerArray@ -> [412339969 sz:585 Array] anArrayrray( 56, nil, nil,
+nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil,
+nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, ni...
+#   offsets into sourceString, corresponding to the step points
+srcOffsets@ -> [412712961 sz:13 Array] anArray( 1, 422, 417, 438, 570,
+563, 583, 577, 445, 542, 534, 527, 553)
+srcOffsets@ -> [413197313 sz:13 Array] anArray( 1,anArray 422, 417, 438,
+570, 563, 583, 577, 445, 542, 534, 527, 553)
+# "stepIps contains IP number for each stepPoint "
+stepIps@ -> [412245761 sz:13 Array] anArray( 56, 80, 88, 112, 136, 144,
+160, 168, nil, nil, nil, nil, nil)
+stepIps@ -> [413197825 sz:13 Array] anArray( 56, 80, 88, 112, 136, 144,
+160, 168, nil, nil, nil, nil, nil)
+---missing the ipOffsets for nested stepPoints
+---allBreakPoints #19 has same IP as #16 ... perhaps the methods are
+different?
+allBreakPoints@ -> [allBreakPoints413046785 sz:12 Array] anArray( 20,
+'aGsNMethod: 399063297', 112, 21, 'aGsNMethod: 399063297', 136, 22,
+'aGsNMethod: 399063297', 160, 23, 'aGsNMethod: 398607617', 112)
+---confirmed that the method is different (those are oops)
+---I've got the STEP NUMBERS for the breakpoints set in the method,
+perhaps I can just set all of the breakpoints 
+   (presumably I won't get new STEP NUMBER for one that's already set)
+and then clear the ones that weren't 
+   previously set ... then I won't need to monkey with all of this
+offset mapping stuff...
+---as a matter of fact ... the nil slots in stepIps indicates which step
+points NEED to set ...
+==============================dkh 1/26/2013 07:31
+alllBreakpointsSourceOffsets@ -> [412830465 sz:4 Array] anArray( 438,
+570, 583, 553)
+allBreakPoints@ -> [412830209 sz:12 Array] anArray( 24, 'aGsNMethodd:
+399063297', 112, 25, 'aGsNMethod: 399063297', 136, 26, 'aGsNMethod:
+399063297', 160, 27, 'aGsNMethod: 398607617', 112)
+srcOffsets@ -> [412830977 sz:13 Array] anArray(   1, 422, 417, 438, 570,
+563, 583, 577, 445, 542, 534, 527, 553)
+stepIps@ -> [412833793 sz:13 Array] anArray( 56, 80, 88, 112, 136, 144,
+160, 168, nil, nil, nil, nil, nil)
+---allBreakpointsSourceOffsets gives me the initial list of source
+offsets for all set breakpoints.
+   the nil entries in stepIps gives me stepPoints that need to be set
+(that are in a different context)
+---need to test thru at various levels of nesting ... I ESPECIALLY want
+to see what the step points look like when I in an inner block ...
+==============================dkh 1/26/2013 08:16
+srcOffsets@ -> [414539521 sz:13 Array] anArray( 1, 41453952122, 417,
+438, 570, 563, 583, 577, 445, 542, 534, 527, 553)
+allBreakpointsSourceOffsetsntsSourceOffsets@ -> [414539265 sz:3 Array]
+anArray( 438, 570, 583)
+
