@@ -15,7 +15,9 @@
 		"serverStatus",
 		"objIn",
 		"accumulateBlocks",
-		"homeNode" ],
+		"homeNode",
+		"evaluatingScript",
+		"accumulateScriptText" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

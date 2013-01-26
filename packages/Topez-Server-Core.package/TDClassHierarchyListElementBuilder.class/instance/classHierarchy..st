@@ -2,9 +2,12 @@ as yet unclassified
 classHierarchy: elementBlock
   self
     processClassesBlock: [ 
-      | classes |
+      | classes baseClass |
+      baseClass := self object isBehavior
+        ifTrue: [ self object theNonMetaClass ]
+        ifFalse: [ self object class theNonMetaClass ].
       classes := Set new.
-      {(Smalltalk classNamed: self object className)}
+      {(Smalltalk classNamed: baseClass className)}
         do: [ :cl | 
           classes addAll: cl allSuperclasses.
           classes add: cl.

@@ -15,6 +15,7 @@ installOn: aTDTopezServer
     installExampleOn: aTDTopezServer;
     installOptionsOn: aTDTopezServer.
   TDTopezServer
+    registerBuilderClass: TDDictionaryNodeBuilder for: AbstractDictionary aspect: #'view';
     registerBuilderClass: TDSpecialNodeBuilder for: Boolean aspect: #'view';
     registerBuilderClass: TDSpecialNodeBuilder for: Boolean aspect: #'inspect';
     registerBuilderClass: TDSpecialNodeBuilder for: UndefinedObject aspect: #'view';
