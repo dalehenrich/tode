@@ -3,6 +3,7 @@ buildClientElement: parentObject topez: aTopez aspect: anAspect windowName: igno
   ^ self clientSourceElement
     clientElementOop;
     aspect: anAspect;
+    topez: aTopez;
     firstSource: self firstSource;
     getBlock: self getBlock;
     setBlock: self setBlock;

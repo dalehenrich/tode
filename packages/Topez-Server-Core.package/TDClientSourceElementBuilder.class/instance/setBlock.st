@@ -1,3 +1,3 @@
 as yet unclassified
 setBlock
-  ^ [ :source | self elementSource: source ]
+  ^ [ :source :clientSourceElement | self elementSource: source clientSourceElement: clientSourceElement ]

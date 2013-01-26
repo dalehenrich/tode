@@ -1,6 +1,6 @@
 as yet unclassified
-elementSource: methodSource
-  | beh selector category |
+elementSource: methodSource clientSourceElement: clientSourceElement
+  | beh selector category ans |
   self inClass == nil
     ifTrue: [ self error: 'Cannot edit Executable Code' ].
   beh := Smalltalk at: self inClass theNonMetaClass name asSymbol.
@@ -8,4 +8,6 @@ elementSource: methodSource
     ifTrue: [ beh := beh class ].
   selector := self object selector.
   category := beh categoryOfSelector: selector asSymbol.
-  ^ beh compile: methodSource classified: category
+  ans := beh compile: methodSource classified: category.
+  clientSourceElement topez commitTransaction.
+  ^ ans
