@@ -43,49 +43,53 @@ block value: 100';
             name: 'ex1';
             contents:
                 '#
-# Example1: use `db continue` to hit next breakpoint & update debugger
+# Example1: 
+#  open debugger upon breakpoint.
+#  then use `db continue` 
+#  to hit next breakpoint & update debugger
 #
 db break @2 TDTodeTestClass>>breakpoint1
 db break @4 TDTodeTestClass>>breakpoint1
-/tools/debug/examples/st1
-debug
-db continue';
+/tools/debug/examples/st1';
             yourself);
     addChildNode:
         (TDTopezLeafNode new
             name: 'ex2';
             contents:
                 '#
-# Example2: use `db over` to hit next breakpoint & update debugger
+# Example2: 
+#  open debugger upon breakpoint.
+#  then use `db over` or `db continue` 
+#  to hit next breakpoint & update debugger
 #
 db break @2 TDTodeTestClass>>breakpoint2
 db break @2 TDTodeTestClass>>breakpoint3
-/tools/debug/examples/st2
-debug
-db over';
+/tools/debug/examples/st2';
             yourself);
     addChildNode:
         (TDTopezLeafNode new
             name: 'ex3';
             contents:
                 '#
-# Example3: use `db over` to hit next halt & update debugger
+# Example3: 
+#  open debugger upon breakpoint.
+#  then use `db over` or `db continue` 
+#  to hit next halt & update debugger
 #
 db break @2 TDTodeTestClass>>breakpoint4
-/tools/debug/examples/st3
-debug
-db over';
+/tools/debug/examples/st3';
             yourself);
     addChildNode:
         (TDTopezLeafNode new
             name: 'ex4';
             contents:
                 '#
-# Example4: use `db over` to hit next error & update debugger
+# Example4: 
+#  open debugger upon breakpoint.
+#  then use `db over` or `db continue` 
+#  to hit next error & update debugger
 #
 db break @2 TDTodeTestClass>>breakpoint6
-/tools/debug/examples/st4
-debug
-db over';
+/tools/debug/examples/st4';
             yourself);
     yourself
