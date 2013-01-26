@@ -39,6 +39,11 @@ block value: 100';
             contents: 'TDTodeTestClass new breakpoint6';
             yourself);
     addChildNode:
+        (TDSmalltalkLeafNode new
+            name: 'st5';
+            contents: 'TDTodeTestClass new thru1';
+            yourself);
+    addChildNode:
         (TDTopezLeafNode new
             name: 'ex1';
             contents:
@@ -91,5 +96,20 @@ db break @2 TDTodeTestClass>>breakpoint4
 #
 db break @2 TDTodeTestClass>>breakpoint6
 /tools/debug/examples/st4';
+            yourself);
+    addChildNode:
+        (TDTopezLeafNode new
+            name: 'ex5';
+            contents:
+                '#
+# Example5: 
+#  open debugger upon breakpoint.
+#  then use `db thru` to step into
+#  the block without stepping into thru2
+#
+db break @4 TDTodeTestClass>>thru1
+db break @5 TDTodeTestClass>>thru1
+db break @7 TDTodeTestClass>>thru1
+/tools/debug/examples/st5';
             yourself);
     yourself
