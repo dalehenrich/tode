@@ -22,7 +22,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
        ].
   shiftPressed
     ifTrue: [ 
-      obj
+      obj dotSelfObject
         edit: parent
         topez: listElement topez
         aspect: #'browse'
