@@ -4,7 +4,7 @@ editStonElement: aStonString
   clientElement := STON fromString: aStonString.
   clientElement topez: self.
   aWindowId := clientElement editorWindowId.
-  aWindowId == nil
+  (aWindowId == nil and: [ clientElement editorWindowName ~~ nil])
     ifTrue: [ aWindowId := self windowIdNamed: clientElement editorWindowName ].
   ^ self
     editElement: clientElement
