@@ -30,7 +30,7 @@ clientList: listElement
         add:
           {nameText.
           (stream contents)}.
-      items add: (TDClientListItemAttributes object: child parent: nil aspect: listElement aspect) ].
+      items add: (TDClientListItemAttributes object: child parent: self object aspect: listElement aspect) ].
   ar := Array new.
   max := max + 1.
   components

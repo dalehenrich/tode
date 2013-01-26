@@ -4,7 +4,7 @@ executeWindowBuilderSpecs: windowBuilderSpecs
 
   windowBuilderSpecs
     do: [ :ar | 
-      | object expected actual node aspect windowBuilder clientElement windowId actualPrintString block answer |
+      | object expected actual node aspect clientElement windowId actualPrintString block answer found |
       object := ar at: 1.
       aspect := ar at: 2.
       windowId := ar at: 3.
@@ -12,14 +12,20 @@ executeWindowBuilderSpecs: windowBuilderSpecs
       ar size == 5
         ifTrue: [ block := ar at: 5 ]
         ifFalse: [ block := [ :nde | self dsDisplayFor: nde level: 1 ] ].
-      windowBuilder := self topez editorNodeFor: object aspect: aspect.
-      clientElement := windowBuilder
-        buildClientElement: nil
-        topez: self topez
+      found := false.
+      self topez
+        editorNodeFor: object
         aspect: aspect
-        windowName: nil
-        windowId: windowId.
-      node := clientElement first asTDObjectNode: nil topez: self topez aspect: aspect.
-      actual := block value: node.
-      actualPrintString := actual printString.
-      self assert: actual = expected ]
+        do: [ :windowBuilder :finalAspect | 
+          clientElement := windowBuilder
+            buildClientElement: nil
+            topez: self topez
+            aspect: finalAspect
+            windowName: nil
+            windowId: windowId.
+          node := clientElement first asTDObjectNode: nil topez: self topez aspect: finalAspect.
+          actual := block value: node.
+          actualPrintString := actual printString.
+          self assert: actual = expected.
+          found := true ].
+      self assert: found ]

@@ -4,10 +4,16 @@ executeWindowBuilderLookupSpecs: windowBuilderLookupSpecs
 
   windowBuilderLookupSpecs
     do: [ :ar | 
-      | object expected actual aspect actualPrintString |
+      | object expected aspect actualPrintString found |
       object := ar at: 1.
       aspect := ar at: 2.
       expected := ar at: 3.
-      actual := self topez editorNodeClassFor: object aspect: aspect.
-      actualPrintString := actual printString.
-      self assert: actual = expected ]
+      found := false.
+      self topez
+        editorNodeClassFor: object
+        aspect: aspect
+        do: [ :actual :finalAspect | 
+          actualPrintString := actual printString.
+          self assert: actual = expected.
+          found := true ].
+      self assert: found ]

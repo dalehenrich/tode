@@ -1,5 +1,5 @@
 accessing
-nodeClassFor: anObject aspect: anAspect in: nodeDictionary ifAbsent: defaultClassname
+lookupClassNameFor: anObject aspect: anAspect in: nodeDictionary do: aBlock
   | class classMap className |
   class := anObject class.
   [ class notNil and: [ classMap isNil ] ]
@@ -19,10 +19,10 @@ nodeClassFor: anObject aspect: anAspect in: nodeDictionary ifAbsent: defaultClas
         ifTrue: [ 
           "if anAspect is not found at all, default to #view"
           ^ self
-            nodeClassFor: anObject
+            lookupClassNameFor: anObject
             aspect: #'view'
             in: nodeDictionary
-            ifAbsent: defaultClassname ].
-      defaultClassname ]
+            do: aBlock ].
+      ^ aBlock value: nil value: #'view' ]
     ifFalse: [ classMap at: anAspect ifAbsent: [ self error: 'did not expect to get here' ] ].
-  ^ Smalltalk at: className asSymbol
+  ^ aBlock value: className value: anAspect
