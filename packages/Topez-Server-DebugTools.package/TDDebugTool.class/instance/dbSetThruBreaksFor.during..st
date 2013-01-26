@@ -5,6 +5,7 @@ dbSetThruBreaksFor: node during: aBlock
   frame := self dbStack currentFrame.
   method := frame method.
   allBreakpointsSourceOffsets := method _allBreakpointsSourceOffsets.	"source offset for currently set breakpoints"
+  allBreakpointsSourceOffsets ifNil: [ allBreakpointsSourceOffsets := #() ].
   srcOffsets := method _sourceOffsets.	"source offset for each breakpoint"
   ipMarkerArray := method _buildIpMarkerArray.	"IP indexed by source offset for current method context"
   stepIps := Array new.	"stepIps contains IP number for each stepPoint, nil when stepPoint is outside current context"
