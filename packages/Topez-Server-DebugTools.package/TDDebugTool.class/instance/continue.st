@@ -1,5 +1,5 @@
 as yet unclassified
 continue
-  "continue"
+  "db continue"
 
   ^ self dbContinue: self defaultHomeNode

@@ -9,9 +9,11 @@ installOn: aTDTopezServer
   aTDTopezServer installChildrenAt: self commandPath.
   self
     installHalosOn: aTDTopezServer;
-    installExampleOn: aTDTopezServer;
     yourself.
   super installOn: aTDTopezServer.
+  self
+    installExampleOn: aTDTopezServer;
+    yourself.
   TDTopezServer
     registerBuilderClass: TDStackNodeBuilder for: TDStack aspect: #'view';
     registerBuilderClass: TDStackFrameNodeBuilder for: TDStackFrame aspect: #'view';

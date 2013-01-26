@@ -2,7 +2,8 @@
 asTopezProxy
   | proxyNotificationClass proxy header named |
   proxyNotificationClass := ({ERR_Breakpoint.
-  ERR_StackBreakpoint} includes: number)
+  ERR_StackBreakpoint.
+  ERR_CodeBreakpoint} includes: number)
     ifTrue: [ TZProxyBreakpoint ]
     ifFalse: [ 
       number = ERR_CompilerError
