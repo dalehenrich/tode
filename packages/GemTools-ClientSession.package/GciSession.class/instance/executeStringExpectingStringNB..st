@@ -1,8 +1,5 @@
 public gci calls
 executeStringExpectingStringNB: aString
-  Transcript
-    cr;
-    show: 'GciSession>>executeStringExpectingStringNB: ' , (aString printStringLimitedTo: 15).
   self class gsCursor
     showWhile: [ 
       self library

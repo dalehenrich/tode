@@ -1,9 +1,6 @@
 *topez-pharo-common
 readArgumentsAndExceptionClassUsingStonIn: aTodeSession
   | argsSize ofs expressionStream stonString answerArray objectArray classNameArray |
-  Transcript
-    cr;
-    show: 'Gci3xErrSType64>>readArgumentsAndExceptionClassUsingStonIn: ' , self message printString.
   argsSize := self unsignedLongAt: 109.
   args := Array new: argsSize.
   10 < argsSize

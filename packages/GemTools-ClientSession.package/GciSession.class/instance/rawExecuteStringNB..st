@@ -1,8 +1,5 @@
 public gci calls
 rawExecuteStringNB: aString
-  Transcript
-    cr;
-    show: 'GciSession>>rawExecuteStringNB: ' , (aString printStringLimitedTo: 15).
   self class gsCursor
     showWhile: [ 
       self library

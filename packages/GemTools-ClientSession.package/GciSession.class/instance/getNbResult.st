@@ -11,17 +11,9 @@ getNbResult
   [ 
   result := self nbPollForResult.
   error := self getAndClearLastError ]
-    ifCurtailed: [ 
-      Transcript
-        cr;
-        show: 'GciSession>>getNbResult curtailed....'.
-      self terminateCurrentNbCall.
-      Transcript show: 'DONE' ].
+    ifCurtailed: [ self terminateCurrentNbCall ].
   error isNil
     ifTrue: [ ^ result ].
-  Transcript
-    cr;
-    show: 'GciSession>>getNbResult error: ' , error number printString.
   actionArgs := error number == 2336
     ifTrue: [ 
       GsClientForwarderSendNotification new
@@ -34,9 +26,6 @@ getNbResult
           "Session is invalid ... session died out from under us, so clean up session and throw the error"
           self release ].
       self signalServerError: error ].
-  Transcript
-    cr;
-    show: 'GciSession>>getNbResult actionArgs: ' , actionArgs printString.
   actionArgs isArray
     ifTrue: [ 
       (actionArgs at: 1) == #'debug'
@@ -50,12 +39,6 @@ getNbResult
       actionArgs = #'resume'
         ifTrue: [ continueWith := self library oopIllegal asOop ]
         ifFalse: [ ^ actionArgs halt: 'incorrect return value from GsRuntimeError handler' ] ].
-  Transcript
-    cr;
-    show: 'GciSession>>getNbResult continue '.
   self library
     critical: [ :lib | lib apiGciNbContinueWith: error context a: (self library oopTypeClass fromInteger: continueWith) a: 1 ].
-  Transcript
-    cr;
-    show: 'GciSession>>getNbResult recurse '.
   ^ self getNbResult

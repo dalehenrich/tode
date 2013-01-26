@@ -1,8 +1,5 @@
 public gci calls
 rawReceiverNB: receiver perform: aString withArgs: argsArray
-  Transcript
-    cr;
-    show: 'GciSession>>rawReceiverNB:perform:withArgs: ' , aString.
   self class gsCursor
     showWhile: [ 
       self library

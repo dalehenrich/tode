@@ -1,9 +1,6 @@
 as yet unclassified
 defaultAction
   | result forwarder clientForwarderOop selector args |
-  Transcript
-    cr;
-    show: 'GsClientForwarderSendNotification>>defaultAction'.
   args := self tag args.
   clientForwarderOop := session asOopType: (args at: 1).
   forwarder := session clientObjectForwardedFrom: clientForwarderOop.

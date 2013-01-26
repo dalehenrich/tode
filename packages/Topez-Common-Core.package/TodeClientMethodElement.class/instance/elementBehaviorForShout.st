@@ -5,9 +5,6 @@ elementBehaviorForShout
   self inClassOop ifNil: [ ^ nil ].
   elementBehaviorForShout
     ifNil: [ 
-      Transcript
-        cr;
-        show: 'TodeClientMethodelement>>elementBehaviorForShout ' , self editorWindowLabel.
       elementBehaviorForShout := TZGemStoneProxyBehavior new
         behaviorOop: self inClassOop;
         allClassVarNames: self allClassVarNames;

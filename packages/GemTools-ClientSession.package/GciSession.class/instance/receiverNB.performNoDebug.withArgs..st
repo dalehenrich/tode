@@ -1,9 +1,6 @@
 public gci calls
 receiverNB: receiver performNoDebug: aString withArgs: argsArray
   | result |
-  Transcript
-    cr;
-    show: 'GciSession>>receiverNB:performNoDebug:withArgs: ' , aString.
   self library
     critical: [ :lib | 
       | address |
