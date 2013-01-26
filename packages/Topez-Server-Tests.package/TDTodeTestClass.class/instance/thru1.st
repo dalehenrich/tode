@@ -8,6 +8,9 @@ thru1
     db break @5 TDTodeTestClass>>thru1
     db break @7 TDTodeTestClass>>thru1
     /tools/debug/examples/st5
+
+db break @6 TDDebugTool>>dbSetThruBreaksFor:
+# db break @9 TDDebugTool>>dbSetThruBreaksFor:
 "
 
   | tmp |
