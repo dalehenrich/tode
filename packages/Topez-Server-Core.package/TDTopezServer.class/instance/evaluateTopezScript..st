@@ -1,15 +1,15 @@
 accessing
 evaluateTopezScript: topezScript
   | line stream result |
+  [ 
+  evaluatingScript := true.
   stream := topezScript readStream.
   [ 
   line := stream nextLine.
   line notEmpty ]
     whileTrue: [ 
       self accumulateScriptText
-        ifTrue: [ 
-          "just read lines up until one begins with %"
-          self halt ]
+        ifTrue: [ result := self accumulateText: line ]
         ifFalse: [ 
           | isolatedCommands |
           isolatedCommands := line findTokens: ';'.
@@ -18,4 +18,5 @@ evaluateTopezScript: topezScript
               | pipedCommands |
               pipedCommands := isolatedCommand findTokens: '|'.
               pipedCommands do: [ :pipedCommand | result := self evaluateTopezScriptCommand: pipedCommand ] ] ] ].
-  ^ result
+  ^ result ]
+    ensure: [ evaluatingScript := false ]

@@ -2,7 +2,14 @@ accessing
 accumulateTextAndDo: accumulateBlock
   self evaluatingScript
     ifTrue: [ 
+      self scriptActionStack
+        add:
+          {scriptInputStream.
+          [ :input | 
+          self exception: nil.
+          accumulateBlock value: input ]}.
+      scriptInputStream := WriteStream on: String new.
       accumulateScriptText := true.
-      self halt ].
+      ^ self ].
   self accumulateBlocks add: accumulateBlock.
   self topezClientForwarder accumulateTextAndServerDo: accumulateBlock asOop
