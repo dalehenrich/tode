@@ -1,3 +1,3 @@
 rendering
 renderTextColor
-    ^ Color red
+  ^ Color orange

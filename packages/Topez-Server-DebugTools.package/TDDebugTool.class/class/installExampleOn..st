@@ -36,7 +36,7 @@ block value: 100';
     addChildNode:
         (TDSmalltalkLeafNode new
             name: 'st4';
-            contents: 'TDTodeTestClass new breakpoint4';
+            contents: 'TDTodeTestClass new breakpoint6';
             yourself);
     addChildNode:
         (TDTopezLeafNode new

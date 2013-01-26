@@ -2,9 +2,13 @@ as yet unclassified
 handleDebugExceptionsDuring: aBlock
   | result |
   [ result := aBlock value ]
-    on: TZTopezBreakpointNotification , TZTopezHaltNotification
+    on: TZTopezBreakpointNotification , TZTopezHaltNotification , TZTopezErrorNotification
     do: [ :ex | 
       | errorNumber |
+      (ex isKindOf: TZTopezErrorNotification)
+        ifTrue: [ 
+          "error occurred during execution"
+          ^ #'error' ].
       errorNumber := ex exceptionProxy number asTopezNative.
       errorNumber = 6002
         ifTrue: [ 
@@ -16,7 +20,7 @@ handleDebugExceptionsDuring: aBlock
           ^ #'breakpoint' ].
       errorNumber = 2709
         ifTrue: [ 
-          "halt"
+          "halt occurred during execution"
           ^ #'halt' ].
       errorNumber = 6006
         ifTrue: [ 

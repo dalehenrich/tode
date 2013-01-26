@@ -6,6 +6,9 @@ initializePrintBlocks
     at: #'error'
       forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
       put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color red) on: aStream indent: indent ];
+    at: #'halt'
+      forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
+      put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color orange) on: aStream indent: indent ];
     at: #'breakpoint'
       forClasses: #('TZHeaderGemStone' 'TZHeaderNative')
       put: [ :proxy :aStream :indent | proxy renderWith: (TextColor color: Color magenta) on: aStream indent: indent ];
@@ -163,7 +166,7 @@ initializePrintBlocks
             space.
           proxy receiver renderText: #'basic' on: aStream ];
     at: #'basic'
-      forClasses: #('TZProxyError' 'TZProxyBreakpoint' 'TZProxyTodeCommandError')
+      forClasses: #('TZProxyError' 'TZProxyBreakpoint' 'TZProxyHalt' 'TZProxyTodeCommandError')
       put: [ :proxy :aStream :indent | proxy header renderText: proxy renderAttribute on: aStream ];
     at: #'basic'
       forClass: 'TZStack'
