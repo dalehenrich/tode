@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"associations" : "DataCurator 01/27/2013 00:13",
+		"childNamed:parent:ifAbsent:" : "DataCurator 01/27/2013 00:14",
+		"childNodeNameList:" : "DataCurator 01/27/2013 00:16" } }

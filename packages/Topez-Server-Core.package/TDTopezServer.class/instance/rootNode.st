@@ -1,3 +1,5 @@
 accessing
 rootNode
-    ^ self class rootNode
+  ^ self class rootNode
+    topez: self;
+    yourself

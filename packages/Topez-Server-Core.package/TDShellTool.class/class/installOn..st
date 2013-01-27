@@ -30,6 +30,7 @@ installOn: aTDTopezServer
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
     registerEditorClass: TDClassHierarchyListElementBuilder for: Class aspect: #'browse';
+    registerEditorClass: TDClassHierarchyListElementBuilder for: Metaclass3 aspect: #'browse';
     registerEditorClass: TDClientObjectElementBuilder for: Class aspect: #'inspect';
     registerEditorClass: TDClientObjectElementBuilder for: Object aspect: #'view';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder for: TDDirectoryNode aspect: #'view';
