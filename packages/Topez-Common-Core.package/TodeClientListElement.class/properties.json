@@ -11,7 +11,8 @@
 		"listBlockOop",
 		"itemSelectedBlockOop",
 		"selectedIndex",
-		"parent" ],
+		"parent",
+		"windowIsClosingBlockOop" ],
 	"name" : "TodeClientListElement",
 	"pools" : [
 		 ],

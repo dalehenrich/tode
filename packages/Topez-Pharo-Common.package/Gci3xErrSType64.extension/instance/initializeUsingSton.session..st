@@ -4,10 +4,12 @@ initializeUsingSton: aGciLibrary session: aTodeSession
   address := ExternalAddress gcallocate: self structSize.
   (aGciLibrary apiGciErr: address asInteger)
     ifFalse: [ ^ self ].
-  self 
+  self
     readSimpleFields;
     readMessage;
-    readArgumentsAndExceptionClassUsingStonIn: aTodeSession;
     yourself.
+  number = 4100
+    ifTrue: [ self readArguments ]
+    ifFalse: [ self readArgumentsAndExceptionClassUsingStonIn: aTodeSession ].
   address := nil.
   library := nil

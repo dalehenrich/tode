@@ -1,6 +1,7 @@
 accessing
 windowIsClosing
   | windowName |
+  listEditor ifNotNil: [ listEditor windowIsClosing ].
   windowId ifNil: [ ^ self ].
   topez ifNil: [ ^ self ].
   windowName := topez status namedWindows keyAtValue: windowId ifAbsent: [  ].
