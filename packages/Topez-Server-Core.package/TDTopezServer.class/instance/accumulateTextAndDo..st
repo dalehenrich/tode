@@ -6,11 +6,11 @@ accumulateTextAndDo: accumulateBlock
         add:
           {scriptInputStream.
           accumulateScriptText.
-          [ :input | 
+          [ :input :accumulateObjIn | 
           self exception: nil.
-          accumulateBlock value: input ]}.
+          accumulateBlock value: input value: accumulateObjIn ]}.
       scriptInputStream := WriteStream on: String new.
       accumulateScriptText := true.
       ^ self ].
   self accumulateBlocks add: accumulateBlock.
-  self topezClientForwarder accumulateTextAndServerDo: accumulateBlock asOop
+  self topezClientForwarder accumulateTextAndServerDo: accumulateBlock asOop objIn: objIn value asOop

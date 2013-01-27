@@ -1,5 +1,6 @@
 as yet unclassified
 installExampleOn: aTDTopezServer
+  | examplesNode |
   (aTDTopezServer lookup: '/home')
     addChildNode:
         (TDSmalltalkLeafNode new
@@ -37,5 +38,26 @@ installExampleOn: aTDTopezServer
         (TDScriptLeafNode new
             name: 'script';
             block: [ :topez :objIn :tokens :windowId | 'hello world' ];
+            yourself);
+    yourself.
+  (aTDTopezServer lookup: self commandPath)
+    addChildNode:
+      (examplesNode := TDDirectoryNode new
+        name: 'examples';
+        readMe: 'debugger examples';
+        yourself).
+  examplesNode
+    addChildNode:
+        (TDTopezLeafNode new
+            name: 'runEx';
+            contents:
+                '#
+# interesting example of using run command with |
+#
+run | run
+3+4
+%
+self + 3
+%';
             yourself);
     yourself
