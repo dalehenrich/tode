@@ -16,8 +16,19 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     ifFalse: [ 
       obj
         edit: nil
+          topez: listElement topez
+          aspect: #'classDefinition'
+          windowName: #'classDefinition'
+          windowId: nil;
+        edit: nil
+          topez: listElement topez
+          aspect: #'instanceSelectors'
+          windowName: 'instanceSelectors'
+          windowId: nil.
+      obj class
+        edit: nil
         topez: listElement topez
-        aspect: #'classDefinition'
-        windowName: self editorWindowName
+        aspect: #'classSelectors'
+        windowName: 'classSelectors'
         windowId: nil ].
   ^ nil

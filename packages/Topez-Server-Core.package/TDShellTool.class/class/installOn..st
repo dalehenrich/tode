@@ -29,10 +29,12 @@ installOn: aTDTopezServer
     registerBuilderClass: TDTxtLeafNodeBuilder for: CharacterCollection aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
-    registerEditorClass: TDClassHierarchyListElementBuilder for: Class aspect: #'browse';
+    registerEditorClass: TDClassSelectorListElementBuilder for: Behavior aspect: #'classSelectors';
+    registerEditorClass: TDClassSelectorListElementBuilder for: Behavior aspect: #'instanceSelectors';
+    registerEditorClass: TDClassHierarchyListElementBuilder for: Behavior aspect: #'browse';
     registerEditorClass: TDClassDefinitionClientElementBuilder for: Class aspect: #'classDefinition';
-    registerEditorClass: TDClassHierarchyListElementBuilder for: Metaclass3 aspect: #'browse';
     registerEditorClass: TDClientObjectElementBuilder for: Class aspect: #'inspect';
+    registerEditorClass: TDGsNMethodElementBuilder for: GsNMethod aspect: #'method';
     registerEditorClass: TDClientObjectElementBuilder for: Object aspect: #'view';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder for: TDDirectoryNode aspect: #'view';
     registerEditorClass: TDClientSourceElementBuilder for: TDLeafNode aspect: #'browse';
