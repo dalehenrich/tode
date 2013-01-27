@@ -25,8 +25,10 @@ codePointMap
     at: $C codePoint
       put: [ :modifierPressed :listElement :selectionIndex | 
           "CMD-C - spawn window"
-          {#'spawnWindow:'.
-          (STON toString: listElement copyForSpawn)} ];
+          STON
+            toString:
+              {#'spawnWindow:'.
+              (listElement copyForSpawn)} ];
     at: $L codePoint
       put: [ :modifierPressed :listElement :selectionIndex | 
           "CMD-L - list windows"

@@ -12,6 +12,12 @@ listKeystroke: event
   action := self clientElement handleKeyboardEvent: event selectionIndex: self listIndex.
   action isSymbol
     ifTrue: [ ^ self perform: action ].
-  action isArray
-    ifTrue: [ ^ self perform: (action at: 1) with: (STON fromString: (action at: 2)) ].
+  action isString
+    ifTrue: [ 
+      | ar element |
+      ar := STON fromString: action.
+      element := (ar at: 2)
+        topez: self topez;
+        yourself.
+      ^ self perform: (ar at: 1) with: element ].
   ^ action
