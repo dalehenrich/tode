@@ -17,7 +17,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       obj
         edit: nil
         topez: listElement topez
-        aspect: aspect
+        aspect: #'classDefinition'
         windowName: self editorWindowName
         windowId: nil ].
   ^ nil
