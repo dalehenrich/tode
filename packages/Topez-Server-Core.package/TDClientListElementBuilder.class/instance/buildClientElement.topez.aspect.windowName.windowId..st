@@ -7,6 +7,8 @@ buildClientElement: parentObject topez: aTopez aspect: anAspect windowName: inWi
     aspect: anAspect;
     parent: parentObject;
     windowIsClosingBlock: self windowIsClosingBlock;
+    keyboardEventBlock: self keyboardEventBlock;
+    cmdKeyCodePoints: self cmdKeyCodePoints;
     editorWindowLabel: self editorWindowLabel;
     editorWindowId: inWindowId;
     editorWindowName: self editorWindowName;
