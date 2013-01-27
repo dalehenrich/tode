@@ -5,7 +5,7 @@ itemSelected: index
     ifTrue: [ ^ self ].
   oopType := self session
     rawReceiverNB: self itemSelectedBlockOopType
-    perform: 'value:value:value:'
+    perform: #'value:value:value:'
     withArgs:
       {(self clientElementOopType).
       index.

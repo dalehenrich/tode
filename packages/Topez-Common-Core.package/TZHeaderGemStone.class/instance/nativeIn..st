@@ -13,7 +13,7 @@ nativeIn: topez
           theClassOop := topez session asOopType: theClassOop.
           theClassOop = topez session library oopNil
             ifTrue: [ self error: 'The object does not exist' ].
-          theClassName := (topez session receiverNB: theClassOop perform: 'name' withArgs: #()) asString.
+          theClassName := (topez session receiverNB: theClassOop perform: #'name' withArgs: #()) asString.
           native := TZProxyGemStone new
             header: (TZHeaderGemStone oop: oopType asOop classOop: theClassOop className: theClassName) ] ].
   ^ native

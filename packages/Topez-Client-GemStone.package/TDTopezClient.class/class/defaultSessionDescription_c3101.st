@@ -9,7 +9,7 @@ defaultSessionDescription_c3101
         stoneHost: 'foos.gemstone.com';
         stoneName: 'c_gs64stone_3101';
         gemHost: 'foos.gemstone.com';
-        netLDI: '52745';
+        netLDI: '33066';
         userId: 'DataCurator';
         password: 'swordfish';
         backupDirectory: '';

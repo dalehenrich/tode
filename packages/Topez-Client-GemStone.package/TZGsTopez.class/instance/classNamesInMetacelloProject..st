@@ -1,10 +1,10 @@
 metacello
 classNamesInMetacelloProject: aProjectName
-    ^ self
-        doInSession: [ :sess | 
-            sess
-                receiverNB: self currentEngine
-                performNoDebug: 'classNamesInMetacelloProject:level:'
-                withArgs:
-                    {aProjectName.
-                    2} ]
+  ^ self
+    doInSession: [ :sess | 
+      sess
+        receiverNB: self currentEngine
+        performNoDebug: #'classNamesInMetacelloProject:level:'
+        withArgs:
+          {aProjectName.
+          2} ]

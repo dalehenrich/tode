@@ -5,7 +5,7 @@ sourceContainingIt: aString
     doInSession: [ :sess | 
       sess
         receiverNB: self currentEngine
-        performNoDebug: 'sourceContainingIt:level:'
+        performNoDebug: #'sourceContainingIt:level:'
         withArgs:
           {aString.
           2} ]

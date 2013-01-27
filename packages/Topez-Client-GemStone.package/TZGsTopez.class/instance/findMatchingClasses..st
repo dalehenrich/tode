@@ -1,10 +1,10 @@
 as yet unclassified
 findMatchingClasses: aString
-    ^ self
-        doInSession: [ :sess | 
-            sess
-                receiverNB: self currentEngine
-                performNoDebug: 'findMatchingClasses:level:'
-                withArgs:
-                    {aString.
-                    2} ]
+  ^ self
+    doInSession: [ :sess | 
+      sess
+        receiverNB: self currentEngine
+        performNoDebug: #'findMatchingClasses:level:'
+        withArgs:
+          {aString.
+          2} ]

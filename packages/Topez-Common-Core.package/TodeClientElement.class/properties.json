@@ -15,7 +15,9 @@
 		"editorWindowLabel",
 		"editorWindowId",
 		"editorWindowLocation",
-		"editorWindowName" ],
+		"editorWindowName",
+		"keyboardEventBlockOop",
+		"cmdKeyCodePoints" ],
 	"name" : "TodeClientElement",
 	"pools" : [
 		 ],

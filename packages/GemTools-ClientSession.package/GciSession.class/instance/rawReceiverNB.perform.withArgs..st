@@ -1,5 +1,5 @@
 public gci calls
-rawReceiverNB: receiver perform: aString withArgs: argsArray
+rawReceiverNB: receiver perform: aSymbol withArgs: argsArray
   self class gsCursor
     showWhile: [ 
       self library
@@ -9,7 +9,7 @@ rawReceiverNB: receiver perform: aString withArgs: argsArray
           address := lib addressOfArrayOfOopsForObjects: argsArray.
           lib
             apiGciNbPerform: (self asOopType: (lib oopFor: receiver))
-            a: aString
+            a: aSymbol asString
             a: address asInteger
             a: argsArray size ].
       ^ self getNbResultAsOop ]
