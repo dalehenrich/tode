@@ -34,6 +34,6 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         edit: parentObj
         topez: listElement topez
         aspect: aspect
-        windowName: self editorWindowName
+        windowName: listElement editorWindowName
         windowId: nil ].
   ^ nil

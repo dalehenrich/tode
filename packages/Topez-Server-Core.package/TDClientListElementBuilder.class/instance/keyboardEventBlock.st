@@ -4,6 +4,7 @@ keyboardEventBlock
   | block |
   "block result may be a Symbol or a Boolean:
 		if Symbol, the client-side editor will perform: the Symbol
+		if Array, the client-side editor will perform: (array at: 1) with: (array at: 2)
 		if false, the event was not handled
 		if true, the event was handled"
   block := self codePointMap

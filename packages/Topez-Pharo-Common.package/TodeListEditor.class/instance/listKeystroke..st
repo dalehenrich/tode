@@ -12,4 +12,6 @@ listKeystroke: event
   action := self clientElement handleKeyboardEvent: event selectionIndex: self listIndex.
   action isSymbol
     ifTrue: [ ^ self perform: action ].
+  action isArray
+    ifTrue: [ ^ self perform: (action at: 1) with: (STON fromString: (action at: 2)) ].
   ^ action
