@@ -74,6 +74,7 @@
 		"serverStatus" : "DataCurator 01/22/2013 14:03",
 		"serverTextDo:with:" : "DataCurator 01/26/2013 21:17",
 		"setCurrentNode:" : "DataCurator 12/01/2012 08:02",
+		"setCurrentNodeFromClientElement:" : "DataCurator 01/26/2013 23:21",
 		"spawnWindow" : "DataCurator 12/29/2012 12:02",
 		"toString:" : "dkh 11/18/2012 15:30",
 		"toString:level:" : "dkh 11/18/2012 15:30",
