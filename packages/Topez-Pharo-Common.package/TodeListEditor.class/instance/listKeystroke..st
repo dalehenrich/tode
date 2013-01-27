@@ -10,4 +10,4 @@ listKeystroke: event
     ifTrue: [ ^ self listKeystrokeUp ].
   (event anyModifierKeyPressed
     and: [ #($B $C $K $L $N $b $c $m $n $o $p $t $u $j $k $v $x) includes: event keyCharacter ])
-    ifTrue: [ ^ self clientElement handleKeyboardEvent: event ]
+    ifTrue: [ ^ self clientElement handleKeyboardEvent: event selectionIndex: self listIndex ]
