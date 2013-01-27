@@ -1,10 +1,10 @@
 evaluator engine
-accumulateTextAndServerDo: serverBlockOop objIn: objInOop
+accumulateTextAndServerDo: serverBlockOop
   | messageSend |
   messageSend := TZGsMessageSend new
     topez: self topezClient;
     receiver: self topezClient topezServerProxy;
-    selector: 'serverTextDo:with:objIn:';
+    selector: 'serverTextDo:with:';
     arguments: #();
     transform: #'native' -> nil.
   self
@@ -12,6 +12,5 @@ accumulateTextAndServerDo: serverBlockOop objIn: objInOop
       messageSend
         valueWithArguments:
           {(TZHeaderGemStone oop: serverBlockOop).
-          (doitStream contents).
-          (TZHeaderGemStone oop: objInOop)} ].
+          (doitStream contents)} ].
   ^ nil

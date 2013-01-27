@@ -13,4 +13,4 @@ accumulateTextAndDo: accumulateBlock
       accumulateScriptText := true.
       ^ self ].
   self accumulateBlocks add: accumulateBlock.
-  self topezClientForwarder accumulateTextAndServerDo: accumulateBlock asOop objIn: objIn value asOop
+  self topezClientForwarder accumulateTextAndServerDo: accumulateBlock asOop
