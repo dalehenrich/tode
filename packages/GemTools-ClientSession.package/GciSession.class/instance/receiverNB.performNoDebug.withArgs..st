@@ -1,5 +1,5 @@
 public gci calls
-receiverNB: receiver performNoDebug: aString withArgs: argsArray
+receiverNB: receiver performNoDebug: aSymbol withArgs: argsArray
   | result |
   self library
     critical: [ :lib | 
@@ -8,7 +8,7 @@ receiverNB: receiver performNoDebug: aString withArgs: argsArray
       address := lib addressOfArrayOfOopsForObjects: argsArray.
       lib
         apiGciNbPerformNoDebug: (self asOopType: receiver)
-        a: aString
+        a: aSymbol asString
         a: address asInteger
         a: argsArray size
         a: 0 ].
