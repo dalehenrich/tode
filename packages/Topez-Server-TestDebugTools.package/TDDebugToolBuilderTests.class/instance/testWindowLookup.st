@@ -6,19 +6,19 @@ testWindowLookup
     executeWindowBuilderLookupSpecs:
       {{(TDStack new).
       #'view'.
-      TDStackClientListElementBuilder}.
+      (TDStackClientListElementBuilder name)}.
       {(TDStack new).
       #'browse'.
-      TDStackClientListElementBuilder}.
+      (TDStackClientListElementBuilder name)}.
       {(TDStackFrame new).
       #'view'.
-      TDClientObjectElementBuilder}.
+      (TDClientObjectElementBuilder name)}.
       {(TDStackFrame new).
       #'browse'.
-      TDClientObjectElementBuilder}.
+      (TDClientObjectElementBuilder name)}.
       {(TDStackFrame new).
       #'source'.
-      TDStackFrameMethodElementBuilder}.
+      (TDStackFrameMethodElementBuilder name)}.
       {(TDStackFrame new).
       #'contents'.
-      TDStackFrameContentsClientListElementBuilder}}
+      (TDStackFrameContentsClientListElementBuilder name)}}

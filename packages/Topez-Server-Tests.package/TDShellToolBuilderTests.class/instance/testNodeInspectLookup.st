@@ -6,13 +6,13 @@ testNodeInspectLookup
     executeNodeBuilderLookupSpecs:
       {{(Object new).
       #'inspect'.
-      TDObjectNodeBuilder}.
+      (TDObjectNodeBuilder name)}.
       {''.
       #'inspect'.
-      TDObjectNodeBuilder}.
+      (TDObjectNodeBuilder name)}.
       {Object.
       #'inspect'.
-      TDObjectNodeBuilder}.
+      (TDObjectNodeBuilder name)}.
       {(Object class).
       #'inspect'.
-      TDObjectNodeBuilder}}
+      (TDObjectNodeBuilder name)}}

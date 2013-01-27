@@ -6,28 +6,28 @@ testSpecialNodeLookup
     executeNodeBuilderLookupSpecs:
       {{$o.
       #'view'.
-      TDCharacterNodeBuilder}.
+      (TDCharacterNodeBuilder name)}.
       {117.
       #'view'.
-      TDIntegerNodeBuilder}.
+      (TDIntegerNodeBuilder name)}.
       {(SmallInteger maximumValue + 1).
       #'view'.
-      TDIntegerNodeBuilder}.
+      (TDIntegerNodeBuilder name)}.
       {(SmallInteger minimumValue - 1).
       #'view'.
-      TDIntegerNodeBuilder}.
+      (TDIntegerNodeBuilder name)}.
       {117.145.
       #'view'.
-      TDSpecialNodeBuilder}.
+      (TDSpecialNodeBuilder name)}.
       {117.145s3.
       #'view'.
-      TDSpecialNodeBuilder}.
+      (TDSpecialNodeBuilder name)}.
       {(FixedPoint fromString: '117.145').
       #'view'.
-      TDSpecialNodeBuilder}.
+      (TDSpecialNodeBuilder name)}.
       {true.
       #'view'.
-      TDSpecialNodeBuilder}.
+      (TDSpecialNodeBuilder name)}.
       {nil.
       #'view'.
-      TDSpecialNodeBuilder}}
+      (TDSpecialNodeBuilder name)}}

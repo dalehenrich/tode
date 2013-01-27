@@ -1,7 +1,7 @@
 accessing
 builderFor: anObject aspect: anAspect do: aBlock
   self
-    builderClassFor: anObject
+    builderClassNameFor: anObject
     aspect: anAspect
     do: [ :className :finalAspect | 
       | builderClass |

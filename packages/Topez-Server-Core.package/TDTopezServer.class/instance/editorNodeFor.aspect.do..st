@@ -1,7 +1,7 @@
 accessing
 editorNodeFor: anObject aspect: anAspect do: aBlock
   self
-    editorNodeClassFor: anObject
+    editorNodeClassNameFor: anObject
     aspect: anAspect
     do: [ :className :finalAspect | 
       | editorClass |

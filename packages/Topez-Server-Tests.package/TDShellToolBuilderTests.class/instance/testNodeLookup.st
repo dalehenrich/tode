@@ -6,16 +6,16 @@ testNodeLookup
     executeNodeBuilderLookupSpecs:
       {{(Object new).
       #'view'.
-      TDObjectNodeBuilder}.
+      (TDObjectNodeBuilder name)}.
       {''.
       #'view'.
-      TDTxtLeafNodeBuilder}.
+      (TDTxtLeafNodeBuilder name)}.
       {''.
       #'bubba'.
-      TDTxtLeafNodeBuilder}.
+      (TDTxtLeafNodeBuilder name)}.
       {Object.
       #'view'.
-      TDObjectNodeBuilder}.
+      (TDObjectNodeBuilder name)}.
       {(Object class).
       #'view'.
-      TDObjectNodeBuilder}}
+      (TDObjectNodeBuilder name)}}

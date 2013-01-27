@@ -10,7 +10,7 @@ executeWindowBuilderLookupSpecs: windowBuilderLookupSpecs
       expected := ar at: 3.
       found := false.
       self topez
-        editorNodeClassFor: object
+        editorNodeClassNameFor: object
         aspect: aspect
         do: [ :actual :finalAspect | 
           actualPrintString := actual printString.

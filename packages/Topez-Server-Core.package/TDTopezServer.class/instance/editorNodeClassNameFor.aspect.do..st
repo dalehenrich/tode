@@ -1,10 +1,10 @@
 accessing
-builderClassFor: anObject aspect: anAspect do: aBlock
+editorNodeClassNameFor: anObject aspect: anAspect do: aBlock
   self
     lookupClassNameFor: anObject
     aspect: anAspect
-    in: self class nodeBuilders
+    in: self class nodeEditors
     do: [ :className :finalAspect | 
       ^ className == nil
-        ifTrue: [ aBlock value: 'TDObjectNodeBuilder' value: finalAspect ]
+        ifTrue: [ aBlock value: 'TDClientObjectElementBuilder' value: finalAspect ]
         ifFalse: [ aBlock value: className value: finalAspect ] ]

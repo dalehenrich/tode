@@ -4,7 +4,7 @@ testNodeLookup
     executeNodeBuilderLookupSpecs:
       {{(TDStack new).
       #'view'.
-      TDStackNodeBuilder}.
+      (TDStackNodeBuilder name)}.
       {(TDStackFrame new).
       #'view'.
-      TDStackFrameNodeBuilder}}
+      (TDStackFrameNodeBuilder name)}}

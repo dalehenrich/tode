@@ -10,10 +10,10 @@ executeNodeBuilderLookupSpecs: nodeBuilderLookupSpecs
       expected := ar at: 3.
       found := false.
       self topez
-        builderClassFor: object
+        builderClassNameFor: object
         aspect: aspect
         do: [ :actual :finalAspect | 
           actualPrintString := actual printString.
           self assert: actual = expected.
           found := true ].
-      self assert found ]
+      self assert: found ]
