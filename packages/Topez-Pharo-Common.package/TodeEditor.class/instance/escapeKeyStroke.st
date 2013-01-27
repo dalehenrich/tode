@@ -1,6 +1,5 @@
 accessing
 escapeKeyStroke
-    | evaluator |
-    evaluator := self topez editorWindowNamed: #'evaluator'.
-    evaluator activate.
-    ^ true
+  | spawnedServerOop element |
+  spawnedServerOop := self topez spawnWindow.
+  self activeEditor clientElement spawnShell: spawnedServerOop
