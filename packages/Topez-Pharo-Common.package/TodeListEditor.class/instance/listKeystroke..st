@@ -1,5 +1,6 @@
 accessing
 listKeystroke: event
+  | action |
   event keyCharacter = Character arrowUp
     ifTrue: [ ^ self listKeystrokeUp ].
   event keyCharacter = Character arrowDown
@@ -8,6 +9,7 @@ listKeystroke: event
     ifTrue: [ ^ self listKeystrokeLeft ].
   event keyCharacter = Character arrowUp
     ifTrue: [ ^ self listKeystrokeUp ].
-  (event anyModifierKeyPressed
-    and: [ #($B $C $K $L $N $b $c $m $n $o $p $t $u $j $k $v $x) includes: event keyCharacter ])
-    ifTrue: [ ^ self clientElement handleKeyboardEvent: event selectionIndex: self listIndex ]
+  action := self clientElement handleKeyboardEvent: event selectionIndex: self listIndex.
+  action isSymbol
+    ifTrue: [ ^ self perform: action ].
+  ^ action

@@ -13,9 +13,25 @@ codePointMap
 	CMD-x - cut selection
 "
 
+  "block result may be a Symbol or a Boolean:
+		if Symbol, the client-side editor will perform: the Symbol
+		if false, the event was not handled
+		if true, the event was handled"
+
   | map |
   map := Dictionary new.
   map
-    at: $C codePoint put: [ :modifierPressed :listElement :selectionIndex |  ];
+    at: $C codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          "CMD-C - spawn window"
+          #'spawnWindow' ];
+    at: $L codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          "CMD-L - list windows"
+          #'listWindows' ];
+    at: $l codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          "CMD-l - refresh"
+          #'refreshList' ];
     yourself.
   ^ map
