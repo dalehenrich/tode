@@ -6,6 +6,7 @@ buildClientElement: parentObject topez: aTopez aspect: anAspect windowName: inWi
     topez: aTopez;
     aspect: anAspect;
     parent: parentObject;
+    windowIsClosingBlock: self windowIsClosingBlock;
     editorWindowLabel: self editorWindowLabel;
     editorWindowId: inWindowId;
     editorWindowName: self editorWindowName;
