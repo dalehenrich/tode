@@ -9,7 +9,7 @@ evaluateTopezScript: topezScript
   line notEmpty ]
     whileTrue: [ 
       self accumulateScriptText
-        ifTrue: [ result := self accumulateText: line ]
+        ifTrue: [ self accumulateText: line ]
         ifFalse: [ 
           | isolatedCommands |
           isolatedCommands := line findTokens: ';'.
@@ -17,6 +17,9 @@ evaluateTopezScript: topezScript
             do: [ :isolatedCommand | 
               | pipedCommands |
               pipedCommands := isolatedCommand findTokens: '|'.
-              pipedCommands do: [ :pipedCommand | result := self evaluateTopezScriptCommand: pipedCommand ] ] ] ].
+              pipedCommands
+                do: [ :pipedCommand | 
+                  result := self evaluateTopezScriptCommand: pipedCommand.
+                  objIn value: result ] ] ] ].
   ^ result ]
     ensure: [ evaluatingScript := false ]

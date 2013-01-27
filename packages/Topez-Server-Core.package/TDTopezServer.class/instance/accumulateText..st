@@ -10,4 +10,5 @@ accumulateText: line
   actionArray := self scriptActionStack removeLast.
   stream := scriptInputStream.
   scriptInputStream := actionArray at: 1.
-  ^ (actionArray at: 2) value: stream contents
+  accumulateScriptText := actionArray at: 2.
+  ^ (actionArray at: 3) value: stream contents

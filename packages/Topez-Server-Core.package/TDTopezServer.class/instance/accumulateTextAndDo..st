@@ -5,6 +5,7 @@ accumulateTextAndDo: accumulateBlock
       self scriptActionStack
         add:
           {scriptInputStream.
+          accumulateScriptText.
           [ :input | 
           self exception: nil.
           accumulateBlock value: input ]}.
