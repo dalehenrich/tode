@@ -29,6 +29,7 @@ installOn: aTDTopezServer
     registerBuilderClass: TDTxtLeafNodeBuilder for: CharacterCollection aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
+    registerEditorClass: TDClassListElementBuilder for: Collection aspect: #'classList';
     registerEditorClass: TDClassSelectorListElementBuilder for: Behavior aspect: #'classSelectors';
     registerEditorClass: TDClassSelectorListElementBuilder for: Behavior aspect: #'instanceSelectors';
     registerEditorClass: TDClassHierarchyListElementBuilder for: Behavior aspect: #'browse';

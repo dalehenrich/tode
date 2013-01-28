@@ -2,14 +2,14 @@ as yet unclassified
 cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
   "CMD-b - browse class - globals"
 
-  | beh |
-  beh := listElement theObject.
-  beh isBehavior
-    ifFalse: [ beh := beh class ].
-  {(beh theNonMetaClass)}
+  | classList |
+  classList := self theClassList: listElement selectionIndex: selectionIndex.
+  classList isEmpty
+    ifTrue: [ ^ true ].
+  classList
     edit: listElement parent
     topez: listElement topez
-    aspect: #'globalList'
+    aspect: #'classList'
     windowName: nil
     windowId: nil
     windowLocation: nil.

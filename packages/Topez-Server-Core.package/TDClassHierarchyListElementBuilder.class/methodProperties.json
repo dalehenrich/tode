@@ -2,9 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"classHierarchy:" : "DataCurator 01/26/2013 10:10",
+		"baseClassList" : "DataCurator 01/27/2013 22:30",
+		"classHierarchy:" : "DataCurator 01/27/2013 22:29",
 		"clientList:" : "DataCurator 01/24/2013 23:56",
+		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:13",
 		"editorWindowLabel" : "DataCurator 01/25/2013 02:03",
-		"editorWindowLocation" : "DataCurator 01/25/2013 02:01",
-		"itemSelected:at:shiftPressed:" : "DataCurator 01/27/2013 01:50",
-		"processClassesBlock:elementBlock:" : "DataCurator 01/24/2013 15:48" } }
+		"itemSelected:at:shiftPressed:" : "DataCurator 01/27/2013 21:58",
+		"processClassesBlock:elementBlock:" : "DataCurator 01/24/2013 15:48",
+		"theClassList:selectionIndex:" : "DataCurator 01/27/2013 22:00" } }

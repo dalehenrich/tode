@@ -3,8 +3,9 @@
 		 },
 	"instance" : {
 		"clientList:" : "DataCurator 01/27/2013 01:52",
+		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:10",
 		"editorWindowLabel" : "DataCurator 01/27/2013 01:34",
-		"editorWindowLocation" : "DataCurator 01/27/2013 01:36",
 		"itemSelected:at:shiftPressed:" : "DataCurator 01/27/2013 01:56",
 		"theBehavior" : "DataCurator 01/27/2013 01:24",
-		"theClass" : "DataCurator 01/27/2013 01:31" } }
+		"theClass" : "DataCurator 01/27/2013 01:31",
+		"theClassList:selectionIndex:" : "DataCurator 01/27/2013 22:04" } }
