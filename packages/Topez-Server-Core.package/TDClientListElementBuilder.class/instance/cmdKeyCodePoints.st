@@ -13,4 +13,4 @@ cmdKeyCodePoints
 	CMD-x - cut selection
 "
 
-  ^ #($B $C $L $N $b $c $l $p $v $x) collect: [ :char | char codePoint ]
+  ^ self codePointMap keys asArray

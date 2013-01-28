@@ -2,12 +2,12 @@ as yet unclassified
 codePointMap
   "
 	CMD-B - browse (full) class - hiearchy, definition, selectors
-	CMD-C - spawn window
-	CMD-L - list windows
+[]	CMD-C - spawn window
+[]	CMD-L - list windows
 	CMD-N - find references
-	CMD-b - browse class - globals
+[]	CMD-b - browse class - globals
 	CMD-c - copy selection
-	CMD-l - refresh
+[]	CMD-l - refresh
 	CMD-p - open print window
 	CMD-v - paste selection
 	CMD-x - cut selection
@@ -23,19 +23,12 @@ codePointMap
   map := Dictionary new.
   map
     at: $C codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | 
-          "CMD-C - spawn window"
-          STON
-            toString:
-              {#'spawnWindow:'.
-              (listElement copyForSpawn)} ];
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftCAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $L codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | 
-          "CMD-L - list windows"
-          #'listWindows' ];
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+    at: $b codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $l codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | 
-          "CMD-l - refresh"
-          #'refreshList' ];
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     yourself.
   ^ map
