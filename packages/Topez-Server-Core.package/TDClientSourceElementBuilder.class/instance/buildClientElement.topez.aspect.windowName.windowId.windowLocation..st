@@ -1,5 +1,8 @@
 as yet unclassified
-buildClientElement: parentObject topez: aTopez aspect: anAspect windowName: ignored windowId: inWindowId
+buildClientElement: parentObject topez: aTopez aspect: anAspect windowName: inWindowName windowId: inWindowId windowLocation: windowLocation
+  self
+    theWindowName: inWindowName;
+    theWindowLocation: windowLocation.
   ^ self clientSourceElement
     theObject: self object;
     clientElementOop;

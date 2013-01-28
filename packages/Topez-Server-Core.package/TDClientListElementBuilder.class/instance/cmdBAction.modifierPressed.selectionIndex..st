@@ -11,5 +11,6 @@ cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
     topez: listElement topez
     aspect: #'globalList'
     windowName: nil
-    windowId: nil.
+    windowId: nil
+    windowLocation: nil.
   ^ true

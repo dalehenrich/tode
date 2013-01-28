@@ -22,7 +22,8 @@ executeWindowBuilderSpecs: windowBuilderSpecs
             topez: self topez
             aspect: finalAspect
             windowName: nil
-            windowId: windowId.
+            windowId: windowId
+            windowLocation: nil.
           node := clientElement first asTDObjectNode: nil topez: self topez aspect: finalAspect.
           actual := block value: node.
           actualPrintString := actual printString.

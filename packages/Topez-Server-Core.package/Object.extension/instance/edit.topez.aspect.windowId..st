@@ -8,3 +8,4 @@ edit: parentObject topez: aTopez aspect: anAspect windowId: windowId
     aspect: anAspect
     windowName: nil
     windowId: windowId
+    windowLocation: nil

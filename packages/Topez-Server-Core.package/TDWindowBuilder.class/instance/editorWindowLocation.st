@@ -1,3 +1,4 @@
 as yet unclassified
 editorWindowLocation
-  ^ nil
+  theWindowLocation ifNil: [ ^ self defaultEditorWindowLocation ].
+  ^ theWindowLocation

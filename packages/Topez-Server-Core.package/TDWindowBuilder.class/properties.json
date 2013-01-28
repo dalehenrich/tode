@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"theWindowName" ],
+		"theWindowName",
+		"theWindowLocation" ],
 	"name" : "TDWindowBuilder",
 	"pools" : [
 		 ],
