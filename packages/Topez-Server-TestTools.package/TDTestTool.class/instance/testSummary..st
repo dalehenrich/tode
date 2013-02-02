@@ -1,12 +1,13 @@
 as yet unclassified
 testSummary: testNode
-  | resultsText stream suiteNode |
-  stream := TextStream on: Text new.
+  | resultsText stream suiteNode displayPolicy |
+  displayPolicy := topez displayPolicy.
+  stream := displayPolicy stream.
   suiteNode := self topez lookup: testNode printString , 'suite'.
   stream
     nextPutAll: suiteNode printString asText allBold;
     nextPutAll: '-> '.
-  suiteNode dotSelfObject tzNodeDisplayOn: stream.
+  suiteNode dotSelfObject displayOn: displayPolicy.
   stream cr.
   resultsText := (topez commands at: 'ds') block
     value: topez

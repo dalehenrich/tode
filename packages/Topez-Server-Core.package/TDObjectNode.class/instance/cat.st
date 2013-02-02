@@ -1,3 +1,3 @@
 as yet unclassified
 cat
-    ^ self basicContents tzNodeDisplay
+  ^ self basicContents displayWith: self topez displayPolicy

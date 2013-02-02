@@ -1,5 +1,5 @@
 *topez-server-core
-tzNodeDisplayOn: aStream limit: limit displayOops: displayOops compacted: compacted
+displayOn: aStream limit: limit displayOops: displayOops compacted: compacted
   "not many useful things you can do with a clientForwarder ... without triggering references to client"
 
   | string |

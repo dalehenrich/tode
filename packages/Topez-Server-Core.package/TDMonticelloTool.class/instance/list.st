@@ -2,12 +2,15 @@ as yet unclassified
 list
   "  mc list <pkg-spec> "
 
-  | pattern list stream |
+  | pattern list stream displayPolicy |
   pattern := tokens at: 2.
   list := self findMatchingPackages: pattern topez: topez.
-  stream := TextStream on: Text new.
+  displayPolicy := topez displayPolicy
+    compacted: true;
+    yourself.
+  stream := displayPolicy stream.
   list
     do: [ :pkg | 
-      pkg tzNodeDisplayOn: stream limit: 160 compacted: true.
+      pkg displayOn: displayPolicy.
       stream cr ].
   ^ stream contents

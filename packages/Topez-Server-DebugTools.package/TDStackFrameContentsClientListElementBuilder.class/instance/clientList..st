@@ -1,6 +1,6 @@
 as yet unclassified
 clientList: listElement
-  | max ar items elementNames specialNames |
+  | max ar items elementNames specialNames displayPolicy |
   items := Array new.
   max := 0.
   specialNames := #('.' '..').
@@ -8,6 +8,10 @@ clientList: listElement
   elementNames do: [ :elementName | max := max max: elementName size ].
   ar := Array new.
   max := max + 1.
+  displayPolicy := listElement topez displayPolicy
+    characterLimit: 80;
+    compacted: true;
+    yourself.
   elementNames
     do: [ :elementName | 
       | object parentObject itemObject stream |
@@ -30,7 +34,8 @@ clientList: listElement
           object := self object objectFor: elementName ifAbsent: [ self error: 'missing element' ].
           itemObject := object asTDObjectNode: parentObject topez: listElement topez aspect: listElement aspect ].
       items add: (TDClientListItemAttributes object: itemObject parent: parentObject aspect: listElement aspect).
-      object tzNodeDisplayOn: stream limit: 80 compacted: true.
+      displayPolicy stream: stream.
+      object displayOn: displayPolicy.
       ar add: stream contents asString ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].

@@ -4,22 +4,23 @@ clientList: listElement
   items := Array new.
   components := Array new.
   max := 'parent' size.
+  displayPolicy := listElement topez displayPolicy
+    characterLimit: 80;
+    compacted: true;
+    yourself.
   components
     add:
       {'.'.
-      (self object tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true)}.
+      (self object displayWith: displayPolicy)}.
   items add: (TDClientListItemAttributes object: self object parent: nil aspect: listElement aspect).
   self object parent ~~ nil
     ifTrue: [ 
+      displayPolicy stream: nil.
       components
         add:
           {'..'.
-          (self object parent tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true)}.
+          (self object parent displayWith: displayPolicy)}.
       items add: (TDClientListItemAttributes object: self object parent parent: nil aspect: listElement aspect) ].
-  displayPolicy := listElement topez displayPolicy
-    limit: 80;
-    compacted: true;
-    yourself.
   self object
     childrenAndNamesDo: [ :child :nameText | 
       max := max max: nameText size.
