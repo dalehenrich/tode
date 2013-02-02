@@ -1,4 +1,4 @@
-*topez-common-core
+*topez-server-core
 displayOn: displayPolicy
   self
     displayOn: displayPolicy stream

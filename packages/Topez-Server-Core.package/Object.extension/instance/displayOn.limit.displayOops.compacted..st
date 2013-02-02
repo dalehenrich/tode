@@ -1,4 +1,4 @@
-*topez-common-core
+*topez-server-core
 displayOn: aStream limit: limit displayOops: displayOops compacted: compacted
   | string |
   aStream nextPutAll: '['.
