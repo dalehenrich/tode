@@ -1,9 +1,10 @@
 as yet unclassified
-dsChildren: node indent: indent level: level displayOops: displayOops on: stream
-  | count |
+dsChildren: node indent: indent level: level on: displayPolicy
+  | count stream |
   (node isLeaf or: [ level = 0 ])
     ifTrue: [ ^ self ].
   count := 0.
+  stream := displayPolicy stream.
   node
     childrenAndNamesDo: [ :child :nameText | 
       stream tab: indent.
@@ -16,15 +17,10 @@ dsChildren: node indent: indent level: level displayOops: displayOops on: stream
           ^ self ].
       stream nextPutAll: nameText.
       stream nextPutAll: ' -> '.
-      child dotSelfObject
-        tzNodeDisplayOn: stream
-        limit: self characterLimit
-        displayOops: displayOops
-        compacted: true.
+      child dotSelfObject displayOn: displayPolicy.
       stream cr.
       self
         dsChildren: child
         indent: indent + 1
         level: level - 1
-        displayOops: displayOops
-        on: stream ]
+        on: displayPolicy ]

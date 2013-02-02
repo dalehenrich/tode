@@ -4,7 +4,7 @@ limitChars: cmdTokens
 
   | limit |
   cmdTokens size = 1
-    ifTrue: [ ^ self characterLimit ].
+    ifTrue: [ ^ self topez characterLimit ].
   limit := (cmdTokens at: 2) asNumber.
   self topez characterLimit: limit.
   ^ limit

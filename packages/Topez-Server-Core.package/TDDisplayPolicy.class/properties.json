@@ -1,0 +1,18 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stream",
+		"characterLimit",
+		"listLimit",
+		"displayOops",
+		"compacted" ],
+	"name" : "TDDisplayPolicy",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

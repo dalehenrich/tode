@@ -1,6 +1,6 @@
 as yet unclassified
 clientList: listElement
-  | components max ar items |
+  | displayPolicy components max ar items |
   items := Array new.
   components := Array new.
   max := 'parent' size.
@@ -16,20 +16,18 @@ clientList: listElement
           {'..'.
           (self object parent tzNodeDisplay: 80 displayOops: listElement topez displayOops compacted: true)}.
       items add: (TDClientListItemAttributes object: self object parent parent: nil aspect: listElement aspect) ].
+  displayPolicy := listElement topez displayPolicy
+    limit: 80;
+    compacted: true;
+    yourself.
   self object
     childrenAndNamesDo: [ :child :nameText | 
-      | stream |
       max := max max: nameText size.
-      stream := TextStream on: Text new.
-      child dotSelfObject
-        tzNodeDisplayOn: stream
-        limit: 80
-        displayOops: listElement topez displayOops
-        compacted: true.
+      displayPolicy stream: nil.
       components
         add:
           {nameText.
-          (stream contents)}.
+          (child dotSelfObject displayWith: displayPolicy)}.
       items add: (TDClientListItemAttributes object: child parent: self object aspect: listElement aspect) ].
   ar := Array new.
   max := max + 1.

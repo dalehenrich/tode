@@ -1,14 +1,12 @@
 as yet unclassified
 dsDisplayFor: anObject level: level
-  | stream |
-  stream := WriteStream on: String new.
+  | displayPolicy |
+  displayPolicy := topez displayPolicy
+    compacted: true;
+    yourself.
   (TDShellTool
     topez: self topez
     objIn: nil
     tokens: {}
-    windowId: nil)
-    dsNode: anObject
-    level: level
-    displayOops: false
-    on: stream.
-  ^ stream contents
+    windowId: nil) dsNode: anObject level: level on: displayPolicy.
+  ^ displayPolicy stream contents asString

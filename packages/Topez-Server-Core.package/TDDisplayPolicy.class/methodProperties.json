@@ -1,0 +1,14 @@
+{
+	"class" : {
+		"stream:characterLimit:listLimit:displayOops:compacted:" : "DataCurator 02/01/2013 16:44" },
+	"instance" : {
+		"characterLimit" : "DataCurator 02/01/2013 16:27",
+		"characterLimit:" : "DataCurator 02/01/2013 16:35",
+		"compacted" : "DataCurator 02/01/2013 16:25",
+		"compacted:" : "DataCurator 02/01/2013 16:35",
+		"displayOops" : "DataCurator 02/01/2013 16:27",
+		"displayOops:" : "DataCurator 02/01/2013 16:35",
+		"listLimit" : "DataCurator 02/01/2013 16:27",
+		"listrLimit:" : "DataCurator 02/01/2013 16:35",
+		"stream" : "DataCurator 02/01/2013 16:24",
+		"stream:" : "DataCurator 02/01/2013 16:34" } }
