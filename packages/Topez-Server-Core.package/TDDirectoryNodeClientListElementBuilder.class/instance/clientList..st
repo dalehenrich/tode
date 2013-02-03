@@ -4,10 +4,7 @@ clientList: listElement
   items := Array new.
   components := Array new.
   max := 'parent' size.
-  displayPolicy := listElement topez displayPolicy
-    characterLimit: 80;
-    compacted: true;
-    yourself.
+  displayPolicy := listElement displayPolicy.
   components
     add:
       {'.'.

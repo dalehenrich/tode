@@ -8,10 +8,7 @@ clientList: listElement
   elementNames do: [ :elementName | max := max max: elementName size ].
   ar := Array new.
   max := max + 1.
-  displayPolicy := listElement topez displayPolicy
-    characterLimit: 80;
-    compacted: true;
-    yourself.
+  displayPolicy := listElement displayPolicy.
   elementNames
     do: [ :elementName | 
       | object parentObject itemObject stream |

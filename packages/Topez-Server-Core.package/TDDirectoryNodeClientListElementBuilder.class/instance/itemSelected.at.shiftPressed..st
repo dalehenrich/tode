@@ -1,6 +1,6 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect parent obj itemAttribute displayPolicy objName |
+  | aspect parent obj itemAttribute objName |
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
   parent := itemAttribute parent.
@@ -13,10 +13,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         ifTrue: [ #'view' ]
         ifFalse: [ #'inspect' ].
       obj := obj asTDObjectNode: obj topez: listElement topez aspect: aspect.
-      displayPolicy := listElement topez displayPolicy
-        characterLimit: 80;
-        compacted: true.
-      objName := self object displayWith: displayPolicy.
+      objName := self object displayWith: listElement displayPolicy.
       obj name: objName ].
   index == 2
     ifTrue: [ 
