@@ -10,7 +10,8 @@
 		"characterLimit",
 		"listLimit",
 		"displayOops",
-		"compacted" ],
+		"compacted",
+		"minimal" ],
 	"name" : "TDDisplayPolicy",
 	"pools" : [
 		 ],

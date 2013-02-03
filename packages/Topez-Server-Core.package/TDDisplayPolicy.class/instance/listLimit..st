@@ -1,3 +1,3 @@
 as yet unclassified
-listrLimit: anInteger
+listLimit: anInteger
   listLimit := anInteger
