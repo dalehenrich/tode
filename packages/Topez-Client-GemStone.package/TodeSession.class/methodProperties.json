@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"debuggerRequested:" : "dkh 2/4/2013 14:36",
 		"getAndClearLastError" : "dkh 1/5/2013 10:14",
 		"shell" : "dkh 1/4/2013 07:47",
 		"signalServerError:" : "dkh 12/30/2012 07:06",

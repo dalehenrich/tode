@@ -29,7 +29,7 @@ getNbResult
   actionArgs isArray
     ifTrue: [ 
       (actionArgs at: 1) == #'debug'
-        ifTrue: [ ^ actionArgs at: 2 ].
+        ifTrue: [ ^ self debuggerRequested: (actionArgs at: 2) ].
       (actionArgs at: 1) == #'abort'
         ifTrue: [ ^ actionArgs at: 2 ].
       (actionArgs at: 1) == #'resume'

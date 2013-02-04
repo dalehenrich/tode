@@ -4,7 +4,8 @@ getNbResultAsString
   result := self getNbResult.
   result isInteger
     ifFalse: [ 
-      "must be an error notification"
-      ^ result exceptionProxy ].
+      (result isKindOf: TZTopezNotification)
+        ifTrue: [ ^ result exceptionProxy ].
+      ^ result ].
   oopType := self library oopTypeFromInteger: result.
   ^ self library critical: [ :lib | lib fetchChars: oopType ]

@@ -13,7 +13,8 @@
 		"topezServerProxy",
 		"evaluateTokenMessage",
 		"setExceptionMessage",
-		"resetObjInMessage" ],
+		"resetObjInMessage",
+		"openDebuggerMessage" ],
 	"name" : "TDTopezClient",
 	"pools" : [
 		 ],
