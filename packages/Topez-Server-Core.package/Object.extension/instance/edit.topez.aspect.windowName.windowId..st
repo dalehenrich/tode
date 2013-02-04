@@ -6,6 +6,6 @@ edit: parentObject topez: aTopez aspect: anAspect windowName: windowName windowI
     edit: parentObject
     topez: aTopez
     aspect: anAspect
-    windowName: nil
+    windowName: windowName
     windowId: windowId
     windowLocation: nil
