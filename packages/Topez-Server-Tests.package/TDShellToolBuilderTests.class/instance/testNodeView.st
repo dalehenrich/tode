@@ -39,6 +39,7 @@ testNodeView
         yourself).
       #'view'.
       'aDictionary( ''2''->2, ''1''->1)/ ([Dictionary] aDictionary( ''2''->2, ''1''->1)):
+	(class)@ -> [Dictionary class] Dictionary
 	1@ -> [Association] ''2''->2
 	2@ -> [Association] ''1''->1
 '}}

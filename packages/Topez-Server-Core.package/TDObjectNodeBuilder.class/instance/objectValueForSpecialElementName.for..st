@@ -1,9 +1,9 @@
 as yet unclassified
 objectValueForSpecialElementName: elementName for: anObject
   elementName = '(oop)'
-    ifTrue: [ ^ anObject asOop ].
+    ifTrue: [ ^ Reflection oopOf: anObject ].
   elementName = '(class)'
-    ifTrue: [ ^ anObject class ].
+    ifTrue: [ ^ Reflection classOf: anObject ].
   elementName = '(value)'
     ifTrue: [ ^ anObject asString ].
   ^ nil
