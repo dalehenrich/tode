@@ -18,6 +18,7 @@ DESCRIPTION
   db frame <frame-index>
   db into 
   db over 
+  db restart 
   db stack 
   db thru 
   db up
