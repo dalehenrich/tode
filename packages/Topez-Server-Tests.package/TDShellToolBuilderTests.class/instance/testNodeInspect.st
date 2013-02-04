@@ -8,7 +8,6 @@ testNodeInspect
       #'inspect'.
       '''123''/ ([String] ''123''):
 	(class)@ -> [String class] String
-	(value)@ -> [String] ''123''
 	1@ -> [Character] $1
 	2@ -> [Character] $2
 	3@ -> [Character] $3
@@ -28,7 +27,6 @@ testNodeInspect
       #'inspect'.
       'aDictionary( ''2''->2, ''1''->1)/ ([Dictionary] aDictionary( ''2''->2, ''1''->1)):
 	(class)@ -> [Dictionary class] Dictionary
-	(value)@ -> [String] ''aDictionary''
 	count@ -> [SmallInteger] 2
 	emptySlotHint@ -> [SmallInteger] 8
 	numEmptySlots@ -> [SmallInteger] 7
@@ -47,5 +45,12 @@ testNodeInspect
 	11@ -> [UndefinedObject] nil
 	12@ -> [UndefinedObject] nil
 	13@ -> [UndefinedObject] nil
-	...
+	14@ -> [UndefinedObject] nil
+	15@ -> [UndefinedObject] nil
+	16@ -> [UndefinedObject] nil
+	17@ -> [UndefinedObject] nil
+	18@ -> [UndefinedObject] nil
+	19@ -> [UndefinedObject] nil
+	20@ -> [UndefinedObject] nil
+	21@ -> [UndefinedObject] nil
 '}}

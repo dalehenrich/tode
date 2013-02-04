@@ -5,6 +5,6 @@ topez
       topez := (TDTopezServer for: 1000)
         displayOops: false;
         characterLimit: 160;
-        listLimit: 20;
+        listLimit: 120;
         yourself ].
   ^ topez

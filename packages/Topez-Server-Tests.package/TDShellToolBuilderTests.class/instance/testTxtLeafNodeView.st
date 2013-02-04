@@ -17,28 +17,24 @@ testTxtLeafNodeView
       {(self directoryNodeStructure childNamed: 'd' ifAbsent: [  ]).
       #'view'.
       nil.
-      'anArray( ''.         -> /d//'', ''(class)@  -> TDTxtLeafNode'', ''(value)@  -> ''''aTDTxtLeafNode'''''', ''contents@ -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g)'', ''name@     -> ''''d'''''', ''parent@   -> /'', ''topez@    -> nil'')/ ([Array] anArray( ''. -> /d//'', ''(class)@ -> TDTxtLeafNode'', ''(value)@ -> ''''aTDTxtLeafNode'''''', ''contents@ -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $...):
+      'anArray( ''.         -> /d//'', ''(class)@  -> TDTxtLeafNode'', ''contents@ -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g)'', ''name@     -> ''''d'''''', ''parent@   -> /'', ''topez@    -> nil'')/ ([Array] anArray( ''. -> /d//'', ''(class)@ -> TDTxtLeafNode'', ''contents@ -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g)'', ''n...):
 	(class)@ -> [Array class] Array
-	(value)@ -> [String] ''anArray''
 	1@ -> [String] ''. -> /d//''
 	2@ -> [String] ''(class)@ -> TDTxtLeafNode''
-	3@ -> [String] ''(value)@ -> ''''aTDTxtLeafNode''''''
-	4@ -> [String] ''contents@ -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g)''
-	5@ -> [String] ''name@ -> ''''d''''''
-	6@ -> [String] ''parent@ -> /''
-	7@ -> [String] ''topez@ -> nil''
+	3@ -> [String] ''contents@ -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g)''
+	4@ -> [String] ''name@ -> ''''d''''''
+	5@ -> [String] ''parent@ -> /''
+	6@ -> [String] ''topez@ -> nil''
 '}.
       {(self directoryNodeStructure childNamed: 'e' ifAbsent: [  ]).
       #'view'.
       nil.
-      'anArray( ''.         -> /e//'', ''(class)@  -> TDTxtLeafNode'', ''(value)@  -> ''''aTDTxtLeafNode'''''', ''contents@ -> ''''This is a string'''''', ''name@     -> ''''e'''''', ''parent@   -> /'', ''topez@    -> nil'')/ ([Array] anArray( ''. -> /e//'', ''(class)@ -> TDTxtLeafNode'', ''(value)@ -> ''''aTDTxtLeafNode'''''', ''contents@ -> ''''This is a string'''''', ''name@ -> ''''e'''''', ''paren...):
+      'anArray( ''.         -> /e//'', ''(class)@  -> TDTxtLeafNode'', ''contents@ -> ''''This is a string'''''', ''name@     -> ''''e'''''', ''parent@   -> /'', ''topez@    -> nil'')/ ([Array] anArray( ''. -> /e//'', ''(class)@ -> TDTxtLeafNode'', ''contents@ -> ''''This is a string'''''', ''name@ -> ''''e'''''', ''parent@ -> /'', ''topez@ -> nil'')):
 	(class)@ -> [Array class] Array
-	(value)@ -> [String] ''anArray''
 	1@ -> [String] ''. -> /e//''
 	2@ -> [String] ''(class)@ -> TDTxtLeafNode''
-	3@ -> [String] ''(value)@ -> ''''aTDTxtLeafNode''''''
-	4@ -> [String] ''contents@ -> ''''This is a string''''''
-	5@ -> [String] ''name@ -> ''''e''''''
-	6@ -> [String] ''parent@ -> /''
-	7@ -> [String] ''topez@ -> nil''
+	3@ -> [String] ''contents@ -> ''''This is a string''''''
+	4@ -> [String] ''name@ -> ''''e''''''
+	5@ -> [String] ''parent@ -> /''
+	6@ -> [String] ''topez@ -> nil''
 '}}

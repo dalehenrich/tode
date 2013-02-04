@@ -16,7 +16,6 @@ testNodeView
       '[x: ''x'' y: ''y'' z: ''z'']
 (1 2 anArray( 3) 4)/ ([TDTodeTestClass] [x: ''x'' y: ''y'' z: ''z''] (1 2 anArray( 3) 4)):
 	(class)@ -> [TDTodeTestClass class] TDTodeTestClass
-	(value)@ -> [String] ''aTDTodeTestClass''
 	x@ -> [String] ''x''
 	y@ -> [String] ''y''
 	z@ -> [String] ''z''

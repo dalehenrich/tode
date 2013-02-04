@@ -2,9 +2,11 @@ as yet unclassified
 executeWindowBuilderSpecs: windowBuilderSpecs
   "object aspect windowId expected [ block ]"
 
+  | results |
+  results := Array new.
   windowBuilderSpecs
     do: [ :ar | 
-      | object expected actual node aspect clientElement windowId actualPrintString block answer found |
+      | object expected actual node aspect clientElement windowId block answer found |
       object := ar at: 1.
       aspect := ar at: 2.
       windowId := ar at: 3.
@@ -26,7 +28,19 @@ executeWindowBuilderSpecs: windowBuilderSpecs
             windowLocation: nil.
           node := clientElement first asTDObjectNode: nil topez: self topez aspect: finalAspect.
           actual := block value: node.
-          actualPrintString := actual printString.
-          self assert: actual = expected.
           found := true ].
-      self assert: found ]
+      false
+        ifTrue: [ self assert: actual = expected ].
+      results
+        add:
+          {actual.
+          expected.
+          (actual printString)}.
+      self assert: found ].
+  results
+    do: [ :ar | 
+      | actual expected actualPrintString |
+      actual := ar at: 1.
+      expected := ar at: 2.
+      actualPrintString := ar at: 3.
+      self assert: actual = expected ]
