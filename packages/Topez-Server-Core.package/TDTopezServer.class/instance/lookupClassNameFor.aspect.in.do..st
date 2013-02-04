@@ -23,6 +23,6 @@ lookupClassNameFor: anObject aspect: anAspect in: nodeDictionary do: aBlock
             aspect: #'view'
             in: nodeDictionary
             do: aBlock ].
-      ^ aBlock value: nil value: #'view' ]
+      ^ aBlock value: nil ]
     ifFalse: [ classMap at: anAspect ifAbsent: [ self error: 'did not expect to get here' ] ].
-  ^ aBlock value: className value: anAspect
+  ^ aBlock value: className

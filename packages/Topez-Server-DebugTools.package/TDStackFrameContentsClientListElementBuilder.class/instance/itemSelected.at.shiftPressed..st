@@ -7,15 +7,15 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   aspect := itemAttribute aspect.
   index == 1
     ifTrue: [ 
+      | objName |
       "."
       "toggle between view and inspect on subject of list"
       aspect := aspect == #'inspect'
         ifTrue: [ #'view' ]
         ifFalse: [ #'inspect' ].
-      parentObj := self object.
-      obj := (obj asTDObjectNode: parentObj topez: listElement topez aspect: aspect)
-        name: self objectPrintString;
-        yourself ].
+      obj := obj dotSelfObject asTDObjectNode: obj topez: listElement topez aspect: aspect.
+      objName := self object displayWith: listElement displayPolicy.
+      obj name: objName ].
   index == 2
     ifTrue: [ 
       ".."

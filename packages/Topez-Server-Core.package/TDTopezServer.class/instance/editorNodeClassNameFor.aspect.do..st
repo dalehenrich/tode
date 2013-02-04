@@ -4,7 +4,7 @@ editorNodeClassNameFor: anObject aspect: anAspect do: aBlock
     lookupClassNameFor: anObject
     aspect: anAspect
     in: self class nodeEditors
-    do: [ :className :finalAspect | 
+    do: [ :className | 
       ^ className == nil
-        ifTrue: [ aBlock value: 'TDClientObjectElementBuilder' value: finalAspect ]
-        ifFalse: [ aBlock value: className value: finalAspect ] ]
+        ifTrue: [ aBlock value: 'TDClientObjectElementBuilder' value: anAspect ]
+        ifFalse: [ aBlock value: className value: anAspect ] ]

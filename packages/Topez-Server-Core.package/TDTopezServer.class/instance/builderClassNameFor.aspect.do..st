@@ -4,7 +4,7 @@ builderClassNameFor: anObject aspect: anAspect do: aBlock
     lookupClassNameFor: anObject
     aspect: anAspect
     in: self class nodeBuilders
-    do: [ :className :finalAspect | 
+    do: [ :className | 
       ^ className == nil
-        ifTrue: [ aBlock value: 'TDObjectNodeBuilder' value: finalAspect ]
-        ifFalse: [ aBlock value: className value: finalAspect ] ]
+        ifTrue: [ aBlock value: 'TDObjectNodeBuilder' value: anAspect ]
+        ifFalse: [ aBlock value: className value: anAspect ] ]
