@@ -32,4 +32,13 @@ testNodeView
       {'123'.
       #'browse'.
       '''123''/:
-[String] ''123'''}}
+[String] ''123'''}.
+      {(Dictionary new
+        add: '1' -> 1;
+        add: '2' -> 2;
+        yourself).
+      #'view'.
+      'aDictionary( ''2''->2, ''1''->1)/ ([Dictionary] aDictionary( ''2''->2, ''1''->1)):
+	1@ -> [Association] ''2''->2
+	2@ -> [Association] ''1''->1
+'}}
