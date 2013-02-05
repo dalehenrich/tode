@@ -1,9 +1,11 @@
 {
 	"class" : {
 		"category:matches:" : "DataCurator 02/05/2013 11:08",
+		"className:" : "DataCurator 02/05/2013 14:09",
 		"selectClassNamed:topez:" : "DataCurator 02/05/2013 11:21",
 		"updatePackageAndConfigFor:topez:" : "DataCurator 02/05/2013 13:28" },
 	"instance" : {
+		"addToClientListFor:names:items:indents:aspect:" : "DataCurator 02/05/2013 15:04",
 		"className" : "DataCurator 02/05/2013 09:26",
 		"className:" : "DataCurator 02/05/2013 09:26",
 		"label" : "DataCurator 02/05/2013 09:39" } }

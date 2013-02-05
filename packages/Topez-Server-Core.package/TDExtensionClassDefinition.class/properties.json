@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TDDefinitionListElementBuilder",
+		"classMethods",
+		"instanceMethods" ],
+	"name" : "TDExtensionClassDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDClientListElementBuilder",
+	"super" : "TDClassDefinition",
 	"type" : "normal" }

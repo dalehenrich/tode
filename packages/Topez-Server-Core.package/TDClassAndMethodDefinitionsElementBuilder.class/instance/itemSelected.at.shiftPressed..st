@@ -2,7 +2,7 @@ as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
   "open hierarchy window"
 
-  | aspect className itemAttribute obj |
+  |  className itemAttribute obj |
   itemAttribute := listElement itemCache at: index.
   className := itemAttribute object.
   obj := Smalltalk classNamed: className.

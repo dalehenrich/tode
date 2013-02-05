@@ -1,3 +1,3 @@
 as yet unclassified
 editorWindowLabel
-  ^ 'Classes'
+  ^ 'Definitions'
