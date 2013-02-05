@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"definitionList",
+		"selectedIndex" ],
+	"name" : "TDDefinitionList",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
