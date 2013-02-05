@@ -1,6 +1,6 @@
 as yet unclassified
 clientList: listElement
-  | items ar |
+  | items ar selectedIndex |
   items := Array new.
   ar := Array new.
   self
@@ -12,7 +12,11 @@ clientList: listElement
         nextPutAll: cl name asString.
       stream contents.
       ar add: stream contents asText allBold.
+      selectedClass == cl
+        ifTrue: [ selectedIndex := ar size ].
       items add: (TDClientListItemAttributes object: cl name parent: nil aspect: listElement aspect) ].
   listElement ~~ nil
-    ifTrue: [ listElement itemCache: items ].
+    ifTrue: [ 
+      listElement itemCache: items.
+      listElement selectedIndex: selectedIndex ].
   ^ ar

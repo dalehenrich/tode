@@ -1,3 +1,8 @@
 as yet unclassified
 classHierarchy: elementBlock
-  self processClassesBlock: [ self baseClassList ] elementBlock: elementBlock
+  self baseClassList size = 1
+    ifTrue: [ 
+      | cl |
+      cl := self baseClassList first.
+      selectedClass := Smalltalk classNamed: cl name ].
+  self processClassesBlock: [ self classList ] elementBlock: elementBlock

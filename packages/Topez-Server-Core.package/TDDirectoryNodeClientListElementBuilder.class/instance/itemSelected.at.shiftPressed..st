@@ -21,19 +21,10 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       ".."
       "nothing special"
        ].
-  shiftPressed
-    ifTrue: [ 
-      obj dotSelfObject
-        edit: parent
-        topez: listElement topez
-        aspect: #'browse'
-        windowName: nil
-        windowId: nil ]
-    ifFalse: [ 
-      obj
-        edit: parent
-        topez: listElement topez
-        aspect: aspect
-        windowName: listElement editorWindowName
-        windowId: nil ].
+  obj
+    edit: parent
+    topez: listElement topez
+    aspect: aspect
+    windowName: listElement editorWindowName
+    windowId: nil.
   ^ nil

@@ -1,10 +1,13 @@
 as yet unclassified
-buildClientElement: parentObject topez: aTopez aspect: anAspect windowName: inWindowName windowId: inWindowId windowLocation: windowLocation
+buildClientElement: parentObject topez: aTopez aspect: anAspect selectionIndex: aSelectionIndex windowName: inWindowName windowId: inWindowId windowLocation: windowLocation
   | clientListElement |
   self
     theWindowName: inWindowName;
     theWindowLocation: windowLocation.
-  ^ (clientListElement := self clientListElement)
+  clientListElement := self clientListElement.
+  aSelectionIndex ~~ nil
+    ifTrue: [ clientListElement selectionIndex: aSelectionIndex ].
+  ^ clientListElement
     topez: aTopez;
     aspect: anAspect;
     parent: parentObject;

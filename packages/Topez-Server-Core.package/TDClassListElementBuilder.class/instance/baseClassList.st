@@ -1,9 +1,7 @@
 as yet unclassified
 baseClassList
-  | baseClasses |
-  baseClasses := self object
+  ^ (self object
     collect: [ :obj | 
       obj isBehavior
         ifTrue: [ obj theNonMetaClass ]
-        ifFalse: [ obj class theNonMetaClass ] ].
-  ^ baseClasses collect: [ :baseClass | Smalltalk classNamed: baseClass className ]
+        ifFalse: [ obj class theNonMetaClass ] ]) asArray

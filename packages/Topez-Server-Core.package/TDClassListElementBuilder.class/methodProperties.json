@@ -2,7 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baseClassList" : "DataCurator 01/27/2013 21:39",
+		"baseClassList" : "DataCurator 02/04/2013 16:17",
+		"classList" : "DataCurator 02/04/2013 16:01",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:13",
 		"editorWindowLabel" : "DataCurator 01/27/2013 21:14",
 		"itemSelected:at:shiftPressed:" : "DataCurator 01/27/2013 21:58" } }
