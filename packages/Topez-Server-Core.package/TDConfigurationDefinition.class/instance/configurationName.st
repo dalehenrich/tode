@@ -1,3 +1,3 @@
 as yet unclassified
 configurationName
-  ^ configurationName
+  ^ self projectSpec name
