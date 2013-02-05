@@ -15,12 +15,12 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     edit: nil
       topez: listElement topez
       aspect: #'instanceSelectors'
-      windowName: 'instanceSelectors'
+      windowName: #'instanceSelectors'
       windowId: nil.
   obj class
     edit: nil
     topez: listElement topez
     aspect: #'classSelectors'
-    windowName: 'classSelectors'
+    windowName: '#classSelectors'
     windowId: nil.
   ^ nil

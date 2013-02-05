@@ -1,9 +1,12 @@
 {
 	"class" : {
 		"category:matches:" : "DataCurator 02/05/2013 11:27",
-		"className:selector:" : "DataCurator 02/05/2013 14:03",
+		"className:isMeta:selector:" : "DataCurator 02/05/2013 15:32",
 		"selectMethod:topez:" : "DataCurator 02/05/2013 11:30" },
 	"instance" : {
+		"isMeta" : "DataCurator 02/05/2013 15:32",
+		"isMeta:" : "DataCurator 02/05/2013 15:32",
+		"itemSelected:" : "DataCurator 02/05/2013 15:42",
 		"label" : "DataCurator 02/05/2013 09:40",
 		"selector" : "DataCurator 02/05/2013 09:26",
 		"selector:" : "DataCurator 02/05/2013 09:26" } }

@@ -16,9 +16,12 @@ classDefinitions
           classDef := TDExtensionClassDefinition className: extensionClassName.
           defs add: classDef.
           extensionClassNames at: extensionClassName put: classDef ].
-      methodDef := TDMethodDefinition className: extensionClassName selector: methodRef selector.
-      mDefs := methodRef classIsMeta
+      methodDef := TDMethodDefinition
+        className: extensionClassName
+        isMeta: methodRef classIsMeta
+        selector: methodRef selector.
+      mDefs := methodDef isMeta
         ifTrue: [ classDef classMethods ]
         ifFalse: [ classDef instanceMethods ].
-      mDefs add: methodRef ].
+      mDefs add: methodDef ].
   ^ defs

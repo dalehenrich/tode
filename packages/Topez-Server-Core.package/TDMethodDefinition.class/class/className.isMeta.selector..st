@@ -1,6 +1,7 @@
 as yet unclassified
-className: className selector: selector
+className: className isMeta: isMeta selector: selector
   ^ self new
     className: className;
+    isMeta: isMeta;
     selector: selector;
     yourself
