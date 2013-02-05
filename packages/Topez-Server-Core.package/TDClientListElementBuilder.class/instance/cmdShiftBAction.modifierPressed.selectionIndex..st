@@ -1,6 +1,6 @@
 as yet unclassified
-cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-b - browse CLASS"
+cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
+  "CMD-b - browse class - globals"
 
   | classList |
   classList := self theClassList: listElement selectionIndex: selectionIndex.

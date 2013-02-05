@@ -1,11 +1,13 @@
 as yet unclassified
 cmdKeyCodePoints
   "
-	CMD-B - browse (full) class - hiearchy, definition, selectors
+	CMD-B - browse/edit (#browse)
 	CMD-C - spawn window
+	CMD-I - inspect (#inspect)
 	CMD-L - list windows
 	CMD-N - find references
-	CMD-b - browse class - globals
+	CMD-V - view (#view)
+	CMD-b - browse CLASS
 	CMD-c - copy selection
 	CMD-l - refresh
 	CMD-p - open print window
