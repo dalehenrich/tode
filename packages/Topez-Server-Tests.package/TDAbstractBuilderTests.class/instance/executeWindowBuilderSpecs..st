@@ -23,6 +23,7 @@ executeWindowBuilderSpecs: windowBuilderSpecs
             buildClientElement: nil
             topez: self topez
             aspect: finalAspect
+            selectionIndex: nil
             windowName: nil
             windowId: windowId
             windowLocation: nil.
