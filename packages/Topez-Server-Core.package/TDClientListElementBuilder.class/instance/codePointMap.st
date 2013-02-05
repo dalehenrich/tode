@@ -1,13 +1,10 @@
 as yet unclassified
 codePointMap
   "
-	CMD-B - browse/edit (#browse)
+[]	CMD-B - browse class hierarchy
 []	CMD-C - spawn window
-	CMD-I - inspect (#inspect)
 []	CMD-L - list windows
 	CMD-N - find references
-	CMD-V - view (#view)
-[]	CMD-b - browse CLASS
 	CMD-c - copy selection
 []	CMD-l - refresh
 	CMD-p - open print window
@@ -24,12 +21,12 @@ codePointMap
   | map |
   map := Dictionary new.
   map
+    at: $B codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $C codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftCAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $L codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
-    at: $b codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $l codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     yourself.

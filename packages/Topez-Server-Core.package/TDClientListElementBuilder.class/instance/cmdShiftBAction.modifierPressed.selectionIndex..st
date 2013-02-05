@@ -1,15 +1,11 @@
 as yet unclassified
 cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-b - browse class - globals"
+  "CMD-B - browse class hierarchy"
 
-  | classList |
-  classList := self theClassList: listElement selectionIndex: selectionIndex.
-  classList isEmpty
-    ifTrue: [ ^ true ].
-  classList
+  self object class theNonMetaClass
     edit: listElement parent
     topez: listElement topez
-    aspect: #'classList'
+    aspect: #'browse'
     windowName: nil
     windowId: nil
     windowLocation: nil.
