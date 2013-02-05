@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"configuration",
+		"package" ],
+	"name" : "TDPackagedDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDDefinition",
+	"type" : "normal" }
