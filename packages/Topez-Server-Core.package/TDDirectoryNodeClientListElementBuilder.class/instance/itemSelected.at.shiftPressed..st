@@ -1,6 +1,6 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect parent obj itemAttribute |
+  | aspect parent obj itemAttribute windowName |
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
   parent := itemAttribute parent.
@@ -21,10 +21,15 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       ".."
       "nothing special"
        ].
+  windowName := listElement editorWindowName.
+  aspect == #'browse'
+    ifTrue: [ 
+      "when we're browsing there is a diversity of windows involvled, so don't try to reuse the same window ... #view and #inspect reuse window as navigator"
+      windowName := nil ].
   obj
     edit: parent
     topez: listElement topez
     aspect: aspect
-    windowName: listElement editorWindowName
+    windowName: windowName
     windowId: nil.
   ^ nil
