@@ -2,4 +2,4 @@ as yet unclassified
 pkgs
   "pkgs"
 
-  ^ TDPackageList new edit: topez
+  ^ TDPackageList current edit: topez

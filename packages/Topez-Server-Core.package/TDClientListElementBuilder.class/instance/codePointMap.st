@@ -4,6 +4,7 @@ codePointMap
 []	CMD-B - browse class hierarchy
 []	CMD-C - spawn window
 []	CMD-L - list windows
+	CMD-E - browse classes/methods
 	CMD-N - find references
 	CMD-c - copy selection
 []	CMD-l - refresh

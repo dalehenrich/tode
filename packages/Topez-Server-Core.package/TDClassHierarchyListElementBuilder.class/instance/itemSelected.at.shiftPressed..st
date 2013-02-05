@@ -5,6 +5,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   className := itemAttribute object.
   aspect := itemAttribute aspect.
   obj := Smalltalk classNamed: className.
+  TDClassDefinition selectClassNamed: className topez: listElement topez.
   obj
     edit: nil
       topez: listElement topez

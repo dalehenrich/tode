@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"selectedDefinition" ],
+		 ],
 	"name" : "TDDefinitionListElementBuilder",
 	"pools" : [
 		 ],

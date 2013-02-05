@@ -2,4 +2,4 @@ as yet unclassified
 configs
   "configs"
 
-  ^ TDConfigurationList new edit: topez
+  ^ TDConfigurationList current edit: topez

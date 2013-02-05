@@ -11,6 +11,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   isMeta
     ifTrue: [ cl := cl class ].
   method := cl compiledMethodAt: selector.
+  TDMethodDefinition selectMethod: method topez: listElement topez.
   method
     edit: nil
     topez: listElement topez
