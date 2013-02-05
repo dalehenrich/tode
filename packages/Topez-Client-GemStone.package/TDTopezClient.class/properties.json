@@ -1,8 +1,10 @@
 {
 	"category" : "Topez-Client-GemStone",
 	"classinstvars" : [
-		 ],
+		"bounds",
+		"windowOffset" ],
 	"classvars" : [
+		"Bounds",
 		"DefaultSessionDescription" ],
 	"commentStamp" : "",
 	"instvars" : [

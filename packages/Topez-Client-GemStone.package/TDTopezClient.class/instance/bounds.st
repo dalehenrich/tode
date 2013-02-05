@@ -1,3 +1,3 @@
 as yet unclassified
 bounds
-  ^ TZNativeTopez bounds
+  ^ self class bounds

@@ -1,15 +1,21 @@
 {
 	"class" : {
+		"bounds" : "dkh 2/5/2013 07:56",
 		"defaultSessionDescription" : "dkh 11/19/2012 16:10",
 		"defaultSessionDescription3101" : "dkh 12/19/2012 09:47",
 		"defaultSessionDescription:" : "dkh 11/19/2012 16:10",
 		"defaultSessionDescription_c3101" : "dkh 1/27/2013 08:04",
-		"defaultSessionDescription_k" : "dkh 1/8/2013 15:07" },
+		"defaultSessionDescription_k" : "dkh 1/8/2013 15:07",
+		"initialize" : "dkh 2/5/2013 07:57",
+		"initializeBounds" : "dkh 2/5/2013 08:00",
+		"offsetBounds:" : "dkh 2/5/2013 07:56",
+		"windowOffset" : "dkh 2/5/2013 07:56",
+		"windowOffset:" : "dkh 2/5/2013 07:57" },
 	"instance" : {
 		"accumulateTextAndServerDo:" : "dkh 1/26/2013 21:24",
 		"activeWindowServerModel" : "dkh 12/30/2012 09:44",
 		"adornmentColor" : "dkh 11/26/2012 15:16",
-		"bounds" : "dkh 1/2/2013 20:29",
+		"bounds" : "dkh 2/5/2013 07:57",
 		"currentWindowId:" : "dkh 1/26/2013 09:58",
 		"dbContinue:" : "dkh 1/25/2013 19:58",
 		"dbStep:forProcessOop:" : "dkh 1/25/2013 19:56",
