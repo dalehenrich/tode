@@ -13,9 +13,6 @@ break
   | breakTokens command |
   breakTokens := tokens copyFrom: 2 to: tokens size.
   command := breakTokens at: 1.
-  Transcript
-    cr;
-    show: command.
   (command beginsWith: '@')
     ifTrue: [ ^ self breakSet: breakTokens ].
   command = 'clear'

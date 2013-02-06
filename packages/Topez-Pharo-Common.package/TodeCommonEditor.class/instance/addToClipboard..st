@@ -1,4 +1,3 @@
 accessing
-addToClipboard: anObject
-    ObjectClipboard := anObject.
-    Clipboard clipboardText: anObject renderLabel
+addToClipboard: clipboardText
+  Clipboard clipboardText: clipboardText

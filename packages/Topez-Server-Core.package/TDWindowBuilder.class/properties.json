@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"ObjectClipboard" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"theWindowName",
