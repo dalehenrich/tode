@@ -1,3 +1,3 @@
 evaluator engine
 topezClientClass
-  ^ TZNativeTopez
+  ^ TDTopezClient

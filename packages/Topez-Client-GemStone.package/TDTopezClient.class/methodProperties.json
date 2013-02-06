@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"baseWidth" : "dkh 2/5/2013 19:15",
 		"bounds" : "dkh 2/5/2013 07:56",
 		"defaultSessionDescription" : "dkh 11/19/2012 16:10",
 		"defaultSessionDescription3101" : "dkh 12/19/2012 09:47",
@@ -7,7 +8,7 @@
 		"defaultSessionDescription_c3101" : "dkh 1/27/2013 08:04",
 		"defaultSessionDescription_k" : "dkh 1/8/2013 15:07",
 		"initialize" : "dkh 2/5/2013 07:57",
-		"initializeBounds" : "dkh 2/5/2013 08:00",
+		"initializeBounds" : "dkh 2/5/2013 19:45",
 		"offsetBounds:" : "dkh 2/5/2013 07:56",
 		"windowOffset" : "dkh 2/5/2013 07:56",
 		"windowOffset:" : "dkh 2/5/2013 09:22" },
