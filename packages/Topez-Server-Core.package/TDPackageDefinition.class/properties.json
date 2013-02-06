@@ -10,5 +10,5 @@
 	"name" : "TDPackageDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDDefinition",
+	"super" : "TDPackageBasedDefinition",
 	"type" : "normal" }

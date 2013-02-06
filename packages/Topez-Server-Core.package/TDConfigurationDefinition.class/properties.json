@@ -10,5 +10,5 @@
 	"name" : "TDConfigurationDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDDefinition",
+	"super" : "TDPackageBasedDefinition",
 	"type" : "normal" }
