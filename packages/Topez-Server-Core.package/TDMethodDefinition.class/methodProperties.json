@@ -6,7 +6,14 @@
 	"instance" : {
 		"isMeta" : "DataCurator 02/05/2013 15:32",
 		"isMeta:" : "DataCurator 02/05/2013 15:32",
-		"itemSelected:" : "DataCurator 02/05/2013 16:23",
+		"itemSelected:" : "DataCurator 02/05/2013 23:26",
 		"label" : "DataCurator 02/05/2013 16:20",
+		"method" : "DataCurator 02/05/2013 23:26",
+		"pasteIntoBehavior:" : "DataCurator 02/05/2013 23:31",
+		"pasteIntoClassDefinition:" : "DataCurator 02/05/2013 23:48",
+		"pasteIntoMethodDefinition:" : "DataCurator 02/05/2013 23:52",
+		"pasteIntoPackageDefinition:" : "DataCurator 02/05/2013 23:58",
+		"pasteTDDefinition:" : "DataCurator 02/05/2013 23:43",
 		"selector" : "DataCurator 02/05/2013 09:26",
-		"selector:" : "DataCurator 02/05/2013 09:26" } }
+		"selector:" : "DataCurator 02/05/2013 09:26",
+		"theBehavior" : "DataCurator 02/05/2013 23:51" } }

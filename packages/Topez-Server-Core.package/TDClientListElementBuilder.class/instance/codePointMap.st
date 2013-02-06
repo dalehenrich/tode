@@ -6,10 +6,10 @@ codePointMap
 []	CMD-L - list windows
 []	CMD-E - browse pkg/config classes/methods
 	CMD-N - find references
-[]	CMD-c - copy selection
+[]	CMD-c - copy object
 []	CMD-l - refresh
 	CMD-p - open print window
-	CMD-v - paste selection
+[]	CMD-v - paste object
 	CMD-x - cut selection
 "
 
@@ -34,5 +34,7 @@ codePointMap
       put: [ :modifierPressed :listElement :selectionIndex | self cmdCAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $l codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+    at: $v codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdVAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     yourself.
   ^ map
