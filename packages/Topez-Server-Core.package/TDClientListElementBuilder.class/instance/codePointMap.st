@@ -10,7 +10,7 @@ codePointMap
 []	CMD-l - refresh
 	CMD-p - open print window
 []	CMD-v - paste object
-	CMD-x - cut selection
+[]	CMD-x - cut object
 "
 
   "block result may be a Symbol or a Boolean:
@@ -36,5 +36,7 @@ codePointMap
       put: [ :modifierPressed :listElement :selectionIndex | self cmdLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $v codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdVAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+    at: $x codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdXAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     yourself.
   ^ map

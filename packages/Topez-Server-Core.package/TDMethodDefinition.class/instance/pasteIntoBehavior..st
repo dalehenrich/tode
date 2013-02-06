@@ -6,5 +6,6 @@ pasteIntoBehavior: aBehavior
   method := self method.
   source := method sourceString.
   category := method inClass categoryOfSelector: self selector.
+  category ifNil: [ category := ClassOrganizer default ].
   aBehavior compile: source classified: category.
   ^ true

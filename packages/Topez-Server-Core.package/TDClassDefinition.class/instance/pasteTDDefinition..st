@@ -1,3 +1,3 @@
 as yet unclassified
 pasteTDDefinition: def
-  ^ def pasteIntoConfigurationDefinition: self
+  ^ def pasteIntoClassDefinition: self

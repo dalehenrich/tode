@@ -6,5 +6,6 @@ pasteIntoMethodDefinition: aTDMethodDefinition
   method := self method.
   source := method sourceString.
   category := aTDMethodDefinition method inClass categoryOfSelector: aTDMethodDefinition method selector.
+  category ifNil: [ category := ClassOrganizer default ].
   aTDMethodDefinition theBehavior compile: source classified: category.
   ^ true
