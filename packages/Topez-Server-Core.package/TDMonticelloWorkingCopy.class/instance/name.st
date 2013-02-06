@@ -1,3 +1,7 @@
 as yet unclassified
 name
-  ^ self workingCopy ancestry ancestors first name
+  | ancestors |
+  ancestors := self workingCopy ancestry ancestors.
+  ancestors isEmpty
+    ifTrue: [ ^ self workingCopy packageName ].
+  ^ ancestors first name
