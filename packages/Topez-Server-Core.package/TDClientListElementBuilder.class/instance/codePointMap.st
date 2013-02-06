@@ -8,6 +8,7 @@ codePointMap
 	CMD-N - find references
 []	CMD-c - copy object
 []	CMD-l - refresh
+	CMD-o - open method template
 	CMD-p - open print window
 []	CMD-v - paste object
 []	CMD-x - cut object
@@ -34,6 +35,8 @@ codePointMap
       put: [ :modifierPressed :listElement :selectionIndex | self cmdCAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $l codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+    at: $o codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdOAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $v codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdVAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $x codePoint

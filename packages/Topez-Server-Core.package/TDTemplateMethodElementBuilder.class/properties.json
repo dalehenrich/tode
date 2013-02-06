@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"methodClass",
+		"isMeta" ],
+	"name" : "TDTemplateMethodElementBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDClientMethodElementBuilder",
+	"type" : "normal" }
