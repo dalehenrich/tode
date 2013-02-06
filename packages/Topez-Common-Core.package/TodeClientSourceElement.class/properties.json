@@ -8,7 +8,8 @@
 	"instvars" : [
 		"firstSource",
 		"getBlockOop",
-		"setBlockOop" ],
+		"setBlockOop",
+		"cmdKeyBlockOop" ],
 	"name" : "TodeClientSourceElement",
 	"pools" : [
 		 ],

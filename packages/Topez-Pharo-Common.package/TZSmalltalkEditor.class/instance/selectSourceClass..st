@@ -1,4 +1,4 @@
 menu messages
 selectSourceClass: aKeyboardEvent
-    self model selectSourceClass.
-    ^ true
+  self model selectSourceClass.
+  ^ true

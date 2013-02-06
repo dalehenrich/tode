@@ -11,6 +11,7 @@ buildClientElement: parentObject topez: aTopez aspect: anAspect selectionIndex: 
     firstSource: self firstSource;
     getBlock: self getBlock;
     setBlock: self setBlock;
+    cmdKeyBlock: self cmdKeyBlock;
     editorWindowLabel: self editorWindowLabel;
     editorWindowId: inWindowId;
     editorWindowName: self editorWindowName;
