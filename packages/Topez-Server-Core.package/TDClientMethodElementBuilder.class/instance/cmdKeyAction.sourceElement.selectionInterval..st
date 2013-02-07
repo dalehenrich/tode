@@ -1,10 +1,7 @@
 as yet unclassified
 cmdKeyAction: cmdKey sourceElement: clientSourceElement selectionInterval: selectionInterval
-  "CMD-b - set breakpoint"
-
-  | stepPoint |
+  cmdKey = $k
+    ifTrue: [ ^ self setBreakPoint: selectionInterval ].
   cmdKey = $b
-    ifFalse: [ ^ false ].
-  stepPoint := self findStepPoint: selectionInterval.
-  self method setBreakAtStepPoint: stepPoint.
-  ^ true
+    ifTrue: [ ^ self browseClass: selectionInterval ].
+  ^ false
