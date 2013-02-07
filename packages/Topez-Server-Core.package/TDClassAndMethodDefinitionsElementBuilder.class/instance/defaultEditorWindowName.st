@@ -1,3 +1,3 @@
 as yet unclassified
 defaultEditorWindowName
-  ^ #'definitionList'
+  ^ nil
