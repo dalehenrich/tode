@@ -7,8 +7,10 @@ implementorsOf: selector
       (behavior includesSelector: selector)
         ifTrue: [ 
           | def |
-          def := (self className: behavior theNonMetaClass name isMeta: behavior isMeta selector: selector)
-            messagePattern: selector asString;
-            yourself.
+          def := self
+            className: behavior theNonMetaClass name
+            isMeta: behavior isMeta
+            selector: selector
+            messagePattern: selector asString.
           defs add: def ] ].
   ^ defs

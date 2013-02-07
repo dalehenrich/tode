@@ -1,15 +1,16 @@
 as yet unclassified
 browseManPage
   ^ 'NAME
-  brwose - navigate results of find command
+  browse - navigate results of find command
 
 SYNOPSIS
+  browse class <regex-pattern>
   browse method <selector>
-  browse sender <selector>
+  browse references <variableOrGlobalName>
   browse rmethod <regex-pattern>
   browse rsender <regex-pattern>
+  browse sender <selector>
   browse source <regex-pattern>
-  browse class <regex-pattern>
 
 DESCRIPTION
   

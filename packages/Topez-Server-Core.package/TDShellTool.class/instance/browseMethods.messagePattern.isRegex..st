@@ -3,13 +3,12 @@ browseMethods: methodList messagePattern: messagePattern isRegex: isRegex
   | defs |
   defs := methodList
     collect: [ :meth | 
-      (TDMethodDefinition
+      TDMethodDefinition
         className: meth actualClass theNonMetaClass name
         isMeta: meth actualClass isMeta
-        selector: meth selector)
-        messagePattern: messagePattern;
-        messagePatternIsRegex: isRegex;
-        yourself ].
+        selector: meth selector
+        messagePattern: messagePattern
+        messagePatternIsRegex: isRegex ].
   ^ defs
     edit: nil
     topez: topez

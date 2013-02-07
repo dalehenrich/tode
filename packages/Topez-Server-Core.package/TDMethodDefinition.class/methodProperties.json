@@ -2,9 +2,12 @@
 	"class" : {
 		"category:matches:" : "DataCurator 02/05/2013 11:27",
 		"className:isMeta:selector:" : "DataCurator 02/05/2013 15:32",
-		"implementorsOf:" : "DataCurator 02/07/2013 11:13",
+		"className:isMeta:selector:messagePattern:" : "DataCurator 02/07/2013 13:15",
+		"className:isMeta:selector:messagePattern:messagePatternIsRegex:" : "DataCurator 02/07/2013 13:15",
+		"implementorsOf:" : "DataCurator 02/07/2013 13:17",
+		"referencesTo:isMeta:in:" : "DataCurator 02/07/2013 13:34",
 		"selectMethod:topez:" : "DataCurator 02/05/2013 11:30",
-		"sendersOf:" : "DataCurator 02/07/2013 11:14" },
+		"sendersOf:" : "DataCurator 02/07/2013 13:17" },
 	"instance" : {
 		"addToClientListFor:names:items:indents:aspect:" : "DataCurator 02/06/2013 20:43",
 		"asClassDefinition" : "DataCurator 02/06/2013 22:06",

@@ -4,7 +4,7 @@ find
   find method <selector>
   find sender <selector>
   find rmethod <regex-pattern>
-  find sender <regex-pattern>
+  find rsender <regex-pattern>
   find source <regex-pattern>
   find class <regex-pattern>
 "
@@ -16,6 +16,8 @@ find
     ifTrue: [ ^ self findMethod: findTokens ].
   command = 'sender'
     ifTrue: [ ^ self findSender: findTokens ].
+  command = 'references'
+    ifTrue: [ ^ self findReferences: findTokens ].
   command = 'rmethod'
     ifTrue: [ ^ self findRegexMethod: findTokens ].
   command = 'rsender'
