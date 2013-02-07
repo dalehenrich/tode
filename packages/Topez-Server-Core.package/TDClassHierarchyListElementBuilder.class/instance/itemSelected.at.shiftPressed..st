@@ -23,4 +23,12 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     aspect: #'classSelectors'
     windowName: '#classSelectors'
     windowId: nil.
+  listElement selectedIndex ~~ index
+    ifTrue: [ 
+      obj
+        edit: nil
+        topez: listElement topez
+        aspect: #'browse'
+        windowName: nil
+        windowId: nil ].
   ^ nil
