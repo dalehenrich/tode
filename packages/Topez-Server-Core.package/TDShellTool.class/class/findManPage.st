@@ -4,10 +4,12 @@ findManPage
   find - search the image
 
 SYNOPSIS
-  find method <pattern>
-  find sender <pattern>
-  find source <pattern>
-  find class <pattern>
+  find method <selector>
+  find sender <selector>
+  find rmethod <regex-pattern>
+  find rsender <regex-pattern>
+  find source <regex-pattern>
+  find class <regex-pattern>
 
 DESCRIPTION
   

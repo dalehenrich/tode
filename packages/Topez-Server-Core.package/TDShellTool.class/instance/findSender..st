@@ -1,8 +1,8 @@
 as yet unclassified
 findSender: findTokens
-  "find sender <pattern>"
+  "find sender <selector>"
 
-  | regex |
-  regex := self findRegex: findTokens.
-  regex ifNil: [ ^ #() ].
-  ^ SystemNavigation default regexSendersOf: regex
+  | selector |
+  selector := findTokens at: 2.
+  ^ (SystemNavigation default sendersOf: selector)
+    collect: [ :gsMethod | MethodReference class: gsMethod inClass selector: gsMethod selector ]

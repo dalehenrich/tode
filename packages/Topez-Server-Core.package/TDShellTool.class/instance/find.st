@@ -1,10 +1,12 @@
 as yet unclassified
 find
   "
-  find method <pattern>
-  find sender <pattern>
-  find source <pattern>
-  find class <pattern>
+  find method <selector>
+  find sender <selector>
+  find rmethod <regex-pattern>
+  find sender <regex-pattern>
+  find source <regex-pattern>
+  find class <regex-pattern>
 "
 
   | findTokens command |
@@ -14,6 +16,10 @@ find
     ifTrue: [ ^ self findMethod: findTokens ].
   command = 'sender'
     ifTrue: [ ^ self findSender: findTokens ].
+  command = 'rmethod'
+    ifTrue: [ ^ self findRegexMethod: findTokens ].
+  command = 'rsender'
+    ifTrue: [ ^ self findRegexSender: findTokens ].
   command = 'source'
     ifTrue: [ ^ self findSource: findTokens ].
   command = 'class'

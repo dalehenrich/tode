@@ -1,8 +1,7 @@
 as yet unclassified
 findMethod: findTokens
-  "find method <pattern>"
+  "find method <selector>"
 
-  | regex |
-  regex := self findRegex: findTokens.
-  regex ifNil: [ ^ #() ].
-  ^ SystemNavigation default allMethodsNoDoitsSelect: [ :m | regex search: m selector asString ]
+  | selector |
+  selector := findTokens at: 2.
+  ^ SystemNavigation default allMethodsNoDoitsSelect: [ :m | selector = m selector asString ]

@@ -1,6 +1,6 @@
 as yet unclassified
 findSource: findTokens
-  "find source <pattern>"
+  "find source <regex-pattern>"
 
   | regex |
   regex := self findRegex: findTokens.

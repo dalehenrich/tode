@@ -1,6 +1,6 @@
 as yet unclassified
 findClass: findTokens
-  "find class <pattern>"
+  "find class <regex-pattern>"
 
   | regex |
   regex := self findRegex: findTokens.
