@@ -13,7 +13,7 @@ implementorsOf: clientSourceElement selectionInterval: selectionInterval
   defs
     edit: nil
     topez: clientSourceElement topez
-    aspect: #'definitionList'
+    aspect: #'methodDefinitionList'
     windowName: nil
     windowId: nil
     windowLocation: #'implementors'.

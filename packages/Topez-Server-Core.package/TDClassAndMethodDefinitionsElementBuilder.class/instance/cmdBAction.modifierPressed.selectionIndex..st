@@ -6,6 +6,6 @@ cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
   selectionIndex == 0
     ifTrue: [ ^ false ].
   itemAttribute := listElement itemCache at: selectionIndex.
-  def := itemAttribute object.
+  def := itemAttribute object asClassDefinition.
   {def} edit: listElement topez aspect: #'definitionList'.
   ^ true

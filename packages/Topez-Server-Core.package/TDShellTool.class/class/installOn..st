@@ -30,6 +30,7 @@ installOn: aTDTopezServer
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
     registerEditorClass: TDClassAndMethodDefinitionsElementBuilder for: Collection aspect: #'definitionList';
+    registerEditorClass: TDMethodDefinitionsElementBuilder for: Collection aspect: #'methodDefinitionList';
     registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder for: TDDefinitionList aspect: #'view';
     registerEditorClass: TDClassSelectorListElementBuilder for: Behavior aspect: #'classSelectors';
     registerEditorClass: TDClassSelectorListElementBuilder for: Behavior aspect: #'instanceSelectors';
