@@ -2,7 +2,7 @@ as yet unclassified
 sendersOf: selector
   | defs |
   defs := Array new.
-  (SystemNavigation default sendersOf: selector)
+  (SystemNavigation default sendersOf: selector asSymbol)
     do: [ :gsMethod | 
       defs
         add:
