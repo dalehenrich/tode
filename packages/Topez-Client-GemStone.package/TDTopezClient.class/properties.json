@@ -2,7 +2,10 @@
 	"category" : "Topez-Client-GemStone",
 	"classinstvars" : [
 		"bounds",
-		"windowOffset" ],
+		"windowOffset",
+		"codeWindowWidth",
+		"listWindowWidth",
+		"windowOrigin" ],
 	"classvars" : [
 		"Bounds",
 		"DefaultSessionDescription" ],
