@@ -4,4 +4,4 @@ findReferences: findTokens
 
   | variableOrClassName |
   variableOrClassName := findTokens at: 2.
-  ^ TDMethodDefinition referencesTo: variableOrClassName isMeta: false in: nil
+  ^ TDMethodDefinition rawReferencesTo: variableOrClassName isMeta: false in: nil
