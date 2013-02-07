@@ -1,4 +1,4 @@
 menu messages
 selectSourceClass: aKeyboardEvent
-  self model selectSourceClass.
+  self model cmdShiftBPressed: self.
   ^ true

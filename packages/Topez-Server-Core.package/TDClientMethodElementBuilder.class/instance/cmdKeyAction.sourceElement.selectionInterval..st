@@ -8,6 +8,8 @@ cmdKeyAction: cmdKey sourceElement: clientSourceElement selectionInterval: selec
     ifTrue: [ ^ self implementorsOf: clientSourceElement selectionInterval: selectionInterval ].
   cmdKey = $n
     ifTrue: [ ^ self sendersOf: clientSourceElement selectionInterval: selectionInterval ].
+  cmdKey = $B
+    ifTrue: [ ^ self browseClassHierarchy: clientSourceElement selectionInterval: selectionInterval ].
   cmdKey = $N
     ifTrue: [ ^ self referencesTo: clientSourceElement selectionInterval: selectionInterval ].
   ^ false
