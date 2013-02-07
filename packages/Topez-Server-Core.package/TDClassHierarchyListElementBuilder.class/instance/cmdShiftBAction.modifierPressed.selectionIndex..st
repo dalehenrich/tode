@@ -12,7 +12,7 @@ cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: se
     edit: listElement parent
     topez: listElement topez
     aspect: #'browse'
-    windowName: nil
+    windowName: #'hierarchy'
     windowId: nil
     windowLocation: nil.
   ^ true

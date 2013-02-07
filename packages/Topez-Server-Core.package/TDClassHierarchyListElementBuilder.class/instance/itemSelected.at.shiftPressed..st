@@ -29,6 +29,6 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         edit: nil
         topez: listElement topez
         aspect: #'browse'
-        windowName: nil
+        windowName: #'hierarchy'
         windowId: nil ].
   ^ nil
