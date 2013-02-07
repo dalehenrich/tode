@@ -11,6 +11,7 @@ codePointMap
 []	CMD-l - refresh
 []	CMD-m - browse implementors
 []	CMD-n - browse senders
+[]	CMD-N - references to
 	CMD-o - open method template
 	CMD-p - open print window
 []	CMD-v - paste object
@@ -34,6 +35,8 @@ codePointMap
       put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftEAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $L codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+    at: $N codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftNAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $b codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $c codePoint

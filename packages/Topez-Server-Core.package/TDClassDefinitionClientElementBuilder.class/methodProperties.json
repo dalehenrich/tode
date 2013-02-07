@@ -2,8 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"cmdKeyAction:sourceElement:selectionInterval:" : "DataCurator 02/07/2013 13:50",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:10",
 		"editorWindowLabel" : "DataCurator 01/27/2013 01:33",
 		"elementSource" : "DataCurator 01/27/2013 00:58",
 		"elementSource:clientSourceElement:" : "DataCurator 01/27/2013 01:02",
+		"formatOnDisplay" : "DataCurator 02/07/2013 13:51",
+		"referencesTo:selectionInterval:" : "DataCurator 02/07/2013 13:53",
 		"theClass" : "DataCurator 01/27/2013 00:56" } }

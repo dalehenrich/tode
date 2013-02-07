@@ -2,7 +2,9 @@ as yet unclassified
 cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
   "CMD-B - browse class hierarchy"
 
-  self object class theNonMetaClass
+  | cls |
+  cls := self selectedClass: listElement selectionIndex: selectionIndex.
+  cls
     edit: listElement parent
     topez: listElement topez
     aspect: #'browse'
