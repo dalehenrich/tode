@@ -7,7 +7,7 @@ browseClass: clientSourceElement selectionInterval: selectionInterval
   | gsMethod classNamePattern parser regex classes defs |
   gsMethod := self method.
   classNamePattern := gsMethod sourceString copyFrom: selectionInterval _from to: selectionInterval _to.
-  parser := RxParser new safelyParse: classNamePattern.
+  parser := RxParser safelyParse: classNamePattern.
   parser ifNil: [ ^ false ].
   regex := RxParser preferredMatcherClass for: parser ignoreCase: true.
   classes := SystemNavigation default allClasses asArray select: [ :cls | regex search: cls name asString ].

@@ -1,7 +1,7 @@
 as yet unclassified
 findMatchingPackages: pattern topez: aTopez
   | regex pkgNode parser |
-  parser := RxParser new safelyParse: pattern.
+  parser := RxParser safelyParse: pattern.
   parser ifNil: [ ^ #() ].
   regex := RxParser preferredMatcherClass for: parser ignoreCase: true.
   pkgNode := aTopez lookup: self pkgsPath.
