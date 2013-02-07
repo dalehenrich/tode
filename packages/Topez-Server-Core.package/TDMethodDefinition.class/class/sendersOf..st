@@ -4,7 +4,9 @@ sendersOf: selector
   defs := Array new.
   (SystemNavigation default sendersOf: selector asSymbol)
     do: [ :gsMethod | 
-      defs
-        add:
-          (self className: gsMethod inClass theNonMetaClass name isMeta: gsMethod inClass isMeta selector: gsMethod selector) ].
+      | def |
+      def := (self className: gsMethod inClass theNonMetaClass name isMeta: gsMethod inClass isMeta selector: selector)
+        messagePattern: selector asString;
+        yourself.
+      defs add: def ].
   ^ defs

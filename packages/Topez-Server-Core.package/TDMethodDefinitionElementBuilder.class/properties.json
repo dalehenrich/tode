@@ -6,13 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"isMeta",
-		"selector",
-		"deletedMethod",
-		"messagePattern",
-		"messagePatternIsRegex" ],
-	"name" : "TDMethodDefinition",
+		 ],
+	"name" : "TDMethodDefinitionElementBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDClassDefinition",
+	"super" : "TDClientMethodElementBuilder",
 	"type" : "normal" }

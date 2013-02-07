@@ -1,12 +1,15 @@
 as yet unclassified
-browseMethods: methodList
+browseMethods: methodList messagePattern: messagePattern isRegex: isRegex
   | defs |
   defs := methodList
     collect: [ :meth | 
-      TDMethodDefinition
+      (TDMethodDefinition
         className: meth actualClass theNonMetaClass name
         isMeta: meth actualClass isMeta
-        selector: meth selector ].
+        selector: meth selector)
+        messagePattern: messagePattern;
+        messagePatternIsRegex: isRegex;
+        yourself ].
   ^ defs
     edit: nil
     topez: topez

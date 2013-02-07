@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"baseClassList" : "DataCurator 02/06/2013 22:01",
+		"buildClientElement:topez:aspect:selectionIndex:windowName:windowId:windowLocation:" : "DataCurator 02/07/2013 11:31",
 		"clientList:" : "DataCurator 02/06/2013 22:02",
 		"cmdMAction:modifierPressed:selectionIndex:" : "DataCurator 02/07/2013 08:03",
 		"cmdNAction:modifierPressed:selectionIndex:" : "DataCurator 02/07/2013 08:04" } }

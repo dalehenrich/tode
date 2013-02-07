@@ -5,5 +5,10 @@ implementorsOf: selector
   SystemNavigation default
     allBehaviorsDo: [ :behavior | 
       (behavior includesSelector: selector)
-        ifTrue: [ defs add: (self className: behavior theNonMetaClass name isMeta: behavior isMeta selector: selector) ] ].
+        ifTrue: [ 
+          | def |
+          def := (self className: behavior theNonMetaClass name isMeta: behavior isMeta selector: selector)
+            messagePattern: selector asString;
+            yourself.
+          defs add: def ] ].
   ^ defs

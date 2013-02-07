@@ -38,6 +38,7 @@ installOn: aTDTopezServer
     registerEditorClass: TDClassDefinitionClientElementBuilder for: Class aspect: #'classDefinition';
     registerEditorClass: TDClientObjectElementBuilder for: Class aspect: #'inspect';
     registerEditorClass: TDGsNMethodElementBuilder for: GsNMethod aspect: #'method';
+    registerEditorClass: TDMethodDefinitionElementBuilder for: TDMethodDefinition aspect: #'method';
     registerEditorClass: TDClientObjectElementBuilder for: Object aspect: #'view';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder for: TDDirectoryNode aspect: #'view';
     registerEditorClass: TDClientSourceElementBuilder for: TDLeafNode aspect: #'browse';

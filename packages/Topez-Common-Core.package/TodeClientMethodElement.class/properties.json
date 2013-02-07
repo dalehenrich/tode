@@ -11,7 +11,9 @@
 		"elementBehaviorForShout",
 		"allInstVarNames",
 		"allClassVarNames",
-		"allSharedPoolNames" ],
+		"allSharedPoolNames",
+		"messagePattern",
+		"messagePatternIsRegex" ],
 	"name" : "TodeClientMethodElement",
 	"pools" : [
 		 ],
