@@ -5,7 +5,7 @@ itemSelected: topez
   | method |
   method := self method.
   TDMethodDefinition selectMethod: method topez: topez.
-  method
+  self
     edit: nil
     topez: topez
     aspect: #'method'

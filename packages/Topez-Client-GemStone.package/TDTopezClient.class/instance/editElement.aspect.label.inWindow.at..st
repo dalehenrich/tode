@@ -24,4 +24,5 @@ editElement: aClientElement aspect: aspectSelector label: labelString inWindow: 
   aClientElement selectedIndex
     ifNil: [ win model listIndex: 0 ]
     ifNotNil: [ :selectedIndex | win model listIndex: selectedIndex ].
+  aClientElement activateElement.
   ^ windowId

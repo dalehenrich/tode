@@ -1,3 +1,3 @@
 as yet unclassified
 method
-  ^ self object
+  ^ self theBehavior compiledMethodAt: self selector
