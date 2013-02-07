@@ -6,4 +6,6 @@ cmdKeyAction: cmdKey sourceElement: clientSourceElement selectionInterval: selec
     ifTrue: [ ^ self setBreakPoint: selectionInterval ].
   cmdKey = $m
     ifTrue: [ ^ self implementorsOf: clientSourceElement selectionInterval: selectionInterval ].
+  cmdKey = $n
+    ifTrue: [ ^ self sendersOf: clientSourceElement selectionInterval: selectionInterval ].
   ^ false
