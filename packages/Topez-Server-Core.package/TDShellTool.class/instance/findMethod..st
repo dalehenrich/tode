@@ -4,4 +4,5 @@ findMethod: findTokens
 
   | regex |
   regex := self findRegex: findTokens.
+  regex ifNil: [ ^ #() ].
   ^ SystemNavigation default allMethodsNoDoitsSelect: [ :m | regex search: m selector asString ]

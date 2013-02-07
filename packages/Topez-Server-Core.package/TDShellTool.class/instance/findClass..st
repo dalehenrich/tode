@@ -4,4 +4,5 @@ findClass: findTokens
 
   | regex |
   regex := self findRegex: findTokens.
+  regex ifNil: [ ^ #() ].
   ^ SystemNavigation default allClasses asArray select: [ :cls | regex search: cls name asString ]

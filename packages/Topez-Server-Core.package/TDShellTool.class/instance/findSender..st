@@ -4,4 +4,5 @@ findSender: findTokens
 
   | regex |
   regex := self findRegex: findTokens.
+  regex ifNil: [ ^ #() ].
   ^ SystemNavigation default regexSendersOf: regex

@@ -3,5 +3,5 @@ cmdKeyAction: cmdKey sourceElement: clientSourceElement selectionInterval: selec
   cmdKey = $k
     ifTrue: [ ^ self setBreakPoint: selectionInterval ].
   cmdKey = $b
-    ifTrue: [ ^ self browseClass: selectionInterval ].
+    ifTrue: [ ^ self browseClass: clientSourceElement selectionInterval: selectionInterval ].
   ^ false
