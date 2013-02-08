@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ProfMon" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDProfileTool",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractDevTool",
+	"type" : "normal" }

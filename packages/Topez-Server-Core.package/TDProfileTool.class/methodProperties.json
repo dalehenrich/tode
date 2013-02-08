@@ -1,0 +1,21 @@
+{
+	"class" : {
+		"install" : "DataCurator 02/07/2013 19:38",
+		"installExampleOn:" : "DataCurator 02/07/2013 19:07",
+		"installOn:" : "DataCurator 02/07/2013 19:08",
+		"pf" : "DataCurator 02/07/2013 19:09",
+		"pfManPage" : "DataCurator 02/07/2013 20:08",
+		"priority" : "DataCurator 02/07/2013 19:05",
+		"profMonitor" : "DataCurator 02/07/2013 20:02",
+		"profMonitor:" : "DataCurator 02/07/2013 20:03",
+		"toolName" : "DataCurator 02/07/2013 19:08",
+		"toolReadMe" : "DataCurator 02/07/2013 19:09" },
+	"instance" : {
+		"clean" : "DataCurator 02/07/2013 20:07",
+		"gather" : "DataCurator 02/07/2013 20:09",
+		"profMonitor" : "DataCurator 02/07/2013 19:23",
+		"profMonitor:" : "DataCurator 02/07/2013 19:23",
+		"report" : "DataCurator 02/07/2013 20:09",
+		"start" : "DataCurator 02/07/2013 19:23",
+		"status" : "DataCurator 02/07/2013 19:33",
+		"stop" : "DataCurator 02/07/2013 19:31" } }
