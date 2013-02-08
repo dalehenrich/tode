@@ -1,12 +1,9 @@
 as yet unclassified
-browseClass: clientSourceElement selectionInterval: selectionInterval
+browseClass: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-b - browse class"
 
-  "find class matching pattern"
-
-  | gsMethod classNamePattern parser regex classes defs |
-  gsMethod := self method.
-  classNamePattern := gsMethod sourceString copyFrom: selectionInterval _from to: selectionInterval _to.
+  | classNamePattern parser regex classes defs |
+  classNamePattern := editorSource copyFrom: selectionInterval _from to: selectionInterval _to.
   parser := RxParser safelyParse: classNamePattern.
   parser ifNil: [ ^ false ].
   regex := RxParser preferredMatcherClass for: parser ignoreCase: true.

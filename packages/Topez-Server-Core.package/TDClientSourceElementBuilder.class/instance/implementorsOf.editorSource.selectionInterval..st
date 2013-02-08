@@ -1,10 +1,9 @@
 as yet unclassified
-implementorsOf: clientSourceElement selectionInterval: selectionInterval
+implementorsOf: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-m - implementorsOf"
 
-  | gsMethod selector defs |
-  gsMethod := self method.
-  selector := (gsMethod sourceString copyFrom: selectionInterval _from to: selectionInterval _to) findSelector.
+  | selector defs |
+  selector := (editorSource copyFrom: selectionInterval _from to: selectionInterval _to) findSelector.
   defs := TDMethodDefinition implementorsOf: selector.
   defs
     edit: nil

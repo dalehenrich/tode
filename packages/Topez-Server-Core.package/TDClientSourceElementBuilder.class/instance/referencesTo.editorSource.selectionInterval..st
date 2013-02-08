@@ -1,9 +1,9 @@
 as yet unclassified
-referencesTo: clientSourceElement selectionInterval: selectionInterval
+referencesTo: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-N - references to"
 
   | aVariableOrClassName defs |
-  aVariableOrClassName := self elementSource copyFrom: selectionInterval _from to: selectionInterval _to.
+  aVariableOrClassName := editorSource copyFrom: selectionInterval _from to: selectionInterval _to.
   defs := TDMethodDefinition referencesTo: aVariableOrClassName isMeta: false in: self theClass.
   defs
     edit: nil

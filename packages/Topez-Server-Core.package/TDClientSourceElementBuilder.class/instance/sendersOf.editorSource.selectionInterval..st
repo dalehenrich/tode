@@ -1,10 +1,9 @@
 as yet unclassified
-sendersOf: clientSourceElement selectionInterval: selectionInterval
+sendersOf: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-n - sendersOf"
 
-  | meth selector defs |
-  meth := self method.
-  selector := (meth sourceString copyFrom: selectionInterval _from to: selectionInterval _to) findSelector.
+  | selector defs |
+  selector := (editorSource copyFrom: selectionInterval _from to: selectionInterval _to) findSelector.
   defs := TDMethodDefinition sendersOf: selector.
   defs
     edit: nil
