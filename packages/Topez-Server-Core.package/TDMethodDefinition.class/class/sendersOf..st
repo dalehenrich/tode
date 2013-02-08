@@ -8,7 +8,7 @@ sendersOf: selector
       def := self
         className: gsMethod inClass theNonMetaClass name
         isMeta: gsMethod inClass isMeta
-        selector: selector
+        selector: gsMethod selector
         messagePattern: selector asString.
       defs add: def ].
   ^ defs
