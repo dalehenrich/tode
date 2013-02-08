@@ -12,4 +12,5 @@ SYNOPSIS
   pf clean
 
 DESCRIPTION
+  default <tally> is 100
 '

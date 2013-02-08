@@ -9,4 +9,4 @@ report
     ifTrue: [ tally := (tokens at: 2) asNumber ].
   profMon := self profMonitor.
   profMon results ifNil: [ profMon gatherResults ].
-  ^ (profMon reportDownTo: 2) edit: topez aspect: #'browse'
+  ^ (profMon reportDownTo: tally) edit: topez aspect: #'browse'
