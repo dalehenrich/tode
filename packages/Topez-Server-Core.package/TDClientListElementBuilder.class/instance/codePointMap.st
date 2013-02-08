@@ -42,7 +42,7 @@ codePointMap
     at: $c codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdCAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $l codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | self cmdLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $m codePoint
       put: [ :modifierPressed :listElement :selectionIndex | self cmdMAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
     at: $n codePoint
