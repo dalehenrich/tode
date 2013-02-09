@@ -7,6 +7,7 @@ cmdXAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
   def := itemAttribute object.
   self objectClipboard: def.
   def removeFromSystem.
+  listElement topez commitTransaction.
   ^ STON
     toString:
       {#'addToClipboard:'.

@@ -7,6 +7,7 @@ cmdCAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
   className := itemAttribute object.
   def := TDClassDefinition className: className.
   self objectClipboard: def.
+  listElement topez commitTransaction.
   ^ STON
     toString:
       {#'addToClipboard:'.

@@ -8,8 +8,12 @@ cmdCAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
   className := classAttributes at: 1.
   selector := classAttributes at: 3.
   isMeta := classAttributes at: 2.
-  def := TDMethodDefinition className: className isMeta: isMeta selector: selector.
+  def := TDMethodDefinition
+    className: className
+    isMeta: isMeta
+    selector: selector.
   self objectClipboard: def.
+  listElement topez commitTransaction.
   ^ STON
     toString:
       {#'addToClipboard:'.

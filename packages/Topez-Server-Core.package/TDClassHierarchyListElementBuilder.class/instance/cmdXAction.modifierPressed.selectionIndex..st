@@ -8,6 +8,7 @@ cmdXAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
   def := TDClassDefinition className: className.
   self objectClipboard: def.
   def theClass removeFromSystem.
+  listElement topez commitTransaction.
   ^ STON
     toString:
       {#'addToClipboard:'.

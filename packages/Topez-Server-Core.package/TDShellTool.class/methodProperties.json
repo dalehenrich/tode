@@ -58,6 +58,8 @@
 		"sendersManPage" : "dkh 12/21/2012 11:23",
 		"shellInspect" : "DataCurator 01/21/2013 16:34",
 		"shellInspectManPage" : "DataCurator 01/25/2013 09:56",
+		"ston" : "DataCurator 02/09/2013 07:08",
+		"stonManPage" : "DataCurator 02/09/2013 07:25",
 		"testSuiteClasses" : "DataCurator 01/23/2013 18:04",
 		"toolName" : "dkh 12/21/2012 11:26",
 		"toolReadMe" : "dkh 12/21/2012 11:23",
@@ -109,5 +111,6 @@
 		"run" : "DataCurator 01/26/2013 20:25",
 		"sendersOf:" : "dkh 12/21/2012 11:23",
 		"shellInspect" : "DataCurator 01/24/2013 16:52",
+		"ston" : "DataCurator 02/09/2013 08:12",
 		"touch" : "dkh 12/21/2012 11:23",
 		"view" : "DataCurator 01/25/2013 09:54" } }
