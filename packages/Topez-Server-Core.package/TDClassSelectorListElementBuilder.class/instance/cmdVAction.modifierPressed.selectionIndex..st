@@ -2,8 +2,11 @@ as yet unclassified
 cmdVAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
   "CMD-v - paste object"
 
-  | def result |
+  | def behaviorDef result |
   def := self objectClipboard.
-  result := def pasteTDDefinition: def.
+  behaviorDef := TDBehaviorDefinition
+    className: self theClass name
+    isMeta: self theBehavior isMeta.
+  result := behaviorDef pasteTDDefinition: def.
   listElement topez commitTransaction.
   ^ result

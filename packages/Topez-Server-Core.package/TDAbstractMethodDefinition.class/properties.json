@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"selector",
-		"deletedMethod",
-		"messagePattern",
-		"messagePatternIsRegex" ],
-	"name" : "TDMethodDefinition",
+		 ],
+	"name" : "TDAbstractMethodDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractMethodDefinition",
+	"super" : "TDBehaviorDefinition",
 	"type" : "normal" }

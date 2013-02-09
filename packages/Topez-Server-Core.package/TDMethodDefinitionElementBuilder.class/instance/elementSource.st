@@ -1,3 +1,3 @@
 as yet unclassified
 elementSource
-  ^ self theBehavior sourceCodeAt: self selector
+  ^ self object source

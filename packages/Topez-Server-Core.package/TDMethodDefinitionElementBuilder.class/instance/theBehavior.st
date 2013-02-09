@@ -1,3 +1,3 @@
 as yet unclassified
 theBehavior
-  ^ self inClass
+  ^ self object theBehavior

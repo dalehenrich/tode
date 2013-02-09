@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"methodClass",
 		"isMeta" ],
-	"name" : "TDTemplateMethodElementBuilder",
+	"name" : "TDBehaviorDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDClientMethodElementBuilder",
+	"super" : "TDClassDefinition",
 	"type" : "normal" }
