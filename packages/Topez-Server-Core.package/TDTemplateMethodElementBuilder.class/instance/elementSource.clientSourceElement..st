@@ -4,4 +4,5 @@ elementSource: methodSource clientSourceElement: clientSourceElement
   beh := self inClass.
   ans := beh compile: methodSource.
   clientSourceElement topez commitTransaction.
+  self differentMethodCreated: ans.
   ^ ans

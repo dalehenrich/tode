@@ -1,6 +1,6 @@
 as yet unclassified
 elementSource
-  ^ 'message selector and argument names
+  ^ 'messageSelectorAndArgumentNames
 	"comment stating purpose of message"
 
 	| temporary variable names |
