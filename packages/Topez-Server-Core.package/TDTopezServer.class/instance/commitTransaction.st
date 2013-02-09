@@ -6,5 +6,8 @@ commitTransaction
     on: Error
     do: [ :ex | 
       "if an error occurs during commit, disable autoCommit and pass"
+      Transcript
+        cr;
+        show: 'AUTOCOMMIT DISABLED'.
       self serverStatus autoCommit: false.
       ex pass ]

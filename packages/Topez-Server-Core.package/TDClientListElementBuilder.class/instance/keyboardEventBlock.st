@@ -1,7 +1,7 @@
 as yet unclassified
 keyboardEventBlock
   ^ [ :modifierPressed :codePoint :listElement :selectionIndex | 
-  | block |
+  | block result |
   "block result may be a Symbol or a Boolean:
 		if Symbol, the client-side editor will perform: the Symbol
 		if Array, the client-side editor will perform: (array at: 1) with: (array at: 2)
@@ -12,4 +12,10 @@ keyboardEventBlock
     ifAbsent: [ 
       "just return false"
       [ :x :y :z | false ] ].
-  block value: modifierPressed value: listElement value: selectionIndex ]
+  result := block
+    value: modifierPressed
+    value: listElement
+    value: selectionIndex.
+  result
+    ifTrue: [ listElement topez commitTransaction ].
+  result ]
