@@ -31,7 +31,7 @@
 		"workingCopyNode:" : "DataCurator 01/25/2013 10:09" },
 	"instance" : {
 		"compareChangesFor:on:" : "DataCurator 12/26/2012 08:14",
-		"diff" : "dkh 02/10/2013 07:37",
+		"diff" : "dkh 02/10/2013 13:28",
 		"dirty" : "dkh 12/25/2012 06:20",
 		"dirtyPath" : "DataCurator 12/25/2012 09:02",
 		"findMatchingPackages:topez:" : "DataCurator 02/06/2013 19:47",
@@ -41,7 +41,8 @@
 		"halorm" : "DataCurator 12/25/2012 08:38",
 		"history" : "dkh 02/10/2013 08:04",
 		"list" : "dkh 02/10/2013 08:05",
-		"mmdiff" : "dkh 02/10/2013 13:02",
+		"mmcommit" : "dkh 02/10/2013 14:22",
+		"mmdiff" : "dkh 02/10/2013 13:32",
 		"mmdirty" : "dkh 02/10/2013 12:57",
 		"mmget" : "dkh 02/10/2013 10:40",
 		"mmlist" : "dkh 02/10/2013 11:23",
