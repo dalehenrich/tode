@@ -1,3 +1,3 @@
 as yet unclassified
 differentMethodCreated: selector
-  "for now isolate behavior"
+  "see elementSource:clientSourceElement: for the differentMethodCreated: handling"

@@ -5,7 +5,8 @@ installExampleOn: aTDTopezServer
     addChildNode:
         (TDSmalltalkLeafNode new
             name: 'halt';
-            contents: '"opportunity to use debugger"
+            contents:
+                '"opportunity to use debugger"
 | block |
 block := [:arg | arg halt].
 block value: 100';
@@ -15,7 +16,14 @@ block value: 100';
     addChildNode:
       (examplesNode := TDDirectoryNode new
         name: 'examples';
-        readMe: 'debugger examples';
+        readMe:
+            'ex1 - breakpoints: use `db continue`
+ex2 - breakpoints: use `db over` and `db continue`
+ex3 - breakpoints: `db continue` to hit next breakpoint
+ex4 - breakpoints: `db continue` to hit next error
+ex5 - breakpoints: `db thru` to step into block.
+ex6 - breakpoints: `db thru` to step into block
+ex7 - breakpoints: break in nested block context';
         yourself).
   examplesNode
     addChildNode:
@@ -127,7 +135,7 @@ db break @7 TDTodeTestClass>>thru1
             name: 'ex6';
             contents:
                 '#
-# Example5: 
+# Example6: 
 #  open debugger upon breakpoint.
 #  then use `db thru` to step into
 #  the block without stepping into thru2
@@ -135,6 +143,19 @@ db break @7 TDTodeTestClass>>thru1
 db break clear
 db break @12 TDTodeTestClass>>thru4
 db break @8 TDTodeTestClass>>thru4
+/tools/debug/examples/st6';
+            yourself);
+    addChildNode:
+        (TDTopezLeafNode new
+            name: 'ex6';
+            contents:
+                '#
+# Example7: 
+#  breakpoint in a nested block 
+#  look at home context for block
+#
+db break clear
+db break @16 TDTodeTestClass>>thru4
 /tools/debug/examples/st6';
             yourself);
     yourself
