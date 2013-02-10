@@ -1,6 +1,9 @@
 as yet unclassified
 writeAddition: anAddition
-    stream
-        nextPutAll: 'Item was added:';
-        cr.
-    self writePatchFrom: nil to: anAddition definition
+  Text
+    string: 'Item was added:'
+      attributes:
+        {(TextEmphasis bold).
+          (TextColor green)};
+    cr.
+  self writePatchFrom: nil to: anAddition definition

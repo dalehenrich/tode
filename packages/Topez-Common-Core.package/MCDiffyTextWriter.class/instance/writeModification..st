@@ -1,6 +1,6 @@
 as yet unclassified
 writeModification: aModification
-    stream
-        nextPutAll: 'Item was changed:';
-        cr.
-    self writePatchFrom: aModification obsoletion to: aModification definition
+  Text
+    string: 'Item was changed:' attributes: {(TextEmphasis bold)};
+    cr.
+  self writePatchFrom: aModification obsoletion to: aModification definition
