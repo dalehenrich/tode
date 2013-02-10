@@ -1,23 +1,44 @@
 as yet unclassified
 mmdiff
-  "mm diff <config>"
+  "mm diff [<config>]"
 
-  | registration projectSpec dirty stream empty |
-  registration := self getRegistrationFor: (tokens at: 2).
-  projectSpec := registration lookupBaselineSpec.
-  dirty := self modifiedPackagesForProjectSpec: projectSpec.
+  | registrations projectSpec dirty stream empty |
+  registrations := tokens size = 1
+    ifTrue: [ 
+      self mmlist
+        select: [ :registration | 
+          | version |
+          version := registration lookupBaselineSpec version.
+          (version packages
+            detect: [ :pkg | 
+              | wc |
+              wc := pkg workingCopy.
+              wc == nil
+                ifTrue: [ false ]
+                ifFalse: [ wc modified ] ]
+            ifNone: [  ]) notNil ] ]
+    ifFalse: [ {(self getRegistrationFor: (tokens at: 2))} ].
   stream := TextStream on: Text new.
   empty := true.
-  dirty
-    do: [ :packageSpec | 
-      empty := false.
+  registrations
+    do: [ :registration | 
+      projectSpec := registration lookupBaselineSpec.
       stream
         nextPutAll:
-            ('==================== ' , packageSpec name , ' ====================') asText
+            ('____________________ ' , projectSpec name , ' ____________________') asText
                 allBold;
         cr.
-      self compareChangesFor: packageSpec workingCopy on: stream.
-      stream cr ].
+      dirty := self modifiedPackagesForProjectSpec: projectSpec.
+      dirty
+        do: [ :packageSpec | 
+          empty := false.
+          stream
+            nextPutAll:
+                ('==================== ' , packageSpec name , ' ====================') asText
+                    allBold;
+            cr.
+          self compareChangesFor: packageSpec workingCopy on: stream.
+          stream cr ] ].
   empty
     ifTrue: [ ^ 'No dirty packages' asText allBold ].
   ^ stream contents

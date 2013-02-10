@@ -8,7 +8,7 @@ SYNOPSIS
 
 DESCRIPTION
   mm commit <config>
-  mm diff <config>
+  mm diff [<config>]
   mm dirty
   mm get [image|new|registry] <config> [<config> ... ]
   mm list [<config> [<config> ... ]]
