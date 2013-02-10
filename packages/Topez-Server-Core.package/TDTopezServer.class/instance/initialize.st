@@ -3,6 +3,9 @@ initialize
   "do not persist objIn ... preserve isolation from instances that cannot be persisted: socket, semaphore, processScheduler, etc."
 
   super initialize.
+  MCPlatformSupport autoCommit: true.
+  MCPlatformSupport autoMigrate: true.
+  GsPackagePolicy current authorInitials: 'dkh'.
   objIn := TransientValue new.
   Warning
     addDefaultHandler: [ :ex | 
