@@ -44,7 +44,10 @@ installExampleOn: aTDTopezServer
     addChildNode:
       (examplesNode := TDDirectoryNode new
         name: 'examples';
-        readMe: 'debugger examples';
+        readMe:
+            'shell examples:
+  runEx - example tpz script
+  shellInit - initialize topez system ... relogin afterwards';
         yourself).
   examplesNode
     addChildNode:
@@ -59,5 +62,15 @@ run | run
 %
 self + 3
 %';
+            yourself);
+    addChildNode:
+        (TDSmalltalkLeafNode new
+            name: 'shellInit';
+            contents:
+                'TDTopezServer reset.
+TDConfigurationList reset.
+TDPackageList reset.
+TDWindowBuilder reset.
+TDAbstractDevTool initialize.';
             yourself);
     yourself

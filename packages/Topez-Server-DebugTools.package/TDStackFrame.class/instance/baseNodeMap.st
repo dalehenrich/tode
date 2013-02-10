@@ -3,9 +3,21 @@ baseNodeMap
   | map |
   map := Dictionary new.
   map
-    add: '(method)' -> #'method';
-    add: '(receiver)' -> #'receiver';
+    add: '(context)' -> #'method';
     yourself.
   self isMethodForBlock
-    ifTrue: [ map add: '(home)' -> #'homeMethod' ].
+    ifTrue: [ 
+      self receiver ~~ self frameSelf
+        ifTrue: [ 
+          map
+            add: '(receiver)' -> #'receiver';
+            add: '(self)' -> #'frameSelf';
+            yourself ].
+      map
+        add: '(home)' -> #'homeMethod';
+        yourself ]
+    ifFalse: [ 
+      map
+        add: '(self)' -> #'receiver';
+        yourself ].
   ^ map

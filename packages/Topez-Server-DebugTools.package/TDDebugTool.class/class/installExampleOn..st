@@ -147,7 +147,7 @@ db break @8 TDTodeTestClass>>thru4
             yourself);
     addChildNode:
         (TDTopezLeafNode new
-            name: 'ex6';
+            name: 'ex7';
             contents:
                 '#
 # Example7: 
