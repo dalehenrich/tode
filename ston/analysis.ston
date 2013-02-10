@@ -1,1 +1,22 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'==============================\r==============================',#runs:RunArray{#runs:[61],#values:[[TextEmphasis{#emphasisCode:1,#setMode:true}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+TDTxtLeafNode {
+	#name : 'analysis',
+	#contents : Text {
+		#string : '==============================\r==============================',
+		#runs : RunArray {
+			#runs : [
+				61
+			],
+			#values : [
+				[
+					TextEmphasis {
+						#emphasisCode : 1,
+						#setMode : true
+					}
+				]
+			],
+			#lastIndex : nil,
+			#lastRun : nil,
+			#lastOffset : nil
+		}
+	}
+}

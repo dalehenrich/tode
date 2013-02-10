@@ -20,8 +20,8 @@ history
             ifTrue: [ ancestors := ancestors copyFrom: 1 to: limit ].
           nodes
             add:
-              (self class
-                ancestryNode: ancestors name: workingCopy packageName;
+              ((self class ancestryNode: ancestors)
+                name: workingCopy name;
                 yourself) ].
       (nodes asTDObjectNode: nil topez: aTopez aspect: #'view')
         name: 'history';
