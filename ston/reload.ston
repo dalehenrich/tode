@@ -1,4 +1,1 @@
-TDScriptLeafNode {
-	#name : 'reload',
-	#contents : '[ :topez :objIn :tokens :windowId | \r| baselineName |\rbaselineName := tokens at: 2.\rMetacello image\r  baseline: baselineName;\r  silently;\r  get.\rMetacello image\r  baseline: baselineName;\r  silently;\r  load ]'
-}
+TDScriptLeafNode {	#name : 'reload',	#contents : '[ :topez :objIn :tokens :windowId | \r| baselineName |\rbaselineName := tokens at: 2.\rMetacello image\r  baseline: baselineName;\r  silently;\r  get.\rMetacello image\r  baseline: baselineName;\r  silently;\r  load ]'}
