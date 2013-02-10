@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'==============================\r==============================\r',#runs:RunArray{#runs:[62],#values:[[TextEmphasis{#emphasisCode:1,#setMode:true}]],#lastIndex:62,#lastRun:1,#lastOffset:61}}}
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'==============================\r==============================',#runs:RunArray{#runs:[61],#values:[[TextEmphasis{#emphasisCode:1,#setMode:true}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}

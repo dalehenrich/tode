@@ -1,4 +1,4 @@
 as yet unclassified
 contents
-    contents ifNil: [ ^ '[ :topez :tokens :windowId |  ]' ].
-    ^ contents value
+  contents ifNil: [ ^ '[ :topez :objIn :tokens :windowId |  ]' ].
+  ^ contents value

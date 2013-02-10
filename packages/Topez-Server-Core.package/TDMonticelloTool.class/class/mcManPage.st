@@ -1,19 +1,19 @@
 as yet unclassified
 mcManPage
   ^ 'NAME
-  mc - execute process commands
+  mc - monticello commands
 
 SYNOPSIS
   mc <command> [args]
 
 DESCRIPTION
   mc commit <pkg>
-  mc compare <pkg-spec> [<pkg-spec>]
-  mc diff [<pkg-spec>]
+  mc compare <regex-pkg-pattern> [<regex-pkg-pattern>]
+  mc diff [<regex-pkg-pattern>]
   mc dirty 
-  mc halo <name> <pkg-spec> 
+  mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
-  mc history <pkg-spec> [<limit>]
-  mc list <pkg-spec>
-  mc revert <pkg-spec> [<ancestor-index>]
+  mc history <regex-pkg-pattern> [<limit>]
+  mc list <regex-pkg-pattern>
+  mc revert <regex-pkg-pattern> [<ancestor-index>]
 '

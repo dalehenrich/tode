@@ -1,6 +1,6 @@
 as yet unclassified
 list
-  "  mc list <pkg-spec> "
+  "  mc list <regex-pkg-pattern> "
 
   | pattern list stream displayPolicy |
   pattern := tokens at: 2.

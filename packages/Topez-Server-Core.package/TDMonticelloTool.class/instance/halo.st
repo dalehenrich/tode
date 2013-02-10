@@ -1,6 +1,6 @@
 as yet unclassified
 halo
-  "  mc halo <name> <pkg-spec> "
+  "  mc halo <name> <regex-pkg-pattern> "
 
   | haloName pattern haloBlock |
   haloName := tokens at: 2.

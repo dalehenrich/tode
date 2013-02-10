@@ -1,6 +1,6 @@
 as yet unclassified
 diff
-  "mc diff [<pkg-spec>]"
+  "mc diff [<regex-pkg-pattern>]"
 
   | pattern stream wcNode workingCopyList |
   workingCopyList := tokens size = 1
@@ -14,7 +14,8 @@ diff
       workingCopy workingCopy modified
         ifTrue: [ 
           stream
-            nextPutAll: '==================== ' , workingCopy name , ' ====================';
+            nextPutAll:
+                '==================== ' , workingCopy name , ' ====================';
             cr.
           self compareChangesFor: workingCopy workingCopy on: stream.
           stream cr ] ].
