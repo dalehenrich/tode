@@ -3,5 +3,7 @@
 		 },
 	"instance" : {
 		"label" : "dkh 02/09/2013 11:02",
+		"messagePattern" : "dkh 02/10/2013 20:00",
+		"messagePatternIsRegex" : "dkh 02/10/2013 20:00",
 		"selector" : "DataCurator 02/09/2013 11:07",
 		"source" : "DataCurator 02/09/2013 11:07" } }
