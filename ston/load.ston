@@ -1,0 +1,1 @@
+TDScriptLeafNode {	#name : 'load',	#contents : '[ :topez :objIn :tokens :windowId | \r| baselineName |\rbaselineName := tokens at: 2.\rMetacello new\r  baseline: baselineName;\r  repository: (tokens at: 3);\r  silently;\r  get.\rMetacello new\r  baseline: baselineName;\r  repository: (tokens at: 3);\r  silently;\r  halt;\r  load ]'}

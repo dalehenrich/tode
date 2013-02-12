@@ -1,3 +1,4 @@
 as yet unclassified
 block
-    ^ block
+  block ifNil: [ block := self createBlockFromSource: self contents ].
+  ^ block

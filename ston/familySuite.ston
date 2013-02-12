@@ -1,0 +1,1 @@
+TDSmalltalkLeafNode {	#name : 'familySuite',	#contents : '| suite |\rsuite := TestSuite named: \'Index Family Suite\'.\rsuite addTests: IXQueryTests suite tests.\r^ suite'}
