@@ -1,5 +1,6 @@
 initialization
 initialize
+  InQueryBlock := false.
   CascadedMessageInsideParentheses := false.
   FormatCommentWithStatements := true.
   IndentString := '  '.

@@ -5,6 +5,7 @@
 	"classvars" : [
 		"CascadedMessageInsideParentheses",
 		"FormatCommentWithStatements",
+		"InQueryBlock",
 		"IndentString",
 		"IndentsForKeywords",
 		"KeepBlockInMessage",
@@ -35,7 +36,8 @@
 		"indent",
 		"lookaheadCode",
 		"originalSource",
-		"lineStart" ],
+		"lineStart",
+		"inQueryBlock" ],
 	"name" : "RBConfigurableFormatter",
 	"pools" : [
 		 ],

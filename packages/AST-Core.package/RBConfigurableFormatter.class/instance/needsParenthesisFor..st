@@ -7,7 +7,7 @@ needsParenthesisFor: aNode
 		grandparent := parent parent.
 		(grandparent notNil and: [ grandparent isCascade ])
 			ifTrue: [ ^ true ] ].
-	(aNode precedence < parent precedence) ifTrue: [ ^ false ].
+ 	(aNode precedence < parent precedence) ifTrue: [ ^ false ].
 	(aNode isAssignment and: [ parent isAssignment ]) ifTrue: [ ^ false ].
 	(aNode isAssignment and: [ aNode isCascade ]) ifTrue: [ ^ true ].
 	(aNode precedence = 0) ifTrue: [ ^ false ].
@@ -16,4 +16,5 @@ needsParenthesisFor: aNode
 	(aNode isUnary) ifTrue: [ ^ false ].
 	(aNode isKeyword) ifTrue: [ ^ true ].
 	(parent receiver == aNode) ifFalse: [ ^ true ].
+	InQueryBlock ifTrue: [ ^true].
 	^ UseTraditionalBinaryPrecedenceForParentheses and: [ self precedenceOf: parent selector greaterThan: aNode selector ]
