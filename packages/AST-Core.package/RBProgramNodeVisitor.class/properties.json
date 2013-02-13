@@ -1,0 +1,14 @@
+{
+	"category" : "AST-Core-Visitors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "RBProgramNodeVisitor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

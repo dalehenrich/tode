@@ -1,0 +1,14 @@
+{
+	"category" : "AST-Core-Nodes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RBQueryBlockNode",
+	"pools" : [
+		 ],
+	"super" : "RBBlockNode",
+	"type" : "normal" }

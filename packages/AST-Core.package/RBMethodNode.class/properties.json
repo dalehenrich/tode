@@ -1,0 +1,21 @@
+{
+	"category" : "AST-Core-Nodes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"selector",
+		"selectorParts",
+		"body",
+		"source",
+		"arguments",
+		"pragmas",
+		"replacements",
+		"nodeReplacements" ],
+	"name" : "RBMethodNode",
+	"pools" : [
+		 ],
+	"super" : "RBProgramNode",
+	"type" : "normal" }
