@@ -1,3 +1,3 @@
 as yet unclassified
 firstSource
-  ^ self elementSource
+  ^ self formattedElementSource

@@ -2,8 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"clientSourceElement" : "DataCurator 01/11/2013 15:45",
+		"clientSourceElement" : "dkh 02/16/2013 13:09",
 		"clientSourceElementClass" : "DataCurator 01/11/2013 15:42",
-		"elementSource:clientSourceElement:" : "DataCurator 02/09/2013 09:28",
+		"elementSource:clientSourceElement:" : "dkh 02/16/2013 12:59",
 		"formatOnAccept" : "DataCurator 01/11/2013 15:46",
-		"formatOnDisplay" : "DataCurator 02/09/2013 07:37" } }
+		"formatOnDisplay" : "DataCurator 02/09/2013 07:37",
+		"formatSource:" : "dkh 02/16/2013 12:42",
+		"formattedElementSource" : "dkh 02/16/2013 13:06",
+		"formattedElementSource:" : "dkh 02/16/2013 13:04" } }

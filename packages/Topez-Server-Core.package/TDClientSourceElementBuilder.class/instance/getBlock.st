@@ -1,3 +1,3 @@
 as yet unclassified
 getBlock
-  ^ [ self elementSource ]
+  ^ [ self formattedElementSource ]
