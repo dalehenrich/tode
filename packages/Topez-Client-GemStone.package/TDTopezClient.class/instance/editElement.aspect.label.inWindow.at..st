@@ -1,6 +1,6 @@
 as yet unclassified
 editElement: aClientElement aspect: aspectSelector label: labelString inWindow: windowIdOrNil at: windowLocation
-  | windowId label newWindow win |
+  | windowId label newWindow win selectedIndex |
   windowId := windowIdOrNil ifNil: [ windowId := self nextAvailableWindowId ].
   windowId == 0
     ifTrue: [ windowId := self nextAvailableWindowId ].
@@ -21,15 +21,14 @@ editElement: aClientElement aspect: aspectSelector label: labelString inWindow: 
       win
         extent: bounds extent;
         position: bounds origin ].
-  aClientElement selectedIndex
-    ifNil: [ win model listIndex: 0 ]
-    ifNotNil: [ :selectedIndex | 
-      win model listIndex: selectedIndex.
-      selectedIndex == 0
-        ifTrue: [ 
-          aClientElement highlightedIndex
-            ifNotNil: [ :highlightedIndex | 
-              highlightedIndex > 0
-                ifTrue: [ win model setListIndex: highlightedIndex ] ] ] ].
+  selectedIndex := aClientElement selectedIndex.
+  selectedIndex ifNil: [ selectedIndex := 0 ].
+  win model listIndex: selectedIndex.
+  selectedIndex == 0
+    ifTrue: [ 
+      aClientElement highlightedIndex
+        ifNotNil: [ :highlightedIndex | 
+          highlightedIndex > 0
+            ifTrue: [ win model setListIndex: highlightedIndex ] ] ].
   aClientElement activateElement.
   ^ windowId

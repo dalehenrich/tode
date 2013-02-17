@@ -13,7 +13,8 @@
 		"selectedIndex",
 		"parent",
 		"windowIsClosingBlockOop",
-		"highlightedIndex" ],
+		"highlightedIndex",
+		"parentListIndex" ],
 	"name" : "TodeClientListElement",
 	"pools" : [
 		 ],
