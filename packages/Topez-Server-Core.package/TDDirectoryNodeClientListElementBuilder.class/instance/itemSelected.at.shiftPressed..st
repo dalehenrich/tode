@@ -1,10 +1,11 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect parent obj itemAttribute windowName highlightIndex |
+  | aspect parent obj itemAttribute windowName highlightIndex parentList |
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
   parent := itemAttribute parent.
   aspect := itemAttribute aspect.
+  parentList := itemAttribute listIndex copy.
   index == 1
     ifTrue: [ 
       | objName |
@@ -18,12 +19,14 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         topez: listElement topez
         aspect: aspect.
       objName := self object displayWith: listElement displayPolicy.
-      obj name: objName ].
-  index == 2
-    ifTrue: [ 
-      ".."
-      "lets highlight ourselves in the .. list ..."
-      highlightIndex := itemAttribute listIndex ].
+      obj name: objName ]
+    ifFalse: [ 
+      index == 2
+        ifTrue: [ 
+          ".."
+          "lets highlight ourselves in the .. list ..."
+          highlightIndex := parentList removeLast ]
+        ifFalse: [ parentList add: index ] ].
   windowName := listElement editorWindowName.
   aspect == #'browse'
     ifTrue: [ 
@@ -35,7 +38,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     aspect: aspect
     selectionIndex: nil
     highlightIndex: highlightIndex
-    parentListIndex: index
+    parentListIndex: parentList
     windowName: windowName
     windowId: nil
     windowLocation: nil.

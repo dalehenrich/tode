@@ -14,7 +14,8 @@ clientList: listElement
       (TDClientListItemAttributes
         object: self object
         parent: nil
-        aspect: listElement aspect).
+        aspect: listElement aspect
+        listIndex: listElement parentListIndex).
   self object parent ~~ nil
     ifTrue: [ 
       displayPolicy stream: nil.
@@ -42,7 +43,8 @@ clientList: listElement
           (TDClientListItemAttributes
             object: child
             parent: self object
-            aspect: listElement aspect) ].
+            aspect: listElement aspect
+            listIndex: listElement parentListIndex) ].
   ar := Array new.
   max := max + 1.
   components

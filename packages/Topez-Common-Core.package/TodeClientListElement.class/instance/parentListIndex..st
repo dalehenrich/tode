@@ -1,3 +1,3 @@
 updating
-parentListIndex: anInteger
-  parentListIndex := anInteger
+parentListIndex: aList
+  parentListIndex := self parentListIndex , aList
