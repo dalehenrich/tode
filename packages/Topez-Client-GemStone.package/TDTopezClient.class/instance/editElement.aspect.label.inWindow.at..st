@@ -23,6 +23,13 @@ editElement: aClientElement aspect: aspectSelector label: labelString inWindow: 
         position: bounds origin ].
   aClientElement selectedIndex
     ifNil: [ win model listIndex: 0 ]
-    ifNotNil: [ :selectedIndex | win model listIndex: selectedIndex ].
+    ifNotNil: [ :selectedIndex | 
+      win model listIndex: selectedIndex.
+      selectedIndex == 0
+        ifTrue: [ 
+          aClientElement highlightedIndex
+            ifNotNil: [ :highlightedIndex | 
+              highlightedIndex > 0
+                ifTrue: [ win model setListIndex: highlightedIndex ] ] ] ].
   aClientElement activateElement.
   ^ windowId
