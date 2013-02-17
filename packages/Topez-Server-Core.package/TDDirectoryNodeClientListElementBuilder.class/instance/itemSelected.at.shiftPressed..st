@@ -1,6 +1,6 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect parent obj itemAttribute windowName |
+  | aspect parent obj itemAttribute windowName highlightIndex |
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
   parent := itemAttribute parent.
@@ -13,14 +13,17 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       aspect := aspect == #'inspect'
         ifTrue: [ #'view' ]
         ifFalse: [ #'inspect' ].
-      obj := obj dotSelfObject asTDObjectNode: obj topez: listElement topez aspect: aspect.
+      obj := obj dotSelfObject
+        asTDObjectNode: obj
+        topez: listElement topez
+        aspect: aspect.
       objName := self object displayWith: listElement displayPolicy.
       obj name: objName ].
   index == 2
     ifTrue: [ 
       ".."
-      "nothing special"
-       ].
+      "lets highlight ourselves in the .. list ..."
+      highlightIndex := itemAttribute listIndex ].
   windowName := listElement editorWindowName.
   aspect == #'browse'
     ifTrue: [ 
@@ -30,6 +33,10 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     edit: parent
     topez: listElement topez
     aspect: aspect
+    selectionIndex: nil
+    highlightIndex: highlightIndex
+    parentListIndex: index
     windowName: windowName
-    windowId: nil.
+    windowId: nil
+    windowLocation: nil.
   ^ nil

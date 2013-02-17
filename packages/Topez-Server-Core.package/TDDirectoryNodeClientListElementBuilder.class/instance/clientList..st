@@ -9,7 +9,12 @@ clientList: listElement
     add:
       {'.'.
       (self object displayWith: displayPolicy)}.
-  items add: (TDClientListItemAttributes object: self object parent: nil aspect: listElement aspect).
+  items
+    add:
+      (TDClientListItemAttributes
+        object: self object
+        parent: nil
+        aspect: listElement aspect).
   self object parent ~~ nil
     ifTrue: [ 
       displayPolicy stream: nil.
@@ -17,7 +22,13 @@ clientList: listElement
         add:
           {'..'.
           (self object parent displayWith: displayPolicy)}.
-      items add: (TDClientListItemAttributes object: self object parent parent: nil aspect: listElement aspect) ].
+      items
+        add:
+          (TDClientListItemAttributes
+            object: self object parent
+            parent: nil
+            aspect: listElement aspect
+            listIndex: listElement parentListIndex) ].
   self object
     childrenAndNamesDo: [ :child :nameText | 
       max := max max: nameText size.
@@ -26,7 +37,12 @@ clientList: listElement
         add:
           {nameText.
           (child dotSelfObject displayWith: displayPolicy)}.
-      items add: (TDClientListItemAttributes object: child parent: self object aspect: listElement aspect) ].
+      items
+        add:
+          (TDClientListItemAttributes
+            object: child
+            parent: self object
+            aspect: listElement aspect) ].
   ar := Array new.
   max := max + 1.
   components

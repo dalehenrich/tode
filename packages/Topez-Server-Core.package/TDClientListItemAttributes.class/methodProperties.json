@@ -1,9 +1,12 @@
 {
 	"class" : {
-		"object:parent:aspect:" : "DataCurator 01/24/2013 17:12" },
+		"object:parent:aspect:" : "DataCurator 01/24/2013 17:12",
+		"object:parent:aspect:listIndex:" : "dkh 02/17/2013 12:47" },
 	"instance" : {
 		"aspect" : "DataCurator 01/24/2013 17:11",
 		"aspect:" : "DataCurator 01/24/2013 17:16",
+		"listIndex" : "dkh 02/17/2013 11:48",
+		"listIndex:" : "dkh 02/17/2013 11:47",
 		"object" : "DataCurator 01/24/2013 16:59",
 		"object:parent:aspect:" : "DataCurator 01/24/2013 17:11",
 		"parent" : "DataCurator 01/24/2013 16:59" } }

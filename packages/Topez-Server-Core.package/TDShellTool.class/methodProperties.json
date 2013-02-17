@@ -45,6 +45,8 @@
 		"mvManPage" : "dkh 12/21/2012 11:23",
 		"pkgs" : "DataCurator 02/05/2013 10:20",
 		"pkgsManPage" : "DataCurator 02/05/2013 10:20",
+		"port" : "dkh 02/17/2013 10:33",
+		"portManPage" : "dkh 02/17/2013 10:34",
 		"priority" : "dkh 12/21/2012 11:23",
 		"pwd" : "dkh 12/21/2012 11:25",
 		"pwdManPage" : "dkh 12/21/2012 11:23",
@@ -110,7 +112,9 @@
 		"rm" : "dkh 12/21/2012 11:23",
 		"run" : "DataCurator 01/26/2013 20:25",
 		"sendersOf:" : "dkh 12/21/2012 11:23",
+		"sentButNotImplemented" : "dkh 02/17/2013 10:35",
 		"shellInspect" : "DataCurator 01/24/2013 16:52",
 		"ston" : "DataCurator 02/09/2013 08:12",
 		"touch" : "dkh 12/21/2012 11:23",
+		"undefinedSymbols" : "dkh 02/17/2013 11:15",
 		"view" : "DataCurator 01/25/2013 09:54" } }

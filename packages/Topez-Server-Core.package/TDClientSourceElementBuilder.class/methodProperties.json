@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"browseClass:editorSource:selectionInterval:" : "DataCurator 02/07/2013 16:17",
-		"buildClientElement:topez:aspect:selectionIndex:windowName:windowId:windowLocation:" : "DataCurator 02/05/2013 21:13",
+		"buildClientElement:topez:aspect:selectionIndex:highlightIndex:parentListIndex:windowName:windowId:windowLocation:" : "dkh 02/17/2013 13:19",
 		"clientSourceElement" : "DataCurator 01/11/2013 15:41",
 		"clientSourceElementClass" : "DataCurator 01/11/2013 15:41",
 		"cmdKeyAction:sourceElement:editorSource:selectionInterval:" : "DataCurator 02/07/2013 16:16",

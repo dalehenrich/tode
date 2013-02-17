@@ -1,5 +1,5 @@
 accessing
-editElement: parentObject for: anObject aspect: anAspect selectionIndex: aSelectionIndex windowName: windowName windowId: windowId windowLocation: windowLocation
+editElement: parentObject for: anObject aspect: anAspect selectionIndex: aSelectionIndex highlightIndex: aHighlightIndex parentListIndex: aParentListIndex windowName: windowName windowId: windowId windowLocation: windowLocation
   | element |
   self
     editorNodeFor: anObject
@@ -10,6 +10,8 @@ editElement: parentObject for: anObject aspect: anAspect selectionIndex: aSelect
         topez: self
         aspect: finalAspect
         selectionIndex: aSelectionIndex
+        highlightIndex: aHighlightIndex
+        parentListIndex: aParentListIndex
         windowName: windowName
         windowId: windowId
         windowLocation: windowLocation ].

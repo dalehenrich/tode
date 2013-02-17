@@ -1,5 +1,5 @@
 *topez-server-core
-edit: parentObject topez: aTopez aspect: anAspect selectionIndex: aSelectionIndex windowName: windowName windowId: windowId windowLocation: windowLocation
+edit: parentObject topez: aTopez aspect: anAspect selectionIndex: aSelectionIndex highlightIndex: aHighlightIndex windowName: windowName windowId: windowId windowLocation: windowLocation
   "anAspect: #edit, #debug, #inspect"
 
   ^ self
@@ -7,7 +7,8 @@ edit: parentObject topez: aTopez aspect: anAspect selectionIndex: aSelectionInde
     topez: aTopez
     aspect: anAspect
     selectionIndex: aSelectionIndex
-    highlightIndex: nil
+    highlightIndex: aHighlightIndex
+    parentListIndex: nil
     windowName: windowName
     windowId: windowId
     windowLocation: windowLocation

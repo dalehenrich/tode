@@ -1,10 +1,12 @@
 as yet unclassified
-buildClientElement: parentObject topez: aTopez aspect: anAspect selectionIndex: aSelectionIndex windowName: inWindowName windowId: inWindowId windowLocation: windowLocation
+buildClientElement: parentObject topez: aTopez aspect: anAspect selectionIndex: aSelectionIndex highlightIndex: aHighlightIndex parentListIndex: aParentListIndex windowName: inWindowName windowId: inWindowId windowLocation: windowLocation
   ^ (super
     buildClientElement: parentObject
     topez: aTopez
     aspect: anAspect
     selectionIndex: aSelectionIndex
+    highlightIndex: aHighlightIndex
+    parentListIndex: aParentListIndex
     windowName: inWindowName
     windowId: inWindowId
     windowLocation: windowLocation)

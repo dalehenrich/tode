@@ -24,10 +24,15 @@ executeWindowBuilderSpecs: windowBuilderSpecs
             topez: self topez
             aspect: finalAspect
             selectionIndex: nil
+            highlightIndex: nil
+            parentListIndex: nil
             windowName: nil
             windowId: windowId
             windowLocation: nil.
-          node := clientElement first asTDObjectNode: nil topez: self topez aspect: finalAspect.
+          node := clientElement first
+            asTDObjectNode: nil
+            topez: self topez
+            aspect: finalAspect.
           actual := block value: node.
           found := true ].
       false
