@@ -11,4 +11,5 @@ buildListMorph
       keystroke: nil;
     keystrokeSelector: #'listKeystroke:';
     handleBasicKeys: true;
+    autoDeselect: true;
     yourself
