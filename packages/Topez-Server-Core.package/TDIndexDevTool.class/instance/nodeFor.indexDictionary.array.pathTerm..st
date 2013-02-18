@@ -1,5 +1,5 @@
 as yet unclassified
-nodeFor: parenNode indexDictionary: indexDict array: parentArray pathTerm: pathTerm
+nodeFor: parentNode indexDictionary: indexDict array: parentArray pathTerm: pathTerm
   | node |
   node := TDObjectNode new
     name: 'pathLinkArray';

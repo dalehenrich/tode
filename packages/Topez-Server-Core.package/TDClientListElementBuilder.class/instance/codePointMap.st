@@ -6,6 +6,7 @@ codePointMap
 []	CMD-L - list windows
 []	CMD-E - browse pkg/config classes/methods
 	CMD-N - find references
+[]	CMD-T - browse pkg/confis tests
 []	CMD-b - browse class
 []	CMD-c - copy object
 []	CMD-l - refresh
@@ -28,30 +29,88 @@ codePointMap
   map := Dictionary new.
   map
     at: $B codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdShiftBAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $C codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftCAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdShiftCAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $E codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftEAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdShiftEAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $L codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdShiftLAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $N codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdShiftNAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdShiftNAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
+    at: $T codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdShiftTAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $b codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdBAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $c codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdCAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdCAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $l codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdLAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $m codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdMAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdMAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $n codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdNAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdNAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $o codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdOAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdOAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $v codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdVAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdVAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $x codePoint
-      put: [ :modifierPressed :listElement :selectionIndex | self cmdXAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ];
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdXAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     yourself.
   ^ map
