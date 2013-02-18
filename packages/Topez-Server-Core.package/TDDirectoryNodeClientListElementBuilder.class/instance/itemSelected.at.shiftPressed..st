@@ -25,7 +25,8 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         ifTrue: [ 
           ".."
           "lets highlight ourselves in the .. list ..."
-          highlightIndex := parentList removeLast ]
+          parentList isEmpty not
+            ifTrue: [ highlightIndex := parentList removeLast ] ]
         ifFalse: [ parentList add: index ] ].
   windowName := listElement editorWindowName.
   aspect == #'browse'
