@@ -5,7 +5,7 @@ debug
   | exceptionProcess exception |
   exceptionProcess := self topez serverStatus exceptionProcess.
   exception := self topez serverStatus exception.
-  topez := self topez spawnWindow.
+  topez := self topez spawnDebugger: exception description.
   topez exception: exception process: exceptionProcess.
   stackNode := topez lookup: self haloStackPath.
   topez

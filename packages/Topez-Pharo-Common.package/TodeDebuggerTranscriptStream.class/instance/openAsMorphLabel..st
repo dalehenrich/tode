@@ -1,10 +1,10 @@
-initialization
+as yet unclassified
 openAsMorphLabel: labelString
   "Build a morph viewing this transcriptStream"
 
   | window textMorph |
   window := (TZSystemWindow labelled: labelString) model: self.
-  textMorph := StashShellWindowMorph
+  textMorph := TodeDebuggerWindowMorph
     on: self
     text: nil
     accept: nil
