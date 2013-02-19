@@ -1,1 +1,0 @@
-TDScriptLeafNode {	#name : 'script',	#contents : '\"This is source for a block.  \" \n ^ [ :topez :objIn :tokens :windowId | \'hello world\' ]'}

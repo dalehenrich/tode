@@ -1,1 +1,0 @@
-TDScriptLeafNode{#name:'save',#contents:'[ :evaluator :topez :tokens | \r| projectNode |\rprojectNode := topez lookup: \'/projects/\' , (tokens at: 2).\revaluator\r  accumulateTextAndDo: [ :doitStream | \r    evaluator exception: nil.\r    topez\r      saveModifiedPackagesForProjectNamed: projectNode name\r      commitMessage: doitStream contents ].\r\'\' ]'}
