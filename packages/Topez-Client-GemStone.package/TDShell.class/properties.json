@@ -15,7 +15,8 @@
 		"actionStack",
 		"promptString",
 		"shellWindow",
-		"shellId" ],
+		"shellId",
+		"autoCommit" ],
 	"name" : "TDShell",
 	"pools" : [
 		 ],

@@ -2,6 +2,15 @@ stash
 promptString
   promptString
     ifNil: [ 
-      promptString := (Text string: 'tode ' , self shellId asString , ' >' attribute: TextColor gray)
-        , (Text string: ' ' attribute: TextEmphasis normal) ].
+      self autoCommit
+        ifTrue: [ 
+          promptString := (Text
+            string: 'tode ' , self shellId asString , ' >'
+            attribute: TextColor gray)
+            , (Text string: ' ' attribute: TextEmphasis normal) ]
+        ifFalse: [ 
+          promptString := (Text
+            string: 'tode ' , self shellId asString , ' >'
+            attribute: TextColor red)
+            , (Text string: ' ' attribute: TextEmphasis normal) ] ].
   ^ promptString
