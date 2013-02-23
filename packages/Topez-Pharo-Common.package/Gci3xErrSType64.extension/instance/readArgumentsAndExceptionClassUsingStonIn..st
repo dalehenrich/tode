@@ -7,7 +7,7 @@ readArgumentsAndExceptionClassUsingStonIn: aTodeSession
     ifTrue: [ self error: 'Argument count too high!' ].
   expressionStream := WriteStream on: String new.
   expressionStream
-    nextPutAll: '(' , aTodeSession halt todeServerAccessString , ' for: ';
+    nextPutAll: '(' , aTodeSession todeServerAccessString , ' for: ';
     nextPutAll: aTodeSession shell shellId printString;
     nextPutAll: ') reifyExceptionArgsForOopList: {'.
   ofs := 25.
