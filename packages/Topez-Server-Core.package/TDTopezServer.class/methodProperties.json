@@ -15,7 +15,8 @@
 		"registerEditorClass:for:aspect:" : "DataCurator 01/14/2013 12:50",
 		"registerPrinterClass:for:aspect:" : "DataCurator 01/14/2013 12:51",
 		"reset" : "DataCurator 01/23/2013 20:16",
-		"rootNode" : "DataCurator 11/28/2012 05:40" },
+		"rootNode" : "DataCurator 11/28/2012 05:40",
+		"setupForIndirectAccessFrom:todeSymbolDictionaryName:" : "dkh 02/23/2013 09:50" },
 	"instance" : {
 		"accumulateBlocks" : "DataCurator 01/22/2013 14:21",
 		"accumulateScriptText" : "DataCurator 01/26/2013 11:30",
