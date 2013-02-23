@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"initialize" : "dkh 02/23/2013 14:51",
 		"installExampleOn:" : "DataCurator 12/23/2012 13:36",
 		"installOn:" : "DataCurator 01/25/2013 10:21",
 		"priority" : "DataCurator 12/21/2012 11:43",
