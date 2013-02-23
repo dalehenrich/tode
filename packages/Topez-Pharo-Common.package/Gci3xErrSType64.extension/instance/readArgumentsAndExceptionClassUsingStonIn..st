@@ -7,7 +7,7 @@ readArgumentsAndExceptionClassUsingStonIn: aTodeSession
     ifTrue: [ self error: 'Argument count too high!' ].
   expressionStream := WriteStream on: String new.
   expressionStream
-    nextPutAll: '(TDTopezServer for: ';
+    nextPutAll: '(' , aTodeSession halt todeServerAccessString , ' for: ';
     nextPutAll: aTodeSession shell shellId printString;
     nextPutAll: ') reifyExceptionArgsForOopList: {'.
   ofs := 25.
@@ -20,7 +20,11 @@ readArgumentsAndExceptionClassUsingStonIn: aTodeSession
     nextPutAll: '} classNamesForOopList: {';
     nextPutAll: exceptionObj asOop printString;
     nextPut: $}.
-  stonString := aTodeSession executeStringExpectingStringNB: expressionStream contents.
+  [ 
+  stonString := aTodeSession
+    executeStringExpectingStringNB: expressionStream contents ]
+    on: Error
+    do: [ :ex | self halt ].
   answerArray := STON fromString: stonString.
   objectArray := answerArray at: 1.
   1 to: argsSize do: [ :i | 

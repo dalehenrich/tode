@@ -16,7 +16,9 @@
 		"promptString",
 		"shellWindow",
 		"shellId",
-		"autoCommit" ],
+		"autoCommit",
+		"adornmentColor",
+		"sessionName" ],
 	"name" : "TDShell",
 	"pools" : [
 		 ],

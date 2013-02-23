@@ -8,7 +8,7 @@
 		"windowOrigin" ],
 	"classvars" : [
 		"Bounds",
-		"DefaultSessionDescription" ],
+		"SessionMap" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"exception",

@@ -2,7 +2,7 @@ as yet unclassified
 login
   | desc sess |
   desc := self sessionDescription.
-  sess := TodeSession new
+  sess := self todeSessionClass new
     gemNRS: desc gemNRS;
     stoneNRS: desc stoneNRS;
     userID: desc userId;
@@ -22,5 +22,9 @@ login
       | gciError messageText |
       gciError := sess getAndClearLastError.
       messageText := gciError message.
-      ^ Error signal: messageText , ' For further information about login failures, check the gem log file' ].
+      ^ Error
+        signal:
+          messageText
+            ,
+              ' For further information about login failures, check the gem log file' ].
   ^ sess

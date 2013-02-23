@@ -25,4 +25,5 @@ initialize
 
   Bounds := Dictionary new.
   self initializeBounds.
-  bounds := self offsetBounds: self windowOffset
+  bounds := self offsetBounds: self windowOffset.
+  self initializeSessionMap
