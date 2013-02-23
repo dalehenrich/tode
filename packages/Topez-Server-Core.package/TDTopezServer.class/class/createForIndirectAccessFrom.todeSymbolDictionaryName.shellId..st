@@ -1,5 +1,5 @@
 accessing
-setupForIndirectAccessFrom: theTodeUserName todeSymbolDictionaryName: todeSymbolDictionaryName
+createForIndirectAccessFrom: theTodeUserName todeSymbolDictionaryName: todeSymbolDictionaryName shellId: aShellId
   | tode sessionMethodsPackage serverClass symbolDict todePackage stealthSymbolDictionary globalDict |
   tode := AllUsers userWithId: theTodeUserName ifAbsent: [ nil ].
   symbolDict := tode symbolList
@@ -22,4 +22,4 @@ setupForIndirectAccessFrom: theTodeUserName todeSymbolDictionaryName: todeSymbol
         add: stealthSymbolDictionary
         before: globalDict ].
   GsPackagePolicy current enable.
-  serverClass := symbolDict at: #'TDTopezServer'
+  ^ self createFor: aShellId
