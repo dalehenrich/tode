@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 01/24/2013 21:24",
+	"commentStamp" : "dkh 02/24/2013 09:04",
 	"instvars" : [
 		 ],
-	"name" : "TDSpecialNodeBuilder",
+	"name" : "IndirectSymbolAssociation",
 	"pools" : [
 		 ],
-	"super" : "TDObjectNodeBuilder",
+	"super" : "SymbolAssociation",
 	"type" : "normal" }

@@ -2,7 +2,7 @@ as yet unclassified
 sendersOf: aString
   | selector aCollection |
   selector := aString asSymbol.
-  aCollection := (Smalltalk systemNavigation sendersOf: selector)
+  aCollection := (Smalltalk systemNavigation newSendersOf: selector)
     collect: [ :gsMethod | 
       self
         messageElementFor: gsMethod inClass

@@ -4,5 +4,5 @@ findSender: findTokens
 
   | selector |
   selector := findTokens at: 2.
-  ^ (Smalltalk systemNavigation sendersOf: selector asSymbol)
+  ^ (Smalltalk systemNavigation newSendersOf: selector asSymbol)
     collect: [ :gsMethod | MethodReference class: gsMethod inClass selector: gsMethod selector ]

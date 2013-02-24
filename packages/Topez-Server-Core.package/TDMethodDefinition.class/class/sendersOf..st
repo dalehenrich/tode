@@ -2,7 +2,7 @@ as yet unclassified
 sendersOf: selector
   | defs |
   defs := Array new.
-  (Smalltalk systemNavigation sendersOf: selector asSymbol)
+  (Smalltalk systemNavigation newSendersOf: selector asSymbol)
     do: [ :gsMethod | 
       | def |
       def := self
