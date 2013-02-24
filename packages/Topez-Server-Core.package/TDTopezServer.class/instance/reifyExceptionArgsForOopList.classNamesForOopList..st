@@ -1,6 +1,7 @@
 accessing
 reifyExceptionArgsForOopList: oopList classNamesForOopList: classNameOopList
   | objects classNames |
+  self ensureSessionMethodsEnabled.
   objects := oopList collect: [ :oop | self reifyExceptionArg: oop ].
   classNames := classNameOopList
     collect: [ :oop | 
