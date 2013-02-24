@@ -1,0 +1,143 @@
+# This script was generated using an expression much like the following: 
+#
+#    GLASSProjectSupport
+#    	release: ConfigurationOfGLASS
+#    	version: '1.0-beta.8.7.2'
+#    	path: '/export/foos2/users/dhenrich/2.0/k_gss64bit/image'
+#    	repositoryPath: '/export/foos2/users/dhenrich/2.0/k_gss64bit/examples/monticello/repository'.
+#
+
+run
+UserGlobals
+	at: #BootstrapSymbolDictionaryName
+	ifAbsent: [ UserGlobals at: #BootstrapSymbolDictionaryName put: #UserGlobals ].
+UserGlobals
+	at: #BootstrapRepositoryDirectory
+	ifAbsent: [ UserGlobals at: #BootstrapRepositoryDirectory put: GsPackageLibrary getMonticelloRepositoryDirectory ].
+UserGlobals
+	at: #BootstrapUseRepositoryDirectory
+	ifAbsent: [ UserGlobals at: #BootstrapUseRepositoryDirectory put: true ].
+UserGlobals
+	at: #BootstrapConfigurationClassName
+	ifAbsent: [ UserGlobals at: #BootstrapConfigurationClassName put: 'ConfigurationOfGLASS' ].
+UserGlobals
+	at: #BootstrapConfigurationLoads
+	ifAbsent: [ UserGlobals at: #BootstrapConfigurationLoads put: #() ].
+true
+%
+
+commit
+
+
+input bootstrapMaster30.topaz
+
+
+run
+| driver |
+driver := GLASSBootstrapDriver new.
+UserGlobals at: #BootstrapDriver put: driver.
+driver
+	bootStrapSymbolDictionary: (System myUserProfile symbolList objectNamed: BootstrapSymbolDictionaryName);
+	repositoryDirectory: BootstrapRepositoryDirectory;
+	useRepositoryDirectory: BootstrapUseRepositoryDirectory;
+	configurationPackageName: 'ConfigurationOfGLASS';
+	configurationRepository: 'http://seaside.gemstone.com/ss/MetacelloRepository';
+	configurationClass: BootstrapConfigurationClassName;
+	configurationPackageLoads: BootstrapConfigurationLoads;
+	configurationVersionString: '1.0-beta.8.7.2';
+	metacelloVersionString: '1.0-beta.31.1';
+	repositoryMap: { 
+		'GemStone-Indexing-Extensions' -> {'http://seaside.gemstone.com/ss/QueryExtensions'. }.
+		'Bootstrap' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Core' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'ConfigurationOfGsMonticello' -> {'http://seaside.gemstone.com/ss/MetacelloRepository'. }.
+		'Metacello-Core' -> {'http://www.squeaksource.com/metacello'. }.
+		'OB-Metacello' -> {'http://www.squeaksource.com/metacello'. }.
+		'OB-Standard' -> {'http://seaside.gemstone.com/ss/GemStone'. }.
+		'ConfigurationOfGsOB' -> {'http://seaside.gemstone.com/ss/MetacelloRepository'. }.
+		'OB-GemStone-Platform' -> {'http://seaside.gemstone.com/ss/GemStone'. }.
+		'Bootstrap' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Core' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'ConfigurationOfGofer' -> {'http://www.squeaksource.com/MetacelloRepository'. }.
+		'Grease-Core' -> {'http://www.squeaksource.com/Seaside30'. }.
+		'Grease-GemStone300-Core' -> {'http://seaside.gemstone.com/ss/Seaside30'. }.
+		'OB-Tools' -> {'http://seaside.gemstone.com/ss/GemStone'. }.
+		'GsSqueakCommon-Core' -> {'http://seaside.gemstone.com/ss/PharoCompat'. }.
+		'Gofer-Core' -> {'http://seaside.gemstone.com/ss/metacello'. }.
+		'ConfigurationOfMetacello' -> {'http://seaside.gemstone.com/ss/metacello'. }.
+		'Change-Notification' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'ConfigurationOfGsMisc' -> {'http://seaside.gemstone.com/ss/MetacelloRepository'. }.
+		'ConfigurationOfGLASS' -> {'http://seaside.gemstone.com/ss/MetacelloRepository'. }.
+		'Sport' -> {'http://seaside.gemstone.com/ss/hyper'. }.
+		'GemStone-Deployment' -> {'http://seaside.gemstone.com/ss/GLASSproject'. }.
+		'Regex-Tests-Core' -> {'http://seaside.gemstone.com/ss/VBRegex'. }.
+		'Change-Notification' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'PackageInfo-Base' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Base-Bootstrap' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Squeak' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Monticello' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Metacello-MC' -> {'http://www.squeaksource.com/metacello'. }.
+		'Core' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Metacello-Platform' -> {'http://seaside.gemstone.com/ss/metacello'. }.
+		'Metacello-ToolBox' -> {'http://www.squeaksource.com/metacello'. }.
+		'ConfigurationOfGsCore' -> {'http://seaside.gemstone.com/ss/MetacelloRepository'. }.
+		'Metacello-Base' -> {'http://www.squeaksource.com/metacello'. }.
+		'ConfigurationOfGoferProjectLoader' -> {'http://seaside.gemstone.com/ss/MetacelloRepository'. }.
+		'GemStone-ANSI-Streams' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Regex-Core' -> {'http://seaside.gemstone.com/ss/VBRegex'. }.
+		'OmniBrowser' -> {'http://seaside.gemstone.com/ss/GemStone'. }.
+		'OB-Monticello' -> {'http://seaside.gemstone.com/ss/GemStone'. }.
+		'Squeak' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'JadeServer' -> {'http://seaside.gemstone.com/ss/GLASSClient'. }.
+		'OB-SymbolListBrowser' -> {'http://seaside.gemstone.com/ss/GemStone'. }.
+		'Monticello' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'OB-SUnitGUI' -> {'http://seaside.gemstone.com/ss/obsunit'. }.
+		'GoferProjectLoader' -> {'http://www.squeaksource.com/Loader'. }.
+		'Gofer-Core' -> {'http://www.squeaksource.com/metacello'. }.
+		'GemStone-Release-Support' -> {'http://seaside.gemstone.com/ss/GLASSproject'. }.
+		'Base-Bootstrap' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'System-Digital-Signatures' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'OB-SUnitIntegration' -> {'http://seaside.gemstone.com/ss/GemStone'. }.
+		'ConfigurationOfGsSqueakCommon' -> {'http://seaside.gemstone.com/ss/MetacelloRepository'. }.
+		'Utf8Encoding' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'Announcements' -> {'http://seaside.gemstone.com/ss/announcements'. }.
+		'SMTPMail' -> {'http://seaside.gemstone.com/ss/smtp'. }.
+		'Grease-GemStone-Core' -> {'http://seaside.gemstone.com/ss/Seaside30'. }.
+		'ConfigurationOfGrease' -> {'http://www.squeaksource.com/MetacelloRepository'. }.
+		'GsSqueakCommon-Core.3x' -> {'http://seaside.gemstone.com/ss/PharoCompat'. }.
+		'Bootstrap' -> {'http://seaside.gemstone.com/ss/monticello'. }.
+		'GsSqueakCommon-Tests' -> {'http://seaside.gemstone.com/ss/PharoCompat'. }.
+	 }.
+true
+%
+
+commit
+
+# standard configuration install
+run
+BootstrapDriver installConfigurationPackage.
+true
+%
+
+run
+BootstrapDriver installConfiguration.
+SystemOrganizer resetSystemOrganization.
+true
+%
+
+commit
+
+run
+UserGlobals removeKey: #BootstrapUseRepositoryDirectory.
+UserGlobals removeKey: #BootstrapSymbolDictionaryName.
+UserGlobals removeKey: #BootstrapRepositoryDirectory.
+UserGlobals removeKey: #BootstrapConfigurationLoads.
+UserGlobals removeKey: #BootstrapConfigurationClassName.
+UserGlobals removeKey: #BootstrapDriver.
+true
+%
+
+input $upgradeDir/patchMaster30.gs
+
+
+commit

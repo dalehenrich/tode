@@ -1,0 +1,102 @@
+
+! run with topaz -l -T50000 or larger
+
+output pushnew tode.out only
+
+level 1
+iferr 1 stk
+iferr 2 stack
+
+set user DataCurator pass swordfish
+login
+run
+| tode |
+tode := AllUsers userWithId: 'tode' ifAbsent: [ nil ].
+tode ~~ nil
+  ifTrue: [ 
+    AllUsers removeAndCleanup: tode.
+    System commitTransaction.
+ ].
+(AllUsers 
+  addNewUserWithId: 'tode'
+  password: 'swordfish')
+    addPrivilege: #'CodeModification';
+    addPrivilege: #'UserPassword';
+    addPrivilege: #'OtherPassword';
+    yourself.
+System commitTransaction.
+%
+run
+| sample |
+sample := AllUsers userWithId: 'sample' ifAbsent: [ nil ].
+sample ~~ nil
+  ifTrue: [ 
+    AllUsers removeAndCleanup: sample.
+    System commitTransaction.
+ ].
+(AllUsers 
+  addNewUserWithId: 'sample'
+  password: 'swordfish')
+    addPrivilege: #'CodeModification';
+    addPrivilege: #'UserPassword';
+    addPrivilege: #'OtherPassword';
+    yourself.
+System commitTransaction.
+%
+logout
+errorCount
+
+set user tode pass swordfish
+login
+
+!
+! Define which SymbolDictionary into which all classes are to be installed.
+!
+run
+System myUserProfile _createDictionary: #tODE at: 1.
+UserGlobals at: #BootstrapSymbolDictionaryName put: #tODE.
+true
+%
+commit
+errorCount
+
+!
+! Install GLASS
+!
+run
+UserGlobals at: #BootstrapSymbolDictionaryName put: #tODE.
+%
+input installMaster30.topaz
+
+!
+! Upgrade to GLASS 1.0-beta.9
+!
+run
+ConfigurationOfGLASS project updateProject.
+GsDeployer deploy: [ (ConfigurationOfGLASS project version: '1.0-beta.9') load ].
+%
+commit
+errorCount
+
+!
+! Install tode
+!
+run
+Metacello new
+  baseline: #('Topez');
+  repository: 'filetree:///opt/git/topez/packages';
+  get.
+Metacello new
+  baseline: #('Topez');
+  repository: 'filetree:///opt/git/topez/packages';
+  load: 'ALL'.
+%
+commit
+errorCount
+
+logout
+
+time
+output pop
+errorCount
+
