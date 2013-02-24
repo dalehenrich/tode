@@ -4,5 +4,6 @@ evaluateSTONTokens: stonTokens
   self ensureSessionMethodsEnabled.
   tokens := STON fromString: stonTokens.
   objIn value: (self evaluateTokens: tokens objIn: objIn value).
-  text := objIn value renderText: #'display'.
+  self ensureSessionMethodsEnabled.
+  text := self renderAsText: objIn value.
   ^ STON toString: text
