@@ -1,6 +1,6 @@
 accessing
 reifyExceptionArgsForOopList: oopList classNamesForOopList: classNameOopList
-  | objects classNames |
+  | objects classNames result |
   self ensureSessionMethodsEnabled.
   objects := oopList collect: [ :oop | self reifyExceptionArg: oop ].
   classNames := classNameOopList
@@ -8,7 +8,9 @@ reifyExceptionArgsForOopList: oopList classNamesForOopList: classNameOopList
       oop == nil
         ifTrue: [ nil ]
         ifFalse: [ (Object _objectForOop: oop) class name ] ].
-  ^ STON
+  result := STON
     toString:
       {objects.
-      classNames}
+      classNames}.
+  self disableSessionMethods.
+  ^ result
