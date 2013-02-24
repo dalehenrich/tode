@@ -2,7 +2,7 @@ as yet unclassified
 implementorsOf: selector
   | defs |
   defs := Array new.
-  SystemNavigation default
+  Smalltalk systemNavigation
     allBehaviorsDo: [ :behavior | 
       (behavior includesSelector: selector)
         ifTrue: [ 

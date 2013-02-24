@@ -4,7 +4,7 @@ viewManPage
   view - open a navigator window
 
 SYNOPSIS
-  view [ path ]
+  view aspect [ path ]
 
 DESCRIPTION
   objIn too...using #view aspect

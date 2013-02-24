@@ -5,5 +5,5 @@ findRegexSender: findTokens
   | regex |
   regex := self findRegex: findTokens.
   regex ifNil: [ ^ #() ].
-  ^ (SystemNavigation default regexSendersOf: regex)
+  ^ (Smalltalk systemNavigation regexSendersOf: regex)
     collect: [ :gsMethod | MethodReference class: gsMethod inClass selector: gsMethod selector ]

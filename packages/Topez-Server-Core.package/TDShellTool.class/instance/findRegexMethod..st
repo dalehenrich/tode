@@ -5,4 +5,5 @@ findRegexMethod: findTokens
   | regex |
   regex := self findRegex: findTokens.
   regex ifNil: [ ^ #() ].
-  ^ SystemNavigation default allMethodsNoDoitsSelect: [ :m | regex search: m selector asString ]
+  ^ Smalltalk systemNavigation
+    allMethodsNoDoitsSelect: [ :m | regex search: m selector asString ]

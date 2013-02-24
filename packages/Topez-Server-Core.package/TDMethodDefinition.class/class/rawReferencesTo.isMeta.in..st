@@ -15,7 +15,8 @@ rawReferencesTo: aVariableOrClassName isMeta: isMeta in: aClassOrNil
               (cl whichSelectorsAccess: aVariableOrClassName)
                 do: [ :sel | aCollection add: (MethodReference class: cl selector: sel) ] ].
           ^ aCollection ].
-      literal := (env withAllSuperclasses gather: [ :ea | ea classPool associations ])
+      literal := (env withAllSuperclasses
+        gather: [ :ea | ea classPool associations ])
         detect: [ :ea | ea key = aVariableOrClassName asSymbol ]
         ifNone: [  ].
       literal
@@ -24,9 +25,16 @@ rawReferencesTo: aVariableOrClassName isMeta: isMeta in: aClassOrNil
           "class vars."
           classes := ClassSet new.
           classes addAll: env theNonMetaClass withAllSuperclasses.
-          ((ClassOrganizer cachedOrganizer referencesTo: literal key in: classes) at: 1)
-            do: [ :method | aCollection add: (MethodReference class: method inClass selector: method selector) ].
+          ((Smalltalk classOrganizer referencesTo: literal key in: classes)
+            at: 1)
+            do: [ :method | 
+              aCollection
+                add:
+                  (MethodReference class: method inClass selector: method selector) ].
           ^ aCollection ] ].	"globals"
-  (ClassOrganizer cachedOrganizer referencesToObject: (Smalltalk at: aVariableOrClassName asSymbol))
-    do: [ :method | aCollection add: (MethodReference class: method inClass selector: method selector) ].
+  (Smalltalk classOrganizer
+    referencesToObject: (Smalltalk at: aVariableOrClassName asSymbol))
+    do: [ :method | 
+      aCollection
+        add: (MethodReference class: method inClass selector: method selector) ].
   ^ aCollection

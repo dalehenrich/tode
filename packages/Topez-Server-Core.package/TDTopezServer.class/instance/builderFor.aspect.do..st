@@ -5,7 +5,8 @@ builderFor: anObject aspect: anAspect do: aBlock
     aspect: anAspect
     do: [ :className :finalAspect | 
       | builderClass |
-      builderClass := Smalltalk classNamed: className asSymbol.
+      builderClass := TDTopezServer todeSymbolList
+        objectNamed: className asSymbol.
       aBlock
         value:
           (builderClass new

@@ -5,7 +5,8 @@ editorNodeFor: anObject aspect: anAspect do: aBlock
     aspect: anAspect
     do: [ :className :finalAspect | 
       | editorClass |
-      editorClass := Smalltalk classNamed: className asSymbol.
+      editorClass := TDTopezServer todeSymbolList
+        objectNamed: className asSymbol.
       aBlock
         value:
           (editorClass new

@@ -4,4 +4,5 @@ findMethod: findTokens
 
   | selector |
   selector := findTokens at: 2.
-  ^ SystemNavigation default allMethodsNoDoitsSelect: [ :m | selector = m selector asString ]
+  ^ Smalltalk systemNavigation
+    allMethodsNoDoitsSelect: [ :m | selector = m selector asString ]

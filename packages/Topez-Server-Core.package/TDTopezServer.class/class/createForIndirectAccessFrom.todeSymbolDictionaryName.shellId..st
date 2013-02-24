@@ -22,4 +22,5 @@ createForIndirectAccessFrom: theTodeUserName todeSymbolDictionaryName: todeSymbo
         add: stealthSymbolDictionary
         before: globalDict ].
   GsPackagePolicy current enable.
+  self todeSymbolList: tode symbolList.
   ^ self createFor: aShellId
