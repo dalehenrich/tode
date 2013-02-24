@@ -1,6 +1,7 @@
 accessing
 evaluateSTONTokens: stonTokens
   | tokens text |
+  self ensureSessionMethodsEnabled.
   tokens := STON fromString: stonTokens.
   objIn value: (self evaluateTokens: tokens objIn: objIn value).
   text := objIn value renderText: #'display'.

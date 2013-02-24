@@ -8,5 +8,9 @@ dbStep: stepDirective for: node
   stepId == 1
     ifTrue: [ level := 0 ]
     ifFalse: [ level := stack currentFrame frameIndex ].
-  processResult := self topez topezClientForwarder dbStep: level forProcessOop: processOop.
+  self topez disableSessionMethods.
+  processResult := self topez topezClientForwarder
+    dbStep: level
+    forProcessOop: processOop.
+  self ensureSessionMethodsEnabled.
   stack resetFrames

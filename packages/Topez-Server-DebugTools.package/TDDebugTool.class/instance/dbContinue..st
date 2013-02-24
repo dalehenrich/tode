@@ -4,6 +4,8 @@ dbContinue: node
   stackNode := node.
   stack := node basicContents stack.
   processOop := stack process asOop.
+  self topez disableSessionMethods.
   processResult := self topez topezClientForwarder dbContinue: processOop.
+  self ensureSessionMethodsEnabled.
   stack resetFrames.
   ^ self dbFinishStep: stackNode
