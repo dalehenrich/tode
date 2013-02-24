@@ -8,7 +8,8 @@ performTransformOn: anOoptype
         perform: #'toString:level:'
         withArgs:
           {anOoptype.
-          (self transform value)}.
+          (self transform value)}
+        envId: self environmentId.
       ^ (self topez readerClass on: stonString readStream) next ].
   self transform key == #'native'
     ifTrue: [ ^ self session library localFor: anOoptype ].

@@ -1,5 +1,5 @@
 *topez-client-gemstone
-compileMethod: sourceString class: class category: category symbolList: symbolList overrideSelector: overrideSelector compileFlags: compileFlags
+compileMethod: sourceString class: class category: category symbolList: symbolList overrideSelector: overrideSelector compileFlags: compileFlags envId: envId
   | result |
   self library
     critical: [ :lib | 
@@ -11,6 +11,6 @@ compileMethod: sourceString class: class category: category symbolList: symbolLi
         a: (self asOopType: symbolList)
         a: (self asOopType: overrideSelector)
         a: compileFlags
-        a: 0 ].
+        a: envId ].
   result := self getNbResultAsOop.
   ^ self library localFor: result

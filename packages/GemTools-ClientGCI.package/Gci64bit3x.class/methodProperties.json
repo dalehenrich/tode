@@ -2,6 +2,12 @@
 	"class" : {
 		"isClassForVersion:" : "dkh 4/18/2012 15:36" },
 	"instance" : {
+		"apiGciExecuteStr:a:a:" : "dkh 2/24/2013 07:07",
+		"apiGciNbExecuteStr:a:a:" : "dkh 2/24/2013 07:08",
+		"apiGciNbPerform:a:a:a:a:" : "dkh 2/24/2013 07:08",
+		"apiGciNbPerformNoDebug:a:a:a:a:a:" : "dkh 2/24/2013 07:08",
+		"apiGciPerform:a:a:a:a:" : "dkh 2/24/2013 07:08",
+		"apiGciPerformNoDebug:a:a:a:a:a:" : "dkh 2/24/2013 07:08",
 		"gciErrSTypeClass" : "dkh 1/4/2013 07:16",
 		"oopClassDoubleByteString" : "dkh 1/8/2013 12:51",
 		"oopClassDoubleByteSymbol" : "dkh 1/8/2013 12:52",

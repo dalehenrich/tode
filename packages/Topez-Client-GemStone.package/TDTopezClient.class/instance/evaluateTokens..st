@@ -4,4 +4,6 @@ evaluateTokens: tokens
   stonString := STON toString: tokens.
   ^ self session
     executeStringExpectingStringNB:
-      '(', self todeServerAccessString, ' for: ' , self shell shellId asString , ') evaluateSTONTokens:' , stonString printString
+      '(' , self todeServerAccessString , ' for: ' , self shell shellId asString
+        , ') evaluateSTONTokens:' , stonString printString
+    envId: self environmentId
