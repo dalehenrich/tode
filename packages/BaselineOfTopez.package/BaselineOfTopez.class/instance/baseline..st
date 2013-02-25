@@ -69,7 +69,7 @@ baseline: spec
     do: [ 
       spec
         baseline: 'RB'
-          with: [ spec repository: 'github://dalehenrich/rb/packages' ];
+          with: [ spec repository: 'github://dalehenrich/rb:dev/packages' ];
         baseline: 'Ston'
           with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
       spec
