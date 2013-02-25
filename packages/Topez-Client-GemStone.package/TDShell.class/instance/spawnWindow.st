@@ -2,6 +2,6 @@ accessing
 spawnWindow
   | spawn |
   spawn := self copy.
-  spawn open.
+  spawn open: 'spawned' adornmentColor: self adornmentColor.
   spawn windowRegistration.
   ^ spawn topezClient topezServerOop
