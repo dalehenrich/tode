@@ -61,11 +61,40 @@ commit
 errorCount
 
 !
+! Create SymbolAssociation class for local storage of class variable state
+!
+
+doit
+SymbolAssociation subclass: 'IndirectSymbolAssociation'
+instVarNames: #()
+classVars: #( )
+classInstVars: #()
+poolDictionaries: #()
+inDictionary: tODE
+instancesInvariant: false
+isModifiable: false.
+true
+%
+commit
+errorCount
+
+input IndirectSymbolAssociation.st
+commit
+errorCount
+
+run
+Class classVariablesAssociationClass: IndirectSymbolAssociation.
+%
+commit
+errorCount
+
+!
 ! Install GLASS
 !
 run
 UserGlobals at: #BootstrapSymbolDictionaryName put: #tODE.
 %
+
 input installMaster30.topaz
 
 !
@@ -91,6 +120,123 @@ Metacello new
   repository: 'filetree:///opt/git/topez/packages';
   load: 'ALL'.
 %
+commit
+errorCount
+
+logout
+
+set user sample pass swordfish
+login
+
+!
+! Install tode in sample
+!
+
+run
+| tode sessionMethodsPackage serverClass symbolDict todePackage stealthSymbolDictionary globalDict |
+serverClass := ((AllUsers userWithId: 'tode' ifAbsent: [ nil ]) symbolList
+  detect: [ :dict | dict name == #'tODE' ]) at: #'TDTopezServer'.
+tode := AllUsers userWithId: 'tode' ifAbsent: [ nil ].
+symbolDict := tode symbolList detect: [ :dict | dict name == #'tODE' ].
+todePackage := symbolDict at: GsPackage globalName.
+sessionMethodsPackage := GsPackageLibrary createPackageNamed: #'SessionMethods'.
+globalDict := UserGlobals.
+stealthSymbolDictionary := SymbolDictionary new
+  name: #'todeSessionMethods';
+  yourself.
+stealthSymbolDictionary at: GsPackage globalName put: todePackage.
+(System myUserProfile symbolList objectNamed: stealthSymbolDictionary name)
+  == nil
+  ifTrue: [ System myUserProfile symbolList add: stealthSymbolDictionary before: globalDict ].
+(GsSession currentSession symbolList objectNamed: stealthSymbolDictionary name)
+  == nil
+  ifTrue: [ 
+    GsSession currentSession symbolList
+      add: stealthSymbolDictionary
+      before: globalDict ].
+GsPackagePolicy current enable
+%
+commit
+errorCount
+
+run
+| tode symbolDict |
+tode := AllUsers userWithId: 'tode' ifAbsent: [ nil ].
+symbolDict := tode symbolList detect: [ :dict | dict name == #'tODE' ].
+System myUserProfile symbolList
+      add: symbolDict
+      before: UserGlobals.
+%
+
+run
+Base64MimeConverter initialize.
+ChronologyConstants initialize.
+Color initialize.
+MczInstaller initialize.
+RxMatcher initialize.
+RxParser initialize.
+RxsPredicate initialize.
+Scanner initialize.
+SessionMethodTransactionBoundaryPolicy initialize.
+SmalltalkProxy initialize.
+SpSocket initialize.
+HTTPSocket initialize.
+SystemLoginNotification initialize.
+SystemOrganizer initialize.
+TranscriptProxy initialize.
+ZipConstants initialize.
+ZipFileConstants initialize.
+ZipReadStream initialize.
+ZipWriteStream initialize.
+DataStream initialize.
+MCCacheRepository initialize.
+MCMethodDefinition initialize.
+MCMockClassA initialize.
+MCVersionReader initialize.
+MCWorkingCopy initialize.
+PackageInfo initialize.
+MCDirtyPackageInfo initialize.
+MCEmptyPackageInfo initialize.
+MCMockPackageInfo initialize.
+PackageServices initialize.
+PseudoClassOrganizer initialize.
+UUIDGenerator initialize.
+MCGitHubRepository initialize.
+MetacelloPlatform initialize.
+MetacelloGemStonePlatform initialize.
+GemToGemAnnouncement initialize.
+SecureHashAlgorithm initialize.
+GRGemStonePlatform initialize.
+GRGemStoneRandomProvider initialize.
+GRInflector initialize.
+GRNumberPrinter initialize.
+MCFileTreeFileDirectoryUtils initialize.
+STONWriter initialize.
+TDAbstractDevTool initialize.
+TDDebugTool initialize.
+TDTestTool initialize.
+TZEvaluator initialize.
+TZObject initialize.
+TZProxyObject initialize.
+RBAbstractClass initialize.
+RBClass initialize.
+RBConfigurableFormatter initialize.
+RBGemStonePlatform initialize.
+RBRefactoring initialize.
+RBRefactoryChangeManager initialize.
+RBScanner initialize.
+RBSpellChecker initialize.
+RBTransformationRule initialize.
+%
+
+run
+| tode symbolDict |
+tode := AllUsers userWithId: 'tode' ifAbsent: [ nil ].
+symbolDict := tode symbolList detect: [ :dict | dict name == #'tODE' ].
+System myUserProfile symbolList
+      remove: symbolDict.
+%
+
 commit
 errorCount
 
