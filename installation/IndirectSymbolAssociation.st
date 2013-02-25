@@ -1,14 +1,6 @@
-doit
-SymbolAssociation subclass: 'IndirectSymbolAssociation'
-	instVarNames: #()
-	classVars: #()
-	classInstVars: #()
-	poolDictionaries: #()
-	inDictionary: ''
-	category: 'Topez-Server-Core'
-	options: #()
-
-%
+!
+! class IndirectSymbolAssociation created in todeInstall.tpz
+!
 
 ! ------------------- Class comment for IndirectSymbolAssociation
 doit
@@ -86,7 +78,7 @@ category: 'as yet unclassified'
 set compile_env: 0
 method: IndirectSymbolAssociation
 _value
-  ^ self identityDictionary at: self
+  ^ self identityDictionary at: self ifAbsent: [  ]
 %
 category: 'as yet unclassified'
 set compile_env: 0

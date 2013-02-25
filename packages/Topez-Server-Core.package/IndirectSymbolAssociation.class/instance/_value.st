@@ -1,3 +1,3 @@
 as yet unclassified
 _value
-  ^ self identityDictionary at: self
+  ^ self identityDictionary at: self ifAbsent: [  ]
