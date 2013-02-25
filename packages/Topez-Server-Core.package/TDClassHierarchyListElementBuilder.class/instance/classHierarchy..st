@@ -5,4 +5,6 @@ classHierarchy: elementBlock
       | cl |
       cl := self baseClassList first.
       selectedClass := Smalltalk classNamed: cl name ].
-  self processClassesBlock: [ self classList ] elementBlock: elementBlock
+  TDClassDefinition
+    processClassesBlock: [ self classList ]
+    elementBlock: elementBlock

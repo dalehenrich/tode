@@ -2,6 +2,13 @@ as yet unclassified
 findReferences: findTokens
   "find method <selector>"
 
-  | variableOrClassName |
+  | variableOrClassName methodRefs |
   variableOrClassName := findTokens at: 2.
-  ^ TDMethodDefinition rawReferencesTo: variableOrClassName isMeta: false in: nil
+  methodRefs := TDMethodDefinition
+    rawReferencesTo: variableOrClassName
+    isMeta: false
+    in: nil.
+  ^ self
+    methodDefinitionsFor: methodRefs
+    messagePattern: variableOrClassName
+    isRegex: false

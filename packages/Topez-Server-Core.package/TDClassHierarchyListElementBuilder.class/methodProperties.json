@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"baseClassList" : "DataCurator 02/04/2013 16:02",
-		"classHierarchy:" : "DataCurator 02/04/2013 16:29",
+		"classHierarchy:" : "dkh 02/24/2013 15:42",
 		"classList" : "DataCurator 02/04/2013 16:01",
 		"clientList:" : "DataCurator 02/04/2013 16:26",
 		"cmdBAction:modifierPressed:selectionIndex:" : "DataCurator 02/06/2013 19:54",
@@ -13,6 +13,5 @@
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:13",
 		"editorWindowLabel" : "DataCurator 01/25/2013 02:03",
 		"itemSelected:at:shiftPressed:" : "DataCurator 02/07/2013 07:13",
-		"processClassesBlock:elementBlock:" : "DataCurator 01/24/2013 15:48",
 		"selectedClass:selectionIndex:" : "DataCurator 02/07/2013 14:30",
 		"selectedDefinition:selectionIndex:" : "DataCurator 02/07/2013 14:17" } }

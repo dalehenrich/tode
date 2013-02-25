@@ -5,5 +5,6 @@ findClass: findTokens
   | regex |
   regex := self findRegex: findTokens.
   regex ifNil: [ ^ #() ].
-  ^ Smalltalk systemNavigation allClasses asArray
-    select: [ :cls | regex search: cls name asString ]
+  ^ (Smalltalk systemNavigation allClasses asArray
+    select: [ :cls | regex search: cls name asString ])
+    collect: [ :cls | TDClassDefinition className: cls theNonMetaClass name ]

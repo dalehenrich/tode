@@ -2,7 +2,11 @@ as yet unclassified
 findMethod: findTokens
   "find method <selector>"
 
-  | selector |
+  | selector methodRefs |
   selector := findTokens at: 2.
-  ^ Smalltalk systemNavigation
-    allMethodsNoDoitsSelect: [ :m | selector = m selector asString ]
+  methodRefs := Smalltalk systemNavigation
+    allMethodsNoDoitsSelect: [ :m | selector = m selector asString ].
+  ^ self
+    methodDefinitionsFor: methodRefs
+    messagePattern: selector
+    isRegex: false

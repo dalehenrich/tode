@@ -2,8 +2,9 @@ as yet unclassified
 findRegexMethod: findTokens
   "find rmethod <regex-pattern>"
 
-  | regex |
+  | regex methodRefs |
   regex := self findRegex: findTokens.
   regex ifNil: [ ^ #() ].
-  ^ Smalltalk systemNavigation
-    allMethodsNoDoitsSelect: [ :m | regex search: m selector asString ]
+  methodRefs := Smalltalk systemNavigation
+    allMethodsNoDoitsSelect: [ :m | regex search: m selector asString ].
+  ^ self methodDefinitionsFor: methodRefs messagePattern: regex isRegex: true

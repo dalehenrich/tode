@@ -1,17 +1,25 @@
 {
 	"class" : {
+		"_configurationGivenPackageDefinition:" : "dkh 02/24/2013 15:21",
 		"category:matches:" : "DataCurator 02/05/2013 11:08",
+		"classHierarchyOrder:" : "dkh 02/24/2013 15:56",
 		"className:" : "DataCurator 02/05/2013 14:09",
+		"configurationOfDefinition:" : "dkh 02/24/2013 11:25",
+		"packageOfClassDefinition:" : "dkh 02/24/2013 11:04",
+		"processClassesBlock:elementBlock:" : "dkh 02/24/2013 15:42",
 		"selectClassNamed:topez:" : "DataCurator 02/05/2013 11:21",
-		"updatePackageAndConfigFor:topez:" : "DataCurator 02/05/2013 13:28" },
+		"updatePackageAndConfigFor:topez:" : "dkh 02/24/2013 11:24" },
 	"instance" : {
 		"addToClientListFor:names:items:indents:aspect:" : "DataCurator 02/05/2013 15:26",
 		"asClassDefinition" : "DataCurator 02/06/2013 22:05",
 		"className" : "DataCurator 02/05/2013 09:26",
 		"className:" : "DataCurator 02/05/2013 09:26",
+		"configurationOf" : "dkh 02/24/2013 11:26",
 		"itemSelected:" : "DataCurator 02/08/2013 17:57",
 		"label" : "DataCurator 02/05/2013 09:39",
+		"packageOf" : "dkh 02/24/2013 11:06",
 		"pasteIntoPackageDefinition:" : "DataCurator 02/05/2013 23:57",
 		"pasteTDDefinition:" : "DataCurator 02/06/2013 02:05",
 		"removeFromSystem" : "DataCurator 02/06/2013 01:28",
+		"theBehavior" : "dkh 02/24/2013 11:15",
 		"theClass" : "DataCurator 02/05/2013 23:46" } }
