@@ -5,7 +5,6 @@ initialize
   super initialize.
   MCPlatformSupport autoCommit: true.
   MCPlatformSupport autoMigrate: true.
-  GsPackagePolicy current authorInitials: 'dkh'.
   objIn := TransientValue new.
   Warning
     addDefaultHandler: [ :ex | 
