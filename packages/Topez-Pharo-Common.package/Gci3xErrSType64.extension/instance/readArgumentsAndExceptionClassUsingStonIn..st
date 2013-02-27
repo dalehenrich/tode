@@ -5,8 +5,8 @@ readArgumentsAndExceptionClassUsingStonIn: aTodeSession
   args := Array new: argsSize.
   10 < argsSize
     ifTrue: [ self error: 'Argument count too high!' ].
-  message isEmpty
-    ifFalse: [ self halt: message asString ].
+  false ifTrue:[ message isEmpty
+    ifFalse: [ self halt: message asString ]].
   expressionStream := WriteStream on: String new.
   expressionStream
     nextPutAll: '(' , aTodeSession todeServerAccessString , ' for: ';
