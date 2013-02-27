@@ -13,7 +13,6 @@
 		"nodeEditors:" : "DataCurator 01/15/2013 10:16",
 		"nodePrinters" : "DataCurator 01/15/2013 10:17",
 		"nodePrinters:" : "DataCurator 01/15/2013 10:17",
-		"postBindEvaluatorsFor:" : "dkh 02/23/2013 11:09",
 		"registerBuilderClass:for:aspect:" : "DataCurator 01/11/2013 16:48",
 		"registerEditorClass:for:aspect:" : "DataCurator 01/14/2013 12:50",
 		"registerPrinterClass:for:aspect:" : "DataCurator 01/14/2013 12:51",
