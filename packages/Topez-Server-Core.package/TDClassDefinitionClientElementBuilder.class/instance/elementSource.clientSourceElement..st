@@ -1,4 +1,6 @@
 as yet unclassified
 elementSource: classDefinition clientSourceElement: clientSourceElement
   classDefinition evaluate.
-  clientSourceElement topez commitTransaction
+  clientSourceElement topez
+    commitTransaction;
+    resetAllGlobalNames

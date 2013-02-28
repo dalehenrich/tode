@@ -78,6 +78,7 @@
 		"removeChildrenAt:select:" : "DataCurator 11/27/2012 15:11",
 		"renderAsText:" : "dkh 02/23/2013 21:31",
 		"reset" : "DataCurator 01/23/2013 19:37",
+		"resetAllGlobalNames" : "dkh 02/28/2013 11:46",
 		"resetObjIn" : "DataCurator 01/22/2013 14:05",
 		"resolveHaloNamed:for:ifAbsent:" : "DataCurator 12/01/2012 16:36",
 		"rootNode" : "DataCurator 01/27/2013 00:26",
