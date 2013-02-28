@@ -7,4 +7,7 @@ findRegexMethod: findTokens
   regex ifNil: [ ^ #() ].
   methodRefs := Smalltalk systemNavigation
     allMethodsNoDoitsSelect: [ :m | regex search: m selector asString ].
-  ^ self methodDefinitionsFor: methodRefs messagePattern: regex isRegex: true
+  ^ self
+    methodDefinitionsFor: methodRefs
+    messagePattern: (findTokens at: 2)
+    isRegex: true

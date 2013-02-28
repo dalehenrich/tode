@@ -7,4 +7,7 @@ findRegexSender: findTokens
   regex ifNil: [ ^ #() ].
   methodRefs := (Smalltalk systemNavigation regexSendersOf: regex)
     collect: [ :gsMethod | MethodReference class: gsMethod inClass selector: gsMethod selector ].
-  ^ self methodDefinitionsFor: methodRefs messagePattern: regex isRegex: true
+  ^ self
+    methodDefinitionsFor: methodRefs
+    messagePattern: (findTokens at: 2)
+    isRegex: true
