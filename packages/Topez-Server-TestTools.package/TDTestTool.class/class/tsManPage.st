@@ -19,5 +19,6 @@ DESCRIPTION
   The <test-spec> is of the form:
 
     TestCaseClass>>testSelector
+    TestClassClass
   
 '
