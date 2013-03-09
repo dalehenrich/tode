@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"objectLog",
+		"priority" ],
+	"name" : "TDObjectLog",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

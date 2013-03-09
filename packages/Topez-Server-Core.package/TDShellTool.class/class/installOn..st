@@ -88,6 +88,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDClientSourceElementBuilder
       for: Text
       aspect: #'browse';
+    registerEditorClass: TDObjectLogElementBuilder
+      for: TDObjectLog
+      aspect: #'browse';
     registerEditorClass: TDClientScriptElementBuilder
       for: TDScriptLeafNode
       aspect: #'browse';
