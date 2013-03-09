@@ -3,6 +3,8 @@ objectLog
   objectLog
     ifNil: [ 
       objectLog := ObjectLogEntry objectLog.
-      self priority
-        ifNotNil: [ objectLog := objectLog select: [ :each | each priority = self priority ] ] ].
+      self priorities isEmpty not
+        ifTrue: [ 
+          objectLog := objectLog
+            select: [ :each | self priorities isEmpty or: [ self priorities includes: each priority ] ] ] ].
   ^ objectLog

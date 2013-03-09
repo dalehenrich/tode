@@ -8,5 +8,5 @@ ol
   (self
     topez: topez
     objIn: objIn
-    tokens: tokens
+    tokens: commandTokens
     windowId: windowId) perform: command ]
