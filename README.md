@@ -34,7 +34,7 @@ presentation:
 
 Here's a recent screen shot:
 
-<img style="border: 2px solid #000000;" src="https://raw.github.com/dalehenrich/topez/debugger/docs/screenShot_2013-03-10-01.png" />
+<img style="border: 2px solid #000000;" src="https://raw.github.com/dalehenrich/topez/master/docs/screenShot_2013-03-10-01.png" />
 
 [1]: http://www.pharo-project.org/pharo-download/release-1-4
 [2]: http://gemstonesoup.wordpress.com/2012/09/21/gemstones-3-1-0-1-is-shipping/
