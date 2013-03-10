@@ -1,4 +1,4 @@
-# Topez Programming Environment
+# Topez Programming Environment [![Build Status](https://travis-ci.org/dalehenrich/topez.png?branch=master)](https://travis-ci.org/dalehenrich/topez)
 
 **Topez** is based upon the [**Topaz Programming Environment**][3] for GemStone/S.
 
