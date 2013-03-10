@@ -1,10 +1,10 @@
 as yet unclassified
-mc
-  <topezCommand: 'mc' manPage: #'mcManPage'>
+mr
+  <topezCommand: 'mr' manPage: #'mrManPage'>
   ^ [ :topez :objIn :tokens :windowId | 
   | commandTokens command |
   commandTokens := tokens copyFrom: 2 to: tokens size.
-  command := ('mc' , (commandTokens at: 1)) asSymbol.
+  command := ('mr' , (commandTokens at: 1)) asSymbol.
   (self
     topez: topez
     objIn: objIn

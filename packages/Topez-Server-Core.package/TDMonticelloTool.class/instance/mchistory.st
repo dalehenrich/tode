@@ -1,5 +1,5 @@
 as yet unclassified
-history
+mchistory
   "mc history <regex-pkg-pattern> [<limit>]"
 
   | pattern limit path |

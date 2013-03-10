@@ -1,5 +1,5 @@
 as yet unclassified
-diff
+mcdiff
   "mc diff [<regex-pkg-pattern>]"
 
   | pattern stream wcNode workingCopyList empty |

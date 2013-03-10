@@ -7,16 +7,19 @@ testDirectoryNodeWindowView
       {{(self directoryNodeStructure).
       #'view'.
       nil.
-      'anArray( ''.      -> /'', ''a*     -> ''''[ :topez :tokens :windowId | ]'''''', ''b*     -> ''''3+4'''''', ''c*     -> ''''cat /home/.window/model'''''', ''d      -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g)'', ''e      -> ''''This is a string'''''')/ ([Array] anArray( ''. -> /'', ''a* -> ''''[ :topez :tokens :windowId | ]'''''', ''b* -> ''''3+4'''''', ''c* -> ''''cat /home/.window/model'''''', ''d -> This is a strin...):
+      'anArray( ''.      -> /'', ''a*     -> ''''[ :topez :objIn :tokens :windowId | ]'''''', ''b*     -> ''''3+4'''''', ''c*     -> ''''cat /home/.window/model'''''', ''d      -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g)'', ''e      -> ''''This is a string'''''')/ ([Array] anArray( ''. -> /'', ''a* -> ''''[ :topez :objIn :tokens :windowId | ]'''''', ''b* -> ''''3+4'''''', ''c* -> ''''cat /home/.window/model'''''', ''d -> This is ...):
 	(class)@ -> [Array class] Array
 	1@ -> [String] ''. -> /''
-	2@ -> [String] ''a* -> ''''[ :topez :tokens :windowId | ]''''''
+	2@ -> [String] ''a* -> ''''[ :topez :objIn :tokens :windowId | ]''''''
 	3@ -> [String] ''b* -> ''''3+4''''''
 	4@ -> [String] ''c* -> ''''cat /home/.window/model''''''
 	5@ -> [String] ''d -> This is a string( $T, $h, $i, $s, $ , $i, $s, $ , $a, $ , $s, $t, $r, $i, $n, $g)''
 	6@ -> [String] ''e -> ''''This is a string''''''
 '}.
-      {(self directoryNodeStructure asTDObjectNode: nil topez: self topez aspect: #'view').
+      {(self directoryNodeStructure
+        asTDObjectNode: nil
+        topez: self topez
+        aspect: #'view').
       #'view'.
       nil.
       'anArray( ''.         -> //'', ''(class)@  -> TDDirectoryNode'', ''aspect@   -> nil'', ''contents@ -> aDictionary( ''''a''''->/a/, ''''d''''->/d/, ''''b''''->/b/, ''''c''''->/c/, ''''e''''->/e/)'', ''name@     -> nil'', ''parent@   -> nil'', ''readMe@   -> nil'', ''topez@    -> nil'')/ ([Array] anArray( ''. -> //'', ''(class)@ -> TDDirectoryNode'', ''aspect@ -> nil'', ''contents@ -> aDictionary( ''''a''''->/a/, ''''d''''->/d/, ''''b''''->/b/, ''''c''''->/c/, ''''e''''...):

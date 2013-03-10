@@ -13,13 +13,18 @@ haloProcessesBlock: aTDTopezServer
           | process debugTool debugNode |
           elementName isAllDigits
             ifFalse: [ absentBlock value ].
-          process := theNode basicContents at: elementName asNumber ifAbsent: absentBlock.
+          process := theNode basicContents
+            at: elementName asNumber
+            ifAbsent: absentBlock.
           debugTool := TDDebugTool
             topez: parentNode topez
             objIn: nil
             tokens: #()
             windowId: nil.
-          debugNode := debugTool debugNode: theNode process: process exception: nil.
+          debugNode := debugTool
+            debugNode: theNode
+            process: process
+            exception: nil.
           debugNode
             name: elementName;
             yourself ];

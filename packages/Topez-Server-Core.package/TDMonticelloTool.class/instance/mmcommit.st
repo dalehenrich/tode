@@ -19,11 +19,14 @@ mmcommit
           wc := pkgSpec workingCopy.
           repositories := wc repositoryGroup repositories
             reject: [ :repo | repo = cacheRepository ].
-          info := wc ancestors first.
-          targetRepos := repositories
-            select: [ :repo | (repo versionWithInfo: info) notNil ].
+          targetRepos := #().
+          wc ancestors isEmpty not
+            ifTrue: [ 
+              info := wc ancestors first.
+              targetRepos := repositories
+                select: [ :repo | (repo versionWithInfo: info) notNil ] ].
           targetRepos isEmpty
-            ifTrue: [ self error: 'No repositories found in which to commit results' ].
+            ifTrue: [ targetRepos := repositories ].
           gofer := Gofer new.
           gofer disablePackageCache.
           targetRepos
