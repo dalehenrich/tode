@@ -13,9 +13,12 @@ mccommit
       cacheRepository := MCCacheRepository default.
       repositories := workingCopy repositoryGroup repositories
         reject: [ :repo | repo = cacheRepository ].
-      info := workingCopy ancestors first.
-      targetRepos := repositories
-        select: [ :repo | (repo versionWithInfo: info) notNil ].
+      targetRepos := #().
+      workingCopy ancestors isEmpty not
+        ifTrue: [ 
+          info := workingCopy ancestors first.
+          targetRepos := repositories
+            select: [ :repo | (repo versionWithInfo: info) notNil ] ].
       targetRepos isEmpty
         ifTrue: [ targetRepos := repositories ].
       gofer := Gofer new.

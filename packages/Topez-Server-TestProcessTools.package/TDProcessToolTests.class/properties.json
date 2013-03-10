@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-TestProcessTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDProcessToolTests",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractToolTests",
+	"type" : "normal" }

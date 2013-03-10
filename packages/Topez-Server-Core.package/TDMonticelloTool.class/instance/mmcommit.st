@@ -19,6 +19,7 @@ mmcommit
           wc := pkgSpec workingCopy.
           repositories := wc repositoryGroup repositories
             reject: [ :repo | repo = cacheRepository ].
+          targetRepos := #().
           wc ancestors isEmpty not
             ifTrue: [ 
               info := wc ancestors first.
