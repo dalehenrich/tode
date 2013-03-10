@@ -1,9 +1,10 @@
 as yet unclassified
 mclist
-  "  mc list <regex-pkg-pattern> "
+  "mc list <regex-pkg-pattern> "
 
   | pattern list stream displayPolicy |
-  pattern := tokens at: 2.
+  pattern := tokens size > 1
+    ifTrue: [ tokens at: 2 ].
   list := self findMatchingPackages: pattern topez: topez.
   displayPolicy := topez displayPolicy
     compacted: true;
