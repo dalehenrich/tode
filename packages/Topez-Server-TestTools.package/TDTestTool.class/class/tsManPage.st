@@ -10,8 +10,8 @@ DESCRIPTION
   ts debug [errors|failures|
     passed|expectedDefects|unexpectedPassed|
     <test-spec>]
-  ts list [<test-path>]
-  ts run [<test-path>]
+  ts list [<ds-level>]
+  ts run
 
   The default <test-path> is /home/tests. If you use 
   the `test` command to initiate testinging.

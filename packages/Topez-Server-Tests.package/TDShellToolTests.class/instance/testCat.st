@@ -5,6 +5,6 @@ testCat
   self
     executeCommandSpecs:
       {{{'cat'.
-      '/home/topez'}.
+      '/tools/shell/testSuite'}.
       #'cat'.
-      'cat /home/.window/model'}}
+      nil}}

@@ -1,5 +1,5 @@
 as yet unclassified
-halo
+mchalo
   "  mc halo <name> <regex-pkg-pattern> "
 
   | haloName pattern haloBlock |

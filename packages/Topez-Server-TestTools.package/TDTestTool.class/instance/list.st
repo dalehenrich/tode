@@ -1,7 +1,10 @@
 as yet unclassified
 list
-  "ts list [<test-path>]"
+  "ts list [<ds-level>]"
 
-  | testNode |
+  | testNode dsLevel |
   testNode := self topez lookup: self defaultHomeTestPath.
-  ^ self testSummary: testNode
+  dsLevel := tokens size > 1
+    ifTrue: [ (tokens at: 2) asNumber ]
+    ifFalse: [ 1 ].
+  ^ self testSummary: testNode dsLevel: dsLevel

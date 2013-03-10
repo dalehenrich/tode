@@ -1,8 +1,8 @@
 as yet unclassified
-dirty
+mcdirty
   "mc dirty"
 
-    | path |
+  | path |
   path := self dirtyPath.
   ^ (topez commands at: 'ds') block
     value: topez
