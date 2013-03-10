@@ -4,7 +4,7 @@ mc
   ^ [ :topez :objIn :tokens :windowId | 
   | commandTokens command |
   commandTokens := tokens copyFrom: 2 to: tokens size.
-  command := (commandTokens at: 1) asSymbol.
+  command := ('mc' , (commandTokens at: 1)) asSymbol.
   (self
     topez: topez
     objIn: objIn

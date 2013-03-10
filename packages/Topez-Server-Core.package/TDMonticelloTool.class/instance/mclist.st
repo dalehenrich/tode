@@ -1,5 +1,5 @@
 as yet unclassified
-list
+mclist
   "  mc list <regex-pkg-pattern> "
 
   | pattern list stream displayPolicy |
