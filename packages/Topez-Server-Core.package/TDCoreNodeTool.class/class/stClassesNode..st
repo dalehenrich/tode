@@ -2,7 +2,7 @@ as yet unclassified
 stClassesNode: aTopez
   <topezNode: 'classes'>
   | node directory |
-  node := aTopez installChildrenAt: '/st'.
+  node := aTopez ensureChildrenExistIn: '/st'.
   node
     addChildNode:
       (TDPluggableNode new

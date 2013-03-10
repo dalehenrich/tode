@@ -6,7 +6,10 @@ installOn: aTDTopezServer
    `view` ---> #view
    `inspect` ---> #inspect"
 
-  aTDTopezServer installChildrenAt: self commandPath.
+  aTDTopezServer ensureChildrenExistIn: self commandPath.
   self installExampleOn: aTDTopezServer.
   super installOn: aTDTopezServer.
-  TDTopezServer registerBuilderClass: TDTestResultNodeBuilder for: TestResult aspect: #'view'
+  TDTopezServer
+    registerBuilderClass: TDTestResultNodeBuilder
+    for: TestResult
+    aspect: #'view'

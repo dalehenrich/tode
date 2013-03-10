@@ -1,6 +1,6 @@
 as yet unclassified
 installOn: aTDTopezServer
-  aTDTopezServer installChildrenAt: self commandPath.
+  aTDTopezServer ensureChildrenExistIn: self commandPath.
   self
     installHalosOn: aTDTopezServer;
     installExampleOn: aTDTopezServer;

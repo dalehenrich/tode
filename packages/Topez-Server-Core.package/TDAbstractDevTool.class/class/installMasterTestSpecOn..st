@@ -21,7 +21,7 @@ installMasterTestSpecOn: aTDTopezServer
     cr;
     nextPutAll: '^suite';
     cr.
-  (aTDTopezServer installChildrenAt: path)
+  (aTDTopezServer ensureChildrenExistIn: path)
     addChildNode:
         (TDSmalltalkLeafNode new
             name: 'testSuite';

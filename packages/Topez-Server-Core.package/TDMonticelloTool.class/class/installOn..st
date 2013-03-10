@@ -1,7 +1,7 @@
 as yet unclassified
 installOn: aTDTopezServer
   aTDTopezServer
-    installChildrenAt: '/mc';
-    installChildrenAt: self commandPath.
+    ensureChildrenExistIn: '/mc';
+    ensureChildrenExistIn: self commandPath.
   self installHalosOn: aTDTopezServer.
   super installOn: aTDTopezServer

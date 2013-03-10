@@ -2,7 +2,7 @@ as yet unclassified
 mcRepositoryNode: aTopez
   <topezNode: 'repos'>
   | node |
-  node := aTopez installChildrenAt: '/mc'.
+  node := aTopez ensureChildrenExistIn: '/mc'.
   node
     addChildNode:
       (TDPluggableNode new

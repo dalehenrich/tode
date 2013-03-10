@@ -7,7 +7,7 @@ installOn: aTDTopezServer
    `inspect` ---> #inspect"
 
   | optionsNode |
-  (aTDTopezServer installChildrenAt: '/home')
+  (aTDTopezServer ensureChildrenExistIn: '/home')
     readMe: self homeReadMe;
     yourself.
   super installOn: aTDTopezServer.

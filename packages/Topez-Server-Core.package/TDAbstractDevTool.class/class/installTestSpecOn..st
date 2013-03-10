@@ -6,7 +6,8 @@ installTestSpecOn: aTDTopezServer
   stream
     nextPutAll: '| suite |';
     cr;
-    nextPutAll: 'suite := TestSuite named: ''' , self toolName , ' Tools Suite (';
+    nextPutAll:
+        'suite := TestSuite named: ''' , self toolName , ' Tools Suite (';
     nextPutAll: path;
     nextPutAll: '/testSuite))''.';
     cr;
@@ -18,7 +19,7 @@ installTestSpecOn: aTDTopezServer
     cr;
     nextPutAll: '^suite';
     cr.
-  (aTDTopezServer installChildrenAt: path)
+  (aTDTopezServer ensureChildrenExistIn: path)
     addChildNode:
         (TDSmalltalkLeafNode new
             name: 'testSuite';

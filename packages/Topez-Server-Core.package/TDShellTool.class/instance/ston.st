@@ -22,4 +22,4 @@ ston
       dir
         readOnlyFileNamed: fileName
         do: [ :fileStream | node := STON fromStream: fileStream ].
-      (topez lookup: path) addChildNode: node ]
+      (topez ensureChildrenExistIn: path) addChildNode: node ]
