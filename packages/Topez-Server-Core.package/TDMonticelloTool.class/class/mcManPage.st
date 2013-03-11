@@ -15,7 +15,7 @@ DESCRIPTION
   mc dirty 
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
-  mc history <regex-pkg-pattern> [<limit>]
+  mc history <packageName> [<limit>]
   mc list [<regex-pkg-pattern>]
 ?  mc revert <regex-pkg-pattern> [<ancestor-index>]
 
