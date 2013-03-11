@@ -8,6 +8,7 @@ browse
   browse rsender <regex-pattern>
   browse sender <selector>
   browse source <regex-pattern>
+  browse versions <method-spec>
 "
 
   | findTokens command messagePattern |
@@ -18,6 +19,8 @@ browse
     ifTrue: [ ^ self browseMethods: (self findMethod: findTokens) ].
   command = 'sender'
     ifTrue: [ ^ self browseMethods: (self findSender: findTokens) ].
+  command = 'versions'
+    ifTrue: [ ^ self browseMethods: (self findVersions: findTokens) ].
   command = 'references'
     ifTrue: [ ^ self browseMethods: (self findReferences: findTokens) ].
   command = 'rmethod'

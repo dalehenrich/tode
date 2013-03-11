@@ -11,7 +11,10 @@ SYNOPSIS
   find rsender <regex-pattern>
   find sender <selector>
   find source <regex-pattern>
+  find versions <method-spec>
 
 DESCRIPTION
-  
+  <method-spec>
+    Object>>methodSelector
+    Object class>>methodSelector
 '

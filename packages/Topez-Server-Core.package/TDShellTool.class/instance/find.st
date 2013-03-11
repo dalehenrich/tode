@@ -16,6 +16,8 @@ find
     ifTrue: [ ^ self findMethod: findTokens ].
   command = 'sender'
     ifTrue: [ ^ self findSender: findTokens ].
+  command = 'versions'
+    ifTrue: [ ^ self findVersions: findTokens ].
   command = 'references'
     ifTrue: [ ^ self findReferences: findTokens ].
   command = 'rmethod'
