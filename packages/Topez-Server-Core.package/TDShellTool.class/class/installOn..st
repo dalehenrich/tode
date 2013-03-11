@@ -71,6 +71,9 @@ installOn: aTDTopezServer
       for: TDMethodDefinition
       aspect: #'method';
     registerEditorClass: TDMethodDefinitionElementBuilder
+      for: TDMethodVersionDefinition
+      aspect: #'method';
+    registerEditorClass: TDMethodDefinitionElementBuilder
       for: TDMethodTemplateDefinition
       aspect: #'method';
     registerEditorClass: TDClientObjectElementBuilder

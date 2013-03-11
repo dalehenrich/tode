@@ -11,7 +11,10 @@ SYNOPSIS
   browse rsender <regex-pattern>
   browse sender <selector>
   browse source <regex-pattern>
+  browse versions <method-spec>
 
 DESCRIPTION
-  
+  <method-spec>
+    Object>>methodSelector
+    Object class>>methodSelector  
 '
