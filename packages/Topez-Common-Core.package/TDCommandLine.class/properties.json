@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tokens" ],
+	"name" : "TDCommandLine",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
