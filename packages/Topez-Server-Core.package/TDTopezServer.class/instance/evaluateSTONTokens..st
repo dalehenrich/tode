@@ -1,9 +1,10 @@
 accessing
 evaluateSTONTokens: stonTokens
-  | tokens text |
+  | tokens result text |
   self ensureSessionMethodsEnabled.
   tokens := STON fromString: stonTokens.
-  objIn value: (self evaluateTokens: tokens objIn: objIn value).
+  result := self evaluateTokens: tokens objIn: objIn value.
+  objIn value: result resultObject.
   self ensureSessionMethodsEnabled.
-  text := self renderAsText: objIn value.
+  text := result renderAsTextFor: self.
   ^ STON toString: text
