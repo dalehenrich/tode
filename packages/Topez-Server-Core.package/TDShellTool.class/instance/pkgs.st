@@ -3,4 +3,7 @@ pkgs
   "pkgs"
 
   TDPackageList reset.
-  ^ TDPackageList current edit: topez
+  TDPackageList current edit: topez.
+  ^ TDCommandResult new
+    resultObject: TDPackageList current;
+    yourself

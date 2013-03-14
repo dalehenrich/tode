@@ -1,6 +1,6 @@
 as yet unclassified
 run
-  | doitContext |
+  | doitContext displayPolicy |
   doitContext := objIn.
   tokens size > 1
     ifTrue: [ 
@@ -14,4 +14,11 @@ run
       result := self topez evaluateString: doitString inContext: accumulateObjIn.
       self topez objIn: result.
       result ].
-  ^ doitContext
+  displayPolicy := topez displayPolicy
+    compacted: true;
+    yourself.
+  doitContext displayOn: displayPolicy.
+  ^ TDCommandResult new
+    displayText: displayPolicy stream contents;
+    resultObject: doitContext;
+    yourself

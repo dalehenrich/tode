@@ -12,4 +12,7 @@ ollist
     aspect: #'browse'
     windowName: nil
     windowId: nil
-    windowLocation: nil
+    windowLocation: nil.
+  ^ TDCommandResult new
+    resultObject: objectLog;
+    yourself
