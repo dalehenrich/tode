@@ -11,7 +11,7 @@ version 1.0-beta.9 of GLASS.
 Metacello new
     baseline: 'Topez';
     repository: 'github://dalehenrich/topez:master/packages';
-    load: 'Gemstone Server'.
+    load: 'GemStone Server'.
 ```
 
 ### Pharo Client Installation
