@@ -1,12 +1,13 @@
 {
 	"class" : {
-		"current" : "jgf 8/11/2008 12:44",
+		"current" : "dkh 3/14/2013 12:07",
 		"hasCurrent" : "JGF 4/2/2007 12:04",
 		"initialize" : "dkh 12/3/2007 12:10",
 		"isClassForVersion:" : "JGF 4/2/2007 12:00",
 		"isOnLinux" : "DaleHenrichs 2/8/2010 15:29",
 		"isOnMacintosh" : "JamesFoster 2/2/2010 12:23",
 		"isOnWindows" : "JamesFoster 2/2/2010 12:23",
+		"libraryNamed:" : "dkh 3/14/2013 11:15",
 		"moduleName" : "JamesFoster 2/2/2010 12:50",
 		"new" : "JGF 4/2/2007 11:51",
 		"newGCI" : "JGF 4/2/2007 12:03",
@@ -66,6 +67,8 @@
 		"forceLoading" : "JGF 4/2/2007 11:33",
 		"gciErrSTypeClass" : "dkh 1/4/2013 07:14",
 		"getAndClearLastError" : "dkh 1/5/2013 13:20",
+		"initialize" : "dkh 3/14/2013 10:12",
+		"libraryNamed:" : "dkh 3/14/2013 11:50",
 		"localFor:" : "dkh 1/26/2013 09:35",
 		"localForBytes:" : "dkh 9/26/2012 15:43",
 		"localForOopType:" : "dkh 1/5/2013 11:30",

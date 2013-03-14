@@ -1,14 +1,14 @@
 accessing
-sessionDescription_c3101
+sessionDescription_r
   ^ OGStandardSessionDescription new
-    name: 'c_gs64stone_3101';
-    gemstoneVersion: '3.1.0.1';
-    gciLibraryName: 'libgcirpc-3.1.0.1-32.so';
+    name: 'r_gs64stone';
+    gemstoneVersion: '3.1.0.3';
+    gciLibraryName: 'libgcirpc-3.1.0.3-32.so';
     adornmentColor: Color lightGreen;
     stoneHost: 'foos.gemstone.com';
-    stoneName: 'c_gs64stone_3101';
+    stoneName: 'r_gs64stone';
     gemHost: 'foos.gemstone.com';
-    netLDI: '33066';
+    netLDI: '49352';
     userId: 'DataCurator';
     password: 'swordfish';
     backupDirectory: '';
