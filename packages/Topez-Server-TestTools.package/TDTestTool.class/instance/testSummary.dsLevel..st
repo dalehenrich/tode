@@ -1,6 +1,6 @@
 as yet unclassified
 testSummary: testNode dsLevel: dsLevel
-  | resultsText stream suiteNode displayPolicy |
+  | commandResult stream suiteNode displayPolicy |
   displayPolicy := topez displayPolicy.
   stream := displayPolicy stream.
   suiteNode := self topez lookup: testNode printString , 'suite'.
@@ -9,7 +9,7 @@ testSummary: testNode dsLevel: dsLevel
     nextPutAll: '-> '.
   suiteNode dotSelfObject displayOn: displayPolicy.
   stream cr.
-  resultsText := (topez commands at: 'ds') block
+  commandResult := (topez commands at: 'ds') block
     value: topez
     value: testNode
     value:
@@ -17,5 +17,5 @@ testSummary: testNode dsLevel: dsLevel
       (testNode printString , 'result').
       (dsLevel asString)}
     value: nil.
-  stream nextPutAll: resultsText.
+  stream nextPutAll: commandResult displayText.
   ^ stream contents
