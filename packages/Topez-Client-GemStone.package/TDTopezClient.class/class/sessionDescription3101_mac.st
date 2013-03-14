@@ -1,9 +1,9 @@
 accessing
-sessionDescription3101
+sessionDescription3101_mac
   ^ OGCustomSessionDescription new
-    name: '3.1.0.1';
+    name: '3.1.0.1_mac';
     gemstoneVersion: '3.1.0.1';
-    gciLibraryName: 'libgcirpc-3.1.0.1-32.so';
+    gciLibraryName: 'libgcirpc-3.1.0.1-32.dylib';
     adornmentColor: Color lightGreen;
     stoneHost: 'localhost';
     stoneName: 'seaside31';

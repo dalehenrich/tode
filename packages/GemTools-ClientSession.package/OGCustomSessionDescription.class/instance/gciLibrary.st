@@ -4,4 +4,6 @@ gciLibrary
   libraryClass := GciLibrary withAllSubclasses
     detect: [ :each | each isClassForVersion: self gemstoneVersion ].
   ExternalAddress startUp: true.
-  ^ libraryClass libraryNamed: self gciLibraryName
+  library := libraryClass libraryNamed: self gciLibraryName.
+  library apiGciInit.
+  ^ library
