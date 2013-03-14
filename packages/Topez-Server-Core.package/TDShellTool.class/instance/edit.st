@@ -27,6 +27,4 @@ edit
             aspect: #'browse'
             windowId: windowId ] ].
   contextObject edit: topez aspect: #'browse' windowId: windowId.
-  ^ TDCommandResult new
-    resultObject: contextObject;
-    yourself
+  ^ contextObject

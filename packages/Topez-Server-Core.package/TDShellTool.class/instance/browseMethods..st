@@ -7,6 +7,4 @@ browseMethods: methodDefinitions
     windowName: nil
     windowId: nil
     windowLocation: #'implementors'.
-  ^ TDCommandResult new
-    resultObject: methodDefinitions;
-    yourself
+  ^ methodDefinitions

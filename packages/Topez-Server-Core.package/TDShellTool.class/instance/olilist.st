@@ -16,6 +16,4 @@ olilist
     windowName: nil
     windowId: nil
     windowLocation: nil.
-  ^ TDCommandResult new
-    resultObject: objectLog;
-    yourself
+  ^ objectLog

@@ -2,7 +2,7 @@ as yet unclassified
 report
   "pf report"
 
-  | profMon tally report result |
+  | profMon tally report |
   self stop.
   tally := 100.
   tokens size > 1
@@ -10,8 +10,5 @@ report
   profMon := self profMonitor.
   profMon results ifNil: [ profMon gatherResults ].
   report := profMon reportDownTo: tally.
-  result := TDCommandResult new
-    resultObject: profMon;
-    yourself.
   report edit: topez aspect: #'browse'.
-  ^ result
+  ^ profMon

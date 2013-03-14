@@ -8,6 +8,4 @@ view
   tokens size > 2
     ifTrue: [ contextObject := topez lookup: (tokens at: 3) ].
   contextObject edit: topez aspect: aspect windowId: windowId.
-  ^ TDCommandResult new
-    resultObject: contextObject;
-    yourself
+  ^ contextObject

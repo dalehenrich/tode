@@ -28,6 +28,4 @@ shellInspect
     edit: topez
     aspect: #'inspect'
     windowId: windowId.
-  ^ TDCommandResult new
-    resultObject: contextObject;
-    yourself
+  ^ contextObject
