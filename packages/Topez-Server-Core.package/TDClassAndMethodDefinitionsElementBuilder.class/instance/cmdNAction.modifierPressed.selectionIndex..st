@@ -2,10 +2,10 @@ as yet unclassified
 cmdNAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
   "CMD-n - browse senders"
 
-  | itemAttribute methodDef defs |
+  | itemAttribute def defs |
   itemAttribute := listElement itemCache at: selectionIndex.
-  methodDef := itemAttribute object.
-  defs := TDMethodDefinition sendersOf: methodDef selector.
+  def := itemAttribute object.
+  defs := def sendersOf.
   defs
     edit: nil
     topez: listElement topez

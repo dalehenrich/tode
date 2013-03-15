@@ -2,10 +2,10 @@ as yet unclassified
 cmdMAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
   "CMD-m - browse implementors"
 
-  | itemAttribute methodDef defs |
+  | itemAttribute def defs |
   itemAttribute := listElement itemCache at: selectionIndex.
-  methodDef := itemAttribute object.
-  defs := TDMethodDefinition implementorsOf: methodDef selector.
+  def := itemAttribute object.
+  defs := def implementorsOf.
   defs
     edit: nil
     topez: listElement topez
