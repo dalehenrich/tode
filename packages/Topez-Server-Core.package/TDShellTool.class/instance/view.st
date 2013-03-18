@@ -7,4 +7,5 @@ view
   aspect := (tokens at: 2) asSymbol.
   tokens size > 2
     ifTrue: [ contextObject := topez lookup: (tokens at: 3) ].
-  ^ contextObject edit: topez aspect: aspect windowId: windowId
+  contextObject edit: topez aspect: aspect windowId: windowId.
+  ^ contextObject

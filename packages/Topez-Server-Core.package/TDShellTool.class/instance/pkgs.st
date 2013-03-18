@@ -3,4 +3,5 @@ pkgs
   "pkgs"
 
   TDPackageList reset.
-  ^ TDPackageList current edit: topez
+  TDPackageList current edit: topez.
+  ^ TDPackageList current

@@ -1,3 +1,3 @@
 stash
 label
-  ^ 'GemStone Shell'
+  ^ 'GemStone Shell: ' , self sessionName

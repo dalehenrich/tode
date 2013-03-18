@@ -3,21 +3,9 @@ login
   | desc sess |
   desc := self sessionDescription.
   sess := self todeSessionClass new
-    gemNRS: desc gemNRS;
-    stoneNRS: desc stoneNRS;
-    userID: desc userId;
     topez: self;
     yourself.
-  (sess
-    login: desc password
-    osUser:
-      (desc isGuest
-        ifTrue: [ '' ]
-        ifFalse: [ desc osUserId ])
-    osPassword:
-      (desc isGuest
-        ifTrue: [ '' ]
-        ifFalse: [ desc osPassword ]))
+  (sess loginWith: self sessionDescription)
     ifFalse: [ 
       | gciError messageText |
       gciError := sess getAndClearLastError.

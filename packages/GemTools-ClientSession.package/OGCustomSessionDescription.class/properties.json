@@ -17,7 +17,10 @@
 		"osUserId",
 		"osPassword",
 		"dataDirectory",
-		"backupDirectory" ],
+		"backupDirectory",
+		"gemstoneVersion",
+		"gciLibraryName",
+		"adornmentColor" ],
 	"name" : "OGCustomSessionDescription",
 	"pools" : [
 		 ],

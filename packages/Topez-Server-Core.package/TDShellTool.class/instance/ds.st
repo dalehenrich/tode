@@ -13,4 +13,7 @@ ds
     compacted: true;
     yourself.
   self dsNode: node level: level on: displayPolicy.
-  ^ displayPolicy stream contents
+  ^ TDCommandResult new
+    displayText: displayPolicy stream contents;
+    resultObject: node;
+    yourself

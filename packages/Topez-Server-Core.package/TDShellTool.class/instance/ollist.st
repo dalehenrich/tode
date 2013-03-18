@@ -12,4 +12,5 @@ ollist
     aspect: #'browse'
     windowName: nil
     windowId: nil
-    windowLocation: nil
+    windowLocation: nil.
+  ^ objectLog

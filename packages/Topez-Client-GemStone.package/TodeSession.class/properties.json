@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"topez" ],
+		"topez",
+		"sessionDescription",
+		"gciLibrary" ],
 	"name" : "TodeSession",
 	"pools" : [
 		 ],
