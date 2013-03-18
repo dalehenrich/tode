@@ -34,6 +34,6 @@ mccommit
       gofer package: workingCopy packageName.
       gofer commit: commitMessage ].
   ^ TDCommandResult new
-    displayText: 'Please enter commit comment';
+    displayText: 'Please enter commit comment' asText allBold;
     resultObject: 'Please enter commit comment';
     yourself

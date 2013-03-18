@@ -42,6 +42,6 @@ mmcommit
           committedPackages add: pkgSpec name ].
       committedPackages ].
   ^ TDCommandResult new
-    displayText: 'Please enter commit comment';
+    displayText: 'Please enter commit comment' asText allBold;
     resultObject: 'Please enter commit comment';
     yourself
