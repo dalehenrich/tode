@@ -2,7 +2,11 @@ accessing
 reifyExceptionArgsForOopList: oopList classNamesForOopList: classNameOopList
   | objects classNames result |
   self ensureSessionMethodsEnabled.
-  objects := oopList collect: [ :oop | self reifyExceptionArg: oop ].
+  objects := (oopList collect: [ :oop | self reifyExceptionArg: oop ])
+    collect: [ :each | 
+      each isClass
+        ifTrue: [ each name ]
+        ifFalse: [ each ] ].
   classNames := classNameOopList
     collect: [ :oop | 
       oop == nil
