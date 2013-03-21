@@ -17,7 +17,15 @@ compareChangesFor: anMCWorkingCopy on: stream
         cr.
       diffy writePatch: (snapshot patchRelativeToBase: MCSnapshot empty) ]
     ifFalse: [ 
-      | info ancestorSnapshot |
+      | info ancestorSnapshot patch |
       info := anMCWorkingCopy ancestors first.
       ancestorSnapshot := anMCWorkingCopy findSnapshotWithVersionInfo: info.
-      diffy writePatch: (snapshot patchRelativeToBase: ancestorSnapshot) ]
+      patch := snapshot patchRelativeToBase: ancestorSnapshot.
+      patch isEmpty
+        ifTrue: [ 
+          anMCWorkingCopy modified: false.
+          stream
+            nextPutAll: '... no changes';
+            cr.
+          ^ self ].
+      diffy writePatch: patch ]

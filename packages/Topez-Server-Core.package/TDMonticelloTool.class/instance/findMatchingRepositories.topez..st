@@ -6,4 +6,4 @@ findMatchingRepositories: pattern topez: aTopez
   parser := RxParser safelyParse: pattern.
   parser ifNil: [ ^ repos ].
   regex := RxParser preferredMatcherClass for: parser ignoreCase: true.
-  ^ repos select: [ :repo | regex search: repo description ]
+  ^ repos select: [ :repo | regex search: repo url locator ]

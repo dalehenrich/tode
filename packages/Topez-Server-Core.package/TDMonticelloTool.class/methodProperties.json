@@ -32,10 +32,10 @@
 		"workingCopiesNode:" : "DataCurator 12/25/2012 07:35",
 		"workingCopyNode:" : "DataCurator 01/25/2013 10:09" },
 	"instance" : {
-		"compareChangesFor:on:" : "dkh 03/10/2013 14:36",
+		"compareChangesFor:on:" : "dkh 03/20/2013 20:57",
 		"dirtyPath" : "DataCurator 12/25/2012 09:02",
 		"findMatchingPackages:topez:" : "dkh 03/10/2013 14:04",
-		"findMatchingRepositories:topez:" : "dkh 03/10/2013 14:05",
+		"findMatchingRepositories:topez:" : "dkh 03/20/2013 20:53",
 		"getAspectGiven:" : "dkh 02/10/2013 10:13",
 		"getRegistrationFor:" : "dkh 02/10/2013 10:16",
 		"mccommit" : "dkh 03/18/2013 10:09",
