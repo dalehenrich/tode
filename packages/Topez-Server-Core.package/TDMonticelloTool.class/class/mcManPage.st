@@ -7,6 +7,7 @@ SYNOPSIS
   mc <command> [args]
 
 DESCRIPTION
+  mc ancestors <pkg-name> [<limit>]
   mc commit <pkg-name>
 ?  mc compare <version-name> <version-name>
   mc create <pkg-name>
@@ -14,7 +15,6 @@ DESCRIPTION
   mc dirty 
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
-  mc history <pkg-name> [<limit>]
   mc list [<regex-pkg-pattern>]
 ?  mc revert <regex-pkg-pattern> [<ancestor-index>]
 ?  mc save <pkg-name> <version-name> <repository-spec>
