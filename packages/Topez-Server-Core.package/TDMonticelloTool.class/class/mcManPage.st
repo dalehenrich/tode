@@ -18,6 +18,7 @@ DESCRIPTION
   mc history <packageName> [<limit>]
   mc list [<regex-pkg-pattern>]
 ?  mc revert <regex-pkg-pattern> [<ancestor-index>]
+  mc unload <packageName>
 
   <pkg-name> - package base name, e.g., ''Topez-Server-Core''
   <repository-spec> (see `man mr`):
