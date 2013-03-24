@@ -4,21 +4,21 @@ classHierarchyOrder: definitionList
   sortedDefs := Array new.
   classMap := Dictionary new.
   self
-    processClassesBlock: [ 
-      | classes |
-      classes := IdentitySet new.
+    processClassNamesBlock: [ 
+      | classNames |
+      classNames := IdentitySet new.
       definitionList
         do: [ :each | 
           | cl defs |
           cl := each theClass.
-          classes add: cl.
+          classNames add: cl name.
           defs := classMap
             at: cl name
             ifAbsent: [ classMap at: cl name put: Array new ].
           defs add: each ].
-      classes ]
-    elementBlock: [ :cl :indents | 
+      classNames ]
+    elementBlock: [ :className :indents | 
       | defs |
-      defs := (classMap at: cl name) sort: [ :a :b | a label <= b label ].
+      defs := (classMap at: className) sort: [ :a :b | a label <= b label ].
       sortedDefs addAll: defs ].
   ^ sortedDefs

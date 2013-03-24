@@ -8,15 +8,18 @@ SYNOPSIS
 
 DESCRIPTION
   mc ancestors <pkg-name> [<limit>]
+  mc browse <version-name> <repository-spec>
+?  mc browse <pkg-name>
   mc commit <pkg-name>
 ?  mc compare <version-name> <version-name>
-?  mc copy <pkg-name> <repository-spec>
+?  mc copy <pkg-name> <source-repository-spec> <destination-repository-spec>
   mc create <pkg-name>
   mc diff [<regex-pkg-pattern>]
   mc dirty 
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
   mc list [<regex-pkg-pattern>]
+?  mc merge <pkg-name> <repository-spec>
 ?  mc revert <pkg-name> [<version-name>] [<method-spec>]
 ?  mc save <pkg-name> <version-name> <repository-spec>
   mc unload <pkg-name>

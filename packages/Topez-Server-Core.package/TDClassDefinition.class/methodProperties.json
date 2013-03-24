@@ -2,15 +2,15 @@
 	"class" : {
 		"_configurationGivenPackageDefinition:" : "dkh 02/24/2013 15:21",
 		"category:matches:" : "DataCurator 02/05/2013 11:08",
-		"classHierarchyOrder:" : "dkh 02/24/2013 15:56",
+		"classHierarchyOrder:" : "dkh 03/24/2013 09:45",
 		"className:" : "DataCurator 02/05/2013 14:09",
 		"configurationOfDefinition:" : "dkh 02/24/2013 11:25",
 		"packageOfClassDefinition:" : "dkh 02/24/2013 11:04",
-		"processClassesBlock:elementBlock:" : "dkh 02/24/2013 15:42",
+		"processClassNamesBlock:elementBlock:" : "dkh 03/24/2013 09:34",
 		"selectClassNamed:topez:" : "DataCurator 02/05/2013 11:21",
 		"updatePackageAndConfigFor:topez:" : "dkh 02/24/2013 11:24" },
 	"instance" : {
-		"addToClientListFor:names:items:indents:aspect:" : "DataCurator 02/05/2013 15:26",
+		"addToClientListFor:names:items:indents:aspect:" : "dkh 03/24/2013 10:03",
 		"asClassDefinition" : "DataCurator 02/06/2013 22:05",
 		"className" : "DataCurator 02/05/2013 09:26",
 		"className:" : "DataCurator 02/05/2013 09:26",

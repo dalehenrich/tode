@@ -43,6 +43,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDClassAndMethodDefinitionsElementBuilder
       for: Collection
       aspect: #'definitionList';
+    registerEditorClass: TDExternalClassAndMethodDefinitionsElementBuilder
+      for: Collection
+      aspect: #'externalDefinitionList';
     registerEditorClass: TDMethodDefinitionsElementBuilder
       for: Collection
       aspect: #'methodDefinitionList';
@@ -69,6 +72,12 @@ installOn: aTDTopezServer
       aspect: #'method';
     registerEditorClass: TDMethodDefinitionElementBuilder
       for: TDMethodDefinition
+      aspect: #'method';
+    registerEditorClass: TDMethodDefinitionElementBuilder
+      for: TDMcMethodDefinition
+      aspect: #'method';
+    registerEditorClass: TDMethodDefinitionElementBuilder
+      for: TDMcClassDefinition
       aspect: #'method';
     registerEditorClass: TDMethodDefinitionElementBuilder
       for: TDMethodVersionDefinition

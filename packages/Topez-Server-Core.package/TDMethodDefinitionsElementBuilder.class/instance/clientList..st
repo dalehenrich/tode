@@ -4,13 +4,14 @@ clientList: listElement
   items := Array new.
   ar := Array new.
   self
-    classHierarchy: [ :cl :indents | 
+    classHierarchy: [ :className :indents | 
       | defs |
-      defs := (classMap at: cl name) sort: [ :a :b | a selector <= b selector ].
+      defs := (classMap at: className)
+        sort: [ :a :b | a selector <= b selector ].
       defs
         do: [ :def | 
           def
-            addToClientListFor: cl
+            addToClientListFor: className
             names: ar
             items: items
             indents: indents
