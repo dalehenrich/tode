@@ -10,18 +10,20 @@ DESCRIPTION
   mc ancestors <pkg-name> [<limit>]
   mc commit <pkg-name>
 ?  mc compare <version-name> <version-name>
+?  mc copy <pkg-name> <repository-spec>
   mc create <pkg-name>
   mc diff [<regex-pkg-pattern>]
   mc dirty 
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
   mc list [<regex-pkg-pattern>]
-?  mc revert <regex-pkg-pattern> [<ancestor-index>]
+?  mc revert <pkg-name> [<version-name>] [<method-spec>]
 ?  mc save <pkg-name> <version-name> <repository-spec>
   mc unload <pkg-name>
 
   <pkg-name> - package base name, e.g., ''Topez-Server-Core''
   <version-name> - fully qualified name, e.g., ''Topez-Server-Core-dkh.100''
+  <method-spec> class>>selector reference, e.g. ''TDMonticelloTool class>>mcManPage''
   <repository-spec> (see `man mr`):
     http://seaside.gemstone.com/ss/Seaside30
     filetree:///opt/git/topez/packages
