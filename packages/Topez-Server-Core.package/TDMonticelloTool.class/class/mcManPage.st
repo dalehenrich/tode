@@ -7,6 +7,7 @@ SYNOPSIS
   mc <command> [args]
 
 DESCRIPTION
+?  mc adopt <pkg-name> <version-name> <repository-spec>
   mc ancestors <pkg-name> [<limit>]
   mc browse <version-name> <repository-spec>
 ?  mc browse <pkg-name>
@@ -14,12 +15,16 @@ DESCRIPTION
   mc compare <version-name> <repository-spec> <version-name> <repository-spec>
   mc copy <version-name> <source-repository-spec> <destination-repository-spec>
   mc create <pkg-name>
+  mc delete <pkg-name>
   mc diff [<regex-pkg-pattern>]
   mc dirty 
+?  mc flush 
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
   mc list [<regex-pkg-pattern>]
+?  mc load <pkg-name> <repository-spec>
 ?  mc merge <pkg-name> <repository-spec>
+?  mc recompile <pkg-name>
 ?  mc revert <pkg-name> [<version-name>] [<method-spec>]
 ?  mc save <pkg-name> <version-name> <repository-spec>
   mc unload <pkg-name>
