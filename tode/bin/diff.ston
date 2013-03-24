@@ -1,1 +1,0 @@
-TDScriptLeafNode {	#name : 'diff',	#contents : '[ :topez :objIn :tokens :windowId | \n| txt |\ntxt := (TDMonticelloTool\n  topez: topez\n  objIn: objIn\n  tokens:\n    {\'diff\'.\n    (tokens at: 2)}\n  windowId: windowId) mmdiff.\n(TDTxtLeafNode new contents: txt) edit: topez aspect: #\'browse\' windowId: nil ]'}
