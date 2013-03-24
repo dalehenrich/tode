@@ -12,7 +12,7 @@ DESCRIPTION
 ?  mc browse <pkg-name>
   mc commit <pkg-name>
   mc compare <version-name> <repository-spec> <version-name> <repository-spec>
-?  mc copy <pkg-name> <source-repository-spec> <destination-repository-spec>
+  mc copy <version-name> <source-repository-spec> <destination-repository-spec>
   mc create <pkg-name>
   mc diff [<regex-pkg-pattern>]
   mc dirty 

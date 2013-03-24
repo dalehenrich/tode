@@ -13,7 +13,7 @@
 		"installHalosOn:" : "DataCurator 12/25/2012 06:45",
 		"installOn:" : "dkh 03/10/2013 09:30",
 		"mc" : "dkh 03/10/2013 11:25",
-		"mcManPage" : "dkh 03/24/2013 12:15",
+		"mcManPage" : "dkh 03/24/2013 13:31",
 		"mcRepositoryNode:" : "dkh 03/10/2013 09:30",
 		"mcWorkingCopiesNode:" : "dkh 03/10/2013 09:30",
 		"mm" : "dkh 02/10/2013 13:08",
@@ -43,6 +43,7 @@
 		"mcbrowse" : "dkh 03/24/2013 11:09",
 		"mccommit" : "dkh 03/18/2013 10:09",
 		"mccompare" : "dkh 03/24/2013 12:35",
+		"mccopy" : "dkh 03/24/2013 13:37",
 		"mccreate" : "dkh 03/10/2013 11:43",
 		"mcdiff" : "dkh 03/24/2013 12:40",
 		"mcdirty" : "dkh 03/10/2013 11:26",
@@ -68,4 +69,5 @@
 		"repositoryFromDescription:" : "dkh 03/21/2013 17:40",
 		"resolvedReferencesForRepository:" : "dkh 03/23/2013 19:08",
 		"rootPath" : "DataCurator 12/25/2012 06:16",
-		"snapshotFor:in:" : "dkh 03/24/2013 12:25" } }
+		"snapshotFor:in:" : "dkh 03/24/2013 13:33",
+		"versionFor:in:" : "dkh 03/24/2013 13:33" } }
