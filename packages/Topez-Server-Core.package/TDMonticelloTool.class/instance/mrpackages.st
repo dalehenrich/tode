@@ -6,8 +6,8 @@ mrpackages
 
   | repo packageNames displayPolicy stream loadedVersions resolvedReferences |
   repo := self repositoryFromDescription: (tokens at: 2).
-  resolvedReferences := self resolvedReferencesForRepository: repo.
   loadedVersions := self loadedVersions.
+  resolvedReferences := self resolvedReferencesForRepository: repo.
   packageNames := resolvedReferences keys asArray
     sorted: [ :a :b | 
       | aLoaded bLoaded |
