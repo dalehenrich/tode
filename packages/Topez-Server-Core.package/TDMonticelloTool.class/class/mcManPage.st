@@ -7,7 +7,7 @@ SYNOPSIS
   mc <command> [args]
 
 DESCRIPTION
-?  mc adopt <pkg-name> <version-name> <repository-spec>
+  mc adopt <pkg-name> <version-name> <repository-spec>
   mc ancestors <pkg-name> [<limit>]
   mc browse <version-name> <repository-spec>
 ?  mc browse <pkg-name>
