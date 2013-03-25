@@ -22,7 +22,7 @@ DESCRIPTION
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
   mc list [<regex-pkg-pattern>]
-?  mc load <pkg-name> <repository-spec>
+  mc load <version-name> <repository-spec>
 ?  mc merge <pkg-name> <repository-spec>
 ?  mc recompile <pkg-name>
 ?  mc revert <pkg-name> [<version-name>] [<method-spec>]
