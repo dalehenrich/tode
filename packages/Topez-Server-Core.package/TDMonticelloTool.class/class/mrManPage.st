@@ -9,6 +9,7 @@ SYNOPSIS
 DESCRIPTION
   mr add <repository-spec> <pkg-name>
   mr create <repository-spec>
+  mr flush 
   mr group <pkg-name>
   mr list [<regex-repo-pattern>]
   mr packages <repository-spec>

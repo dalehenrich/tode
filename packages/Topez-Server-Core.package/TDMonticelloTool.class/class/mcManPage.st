@@ -18,7 +18,6 @@ DESCRIPTION
   mc delete <pkg-name>
   mc diff [<regex-pkg-pattern>]
   mc dirty 
-?  mc flush 
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
   mc list [<regex-pkg-pattern>]

@@ -4,7 +4,7 @@ fromRepository: aRepository
   description := (aRepository asRepositorySpecFor: MetacelloMCProject new)
     description.
   description = 'cache'
-    ifTrue: [ description := 'cache://' , aRepository asOop asString , '@gemstone' ].
+    ifTrue: [ description := 'cache://' , aRepository asOop asString , '@gemstone/cache' ].
   url := Url absoluteFromText: description.
   ^ self new
     url: url;
