@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"processToInterrupt" ],
-	"name" : "GciUserInterrupt",
+		 ],
+	"name" : "GciUserInterruptHandler",
 	"pools" : [
 		 ],
-	"super" : "Exception",
+	"super" : "UserInterruptHandler",
 	"type" : "normal" }
