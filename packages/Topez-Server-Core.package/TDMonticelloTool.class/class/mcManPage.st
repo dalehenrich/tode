@@ -24,7 +24,7 @@ DESCRIPTION
   mc load <version-name> <repository-spec>
 ?  mc merge <pkg-name> <repository-spec>
   mc recompile <pkg-name>
-?  mc revert <pkg-name> [<version-name>] [<method-spec>]
+  mc revert <pkg-name> [<method-spec>]
 ?  mc save <pkg-name> <version-name> <repository-spec>
   mc unload <pkg-name>
 
