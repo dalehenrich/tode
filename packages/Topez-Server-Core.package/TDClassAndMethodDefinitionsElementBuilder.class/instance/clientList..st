@@ -4,9 +4,9 @@ clientList: listElement
   items := Array new.
   ar := Array new.
   self
-    classHierarchy: [ :cl :indents | 
-      (classMap at: cl name)
-        addToClientListFor: cl
+    classHierarchy: [ :className :indents | 
+      (classMap at: className)
+        addToClientListFor: className
         names: ar
         items: items
         indents: indents

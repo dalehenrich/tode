@@ -5,5 +5,8 @@ evaluateTopezScriptCommand: line
     ifFalse: [ 
       tokens := line trimBoth findTokens: {(Character space)}.
       tokens isEmpty
-        ifFalse: [ result := self evaluateTokens: tokens objIn: objIn value ] ].
+        ifFalse: [ 
+          | commandResult |
+          commandResult := self evaluateTokens: tokens objIn: objIn value.
+          result := commandResult resultObject ] ].
   ^ result

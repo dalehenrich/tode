@@ -1,6 +1,6 @@
 as yet unclassified
 compareChangesFor: anMCWorkingCopy on: stream
-  | diffy package snapshot |
+  | diffy package snapshot patch |
   anMCWorkingCopy modified
     ifFalse: [ 
       stream
@@ -15,9 +15,18 @@ compareChangesFor: anMCWorkingCopy on: stream
       stream
         nextPutAll: '... no version with which to compare (all added)..';
         cr.
-      diffy writePatch: (snapshot patchRelativeToBase: MCSnapshot empty) ]
+      patch := snapshot patchRelativeToBase: MCSnapshot empty ]
     ifFalse: [ 
       | info ancestorSnapshot |
       info := anMCWorkingCopy ancestors first.
       ancestorSnapshot := anMCWorkingCopy findSnapshotWithVersionInfo: info.
-      diffy writePatch: (snapshot patchRelativeToBase: ancestorSnapshot) ]
+      patch := snapshot patchRelativeToBase: ancestorSnapshot.
+      patch isEmpty
+        ifTrue: [ 
+          anMCWorkingCopy modified: false.
+          stream
+            nextPutAll: '... no changes';
+            cr.
+          ^ patch ] ].
+  diffy writePatch: patch.
+  ^ patch

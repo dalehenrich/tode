@@ -14,4 +14,7 @@ mrlist
     do: [ :pkg | 
       pkg displayOn: displayPolicy.
       stream cr ].
-  ^ stream contents
+  ^ TDCommandResult new
+    displayText: stream contents;
+    resultObject: list;
+    yourself

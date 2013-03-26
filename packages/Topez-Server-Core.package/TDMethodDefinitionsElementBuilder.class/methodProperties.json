@@ -2,8 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baseClassList" : "DataCurator 02/06/2013 22:01",
-		"clientList:" : "DataCurator 02/06/2013 22:02",
-		"cmdMAction:modifierPressed:selectionIndex:" : "DataCurator 02/07/2013 08:03",
-		"cmdNAction:modifierPressed:selectionIndex:" : "DataCurator 02/07/2013 08:04",
-		"itemSelected:at:shiftPressed:" : "DataCurator 02/07/2013 12:19" } }
+		"baseClassNamesList" : "dkh 03/24/2013 09:50",
+		"clientList:" : "dkh 03/24/2013 10:02" } }

@@ -4,17 +4,18 @@ clientList: listElement
   items := Array new.
   ar := Array new.
   self
-    classHierarchy: [ :cl :indents | 
-      | stream |
+    classHierarchy: [ :className :indents | 
+      | stream cl |
+      cl := (Smalltalk classNamed: className).
       stream := WriteStream on: String new.
       stream
-        space: (indents at: cl);
-        nextPutAll: cl name asString.
+        space: (indents at: className);
+        nextPutAll: className asString.
       stream contents.
       ar add: stream contents asText allBold.
       selectedClass == cl
         ifTrue: [ selectedIndex := ar size ].
-      items add: (TDClientListItemAttributes object: cl name parent: nil aspect: listElement aspect) ].
+      items add: (TDClientListItemAttributes object: className parent: nil aspect: listElement aspect) ].
   listElement ~~ nil
     ifTrue: [ 
       listElement itemCache: items.

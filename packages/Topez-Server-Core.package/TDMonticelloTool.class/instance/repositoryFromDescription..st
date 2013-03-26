@@ -4,4 +4,4 @@ repositoryFromDescription: aRepositoryDescription
   project := MetacelloMCProject new.
   repositorySpec := project repositorySpec.
   repositorySpec description: aRepositoryDescription.
-  ^ MetacelloPlatform current createRepository: repositorySpec
+  ^ repositorySpec createRepository

@@ -2,7 +2,7 @@ as yet unclassified
 mcdiff
   "mc diff [<regex-pkg-pattern>]"
 
-  | pattern stream wcNode workingCopyList empty |
+  | pattern stream wcNode workingCopyList empty patch |
   workingCopyList := tokens size = 1
     ifTrue: [ objIn ]
     ifFalse: [ 
@@ -20,8 +20,9 @@ mcdiff
                 ('==================== ' , workingCopy name , ' ====================') asText
                     allBold;
             cr.
-          self compareChangesFor: workingCopy workingCopy on: stream.
+          patch := self compareChangesFor: workingCopy workingCopy on: stream.
           stream cr ] ].
   empty
     ifTrue: [ ^ 'No modifications' asText allBold ].
-  ^ stream contents
+  stream contents edit: topez aspect: #'browse' windowId: nil.
+  ^ patch

@@ -1,1 +1,1 @@
-SystemOrganization addCategory: 'Topez-Server-Core'!
+SystemOrganization addCategory: #'Topez-Server-Core'!

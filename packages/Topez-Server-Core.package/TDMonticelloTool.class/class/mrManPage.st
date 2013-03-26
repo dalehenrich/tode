@@ -7,9 +7,14 @@ SYNOPSIS
   mr <command> [args]
 
 DESCRIPTION
-  mr add <repository-spec> <package-name>
+  mr add <repository-spec> <pkg-name>
   mr create <repository-spec>
+  mr flush 
+  mr group <pkg-name>
   mr list [<regex-repo-pattern>]
+  mr packages <repository-spec>
+  mr versions <pkg-name> <repository-spec> [<limit>]
+  mr remove <repository-spec> <pkg-name>
 
   <pkg-name> - package base name, e.g., ''Topez-Server-Core''
   <repository-spec>

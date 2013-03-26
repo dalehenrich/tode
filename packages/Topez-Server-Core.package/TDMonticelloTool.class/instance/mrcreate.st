@@ -2,4 +2,7 @@ as yet unclassified
 mrcreate
   "mr create <repository-spec>"
 
-  ^ self repositoryFromDescription: (tokens at: 2)
+  | repo |
+  repo := self repositoryFromDescription: (tokens at: 2).
+  MCRepositoryGroup default addRepository: repo.
+  ^ repo

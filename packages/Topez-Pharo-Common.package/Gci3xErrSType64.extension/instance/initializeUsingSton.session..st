@@ -8,7 +8,7 @@ initializeUsingSton: aGciLibrary session: aTodeSession
     readSimpleFields;
     readMessage;
     yourself.
-  number = 4100
+  (number = 4100 or: [number = 4040])
     ifTrue: [ self readArguments ]
     ifFalse: [ self readArgumentsAndExceptionClassUsingStonIn: aTodeSession ].
   address := nil.

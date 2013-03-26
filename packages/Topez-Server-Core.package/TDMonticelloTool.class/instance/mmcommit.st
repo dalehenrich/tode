@@ -41,4 +41,7 @@ mmcommit
           gofer commit: commitMessage.
           committedPackages add: pkgSpec name ].
       committedPackages ].
-  ^ 'Please enter commit comment'
+  ^ TDCommandResult new
+    displayText: 'Please enter commit comment' asText allBold;
+    resultObject: 'Please enter commit comment';
+    yourself

@@ -1,0 +1,7 @@
+{
+	"class" : {
+		"install" : "dkh 3/25/2013 21:24",
+		"interrupted" : "dkh 3/26/2013 07:57",
+		"reset" : "dkh 3/26/2013 07:58" },
+	"instance" : {
+		"handleUserInterrupt" : "dkh 3/26/2013 08:03" } }

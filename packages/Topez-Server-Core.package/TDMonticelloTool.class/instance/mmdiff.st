@@ -2,7 +2,7 @@ as yet unclassified
 mmdiff
   "mm diff [<config>]"
 
-  | registrations projectSpec dirty stream empty |
+  | registrations projectSpec dirty stream empty patch |
   registrations := tokens size = 1
     ifTrue: [ 
       self mmlist
@@ -37,8 +37,9 @@ mmdiff
                 ('==================== ' , packageSpec name , ' ====================') asText
                     allBold;
             cr.
-          self compareChangesFor: packageSpec workingCopy on: stream.
+          patch := self compareChangesFor: packageSpec workingCopy on: stream.
           stream cr ] ].
   empty
     ifTrue: [ ^ 'No dirty packages' asText allBold ].
-  ^ stream contents
+  stream contents edit: topez aspect: #'browse' windowId: nil.
+  ^ patch

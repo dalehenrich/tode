@@ -1,9 +1,10 @@
 as yet unclassified
 browseMethods: methodDefinitions
-  ^ methodDefinitions
+  methodDefinitions
     edit: nil
     topez: topez
     aspect: #'methodDefinitionList'
     windowName: nil
     windowId: nil
-    windowLocation: #'implementors'
+    windowLocation: #'implementors'.
+  ^ methodDefinitions
