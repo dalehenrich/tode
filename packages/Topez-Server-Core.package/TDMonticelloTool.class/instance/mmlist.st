@@ -2,7 +2,7 @@ as yet unclassified
 mmlist
   "mm list [<config> [<config> ... ]]"
 
-  | configNames registrations |
+  | configNames registrations list displayPolicy stream |
   configNames := tokens size = 1
     ifTrue: [ 
       | registry |
@@ -12,4 +12,16 @@ mmlist
     ifFalse: [ tokens copyFrom: 2 to: tokens size ].
   registrations := configNames
     collect: [ :configName | self getRegistrationFor: configName ].
-  ^ registrations sort: [ :a :b | a projectName <= b projectName ]
+  list := registrations sort: [ :a :b | a projectName <= b projectName ].
+  displayPolicy := topez displayPolicy
+    compacted: true;
+    yourself.
+  stream := displayPolicy stream.
+  list
+    do: [ :pkg | 
+      pkg displayOn: displayPolicy.
+      stream cr ].
+  ^ TDCommandResult new
+    displayText: stream contents;
+    resultObject: list;
+    yourself
