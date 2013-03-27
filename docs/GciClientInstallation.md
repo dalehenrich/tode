@@ -45,7 +45,7 @@ sessionDescription := OGCustomSessionDescription new
     dataDirectory: '';
     yourself.
 TDTopezClient sessionMap 
-    at: sessionDescrtion name
+    at: sessionDescription name
     put: sessionDescription.
 ```
 
