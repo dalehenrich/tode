@@ -5,6 +5,9 @@
 The current implementation (still in development) uses a [Pharo1.4][1] image as the GCI client running against a [GemStone/S 3.1.0.x][2] stone using
 version 1.0-beta.9 of GLASS.
 
+*See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
+for details on installing Metacello.*
+
 ### GemStone Server Installation
 
 ```Smalltalk
@@ -16,16 +19,7 @@ Metacello new
 
 ### Pharo Client Installation
 
-
-```Smalltalk
-Metacello new
-    baseline: 'Topez';
-    repository: 'github://dalehenrich/topez:master/packages';
-    load: 'Dev'.
-``` 
-
-*See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
-for details on installing Metacello.*
+See the [Gci client installation instructions](https://github.com/dalehenrich/topez/blob/master/docs/GciClientInstallation.md).
 
 Here's a video of my 
 [Smalltalks 2012](http://www.fast.org.ar/smalltalks2012?_s=bvlW29Av2dix9EWt&_k=OGfhqoGSxR431Tth) 
