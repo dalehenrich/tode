@@ -1,0 +1,1 @@
+I add a keyboard hook to a TextMorphForEditView to allow filtering of keystrokes for a simple tty terminal emulator.
