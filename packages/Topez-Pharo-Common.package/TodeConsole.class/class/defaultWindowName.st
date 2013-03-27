@@ -1,0 +1,3 @@
+defaults
+defaultWindowName
+  ^ 'tODE Console'
