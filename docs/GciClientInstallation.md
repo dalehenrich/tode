@@ -49,6 +49,15 @@ TDTopezClient sessionMap
     put: sessionDescription.
 ```
 
+Define window sizes:
+
+```Smalltalk
+TDTopezClient
+    windowOrigin: 5@0.5;
+  	listWindowWidth: 28;
+  	codeWindowWidth: 80;
+  	initialize.
+```
 Login using the session:
 
 ```Smalltalk
