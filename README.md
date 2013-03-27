@@ -21,7 +21,7 @@ Metacello new
 Metacello new
     baseline: 'Topez';
     repository: 'github://dalehenrich/topez:master/packages';
-    load: 'Client'.
+    load: 'Dev'.
 ``` 
 
 *See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
