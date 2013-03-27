@@ -66,7 +66,7 @@ TDTopezClient
 
 ```Smalltalk
 TDTopezClient
-      windowOriginwOrigin: 5@0.5;
+      windowOrigin: 5@0.5;
       listWindowWidth: 24;
       codeWindowHeight: 21;
       codeWindowWidth: 80;
