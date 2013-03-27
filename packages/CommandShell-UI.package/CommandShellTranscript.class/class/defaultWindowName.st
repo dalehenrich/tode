@@ -1,0 +1,4 @@
+defaults
+defaultWindowName
+
+	^ 'Squeak Shell'
