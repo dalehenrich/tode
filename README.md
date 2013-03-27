@@ -21,7 +21,7 @@ Metacello new
 Metacello new
     baseline: 'Topez';
     repository: 'github://dalehenrich/topez:master/packages';
-    load: 'Pharo Client'.
+    load: 'Client'.
 ``` 
 
 *See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
