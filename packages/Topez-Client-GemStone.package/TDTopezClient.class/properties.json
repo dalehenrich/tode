@@ -3,6 +3,7 @@
 	"classinstvars" : [
 		"bounds",
 		"windowOffset",
+		"codeWindowHeight",
 		"codeWindowWidth",
 		"listWindowWidth",
 		"windowOrigin" ],

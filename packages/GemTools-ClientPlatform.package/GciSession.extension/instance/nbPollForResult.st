@@ -3,14 +3,19 @@ nbPollForResult
   | debuggerChoice terminated |
   GciUserInterruptHandler reset.
   [ 
-  | i assoc |
+  | i assoc trigger |
   i := 0.
+  trigger := Time now addSeconds: 1.
   [ 
   assoc := self library nbEnd.
   assoc key < 2 ]
     whileTrue: [ 
       i := i + 5 min: 50.
-      World displayWorldSafely.
+      Time now > trigger
+        ifTrue: [ 
+          "don't need to be flashing wildly ... an update per second will do"
+          World displayWorldSafely.
+          trigger := Time now addSeconds: 1 ].
       (Delay forMilliseconds: i) wait.
       GciUserInterruptHandler interrupted
         ifTrue: [ GciUserInterrupt signal ] ].
