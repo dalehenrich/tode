@@ -1,5 +1,3 @@
 stream extensions
-nextPut: anObject 
-
-	self scheduleToEvaluate:
-		[super nextPut: anObject]
+nextPut: anObject
+  super nextPut: anObject

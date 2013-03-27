@@ -1,6 +1,5 @@
 command prompt
 prompt
-
-	self scheduleToEvaluate:
-		[self show: self cliShell promptString.
-		self restoreSelectionMarker]
+  self show: self cliShell promptString.
+  self markInput.
+  self restoreSelectionMarker

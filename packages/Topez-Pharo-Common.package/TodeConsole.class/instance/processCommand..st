@@ -6,7 +6,7 @@ processCommand: aCommandString
       (str := outputStringOrText) isEmpty
         ifTrue: [ self restoreSelectionMarker ]
         ifFalse: [ 
-          self
+          self 
             show: outputStringOrText;
             cr ] ].
   self prompt
