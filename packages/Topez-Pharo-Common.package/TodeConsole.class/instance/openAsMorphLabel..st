@@ -4,7 +4,7 @@ openAsMorphLabel: labelString
 
   | window textMorph |
   window := (TZSystemWindow labelled: labelString) model: self.
-  textMorph := TodeConsoleWindowMorph
+  textMorph := self consoleWindowMorphClass
     on: self
     text: nil
     accept: nil

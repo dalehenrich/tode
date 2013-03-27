@@ -3,7 +3,7 @@ setText: aText
   scrollBar setValue: 0.0.
   textMorph
     ifNil: [ 
-      textMorph := StashShellTtyTextMorphForEditView new
+      textMorph := self ttyTextMorphForEditViewClass new
         contents: aText
         wrappedTo: self innerBounds width - 6.
       textMorph setEditView: self.

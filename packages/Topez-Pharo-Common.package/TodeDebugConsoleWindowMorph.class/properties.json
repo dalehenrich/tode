@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common-Console",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TodeDebugConsoleWindowMorph",
+	"pools" : [
+		 ],
+	"super" : "TodeConsoleWindowMorph",
+	"type" : "normal" }
