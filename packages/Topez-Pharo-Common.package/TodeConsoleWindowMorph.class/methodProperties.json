@@ -3,9 +3,13 @@
 		"open" : "dkh 3/27/2013 10:26" },
 	"instance" : {
 		"accept" : "dkh 3/27/2013 10:26",
-		"appendEntry" : "dkh 3/27/2013 10:26",
+		"adornmentColor" : "dkh 3/27/2013 10:41",
+		"appendEntry" : "dkh 3/27/2013 11:32",
 		"commandLineInput" : "dkh 3/27/2013 10:26",
-		"positionAfterPromptString" : "dkh 3/27/2013 10:26",
-		"setText:" : "dkh 3/27/2013 10:28",
-		"textStyle" : "dkh 3/27/2013 10:26",
-		"update:" : "dkh 3/27/2013 10:26" } }
+		"drawOn:" : "dkh 3/27/2013 10:42",
+		"positionAfterPromptString" : "dkh 3/27/2013 11:23",
+		"setText:" : "dkh 3/27/2013 11:28",
+		"stylerStyled:" : "dkh 3/27/2013 10:42",
+		"textStyle" : "dkh 3/27/2013 10:43",
+		"update:" : "dkh 3/27/2013 10:26",
+		"wantsFrameAdornments" : "dkh 3/27/2013 10:43" } }

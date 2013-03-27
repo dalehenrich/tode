@@ -13,5 +13,5 @@
 	"name" : "TodeConsole",
 	"pools" : [
 		 ],
-	"super" : "WriteStream",
+	"super" : "TextStream",
 	"type" : "normal" }

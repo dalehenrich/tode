@@ -1,6 +1,6 @@
 evaluation
 scheduleToEvaluate: aBlock
-	"Evaluate aBlock, typically to create a new scheduled window. Make it work in
+  "Evaluate aBlock, typically to create a new scheduled window. Make it work in
 	both Morphic and MVC. In Morphic, just evaluate aBlock, but in MVC, put it in
 	a queue for evaluation within a control loop. This method may be sent from
 	a process running independent of MVC controller scheduling.
@@ -9,6 +9,8 @@ scheduleToEvaluate: aBlock
 	project, eliminating the need for an #isMorphic test. This mechanism is not
 	available for older images or for Pharo."
 
-	CommandShell isMorphic
-		ifTrue: [WorldState addDeferredUIMessage: aBlock]
-		ifFalse: [self activeController ifNotNil: [activeController addDeferredUIMessage: aBlock]]
+  self isMorphic
+    ifTrue: [ WorldState addDeferredUIMessage: aBlock ]
+    ifFalse: [ 
+      self activeController
+        ifNotNil: [ activeController addDeferredUIMessage: aBlock ] ]

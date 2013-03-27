@@ -3,16 +3,21 @@ openAsMorphLabel: labelString
   "Build a morph viewing this stream"
 
   | window textMorph |
-  window := SystemWindow new model: self.
+  window := (TZSystemWindow labelled: labelString) model: self.
   textMorph := TodeConsoleWindowMorph
     on: self
     text: nil
     accept: nil
     readSelection: nil
-    menu: #'codePaneMenu:shifted:'.
+    menu: nil.
   textMorph acceptOnCR: true.
   window addMorph: textMorph frame: (0 @ 0 corner: 1 @ 1).
   self prompt.
-  labelString ifNotNil: [ self labelStringBlock: [ labelString ] ].
-  self changed: #'relabel'.
+  false
+    ifTrue: [ 
+      labelString ifNotNil: [ self labelStringBlock: [ labelString ] ].
+      self changed: #'relabel' ].
   ^ window
+    openInWorld;
+    bounds: (self cliShell topezClientClass bounds at: #'evaluator');
+    yourself
