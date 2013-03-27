@@ -51,7 +51,7 @@ TDTopezClient sessionMap
 
 Define window sizes.
 
-1280x800 display:
+1280x800 display (using Consolas Regular 10 FreeType font):
 
 ```Smalltalk
 TDTopezClient
@@ -62,7 +62,7 @@ TDTopezClient
   	initialize.
 ```
 
-1440x900 display:
+1440x900 display (using Consolas Regular 10 FreeType font):
 
 ```Smalltalk
 TDTopezClient
