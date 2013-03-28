@@ -2,10 +2,12 @@ evaluator engine
 nextHistory
   self history size = 0
     ifTrue: [ ^ self ].
-  historyIndex := (historyIndex + 1 min: history size + 2) max: 2.
-  history size + 1 < historyIndex
+  historyIndex <= 1
+    ifTrue: [ historyIndex := 2 ].
+  history size + 1 <= historyIndex
     ifTrue: [ self installHistoryEntry: '' windowMorph: self shellWindow paneMorphs first ]
     ifFalse: [ 
       self
-        installHistoryEntry: (history at: historyIndex - 1)
-        windowMorph: self shellWindow paneMorphs first ]
+        installHistoryEntry: (history at: historyIndex)
+        windowMorph: self shellWindow paneMorphs first ].
+  historyIndex := (historyIndex + 1 max: 1) min: history size + 1
