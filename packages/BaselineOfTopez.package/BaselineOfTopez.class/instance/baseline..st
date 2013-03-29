@@ -7,13 +7,20 @@ baseline: spec
       spec baseline: 'Ston'.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
+        package: 'Topez-OldCommon-Core'
+          with: [ spec requires: #('Topez-OldCommon-Core') ];
         package: 'Topez-Common-Tests'
           with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Client-Core'
           with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Client-Tests-Common'
           with: [ spec requires: #('Topez-Client-Core' 'Topez-Common-Tests') ];
-        yourself ].
+        yourself.
+      spec
+        group: 'default' with: #('Topez-Common-Core');
+        group: 'Old'
+          with:
+            #('Topez-OldCommon-Core' 'Topez-Client-Core' 'Topez-Client-Tests-Common') ].
   spec
     for: #'squeakCommon'
     do: [ 
@@ -46,8 +53,12 @@ baseline: spec
         with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ].
       spec
         package: 'Topez-Pharo-Common';
+        package: 'Topez-OldPharo-Common'
+          with: [ spec requires: 'Topez-Pharo-Common' ];
         package: 'Topez-Client-GemStone'
           with: [ spec requires: #('GemTools-ClientGCI' 'Topez-Common-Core' 'Topez-Pharo-Common') ];
+        package: 'Topez-OldClient-GemStone'
+          with: [ spec requires: 'Topez-Client-GemStone' ];
         package: 'Topez-Client-Tests-GemStone'
           with: [ spec requires: #('Topez-Client-GemStone' 'Topez-Client-Tests-Common') ];
         package: 'Topez-Pharo-Client';
@@ -57,12 +68,11 @@ baseline: spec
           with: [ spec requires: #('Topez-Client-Pharo' 'Topez-Client-Tests-Common') ];
         yourself.
       spec
-        group: 'GemStone Client' with: #('Topez-Client-GemStone');
-        group: 'Pharo Client' with: #('Topez-Client-Pharo');
-        group: 'Client' with: #('Topez-Client-GemStone' 'Topez-Client-Pharo');
-        group: 'Client Tests'
-          with: #('Topez-Client-Tests-GemStone' #'Topez-Client-Tests-Pharo');
-        group: 'Dev' with: #('Client Tests');
+        group: 'Client' with: #('Topez-Client-GemStone');
+        group: 'Dev' with: #('Client');
+        group: 'Old'
+          with:
+            #('Topez-OldPharo-Common' 'Topez-OldClient-GemStone' 'Topez-Client-Tests-GemStone' 'Topez-Pharo-Client' 'Topez-Client-Pharo' 'Topez-Client-Tests-Pharo');
         yourself ].
   spec
     for: #'gemstone'
