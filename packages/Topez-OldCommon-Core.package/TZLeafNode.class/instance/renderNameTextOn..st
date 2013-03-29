@@ -1,4 +1,4 @@
-*topez-common-core
+as yet unclassified
 renderNameTextOn: textStream
     | attributes |
     attributes := self isTopezSourceNode
