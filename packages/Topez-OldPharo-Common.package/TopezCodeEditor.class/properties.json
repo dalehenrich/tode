@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-OldPharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sourceElement",
+		"stylingActive",
+		"edittingCode",
+		"shoutClassOrMetaClass" ],
+	"name" : "TopezCodeEditor",
+	"pools" : [
+		 ],
+	"super" : "TopezCommonEditor",
+	"type" : "normal" }

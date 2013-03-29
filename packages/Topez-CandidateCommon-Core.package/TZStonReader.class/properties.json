@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-CandidateCommon-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"visited" ],
+	"name" : "TZStonReader",
+	"pools" : [
+		 ],
+	"super" : "STONReader",
+	"type" : "normal" }

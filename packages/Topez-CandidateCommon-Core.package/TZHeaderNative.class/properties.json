@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-CandidateCommon-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZHeaderNative",
+	"pools" : [
+		 ],
+	"super" : "TZHeaderObject",
+	"type" : "normal" }

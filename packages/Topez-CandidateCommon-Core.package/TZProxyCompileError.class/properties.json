@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-CandidateCommon-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZProxyCompileError",
+	"pools" : [
+		 ],
+	"super" : "TZProxyError",
+	"type" : "normal" }

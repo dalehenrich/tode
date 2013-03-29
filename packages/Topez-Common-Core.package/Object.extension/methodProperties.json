@@ -2,17 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"asTZString" : "dkh 10/26/2012 23:37",
-		"asTopezNative" : "dkh 10/10/2012 08:39",
-		"asTopezProxy" : "dkh 9/28/2012 11:42",
-		"objectForOop" : "dkh 9/28/2012 19:29",
-		"renderLabel" : "dkh 10/11/2012 20:06",
+		"asTodeProxy" : "dkh 3/29/2013 11:05",
 		"renderText" : "dkh 10/26/2012 23:58",
 		"renderText:" : "dkh 12/01/2012 19:38",
 		"renderText:on:" : "dkh 10/12/2012 15:23",
 		"renderText:on:indent:" : "DataCurator 02/02/2013 09:03",
-		"renderTextOn:" : "dkh 10/4/2012 07:57",
-		"stonProcessSubObjects:visited:" : "dkh 10/30/2012 20:09",
-		"tzNativeStonOn:" : "dkh 9/28/2012 12:18",
-		"tzProxyStonOn:" : "dkh 9/26/2012 20:43",
-		"tzStoreNativeLiteralInHeader:" : "dkh 10/25/2012 23:54" } }
+		"renderTextOn:" : "dkh 10/4/2012 07:57" } }

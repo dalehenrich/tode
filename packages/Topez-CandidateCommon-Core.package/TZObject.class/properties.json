@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-CandidateCommon-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ClickBlocks",
+		"PrintBlocks" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

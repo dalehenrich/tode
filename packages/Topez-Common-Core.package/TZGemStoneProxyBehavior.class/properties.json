@@ -15,5 +15,5 @@
 	"name" : "TZGemStoneProxyBehavior",
 	"pools" : [
 		 ],
-	"super" : "TZObject",
+	"super" : "Object",
 	"type" : "normal" }
