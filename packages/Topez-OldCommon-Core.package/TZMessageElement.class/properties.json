@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-OldCommon-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"messagePattern",
+		"inExtensionClassList" ],
+	"name" : "TZMessageElement",
+	"pools" : [
+		 ],
+	"super" : "TZMethodElement",
+	"type" : "normal" }

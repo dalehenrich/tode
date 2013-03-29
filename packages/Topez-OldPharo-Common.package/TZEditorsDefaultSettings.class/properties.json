@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-OldPharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZEditorsDefaultSettings",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

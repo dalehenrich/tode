@@ -1,0 +1,21 @@
+{
+	"category" : "Topez-OldCommon-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"elementProject",
+		"elementPackage",
+		"elementClass",
+		"elementClassName",
+		"elementSuperClassName",
+		"indent",
+		"isMeta",
+		"elementBehaviorForShout" ],
+	"name" : "TZElement",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
