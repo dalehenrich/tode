@@ -6,9 +6,7 @@ performTransformOn: anOoptype
       stonString := self session
         receiverNB: self topez topezServerProxy
         perform: #'toString:'
-        withArgs:
-          {anOoptype.
-          (self transform value)}
+        withArgs: {anOoptype}
         envId: self environmentId.
       ^ (STONReader on: stonString readStream) next ].
   self transform key == #'native'
