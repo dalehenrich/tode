@@ -8,7 +8,7 @@ baseline: spec
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
         package: 'Topez-OldCommon-Core'
-          with: [ spec requires: #('Topez-OldCommon-Core') ];
+          with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Common-Tests'
           with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Client-Core'
