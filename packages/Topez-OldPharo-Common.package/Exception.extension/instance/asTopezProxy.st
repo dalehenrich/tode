@@ -1,4 +1,4 @@
-*topez-pharo-common
+*topez-oldpharo-common
 asTopezProxy
     | proxyNotificationClass proxy header named messageMap |
     proxyNotificationClass := TZProxyError.

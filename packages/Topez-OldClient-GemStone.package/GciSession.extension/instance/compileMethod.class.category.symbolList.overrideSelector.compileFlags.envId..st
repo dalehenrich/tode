@@ -1,4 +1,4 @@
-*topez-client-gemstone
+*topez-oldclient-gemstone
 compileMethod: sourceString class: class category: category symbolList: symbolList overrideSelector: overrideSelector compileFlags: compileFlags envId: envId
   | result |
   self library

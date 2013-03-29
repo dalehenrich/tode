@@ -1,4 +1,4 @@
-*topez-client-gemstone
+*topez-oldclient-gemstone
 fetchOopOopType: anOopType index: index
   self class gsCursor
     showWhile: [ 
