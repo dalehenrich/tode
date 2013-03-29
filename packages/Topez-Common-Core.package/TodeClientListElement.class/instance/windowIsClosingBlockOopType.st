@@ -1,3 +1,3 @@
 accessing
 windowIsClosingBlockOopType
-  ^ TZHeaderGemStone oop: self windowIsClosingBlockOop
+  ^ self session asOopType: self windowIsClosingBlockOop

@@ -1,3 +1,3 @@
 accessing
 keyboardEventBlockOopType
-  ^ TZHeaderGemStone oop: self keyboardEventBlockOop
+  ^ self session asOopType: self keyboardEventBlockOop

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GsBreakpointNotification",
+	"pools" : [
+		 ],
+	"super" : "GsRuntimeExceptionNotification",
+	"type" : "normal" }

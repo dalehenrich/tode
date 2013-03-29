@@ -25,7 +25,7 @@ getNbResult
         ifTrue: [ 
           "Session is invalid ... session died out from under us, so clean up session and throw the error"
           self release ].
-      self signalServerError: error ].
+      self  signalServerError: error ].
   actionArgs isArray
     ifTrue: [ 
       (actionArgs at: 1) == #'debug'

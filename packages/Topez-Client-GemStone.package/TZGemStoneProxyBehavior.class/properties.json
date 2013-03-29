@@ -1,0 +1,19 @@
+{
+	"category" : "Topez-Client-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"AllGlobalNames",
+		"GciSemaphore" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"behaviorOop",
+		"topez",
+		"allInstVarNames",
+		"allClassVarNames",
+		"allSharedPoolNames" ],
+	"name" : "TZGemStoneProxyBehavior",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

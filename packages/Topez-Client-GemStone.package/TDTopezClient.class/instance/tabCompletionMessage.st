@@ -4,7 +4,7 @@ tabCompletionMessage
     ifNil: [ 
       tabCompletionMessage := TZGsMessageSend new
         topez: self;
-        receiver: (TZHeaderGemStone oop: self topezServerOop);
+        receiver: (self session asOopType: self topezServerOop);
         selector: 'tabCompletion:';
         arguments: #();
         transform: #'native' -> nil ].

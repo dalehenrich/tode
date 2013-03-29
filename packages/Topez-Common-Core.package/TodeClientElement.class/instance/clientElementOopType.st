@@ -1,3 +1,3 @@
 as yet unclassified
 clientElementOopType
-  ^ TZHeaderGemStone oop: self clientElementOop
+  ^ self session asOopType: self clientElementOop

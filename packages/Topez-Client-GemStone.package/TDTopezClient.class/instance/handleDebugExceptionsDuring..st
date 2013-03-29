@@ -2,12 +2,10 @@ as yet unclassified
 handleDebugExceptionsDuring: aBlock
   | result |
   [ result := aBlock value ]
-    on:
-      TZTopezBreakpointNotification , TZTopezHaltNotification
-        , TZTopezErrorNotification
+    on: GsBreakpointNotification , GsHaltNotification , GsErrorNotification
     do: [ :ex | 
       | errorNumber |
-      (ex isKindOf: TZTopezErrorNotification)
+      (ex isKindOf: GsErrorNotification)
         ifTrue: [ 
           "error occurred during execution"
           ^ #'error' ].
