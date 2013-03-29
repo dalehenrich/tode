@@ -14,7 +14,7 @@ nbPollForResult
       Time now > trigger
         ifTrue: [ 
           "don't need to be flashing wildly ... an update per second will do"
-          World displayWorldSafely.
+          [ World displayWorldSafely ] fork.
           trigger := Time now addSeconds: 1 ].
       (Delay forMilliseconds: i) wait.
       GciUserInterruptHandler interrupted
