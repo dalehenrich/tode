@@ -20,7 +20,8 @@
 		"evaluateTokenMessage",
 		"setExceptionMessage",
 		"resetObjInMessage",
-		"openDebuggerMessage" ],
+		"openDebuggerMessage",
+		"tabCompletionMessage" ],
 	"name" : "TDTopezClient",
 	"pools" : [
 		 ],

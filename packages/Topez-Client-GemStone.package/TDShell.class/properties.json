@@ -18,7 +18,9 @@
 		"shellId",
 		"autoCommit",
 		"adornmentColor",
-		"sessionName" ],
+		"sessionName",
+		"history",
+		"historyIndex" ],
 	"name" : "TDShell",
 	"pools" : [
 		 ],

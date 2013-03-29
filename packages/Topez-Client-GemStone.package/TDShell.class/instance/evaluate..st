@@ -11,12 +11,14 @@ evaluate: aString
         ifTrue: [ result := self accumulateText: line ]
         ifFalse: [ 
           | isolatedCommands |
+          self addToHistory: line.
           isolatedCommands := line findTokens: ';'.
           isolatedCommands
             do: [ :isolatedCommand | 
               | pipedCommands |
               pipedCommands := isolatedCommand findTokens: '|'.
-              pipedCommands do: [ :pipedCommand | result := self evaluateCommand: pipedCommand ] ] ] ].
+              pipedCommands
+                do: [ :pipedCommand | result := self evaluateCommand: pipedCommand ] ] ] ].
   ^ result ]
     on: Error
     do: [ :ex | 

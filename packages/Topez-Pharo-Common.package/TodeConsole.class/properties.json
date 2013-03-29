@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Pharo-Common-Console",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"cliShell",
+		"lastPromptString",
+		"activeController",
+		"labelStringBlock" ],
+	"name" : "TodeConsole",
+	"pools" : [
+		 ],
+	"super" : "TextStream",
+	"type" : "normal" }
