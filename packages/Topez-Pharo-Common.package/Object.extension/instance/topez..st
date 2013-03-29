@@ -1,4 +1,4 @@
-*topez-oldpharo-common
+*topez-pharo-common
 topez: aTopez
   "noop"
 
