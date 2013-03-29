@@ -6,11 +6,7 @@ baseline: spec
     do: [ 
       spec baseline: 'Ston'.
       spec
-        package: 'Topez-Common-Core'
-          with: [ 
-              spec
-                includes: 'Topez-CandidateCommon-Core';
-                requires: #('Ston') ];
+        package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
         package: 'Topez-OldCommon-Core'
           with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-CandidateCommon-Core'
