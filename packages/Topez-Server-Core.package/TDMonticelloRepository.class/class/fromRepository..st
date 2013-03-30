@@ -1,11 +1,10 @@
 as yet unclassified
 fromRepository: aRepository
-  | description url |
-  description := (aRepository asRepositorySpecFor: MetacelloMCProject new)
-    description.
-  description = 'cache'
-    ifTrue: [ description := 'cache://' , aRepository asOop asString , '@gemstone/cache' ].
-  url := Url absoluteFromText: description.
+  | descr url |
+  descr := (aRepository asRepositorySpecFor: MetacelloMCProject new) description.
+  descr = 'cache'
+    ifTrue: [ descr := 'cache://' , aRepository asOop asString , '@gemstone/cache' ].
+  url := Url absoluteFromText: descr.
   ^ self new
     url: url;
     repository: aRepository;
