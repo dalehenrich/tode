@@ -9,21 +9,10 @@ printOn: aStream
     nextPutAll: 'status=';
     nextPutAll: process _statusString;
     nextPutAll: ', '.
-  process clientData ~~ nil
-    ifTrue: [ 
-      aStream
-        nextPutAll: 'clientData=';
-        nextPutAll: process clientData printString;
-        add: ', ' ].
   aStream
     nextPutAll: 'priority=';
     nextPutAll: process priority printString;
-    nextPutAll: ', '.
-  process _group ~~ nil
-    ifTrue: [ 
-      aStream
-        nextPutAll: 'group=';
-        nextPutAll: process _group printString ] ]
+    nextPutAll: ', ' ]
     on: Error
     do: [ :ex | aStream nextPutAll: '...problem printing process' ].
   aStream nextPut: ')'.

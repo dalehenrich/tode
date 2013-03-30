@@ -1,4 +1,4 @@
 as yet unclassified
 sourceRange
-  ^ {(self object selectionRange begin).
-  (self object selectionRange end)}
+  ^ {(self object selectionRange first).
+  (self object selectionRange last)}
