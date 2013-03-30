@@ -72,6 +72,17 @@ TDTopezClient
       codeWindowWidth: 80;
       initialize.
 ```
+1440x900 display (using Bitmap DejaVu Sans Regular 9 font):
+
+```Smalltalk
+TDTopezClient
+      windowOrigin: 5@0.5;
+      listWindowWidth: 18;
+      codeWindowHeight: 21;
+      codeWindowWidth: 65;
+      initialize.
+```
+
 Login using the session:
 
 ```Smalltalk
