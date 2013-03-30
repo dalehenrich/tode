@@ -9,7 +9,7 @@ handleDebugExceptionsDuring: aBlock
         ifTrue: [ 
           "error occurred during execution"
           ^ #'error' ].
-      errorNumber := ex exceptionProxy number.
+      errorNumber := ex errorNumber.
       errorNumber = 6002
         ifTrue: [ 
           "single step breakpoint ... as expected"

@@ -4,7 +4,8 @@ initializeSessionMap
 
   | dict |
   dict := Dictionary new.
-  {(self sessionDescription3101_mac).
+  {(self sessionDescription2441_mac).
+  (self sessionDescription3101_mac).
   (self sessionDescription3101tODE).
   (self sessionDescription_c3101).
   (self sessionDescription_c3101_mac).

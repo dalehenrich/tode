@@ -1,12 +1,15 @@
 {
 	"category" : "GemTools-ClientGCI",
 	"classinstvars" : [
-		 ],
+		"err_CompilerError",
+		"err_Error",
+		"err_Halt" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "JGF 4/13/2007 13:44",
 	"instvars" : [
-		 ],
+		"exceptionObj",
+		"exceptionObjClassName" ],
 	"name" : "GciErrSType64",
 	"pools" : [
 		 ],

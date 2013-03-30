@@ -1,8 +1,9 @@
 private
 readArguments
-  | argsSize |
-  argsSize := self unsignedLongAt: 101.
+  | argsSize ofs |
+  argsSize := self argsSize.
   args := Array new: argsSize.
-  10 < argsSize
-    ifTrue: [ self error: 'Argument count too high!' ].
-  1 to: argsSize do: [ :i | args at: i put: (library localFor: (self oopTypeAt: (i - 1) * 8 + 16 + 1)) ]
+  ofs := self argsOffset.
+  1 to: argsSize do: [ :i | 
+    args at: i put: (library localFor: (self oopTypeAt: ofs)).
+    ofs := ofs + 8 ]

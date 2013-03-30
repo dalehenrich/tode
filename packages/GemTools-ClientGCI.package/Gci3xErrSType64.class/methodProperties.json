@@ -1,11 +1,13 @@
 {
 	"class" : {
-		"initialize" : "dkh 1/25/2013 20:06" },
+		"err_Breakpoint" : "dkh 3/30/2013 14:08",
+		"err_CodeBreakpoint" : "dkh 3/30/2013 14:08",
+		"err_StackBreakpoint" : "dkh 3/30/2013 14:08",
+		"initialize" : "dkh 3/30/2013 13:57" },
 	"instance" : {
-		"exceptionObj" : "dkh 9/28/2012 07:56",
-		"exceptionObjClassName" : "dkh 1/4/2013 07:23",
+		"argsSize" : "dkh 3/30/2013 14:18",
+		"isBreakpoint" : "dkh 3/30/2013 14:07",
 		"maxMessageSize" : "DaleHenrichs 12/14/2010 10:38",
-		"readArguments" : "dkh 1/26/2013 09:33",
 		"readSimpleFields" : "dkh 11/2/2009 14:03",
 		"startOfMessage" : "dkh 11/2/2009 14:04",
 		"structSize" : "dkh 4/18/2012 15:43" } }

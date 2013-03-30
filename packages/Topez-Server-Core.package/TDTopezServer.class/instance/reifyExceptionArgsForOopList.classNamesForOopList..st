@@ -1,5 +1,7 @@
 accessing
 reifyExceptionArgsForOopList: oopList classNamesForOopList: classNameOopList
+  "sent by client on GemStone3.x stone"
+
   | objects classNames result |
   self ensureSessionMethodsEnabled.
   objects := (oopList collect: [ :oop | self reifyExceptionArg: oop ])
