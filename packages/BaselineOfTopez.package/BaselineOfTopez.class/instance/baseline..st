@@ -90,6 +90,15 @@ baseline: spec
         group: 'Dev' with: #('GemStone Server' 'GemStone Server Tests');
         yourself ].
   spec
+    for: #'gs2.4.x'
+    do: [ 
+      spec
+        package: 'Topez-Server-DebugTools'
+          with: [ spec includes: 'Topez-Server-DebugTools.v24' ];
+        package: 'Topez-Server-DebugTools.v24'
+          with: [ spec requires: 'Topez-Server-DebugTools' ];
+        yourself ].
+  spec
     for: #'gs3.1.x'
     do: [ 
       spec
