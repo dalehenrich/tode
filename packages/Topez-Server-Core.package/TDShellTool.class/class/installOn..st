@@ -14,6 +14,17 @@ installOn: aTDTopezServer
   self
     installExampleOn: aTDTopezServer;
     installOptionsOn: aTDTopezServer.
+  (Smalltalk at: #'GSNMethod' ifAbsent: [  ]) ~~ nil
+    ifTrue: [ 
+      TDTopezServer
+        registerEditorClass: TDGsNMethodElementBuilder
+        for: (Smalltalk at: #'GsNMethod')
+        aspect: #'method' ]
+    ifFalse: [ 
+      TDTopezServer
+        registerEditorClass: TDGsNMethodElementBuilder
+        for: (Smalltalk at: #'GsMethod')
+        aspect: #'method' ].
   TDTopezServer
     registerBuilderClass: TDDictionaryNodeBuilder
       for: AbstractDictionary
@@ -67,9 +78,6 @@ installOn: aTDTopezServer
     registerEditorClass: TDClientObjectElementBuilder
       for: Class
       aspect: #'inspect';
-    registerEditorClass: TDGsNMethodElementBuilder
-      for: GsNMethod
-      aspect: #'method';
     registerEditorClass: TDMethodDefinitionElementBuilder
       for: TDMethodDefinition
       aspect: #'method';

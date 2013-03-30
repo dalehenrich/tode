@@ -22,9 +22,6 @@ testSpecialNodeInspectLookup
       {117.145s3.
       #'inspect'.
       (TDSpecialNodeBuilder name)}.
-      {(FixedPoint fromString: '117.145').
-      #'inspect'.
-      (TDSpecialNodeBuilder name)}.
       {true.
       #'inspect'.
       (TDSpecialNodeBuilder name)}.

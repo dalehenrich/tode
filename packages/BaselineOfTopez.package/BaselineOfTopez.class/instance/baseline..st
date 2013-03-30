@@ -84,10 +84,23 @@ baseline: spec
         group: 'default' with: #('GemStone Server');
         group: 'GemStone Server'
           with:
-            #('Topez-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-TestTools');
+            #('Topez-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-ProcessTools' 'Topez-Server-TestTools');
         group: 'GemStone Server Tests'
           with: #('Topez-Server-Tests' 'Topez-Server-TestDebugTools');
         group: 'Dev' with: #('GemStone Server' 'GemStone Server Tests');
+        yourself ].
+  spec
+    for: #'gs3.1.x'
+    do: [ 
+      spec
+        package: 'Topez-Server-DebugTools'
+          with: [ spec includes: 'Topez-Server-DebugTools.v31' ];
+        package: 'Topez-Server-DebugTools.v31'
+          with: [ spec requires: 'Topez-Server-DebugTools' ];
+        package: 'Topez-Server-Tests'
+          with: [ spec includes: 'Topez-Server-Tests.v31' ];
+        package: 'Topez-Server-Tests.v31'
+          with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
   spec
     for: #'maglev'
