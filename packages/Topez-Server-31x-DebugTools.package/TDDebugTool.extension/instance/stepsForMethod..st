@@ -1,4 +1,4 @@
-*topez-server-debugtools.v31
+*topez-server-31x-debugtools
 stepsForMethod: meth
     "pulled over here because the standard GemStone method assumes that lf is sole line separator"
 

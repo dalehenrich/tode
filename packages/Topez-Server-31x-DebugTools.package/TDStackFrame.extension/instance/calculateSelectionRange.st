@@ -1,4 +1,4 @@
-*topez-server-debugtools.v31
+*topez-server-31x-debugtools
 calculateSelectionRange
     | method stepPoint offsets begin end |
     method := self method.

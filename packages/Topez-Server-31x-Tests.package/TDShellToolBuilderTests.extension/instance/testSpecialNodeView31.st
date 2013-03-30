@@ -1,4 +1,4 @@
-*topez-server-tests.v31
+*topez-server-31x-tests
 testSpecialNodeView31
   "object aspect expected"
 

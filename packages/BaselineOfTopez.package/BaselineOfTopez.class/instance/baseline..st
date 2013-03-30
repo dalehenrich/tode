@@ -94,8 +94,8 @@ baseline: spec
     do: [ 
       spec
         package: 'Topez-Server-DebugTools'
-          with: [ spec includes: 'Topez-Server-DebugTools.v24' ];
-        package: 'Topez-Server-DebugTools.v24'
+          with: [ spec includes: 'Topez-Server-24x-DebugTools' ];
+        package: 'Topez-Server-24x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
         yourself ].
   spec
@@ -103,12 +103,12 @@ baseline: spec
     do: [ 
       spec
         package: 'Topez-Server-DebugTools'
-          with: [ spec includes: 'Topez-Server-DebugTools.v31' ];
-        package: 'Topez-Server-DebugTools.v31'
+          with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
+        package: 'Topez-Server-31x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
         package: 'Topez-Server-Tests'
-          with: [ spec includes: 'Topez-Server-Tests.v31' ];
-        package: 'Topez-Server-Tests.v31'
+          with: [ spec includes: 'Topez-Server-31x-Tests' ];
+        package: 'Topez-Server-31x-Tests'
           with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
   spec

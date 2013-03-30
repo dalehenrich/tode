@@ -1,4 +1,4 @@
-*topez-server-debugtools.v31
+*topez-server-31x-debugtools
 dbSetThruBreaksFor: node during: aBlock
   | allBreakpointsSourceOffsets srcOffsets frame method ipMarkerArray stepIps thruStepPoints |
   stackNode := node.

@@ -1,4 +1,4 @@
-*topez-server-debugtools.v31
+*topez-server-31x-debugtools
 _localTrimStackToLevel: aLevel
   "Deletes stack entries from 1 to (aLevel - 1) inclusive, thus making aLevel the
  new top-of-stack(TOS).  At new TOS, looks in the implementation class of the

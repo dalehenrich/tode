@@ -1,9 +1,9 @@
-*topez-server-tests.v31
-testSpecialNodeLookup31
+*topez-server-31x-tests
+testSpecialNodeInspectLookup31
   "object aspect expected"
 
   self
     executeNodeBuilderLookupSpecs:
       {{(FixedPoint fromString: '117.145').
-      #'view'.
+      #'inspect'.
       (TDSpecialNodeBuilder name)}}
