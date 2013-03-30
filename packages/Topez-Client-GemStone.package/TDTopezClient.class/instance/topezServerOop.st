@@ -1,3 +1,3 @@
 as yet unclassified
 topezServerOop
-    ^ self topezServerProxy oop
+    ^ self topezServerProxy asInteger

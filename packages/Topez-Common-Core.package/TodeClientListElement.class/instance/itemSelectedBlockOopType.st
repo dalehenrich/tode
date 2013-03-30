@@ -1,3 +1,3 @@
 accessing
 itemSelectedBlockOopType
-  ^ TZHeaderGemStone oop: self itemSelectedBlockOop
+  ^ self session asOopType: self itemSelectedBlockOop

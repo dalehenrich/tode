@@ -9,4 +9,4 @@ reportCompileErrors: compilerErrorOoptype
 	errorDetails := ex errorDetails at: 1.
 	{errorDetails at: 3. errorDetails at: 2}]';
     transform: #'ston' -> 1.
-  ^ (block value: compilerErrorOoptype) collect: [ :each | each asTopezNative ]
+  ^ block value: compilerErrorOoptype

@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-OldCommon-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"FloatingNodes" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parent",
+		"name",
+		"contents",
+		"topez" ],
+	"name" : "TZNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

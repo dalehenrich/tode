@@ -1,3 +1,3 @@
 accessing
 listBlockOopType
-  ^ TZHeaderGemStone oop: self listBlockOop
+  ^ self session asOopType: self listBlockOop

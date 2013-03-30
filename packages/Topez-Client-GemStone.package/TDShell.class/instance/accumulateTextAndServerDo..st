@@ -11,6 +11,6 @@ accumulateTextAndServerDo: serverBlockOop
     accumulateTextAndDo: [ :doitStream | 
       messageSend
         valueWithArguments:
-          {(TZHeaderGemStone oop: serverBlockOop).
+          {(self session asOopType: serverBlockOop).
           (doitStream contents)} ].
   ^ nil

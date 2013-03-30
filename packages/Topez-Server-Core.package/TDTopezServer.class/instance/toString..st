@@ -1,3 +1,3 @@
 convenience
 toString: object
-    ^ self toString: object withOptions: TZTopezOptions new
+  ^ String streamContents: [ :stream | self put: object onStream: stream ]

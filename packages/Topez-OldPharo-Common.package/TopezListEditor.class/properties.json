@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-OldPharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"list",
+		"listIndex",
+		"listFilter",
+		"renderAttribute" ],
+	"name" : "TopezListEditor",
+	"pools" : [
+		 ],
+	"super" : "TopezCommonEditor",
+	"type" : "normal" }

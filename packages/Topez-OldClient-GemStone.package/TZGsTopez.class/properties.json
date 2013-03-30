@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-OldClient-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"session",
+		"sessionDescription",
+		"currentEngine" ],
+	"name" : "TZGsTopez",
+	"pools" : [
+		 ],
+	"super" : "TZTopez",
+	"type" : "normal" }

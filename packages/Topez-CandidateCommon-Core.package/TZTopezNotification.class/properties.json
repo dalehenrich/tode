@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-CandidateCommon-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"exceptionProxy" ],
+	"name" : "TZTopezNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

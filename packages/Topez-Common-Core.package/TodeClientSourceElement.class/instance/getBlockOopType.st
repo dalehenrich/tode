@@ -1,3 +1,3 @@
 as yet unclassified
 getBlockOopType
-  ^ TZHeaderGemStone oop: self getBlockOop
+  ^ self session asOopType: self getBlockOop

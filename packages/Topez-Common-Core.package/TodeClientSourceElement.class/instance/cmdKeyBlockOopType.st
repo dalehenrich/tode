@@ -1,3 +1,3 @@
 as yet unclassified
 cmdKeyBlockOopType
-  ^ TZHeaderGemStone oop: self cmdKeyBlockOop
+  ^ self session asOopType: self cmdKeyBlockOop
