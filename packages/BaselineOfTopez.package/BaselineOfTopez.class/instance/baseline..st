@@ -93,6 +93,10 @@ baseline: spec
     for: #'gs2.4.x'
     do: [ 
       spec
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-24x-Core' ];
+        package: 'Topez-Server-24x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Topez-Server-24x-DebugTools' ];
         package: 'Topez-Server-24x-DebugTools'
