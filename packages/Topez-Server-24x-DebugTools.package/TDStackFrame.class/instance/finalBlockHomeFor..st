@@ -3,10 +3,10 @@ finalBlockHomeFor: aTDStackFrame
 
 	(self receiver isKindOf: ExecutableBlock) 
 		ifFalse: [
-			aTDStackFrame frameSelf == nil
+			aTDStackFrame frameSelfSlot == nil
 				ifTrue: [ aTDStackFrame method == self method ifTrue: [ ^self ] ]
 				ifFalse: [
-					((aTDStackFrame frameSelf == self receiver) 
+					((aTDStackFrame frameSelfSlot == self receiver) 
 						and: [aTDStackFrame method == self method]) ifTrue: [ ^self ]]].
 	self next == nil ifTrue: [ ^self ].
 	^self next finalBlockHomeFor: aTDStackFrame
