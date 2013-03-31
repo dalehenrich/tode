@@ -1,3 +1,3 @@
-*topez-server-core
+*topez-server-debugtools
 gsMethodClass
   ^ self class gsMethodClass
