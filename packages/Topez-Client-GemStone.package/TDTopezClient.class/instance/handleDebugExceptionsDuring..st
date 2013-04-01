@@ -4,11 +4,12 @@ handleDebugExceptionsDuring: aBlock
   [ result := aBlock value ]
     on: GsBreakpointNotification , GsHaltNotification , GsErrorNotification
     do: [ :ex | 
-      | errorNumber |
+      | errorNumber gciErrorClass |
       (ex isKindOf: GsErrorNotification)
         ifTrue: [ 
           "error occurred during execution"
           ^ #'error' ].
+      gciErrorClass := self session library gciErrSTypeClass.
       errorNumber := ex errorNumber.
       errorNumber = 6002
         ifTrue: [ 
@@ -18,7 +19,7 @@ handleDebugExceptionsDuring: aBlock
         ifTrue: [ 
           "method breakpoint"
           ^ #'breakpoint' ].
-      errorNumber = 2709
+      errorNumber = gciErrorClass err_Halt
         ifTrue: [ 
           "halt occurred during execution"
           ^ #'halt' ].

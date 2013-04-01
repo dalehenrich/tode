@@ -25,7 +25,7 @@ getNbResult
         ifTrue: [ 
           "Session is invalid ... session died out from under us, so clean up session and throw the error"
           self release ].
-      self  signalServerError: error ].
+      self signalServerError: error ].
   actionArgs isArray
     ifTrue: [ 
       (actionArgs at: 1) == #'debug'
@@ -40,5 +40,9 @@ getNbResult
         ifTrue: [ continueWith := self library oopIllegal asOop ]
         ifFalse: [ ^ actionArgs halt: 'incorrect return value from GsRuntimeError handler' ] ].
   self library
-    critical: [ :lib | lib apiGciNbContinueWith: error context a: (self library oopTypeClass fromInteger: continueWith) a: 1 ].
+    critical: [ :lib | 
+      lib
+        apiGciNbContinueWith: error context
+        a: (self library oopTypeClass fromInteger: continueWith)
+        a: 1 ].
   ^ self getNbResult

@@ -5,6 +5,7 @@
 		"err_StackBreakpoint" : "dkh 3/30/2013 14:08",
 		"initialize" : "dkh 3/30/2013 13:57" },
 	"instance" : {
+		"argsOffset" : "dkh 4/1/2013 07:27",
 		"argsSize" : "dkh 3/30/2013 14:18",
 		"isBreakpoint" : "dkh 3/30/2013 14:07",
 		"maxMessageSize" : "DaleHenrichs 12/14/2010 10:38",
