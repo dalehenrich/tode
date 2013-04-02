@@ -12,5 +12,6 @@ dbStep: stepDirective for: node
   processResult := self topez topezClientForwarder
     dbStep: level
     forProcessOop: processOop.
+  processTerminated := (self debugExceptionSymbols includes: processResult) not.
   self topez ensureSessionMethodsEnabled.
   stack resetFrames
