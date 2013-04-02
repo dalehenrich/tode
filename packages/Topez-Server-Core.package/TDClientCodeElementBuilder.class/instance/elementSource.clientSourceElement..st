@@ -5,7 +5,7 @@ elementSource: methodSource clientSourceElement: clientSourceElement
   | theFormattedSource |
   theFormattedSource := self formattedElementSource: methodSource.
   theFormattedSource
-    evaluateInContext: nil
+    _compileInContext: nil
     symbolList: GsSession currentSession symbolList.
   ^ super
     elementSource: theFormattedSource

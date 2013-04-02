@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 03/24/2013 06:56",
+	"commentStamp" : "",
 	"instvars" : [
 		"methodDefinition" ],
 	"name" : "TDMcMethodDefinition",
