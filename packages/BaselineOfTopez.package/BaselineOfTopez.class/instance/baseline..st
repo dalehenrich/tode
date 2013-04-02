@@ -103,7 +103,7 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-DebugTools' ];
         yourself ].
   spec
-    for: #'gs3.1.x'
+    for: #(#'gs3.1.x' #'gs3.2.x')
     do: [ 
       spec
         package: 'Topez-Server-DebugTools'
