@@ -6,6 +6,9 @@ continue: processObj
       self library
         critical: [ :lib | 
           lib apiGciSetSessionId: self getSessionNumber.
-          lib apiGciNbContinue: (self asOopType: processObj) ].
+          lib
+            apiGciNbContinueWith: (self asOopType: processObj)
+            a: self library oopIllegal
+            a: 1 ].
       result := self getNbResultAsOop.
       ^ self library localFor: result ]
