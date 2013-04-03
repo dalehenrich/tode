@@ -10,4 +10,10 @@ getRegistrationFor: configName
   registry configurationRegistry
     at: 'ConfigurationOf' , configName
     ifPresent: [ :registration | ^ registration ].
+  registry baselineRegistry
+    at: configName
+    ifPresent: [ :registration | ^ registration ].
+  registry configurationRegistry
+    at: configName
+    ifPresent: [ :registration | ^ registration ].
   registry error: 'No configuration name: ' , configName printString
