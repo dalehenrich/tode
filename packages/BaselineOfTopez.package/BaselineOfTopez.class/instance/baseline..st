@@ -61,7 +61,7 @@ baseline: spec
           with: [ 
               spec
                 loads: #('AST-Core');
-                repository: 'github://dalehenrich/rb:dev/packages' ];
+                repository: 'github://dalehenrich/rb:dev/repository' ];
         baseline: 'Ston'
           with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
       spec
