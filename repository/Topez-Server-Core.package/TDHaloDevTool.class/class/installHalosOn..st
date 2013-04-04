@@ -28,4 +28,5 @@ installHalosOn: aTDTopezServer
     installHalo: '.window' block: (self haloWindowBlock: aTDTopezServer);
     installHalo: '.run' block: (self haloRunBlock: aTDTopezServer);
     installHalo: '.bin' block: (self haloBinBlock: aTDTopezServer);
+    installHalo: '.keymap' block: (self haloKeyMapBlock: aTDTopezServer);
     yourself

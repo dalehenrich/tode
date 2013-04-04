@@ -20,6 +20,7 @@ DESCRIPTION
     .node
     .readme
     .bin
+    .keymap
 
   The .readme halo provides access to the readMe instance
   variable of the current node.
