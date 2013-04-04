@@ -1,11 +1,11 @@
 as yet unclassified
 whereManPage
-    ^ 'NAME
-    where - list current exception stack
+  ^ 'NAME
+  where - display current exception stack
 
 SYNOPSIS
-    where 
+  where 
 
 DESCRIPTION
-    Display the stack for .ex/process. 
+  Display the stack for .ex/process. 
 '

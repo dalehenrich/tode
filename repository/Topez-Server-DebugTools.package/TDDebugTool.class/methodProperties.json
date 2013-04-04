@@ -1,11 +1,11 @@
 {
 	"class" : {
 		"continue" : "DataCurator 12/23/2012 07:49",
-		"continueManPage" : "DataCurator 12/23/2012 07:14",
+		"continueManPage" : "dkh 04/04/2013 15:54",
 		"db" : "DataCurator 12/19/2012 11:16",
-		"dbManPage" : "DataCurator 02/04/2013 15:16",
+		"dbManPage" : "dkh 04/04/2013 15:56",
 		"debug" : "DataCurator 12/30/2012 08:18",
-		"debugManPage" : "DataCurator 12/29/2012 11:41",
+		"debugManPage" : "dkh 04/04/2013 15:57",
 		"haloDebugBlock:" : "DataCurator 01/25/2013 10:05",
 		"haloReadMe" : "DataCurator 12/20/2012 07:31",
 		"initialize" : "dkh 02/23/2013 14:49",
@@ -18,7 +18,7 @@
 		"toolName" : "DataCurator 12/20/2012 07:50",
 		"toolReadMe" : "DataCurator 12/20/2012 07:50",
 		"where" : "DataCurator 12/15/2012 11:48",
-		"whereManPage" : "DataCurator 12/19/2012 11:13" },
+		"whereManPage" : "dkh 04/04/2013 15:58" },
 	"instance" : {
 		"break" : "DataCurator 02/05/2013 23:05",
 		"breakClear:" : "dkh 03/31/2013 07:46",

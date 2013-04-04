@@ -1,7 +1,7 @@
 as yet unclassified
 editManPage
   ^ 'NAME
-  edit - open a browser window
+  edit - open a window on object using #browse attribute
 
 SYNOPSIS
   edit [ path ]

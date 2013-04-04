@@ -1,10 +1,10 @@
 as yet unclassified
 viewManPage
   ^ 'NAME
-  view - open a navigator window
+  view - open a window on object using specified attribute
 
 SYNOPSIS
-  view aspect [ path ]
+  view <aspect> [ <path> ]
 
 DESCRIPTION
   objIn too...using #view aspect

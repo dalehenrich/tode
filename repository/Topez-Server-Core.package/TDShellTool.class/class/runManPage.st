@@ -1,10 +1,10 @@
 as yet unclassified
 runManPage
-    ^ 'NAME
-    run - evaluate smalltalk expressions input from stdin
+  ^ 'NAME
+  run - evaluate smalltalk expressions input
 
 SYNOPSIS
-    run [ doit_receiver ]
+  run [ doit_receiver ]
 
 DESCRIPTION
 '

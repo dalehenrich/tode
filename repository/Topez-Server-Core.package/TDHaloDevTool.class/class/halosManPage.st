@@ -1,27 +1,28 @@
 as yet unclassified
 halosManPage
-    ^ 'NAME
-    halos - list halo nodes
+  ^ 'NAME
+  halos - list halo nodes
 
 SYNOPSIS
-    halos
+  halos
 
 DESCRIPTION
-    List the existing halo nodes. A halo node is a node is
-    available from every node in the system. A halo node
-    either provides information about the current node, 
-    or provides general information about the system.
+  List the existing halo nodes. A halo node is a node is
+  available from every node in the system. A halo node
+  either provides information about the current node, 
+  or provides general information about the system.
 
-    The default set of halo nodes includes:
+  The default set of halo nodes includes:
 
-      .run
-      .window
-      .self
-      .node
-      .readme
+    .run
+    .window
+    .self
+    .node
+    .readme
+    .bin
 
-    The .readme halo provides access to the readMe instance
-    variable of the current node.
+  The .readme halo provides access to the readMe instance
+  variable of the current node.
 
     The .run halo provides access to the result of the last run
     command (.run/result) and the st source for the last run

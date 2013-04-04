@@ -1,7 +1,7 @@
 as yet unclassified
 shellInspectManPage
   ^ 'NAME
-  inspect - open a navigator window
+  inspect - open a window on object using #inspect attribute
 
 SYNOPSIS
   inspect [ path ]

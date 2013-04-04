@@ -1,11 +1,11 @@
 as yet unclassified
 pwdManPage
-    ^ 'NAME
-    pwd - print working node
+  ^ 'NAME
+  pwd - print working node
 
 SYNOPSIS
-    pwd
+  pwd
 
 DESCRIPTION
-    Return the path of the current node.
+  Return the path of the current node.
 '

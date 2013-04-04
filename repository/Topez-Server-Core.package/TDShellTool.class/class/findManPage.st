@@ -1,7 +1,7 @@
 as yet unclassified
 findManPage
   ^ 'NAME
-  find - search the image
+  find - search for matching classes and methods (class, method, sender, rmethod, rsender, source, versions)
 
 SYNOPSIS
   find class <regex-pattern>

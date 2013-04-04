@@ -1,7 +1,7 @@
 as yet unclassified
 limitManPage
   ^ 'NAME
-  limit - control ds display options
+  limit - control char, list, and oops display limits
 
 SYNOPSIS
   limit <command> [command-options]
