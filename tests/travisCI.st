@@ -6,7 +6,7 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 "Load the Topez Tests ... "
 Metacello new
 	baseline: 'Topez';
-  repository: 'filetree://', gitPath, '/topez/packages';
+  repository: 'filetree://', gitPath, '/topez/repository';
   load: 'Dev'.
 
 "Run the Topez tests"

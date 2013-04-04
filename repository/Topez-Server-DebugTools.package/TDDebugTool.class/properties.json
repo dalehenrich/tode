@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Server-DebugTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stackNode",
+		"processResult",
+		"processTerminated" ],
+	"name" : "TDDebugTool",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractDevTool",
+	"type" : "normal" }

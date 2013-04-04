@@ -17,7 +17,7 @@ cp $GEMSTONE/lib32*.dylib <path_to_Pharo_image_file>
 ```Smalltalk
 Metacello new
     baseline: 'Topez';
-    repository: 'github://dalehenrich/topez:master/packages';
+    repository: 'github://dalehenrich/topez:master/repository';
     load: 'Dev'.
 ``` 
 

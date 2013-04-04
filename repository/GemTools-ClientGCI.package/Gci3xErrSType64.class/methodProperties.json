@@ -1,0 +1,14 @@
+{
+	"class" : {
+		"err_Breakpoint" : "dkh 3/30/2013 14:08",
+		"err_CodeBreakpoint" : "dkh 3/30/2013 14:08",
+		"err_StackBreakpoint" : "dkh 3/30/2013 14:08",
+		"initialize" : "dkh 3/30/2013 13:57" },
+	"instance" : {
+		"argsOffset" : "dkh 4/1/2013 07:27",
+		"argsSize" : "dkh 3/30/2013 14:18",
+		"isBreakpoint" : "dkh 3/30/2013 14:07",
+		"maxMessageSize" : "DaleHenrichs 12/14/2010 10:38",
+		"readSimpleFields" : "dkh 11/2/2009 14:03",
+		"startOfMessage" : "dkh 11/2/2009 14:04",
+		"structSize" : "dkh 4/18/2012 15:43" } }
