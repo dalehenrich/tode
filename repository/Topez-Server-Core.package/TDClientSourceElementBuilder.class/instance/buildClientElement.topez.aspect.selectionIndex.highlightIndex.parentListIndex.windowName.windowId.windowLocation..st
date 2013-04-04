@@ -17,4 +17,5 @@ buildClientElement: parentObject topez: aTopez aspect: anAspect selectionIndex: 
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;
     editorAspectSelector: #'activateCodeEditor';
+    windowBuilder: self;
     yourself
