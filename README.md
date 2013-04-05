@@ -13,7 +13,7 @@ for details on installing Metacello.*
 ```Smalltalk
 Metacello new
     baseline: 'Topez';
-    repository: 'github://dalehenrich/topez:master/repository';
+    repository: 'github://dalehenrich/tode:master/repository';
     load: 'GemStone Server'.
 ```
 
