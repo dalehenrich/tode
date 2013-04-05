@@ -19,7 +19,8 @@ Metacello new
 
 ### Pharo Client Installation
 
-See the [Gci client installation instructions](https://github.com/dalehenrich/topez/blob/master/docs/GciClientInstallation.md).
+See the [Gci client installation instructions](https://github.com/dalehenrich/topez/blob/master/docs/GciClientInstallation.md) 
+and [Getting Started with tODE](https://github.com/dalehenrich/topez/blob/master/docs/GettingStarted.md)
 
 Here's a video of my 
 [Smalltalks 2012](http://www.fast.org.ar/smalltalks2012?_s=bvlW29Av2dix9EWt&_k=OGfhqoGSxR431Tth) 
