@@ -16,16 +16,16 @@ The GCI libraries must be in the Cog vm's `MacOS/Plugins` directory:
 cp $GEMSTONE/lib32*.dylib <path_to_Cog_vm>/Contents/MacOS/Plugins
 ```
 
-## Pharo Image Topez Installation
+## Pharo Image Tode Installation
 
 ```Smalltalk
 Metacello new
-    baseline: 'Topez';
+    baseline: 'Tode';
     repository: 'github://dalehenrich/tode:master/repository';
     load: 'Dev'.
 ``` 
 
-## Topez setup
+## Tode setup
 
 Define a session description:
 

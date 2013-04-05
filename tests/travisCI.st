@@ -3,14 +3,14 @@
 Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-"Load the Topez Tests ... "
+"Load Tode ... "
 Metacello new
-	baseline: 'Topez';
+	baseline: 'Tode';
   repository: 'filetree://', gitPath, '/tode/repository';
   load: 'Dev'.
 
-"Run the Topez tests"
+"Run the Tode tests"
 TravisCIHarness
-  value: #( 'BaselineOfTopez' )
+  value: #( 'BaselineOfTode' )
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.
