@@ -3,13 +3,17 @@
 
 ##on Linux
 
+The GCI libraries must be in the same directory as the image file you are using:
+
 ```Shell
 cp $GEMSTONE/lib32*.so <path_to_Pharo_image_file>
 ```
 ## on Mac
 
+The GCI libraries must be in the Cog vm's `MacOS/Plugins` directory: 
+
 ```Shell
-cp $GEMSTONE/lib32*.dylib <path_to_Pharo_image_file>
+cp $GEMSTONE/lib32*.dylib <path_to_Cog_vm>/Contents/MacOS/Plugins
 ```
 
 ## Pharo Image Topez Installation
@@ -17,7 +21,7 @@ cp $GEMSTONE/lib32*.dylib <path_to_Pharo_image_file>
 ```Smalltalk
 Metacello new
     baseline: 'Topez';
-    repository: 'github://dalehenrich/topez:master/repository';
+    repository: 'github://dalehenrich/tode:master/repository';
     load: 'Dev'.
 ``` 
 
