@@ -1,6 +1,6 @@
 # tODE: the Object-centric Development Environment [![Build Status](https://travis-ci.org/dalehenrich/tode.png?branch=master)](https://travis-ci.org/dalehenrich/tode)
 
-**Topez** is based upon the [**Topaz Programming Environment**][3] for GemStone/S.
+The current incarnation of **tODE** is very loosely based upon the [**Topaz Programming Environment**][3] for GemStone/S.
 
 The current implementation (still in development) uses a [Pharo1.4][1] image as the GCI client running against a [GemStone/S 3.1.0.x][2] stone using
 version 1.0-beta.9 of GLASS.
@@ -17,10 +17,12 @@ Metacello new
     load: 'GemStone Server'.
 ```
 
+*I have not renamed the Baseline ... yet*
+
 ### Pharo Client Installation
 
 See the [Gci client installation instructions](https://github.com/dalehenrich/topez/blob/master/docs/GciClientInstallation.md) 
-and [Getting Started with tODE](https://github.com/dalehenrich/topez/blob/master/docs/GettingStarted.md)
+and [Getting Started with tODE](https://github.com/dalehenrich/topez/blob/master/docs/GettingStarted.md).
 
 Here's a video of my 
 [Smalltalks 2012](http://www.fast.org.ar/smalltalks2012?_s=bvlW29Av2dix9EWt&_k=OGfhqoGSxR431Tth) 
