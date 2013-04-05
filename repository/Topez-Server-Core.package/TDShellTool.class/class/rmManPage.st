@@ -1,13 +1,13 @@
 as yet unclassified
 rmManPage
-    ^ 'NAME
-    rm - remove node
+  ^ 'NAME
+  rm - remove node
 
 SYNOPSIS
-    rm path
+  rm path
 
 DESCRIPTION
-    Remove the node referenced by `path`.
+  Remove the node referenced by `path`.
 
-    Returns the current node.
+  Returns the current node.
 '

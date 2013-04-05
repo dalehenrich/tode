@@ -1,7 +1,7 @@
 as yet unclassified
 stonManPage
   ^ 'NAME
-  ston - import/export objects to/from disk
+  ston - import/export objects to/from disk (STON format)
 
 SYNOPSIS
   ston export <path> <server-file-path>

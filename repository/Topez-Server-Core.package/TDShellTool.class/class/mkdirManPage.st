@@ -1,12 +1,12 @@
 as yet unclassified
 mkdirManPage
-    ^ 'NAME
-    mkdir - create a new internal node
+  ^ 'NAME
+  mkdir - create a new internal (directory) node
 
 SYNOPSIS
-    mkdir path
+  mkdir path
 
 DESCRIPTION
-    Create the new internal node (TDDirectoryNode or TDBlockNode)  
-    at the location specified by the path.
+  Create the new internal node (TDDirectoryNode or TDBlockNode)  
+  at the location specified by the path.
 '

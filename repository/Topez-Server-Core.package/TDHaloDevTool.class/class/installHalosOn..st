@@ -3,7 +3,10 @@ installHalosOn: aTDTopezServer
   aTDTopezServer
     installHalo: '.self'
       block: [ :theNode | 
-          (theNode dotSelfObject asTDObjectNode: theNode topez: theNode topez aspect: #'inspect')
+          (theNode dotSelfObject
+            asTDObjectNode: theNode
+            topez: theNode topez
+            aspect: #'inspect')
             name: '.self';
             parent: theNode;
             readMe: self readMeSelf;
@@ -24,4 +27,6 @@ installHalosOn: aTDTopezServer
             yourself ];
     installHalo: '.window' block: (self haloWindowBlock: aTDTopezServer);
     installHalo: '.run' block: (self haloRunBlock: aTDTopezServer);
+    installHalo: '.bin' block: (self haloBinBlock: aTDTopezServer);
+    installHalo: '.keymap' block: (self haloKeyMapBlock: aTDTopezServer);
     yourself

@@ -7,4 +7,5 @@ clientListElement
     listBlock: self listBlock;
     itemSelectedBlock: self itemSelectedBlock;
     selectedIndex: self selectedIndex;
+    windowBuilder: self;
     yourself

@@ -1,7 +1,7 @@
 as yet unclassified
 dbManPage
   ^ 'NAME
-    db - execute debugger commands
+  db - debugger commands (break, continue, into, over, etc.)
 
 SYNOPSIS
   db <command> [args]

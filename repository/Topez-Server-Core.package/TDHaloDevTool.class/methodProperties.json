@@ -1,12 +1,16 @@
 {
 	"class" : {
+		"haloBinBlock:" : "dkh 04/04/2013 15:46",
+		"haloKeyMapBlock:" : "dkh 04/04/2013 16:44",
 		"haloRunBlock:" : "DataCurator 01/25/2013 10:08",
 		"haloWindowBlock:" : "DataCurator 01/25/2013 10:08",
 		"halos" : "DataCurator 12/11/2012 20:54",
-		"halosManPage" : "dkh 12/01/2012 16:44",
-		"installHalosOn:" : "DataCurator 01/23/2013 20:13",
+		"halosManPage" : "dkh 04/04/2013 16:40",
+		"installHalosOn:" : "dkh 04/04/2013 16:40",
 		"installOn:" : "dkh 03/10/2013 09:30",
 		"priority" : "DataCurator 12/19/2012 11:44",
+		"readMeBin" : "dkh 04/04/2013 15:37",
+		"readMeKeyMap" : "dkh 04/04/2013 16:32",
 		"readMeNode" : "DataCurator 12/20/2012 07:39",
 		"readMeRun" : "DataCurator 12/20/2012 07:39",
 		"readMeSelf" : "DataCurator 12/20/2012 07:40",

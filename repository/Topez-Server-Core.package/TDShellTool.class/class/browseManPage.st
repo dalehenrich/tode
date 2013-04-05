@@ -1,7 +1,7 @@
 as yet unclassified
 browseManPage
   ^ 'NAME
-  browse - navigate results of find command
+  browse - view class and method search results (see find)
 
 SYNOPSIS
   browse class <regex-pattern>

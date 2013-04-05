@@ -1,10 +1,10 @@
 as yet unclassified
 pkgsManPage
   ^ 'NAME
-    pkgs - open packages window
+  pkgs - list packages
 
 SYNOPSIS
-    pkgs
+  pkgs
 
 DESCRIPTION
     

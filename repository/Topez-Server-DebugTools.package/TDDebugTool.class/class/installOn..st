@@ -16,15 +16,6 @@ installOn: aTDTopezServer
     yourself.
   TDTopezServer
     registerBuilderClass: TDStackNodeBuilder for: TDStack aspect: #'view';
-    registerBuilderClass: TDStackFrameNodeBuilder
-      for: TDStackFrame
-      aspect: #'view';
     registerEditorClass: TDStackClientListElementBuilder
       for: TDStack
-      aspect: #'view';
-    registerEditorClass: TDStackFrameContentsClientListElementBuilder
-      for: TDStackFrame
-      aspect: #'contents';
-    registerEditorClass: TDStackFrameMethodElementBuilder
-      for: TDStackFrame
-      aspect: #'source'
+      aspect: #'view'

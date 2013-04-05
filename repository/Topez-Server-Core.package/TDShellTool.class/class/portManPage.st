@@ -1,7 +1,7 @@
 as yet unclassified
 portManPage
   ^ 'NAME
-  port - porting tools
+  port - porting tools (sentButNotImplemented, undefinedSymbols)
 
 SYNOPSIS
   port sentButNotImplemented

@@ -1,11 +1,11 @@
 as yet unclassified
 continueManPage
   ^ 'NAME
-    continue - continue process execution
+  continue - continue process execution after halt or breakpoint
 
 SYNOPSIS
-    continue
+  continue
 
 DESCRIPTION
-    Continue execution off a continuable exception. 
+  Continue execution off a continuable exception. 
 '

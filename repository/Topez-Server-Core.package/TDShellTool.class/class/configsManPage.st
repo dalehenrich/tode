@@ -1,10 +1,10 @@
 as yet unclassified
 configsManPage
   ^ 'NAME
-    configs - open configurations window
+  configs - view configurations
 
 SYNOPSIS
-    configs
+  configs
 
 DESCRIPTION
     

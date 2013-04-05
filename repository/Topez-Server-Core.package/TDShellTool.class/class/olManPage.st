@@ -1,7 +1,7 @@
 as yet unclassified
 olManPage
   ^ 'NAME
-  ol - object log
+  ol - object log (list, clear, ilist)
 
 SYNOPSIS
   ol clear { <priority-list> ]

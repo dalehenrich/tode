@@ -1,13 +1,13 @@
 as yet unclassified
 abortManPage
-    ^ 'NAME
-    abort - abort transaction
+  ^ 'NAME
+  abort - abort transaction
 
 SYNOPSIS
-    abort
+  abort
 
 DESCRIPTION
-    The abort command calls `System abortTransaction`.
+  The abort command calls `System abortTransaction`.
 
-    The abort command returns `true`.
+  The abort command returns `true`.
 '

@@ -1,7 +1,7 @@
 as yet unclassified
 tsManPage
   ^ 'NAME
-  ts - execute test commands
+  ts - execute test commands (debug, list, run)
 
 SYNOPSIS
   ts <command> [args]
