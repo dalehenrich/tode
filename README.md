@@ -1,4 +1,4 @@
-# Topez Programming Environment [![Build Status](https://travis-ci.org/dalehenrich/topez.png?branch=master)](https://travis-ci.org/dalehenrich/topez)
+# tODE: the Object-centric Development Environment [![Build Status](https://travis-ci.org/dalehenrich/topez.png?branch=master)](https://travis-ci.org/dalehenrich/topez)
 
 **Topez** is based upon the [**Topaz Programming Environment**][3] for GemStone/S.
 
