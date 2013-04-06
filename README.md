@@ -21,11 +21,14 @@ Metacello new
 
 ### Pharo Client Installation
 
-See the [Gci client installation instructions](https://github.com/dalehenrich/topez/blob/master/docs/GciClientInstallation.md),
-[Getting Started with tODE](https://github.com/dalehenrich/topez/blob/master/docs/GettingStarted.md), 
-[object shell man page summary](https://github.com/dalehenrich/tode/blob/master/docs/man/ManPageSummary.md),
-[keybard shortcuts](https://github.com/dalehenrich/tode/blob/master/docs/man/KeyboardMapSummary.md)
-and [object shell man pages](https://github.com/dalehenrich/tode/tree/master/docs/man).
+See the [Gci client installation instructions](https://github.com/dalehenrich/topez/blob/master/docs/GciClientInstallation.md).
+
+### tODE Documentation
+
+- [Getting Started with tODE](https://github.com/dalehenrich/topez/blob/master/docs/GettingStarted.md)
+- [object shell man page summary](https://github.com/dalehenrich/tode/blob/master/docs/man/ManPageSummary.md)
+- [keybard shortcuts](https://github.com/dalehenrich/tode/blob/master/docs/man/KeyboardMapSummary.md)
+- [object shell man pages](https://github.com/dalehenrich/tode/tree/master/docs/man)
 
 Here's a video of my 
 [Smalltalks 2012](http://www.fast.org.ar/smalltalks2012?_s=bvlW29Av2dix9EWt&_k=OGfhqoGSxR431Tth) 
