@@ -1,8 +1,0 @@
-##NAME
-  history - list command history
-
-##SYNOPSIS
-  history list [ <limit> ]
-
-##DESCRIPTION
-  

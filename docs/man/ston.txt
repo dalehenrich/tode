@@ -1,0 +1,9 @@
+NAME
+  ston - import/export objects to/from disk (STON format)
+
+SYNOPSIS
+  ston export <path> <server-file-path>
+  ston import <path> <server-file-path>
+
+DESCRIPTION
+  

@@ -2,19 +2,19 @@ as yet unclassified
 printOn: aStream
   aStream
     nextPutAll: 'NAME';
-    cr;
+    lf;
     nextPutAll: '  ';
     nextPutAll: self summary;
-    cr;
-    cr;
+    lf;
+    lf;
     nextPutAll: 'SYNOPSIS';
-    cr;
+    lf;
     nextPutAll: '  ';
     nextPutAll: self synopsis;
-    cr;
-    cr;
+    lf;
+    lf;
     nextPutAll: 'DESCRIPTION';
-    cr;
+    lf;
     nextPutAll: '  ';
     nextPutAll: self description;
-    cr
+    lf
