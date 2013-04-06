@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"haloKeyMapBlock:" : "dkh 04/04/2013 16:44",
+		"haloKeyMapBlock:" : "dkh 04/06/2013 15:23",
 		"haloManBlock:" : "dkh 04/06/2013 09:26",
 		"haloRunBlock:" : "DataCurator 01/25/2013 10:08",
 		"haloWindowBlock:" : "DataCurator 01/25/2013 10:08",
@@ -8,6 +8,7 @@
 		"halosManPage" : "dkh 04/06/2013 10:29",
 		"installHalosOn:" : "dkh 04/06/2013 09:07",
 		"installOn:" : "dkh 03/10/2013 09:30",
+		"keyMapDictionary" : "dkh 04/06/2013 15:23",
 		"priority" : "DataCurator 12/19/2012 11:44",
 		"readMeKeyMap" : "dkh 04/04/2013 16:32",
 		"readMeMan" : "dkh 04/06/2013 09:08",
