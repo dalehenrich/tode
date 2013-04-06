@@ -7,4 +7,6 @@
 ##DESCRIPTION
   Remove the node referenced by `path`.
 
+
+
   Returns the current node.

@@ -6,4 +6,5 @@
 
 ##DESCRIPTION
   The man command looks up the node for the given `command` 
+
   Returns the result of sending #manPage .to the node.

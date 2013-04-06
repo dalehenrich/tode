@@ -3,10 +3,15 @@
 
 ##SYNOPSIS
   pf start
+
   pf status
+
   pf stop
+
   pf gather
+
   pf report [<tally>]
+
   pf clean
 
 ##DESCRIPTION

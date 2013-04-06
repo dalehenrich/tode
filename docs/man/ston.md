@@ -3,6 +3,7 @@
 
 ##SYNOPSIS
   ston export <path> <server-file-path>
+
   ston import <path> <server-file-path>
 
 ##DESCRIPTION
