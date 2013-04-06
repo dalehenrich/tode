@@ -1,19 +1,17 @@
 as yet unclassified
-haloBinBlock: aTDTopezServer
+haloManBlock: aTDTopezServer
   ^ [ :parentNode | 
   TDObjectNode new
-    name: '.bin';
+    name: '.man';
     basicContents: (Smalltalk at: #'TDTopezServer') commands;
     parent: parentNode;
-    readMe: self readMeBin;
+    readMe: self readMeMan;
     listBlock: [ :theNode | theNode basicContents keys sorted ];
     elementBlock: [ :theNode :elementName :absentBlock | 
-          | command manPage index1 index2 |
+          | command manPage |
           command := theNode basicContents at: elementName ifAbsent: absentBlock.
           manPage := command manPage.
-          index1 := 'NAME' size + 4.
-          index2 := (manPage indexOfSubCollection: 'SYNOPSIS') - 3.
-          ((manPage copyFrom: index1 to: index2)
+          (manPage summary
             asTDObjectNode: theNode
             topez: theNode topez
             aspect: #'view')

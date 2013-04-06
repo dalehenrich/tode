@@ -1,0 +1,14 @@
+##NAME
+  touch - create new leaf node
+
+##SYNOPSIS
+  touch type path
+
+##DESCRIPTION
+  Create the new leaf node at the location specified by the `path`.
+
+  `type` may be:
+    `sh`  to produce a TDScriptLeafNode
+    `st`  to produce a TDSmalltalkLeafNode
+    `tpz`  to produce a TDTopezLeafNode
+    `txt`  to produce a TDTxtLeafNode

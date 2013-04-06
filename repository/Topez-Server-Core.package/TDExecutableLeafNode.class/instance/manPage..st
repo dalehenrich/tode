@@ -1,3 +1,3 @@
 as yet unclassified
-manPage: aString
-    manPage := aString
+manPage: aTDManPage
+  manPage := aTDManPage

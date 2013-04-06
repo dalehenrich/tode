@@ -1,6 +1,6 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect className itemAttribute classAttributes selector method isMeta cl |
+  | aspect className itemAttribute classAttributes selector method isMeta cl methodDef |
   itemAttribute := listElement itemCache at: index.
   classAttributes := itemAttribute object.
   aspect := itemAttribute aspect.
@@ -12,7 +12,11 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     ifTrue: [ cl := cl class ].
   method := cl compiledMethodAt: selector.
   TDMethodDefinition selectMethod: method topez: listElement topez.
-  method
+  methodDef := TDMethodDefinition
+    className: cl theNonMetaClass name
+    isMeta: cl isMeta
+    selector: selector.
+  methodDef
     edit: nil
     topez: listElement topez
     aspect: #'method'

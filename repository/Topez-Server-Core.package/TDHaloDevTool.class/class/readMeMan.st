@@ -1,3 +1,3 @@
 as yet unclassified
-readMeBin
+readMeMan
   ^ 'I provide a list of all of the available commands.'

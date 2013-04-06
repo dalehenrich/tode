@@ -1,0 +1,8 @@
+##NAME
+  pkgs - list packages
+
+##SYNOPSIS
+  pkgs
+
+##DESCRIPTION
+  

@@ -19,16 +19,16 @@ DESCRIPTION
     .self
     .node
     .readme
-    .bin
+    .man
     .keymap
 
   The .readme halo provides access to the readMe instance
   variable of the current node.
 
-    The .run halo provides access to the result of the last run
-    command (.run/result) and the st source for the last run
-    command (.run/st). Using the run halos you can execute the 
-    following set of commands:
+  The .run halo provides access to the result of the last run
+  command (.run/result) and the st source for the last run
+  command (.run/st). Using the run halos you can execute the 
+  following set of commands:
 
     topez > run
     3+4
