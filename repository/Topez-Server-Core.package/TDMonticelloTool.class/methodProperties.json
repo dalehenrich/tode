@@ -32,7 +32,7 @@
 		"workingCopiesNode:" : "DataCurator 12/25/2012 07:35",
 		"workingCopyNode:" : "DataCurator 01/25/2013 10:09" },
 	"instance" : {
-		"compareChangesFor:on:" : "dkh 03/24/2013 12:38",
+		"compareChangesFor:on:" : "dkh 04/08/2013 10:23",
 		"dirtyPath" : "DataCurator 12/25/2012 09:02",
 		"findMatchingPackages:topez:" : "dkh 03/10/2013 14:04",
 		"findMatchingRepositories:topez:" : "dkh 03/20/2013 20:53",
@@ -47,7 +47,7 @@
 		"mccopy" : "dkh 03/24/2013 13:37",
 		"mccreate" : "dkh 03/10/2013 11:43",
 		"mcdelete" : "dkh 03/24/2013 16:55",
-		"mcdiff" : "dkh 03/24/2013 12:40",
+		"mcdiff" : "dkh 04/08/2013 10:15",
 		"mcdirty" : "dkh 03/24/2013 17:21",
 		"mchalo" : "dkh 03/10/2013 11:28",
 		"mchalorm" : "dkh 03/10/2013 11:29",

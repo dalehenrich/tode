@@ -1,12 +1,6 @@
 as yet unclassified
 compareChangesFor: anMCWorkingCopy on: stream
   | diffy package snapshot patch |
-  anMCWorkingCopy modified
-    ifFalse: [ 
-      stream
-        nextPutAll: '... no changes';
-        cr.
-      ^ self ].
   diffy := MCDiffyTextWriter on: stream.
   package := anMCWorkingCopy package.
   snapshot := package snapshot.
@@ -27,6 +21,9 @@ compareChangesFor: anMCWorkingCopy on: stream
           stream
             nextPutAll: '... no changes';
             cr.
-          ^ patch ] ].
+          ^ patch ]
+        ifFalse: [ 
+          anMCWorkingCopy modified
+            ifFalse: [ anMCWorkingCopy modified: true ] ] ].
   diffy writePatch: patch.
   ^ patch
