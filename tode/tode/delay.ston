@@ -1,0 +1,1 @@
+TDSmalltalkLeafNode {	#name : 'delay',	#contents : 'Transcript\n  cr;\n  show: \'Starting\'.\n15\n  timesRepeat: [ \n    (Delay forSeconds: 1) wait.\n    Transcript show: \'.\' ].\nTranscript show: \'done\''}
