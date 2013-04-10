@@ -18,4 +18,4 @@ installOn: aTDTopezServer
     registerBuilderClass: TDStackNodeBuilder for: TDStack aspect: #'view';
     registerEditorClass: TDStackClientListElementBuilder
       for: TDStack
-      aspect: #'view'
+      aspect: #'browse'

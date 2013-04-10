@@ -2,4 +2,4 @@
 edit: aTopez
   "anAspect: #edit, #debug, #inspect"
 
-  ^ self edit: aTopez aspect: #'view' windowId: nil
+  ^ self edit: aTopez aspect: #'browse' windowId: nil

@@ -24,8 +24,5 @@ shellInspect
           contextNode := topez lookup: (theTokens at: 1).
           parentNode := contextNode parent.
           contextObject := contextNode dotSelfObject ] ].
-  (contextObject asTDObjectNode: parentNode topez: topez aspect: #'inspect')
-    edit: topez
-    aspect: #'inspect'
-    windowId: windowId.
+  contextObject edit: topez aspect: #'inspect' windowId: windowId.
   ^ contextObject

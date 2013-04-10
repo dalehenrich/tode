@@ -62,7 +62,7 @@ installOn: aTDTopezServer
       aspect: #'methodDefinitionList';
     registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder
       for: TDDefinitionList
-      aspect: #'view';
+      aspect: #'browse';
     registerEditorClass: TDClassSelectorListElementBuilder
       for: Behavior
       aspect: #'classSelectors';
@@ -95,10 +95,10 @@ installOn: aTDTopezServer
       aspect: #'method';
     registerEditorClass: TDClientObjectElementBuilder
       for: Object
-      aspect: #'view';
+      aspect: #'browse';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder
       for: TDDirectoryNode
-      aspect: #'view';
+      aspect: #'browse';
     registerEditorClass: TDClientSourceElementBuilder
       for: TDLeafNode
       aspect: #'browse';

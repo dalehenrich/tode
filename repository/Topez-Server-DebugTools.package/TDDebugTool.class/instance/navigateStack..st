@@ -5,6 +5,6 @@ navigateStack: increment
   self dbStack
     edit: stackNode
     topez: topez
-    aspect: #'view'
+    aspect: #'browse'
     windowId: nil.
   ^ topez currentNode
