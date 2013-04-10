@@ -1,10 +1,7 @@
 as yet unclassified
 installOn: aTDTopezServer
-  "#browse #view #inspect ... #view is default"
-
-  "`edit` ---> #browse [[editor only aspect]]
-   `view` ---> #view
-   `inspect` ---> #inspect"
+  "builder aspects are #view or #inspect, default builder aspect is #view
+	default view aspect is #browse "
 
   | optionsNode |
   (aTDTopezServer ensureChildrenExistIn: '/home')
@@ -26,6 +23,8 @@ installOn: aTDTopezServer
         for: (Smalltalk at: #'GsMethod')
         aspect: #'method' ].
   TDTopezServer
+    registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
+    registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
     registerBuilderClass: TDDictionaryNodeBuilder
       for: AbstractDictionary
       aspect: #'view';
@@ -49,8 +48,9 @@ installOn: aTDTopezServer
       for: CharacterCollection
       aspect: #'view';
     registerBuilderClass: TDTxtLeafNodeBuilder for: Text aspect: #'view';
-    registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
-    registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
+    registerEditorClass: TDClientObjectElementBuilder
+      for: Object
+      aspect: #'browse';
     registerEditorClass: TDClassAndMethodDefinitionsElementBuilder
       for: Collection
       aspect: #'definitionList';
@@ -75,9 +75,6 @@ installOn: aTDTopezServer
     registerEditorClass: TDClassDefinitionClientElementBuilder
       for: Class
       aspect: #'classDefinition';
-    registerEditorClass: TDClientObjectElementBuilder
-      for: Class
-      aspect: #'inspect';
     registerEditorClass: TDMethodDefinitionElementBuilder
       for: TDMethodDefinition
       aspect: #'method';
@@ -93,9 +90,6 @@ installOn: aTDTopezServer
     registerEditorClass: TDMethodDefinitionElementBuilder
       for: TDMethodTemplateDefinition
       aspect: #'method';
-    registerEditorClass: TDClientObjectElementBuilder
-      for: Object
-      aspect: #'browse';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder
       for: TDDirectoryNode
       aspect: #'browse';
