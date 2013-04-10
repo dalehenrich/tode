@@ -6,8 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"readMe",
-		"aspect" ],
+		"readMe" ],
 	"name" : "TDDirectoryNode",
 	"pools" : [
 		 ],

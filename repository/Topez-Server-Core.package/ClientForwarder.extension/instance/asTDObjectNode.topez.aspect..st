@@ -5,7 +5,7 @@ asTDObjectNode: parentNode topez: aTopez aspect: anAspect
   ^ TDObjectNode new
     name: 'A ClientForwarder';
     parent: parentNode;
-    aspect: anAspect;
+    builderAspect: anAspect;
     topez: aTopez;
     readMe:
         'A client forwarder represents an object on the client. All messages (well almost all) are forwarded to the instance on the client.';
