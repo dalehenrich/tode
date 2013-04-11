@@ -1,7 +1,13 @@
 as yet unclassified
 installOn: aTDTopezServer
-  "builder aspects are #view or #inspect, default builder aspect is #view
-	default view aspect is #browse "
+  "builder:
+	 #view		- normal view (i.e., collection of associations for Dictionary)
+	 #inspect - raw object/implementation view
+
+   editor:
+	 #edit		 - text code editor (falls back to #navigate)
+	 #navigate - structural access via navigator
+	 CUSTOM    - custom names for specialized window access"
 
   | optionsNode |
   (aTDTopezServer ensureChildrenExistIn: '/home')
@@ -50,7 +56,7 @@ installOn: aTDTopezServer
     registerBuilderClass: TDTxtLeafNodeBuilder for: Text aspect: #'view';
     registerEditorClass: TDClientObjectElementBuilder
       for: Object
-      aspect: #'browse';
+      aspect: #'navigate';
     registerEditorClass: TDClassAndMethodDefinitionsElementBuilder
       for: Collection
       aspect: #'definitionList';
@@ -62,7 +68,7 @@ installOn: aTDTopezServer
       aspect: #'methodDefinitionList';
     registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder
       for: TDDefinitionList
-      aspect: #'browse';
+      aspect: #'navigate';
     registerEditorClass: TDClassSelectorListElementBuilder
       for: Behavior
       aspect: #'classSelectors';
@@ -71,7 +77,7 @@ installOn: aTDTopezServer
       aspect: #'instanceSelectors';
     registerEditorClass: TDClassHierarchyListElementBuilder
       for: Behavior
-      aspect: #'browse';
+      aspect: #'navigate';
     registerEditorClass: TDClassDefinitionClientElementBuilder
       for: Class
       aspect: #'classDefinition';
@@ -92,25 +98,23 @@ installOn: aTDTopezServer
       aspect: #'method';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder
       for: TDDirectoryNode
-      aspect: #'browse';
+      aspect: #'navigate';
     registerEditorClass: TDClientSourceElementBuilder
       for: TDLeafNode
-      aspect: #'browse';
+      aspect: #'edit';
     registerEditorClass: TDClientSourceElementBuilder
       for: CharacterCollection
-      aspect: #'browse';
-    registerEditorClass: TDClientSourceElementBuilder
-      for: Text
-      aspect: #'browse';
+      aspect: #'edit';
+    registerEditorClass: TDClientSourceElementBuilder for: Text aspect: #'edit';
     registerEditorClass: TDObjectLogElementBuilder
       for: TDObjectLog
-      aspect: #'browse';
+      aspect: #'navigate';
     registerEditorClass: TDClientScriptElementBuilder
       for: TDScriptLeafNode
-      aspect: #'browse';
+      aspect: #'edit';
     registerEditorClass: TDClientCodeElementBuilder
       for: TDSmalltalkLeafNode
-      aspect: #'browse';
+      aspect: #'edit';
     registerEditorClass: TDClientTextElementBuilder
       for: TDTxtLeafNode
-      aspect: #'browse'
+      aspect: #'edit'

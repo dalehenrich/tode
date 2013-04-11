@@ -5,7 +5,7 @@ itemSelected: topez
   cl
     edit: nil
     topez: topez
-    aspect: #'browse'
+    aspect: #'edit'
     windowName: #'hierarchy'
     windowId: nil.
   ^ nil

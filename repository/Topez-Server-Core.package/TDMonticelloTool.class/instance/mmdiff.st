@@ -41,5 +41,5 @@ mmdiff
           stream cr ] ].
   empty
     ifTrue: [ ^ 'No dirty packages' asText allBold ].
-  stream contents edit: topez aspect: #'browse' windowId: nil.
+  stream contents edit: topez aspect: #'edit' windowId: nil.
   ^ patch

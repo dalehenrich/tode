@@ -5,7 +5,7 @@ testObjectWindowView
   self
     executeWindowBuilderSpecs:
       {{(1 -> '1').
-      #'browse'.
+      #'edit'.
       nil.
       'anArray( ''.        -> 1->''''1''''/'', ''(class)@ -> Association'', ''key@     -> 1'', ''value@   -> ''''1'''''')/ ([Array] anArray( ''. -> 1->''''1''''/'', ''(class)@ -> Association'', ''key@ -> 1'', ''value@ -> ''''1'''''')):
 	(class)@ -> [Array class] Array

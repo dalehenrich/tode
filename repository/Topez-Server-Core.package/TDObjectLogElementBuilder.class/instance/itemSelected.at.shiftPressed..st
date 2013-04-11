@@ -5,7 +5,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   objectLogEntry
     edit: self object
     topez: listElement topez
-    aspect: #'browse'
+    aspect: #'navigate'
     selectionIndex: nil
     highlightIndex: nil
     parentListIndex: {index}

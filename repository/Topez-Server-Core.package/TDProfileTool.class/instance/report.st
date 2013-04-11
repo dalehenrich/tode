@@ -10,5 +10,5 @@ report
   profMon := self profMonitor.
   profMon results ifNil: [ profMon gatherResults ].
   report := profMon reportDownTo: tally.
-  report edit: topez aspect: #'browse'.
+  report edit: topez aspect: #'edit'.
   ^ profMon

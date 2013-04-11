@@ -10,7 +10,7 @@ browseClassHierarchy: clientSourceElement selectionInterval: selectionInterval
   cls
     edit: nil
     topez: clientSourceElement topez
-    aspect: #'browse'
+    aspect: #'navigate'
     windowName: #'hierarchy'
     windowId: nil
     windowLocation: nil.

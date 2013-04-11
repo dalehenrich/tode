@@ -5,23 +5,23 @@ testWndowLookup
   self
     executeWindowBuilderLookupSpecs:
       {{(TDObjectNode new).
-      #'browse'.
+      #'edit'.
       (TDDirectoryNodeClientListElementBuilder name)}.
       {(TDDirectoryNode new).
-      #'browse'.
+      #'edit'.
       (TDDirectoryNodeClientListElementBuilder name)}.
       {(Object new).
-      #'browse'.
+      #'edit'.
       (TDClientObjectElementBuilder name)}.
       {(TDScriptLeafNode new).
-      #'browse'.
+      #'edit'.
       (TDClientScriptElementBuilder name)}.
       {(TDSmalltalkLeafNode new).
-      #'browse'.
+      #'edit'.
       (TDClientCodeElementBuilder name)}.
       {(TDTopezLeafNode new).
-      #'browse'.
+      #'edit'.
       (TDClientSourceElementBuilder name)}.
       {(TDTxtLeafNode new).
-      #'browse'.
+      #'edit'.
       (TDClientTextElementBuilder name)}}

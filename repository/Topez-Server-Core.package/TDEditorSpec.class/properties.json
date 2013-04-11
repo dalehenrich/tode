@@ -1,0 +1,25 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topez",
+		"builderAspect",
+		"editorAspect",
+		"object",
+		"parentObject",
+		"windowLabel",
+		"windowId",
+		"windowName",
+		"windowLocation",
+		"selectionIndex",
+		"highlightIndex",
+		"parentListIndex" ],
+	"name" : "TDEditorSpec",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

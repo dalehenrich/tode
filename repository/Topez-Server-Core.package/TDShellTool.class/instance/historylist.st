@@ -9,7 +9,7 @@ historylist
   history
     edit: nil
     topez: topez
-    aspect: #'browse'
+    aspect: #'edit'
     windowName: nil
     windowId: nil
     windowLocation: nil.

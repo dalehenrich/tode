@@ -5,11 +5,8 @@ testClassWndowLookup
   self
     executeWindowBuilderLookupSpecs:
       {{SmallInteger.
-      #'browse'.
+      #'edit'.
       (TDClassHierarchyListElementBuilder name)}.
       {SmallInteger.
-      #'view'.
-      (TDClientObjectElementBuilder name)}.
-      {SmallInteger.
-      #'inspect'.
+      #'navigate'.
       (TDClientObjectElementBuilder name)}}

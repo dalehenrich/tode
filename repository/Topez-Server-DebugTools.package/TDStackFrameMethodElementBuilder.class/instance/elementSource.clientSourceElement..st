@@ -14,6 +14,6 @@ elementSource: methodSource clientSourceElement: clientSourceElement
       self object stack
         edit: nil
         topez: clientSourceElement topez
-        aspect: #'browse'
+        aspect: #'navigate'
         windowId: nil ].
   ^ newSelector

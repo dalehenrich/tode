@@ -29,7 +29,7 @@ testNodeView
       '''123''/:
 [String] ''123'''}.
       {'123'.
-      #'browse'.
+      #'edit'.
       '''123''/:
 [String] ''123'''}.
       {(Dictionary new

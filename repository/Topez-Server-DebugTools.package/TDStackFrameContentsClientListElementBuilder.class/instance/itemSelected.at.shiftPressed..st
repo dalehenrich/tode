@@ -5,6 +5,10 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   obj := itemAttribute object.
   parentObj := itemAttribute parent.
   aspect := itemAttribute aspect.
+  aspect == #'edit'
+    ifTrue: [ 
+      "convert #edit (source editor) to #navigate"
+      aspect := #'navigate' ].
   toggled := false.
   index == 1
     ifTrue: [ 
@@ -13,10 +17,8 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       "toggle between view and inspect on subject of list"
       toggled := true.
       aspect := aspect == #'inspect'
-        ifTrue: [ 
-          builderAspect := #'view'.
-          aspect := #'browse' ]
-        ifFalse: [ builderAspect := aspect := #'inspect' ].
+        ifTrue: [ builderAspect := #'view' ]
+        ifFalse: [ builderAspect := #'inspect' ].
       obj := obj dotSelfObject
         asTDObjectNode: obj
         topez: listElement topez

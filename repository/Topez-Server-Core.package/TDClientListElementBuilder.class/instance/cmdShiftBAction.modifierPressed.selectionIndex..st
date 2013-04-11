@@ -7,7 +7,7 @@ cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: se
   cls
     edit: listElement parent
     topez: listElement topez
-    aspect: #'browse'
+    aspect: #'navigate'
     windowName: #'hierarchy'
     windowId: nil
     windowLocation: nil.

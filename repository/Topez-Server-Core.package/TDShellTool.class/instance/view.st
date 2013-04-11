@@ -4,7 +4,7 @@ view
 
   | contextObject aspect |
   contextObject := objIn.
-  aspect := #'browse'.
+  aspect := #'navigate'.
   tokens size > 1
     ifTrue: [ 
       aspect := (tokens at: 2) asSymbol.

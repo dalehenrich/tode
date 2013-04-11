@@ -12,7 +12,7 @@ olilist
   objectLog
     edit: nil
     topez: topez
-    aspect: #'browse'
+    aspect: #'navigate'
     windowName: nil
     windowId: nil
     windowLocation: nil.
