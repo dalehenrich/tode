@@ -4,9 +4,15 @@ cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
 
   | method |
   selectionIndex == 0
-    ifTrue: [ ^ super cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ].
+    ifTrue: [ 
+      ^ super
+        cmdBAction: listElement
+        modifierPressed: modifierPressed
+        selectionIndex: selectionIndex ].
   self object navigateFrame: selectionIndex.
   method := self object currentFrame method.
   method inClass ifNil: [ ^ false ].
-  {(TDClassDefinition className: method inClass theNonMetaClass name)} edit: listElement topez aspect: #'definitionList'.
+  {(TDClassDefinition className: method inClass theNonMetaClass name)}
+    editUsing:
+      (TDEditorSpec topez: listElement topez editorAspect: #'definitionList').
   ^ true

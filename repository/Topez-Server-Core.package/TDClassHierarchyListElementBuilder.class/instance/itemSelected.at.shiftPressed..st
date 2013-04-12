@@ -7,28 +7,24 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   obj := Smalltalk classNamed: className.
   TDClassDefinition selectClassNamed: className topez: listElement topez.
   obj
-    edit: nil
-      topez: listElement topez
-      aspect: #'classDefinition'
-      windowName: #'classDefinition'
-      windowId: nil;
-    edit: nil
-      topez: listElement topez
-      aspect: #'instanceSelectors'
-      windowName: #'instanceSelectors'
-      windowId: nil.
+    editUsing:
+        ((TDEditorSpec topez: listElement topez editorAspect: #'classDefinition')
+            windowName: #'classDefinition';
+            yourself);
+    editUsing:
+        ((TDEditorSpec topez: listElement topez editorAspect: #'instanceSelectors')
+            windowName: #'instanceSelectors';
+            yourself).
   obj class
-    edit: nil
-    topez: listElement topez
-    aspect: #'classSelectors'
-    windowName: '#classSelectors'
-    windowId: nil.
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'classSelectors')
+        windowName: #'classSelectors';
+        yourself).
   listElement selectedIndex ~~ index
     ifTrue: [ 
       obj
-        edit: nil
-        topez: listElement topez
-        aspect: #'navigate'
-        windowName: #'hierarchy'
-        windowId: nil ].
+        editUsing:
+          ((TDEditorSpec topez: listElement topez editorAspect: #'navigate')
+            windowName: #'hierarchy';
+            yourself) ].
   ^ nil

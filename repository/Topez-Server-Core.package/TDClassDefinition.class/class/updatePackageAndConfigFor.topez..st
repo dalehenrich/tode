@@ -10,11 +10,11 @@ updatePackageAndConfigFor: packageName topez: topez
     ifFalse: [ 
       | configs configDef |
       pkgs selectedIndex: selectedIndex.
-      pkgs edit: topez.
+      pkgs editUsing: (TDEditorSpec topez: topez).
       configs := TDConfigurationList current.
       configDef := self _configurationGivenPackageDefinition: pkgDef.
       selectedIndex := configs definitionList indexOf: configDef.
       selectedIndex == configs selectedIndex
         ifFalse: [ 
           configs selectedIndex: selectedIndex.
-          configs edit: topez ] ]
+          configs editUsing: (TDEditorSpec topez: topez) ] ]

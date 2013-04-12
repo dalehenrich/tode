@@ -10,8 +10,8 @@ dbFinishStep: node
       processTerminated ])
     ifTrue: [ ^ STON fromString: processResult ].
   self dbStack
-    edit: stackNode
-    topez: topez
-    aspect: #'navigate'
-    windowId: nil.
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'navigate')
+        parentObject: stackNode;
+        yourself).
   ^ topez currentNode

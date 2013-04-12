@@ -1,19 +1,19 @@
 as yet unclassified
-buildClientElement: parentObject topez: aTopez aspect: anAspect selectionIndex: aSelectionIndex highlightIndex: aHighlightIndex parentListIndex: aParentListIndex windowName: inWindowName windowId: inWindowId windowLocation: windowLocation
+buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
   self
-    theWindowName: inWindowName;
-    theWindowLocation: windowLocation.
+    theWindowName: aTDEditorSpec windowName;
+    theWindowLocation: aTDEditorSpec windowLocation.
   ^ self clientSourceElement
     theObject: self object;
     clientElementOop;
-    aspect: anAspect;
-    topez: aTopez;
+    aspect: aTDEditorSpec editorAspect;
+    topez: aTDEditorSpec topez;
     firstSource: self firstSource;
     getBlock: self getBlock;
     setBlock: self setBlock;
     cmdKeyBlock: self cmdKeyBlock;
     editorWindowLabel: self editorWindowLabel;
-    editorWindowId: inWindowId;
+    editorWindowId: aTDEditorSpec windowId;
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;
     editorAspectSelector: #'activateCodeEditor';

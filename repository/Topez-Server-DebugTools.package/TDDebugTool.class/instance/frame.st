@@ -7,8 +7,8 @@ frame
     ifFalse: [ self dbStack currentFrame frameIndex ].
   self dbStack navigateFrame: frameIndex.
   self dbStack
-    edit: stackNode
-    topez: topez
-    aspect: #'navigate'
-    windowId: nil.
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'navigate')
+        parentObject: stackNode;
+        yourself).
   ^ topez currentNode

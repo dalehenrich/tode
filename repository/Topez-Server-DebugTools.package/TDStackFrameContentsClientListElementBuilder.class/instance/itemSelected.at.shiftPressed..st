@@ -1,6 +1,6 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect obj parentObj itemAttribute toggled windowName |
+  | aspect obj parentObj itemAttribute toggled windowName builderAspect objName |
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
   parentObj := itemAttribute parent.
@@ -9,14 +9,24 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     ifTrue: [ 
       "convert #edit (source editor) to #navigate"
       aspect := #'navigate' ].
+  builderAspect := obj builderAspect.
+  builderAspect == #'print'
+    ifTrue: [ 
+      "convert #print (source editor) to #view for navigator"
+      builderAspect := #'view'.
+      obj := obj dotSelfObject
+        asTDObjectNode: obj
+        topez: listElement topez
+        aspect: builderAspect.
+      objName := self object displayWith: listElement displayPolicy.
+      obj name: objName ].
   toggled := false.
   index == 1
     ifTrue: [ 
-      | objName builderAspect |
       "."
       "toggle between view and inspect on subject of list"
       toggled := true.
-      aspect := aspect == #'inspect'
+      builderAspect == #'inspect'
         ifTrue: [ builderAspect := #'view' ]
         ifFalse: [ builderAspect := #'inspect' ].
       obj := obj dotSelfObject
@@ -36,9 +46,10 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       "when we're browsing there is a diversity of windows involvled, so don't try to reuse the same window ... #view and #inspect reuse window as navigator"
       windowName := nil ].
   obj
-    edit: parentObj
-    topez: listElement topez
-    aspect: aspect
-    windowName: windowName
-    windowId: nil.
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: aspect)
+        builderAspect: builderAspect;
+        parentObject: parentObj;
+        windowName: windowName;
+        yourself).
   ^ nil

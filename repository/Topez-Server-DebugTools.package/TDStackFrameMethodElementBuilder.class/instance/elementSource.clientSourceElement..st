@@ -12,8 +12,6 @@ elementSource: methodSource clientSourceElement: clientSourceElement
     ifTrue: [ 
       self object trimToHomeFrame.
       self object stack
-        edit: nil
-        topez: clientSourceElement topez
-        aspect: #'navigate'
-        windowId: nil ].
+        editUsing:
+          (TDEditorSpec topez: clientSourceElement topez editorAspect: #'navigate') ].
   ^ newSelector

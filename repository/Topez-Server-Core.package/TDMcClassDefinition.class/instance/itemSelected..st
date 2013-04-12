@@ -3,9 +3,8 @@ itemSelected: topez
   "select the class definition and display in the method pane"
 
   self
-    edit: nil
-    topez: topez
-    aspect: #'method'
-    windowName: #'method'
-    windowId: nil.
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'method')
+        windowName: #'method';
+        yourself).
   ^ nil

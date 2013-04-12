@@ -6,5 +6,7 @@ cmdShiftEAction: listElement modifierPressed: modifierPressed selectionIndex: se
   definition := self object selectedDefinition.
   definition ifNil: [ ^ true ].
   defs := definition classDefinitions.
-  defs edit: listElement topez aspect: #'definitionList'.
+  defs
+    editUsing:
+      (TDEditorSpec topez: listElement topez editorAspect: #'definitionList').
   ^ true

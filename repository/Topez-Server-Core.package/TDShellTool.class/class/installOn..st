@@ -1,6 +1,7 @@
 as yet unclassified
 installOn: aTDTopezServer
   "builder:
+	 #print   - textEditor view ... printString (default of edit command)
 	 #view		- normal view (i.e., collection of associations for Dictionary)
 	 #inspect - raw object/implementation view
 
@@ -52,8 +53,8 @@ installOn: aTDTopezServer
       aspect: #'inspect';
     registerBuilderClass: TDTxtLeafNodeBuilder
       for: CharacterCollection
-      aspect: #'view';
-    registerBuilderClass: TDTxtLeafNodeBuilder for: Text aspect: #'view';
+      aspect: #'print';
+    registerBuilderClass: TDTxtLeafNodeBuilder for: Text aspect: #'print';
     registerEditorClass: TDClientObjectElementBuilder
       for: Object
       aspect: #'navigate';

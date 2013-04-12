@@ -3,13 +3,18 @@ referencesTo: clientSourceElement editorSource: editorSource selectionInterval: 
   "CMD-N - references to"
 
   | aVariableOrClassName defs |
-  aVariableOrClassName := editorSource copyFrom: selectionInterval _from to: selectionInterval _to.
-  defs := TDMethodDefinition referencesTo: aVariableOrClassName isMeta: false in: self theClass.
+  aVariableOrClassName := editorSource
+    copyFrom: selectionInterval _from
+    to: selectionInterval _to.
+  defs := TDMethodDefinition
+    referencesTo: aVariableOrClassName
+    isMeta: false
+    in: self theClass.
   defs
-    edit: nil
-    topez: clientSourceElement topez
-    aspect: #'methodDefinitionList'
-    windowName: nil
-    windowId: nil
-    windowLocation: #'implementors'.
+    editUsing:
+      ((TDEditorSpec
+        topez: clientSourceElement topez
+        editorAspect: #'methodDefinitionList')
+        windowLocation: #'implementors';
+        yourself).
   ^ true

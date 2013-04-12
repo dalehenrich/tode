@@ -5,10 +5,9 @@ cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: se
   | cls |
   cls := self selectedClass: listElement selectionIndex: selectionIndex.
   cls
-    edit: listElement parent
-    topez: listElement topez
-    aspect: #'navigate'
-    windowName: #'hierarchy'
-    windowId: nil
-    windowLocation: nil.
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'navigate')
+        parentObject: listElement parent;
+        windowName: #'hierarchy';
+        yourself).
   ^ true

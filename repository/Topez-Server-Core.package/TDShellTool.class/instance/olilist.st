@@ -9,11 +9,5 @@ olilist
   objectLog := TDObjectLog new.
   priorities
     do: [ :priority | objectLog priority: (ObjectLogEntry perform: priority) ].
-  objectLog
-    edit: nil
-    topez: topez
-    aspect: #'navigate'
-    windowName: nil
-    windowId: nil
-    windowLocation: nil.
+  objectLog editUsing: (TDEditorSpec topez: topez editorAspect: #'navigate').
   ^ objectLog

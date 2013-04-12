@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"buildClientElement:topez:aspect:selectionIndex:highlightIndex:parentListIndex:windowName:windowId:windowLocation:" : "dkh 02/17/2013 13:18",
+		"buildClientElementUsing:editorAspect:" : "dkh 04/11/2013 14:35",
 		"clientList:" : "DataCurator 01/16/2013 07:43",
 		"clientListElement" : "dkh 04/04/2013 13:42",
 		"cmdBAction:modifierPressed:selectionIndex:" : "DataCurator 02/06/2013 19:50",
@@ -12,11 +12,11 @@
 		"cmdMAction:modifierPressed:selectionIndex:" : "DataCurator 02/07/2013 07:37",
 		"cmdNAction:modifierPressed:selectionIndex:" : "DataCurator 02/07/2013 07:35",
 		"cmdOAction:modifierPressed:selectionIndex:" : "DataCurator 02/06/2013 02:13",
-		"cmdShiftBAction:modifierPressed:selectionIndex:" : "dkh 04/10/2013 16:11",
+		"cmdShiftBAction:modifierPressed:selectionIndex:" : "dkh 04/11/2013 14:57",
 		"cmdShiftCAction:modifierPressed:selectionIndex:" : "DataCurator 01/27/2013 20:38",
 		"cmdShiftEAction:modifierPressed:selectionIndex:" : "DataCurator 02/05/2013 13:35",
 		"cmdShiftLAction:modifierPressed:selectionIndex:" : "DataCurator 01/27/2013 20:37",
-		"cmdShiftNAction:modifierPressed:selectionIndex:" : "DataCurator 02/07/2013 14:33",
+		"cmdShiftNAction:modifierPressed:selectionIndex:" : "dkh 04/11/2013 14:57",
 		"cmdShiftTAction:modifierPressed:selectionIndex:" : "dkh 02/18/2013 07:38",
 		"cmdVAction:modifierPressed:selectionIndex:" : "DataCurator 02/05/2013 23:12",
 		"cmdXAction:modifierPressed:selectionIndex:" : "DataCurator 02/06/2013 01:20",

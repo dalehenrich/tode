@@ -7,5 +7,7 @@ cmdShiftTAction: listElement modifierPressed: modifierPressed selectionIndex: se
   definition ifNil: [ ^ true ].
   defs := definition classDefinitions.
   defs := defs select: [ :def | def theClass inheritsFrom: TestAsserter ].
-  defs edit: listElement topez aspect: #'definitionList'.
+  defs
+    editUsing:
+      (TDEditorSpec topez: listElement topez editorAspect: #'definitionList').
   ^ true

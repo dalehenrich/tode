@@ -25,5 +25,5 @@ mccompare
   diffy := MCDiffyTextWriter on: stream.
   diffy writePatch: patch.
   stream cr.
-  stream contents edit: topez aspect: #'edit' windowId: nil.
+  stream contents editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
   ^ patch

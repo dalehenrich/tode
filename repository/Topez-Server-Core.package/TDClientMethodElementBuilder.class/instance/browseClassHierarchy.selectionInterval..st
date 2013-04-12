@@ -8,10 +8,8 @@ browseClassHierarchy: clientSourceElement selectionInterval: selectionInterval
   gsMethod := self method.
   cls := gsMethod inClass.
   cls
-    edit: nil
-    topez: clientSourceElement topez
-    aspect: #'navigate'
-    windowName: #'hierarchy'
-    windowId: nil
-    windowLocation: nil.
+    editUsing:
+      ((TDEditorSpec topez: clientSourceElement topez editorAspect: #'navigate')
+        windowName: #'hierarchy';
+        yourself).
   ^ true

@@ -15,4 +15,4 @@ mmdirty
             ifTrue: [ false ]
             ifFalse: [ wc modified ] ]
         ifNone: [  ]) notNil ].
-  ^ dirty edit: topez
+  ^ dirty editUsing: (TDEditorSpec topez: topez)

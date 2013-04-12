@@ -3,9 +3,8 @@ itemSelected: topez
   | cl |
   cl := Smalltalk classNamed: self className.
   cl
-    edit: nil
-    topez: topez
-    aspect: #'edit'
-    windowName: #'hierarchy'
-    windowId: nil.
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'hierarchy';
+        yourself).
   ^ nil
