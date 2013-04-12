@@ -28,7 +28,7 @@ executeWindowBuilderSpecs: windowBuilderSpecs
           node := clientElement first
             asTDObjectNode: nil
             topez: self topez
-            aspect: finalAspect.
+            aspect: #'view'.
           actual := block value: node.
           found := true ].
       false

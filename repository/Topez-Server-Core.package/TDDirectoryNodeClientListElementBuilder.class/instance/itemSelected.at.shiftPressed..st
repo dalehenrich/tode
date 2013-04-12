@@ -9,17 +9,19 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     ifTrue: [ 
       "convert #edit (source editor) to #navigate"
       aspect := #'navigate' ].
-  builderAspect := obj builderAspect.
-  builderAspect == #'print'
+  (obj respondsTo: #'builderAspect')
     ifTrue: [ 
-      "convert #print (source editor) to #view for navigator"
-      builderAspect := #'view'.
-      obj := obj dotSelfObject
-        asTDObjectNode: obj
-        topez: listElement topez
-        aspect: builderAspect.
-      objName := self object displayWith: listElement displayPolicy.
-      obj name: objName ].
+      builderAspect := obj builderAspect.
+      builderAspect == #'print'
+        ifTrue: [ 
+          "convert #print (source editor) to #view for navigator"
+          builderAspect := #'view'.
+          obj := obj dotSelfObject
+            asTDObjectNode: obj
+            topez: listElement topez
+            aspect: builderAspect.
+          objName := self object displayWith: listElement displayPolicy.
+          obj name: objName ] ].
   parentList := itemAttribute listIndex copy.
   toggled := false.
   index == 1
@@ -30,12 +32,14 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       builderAspect == #'inspect'
         ifTrue: [ builderAspect := #'view' ]
         ifFalse: [ builderAspect := #'inspect' ].
-      obj := obj dotSelfObject
-        asTDObjectNode: obj
-        topez: listElement topez
-        aspect: builderAspect.
-      objName := self object displayWith: listElement displayPolicy.
-      obj name: objName ]
+      (obj respondsTo: #'dotSelfObject')
+        ifTrue: [ 
+          obj := obj dotSelfObject
+            asTDObjectNode: obj
+            topez: listElement topez
+            aspect: builderAspect.
+          objName := self object displayWith: listElement displayPolicy.
+          obj name: objName ] ]
     ifFalse: [ 
       index == 2
         ifTrue: [ 
