@@ -9,4 +9,4 @@ testClassWndowLookup
       (TDClassHierarchyListElementBuilder name)}.
       {SmallInteger.
       #'navigate'.
-      (TDClientObjectElementBuilder name)}}
+      (TDClassHierarchyListElementBuilder name)}}
