@@ -1,5 +1,8 @@
 accessing
 sessionDescription_r
+  "self initializeSessionMap"
+
+  <sessionDescription>
   ^ OGStandardSessionDescription new
     name: 'r_gs64stone';
     gemstoneVersion: '3.1.0.3';

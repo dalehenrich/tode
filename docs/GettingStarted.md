@@ -38,6 +38,9 @@ CMD-k sets a breakpoint in a method window ... `man db` for list of debugger com
 
 CMD-o in an empty class/instance selector window opens a method template (CMD-s saves code) ... the windows aren't automatically updated, so use CMD-SHIFT-B to refresh the class view ...
 
+CMD-p in a list window opens a source editor on result of #printUsing: on the object
+associated with the window.
+
 CMD-SHIFT-C copies the window ...
 
 CMD-c, CMD-x, CMD-v does copy, cut, paste. Cut for class removes class from system ... paste of class doesn't put it back:). Cut for method removes method and paste installes method. You can copy a method and then paste in another class. Paste method on a selected class adds method to instance side ... paste of method into instance/class list adds method to appropriate side.
