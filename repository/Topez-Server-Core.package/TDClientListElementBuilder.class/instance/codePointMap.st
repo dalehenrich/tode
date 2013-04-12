@@ -5,7 +5,7 @@ codePointMap
 []	CMD-C - spawn window
 []	CMD-L - list windows
 []	CMD-E - browse pkg/config classes/methods
-	CMD-N - find references
+[]	CMD-N - find references
 []	CMD-T - browse pkg/confis tests
 []	CMD-b - browse class
 []	CMD-c - copy object
@@ -13,8 +13,8 @@ codePointMap
 []	CMD-m - browse implementors
 []	CMD-n - browse senders
 []	CMD-N - references to
-	CMD-o - open method template
-	CMD-p - open print window
+[]	CMD-o - open method template
+[]	CMD-p - open print window
 []	CMD-v - paste object
 []	CMD-x - cut object
 "
@@ -98,6 +98,12 @@ codePointMap
       put: [ :modifierPressed :listElement :selectionIndex | 
           self
             cmdOAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
+    at: $p codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdPAction: listElement
             modifierPressed: modifierPressed
             selectionIndex: selectionIndex ];
     at: $v codePoint

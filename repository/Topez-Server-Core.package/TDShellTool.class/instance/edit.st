@@ -24,14 +24,14 @@ edit
           ^ contextNode
             editUsing:
               ((TDEditorSpec topez: topez editorAspect: #'edit')
-                builderAspect: #'print';
+                builderAspect: #'view';
                 parentObject: contextNode parent;
                 windowId: windowId;
                 yourself) ] ].
   contextObject
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
-        builderAspect: #'print';
+        builderAspect: #'view';
         windowId: windowId;
         yourself).
   ^ contextObject

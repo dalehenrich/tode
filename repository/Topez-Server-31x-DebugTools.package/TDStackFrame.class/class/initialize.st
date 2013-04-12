@@ -1,7 +1,6 @@
 as yet unclassified
 initialize
   "builder:
-	 #print   - textEditor view ... printString (default of edit command)
 	 #view		- normal view (i.e., collection of associations for Dictionary)
 	 #inspect - raw object/implementation view
 

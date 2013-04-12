@@ -9,19 +9,6 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     ifTrue: [ 
       "convert #edit (source editor) to #navigate"
       aspect := #'navigate' ].
-  (obj respondsTo: #'builderAspect')
-    ifTrue: [ 
-      builderAspect := obj builderAspect.
-      builderAspect == #'print'
-        ifTrue: [ 
-          "convert #print (source editor) to #view for navigator"
-          builderAspect := #'view'.
-          obj := obj dotSelfObject
-            asTDObjectNode: obj
-            topez: listElement topez
-            aspect: builderAspect.
-          objName := self object displayWith: listElement displayPolicy.
-          obj name: objName ] ].
   parentList := itemAttribute listIndex copy.
   toggled := false.
   index == 1
