@@ -3,10 +3,6 @@
 Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-"Install GLASS 1.0-beta.9.1"
-ConfigurationOfGLASS project updateProject.
-GsDeployer deploy: [ (ConfigurationOfGLASS project version: '1.0-beta.9.1') load ].
-
 "Load Tode ... "
 Metacello new
 	baseline: 'Tode';
