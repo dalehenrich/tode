@@ -45,4 +45,15 @@ executeWindowBuilderSpecs: windowBuilderSpecs
       actual := ar at: 1.
       expected := ar at: 2.
       actualPrintString := ar at: 3.
+      actual = expected
+        ifFalse: [ 
+          Transcript
+            cr;
+            show: 'ACTUAL';
+            cr;
+            show: actual;
+            cr;
+            show: 'EXPECTED';
+            cr;
+            show: expected ].
       self assert: actual = expected ]
