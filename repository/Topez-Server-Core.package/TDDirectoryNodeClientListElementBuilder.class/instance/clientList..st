@@ -8,7 +8,7 @@ clientList: listElement
   components
     add:
       {'.'.
-      (self object displayWith: displayPolicy)}.
+      (self object dotSelfObject displayWith: displayPolicy)}.
   items
     add:
       (TDClientListItemAttributes
@@ -41,7 +41,7 @@ clientList: listElement
       items
         add:
           (TDClientListItemAttributes
-            object: child
+            object: child dotSelfObject
             parent: self object
             aspect: listElement aspect
             listIndex: listElement parentListIndex) ].

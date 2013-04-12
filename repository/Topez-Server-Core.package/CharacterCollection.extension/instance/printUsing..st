@@ -1,4 +1,3 @@
 *topez-server-core
-editUsing: aTDEditorSpec
-  aTDEditorSpec object: self.
+printUsing: aTDEditorSpec
   ^ aTDEditorSpec topez edit: self using: aTDEditorSpec
