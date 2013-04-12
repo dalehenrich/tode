@@ -1,5 +1,8 @@
 accessing
 sessionDescription3101tODE
+  "self initializeSessionMap"
+
+  <sessionDescription>
   ^ OGCustomSessionDescription new
     name: 'tode';
     gemstoneVersion: '3.1.0.1';

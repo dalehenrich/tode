@@ -2,6 +2,7 @@ accessing
 sessionDescription2441_mac
   "self initializeSessionMap"
 
+  <sessionDescription>
   ^ OGCustomSessionDescription new
     name: '2.4.4.1_mac';
     gemstoneVersion: '2.4.4.1';
