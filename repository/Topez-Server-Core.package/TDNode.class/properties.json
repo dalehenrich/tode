@@ -9,7 +9,8 @@
 		"parent",
 		"name",
 		"contents",
-		"topez" ],
+		"topez",
+		"builderAspect" ],
 	"name" : "TDNode",
 	"pools" : [
 		 ],

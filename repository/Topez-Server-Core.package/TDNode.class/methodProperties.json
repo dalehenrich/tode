@@ -11,7 +11,10 @@
 		"smalltalkTextColor" : "DataCurator 12/21/2012 18:09",
 		"topezTextAttributes" : "DataCurator 11/29/2012 20:36" },
 	"instance" : {
+		"aspect" : "dkh 04/10/2013 08:27",
 		"block" : "DataCurator 12/01/2012 10:51",
+		"builderAspect" : "dkh 04/10/2013 08:26",
+		"builderAspect:" : "dkh 04/11/2013 17:05",
 		"canEnter" : "dkh 11/28/2012 05:31",
 		"canMove" : "DataCurator 12/02/2012 08:03",
 		"cat" : "dkh 11/28/2012 05:31",
@@ -19,7 +22,6 @@
 		"childrenDo:" : "DataCurator 12/12/2012 15:16",
 		"contents" : "dkh 11/28/2012 05:31",
 		"cp:in:" : "DataCurator 12/19/2012 14:30",
-		"dotSelfObject" : "DataCurator 12/12/2012 16:38",
 		"extension" : "dkh 12/27/2012 16:40",
 		"findMatchingPathFor:with:" : "dkh 03/28/2013 08:21",
 		"isLeaf" : "dkh 11/28/2012 05:31",

@@ -2,7 +2,7 @@
 	"class" : {
 		"reset" : "DataCurator 02/06/2013 01:52" },
 	"instance" : {
-		"buildClientElement:topez:aspect:selectionIndex:highlightIndex:parentListIndex:windowName:windowId:windowLocation:" : "dkh 02/17/2013 13:18",
+		"buildClientElementUsing:editorAspect:" : "dkh 04/11/2013 14:35",
 		"cmdKeyCodePoints" : "DataCurator 01/27/2013 09:30",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 20:52",
 		"defaultEditorWindowName" : "DataCurator 01/24/2013 13:44",

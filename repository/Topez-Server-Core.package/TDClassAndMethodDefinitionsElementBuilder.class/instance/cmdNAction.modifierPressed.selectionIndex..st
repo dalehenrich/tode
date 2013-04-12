@@ -7,10 +7,8 @@ cmdNAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
   def := itemAttribute object.
   defs := def sendersOf.
   defs
-    edit: nil
-    topez: listElement topez
-    aspect: #'methodDefinitionList'
-    windowName: nil
-    windowId: nil
-    windowLocation: #'implementors'.
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')
+        windowLocation: #'implementors';
+        yourself).
   ^ true

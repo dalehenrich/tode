@@ -26,12 +26,20 @@ testNodeView
 '}.
       {'123'.
       #'view'.
-      '''123''/:
-[String] ''123'''}.
+      '''123''/ ([String] ''123''):
+	(class)@ -> [String class] String
+	1@ -> [Character] $1
+	2@ -> [Character] $2
+	3@ -> [Character] $3
+'}.
       {'123'.
-      #'browse'.
-      '''123''/:
-[String] ''123'''}.
+      #'edit'.
+      '''123''/ ([String] ''123''):
+	(class)@ -> [String class] String
+	1@ -> [Character] $1
+	2@ -> [Character] $2
+	3@ -> [Character] $3
+'}.
       {(Dictionary new
         add: '1' -> 1;
         add: '2' -> 2;

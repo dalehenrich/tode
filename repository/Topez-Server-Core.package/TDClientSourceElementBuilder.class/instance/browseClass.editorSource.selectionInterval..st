@@ -12,5 +12,7 @@ browseClass: clientSourceElement editorSource: editorSource selectionInterval: s
   classes := Smalltalk systemNavigation allClasses asArray
     select: [ :cls | regex search: cls name asString ].
   defs := classes collect: [ :cl | TDClassDefinition className: cl name ].
-  defs edit: clientSourceElement topez aspect: #'definitionList'.
+  defs
+    editUsing:
+      (TDEditorSpec topez: clientSourceElement topez editorAspect: #'definitionList').
   ^ true

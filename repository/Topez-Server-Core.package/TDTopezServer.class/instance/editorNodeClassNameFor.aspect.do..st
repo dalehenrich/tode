@@ -3,6 +3,7 @@ editorNodeClassNameFor: anObject aspect: anAspect do: aBlock
   self
     lookupClassNameFor: anObject
     aspect: anAspect
+    defaultAspect: #'navigate'
     in: self class nodeEditors
     do: [ :className | 
       ^ className == nil

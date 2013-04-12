@@ -22,5 +22,7 @@ mcbrowse
   mcDefinitions := snapshot definitions
     select: [ :def | def isOrganizationDefinition not ].
   definitions := mcDefinitions collect: [ :def | def asTDDefinition ].
-  definitions edit: self topez aspect: #'externalDefinitionList'.
+  definitions
+    editUsing:
+      (TDEditorSpec topez: self topez editorAspect: #'externalDefinitionList').
   ^ definitions

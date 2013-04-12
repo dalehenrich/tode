@@ -3,7 +3,7 @@ buildNode: parentNode topez: aTopez aspect: anAspect
   ^ TDObjectNode new
     name: self nodeName;
     parent: parentNode;
-    aspect: anAspect;
+    builderAspect: anAspect;
     topez: aTopez;
     basicContents: self basicContents;
     readMe: self readmeString;

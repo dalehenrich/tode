@@ -28,9 +28,19 @@ clientList: listElement
               self object stack ] ]
         ifFalse: [ 
           parentObject := self object.
-          object := self object objectFor: elementName ifAbsent: [ self error: 'missing element' ].
-          itemObject := object asTDObjectNode: parentObject topez: listElement topez aspect: listElement aspect ].
-      items add: (TDClientListItemAttributes object: itemObject parent: parentObject aspect: listElement aspect).
+          object := self object
+            objectFor: elementName
+            ifAbsent: [ self error: 'missing element' ].
+          itemObject := object
+            asTDObjectNode: parentObject
+            topez: listElement topez
+            aspect: #'view' ].
+      items
+        add:
+          (TDClientListItemAttributes
+            object: itemObject
+            parent: parentObject
+            aspect: listElement aspect).
       displayPolicy stream: stream.
       object displayOn: displayPolicy.
       ar add: stream contents asString ].

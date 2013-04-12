@@ -6,9 +6,8 @@ itemSelected: topez
   method := self method.
   TDMethodDefinition selectMethod: method topez: topez.
   self
-    edit: nil
-    topez: topez
-    aspect: #'method'
-    windowName: #'method'
-    windowId: nil.
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'method')
+        windowName: #'method';
+        yourself).
   ^ nil

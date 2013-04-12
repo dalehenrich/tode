@@ -9,10 +9,10 @@ testNodeLookup
       (TDObjectNodeBuilder name)}.
       {''.
       #'view'.
-      (TDTxtLeafNodeBuilder name)}.
+      (TDObjectNodeBuilder name)}.
       {''.
       #'bubba'.
-      (TDTxtLeafNodeBuilder name)}.
+      (TDObjectNodeBuilder name)}.
       {Object.
       #'view'.
       (TDObjectNodeBuilder name)}.

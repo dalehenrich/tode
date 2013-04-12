@@ -1,1 +1,1 @@
-SystemOrganization addCategory: 'Topez-Server-TestDebugTools'!
+SystemOrganization addCategory: #'Topez-Server-TestDebugTools'!

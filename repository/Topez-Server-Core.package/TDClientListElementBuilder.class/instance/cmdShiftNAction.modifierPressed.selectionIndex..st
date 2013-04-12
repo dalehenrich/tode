@@ -5,12 +5,13 @@ cmdShiftNAction: listElement modifierPressed: modifierPressed selectionIndex: se
   | cls aVariableOrClassName defs |
   cls := self selectedClass: listElement selectionIndex: selectionIndex.
   aVariableOrClassName := cls name asString.
-  defs := TDMethodDefinition referencesTo: aVariableOrClassName isMeta: false isMeta in: nil.
+  defs := TDMethodDefinition
+    referencesTo: aVariableOrClassName
+    isMeta: false isMeta
+    in: nil.
   defs
-    edit: nil
-    topez: listElement topez
-    aspect: #'methodDefinitionList'
-    windowName: nil
-    windowId: nil
-    windowLocation: #'implementors'.
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')
+        windowLocation: #'implementors';
+        yourself).
   ^ true

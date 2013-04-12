@@ -7,8 +7,7 @@ cmdOAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
     className: self theClass name
     isMeta: self object isMeta.
   ^ def
-    edit: nil
-    topez: listElement topez
-    aspect: #'method'
-    windowName: #'method'
-    windowId: nil
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'method')
+        windowName: #'method';
+        yourself)

@@ -7,5 +7,7 @@ cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
     ifTrue: [ ^ false ].
   itemAttribute := listElement itemCache at: selectionIndex.
   def := itemAttribute object asClassDefinition.
-  {def} edit: listElement topez aspect: #'definitionList'.
+  {def}
+    editUsing:
+      (TDEditorSpec topez: listElement topez editorAspect: #'definitionList').
   ^ true

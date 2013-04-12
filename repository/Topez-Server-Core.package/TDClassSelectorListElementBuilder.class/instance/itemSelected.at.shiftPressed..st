@@ -17,9 +17,8 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     isMeta: cl isMeta
     selector: selector.
   methodDef
-    edit: nil
-    topez: listElement topez
-    aspect: #'method'
-    windowName: #'method'
-    windowId: nil.
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'method')
+        windowName: #'method';
+        yourself).
   ^ nil

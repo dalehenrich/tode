@@ -7,4 +7,4 @@ breakSteps: breakTokens
   | meth stepSource |
   meth := self lookupMethodIn: (breakTokens copyFrom: 2 to: breakTokens size).
   stepSource := self stepsForMethod: meth.
-  stepSource edit: topez aspect: #'browse' windowId: nil
+  stepSource editUsing: (TDEditorSpec topez: topez editorAspect: #'edit')

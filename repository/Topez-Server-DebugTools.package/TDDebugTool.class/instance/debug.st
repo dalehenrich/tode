@@ -12,7 +12,7 @@ debug
     homeNode: stackNode;
     currentNode: stackNode.
   self dbStack
-    edit: stackNode
-    topez: topez
-    aspect: #'view'
-    windowId: nil
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'navigate')
+        parentObject: stackNode;
+        yourself)

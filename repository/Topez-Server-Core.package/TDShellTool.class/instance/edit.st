@@ -22,9 +22,16 @@ edit
           | contextNode |
           contextNode := topez lookup: (theTokens at: 1).
           ^ contextNode
-            edit: contextNode parent
-            topez: topez
-            aspect: #'browse'
-            windowId: windowId ] ].
-  contextObject edit: topez aspect: #'browse' windowId: windowId.
+            editUsing:
+              ((TDEditorSpec topez: topez editorAspect: #'edit')
+                builderAspect: #'view';
+                parentObject: contextNode parent;
+                windowId: windowId;
+                yourself) ] ].
+  contextObject
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        builderAspect: #'view';
+        windowId: windowId;
+        yourself).
   ^ contextObject

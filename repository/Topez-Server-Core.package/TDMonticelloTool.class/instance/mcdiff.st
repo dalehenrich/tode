@@ -18,5 +18,5 @@ mcdiff
         cr.
       patch := self compareChangesFor: workingCopy workingCopy on: stream.
       stream cr ].
-  stream contents edit: topez aspect: #'browse' windowId: nil.
+  stream contents editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
   ^ patch

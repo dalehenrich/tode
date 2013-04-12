@@ -4,8 +4,14 @@ cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
 
   | aspect obj parentObj itemAttribute |
   selectionIndex == 0
-    ifTrue: [ ^ super cmdBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex ].
+    ifTrue: [ 
+      ^ super
+        cmdBAction: listElement
+        modifierPressed: modifierPressed
+        selectionIndex: selectionIndex ].
   itemAttribute := listElement itemCache at: selectionIndex.
   obj := itemAttribute object.
-  {(TDClassDefinition className: obj class theNonMetaClass name)} edit: listElement topez aspect: #'definitionList'.
+  {(TDClassDefinition className: obj class theNonMetaClass name)}
+    editUsing:
+      (TDEditorSpec topez: listElement topez editorAspect: #'definitionList').
   ^ true

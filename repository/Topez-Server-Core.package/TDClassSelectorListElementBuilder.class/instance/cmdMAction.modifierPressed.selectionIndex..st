@@ -8,10 +8,8 @@ cmdMAction: listElement modifierPressed: modifierPressed selectionIndex: selecti
   selector := classAttributes at: 3.
   defs := TDMethodDefinition implementorsOf: selector.
   defs
-    edit: nil
-    topez: listElement topez
-    aspect: #'methodDefinitionList'
-    windowName: nil
-    windowId: nil
-    windowLocation: #'implementors'.
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')
+        windowLocation: #'implementors';
+        yourself).
   ^ true

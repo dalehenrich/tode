@@ -1,10 +1,8 @@
 as yet unclassified
 browseMethods: methodDefinitions
   methodDefinitions
-    edit: nil
-    topez: topez
-    aspect: #'methodDefinitionList'
-    windowName: nil
-    windowId: nil
-    windowLocation: #'implementors'.
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'methodDefinitionList')
+        windowLocation: #'implementors';
+        yourself).
   ^ methodDefinitions

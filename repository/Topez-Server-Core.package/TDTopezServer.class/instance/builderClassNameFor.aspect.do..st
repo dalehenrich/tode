@@ -3,6 +3,7 @@ builderClassNameFor: anObject aspect: anAspect do: aBlock
   self
     lookupClassNameFor: anObject
     aspect: anAspect
+    defaultAspect: #'view'
     in: self class nodeBuilders
     do: [ :className | 
       ^ className == nil
