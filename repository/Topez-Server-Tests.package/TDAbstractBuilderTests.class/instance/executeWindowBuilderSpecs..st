@@ -2,6 +2,7 @@ as yet unclassified
 executeWindowBuilderSpecs: windowBuilderSpecs
   "object aspect windowId expected [ block ]"
 
+  [ 
   | results |
   results := Array new.
   windowBuilderSpecs
@@ -45,15 +46,6 @@ executeWindowBuilderSpecs: windowBuilderSpecs
       actual := ar at: 1.
       expected := ar at: 2.
       actualPrintString := ar at: 3.
-      actual = expected
-        ifFalse: [ 
-          Transcript
-            cr;
-            show: 'ACTUAL';
-            cr;
-            show: actual;
-            cr;
-            show: 'EXPECTED';
-            cr;
-            show: expected ].
-      self assert: actual = expected ]
+      self assert: actual = expected ] ]
+    on: Error
+    do: [ :ex | ex halt ]
