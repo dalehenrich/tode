@@ -37,7 +37,7 @@ loaded := Metacello image
                   show: \'instead of: \' , ex newProjectRegistration printString.
                 ex disallow ]
               ifFalse: [ ex pass ] ] ];
-  load: \'ALL\'.\"
+  load: \'ALL\'.\"
 clear packagelists\"
 TDConfigurationList reset.
 TDPackageList reset.
