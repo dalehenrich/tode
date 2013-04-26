@@ -1,8 +1,7 @@
 TDScriptLeafNode {	#name : 'buildDocs',	#contents : '[ :topez :objIn :tokens :windowId | 
 | dirPath dir |
 \"buildDocs <server-directory-path>
-
-create markup versions of all man pages in the directory specified.\"
+create markup versions of all man pages in the directory specified.\"
 dirPath := tokens at: 2.
 dir := ServerFileDirectory on: dirPath.
 Transcript
@@ -34,9 +33,7 @@ dir
       lf;
       lf.
     dict := TDHaloDevTool keyMapDictionary.
-
-
-dict keys sorted
+dict keys sorted
       do: [ :keySequence | 
         fileStream
           nextPutAll: \'**\', keySequence, \'** - \',(dict at: keySequence) ;
