@@ -1,1 +1,51 @@
-TDScriptLeafNode {	#name : 'load',	#contents : '[ :topez :objIn :tokens :windowId | \n| baselineName loaded useNew useImage loadSpec |\nbaselineName := tokens at: 2.\nuseNew := #().\nuseImage := #(\'RB\' \'Tode\' \'FileTree\' \'Indexing\' \'Metacello\').\nTranscript\n  cr;\n  show: \'Load: \' , DateAndTime now printString.\rloadSpec := \'default\'.\rtokens size > 3 ifTrue: [ loadSpec := tokens at: 4].\nMetacello new\n  baseline: baselineName;\n  repository: (tokens at: 3);\n  silently;\n  get.\nloaded := Metacello new\n  baseline: baselineName;\n  repository: (tokens at: 3);\n  silently;\n  onConflict: [ :ex | \n        | projectRegistration projectName |\n        projectRegistration := ex existingProjectRegistration.\n        projectName := projectRegistration projectName.\n        (useNew includes: projectName)\n          ifTrue: [ \n            Transcript\n              cr;\n              show: \'Load using: \' , ex newProjectRegistration printString;\n              cr;\n              tab;\n              show: \'instead of: \' , ex existingProjectRegistration printString.\n            ex allow ]\n          ifFalse: [ \n            (useImage includes: projectName)\n              ifTrue: [ \n                Transcript\n                  cr;\n                  show:\n                      \'Load using: \' , ex existingProjectRegistration printString;\n                  cr;\n                  tab;\n                  show: \'instead of: \' , ex newProjectRegistration printString.\n                ex disallow ]\n              ifFalse: [ ex pass ] ] ];\n  load: loadSpec.\t\"\rclear packagelists\"\nTDConfigurationList reset.\nTDPackageList reset.\ntopez resetAllGlobalNames.\nloaded printString asText ]'}
+TDScriptLeafNode {	#name : 'load',	#contents : '[ :topez :objIn :tokens :windowId | 
+| baselineName loaded useNew useImage loadSpec |
+baselineName := tokens at: 2.
+useNew := #().
+useImage := #(\'RB\' \'Tode\' \'FileTree\' \'Indexing\' \'Metacello\').
+Transcript
+  cr;
+  show: \'Load: \' , DateAndTime now printString.
+loadSpec := \'default\'.
+tokens size > 3 ifTrue: [ loadSpec := tokens at: 4].
+Metacello new
+  baseline: baselineName;
+  repository: (tokens at: 3);
+  silently;
+  get.
+loaded := Metacello new
+  baseline: baselineName;
+  repository: (tokens at: 3);
+  silently;
+  onConflict: [ :ex | 
+        | projectRegistration projectName |
+        projectRegistration := ex existingProjectRegistration.
+        projectName := projectRegistration projectName.
+        (useNew includes: projectName)
+          ifTrue: [ 
+            Transcript
+              cr;
+              show: \'Load using: \' , ex newProjectRegistration printString;
+              cr;
+              tab;
+              show: \'instead of: \' , ex existingProjectRegistration printString.
+            ex allow ]
+          ifFalse: [ 
+            (useImage includes: projectName)
+              ifTrue: [ 
+                Transcript
+                  cr;
+                  show:
+                      \'Load using: \' , ex existingProjectRegistration printString;
+                  cr;
+                  tab;
+                  show: \'instead of: \' , ex newProjectRegistration printString.
+                ex disallow ]
+              ifFalse: [ ex pass ] ] ];
+  load: loadSpec.
+\"
+clear packagelists\"
+TDConfigurationList reset.
+TDPackageList reset.
+topez resetAllGlobalNames.
+loaded printString asText ]'}

@@ -1,1 +1,19 @@
-TDSmalltalkLeafNode {	#name : 'glassSuite',	#contents : '| suite configs version classes testCases |\nsuite := TestSuite named: \'GLASS base Suite\'.\nconfigs := Array new.\nversion := ConfigurationOfGLASS project version: \'1.0-beta.9\'.\nversion spec\n  projectDo: [ :projectSpec | \n    configs\n      add:\n        (TDConfigurationDefinition new\n          projectSpec: projectSpec;\n          yourself) ]\n  packageDo: [ :ignored |  ]\n  groupDo: [ :ignored |  ].\nclasses := Array new.\nconfigs do: [ :def | classes addAll: def classDefinitions ].\ntestCases := classes select: [ :def | def theClass inheritsFrom: TestCase ].\ntestCases\n  do: [ :testCaseDef | suite addTests: testCaseDef theClass suite tests ].\n^ suite'}
+TDSmalltalkLeafNode {	#name : 'glassSuite',	#contents : '| suite configs version classes testCases |
+suite := TestSuite named: \'GLASS base Suite\'.
+configs := Array new.
+version := ConfigurationOfGLASS project version: \'1.0-beta.9\'.
+version spec
+  projectDo: [ :projectSpec | 
+    configs
+      add:
+        (TDConfigurationDefinition new
+          projectSpec: projectSpec;
+          yourself) ]
+  packageDo: [ :ignored |  ]
+  groupDo: [ :ignored |  ].
+classes := Array new.
+configs do: [ :def | classes addAll: def classDefinitions ].
+testCases := classes select: [ :def | def theClass inheritsFrom: TestCase ].
+testCases
+  do: [ :testCaseDef | suite addTests: testCaseDef theClass suite tests ].
+^ suite'}

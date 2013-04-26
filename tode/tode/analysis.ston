@@ -1,1 +1,12 @@
-TDTxtLeafNode {	#name : 'analysis',	#contents : Text {		#string : '==============================\r==============================\reditorAspect in TodeClientElement\rnodeAspect (not builderAspect...) in TDNode\rrecord both in ItemAttribute ...\rchange protocol used in registration, etc. \r\rIn the navigator it is more about the node structure (nodeAspect) than about the view aspect ... the view is almost always #browse and haven\'t found a use case for having an #inspect _view_ ... although there is a use case for using a different viewer ... wanting to see a) the string as source b) any object as a the printString\r\rit\'s like there is a #navigator view that forces objects to be viewed in navigator ... where `.` toggles between #view and #inspect ....\r\rin navigator, then we want to be able to pop out source view (string or printString) of the current object...',		#runs : RunArray {			#runs : [				62,				734			],			#values : [				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					}				],				[					TextColor {						#color : Color {							#rgb : 0						}					}				]			],			#lastIndex : 796,			#lastRun : 2,			#lastOffset : 733		}	}}
+TDTxtLeafNode {	#name : 'analysis',	#contents : Text {		#string : '==============================
+==============================
+editorAspect in TodeClientElement
+nodeAspect (not builderAspect...) in TDNode
+record both in ItemAttribute ...
+change protocol used in registration, etc. 
+
+In the navigator it is more about the node structure (nodeAspect) than about the view aspect ... the view is almost always #browse and haven\'t found a use case for having an #inspect _view_ ... although there is a use case for using a different viewer ... wanting to see a) the string as source b) any object as a the printString
+
+it\'s like there is a #navigator view that forces objects to be viewed in navigator ... where `.` toggles between #view and #inspect ....
+
+in navigator, then we want to be able to pop out source view (string or printString) of the current object...',		#runs : RunArray {			#runs : [				62,				734			],			#values : [				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					}				],				[					TextColor {						#color : Color {							#rgb : 0						}					}				]			],			#lastIndex : 796,			#lastRun : 2,			#lastOffset : 733		}	}}

@@ -1,1 +1,14 @@
-TDScriptLeafNode {	#name : 'reinstall',	#contents : '[ :topez :objIn :tokens :windowId | \nTranscript\n  cr;\n  show: \'ReInstall: \' , DateAndTime now printString.\nTDTopezServer resetForInstall.\nTDAbstractDevTool allSubclasses\n  do: [ :cl | \n    Transcript\n      cr;\n      tab;\n      show: cl name.\n    cl installOn: topez ] .\r\tTDStackFrame initialize]'}
+TDScriptLeafNode {	#name : 'reinstall',	#contents : '[ :topez :objIn :tokens :windowId | 
+Transcript
+  cr;
+  show: \'ReInstall: \' , DateAndTime now printString.
+TDTopezServer resetForInstall.
+TDAbstractDevTool allSubclasses
+  do: [ :cl | 
+    Transcript
+      cr;
+      tab;
+      show: cl name.
+    cl installOn: topez ] .
+
+TDStackFrame initialize]'}
