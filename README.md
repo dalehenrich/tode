@@ -25,7 +25,7 @@ See the [Gci client installation instructions](https://github.com/dalehenrich/to
 
 ### tODE Documentation
 
-- [Getting Started with tODE](https://github.com/dalehenrich/topez/blob/master/docs/GettingStarted.md)
+- [Getting Started with tODE](https://github.com/dalehenrich/tode/blob/master/docs/GettingStarted.md)
 - [object shell man page summary](https://github.com/dalehenrich/tode/blob/master/docs/man/ManPageSummary.md)
 - [keybard shortcuts](https://github.com/dalehenrich/tode/blob/master/docs/man/KeyboardMapSummary.md)
 - [object shell man pages](https://github.com/dalehenrich/tode/tree/master/docs/man)
