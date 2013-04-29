@@ -19,6 +19,8 @@ install:
    - ls -latr /opt/gemstone/product/lib32
    - mkdir -p $BUILD_PATH/builds/travisCI
    - cp /opt/gemstone/product/lib32/*.so $BUILD_PATH/builds/travisCI
+   - cp /opt/gemstone/product/lib32/*.so $BUILDER_CI_HOME/oneclick/Contents/Linux
+   - ls -altr $BUILDER_CI_HOME/oneclick/Contents/Linux
    - ls -altr $BUILD_PATH/builds/travisCI
    - pwd
 
