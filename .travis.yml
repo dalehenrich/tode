@@ -14,9 +14,12 @@ install:
    - ln -s $PROJECT_HOME $GIT_PATH
    - export ST="$GemStone"
    - ./build_image.sh
-   - cp /opt/gemstone/product/lib32/*.so $IMAGES_PATH
+   - ls $IMAGES_PATH
+   - ls -latr /opt/gemstone/product/lib32
    - export ST="$CLIENT"
    - ./build_image.sh
+   - cp /opt/gemstone/product/lib32/*.so $IMAGES_PATH
+   - ls $IMAGES_PATH
 
 script: $BUILDER_CI_HOME/testGemStoneGCI.sh # -verbose
 
