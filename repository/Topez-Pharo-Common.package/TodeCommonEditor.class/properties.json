@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ObjectClipboard" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"editor",
+		"clientElement" ],
+	"name" : "TodeCommonEditor",
+	"pools" : [
+		 ],
+	"super" : "Model",
+	"type" : "normal" }

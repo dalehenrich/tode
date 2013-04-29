@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topez",
+		"gciErrSType" ],
+	"name" : "GsRuntimeExceptionNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

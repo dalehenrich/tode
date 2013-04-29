@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GsTopezCommandErrorNotification",
+	"pools" : [
+		 ],
+	"super" : "GsErrorNotification",
+	"type" : "normal" }

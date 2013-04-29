@@ -1,0 +1,20 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topez",
+		"listEditor",
+		"codeEditor",
+		"activeEditor",
+		"label",
+		"windowId",
+		"updating" ],
+	"name" : "TodeEditor",
+	"pools" : [
+		 ],
+	"super" : "Model",
+	"type" : "normal" }

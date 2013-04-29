@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TZParserST80",
+	"pools" : [
+		 ],
+	"super" : "SHParserST80",
+	"type" : "normal" }
