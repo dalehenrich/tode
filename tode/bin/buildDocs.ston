@@ -1,1 +1,41 @@
-TDScriptLeafNode {	#name : 'buildDocs',	#contents : '[ :topez :objIn :tokens :windowId | \n| dirPath dir |\n\"buildDocs <server-directory-path>\r\tcreate markup versions of all man pages in the directory specified.\"\ndirPath := tokens at: 2.\ndir := ServerFileDirectory on: dirPath.\nTranscript\n  cr;\n  show: \'Build docs: \' , dirPath , \' : \' , DateAndTime now printString.\ntopez commands\n  keysAndValuesDo: [ :commandName :command | \n    dir\n      forceNewFileNamed: commandName , \'.txt\'\n      do: [ :fileStream | command manPage printOn: fileStream ] ].\ndir\n  forceNewFileNamed: \'ManPageSummary.md\'\n  do: [ :fileStream | \n    fileStream\n      nextPutAll: \'##Man page Summary\';\n      lf;\n      lf.\n    topez commands keys sorted\n      do: [ :commandName | \n        fileStream\n          nextPutAll: (topez commands at: commandName) manPage summary;\n          lf;\n          lf ] ].\ndir\n  forceNewFileNamed: \'KeyboardMapSummary.md\'\n  do: [ :fileStream | | dict |\n    fileStream\n      nextPutAll: \'##Keyboard Map Summary\';\n      lf;\n      lf.\n    dict := TDHaloDevTool keyMapDictionary.\r\t\tdict keys sorted\n      do: [ :keySequence | \n        fileStream\n          nextPutAll: \'**\', keySequence, \'** - \',(dict at: keySequence) ;\n          lf;\n          lf ] ] ]'}
+TDScriptLeafNode {	#name : 'buildDocs',	#contents : '[ :topez :objIn :tokens :windowId | 
+| dirPath dir |
+\"buildDocs <server-directory-path>
+create markup versions of all man pages in the directory specified.\"
+dirPath := tokens at: 2.
+dir := ServerFileDirectory on: dirPath.
+Transcript
+  cr;
+  show: \'Build docs: \' , dirPath , \' : \' , DateAndTime now printString.
+topez commands
+  keysAndValuesDo: [ :commandName :command | 
+    dir
+      forceNewFileNamed: commandName , \'.txt\'
+      do: [ :fileStream | command manPage printOn: fileStream ] ].
+dir
+  forceNewFileNamed: \'ManPageSummary.md\'
+  do: [ :fileStream | 
+    fileStream
+      nextPutAll: \'##Man page Summary\';
+      lf;
+      lf.
+    topez commands keys sorted
+      do: [ :commandName | 
+        fileStream
+          nextPutAll: (topez commands at: commandName) manPage summary;
+          lf;
+          lf ] ].
+dir
+  forceNewFileNamed: \'KeyboardMapSummary.md\'
+  do: [ :fileStream | | dict |
+    fileStream
+      nextPutAll: \'##Keyboard Map Summary\';
+      lf;
+      lf.
+    dict := TDHaloDevTool keyMapDictionary.
+dict keys sorted
+      do: [ :keySequence | 
+        fileStream
+          nextPutAll: \'**\', keySequence, \'** - \',(dict at: keySequence) ;
+          lf;
+          lf ] ] ]'}

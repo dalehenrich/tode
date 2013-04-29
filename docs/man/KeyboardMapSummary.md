@@ -28,6 +28,8 @@
 
 **CMD-o** - open method template [class/instance list], db over [debugger shell]
 
+**CMD-p** - open a source editor on result of #printUsing: 
+
 **CMD-T** - browse pkg/confis tests [pkgs/config]
 
 **CMD-t** - db thru [debugger shell]
