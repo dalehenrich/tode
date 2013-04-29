@@ -1,6 +1,6 @@
 as yet unclassified
 stonInstVarNames
-  | ar |
-  ar := self class allInstVarNames.
-  ar removeAll: self excludedInstVarNames.
-  ^ ar
+  | oc |
+  oc := self class allInstVarNames asOrderedCollection.
+  oc removeAll: self excludedInstVarNames.
+  ^ oc 
