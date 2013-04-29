@@ -14,7 +14,7 @@ install:
    - ln -s $PROJECT_HOME $GIT_PATH
    - export ST="$GemStone"
    - ./build_image.sh
-   - cp /opt/gemstone/lib32/*.so $IMAGES_PATH
+   - cp /opt/gemstone/product/lib32/*.so $IMAGES_PATH
    - export ST="$CLIENT"
    - ./build_image.sh
 
