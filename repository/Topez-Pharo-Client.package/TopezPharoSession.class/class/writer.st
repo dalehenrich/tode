@@ -1,3 +1,0 @@
-ston
-writer
-    ^ TZStonWriter new

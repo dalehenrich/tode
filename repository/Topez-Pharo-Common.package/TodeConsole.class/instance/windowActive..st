@@ -1,5 +1,0 @@
-updating
-windowActive: aSystemWindow
-  "noop"
-
-  

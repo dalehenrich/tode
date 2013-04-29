@@ -1,5 +1,0 @@
-printing
-windowActive: aSystemWindow
-    "noop"
-
-    

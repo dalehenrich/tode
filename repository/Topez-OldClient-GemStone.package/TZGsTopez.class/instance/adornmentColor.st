@@ -1,3 +1,0 @@
-transactions
-adornmentColor
-    ^ Color lightGreen

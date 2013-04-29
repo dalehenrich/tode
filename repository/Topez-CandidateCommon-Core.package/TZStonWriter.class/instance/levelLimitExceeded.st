@@ -1,3 +1,0 @@
-testing
-levelLimitExceeded
-    ^ objectLevel > levelLimit

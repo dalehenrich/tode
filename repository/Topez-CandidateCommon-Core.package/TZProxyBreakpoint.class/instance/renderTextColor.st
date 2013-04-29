@@ -1,3 +1,0 @@
-rendering
-renderTextColor
-    ^ Color magenta

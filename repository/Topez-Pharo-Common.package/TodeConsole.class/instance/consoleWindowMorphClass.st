@@ -1,3 +1,0 @@
-initialize-release
-consoleWindowMorphClass
-  ^ TodeConsoleWindowMorph

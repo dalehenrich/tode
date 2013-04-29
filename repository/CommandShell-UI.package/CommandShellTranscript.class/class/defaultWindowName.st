@@ -1,4 +1,0 @@
-defaults
-defaultWindowName
-
-	^ 'Squeak Shell'

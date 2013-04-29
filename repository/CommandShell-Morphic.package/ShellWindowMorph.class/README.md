@@ -1,1 +1,0 @@
-I am a simple teletype shell session morph, providing a view on an instance of CommandShell.

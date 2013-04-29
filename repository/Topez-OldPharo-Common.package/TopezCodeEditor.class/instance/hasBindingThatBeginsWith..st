@@ -1,3 +1,0 @@
-styling
-hasBindingThatBeginsWith: aString
-    ^ true

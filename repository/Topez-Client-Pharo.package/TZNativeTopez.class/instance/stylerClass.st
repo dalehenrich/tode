@@ -1,3 +1,0 @@
-coding
-stylerClass
-    ^ SHTextStylerST80

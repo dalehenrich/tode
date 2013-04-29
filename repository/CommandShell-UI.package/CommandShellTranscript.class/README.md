@@ -1,1 +1,0 @@
-CommandShellTranscript is a user interface for a ComandShell. It behaves like a simple teletype text terminal.

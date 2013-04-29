@@ -1,3 +1,0 @@
-accessing
-oop
-    ^ oop

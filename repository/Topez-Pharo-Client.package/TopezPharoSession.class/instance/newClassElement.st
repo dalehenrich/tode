@@ -1,3 +1,0 @@
-api
-newClassElement
-    ^ TZClassElement new
