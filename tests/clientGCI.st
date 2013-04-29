@@ -1,6 +1,6 @@
-"Load and run tests to be performed by TravisCI"
 | gitPath |
-Transcript cr; show: 'travis---->travisCI.st'.
+Transcript cr; show: 'travis---->clientGCI.st'.
+
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 "Load Tode ... "
