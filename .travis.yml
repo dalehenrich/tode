@@ -22,7 +22,6 @@ install:
    - cp /opt/gemstone/product/lib32/*.so $BUILDER_CI_HOME/oneclick/Contents/Linux
    - ls -altr $BUILDER_CI_HOME/oneclick/Contents/Linux
    - ls -altr $BUILD_PATH/builds/travisCI
-   - pwd
 
 script: $BUILDER_CI_HOME/testGemStoneGCI.sh # -verbose
 
