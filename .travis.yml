@@ -22,3 +22,4 @@ install:
    - ls -altr $BUILD_PATH/travisCI
 
 script: $BUILDER_CI_HOME/testGemStoneGCI.sh # -verbose
+
