@@ -16,10 +16,6 @@ install:
    - ./build_image.sh
    - export ST="$CLIENT"
    - ./build_image.sh
-   - ls -latr /opt/gemstone/product/lib32
-   - mkdir -p $BUILD_PATH/travisCI
-   - cp /opt/gemstone/product/lib32/*.so $BUILD_PATH/travisCI
-   - ls -altr $BUILD_PATH/travisCI
 
 script: $BUILDER_CI_HOME/testGemStoneGCI.sh # -verbose
 
