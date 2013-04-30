@@ -17,5 +17,6 @@ install:
    - export ST="$CLIENT"
    - ./build_image.sh
    - export LD_LIBRARY_PATH="/opt/gemstone/product/lib32"
+   - sudo apt-get install ia32-libs-multiarch
 
 script: $BUILDER_CI_HOME/testGemStoneGCI.sh # -verbose
