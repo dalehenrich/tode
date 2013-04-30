@@ -18,3 +18,4 @@ install:
    - ./build_image.sh
 
 script: $BUILDER_CI_HOME/testGemStoneGCI.sh # -verbose
+
