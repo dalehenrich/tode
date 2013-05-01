@@ -5,6 +5,7 @@ browseManPage
 
 SYNOPSIS
   browse class <regex-pattern>
+  browse diff <method1-spec> <method2-spec>
   browse method <selector>
   browse references <variableOrGlobalName>
   browse rmethod <regex-pattern>

@@ -2,6 +2,7 @@ as yet unclassified
 find
   "
   find method <selector>
+  find methods <method-spec> <method-spec>
   find sender <selector>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
@@ -14,6 +15,8 @@ find
   command := findTokens at: 1.
   command = 'method'
     ifTrue: [ ^ self findMethod: findTokens ].
+  command = 'methods'
+    ifTrue: [ ^ self findMethods: findTokens ].
   command = 'sender'
     ifTrue: [ ^ self findSender: findTokens ].
   command = 'versions'

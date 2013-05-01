@@ -2,6 +2,7 @@ as yet unclassified
 browse
   "
   browse class <regex-pattern>
+  browse diff <method1-spec> <method2-spec>
   browse method <selector>
   browse references <variableOrGlobalName>
   browse rmethod <regex-pattern>
@@ -17,6 +18,8 @@ browse
   messagePattern := findTokens at: 2.
   command = 'method'
     ifTrue: [ ^ self browseMethods: (self findMethod: findTokens) ].
+  command = 'diff'
+    ifTrue: [ ^ self browseDiff: (self findMethods: findTokens) ].
   command = 'sender'
     ifTrue: [ ^ self browseMethods: (self findSender: findTokens) ].
   command = 'versions'

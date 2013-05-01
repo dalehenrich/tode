@@ -10,6 +10,7 @@ mclist
     compacted: true;
     yourself.
   stream := displayPolicy stream.
+  list := list sort: [ :a :b | a name <= b name ].
   list
     do: [ :pkg | 
       pkg displayOn: displayPolicy.

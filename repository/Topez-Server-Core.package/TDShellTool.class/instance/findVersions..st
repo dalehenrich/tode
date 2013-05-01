@@ -2,15 +2,24 @@ as yet unclassified
 findVersions: findTokens
   "find versions <method-spec>"
 
-  | methodSpec selector behavior classSpec |
-  methodSpec := (tokens at: 3) findTokens: '>>'.
-  classSpec := (methodSpec at: 1) findTokens: ' '.
-  behavior := Smalltalk at: (classSpec at: 1) asSymbol.
-  classSpec size > 1
+  | methodSpecTokens method |
+  methodSpecTokens := findTokens copyFrom: 2 to: findTokens size.
+  methodSpecTokens size == 1
     ifTrue: [ 
-      (classSpec at: 2) = 'class'
-        ifFalse: [ self error: 'invalid methodSpec' ].
-      behavior := behavior class ].
-  selector := (methodSpec at: 2) asSymbol.
-  ^ (MethodVersionHistory uniqueInstance versionsOfMethod: selector in: behavior)
+      "class>>selector"
+      method := self parseMethodSpec: (methodSpecTokens at: 1) ]
+    ifFalse: [ 
+      methodSpecTokens size == 2
+        ifTrue: [ 
+          ((methodSpecTokens at: 2) beginsWith: 'class')
+            ifTrue: [ 
+              "class class>>selector"
+              method := self
+                parseMethodSpec:
+                  (methodSpecTokens at: 1) , ' ' , (methodSpecTokens at: 2) ]
+            ifFalse: [ self error: 'expecting a <method spec>' ] ]
+        ifFalse: [ self error: 'expecting a <method spec>' ] ].
+  ^ (MethodVersionHistory uniqueInstance
+    versionsOfMethod: method selector
+    in: method inClass)
     collect: [ :methodVersionRecord | TDMethodVersionDefinition new methodVersionRecord: methodVersionRecord ]
