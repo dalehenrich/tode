@@ -1,8 +1,9 @@
 language: erlang
 
 env:
-   - CLIENT=Pharo-1.4 GemStone=GemStone-3.1.0.2
-#   - CLIENT=Pharo-1.4 ST=GemStone-2.4.4.1
+   - ST=Pharo-1.4
+#   - ST=GemStone-2.4.4.1
+   - ST=GemStone-3.1.0.2 
 
 install:
    - export PROJECT_HOME="$(pwd)"
@@ -12,11 +13,6 @@ install:
    - cd dalehenrich-builderCI*
    - source build_env_vars
    - ln -s $PROJECT_HOME $GIT_PATH
-   - export ST="$GemStone"
    - ./build_image.sh
-   - export ST="$CLIENT"
-   - ./build_image.sh
-   - export LD_LIBRARY_PATH="/opt/gemstone/product/lib32"
-   - ls -altr /usr/lib32
 
-script: $BUILDER_CI_HOME/testGemStoneGCI.sh # -verbose
+script: $BUILDER_CI_HOME/testTravisCI.sh -verbose
