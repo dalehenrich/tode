@@ -22,8 +22,8 @@ escapes
 [ 
 \"map cr and lf to pure lf (no escapes) to make text portions of file more readable in git\"
 STONWriter stonCharacters
-  at: 10 put: String cr;
-  at: 13 put: String cr.
+  at: 10 put: String lf;
+  at: 13 put: String lf.
 parentNode
   childrenDo: [ :child | 
     child isLeaf

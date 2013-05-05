@@ -1,0 +1,12 @@
+TDTxtLeafNode {	#name : 'INFO',	#contents : 'project Tode
+version baseline
+loads anArray( \'Dev\')
+repo filetree:///opt/git/tode/repository
+directory /opt/git/tode
+commit 603146cbe4e19260f7fe20f3616ff125a66eb58e
+tree db5815ac5f349405894d67551cf193012a6ade69
+parent d131eba0924e8f38a9a33d283f415b6e785d1c43
+author Dale Henrichs <dhenrich@vmware.com> 1367770032 -0700
+committer Dale Henrichs <dhenrich@vmware.com> 1367770032 -0700
+
+improve logout behavior after image restart'}

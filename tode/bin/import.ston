@@ -1,8 +1,10 @@
 TDScriptLeafNode {	#name : 'import',	#contents : '[ :topez :objIn :tokens :windowId | 
 | topezPath dirPath dir node parentNode |
 \"import <topez-directory-path> <server-directory-path>
-import all of the .ston files in <server-directory-path> into 
-<topez-directory-path>\"
+
+import all of the .ston files in <server-directory-path> into 
+
+<topez-directory-path>\"
 topezPath := tokens at: 2.
 Transcript
   cr;
