@@ -1,6 +1,8 @@
 as yet unclassified
 mcancestors
-  "mc ancestors <packageName> [<limit>]"
+  "mc ancestors <packageName> [<limit>]
+      ancestors @<workingCopy-path> [<limit>]
+  "
 
   | packageName limit path |
   packageName := tokens at: 2.
@@ -10,8 +12,7 @@ mcancestors
     at: 'ancestors'
     put: [ :aTopez | 
       | workingCopy ancestors |
-      workingCopy := MCWorkingCopy allManagers
-        detect: [ :wc | wc packageName = packageName ].
+      workingCopy := self resolveWorkingCopyReference: packageName.
       ancestors := workingCopy ancestry allAncestors.
       limit ~~ nil
         ifTrue: [ ancestors := ancestors copyFrom: 1 to: (limit min: ancestors size) ].

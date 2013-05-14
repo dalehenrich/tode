@@ -1,13 +1,17 @@
 as yet unclassified
 mcunload
-  "mc unload <packageName>"
+  "mc unload <packageName>
+      unload @<workingCopy-path>
+  "
 
-  | packageName |
+  | packageName workingCopy |
   packageName := tokens at: 2.
+  workingCopy := self resolveWorkingCopyReference: packageName.
   Transcript
     cr;
     show:
-        'Unload: ' , packageName printString , ' @ ' , DateAndTime now printString.
+        'Unload: ' , workingCopy packageName printString , ' @ '
+            , DateAndTime now printString.
   ^ Gofer new
-    package: packageName;
+    package: workingCopy packageName;
     unload

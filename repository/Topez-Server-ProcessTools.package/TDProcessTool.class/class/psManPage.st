@@ -4,13 +4,12 @@ psManPage
   ps - execute process commands
 
 SYNOPSIS
-  ps <command> [args]
-
-DESCRIPTION
-  ps kill <process-oop>
-  ps kill9 <process-oop>
+  ps kill @<process-path>
+  ps kill9 @<process-path>
   ps list [<level>]
   ps stacks
-  ps terminate <process-oop>
+  ps terminate @<process-path>
   ps yield
+
+DESCRIPTION
 '

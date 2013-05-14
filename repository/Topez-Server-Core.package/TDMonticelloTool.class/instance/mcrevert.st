@@ -1,12 +1,12 @@
 as yet unclassified
 mcrevert
-  "mc revert <pkg-name> [<method-spec>]"
+  "mc revert <pkg-name> [<method-spec>]
+      revert @<workingCopy-path> [<method-spec>]
+  "
 
   | packageName workingCopy versionName repoSpec repo info repositories targetRepos gofer version |
   packageName := tokens at: 2.
-  workingCopy := MCWorkingCopy allManagers
-    detect: [ :wc | wc packageName = packageName ]
-    ifNone: [ ^ 'No package named ' , packageName printString , ' found.' ].
+  workingCopy := self resolveWorkingCopyReference: packageName.
   workingCopy ancestors isEmpty
     ifTrue: [ ^ 'No ancestors for package named ' , packageName printString , ' found' ].
   info := workingCopy ancestry ancestors first.

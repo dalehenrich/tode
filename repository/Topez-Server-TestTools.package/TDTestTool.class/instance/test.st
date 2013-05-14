@@ -1,10 +1,17 @@
 as yet unclassified
 test
-  "test <smalltalk-node-name>"
+  "test <sunit-suite-file>
+        @<sunit-suite-path>
+  "
 
-  | suitePath suiteNode suite node testNode |
+  | suitePath suite node testNode |
   suitePath := tokens at: 2.
-  suiteNode := self topez lookup: suitePath.
+  suite := (suitePath beginsWith: '@')
+    ifTrue: [ self self resolveAtPathReference: suitePath ]
+    ifFalse: [ 
+      | suiteNode |
+      suiteNode := self topez lookup: suitePath.
+      suiteNode evaluateInContext: objIn ].
   node := topez homeNode.
   testNode := node
     childNamed: 'tests'
@@ -15,6 +22,5 @@ test
             name: 'tests';
             readMe: 'test results';
             yourself) ].
-  suite := suiteNode evaluateInContext: objIn.
   testNode addChildNode: (self suiteNode: testNode suite: suite).
   ^ self runSuite: suite testNode: testNode

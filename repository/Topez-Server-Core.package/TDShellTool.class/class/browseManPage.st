@@ -7,7 +7,7 @@ SYNOPSIS
   browse class <regex-pattern>
   browse diff <method1-spec> <method2-spec>
   browse method <selector>
-  browse references <variableOrGlobalName>
+  browse references <variableOrGlobalNameOrPathRef>
   browse rmethod <regex-pattern>
   browse rsender <regex-pattern>
   browse sender <selector>
@@ -17,5 +17,9 @@ SYNOPSIS
 DESCRIPTION
   <method-spec>
     Object>>methodSelector
-    Object class>>methodSelector  
+    Object class>>methodSelector
+
+  <variableOrGlobalNameOrPathRef>
+    <identifier>
+    @<path>  
 '

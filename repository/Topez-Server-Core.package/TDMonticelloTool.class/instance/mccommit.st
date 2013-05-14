@@ -1,12 +1,12 @@
 as yet unclassified
 mccommit
-  "mc commit <pkg-name>"
+  "mc commit <pkg-name>
+      commit @<workingCopy-path>
+  "
 
   | workingCopy packageName |
   packageName := tokens at: 2.
-  workingCopy := MCWorkingCopy allManagers
-    detect: [ :wc | wc packageName = packageName ]
-    ifNone: [ ^ 'no matching package found' ].
+  workingCopy := self resolveWorkingCopyReference: packageName.
   topez
     accumulateTextAndDo: [ :commitMessage :accumulateObjIn | 
       | cacheRepository gofer repositoryList packageSpec info repositories targetRepos |

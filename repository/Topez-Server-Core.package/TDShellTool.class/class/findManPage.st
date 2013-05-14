@@ -7,7 +7,7 @@ SYNOPSIS
   find class <regex-pattern>
   find method <selector>
   find methods <method-spec> <method-spec>
-  find references <variableOrGlobalName>
+  find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
   find sender <selector>
@@ -18,4 +18,8 @@ DESCRIPTION
   <method-spec>
     Object>>methodSelector
     Object class>>methodSelector
+
+  <variableOrGlobalNameOrPathRef>
+    <identifier>
+    @<path>
 '

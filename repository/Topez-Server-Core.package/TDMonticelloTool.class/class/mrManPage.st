@@ -4,21 +4,31 @@ mrManPage
   mr - monticello repository commands
 
 SYNOPSIS
-  mr <command> [args]
-
-DESCRIPTION
-  mr add <repository-spec> <pkg-name>
+  mr add <repository-spec> <package-name>
+     add @<repository-path> <package-name>
+     add <repository-spec> @<workingCopy-path>
+     add @<repository-path> @<workingCopy-path>
   mr create <repository-spec>
   mr flush 
-  mr group <pkg-name>
+  mr group <package-name>
+     group @<workingCopy-path>
   mr list [<regex-repo-pattern>]
   mr packages <repository-spec>
-  mr versions <pkg-name> <repository-spec> [<limit>]
-  mr remove <repository-spec> <pkg-name>
+     packages @<repository-path>
+  mr remove <repository-spec> <package-name>
+     remove @<repository-path> <package-name>
+     remove <repository-spec> @<workingCopy-path>
+     remove @<repository-path> @<workingCopy-path>
+  mr versions <repository-spec> <package-name> [<limit>]
+     versions @<repository-path> <package-name>
 
-  <pkg-name> - package base name, e.g., ''Topez-Server-Core''
+DESCRIPTION
+
+  <package-name> - package base name, e.g., ''Topez-Server-Core''
+  <repository-path> path to an MCRepository instance
   <repository-spec>
     http://seaside.gemstone.com/ss/Seaside30
     filetree:///opt/git/topez/packages
     github://dalehenrich/rb:dev/packages
+  <workingCopy-path> - path to an MCWorkingCopy or TDMonticelloWorkingCopy instance
 '

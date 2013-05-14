@@ -4,21 +4,20 @@ tsManPage
   ts - execute test commands (debug, list, run)
 
 SYNOPSIS
-  ts <command> [args]
-
-DESCRIPTION
-  ts debug [errors|failures|
-    passed|expectedDefects|unexpectedPassed|
-    <test-spec>]
+  ts debug [errors|failures| passed|expectedDefects|unexpectedPassed]
+     debug <test-spec>
+     debug @<method-path>
   ts list [<ds-level>]
   ts run
 
-  The default <test-path> is /home/tests. If you use 
-  the `test` command to initiate testinging.
+DESCRIPTION
 
-  The <test-spec> is of the form:
+  The default <test-path> is /home/tests. If you use the `test` command to 
+  initiate testing.
 
+  <test-spec>:
     TestCaseClass>>testSelector
     TestClassClass
+  <method-path> - path to a test method or test class
   
 '

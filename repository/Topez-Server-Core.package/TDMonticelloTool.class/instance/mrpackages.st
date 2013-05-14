@@ -1,11 +1,13 @@
 as yet unclassified
 mrpackages
-  "mr packages <repository-spec>"
+  "mr packages <repository-spec>
+      packages @<repository-path>
+  "
 
   "underlined if package is loaded in image, bold if there is a newer version of package in repository"
 
   | repo packageNames displayPolicy stream loadedVersions resolvedReferences |
-  repo := self repositoryFromDescription: (tokens at: 2).
+  repo := self resolveRepositoryReference: (tokens at: 2).
   loadedVersions := self loadedVersions.
   resolvedReferences := self resolvedReferencesForRepository: repo.
   packageNames := resolvedReferences keys asArray
