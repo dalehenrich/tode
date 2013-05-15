@@ -87,6 +87,7 @@
 		"resetAllGlobalNames" : "dkh 02/28/2013 11:46",
 		"resetObjIn" : "DataCurator 01/22/2013 14:05",
 		"resolveHaloNamed:for:ifAbsent:" : "DataCurator 12/01/2012 16:36",
+		"restoreFromBackup:" : "dkh 05/14/2013 16:26",
 		"rootNode" : "DataCurator 01/27/2013 00:26",
 		"scriptActionStack" : "DataCurator 01/26/2013 15:11",
 		"serverStatus" : "DataCurator 01/27/2013 00:38",
