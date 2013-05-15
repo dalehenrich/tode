@@ -19,7 +19,8 @@ bubackup
         addChildNode:
           (TDSmalltalkLeafNode new
             name: filename;
-            contents: '"' , TimeStamp now asString , '"' , backupPath asString;
+            contents:
+                '"' , TimeStamp now asString , '"' , backupPath printString;
             yourself) ].
   Transcript
     cr;
