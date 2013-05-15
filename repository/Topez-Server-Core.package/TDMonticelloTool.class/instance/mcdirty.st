@@ -4,10 +4,4 @@ mcdirty
 
   | path |
   path := self dirtyPath.
-  ^ (topez commands at: 'ds') block
-    value: topez
-    value: (self topez lookup: path)
-    value:
-      {'ds'.
-      path}
-    value: nil
+  ^ (self topez lookup: path) dotSelfObject

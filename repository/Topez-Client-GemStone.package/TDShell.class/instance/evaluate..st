@@ -18,7 +18,15 @@ evaluate: aString
               | pipedCommands |
               pipedCommands := isolatedCommand findTokens: '|'.
               pipedCommands
-                do: [ :pipedCommand | result := self evaluateCommand: pipedCommand ] ] ] ].
+                do: [ :pipedCommand | 
+                  | redirectedCommands redirectedCommand redirectTarget |
+                  redirectedCommands := pipedCommand findTokens: '>'.
+                  redirectedCommand := redirectedCommands at: 1.
+                  redirectTarget := redirectedCommands size > 1
+                    ifTrue: [ redirectedCommands at: 2 ].
+                  result := self
+                    evaluateCommand: redirectedCommand
+                    redirectTarget: redirectTarget ] ] ] ].
   ^ result ]
     on: Error , TDRestoreFromBackupComplete
     do: [ :ex | 
