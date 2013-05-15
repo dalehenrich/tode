@@ -1,7 +1,7 @@
 as yet unclassified
 run
   | doitContext displayPolicy |
-  doitContext := objIn.
+  doitContext := objIn dotSelfObject.
   tokens size > 1
     ifTrue: [ 
       | doitString |
@@ -11,7 +11,9 @@ run
     accumulateTextAndDo: [ :doitString :accumulateObjIn | 
       | result |
       topez exception: nil.
-      result := self topez evaluateString: doitString inContext: accumulateObjIn.
+      result := self topez
+        evaluateString: doitString
+        inContext: accumulateObjIn dotSelfObject.
       self topez objIn: result.
       result ].
   displayPolicy := topez displayPolicy
