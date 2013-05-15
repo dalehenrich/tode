@@ -47,6 +47,7 @@
 		"evaluator" : "dkh 11/21/2012 16:02",
 		"exception:" : "dkh 3/29/2013 13:43",
 		"exception:context:" : "dkh 3/29/2013 14:08",
+		"executeRestoreFromBackupFromClient:" : "dkh 5/14/2013 18:09",
 		"handleDebugExceptionsDuring:" : "dkh 4/1/2013 14:30",
 		"informWarning:" : "dkh 12/29/2012 08:59",
 		"login" : "dkh 3/29/2013 19:13",

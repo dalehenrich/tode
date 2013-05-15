@@ -20,17 +20,20 @@ evaluate: aString
               pipedCommands
                 do: [ :pipedCommand | result := self evaluateCommand: pipedCommand ] ] ] ].
   ^ result ]
-    on: Error
+    on: Error , TDRestoreFromBackupComplete
     do: [ :ex | 
-      | errorMessage |
-      errorMessage := 'Topez ERROR: ' asText
-        ,
-          (Text
-            string: ex description
-            attributes:
-              {(TextColor red).
-              (TextEmphasis bold)}).
-      self class debugMode
-        ifTrue: [ self halt: errorMessage asString ].
-      self resetStack.
-      ^ errorMessage ]
+      (ex isKindOf: Error)
+        ifTrue: [ 
+          | errorMessage |
+          errorMessage := 'Topez ERROR: ' asText
+            ,
+              (Text
+                string: ex description
+                attributes:
+                  {(TextColor red).
+                  (TextEmphasis bold)}).
+          self class debugMode
+            ifTrue: [ self halt: errorMessage asString ].
+          self resetStack.
+          ^ errorMessage ].
+      ^ ex description ]
