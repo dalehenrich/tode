@@ -13,6 +13,7 @@
 		"topezClient",
 		"inputStream",
 		"actionStack",
+		"stateStack",
 		"promptString",
 		"shellWindow",
 		"shellId",

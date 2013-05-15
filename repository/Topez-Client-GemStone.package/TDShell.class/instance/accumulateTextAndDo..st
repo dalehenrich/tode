@@ -1,11 +1,12 @@
 evaluator engine
 accumulateTextAndDo: resultBlock
-  self actionStack
-    add:
+  self stateStack
+    addFirst:
       {inputStream.
-      (self promptString).
-      [ :input | 
+      (self promptString)}.
+  self actionStack
+    addLast: [ :input | 
       self exception: nil.
-      resultBlock value: input ]}.
+      resultBlock value: input ].
   inputStream := WriteStream on: String new.
   promptString := ''
