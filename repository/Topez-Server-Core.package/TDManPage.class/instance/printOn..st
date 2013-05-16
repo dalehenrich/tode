@@ -17,4 +17,13 @@ printOn: aStream
     lf;
     nextPutAll: '  ';
     nextPutAll: self description;
+    lf;
+    lf;
+    nextPutAll: 'SEE ALSO';
+    lf;
+    nextPutAll: '  ';
+    nextPutAll: self commandPath;
+    lf;
+    nextPutAll: '  ';
+    nextPutAll: self sourceMethod;
     lf

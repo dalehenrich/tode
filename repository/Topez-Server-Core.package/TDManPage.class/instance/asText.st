@@ -19,5 +19,14 @@ asText
     cr;
     nextPutAll: '  ';
     nextPutAll: self description;
+    cr;
+    cr;
+    nextPutAll: 'SEE ALSO' asText allBold;
+    cr;
+    nextPutAll: '  ';
+    nextPutAll: self commandPath;
+    cr;
+    nextPutAll: '  ';
+    nextPutAll: self sourceMethod;
     cr.
   ^ aStream contents

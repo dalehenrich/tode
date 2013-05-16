@@ -4,6 +4,7 @@ browseManPage
   browse - view class and method search results (see find)
 
 SYNOPSIS
+  browse amethod <method-spec>
   browse class <regex-pattern>
   browse diff <method1-spec> <method2-spec>
   browse method <selector>

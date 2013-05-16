@@ -5,6 +5,7 @@ findManPage
 
 SYNOPSIS
   find class <regex-pattern>
+  find amethod <method-spec> 
   find method <selector>
   find methods <method-spec> <method-spec>
   find references <variableOrGlobalNameOrPathRef>

@@ -20,4 +20,12 @@ writeMdOn: aStream
     lf;
     nextPutAll: '  ';
     nextPutAll: (self description copyReplaceAll: String lf with: lflf);
+    lf;
+    lf;
+    nextPutAll: '##SEE ALSO';
+    lf;
+    nextPutAll: '  ';
+    nextPutAll: self commandPath;
+    nextPutAll: '  ';
+    nextPutAll: self sourceMethod;
     lf

@@ -11,7 +11,11 @@ installOn: aTDTopezServer
         at: self commandPath.
       node
         manPage:
-          (TDManPage fromString: (self perform: (pragma argumentAt: 2)) in: self) ].
+          (TDManPage
+            fromString: (self perform: (pragma argumentAt: 2))
+            commandPath: self commandPath , '/bin/' , (pragma argumentAt: 1)
+            sourceMethod:
+              self name asString , ' class>>' , pragma selector asString) ].
   (Pragma allNamed: #'topezNode:' in: self class)
     do: [ :pragma | self perform: pragma selector with: aTDTopezServer ].
   (aTDTopezServer lookup: self commandPath)
