@@ -1,9 +1,8 @@
 as yet unclassified
 findMatchingPackages: pattern topez: aTopez
-  | regex pkgNode parser packages |
-  pkgNode := aTopez lookup: self pkgsPath.
-  packages := pkgNode basicContents value ifNil: [ ^ packages ].
+  | regex parser workingCopies |
+  workingCopies := MCWorkingCopy allManagers.
   parser := RxParser safelyParse: pattern.
-  parser ifNil: [ ^ packages ].
+  parser ifNil: [ ^ workingCopies ].
   regex := RxParser preferredMatcherClass for: parser ignoreCase: true.
-  ^ packages select: [ :pkg | regex search: pkg name ]
+  ^ workingCopies select: [ :wc | regex search: wc packageName ]

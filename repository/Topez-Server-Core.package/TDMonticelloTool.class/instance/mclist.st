@@ -15,7 +15,5 @@ mclist
     do: [ :pkg | 
       pkg displayOn: displayPolicy.
       stream cr ].
-  ^ TDCommandResult new
-    displayText: stream contents;
-    resultObject: list;
-    yourself
+  list editUsing: (TDEditorSpec topez: topez).
+  ^ list

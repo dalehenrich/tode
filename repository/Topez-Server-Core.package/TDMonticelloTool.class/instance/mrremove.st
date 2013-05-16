@@ -8,7 +8,7 @@ mrremove
 
   | repo workingCopy packageName |
   packageName := tokens at: 3.
-  workingCopy := workingCopy := self resolveWorkingCopyReference: packageName.
+  workingCopy := self resolveWorkingCopyReference: packageName.
   repo := self resolveRepositoryReference: (tokens at: 2).
   workingCopy repositoryGroup removeRepository: repo.
   ^ workingCopy

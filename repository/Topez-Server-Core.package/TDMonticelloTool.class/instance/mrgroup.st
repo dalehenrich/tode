@@ -19,5 +19,5 @@ mrgroup
       stream cr ].
   ^ TDCommandResult new
     displayText: stream contents;
-    resultObject: list;
+    resultObject: (list collect: [ :each | each repository ]);
     yourself

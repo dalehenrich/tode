@@ -2,6 +2,7 @@ as yet unclassified
 mcdirty
   "mc dirty"
 
-  | path |
-  path := self dirtyPath.
-  ^ (self topez lookup: path) dotSelfObject
+  | dirty |
+  dirty := MCWorkingCopy allManagers select: [ :wc | wc modified ].
+  dirty editUsing: (TDEditorSpec topez: topez).
+  ^ dirty

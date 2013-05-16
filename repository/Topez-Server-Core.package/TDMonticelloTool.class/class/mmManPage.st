@@ -4,9 +4,6 @@ mmManPage
   mm - metacello commands 
 
 SYNOPSIS
-  mm <command> [args]
-
-DESCRIPTION
   mm commit <config>
   mm diff [<config>]
   mm dirty
@@ -14,5 +11,6 @@ DESCRIPTION
   mm list [<config> [<config> ... ]]
 ?  mm load [image|new|registry] <config> [<config> ... ]
 
+DESCRIPTION
   image is default for [image|new|registry].
 '
