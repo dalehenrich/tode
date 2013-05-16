@@ -10,7 +10,8 @@ installOn: aTDTopezServer
         block: block
         at: self commandPath.
       node
-        manPage: (TDManPage fromString: (self perform: (pragma argumentAt: 2))) ].
+        manPage:
+          (TDManPage fromString: (self perform: (pragma argumentAt: 2)) in: self) ].
   (Pragma allNamed: #'topezNode:' in: self class)
     do: [ :pragma | self perform: pragma selector with: aTDTopezServer ].
   (aTDTopezServer lookup: self commandPath)

@@ -8,7 +8,8 @@
 	"instvars" : [
 		"summary",
 		"synopsis",
-		"description" ],
+		"description",
+		"implementationClassName" ],
 	"name" : "TDManPage",
 	"pools" : [
 		 ],

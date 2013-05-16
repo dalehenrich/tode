@@ -1,5 +1,5 @@
 as yet unclassified
-fromString: manPage
+fromString: manPage in: aClass
   | summaryIndex synopsisIndex descriptIndex |
   summaryIndex := 'NAME' size.
   synopsisIndex := manPage indexOfSubCollection: 'SYNOPSIS'.
@@ -13,4 +13,5 @@ fromString: manPage
     description:
         (manPage copyFrom: descriptIndex + 'DESCRIPTION' size to: manPage size)
             trimWhiteSpace;
+    implementationClassName: aClass name;
     yourself
