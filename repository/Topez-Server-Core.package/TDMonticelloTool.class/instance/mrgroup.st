@@ -11,13 +11,12 @@ mrgroup
     compacted: true;
     yourself.
   stream := displayPolicy stream.
-  list := self class
-    buildRepositoryList: workingCopy repositoryGroup repositories.
+  list := workingCopy repositoryGroup repositories.
   list
     do: [ :pkg | 
       pkg displayOn: displayPolicy.
       stream cr ].
   ^ TDCommandResult new
     displayText: stream contents;
-    resultObject: (list collect: [ :each | each repository ]);
+    resultObject: list;
     yourself

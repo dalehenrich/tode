@@ -2,5 +2,10 @@ as yet unclassified
 mmbcreate
   "mmb create <baseline-name>"
 
-  | baselineName |
-  baselineName := tokens at: 2
+  | baseName baselineName baselineClass |
+  baseName := tokens at: 2.
+  baselineName := MetacelloToolBox baselineNameFrom: baseName.
+  baselineClass := MetacelloPlatform current
+    globalNamed: baselineName asSymbol
+    ifAbsent: [ ^ MetacelloToolBox baselineNamed: baselineName ].
+  ^ baselineClass project
