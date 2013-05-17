@@ -1,4 +1,4 @@
 as yet unclassified
 objectTextAttributes
-    ^ {(TextColor color: Color brown).
-    (TextEmphasis bold)}
+  ^ {(TextColor color: Color brown).
+  (TextEmphasis bold)}

@@ -31,7 +31,7 @@
 		"historyManPage" : "dkh 03/28/2013 19:56",
 		"homeReadMe" : "dkh 12/21/2012 11:23",
 		"installExampleOn:" : "dkh 02/09/2013 18:05",
-		"installOn:" : "dkh 04/11/2013 20:05",
+		"installOn:" : "dkh 05/17/2013 07:37",
 		"installOptionsOn:" : "dkh 03/10/2013 09:30",
 		"limit" : "DataCurator 12/24/2012 08:37",
 		"limitManPage" : "dkh 04/04/2013 16:03",
@@ -66,7 +66,7 @@
 		"toolName" : "dkh 12/21/2012 11:26",
 		"toolReadMe" : "dkh 12/21/2012 11:23",
 		"touch" : "dkh 12/21/2012 11:24",
-		"touchManPage" : "dkh 04/04/2013 16:07",
+		"touchManPage" : "dkh 05/17/2013 08:01",
 		"view" : "DataCurator 01/25/2013 09:53",
 		"viewManPage" : "dkh 04/04/2013 16:08" },
 	"instance" : {
@@ -119,6 +119,6 @@
 		"shellInspect" : "dkh 04/11/2013 15:50",
 		"shellPrint" : "dkh 05/15/2013 19:44",
 		"ston" : "dkh 03/13/2013 21:09",
-		"touch" : "dkh 12/21/2012 11:23",
+		"touch" : "dkh 05/17/2013 07:05",
 		"undefinedSymbols" : "dkh 02/17/2013 11:15",
 		"view" : "dkh 04/11/2013 14:50" } }
