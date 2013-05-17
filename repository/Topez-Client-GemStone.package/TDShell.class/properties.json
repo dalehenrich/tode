@@ -16,6 +16,7 @@
 		"stateStack",
 		"promptString",
 		"shellWindow",
+		"console",
 		"shellId",
 		"autoCommit",
 		"adornmentColor",
