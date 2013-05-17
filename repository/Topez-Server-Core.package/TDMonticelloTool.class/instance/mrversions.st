@@ -17,7 +17,7 @@ mrversions
     ifAbsent: [ ^ 'No package named: ' , packageName printString , ' found.' ].
   displayPolicy := topez displayPolicy.
   stream := displayPolicy stream.
-  loadedVersions := self loadedVersions.
+  loadedVersions := self loadedVersions: true.
   loadedVersion := loadedVersions at: packageName ifAbsent: [  ].
   ancestorNames := #().
   loadedVersion notNil

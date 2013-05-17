@@ -99,9 +99,6 @@ installOn: aTDTopezServer
       for: TDLeafNode
       aspect: #'edit';
     registerEditorClass: TDClientSourceElementBuilder
-      for: TDObjectGatewayNode
-      aspect: #'edit';
-    registerEditorClass: TDClientSourceElementBuilder
       for: CharacterCollection
       aspect: #'edit';
     registerEditorClass: TDClientSourceElementBuilder for: Text aspect: #'edit';
@@ -113,6 +110,9 @@ installOn: aTDTopezServer
       aspect: #'edit';
     registerEditorClass: TDClientCodeElementBuilder
       for: TDSmalltalkLeafNode
+      aspect: #'edit';
+    registerEditorClass: TDClientCodeElementBuilder
+      for: TDObjectGatewayNode
       aspect: #'edit';
     registerEditorClass: TDClientTextElementBuilder
       for: TDTxtLeafNode
