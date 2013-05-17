@@ -19,7 +19,9 @@ findMethodSpec: findTokens
                   (methodSpecTokens at: 1) , ' ' , (methodSpecTokens at: 2) ]
             ifFalse: [ self error: 'expecting a <method spec>' ] ]
         ifFalse: [ self error: 'expecting a <method spec>' ] ].
-  methodRefs := {method}.
+  methodRefs := {(MethodReference
+    class: method inClass
+    selector: method selector)}.
   ^ self
     methodDefinitionsFor: methodRefs
     messagePattern: method selector
