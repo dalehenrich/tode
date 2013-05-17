@@ -5,7 +5,7 @@ bubackup
   "
 
   | backupPath |
-  backupPath := self resolveBackupPath: (tokens at: 2).
+  backupPath := (self resolveBackupPath: (tokens at: 2)) asString.
   Transcript
     cr;
     show: '---Starting backup to ' , backupPath printString , ' (';
@@ -17,7 +17,7 @@ bubackup
     to: [ :dirPath :filename | 
       (topez lookup: self homePath)
         addChildNode:
-          (TDSmalltalkLeafNode new
+          (TDTxtLeafNode new
             name: filename;
             contents:
                 '"' , TimeStamp now asString , '"' , backupPath printString;

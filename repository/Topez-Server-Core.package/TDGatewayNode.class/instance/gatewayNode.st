@@ -1,3 +1,3 @@
 as yet unclassified
 gatewayNode
-  ^ self responsibility
+  ^ self subclassResponsibility
