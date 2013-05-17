@@ -2,12 +2,12 @@ as yet unclassified
 find
   "
   find class <regex-pattern>
-  find method <selector>
+  find method [#]<selector>
   find methods <method-spec> <method-spec>
   find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
-  find sender <selector>
+  find sender [#]<selector>
   find source <regex-pattern>
   find versions <method-spec>
 "

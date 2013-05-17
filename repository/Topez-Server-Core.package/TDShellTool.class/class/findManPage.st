@@ -6,12 +6,12 @@ findManPage
 SYNOPSIS
   find class <regex-pattern>
   find amethod <method-spec> 
-  find method <selector>
+  find method [#]<selector>
   find methods <method-spec> <method-spec>
   find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
-  find sender <selector>
+  find sender [#]<selector>
   find source <regex-pattern>
   find versions <method-spec>
 
@@ -23,4 +23,6 @@ DESCRIPTION
   <variableOrGlobalNameOrPathRef>
     <identifier>
     @<path>
+
+  use `#` in front of selector to distinquish from shell operator (`>`).
 '
