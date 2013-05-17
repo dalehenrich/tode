@@ -33,6 +33,7 @@ SYNOPSIS
   mc halorm <name> 
   mc list [<regex-pkg-pattern>]
   mc load <version-name> <repository-spec>
+     load <version-name> @<repository-path>
 ?  mc merge <pkg-name> <repository-spec>
   mc recompile <pkg-name>
      recompile @<workingCopy-path>
