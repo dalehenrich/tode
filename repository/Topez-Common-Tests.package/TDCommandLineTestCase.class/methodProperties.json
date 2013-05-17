@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"assert:parsesInto:" : "dkh 5/16/2013 18:21",
+		"assert:shouldParse:into:" : "dkh 5/16/2013 19:19",
+		"test01" : "dkh 5/16/2013 19:41",
+		"test02" : "dkh 5/16/2013 19:47",
+		"test03" : "dkh 5/16/2013 19:34",
+		"test04" : "dkh 5/16/2013 19:46",
+		"test05" : "dkh 5/16/2013 19:48",
+		"test06" : "dkh 5/16/2013 19:50",
+		"test07" : "dkh 5/16/2013 19:51",
+		"test08" : "dkh 5/16/2013 19:52" } }

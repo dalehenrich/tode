@@ -10,23 +10,10 @@ evaluate: aString
       self actionStack notEmpty
         ifTrue: [ result := self accumulateText: line ]
         ifFalse: [ 
-          | isolatedCommands |
           self addToHistory: line.
-          isolatedCommands := line findTokens: ';'.
-          isolatedCommands
-            do: [ :isolatedCommand | 
-              | pipedCommands |
-              pipedCommands := isolatedCommand findTokens: '|'.
-              pipedCommands
-                do: [ :pipedCommand | 
-                  | redirectedCommands redirectedCommand redirectTarget |
-                  redirectedCommands := pipedCommand findTokens: '>'.
-                  redirectedCommand := redirectedCommands at: 1.
-                  redirectTarget := redirectedCommands size > 1
-                    ifTrue: [ redirectedCommands at: 2 ].
-                  result := self
-                    evaluateCommand: redirectedCommand
-                    redirectTarget: redirectTarget ] ] ] ].
+          TDCommandLine
+            line: line
+            forEachCommand: [ :command | result := self evaluateCommand: command ] ] ].
   ^ result ]
     on: Error , TDRestoreFromBackupComplete
     do: [ :ex | 
