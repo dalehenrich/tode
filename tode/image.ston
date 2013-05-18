@@ -1,77 +1,34 @@
-TDDirectoryNode{#name:'image',#contents:{'backupFile':TDTxtLeafNode{#name:'backupFile',#contents:Text{#string:'/opt/gemstone/product32/seaside/data/backups/backupTest.dbf',#runs:RunArray{#runs:[59],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:59,#lastRun:1,#lastOffset:58}}},'exportFile':TDTxtLeafNode{#name:'exportFile',#contents:Text{#string:'/opt/git/tode/tode/image.ston',#runs:RunArray{#runs:[29],#values:[[]],#lastIndex:29,#lastRun:1,#lastOffset:28}}},'bin':TDDirectoryNode{#name:'bin',#contents:{'commit':TDScriptLeafNode{#name:'commit',#contents:'[ :topez :objIn :tokens :windowId | 
-| commitMessage active commitMessageNode |
-commitMessage := (topez currentNode
-  childNamed: \'commitMessage\'
-  ifAbsent: [ nil error: \'Cannot find `commitMessage` node\' ]) dotSelfObject.
-active := topez currentNode
-  childNamed: \'active\'
-  ifAbsent: [ nil error: \'Cannot find `active` node\' ].
-commitMessageNode := (topez lookup: \'tmp\')
-  addChildNode:
-    (TDTxtLeafNode new
-      name: \'commitMessage\';
-      contents: commitMessage;
-      yourself).
-active dotSelfObject
-  do: [ :projectName | 
-    | nodeName projectNode projectSpec |
-    Transcript
-      cr;
-      show: \'Committing: \' , projectName.
-    nodeName := projectName , \'/project\'.
-    projectNode := topez lookup: nodeName.
-    projectSpec := projectNode dotSelfObject.
-    true
-      ifTrue: [ 
-        topez
-          evaluateTopezScript:
-            \'mm commit \' , projectSpec name , \' @tmp/commitMessage\' ] ] ]'},'backup':TDScriptLeafNode{#name:'backup',#contents:'[ :topez :objIn :tokens :windowId | 
-| stream active statusNode |
-stream := TextStream on: Text new.
-stream
-  nextPutAll: \'BACKUP: \' asText allBold , DateAndTime now printString;
-  cr;
-  cr.
-active := topez currentNode
-  childNamed: \'active\'
-  ifAbsent: [ nil error: \'Cannot find `active` node\' ].
-active dotSelfObject
-  do: [ :projectName | 
-    stream
-      nextPutAll: (topez lookup: projectName , \'/STATUS\') contents;
-      cr;
-      cr ].
-statusNode := topez currentNode
-  addChildNode:
-    (TDTxtLeafNode new
-      name: \'STATUS\';
-      contents: stream contents;
-      yourself).
-true
-  ifTrue: [ topez evaluateTopezScript: \'bu backup @backupFile\' ].
-statusNode ]'},'diff':TDScriptLeafNode{#name:'diff',#contents:'[ :topez :objIn :tokens :windowId | 
-| active script|
-active := topez currentNode
-  childNamed: \'active\'
-  ifAbsent: [ nil error: \'Cannot find `active` node\' ].
-\tscript := \'mm diff \'.
-active dotSelfObject
-  do: [ :projectName | 
-    | nodeName projectNode projectSpec |
-    nodeName := projectName , \'/project\'.
-    projectNode := topez lookup: nodeName.
-    projectSpec := projectNode dotSelfObject.
-     script := script , projectSpec name,\' \' ].
-\ttopez evaluateTopezScript: script ]'},'export':TDScriptLeafNode{#name:'export',#contents:'[ :topez :objIn :tokens :windowId | 
-Transcript
-  cr;
-  show: \'Export: \' ,  DateAndTime now printString.
-STONWriter
-  plainTextNewlinesDuring: [ topez evaluateTopezScript: \'ston export . @exportFile\' ] ]'},'import':TDScriptLeafNode{#name:'import',#contents:'[ :topez :objIn :tokens :windowId | 
-Transcript
-  cr;
-  show: \'Import: \' , DateAndTime now printString.
- topez evaluateTopezScript: \'ston import . @exportFile\'  ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-17T21:43:03.66227602958679-07:00
+TDDirectoryNode{#name:'image',#contents:{'backupFile':TDTxtLeafNode{#name:'backupFile',#contents:Text{#string:'/opt/gemstone/product32/seaside/data/backups/tode.dbf',#runs:RunArray{#runs:[53],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:49,#lastRun:1,#lastOffset:48}}},'exportFile':TDTxtLeafNode{#name:'exportFile',#contents:Text{#string:'/opt/git/tode/tode/image.ston',#runs:RunArray{#runs:[29],#values:[[]],#lastIndex:29,#lastRun:1,#lastOffset:28}}},'bin':TDDirectoryNode{#name:'bin',#contents:{'commit':TDScriptLeafNode{#name:'commit',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) commit ]'},'backup':TDScriptLeafNode{#name:'backup',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) backup ]'},'diff':TDScriptLeafNode{#name:'diff',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) diff ]'},'export':TDScriptLeafNode{#name:'export',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) export ]'},'import':TDScriptLeafNode{#name:'import',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) import ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-18T08:44:45.46752190589905-07:00
 
 project Metacello
 version baseline
@@ -89,19 +46,19 @@ version baseline
 loads nil
 repo filetree:///opt/git/tode/repository
 directory /opt/git/tode
-commit 5cdaee0cbfd5016dfaee480edd07c30b70f4bd91
+commit c5c3953207e9754a0b99eb5c8f4d8429bfdd0928
 Author: Dale Henrichs <dhenrich@vmware.com>
-Date:   Fri May 17 19:46:07 2013 -0700
+Date:   Sat May 18 08:42:57 2013 -0700
 
-    tweak ston command to support import/export commands
+    refactor TDAbstractDevTool hierarchy a bit to accommodate the addition of TDDevProcessSupport ... added TDStandardTool above the tools to house the code related to installing generally available commands, commands defined in TDDevProcessSupport have to be invoked directly, but the code and manPages deserve to be managed in a class... sticking code for the image dev support into TDDevProcessSupport ... share some common commit code in TDMonticelloTool ... preparing for revising the commit commands a bit (maybe?)
 
-',#runs:RunArray{#runs:[8,657],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}},'rb':TDDirectoryNode{#name:'rb',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+',#runs:RunArray{#runs:[8,362,759],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}},'rb':TDDirectoryNode{#name:'rb',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   baseline: \'RB\';
   list'}}},'filetree':TDDirectoryNode{#name:'filetree',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   baseline: \'FileTree\';
   list'}}},'active':TDObjectGatewayNode{#name:'active',#contents:'#(\'metacello\' \'tode\')'},'indexing':TDDirectoryNode{#name:'indexing',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   baseline: \'Indexing\';
-  list'}}},'tmp':TDDirectoryNode{#name:'tmp',#contents:{'commitMessage':TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'add commit-message-path to mm commit command. all list of configs for mm diff command. Use TDCommandLine for script execution.',#runs:RunArray{#runs:[126],#values:[[]],#lastIndex:126,#lastRun:1,#lastOffset:125}}}}},'glass':TDDirectoryNode{#name:'glass',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  list'}}},'tmp':TDDirectoryNode{#name:'tmp',#contents:{}},'glass':TDDirectoryNode{#name:'glass',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   configuration: \'GLASS\';
   list'}}},'metacello':TDDirectoryNode{#name:'metacello',#contents:{'gemsource':TDObjectGatewayNode{#name:'gemsource',#contents:'(TDMonticelloRepository
   fromDescription: \'http://seaside.gemstone.com/ss/metacello\') repository'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository
@@ -122,88 +79,23 @@ Date:   Wed May 15 21:40:00 2013 -0700
   baseline: \'Ston\';
   list'}}},'tode':TDDirectoryNode{#name:'tode',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   baseline: \'Tode\';
-  list'},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:'project Tode
+  list'},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'project Tode
 version baseline
 loads nil
 repo filetree:///opt/git/tode/repository
 directory /opt/git/tode
-commit 5cdaee0cbfd5016dfaee480edd07c30b70f4bd91
+commit c5c3953207e9754a0b99eb5c8f4d8429bfdd0928
 Author: Dale Henrichs <dhenrich@vmware.com>
-Date:   Fri May 17 19:46:07 2013 -0700
+Date:   Sat May 18 08:42:57 2013 -0700
 
-    tweak ston command to support import/export commands'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository fromDescription: \'filetree:///opt/git/tode/repository\')
-  repository'}}},'projects':TDObjectGatewayNode{#name:'projects',#contents:'#(\'filetree\' \'glass\' \'indexing\' \'metacello\' \'rb\' \'ston\' \'tode\')'},'README':TDTxtLeafNode{#name:'README',#contents:Text{#string:'./active
---------
+    refactor TDAbstractDevTool hierarchy a bit to accommodate the addition of TDDevProcessSupport ... added TDStandardTool above the tools to house the code related to installing generally available commands, commands defined in TDDevProcessSupport have to be invoked directly, but the code and manPages deserve to be managed in a class... sticking code for the image dev support into TDDevProcessSupport ... share some common commit code in TDMonticelloTool ... preparing for revising the commit commands a bit (maybe?)',#runs:RunArray{#runs:[757],#values:[@33],#lastIndex:757,#lastRun:1,#lastOffset:756}}},'INFO':TDTxtLeafNode{#name:'INFO',#contents:'project Tode
+version baseline
+loads nil
+repo filetree:///opt/git/tode/repository
+directory /opt/git/tode
+commit c5c3953207e9754a0b99eb5c8f4d8429bfdd0928
+Author: Dale Henrichs <dhenrich@vmware.com>
+Date:   Sat May 18 08:42:57 2013 -0700
 
-  Identifies the active projects in this node. 
-
-./backupFile
-------------
-
-  Full path on disk to backup file. Use by both `./bin/backup` and `./bin/restore`.
-
-./bin/backup
-----------
-
-  Runs GemStone backup into file listed in `./backupFile` node. 
-
-  `./active` list is used to determine which active projects are to be included 
-  in the `STATUS` report.
-
-./bin/commit
-------------
-
-  Commit dirty packages for active projects. Get commit message from 
-  `./commitMessage`.
-
-./bin/diff
-----------
-
-  Open diff window for dirty packages in active projects.
-
-./bin/export
-------------
-
-  Export image node structure.
-
-  `./exportFile` identifies disk location for export .ston output
-
-./bin/import
-------------
-
-  Import image node structure.
-
-  `./exportFile` identifies disk location for export .ston output
-
-./commitMessage
-------------
-
-  see `./bin/commit`
-
-./exportFile
-------------
-
-  Full path on disk for import.ston file.
-
-./projects
-----------
-
-  Identifies the nodes that represent projects whether active or passive. 
-
-./<project-name>/project
-------------------------
-
-  MetacelloMCProjectSpec instance representing the project.
-  
-./<project-name>/repo
----------------------
-
-  MCRepository instance that represents the primary repository used by the project.
-  Should probably correspond to one of the repositories in the project spec.
-
-./<project-name>/STATUS
------------------------
-
-  Information about the last commit made for this project. For git repositories
-  includes the SHA of the commit.
-',#runs:RunArray{#runs:[1537],#values:[[]],#lastIndex:869,#lastRun:1,#lastOffset:868}}},'commitMessage':TDTxtLeafNode{#name:'commitMessage',#contents:@46}}}
+    refactor TDAbstractDevTool hierarchy a bit to accommodate the addition of TDDevProcessSupport ... added TDStandardTool above the tools to house the code related to installing generally available commands, commands defined in TDDevProcessSupport have to be invoked directly, but the code and manPages deserve to be managed in a class... sticking code for the image dev support into TDDevProcessSupport ... share some common commit code in TDMonticelloTool ... preparing for revising the commit commands a bit (maybe?)'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository fromDescription: \'filetree:///opt/git/tode/repository\')
+  repository'}}},'projects':TDObjectGatewayNode{#name:'projects',#contents:'#(\'filetree\' \'glass\' \'indexing\' \'metacello\' \'rb\' \'ston\' \'tode\')'},'commitMessage':TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'refactor TDAbstractDevTool hierarchy a bit to accommodate the addition of TDDevProcessSupport ... added TDStandardTool above the tools to house the code related to installing generally available commands, commands defined in TDDevProcessSupport have to be invoked directly, but the code and manPages deserve to be managed in a class... sticking code for the image dev support into TDDevProcessSupport ... share some common commit code in TDMonticelloTool ... preparing for revising the commit commands a bit (maybe?)',#runs:RunArray{#runs:[516],#values:[[]],#lastIndex:332,#lastRun:1,#lastOffset:331}}}}}
