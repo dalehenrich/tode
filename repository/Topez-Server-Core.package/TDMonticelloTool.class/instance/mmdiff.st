@@ -1,6 +1,6 @@
 as yet unclassified
 mmdiff
-  "mm diff [<config>]"
+  "mm diff [<config-list>]"
 
   | registrations projectSpec dirty stream empty patch |
   registrations := tokens size = 1
@@ -17,7 +17,9 @@ mmdiff
                 ifTrue: [ false ]
                 ifFalse: [ wc modified ] ]
             ifNone: [  ]) notNil ] ]
-    ifFalse: [ {(self getRegistrationFor: (tokens at: 2))} ].
+    ifFalse: [ 
+      (tokens copyFrom: 2 to: tokens size)
+        collect: [ :config | self getRegistrationFor: config ] ].
   stream := TextStream on: Text new.
   empty := true.
   registrations

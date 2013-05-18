@@ -1,6 +1,6 @@
 as yet unclassified
 mmcommit
-  "mm commit <config>"
+  "mm commit <config> [@<commit-message-path>]"
 
   | registration projectSpec dirty |
   registration := self getRegistrationFor: (tokens at: 2).
@@ -8,39 +8,16 @@ mmcommit
   dirty := self modifiedPackagesForProjectSpec: projectSpec.
   dirty isEmpty
     ifTrue: [ ^ 'No modified packages to commit' ].
+  tokens size > 2
+    ifTrue: [ 
+      | commitMessage |
+      commitMessage := tokens at: 3.
+      (commitMessage beginsWith: '@')
+        ifTrue: [ 
+          commitMessage := self resolveAtPathReference: commitMessage.
+          ^ self commitPackages: dirty commitMessage: commitMessage ] ].
   topez
-    accumulateTextAndDo: [ :commitMessage :accumulateObjIn | 
-      | cacheRepository committedPackages |
-      cacheRepository := MCCacheRepository default.
-      committedPackages := Array new.
-      dirty
-        do: [ :pkgSpec | 
-          | gofer repositoryList packageSpec wc info repositories targetRepos |
-          wc := pkgSpec workingCopy.
-          repositories := wc repositoryGroup repositories
-            reject: [ :repo | repo = cacheRepository ].
-          targetRepos := #().
-          wc ancestors isEmpty not
-            ifTrue: [ 
-              info := wc ancestors first.
-              targetRepos := repositories
-                select: [ :repo | (repo versionWithInfo: info) notNil ] ].
-          targetRepos isEmpty
-            ifTrue: [ targetRepos := repositories ].
-          gofer := Gofer new.
-          gofer disablePackageCache.
-          targetRepos
-            do: [ :repository | 
-              Transcript
-                cr;
-                show:
-                    'Using ' , repository description printString , ' for '
-                        , pkgSpec name printString.
-              gofer repository: repository ].
-          gofer package: pkgSpec name.
-          gofer commit: commitMessage.
-          committedPackages add: pkgSpec name ].
-      committedPackages ].
+    accumulateTextAndDo: [ :commitMessage :accumulateObjIn | self commitPackages: dirty commitMessage: commitMessage ].
   ^ TDCommandResult new
     displayText: 'Please enter commit comment' asText allBold;
     resultObject: 'Please enter commit comment';
