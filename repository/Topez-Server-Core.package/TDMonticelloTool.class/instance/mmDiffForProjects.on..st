@@ -4,20 +4,18 @@ mmDiffForProjects: projectSpecs on: stream
   patches := Array new.
   projectSpecs
     do: [ :projectSpec | 
+      | packageSpecs |
       stream
         nextPutAll:
             ('____________________ ' , projectSpec name , ' ____________________') asText
                 allBold;
         cr.
-      self
-        patchesForProject: projectSpec
-        do: [ :wc :patch | 
-          stream
-            nextPutAll:
-                ('==================== ' , wc packageName , ' ====================') asText
-                    allBold;
-            cr.
-          self diffPatch: patch forWorkingCopy: wc on: stream.
+      packageSpecs := self modifiedPackagesForProjectSpec: projectSpec.
+      packageSpecs
+        do: [ :packageSpec | 
+          | wc patch |
+          wc := packageSpec workingCopy.
+          patch := self mmDiffForWorkingCopy: wc on: stream.
           patches
             add:
               {wc.

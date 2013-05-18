@@ -4,7 +4,7 @@ mcdiff
       diff @<workingCopy-path>
   "
 
-  | pattern stream wcNode workingCopyList patch |
+  | pattern stream workingCopyList patches |
   workingCopyList := tokens size = 1
     ifTrue: [ objIn ]
     ifFalse: [ 
@@ -18,14 +18,12 @@ mcdiff
           wcOrCollection ]
         ifFalse: [ self findMatchingPackages: pattern topez: topez ] ].
   stream := TextStream on: Text new.
-  workingCopyList
-    do: [ :workingCopy | 
-      stream
-        nextPutAll:
-            ('==================== ' , workingCopy name , ' ====================') asText
-                allBold;
-        cr.
-      patch := self compareChangesFor: workingCopy on: stream.
-      stream cr ].
+  patches := workingCopyList
+    collect: [ :workingCopy | 
+      | patch |
+      patch := self mmDiffForWorkingCopy: workingCopy on: stream.
+      stream cr.
+      {workingCopy.
+      patch} ].
   stream contents editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
-  ^ patch
+  ^ patches
