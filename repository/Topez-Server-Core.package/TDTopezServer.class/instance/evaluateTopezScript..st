@@ -1,5 +1,7 @@
 accessing
 evaluateTopezScript: topezScript
+  "you know, you should be using #toolInstanceFor:, instead"
+
   | line stream result startingSize originalEvaluating |
   [ 
   startingSize := self scriptActionStack size.

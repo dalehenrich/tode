@@ -5,7 +5,7 @@ commitWorkingCopies: workingCopies commitMessage: commitMessage
   committedPackages := Array new.
   workingCopies
     do: [ :wc | 
-      | gofer repositoryList packageSpec info repositories targetRepos |
+      | committed info repositories targetRepos |
       repositories := wc repositoryGroup repositories
         reject: [ :repo | repo = cacheRepository ].
       targetRepos := #().
@@ -16,17 +16,9 @@ commitWorkingCopies: workingCopies commitMessage: commitMessage
             select: [ :repo | (repo versionWithInfo: info) notNil ] ].
       targetRepos isEmpty
         ifTrue: [ targetRepos := repositories ].
-      gofer := Gofer new.
-      gofer disablePackageCache.
-      targetRepos
-        do: [ :repository | 
-          Transcript
-            cr;
-            show:
-                'Using ' , repository description printString , ' for '
-                    , wc packageName printString.
-          gofer repository: repository ].
-      gofer package: wc packageName.
-      gofer commit: commitMessage.
-      committedPackages add: wc packageName ].
+      committed := self
+        commitWorkingCopies: {wc}
+        repos: targetRepos
+        commitMessage: commitMessage.
+      committedPackages addAll: committed ].
   ^ committedPackages
