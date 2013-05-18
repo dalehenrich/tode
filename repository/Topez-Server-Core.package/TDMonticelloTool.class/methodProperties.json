@@ -34,7 +34,8 @@
 		"workingCopiesNode:" : "DataCurator 12/25/2012 07:35",
 		"workingCopyNode:" : "DataCurator 01/25/2013 10:09" },
 	"instance" : {
-		"commitPackages:commitMessage:" : "dkh 05/17/2013 21:02",
+		"commitPackages:commitMessage:" : "dkh 05/18/2013 07:02",
+		"commitWorkingCopies:commitMessage:" : "dkh 05/18/2013 07:03",
 		"compareChangesFor:on:" : "dkh 04/08/2013 10:23",
 		"dirtyPath" : "DataCurator 12/25/2012 09:02",
 		"findMatchingPackages:topez:" : "dkh 05/15/2013 19:01",
@@ -45,7 +46,7 @@
 		"mcadopt" : "dkh 05/13/2013 11:21",
 		"mcancestors" : "dkh 05/15/2013 18:46",
 		"mcbrowse" : "dkh 05/12/2013 09:19",
-		"mccommit" : "dkh 05/13/2013 11:17",
+		"mccommit" : "dkh 05/18/2013 07:04",
 		"mccompare" : "dkh 05/13/2013 11:39",
 		"mccopy" : "dkh 05/13/2013 11:45",
 		"mccreate" : "dkh 03/10/2013 11:43",

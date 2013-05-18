@@ -11,5 +11,5 @@
 	"name" : "TDProcessTool",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractDevTool",
+	"super" : "TDStandardTool",
 	"type" : "normal" }

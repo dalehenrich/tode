@@ -5,7 +5,7 @@ buinfo
   "
 
   | backupPath copyDbfCommand |
-  backupPath := self resolveBackupPath: (tokens at: 2).
+  backupPath := (self resolveBackupPath: (tokens at: 2)) asString.
   copyDbfCommand := (GsFile _expandEnvVariable: 'GEMSTONE' isClient: false)
     , '/bin/copyDbf -i ' , backupPath.
   ^ System performOnServer: copyDbfCommand

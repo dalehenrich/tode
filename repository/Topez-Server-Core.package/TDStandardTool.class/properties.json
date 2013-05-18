@@ -1,16 +1,14 @@
 {
 	"category" : "Topez-Server-Core",
 	"classinstvars" : [
-		"listLimit",
-		"displayOops",
-		"characterLimit" ],
+		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TDShellTool",
+	"name" : "TDStandardTool",
 	"pools" : [
 		 ],
-	"super" : "TDStandardTool",
+	"super" : "TDAbstractDevTool",
 	"type" : "normal" }
