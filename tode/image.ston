@@ -27,7 +27,11 @@ Transcript
   cr;
   show: \'Export: \' ,  DateAndTime now printString.
 STONWriter
-  plainTextNewlinesDuring: [ topez evaluateTopezScript: \'ston export . @exportFile\' ] ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-17T17:12:40.17765188217163-07:00
+  plainTextNewlinesDuring: [ topez evaluateTopezScript: \'ston export . @exportFile\' ] ]'},'import':TDScriptLeafNode{#name:'import',#contents:'[ :topez :objIn :tokens :windowId | 
+Transcript
+  cr;
+  show: \'Import: \' , DateAndTime now printString.
+ topez evaluateTopezScript: \'ston import . @exportFile\'  ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-17T17:12:40.17765188217163-07:00
 
 project Metacello
 version baseline
