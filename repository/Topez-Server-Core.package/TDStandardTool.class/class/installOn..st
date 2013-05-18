@@ -8,6 +8,7 @@ installOn: aTDTopezServer
       node := aTDTopezServer
         installCommand: (pragma argumentAt: 1)
         block: block
+        vendor: self
         at: self commandPath.
       node
         manPage:

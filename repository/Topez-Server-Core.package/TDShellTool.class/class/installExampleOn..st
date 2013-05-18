@@ -17,7 +17,8 @@ installExampleOn: aTDTopezServer
                         string: 'REAL'
                         attributes:
                           {(TextColor red).
-                          (TextEmphasis bold)}) , ' text.' asText;
+                          (TextEmphasis bold)})
+                    , ' text.' asText;
             yourself);
     addChildNode:
         (TDTxtLeafNode new
@@ -38,7 +39,25 @@ installExampleOn: aTDTopezServer
         (TDScriptLeafNode new
             name: 'script';
             block: [ :topez :objIn :tokens :windowId | 'hello world' ];
-            yourself);
+            blockVendor: self;
+            manPage:
+                (TDManPage
+                    fromString:
+                      'NAME
+  script - simple demo of a topez script
+
+SYNOPSIS
+  script
+
+DESCRIPTION
+  Does a ''hello world'' to start. Edit the source for the script to change it''s 
+  behavior. To create another script try:
+
+    touch sh <script-name>
+'
+                    commandPath: '/home/script'
+                    sourceMethod:
+                      self name asString , ' class>>installExampleOn:') yourself);
     yourself.
   (aTDTopezServer lookup: self commandPath)
     addChildNode:

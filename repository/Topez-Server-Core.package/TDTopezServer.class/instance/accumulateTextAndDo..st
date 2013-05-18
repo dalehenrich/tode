@@ -17,9 +17,9 @@ accumulateTextAndDo: accumulateBlock
       ^ self ].
   redirectCopy := redirectTarget copy.
   redirectTarget := nil.
-  block := [ :doitString :objectIn | 
+  block := [ :doitString :accumulateObjIn | 
   | res |
-  res := accumulateBlock value: doitString value: objectIn value.
+  res := accumulateBlock value: doitString value: accumulateObjIn.
   self redirectObjIn: redirectCopy.
   res ].
   self accumulateBlocks add: block.

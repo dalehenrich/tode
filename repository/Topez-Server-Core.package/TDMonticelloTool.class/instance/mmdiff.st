@@ -2,7 +2,7 @@ as yet unclassified
 mmdiff
   "mm diff [<config-list>]"
 
-  | registrations projectSpec dirty stream empty patch |
+  | registrations stream patches projectSpecs |
   registrations := tokens size = 1
     ifTrue: [ 
       self mmlist
@@ -20,28 +20,11 @@ mmdiff
     ifFalse: [ 
       (tokens copyFrom: 2 to: tokens size)
         collect: [ :config | self getRegistrationFor: config ] ].
+  projectSpecs := registrations
+    collect: [ :registration | registration lookupBaselineSpec ].
   stream := TextStream on: Text new.
-  empty := true.
-  registrations
-    do: [ :registration | 
-      projectSpec := registration lookupBaselineSpec.
-      stream
-        nextPutAll:
-            ('____________________ ' , projectSpec name , ' ____________________') asText
-                allBold;
-        cr.
-      dirty := self modifiedPackagesForProjectSpec: projectSpec.
-      dirty
-        do: [ :packageSpec | 
-          empty := false.
-          stream
-            nextPutAll:
-                ('==================== ' , packageSpec name , ' ====================') asText
-                    allBold;
-            cr.
-          patch := self compareChangesFor: packageSpec workingCopy on: stream.
-          stream cr ] ].
-  empty
+  patches := self mmDiffForProjects: projectSpecs on: stream.
+  patches isEmpty
     ifTrue: [ ^ 'No dirty packages' asText allBold ].
   stream contents editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
-  ^ patch
+  ^ patches

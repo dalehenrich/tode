@@ -1,6 +1,6 @@
 as yet unclassified
 backup
-  | stream active statusNode |
+  | stream active statusNode tool backupFileNode |
   stream := TextStream on: Text new.
   stream
     nextPutAll: 'BACKUP: ' asText allBold , DateAndTime now printString;
@@ -19,6 +19,7 @@ backup
         name: 'STATUS';
         contents: stream contents;
         yourself).
-  true
-    ifTrue: [ topez evaluateTopezScript: 'bu backup @backupFile' ].
+  tool := topez toolInstanceFor: 'bu'.
+  backupFileNode := self backupFileNode.
+  tool buBackup: backupFileNode dotSelfObject asString.
   ^ statusNode
