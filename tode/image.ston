@@ -1,4 +1,31 @@
-TDDirectoryNode{#name:'image',#contents:{'backupFile':TDTxtLeafNode{#name:'backupFile',#contents:Text{#string:'/opt/gemstone/product32/seaside/data/backups/backupTest.dbf',#runs:RunArray{#runs:[59],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:59,#lastRun:1,#lastOffset:58}}},'exportFile':TDTxtLeafNode{#name:'exportFile',#contents:Text{#string:'/opt/git/tode/tode/image.ston',#runs:RunArray{#runs:[29],#values:[[]],#lastIndex:29,#lastRun:1,#lastOffset:28}}},'bin':TDDirectoryNode{#name:'bin',#contents:{'backup':TDScriptLeafNode{#name:'backup',#contents:'[ :topez :objIn :tokens :windowId | 
+TDDirectoryNode{#name:'image',#contents:{'backupFile':TDTxtLeafNode{#name:'backupFile',#contents:Text{#string:'/opt/gemstone/product32/seaside/data/backups/backupTest.dbf',#runs:RunArray{#runs:[59],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:59,#lastRun:1,#lastOffset:58}}},'exportFile':TDTxtLeafNode{#name:'exportFile',#contents:Text{#string:'/opt/git/tode/tode/image.ston',#runs:RunArray{#runs:[29],#values:[[]],#lastIndex:29,#lastRun:1,#lastOffset:28}}},'bin':TDDirectoryNode{#name:'bin',#contents:{'commit':TDScriptLeafNode{#name:'commit',#contents:'[ :topez :objIn :tokens :windowId | 
+| commitMessage active commitMessageNode |
+commitMessage := (topez currentNode
+  childNamed: \'commitMessage\'
+  ifAbsent: [ nil error: \'Cannot find `commitMessage` node\' ]) dotSelfObject.
+active := topez currentNode
+  childNamed: \'active\'
+  ifAbsent: [ nil error: \'Cannot find `active` node\' ].
+commitMessageNode := (topez lookup: \'tmp\')
+  addChildNode:
+    (TDTxtLeafNode new
+      name: \'commitMessage\';
+      contents: commitMessage;
+      yourself).
+active dotSelfObject
+  do: [ :projectName | 
+    | nodeName projectNode projectSpec |
+    Transcript
+      cr;
+      show: \'Committing: \' , projectName.
+    nodeName := projectName , \'/project\'.
+    projectNode := topez lookup: nodeName.
+    projectSpec := projectNode dotSelfObject.
+    true
+      ifTrue: [ 
+        topez
+          evaluateTopezScript:
+            \'mm commit \' , projectSpec name , \' @tmp/commitMessage\' ] ] ]'},'backup':TDScriptLeafNode{#name:'backup',#contents:'[ :topez :objIn :tokens :windowId | 
 | stream active statusNode |
 stream := TextStream on: Text new.
 stream
@@ -7,7 +34,7 @@ stream
   cr.
 active := topez currentNode
   childNamed: \'active\'
-  ifAbsent: [ nil error: \'Cannot fine `active` node\' ].
+  ifAbsent: [ nil error: \'Cannot find `active` node\' ].
 active dotSelfObject
   do: [ :projectName | 
     stream
@@ -22,7 +49,20 @@ statusNode := topez currentNode
       yourself).
 true
   ifTrue: [ topez evaluateTopezScript: \'bu backup @backupFile\' ].
-statusNode ]'},'export':TDScriptLeafNode{#name:'export',#contents:'[ :topez :objIn :tokens :windowId | 
+statusNode ]'},'diff':TDScriptLeafNode{#name:'diff',#contents:'[ :topez :objIn :tokens :windowId | 
+| active script|
+active := topez currentNode
+  childNamed: \'active\'
+  ifAbsent: [ nil error: \'Cannot find `active` node\' ].
+\tscript := \'mm diff \'.
+active dotSelfObject
+  do: [ :projectName | 
+    | nodeName projectNode projectSpec |
+    nodeName := projectName , \'/project\'.
+    projectNode := topez lookup: nodeName.
+    projectSpec := projectNode dotSelfObject.
+     script := script , projectSpec name,\' \' ].
+\ttopez evaluateTopezScript: script ]'},'export':TDScriptLeafNode{#name:'export',#contents:'[ :topez :objIn :tokens :windowId | 
 Transcript
   cr;
   show: \'Export: \' ,  DateAndTime now printString.
@@ -31,7 +71,7 @@ STONWriter
 Transcript
   cr;
   show: \'Import: \' , DateAndTime now printString.
- topez evaluateTopezScript: \'ston import . @exportFile\'  ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-17T19:47:37.43294596672058-07:00
+ topez evaluateTopezScript: \'ston import . @exportFile\'  ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-17T21:43:03.66227602958679-07:00
 
 project Metacello
 version baseline
@@ -57,60 +97,12 @@ Date:   Fri May 17 19:46:07 2013 -0700
 
 ',#runs:RunArray{#runs:[8,657],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}},'rb':TDDirectoryNode{#name:'rb',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   baseline: \'RB\';
-  list'}}},'README':TDTxtLeafNode{#name:'README',#contents:Text{#string:'./active
---------
-
-  Identifies the active projects in this node. 
-
-./backupFile
-------------
-
-  Full path on disk to backup file. Use by both `./bin/backup` and `./bin/restore`.
-
-./bin/backup
-----------
-
-  Runs GemStone backup into file listed in `./backupFile` node. 
-
-  `./active` list is used to determine which active projects are to be included 
-  in the `STATUS` report.
-
-./projects
-----------
-
-  Identifies the nodes that represent projects whether active or passive. 
-
-./<project-name>/project
-------------------------
-
-  MetacelloMCProjectSpec instance representing the project.
-  
-./<project-name>/repo
----------------------
-
-  MCRepository instance that represents the primary repository used by the project.
-  Should probably correspond to one of the repositories in the project spec.
-
-./<project-name>/STATUS
------------------------
-
-  Information about the last commit made for this project. For git repositories
-  includes the SHA of the commit.
-',#runs:RunArray{#runs:[962],#values:[[]],#lastIndex:474,#lastRun:1,#lastOffset:473}}},'filetree':TDDirectoryNode{#name:'filetree',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  list'}}},'filetree':TDDirectoryNode{#name:'filetree',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   baseline: \'FileTree\';
   list'}}},'active':TDObjectGatewayNode{#name:'active',#contents:'#(\'metacello\' \'tode\')'},'indexing':TDDirectoryNode{#name:'indexing',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   baseline: \'Indexing\';
-  list'}}},'tmp':TDDirectoryNode{#name:'tmp',#contents:{'status':TDDirectoryNode{#name:'status',#contents:{'INFO':TDTxtLeafNode{#name:'INFO',#contents:'project Tode
-version baseline
-loads nil
-repo filetree:///opt/git/tode/repository
-directory /opt/git/tode
-commit fa39b4011c1f981f94a61904cf07bdbcf7d54fe2
-Author: Dale Henrichs <dhenrich@vmware.com>
-Date:   Fri May 17 14:25:54 2013 -0700
-
-    gateway tweaks ... tiner with mr packages command to more information in result array'}}}}},'glass':TDDirectoryNode{#name:'glass',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
-  baseline: \'GLASS\';
+  list'}}},'tmp':TDDirectoryNode{#name:'tmp',#contents:{'commitMessage':TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'add commit-message-path to mm commit command. all list of configs for mm diff command. Use TDCommandLine for script execution.',#runs:RunArray{#runs:[126],#values:[[]],#lastIndex:126,#lastRun:1,#lastOffset:125}}}}},'glass':TDDirectoryNode{#name:'glass',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  configuration: \'GLASS\';
   list'}}},'metacello':TDDirectoryNode{#name:'metacello',#contents:{'gemsource':TDObjectGatewayNode{#name:'gemsource',#contents:'(TDMonticelloRepository
   fromDescription: \'http://seaside.gemstone.com/ss/metacello\') repository'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository
   fromDescription: \'filetree:///opt/git/metacello-work/repository\') repository'},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:'project Metacello
@@ -140,4 +132,78 @@ Author: Dale Henrichs <dhenrich@vmware.com>
 Date:   Fri May 17 19:46:07 2013 -0700
 
     tweak ston command to support import/export commands'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository fromDescription: \'filetree:///opt/git/tode/repository\')
-  repository'}}},'projects':TDObjectGatewayNode{#name:'projects',#contents:'#(\'filetree\' \'glass\' \'indexing\' \'metacello\' \'rb\' \'ston\' \'tode\')'}}}
+  repository'}}},'projects':TDObjectGatewayNode{#name:'projects',#contents:'#(\'filetree\' \'glass\' \'indexing\' \'metacello\' \'rb\' \'ston\' \'tode\')'},'README':TDTxtLeafNode{#name:'README',#contents:Text{#string:'./active
+--------
+
+  Identifies the active projects in this node. 
+
+./backupFile
+------------
+
+  Full path on disk to backup file. Use by both `./bin/backup` and `./bin/restore`.
+
+./bin/backup
+----------
+
+  Runs GemStone backup into file listed in `./backupFile` node. 
+
+  `./active` list is used to determine which active projects are to be included 
+  in the `STATUS` report.
+
+./bin/commit
+------------
+
+  Commit dirty packages for active projects. Get commit message from 
+  `./commitMessage`.
+
+./bin/diff
+----------
+
+  Open diff window for dirty packages in active projects.
+
+./bin/export
+------------
+
+  Export image node structure.
+
+  `./exportFile` identifies disk location for export .ston output
+
+./bin/import
+------------
+
+  Import image node structure.
+
+  `./exportFile` identifies disk location for export .ston output
+
+./commitMessage
+------------
+
+  see `./bin/commit`
+
+./exportFile
+------------
+
+  Full path on disk for import.ston file.
+
+./projects
+----------
+
+  Identifies the nodes that represent projects whether active or passive. 
+
+./<project-name>/project
+------------------------
+
+  MetacelloMCProjectSpec instance representing the project.
+  
+./<project-name>/repo
+---------------------
+
+  MCRepository instance that represents the primary repository used by the project.
+  Should probably correspond to one of the repositories in the project spec.
+
+./<project-name>/STATUS
+-----------------------
+
+  Information about the last commit made for this project. For git repositories
+  includes the SHA of the commit.
+',#runs:RunArray{#runs:[1537],#values:[[]],#lastIndex:869,#lastRun:1,#lastOffset:868}}},'commitMessage':TDTxtLeafNode{#name:'commitMessage',#contents:@46}}}
