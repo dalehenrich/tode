@@ -31,7 +31,7 @@ STONWriter
 Transcript
   cr;
   show: \'Import: \' , DateAndTime now printString.
- topez evaluateTopezScript: \'ston import . @exportFile\'  ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-17T17:12:40.17765188217163-07:00
+ topez evaluateTopezScript: \'ston import . @exportFile\'  ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-17T19:47:37.43294596672058-07:00
 
 project Metacello
 version baseline
@@ -49,13 +49,13 @@ version baseline
 loads nil
 repo filetree:///opt/git/tode/repository
 directory /opt/git/tode
-commit 16f41d7d7a7c0d63f487315cb0aae00240680330
+commit 5cdaee0cbfd5016dfaee480edd07c30b70f4bd91
 Author: Dale Henrichs <dhenrich@vmware.com>
-Date:   Fri May 17 16:50:53 2013 -0700
+Date:   Fri May 17 19:46:07 2013 -0700
 
-    tweaks to gateway and bu backup command ... building up node structure for managing my development environment
+    tweak ston command to support import/export commands
 
-',#runs:RunArray{#runs:[8,715],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}},'rb':TDDirectoryNode{#name:'rb',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+',#runs:RunArray{#runs:[8,657],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}},'rb':TDDirectoryNode{#name:'rb',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
   baseline: \'RB\';
   list'}}},'README':TDTxtLeafNode{#name:'README',#contents:Text{#string:'./active
 --------
@@ -135,9 +135,9 @@ version baseline
 loads nil
 repo filetree:///opt/git/tode/repository
 directory /opt/git/tode
-commit 16f41d7d7a7c0d63f487315cb0aae00240680330
+commit 5cdaee0cbfd5016dfaee480edd07c30b70f4bd91
 Author: Dale Henrichs <dhenrich@vmware.com>
-Date:   Fri May 17 16:50:53 2013 -0700
+Date:   Fri May 17 19:46:07 2013 -0700
 
-    tweaks to gateway and bu backup command ... building up node structure for managing my development environment'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository fromDescription: \'filetree:///opt/git/tode/repository\')
+    tweak ston command to support import/export commands'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository fromDescription: \'filetree:///opt/git/tode/repository\')
   repository'}}},'projects':TDObjectGatewayNode{#name:'projects',#contents:'#(\'filetree\' \'glass\' \'indexing\' \'metacello\' \'rb\' \'ston\' \'tode\')'}}}
