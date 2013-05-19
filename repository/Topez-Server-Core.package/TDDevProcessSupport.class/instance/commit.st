@@ -5,7 +5,9 @@ commit
   active := self activeNode.
   active dotSelfObject
     do: [ :projectName | 
-      (self commitProject: projectName message: commitMessageNode printString)
+      (self
+        commitProject: projectName
+        message: commitMessageNode dotSelfObject asString)
         ifTrue: [ 
           (self gitPathFor: projectName) notNil
             ifTrue: [ self postCommitForGitRepo: projectName ]
