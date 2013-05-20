@@ -9,5 +9,5 @@ SYNOPSIS
 DESCRIPTION
   limit chars [<item-count>]
   limit list [<item-count>]
-  limit oops [<item-count>]
+  limit oops [true|false]
 '
