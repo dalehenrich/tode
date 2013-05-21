@@ -1,13 +1,14 @@
 {
 	"class" : {
 		"commandLine:redirectTarget:" : "dkh 5/16/2013 18:15",
-		"isolate:" : "dkh 5/16/2013 18:13",
+		"isolate:" : "dkh 05/20/2013 22:17",
 		"line:forEachCommand:" : "dkh 5/16/2013 19:43",
-		"scan:delim:" : "dkh 5/16/2013 19:46" },
+		"scan:delim:" : "dkh 05/20/2013 22:22" },
 	"instance" : {
 		"commandLine" : "dkh 5/16/2013 16:00",
 		"commandLine:" : "dkh 5/16/2013 16:01",
 		"redirectTarget" : "dkh 5/16/2013 16:01",
 		"redirectTarget:" : "dkh 5/16/2013 16:01",
-		"tokens" : "dkh 5/16/2013 20:06",
+		"tokenize:" : "dkh 05/20/2013 22:30",
+		"tokens" : "dkh 05/20/2013 22:27",
 		"tokens:" : "dkh 5/16/2013 19:22" } }
