@@ -49,15 +49,19 @@ baseline: spec
         with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ].
       spec
         package: 'Topez-Pharo-Common';
+        package: 'Tode-Client-Common'
+          with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
-          with: [ spec requires: #('GemTools-ClientGCI' 'Topez-Common-Core' 'Topez-Pharo-Common') ];
+          with: [ spec requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];
+        package: 'Tode-Client-Pharo'
+          with: [ spec requires: #('Tode-Client-Common') ];
         package: 'Topez-ClientTravis-Tests'
           with: [ spec requires: #('Topez-Client-GemStone') ];
         yourself.
       spec
         group: 'default' with: #('GemStone');
         group: 'GemStone' with: #('Topez-Client-GemStone');
-        group: 'Pharo' with: #();
+        group: 'Pharo' with: #('Tode-Client-Pharo');
         group: 'GemStone Tests' with: #('Topez-ClientTravis-Tests');
         group: 'GemStone Dev'
           with: #('GemStone' 'Common Tests' 'GemStone Tests');
