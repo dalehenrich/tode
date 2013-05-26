@@ -17,8 +17,8 @@ baseline: spec
       spec
         group: 'Tests' with: #('Topez-Common-Tests');
         group: 'Tode' with: #('Topez-Server-Core');
-        group: 'GemStone Tode' with: #('Tode');
-        group: 'Pharo Tode' with: #('Tode');
+        group: 'GemStone' with: #('Tode');
+        group: 'Pharo' with: #('Tode');
         yourself ].
   spec
     for: #'squeakCommon'
@@ -58,12 +58,12 @@ baseline: spec
           with: [ spec requires: #('Topez-Client-GemStone') ];
         yourself.
       spec
-        group: 'default' with: #('GemStone Tode');
-        group: 'GemStone Tode' with: #('Topez-Client-GemStone');
-        group: 'Pharo Tode' with: #();
-        group: 'GemStone Tode Tests' with: #('Topez-ClientTravis-Tests');
-        group: 'GemStone Dev' with: #('GemStone Tode' 'GemStone Tode Tests');
-        group: 'Pharo Dev' with: #('Pharo Tode');
+        group: 'default' with: #('GemStone');
+        group: 'GemStone' with: #('Topez-Client-GemStone');
+        group: 'Pharo' with: #();
+        group: 'GemStone Tests' with: #('Topez-ClientTravis-Tests');
+        group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
+        group: 'Pharo Dev' with: #('Pharo');
         yourself ].
   spec
     for: #'gemstone'
@@ -90,13 +90,13 @@ baseline: spec
           with: [ spec requires: #('Topez-Server-ProcessTools' 'Topez-Server-TestTools') ];
         yourself.
       spec
-        group: 'default' with: #('GemStone Server');
-        group: 'GemStone Tode'
+        group: 'default' with: #('GemStone');
+        group: 'GemStone'
           with:
             #('Tode-GemStone-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-ProcessTools' 'Topez-Server-TestTools');
-        group: 'GemStone Tode Tests'
+        group: 'GemStone Tests'
           with: #('Topez-Server-Tests' 'Topez-Server-TestDebugTools');
-        group: 'GemStone Dev' with: #('GemStone Tode' 'GemStone Tode Tests');
+        group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
         yourself ].
   spec
     for: #'gs2.4.x'

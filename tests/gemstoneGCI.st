@@ -7,7 +7,7 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 Metacello new
 	baseline: 'Tode';
   repository: 'filetree://', gitPath, '/tode/repository';
-  load: 'Dev'.
+  load: 'GemStone Dev'.
 
 "Run the Tode tests"
 TravisCIHarness
