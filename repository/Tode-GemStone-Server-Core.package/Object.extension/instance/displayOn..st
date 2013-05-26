@@ -1,4 +1,4 @@
-*topez-server-core
+*tode-gemstone-server-core
 displayOn: displayPolicy
   | string aStream limit displayOops compacted |
   aStream := displayPolicy stream.

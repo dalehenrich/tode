@@ -1,13 +1,13 @@
 {
-	"category" : "Topez-Server-Core",
+	"category" : "Tode-GemStone-Server-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"nodes" ],
-	"name" : "TDIndexDevTool",
+		 ],
+	"name" : "TDCoreNodeTool",
 	"pools" : [
 		 ],
 	"super" : "TDStandardTool",

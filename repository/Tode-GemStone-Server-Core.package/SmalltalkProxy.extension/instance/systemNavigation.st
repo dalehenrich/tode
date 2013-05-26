@@ -1,3 +1,3 @@
-*topez-server-core
+*tode-gemstone-server-core
 systemNavigation
   ^ SystemNavigation default

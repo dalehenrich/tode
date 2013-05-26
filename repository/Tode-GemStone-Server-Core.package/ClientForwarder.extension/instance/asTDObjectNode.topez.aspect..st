@@ -1,4 +1,4 @@
-*topez-server-core
+*tode-gemstone-server-core
 asTDObjectNode: parentNode topez: aTopez aspect: anAspect
   "not many useful things you can do with a clientForwarder ... without triggering references to client"
 

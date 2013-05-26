@@ -1,4 +1,4 @@
-*topez-server-core
+*tode-gemstone-server-core
 displayOn: displayPolicy
   "not many useful things you can do with a clientForwarder ... without triggering references to client"
 
