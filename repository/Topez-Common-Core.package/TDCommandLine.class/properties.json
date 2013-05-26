@@ -6,6 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"commandLine",
+		"redirectTarget",
 		"tokens" ],
 	"name" : "TDCommandLine",
 	"pools" : [

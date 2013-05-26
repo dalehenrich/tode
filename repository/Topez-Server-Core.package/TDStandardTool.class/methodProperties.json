@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"basePath" : "dkh 05/18/2013 07:18",
+		"basePathReadMe" : "dkh 05/18/2013 07:18",
+		"commandPath" : "dkh 05/18/2013 07:18",
+		"initialize" : "dkh 05/18/2013 07:18",
+		"installMasterTestSpecOn:" : "dkh 05/18/2013 07:18",
+		"installOn:" : "dkh 05/18/2013 10:45",
+		"installTestSpecOn:" : "dkh 05/18/2013 07:19",
+		"priority" : "dkh 05/18/2013 07:19",
+		"testSuiteClasses" : "dkh 05/18/2013 07:19",
+		"toolName" : "dkh 05/18/2013 07:19",
+		"toolReadMe" : "dkh 05/18/2013 07:19" },
+	"instance" : {
+		 } }

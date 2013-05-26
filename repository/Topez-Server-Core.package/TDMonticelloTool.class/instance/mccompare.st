@@ -1,19 +1,25 @@
 as yet unclassified
 mccompare
-  "mc compare <version-name> <repository-spec> <version-name> <repository-spec>"
+  "mc compare <version-name> <repository-spec> <version-name> <repository-spec>
+      compare @<version-path> <version-name> <repository-spec>
+      compare <version-name> <repository-spec> @<version-path>
+      compare @<version-path> @<version-path>
+  "
 
-  | stream version1Name version2Name repo1Spec repo2Spec snapshot1 snapshot2 patch diffy |
-  version1Name := tokens at: 2.
-  repo1Spec := tokens at: 3.
-  snapshot1 := self snapshotFor: version1Name in: repo1Spec.
-  version2Name := tokens at: 4.
-  repo2Spec := tokens at: 5.
-  snapshot2 := self snapshotFor: version2Name in: repo2Spec.
+  | stream version1 version2 snapshot1 snapshot2 patch diffy resolutionAr |
+  resolutionAr := self resolveVersionReferenceStartingAt: 2 inTokens: tokens.
+  version1 := resolutionAr at: 1.
+  snapshot1 := version1 snapshot.
+  resolutionAr := self
+    resolveVersionReferenceStartingAt: (resolutionAr at: 2)
+    inTokens: tokens.
+  version2 := resolutionAr at: 1.
+  snapshot2 := version2 snapshot.
   patch := snapshot1 patchRelativeToBase: snapshot2.
   stream := TextStream on: Text new.
   stream
     nextPutAll:
-        ('==================== ' , version1Name , ' vs' , version2Name
+        ('==================== ' , version1 info name , ' vs' , version2 info name
             , ' ====================') asText allBold;
     cr.
   patch isEmpty

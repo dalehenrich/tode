@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"BackupDirectoryName",
+		"HomePath" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDGemStoneTool",
+	"pools" : [
+		 ],
+	"super" : "TDStandardTool",
+	"type" : "normal" }

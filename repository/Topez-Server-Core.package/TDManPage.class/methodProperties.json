@@ -1,13 +1,17 @@
 {
 	"class" : {
-		"fromString:" : "dkh 04/06/2013 09:35" },
+		"fromString:commandPath:sourceMethod:" : "dkh 05/16/2013 13:11" },
 	"instance" : {
-		"asText" : "dkh 04/06/2013 09:36",
+		"asText" : "dkh 05/16/2013 13:08",
+		"commandPath" : "dkh 05/16/2013 13:03",
+		"commandPath:" : "dkh 05/16/2013 13:05",
 		"description" : "dkh 04/06/2013 09:25",
 		"description:" : "dkh 04/06/2013 09:05",
-		"printOn:" : "dkh 04/06/2013 15:12",
+		"printOn:" : "dkh 05/16/2013 13:09",
+		"sourceMethod" : "dkh 05/16/2013 13:04",
+		"sourceMethod:" : "dkh 05/16/2013 13:08",
 		"summary" : "dkh 04/06/2013 09:25",
 		"summary:" : "dkh 04/06/2013 09:06",
 		"synopsis" : "dkh 04/06/2013 09:25",
 		"synopsis:" : "dkh 04/06/2013 09:06",
-		"writeMdOn:" : "dkh 04/06/2013 10:45" } }
+		"writeMdOn:" : "dkh 05/16/2013 13:10" } }

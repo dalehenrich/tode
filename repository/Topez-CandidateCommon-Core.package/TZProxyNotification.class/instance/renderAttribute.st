@@ -1,3 +1,0 @@
-rendering
-renderAttribute
-    self subclassResponsibility

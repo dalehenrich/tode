@@ -1,3 +1,0 @@
-accessing
-morph
-    ^ self listMorph

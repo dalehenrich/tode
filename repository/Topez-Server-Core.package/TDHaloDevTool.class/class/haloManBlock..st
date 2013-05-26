@@ -11,10 +11,7 @@ haloManBlock: aTDTopezServer
           | command manPage |
           command := theNode basicContents at: elementName ifAbsent: absentBlock.
           manPage := command manPage.
-          (manPage summary
-            asTDObjectNode: theNode
-            topez: theNode topez
-            aspect: #'view')
-            name: elementName;
+          (manPage asTDObjectNode: theNode topez: theNode topez aspect: #'view')
+            name: manPage summary;
             yourself ];
     yourself ]

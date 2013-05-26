@@ -1,13 +1,14 @@
 as yet unclassified
 browse
   "
+  browse amethod <method-spec>
   browse class <regex-pattern>
   browse diff <method1-spec> <method2-spec>
-  browse method <selector>
-  browse references <variableOrGlobalName>
+  browse method [#]<selector>
+  browse references <variableOrGlobalNameOrPathRef>
   browse rmethod <regex-pattern>
   browse rsender <regex-pattern>
-  browse sender <selector>
+  browse sender [#]<selector>
   browse source <regex-pattern>
   browse versions <method-spec>
 "
@@ -16,6 +17,8 @@ browse
   findTokens := tokens copyFrom: 2 to: tokens size.
   command := findTokens at: 1.
   messagePattern := findTokens at: 2.
+  command = 'amethod'
+    ifTrue: [ ^ self browseMethods: (self findMethodSpec: findTokens) ].
   command = 'method'
     ifTrue: [ ^ self browseMethods: (self findMethod: findTokens) ].
   command = 'diff'

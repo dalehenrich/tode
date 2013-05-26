@@ -4,6 +4,8 @@ logout
 
   number isNil
     ifTrue: [ ^ self ].
+  self library isNull
+    ifTrue: [ ^ self ].
   [ 
   self setSession.
   self isCallInProgress

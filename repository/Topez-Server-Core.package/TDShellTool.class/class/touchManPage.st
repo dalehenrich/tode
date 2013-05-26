@@ -15,7 +15,7 @@ DESCRIPTION
 
   `type` may be:
 '.
-  (((TDLeafNode allSubclasses
+  (((TDLeafNode allSubclasses , TDGatewayNode allSubclasses
     select: [ :cl | cl theMetaClass selectors includes: #'typeSignature' ])
     collect: [ :cl | cl typeSignature -> cl ]) asArray
     sort: [ :a :b | a key <= b key ])

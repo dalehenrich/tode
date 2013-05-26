@@ -1,5 +1,7 @@
 accessing
 evaluateTopezScript: topezScript
+  "you know, you should be using #toolInstanceFor:, instead"
+
   | line stream result startingSize originalEvaluating |
   [ 
   startingSize := self scriptActionStack size.
@@ -18,16 +20,11 @@ evaluateTopezScript: topezScript
               result := res.
               objIn value: result ] ]
         ifFalse: [ 
-          | isolatedCommands |
-          isolatedCommands := line findTokens: ';'.
-          isolatedCommands
-            do: [ :isolatedCommand | 
-              | pipedCommands |
-              pipedCommands := isolatedCommand findTokens: '|'.
-              pipedCommands
-                do: [ :pipedCommand | 
-                  result := self evaluateTopezScriptCommand: pipedCommand.
-                  objIn value: result ] ] ] ].
+          TDCommandLine
+            line: line
+            forEachCommand: [ :command | 
+              result := self evaluateTopezScriptCommand: command.
+              objIn value: result ] ] ].
   evaluatingScript := originalEvaluating	"last one on the stack please turn out the lights" ]
     ifCurtailed: [ 
       | currentSize extra |

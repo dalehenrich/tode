@@ -1,6 +1,6 @@
 as yet unclassified
 limitOops: cmdTokens
-  "oops [<item-count>]"
+  "oops [true|false]"
 
   | bool |
   cmdTokens size = 1

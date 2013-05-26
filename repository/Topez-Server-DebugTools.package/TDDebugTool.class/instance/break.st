@@ -1,13 +1,12 @@
 as yet unclassified
 break
   "
-    db break @<step-point> <class>[ class]>><selector> 
-    db break clear [break-list-index] 
-    db break enable [break-list-index] 
-    db break disable [break-list-index]  
-    db break list 
-    db break steps <class> [class] >> <selector>
-    db break steps <class>[ class]>><selector>
+  db break @<step-point> <method-ref>
+  db break clear [break-list-index] 
+  db break enable [break-list-index]
+  db break disable [break-list-index]
+  db break list 
+  db break steps <method-ref>
 "
 
   | breakTokens command |

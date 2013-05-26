@@ -10,5 +10,5 @@
 	"name" : "TDTestTool",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractDevTool",
+	"super" : "TDStandardTool",
 	"type" : "normal" }

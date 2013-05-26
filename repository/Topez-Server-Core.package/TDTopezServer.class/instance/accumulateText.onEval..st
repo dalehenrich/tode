@@ -11,5 +11,6 @@ accumulateText: line onEval: aBlock
   stream := scriptInputStream.
   scriptInputStream := actionArray at: 1.
   accumulateScriptText := actionArray at: 2.
+  redirectTarget := actionArray at: 4.
   result := (actionArray at: 3) value: stream contents value: objIn value.
   aBlock value: result

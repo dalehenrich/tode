@@ -1,11 +1,14 @@
 evaluator engine
-evaluateCommand: line
-  | tokens |
-  (line notEmpty and: [ line first = $# ])
+evaluateCommand: command
+  | tokens redirectTarget |
+  (command commandLine notEmpty and: [ command commandLine first = $# ])
     ifTrue: [ ^ '' ].
-  tokens := line trimBoth findTokens: {(Character space)}.
+  tokens := command tokens.
   tokens isEmpty
     ifTrue: [ ^ '' ].
   (self builtIns includes: (tokens at: 1))
     ifTrue: [ ^ self executeBuiltIn: tokens ].
-  ^ (self topezClient evaluateTokens: tokens) convertTDEvaluateTokenResponseToText
+  redirectTarget := command redirectTarget.
+  redirectTarget ifNotNil: [ redirectTarget := redirectTarget trimBoth ].
+  ^ (self topezClient evaluateTokens: tokens redirectTarget: redirectTarget)
+    convertTDEvaluateTokenResponseToText

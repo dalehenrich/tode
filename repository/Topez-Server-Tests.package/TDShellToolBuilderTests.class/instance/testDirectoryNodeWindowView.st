@@ -36,17 +36,18 @@ testDirectoryNodeWindowView
       {(self directoryNodeStructure childNamed: 'a' ifAbsent: [  ]).
       #'view'.
       nil.
-      'anArray( ''.              -> /a/'', ''(class)@       -> TDScriptLeafNode'', ''block@         -> nil'', ''builderAspect@ -> nil'', ''contents@      -> nil'', ''manPage@       -> nil'', ''name@          -> ''''a'''''', ''parent@        -> /'', ''topez@         -> nil'')/ ([Array] anArray( ''. -> /a/'', ''(class)@ -> TDScriptLeafNode'', ''block@ -> nil'', ''builderAspect@ -> nil'', ''contents@ -> nil'', ''manPage@ ...):
+      'anArray( ''.              -> /a/'', ''(class)@       -> TDScriptLeafNode'', ''block@         -> nil'', ''blockVendor@   -> nil'', ''builderAspect@ -> nil'', ''contents@      -> nil'', ''manPage@       -> nil'', ''name@          -> ''''a'''''', ''parent@        -> /'', ''topez@         -> nil'')/ ([Array] anArray( ''. -> /a/'', ''(class)@ -> TDScriptLeafNode'', ''block@ -> nil'', ''blockVendor@ -> nil'', ''builderAspect@ -> nil'', ''contents@ ...):
 	(class)@ -> [Array class] Array
 	1@ -> [String] ''. -> /a/''
 	2@ -> [String] ''(class)@ -> TDScriptLeafNode''
 	3@ -> [String] ''block@ -> nil''
-	4@ -> [String] ''builderAspect@ -> nil''
-	5@ -> [String] ''contents@ -> nil''
-	6@ -> [String] ''manPage@ -> nil''
-	7@ -> [String] ''name@ -> ''''a''''''
-	8@ -> [String] ''parent@ -> /''
-	9@ -> [String] ''topez@ -> nil''
+	4@ -> [String] ''blockVendor@ -> nil''
+	5@ -> [String] ''builderAspect@ -> nil''
+	6@ -> [String] ''contents@ -> nil''
+	7@ -> [String] ''manPage@ -> nil''
+	8@ -> [String] ''name@ -> ''''a''''''
+	9@ -> [String] ''parent@ -> /''
+	10@ -> [String] ''topez@ -> nil''
 '}.
       {(self directoryNodeStructure childNamed: 'b' ifAbsent: [  ]).
       #'view'.

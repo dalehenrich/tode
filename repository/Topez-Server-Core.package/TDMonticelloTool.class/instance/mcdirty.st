@@ -2,12 +2,7 @@ as yet unclassified
 mcdirty
   "mc dirty"
 
-  | path |
-  path := self dirtyPath.
-  ^ (topez commands at: 'ds') block
-    value: topez
-    value: (self topez lookup: path)
-    value:
-      {'ds'.
-      path}
-    value: nil
+  | dirty |
+  dirty := MCWorkingCopy allManagers select: [ :wc | wc modified ].
+  dirty editUsing: (TDEditorSpec topez: topez).
+  ^ dirty

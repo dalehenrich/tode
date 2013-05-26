@@ -1,12 +1,14 @@
 as yet unclassified
 mradd
-  "mr add <repository-spec> <package-name>"
+  "mr add <repository-spec> <package-name>
+      add @<repository-path> <package-name>
+      add <repository-spec> @<workingCopy-path>
+      add @<repository-path> @<workingCopy-path>
+  "
 
   | repo workingCopy packageName |
   packageName := tokens at: 3.
-  workingCopy := MCWorkingCopy allManagers
-    detect: [ :wc | wc packageName = packageName ]
-    ifNone: [ ^ 'no matching package found' ].
-  repo := self repositoryFromDescription: (tokens at: 2).
+  workingCopy := self resolveWorkingCopyReference: packageName.
+  repo := self resolveRepositoryReference: (tokens at: 2).
   workingCopy repositoryGroup addRepository: repo.
   ^ workingCopy

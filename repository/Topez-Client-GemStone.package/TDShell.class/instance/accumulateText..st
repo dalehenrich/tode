@@ -1,14 +1,15 @@
 evaluator engine
 accumulateText: line
-    | actionArray result stream |
-    (line isNil or: [ line beginsWith: '%' ])
-        ifFalse: [ 
-            inputStream
-                nextPutAll: line;
-                cr.
-            ^ '' ].
-    actionArray := self actionStack removeLast.
-    stream := inputStream.
-    promptString := actionArray at: 2.
-    inputStream := actionArray at: 1.
-    ^ ((actionArray at: 3) value: stream) convertTDEvaluateTokenResponseToText
+  | actionArray result stream block |
+  (line isNil or: [ line beginsWith: '%' ])
+    ifFalse: [ 
+      inputStream
+        nextPutAll: line;
+        cr.
+      ^ '' ].
+  block := self actionStack removeFirst.
+  actionArray := self stateStack removeFirst.
+  stream := inputStream.
+  promptString := actionArray at: 2.
+  inputStream := actionArray at: 1.
+  ^ (block value: stream) convertTDEvaluateTokenResponseToText

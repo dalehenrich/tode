@@ -1,12 +1,14 @@
 as yet unclassified
 mrversions
-  "mr versions <pkg-name> <repository-spec>"
+  "mr versions <repository-spec> <package-name>
+      versions @<repository-path> <package-name>
+  "
 
   "underlined if version is loaded in image, bold if version is not in the version history of the loaded package"
 
   | repo resolvedReferences packageName versions displayPolicy stream loadedVersions loadedVersion ancestorNames wc limit |
-  packageName := tokens at: 2.
-  repo := self repositoryFromDescription: (tokens at: 3).
+  packageName := tokens at: 3.
+  repo := self resolveRepositoryReference: (tokens at: 2).
   tokens size > 3
     ifTrue: [ limit := (tokens at: 4) asNumber ].
   resolvedReferences := self resolvedReferencesForRepository: repo.
@@ -15,7 +17,7 @@ mrversions
     ifAbsent: [ ^ 'No package named: ' , packageName printString , ' found.' ].
   displayPolicy := topez displayPolicy.
   stream := displayPolicy stream.
-  loadedVersions := self loadedVersions.
+  loadedVersions := self loadedVersions: true.
   loadedVersion := loadedVersions at: packageName ifAbsent: [  ].
   ancestorNames := #().
   loadedVersion notNil

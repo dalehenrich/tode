@@ -4,7 +4,8 @@ manManPage
   man - produce man page for a command
 
 SYNOPSIS
-  man command
+  man <command-name>
+  man @<command-path>
 
 DESCRIPTION
   The man command looks up the node for the given `command` 

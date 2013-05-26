@@ -1,14 +1,15 @@
 as yet unclassified
 ston
+  "ston export <path> <server-file-path>
+        export <path> @<server-path>
+   ston import <path> <server-file-path>
+        import <path> @<server-path>
   "
-  ston export <path> <server-file-path>
-  ston import <path> <server-file-path>
-"
 
   | command path filePath dir node fileName |
   command := tokens at: 2.
   path := tokens at: 3.
-  filePath := tokens at: 4.
+  filePath := (self resolveAtPathReference: (tokens at: 4)) asString.
   dir := ServerFileDirectory forFileName: filePath.
   fileName := ServerFileDirectory localNameFor: filePath.
   command = 'export'

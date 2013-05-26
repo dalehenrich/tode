@@ -1,5 +1,5 @@
 as yet unclassified
 kill9
-  "ps kill9 <process-oop>"
+  "ps kill9 @<process-path>"
 
-  ^ (Object _objectForOop: (tokens at: 2) asNumber) terminate9
+  ^ (self resolveAtPathReference: (tokens at: 2)) terminate9

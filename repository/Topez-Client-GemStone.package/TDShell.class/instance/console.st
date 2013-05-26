@@ -1,0 +1,3 @@
+stash
+console
+  ^ console

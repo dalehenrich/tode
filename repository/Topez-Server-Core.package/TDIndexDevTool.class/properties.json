@@ -10,5 +10,5 @@
 	"name" : "TDIndexDevTool",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractDevTool",
+	"super" : "TDStandardTool",
 	"type" : "normal" }

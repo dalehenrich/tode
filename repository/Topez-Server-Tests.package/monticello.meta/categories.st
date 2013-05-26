@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Topez-Server-Tests'!
+SystemOrganization addCategory: 'Topez-Server-Tests'!

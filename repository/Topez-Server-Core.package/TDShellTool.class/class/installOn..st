@@ -111,6 +111,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDClientCodeElementBuilder
       for: TDSmalltalkLeafNode
       aspect: #'edit';
+    registerEditorClass: TDClientCodeElementBuilder
+      for: TDObjectGatewayNode
+      aspect: #'edit';
     registerEditorClass: TDClientTextElementBuilder
       for: TDTxtLeafNode
       aspect: #'edit'

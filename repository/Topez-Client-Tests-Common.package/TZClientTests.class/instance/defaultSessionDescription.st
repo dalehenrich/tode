@@ -1,3 +1,0 @@
-accessing
-defaultSessionDescription
-    ^ TZGsEvaluator defaultSessionDescription

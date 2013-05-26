@@ -10,4 +10,5 @@ TDAbstractDevTool allSubclasses
       tab;
       show: cl name.
     cl installOn: topez ] .
-TDStackFrame initialize]'}
+
+TDStackFrame initialize]'}

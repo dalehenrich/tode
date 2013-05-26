@@ -3,7 +3,9 @@
 		"typeSignature" : "DataCurator 11/30/2012 08:00" },
 	"instance" : {
 		"block" : "dkh 02/11/2013 13:22",
-		"block:" : "dkh 11/29/2012 20:07",
+		"block:" : "dkh 05/18/2013 10:47",
+		"blockVendor" : "dkh 05/18/2013 10:41",
+		"blockVendor:" : "dkh 05/18/2013 10:42",
 		"contents" : "dkh 02/10/2013 13:12",
 		"createBlockFromSource:" : "DataCurator 11/30/2012 15:53",
 		"renderNameTextAttributes" : "dkh 11/29/2012 20:12",

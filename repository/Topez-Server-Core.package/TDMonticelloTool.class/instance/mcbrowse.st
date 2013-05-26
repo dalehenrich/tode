@@ -1,6 +1,9 @@
 as yet unclassified
 mcbrowse
-  "mc browse <version-name> <repository-spec>"
+  "mc browse <version-name> <repository-spec>
+      browse <package-name>
+      browse @<workingCopy-path>
+  "
 
   | versionName snapshot mcDefinitions definitions |
   versionName := tokens at: 2.
@@ -15,9 +18,7 @@ mcbrowse
     ifFalse: [ 
       | packageName workingCopy |
       packageName := tokens at: 2.
-      workingCopy := MCWorkingCopy allManagers
-        detect: [ :wc | wc packageName = packageName ]
-        ifNone: [ ^ 'no matching package found' ].
+      workingCopy := self resolveWorkingCopyReference: packageName.
       snapshot := workingCopy package snapshot ].
   mcDefinitions := snapshot definitions
     select: [ :def | def isOrganizationDefinition not ].

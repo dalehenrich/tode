@@ -1,3 +1,0 @@
-metacello
-stylerClass
-    ^ TZTextStylerST80

@@ -1,11 +1,13 @@
 {
 	"class" : {
+		"concreteClassForTypeSignature:" : "dkh 05/17/2013 07:00",
 		"directoryExtension" : "DataCurator 11/30/2012 12:13",
 		"directoryTextAttributes" : "DataCurator 11/29/2012 18:20",
 		"executableExtension" : "DataCurator 11/30/2012 10:56",
+		"gatewayTextAttributes" : "dkh 05/17/2013 07:35",
 		"leafTextAttributes" : "DataCurator 11/29/2012 18:23",
 		"objectExtension" : "DataCurator 11/30/2012 10:55",
-		"objectTextAttributes" : "DataCurator 11/29/2012 19:45",
+		"objectTextAttributes" : "dkh 05/17/2013 07:23",
 		"scriptTextAttributes" : "dkh 11/29/2012 20:08",
 		"smalltalkTextAttributes" : "DataCurator 12/21/2012 18:09",
 		"smalltalkTextColor" : "DataCurator 12/21/2012 18:09",
@@ -17,7 +19,7 @@
 		"builderAspect:" : "dkh 04/11/2013 17:05",
 		"canEnter" : "dkh 11/28/2012 05:31",
 		"canMove" : "DataCurator 12/02/2012 08:03",
-		"cat" : "dkh 11/28/2012 05:31",
+		"cat" : "dkh 05/17/2013 06:35",
 		"childrenAndNamesDo:" : "DataCurator 12/23/2012 08:23",
 		"childrenDo:" : "DataCurator 12/12/2012 15:16",
 		"contents" : "dkh 11/28/2012 05:31",
@@ -46,4 +48,4 @@
 		"rm" : "dkh 11/28/2012 05:31",
 		"topez" : "dkh 11/28/2012 05:31",
 		"topez:" : "dkh 11/28/2012 05:31",
-		"touch:leafClass:in:" : "DataCurator 11/30/2012 08:30" } }
+		"touch:nodeClass:in:" : "dkh 05/17/2013 07:05" } }

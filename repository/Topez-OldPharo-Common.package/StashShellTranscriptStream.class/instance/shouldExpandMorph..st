@@ -1,3 +1,0 @@
-accessing
-shouldExpandMorph: aMorph
-    ^ true

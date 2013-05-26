@@ -1,20 +1,7 @@
 *topez-server-31x-debugtools
 breakpointNode: parentNode
-  | node breakReport count rawBreakReport breakSummary |
-  count := 0.
-  rawBreakReport := self gsMethodClass _breakReport: false.
-  breakSummary := (rawBreakReport at: 1) lines.
-  breakReport := (rawBreakReport at: 2)
-    collect: [ :each | 
-      | reportString |
-      count := count + 1.
-      reportString := (each at: 2) name asString , '>>' , (each at: 3) asString
-        , ' @' , (each at: 4) asString.
-      ((breakSummary at: count) includesSubString: '(disabled)')
-        ifTrue: [ 
-          "horrible hack, sorry"
-          reportString := reportString , ' (disabled)' ].
-      reportString ].
+  | node breakReport |
+  breakReport := self breakpointReport.
   node := TDObjectNode new
     name: 'breakpoints';
     parent: parentNode;

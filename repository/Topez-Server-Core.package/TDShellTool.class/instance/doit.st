@@ -6,7 +6,9 @@ doit
     accumulateTextAndDo: [ :doitString :accumulateObjIn | 
       | result |
       topez exception: nil.
-      result := self topez evaluateString: doitString inContext: accumulateObjIn.
+      result := self topez
+        evaluateString: doitString
+        inContext: accumulateObjIn dotSelfObject.
       self topez objIn: result.
       result ].
   displayPolicy := topez displayPolicy

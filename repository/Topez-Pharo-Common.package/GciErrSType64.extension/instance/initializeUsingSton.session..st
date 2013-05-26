@@ -8,8 +8,14 @@ initializeUsingSton: aGciLibrary session: aTodeSession
     readSimpleFields;
     readMessage;
     yourself.
-  (number = 4100 or: [number = 4040])
+  (number > 4000 and: [ number < 5000 ])
     ifTrue: [ self readArguments ]
-    ifFalse: [ self readArgumentsAndExceptionClassUsingStonIn: aTodeSession ].
+    ifFalse: [ 
+      TDReadingGciErrorArguments signal.
+      [ self readArgumentsAndExceptionClassUsingStonIn: aTodeSession ]
+        on: TDReadingGciErrorArguments
+        do: [ :ex | 
+          "recursion protection"
+          self halt readArguments ] ].
   address := nil.
   library := nil

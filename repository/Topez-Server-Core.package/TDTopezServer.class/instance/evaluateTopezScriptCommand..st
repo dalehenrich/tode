@@ -1,9 +1,9 @@
 accessing
-evaluateTopezScriptCommand: line
+evaluateTopezScriptCommand: command
   | tokens result |
-  (line notEmpty and: [ line first = $# ])
+  (command commandLine notEmpty and: [ command commandLine first = $# ])
     ifFalse: [ 
-      tokens := line trimBoth findTokens: {(Character space)}.
+      tokens := command tokens.
       tokens isEmpty
         ifFalse: [ 
           | commandResult |

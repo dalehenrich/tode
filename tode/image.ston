@@ -1,0 +1,101 @@
+TDDirectoryNode{#name:'image',#contents:{'backupFile':TDTxtLeafNode{#name:'backupFile',#contents:Text{#string:'/opt/gemstone/product32/seaside/data/backups/tode.dbf',#runs:RunArray{#runs:[53],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:49,#lastRun:1,#lastOffset:48}}},'exportFile':TDTxtLeafNode{#name:'exportFile',#contents:Text{#string:'/opt/git/tode/tode/image.ston',#runs:RunArray{#runs:[29],#values:[[]],#lastIndex:29,#lastRun:1,#lastOffset:28}}},'bin':TDDirectoryNode{#name:'bin',#contents:{'commit':TDScriptLeafNode{#name:'commit',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) commit ]'},'backup':TDScriptLeafNode{#name:'backup',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) backup ]'},'diff':TDScriptLeafNode{#name:'diff',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) diff ]'},'export':TDScriptLeafNode{#name:'export',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) export ]'},'import':TDScriptLeafNode{#name:'import',#contents:'\"This is source for a block.  \" 
+ ^ [ :topez :objIn :tokens :windowId | 
+  (TDDevProcessSupport
+    topez: topez
+    objIn: objIn
+    tokens: tokens
+    windowId: windowId) import ]'}}},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'BACKUP: 2013-05-18T08:44:45.46752190589905-07:00
+
+project Metacello
+version baseline
+loads anArray( \'ALL\')
+repo filetree:///opt/git/metacello-work/repository
+directory /opt/git/metacello-work
+commit 2af769beb62cf5cbf9f7be8b1a2393278dc6242b
+Author: Dale Henrichs <dhenrich@vmware.com>
+Date:   Wed May 15 21:40:00 2013 -0700
+
+    working on toobox support for BaselineOf
+
+project Tode
+version baseline
+loads nil
+repo filetree:///opt/git/tode/repository
+directory /opt/git/tode
+commit c5c3953207e9754a0b99eb5c8f4d8429bfdd0928
+Author: Dale Henrichs <dhenrich@vmware.com>
+Date:   Sat May 18 08:42:57 2013 -0700
+
+    refactor TDAbstractDevTool hierarchy a bit to accommodate the addition of TDDevProcessSupport ... added TDStandardTool above the tools to house the code related to installing generally available commands, commands defined in TDDevProcessSupport have to be invoked directly, but the code and manPages deserve to be managed in a class... sticking code for the image dev support into TDDevProcessSupport ... share some common commit code in TDMonticelloTool ... preparing for revising the commit commands a bit (maybe?)
+
+',#runs:RunArray{#runs:[8,362,759],#values:[[TextEmphasis{#emphasisCode:0,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}},'rb':TDDirectoryNode{#name:'rb',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  baseline: \'RB\';
+  list'}}},'filetree':TDDirectoryNode{#name:'filetree',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  baseline: \'FileTree\';
+  list'}}},'active':TDObjectGatewayNode{#name:'active',#contents:'#(\'metacello\' \'tode\')'},'indexing':TDDirectoryNode{#name:'indexing',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  baseline: \'Indexing\';
+  list'}}},'tmp':TDDirectoryNode{#name:'tmp',#contents:{}},'glass':TDDirectoryNode{#name:'glass',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  configuration: \'GLASS\';
+  list'}}},'metacello':TDDirectoryNode{#name:'metacello',#contents:{'gemsource':TDObjectGatewayNode{#name:'gemsource',#contents:'(TDMonticelloRepository
+  fromDescription: \'http://seaside.gemstone.com/ss/metacello\') repository'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository
+  fromDescription: \'filetree:///opt/git/metacello-work/repository\') repository'},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:'project Metacello
+version baseline
+loads anArray( \'ALL\')
+repo filetree:///opt/git/metacello-work/repository
+directory /opt/git/metacello-work
+commit 2af769beb62cf5cbf9f7be8b1a2393278dc6242b
+Author: Dale Henrichs <dhenrich@vmware.com>
+Date:   Wed May 15 21:40:00 2013 -0700
+
+    working on toobox support for BaselineOf'},'sthub':TDObjectGatewayNode{#name:'sthub',#contents:'(TDMonticelloRepository
+  fromDescription: \'http://smalltalkhub.com/mc/dkh/metacello/main\') repository'},'config-repo':TDObjectGatewayNode{#name:'config-repo',#contents:'(TDMonticelloRepository
+  fromDescription: \'filetree:///opt/git/config/metacello-work\') repository'},'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  baseline: \'Metacello\';
+  list'}}},'ston':TDDirectoryNode{#name:'ston',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  baseline: \'Ston\';
+  list'}}},'tode':TDDirectoryNode{#name:'tode',#contents:{'project':TDObjectGatewayNode{#name:'project',#contents:'Metacello image
+  baseline: \'Tode\';
+  list'},'STATUS':TDTxtLeafNode{#name:'STATUS',#contents:Text{#string:'project Tode
+version baseline
+loads nil
+repo filetree:///opt/git/tode/repository
+directory /opt/git/tode
+commit c5c3953207e9754a0b99eb5c8f4d8429bfdd0928
+Author: Dale Henrichs <dhenrich@vmware.com>
+Date:   Sat May 18 08:42:57 2013 -0700
+
+    refactor TDAbstractDevTool hierarchy a bit to accommodate the addition of TDDevProcessSupport ... added TDStandardTool above the tools to house the code related to installing generally available commands, commands defined in TDDevProcessSupport have to be invoked directly, but the code and manPages deserve to be managed in a class... sticking code for the image dev support into TDDevProcessSupport ... share some common commit code in TDMonticelloTool ... preparing for revising the commit commands a bit (maybe?)',#runs:RunArray{#runs:[757],#values:[@33],#lastIndex:757,#lastRun:1,#lastOffset:756}}},'INFO':TDTxtLeafNode{#name:'INFO',#contents:'project Tode
+version baseline
+loads nil
+repo filetree:///opt/git/tode/repository
+directory /opt/git/tode
+commit c5c3953207e9754a0b99eb5c8f4d8429bfdd0928
+Author: Dale Henrichs <dhenrich@vmware.com>
+Date:   Sat May 18 08:42:57 2013 -0700
+
+    refactor TDAbstractDevTool hierarchy a bit to accommodate the addition of TDDevProcessSupport ... added TDStandardTool above the tools to house the code related to installing generally available commands, commands defined in TDDevProcessSupport have to be invoked directly, but the code and manPages deserve to be managed in a class... sticking code for the image dev support into TDDevProcessSupport ... share some common commit code in TDMonticelloTool ... preparing for revising the commit commands a bit (maybe?)'},'repo':TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository fromDescription: \'filetree:///opt/git/tode/repository\')
+  repository'}}},'projects':TDObjectGatewayNode{#name:'projects',#contents:'#(\'filetree\' \'glass\' \'indexing\' \'metacello\' \'rb\' \'ston\' \'tode\')'},'commitMessage':TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'refactor TDAbstractDevTool hierarchy a bit to accommodate the addition of TDDevProcessSupport ... added TDStandardTool above the tools to house the code related to installing generally available commands, commands defined in TDDevProcessSupport have to be invoked directly, but the code and manPages deserve to be managed in a class... sticking code for the image dev support into TDDevProcessSupport ... share some common commit code in TDMonticelloTool ... preparing for revising the commit commands a bit (maybe?)',#runs:RunArray{#runs:[516],#values:[[]],#lastIndex:332,#lastRun:1,#lastOffset:331}}}}}

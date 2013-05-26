@@ -8,7 +8,9 @@
 	"instvars" : [
 		"summary",
 		"synopsis",
-		"description" ],
+		"description",
+		"commandPath",
+		"sourceMethod" ],
 	"name" : "TDManPage",
 	"pools" : [
 		 ],

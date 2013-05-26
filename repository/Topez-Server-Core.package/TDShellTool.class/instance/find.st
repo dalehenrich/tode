@@ -1,13 +1,15 @@
 as yet unclassified
 find
   "
-  find method <selector>
+  find class <regex-pattern>
+  find method [#]<selector>
   find methods <method-spec> <method-spec>
-  find sender <selector>
+  find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
+  find sender [#]<selector>
   find source <regex-pattern>
-  find class <regex-pattern>
+  find versions <method-spec>
 "
 
   | findTokens command |

@@ -1,5 +1,0 @@
-editting
-windowActive: aSystemWindow
-    "noop"
-
-    

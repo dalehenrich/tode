@@ -11,4 +11,5 @@ accumulateText: line
   stream := scriptInputStream.
   scriptInputStream := actionArray at: 1.
   accumulateScriptText := actionArray at: 2.
+  redirectTarget := actionArray at: 4.
   ^ (actionArray at: 3) value: stream contents value: objIn value

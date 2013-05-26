@@ -1,5 +1,0 @@
-accessing
-cmdKPressed: aSmalltalkEditor
-  "noop"
-
-  

@@ -1,7 +1,16 @@
 as yet unclassified
 man
+  "man <command-name>
+   man @<command-path>
+  "
+
   ^ tokens size = 1
     ifFalse: [ 
-      | node |
-      node := topez commands at: (tokens at: 2).
-      node manPage asText ]
+      | node man command |
+      command := tokens at: 2.
+      node := (command beginsWith: '@')
+        ifTrue: [ self resolveAtPathNodeReference: command ]
+        ifFalse: [ topez commands at: (tokens at: 2) ].
+      man := node manPage asText.
+      man editUsing: (TDEditorSpec topez: topez).
+      man ]

@@ -7,10 +7,13 @@ baseline: spec
       spec baseline: 'Ston'.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
+        package: 'Topez-Common-Tests'
+          with: [ spec requires: #('Topez-Common-Core') ];
         yourself.
       spec
         group: 'default' with: #('Topez-Common-Core');
-        group: 'Dev' with: #('default');
+        group: 'Tests' with: #('Topez-Common-Tests');
+        group: 'Dev' with: #('default' 'Tests');
         yourself ].
   spec
     for: #'squeakCommon'
@@ -46,11 +49,14 @@ baseline: spec
         package: 'Topez-Pharo-Common';
         package: 'Topez-Client-GemStone'
           with: [ spec requires: #('GemTools-ClientGCI' 'Topez-Common-Core' 'Topez-Pharo-Common') ];
+        package: 'Topez-ClientTravis-Tests'
+          with: [ spec requires: #('Topez-Client-GemStone') ];
         yourself.
       spec
         group: 'default' with: #('Client');
         group: 'Client' with: #('Topez-Client-GemStone');
         group: 'GemStone Client' with: #('Client');
+        group: 'Tests' with: #('Topez-ClientTravis-Tests');
         group: 'Dev' with: #('Client');
         yourself ].
   spec
