@@ -1,12 +1,12 @@
-accessing
-sessionDescription_r
+*topez-client-gemstone
+sessionDescription_r_mac
   "self initializeSessionMap"
 
   <sessionDescription>
   ^ OGStandardSessionDescription new
-    name: 'r_gs64stone';
+    name: 'r_gs64stone_mac';
     gemstoneVersion: '3.1.0.3';
-    gciLibraryName: 'libgcirpc-3.1.0.3-32.so';
+    gciLibraryName: 'libgcirpc-3.1.0.3-32.dylib';
     adornmentColor: Color lightRed;
     stoneHost: 'foos.gemstone.com';
     stoneName: 'r_gs64stone';
