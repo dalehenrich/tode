@@ -15,10 +15,7 @@ baseline: spec
           with: [ spec requires: #('Topez-Common-Core') ];
         yourself.
       spec
-        group: 'Tests' with: #('Topez-Common-Tests');
-        group: 'Tode' with: #('Topez-Server-Core');
-        group: 'GemStone' with: #('Tode');
-        group: 'Pharo' with: #('Tode');
+        group: 'Common Tests' with: #('Topez-Common-Tests');
         yourself ].
   spec
     for: #'squeakCommon'
@@ -62,8 +59,9 @@ baseline: spec
         group: 'GemStone' with: #('Topez-Client-GemStone');
         group: 'Pharo' with: #();
         group: 'GemStone Tests' with: #('Topez-ClientTravis-Tests');
-        group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
-        group: 'Pharo Dev' with: #('Pharo');
+        group: 'GemStone Dev'
+          with: #('GemStone' 'Common Tests' 'GemStone Tests');
+        group: 'Pharo Dev' with: #('Pharo' 'Common Tests');
         yourself ].
   spec
     for: #'gemstone'
@@ -95,7 +93,8 @@ baseline: spec
           with:
             #('Tode-GemStone-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-ProcessTools' 'Topez-Server-TestTools');
         group: 'GemStone Tests'
-          with: #('Topez-Server-Tests' 'Topez-Server-TestDebugTools');
+          with:
+            #('Common Tests' 'Topez-Server-Tests' 'Topez-Server-TestDebugTools');
         group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
         yourself ].
   spec
