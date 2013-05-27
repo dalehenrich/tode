@@ -1,4 +1,4 @@
-*topez-client-gemstone
+session descriptions
 sessionDescription3101tODE
   "self initializeSessionMap"
 

@@ -1,17 +1,17 @@
-*topez-client-gemstone
-sessionDescription2441_mac
+session descriptions
+sessionDescription3101_mac
   "self initializeSessionMap"
 
   <sessionDescription>
   ^ OGCustomSessionDescription new
-    name: '2.4.4.1_mac';
-    gemstoneVersion: '2.4.4.1';
-    gciLibraryName: 'libgcirpc64-244.so';
-    adornmentColor: Color lightRed;
+    name: '3.1.0.1_mac';
+    gemstoneVersion: '3.1.0.1';
+    gciLibraryName: 'libgcirpc-3.1.0.1-32.dylib';
+    adornmentColor: Color lightGreen;
     stoneHost: 'localhost';
-    stoneName: 'seaside';
+    stoneName: 'seaside31';
     gemHost: 'localhost';
-    netLDI: '57643';
+    netLDI: '50377';
     gemTask: 'gemnetobject';
     userId: 'DataCurator';
     password: 'swordfish';

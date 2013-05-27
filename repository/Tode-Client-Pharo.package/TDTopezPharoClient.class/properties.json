@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Client-Pharo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topezServer" ],
+	"name" : "TDTopezPharoClient",
+	"pools" : [
+		 ],
+	"super" : "TDTopezClient",
+	"type" : "normal" }

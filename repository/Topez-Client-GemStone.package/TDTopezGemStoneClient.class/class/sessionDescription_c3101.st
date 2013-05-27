@@ -1,17 +1,17 @@
-*topez-client-gemstone
-sessionDescription_r
+session descriptions
+sessionDescription_c3101
   "self initializeSessionMap"
 
   <sessionDescription>
   ^ OGStandardSessionDescription new
-    name: 'r_gs64stone';
-    gemstoneVersion: '3.1.0.3';
-    gciLibraryName: 'libgcirpc-3.1.0.3-32.so';
-    adornmentColor: Color lightRed;
+    name: 'c_gs64stone_3101';
+    gemstoneVersion: '3.1.0.1';
+    gciLibraryName: 'libgcirpc-3.1.0.1-32.so';
+    adornmentColor: Color lightYellow;
     stoneHost: 'foos.gemstone.com';
-    stoneName: 'r_gs64stone';
+    stoneName: 'c_gs64stone_3101';
     gemHost: 'foos.gemstone.com';
-    netLDI: '49352';
+    netLDI: '33066';
     userId: 'DataCurator';
     password: 'swordfish';
     backupDirectory: '';

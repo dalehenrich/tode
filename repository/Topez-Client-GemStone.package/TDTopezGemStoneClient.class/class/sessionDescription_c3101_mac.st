@@ -1,4 +1,4 @@
-*topez-client-gemstone
+session descriptions
 sessionDescription_c3101_mac
   "self initializeSessionMap"
 

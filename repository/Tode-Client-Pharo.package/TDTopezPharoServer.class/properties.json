@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-Client-Pharo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"redirectTarget",
+		"result",
+		"objIn" ],
+	"name" : "TDTopezPharoServer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

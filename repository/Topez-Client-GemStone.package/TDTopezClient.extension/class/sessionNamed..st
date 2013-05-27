@@ -1,3 +1,3 @@
-class initialization
+*topez-client-gemstone
 sessionNamed: aString
   ^ SessionMap at: aString
