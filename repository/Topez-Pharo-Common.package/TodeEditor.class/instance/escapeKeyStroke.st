@@ -1,6 +1,4 @@
 accessing
 escapeKeyStroke
-  | spawnedServerOop element |
-  spawnedServerOop := self topez spawnWindow.
-  self activeEditor clientElement spawnShell: spawnedServerOop.
+  self topez spawnShellFor: self activeEditor clientElement.
   ^ true

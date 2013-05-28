@@ -2,7 +2,15 @@
 	"class" : {
 		"initialize" : "dkh 5/26/2013 14:20" },
 	"instance" : {
+		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:47",
 		"editElement:" : "dkh 5/28/2013 12:07",
 		"evaluateTokens:redirectTarget:" : "dkh 5/28/2013 06:56",
+		"getListForClientListElement:" : "dkh 5/28/2013 14:54",
+		"getSourceForClientSourceElement:" : "dkh 5/28/2013 14:53",
+		"handleKeyboardEventForClientListElement:codePoint:selectionIndex:" : "dkh 5/28/2013 14:40",
+		"itemSelectedForClientListElement:index:" : "dkh 5/28/2013 14:41",
 		"proxyBehaviorClass" : "dkh 5/28/2013 13:37",
-		"topezServer" : "dkh 5/28/2013 12:04" } }
+		"setSourceForClientSourceElement:source:" : "dkh 5/28/2013 14:51",
+		"spawnShellFor:" : "dkh 5/28/2013 14:27",
+		"topezServer" : "dkh 5/28/2013 12:04",
+		"windowIsClosingFor:" : "dkh 5/28/2013 14:44" } }

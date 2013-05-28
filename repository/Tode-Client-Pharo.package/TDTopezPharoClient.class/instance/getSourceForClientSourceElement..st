@@ -1,0 +1,3 @@
+as yet unclassified
+getSourceForClientSourceElement: aClientSourceElement
+	^ aClientSourceElement getBlock value
