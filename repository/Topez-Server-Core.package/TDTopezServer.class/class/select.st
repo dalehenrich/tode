@@ -1,3 +1,3 @@
 accessing
 select
-  self concreteClassName: self className
+  self concreteClassName: self name

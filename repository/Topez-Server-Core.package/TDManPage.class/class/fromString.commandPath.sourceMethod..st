@@ -5,14 +5,12 @@ fromString: manPage commandPath: commandPath sourceMethod: sourceMethod
   synopsisIndex := manPage indexOfSubCollection: 'SYNOPSIS'.
   descriptIndex := manPage indexOfSubCollection: 'DESCRIPTION'.
   ^ self new
-    summary:
-        (manPage copyFrom: summaryIndex + 1 to: synopsisIndex - 1) trimWhiteSpace;
+    summary: (manPage copyFrom: summaryIndex + 1 to: synopsisIndex - 1) trimBoth;
     synopsis:
         (manPage copyFrom: synopsisIndex + 'SYNOPSIS' size to: descriptIndex - 1)
-            trimWhiteSpace;
+            trimBoth;
     description:
-        (manPage copyFrom: descriptIndex + 'DESCRIPTION' size to: manPage size)
-            trimWhiteSpace;
+        (manPage copyFrom: descriptIndex + 'DESCRIPTION' size to: manPage size) trimBoth;
     commandPath: commandPath;
     sourceMethod: sourceMethod;
     yourself

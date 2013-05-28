@@ -2,5 +2,6 @@ accessing
 editorAspects
   | aspects |
   aspects := Set new.
-  self nodeEditors values do: [ :classMap | aspects addAll: classMap keys ].
+  self concreteClass nodeEditors values
+    do: [ :classMap | aspects addAll: classMap keys ].
   ^ aspects asArray

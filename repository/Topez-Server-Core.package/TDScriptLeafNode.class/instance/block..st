@@ -1,5 +1,5 @@
 as yet unclassified
 block: aBlock
-  contents := aBlock _sourceString.
+  contents := aBlock blockSource.
   block := aBlock.
   blockVendor := nil

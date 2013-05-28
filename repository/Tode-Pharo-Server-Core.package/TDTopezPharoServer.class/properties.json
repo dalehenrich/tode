@@ -1,7 +1,7 @@
 {
 	"category" : "Tode-Pharo-Server-Core",
 	"classinstvars" : [
-		 ],
+		"instanceMap" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
