@@ -1,7 +1,7 @@
 as yet unclassified
 mmDiffForProjects: projectSpecs on: stream
   | patches |
-  patches := Array new.
+  patches := OrderedCollection new.
   projectSpecs
     do: [ :projectSpec | 
       | packageSpecs |

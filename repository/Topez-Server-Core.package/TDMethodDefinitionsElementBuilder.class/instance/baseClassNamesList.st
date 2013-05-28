@@ -7,6 +7,7 @@ baseClassNamesList
     do: [ :def | 
       (classMap
         at: def theClassName
-        ifAbsent: [ classMap at: def theClassName put: Array new ]) add: def.
+        ifAbsent: [ classMap at: def theClassName put: OrderedCollection new ])
+        add: def.
       classes add: def theClassName ].
   ^ classes asArray

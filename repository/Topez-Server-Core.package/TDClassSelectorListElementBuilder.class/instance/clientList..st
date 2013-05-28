@@ -1,8 +1,8 @@
 as yet unclassified
 clientList: listElement
   | items ar beh className |
-  items := Array new.
-  ar := Array new.
+  items := OrderedCollection new.
+  ar := OrderedCollection new.
   className := self theClass name.
   beh := self theBehavior.
   beh selectors sorted

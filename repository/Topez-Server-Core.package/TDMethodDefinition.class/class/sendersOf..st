@@ -1,7 +1,7 @@
 as yet unclassified
 sendersOf: selector
   | defs |
-  defs := Array new.
+  defs := OrderedCollection new.
   (Smalltalk systemNavigation newSendersOf: selector asSymbol)
     do: [ :gsMethod | 
       | def |

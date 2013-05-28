@@ -1,7 +1,7 @@
 as yet unclassified
 classDefinitions
   | defs version extensionDefinitions |
-  defs := Array new.
+  defs := OrderedCollection new.
   version := self projectSpec version.
   extensionDefinitions := Dictionary new.
   version packages
@@ -10,5 +10,8 @@ classDefinitions
         ifNotNil: [ :wc | 
           | packageInfo |
           packageInfo := wc packageInfo.
-          self classDefinitionsFor: packageInfo definitions: defs extensionDefinitions: extensionDefinitions ] ].
+          self
+            classDefinitionsFor: packageInfo
+            definitions: defs
+            extensionDefinitions: extensionDefinitions ] ].
   ^ defs

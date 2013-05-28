@@ -1,4 +1,4 @@
 as yet unclassified
 instanceMethods
-  instanceMethods ifNil: [ instanceMethods := Array new ].
+  instanceMethods ifNil: [ instanceMethods := OrderedCollection new ].
   ^ instanceMethods

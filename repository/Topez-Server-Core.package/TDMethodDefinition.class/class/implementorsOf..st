@@ -1,7 +1,7 @@
 as yet unclassified
 implementorsOf: selector
   | defs |
-  defs := Array new.
+  defs := OrderedCollection new.
   Smalltalk systemNavigation
     allBehaviorsDo: [ :behavior | 
       (behavior includesSelector: selector)

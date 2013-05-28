@@ -9,7 +9,7 @@ findMatchingPathFor: aPath with: aTopez
         lookupPath: (path copyFrom: 1 to: path size - 1)
         ifAbsent: [ ^ aPath ] ].
   elementName := path last.
-  matches := Array new.
+  matches := OrderedCollection new.
   node
     childrenDo: [ :child | 
       (child name beginsWith: elementName)

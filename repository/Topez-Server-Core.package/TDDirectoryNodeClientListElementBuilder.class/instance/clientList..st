@@ -1,8 +1,8 @@
 as yet unclassified
 clientList: listElement
   | displayPolicy components max ar items |
-  items := Array new.
-  components := Array new.
+  items := OrderedCollection new.
+  components := OrderedCollection new.
   max := 'parent' size.
   displayPolicy := listElement displayPolicy.
   components
