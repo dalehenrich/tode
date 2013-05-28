@@ -1,4 +1,4 @@
-*topez-pharo-common
+*topez-client-gemstone
 initializeUsingSton: aGciLibrary session: aTodeSession
   library := aGciLibrary.
   address := ExternalAddress gcallocate: self structSize.

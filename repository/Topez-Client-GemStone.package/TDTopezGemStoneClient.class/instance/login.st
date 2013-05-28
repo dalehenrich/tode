@@ -1,7 +1,7 @@
 as yet unclassified
 login
   | desc sess |
-  TZGemStoneProxyBehavior resetAllGlobalNames.	"reset the cache on login"
+  self proxyBehaviorClass resetAllGlobalNames.	"reset the cache on login"
   desc := self sessionDescription.
   sess := self todeSessionClass new
     topez: self;

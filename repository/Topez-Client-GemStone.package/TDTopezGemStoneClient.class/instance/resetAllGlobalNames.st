@@ -1,4 +1,4 @@
 as yet unclassified
 resetAllGlobalNames
-  TZGemStoneProxyBehavior resetAllGlobalNames.
+  self proxyBehaviorClass resetAllGlobalNames.
   ^ nil

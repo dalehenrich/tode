@@ -4,12 +4,5 @@ elementBehaviorForShout
 
   self inClassOop ifNil: [ ^ nil ].
   elementBehaviorForShout
-    ifNil: [ 
-      elementBehaviorForShout := TZGemStoneProxyBehavior new
-        behaviorOop: self inClassOop;
-        allClassVarNames: self allClassVarNames;
-        allInstVarNames: self allInstVarNames;
-        allSharedPoolNames: self allSharedPoolNames;
-        topez: self topez;
-        yourself ].
+    ifNil: [ elementBehaviorForShout := topez proxyBehaviorClass fromClientElement: self ].
   ^ elementBehaviorForShout

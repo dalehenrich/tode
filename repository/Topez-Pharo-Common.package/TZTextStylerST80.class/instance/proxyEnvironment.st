@@ -2,7 +2,7 @@ private
 proxyEnvironment
   proxyEnvironment
     ifNil: [ 
-      proxyEnvironment := TZGemStoneProxyBehavior new
+      proxyEnvironment := view model topez proxyBehaviorClass new
         topez: view model topez;
         yourself ].
   ^ proxyEnvironment

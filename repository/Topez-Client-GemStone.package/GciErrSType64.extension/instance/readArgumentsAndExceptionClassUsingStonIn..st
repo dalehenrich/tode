@@ -1,4 +1,4 @@
-*topez-pharo-common
+*topez-client-gemstone
 readArgumentsAndExceptionClassUsingStonIn: aTodeSession
   | argsSize ofs expressionStream stonString answerArray objectArray classNameArray Name is exceptionObjInClassNameArray |
   argsSize := self argsSize.

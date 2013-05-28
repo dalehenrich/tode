@@ -1,0 +1,15 @@
+{
+	"category" : "Tode-Pharo-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"behavior",
+		"topez" ],
+	"name" : "TZPharoProxyBehavior",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,4 +1,4 @@
-*topez-pharo-common
+*topez-client-gemstone
 asGsRuntimeException: aGciSession
   | notificationClass |
   notificationClass := self isBreakpoint

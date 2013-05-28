@@ -1,4 +1,4 @@
-*topez-pharo-common
+*topez-client-gemstone
 library: aGciLibrary session: aTodeSession
   | instance |
   instance := self new
