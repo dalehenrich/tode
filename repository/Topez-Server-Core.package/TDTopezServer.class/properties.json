@@ -8,7 +8,7 @@
 		"nodeEditors",
 		"nodePrinters" ],
 	"classvars" : [
-		 ],
+		"ConcreteClassName" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"topezClientForwarder",

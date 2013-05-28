@@ -1,13 +1,16 @@
 {
 	"class" : {
 		"commands" : "DataCurator 11/20/2012 09:01",
+		"concreteClass" : "dkh 05/27/2013 20:03",
+		"concreteClassName" : "dkh 05/27/2013 20:01",
+		"concreteClassName:" : "dkh 05/27/2013 20:01",
 		"createFor:" : "DataCurator 01/06/2013 07:59",
 		"createForIndirectAccessFrom:todeSymbolDictionaryName:shellId:" : "dkh 02/23/2013 16:32",
 		"editorAspects" : "dkh 04/10/2013 15:38",
-		"for:" : "DataCurator 01/06/2013 08:37",
+		"for:" : "dkh 05/27/2013 20:03",
 		"halos" : "DataCurator 01/22/2013 13:46",
 		"indirectAccess" : "dkh 02/23/2013 17:29",
-		"instanceMap" : "DataCurator 12/21/2012 09:31",
+		"initialize" : "dkh 05/27/2013 20:10",
 		"nodeBuilders" : "DataCurator 01/15/2013 10:16",
 		"nodeBuilders:" : "DataCurator 01/15/2013 10:16",
 		"nodeEditors" : "DataCurator 01/15/2013 10:17",
@@ -19,8 +22,8 @@
 		"registerPrinterClass:for:aspect:" : "DataCurator 01/14/2013 12:51",
 		"reset" : "dkh 04/06/2013 09:40",
 		"resetForInstall" : "dkh 04/06/2013 09:44",
-		"resetHard" : "dkh 04/06/2013 09:45",
 		"rootNode" : "DataCurator 11/28/2012 05:40",
+		"select" : "dkh 05/27/2013 20:01",
 		"todeSymbolList" : "dkh 02/23/2013 16:33",
 		"todeSymbolList:" : "dkh 02/23/2013 16:32" },
 	"instance" : {

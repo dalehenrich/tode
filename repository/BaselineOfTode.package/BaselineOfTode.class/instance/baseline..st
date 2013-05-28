@@ -4,13 +4,11 @@ baseline: spec
   spec
     for: #'common'
     do: [ 
-      spec
-        baseline: 'RB' with: [ spec loads: #('AST-Core') ];
-        baseline: 'Ston'.
+      spec baseline: 'Ston'.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
         package: 'Topez-Server-Core'
-          with: [ spec requires: #('RB' 'Topez-Common-Core') ];
+          with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Common-Tests'
           with: [ spec requires: #('Topez-Common-Core') ];
         yourself.
@@ -49,6 +47,8 @@ baseline: spec
         with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ].
       spec
         package: 'Topez-Pharo-Common';
+        package: 'Tode-Pharo-Server-Core'
+          with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-Client-Common'
           with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
@@ -61,7 +61,7 @@ baseline: spec
       spec
         group: 'default' with: #('GemStone');
         group: 'GemStone' with: #('Topez-Client-GemStone');
-        group: 'Pharo' with: #('Tode-Client-Pharo');
+        group: 'Pharo' with: #('Tode-Pharo-Server-Core' 'Tode-Client-Pharo');
         group: 'GemStone Tests' with: #('Topez-ClientTravis-Tests');
         group: 'GemStone Dev'
           with: #('GemStone' 'Common Tests' 'GemStone Tests');
@@ -72,10 +72,14 @@ baseline: spec
     do: [ 
       spec
         baseline: 'RB'
-          with: [ spec repository: 'github://dalehenrich/rb:dev/repository' ];
+          with: [ 
+              spec
+                loads: #('AST-Core');
+                repository: 'github://dalehenrich/rb:dev/repository' ];
         baseline: 'Ston'
           with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
       spec
+        package: 'Topez-Server-Core' with: [ spec requires: #('RB') ];
         package: 'Tode-GemStone-Server-Core'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Tests'

@@ -7,7 +7,6 @@ initialize
   initializationOrder := OrderedCollection new.
   TDAbstractDevTool allSubclasses
     do: [ :cl | 
-      | pragma |
       (Pragma allNamed: #'topezCommandPriority' in: cl class)
         do: [ :pragma | initializationOrder add: (cl perform: pragma selector) -> cl ] ].
   (initializationOrder sort: [ :a :b | a key <= b key ])
