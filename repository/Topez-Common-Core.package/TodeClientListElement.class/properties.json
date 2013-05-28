@@ -8,10 +8,13 @@
 	"instvars" : [
 		"itemCache",
 		"firstList",
+		"listBlock",
 		"listBlockOop",
+		"itemSelectedBlock",
 		"itemSelectedBlockOop",
 		"selectedIndex",
 		"parent",
+		"windowIsClosingBlock",
 		"windowIsClosingBlockOop",
 		"highlightedIndex",
 		"parentListIndex" ],

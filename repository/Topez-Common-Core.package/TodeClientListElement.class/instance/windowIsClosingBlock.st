@@ -1,0 +1,3 @@
+updating
+windowIsClosingBlock
+  ^ windowIsClosingBlock

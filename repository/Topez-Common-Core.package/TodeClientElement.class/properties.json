@@ -16,6 +16,7 @@
 		"editorWindowId",
 		"editorWindowLocation",
 		"editorWindowName",
+		"keyboardEventBlock",
 		"keyboardEventBlockOop",
 		"cmdKeyCodePoints",
 		"windowBuilder" ],

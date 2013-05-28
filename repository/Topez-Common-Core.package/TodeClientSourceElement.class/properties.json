@@ -7,8 +7,11 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"firstSource",
+		"getBlock",
 		"getBlockOop",
+		"setBlock",
 		"setBlockOop",
+		"cmdKeyBlock",
 		"cmdKeyBlockOop" ],
 	"name" : "TodeClientSourceElement",
 	"pools" : [
