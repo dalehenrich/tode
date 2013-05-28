@@ -5,8 +5,7 @@ builderFor: anObject aspect: anAspect do: aBlock
     aspect: anAspect
     do: [ :className :finalAspect | 
       | builderClass |
-      builderClass := TDTopezServer todeSymbolList
-        objectNamed: className asSymbol.
+      builderClass := self class globalNamed: className.
       aBlock
         value:
           (builderClass new

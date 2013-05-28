@@ -1,7 +1,7 @@
 as yet unclassified
 method
   | cl method |
-  cl := Smalltalk classNamed: self className.
+  cl := Smalltalk classNamed: self theClassName.
   self isMeta
     ifTrue: [ cl := cl class ].
   ^ cl

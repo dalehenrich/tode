@@ -6,7 +6,7 @@ baseClassNamesList
   self object
     do: [ :def | 
       (classMap
-        at: def className
-        ifAbsent: [ classMap at: def className put: Array new ]) add: def.
-      classes add: def className ].
+        at: def theClassName
+        ifAbsent: [ classMap at: def theClassName put: Array new ]) add: def.
+      classes add: def theClassName ].
   ^ classes asArray

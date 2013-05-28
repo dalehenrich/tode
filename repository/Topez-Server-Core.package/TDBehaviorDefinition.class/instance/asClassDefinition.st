@@ -1,3 +1,3 @@
 as yet unclassified
 asClassDefinition
-  ^ TDClassDefinition className: self className
+  ^ TDClassDefinition className: self theClassName
