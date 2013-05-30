@@ -1,3 +1,3 @@
 updating
-parentList: anArrayOfIntegers
-  parentList := self parentList , anArrayOfIntegers
+parentList: anOrderedCollection
+  parentList := self parentList , anOrderedCollection
