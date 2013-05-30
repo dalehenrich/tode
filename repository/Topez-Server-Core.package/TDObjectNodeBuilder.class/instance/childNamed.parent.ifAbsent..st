@@ -8,7 +8,10 @@ childNamed: elementName parent: parentNode ifAbsent: absentBlock
         do: [ :ex | 'error accessing index: ' , elementName printString , ' --> ' , ex description ] ]
     ifFalse: [ 
       (#('(class)' '(oop)' '(value)') includes: elementName)
-        ifTrue: [ self objectValueForSpecialElementName: elementName for: parentNode basicContents ]
+        ifTrue: [ 
+          obj := self
+            objectValueForSpecialElementName: elementName
+            for: parentNode basicContents ]
         ifFalse: [ 
           | parent ivarIndex |
           parent := parentNode basicContents.
