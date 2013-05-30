@@ -45,7 +45,7 @@ clientList: listElement
             parent: self object
             aspect: listElement aspect
             listIndex: listElement parentListIndex) ].
-  ar := Array new.
+  ar := OrderedCollection new.
   max := max + 1.
   components
     do: [ :compAr | 
