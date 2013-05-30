@@ -1,5 +1,5 @@
 *tode-gemstone-server-core
-displayOn: displayPolicy
+displayOnPolicy: displayPolicy
   | string aStream limit displayOops compacted |
   aStream := displayPolicy stream.
   limit := displayPolicy characterLimit.
@@ -16,7 +16,10 @@ displayOn: displayPolicy
             nextPutAll: (Reflection sizeOf: self) printString;
             space ].
       aStream
-        nextPutAll: (Text string: (Reflection classOf: self) name asString attribute: TextEmphasis bold);
+        nextPutAll:
+            (Text
+                string: (Reflection classOf: self) name asString
+                attribute: TextEmphasis bold);
         nextPutAll: ']';
         space ].
   string := [ 
@@ -27,4 +30,5 @@ displayOn: displayPolicy
     do: [ :ignored | 'error printing' ].
   compacted
     ifTrue: [ string := string withSeparatorsCompacted ].
-  aStream nextPutAll: (Text string: string attribute: (TextColor color: Color blue))
+  aStream
+    nextPutAll: (Text string: string attribute: (TextColor color: Color blue))

@@ -13,7 +13,7 @@ mclist
   list := list sort: [ :a :b | a name <= b name ].
   list
     do: [ :pkg | 
-      pkg displayOn: displayPolicy.
+      pkg displayOnPolicy: displayPolicy.
       stream cr ].
   list editUsing: (TDEditorSpec topez: topez).
   ^ list

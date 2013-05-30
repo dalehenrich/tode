@@ -19,7 +19,7 @@ mmlist
   stream := displayPolicy stream.
   list
     do: [ :pkg | 
-      pkg displayOn: displayPolicy.
+      pkg displayOnPolicy: displayPolicy.
       stream cr ].
   ^ TDCommandResult new
     displayText: stream contents;

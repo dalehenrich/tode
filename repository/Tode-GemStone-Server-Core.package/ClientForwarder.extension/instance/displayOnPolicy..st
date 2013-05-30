@@ -1,5 +1,5 @@
 *tode-gemstone-server-core
-displayOn: displayPolicy
+displayOnPolicy: displayPolicy
   "not many useful things you can do with a clientForwarder ... without triggering references to client"
 
   | string aStream displayOops compacted limit pStream |
@@ -18,7 +18,10 @@ displayOn: displayPolicy
             nextPutAll: (Reflection sizeOf: self) printString;
             space ].
       aStream
-        nextPutAll: (Text string: (Reflection classOf: self) name asString attribute: TextEmphasis bold);
+        nextPutAll:
+            (Text
+                string: (Reflection classOf: self) name asString
+                attribute: TextEmphasis bold);
         nextPutAll: ']';
         space ].
   pStream := WriteStream on: String new.
@@ -28,4 +31,5 @@ displayOn: displayPolicy
     ifTrue: [ string := (string copyFrom: 1 to: limit) , '...' ].
   compacted
     ifTrue: [ string := string withSeparatorsCompacted ].
-  aStream nextPutAll: (Text string: string attribute: (TextColor color: Color blue))
+  aStream
+    nextPutAll: (Text string: string attribute: (TextColor color: Color blue))

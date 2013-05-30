@@ -42,7 +42,7 @@ clientList: listElement
             parent: parentObject
             aspect: listElement aspect).
       displayPolicy stream: stream.
-      object displayOn: displayPolicy.
+      object displayOnPolicy: displayPolicy.
       ar add: stream contents asString ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].

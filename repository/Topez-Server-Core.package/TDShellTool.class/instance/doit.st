@@ -14,7 +14,7 @@ doit
   displayPolicy := topez displayPolicy
     compacted: true;
     yourself.
-  doitContext displayOn: displayPolicy.
+  doitContext displayOnPolicy: displayPolicy.
   ^ TDCommandResult new
     displayText: displayPolicy stream contents;
     resultObject: doitContext;

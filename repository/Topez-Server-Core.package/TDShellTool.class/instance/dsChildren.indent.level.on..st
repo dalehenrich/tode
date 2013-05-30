@@ -17,7 +17,7 @@ dsChildren: node indent: indent level: level on: displayPolicy
           ^ self ].
       stream nextPutAll: nameText.
       stream nextPutAll: ' -> '.
-      child dotSelfObject displayOn: displayPolicy.
+      child dotSelfObject displayOnPolicy: displayPolicy.
       stream cr.
       self
         dsChildren: child

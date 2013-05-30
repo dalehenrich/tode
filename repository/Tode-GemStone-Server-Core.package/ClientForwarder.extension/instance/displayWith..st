@@ -1,4 +1,4 @@
 *tode-gemstone-server-core
 displayWith: displayPolicy
-  self displayOn: displayPolicy.
+  self displayOnPolicy: displayPolicy.
   ^ displayPolicy stream contents
