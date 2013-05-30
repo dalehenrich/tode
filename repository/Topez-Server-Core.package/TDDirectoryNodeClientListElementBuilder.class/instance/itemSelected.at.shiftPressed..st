@@ -46,7 +46,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         builderAspect: builderAspect;
         parentObject: parent;
         highlightIndex: highlightIndex;
-        parentListIndex: parentList;
+        parentList: parentList;
         windowName: windowName;
         yourself).
   ^ nil
