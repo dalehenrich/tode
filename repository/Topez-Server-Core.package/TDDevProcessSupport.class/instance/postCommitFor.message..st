@@ -2,7 +2,7 @@ as yet unclassified
 postCommitFor: projectName message: message
   | projectNode |
   projectNode := topez lookup: projectName.
-  projectNode
+  ^ projectNode
     addChildNode:
       (TDTxtLeafNode new
         name: 'STATUS';
