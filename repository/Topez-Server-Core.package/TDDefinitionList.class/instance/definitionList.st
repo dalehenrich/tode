@@ -1,3 +1,5 @@
 as yet unclassified
 definitionList
-  ^ self createDefinitionList
+  "always create a fresh list, but cache the list in <definitionList>...for now"
+
+  ^ definitionList := self createDefinitionList

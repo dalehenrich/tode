@@ -15,5 +15,5 @@ mclist
     do: [ :pkg | 
       pkg displayOnPolicy: displayPolicy.
       stream cr ].
-  list editUsing: (TDEditorSpec topez: topez).
+  list editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
   ^ list

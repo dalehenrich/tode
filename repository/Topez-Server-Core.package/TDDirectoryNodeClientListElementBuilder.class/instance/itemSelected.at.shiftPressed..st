@@ -7,7 +7,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   aspect := itemAttribute aspect.
   aspect == #'edit'
     ifTrue: [ 
-      "convert #edit (source editor) to #navigate"
+      "navigator window always navigates"
       aspect := #'navigate' ].
   parentList := itemAttribute list copy.
   toggled := false.
@@ -16,6 +16,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       "."
       "toggle between view and inspect on subject of list"
       toggled := true.
+      builderAspect := obj builderAspect.
       builderAspect == #'inspect'
         ifTrue: [ builderAspect := #'view' ]
         ifFalse: [ builderAspect := #'inspect' ].

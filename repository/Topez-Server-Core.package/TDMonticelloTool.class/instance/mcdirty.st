@@ -4,5 +4,5 @@ mcdirty
 
   | dirty |
   dirty := MCWorkingCopy allManagers select: [ :wc | wc modified ].
-  dirty editUsing: (TDEditorSpec topez: topez).
+  dirty editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
   ^ dirty
