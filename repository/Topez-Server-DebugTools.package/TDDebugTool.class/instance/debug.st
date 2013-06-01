@@ -13,6 +13,6 @@ debug
     currentNode: stackNode.
   self dbStack
     editUsing:
-      ((TDEditorSpec topez: topez editorAspect: #'navigate')
+      ((TDEditorSpec topez: topez editorAspect: #'stack')
         parentObject: stackNode;
         yourself)

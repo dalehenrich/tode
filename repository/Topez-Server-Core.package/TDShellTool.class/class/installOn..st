@@ -43,7 +43,7 @@ installOn: aTDTopezServer
       TDTopezServer
         registerEditorClass: TDObjectLogElementBuilder
         for: cl
-        aspect: #'navigate' ].
+        aspect: #'logEntries' ].
   TDTopezServer
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
@@ -77,7 +77,7 @@ installOn: aTDTopezServer
       aspect: #'methodDefinitionList';
     registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder
       for: TDDefinitionList
-      aspect: #'navigate';
+      aspect: #'definitionList';
     registerEditorClass: TDClassSelectorListElementBuilder
       for: Behavior
       aspect: #'classSelectors';
@@ -86,7 +86,7 @@ installOn: aTDTopezServer
       aspect: #'instanceSelectors';
     registerEditorClass: TDClassHierarchyListElementBuilder
       for: Behavior
-      aspect: #'navigate';
+      aspect: #'hierarchyList';
     registerEditorClass: TDClassDefinitionClientElementBuilder
       for: Class
       aspect: #'classDefinition';
@@ -107,7 +107,7 @@ installOn: aTDTopezServer
       aspect: #'method';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder
       for: TDDirectoryNode
-      aspect: #'navigate';
+      aspect: #'edit';
     registerEditorClass: TDClientSourceElementBuilder
       for: TDLeafNode
       aspect: #'edit';

@@ -9,7 +9,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     ifTrue: [ 
       "convert #edit (source editor) to #navigate"
       aspect := #'navigate' ].
-  parentList := itemAttribute listIndex copy.
+  parentList := itemAttribute list copy.
   toggled := false.
   index == 1
     ifTrue: [ 

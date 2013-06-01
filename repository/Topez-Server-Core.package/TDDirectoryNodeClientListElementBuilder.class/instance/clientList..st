@@ -15,7 +15,7 @@ clientList: listElement
         object: self object
         parent: nil
         aspect: listElement aspect
-        listIndex: listElement parentList).
+        list: listElement parentList).
   self object parent ~~ nil
     ifTrue: [ 
       displayPolicy stream: nil.
@@ -29,7 +29,7 @@ clientList: listElement
             object: self object parent
             parent: nil
             aspect: listElement aspect
-            listIndex: listElement parentList) ].
+            list: listElement parentList) ].
   self object
     childrenAndNamesDo: [ :child :nameText | 
       max := max max: nameText size.
@@ -44,7 +44,7 @@ clientList: listElement
             object: child dotSelfObject
             parent: self object
             aspect: listElement aspect
-            listIndex: listElement parentList) ].
+            list: listElement parentList) ].
   ar := OrderedCollection new.
   max := max + 1.
   components

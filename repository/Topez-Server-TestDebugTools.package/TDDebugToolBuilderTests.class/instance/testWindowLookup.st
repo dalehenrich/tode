@@ -5,10 +5,10 @@ testWindowLookup
   self
     executeWindowBuilderLookupSpecs:
       {{(TDStack new).
-      #'navigate'.
+      #'stack'.
       (TDStackClientListElementBuilder name)}.
       {(TDStackFrame new).
-      #'navigate'.
+      #'stack'.
       (TDClientObjectElementBuilder name)}.
       {(TDStackFrame new).
       #'source'.

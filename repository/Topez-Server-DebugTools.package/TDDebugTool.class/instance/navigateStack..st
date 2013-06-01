@@ -4,7 +4,7 @@ navigateStack: increment
   self dbStack navigateStack: increment.
   self dbStack
     editUsing:
-      ((TDEditorSpec topez: topez editorAspect: #'navigate')
+      ((TDEditorSpec topez: topez editorAspect: #'stack')
         parentObject: stackNode;
         yourself).
   ^ topez currentNode

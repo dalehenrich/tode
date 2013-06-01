@@ -9,7 +9,7 @@ browseClassHierarchy: clientSourceElement selectionInterval: selectionInterval
   cls := gsMethod inClass.
   cls
     editUsing:
-      ((TDEditorSpec topez: clientSourceElement topez editorAspect: #'navigate')
+      ((TDEditorSpec topez: clientSourceElement topez editorAspect: #'hierarchyList')
         windowName: #'hierarchy';
         yourself).
   ^ true
