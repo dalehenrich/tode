@@ -1,4 +1,4 @@
 accessing
 shellWindowHeight
-  shellWindowHeight ifNil: [ shellWindowHeight := 21 ].
+  shellWindowHeight ifNil: [ shellWindowHeight := 14 ].
   ^ shellWindowHeight
