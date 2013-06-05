@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addResultToStack:" : "dkh 06/04/2013 21:29",
 		"autoCommit" : "DataCurator 12/21/2012 11:20",
 		"autoCommit:" : "DataCurator 12/21/2012 11:17",
 		"characterLimit" : "DataCurator 01/16/2013 15:12",
@@ -20,4 +21,7 @@
 		"exceptionProcess" : "DataCurator 12/01/2012 18:18",
 		"listLimit" : "DataCurator 01/16/2013 09:51",
 		"listLimit:" : "DataCurator 01/16/2013 09:52",
-		"reset" : "DataCurator 01/23/2013 19:39" } }
+		"reset" : "DataCurator 01/23/2013 19:39",
+		"resultFromStackAt:" : "dkh 06/04/2013 21:04",
+		"resultStack" : "dkh 06/04/2013 20:47",
+		"resultStackIndex" : "dkh 06/04/2013 20:49" } }

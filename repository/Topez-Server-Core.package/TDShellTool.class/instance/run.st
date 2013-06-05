@@ -4,12 +4,14 @@ run
   doitContext := objIn dotSelfObject.
   tokens size > 1
     ifTrue: [ 
-      | doitString |
+      | doitString result |
       doitString := (topez lookup: (tokens at: 2)) contents.
-      ^ self topez
+      result := self topez
         evaluateString: doitString
         inContext: doitContext
-        withTempSymbolList: (self symbolListForNode: topez currentNode) ].
+        withTempSymbolList: (self symbolListForNode: topez currentNode).
+      self topez objIn: result.
+      ^ result ].
   topez
     accumulateTextAndDo: [ :doitString :accumulateObjIn | 
       | result |
