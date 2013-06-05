@@ -1,5 +1,5 @@
 accessing
 spawnWindow
   | topezOop |
-  topezOop := self topezClientForwarder spawnWindow.
+  topezOop := self topezClientForwarder spawnWindowFromServer.
   ^ Object _objectForOop: topezOop
