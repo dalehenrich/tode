@@ -3,7 +3,7 @@ mmdirty
   "mm dirty"
 
   | versions dirty |
-  versions := self mmlist
+  versions := self mmlist resultObject
     collect: [ :registration | registration lookupBaselineSpec version ].
   dirty := versions
     select: [ :version | 

@@ -6,7 +6,7 @@ browseManPage
 SYNOPSIS
   browse amethod <method-spec>
   browse class <regex-pattern>
-  browse diff <method1-spec> <method2-spec>
+  browse diff <method-spec-1> <method-spec-2>
   browse list <definitionList-path>
   browse method [#]<selector>
   browse references <variableOrGlobalNameOrPathRef>
@@ -17,13 +17,23 @@ SYNOPSIS
   browse versions <method-spec>
 
 DESCRIPTION
-  <method-spec>
+  <definitionList-path> :: path to collection of TDDefinitions
+    .
+    ../implementors
+    /home/impelementors
+
+  <method-spec> :: method specification
     Object>>methodSelector
     Object class>>methodSelector
 
-  <variableOrGlobalNameOrPathRef>
+  <regex-pattern> :: regular expression pattern
+
+  <selector> :: method selector (use `#` in front of selector to disambiguate from shell operator (`>`)).
+    yourself
+    at:put:
+    #>
+
+  <variableOrGlobalNameOrPathRef> :: global name
     <identifier>
     @<path>  
-
-  use `#` in front of selector to distinquish from shell operator (`>`).
 '

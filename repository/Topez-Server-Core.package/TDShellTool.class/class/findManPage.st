@@ -4,10 +4,10 @@ findManPage
   find - search for matching classes and methods (class, method, sender, rmethod, rsender, source, versions)
 
 SYNOPSIS
-  find class <regex-pattern>
   find amethod <method-spec> 
+  find class <regex-pattern>
   find method [#]<selector>
-  find methods <method-spec> <method-spec>
+  find methods <method-spec-1> <method-spec-2>
   find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
@@ -16,13 +16,18 @@ SYNOPSIS
   find versions <method-spec>
 
 DESCRIPTION
-  <method-spec>
+  <method-spec> :: method specification
     Object>>methodSelector
     Object class>>methodSelector
 
-  <variableOrGlobalNameOrPathRef>
-    <identifier>
-    @<path>
+  <regex-pattern> :: regular expression pattern
 
-  use `#` in front of selector to distinquish from shell operator (`>`).
+  <selector> :: method selector (use `#` in front of selector to disambiguate from shell operator (`>`)).
+    yourself
+    at:put:
+    #>
+
+  <variableOrGlobalNameOrPathRef> :: global name
+    <identifier>
+    @<path>  
 '

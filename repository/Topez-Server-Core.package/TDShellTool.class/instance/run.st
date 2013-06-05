@@ -1,25 +1,19 @@
 as yet unclassified
 run
+  "run [ <receiver-path> ]"
+
   | doitContext displayPolicy |
-  doitContext := objIn dotSelfObject.
+  doitContext := objIn.
   tokens size > 1
-    ifTrue: [ 
-      | doitString result |
-      doitString := (topez lookup: (tokens at: 2)) contents.
-      result := self topez
-        evaluateString: doitString
-        inContext: doitContext
-        withTempSymbolList: (self symbolListForNode: topez currentNode).
-      self topez objIn: result.
-      ^ result ].
+    ifTrue: [ doitContext := topez lookup: (tokens at: 2) ].
   topez
     accumulateTextAndDo: [ :doitString :accumulateObjIn | 
       | result |
       topez exception: nil.
       result := self topez
         evaluateString: doitString
-        inContext: accumulateObjIn dotSelfObject
-        withTempSymbolList: (self symbolListForNode: topez currentNode).
+        inContext: accumulateObjIn
+        withTempSymbolList: topez currentNode tempSymbolList.
       self topez objIn: result.
       result ].
   displayPolicy := topez displayPolicy

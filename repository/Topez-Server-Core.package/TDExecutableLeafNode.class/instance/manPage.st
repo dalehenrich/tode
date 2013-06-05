@@ -1,4 +1,4 @@
 as yet unclassified
 manPage
-  manPage ifNil: [ manPage := TDManPage new ].
+  manPage ifNil: [ manPage := self createManPage ].
   ^ manPage

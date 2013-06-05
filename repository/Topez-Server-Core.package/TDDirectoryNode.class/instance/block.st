@@ -1,3 +1,3 @@
 as yet unclassified
 block
-    ^ [ :aTopez :objIn :tokens :windowId | self dotSelfObject ]
+  self error: 'Cannot execute a directory node'

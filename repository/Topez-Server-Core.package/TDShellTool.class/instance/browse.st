@@ -3,7 +3,7 @@ browse
   "
   browse amethod <method-spec>
   browse class <regex-pattern>
-  browse diff <method1-spec> <method2-spec>
+  browse diff <method-spec-1> <method-spec-2>
   browse list <definitionList-path>
   browse method [#]<selector>
   browse references <variableOrGlobalNameOrPathRef>

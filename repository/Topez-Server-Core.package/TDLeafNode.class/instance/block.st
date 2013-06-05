@@ -1,3 +1,3 @@
 as yet unclassified
 block
-    ^ [ :aTopez :objIn :tokens :windowId | self contents ]
+  self error: 'Cannot execute a leaf node'

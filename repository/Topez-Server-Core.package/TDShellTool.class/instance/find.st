@@ -1,9 +1,10 @@
 as yet unclassified
 find
   "
+  find amethod <method-spec> 
   find class <regex-pattern>
   find method [#]<selector>
-  find methods <method-spec> <method-spec>
+  find methods <method-spec-1> <method-spec-2>
   find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
