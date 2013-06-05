@@ -6,7 +6,8 @@
 		"codeWindowHeight",
 		"codeWindowWidth",
 		"listWindowWidth",
-		"windowOrigin" ],
+		"windowOrigin",
+		"shellWindowHeight" ],
 	"classvars" : [
 		"Bounds",
 		"SessionMap" ],

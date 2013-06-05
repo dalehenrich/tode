@@ -66,9 +66,9 @@ initializeBounds
     at: #'evaluator'
       put:
         (classListsOrigin @ (top + thirdHeight + codeWindowExtent y)
-            extent: codeWidth @ twoThirdHeight);
+            extent: codeWidth @ (self shellWindowHeight * height));
     at: #'inspector'
       put:
         (classListsOrigin + codeWidth @ (top + thirdHeight + codeWindowExtent y)
-            extent: codeWidth @ twoThirdHeight);
+            extent: codeWidth @ (self shellWindowHeight * height));
     yourself
