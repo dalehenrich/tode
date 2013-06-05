@@ -6,14 +6,18 @@ run
     ifTrue: [ 
       | doitString |
       doitString := (topez lookup: (tokens at: 2)) contents.
-      ^ self topez evaluateString: doitString inContext: doitContext ].
+      ^ self topez
+        evaluateString: doitString
+        inContext: doitContext
+        withTempSymbolList: (self symbolListForNode: topez currentNode) ].
   topez
     accumulateTextAndDo: [ :doitString :accumulateObjIn | 
       | result |
       topez exception: nil.
       result := self topez
         evaluateString: doitString
-        inContext: accumulateObjIn dotSelfObject.
+        inContext: accumulateObjIn dotSelfObject
+        withTempSymbolList: (self symbolListForNode: topez currentNode).
       self topez objIn: result.
       result ].
   displayPolicy := topez displayPolicy

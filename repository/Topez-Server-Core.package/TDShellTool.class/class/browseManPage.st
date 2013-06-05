@@ -7,6 +7,7 @@ SYNOPSIS
   browse amethod <method-spec>
   browse class <regex-pattern>
   browse diff <method1-spec> <method2-spec>
+  browse list <definitionList-path>
   browse method [#]<selector>
   browse references <variableOrGlobalNameOrPathRef>
   browse rmethod <regex-pattern>

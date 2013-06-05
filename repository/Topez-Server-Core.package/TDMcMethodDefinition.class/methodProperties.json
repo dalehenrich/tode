@@ -2,9 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"=" : "dkh 06/04/2013 11:21",
 		"addToClientListFor:names:items:indents:aspect:" : "dkh 03/24/2013 11:51",
 		"className" : "dkh 03/24/2013 06:56",
 		"configurationOf" : "dkh 03/24/2013 06:59",
+		"hash" : "dkh 06/04/2013 11:05",
 		"isMeta" : "dkh 03/24/2013 06:56",
 		"itemSelected:" : "dkh 04/11/2013 15:11",
 		"methodDefinition" : "dkh 03/24/2013 06:56",

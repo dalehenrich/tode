@@ -9,6 +9,6 @@ view
     ifTrue: [ 
       aspect := (tokens at: 2) asSymbol.
       tokens size > 2
-        ifTrue: [ contextObject := topez lookup: (tokens at: 3) ] ].
+        ifTrue: [ contextObject := (topez lookup: (tokens at: 3)) dotSelfObject ] ].
   contextObject editUsing: (TDEditorSpec topez: topez editorAspect: aspect).
   ^ contextObject

@@ -8,7 +8,8 @@ doit
       topez exception: nil.
       result := self topez
         evaluateString: doitString
-        inContext: accumulateObjIn dotSelfObject.
+        inContext: accumulateObjIn dotSelfObject
+        withTempSymbolList: (self symbolListForNode: topez currentNode).
       self topez objIn: result.
       result ].
   displayPolicy := topez displayPolicy
