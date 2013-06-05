@@ -16,4 +16,7 @@ findReferences: findTokens
         rawReferencesTo: variableOrGlobalNameOrPathRef
         isMeta: false
         in: nil ].
-  ^ self methodDefinitionsFor: methodRefs messagePattern: pattern isRegex: false
+  ^ self
+    methodDefinitionsFor: methodRefs asArray
+    messagePattern: pattern
+    isRegex: false

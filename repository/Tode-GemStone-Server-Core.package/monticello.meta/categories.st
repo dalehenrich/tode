@@ -1,1 +1,1 @@
-SystemOrganization addCategory: 'Tode-GemStone-Server-Core'!
+SystemOrganization addCategory: #'Tode-GemStone-Server-Core'!

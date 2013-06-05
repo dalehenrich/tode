@@ -8,6 +8,6 @@ findRegexSender: findTokens
   methodRefs := (Smalltalk systemNavigation regexSendersOf: regex)
     collect: [ :gsMethod | MethodReference class: gsMethod inClass selector: gsMethod selector ].
   ^ self
-    methodDefinitionsFor: methodRefs
+    methodDefinitionsFor: methodRefs asArray
     messagePattern: (findTokens at: 2)
     isRegex: true

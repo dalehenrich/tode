@@ -7,6 +7,6 @@ findMethod: findTokens
   methodRefs := Smalltalk systemNavigation
     allMethodsNoDoitsSelect: [ :m | selector = m selector asString ].
   ^ self
-    methodDefinitionsFor: methodRefs
+    methodDefinitionsFor: methodRefs asArray
     messagePattern: selector
     isRegex: false

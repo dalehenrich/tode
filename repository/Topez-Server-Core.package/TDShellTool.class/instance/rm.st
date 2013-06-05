@@ -1,4 +1,6 @@
 as yet unclassified
 rm
-    (topez lookup: (tokens at: 2)) rm.
-    ^ topez currentNode
+  "rm <path> [ <path> ... ]"
+
+  2 to: tokens size do: [ :index | (topez lookup: (tokens at: index)) rm ].
+  ^ topez currentNode

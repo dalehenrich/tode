@@ -24,7 +24,7 @@ display: anObject on: displayPolicy
         space ].
   string := [ 
   limit > 0
-    ifTrue: [ anObject printString truncateTo: limit ]
+    ifTrue: [ anObject printString truncate: limit ]
     ifFalse: [ anObject printString ] ]
     on: Error
     do: [ :ignored | 'error printing' ].
