@@ -5,7 +5,6 @@ baseline: spec
     for: #'common'
     do: [ 
       spec baseline: 'Ston'.
-      spec postLoadDoIt: #'initializeTools'.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
         package: 'Topez-Server-Core'
@@ -49,7 +48,10 @@ baseline: spec
       spec
         package: 'Topez-Pharo-Common';
         package: 'Tode-Pharo-Server-Core'
-          with: [ spec requires: #('Topez-Server-Core') ];
+          with: [ 
+              spec
+                postLoadDoIt: #'initializeTools';
+                requires: #('Topez-Server-Core') ];
         package: 'Tode-Client-Common'
           with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
@@ -82,7 +84,10 @@ baseline: spec
       spec
         package: 'Topez-Server-Core' with: [ spec requires: #('RB') ];
         package: 'Tode-GemStone-Server-Core'
-          with: [ spec requires: #('Topez-Server-Core') ];
+          with: [ 
+              spec
+                postLoadDoIt: #'initializeTools';
+                requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Tests'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-TestTools'

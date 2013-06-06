@@ -1,3 +1,3 @@
 baseline
 initializeTools
-  (Smalltalk at: #'TDStandardTool') initializeTools
+  Smalltalk at: #'TDStandardTool' ifPresent: [ :cls | cls initializeTools ]
