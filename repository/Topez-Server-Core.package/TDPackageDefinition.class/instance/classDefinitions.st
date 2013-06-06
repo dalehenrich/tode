@@ -4,7 +4,10 @@ classDefinitions
   wc := self workingCopy.
   wc ifNil: [ ^ #() ].
   packageInfo := wc packageInfo.
-  defs := Array new.
+  defs := OrderedCollection new.
   extensionDefinitions := Dictionary new.
-  self classDefinitionsFor: packageInfo definitions: defs extensionDefinitions: extensionDefinitions.
+  self
+    classDefinitionsFor: packageInfo
+    definitions: defs
+    extensionDefinitions: extensionDefinitions.
   ^ defs

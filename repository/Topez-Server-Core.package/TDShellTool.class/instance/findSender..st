@@ -7,6 +7,6 @@ findSender: findTokens
   methodRefs := (Smalltalk systemNavigation newSendersOf: selector asSymbol)
     collect: [ :gsMethod | MethodReference class: gsMethod inClass selector: gsMethod selector ].
   ^ self
-    methodDefinitionsFor: methodRefs
+    methodDefinitionsFor: methodRefs asArray
     messagePattern: selector
     isRegex: false

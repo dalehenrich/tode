@@ -1,7 +1,7 @@
 accessing
 registerEditorClass: anEditorClass for: aDomainClass aspect: anAspect
   | classMap |
-  classMap := self nodeEditors
-    at: aDomainClass className
-    ifAbsent: [ self nodeEditors at: aDomainClass className put: Dictionary new ].
-  classMap at: anAspect put: anEditorClass className
+  classMap := self concreteClass nodeEditors
+    at: aDomainClass name
+    ifAbsent: [ self concreteClass nodeEditors at: aDomainClass name put: Dictionary new ].
+  classMap at: anAspect put: anEditorClass name

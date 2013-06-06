@@ -1,8 +1,8 @@
 as yet unclassified
 clientList: listElement
   | displayPolicy components max ar items |
-  items := Array new.
-  components := Array new.
+  items := OrderedCollection new.
+  components := OrderedCollection new.
   max := 'parent' size.
   displayPolicy := listElement displayPolicy.
   components
@@ -15,7 +15,7 @@ clientList: listElement
         object: self object
         parent: nil
         aspect: listElement aspect
-        listIndex: listElement parentListIndex).
+        list: listElement parentList).
   self object parent ~~ nil
     ifTrue: [ 
       displayPolicy stream: nil.
@@ -29,7 +29,7 @@ clientList: listElement
             object: self object parent
             parent: nil
             aspect: listElement aspect
-            listIndex: listElement parentListIndex) ].
+            list: listElement parentList) ].
   self object
     childrenAndNamesDo: [ :child :nameText | 
       max := max max: nameText size.
@@ -44,8 +44,8 @@ clientList: listElement
             object: child dotSelfObject
             parent: self object
             aspect: listElement aspect
-            listIndex: listElement parentListIndex) ].
-  ar := Array new.
+            list: listElement parentList) ].
+  ar := OrderedCollection new.
   max := max + 1.
   components
     do: [ :compAr | 

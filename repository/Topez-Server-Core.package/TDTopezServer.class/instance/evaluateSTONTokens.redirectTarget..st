@@ -5,7 +5,7 @@ evaluateSTONTokens: stonTokens redirectTarget: aRedirectTarget
   tokens := STON fromString: stonTokens.
   redirectTarget := aRedirectTarget.
   result := self evaluateTokens: tokens objIn: objIn value.
-  objIn value: result resultObject.
+  self objIn: result resultObject.
   self redirectObjIn: redirectTarget.
   self ensureSessionMethodsEnabled.
   text := result renderAsTextFor: self.

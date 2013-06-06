@@ -1,0 +1,18 @@
+{
+	"category" : "Tode-Client-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"windows",
+		"namedWindows",
+		"activeWindowIndex",
+		"shellWindowCount",
+		"shellWindows" ],
+	"name" : "TDWindowStatus",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

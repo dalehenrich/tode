@@ -7,13 +7,13 @@ baseline: spec
       spec baseline: 'Ston'.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
+        package: 'Topez-Server-Core'
+          with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Common-Tests'
           with: [ spec requires: #('Topez-Common-Core') ];
         yourself.
       spec
-        group: 'default' with: #('Topez-Common-Core');
-        group: 'Tests' with: #('Topez-Common-Tests');
-        group: 'Dev' with: #('default' 'Tests');
+        group: 'Common Tests' with: #('Topez-Common-Tests');
         yourself ].
   spec
     for: #'squeakCommon'
@@ -47,17 +47,25 @@ baseline: spec
         with: [ spec repository: 'github://dalehenrich/ston:pharo/repository' ].
       spec
         package: 'Topez-Pharo-Common';
+        package: 'Tode-Pharo-Server-Core'
+          with: [ spec requires: #('Topez-Server-Core') ];
+        package: 'Tode-Client-Common'
+          with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
-          with: [ spec requires: #('GemTools-ClientGCI' 'Topez-Common-Core' 'Topez-Pharo-Common') ];
+          with: [ spec requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];
+        package: 'Tode-Client-Pharo'
+          with: [ spec requires: #('Tode-Client-Common') ];
         package: 'Topez-ClientTravis-Tests'
           with: [ spec requires: #('Topez-Client-GemStone') ];
         yourself.
       spec
-        group: 'default' with: #('Client');
-        group: 'Client' with: #('Topez-Client-GemStone');
-        group: 'GemStone Client' with: #('Client');
-        group: 'Tests' with: #('Topez-ClientTravis-Tests');
-        group: 'Dev' with: #('Client');
+        group: 'default' with: #('GemStone');
+        group: 'GemStone' with: #('Topez-Client-GemStone');
+        group: 'Pharo' with: #('Tode-Pharo-Server-Core' 'Tode-Client-Pharo');
+        group: 'GemStone Tests' with: #('Topez-ClientTravis-Tests');
+        group: 'GemStone Dev'
+          with: #('GemStone' 'Common Tests' 'GemStone Tests');
+        group: 'Pharo Dev' with: #('Pharo' 'Common Tests');
         yourself ].
   spec
     for: #'gemstone'
@@ -71,8 +79,9 @@ baseline: spec
         baseline: 'Ston'
           with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
       spec
-        package: 'Topez-Server-Core'
-          with: [ spec requires: #('RB' 'Topez-Common-Core') ];
+        package: 'Topez-Server-Core' with: [ spec requires: #('RB') ];
+        package: 'Tode-GemStone-Server-Core'
+          with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Tests'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-TestTools'
@@ -87,13 +96,14 @@ baseline: spec
           with: [ spec requires: #('Topez-Server-ProcessTools' 'Topez-Server-TestTools') ];
         yourself.
       spec
-        group: 'default' with: #('GemStone Server');
-        group: 'GemStone Server'
+        group: 'default' with: #('GemStone');
+        group: 'GemStone'
           with:
-            #('Topez-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-ProcessTools' 'Topez-Server-TestTools');
-        group: 'GemStone Server Tests'
-          with: #('Topez-Server-Tests' 'Topez-Server-TestDebugTools');
-        group: 'Dev' with: #('GemStone Server' 'GemStone Server Tests');
+            #('Tode-GemStone-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-ProcessTools' 'Topez-Server-TestTools');
+        group: 'GemStone Tests'
+          with:
+            #('Common Tests' 'Topez-Server-Tests' 'Topez-Server-TestDebugTools');
+        group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
         yourself ].
   spec
     for: #'gs2.4.x'

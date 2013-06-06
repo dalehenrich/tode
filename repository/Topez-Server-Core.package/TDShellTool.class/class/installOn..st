@@ -9,7 +9,7 @@ installOn: aTDTopezServer
 	 #navigate - structural access via navigator
 	 CUSTOM    - custom names for specialized window access"
 
-  | optionsNode |
+  | optionsNode compiledMethodClass dictionaryClass stringClass |
   (aTDTopezServer ensureChildrenExistIn: '/home')
     readMe: self homeReadMe;
     yourself.
@@ -17,23 +17,36 @@ installOn: aTDTopezServer
   self
     installExampleOn: aTDTopezServer;
     installOptionsOn: aTDTopezServer.
-  (Smalltalk at: #'GSNMethod' ifAbsent: [  ]) ~~ nil
-    ifTrue: [ 
+  compiledMethodClass := Smalltalk
+    at: #'GsNMethod'
+    ifAbsent: [ Smalltalk at: #'GsMethod' ifAbsent: [ Smalltalk at: #'CompiledMethod' ] ].
+  dictionaryClass := Smalltalk
+    at: #'AbstractDictionary'
+    ifAbsent: [ Smalltalk at: #'Dictionary' ].
+  stringClass := Smalltalk
+    at: #'CharacterCollection'
+    ifAbsent: [ Smalltalk at: #'String' ].
+  TDTopezServer
+    registerEditorClass: TDGsNMethodElementBuilder
+      for: compiledMethodClass
+      aspect: #'method';
+    registerBuilderClass: TDDictionaryNodeBuilder
+      for: dictionaryClass
+      aspect: #'view';
+    registerEditorClass: TDClientSourceElementBuilder
+      for: stringClass
+      aspect: #'edit';
+    yourself.
+  Smalltalk
+    at: #'TDObjectLog'
+    ifPresent: [ :cl | 
       TDTopezServer
-        registerEditorClass: TDGsNMethodElementBuilder
-        for: (Smalltalk at: #'GsNMethod')
-        aspect: #'method' ]
-    ifFalse: [ 
-      TDTopezServer
-        registerEditorClass: TDGsNMethodElementBuilder
-        for: (Smalltalk at: #'GsMethod')
-        aspect: #'method' ].
+        registerEditorClass: TDObjectLogElementBuilder
+        for: cl
+        aspect: #'logEntries' ].
   TDTopezServer
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';
-    registerBuilderClass: TDDictionaryNodeBuilder
-      for: AbstractDictionary
-      aspect: #'view';
     registerBuilderClass: TDSpecialNodeBuilder for: Boolean aspect: #'view';
     registerBuilderClass: TDSpecialNodeBuilder for: Boolean aspect: #'inspect';
     registerBuilderClass: TDSpecialNodeBuilder
@@ -64,7 +77,7 @@ installOn: aTDTopezServer
       aspect: #'methodDefinitionList';
     registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder
       for: TDDefinitionList
-      aspect: #'navigate';
+      aspect: #'definitionList';
     registerEditorClass: TDClassSelectorListElementBuilder
       for: Behavior
       aspect: #'classSelectors';
@@ -73,7 +86,7 @@ installOn: aTDTopezServer
       aspect: #'instanceSelectors';
     registerEditorClass: TDClassHierarchyListElementBuilder
       for: Behavior
-      aspect: #'navigate';
+      aspect: #'hierarchyList';
     registerEditorClass: TDClassDefinitionClientElementBuilder
       for: Class
       aspect: #'classDefinition';
@@ -94,17 +107,11 @@ installOn: aTDTopezServer
       aspect: #'method';
     registerEditorClass: TDDirectoryNodeClientListElementBuilder
       for: TDDirectoryNode
-      aspect: #'navigate';
+      aspect: #'edit';
     registerEditorClass: TDClientSourceElementBuilder
       for: TDLeafNode
       aspect: #'edit';
-    registerEditorClass: TDClientSourceElementBuilder
-      for: CharacterCollection
-      aspect: #'edit';
     registerEditorClass: TDClientSourceElementBuilder for: Text aspect: #'edit';
-    registerEditorClass: TDObjectLogElementBuilder
-      for: TDObjectLog
-      aspect: #'navigate';
     registerEditorClass: TDClientScriptElementBuilder
       for: TDScriptLeafNode
       aspect: #'edit';

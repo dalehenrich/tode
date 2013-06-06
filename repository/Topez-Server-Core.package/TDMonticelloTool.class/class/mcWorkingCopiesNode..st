@@ -13,7 +13,7 @@ mcWorkingCopiesNode: aTopez
         elementBlock: [ :theNode :elementName :absentBlock | 
               | wc |
               wc := theNode basicContents value
-                detect: [ :wc | wc name = elementName ].
+                detect: [ :each | each name = elementName ].
               (self workingCopyNode: wc)
                 name: elementName;
                 parent: theNode;

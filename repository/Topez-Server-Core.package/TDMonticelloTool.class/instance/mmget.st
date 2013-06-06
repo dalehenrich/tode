@@ -15,7 +15,7 @@ mmget
           registration := self getRegistrationFor: configName.
           registration lookupBaselineSpec ] ]
     ifFalse: [ self halt ].
-  ans := Array new.
+  ans := OrderedCollection new.
   configurations
     do: [ :projectSpec | 
       | engine |

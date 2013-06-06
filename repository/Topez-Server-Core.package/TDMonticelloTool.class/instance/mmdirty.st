@@ -3,7 +3,7 @@ mmdirty
   "mm dirty"
 
   | versions dirty |
-  versions := self mmlist
+  versions := self mmlist resultObject
     collect: [ :registration | registration lookupBaselineSpec version ].
   dirty := versions
     select: [ :version | 
@@ -15,5 +15,5 @@ mmdirty
             ifTrue: [ false ]
             ifFalse: [ wc modified ] ]
         ifNone: [  ]) notNil ].
-  dirty editUsing: (TDEditorSpec topez: topez).
+  dirty editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
   ^ dirty

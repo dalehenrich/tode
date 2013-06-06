@@ -12,5 +12,5 @@ mcancestors
   ancestors := workingCopy ancestry allAncestors.
   limit ~~ nil
     ifTrue: [ ancestors := ancestors copyFrom: 1 to: (limit min: ancestors size) ].
-  ancestors editUsing: (TDEditorSpec topez: topez).
+  ancestors editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
   ^ ancestors

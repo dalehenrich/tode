@@ -2,9 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"=" : "dkh 05/28/2013 17:02",
 		"_extractPackageDefinitions" : "dkh 04/02/2013 18:40",
-		"classDefinitions" : "DataCurator 02/05/2013 16:42",
+		"classDefinitions" : "dkh 05/28/2013 14:01",
 		"configurationName" : "DataCurator 02/05/2013 13:00",
+		"hash" : "dkh 05/28/2013 17:02",
 		"label" : "DataCurator 02/05/2013 09:39",
 		"packageDefinitions" : "dkh 02/24/2013 15:12",
 		"packageNamed:ifAbsent:" : "dkh 02/24/2013 15:21",

@@ -17,7 +17,7 @@
 		"windowLocation",
 		"selectionIndex",
 		"highlightIndex",
-		"parentListIndex" ],
+		"parentList" ],
 	"name" : "TDEditorSpec",
 	"pools" : [
 		 ],

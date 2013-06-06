@@ -1,12 +1,12 @@
 as yet unclassified
 clientList: listElement
   | max ar items elementNames specialNames displayPolicy |
-  items := Array new.
+  items := OrderedCollection new.
   max := 0.
   specialNames := #('.' '..').
   elementNames := specialNames , self object elementNodeNames.
   elementNames do: [ :elementName | max := max max: elementName size ].
-  ar := Array new.
+  ar := OrderedCollection new.
   max := max + 1.
   displayPolicy := listElement displayPolicy.
   elementNames
@@ -42,7 +42,7 @@ clientList: listElement
             parent: parentObject
             aspect: listElement aspect).
       displayPolicy stream: stream.
-      object displayOn: displayPolicy.
+      object displayOnPolicy: displayPolicy.
       ar add: stream contents asString ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].

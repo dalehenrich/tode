@@ -1,3 +1,3 @@
 as yet unclassified
 theClass
-  ^ Smalltalk classNamed: self className
+  ^ Smalltalk classNamed: self theClassName

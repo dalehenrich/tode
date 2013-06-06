@@ -8,7 +8,7 @@ frame
   self dbStack navigateFrame: frameIndex.
   self dbStack
     editUsing:
-      ((TDEditorSpec topez: topez editorAspect: #'navigate')
+      ((TDEditorSpec topez: topez editorAspect: #'stack')
         parentObject: stackNode;
         yourself).
   ^ topez currentNode

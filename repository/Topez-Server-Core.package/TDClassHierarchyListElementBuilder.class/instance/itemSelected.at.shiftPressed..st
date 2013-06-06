@@ -24,7 +24,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     ifTrue: [ 
       obj
         editUsing:
-          ((TDEditorSpec topez: listElement topez editorAspect: #'navigate')
+          ((TDEditorSpec topez: listElement topez editorAspect: #'hierarchyList')
             windowName: #'hierarchy';
             yourself) ].
   ^ nil

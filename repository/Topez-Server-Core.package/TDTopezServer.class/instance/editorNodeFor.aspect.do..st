@@ -5,8 +5,7 @@ editorNodeFor: anObject aspect: anAspect do: aBlock
     aspect: anAspect
     do: [ :className :finalAspect | 
       | editorClass |
-      editorClass := TDTopezServer todeSymbolList
-        objectNamed: className asSymbol.
+      editorClass := self class globalNamed: className.
       aBlock
         value:
           (editorClass new

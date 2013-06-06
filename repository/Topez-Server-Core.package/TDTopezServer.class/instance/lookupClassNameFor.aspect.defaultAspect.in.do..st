@@ -4,7 +4,7 @@ lookupClassNameFor: anObject aspect: anAspect defaultAspect: defaultAspect in: n
   class := anObject class.
   [ class notNil and: [ classMap isNil ] ]
     whileTrue: [ 
-      classMap := nodeDictionary at: class className ifAbsent: [  ].
+      classMap := nodeDictionary at: class name ifAbsent: [  ].
       classMap
         ifNotNil: [ 
           classMap

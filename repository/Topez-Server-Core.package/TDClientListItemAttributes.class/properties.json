@@ -9,7 +9,8 @@
 		"object",
 		"parent",
 		"aspect",
-		"listIndex" ],
+		"listIndex",
+		"list" ],
 	"name" : "TDClientListItemAttributes",
 	"pools" : [
 		 ],

@@ -14,7 +14,7 @@ classHierarchyOrder: definitionList
           classNames add: cl name.
           defs := classMap
             at: cl name
-            ifAbsent: [ classMap at: cl name put: Array new ].
+            ifAbsent: [ classMap at: cl name put: OrderedCollection new ].
           defs add: each ].
       classNames ]
     elementBlock: [ :className :indents | 

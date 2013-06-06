@@ -9,8 +9,10 @@ backup
   active := self activeNode.
   active dotSelfObject
     do: [ :projectName | 
+      [ stream nextPutAll: (topez lookup: projectName , '/STATUS') contents ]
+        on: Error
+        do: [ :ex | stream nextPutAll: 'No STATUS file for ' , projectName printString ].
       stream
-        nextPutAll: (topez lookup: projectName , '/STATUS') contents;
         cr;
         cr ].
   statusNode := topez currentNode

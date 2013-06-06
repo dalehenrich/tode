@@ -11,7 +11,7 @@ dbFinishStep: node
     ifTrue: [ ^ STON fromString: processResult ].
   self dbStack
     editUsing:
-      ((TDEditorSpec topez: topez editorAspect: #'navigate')
+      ((TDEditorSpec topez: topez editorAspect: #'stack')
         parentObject: stackNode;
         yourself).
   ^ topez currentNode

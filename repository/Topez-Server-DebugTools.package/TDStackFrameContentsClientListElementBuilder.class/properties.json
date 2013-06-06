@@ -10,5 +10,5 @@
 	"name" : "TDStackFrameContentsClientListElementBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDClientListElementBuilder",
+	"super" : "TDDirectoryNodeClientListElementBuilder",
 	"type" : "normal" }

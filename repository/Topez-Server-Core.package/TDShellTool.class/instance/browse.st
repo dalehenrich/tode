@@ -3,7 +3,8 @@ browse
   "
   browse amethod <method-spec>
   browse class <regex-pattern>
-  browse diff <method1-spec> <method2-spec>
+  browse diff <method-spec-1> <method-spec-2>
+  browse list <definitionList-path>
   browse method [#]<selector>
   browse references <variableOrGlobalNameOrPathRef>
   browse rmethod <regex-pattern>
@@ -13,12 +14,21 @@ browse
   browse versions <method-spec>
 "
 
-  | findTokens command messagePattern |
+  | findTokens command |
   findTokens := tokens copyFrom: 2 to: tokens size.
   command := findTokens at: 1.
-  messagePattern := findTokens at: 2.
   command = 'amethod'
     ifTrue: [ ^ self browseMethods: (self findMethodSpec: findTokens) ].
+  command = 'list'
+    ifTrue: [ 
+      | list |
+      list := findTokens size = 1
+        ifTrue: [ objIn ]
+        ifFalse: [ 
+          | listToken |
+          listToken := findTokens at: 2.
+          (topez lookup: listToken) dotSelfObject ].
+      ^ self browseMethods: list ].
   command = 'method'
     ifTrue: [ ^ self browseMethods: (self findMethod: findTokens) ].
   command = 'diff'

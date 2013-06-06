@@ -1,7 +1,7 @@
 as yet unclassified
 commitWorkingCopies: workingCopies repos: targetRepos commitMessage: commitMessage
   | committedPackages gofer |
-  committedPackages := Array new.
+  committedPackages := OrderedCollection new.
   gofer := Gofer new.
   gofer disablePackageCache.
   targetRepos do: [ :repository | gofer repository: repository ].

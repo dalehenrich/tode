@@ -3,5 +3,6 @@ configs
   "configs"
 
   TDConfigurationList reset.
-  TDConfigurationList current editUsing: (TDEditorSpec topez: topez).
+  TDConfigurationList current
+    editUsing: (TDEditorSpec topez: topez editorAspect: #'definitionList').
   ^ TDConfigurationList current

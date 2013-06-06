@@ -14,7 +14,7 @@ postCommitForGitRepo: projectName
   command := commandBase , ' log -1'.
   info := self performOnServer: command.
   projectNode := topez lookup: projectName.
-  projectNode
+  ^ projectNode
     addChildNode:
       (TDTxtLeafNode new
         name: 'STATUS';

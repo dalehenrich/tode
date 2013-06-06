@@ -15,7 +15,9 @@
 		"elementCache",
 		"listLimit",
 		"displayOops",
-		"characterLimit" ],
+		"characterLimit",
+		"resultStack",
+		"resultStackIndex" ],
 	"name" : "TDServerStatus",
 	"pools" : [
 		 ],

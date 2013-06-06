@@ -18,13 +18,13 @@ evaluateTopezScript: topezScript
             accumulateText: line
             onEval: [ :res | 
               result := res.
-              objIn value: result ] ]
+              self objIn: result ] ]
         ifFalse: [ 
           TDCommandLine
             line: line
             forEachCommand: [ :command | 
               result := self evaluateTopezScriptCommand: command.
-              objIn value: result ] ] ].
+              self objIn: result ] ] ].
   evaluatingScript := originalEvaluating	"last one on the stack please turn out the lights" ]
     ifCurtailed: [ 
       | currentSize extra |

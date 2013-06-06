@@ -13,5 +13,5 @@ elementSource: methodSource clientSourceElement: clientSourceElement
       self object trimToHomeFrame.
       self object stack
         editUsing:
-          (TDEditorSpec topez: clientSourceElement topez editorAspect: #'navigate') ].
+          (TDEditorSpec topez: clientSourceElement topez editorAspect: #'stack') ].
   ^ newSelector

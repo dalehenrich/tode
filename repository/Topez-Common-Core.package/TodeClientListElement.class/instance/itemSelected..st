@@ -1,12 +1,5 @@
 accessing
 itemSelected: index
-  | oopType |
   index = 0
     ifTrue: [ ^ self ].
-  oopType := self session
-    rawReceiverNB: self itemSelectedBlockOopType
-    perform: #'value:value:value:'
-    withArgs:
-      {(self clientElementOopType).
-      index.
-      (Sensor shiftPressed)}
+  self topez itemSelectedForClientListElement: self index: index

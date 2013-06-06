@@ -8,5 +8,5 @@ testClassWndowLookup
       #'edit'.
       (TDClassHierarchyListElementBuilder name)}.
       {SmallInteger.
-      #'navigate'.
+      #'hierarchyList'.
       (TDClassHierarchyListElementBuilder name)}}

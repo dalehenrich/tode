@@ -9,12 +9,12 @@ dsNode: node level: level on: displayPolicy
       stream
         nextPutAll: (node printString , ':') asText allBold;
         cr.
-      node contents displayOn: displayPolicy.
+      node contents displayOnPolicy: displayPolicy.
       ^ self ].
   stream
     nextPutAll: node printString asText allBold;
     nextPutAll: ' ('.
-  node dotSelfObject displayOn: displayPolicy.
+  node dotSelfObject displayOnPolicy: displayPolicy.
   stream
     nextPutAll: '):';
     cr.

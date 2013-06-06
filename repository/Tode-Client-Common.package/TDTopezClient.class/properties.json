@@ -1,0 +1,29 @@
+{
+	"category" : "Tode-Client-Common",
+	"classinstvars" : [
+		"bounds",
+		"windowOffset",
+		"codeWindowHeight",
+		"codeWindowWidth",
+		"listWindowWidth",
+		"windowOrigin",
+		"shellWindowHeight" ],
+	"classvars" : [
+		"Bounds",
+		"SessionMap" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"shell",
+		"session",
+		"sessionDescription",
+		"topezServerProxy",
+		"evaluateTokenMessage",
+		"setExceptionMessage",
+		"resetObjInMessage",
+		"openDebuggerMessage",
+		"tabCompletionMessage" ],
+	"name" : "TDTopezClient",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

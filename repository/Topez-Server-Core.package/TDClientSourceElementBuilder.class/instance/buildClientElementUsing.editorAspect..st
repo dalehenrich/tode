@@ -5,7 +5,6 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     theWindowLocation: aTDEditorSpec windowLocation.
   ^ self clientSourceElement
     theObject: self object;
-    clientElementOop;
     aspect: aTDEditorSpec editorAspect;
     topez: aTDEditorSpec topez;
     firstSource: self firstSource;

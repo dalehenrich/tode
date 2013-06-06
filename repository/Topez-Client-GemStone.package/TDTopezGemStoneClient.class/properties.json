@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Client-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDTopezGemStoneClient",
+	"pools" : [
+		 ],
+	"super" : "TDTopezClient",
+	"type" : "normal" }

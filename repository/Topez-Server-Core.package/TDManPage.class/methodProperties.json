@@ -1,14 +1,14 @@
 {
 	"class" : {
-		"fromString:commandPath:sourceMethod:" : "dkh 05/16/2013 13:11" },
+		"fromString:commandPath:sourceMethod:" : "dkh 05/28/2013 06:35" },
 	"instance" : {
 		"asText" : "dkh 05/16/2013 13:08",
-		"commandPath" : "dkh 05/16/2013 13:03",
+		"commandPath" : "dkh 06/05/2013 11:06",
 		"commandPath:" : "dkh 05/16/2013 13:05",
 		"description" : "dkh 04/06/2013 09:25",
 		"description:" : "dkh 04/06/2013 09:05",
 		"printOn:" : "dkh 05/16/2013 13:09",
-		"sourceMethod" : "dkh 05/16/2013 13:04",
+		"sourceMethod" : "dkh 06/05/2013 11:07",
 		"sourceMethod:" : "dkh 05/16/2013 13:08",
 		"summary" : "dkh 04/06/2013 09:25",
 		"summary:" : "dkh 04/06/2013 09:06",

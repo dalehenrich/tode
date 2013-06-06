@@ -1,0 +1,3 @@
+as yet unclassified
+windowIsClosingFor: aClientListElement
+	aClientListElement windowIsClosingBlock value: aClientListElement

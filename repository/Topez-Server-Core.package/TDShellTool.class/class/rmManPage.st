@@ -4,7 +4,7 @@ rmManPage
   rm - remove node
 
 SYNOPSIS
-  rm path
+  rm <path> [ <path> ... ]
 
 DESCRIPTION
   Remove the node referenced by `path`.

@@ -10,5 +10,5 @@
 	"name" : "TDTopezIndirectClient",
 	"pools" : [
 		 ],
-	"super" : "TDTopezClient",
+	"super" : "TDTopezGemStoneClient",
 	"type" : "normal" }

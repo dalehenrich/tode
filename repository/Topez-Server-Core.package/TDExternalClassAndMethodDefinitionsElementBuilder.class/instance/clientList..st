@@ -1,8 +1,8 @@
 as yet unclassified
 clientList: listElement
   | items ar selectedIndex |
-  items := Array new.
-  ar := Array new.
+  items := OrderedCollection new.
+  ar := OrderedCollection new.
   self
     classHierarchy: [ :className :indents | 
       | defs methodDefs |

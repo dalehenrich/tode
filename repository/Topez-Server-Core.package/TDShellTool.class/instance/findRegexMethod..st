@@ -8,6 +8,6 @@ findRegexMethod: findTokens
   methodRefs := Smalltalk systemNavigation
     allMethodsNoDoitsSelect: [ :m | regex search: m selector asString ].
   ^ self
-    methodDefinitionsFor: methodRefs
+    methodDefinitionsFor: methodRefs asArray
     messagePattern: (findTokens at: 2)
     isRegex: true

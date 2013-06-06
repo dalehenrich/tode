@@ -14,7 +14,7 @@ mrgroup
   list := workingCopy repositoryGroup repositories.
   list
     do: [ :pkg | 
-      pkg displayOn: displayPolicy.
+      pkg displayOnPolicy: displayPolicy.
       stream cr ].
   ^ TDCommandResult new
     displayText: stream contents;

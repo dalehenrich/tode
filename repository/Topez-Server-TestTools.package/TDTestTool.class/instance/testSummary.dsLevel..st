@@ -7,7 +7,7 @@ testSummary: testNode dsLevel: dsLevel
   stream
     nextPutAll: suiteNode printString asText allBold;
     nextPutAll: '-> '.
-  suiteNode dotSelfObject displayOn: displayPolicy.
+  suiteNode dotSelfObject displayOnPolicy: displayPolicy.
   stream cr.
   commandResult := (topez commands at: 'ds') block
     value: topez

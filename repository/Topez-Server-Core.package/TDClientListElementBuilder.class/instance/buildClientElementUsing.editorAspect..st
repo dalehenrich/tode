@@ -9,8 +9,8 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     ifTrue: [ clientListElement selectedIndex: aTDEditorSpec selectionIndex ].
   aTDEditorSpec highlightIndex ~~ nil
     ifTrue: [ clientListElement highlightedIndex: aTDEditorSpec highlightIndex ].
-  aTDEditorSpec parentListIndex ~~ nil
-    ifTrue: [ clientListElement parentListIndex: aTDEditorSpec parentListIndex ].
+  aTDEditorSpec parentList ~~ nil
+    ifTrue: [ clientListElement parentList: aTDEditorSpec parentList ].
   ^ clientListElement
     topez: aTDEditorSpec topez;
     aspect: editorAspect;

@@ -4,10 +4,11 @@ commit
   commitMessageNode := self commitMessageNode.
   commitMessage := commitMessageNode dotSelfObject asString.
   active := self activeNode.
-  active dotSelfObject
-    do: [ :projectName | 
+  ^ active dotSelfObject
+    collect: [ :projectName | 
       (self commitProject: projectName message: commitMessage)
         ifTrue: [ 
           (self gitPathFor: projectName) notNil
             ifTrue: [ self postCommitForGitRepo: projectName ]
-            ifFalse: [ self postCommitFor: projectName message: commitMessage ] ] ]
+            ifFalse: [ self postCommitFor: projectName message: commitMessage ] ]
+        ifFalse: [ projectName , ' not committed' ] ]

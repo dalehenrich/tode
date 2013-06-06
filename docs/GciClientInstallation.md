@@ -30,7 +30,7 @@ cp $GEMSTONE/lib3/2*.dylib <path_to_Cog_vm>/Contents/MacOS/Plugins
 Metacello new
     baseline: 'Tode';
     repository: 'github://dalehenrich/tode:master/repository';
-    load: 'Dev'.
+    load: 'GemStone Dev'.
 ``` 
 
 ## Tode setup

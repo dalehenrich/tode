@@ -4,7 +4,7 @@ mcrevert
       revert @<workingCopy-path> [<method-spec>]
   "
 
-  | packageName workingCopy versionName repoSpec repo info repositories targetRepos gofer version |
+  | packageName workingCopy versionName repoSpec info repositories targetRepos gofer version |
   packageName := tokens at: 2.
   workingCopy := self resolveWorkingCopyReference: packageName.
   workingCopy ancestors isEmpty
@@ -27,7 +27,7 @@ mcrevert
     show:
         'Revert: ' , versionName printString , ' @ ' , DateAndTime now printString.
   gofer := Gofer new.
-  targetRepos do: [ :repository | gofer repository: repository ].
+  targetRepos do: [ :repo | gofer repository: repo ].
   ^ [ 
   gofer
     version: versionName;

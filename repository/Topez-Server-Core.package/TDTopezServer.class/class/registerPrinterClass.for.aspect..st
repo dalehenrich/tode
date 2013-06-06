@@ -1,7 +1,7 @@
 accessing
 registerPrinterClass: aPrinterClass for: aDomainClass aspect: anAspect
   | classMap |
-  classMap := self nodePrinters
-    at: aDomainClass className
-    ifAbsent: [ self nodePrinters at: aDomainClass className put: Dictionary new ].
-  classMap at: anAspect put: aPrinterClass className
+  classMap := self concreteClass nodePrinters
+    at: aDomainClass name
+    ifAbsent: [ self concreteClass nodePrinters at: aDomainClass name put: Dictionary new ].
+  classMap at: anAspect put: aPrinterClass name

@@ -1,0 +1,30 @@
+{
+	"category" : "Tode-Client-Common",
+	"classinstvars" : [
+		"commands",
+		"subCommands",
+		"rootNode" ],
+	"classvars" : [
+		"DebugMode",
+		"EnableDebugger" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"windowStatus",
+		"topezClient",
+		"inputStream",
+		"actionStack",
+		"stateStack",
+		"promptString",
+		"shellWindow",
+		"console",
+		"shellId",
+		"autoCommit",
+		"adornmentColor",
+		"sessionName",
+		"history",
+		"historyIndex" ],
+	"name" : "TDShell",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

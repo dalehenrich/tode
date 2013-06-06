@@ -1,4 +1,9 @@
 as yet unclassified
 current
-  current ifNil: [ current := self new ].
-  ^ current
+  | singleton |
+  singleton := SessionTemps current at: self sessionTempsName otherwise: nil.
+  singleton == nil
+    ifTrue: [ 
+      singleton := self new.
+      SessionTemps current at: self sessionTempsName put: singleton ].
+  ^ singleton
