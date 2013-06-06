@@ -5,6 +5,7 @@ baseline: spec
     for: #'common'
     do: [ 
       spec baseline: 'Ston'.
+      spec postLoadDoIt: #'initializeTools'.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
         package: 'Topez-Server-Core'
