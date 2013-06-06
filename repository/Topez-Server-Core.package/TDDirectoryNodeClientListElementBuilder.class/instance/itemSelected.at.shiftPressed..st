@@ -16,10 +16,12 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       "."
       "toggle between view and inspect on subject of list"
       toggled := true.
-      builderAspect := obj builderAspect.
-      builderAspect == #'inspect'
-        ifTrue: [ builderAspect := #'view' ]
-        ifFalse: [ builderAspect := #'inspect' ].
+      (obj respondsTo: #'builderAspect')
+        ifTrue: [ 
+          builderAspect := obj builderAspect.
+          builderAspect == #'inspect'
+            ifTrue: [ builderAspect := #'view' ]
+            ifFalse: [ builderAspect := #'inspect' ] ].
       obj := obj dotSelfObject
         asTDObjectNode: obj
         topez: listElement topez
