@@ -6,7 +6,11 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     editUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'logEntries')
         parentObject: self object;
-        parentList: (OrderedCollection with: index);
+        parentList:
+            (OrderedCollection
+                with:
+                  {index.
+                  #'view'});
         windowName: #'inspector';
         yourself).
   ^ nil

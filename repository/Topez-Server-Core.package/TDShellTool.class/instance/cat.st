@@ -1,8 +1,9 @@
 as yet unclassified
 cat
-  | node |
+  | node result |
   node := topez lookup: (tokens at: 2).
+  result := node cat.
   ^ TDCommandResult new
-    displayText: node cat asText;
-    resultObject: node;
+    displayText: result asText;
+    resultObject: result;
     yourself

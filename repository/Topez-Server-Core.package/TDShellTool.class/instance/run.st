@@ -12,7 +12,7 @@ run
       topez exception: nil.
       result := self topez
         evaluateString: doitString
-        inContext: accumulateObjIn
+        inContext: doitContext
         withTempSymbolList: topez currentNode tempSymbolList.
       self topez objIn: result.
       result ].

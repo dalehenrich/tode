@@ -1,14 +1,14 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect parent obj itemAttribute windowName highlightIndex parentList toggled builderAspect objName |
+  | editorAspect parent obj itemAttribute windowName highlightIndex parentList toggled builderAspect objName |
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
   parent := itemAttribute parent.
-  aspect := itemAttribute aspect.
-  aspect == #'edit'
+  editorAspect := itemAttribute aspect.
+  editorAspect == #'edit'
     ifTrue: [ 
       "navigator window always navigates"
-      aspect := #'navigate' ].
+      editorAspect := #'navigate' ].
   parentList := itemAttribute list copy.
   toggled := false.
   index == 1
@@ -20,22 +20,28 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       builderAspect == #'inspect'
         ifTrue: [ builderAspect := #'view' ]
         ifFalse: [ builderAspect := #'inspect' ].
-      (obj respondsTo: #'dotSelfObject')
-        ifTrue: [ 
-          obj := obj dotSelfObject
-            asTDObjectNode: obj
-            topez: listElement topez
-            aspect: builderAspect.
-          objName := self object displayWith: listElement displayPolicy.
-          obj name: objName ] ]
+      obj := obj dotSelfObject
+        asTDObjectNode: obj
+        topez: listElement topez
+        aspect: builderAspect.
+      objName := self object displayWith: listElement displayPolicy.
+      obj name: objName ]
     ifFalse: [ 
       index == 2
         ifTrue: [ 
           ".."
           "lets highlight ourselves in the .. list ..."
           parentList isEmpty not
-            ifTrue: [ highlightIndex := parentList removeLast ] ]
-        ifFalse: [ parentList add: index ] ].
+            ifTrue: [ 
+              | ar |
+              ar := parentList removeLast.
+              highlightIndex := ar at: 1.
+              editorAspect := ar at: 2 ] ]
+        ifFalse: [ 
+          parentList
+            add:
+              {index.
+              (itemAttribute aspect)	"use original aspect"} ] ].
   windowName := listElement editorWindowName.
   toggled
     ifTrue: [ 
@@ -43,7 +49,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       windowName := nil ].
   obj
     editUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: aspect)
+      ((TDEditorSpec topez: listElement topez editorAspect: editorAspect)
         builderAspect: builderAspect;
         parentObject: parent;
         highlightIndex: highlightIndex;
