@@ -1,6 +1,6 @@
 as yet unclassified
-initialize
-  "self initialize"
+initializeTools
+  "self initializeTools"
 
   | topez initializationOrder |
   topez := TDTopezServer for: 0.
