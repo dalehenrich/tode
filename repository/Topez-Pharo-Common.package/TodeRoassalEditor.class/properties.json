@@ -6,16 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"topez",
-		"listEditor",
-		"codeEditor",
-		"roassalEditor",
-		"activeEditor",
-		"label",
-		"windowId",
-		"updating" ],
-	"name" : "TodeEditor",
+		"roassalView",
+		"roassalRawView" ],
+	"name" : "TodeRoassalEditor",
 	"pools" : [
 		 ],
-	"super" : "Model",
+	"super" : "TodeListEditor",
 	"type" : "normal" }

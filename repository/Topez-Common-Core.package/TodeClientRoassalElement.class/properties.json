@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TodeClientRoassalElement",
+	"pools" : [
+		 ],
+	"super" : "TodeClientListElement",
+	"type" : "normal" }
