@@ -2,7 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"buildRoassalMorph" : "dkh 6/11/2013 16:24",
+		"buildRoassalMorph" : "dkh 6/12/2013 06:18",
+		"clientElement:" : "dkh 6/12/2013 06:42",
+		"listIndex:" : "dkh 6/12/2013 06:19",
 		"morph" : "dkh 6/11/2013 16:21",
 		"roassalRawView" : "dkh 6/11/2013 16:23",
 		"roassalView" : "dkh 6/11/2013 16:23" } }

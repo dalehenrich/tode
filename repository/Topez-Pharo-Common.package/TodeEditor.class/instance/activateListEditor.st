@@ -1,3 +1,3 @@
 accessing
 activateListEditor
-    self activeEditor: self listEditor
+  self activeEditor: self listEditor

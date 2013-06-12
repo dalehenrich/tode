@@ -10,8 +10,9 @@ activeEditor: anEditor
                 releaseCachedState.
             activeEditor modelSleep ].
     activeEditor := anEditor.
-    morph := activeEditor morph.
+    morph := activeEditor  morph.
+morph ifNotNil: [
     systemWindow := self topView.
     systemWindow addMorph: morph unlock.
     systemWindow world startSteppingSubmorphsOf: morph.
-    systemWindow layoutChanged
+    systemWindow layoutChanged]

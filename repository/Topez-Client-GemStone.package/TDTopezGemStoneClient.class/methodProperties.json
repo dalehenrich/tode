@@ -16,6 +16,7 @@
 	"instance" : {
 		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:45",
 		"evaluateTokens:redirectTarget:" : "dkh 5/26/2013 20:51",
+		"getEdgeDictionaryForClientListElement:" : "dkh 6/12/2013 06:48",
 		"getListForClientListElement:" : "dkh 5/28/2013 14:53",
 		"getSourceForClientSourceElement:" : "dkh 5/28/2013 14:53",
 		"handleKeyboardEventForClientListElement:codePoint:selectionIndex:" : "dkh 5/28/2013 14:37",
