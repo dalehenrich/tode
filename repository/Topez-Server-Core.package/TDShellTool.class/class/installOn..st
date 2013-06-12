@@ -75,6 +75,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDMethodDefinitionsElementBuilder
       for: Collection
       aspect: #'methodDefinitionList';
+    registerEditorClass: TDRoassalListElementBuilder
+      for: Collection
+      aspect: #'roassal';
     registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder
       for: TDDefinitionList
       aspect: #'definitionList';
