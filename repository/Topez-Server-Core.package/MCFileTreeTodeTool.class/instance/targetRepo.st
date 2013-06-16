@@ -1,3 +1,5 @@
 as yet unclassified
 targetRepo
-  ^ (topez lookup: 'target') dotSelfObject
+  | description |
+  description := (topez lookup: 'target') contents asString.
+  ^ (TDMonticelloRepository fromDescription: description) repository
