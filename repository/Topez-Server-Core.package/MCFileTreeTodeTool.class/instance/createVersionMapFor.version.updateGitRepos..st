@@ -15,7 +15,7 @@ createVersionMapFor: configurationClass version: versionString updateGitRepos: u
       self
         checkout: (gitBranchMap at: attribute)
         andUpdateGitRepos: updateGitRepos.
-      tmp := self tmpRepo.
+      tmp := self tmpGitRepo.
       gofer := Gofer new
         disablePackageCache;
         repository: tmp;

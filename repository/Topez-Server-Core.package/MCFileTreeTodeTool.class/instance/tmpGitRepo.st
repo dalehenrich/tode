@@ -1,4 +1,4 @@
 as yet unclassified
-tmpRepo
+tmpGitRepo
   ^ (TDMonticelloRepository
     fromDescription: 'filetree://' , self gitPath , '/repository') repository

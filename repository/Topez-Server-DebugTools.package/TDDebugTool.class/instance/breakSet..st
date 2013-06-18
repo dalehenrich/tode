@@ -9,5 +9,4 @@ breakSet: breakTokens
   meth := (methodRef beginsWith: '@')
     ifTrue: [ self resolveAtPathReference: methodRef ]
     ifFalse: [ self lookupMethodIn: (breakTokens copyFrom: 2 to: breakTokens size) ].
-  meth setBreakAtStepPoint: stepPoint.
-  ^ meth _allBreakpoints
+  ^ self breakSet: meth step: stepPoint

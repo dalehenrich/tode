@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"roassalView",
+		"roassalRawView" ],
+	"name" : "TodeRoassalEditor",
+	"pools" : [
+		 ],
+	"super" : "TodeListEditor",
+	"type" : "normal" }

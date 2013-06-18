@@ -8,13 +8,13 @@ commitVersionsFrom: versionMap into: targetRepo commitMessage: commitMessage
       self checkout: (self gitBranchMap at: attribute) andUpdateGitRepos: false.
       repositoryGroup := MCRepositoryGroup new
         addRepository: self ss3Repo;
-        addRepository: self tmpRepo;
+        addRepository: self tmpGitRepo;
         addRepository: targetRepo;
         yourself.
       newVersions := OrderedCollection new.
       versionList
         do: [ :versionRef | 
-          | newVersion newRef |
+          | newVersion newRef message |
           newVersion := self
             commitVersion: versionRef version
             baseVersionNumber: versionRef versionNumber
@@ -23,15 +23,20 @@ commitVersionsFrom: versionMap into: targetRepo commitMessage: commitMessage
             repositoryGroup: repositoryGroup
             commitMessage: commitMessage.
           newVersions add: newVersion.
+          Transcript
+            cr;
+            show: newVersion printString.
           newRef := GoferVersionReference name: newVersion info name.
+          message := 'ensure ss3 version is in ancestry'.
           self
             commitVersion: newVersion
             baseVersionNumber: newRef versionNumber
             attribute: ''
-            into: self tmpRepo
+            into: self tmpGitRepo
             repositoryGroup: repositoryGroup
-            commitMessage: 'ensure ss3 version is in ancestry'.
-          self halt: 'Need to do a git commit and push here' ].
+            commitMessage: message.
+          self commitGitWithCommitMessage: message.
+          self halt: 'Need to do a git  push here' ].
       newVersions isEmpty
         ifFalse: [ newVersionsMap at: attribute put: newVersions ] ].
   ^ newVersionsMap

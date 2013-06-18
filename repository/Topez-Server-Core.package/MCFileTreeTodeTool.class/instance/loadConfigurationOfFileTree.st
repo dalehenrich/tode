@@ -1,8 +1,7 @@
 as yet unclassified
 loadConfigurationOfFileTree
-  | configNode configRepo gofer message |
-  configNode := topez lookup: 'config'.
-  configRepo := configNode dotSelfObject.
+  | configRepo gofer message |
+  configRepo := self configRepo.
   [ 
   gofer := Gofer new
     package: 'ConfigurationOfFileTree';

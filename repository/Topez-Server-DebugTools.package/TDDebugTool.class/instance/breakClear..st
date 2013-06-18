@@ -4,7 +4,7 @@ breakClear: breakTokens
 
   | breakReport breakListIndex stepPoint meth |
   breakTokens size = 1
-    ifTrue: [ ^ self gsMethodClass clearAllBreaks ].
+    ifTrue: [ ^ self breakClearBreakpoints ].
   breakListIndex := (breakTokens at: 2) asNumber.
   breakReport := (self gsMethodClass _breakReport: false) at: 2.
   stepPoint := (breakReport at: breakListIndex) at: 4.
