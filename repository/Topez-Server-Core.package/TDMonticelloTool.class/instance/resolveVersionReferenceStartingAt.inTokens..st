@@ -5,7 +5,7 @@ resolveVersionReferenceStartingAt: index inTokens: versionTokens
   mcVersion := (versionName beginsWith: '@')
     ifTrue: [ 
       nextIndex := index + 1.
-      self self resolveAtPathReference: versionName ]
+      self resolveAtPathReference: versionName ]
     ifFalse: [ 
       repoSpec := versionTokens at: index + 1.
       nextIndex := index + 2.
