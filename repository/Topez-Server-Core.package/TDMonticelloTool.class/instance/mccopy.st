@@ -1,13 +1,19 @@
 as yet unclassified
 mccopy
-  "mc copy <version-name> <source-repository-spec> <destination-repository-spec>
-      copy @<version-path> <destination-repository-spec>
-      copy @<version-path> @<repository-path>
+  "mc copy <version-name> <source-repository-spec> <dest1-repository-spec> [ <dest2-repository-spec> ... ]
+      copy @<version-path> <dest1-repository-spec> [ <dest2-repository-spec> ... ]
+      copy @<version-path> @<repository-path> [ @<repository-path-list> ...]
+      copy @<version-path> @<repository-path-list> [ @<repository-path> ...]
   "
 
-  | repoSpec version repo resolutionAr |
+  | repoSpecs version resolutionAr |
   resolutionAr := self resolveVersionReferenceStartingAt: 2 inTokens: tokens.
   version := resolutionAr at: 1.
-  repoSpec := tokens at: (resolutionAr at: 2).
-  repo := self resolveRepositoryReference: repoSpec.
-  ^ repo storeVersion: version
+  repoSpecs := tokens copyFrom: (resolutionAr at: 2) to: tokens size.
+  ^ repoSpecs
+    collect: [ :repoSpec | 
+      | repoOrList |
+      repoOrList := self resolveRepositoryReference: repoSpec.
+      repoOrList isCollection
+        ifTrue: [ repoOrList do: [ :repo | repo storeVersion: version ] ]
+        ifFalse: [ repoOrList storeVersion: version ] ]

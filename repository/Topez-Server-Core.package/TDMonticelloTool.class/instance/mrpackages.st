@@ -6,25 +6,12 @@ mrpackages
 
   "underlined if package is loaded in image, bold if there is a newer version of package in repository"
 
-  | repo packageNames displayPolicy stream loadedVersions resolvedReferences dirtyPackageNames |
+  | repo ar packageNames displayPolicy stream loadedVersions resolvedReferences dirtyPackageNames |
   repo := self resolveRepositoryReference: (tokens at: 2).
-  loadedVersions := self loadedVersions: false.
-  resolvedReferences := self resolvedReferencesForRepository: repo.
-  packageNames := resolvedReferences keys asArray
-    sorted: [ :a :b | 
-      | aLoaded bLoaded |
-      aLoaded := bLoaded := true.
-      loadedVersions at: a ifAbsent: [ aLoaded := false ].
-      loadedVersions at: b ifAbsent: [ bLoaded := false ].
-      aLoaded & bLoaded
-        ifTrue: [ a < b ]
-        ifFalse: [ 
-          aLoaded
-            ifTrue: [ true ]
-            ifFalse: [ 
-              bLoaded
-                ifTrue: [ false ]
-                ifFalse: [ a < b ] ] ] ].
+  ar := self mrpackageNamesIn: repo.
+  packageNames := ar at: 1.
+  loadedVersions := ar at: 2.
+  resolvedReferences := ar at: 3.
   dirtyPackageNames := (MCWorkingCopy allManagers select: [ :wc | wc modified ])
     collect: [ :wc | wc packageName ].
   displayPolicy := topez displayPolicy.

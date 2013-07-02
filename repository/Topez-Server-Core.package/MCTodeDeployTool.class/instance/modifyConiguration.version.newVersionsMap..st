@@ -14,11 +14,11 @@ modifyConiguration: configurationClass version: versionString newVersionsMap: ne
             newVersions notNil
               ifTrue: [ 
                 newVersions
-                  do: [ :version | 
+                  do: [ :versionReference | 
                     | packageSpec |
                     packageSpec := versionSpec packages
-                      specListDetect: [ :spec | spec name = version package name ]
+                      specListDetect: [ :spec | spec name = versionReference packageName ]
                       ifNone: [  ].
-                    packageSpec file: version info name ] ] ].
+                    packageSpec file: versionReference name ] ] ].
         true ];
     commitMethod

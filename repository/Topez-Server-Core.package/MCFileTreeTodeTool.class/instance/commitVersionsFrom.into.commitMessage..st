@@ -22,11 +22,13 @@ commitVersionsFrom: versionMap into: targetRepo commitMessage: commitMessage
             into: targetRepo
             repositoryGroup: repositoryGroup
             commitMessage: commitMessage.
-          newVersions add: newVersion.
+          newRef := GoferResolvedReference
+            name: newVersion info name
+            repository: targetRepo.
+          newVersions add: newRef.
           Transcript
             cr;
             show: newVersion printString.
-          newRef := GoferVersionReference name: newVersion info name.
           message := 'ensure ss3 version is in ancestry'.
           self
             commitVersion: newVersion

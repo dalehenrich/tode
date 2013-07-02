@@ -20,9 +20,10 @@ SYNOPSIS
      compare @<version-path> <version-name> <repository-spec>
      compare <version-name> <repository-spec> @<version-path>
      compare @<version-path> @<version-path>
-  mc copy <version-name> <source-repository-spec> <destination-repository-spec>
-     copy @<version-path> <destination-repository-spec>
-     copy @<version-path> @<repository-path>
+  mc copy <version-name> <source-repository-spec> <dest1-repository-spec> [ <dest2-repository-spec> ... ]
+     copy @<version-path> <dest1-repository-spec> [ <dest2-repository-spec> ... ]
+     copy @<version-path> @<repository-path> [ @<repository-path-list> ...]
+     copy @<version-path> @<repository-path-list> [ @<repository-path> ...]
   mc create <pkg-name>
   mc delete <pkg-name>
      delete @<workingCopy-path>
@@ -34,9 +35,11 @@ SYNOPSIS
   mc list [<regex-pkg-pattern>]
   mc load <version-name> <repository-spec>
      load <version-name> @<repository-path>
+     load <package-name> <repository-spec>
+     load <package-name> @<repository-path>
 ?  mc merge <pkg-name> <repository-spec>
-   mc move <version-name> <source-repository-spec> <new-version-name> <destination-repository-spec>
-      move @<version-path> <new-version-name> <destination-repository-spec>
+   mc move <version-name> <source-repository-spec> <new-version-name> <destination-repository-spec> <commit-message>
+      move @<version-path> <new-version-name> <destination-repository-spec> <commit-message>
   mc recompile <pkg-name>
      recompile @<workingCopy-path>
   mc revert <pkg-name> [<method-spec>]
@@ -47,6 +50,7 @@ SYNOPSIS
 ?     save <pkg-name> @<version-path>
   mc unload <pkg-name>
      unload @<workingCopy-path>
+  mc version <pkg-name>
 
 DESCRIPTION
   <pkg-name> - package base name, e.g., ''Topez-Server-Core''
