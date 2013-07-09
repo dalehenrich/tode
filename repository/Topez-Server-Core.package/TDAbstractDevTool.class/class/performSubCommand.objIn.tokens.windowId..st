@@ -7,7 +7,7 @@ performSubCommand: topez objIn: objIn tokens: tokens windowId: windowId
   base := tokens at: 1.
   commandTokens := tokens copyFrom: 2 to: tokens size.
   command := (base , (commandTokens at: 1)) asSymbol.
-  (self
+  ^ (self
     topez: topez
     objIn: objIn
     tokens: commandTokens
