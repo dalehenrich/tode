@@ -1,5 +1,5 @@
 as yet unclassified
-status
+pfstatus
   "pf status"
 
   | profMon |

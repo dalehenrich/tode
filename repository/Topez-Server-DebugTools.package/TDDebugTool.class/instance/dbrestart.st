@@ -1,5 +1,5 @@
 as yet unclassified
-restart
+dbrestart
   "db restart"
 
   | stack process level |

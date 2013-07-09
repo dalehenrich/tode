@@ -1,5 +1,5 @@
 as yet unclassified
-sentButNotImplemented
+portsentButNotImplemented
   "port sentButNotImplemented"
 
   | sbni sentNotImplemented |

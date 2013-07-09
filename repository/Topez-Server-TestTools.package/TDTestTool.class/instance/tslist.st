@@ -1,5 +1,5 @@
 as yet unclassified
-list
+tslist
   "ts list [<ds-level>]"
 
   | testNode dsLevel |

@@ -1,5 +1,5 @@
 as yet unclassified
-clean
+pfclean
   "pf clean"
 
   self profMonitor

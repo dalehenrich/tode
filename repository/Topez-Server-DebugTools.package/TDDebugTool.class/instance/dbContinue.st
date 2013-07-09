@@ -1,3 +1,5 @@
 as yet unclassified
-dbContinue
-  ^ self dbContinue: (self topez lookup: self haloStackPath)
+dbcontinue
+  "db continue"
+
+  ^ self dbContinue: self defaultHomeNode

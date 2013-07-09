@@ -2,11 +2,8 @@ as yet unclassified
 mc
   <topezCommand: 'mc' manPage: #'mcManPage'>
   ^ [ :topez :objIn :tokens :windowId | 
-  | commandTokens command |
-  commandTokens := tokens copyFrom: 2 to: tokens size.
-  command := ('mc' , (commandTokens at: 1)) asSymbol.
-  (self
-    topez: topez
+  self
+    performSubCommand: topez
     objIn: objIn
-    tokens: commandTokens
-    windowId: windowId) perform: command ]
+    tokens: tokens
+    windowId: windowId ]

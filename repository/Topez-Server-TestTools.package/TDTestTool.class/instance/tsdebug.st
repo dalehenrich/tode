@@ -1,5 +1,5 @@
 as yet unclassified
-debug
+tsdebug
   "ts debug <test-spec>"
 
   | arg testSpec cls selector meth |

@@ -1,5 +1,5 @@
 as yet unclassified
-frame
+dbframe
   | frameIndex |
   stackNode := self defaultHomeNode.
   frameIndex := tokens size > 1

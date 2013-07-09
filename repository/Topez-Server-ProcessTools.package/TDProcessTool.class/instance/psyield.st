@@ -1,5 +1,5 @@
 as yet unclassified
-yield
+psyield
   "ps yield"
 
   Processor yield.

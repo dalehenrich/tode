@@ -1,5 +1,5 @@
 as yet unclassified
-terminate
+psterminate
   "ps terminate <process-oop>"
 
   ^ (self resolveAtPathReference: (tokens at: 2)) terminate

@@ -1,5 +1,5 @@
 as yet unclassified
-kill
+pskill
   "ps kill @<process-path>"
 
-  ^ self terminate
+  ^ self psterminate

@@ -1,8 +1,8 @@
 as yet unclassified
-over
-  "db over"
+dbthru
+  "db thru"
 
   | node |
   node := self defaultHomeNode.
-  self dbStep: #'over' for: node.
+  self dbSetThruBreaksFor: node during: [ self dbStep: #'over' for: node ].
   ^ self dbFinishStep: stackNode

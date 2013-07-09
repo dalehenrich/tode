@@ -1,8 +1,8 @@
 as yet unclassified
-gather
+pfgather
   "pf gather"
 
   | profMon |
-  self stop.
+  self pfstop.
   profMon := self profMonitor.
   profMon results ifNil: [ profMon gatherResults ]

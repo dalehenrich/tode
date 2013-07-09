@@ -1,5 +1,5 @@
 as yet unclassified
-stop
+pfstop
   "pf stop"
 
   | profMon |

@@ -1,9 +1,9 @@
 as yet unclassified
-report
+pfreport
   "pf report"
 
   | profMon tally report |
-  self stop.
+  self pfstop.
   tally := 100.
   tokens size > 1
     ifTrue: [ tally := (tokens at: 2) asNumber ].

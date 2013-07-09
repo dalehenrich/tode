@@ -1,8 +1,8 @@
 as yet unclassified
-into
-  "db into"
+dbover
+  "db over"
 
   | node |
   node := self defaultHomeNode.
-  self dbStep: #'into' for: node.
+  self dbStep: #'over' for: node.
   ^ self dbFinishStep: stackNode

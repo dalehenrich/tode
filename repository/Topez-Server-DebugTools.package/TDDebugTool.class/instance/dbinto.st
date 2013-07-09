@@ -1,8 +1,8 @@
 as yet unclassified
-thru
-  "db thru"
+dbinto
+  "db into"
 
   | node |
   node := self defaultHomeNode.
-  self dbSetThruBreaksFor: node during: [ self dbStep: #'over' for: node ].
+  self dbStep: #'into' for: node.
   ^ self dbFinishStep: stackNode

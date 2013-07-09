@@ -1,5 +1,5 @@
 as yet unclassified
-run
+tsrun
   "ts run [errors|failures| passed|expectedDefects|unexpectedPassed]
       run <test-spec>
       run @<method-path>
