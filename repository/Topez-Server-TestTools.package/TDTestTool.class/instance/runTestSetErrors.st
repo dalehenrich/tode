@@ -1,5 +1,5 @@
 as yet unclassified
-debugTestSetErrors
+runTestSetErrors
   "turns out that when running through errors, you probably don't want to see assertion failures"
 
   | errors passed failures testResult |

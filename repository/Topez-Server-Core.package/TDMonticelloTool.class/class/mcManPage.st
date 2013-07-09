@@ -17,6 +17,7 @@ SYNOPSIS
   mc commit <pkg-name>
      commit @<workingCopy-path>
   mc compare <version-name> <repository-spec> <version-name> <repository-spec>
+     compare <version-name> @<repository-path> <version-name> @<repository-path>
      compare @<version-path> <version-name> <repository-spec>
      compare <version-name> <repository-spec> @<version-path>
      compare @<version-path> @<version-path>

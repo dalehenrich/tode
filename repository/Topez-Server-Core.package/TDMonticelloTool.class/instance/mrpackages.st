@@ -41,7 +41,15 @@ mrpackages
                     ifTrue: [ 
                       laterVersionName := ' << (' , newest author , '.'
                         , newest versionNumber asString , ')'.
-                      attributes add: TextEmphasis bold ] ] ] ].
+                      attributes add: TextEmphasis bold ] ] ] ]
+        ifAbsent: [ 
+          resolvedReferences
+            at: packageName
+            ifPresent: [ :sortedVersions | 
+              | newest |
+              newest := sortedVersions first.
+              loadedVersionName := ' (' , newest author , '.'
+                , newest versionNumber asString , ')' ] ].
       modified := ''.
       (dirtyPackageNames includes: packageName)
         ifTrue: [ modified := '* ' ].

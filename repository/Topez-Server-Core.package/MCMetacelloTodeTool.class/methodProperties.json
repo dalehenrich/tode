@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"deploy" : "dkh 06/29/2013 18:22",
-		"deployManPage" : "dkh 06/30/2013 08:39",
+		"deployManPage" : "dkh 07/02/2013 00:02",
 		"distribute" : "dkh 06/30/2013 08:52",
 		"distributeManPage" : "dkh 06/30/2013 08:54",
 		"installOn:" : "dkh 06/29/2013 18:37",
@@ -12,7 +12,7 @@
 		"calculateAddedFrom:versionMap:" : "dkh 06/30/2013 06:57",
 		"calculateRemovedFrom:versionMap:" : "dkh 06/30/2013 06:59",
 		"calculateVersionsMapFrom:reverseSectionMap:" : "dkh 06/30/2013 07:02",
-		"deploy" : "dkh 06/30/2013 08:44",
+		"deploy" : "dkh 07/04/2013 16:06",
 		"distribute" : "dkh 06/30/2013 09:01",
 		"metacelloRepo:" : "dkh 06/30/2013 07:12",
 		"orderedAttributeList" : "dkh 06/29/2013 18:46",

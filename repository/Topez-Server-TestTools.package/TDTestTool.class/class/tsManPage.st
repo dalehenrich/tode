@@ -4,11 +4,11 @@ tsManPage
   ts - execute test commands (debug, list, run)
 
 SYNOPSIS
-  ts debug [errors|failures| passed|expectedDefects|unexpectedPassed]
-     debug <test-spec>
-     debug @<method-path>
+  ts debug <test-spec>
   ts list [<ds-level>]
-  ts run
+  ts run [errors|failures| passed|expectedDefects|unexpectedPassed]
+     run <test-spec>
+     run @<method-path>
 
 DESCRIPTION
 
