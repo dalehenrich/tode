@@ -15,5 +15,17 @@ mccopy
       | repoOrList |
       repoOrList := self resolveRepositoryReference: repoSpec.
       repoOrList isCollection
-        ifTrue: [ repoOrList do: [ :repo | repo storeVersion: version ] ]
-        ifFalse: [ repoOrList storeVersion: version ] ]
+        ifTrue: [ 
+          repoOrList
+            do: [ :repo | 
+              Transcript
+                cr;
+                show:
+                    'Copied: ' , version info name printString , ' --' , repo description.
+              repo storeVersion: version ] ]
+        ifFalse: [ 
+          Transcript
+            cr;
+            show:
+                'Copied: ' , version info name printString , ' --' , repoOrList description.
+          repoOrList storeVersion: version ] ]

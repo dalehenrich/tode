@@ -14,6 +14,7 @@ SYNOPSIS
   mc browse <version-name> <repository-spec>
      browse <package-name>
      browse @<workingCopy-path>
+  mc bump <package-name> <repository-spec> <commit-message>
   mc commit <pkg-name>
      commit @<workingCopy-path>
   mc compare <version-name> <repository-spec> <version-name> <repository-spec>

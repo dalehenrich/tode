@@ -1,6 +1,6 @@
 as yet unclassified
-testmm
-  "test mm <configuration-base-name>"
+testproject
+  "test project <configuration-base-name>"
 
   | baseName suite projectSpec |
   baseName := tokens at: 2.

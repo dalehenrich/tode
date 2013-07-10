@@ -6,7 +6,7 @@ testManPage
 SYNOPSIS
   test suite <sunit-suite-file>
        suite @<sunit-suite-path>
-  test mm <configuration-base-name>
+  test project <configuration-base-name>
 
 DESCRIPTION
   Run a test suite and put the test results in the .tests halo node.

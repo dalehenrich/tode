@@ -18,4 +18,7 @@ mcmove
     info: newInfo
     snapshot: version snapshot
     dependencies: version dependencies.
+  Transcript
+    cr;
+    show: 'Moved: ' , newVersionName printString , ' --' , repo description.
   ^ repo storeVersion: newVersion
