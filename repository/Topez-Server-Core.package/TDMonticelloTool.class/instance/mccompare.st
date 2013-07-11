@@ -5,9 +5,12 @@ mccompare
       compare @<version-path> <version-name> <repository-spec>
       compare <version-name> <repository-spec> @<version-path>
       compare @<version-path> @<version-path>
+      compare image <package-name> <version-name> <repository-spec>
   "
 
   | stream version1 version2 snapshot1 snapshot2 patch diffy resolutionAr |
+  (tokens at: 2) = 'image'
+    ifTrue: [ ^ self mccompareimage ].
   resolutionAr := self resolveVersionReferenceStartingAt: 2 inTokens: tokens.
   version1 := resolutionAr at: 1.
   snapshot1 := version1 snapshot.

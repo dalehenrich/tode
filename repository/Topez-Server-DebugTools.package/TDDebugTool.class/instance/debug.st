@@ -11,7 +11,7 @@ debug
   topez
     homeNode: stackNode;
     currentNode: stackNode.
-  self dbStack
+  self theStack
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'stack')
         parentObject: stackNode;

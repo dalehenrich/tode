@@ -22,6 +22,7 @@ SYNOPSIS
      compare @<version-path> <version-name> <repository-spec>
      compare <version-name> <repository-spec> @<version-path>
      compare @<version-path> @<version-path>
+  mc compare image <package-name> <version-name> <repository-spec>
   mc copy <version-name> <source-repository-spec> <dest1-repository-spec> [ <dest2-repository-spec> ... ]
      copy @<version-path> <dest1-repository-spec> [ <dest2-repository-spec> ... ]
      copy @<version-path> @<repository-path> [ @<repository-path-list> ...]
@@ -29,7 +30,7 @@ SYNOPSIS
   mc create <pkg-name>
   mc delete <pkg-name>
      delete @<workingCopy-path>
-  mc diff [<regex-pkg-pattern>]
+  mc diff <regex-pkg-pattern>
      diff @<workingCopy-path>
   mc dirty 
   mc halo <name> <regex-pkg-pattern> 

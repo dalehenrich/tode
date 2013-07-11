@@ -2,7 +2,7 @@
 dbSetThruBreaksFor: node during: aBlock
   | allBreakpointsSourceOffsets srcOffsets frame method ipMarkerArray stepIps thruStepPoints |
   stackNode := node.
-  frame := self dbStack currentFrame.
+  frame := self theStack currentFrame.
   method := frame method.
   allBreakpointsSourceOffsets := method _allBreakpointsSourceOffsets.	"source offset for currently set breakpoints"
   allBreakpointsSourceOffsets ifNil: [ allBreakpointsSourceOffsets := #() ].
@@ -25,4 +25,5 @@ dbSetThruBreaksFor: node during: aBlock
   aBlock
     ensure: [ 
       "clear thru breakpoints"
-      thruStepPoints do: [ :stepPoint | method clearBreakAtStepPoint: stepPoint ] ]
+      thruStepPoints
+        do: [ :stepPoint | method clearBreakAtStepPoint: stepPoint ] ]

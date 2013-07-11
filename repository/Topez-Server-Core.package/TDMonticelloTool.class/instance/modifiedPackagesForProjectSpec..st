@@ -1,6 +1,6 @@
 as yet unclassified
 modifiedPackagesForProjectSpec: projectSpec
-  ^ projectSpec version packages
+  ^ (self packagesForProjectSpec: projectSpec)
     select: [ :pkg | 
       | wc |
       wc := pkg workingCopy.

@@ -10,15 +10,18 @@ mmDiffForProjects: projectSpecs on: stream
             ('____________________ ' , projectSpec name , ' ____________________') asText
                 allBold;
         cr.
-      packageSpecs := self modifiedPackagesForProjectSpec: projectSpec.
+      packageSpecs := self packagesForProjectSpec: projectSpec.
       packageSpecs
         do: [ :packageSpec | 
-          | wc patch |
-          wc := packageSpec workingCopy.
-          patch := self mmDiffForWorkingCopy: wc on: stream.
-          patches
-            add:
-              {wc.
-              patch}.
-          stream cr ] ].
+          | patch |
+          packageSpec workingCopy
+            ifNotNil: [ :wc | 
+              patch := self mmDiffForWorkingCopy: wc on: stream.
+              patch isEmpty
+                ifFalse: [ 
+                  patches
+                    add:
+                      {wc.
+                      patch}.
+                  stream cr ] ] ] ].
   ^ patches
