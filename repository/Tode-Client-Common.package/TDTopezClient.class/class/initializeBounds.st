@@ -2,7 +2,7 @@ as yet unclassified
 initializeBounds
   "self initialize"
 
-  | base width height classListsOrigin methodOrigin methodListOrigin top listWidth fullHeight halfHeight codeWidth hierarcyOrigin classDefOrigin thirdHeight twoThirdHeight thirdListWindowExtent listWindowExtent codeWindowExtent debuggerWidth |
+  | base width height classListsOrigin top listWidth fullHeight codeWidth hierarcyOrigin classDefOrigin thirdHeight twoThirdHeight thirdListWindowExtent listWindowExtent codeWindowExtent debuggerWidth |
   base := self baseWidth.	"680"
   width := base x / 80.0 * 1.1.
   height := (base y * 1.30) asInteger.
@@ -10,16 +10,13 @@ initializeBounds
   top := (height * self windowOrigin y) asInteger.	"10"
   classListsOrigin := (self windowOrigin x * width) asInteger.	"35 - 10"
   fullHeight := self codeWindowHeight * height.	"420"
-  halfHeight := fullHeight // 2.	"210"
   thirdHeight := fullHeight // 3.	"140"
   twoThirdHeight := 2 * thirdHeight.
   listWidth := (self listWindowWidth * width) asInteger.	"250 - 10"
-  debuggerWidth := 2 * listWidth.
+  debuggerWidth := (self debuggerWindowWidth * width) asInteger.
   listWindowExtent := listWidth @ twoThirdHeight.
   thirdListWindowExtent := listWidth @ thirdHeight.
   codeWindowExtent := codeWidth @ fullHeight.
-  methodOrigin := classListsOrigin + listWidth.
-  methodListOrigin := methodOrigin + codeWidth.
   hierarcyOrigin := classListsOrigin + listWidth.
   classDefOrigin := hierarcyOrigin + listWidth.
   Bounds
