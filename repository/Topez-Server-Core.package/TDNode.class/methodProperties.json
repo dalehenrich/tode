@@ -13,6 +13,7 @@
 		"smalltalkTextColor" : "DataCurator 12/21/2012 18:09",
 		"topezTextAttributes" : "DataCurator 11/29/2012 20:36" },
 	"instance" : {
+		"addTempValueTo:" : " 07/12/2013 08:46",
 		"aspect" : "dkh 04/10/2013 08:27",
 		"block" : "DataCurator 12/01/2012 10:51",
 		"builderAspect" : "dkh 04/10/2013 08:26",
@@ -46,7 +47,7 @@
 		"renderNameTextOn:" : "DataCurator 12/12/2012 16:22",
 		"renderText:on:indent:" : "dkh 12/27/2012 16:40",
 		"rm" : "dkh 11/28/2012 05:31",
-		"tempSymbolList" : "dkh 06/05/2013 12:46",
+		"tempSymbolList" : " 07/12/2013 09:33",
 		"topez" : "dkh 11/28/2012 05:31",
 		"topez:" : "dkh 11/28/2012 05:31",
 		"touch:nodeClass:in:" : "dkh 05/17/2013 07:05" } }

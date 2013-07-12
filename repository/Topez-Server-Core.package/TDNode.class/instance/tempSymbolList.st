@@ -5,5 +5,5 @@ tempSymbolList
   tempSymbolDictionary := SymbolDictionary new.
   tempSymbolList add: tempSymbolDictionary.
   self
-    childrenAndNamesDo: [ :child :childName | tempSymbolDictionary at: child name asString asSymbol put: child dotSelfObject ].
+    childrenAndNamesDo: [ :child :childName | child addTempValueTo: tempSymbolDictionary ].
   ^ tempSymbolList
