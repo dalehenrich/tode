@@ -31,7 +31,9 @@ getNbResult
       (actionArgs at: 1) == #'debug'
         ifTrue: [ ^ self debuggerRequested: (actionArgs at: 2) ].
       (actionArgs at: 1) == #'abort'
-        ifTrue: [ ^ actionArgs at: 2 ].
+        ifTrue: [
+	       self terminateOnProcessAbort: error. 
+	       ^ actionArgs at: 2 ].
       (actionArgs at: 1) == #'resume'
         ifTrue: [ continueWith := self library oopFor: (actionArgs at: 2) ]
         ifFalse: [ ^ actionArgs halt: 'incorrect return value from GsRuntimeError handler' ] ]
