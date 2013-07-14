@@ -1,3 +1,7 @@
 as yet unclassified
 windowIsClosingBlock
-  ^ [ :listElement | self object process ifNotNil: [ :proc | proc terminate ] ]
+  ^ [ :listElement | 
+  Transcript
+    cr;
+    show: 'windowIsClosing ' , self objectPrintString.
+  self object terminateProcess ]

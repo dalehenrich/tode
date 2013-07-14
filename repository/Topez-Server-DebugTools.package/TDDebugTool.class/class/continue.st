@@ -6,4 +6,4 @@ continue
     topez: topez
     objIn: objIn
     tokens: tokens
-    windowId: windowId) dbContinue ]
+    windowId: windowId) dbJustContinue ]
