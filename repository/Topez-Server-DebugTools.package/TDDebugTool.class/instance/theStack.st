@@ -1,3 +1,3 @@
 as yet unclassified
 theStack
-  ^ self stackNode basicContents
+  ^ self stackNode dotSelfObject

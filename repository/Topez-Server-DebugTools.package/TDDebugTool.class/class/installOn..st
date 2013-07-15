@@ -10,9 +10,6 @@ installOn: aTDTopezServer
 	 CUSTOM    - custom names for specialized window access"
 
   aTDTopezServer ensureChildrenExistIn: self commandPath.
-  self
-    installHalosOn: aTDTopezServer;
-    yourself.
   super installOn: aTDTopezServer.
   self
     installExampleOn: aTDTopezServer;
