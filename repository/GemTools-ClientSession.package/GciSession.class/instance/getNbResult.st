@@ -30,7 +30,10 @@ getNbResult
     ifTrue: [ 
       (actionArgs at: 1) == #'debug'
         ifTrue: [ ^ self debuggerRequested: (actionArgs at: 2) ].
-      (actionArgs at: 1) == #'abort'
+      (actionArgs at: 1) == #'gciMainTerminated'
+        ifTrue: [
+	       ^ actionArgs at: 2 ].
+     (actionArgs at: 1) == #'abort'
         ifTrue: [
 	       self terminateOnProcessAbort: error. 
 	       ^ actionArgs at: 2 ].

@@ -12,7 +12,10 @@ asGsRuntimeException: aGciSession
             ifFalse: [ 
               self isHalt
                 ifTrue: [ GsHaltNotification ]
-                ifFalse: [ GsErrorNotification ] ] ] ].
+                ifFalse: [ 
+	               number = 2368
+	                 ifTrue:[ GsGCIProcessTerminationNotification ] 
+	                 ifFalse:[ GsErrorNotification ] ] ] ] ].
   ^ notificationClass new
     gciErrSType: self;
     topez: aGciSession topez;

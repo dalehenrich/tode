@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GsGCIProcessTerminationNotification",
+	"pools" : [
+		 ],
+	"super" : "GsErrorNotification",
+	"type" : "normal" }

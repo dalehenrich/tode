@@ -1,0 +1,3 @@
+accessing
+gciLocalForLibrary: ignored
+  ^self 
