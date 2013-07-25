@@ -8,14 +8,11 @@ run
     ifTrue: [ doitContext := topez lookup: (tokens at: 2) ].
   topez
     accumulateTextAndDo: [ :doitString :accumulateObjIn | 
-      | result |
       topez exception: nil.
-      result := self topez
+      self topez
         evaluateString: doitString
         inContext: doitContext
-        withTempSymbolList: topez currentNode tempSymbolList.
-      self topez objIn: result.
-      result ].
+        withTempSymbolList: topez currentNode tempSymbolList ].
   displayPolicy := topez displayPolicy
     compacted: true;
     yourself.

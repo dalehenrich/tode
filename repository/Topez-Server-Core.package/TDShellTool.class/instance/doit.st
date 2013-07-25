@@ -9,14 +9,11 @@ doit
   doitContext := contextNode dotSelfObject.
   topez
     accumulateTextAndDo: [ :doitString :accumulateObjIn | 
-      | result |
       topez exception: nil.
-      result := self topez
+      self topez
         evaluateString: doitString
         inContext: doitContext
-        withTempSymbolList: contextNode tempSymbolList.
-      self topez objIn: result.
-      result ].
+        withTempSymbolList: contextNode tempSymbolList ].
   displayPolicy := topez displayPolicy
     compacted: true;
     yourself.
