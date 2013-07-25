@@ -36,8 +36,8 @@
 	"instance" : {
 		"commitProject:repos:commitMessage:" : "dkh 05/18/2013 15:42",
 		"commitVersion:baseVersionNumber:branch:author:into:repositoryGroup:commitMessage:" : "dkh 07/25/2013 09:52",
-		"commitWorkingCopies:commitMessage:" : "dkh 07/25/2013 10:15",
-		"commitWorkingCopies:repos:commitMessage:" : "dkh 07/25/2013 10:11",
+		"commitWorkingCopies:commitMessage:" : "dkh 07/25/2013 11:27",
+		"commitWorkingCopies:repos:commitMessage:" : "dkh 07/25/2013 11:30",
 		"commitWorkingCopy:repos:commitMessage:" : "dkh 07/25/2013 10:11",
 		"diffPatch:forWorkingCopy:on:" : "dkh 05/18/2013 11:44",
 		"findMatchingPackages:topez:" : "dkh 05/15/2013 19:01",

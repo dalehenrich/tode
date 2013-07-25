@@ -12,5 +12,6 @@ commitWorkingCopies: workingCopies repos: targetRepos commitMessage: commitMessa
       committedVersions add: newVersion.
       Transcript
         cr;
-        show: 'Committed: ' , newVersion printString ].
+        show:
+            'Committed: ' , newVersion printString , ' -- ' , targetRepos printString ].
   ^ committedVersions

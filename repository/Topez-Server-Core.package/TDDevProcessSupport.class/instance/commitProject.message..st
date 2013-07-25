@@ -1,11 +1,11 @@
 as yet unclassified
 commitProject: projectName message: commitMessage
-  | projectSpec targetRepos tool commitedPackages |
+  | projectSpec targetRepos tool commitedVersions |
   projectSpec := self projectSpecFor: projectName.
   targetRepos := {(self repositoryFor: projectName)}.
   tool := topez toolInstanceFor: 'mm'.
-  commitedPackages := tool
+  commitedVersions := tool
     commitProject: projectSpec
     repos: targetRepos
     commitMessage: commitMessage.
-  ^ commitedPackages isEmpty not
+  ^ commitedVersions isEmpty not
