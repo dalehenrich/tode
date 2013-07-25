@@ -1,5 +1,5 @@
 as yet unclassified
-commitVersion: version baseVersionNumber: baseVersionNumber branch: branch author: author into: targetRepo repositoryGroup: repositoryGroup commitMessage: commitMessage
+commitVersion: version baseVersionNumber: baseVersionNumber branch: branch author: author into: targetRepos repositoryGroup: repositoryGroup commitMessage: commitMessage
   | baseName nameString ancestry newInfo newVersion |
   baseName := branch notEmpty
     ifTrue: [ version package name , '.' , branch asString , '-' , author ]
@@ -15,5 +15,5 @@ commitVersion: version baseVersionNumber: baseVersionNumber branch: branch autho
     info: newInfo
     snapshot: version snapshot
     dependencies: version dependencies.
-  targetRepo storeVersion: newVersion.
+  targetRepos do: [ :targetRepo | targetRepo storeVersion: newVersion ].
   ^ newVersion

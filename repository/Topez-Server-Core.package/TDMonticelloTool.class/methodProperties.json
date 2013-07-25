@@ -35,9 +35,10 @@
 		"workingCopyNode:" : "DataCurator 01/25/2013 10:09" },
 	"instance" : {
 		"commitProject:repos:commitMessage:" : "dkh 05/18/2013 15:42",
-		"commitVersion:baseVersionNumber:branch:author:into:repositoryGroup:commitMessage:" : "dkh 07/01/2013 09:31",
+		"commitVersion:baseVersionNumber:branch:author:into:repositoryGroup:commitMessage:" : "dkh 07/25/2013 09:52",
 		"commitWorkingCopies:commitMessage:" : "dkh 05/18/2013 15:32",
-		"commitWorkingCopies:repos:commitMessage:" : "dkh 05/28/2013 14:02",
+		"commitWorkingCopies:repos:commitMessage:" : "dkh 07/25/2013 10:03",
+		"commitWorkingCopy:repos:commitMessage:" : "dkh 07/25/2013 10:07",
 		"diffPatch:forWorkingCopy:on:" : "dkh 05/18/2013 11:44",
 		"findMatchingPackages:topez:" : "dkh 05/15/2013 19:01",
 		"findMatchingRepositories:topez:" : "dkh 03/20/2013 20:53",

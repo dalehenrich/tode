@@ -1,20 +1,18 @@
 as yet unclassified
 commitWorkingCopies: workingCopies repos: targetRepos commitMessage: commitMessage
-  | committedPackages gofer |
+  | committedPackages |
   committedPackages := OrderedCollection new.
-  gofer := Gofer new.
-  gofer disablePackageCache.
-  targetRepos do: [ :repository | gofer repository: repository ].
   workingCopies
     do: [ :wc | 
-      Transcript
-        cr;
-        show: 'Committing: ' , wc packageName printString.
-      gofer package: wc packageName.
+      | versions |
+      versions := self
+        commitWorkingCopy: wc
+        repos: targetRepos
+        commitMessage: commitMessage.
       committedPackages add: wc packageName.
-      targetRepos
-        do: [ :repos | 
-          Transcript show: ' --' , repos description.
-          wc repositoryGroup addRepository: repos ] ].
-  gofer commit: commitMessage.
+      versions
+        do: [ :version | 
+          Transcript
+            cr;
+            show: 'Committed: ' , version printString ] ].
   ^ committedPackages

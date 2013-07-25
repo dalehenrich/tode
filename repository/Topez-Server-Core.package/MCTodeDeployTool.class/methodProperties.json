@@ -2,7 +2,7 @@
 	"class" : {
 		"installOn:at:" : "dkh 06/29/2013 18:39" },
 	"instance" : {
-		"commitVersion:baseVersionNumber:branch:author:into:repositoryGroup:commitMessage:" : "dkh 07/01/2013 09:35",
+		"commitVersion:baseVersionNumber:branch:author:into:repositoryGroup:commitMessage:" : "dkh 07/25/2013 09:52",
 		"createBranchMapFor:version:" : "dkh 06/29/2013 18:42",
 		"createMethodSectionMapFor:version:" : "dkh 06/29/2013 18:42",
 		"createSectionMapFor:version:" : "dkh 06/29/2013 20:10",

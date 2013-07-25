@@ -5,6 +5,6 @@ commitVersion: version baseVersionNumber: baseVersionNumber branch: branch autho
     baseVersionNumber: baseVersionNumber
     branch: branch
     author: author
-    into: targetRepo
+    into: {targetRepo}
     repositoryGroup: repositoryGroup
     commitMessage: commitMessage

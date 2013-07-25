@@ -5,6 +5,6 @@ commitVersion: version baseVersionNumber: baseVersionNumber attribute: attribute
     baseVersionNumber: baseVersionNumber
     branch: attribute asString
     author: MetacelloPlatform current authorName
-    into: targetRepo
+    into: {targetRepo}
     repositoryGroup: repositoryGroup
     commitMessage: commitMessage
