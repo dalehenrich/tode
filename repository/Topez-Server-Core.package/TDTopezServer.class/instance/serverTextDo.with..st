@@ -1,8 +1,10 @@
 convenience
 serverTextDo: accumulateBlock with: doitString
-  | result text |
+  | result text commandResult |
   self accumulateBlocks remove: accumulateBlock ifAbsent: [  ].
   result := accumulateBlock value: doitString value: objIn value.
-  text := result displayWith: self displayPolicy.
+  commandResult := result asTDCommandResult.
+  self objIn: commandResult resultObject.
+  text := commandResult renderAsTextFor: self.
   self commitTransaction.
   ^ STON toString: text
