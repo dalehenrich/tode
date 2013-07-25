@@ -6,4 +6,7 @@ commitWorkingCopy: aWorkingCopy repos: targetRepos commitMessage: commitMessage
     do: [ :notification | 
       notification
         resume: (Array with: notification suggestedName with: commitMessage) ].
-  ^ targetRepos collect: [ :repository | repository storeVersion: version ]
+  ^ targetRepos
+    collect: [ :repository | 
+      repository storeVersion: version.
+      version ]
