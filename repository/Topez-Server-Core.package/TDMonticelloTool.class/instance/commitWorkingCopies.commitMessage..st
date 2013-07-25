@@ -1,8 +1,8 @@
 as yet unclassified
 commitWorkingCopies: workingCopies commitMessage: commitMessage
-  | cacheRepository committedPackages |
+  | cacheRepository committedVersions |
   cacheRepository := MCCacheRepository default.
-  committedPackages := Array new.
+  committedVersions := Array new.
   workingCopies
     do: [ :wc | 
       | committed info repositories targetRepos |
@@ -20,5 +20,5 @@ commitWorkingCopies: workingCopies commitMessage: commitMessage
         commitWorkingCopies: {wc}
         repos: targetRepos
         commitMessage: commitMessage.
-      committedPackages addAll: committed ].
-  ^ committedPackages
+      committedVersions addAll: committed ].
+  ^ committedVersions

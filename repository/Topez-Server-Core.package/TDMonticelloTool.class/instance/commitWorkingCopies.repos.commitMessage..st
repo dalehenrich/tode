@@ -1,18 +1,16 @@
 as yet unclassified
 commitWorkingCopies: workingCopies repos: targetRepos commitMessage: commitMessage
-  | committedPackages |
-  committedPackages := OrderedCollection new.
+  | committedVersions |
+  committedVersions := OrderedCollection new.
   workingCopies
     do: [ :wc | 
-      | versions |
-      versions := self
+      | newVersion |
+      newVersion := self
         commitWorkingCopy: wc
         repos: targetRepos
         commitMessage: commitMessage.
-      committedPackages add: wc packageName.
-      versions
-        do: [ :version | 
-          Transcript
-            cr;
-            show: 'Committed: ' , version printString ] ].
-  ^ committedPackages
+      committedVersions add: newVersion.
+      Transcript
+        cr;
+        show: 'Committed: ' , newVersion printString ].
+  ^ committedVersions
