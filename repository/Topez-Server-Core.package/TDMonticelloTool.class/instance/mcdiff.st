@@ -9,7 +9,7 @@ mcdiff
   workingCopyList := (pattern beginsWith: '@')
     ifTrue: [ 
       | wcOrCollection |
-      wcOrCollection := (self resolveAtPathReference: pattern) dotSelfObject.
+      wcOrCollection := self resolveAtPathReference: pattern.
       wcOrCollection isCollection
         ifFalse: [ wcOrCollection := {wcOrCollection} ].
       wcOrCollection ]

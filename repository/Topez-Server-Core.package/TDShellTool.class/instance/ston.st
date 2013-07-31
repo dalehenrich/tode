@@ -6,10 +6,13 @@ ston
         import <path> @<server-path>
   "
 
-  | command path fileSystemPath dir node fileName |
+  | command path fileSystemPath dir node fileName arg |
   command := tokens at: 2.
   path := tokens at: 3.
-  fileSystemPath := (self resolveAtPathReference: (tokens at: 4)) asString.
+  arg := tokens at: 4.
+  fileSystemPath := (arg beginsWith: '@')
+    ifTrue: [ (self resolveAtPathReference: arg) asString ]
+    ifFalse: [ arg ].
   command = 'export'
     ifTrue: [ 
       node := topez lookup: path.
