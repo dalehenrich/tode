@@ -4,7 +4,7 @@
 	"instance" : {
 		"addChild:" : "dkh 11/28/2012 05:31",
 		"addChildNode:" : "DataCurator 01/23/2013 18:23",
-		"addTempValueTo:" : " 07/12/2013 08:47",
+		"addTempValueTo:" : "07/12/2013 08:47",
 		"asTDNode:" : "DataCurator 01/26/2013 23:22",
 		"basicContents" : "dkh 11/28/2012 05:31",
 		"block" : "dkh 06/05/2013 10:54",
@@ -16,6 +16,7 @@
 		"elementExtension:" : "DataCurator 12/15/2012 11:09",
 		"elementRenderNameTextAttributes:" : "DataCurator 12/15/2012 11:10",
 		"findMatchingPathFor:with:" : "dkh 05/28/2013 14:02",
+		"fromSton:" : "dkh 07/31/2013 16:24",
 		"lookupPath:ifAbsent:" : "DataCurator 12/12/2012 14:43",
 		"objectNamed:" : "dkh 06/05/2013 11:41",
 		"postCopy" : "dkh 06/05/2013 21:45",
