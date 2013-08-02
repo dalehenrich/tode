@@ -1,6 +1,7 @@
 as yet unclassified
 mcbrowse
   "mc browse <version-name> <repository-spec>
+      browse <version-name> @<repository-path>
       browse <package-name>
       browse @<workingCopy-path>
   "
@@ -11,7 +12,7 @@ mcbrowse
     ifTrue: [ 
       | repoSpec repo reference version |
       repoSpec := tokens at: 3.
-      repo := self repositoryFromDescription: repoSpec.
+      repo := self resolveRepositoryReference: repoSpec.
       reference := GoferResolvedReference name: versionName repository: repo.
       version := reference version.
       snapshot := version snapshot ]

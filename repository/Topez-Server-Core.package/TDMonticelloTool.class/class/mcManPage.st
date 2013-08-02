@@ -12,6 +12,7 @@ SYNOPSIS
   mc ancestors <pkg-name> [<limit>]
      ancestors @<workingCopy-path> [<limit>]
   mc browse <version-name> <repository-spec>
+     browse <version-name> @<repository-path>
      browse <package-name>
      browse @<workingCopy-path>
   mc bump <package-name> <repository-spec> <commit-message>
