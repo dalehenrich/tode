@@ -33,6 +33,7 @@ SYNOPSIS
      delete @<workingCopy-path>
   mc diff <regex-pkg-pattern>
      diff @<workingCopy-path>
+     diff
   mc dirty 
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 

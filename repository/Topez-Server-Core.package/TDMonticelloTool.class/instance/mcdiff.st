@@ -2,18 +2,22 @@ as yet unclassified
 mcdiff
   "mc diff <regex-pkg-pattern>
       diff @<workingCopy-path>
+      diff
   "
 
   | pattern stream workingCopyList patches |
-  pattern := tokens at: 2.
-  workingCopyList := (pattern beginsWith: '@')
-    ifTrue: [ 
-      | wcOrCollection |
-      wcOrCollection := self resolveAtPathReference: pattern.
-      wcOrCollection isCollection
-        ifFalse: [ wcOrCollection := {wcOrCollection} ].
-      wcOrCollection ]
-    ifFalse: [ self findMatchingPackages: pattern topez: topez ].
+  tokens size = 1
+    ifTrue: [ workingCopyList := MCWorkingCopy allManagers select: [ :wc | wc modified ] ]
+    ifFalse: [ 
+      pattern := tokens at: 2.
+      workingCopyList := (pattern beginsWith: '@')
+        ifTrue: [ 
+          | wcOrCollection |
+          wcOrCollection := self resolveAtPathReference: pattern.
+          wcOrCollection isCollection
+            ifFalse: [ wcOrCollection := {wcOrCollection} ].
+          wcOrCollection ]
+        ifFalse: [ self findMatchingPackages: pattern topez: topez ] ].
   stream := TextStream on: Text new.
   patches := OrderedCollection new.
   workingCopyList
