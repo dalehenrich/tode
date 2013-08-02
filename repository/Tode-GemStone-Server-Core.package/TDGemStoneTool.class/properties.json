@@ -4,7 +4,9 @@
 		 ],
 	"classvars" : [
 		"BackupDirectoryName",
-		"HomePath" ],
+		"HomePath",
+		"LastBackup",
+		"LastRestore" ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],

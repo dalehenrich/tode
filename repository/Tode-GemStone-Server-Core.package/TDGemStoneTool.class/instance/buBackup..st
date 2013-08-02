@@ -6,9 +6,8 @@ buBackup: backupPath
     show: TimeStamp now asString;
     show: ')'.
   self fullBackupTo: backupPath.
+  self class lastBackup: backupPath.
   Transcript
     cr;
-    show: '---Finished backup to ' , backupPath printString , ' (';
-    show: TimeStamp now asString;
-    show: ')'.
+    show: '---Finished backup to ' , LastBackup.
   ^ backupPath

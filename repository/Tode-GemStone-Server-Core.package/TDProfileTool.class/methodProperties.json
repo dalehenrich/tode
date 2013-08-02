@@ -2,7 +2,7 @@
 	"class" : {
 		"installExampleOn:" : "DataCurator 02/07/2013 19:07",
 		"installOn:" : "DataCurator 02/07/2013 19:08",
-		"pf" : " 07/09/2013 15:42",
+		"pf" : "07/09/2013 15:42",
 		"pfManPage" : "DataCurator 02/07/2013 20:53",
 		"priority" : "DataCurator 02/07/2013 19:05",
 		"profMonitor" : "DataCurator 02/07/2013 20:02",
@@ -10,11 +10,11 @@
 		"toolName" : "DataCurator 02/07/2013 19:08",
 		"toolReadMe" : "DataCurator 02/07/2013 19:09" },
 	"instance" : {
-		"pfclean" : " 07/09/2013 15:43",
-		"pfgather" : " 07/09/2013 15:45",
-		"pfreport" : " 07/09/2013 15:45",
-		"pfstart" : " 07/09/2013 15:43",
-		"pfstatus" : " 07/09/2013 15:43",
-		"pfstop" : " 07/09/2013 15:43",
+		"pfclean" : "07/09/2013 15:43",
+		"pfgather" : "07/09/2013 15:45",
+		"pfreport" : "07/09/2013 15:45",
+		"pfstart" : "07/09/2013 15:43",
+		"pfstatus" : "07/09/2013 15:43",
+		"pfstop" : "07/09/2013 15:43",
 		"profMonitor" : "DataCurator 02/07/2013 19:23",
 		"profMonitor:" : "DataCurator 02/07/2013 19:23" } }

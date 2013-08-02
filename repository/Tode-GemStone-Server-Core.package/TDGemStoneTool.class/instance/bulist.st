@@ -7,6 +7,11 @@ bulist
     select: [ :entry | entry isDirectory not ])
     sorted: [ :a :b | a modificationTime <= b modificationTime ].
   stream := WriteStream on: String new.
+  stream
+    nextPutAll: 'Last Restore: ' , LastRestore asString;
+    cr;
+    nextPutAll: 'Last Backup:  ' , LastBackup asString;
+    cr.
   entries
     do: [ :entry | 
       stream

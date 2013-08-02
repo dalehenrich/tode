@@ -5,7 +5,7 @@ executeRestoreFromBackupFromClient: backupPath
     - run the command as a GCI call
     - start a new session on success and forward any errors our way"
 
-  | message |
+  | message lastRestoreStamp |
   self shell close.
   [ 
   "restore from backup"
@@ -48,8 +48,10 @@ executeRestoreFromBackupFromClient: backupPath
         show: ex description ].
   self logout.
   session := self login.
-  message := '---Finished restore from ' , backupPath printString , ' ('
-    , TimeStamp now asString , ')'.
+  lastRestoreStamp := self session
+    executeStringExpectingStringNB: 'TDGemStoneTool lastRestore: ', backupPath printString
+	 envId: self environmentId.
+  message := '---Finished restore from ' , lastRestoreStamp.
   Transcript
     cr;
     show: message.
