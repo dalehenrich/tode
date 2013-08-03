@@ -1,0 +1,25 @@
+{
+	"class" : {
+		"git" : "dkh 08/03/2013 11:09",
+		"gitManPage" : "dkh 08/03/2013 12:35",
+		"initialize" : "dkh 08/03/2013 11:07",
+		"installOn:" : "dkh 08/03/2013 11:07",
+		"priority" : "dkh 08/03/2013 11:08",
+		"toolName" : "dkh 08/03/2013 11:08",
+		"toolReadMe" : "dkh 08/03/2013 11:08" },
+	"instance" : {
+		"createTmpFileWith:" : "dkh 08/03/2013 14:58",
+		"gitadd" : "dkh 08/03/2013 14:22",
+		"gitcheckout" : "dkh 08/03/2013 14:22",
+		"gitcommit" : "dkh 08/03/2013 14:23",
+		"githelp" : "dkh 08/03/2013 14:23",
+		"gitlog" : "dkh 08/03/2013 14:23",
+		"gitmerge" : "dkh 08/03/2013 14:23",
+		"gitpull" : "dkh 08/03/2013 14:23",
+		"gitpush" : "dkh 08/03/2013 14:23",
+		"gitstatus" : "dkh 08/03/2013 14:24",
+		"performGitCommand:" : "dkh 08/03/2013 11:48",
+		"performGitCommand:defaultArgs:" : "dkh 08/03/2013 12:04",
+		"performGitCommand:in:with:" : "dkh 08/03/2013 14:24",
+		"performGitCommand:requiredCommandArgs:" : "dkh 08/03/2013 12:27",
+		"performGitCommand:requiredCommandArgs:defaultArgs:" : "dkh 08/03/2013 12:36" } }

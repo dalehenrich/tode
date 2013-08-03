@@ -2,13 +2,8 @@ as yet unclassified
 mmcommit
   "mm commit <config> [@<commit-message-path>]"
 
-  | registration projectSpec workingCopies |
-  registration := self getRegistrationFor: (tokens at: 2).
-  projectSpec := registration lookupBaselineSpec.
-  workingCopies := (self modifiedPackagesForProjectSpec: projectSpec)
-    collect: [ :packageSpec | packageSpec workingCopy ].
-  workingCopies isEmpty
-    ifTrue: [ ^ 'No modified packages to commit' ].
+  | projectName |
+  projectName := tokens at: 2.
   tokens size > 2
     ifTrue: [ 
       | commitMessage |
@@ -16,9 +11,9 @@ mmcommit
       (commitMessage beginsWith: '@')
         ifTrue: [ 
           commitMessage := self resolveAtPathReference: commitMessage.
-          ^ self commitWorkingCopies: workingCopies commitMessage: commitMessage ] ].
+          ^ self mmCommit: projectName commitMessage: commitMessage ] ].
   topez
-    accumulateTextAndDo: [ :commitMessage :accumulateObjIn | self commitWorkingCopies: workingCopies commitMessage: commitMessage ].
+    accumulateTextAndDo: [ :commitMessage :accumulateObjIn | self mmCommit: projectName commitMessage: commitMessage ].
   ^ TDCommandResult new
     displayText: 'Please enter commit comment' asText allBold;
     resultObject: 'Please enter commit comment';
