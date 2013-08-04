@@ -9,6 +9,7 @@ SYNOPSIS
   mm dirty
 ?  mm get [image|new|registry] <config> [<config> ... ]
   mm list [<config> [<config> ... ]]
+  mm locked
 ?  mm load [image|new|registry] <config> [<config> ... ]
 
 DESCRIPTION

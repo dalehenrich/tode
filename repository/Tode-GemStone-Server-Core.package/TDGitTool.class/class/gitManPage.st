@@ -30,4 +30,7 @@ DESCRIPTION
     git add    :: `git add .`
     git log    :: `git log -10`
     git status :: `git status`
+
+  If no <git-repo-path> or <git-repo-directory> specified, `@gitRepo` is used
+  by default.
 '
