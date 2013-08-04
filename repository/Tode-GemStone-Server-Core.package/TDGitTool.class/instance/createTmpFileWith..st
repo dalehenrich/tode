@@ -3,7 +3,8 @@ createTmpFileWith: fileContents
   | file filename |
   filename := '/tmp/commitMessage'.
   [ 
+  | count |
   file := GsFile openWriteOnServer: filename.
-  file nextPutAll: fileContents ]
+  (count := file nextPutAll: fileContents) ifNil: [ self error: 'failed write' ] ]
     ensure: [ file close ].
   ^ filename
