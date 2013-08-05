@@ -6,8 +6,11 @@ findManPage
 SYNOPSIS
   find amethod <method-spec> 
   find class <regex-pattern>
+  find hierarchy <class-name>
   find method [#]<selector>
   find methods <method-spec-1> <method-spec-2>
+  find package <package-name>
+  find project <project-name>
   find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>

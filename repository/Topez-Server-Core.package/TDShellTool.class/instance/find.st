@@ -3,8 +3,10 @@ find
   "
   find amethod <method-spec> 
   find class <regex-pattern>
+  find hierarchy <class-name>
   find method [#]<selector>
   find methods <method-spec-1> <method-spec-2>
+  find project <project-name>
   find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
@@ -33,4 +35,10 @@ find
   command = 'source'
     ifTrue: [ ^ self findSource: findTokens ].
   command = 'class'
-    ifTrue: [ ^ self findClass: findTokens ]
+    ifTrue: [ ^ self findClass: findTokens ].
+  command = 'package'
+    ifTrue: [ ^ self findPackageDefinitions: findTokens ].
+  command = 'project'
+    ifTrue: [ ^ self findProjectDefinitions: findTokens ].
+  command = 'hierarchy'
+    ifTrue: [ ^ self findClassHierarchy: findTokens ]

@@ -4,8 +4,11 @@ browse
   browse amethod <method-spec>
   browse class <regex-pattern>
   browse diff <method-spec-1> <method-spec-2>
+  browse hierarchy <class-name>
   browse list <definitionList-path>
   browse method [#]<selector>
+  browse package <package-name>
+  browse project <project-name>
   browse references <variableOrGlobalNameOrPathRef>
   browse rmethod <regex-pattern>
   browse rsender <regex-pattern>
@@ -45,5 +48,11 @@ browse
     ifTrue: [ ^ self browseMethods: (self findRegexSender: findTokens) ].
   command = 'source'
     ifTrue: [ ^ self browseMethods: (self findSource: findTokens) ].
+  command = 'package'
+    ifTrue: [ ^ self browseClasses: (self findPackageDefinitions: findTokens) ].
+  command = 'project'
+    ifTrue: [ ^ self browseClasses: (self findProjectDefinitions: findTokens) ].
   command = 'class'
-    ifTrue: [ ^ self browseClasses: (self findClass: findTokens) ]
+    ifTrue: [ ^ self browseClasses: (self findClass: findTokens) ].
+  command = 'hierarchy'
+    ifTrue: [ ^ self browseClasses: (self findClassHierarchy: findTokens) ]
