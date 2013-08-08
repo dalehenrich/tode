@@ -5,6 +5,7 @@ createTmpFileWith: fileContents
   [ 
   | count |
   file := GsFile openWriteOnServer: filename.
-  (count := file nextPutAll: fileContents) ifNil: [ self error: 'failed write' ] ]
+  (count := file nextPutAll: fileContents withGemstoneLineEndings)
+    ifNil: [ self error: 'failed write' ] ]
     ensure: [ file close ].
   ^ filename
