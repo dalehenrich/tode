@@ -6,7 +6,7 @@ performGitCommand: gitCommand requiredCommandArgs: requiredCommandArgs defaultAr
     ifTrue: [ 
       requiredCommandArgs > 1
         ifTrue: [ self error: 'missing required arguments' ].
-      gitRepoDirectory := (self topez lookup: 'gitRepo') dotSelfObject ]
+      gitRepoDirectory := self resolveDefaultGitRepoDirectory ]
     ifFalse: [ 
       gitArgs := tokens at: 2.
       tokens size > 2
@@ -18,5 +18,5 @@ performGitCommand: gitCommand requiredCommandArgs: requiredCommandArgs defaultAr
         ifFalse: [ 
           requiredCommandArgs > 2
             ifTrue: [ self error: 'missing required arguments' ].
-          gitRepoDirectory := (self topez lookup: 'gitRepo') dotSelfObject ] ].
+          gitRepoDirectory := self resolveDefaultGitRepoDirectory ] ].
   ^ self performGitCommand: gitCommand in: gitRepoDirectory with: gitArgs

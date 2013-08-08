@@ -22,4 +22,5 @@
 		"performGitCommand:defaultArgs:" : "dkh 08/03/2013 12:04",
 		"performGitCommand:in:with:" : "dkh 08/03/2013 14:24",
 		"performGitCommand:requiredCommandArgs:" : "dkh 08/03/2013 12:27",
-		"performGitCommand:requiredCommandArgs:defaultArgs:" : "dkh 08/03/2013 12:36" } }
+		"performGitCommand:requiredCommandArgs:defaultArgs:" : " 08/08/2013 06:30",
+		"resolveDefaultGitRepoDirectory" : " 08/08/2013 06:31" } }

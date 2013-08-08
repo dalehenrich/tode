@@ -1,3 +1,3 @@
 as yet unclassified
 dotSelfObject
-  ^ self directoryEntry sourceDirectory
+  ^ self directoryEntry asFileDirectory
