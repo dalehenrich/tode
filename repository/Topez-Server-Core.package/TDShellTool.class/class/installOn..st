@@ -126,4 +126,7 @@ installOn: aTDTopezServer
       aspect: #'edit';
     registerEditorClass: TDClientTextElementBuilder
       for: TDTxtLeafNode
+      aspect: #'edit';
+    registerEditorClass: TDClientTextElementBuilder
+      for: TDFileSystemLeafNode
       aspect: #'edit'
