@@ -36,7 +36,7 @@ reconcile: configurationClass version: versionString repo: repo
     calculateVersionsMapFrom: changed
     reverseSectionMap: reverseSectionMap.
   self
-    modifyConiguration: configurationClass
+    modifyConfiguration: configurationClass
     version: versionString
     newVersionsMap: newVersionsMap.
   false

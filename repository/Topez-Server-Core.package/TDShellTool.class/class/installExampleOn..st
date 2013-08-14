@@ -1,7 +1,7 @@
 as yet unclassified
 installExampleOn: aTDTopezServer
   | examplesNode |
-  (aTDTopezServer lookup: '/home')
+  (aTDTopezServer ensureChildrenExistIn: '/examples')
     addChildNode:
         (TDSmalltalkLeafNode new
             name: 'st';

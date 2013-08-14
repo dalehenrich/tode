@@ -15,7 +15,7 @@ deploy
     into: self targetRepo
     commitMessage: self commitMessage.
   self
-    modifyConiguration: configurationClass
+    modifyConfiguration: configurationClass
     version: versionString
     newVersionsMap: newVersionsMap.
   ^ ar , {newVersionsMap}

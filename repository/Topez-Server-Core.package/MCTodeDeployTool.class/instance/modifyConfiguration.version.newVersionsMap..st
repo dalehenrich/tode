@@ -1,5 +1,5 @@
 as yet unclassified
-modifyConiguration: configurationClass version: versionString newVersionsMap: newVersionsMap
+modifyConfiguration: configurationClass version: versionString newVersionsMap: newVersionsMap
   (MetacelloToolBox configurationNamed: configurationClass name asString)
     updateVersionMethodForVersion: versionString
       projectAttributes: self orderedAttributeList
