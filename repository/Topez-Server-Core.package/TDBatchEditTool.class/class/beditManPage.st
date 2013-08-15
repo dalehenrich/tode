@@ -9,5 +9,5 @@ SYNOPSIS
 DESCRIPTION
 
   CMD-o - skip over edit
-  CMD-y - replace
+  CMD-p - perform replace
 '
