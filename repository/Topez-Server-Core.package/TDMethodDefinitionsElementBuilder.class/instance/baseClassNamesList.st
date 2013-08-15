@@ -3,7 +3,7 @@ baseClassNamesList
   | classes |
   classMap := Dictionary new.
   classes := IdentitySet new.
-  self object
+  self definitions
     do: [ :def | 
       (classMap
         at: def theClassName

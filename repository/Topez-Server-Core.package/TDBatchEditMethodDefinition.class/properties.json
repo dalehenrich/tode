@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"batchEditor",
+		"matchingRanges",
+		"matchIndex" ],
+	"name" : "TDBatchEditMethodDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDMethodDefinition",
+	"type" : "normal" }

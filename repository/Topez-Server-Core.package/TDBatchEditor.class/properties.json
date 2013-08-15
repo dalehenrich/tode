@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tool",
+		"definitions",
+		"regex",
+		"replacementString" ],
+	"name" : "TDBatchEditor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -112,6 +112,12 @@ codePointMap
             cmdPAction: listElement
             modifierPressed: modifierPressed
             selectionIndex: selectionIndex ];
+    at: $r codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdRAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $t codePoint
       put: [ :modifierPressed :listElement :selectionIndex | 
           self
