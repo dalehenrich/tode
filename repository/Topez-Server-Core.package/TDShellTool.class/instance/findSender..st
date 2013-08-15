@@ -1,9 +1,9 @@
 as yet unclassified
-findSender: findTokens
+findSender: selectorToken
   "find sender [#]<selector>"
 
   | selector methodRefs |
-  selector := self resolveSelector: (findTokens at: 2).
+  selector := self resolveSelector: selectorToken.
   methodRefs := (Smalltalk systemNavigation newSendersOf: selector asSymbol)
     collect: [ :gsMethod | MethodReference class: gsMethod inClass selector: gsMethod selector ].
   ^ self

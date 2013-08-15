@@ -1,9 +1,8 @@
 as yet unclassified
-findProjectDefinitions: findTokens
+findProjectDefinitions: projectName
   "find project <project-name>"
 
-  | projectName spec |
-  projectName := findTokens at: 2.
+  | spec |
   spec := Metacello image
     project: projectName;
     list.

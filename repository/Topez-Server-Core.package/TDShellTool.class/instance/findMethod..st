@@ -1,9 +1,9 @@
 as yet unclassified
-findMethod: findTokens
+findMethod: selectorToken
   "find method [#]<selector>"
 
   | selector methodRefs |
-  selector := self resolveSelector: (findTokens at: 2).
+  selector := self resolveSelector: selectorToken.
   methodRefs := Smalltalk systemNavigation
     allMethodsNoDoitsSelect: [ :m | selector = m selector asString ].
   ^ self

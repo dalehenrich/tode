@@ -15,6 +15,30 @@ find
   find versions <method-spec>
 "
 
-  | findTokens |
+  | findTokens command |
   findTokens := tokens copyFrom: 2 to: tokens size.
-  ^ self find: findTokens
+  command := findTokens at: 1.
+  command = 'method'
+    ifTrue: [ ^ self findMethod: (findTokens at: 2) ].
+  command = 'methods'
+    ifTrue: [ ^ self findMethods: findTokens ].
+  command = 'sender'
+    ifTrue: [ ^ self findSender: (findTokens at: 2) ].
+  command = 'versions'
+    ifTrue: [ ^ self findVersions: findTokens ].
+  command = 'references'
+    ifTrue: [ ^ self findReferences: (findTokens at: 2) ].
+  command = 'rmethod'
+    ifTrue: [ ^ self findRegexMethod: (findTokens at: 2) ].
+  command = 'rsender'
+    ifTrue: [ ^ self findRegexSender: (findTokens at: 2) ].
+  command = 'source'
+    ifTrue: [ ^ self findSource: (findTokens at: 2) ].
+  command = 'class'
+    ifTrue: [ ^ self findClass: (findTokens at: 2) ].
+  command = 'package'
+    ifTrue: [ ^ self findPackageDefinitions: (findTokens at: 2) ].
+  command = 'project'
+    ifTrue: [ ^ self findProjectDefinitions: (findTokens at: 2) ].
+  command = 'hierarchy'
+    ifTrue: [ ^ self findClassHierarchy: (findTokens at: 2) ]

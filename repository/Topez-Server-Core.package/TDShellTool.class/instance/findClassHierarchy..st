@@ -1,9 +1,8 @@
 as yet unclassified
-findClassHierarchy: findTokens
+findClassHierarchy: className
   "find hierarchy <class-name>"
 
-  | className cls classes defs |
-  className := findTokens at: 2.
+  | cls classes defs |
   classes := Set new.
   cls := Smalltalk at: className.
   classes addAll: (TDClassDefinition fullHierarchyOf: cls).

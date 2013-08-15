@@ -1,8 +1,6 @@
 as yet unclassified
-findRegex: findTokens
-  "xxx <pattern>"
-
+findRegex: regexExpression
   | parser |
-  parser := RxParser safelyParse: (findTokens at: 2).
+  parser := RxParser safelyParse: regexExpression.
   parser ifNil: [ ^ nil ].
   ^ RxParser preferredMatcherClass for: parser ignoreCase: true

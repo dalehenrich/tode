@@ -1,9 +1,8 @@
 as yet unclassified
-findReferences: findTokens
+findReferences: variableOrGlobalNameOrPathRef
   "find references <variableOrGlobalNameOrPathRef>"
 
-  | variableOrGlobalNameOrPathRef methodRefs pattern |
-  variableOrGlobalNameOrPathRef := findTokens at: 2.
+  | methodRefs pattern |
   methodRefs := (variableOrGlobalNameOrPathRef beginsWith: '@')
     ifTrue: [ 
       | literal |

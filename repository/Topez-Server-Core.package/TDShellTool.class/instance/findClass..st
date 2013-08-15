@@ -1,9 +1,9 @@
 as yet unclassified
-findClass: findTokens
+findClass: regexPattern
   "find class <regex-pattern>"
 
   | regex |
-  regex := self findRegex: findTokens.
+  regex := self findRegex: regexPattern.
   regex ifNil: [ ^ #() ].
   ^ (Smalltalk systemNavigation allClasses asArray
     select: [ :cls | regex search: cls name asString ])

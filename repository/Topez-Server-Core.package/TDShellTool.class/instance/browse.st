@@ -33,26 +33,26 @@ browse
           (topez lookup: listToken) dotSelfObject ].
       ^ self browseMethods: list ].
   command = 'method'
-    ifTrue: [ ^ self browseMethods: (self findMethod: findTokens) ].
+    ifTrue: [ ^ self browseMethods: (self findMethod: (findTokens at: 2)) ].
   command = 'diff'
     ifTrue: [ ^ self browseDiff: (self findMethods: findTokens) ].
   command = 'sender'
-    ifTrue: [ ^ self browseMethods: (self findSender: findTokens) ].
+    ifTrue: [ ^ self browseMethods: (self findSender: (findTokens at: 2)) ].
   command = 'versions'
     ifTrue: [ ^ self browseMethods: (self findVersions: findTokens) ].
   command = 'references'
-    ifTrue: [ ^ self browseMethods: (self findReferences: findTokens) ].
+    ifTrue: [ ^ self browseMethods: (self findReferences: (findTokens at: 2)) ].
   command = 'rmethod'
-    ifTrue: [ ^ self browseMethods: (self findRegexMethod: findTokens) ].
+    ifTrue: [ ^ self browseMethods: (self findRegexMethod: (findTokens at: 2)) ].
   command = 'rsender'
-    ifTrue: [ ^ self browseMethods: (self findRegexSender: findTokens) ].
+    ifTrue: [ ^ self browseMethods: (self findRegexSender: (findTokens at: 2)) ].
   command = 'source'
-    ifTrue: [ ^ self browseMethods: (self findSource: findTokens) ].
+    ifTrue: [ ^ self browseMethods: (self findSource: (findTokens at: 2)) ].
   command = 'package'
-    ifTrue: [ ^ self browseClasses: (self findPackageDefinitions: findTokens) ].
+    ifTrue: [ ^ self browseClasses: (self findPackageDefinitions: (findTokens at: 2)) ].
   command = 'project'
-    ifTrue: [ ^ self browseClasses: (self findProjectDefinitions: findTokens) ].
+    ifTrue: [ ^ self browseClasses: (self findProjectDefinitions: (findTokens at: 2)) ].
   command = 'class'
-    ifTrue: [ ^ self browseClasses: (self findClass: findTokens) ].
+    ifTrue: [ ^ self browseClasses: (self findClass: (findTokens at: 2)) ].
   command = 'hierarchy'
-    ifTrue: [ ^ self browseClasses: (self findClassHierarchy: findTokens) ]
+    ifTrue: [ ^ self browseClasses: (self findClassHierarchy: (findTokens at: 2)) ]
