@@ -5,6 +5,6 @@ renameclass
   | oldName newName beditTool |
   oldName := tokens at: 2.
   newName := tokens at: 3.
-  beditTool := self topez toolinstanceFor: 'bedit'.
+  beditTool := self topez toolInstanceFor: 'bedit'.
   beditTool beditReferences: oldName regex: oldName replacementString: newName.
   ^ self renameclass: oldName to: newName
