@@ -1,5 +1,5 @@
 as yet unclassified
-asBatchEditorMethodDefinitionFor: aBatchEditor
+asBatchEditorDefinitionFor: aBatchEditor
   ^ (TDBatchEditMethodDefinition
     className: self className
     isMeta: self isMeta

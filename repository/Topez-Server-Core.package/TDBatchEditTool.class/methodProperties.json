@@ -1,11 +1,22 @@
 {
 	"class" : {
 		"bedit" : "dkh 08/14/2013 16:45",
-		"beditManPage" : "dkh 08/15/2013 01:00",
+		"beditManPage" : "dkh 08/15/2013 08:05",
 		"initialize" : "dkh 08/14/2013 16:28",
 		"installOn:" : "dkh 08/14/2013 18:20",
 		"priority" : "dkh 08/14/2013 16:30",
 		"toolName" : "dkh 08/14/2013 16:32",
 		"toolReadMe" : "dkh 08/14/2013 16:32" },
 	"instance" : {
-		"beditsender" : "dkh 08/14/2013 18:13" } }
+		"beditDefinitions:regex:replacementString:" : "dkh 08/15/2013 07:25",
+		"beditTokens:" : "dkh 08/15/2013 07:51",
+		"beditclass" : "dkh 08/15/2013 08:00",
+		"beditinstance" : "dkh 08/15/2013 08:00",
+		"beditlist" : "dkh 08/15/2013 07:52",
+		"beditmethod" : "dkh 08/15/2013 07:52",
+		"beditreferences" : "dkh 08/15/2013 07:52",
+		"beditrmethod" : "dkh 08/15/2013 07:52",
+		"beditrsender" : "dkh 08/15/2013 07:53",
+		"beditrsource" : "dkh 08/15/2013 07:53",
+		"beditsender" : "dkh 08/15/2013 07:53",
+		"cmdPAction:modifierPressed:selectionIndex:" : "dkh 08/15/2013 07:53" } }
