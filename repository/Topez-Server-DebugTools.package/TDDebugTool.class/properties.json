@@ -8,7 +8,8 @@
 	"instvars" : [
 		"stackNode",
 		"processResult",
-		"processTerminated" ],
+		"processTerminated",
+		"stackWindowId" ],
 	"name" : "TDDebugTool",
 	"pools" : [
 		 ],

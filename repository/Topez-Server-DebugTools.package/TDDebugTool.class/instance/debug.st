@@ -12,7 +12,7 @@ debug
     homeNode: stackNode;
     currentNode: stackNode.
   self theStack debugTool: self.
-  self theStack
+  stackWindowId := self theStack
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'stack')
         parentObject: stackNode;

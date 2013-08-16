@@ -13,5 +13,6 @@ dbFinishStep: node
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'stack')
         parentObject: stackNode;
+        windowId: stackWindowId;
         yourself).
   ^ topez currentNode
