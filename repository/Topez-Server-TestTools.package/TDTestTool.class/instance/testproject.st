@@ -11,5 +11,7 @@ testproject
   projectSpec version currentlyLoadedClassesInVersion
     do: [ :cl | 
       (cl inheritsFrom: TestCase)
-        ifTrue: [ suite addTests: cl suite tests ] ].
+        ifTrue: [ 
+          cl isAbstract
+            ifFalse: [ suite addTests: cl suite tests ] ] ].
   ^ self testSuite: suite
