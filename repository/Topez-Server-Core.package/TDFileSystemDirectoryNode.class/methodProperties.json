@@ -1,15 +1,15 @@
 {
 	"class" : {
-		"directoryEntry:" : " 08/06/2013 08:19" },
+		"directoryEntry:" : "08/06/2013 08:19" },
 	"instance" : {
-		"asTDFileSystemNode" : " 08/07/2013 16:55",
-		"childNamed:ifAbsent:" : " 08/07/2013 17:04",
-		"childrenAndNamesDo:" : " 08/07/2013 05:59",
-		"childrenDo:" : " 08/07/2013 06:04",
-		"directoryEntries" : " 08/07/2013 06:55",
-		"directoryEntry" : " 08/07/2013 06:55",
-		"directoryEntry:" : " 08/06/2013 08:15",
-		"dotSelfObject" : " 08/08/2013 06:36",
+		"asTDFileSystemNode" : "08/07/2013 16:55",
+		"childNamed:ifAbsent:" : "08/07/2013 17:04",
+		"childrenAndNamesDo:" : "08/07/2013 05:59",
+		"childrenDo:" : "08/07/2013 06:04",
+		"directoryEntries" : "08/07/2013 06:55",
+		"directoryEntry" : "08/07/2013 06:55",
+		"directoryEntry:" : "08/06/2013 08:15",
+		"dotSelfObject" : "08/08/2013 06:36",
 		"listContents:" : "dkh 08/06/2013 10:18",
-		"resolveSpecialChildNamed:ifAbsent:" : " 08/07/2013 05:54",
-		"stonOn:" : " 08/07/2013 06:05" } }
+		"resolveSpecialChildNamed:ifAbsent:" : "08/07/2013 05:54",
+		"stonOn:" : "08/07/2013 06:05" } }
