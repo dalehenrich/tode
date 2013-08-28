@@ -31,10 +31,13 @@ rawReferencesTo: aVariableOrClassName isMeta: isMeta in: aClassOrNil
               aCollection
                 add:
                   (MethodReference class: method inClass selector: method selector) ].
-          ^ aCollection ] ].	"globals"
-  (Smalltalk classOrganizer
-    referencesToObject: (Smalltalk at: aVariableOrClassName asSymbol))
-    do: [ :method | 
-      aCollection
-        add: (MethodReference class: method inClass selector: method selector) ].
+          ^ aCollection ] ].
+  (Smalltalk at: aVariableOrClassName asSymbol)
+    ifNotNil: [ :aGlobal | 
+      "globals"
+      (Smalltalk classOrganizer referencesToObject: aGlobal)
+        do: [ :method | 
+          aCollection
+            add:
+              (MethodReference class: method inClass selector: method selector) ] ].
   ^ aCollection

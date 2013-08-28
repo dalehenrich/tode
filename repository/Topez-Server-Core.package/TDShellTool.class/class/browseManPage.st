@@ -8,15 +8,16 @@ SYNOPSIS
   browse class <regex-pattern>
   browse diff <method-spec-1> <method-spec-2>
   browse hierarchy <class-name>
-  browse list <definitionList-path>
-  browse method [#]<selector>
+  browse list <definitionList-path> [@filter-block-path]
+  browse method [#]<selector>  [@filter-block-path]
   browse package <package-name>
   browse project <project-name>
-  browse references <variableOrGlobalNameOrPathRef>
-  browse rmethod <regex-pattern>
-  browse rsender <regex-pattern>
-  browse sender [#]<selector>
-  browse source <regex-pattern>
+  browse psender [#]<selector>
+  browse references <variableOrGlobalNameOrPathRef> [@filter-block-path]
+  browse rmethod <regex-pattern> [@filter-block-path]
+  browse rsender <regex-pattern> [@filter-block-path]
+  browse sender [#]<selector> [@filter-block-path]
+  browse source <regex-pattern> [@filter-block-path]
   browse versions <method-spec>
 
 DESCRIPTION

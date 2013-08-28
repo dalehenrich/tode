@@ -7,6 +7,7 @@ find
   find method [#]<selector>
   find methods <method-spec-1> <method-spec-2>
   find project <project-name>
+  find psender [#]<selector>
   find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
@@ -22,6 +23,8 @@ find
     ifTrue: [ ^ self findMethod: (findTokens at: 2) ].
   command = 'methods'
     ifTrue: [ ^ self findMethods: findTokens ].
+  command = 'psender'
+    ifTrue: [ ^ self findPureSender: (findTokens at: 2) ].
   command = 'sender'
     ifTrue: [ ^ self findSender: (findTokens at: 2) ].
   command = 'versions'

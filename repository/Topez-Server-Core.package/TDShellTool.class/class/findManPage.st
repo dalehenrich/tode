@@ -11,6 +11,7 @@ SYNOPSIS
   find methods <method-spec-1> <method-spec-2>
   find package <package-name>
   find project <project-name>
+  find psender [#]<selector>
   find references <variableOrGlobalNameOrPathRef>
   find rmethod <regex-pattern>
   find rsender <regex-pattern>
