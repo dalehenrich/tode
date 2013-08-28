@@ -1,10 +1,0 @@
-TDSmalltalkLeafNode {	#name : 'rx',	#contents : '{(Dictionary new
-  at: \'string\' put: \'value\';
-  at: \'text\' put: \'value\' asText allBold;
-  at: \'dictionary\'
-    put:
-      (Dictionary new
-          at: \'string\' put: \'value\';
-          at: \'text\' put: \'value\' asText allBold;
-          yourself);
-  yourself)}'}

@@ -1,13 +1,0 @@
-TDSmalltalkLeafNode {	#name : '32_load',	#contents : '#(#(\'Metacello\' \'filetree:///opt/git/metacello-work/repository\' \'default\'))
-  do: [ :ar | 
-    Metacello new
-      baseline: (ar at: 1);
-      repository: (ar at: 2);
-      load: (ar at: 3) ].
-#(#(\'FileTree\' \'filetree:///opt/git/GemStone2.4/filetree/repository\' \'default\') #(\'RB\' \'filetree:///opt/git/rb/repository\' \'AST-Semantic\') #(\'Tode\' \'filetree:///opt/git/tode/repository\' \'Dev\'))
-  do: [ :ar | 
-    Metacello new
-      baseline: (ar at: 1);
-      repository: (ar at: 2);
-      onConflict: [ :ex | ex allow ];
-      load: (ar at: 3) ]'}

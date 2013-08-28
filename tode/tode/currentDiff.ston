@@ -1,555 +1,0 @@
-TDTxtLeafNode {	#name : 'currentDiff',	#contents : Text {		#string : '____________________ Tode ____________________
-==================== Topez-Server-Core ====================
-Item was changed:
-  ----- Method: Object>>edit: (in category \'*topez-server-core\') -----edit: aTopez
-    \"anAspect: #edit, #debug, #inspect\"
-  
-+   ^ self edit: aTopez aspect: #\'browse\' windowId: nil!
--   ^ self edit: aTopez aspect: #\'view\' windowId: nil!
-
-Item was changed:
-  ----- Method: TDDirectoryNodeClientListElementBuilder>>itemSelected:at:shiftPressed: (in category \'as yet unclassified\') -----itemSelected: listElement at: index shiftPressed: shiftPressed
-+   | aspect parent obj itemAttribute windowName highlightIndex parentList toggled |
--   | aspect parent obj itemAttribute windowName highlightIndex parentList |
-    itemAttribute := listElement itemCache at: index.
-    obj := itemAttribute object.
-    parent := itemAttribute parent.
-    aspect := itemAttribute aspect.
-    parentList := itemAttribute listIndex copy.
-+   toggled := false.
-    index == 1
-      ifTrue: [ 
-+       | objName builderAspect |
--       | objName |
-        \".\"
-        \"toggle between view and inspect on subject of list\"
-+       toggled := true.
-+       Transcript
-+         cr;
-+         show: aspect printString.
-+       aspect == #\'inspect\'
-+         ifTrue: [ 
-+           builderAspect := #\'view\'.
-+           aspect := #\'browse\' ]
-+         ifFalse: [ builderAspect := aspect := #\'inspect\' ].
-+       builderAspect == #\'inspect\'
-+         ifTrue: [ 
-+           obj := obj dotSelfObject
-+             asTDObjectNode: obj
-+             topez: listElement topez
-+             aspect: builderAspect.
-+           objName := self object displayWith: listElement displayPolicy.
-+           obj name: objName ]
-+         ifFalse: [ obj := obj dotSelfObject ] ]
--       aspect := aspect == #\'inspect\'
--         ifTrue: [ #\'view\' ]
--         ifFalse: [ #\'inspect\' ].
--       obj := obj dotSelfObject
--         asTDObjectNode: obj
--         topez: listElement topez
--         aspect: aspect.
--       objName := self object displayWith: listElement displayPolicy.
--       obj name: objName ]
-      ifFalse: [ 
-        index == 2
-          ifTrue: [ 
-            \"..\"
-            \"lets highlight ourselves in the .. list ...\"
-            parentList isEmpty not
-              ifTrue: [ highlightIndex := parentList removeLast ] ]
-          ifFalse: [ parentList add: index ] ].
-    windowName := listElement editorWindowName.
-+   toggled
--   aspect == #\'browse\'
-      ifTrue: [ 
-        \"when we\'re browsing there is a diversity of windows involvled, so don\'t try to reuse the same window ... #view and #inspect reuse window as navigator\"
-        windowName := nil ].
-    obj
-      edit: parent
-      topez: listElement topez
-      aspect: aspect
-      selectionIndex: nil
-      highlightIndex: highlightIndex
-      parentListIndex: parentList
-      windowName: windowName
-      windowId: nil
-      windowLocation: nil.
-    ^ nil!
-
-Item was changed:
-  ----- Method: TDShellTool class>>installOn: (in category \'as yet unclassified\') -----installOn: aTDTopezServer
-    \"#browse #view #inspect ... #view is default\"
-  
-    \"`edit` ---> #browse [[editor only aspect]]
-     `view` ---> #view
-     `inspect` ---> #inspect\"
-  
-    | optionsNode |
-    (aTDTopezServer ensureChildrenExistIn: \'/home\')
-      readMe: self homeReadMe;
-      yourself.
-    super installOn: aTDTopezServer.
-    self
-      installExampleOn: aTDTopezServer;
-      installOptionsOn: aTDTopezServer.
-    (Smalltalk at: #\'GSNMethod\' ifAbsent: [  ]) ~~ nil
-      ifTrue: [ 
-        TDTopezServer
-          registerEditorClass: TDGsNMethodElementBuilder
-          for: (Smalltalk at: #\'GsNMethod\')
-          aspect: #\'method\' ]
-      ifFalse: [ 
-        TDTopezServer
-          registerEditorClass: TDGsNMethodElementBuilder
-          for: (Smalltalk at: #\'GsMethod\')
-          aspect: #\'method\' ].
-    TDTopezServer
-      registerBuilderClass: TDDictionaryNodeBuilder
-        for: AbstractDictionary
-        aspect: #\'view\';
-      registerBuilderClass: TDSpecialNodeBuilder for: Boolean aspect: #\'view\';
-      registerBuilderClass: TDSpecialNodeBuilder for: Boolean aspect: #\'inspect\';
-      registerBuilderClass: TDSpecialNodeBuilder
-        for: UndefinedObject
-        aspect: #\'view\';
-      registerBuilderClass: TDSpecialNodeBuilder
-        for: UndefinedObject
-        aspect: #\'inspect\';
-      registerBuilderClass: TDSpecialNodeBuilder for: Number aspect: #\'view\';
-      registerBuilderClass: TDSpecialNodeBuilder for: Number aspect: #\'inspect\';
-      registerBuilderClass: TDIntegerNodeBuilder for: Integer aspect: #\'view\';
-      registerBuilderClass: TDIntegerNodeBuilder for: Integer aspect: #\'inspect\';
-      registerBuilderClass: TDCharacterNodeBuilder for: Character aspect: #\'view\';
-      registerBuilderClass: TDCharacterNodeBuilder
-        for: Character
-        aspect: #\'inspect\';
-      registerBuilderClass: TDTxtLeafNodeBuilder
-        for: CharacterCollection
-        aspect: #\'view\';
-      registerBuilderClass: TDTxtLeafNodeBuilder for: Text aspect: #\'view\';
-      registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #\'view\';
-      registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #\'inspect\';
-      registerEditorClass: TDClassAndMethodDefinitionsElementBuilder
-        for: Collection
-        aspect: #\'definitionList\';
-      registerEditorClass: TDExternalClassAndMethodDefinitionsElementBuilder
-        for: Collection
-        aspect: #\'externalDefinitionList\';
-      registerEditorClass: TDMethodDefinitionsElementBuilder
-        for: Collection
-        aspect: #\'methodDefinitionList\';
-      registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder
-        for: TDDefinitionList
-+       aspect: #\'browse\';
--       aspect: #\'view\';
-      registerEditorClass: TDClassSelectorListElementBuilder
-        for: Behavior
-        aspect: #\'classSelectors\';
-      registerEditorClass: TDClassSelectorListElementBuilder
-        for: Behavior
-        aspect: #\'instanceSelectors\';
-      registerEditorClass: TDClassHierarchyListElementBuilder
-        for: Behavior
-        aspect: #\'browse\';
-      registerEditorClass: TDClassDefinitionClientElementBuilder
-        for: Class
-        aspect: #\'classDefinition\';
-      registerEditorClass: TDClientObjectElementBuilder
-        for: Class
-        aspect: #\'inspect\';
-      registerEditorClass: TDMethodDefinitionElementBuilder
-        for: TDMethodDefinition
-        aspect: #\'method\';
-      registerEditorClass: TDMethodDefinitionElementBuilder
-        for: TDMcMethodDefinition
-        aspect: #\'method\';
-      registerEditorClass: TDMethodDefinitionElementBuilder
-        for: TDMcClassDefinition
-        aspect: #\'method\';
-      registerEditorClass: TDMethodDefinitionElementBuilder
-        for: TDMethodVersionDefinition
-        aspect: #\'method\';
-      registerEditorClass: TDMethodDefinitionElementBuilder
-        for: TDMethodTemplateDefinition
-        aspect: #\'method\';
-      registerEditorClass: TDClientObjectElementBuilder
-        for: Object
-+       aspect: #\'browse\';
--       aspect: #\'view\';
-      registerEditorClass: TDDirectoryNodeClientListElementBuilder
-        for: TDDirectoryNode
-+       aspect: #\'browse\';
--       aspect: #\'view\';
-      registerEditorClass: TDClientSourceElementBuilder
-        for: TDLeafNode
-        aspect: #\'browse\';
-      registerEditorClass: TDClientSourceElementBuilder
-        for: CharacterCollection
-        aspect: #\'browse\';
-      registerEditorClass: TDClientSourceElementBuilder
-        for: Text
-        aspect: #\'browse\';
-      registerEditorClass: TDObjectLogElementBuilder
-        for: TDObjectLog
-        aspect: #\'browse\';
-      registerEditorClass: TDClientScriptElementBuilder
-        for: TDScriptLeafNode
-        aspect: #\'browse\';
-      registerEditorClass: TDClientCodeElementBuilder
-        for: TDSmalltalkLeafNode
-        aspect: #\'browse\';
-      registerEditorClass: TDClientTextElementBuilder
-        for: TDTxtLeafNode
-        aspect: #\'browse\'!
-
-Item was changed:
-  ----- Method: TDShellTool>>shellInspect (in category \'as yet unclassified\') -----shellInspect
-    \"inspect [ windowId | windowName ] [ path ]\"
-  
-    | contextObject parentNode |
-    contextObject := objIn.
-    parentNode := nil.
-    tokens size > 1
-      ifTrue: [ 
-        | theTokens |
-        theTokens := tokens copyWithoutIndex: 1.
-        (tokens at: 2) isAllDigits
-          ifTrue: [ 
-            windowId := (tokens at: 2) asNumber.
-            theTokens := tokens copyWithoutIndex: 2 ]
-          ifFalse: [ 
-            ((tokens at: 2) beginsWith: \'#\')
-              ifTrue: [ 
-                windowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
-                theTokens := tokens copyWithoutIndex: 2 ] ].
-        theTokens size > 0
-          ifTrue: [ 
-            | contextNode |
-            contextNode := topez lookup: (theTokens at: 1).
-            parentNode := contextNode parent.
-            contextObject := contextNode dotSelfObject ] ].
-+   contextObject edit: topez aspect: #\'inspect\' windowId: windowId.
--   (contextObject asTDObjectNode: parentNode topez: topez aspect: #\'inspect\')
--     edit: topez
--     aspect: #\'inspect\'
--     windowId: windowId.
-    ^ contextObject!
-
-Item was changed:
-  ----- Method: TDShellTool>>view (in category \'as yet unclassified\') -----view
-    \"view aspect [ path ]\"
-  
-    | contextObject aspect |
-    contextObject := objIn.
-+   aspect := #\'browse\'.
-+   tokens size > 1
-+     ifTrue: [ 
-+       aspect := (tokens at: 2) asSymbol.
-+       tokens size > 2
-+         ifTrue: [ contextObject := topez lookup: (tokens at: 3) ] ].
--   aspect := (tokens at: 2) asSymbol.
--   tokens size > 2
--     ifTrue: [ contextObject := topez lookup: (tokens at: 3) ].
-    contextObject edit: topez aspect: aspect windowId: windowId.
-    ^ contextObject!
-
-
-==================== Topez-Server-DebugTools ====================
-Item was changed:
-  ----- Method: TDDebugTool class>>installOn: (in category \'as yet unclassified\') -----installOn: aTDTopezServer
-    \"#browse #view #inspect ... #view is default\"
-  
-    \"`edit` ---> #browse [[editor only aspect]]
-     `view` ---> #view
-     `inspect` ---> #inspect\"
-  
-    aTDTopezServer ensureChildrenExistIn: self commandPath.
-    self
-      installHalosOn: aTDTopezServer;
-      yourself.
-    super installOn: aTDTopezServer.
-    self
-      installExampleOn: aTDTopezServer;
-      yourself.
-    TDTopezServer
-      registerBuilderClass: TDStackNodeBuilder for: TDStack aspect: #\'view\';
-      registerEditorClass: TDStackClientListElementBuilder
-        for: TDStack
-+       aspect: #\'browse\'!
--       aspect: #\'view\'!
-
-Item was changed:
-  ----- Method: TDDebugTool>>dbFinishStep: (in category \'*topez-server-debugtools\') -----dbFinishStep: node
-    | frameIndex |
-    frameIndex := 1.
-    stackNode := node.
-    self dbStack navigateFrame: frameIndex.
-    (self dbStack currentFrame frameContents == nil
-      or: [ 
-        \"needed for G/S 2.4 to recognize when process is no longer active\"
-        processTerminated ])
-      ifTrue: [ ^ STON fromString: processResult ].
-    self dbStack
-      edit: stackNode
-      topez: topez
-+     aspect: #\'browse\'
--     aspect: #\'view\'
-      windowId: nil.
-    ^ topez currentNode!
-
-Item was changed:
-  ----- Method: TDDebugTool>>debug (in category \'as yet unclassified\') -----debug
-    \"debug\"
-  
-    | exceptionProcess exception |
-    exceptionProcess := self topez serverStatus exceptionProcess.
-    exception := self topez serverStatus exception.
-    topez := self topez spawnDebugger: exception description.
-    topez exception: exception process: exceptionProcess.
-    stackNode := topez lookup: self haloStackPath.
-    topez
-      homeNode: stackNode;
-      currentNode: stackNode.
-    self dbStack
-      edit: stackNode
-      topez: topez
-+     aspect: #\'browse\'
--     aspect: #\'view\'
-      windowId: nil!
-
-Item was changed:
-  ----- Method: TDDebugTool>>frame (in category \'as yet unclassified\') -----frame
-    | frameIndex |
-    stackNode := self defaultHomeNode.
-    frameIndex := tokens size > 1
-      ifTrue: [ (tokens at: 2) asNumber ]
-      ifFalse: [ self dbStack currentFrame frameIndex ].
-    self dbStack navigateFrame: frameIndex.
-    self dbStack
-      edit: stackNode
-      topez: topez
-+     aspect: #\'browse\'
--     aspect: #\'view\'
-      windowId: nil.
-    ^ topez currentNode!
-
-Item was changed:
-  ----- Method: TDDebugTool>>navigateStack: (in category \'as yet unclassified\') -----navigateStack: increment
-    stackNode := self defaultHomeNode.
-    self dbStack navigateStack: increment.
-    self dbStack
-      edit: stackNode
-      topez: topez
-+     aspect: #\'browse\'
--     aspect: #\'view\'
-      windowId: nil.
-    ^ topez currentNode!
-
-Item was changed:
-  ----- Method: TDStackFrameContentsClientListElementBuilder>>itemSelected:at:shiftPressed: (in category \'as yet unclassified\') -----itemSelected: listElement at: index shiftPressed: shiftPressed
-+   | aspect obj parentObj itemAttribute toggled windowName |
--   | aspect obj parentObj itemAttribute |
-    itemAttribute := listElement itemCache at: index.
-    obj := itemAttribute object.
-    parentObj := itemAttribute parent.
-    aspect := itemAttribute aspect.
-+   toggled := false.
-    index == 1
-      ifTrue: [ 
-+       | objName builderAspect |
--       | objName |
-        \".\"
-        \"toggle between view and inspect on subject of list\"
-+       toggled := true.
-        aspect := aspect == #\'inspect\'
-+         ifTrue: [ 
-+           builderAspect := #\'view\'.
-+           aspect := #\'browse\' ]
-+         ifFalse: [ builderAspect := aspect := #\'inspect\' ].
-+       obj := obj dotSelfObject
-+         asTDObjectNode: obj
-+         topez: listElement topez
-+         aspect: builderAspect.
--         ifTrue: [ #\'view\' ]
--         ifFalse: [ #\'inspect\' ].
--       obj := obj dotSelfObject asTDObjectNode: obj topez: listElement topez aspect: aspect.
-        objName := self object displayWith: listElement displayPolicy.
-        obj name: objName ].
-    index == 2
-      ifTrue: [ 
-        \"..\"
-        \"nothing special\"
-         ].
-+   windowName := listElement editorWindowName.
-+   toggled
-+     ifTrue: [ 
-+       \"when we\'re browsing there is a diversity of windows involvled, so don\'t try to reuse the same window ... #view and #inspect reuse window as navigator\"
-+       windowName := nil ].
-    obj
-      edit: parentObj
-      topez: listElement topez
-      aspect: aspect
-+     windowName: windowName
--     windowName: listElement editorWindowName
-      windowId: nil.
-    ^ nil!
-
-Item was changed:
-  ----- Method: TDStackFrameMethodElementBuilder>>elementSource:clientSourceElement: (in category \'as yet unclassified\') -----elementSource: methodSource clientSourceElement: clientSourceElement
-    \"have to use GsProcess>>popTo: to trim the stack back to the frames homeMethod...homeMethod is indeed the outermost method for the stack of blacks\"
-  
-    | newSelector |
-    self inClass == nil
-      ifTrue: [ self error: \'Cannot edit Executable Code\' ].
-    newSelector := super
-      elementSource: methodSource
-      clientSourceElement: clientSourceElement.
-    self selector asSymbol == newSelector
-      ifTrue: [ 
-        self object trimToHomeFrame.
-        self object stack
-          edit: nil
-          topez: clientSourceElement topez
-+         aspect: #\'browse\'
--         aspect: #\'view\'
-          windowId: nil ].
-    ^ newSelector!
-
-
-==================== Topez-Server-TestDebugTools ====================
-Item was changed:
-  ----- Method: TDDebugToolBuilderTests>>testNodeView (in category \'as yet unclassified\') -----testNodeView
-    \"object aspect expected\"
-  
-    | stack frame |
-    stack := TDStack new.
-    frame := stack currentFrame.
-    self
-      executeNodeBuilderSpecs:
-        {{stack.
-        #\'view\'.
-        \'debug/ ([TDStack] UndefinedObject(oop=20, status=...problem printing process)):
-  \'}.
-        {frame.
-        #\'view\'.
-        \'nil/ ([TDStackFrame] error printing):
-  \'}}!
-
-Item was changed:
-  ----- Method: TDDebugToolBuilderTests>>testWindowLookup (in category \'as yet unclassified\') -----testWindowLookup
-    \"object aspect expected\"
-  
-    self
-      executeWindowBuilderLookupSpecs:
-        {{(TDStack new).
--       #\'view\'.
--       (TDStackClientListElementBuilder name)}.
--       {(TDStack new).
-        #\'browse\'.
-        (TDStackClientListElementBuilder name)}.
--       {(TDStackFrame new).
--       #\'view\'.
--       (TDClientObjectElementBuilder name)}.
-        {(TDStackFrame new).
-        #\'browse\'.
-        (TDClientObjectElementBuilder name)}.
-        {(TDStackFrame new).
-        #\'source\'.
-        (TDStackFrameMethodElementBuilder name)}.
-        {(TDStackFrame new).
-        #\'contents\'.
-        (TDStackFrameContentsClientListElementBuilder name)}}!
-
-Item was changed:
-  ----- Method: TDDebugToolBuilderTests>>testWindowView (in category \'as yet unclassified\') -----testWindowView
-    \"object aspect windowId expected\"
-  
-    | stack frame |
-    stack := self stack.
-    frame := stack currentFrame.
-    self
-      executeWindowBuilderSpecs:
-        {{stack.
-+       #\'browse\'.
--       #\'view\'.
-        nil.
-        \'anOrderedCollection( \'\'1. ProcessorScheduler>>_switchFrom:to: @2 line 8\'\', \'\'2. ProcessorScheduler>>_reschedule @5 line 10\'\', \'\'3. ProcessorScheduler>>_waitOnSema: @7 line 8\'\', \'\'4. Semaphore>>wait @13 line 15\'\', \'\'5. TransientSemaphore>>wait @3 line 3\'\', \'\'6. [] in ExecBlock(TDDebugToolBuilderTests)>>stack @3 line 6\'\', \'\'7. GsProcess>>_start @7 line 16\'\', \'\'8. UndefinedObject(GsNMethod class)>>_gsReturnToC @1 line 1\'\')/ ([OrderedCollection] anOrderedCollection( \'\'1. ProcessorScheduler>>_switchFrom:to: @2 line 8\'\', \'\'2. ProcessorScheduler>>_reschedule @5 line 10\'\', \'\'3. ProcessorScheduler>>_waitOnSema: @...):
-  
-(class)@ -> [OrderedCollection class] OrderedCollection
-  
-1@ -> [String] \'\'1. ProcessorScheduler>>_switchFrom:to: @2 line 8\'\'
-  
-2@ -> [String] \'\'2. ProcessorScheduler>>_reschedule @5 line 10\'\'
-  
-3@ -> [String] \'\'3. ProcessorScheduler>>_waitOnSema: @7 line 8\'\'
-  
-4@ -> [String] \'\'4. Semaphore>>wait @13 line 15\'\'
-  
-5@ -> [String] \'\'5. TransientSemaphore>>wait @3 line 3\'\'
-  
-6@ -> [String] \'\'6. [] in ExecBlock(TDDebugToolBuilderTests)>>stack @3 line 6\'\'
-  
-7@ -> [String] \'\'7. GsProcess>>_start @7 line 16\'\'
-  
-8@ -> [String] \'\'8. UndefinedObject(GsNMethod class)>>_gsReturnToC @1 line 1\'\'
-  \'}}!
-
-Item was added:
-+ ----- Method: TDTopezServer>>lookupClassNameFor:aspect:defaultAspect:in:do: (in category \'accessing\') -----lookupClassNameFor: anObject aspect: anAspect defaultAspect: defaultAspect in: nodeDictionary do: aBlock
-+   | class classMap className |
-+   class := anObject class.
-+   [ class notNil and: [ classMap isNil ] ]
-+     whileTrue: [ 
-+       classMap := nodeDictionary at: class className ifAbsent: [  ].
-+       classMap
-+         ifNotNil: [ 
-+           classMap
-+             at: anAspect
-+             ifAbsent: [ 
-+               \"force lookup up class hierarchy for exact match\"
-+               classMap := nil ] ].
-+       classMap ifNil: [ class := class superclass ] ].
-+   className := classMap == nil
-+     ifTrue: [ 
-+       anAspect ~~ defaultAspect
-+         ifTrue: [ 
-+           \"if anAspect is not found at all, default to <defaultAspect>\"
-+           ^ self
-+             lookupClassNameFor: anObject
-+             aspect: defaultAspect
-+             defaultAspect: defaultAspect
-+             in: nodeDictionary
-+             do: aBlock ].
-+       ^ aBlock value: nil ]
-+     ifFalse: [ classMap at: anAspect ifAbsent: [ self error: \'did not expect to get here\' ] ].
-+   ^ aBlock value: className!
-
-Item was removed:
-- ----- Method: TDTopezServer>>lookupClassNameFor:aspect:in:do: (in category \'accessing\') -----lookupClassNameFor: anObject aspect: anAspect in: nodeDictionary do: aBlock
--   | class classMap className |
--   class := anObject class.
--   [ class notNil and: [ classMap isNil ] ]
--     whileTrue: [ 
--       classMap := nodeDictionary at: class className ifAbsent: [  ].
--       classMap
--         ifNotNil: [ 
--           classMap
--             at: anAspect
--             ifAbsent: [ 
--               \"force lookup up class hierarchy for exact match\"
--               classMap := nil ] ].
--       classMap ifNil: [ class := class superclass ] ].
--   className := classMap == nil
--     ifTrue: [ 
--       anAspect ~~ #\'view\'
--         ifTrue: [ 
--           \"if anAspect is not found at all, default to #view\"
--           ^ self
--             lookupClassNameFor: anObject
--             aspect: #\'view\'
--             in: nodeDictionary
--             do: aBlock ].
--       ^ aBlock value: nil ]
--     ifFalse: [ classMap at: anAspect ifAbsent: [ self error: \'did not expect to get here\' ] ].
--   ^ aBlock value: className!
-',		#runs : RunArray {			#runs : [				107,				18,				2,				81,				2,				38,				3,				57,				56,				18,				2,				189,				85,				77,				2,				52,				2,				31,				2,				34,				2,				34,				2,				46,				22,				2,				13,				2,				15,				34,				20,				2,				10,				2,				59,				639,				327,				2,				16,				2,				17,				2,				19,				2,				15,				2,				56,				2,				33,				2,				66,				2,				46,				2,				46,				12,				24,				2,				15,				2,				158,				2,				27,				2,				6,				2,				17,				2,				29,				2,				19,				2,				24,				2,				35,				2,				32,				2,				27,				2,				18,				2,				25,				2,				10,				18,				2,				111,				2,				48,				5,				46,				2,				21,				2,				28,				5,				18,				2,				50,				2,				29,				2,				14,				2,				35,				2,				7,				2,				38,				2,				38,				2,				53,				2,				15,				2,				20,				2,				55,				2,				42,				2,				28,				2,				16,				2,				20,				2,				55,				2,				41,				2,				29,				2,				16,				2,				50,				2,				30,				2,				23,				2,				77,				2,				80,				2,				47,				2,				27,				2,				23,				2,				47,				2,				27,				2,				26,				2,				76,				2,				79,				2,				77,				2,				80,				2,				81,				2,				49,				2,				21,				2,				26,				2,				47,				2,				31,				2,				23,				2,				74,				2,				75,				2,				78,				2,				67,				2,				22,				2,				33,				2,				75,				2,				22,				2,				41,				2,				59,				2,				22,				2,				39,				2,				76,				2,				28,				27,				25,				2,				59,				2,				20,				2,				33,				2,				59,				2,				20,				2,				36,				2,				60,				2,				20,				2,				25,				2,				63,				2,				17,				2,				34,				2,				54,				2,				17,				2,				26,				2,				58,				2,				30,				2,				25,				2,				58,				2,				32,				2,				25,				2,				58,				2,				31,				2,				25,				2,				58,				2,				37,				2,				25,				2,				58,				2,				38,				2,				25,				2,				54,				2,				18,				27,				25,				2,				65,				2,				27,				27,				25,				2,				54,				2,				22,				2,				25,				2,				54,				2,				31,				2,				25,				2,				54,				2,				16,				2,				25,				2,				51,				2,				23,				2,				25,				2,				54,				2,				28,				2,				25,				2,				52,				2,				31,				2,				25,				2,				52,				2,				25,				2,				26,				18,				2,				94,				2,				47,				5,				31,				2,				26,				2,				21,				2,				18,				2,				15,				2,				20,				2,				47,				2,				33,				2,				19,				2,				47,				2,				52,				2,				20,				2,				43,				2,				23,				2,				90,				2,				59,				2,				25,				2,				19,				2,				26,				2,				58,				2,				44,				2,				58,				69,				148,				2,				20,				18,				2,				78,				2,				25,				5,				27,				2,				26,				200,				124,				2,				63,				2,				21,				66,				18,				2,				111,				2,				48,				5,				46,				2,				21,				2,				28,				5,				58,				2,				7,				2,				36,				2,				14,				2,				35,				2,				7,				2,				38,				2,				14,				2,				16,				2,				75,				2,				57,				2,				19,				27,				26,				18,				2,				106,				2,				17,				2,				19,				2,				21,				2,				42,				2,				50,				2,				11,				2,				73,				2,				27,				2,				50,				2,				15,				2,				20,				2,				17,				24,				22,				2,				19,				2,				24,				18,				2,				80,				2,				10,				5,				33,				2,				64,				2,				50,				2,				60,				2,				56,				2,				49,				2,				8,				2,				25,				2,				28,				2,				15,				2,				20,				2,				17,				24,				22,				2,				20,				18,				2,				80,				2,				17,				2,				37,				2,				32,				2,				40,				2,				55,				2,				42,				2,				15,				2,				20,				2,				17,				24,				22,				2,				19,				2,				24,				18,				2,				108,				2,				37,				2,				41,				2,				15,				2,				20,				2,				17,				24,				22,				2,				19,				2,				24,				18,				2,				194,				62,				43,				2,				52,				2,				31,				2,				37,				2,				34,				22,				2,				13,				2,				15,				34,				20,				2,				10,				2,				59,				25,				2,				37,				286,				159,				2,				69,				2,				27,				2,				13,				2,				15,				2,				11,				2,				24,				2,				10,				266,				2,				6,				2,				20,				2,				29,				2,				19,				29,				47,				2,				19,				2,				10,				18,				2,				193,				2,				150,				5,				18,				2,				22,				2,				59,				2,				23,				2,				32,				2,				46,				2,				40,				2,				15,				2,				35,				2,				24,				2,				18,				2,				41,				28,				26,				2,				25,				2,				19,				70,				18,				2,				106,				2,				27,				5,				18,				2,				24,				2,				31,				2,				7,				2,				29,				2,				15,				2,				15,				2,				87,				2,				4,				2,				14,				2,				15,				2,				45,				2,				6,				18,				2,				114,				2,				27,				5,				7,				2,				37,				2,				23,				90,				2,				17,				2,				47,				92,				2,				27,				2,				17,				2,				44,				2,				27,				2,				17,				2,				48,				2,				27,				2,				19,				2,				62,				18,				2,				110,				2,				36,				5,				18,				2,				23,				2,				31,				2,				7,				2,				31,				2,				15,				19,				17,				2,				11,				2,				624,				2,				57,				2,				69,				2,				66,				2,				66,				2,				51,				2,				58,				2,				81,				2,				52,				2,				80,				2,				6,				16,				1227,				18,				1117,				1			],			#values : [				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					},					TextEmphasis {						#emphasisCode : 1,						#setMode : true					}				],				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : Color {							#rgb : 1023						}					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				[ ],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : Color {							#rgb : 1072693248						}					}				],				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					},					TextEmphasis {						#emphasisCode : 1,						#setMode : true					}				],				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					},					TextEmphasis {						#emphasisCode : 1,						#setMode : true					}				],				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : @12					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextColor {						#color : @12					}				],				[					TextColor {						#color : @24					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@15,				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : Color {							#rgb : 644035584						}					}				],				[					TextColor {						#color : Color {							#rgb : 1023						}					}				],				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					},					TextColor {						#color : Color {							#rgb : 1072693248						}					}				],				[					TextColor {						#color : @849					}				],				@15			],			#lastIndex : 20719,			#lastRun : 750,			#lastOffset : 0		}	}}

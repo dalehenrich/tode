@@ -1,13 +1,0 @@
-TDTxtLeafNode {	#name : 'workspace',	#contents : Text {		#string : 'tode 1 > mr packages filetree:///opt/git/gs/filetree/tests/testRepositories/empty
-AAA (dkh.2)
-BBB (dkh.1)
-MonticelloFileTree-Core (dkh.102)
-CCC
-Issue69
-Issue72
-tode 1 > mr versions Issue69 filetree:///opt/git/gs/filetree/tests/testRepositories/empty
-Issue69-dkh.2
-tode 1 > mc browse Issue69-dkh.2 filetree:///opt/git/gs/filetree/tests/testRepositories/empty
-tode 1 > mc revert Issue69 CCC>>_123
-[260435713 sz:6 MCMethodDefinition] aMCMethodDefinition(CCC>>_123)
-',		#runs : RunArray {			#runs : [				8,				13,				60,				1,				58,				20,				8,				21,				60,				1,				14,				8,				11,				13,				1,				60,				1,				8,				11,				7,				1,				9,				1,				16,				18,				2,				30,				1			],			#values : [				[					TextColor {						#color : Color {							#rgb : 537395712						}					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				[					TextColor {						#color : Color {							#rgb : 1023						}					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					},					TextEmphasis {						#emphasisCode : 4,						#setMode : true					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@6,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@11,				[					@22				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					},					TextEmphasis {						#emphasisCode : 1,						#setMode : true					}				],				@6,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@24,				@27,				@11,				@24,				@6,				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				@24,				[					@30				],				[ ],				[					TextColor {						#color : Color {							#rgb : 0						}					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				[					TextEmphasis {						#emphasisCode : 1,						#setMode : true					}				],				[					TextEmphasis {						#emphasisCode : 0,						#setMode : true					}				],				[					TextColor {						#color : Color {							#rgb : 1023						}					}				],				@36			],			#lastIndex : nil,			#lastRun : nil,			#lastOffset : nil		}	}}

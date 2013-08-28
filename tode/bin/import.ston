@@ -1,20 +1,0 @@
-TDScriptLeafNode {	#name : 'import',	#contents : '[ :topez :objIn :tokens :windowId | 
-| topezPath dirPath dir node parentNode |
-\"import <topez-directory-path> <server-directory-path>
-
-import all of the .ston files in <server-directory-path> into 
-
-<topez-directory-path>\"
-topezPath := tokens at: 2.
-Transcript
-  cr;
-  show: \'Import: \' , topezPath , \' : \' , DateAndTime now printString.
-parentNode := topez ensureChildrenExistIn: topezPath.
-dirPath := tokens at: 3.
-dir := ServerFileDirectory on: dirPath.
-(dir fileNamesMatching: \'*.ston\')
-  do: [ :fileName | 
-    dir
-      readOnlyFileNamed: fileName
-      do: [ :fileStream | node := STON fromStream: fileStream ].
-    parentNode addChildNode: node ] ]'}

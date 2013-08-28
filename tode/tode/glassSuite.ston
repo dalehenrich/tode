@@ -1,19 +1,0 @@
-TDSmalltalkLeafNode {	#name : 'glassSuite',	#contents : '| suite configs version classes testCases |
-suite := TestSuite named: \'GLASS base Suite\'.
-configs := Array new.
-version := ConfigurationOfGLASS project version: \'1.0-beta.9\'.
-version spec
-  projectDo: [ :projectSpec | 
-    configs
-      add:
-        (TDConfigurationDefinition new
-          projectSpec: projectSpec;
-          yourself) ]
-  packageDo: [ :ignored |  ]
-  groupDo: [ :ignored |  ].
-classes := Array new.
-configs do: [ :def | classes addAll: def classDefinitions ].
-testCases := classes select: [ :def | def theClass inheritsFrom: TestCase ].
-testCases
-  do: [ :testCaseDef | suite addTests: testCaseDef theClass suite tests ].
-^ suite'}
