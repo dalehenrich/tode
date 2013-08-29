@@ -5,6 +5,8 @@ findManPage
 
 SYNOPSIS
   find amethod <method-spec> 
+  find categories
+  find category <regex-pattern>
   find class <regex-pattern>
   find hierarchy <class-name>
   find method [#]<selector>
@@ -17,6 +19,8 @@ SYNOPSIS
   find rsender <regex-pattern>
   find sender [#]<selector>
   find source <regex-pattern>
+  find symbolList <regex-pattern>
+  find symbolLists
   find versions <method-spec>
 
 DESCRIPTION

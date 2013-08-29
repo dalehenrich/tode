@@ -2,10 +2,13 @@ as yet unclassified
 find
   "
   find amethod <method-spec> 
+  find categories
+  find category <regex-pattern>
   find class <regex-pattern>
   find hierarchy <class-name>
   find method [#]<selector>
   find methods <method-spec-1> <method-spec-2>
+  find package <package-name>
   find project <project-name>
   find psender [#]<selector>
   find references <variableOrGlobalNameOrPathRef>
@@ -13,6 +16,8 @@ find
   find rsender <regex-pattern>
   find sender [#]<selector>
   find source <regex-pattern>
+  find symbolList <regex-pattern>
+  find symbolLists
   find versions <method-spec>
 "
 
@@ -41,6 +46,14 @@ find
     ifTrue: [ ^ self findClass: (findTokens at: 2) ].
   command = 'package'
     ifTrue: [ ^ self findPackageDefinitions: (findTokens at: 2) ].
+  command = 'categories'
+    ifTrue: [ ^ self findCategoryDefinitions ].
+  command = 'symbolLists'
+    ifTrue: [ ^ self findSymbolListDefinitions: (findTokens at: 2) ].
+  command = 'category'
+    ifTrue: [ ^ self findCategoryClassDefinitions: (findTokens at: 2) ].
+  command = 'symbolList'
+    ifTrue: [ ^ self findSymbolListClassDefinitions: (findTokens at: 2) ].
   command = 'project'
     ifTrue: [ ^ self findProjectDefinitions: (findTokens at: 2) ].
   command = 'hierarchy'

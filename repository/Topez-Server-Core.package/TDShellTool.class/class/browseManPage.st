@@ -5,6 +5,7 @@ browseManPage
 
 SYNOPSIS
   browse amethod <method-spec>
+  browse category <regex-pattern>
   browse class <regex-pattern>
   browse diff <method-spec-1> <method-spec-2>
   browse hierarchy <class-name>
@@ -18,6 +19,7 @@ SYNOPSIS
   browse rsender <regex-pattern> [@filter-block-path]
   browse sender [#]<selector> [@filter-block-path]
   browse source <regex-pattern> [@filter-block-path]
+  browse symbolList <regex-pattern>
   browse versions <method-spec>
 
 DESCRIPTION

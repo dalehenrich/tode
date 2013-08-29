@@ -2,6 +2,7 @@ as yet unclassified
 browse
   "
   browse amethod <method-spec>
+  browse category <regex-pattern>
   browse class <regex-pattern>
   browse diff <method-spec-1> <method-spec-2>
   browse hierarchy <class-name>
@@ -15,6 +16,7 @@ browse
   browse rsender <regex-pattern> [@filter-block-path]
   browse sender [#]<selector> [@filter-block-path]
   browse source <regex-pattern> [@filter-block-path]
+  browse symbolList <regex-pattern>
   browse versions <method-spec>
 "
 
@@ -72,6 +74,10 @@ browse
       ^ self browseMethods: list ].
   command = 'package'
     ifTrue: [ ^ self browseClasses: (self findPackageDefinitions: (findTokens at: 2)) ].
+  command = 'category'
+    ifTrue: [ ^ self browseClasses: (self findCategoryClassDefinitions: (findTokens at: 2)) ].
+  command = 'symbolList'
+    ifTrue: [ ^ self browseClasses: (self findSymbolListDefinitions: (findTokens at: 2)) ].
   command = 'project'
     ifTrue: [ ^ self browseClasses: (self findProjectDefinitions: (findTokens at: 2)) ].
   command = 'class'
