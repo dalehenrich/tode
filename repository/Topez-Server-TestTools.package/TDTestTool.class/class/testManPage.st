@@ -6,6 +6,7 @@ testManPage
 SYNOPSIS
   test suite <sunit-suite-file>
        suite @<sunit-suite-path>
+  test package <package-name>
   test project <configuration-base-name>
 
 DESCRIPTION
