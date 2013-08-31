@@ -19,5 +19,6 @@ cypDiffPackage: packageName to: cypressRepository on: stream
         cr.
       diffy := MCDiffyTextWriter on: stream.
       diffy writePatch: patch.
-      stream cr ].
+      stream cr.
+      self markWorkingCopyFor: packageName modified: true ].
   ^ patch

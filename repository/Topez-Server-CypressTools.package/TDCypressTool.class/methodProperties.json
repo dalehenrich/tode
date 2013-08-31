@@ -1,22 +1,22 @@
 {
 	"class" : {
-		"cym" : " 08/31/2013 05:50",
-		"cymManPage" : " 08/31/2013 06:47",
+		"cym" : "08/31/2013 05:50",
+		"cymManPage" : "08/31/2013 06:47",
 		"cyp" : "dkh 08/30/2013 16:10",
-		"cypManPage" : " 08/31/2013 06:36",
+		"cypManPage" : "08/31/2013 06:36",
 		"initialize" : "dkh 08/30/2013 16:37",
 		"installOn:" : "dkh 08/30/2013 16:08",
 		"priority" : "dkh 08/30/2013 16:09",
 		"toolName" : "dkh 08/30/2013 16:09",
 		"toolReadMe" : "dkh 08/30/2013 16:09" },
 	"instance" : {
-		"cymDiffProject:to:on:" : " 08/31/2013 06:13",
-		"cymSave:to:" : " 08/31/2013 06:47",
-		"cymdiff" : " 08/31/2013 06:13",
-		"cymsave" : " 08/31/2013 06:47",
-		"cypDiffPackage:to:on:" : " 08/31/2013 06:54",
-		"cypSave:to:" : " 08/31/2013 07:01",
+		"cymDiffProject:to:on:" : "08/31/2013 06:13",
+		"cymSave:to:" : "08/31/2013 06:47",
+		"cymdiff" : "08/31/2013 06:13",
+		"cymsave" : "08/31/2013 06:47",
+		"cypDiffPackage:to:on:" : "dkh 08/31/2013 11:48",
+		"cypSave:to:" : "08/31/2013 07:01",
 		"cypbrowse" : "dkh 08/30/2013 21:24",
-		"cypdiff" : " 08/31/2013 06:09",
+		"cypdiff" : "08/31/2013 06:09",
 		"cypsave" : "dkh 08/30/2013 20:47",
-		"markWorkingCopyFor:modified:" : " 08/31/2013 06:53" } }
+		"markWorkingCopyFor:modified:" : "08/31/2013 06:53" } }
