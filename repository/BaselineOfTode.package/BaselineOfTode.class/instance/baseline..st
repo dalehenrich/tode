@@ -90,6 +90,8 @@ baseline: spec
                 requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Tests'
           with: [ spec requires: #('Topez-Server-Core') ];
+        package: 'Topez-Server-CypressTools'
+          with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-TestTools'
           with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-DebugTools'

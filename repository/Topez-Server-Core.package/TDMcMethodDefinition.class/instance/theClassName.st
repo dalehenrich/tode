@@ -1,3 +1,3 @@
 as yet unclassified
 theClassName
-  ^ self methodDefinition className
+  ^ self methodDefinition className asSymbol

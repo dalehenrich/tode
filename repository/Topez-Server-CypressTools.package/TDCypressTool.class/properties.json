@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-CypressTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Halos" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDCypressTool",
+	"pools" : [
+		 ],
+	"super" : "TDStandardTool",
+	"type" : "normal" }
