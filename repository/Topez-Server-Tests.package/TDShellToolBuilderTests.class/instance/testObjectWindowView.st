@@ -7,8 +7,8 @@ testObjectWindowView
       {{(1 -> '1').
       #'edit'.
       nil.
-      'anArray( ''.        -> 1->''''1'''''', ''(class)@ -> Association'', ''key@     -> 1'', ''value@   -> ''''1'''''')/ ([Array] anArray( ''. -> 1->''''1'''''', ''(class)@ -> Association'', ''key@ -> 1'', ''value@ -> ''''1'''''')):
-	(class)@ -> [Array class] Array
+      'anOrderedCollection( ''.        -> 1->''''1'''''', ''(class)@ -> Association'', ''key@     -> 1'', ''value@   -> ''''1'''''')/ ([OrderedCollection] anOrderedCollection( ''. -> 1->''''1'''''', ''(class)@ -> Association'', ''key@ -> 1'', ''value@ -> ''''1'''''')):
+	(class)@ -> [OrderedCollection class] OrderedCollection
 	1@ -> [String] ''. -> 1->''''1''''''
 	2@ -> [String] ''(class)@ -> Association''
 	3@ -> [String] ''key@ -> 1''
