@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"operation" ],
+	"name" : "TDMergePatchOperation",
+	"pools" : [
+		 ],
+	"super" : "TDMergeOperation",
+	"type" : "normal" }

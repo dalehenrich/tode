@@ -9,7 +9,7 @@ createStackNodeFor: exceptionProcess
     exception: topez serverStatus exception;
     yourself.
   node := stack
-    asTDObjectNode: parentNode
+    asTDSessionObjectNode: parentNode
     topez: parentNode topez
     aspect: #'view'.
   node name: 'stack'.

@@ -18,6 +18,7 @@ mmDiffForProjects: projectSpecs on: stream
             ifNotNil: [ :wc | 
               patch := self mmDiffForWorkingCopy: wc on: stream.
               patch isEmpty
+                ifTrue: [ wc modified: false ]
                 ifFalse: [ 
                   patches
                     add:

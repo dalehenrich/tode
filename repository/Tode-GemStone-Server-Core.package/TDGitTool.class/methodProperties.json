@@ -1,14 +1,14 @@
 {
 	"class" : {
 		"git" : "dkh 08/03/2013 11:09",
-		"gitManPage" : " 08/04/2013 14:18",
+		"gitManPage" : "08/04/2013 14:18",
 		"initialize" : "dkh 08/03/2013 11:07",
 		"installOn:" : "dkh 08/03/2013 11:07",
 		"priority" : "dkh 08/03/2013 11:08",
 		"toolName" : "dkh 08/03/2013 11:08",
 		"toolReadMe" : "dkh 08/03/2013 11:08" },
 	"instance" : {
-		"createTmpFileWith:" : " 08/08/2013 16:26",
+		"createTmpFileWith:" : "08/08/2013 16:26",
 		"gitadd" : "dkh 08/03/2013 14:22",
 		"gitaddIn:with:" : "dkh 08/09/2013 17:45",
 		"gitcheckout" : "dkh 08/03/2013 14:22",
@@ -31,7 +31,8 @@
 		"gitstatusIn:with:" : "dkh 08/09/2013 17:47",
 		"performGitCommand:" : "dkh 08/03/2013 11:48",
 		"performGitCommand:defaultArgs:" : "dkh 08/03/2013 12:04",
-		"performGitCommand:in:with:" : "dkh 08/10/2013 08:42",
+		"performGitCommand:in:with:" : "dkh 09/01/2013 21:13",
+		"performGitCommand:in:worktree:with:" : "dkh 09/01/2013 21:12",
 		"performGitCommand:requiredCommandArgs:" : "dkh 08/03/2013 12:27",
 		"performGitCommand:requiredCommandArgs:defaultArgs:" : "dkh 08/10/2013 08:33",
-		"resolveDefaultGitRepoDirectory" : " 08/08/2013 06:31" } }
+		"resolveDefaultGitRepoDirectory" : "08/08/2013 06:31" } }

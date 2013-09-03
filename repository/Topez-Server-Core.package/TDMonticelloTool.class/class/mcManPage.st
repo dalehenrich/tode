@@ -42,17 +42,16 @@ SYNOPSIS
      load <version-name> @<repository-path>
      load <package-name> <repository-spec>
      load <package-name> @<repository-path>
-?  mc merge <pkg-name> <repository-spec>
+   mc merge <package-name> <version-name> <repository-spec>
+      merge <package-name> <version-name> @<repository-path>
    mc move <version-name> <source-repository-spec> <new-version-name> <destination-repository-spec> <commit-message>
       move @<version-path> <new-version-name> <destination-repository-spec> <commit-message>
   mc recompile <pkg-name>
      recompile @<workingCopy-path>
   mc revert <pkg-name> [<method-spec>]
      revert @<workingCopy-path> [<method-spec>]
-?  mc save <pkg-name> <version-name> <repository-spec>
-?     save @<workingCopy-path> <version-name> <repository-spec>
-?     save @<workingCopy-path> @<version-path>
-?     save <pkg-name> @<version-path>
+  mc save <pkg-name> <version-name> <repository-spec> <commit-message>
+     save <pkg-name> <version-name> @<repository-path> @<commit-message>
   mc unload <pkg-name>
      unload @<workingCopy-path>
   mc version <pkg-name>

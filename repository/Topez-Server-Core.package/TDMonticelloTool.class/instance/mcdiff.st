@@ -25,6 +25,7 @@ mcdiff
       | patch |
       patch := self mmDiffForWorkingCopy: workingCopy on: stream.
       patch isEmpty
+        ifTrue: [ workingCopy modified: false ]
         ifFalse: [ 
           stream cr.
           patches

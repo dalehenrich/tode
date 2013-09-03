@@ -1,8 +1,11 @@
 as yet unclassified
 buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
+  | theWindowLabel |
   self
     theWindowName: aTDEditorSpec windowName;
     theWindowLocation: aTDEditorSpec windowLocation.
+  theWindowLabel := aTDEditorSpec windowLabel.
+  theWindowLabel ifNil: [ theWindowLabel := self editorWindowLabel ].
   ^ self clientSourceElement
     theObject: self object;
     aspect: aTDEditorSpec editorAspect;
@@ -11,7 +14,7 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     getBlock: self getBlock;
     setBlock: self setBlock;
     cmdKeyBlock: self cmdKeyBlock;
-    editorWindowLabel: self editorWindowLabel;
+    editorWindowLabel: theWindowLabel;
     editorWindowId: aTDEditorSpec windowId;
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;

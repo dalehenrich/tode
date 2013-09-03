@@ -1,0 +1,18 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"merger",
+		"mergerCompletionBlock",
+		"mergerAbortBlock",
+		"mergeTool",
+		"operations" ],
+	"name" : "TDMerger",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

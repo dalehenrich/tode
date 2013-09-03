@@ -1,6 +1,6 @@
 as yet unclassified
 buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
-  | clientListElement |
+  | clientListElement theWindowLabel |
   self
     theWindowName: aTDEditorSpec windowName;
     theWindowLocation: aTDEditorSpec windowLocation.
@@ -11,6 +11,8 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     ifTrue: [ clientListElement highlightedIndex: aTDEditorSpec highlightIndex ].
   aTDEditorSpec parentList ~~ nil
     ifTrue: [ clientListElement parentList: aTDEditorSpec parentList ].
+  theWindowLabel := aTDEditorSpec windowLabel.
+  theWindowLabel ifNil: [ theWindowLabel := self editorWindowLabel ].
   ^ clientListElement
     topez: aTDEditorSpec topez;
     aspect: editorAspect;
@@ -18,7 +20,7 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     windowIsClosingBlock: self windowIsClosingBlock;
     keyboardEventBlock: self keyboardEventBlock;
     cmdKeyCodePoints: self cmdKeyCodePoints;
-    editorWindowLabel: self editorWindowLabel;
+    editorWindowLabel: theWindowLabel;
     editorWindowId: aTDEditorSpec windowId;
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;
