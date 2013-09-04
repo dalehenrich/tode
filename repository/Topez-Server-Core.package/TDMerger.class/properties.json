@@ -10,7 +10,8 @@
 		"mergerCompletionBlock",
 		"mergerAbortBlock",
 		"mergeTool",
-		"operations" ],
+		"operations",
+		"loaded" ],
 	"name" : "TDMerger",
 	"pools" : [
 		 ],

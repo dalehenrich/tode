@@ -14,6 +14,10 @@ mcmerge
   repoSpec := tokens at: 4.
   repo := self resolveRepositoryReference: repoSpec.
   version := self versionFor: versionName in: repoSpec.
+  (wc ancestry hasAncestor: version info)
+    ifTrue: [ 
+      ^ 'No Changes: ' , versionName printString , ' already in '
+        , packageName printString , ' ancestry' ].
   versionSnapshot := version snapshot.
   commonAncestorInfo := version info commonAncestorWith: wc ancestry.
   repoGroup := MCRepositoryGroup new

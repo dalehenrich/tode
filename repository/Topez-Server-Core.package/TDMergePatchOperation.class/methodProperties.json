@@ -2,10 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
+		"applyTo:" : "dkh 09/03/2013 21:13",
+		"editDefinition" : "dkh 09/03/2013 20:30",
 		"mergeSource" : "dkh 09/03/2013 09:50",
+		"mergeSource:" : "dkh 09/03/2013 20:32",
 		"operation" : "dkh 09/02/2013 16:00",
 		"operation:" : "dkh 09/02/2013 16:01",
-		"printText" : " 09/03/2013 07:28",
+		"printOn:" : "dkh 09/03/2013 21:34",
+		"printText" : "dkh 09/03/2013 21:34",
 		"selectedDefinition" : " 09/03/2013 07:37",
 		"selectedDefinitionSource" : " 09/03/2013 07:38",
-		"windowLabel" : "dkh 09/03/2013 09:49" } }
+		"selectedOperation" : "dkh 09/03/2013 21:13",
+		"windowLabel" : "dkh 09/03/2013 21:34" } }

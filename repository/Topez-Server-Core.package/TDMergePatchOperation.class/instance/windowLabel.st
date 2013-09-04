@@ -1,7 +1,6 @@
 as yet unclassified
 windowLabel
-  ^ self operation printString , '[' , self selection asString printString
-    , ', '
+  ^ self printString , '[' , self selection asString printString , ', '
     ,
       (self displayDiffs
         ifTrue: [ 'diff' ]

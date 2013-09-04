@@ -1,3 +1,5 @@
 as yet unclassified
 printText
-  ^ self operation printString asText
+  ^ Text
+    string: self printString
+    attribute: (TextEmphasis perform: self selectionAttribute)
