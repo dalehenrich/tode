@@ -10,7 +10,4 @@ printText
             ifTrue: [ #'normal' ]
             ifFalse: [ #'italic' ] ] ]
     ifFalse: [ #'bold' ].
-  ^ Text
-    string:
-      self conflict operation definition summary , '(' , self selection asString , ')'
-    attribute: (TextEmphasis perform: attribute)
+  ^ Text string: self printString attribute: (TextEmphasis perform: attribute)

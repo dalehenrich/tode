@@ -2,7 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"applyTo:" : "dkh 09/03/2013 16:01",
 		"createOperationsList" : "dkh 09/03/2013 11:25",
+		"load" : "dkh 09/03/2013 16:40",
 		"mergeTool" : " 09/02/2013 09:07",
 		"mergeTool:" : " 09/02/2013 09:07",
 		"merger" : " 09/02/2013 09:04",
@@ -12,4 +14,5 @@
 		"mergerCompletionBlock" : " 09/02/2013 09:04",
 		"mergerCompletionBlock:" : " 09/02/2013 09:04",
 		"operations" : "dkh 09/03/2013 11:23",
-		"windowIsClosing" : "dkh 09/02/2013 11:31" } }
+		"provisions" : "dkh 09/03/2013 16:04",
+		"windowIsClosing" : "dkh 09/03/2013 16:41" } }

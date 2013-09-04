@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"applyTo:" : "dkh 09/03/2013 16:02",
 		"displayDiffs" : " 09/03/2013 07:57",
 		"displayDiffs:" : "dkh 09/03/2013 09:24",
 		"editDefinition" : " 09/03/2013 07:45",
@@ -11,6 +12,7 @@
 		"merger" : "dkh 09/02/2013 17:30",
 		"merger:" : "dkh 09/02/2013 17:30",
 		"printText" : "dkh 09/02/2013 15:58",
+		"resolved" : "dkh 09/03/2013 15:52",
 		"selectEdit" : " 09/03/2013 07:50",
 		"selectLocal" : " 09/03/2013 07:19",
 		"selectRemote" : " 09/03/2013 07:19",

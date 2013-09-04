@@ -26,4 +26,13 @@ mcmerge
     target: versionSnapshot
     ancestor: commonAncestorSnapshot.
   mergeTool := topez toolInstanceFor: 'mg'.
-  mergeTool mgmerge: merger mergerCompletionBlock: [  ] mergerAbortBlock: [  ]
+  mergeTool
+    mgmerge: merger
+    mergerCompletionBlock: [ 
+      | imagePatch |
+      imagePatch := version workingCopy package snapshot
+        patchRelativeToBase: commonAncestorSnapshot.
+      imagePatch isEmpty
+        ifTrue: [ version workingCopy loaded: version ]
+        ifFalse: [ version workingCopy merged: version ] ]
+    mergerAbortBlock: [  ]

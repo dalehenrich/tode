@@ -1,6 +1,6 @@
 as yet unclassified
 cmdJAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "perform merger"
+  "load merger"
 
-  self halt.
+  self object load.
   ^ true
