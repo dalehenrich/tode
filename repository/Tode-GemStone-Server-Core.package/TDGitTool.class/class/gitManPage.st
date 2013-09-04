@@ -16,6 +16,8 @@ SYNOPSIS
       log [ `git-command-args` [ @<git-repo-directory> ]]
   git merge `git-command-args` [ <git-repo-path> ]
       merge `git-command-args` [ @<git-repo-directory> ]
+  git mergetool [ <git-repo-directory> ]
+      mergetool [ @<git-repo-path> ]
   git pull `git-command-args` [ <git-repo-path> ]
       pull `git-command-args` [ @<git-repo-directory> ]
   git push `git-command-args` [ <git-repo-path> ]
