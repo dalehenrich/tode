@@ -4,6 +4,7 @@ psManPage
   ps - execute process commands
 
 SYNOPSIS
+  ps delay <seconds>
   ps kill @<process-path>
   ps kill9 @<process-path>
   ps list 
