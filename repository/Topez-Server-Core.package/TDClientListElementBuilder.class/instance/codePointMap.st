@@ -9,6 +9,8 @@ codePointMap
 []	CMD-T - browse pkg/confis tests
 []	CMD-b - browse class
 []	CMD-c - copy object
+[]	CMD-j 
+[]	CMD-k
 []	CMD-l - refresh
 []	CMD-m - browse implementors
 []	CMD-n - browse senders
@@ -104,6 +106,12 @@ codePointMap
       put: [ :modifierPressed :listElement :selectionIndex | 
           self
             cmdJAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
+    at: $k codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdKAction: listElement
             modifierPressed: modifierPressed
             selectionIndex: selectionIndex ];
     at: $l codePoint

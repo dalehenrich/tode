@@ -1,3 +1,3 @@
 as yet unclassified
 dbup
-  ^ self navigateStack: 1
+  ^ self navigateStack: -1

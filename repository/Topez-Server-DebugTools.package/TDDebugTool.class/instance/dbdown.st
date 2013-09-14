@@ -1,3 +1,3 @@
 as yet unclassified
 dbdown
-  ^ self navigateStack: -1
+  ^ self navigateStack: 1
