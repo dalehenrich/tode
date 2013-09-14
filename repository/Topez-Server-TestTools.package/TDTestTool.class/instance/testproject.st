@@ -6,7 +6,7 @@ testproject
   baseName := tokens at: 2.
   suite := TestSuite named: baseName , ' tests'.
   projectSpec := Metacello image
-    baseline: baseName;
+    project: baseName;
     list.
   projectSpec version currentlyLoadedClassesInVersion
     do: [ :cl | 
