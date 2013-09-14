@@ -13,4 +13,5 @@ nodePath last = $/
 stonTool := topez toolInstanceFor: \'ston\'.
 dir := ServerFileDirectory on: dirPath.
 parentNode := topez ensureChildrenExistIn: nodePath.
-dir stonImportUsing: stonTool parentNode: parentNode ]'}
+dir stonImportUsing: stonTool parentNode: parentNode.
+topez setCurrentNode: (topez lookup: nodePath) ]'}
