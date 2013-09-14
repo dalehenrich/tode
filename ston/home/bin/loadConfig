@@ -4,14 +4,14 @@ TDScriptLeafNode{#name:'loadConfig',#contents:'[ :topez :objIn :tokens :windowId
 projectName := tokens at: 2.
 version := tokens at: 3.
 loads := \'default\'.
- description := tokens at: 4 .
+description := tokens at: 4.
 tokens size > 4
   ifTrue: [ loads := tokens copyFrom: 5 to: tokens size ].
 Metacello new
   configuration: projectName;
   repository: description;
   get.
-loaded := Metacello new
+GsDeployer deploy: [loaded := Metacello new
   configuration: projectName;
   version: version;
   repository: description;
@@ -21,7 +21,7 @@ loaded := Metacello new
           cr;
           show: \'WARNING: \' , ex description.
         ex resume ];
-  load: loads.
+  load: loads].
 statusNode := topez
   lookup: \'status\'
   ifAbsent: [ 
@@ -31,7 +31,5 @@ statusNode := topez
           name: \'status\';
           yourself) ].
 statusNode
-  contents:
-    \'Loaded Configuration: \' , projectName printString , \' version \'
-      , version printString , \' from: \' , description.
+  contents:loaded printString.
 loaded ]'}
