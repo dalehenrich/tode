@@ -1,0 +1,13 @@
+TDSmalltalkLeafNode{#name:'ajpSuite',#contents:'| wc classes suite |
+classes := Set new.
+#(\'YBuffer-Tests-Core\' \'AJP-Tests-Core\')
+  do: [ :packageName | 
+    wc := MCWorkingCopy allManagers
+      detect: [ :each | each packageName = packageName ].
+    classes addAll: (MetacelloPlatform current packageInfoFor: wc) classes ].
+suite := TestSuite named: \'AJP Suite\'.
+classes
+  do: [ :testCase | 
+    (testCase inheritsFrom: TestCase)
+      ifTrue: [ suite addTests: testCase suite tests ] ].
+^ suite'}

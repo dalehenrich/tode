@@ -1,0 +1,6 @@
+TDSmalltalkLeafNode{#name:'x',#contents:'| repo |
+repo := CypressFileSystemRepository
+  onUrl: \'cypressft:/export/galbadia1/users/rsargent/git/gitRepos/\' asUrl
+  alias: \'Cypress\'.
+repo gemStoneFileoutsEnabled: true.
+repo'}

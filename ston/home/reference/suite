@@ -1,0 +1,10 @@
+TDSmalltalkLeafNode{#name:'suite',#contents:'| suite projectSpec |
+suite := TestSuite named: \'Cypress Reference tests\'.
+projectSpec := Metacello image
+  baseline: \'CypressReference\';
+  list.
+projectSpec version currentlyLoadedClassesInVersion
+  do: [ :cl | 
+    (cl inheritsFrom: TestCase)
+      ifTrue: [ suite addTests: cl suite tests ] ].
+^ suite'}

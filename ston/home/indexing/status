@@ -1,0 +1,6 @@
+TDTxtLeafNode{#name:'status',#contents:'commit 740425ea224058c1560934467eebd5d5fc64b93d
+Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
+Date:   Thu Aug 29 21:14:25 2013 -0700
+
+    move UnorderedCollection>>_evaluatorFor:isRangeEqualityOperation: back to GemStone-Indexing-Extensions where it belongs
+'}

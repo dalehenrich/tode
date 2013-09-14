@@ -1,0 +1,8 @@
+TDTxtLeafNode{#name:'scratch',#contents:Text{#string:'    GsIndexSpec new
+      unicodeIndex: \'each.#car.color\' 
+        collator: IcuCollator default;
+      rcUnicodeIndex: \'each.firstName\' 
+        collator: (IcuCollator forLocaleNamed: \'en_GB\')
+        requireUnicodeStrings: true;
+      createIndexesOn: myEmployees.
+',#runs:RunArray{#runs:[267],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:232,#lastRun:1,#lastOffset:231}}}

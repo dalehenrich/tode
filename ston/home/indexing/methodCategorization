@@ -1,0 +1,16 @@
+TDSmalltalkLeafNode{#name:'methodCategorization',#contents:'| block private collection |
+block := [ :class :selectors :categoryName | 
+selectors
+  do: [ :selector | 
+    (class includesCategory: categoryName)
+      ifFalse: [ class addCategory: categoryName ].
+    class moveMethod: selector toCategory: categoryName ] ].
+block
+  value: GsQuery class
+  value: GsQuery class selectors
+  value: \'instance creation\'.
+block value: GsQuery class value: #(#\'defaultOptimizerClass\') value: \'defaults\'.
+private := #(#\'on:\' #\'immediateInvariant\' #\'printOn:\' #\'value:\' #\'optimize\' #\'_nsc:\' #\'optimizeUsing:\' #\'formula:\' #\'hasIndexEvaluators\' #\'_formula:\' #\'formula\' #\'bind:to:\' #\'originalFormula\' #\'_nsc\' #\'requirePathTerms\' #\'withOriginalFormula\' #\'resetCache\' #\'cacheQueryResult:\' #\'cacheQueryResult\' #\'_queryResult\' #\'queryResult\').
+block value: GsQuery value: private value: \'private\'.
+collection := #(#\'asIdentityBag\' #\'includes:\' #\'size\' #\'detect:ifNone:\' #\'select:\' #\'reject:\' #\'collect:\' #\'do:\' #\'any\' #\'isEmpty\' #\'detect:\' #\'readStream\' #\'intersection:\' #\'reversedReadStream\' #\'anyIfNone:\' #\'asCollection\').
+block value: GsQuery value: collection value: \'collection\''}

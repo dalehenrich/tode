@@ -1,0 +1,14 @@
+TDSmalltalkLeafNode{#name:'xx',#contents:'| query nsc expected intersection |
+nsc := IXFamilyTree createFamily population.
+expected := nsc
+  select: { :each | (1 <= each.numberOfChildren) & (each.numberOfChildren <= 3) }.
+query := \'(1 <= each.numberOfChildren) & (each.numberOfChildren <= 3)\'
+  asCachedQueryOn: nsc.
+query size = expected size
+  ifTrue: [ 
+    | result |
+    result := query select: [ :each | expected includes: each ].
+    result size = expected size.
+    result := expected select: [ :each | query includes: each ].
+    result size = expected size ]
+  ifFalse: [ false ]'}

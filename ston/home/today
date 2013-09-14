@@ -1,0 +1,5 @@
+TDTxtLeafNode{#name:'today',#contents:Text{#string:'dkh 9/1/2013 07:02
+1. Pharo 2.0 and Pharo 3.0 filetree and metacello
+[x]2. tode tests passing
+3. Indexing grammar
+4. []tODE merging: Monticello and Git',#runs:RunArray{#runs:[113,4,1,33],#values:[[TextColor{#color:Color{#rgb:0}}],[],[TextEmphasis{#emphasisCode:1,#setMode:true}],@9],#lastIndex:119,#lastRun:4,#lastOffset:0}}}

@@ -1,0 +1,3 @@
+TDSmalltalkLeafNode{#name:'x',#contents:'| repo |
+repo := MCGitHubRepository
+  location: \'github://glassdb/zinc:gemstone3.1/repository\''}

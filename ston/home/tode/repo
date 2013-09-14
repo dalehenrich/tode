@@ -1,0 +1,2 @@
+TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository fromDescription: \'filetree:///opt/git/tode/repository\')
+  repository'}

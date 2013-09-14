@@ -1,0 +1,8 @@
+TDTxtLeafNode{#name:'log',#contents:Text{#string:'dkh 9/4/2013 01:24
+  - commit command returns committed versions...
+dkh 9/3/2013 10:11
+  - fix ./load so that it doesn\'t choke if a non-git repo is being loaded
+    also fix commit the same way...
+  - mapRepos needs to NOT map repositories if there is a repo specified for the 
+    package itself
+',#runs:RunArray{#runs:[86,211],#values:[[TextColor{#color:Color{#rgb:0}}],[]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}

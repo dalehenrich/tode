@@ -1,0 +1,7 @@
+TDSmalltalkLeafNode{#name:'patchRestrictedClasses',#contents:'| cls index set |
+cls := GsPackagePolicy.
+index := cls class allInstVarNames indexOfIdentical: #\'restrictedClasses\'.
+set := cls instVarAt: index.
+set removeAll: set.
+false
+  ifTrue: [ SetValuedPathTerm category: \'Index-Family\' ]'}

@@ -1,0 +1,10 @@
+TDSmalltalkLeafNode{#name:'primeRegistry',#contents:'MetacelloProjectRegistration resetRegistry.\t\"reset registry and lock FileTree and Metacello projects\"
+Metacello new
+  baseline: \'FileTree\';
+  repository: \'filetree:///opt/git/gs/filetree/repository\';
+  lock.
+Metacello new
+  baseline: \'Metacello\';
+  repository: \'filetree:///opt/git/metacello-work/repository\';
+  lock.
+MetacelloProjectRegistration primeRegistryFromImage'}

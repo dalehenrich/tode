@@ -1,0 +1,8 @@
+TDTxtLeafNode{#name:'status',#contents:'commit bee89b4d49f9a28fc915e704040ddf1c6696be49
+Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
+Date:   Sat Sep 14 07:27:56 2013 +0200
+
+    don\'t restrict test projects to baselines...
+    
+    Signed-off-by: Dale Henrichs <dale.henrichs@gemtalksystems.com>
+'}

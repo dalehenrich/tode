@@ -1,0 +1,10 @@
+TDTxtLeafNode{#name:'status',#contents:'commit 16ae364603b31c3360e068a05f3d716e4a210961
+Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
+Date:   Sat Aug 31 15:16:51 2013 -0700
+
+    move methods to GLASS base:
+    
+      Url class>>absoluteFromText:
+      Url class>>schemeName
+      Url class>>urlClassForScheme:
+'}

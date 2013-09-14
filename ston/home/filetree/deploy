@@ -1,0 +1,6 @@
+TDScriptLeafNode{#name:'deploy',#contents:'^ [ :topez \"This is source for a block.  \" :objIn :tokens :windowId | 
+(MCNewFileTreeTodeTool
+  topez: topez
+  objIn: objIn
+  tokens: tokens
+  windowId: windowId) deploy ]'}

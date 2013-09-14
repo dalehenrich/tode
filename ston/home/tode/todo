@@ -1,0 +1,8 @@
+TDTxtLeafNode{#name:'todo',#contents:Text{#string:'1. bedit should take an edit script object as arg...pick an editing language...vi/awk/sed ... maybe just pass the source into awk/sed ...
+2. merge tool badly needed!
+3. object log/debugger link
+4. opening the globals on far right side (option for wider displays)
+5. consider method protocol windows on left?
+6. mv /home/test to /tmp/test/randomNum dir?
+7. isolate window sizing from sesssion descriptions on client
+8. finish implementation of `find symbolists` and `find symbolList` using TDSymbolDictionaryDefinition and TDSymbolListList',#runs:RunArray{#runs:[489,28,21],#values:[[],[TextColor{#color:Color{#rgb:536871424}}],[]],#lastIndex:518,#lastRun:3,#lastOffset:0}}}

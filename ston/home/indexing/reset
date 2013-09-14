@@ -1,0 +1,15 @@
+TDScriptLeafNode{#name:'reset',#contents:'[ :topez :objIn :tokens :windowId | 
+| resetAll indexManager |
+\"./reset [true|false]\"
+resetAll := false.
+tokens size > 1
+  ifTrue: [ resetAll := (tokens at: 2) = \'true\' ].
+IXQueryTestResource reset.
+indexManager := IndexManager current.
+resetAll
+  ifTrue: [ 
+    indexManager
+      removeAllIndexes;
+      resetAllIndexes ].
+\tIXQueryTestResource current. \"force creation of new resources\"
+indexManager ]'}

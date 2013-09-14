@@ -1,0 +1,4 @@
+TDSmalltalkLeafNode{#name:'halt',#contents:'\"opportunity to use debugger\"
+| block |
+block := [:arg | arg halt].
+block value: 100'}

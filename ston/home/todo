@@ -1,0 +1,18 @@
+TDTxtLeafNode{#name:'todo',#contents:Text{#string:'------------
+1. indexing spec updates:
+   - enumerated path term
+   - new index scheme
+   - rewrite spec
+2. Metacello 
+[]   - Chistophe\'s pull request
+[]   - squeak4.5 issue
+3. glassdb stuff
+   - branch for Monticello versus Monticello.v3
+4. Sebastian Zinc issue.
+5. `bu list` should be a TDBackupReport object ... with those fields 
+6. responses
+    - Ken tries response
+    - Mark Veigle response
+7. FileTree
+8. ESUG presentation
+',#runs:RunArray{#runs:[13,73,1,18,68,259],#values:[[TextColor{#color:Color{#rgb:0}}],[],[TextColor{#color:Color{#rgb:0}}],[],@10,@13],#lastIndex:412,#lastRun:6,#lastOffset:238}}}

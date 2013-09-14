@@ -1,0 +1,11 @@
+TDTxtLeafNode{#name:'status',#contents:'commit d0244879f0ae656d28ae3cf2cc5249525680ede1
+Merge: 21c694b 1d4b3a1
+Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
+Date:   Fri Sep 13 08:30:34 2013 +0200
+
+    Merge branch \'master\' into pharo30_merge
+    
+    Conflicts:
+    \t.travis.yml
+    \trepository/Metacello-TestsMCB.package/monticello.meta/version
+'}

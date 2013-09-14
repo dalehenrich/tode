@@ -1,0 +1,1 @@
+TDObjectGatewayNode{#name:'mcRepo',#contents:'(TDMonticelloRepository fromDescription: \'server:///opt/monticello\') repository'}

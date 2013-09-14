@@ -1,0 +1,7 @@
+TDSmalltalkLeafNode{#name:'x',#contents:'| query nsc options |
+nsc := IXFamilyTree createFamily population.
+GsQuery
+  fromString:
+    \'((1 <= each.numberOfChildren) not & (each.numberOfChildren <= 3)) not\'
+  on: nsc
+  options: GsQueryOptions default - GsQueryOptions autoOptimize'}

@@ -1,0 +1,31 @@
+TDTxtLeafNode{#name:'sample',#contents:Text{#string:'  query := \'((1 <= each.numberOfChildren) not & (each.numberOfChildren <= 3)) not\'
+    asQueryOn: nsc.
+
+  options := query queryOptions.
+  query queryOptions: options - GsQueryOptions autoOptimize.
+
+  query.
+    ((1 <= each.numberOfChildren) not & (each.numberOfChildren <= 3)) not
+  query optimizedFormula.
+    (each.numberOfChildren >= 1) | (each.numberOfChildren > 3)
+  query originalFormula.
+    ((1 <= each.numberOfChildren) not & (each.numberOfChildren <= 3)) not
+  query withOptimizedFormula.
+    (each.numberOfChildren >= 1) | (each.numberOfChildren > 3)
+  query withOriginalFormula.
+    ((1 <= each.numberOfChildren) not & (each.numberOfChildren <= 3)) not
+
+  options := query queryOptions.
+  query queryOptions: options + GsQueryOptions autoOptimize.
+
+  query.
+    (each.numberOfChildren >= 1) | (each.numberOfChildren > 3)
+  query optimizedFormula.
+    (each.numberOfChildren >= 1) | (each.numberOfChildren > 3)
+  query originalFormula.
+    ((1 <= each.numberOfChildren) not & (each.numberOfChildren <= 3)) not
+  query withOptimizedFormula.
+    (each.numberOfChildren >= 1) | (each.numberOfChildren > 3)
+  query withOriginalFormula
+    (each.numberOfChildren >= 1) | (each.numberOfChildren > 3)
+',#runs:RunArray{#runs:[1206],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:762,#lastRun:1,#lastOffset:761}}}

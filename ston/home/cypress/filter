@@ -1,0 +1,4 @@
+TDSmalltalkLeafNode{#name:'filter',#contents:'[ :definition | 
+definition configurationOf
+  ifNil: [ false ]
+  ifNotNil: [ :configurationDef | configurationDef configurationName = \'Cypress\' ] ]'}

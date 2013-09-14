@@ -1,0 +1,2 @@
+TDObjectGatewayNode{#name:'altRepo',#contents:'(TDMonticelloRepository fromDescription: \'http://ss3.gemstone.com/ss/FileTree\')
+  repository'}

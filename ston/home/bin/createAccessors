@@ -1,0 +1,29 @@
+TDScriptLeafNode{#name:'createAccessors',#contents:'[ :topez :objIn :tokens :windowId | \"/home/bin/createAccessors class\" | theClass newLine varName className target|
+\tclassName := tokens at: 2.
+\ttarget := Smalltalk at: className asSymbol ifAbsent: [ ^nil error: \'Class \', className printString, \' not found.\'].
+  newLine := Character lf asString.
+  theClass := target theNonMetaClass.
+  varName := \'newValue\'.
+  theClass instVarNames
+    do: [ :aSymbol | 
+      | aSelector |
+      aSelector := aSymbol asString.
+      (theClass includesSelector: aSymbol)
+        ifFalse: [ 
+          theClass
+            compileMethod:
+              aSelector , newLine , newLine
+                , \'   \"Return the value of the instance variable \'\'\' , aSelector
+                , \'\'\'.\"\' , newLine , \'   ^\' , aSelector , newLine
+            dictionaries: #()
+            category: #\'accessing\' ].
+      (theClass includesSelector: (aSelector , \':\') asSymbol)
+        ifFalse: [ 
+          theClass
+            compileMethod:
+              aSelector , \': \' , varName , newLine , newLine
+                , \'   \"Modify the value of the instance variable \'\'\' , aSelector
+                , \'\'\'.\"\' , newLine , \'   \' , aSelector , \' := \' , varName
+                , newLine
+            dictionaries: #()
+            category: #\'updating\' ] ]] '}

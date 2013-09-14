@@ -1,0 +1,11 @@
+TDScriptLeafNode{#name:'export',#contents:'[ :topez :objIn :tokens :windowId | 
+| stonTool homeNode nodePath dirPath |
+\"/home/bin/export /home /opt/git/tode/ston\"
+nodePath := tokens at: 2.
+dirPath := tokens at: 3.
+dirPath last = $/
+  ifFalse: [ dirPath := dirPath , \'/\' ].
+stonTool := topez toolInstanceFor: \'ston\'.
+homeNode := topez lookup: nodePath.
+STONWriter
+  plainTextNewlinesDuring: [ homeNode stonExportOn: stonTool to: dirPath ] ]'}

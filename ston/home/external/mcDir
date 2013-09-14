@@ -1,0 +1,3 @@
+TDObjectGatewayNode{#name:'mcDir',#contents:'| repo |
+repo := (self topez lookup: \'mcRepo\') dotSelfObject.
+repo directory'}

@@ -1,0 +1,20 @@
+TDScriptLeafNode{#name:'mapRepos',#contents:'[ :topez :objIn :tokens :windowId | 
+| spec version workingCopies mcTool newRepo |
+\"/home/bin/mapRepos Tode filetree:///opt/git/tode/repository
+ /home/bin/mapRepos Tode @repo
+
+  ensure that all packages in project have the given repo in repository group.\"
+mcTool := topez toolInstanceFor: \'mc\'.
+newRepo := mcTool resolveRepositoryReference: (tokens at: 3).
+spec := Metacello image
+  baseline: (tokens at: 2);
+  list.
+version := spec version.
+workingCopies := (version packages select: [ :pkgSpec | pkgSpec repositories isEmpty])collect: [ :pkgSpec | pkgSpec workingCopy ].
+workingCopies := workingCopies select: [ :each | each notNil ].
+workingCopies
+  do: [ :wc | 
+    | rg |
+    rg := wc repositoryGroup.
+    rg repositories do: [ :repo | rg removeRepository: repo ].
+    rg addRepository: newRepo ] ]'}

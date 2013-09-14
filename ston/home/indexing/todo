@@ -1,0 +1,50 @@
+TDTxtLeafNode{#name:'todo',#contents:Text{#string:'[x]1. rename GsQueryClause to GsQueryFormula and GsQueryFormula to 
+   GsCompoundQueryClause
+[x]2. for a conjunctive clause, the first clause is evaluated using the bindings
+   for the predicates. The second clause should be evaluated against the results of
+   the first clause ... so I need a way to apply a clause against a result nsc ...
+   and ignore the bound evaluator ... or perhaps we can late bind the evaluator 
+   during query evaluation?
+3. one should be able to override the default behavior described in 2, to force the
+   native evaluators and rely on set intersection to to resolve the results.
+4. I can imagine an indexed query where instead of maintaining the indexes, an 
+   IdentitySet of results is maintained ... so each change to an instance variable 
+   causes the result set of the query to be recalculated...so indstead of creating
+   an index on a path, an index on a query is created ... this only works if you 
+   have path/constant, constant/path, or path/path predicates ... especially 
+   useful for the path/path predicates.
+5. PathEvaluators by their nature will be slower than using a do loop over the 
+   collection and applying the query on an element by element basis:
+     - when does the path evaluator make sense?
+       -- when you want to evaluate the query on a predicate by predicate
+          basis ... need to find a use case for this: no indexes but faster...
+          it may turn out that the path evaluators never make sense?
+     - when does it make sense use a do loop? 
+       -- whenever the developer determines it\'s faster to apply the entire
+          predicate to each element. 
+[x]     - I should be able to evaulate a query in a do loop by passing in each 
+       object and resolving all of the terms from that... 
+6. For the indexed queries (4), one could index the result set!#$?
+7. A predicate could be bound to a constant nsc ... allowing one to use the nsc as 
+   a filter (conjunctive clause) in the query ... disjunctive clauses less 
+   interesting
+8. change #null in GsUnaryClause to #noop
+9. the unary constant predicates `false &...`, `false |...`, `true &...`, `true |...` should be further optimized ...
+10. Enumerated and Selector path terms not implemented.
+11. Optional path term implmented for non-indexed query execution only.
+12. requiredPathTerms and unicode indexes not implemented.
+13. Date and DateAndTime index optimization not implemented.
+14. Concurrent parallel index creation not implemented.
+[x]15. #, operation for GsIndexSpec ... concatenate the lists...
+[x]16. replacement for #asCollection
+[x]17. immediate optimize (class creation specify different default optimizer)
+18. delete methods from base:
+    - PathEvaluator>>findAllValuesWithComparison:to:
+    - PathEvaluator>>_findAllValuesWithComparison:to:
+19. Need tests to compare collect: vs asCollection results for each of the 
+    operators in path/constant predicates and range predicates ... see
+    IXGsClassicQueryBlockOptimizerTests>>testRemoveRedundant15 for one 
+    example ... this is where I saw the initial problem
+20. Remove redundant predicates can be done based on variable names and variable
+    values
+[x]21. repackage to allow parallel work to go on ... either that or fix merge tools',#runs:RunArray{#runs:[93,1,2088,366,1,619,1,82],#values:[[],[TextEmphasis{#emphasisCode:1,#setMode:true}],@6,[TextColor{#color:Color{#rgb:0}}],[@10,TextEmphasis{#emphasisCode:1,#setMode:true}],[@10],[@10,TextEmphasis{#emphasisCode:1,#setMode:true}],@14],#lastIndex:3170,#lastRun:8,#lastOffset:0}}}

@@ -1,0 +1,12 @@
+TDSmalltalkLeafNode{#name:'test',#contents:'Object readSixxFrom: \'<sixx.object sixx.id=\"72\"
+        sixx.name=\"cllOrarioServizioSaturday\" sixx.type=\"SortedCollection\"
+        >
+                                                                <sixx.object sixx.id=\"76\" sixx.type=\"SmallInteger\"
+                                                                 >30</sixx.object>
+                                                                 <sixx.object sixx.id=\"77\" sixx.type=\"SmallInteger\"
+                                                                 >40</sixx.object>
+                                                                 <sixx.object sixx.id=\"78\" sixx.type=\"SmallInteger\"
+                                                                 >20</sixx.object>
+                                                                <sixx.object sixx.id=\"79\" sixx.type=\"SmallInteger\"
+                                                                 >50</sixx.object>
+                                                         </sixx.object>\''}

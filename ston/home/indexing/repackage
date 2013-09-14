@@ -1,0 +1,38 @@
+TDSmalltalkLeafNode{#name:'repackage',#contents:'| family evaluators query tests |
+family := TDPackageDefinition new packageName: \'Index-Family\'.
+evaluators := TDPackageDefinition new packageName: \'Index-Evaluators\'.
+query := TDPackageDefinition new packageName: \'Index-Query\'.
+tests := TDPackageDefinition new packageName: \'Index-Tests\'.
+family classDefinitions
+  do: [ :classDef | 
+    (classDef isKindOf: TDExtensionClassDefinition)
+      ifTrue: [ 
+        classDef instanceMethods , classDef classMethods
+          do: [ :methodDef | 
+            ((methodDef className includesString: \'IndexSpecification\')
+              or: [ methodDef className includesString: \'RBParser\' ])
+              ifTrue: [ query pasteTDDefinition: methodDef ]
+              ifFalse: [ 
+                ((methodDef className includesString: \'Evaluator\')
+                  or: [ 
+                    (methodDef className includesString: \'PathTerm\')
+                      or: [ methodDef className includesString: \'Index\' ] ])
+                  ifTrue: [ evaluators pasteTDDefinition: methodDef ]
+                  ifFalse: [ 
+                    ((methodDef className includesString: \'Executer\')
+                      or: [ methodDef className includesString: \'PathTerm\' ])
+                      ifTrue: [ evaluators pasteTDDefinition: methodDef ]
+                      ifFalse: [ evaluators pasteTDDefinition: methodDef ] ] ] ] ]
+      ifFalse: [ 
+        ((classDef className beginsWith: \'Gs\')
+          or: [ classDef className beginsWith: \'RB\' ])
+          ifTrue: [ query pasteTDDefinition: classDef ]
+          ifFalse: [ 
+            (classDef theClass inheritsFrom: TestCase)
+              ifTrue: [ tests pasteTDDefinition: classDef ]
+              ifFalse: [ 
+                (classDef className includesString: \'IndexSpecification\')
+                  ifTrue: [ query pasteTDDefinition: classDef ]
+                  ifFalse: [ 
+                    (classDef theClass inheritsFrom: PathEvaluator)
+                      ifTrue: [ evaluators pasteTDDefinition: classDef ] ] ] ] ] ]'}
