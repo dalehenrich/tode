@@ -1,11 +1,15 @@
 TDScriptLeafNode{#name:'import',#contents:'[ :topez :objIn :tokens :windowId | 
 | stonTool parentNode nodePath dirPath dir |
 \"/home/bin/import / /opt/git/tode/ston\"
-nodePath := tokens at: 2.
+nodePath := \'/\'.
+dirPath := \'/opt/git/tode/ston\'.
+tokens size > 1
+  ifTrue: [ nodePath := tokens at: 2.
+tokens size > 2
+      ifTrue: [ dirPath := tokens at: 3]].
 nodePath last = $/
   ifFalse: [ nodePath := nodePath , \'/\' ].
-dirPath := tokens at: 3.
 stonTool := topez toolInstanceFor: \'ston\'.
 dir := ServerFileDirectory on: dirPath.
-parentNode := topez lookup: nodePath.
+parentNode := topez ensureChildrenExistIn: nodePath.
 dir stonImportUsing: stonTool parentNode: parentNode ]'}

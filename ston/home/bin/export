@@ -1,8 +1,11 @@
 TDScriptLeafNode{#name:'export',#contents:'[ :topez :objIn :tokens :windowId | 
 | stonTool homeNode nodePath dirPath |
 \"/home/bin/export /home /opt/git/tode/ston\"
+\tnodePath:= \'/home\'.
+\tdirPath:=\'/opt/git/tode/ston\'.
+\ttokens size > 1 ifTrue:[ 
 nodePath := tokens at: 2.
-dirPath := tokens at: 3.
+tokens size > 2 ifTrue: [dirPath := tokens at: 3]].
 dirPath last = $/
   ifFalse: [ dirPath := dirPath , \'/\' ].
 stonTool := topez toolInstanceFor: \'ston\'.
