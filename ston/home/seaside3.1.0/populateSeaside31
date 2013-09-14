@@ -1,0 +1,60 @@
+TDSmalltalkLeafNode{#name:'populateSeaside31',#contents:'| constructor packageNames repositories methodSections gofer methodSectionMap attributes orderedAttributes |
+packageNames := Set new.
+repositories := Set new.
+methodSections := #().
+attributes := Set new.
+#(\'3.1.0-baseline\' \'3.1.0\')
+  do: [ :sourceVersionString | 
+    constructor := MetacelloToolBoxConstructor new.
+    constructor configuration: ConfigurationOfSeaside3 new.
+    constructor extractMethodSectionsFor: sourceVersionString.
+    constructor methodSections
+      do: [ :section | attributes addAll: section attributes ].
+    methodSections := methodSections , constructor methodSections ].
+methodSectionMap := Dictionary new.
+methodSections
+  do: [ :methodSection | 
+    | coll |
+    coll := methodSectionMap
+      at: methodSection attributePath
+      ifAbsent: [ methodSectionMap at: methodSection attributePath put: OrderedCollection new ].
+    coll add: methodSection ].
+orderedAttributes := #(#\'common\' #\'squeakCommon\' #\'gemstone\' #\'pharo\' #\'squeak\' #\'pharo1.x\' #\'pharo1.3.x\' #\'pharo1.4.x\' #\'pharo2.x\' #\'pharo3.x\' #\'gs2.4.x\' #\'gs3.x\' #\'gs3.1.x\' #\'gs3.2.x\').
+attributes
+  do: [ :attribute | 
+    (orderedAttributes includes: attribute)
+      ifFalse: [ attribute error: attribute printString , \' missing from orderedAttributes\' ] ].
+orderedAttributes
+  do: [ :attribute | 
+    | sections |
+    sections := methodSectionMap
+      at: attribute asMetacelloAttributePath
+      ifAbsent: [ #() ].
+    sections
+      do: [ :methodSection | 
+        | versionSpec repos |
+        versionSpec := methodSection versionSpec.
+        repos := versionSpec repositorySpecs
+          collect: [ :repoSpec | repoSpec createRepository ].
+        repositories addAll: repos.
+        versionSpec packages
+          specListDo: [ :packageSpec | 
+            packageSpec getFile
+              ifNotNil: [ :file | 
+                file isEmpty
+                  ifTrue: [ nil halt ].
+                packageNames add: file ].
+            repos := packageSpec repositorySpecs
+              collect: [ :repoSpec | repoSpec createRepository ].
+            repositories addAll: repos ] ] ].
+gofer := Gofer new.
+repositories do: [ :repo | gofer repository: repo ].
+packageNames do: [ :packageName | gofer version: packageName ].
+gofer fetch.
+gofer := Gofer new.
+packageNames do: [ :packageName | gofer version: packageName ].
+gofer
+  repository:
+    (TDMonticelloTool new
+      repositoryFromDescription: \'filetree:///opt/git/Seaside31/repository\').
+gofer push'}
