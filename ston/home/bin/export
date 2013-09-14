@@ -8,4 +8,4 @@ dirPath last = $/
 stonTool := topez toolInstanceFor: \'ston\'.
 homeNode := topez lookup: nodePath.
 STONWriter
-  plainTextNewlinesDuring: [ homeNode stonExportOn: stonTool to: dirPath ] ]'}
+  plainTextNewlinesDuring: [ homeNode stonExportUsing: stonTool to: dirPath ] ]'}
