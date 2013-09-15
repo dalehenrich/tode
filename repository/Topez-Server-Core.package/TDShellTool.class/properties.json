@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		"listLimit",
 		"displayOops",
-		"characterLimit" ],
+		"characterLimit",
+		"enableFormatting" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

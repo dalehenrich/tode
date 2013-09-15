@@ -8,6 +8,7 @@ SYNOPSIS
 
 DESCRIPTION
   limit chars [<item-count>]
+  limit format [true|false]
   limit list [<item-count>]
   limit oops [true|false]
 '

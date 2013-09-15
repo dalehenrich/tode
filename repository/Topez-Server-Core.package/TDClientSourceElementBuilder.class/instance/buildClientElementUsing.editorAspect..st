@@ -2,6 +2,7 @@ as yet unclassified
 buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
   | theWindowLabel |
   self
+    theEditorSpec: aTDEditorSpec;
     theWindowName: aTDEditorSpec windowName;
     theWindowLocation: aTDEditorSpec windowLocation.
   theWindowLabel := aTDEditorSpec windowLabel.

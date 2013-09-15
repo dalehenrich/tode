@@ -17,6 +17,7 @@
 		"displayOops",
 		"characterLimit",
 		"resultStack",
+		"enableFormatting",
 		"resultStackIndex" ],
 	"name" : "TDServerStatus",
 	"pools" : [

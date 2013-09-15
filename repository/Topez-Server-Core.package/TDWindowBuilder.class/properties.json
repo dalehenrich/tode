@@ -6,6 +6,7 @@
 		"ObjectClipboard" ],
 	"commentStamp" : "",
 	"instvars" : [
+		"theEditorSpec",
 		"theWindowName",
 		"theWindowLocation" ],
 	"name" : "TDWindowBuilder",
