@@ -52,6 +52,8 @@ SYNOPSIS
      revert @<workingCopy-path> [<method-spec>]
   mc save <pkg-name> <version-name> <repository-spec> <commit-message>
      save <pkg-name> <version-name> @<repository-path> @<commit-message>
+  mc snapshot <version-name> <repository-spec>
+     snapshot <version-name> @<repository-path>
   mc unload <pkg-name>
      unload @<workingCopy-path>
   mc version <pkg-name>
