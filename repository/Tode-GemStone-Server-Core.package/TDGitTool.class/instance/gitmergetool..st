@@ -1,6 +1,6 @@
 as yet unclassified
 gitmergetool: gitRepoDirectory
-  | result dictionary sourceDictionary |
+  | result dictionary conflicts merger mergeTool |
   result := self
     performGitCommand: 'ls-files'
     in: gitRepoDirectory
@@ -9,13 +9,26 @@ gitmergetool: gitRepoDirectory
   dictionary := self parseLsFiles: result.
   dictionary isEmpty
     ifTrue: [ ^ 'No conflicts' ].
-  sourceDictionary := Dictionary new.
+  conflicts := OrderedCollection new.
   dictionary keys
     do: [ :path | 
       gitRepoDirectory
         fileNamed: path
         do: [ :fileStream | 
-          | triplet |
+          | triplet conflict |
           triplet := self parseSourceConflictsOn: fileStream.
-          sourceDictionary at: path put: triplet ] ].
-  self halt
+          conflict := TDGitConflict new
+            baseDirectory: gitRepoDirectory;
+            filePath: path;
+            local: (triplet at: 1);
+            common: (triplet at: 2);
+            remote: (triplet at: 3);
+            yourself.
+          conflicts add: conflict ] ].
+  merger := TDGitMerger new conflicts: conflicts.
+  mergeTool := topez toolInstanceFor: 'mg'.
+  mergeTool
+    gitmerge: merger
+    gitTool: self
+    mergerCompletionBlock: [ self halt ]
+    mergerAbortBlock: [  ]

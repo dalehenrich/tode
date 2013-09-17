@@ -1,0 +1,19 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"conflicts",
+		"mergerCompletionBlock",
+		"mergerAbortBlock",
+		"gitTool",
+		"mergeTool",
+		"merged" ],
+	"name" : "TDGitMerger",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

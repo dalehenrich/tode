@@ -6,6 +6,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDMergerClientListElementBuilder
       for: TDMerger
       aspect: #'merge';
+    registerEditorClass: TDMergerClientListElementBuilder
+      for: TDGitMerger
+      aspect: #'merge';
     registerEditorClass: TDClientMergeOperationSourceElementBuilder
       for: TDMergeOperation
       aspect: #'edit'

@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"conflicts" : "dkh 09/17/2013 10:57",
+		"conflicts:" : "dkh 09/17/2013 10:56",
+		"doMerge" : "dkh 09/17/2013 12:08",
+		"gitTool" : "dkh 09/17/2013 12:08",
+		"gitTool:" : "dkh 09/17/2013 12:07",
+		"mergeTool" : "dkh 09/17/2013 11:09",
+		"mergeTool:" : "dkh 09/17/2013 11:03",
+		"merged" : "dkh 09/17/2013 11:53",
+		"merged:" : "dkh 09/17/2013 11:53",
+		"mergerAbortBlock" : "dkh 09/17/2013 11:14",
+		"mergerAbortBlock:" : "dkh 09/17/2013 11:14",
+		"mergerCompletionBlock" : "dkh 09/17/2013 11:14",
+		"mergerCompletionBlock:" : "dkh 09/17/2013 11:14",
+		"operations" : "dkh 09/17/2013 11:07",
+		"windowIsClosing" : "dkh 09/17/2013 11:06" } }
