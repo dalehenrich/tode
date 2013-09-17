@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 8543e86b2260162b0c6dae950d69e32ef0b6bfac
+TDTxtLeafNode{#name:'status',#contents:'commit 6e83ee30cfdfd615bbbfb0393dbdeff14af42c7f
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Sep 17 13:45:54 2013 +0200
+Date:   Tue Sep 17 12:23:59 2013 -0700
 
-    add `mc snapshot` command ... record restorve from backup in object log...
+    `git mergetool` implemented ... this is a rough cut implementation as TDMerger and TDGitMerger deserve to be ... merged ... there is a fair amount of shared state and behavior ... TDGitMerger is not based on definitions but files whereas TDMerger is based on monticello definitions...
 '}
