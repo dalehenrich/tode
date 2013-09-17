@@ -31,7 +31,7 @@ SYNOPSIS
   mc create <pkg-name>
   mc delete <pkg-name>
      delete @<workingCopy-path>
-  mc diff <regex-pkg-pattern>
+  mc diff <package-name>
      diff @<workingCopy-path>
      diff
   mc dirty 

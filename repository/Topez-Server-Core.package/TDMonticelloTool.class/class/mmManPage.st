@@ -5,7 +5,7 @@ mmManPage
 
 SYNOPSIS
   mm commit <config> [@<commit-message-path>]
-  mm diff [<config-list>]
+  mm diff [ <config-name> [all|dirty] ]
   mm dirty
 ?  mm get [image|new|registry] <config> [<config> ... ]
   mm list [<config> [<config> ... ]]

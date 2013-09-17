@@ -1,8 +1,9 @@
 as yet unclassified
 mmdiff
-  "mm diff [<config-list>]"
+  "mm diff [ <config-name> [all|dirty] ]"
 
-  | registrations stream patches projectSpecs |
+  | registrations stream patches projectSpecs diffDirty |
+  diffDirty := true.
   registrations := tokens size = 1
     ifTrue: [ 
       self mmlist
@@ -18,12 +19,16 @@ mmdiff
                 ifFalse: [ wc modified ] ]
             ifNone: [  ]) notNil ] ]
     ifFalse: [ 
-      (tokens copyFrom: 2 to: tokens size)
-        collect: [ :config | self getRegistrationFor: config ] ].
+      tokens size >= 3
+        ifTrue: [ diffDirty := (tokens at: 3) = 'dirty' ].
+      {(self getRegistrationFor: (tokens at: 2))} ].
   projectSpecs := registrations
     collect: [ :registration | registration lookupBaselineSpec ].
   stream := TextStream on: Text new.
-  patches := self mmDiffForProjects: projectSpecs on: stream.
+  patches := self
+    mmDiffForProjects: projectSpecs
+    on: stream
+    diffDirty: diffDirty.
   patches isEmpty
     ifTrue: [ ^ 'No dirty packages' asText allBold ].
   stream contents editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
