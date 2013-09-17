@@ -1,1 +1,2 @@
-TDTopezLeafNode{#name:'load',#contents:'/home/bin/loadConfig Seaside3 #bleedingEdge http://www.smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main CI '}
+TDTopezLeafNode{#name:'load',#contents:'mc load ConfigurationOfGrease @configRepo
+/home/bin/load Seaside3 `CI`'}

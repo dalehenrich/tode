@@ -1,8 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit bee89b4d49f9a28fc915e704040ddf1c6696be49
+TDTxtLeafNode{#name:'status',#contents:'commit 8543e86b2260162b0c6dae950d69e32ef0b6bfac
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sat Sep 14 07:27:56 2013 +0200
+Date:   Tue Sep 17 13:45:54 2013 +0200
 
-    don\'t restrict test projects to baselines...
-    
-    Signed-off-by: Dale Henrichs <dale.henrichs@gemtalksystems.com>
+    add `mc snapshot` command ... record restorve from backup in object log...
 '}

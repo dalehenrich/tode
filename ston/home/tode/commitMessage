@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'don\'t restrict test projects to baselines...',#runs:RunArray{#runs:[44],#values:[[TextColor{#color:Color{#rgb:1072693248}}]],#lastIndex:1,#lastRun:1,#lastOffset:0}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'add `mc snapshot` command ... record restorve from backup in object log...',#runs:RunArray{#runs:[74],#values:[[TextColor{#color:Color{#rgb:1072693248}}]],#lastIndex:1,#lastRun:1,#lastOffset:0}}}

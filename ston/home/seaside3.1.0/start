@@ -1,4 +1,0 @@
-TDSmalltalkLeafNode{#name:'start',#contents:'AJPGemStoneAdaptor default ifNil: [ AJPGemStoneAdaptor port: 8003 ].
-AJPGemStoneAdaptor default
-  port: 8003;
-  start'}

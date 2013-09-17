@@ -1,1 +1,0 @@
-TDSmalltalkLeafNode{#name:'stop',#contents:'AJPGemStoneAdaptor default ifNotNil: [ :adaptor | adaptor stop ]'}
