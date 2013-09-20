@@ -8,6 +8,17 @@ tslist
     ifTrue: [ ^ self testSummary: testNode ].
   section := tokens at: 2.
   res := self topez lookup: testNode printString , 'result/' , section.
-  res := res dotSelfObject sort: [ :a :b | a printString <= b printString ].
-  res editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  res := res dotSelfObject
+    collect: [ :testCase | 
+      TDMethodDefinition
+        className: testCase class name
+        isMeta: false
+        selector: testCase selector
+        messagePattern: testCase selector asString
+        messagePatternIsRegex: false ].
+  res
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'methodDefinitionList')
+        windowLocation: #'implementors';
+        yourself).
   ^ res
