@@ -4,10 +4,11 @@ testManPage
   test - execute sunit commands
 
 SYNOPSIS
-  test suite <sunit-suite-file>
-       suite @<sunit-suite-path>
+  test class <class-name>
   test package <package-name>
   test project <configuration-base-name>
+  test suite <sunit-suite-file>
+       suite @<sunit-suite-path>
 
 DESCRIPTION
   Run a test suite and put the test results in the .tests halo node.
