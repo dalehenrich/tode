@@ -5,7 +5,7 @@ tsManPage
 
 SYNOPSIS
   ts debug <test-spec>
-  ts list [<ds-level>]
+  ts list [errors|failures| passed|expectedDefects|unexpectedPassed]
   ts rerun
   ts run [errors|failures| passed|expectedDefects|unexpectedPassed]
      run <test-spec>
