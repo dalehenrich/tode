@@ -20,5 +20,6 @@ tslist
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'methodDefinitionList')
         windowLocation: #'implementors';
+        windowName: #'testCases';
         yourself).
   ^ res
