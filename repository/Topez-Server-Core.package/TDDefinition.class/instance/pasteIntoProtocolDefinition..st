@@ -1,3 +1,3 @@
 as yet unclassified
-pasteIntoProtocolDefinition: aBehaviorDefinition
+pasteIntoProtocolDefinition: aProtocolDefinition
   ^ false

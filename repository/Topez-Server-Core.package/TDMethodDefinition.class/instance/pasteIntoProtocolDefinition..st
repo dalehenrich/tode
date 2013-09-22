@@ -6,7 +6,9 @@ pasteIntoProtocolDefinition: aProtocolDefinition
   method := self method.
   source := method sourceString.
   category := aProtocolDefinition categoryName.
-  (aProtocolDefinition theBehavior compiledMethodAt: method selector) == method
+  (aProtocolDefinition theBehavior
+    compiledMethodAt: method selector
+    ifAbsent: [  ]) == method
     ifTrue: [ 
       "moving method to different category"
       aProtocolDefinition theBehavior
@@ -15,4 +17,4 @@ pasteIntoProtocolDefinition: aProtocolDefinition
     ifFalse: [ 
       "adding method to behavior"
       aProtocolDefinition theBehavior compile: source classified: category ].
-  ^ #'refreshList'
+  ^ true

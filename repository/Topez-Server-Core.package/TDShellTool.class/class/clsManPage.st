@@ -10,8 +10,8 @@ SYNOPSIS
       comment @<class-path>
   cls copy <class-name> <new-name>
       copy @<class-path> <new-name>
-  cls create <class-name> <superclass-name> <category>
-      create <class-name> @<superclass-path> <category>
+  cls create <class-name> [ <superclass-name> [ <category> ] ]
+      create <class-name> [ @<superclass-path> [ <category> ] ]
   cls definition <class-name>
       definition @<class-path>
   cls history <class-name>

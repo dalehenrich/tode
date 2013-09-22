@@ -1,0 +1,3 @@
+accessing
+methodProtocol
+  ^ self categoryName
