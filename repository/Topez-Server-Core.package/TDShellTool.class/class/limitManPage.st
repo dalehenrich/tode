@@ -11,4 +11,5 @@ DESCRIPTION
   limit format [true|false]
   limit list [<item-count>]
   limit oops [true|false]
+  limit protocol [true|false]
 '

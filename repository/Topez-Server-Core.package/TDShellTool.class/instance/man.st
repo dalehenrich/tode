@@ -12,5 +12,9 @@ man
         ifTrue: [ self resolveAtPathNodeReference: command ]
         ifFalse: [ topez commands at: (tokens at: 2) ].
       man := node manPage.
-      man asText editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+      man asText
+        editUsing:
+          ((TDEditorSpec topez: topez editorAspect: #'edit')
+            windowName: #'manPage';
+            yourself).
       man ]
