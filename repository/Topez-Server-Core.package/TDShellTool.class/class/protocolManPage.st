@@ -10,12 +10,12 @@ SYNOPSIS
            cadd @<class-path> <protocol-name>
   protocol cremove <class-name> <protocol-name>
            cremove @<class-path> <protocol-name>
-  protocol crename <class-name> <protocol-name>  <new-protocol-name>
-           crename @<class-path> <protocol-name>  <new-protocol-name>
+  protocol crename <class-name> <protocol-name> <new-protocol-name>
+           crename @<class-path> <protocol-name> <new-protocol-name>
   protocol remove <class-name> <protocol-name>
            remove @<class-path> <protocol-name>
-  protocol rename <class-name> <protocol-name>  <new-protocol-name>
-           rename @<class-path> <protocol-name>  <new-protocol-name>
+  protocol rename <class-name> <protocol-name> <new-protocol-name>
+           rename @<class-path> <protocol-name> <new-protocol-name>
 
 DESCRIPTION
 '
