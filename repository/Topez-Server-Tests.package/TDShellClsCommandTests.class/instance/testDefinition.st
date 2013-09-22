@@ -1,9 +1,8 @@
 as yet unclassified
 testDefinition
-  | clsTool clsName definition x |
+  | clsTool definition x |
   clsTool := self tool.
-  clsName := self mockClassName.
-  definition := clsTool clsdefinition: clsName.
+  definition := clsTool clsdefinition: self mockClass.
   self
     assert:
       definition withGemstoneLineEndings

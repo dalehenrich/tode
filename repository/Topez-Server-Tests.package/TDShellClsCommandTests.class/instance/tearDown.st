@@ -3,5 +3,5 @@ tearDown
   | clsTool |
   super tearDown.
   clsTool := self tool.
-  clsTool clsremove: self mockClassName.
-  clsTool clsremove: self mockAlternateClassName
+  self mockClass ifNotNil: [ :cls | clsTool clsremove: cls ].
+  self mockAlternateClass ifNotNil: [ :cls | clsTool clsremove: cls ]

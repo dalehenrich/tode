@@ -5,13 +5,9 @@ clscomment
       comment @<class-path>
 "
 
-  | clsName comment |
+  | clsName theClass comment |
   clsName := tokens at: 2.
-  (clsName beginsWith: '@')
-    ifTrue: [ 
-      | oldClass |
-      oldClass := self resolveAtPathReference: clsName.
-      clsName := oldClass name asString ].
-  comment := self clscomment: clsName.
-  comment editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  theClass := self resolveClassReference: clsName.
+  comment := self clscomment: theClass.
+  theClass editUsing: (TDEditorSpec topez: topez editorAspect: #'classComment').
   ^ comment

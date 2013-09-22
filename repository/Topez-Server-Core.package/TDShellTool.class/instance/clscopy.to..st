@@ -1,18 +1,17 @@
 as yet unclassified
-clscopy: clsName to: newName
-  | oldClass definition newClass |
-  oldClass := Smalltalk classNamed: clsName.
+clscopy: theClass to: newName
+  | definition newClass |
   (Smalltalk hasClassNamed: newName)
     ifTrue: [ ^ self error: newName , ' already exists' ].
-  definition := oldClass
+  definition := theClass
     definitionWithClassName: newName
     superClassName:
-      (oldClass superClass == nil
+      (theClass superClass == nil
         ifTrue: [ 'nil' ]
-        ifFalse: [ oldClass superClass name ]).
+        ifFalse: [ theClass superClass name ]).
   newClass := definition evaluate.
   newClass
-    copyMethodsFrom: oldClass
+    copyMethodsFrom: theClass
     dictionaries: GsSession currentSession symbolList.
-  newClass classComment: oldClass classComment.
+  newClass classComment: theClass classComment.
   ^ newClass

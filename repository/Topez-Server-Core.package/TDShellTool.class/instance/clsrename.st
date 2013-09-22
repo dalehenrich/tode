@@ -5,14 +5,10 @@ clsrename
       rename @<class-path> <new-name>
 "
 
-  | oldName newName beditTool |
-  oldName := tokens at: 2.
-  (oldName beginsWith: '@')
-    ifTrue: [ 
-      | oldClass |
-      oldClass := self resolveAtPathReference: oldName.
-      oldName := oldClass name asString ].
+  | clsName theClass newName beditTool |
+  clsName := tokens at: 2.
+  theClass := self resolveClassReference: clsName.
   newName := tokens at: 3.
   beditTool := self topez toolInstanceFor: 'bedit'.
-  beditTool beditReferences: oldName regex: oldName replacementString: newName.
-  ^ self clsrename: oldName to: newName
+  beditTool beditReferences: clsName regex: clsName replacementString: newName.
+  ^ self clsrename: theClass to: newName

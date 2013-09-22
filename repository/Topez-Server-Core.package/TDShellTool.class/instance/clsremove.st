@@ -5,11 +5,7 @@ clsremove
       remove @<class-path>
 "
 
-  | oldName |
-  oldName := tokens at: 2.
-  (oldName beginsWith: '@')
-    ifTrue: [ 
-      | oldClass |
-      oldClass := self resolveAtPathReference: oldName.
-      oldName := oldClass name asString ].
-  ^ self clsremove: oldName
+  | clsName theClass |
+  clsName := tokens at: 2.
+  theClass := self resolveClassReference: clsName.
+  ^ self clsremove: theClass

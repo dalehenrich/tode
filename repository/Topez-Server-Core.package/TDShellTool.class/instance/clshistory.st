@@ -5,14 +5,10 @@ clshistory
       history @<class-path>
 "
 
-  | clsName classDefs |
+  | clsName theClass classDefs |
   clsName := tokens at: 2.
-  (clsName beginsWith: '@')
-    ifTrue: [ 
-      | oldClass |
-      oldClass := self resolveAtPathReference: clsName.
-      clsName := oldClass name asString ].
-  classDefs := self clshistory: clsName.
+  theClass := self resolveClassReference: clsName.
+  classDefs := self clshistory: theClass.
   classDefs
     editUsing: (TDEditorSpec topez: topez editorAspect: #'definitionList').
   ^ classDefs

@@ -1,7 +1,7 @@
 as yet unclassified
 testComment
-  | clsTool clsName comment |
+  | clsTool cls comment |
   clsTool := self tool.
-  clsName := self mockClassName.
-  comment := clsTool clscomment: clsName.
+  cls := self mockClass.
+  comment := clsTool clscomment: cls.
   self assert: comment = self mockClassComment

@@ -1,12 +1,11 @@
 as yet unclassified
 testHistory
-  | clsTool clsName history newClassVersion oldClassVersion |
+  | clsTool history newClassVersion oldClassVersion |
   clsTool := self tool.
-  clsName := self mockClassName.
-  history := clsTool clshistory: clsName.
+  history := clsTool clshistory: self mockClass.
   self assert: history size = 1.
   self createMockClassVersion.
-  history := clsTool clshistory: clsName.
+  history := clsTool clshistory: self mockClass.
   self assert: history size = 2.
   newClassVersion := history first theClass.
   self assert: newClassVersion allInstVarNames = #(#'instanceVariable').

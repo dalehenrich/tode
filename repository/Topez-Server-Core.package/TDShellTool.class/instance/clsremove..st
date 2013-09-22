@@ -1,4 +1,4 @@
 as yet unclassified
-clsremove: oldName
-  (Smalltalk classNamed: oldName) ifNotNil: [ :cls | cls removeFromSystem ].
+clsremove: theClass
+  theClass removeFromSystem.
   self topez resetAllGlobalNames

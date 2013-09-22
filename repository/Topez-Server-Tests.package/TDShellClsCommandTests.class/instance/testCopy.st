@@ -5,6 +5,6 @@ testCopy
   clsName := self mockClassName.
   newName := self mockAlternateClassName.
   Smalltalk at: clsName asSymbol ifAbsent: [ self assert: false ].
-  clsTool clscopy: clsName to: newName.
+  clsTool clscopy: self mockClass to: newName.
   Smalltalk at: clsName asSymbol ifAbsent: [ self assert: false ].
   Smalltalk at: newName asSymbol ifAbsent: [ self assert: false ]
