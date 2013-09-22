@@ -14,10 +14,6 @@ SYNOPSIS
       definition @<class-path>
   cls history <class-name>
       history @<class-path>
-  cls protocol add <class-name> <protocol-name>
-      protocol add @<class-path> <protocol-name>
-  cls protocol remove <class-name> <protocol-name>
-      protocol remove @<class-path> <protocol-name>
   cls rename <old-name> <new-name>
       rename @<class-path> <new-name>
   cls remove <old-name>
