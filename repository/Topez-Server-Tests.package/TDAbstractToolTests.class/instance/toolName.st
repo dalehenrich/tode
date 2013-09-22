@@ -1,3 +1,3 @@
 as yet unclassified
-toolClass
+toolName
   self subclassResponsibility

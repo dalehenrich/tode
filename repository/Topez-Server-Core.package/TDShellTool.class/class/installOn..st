@@ -87,12 +87,21 @@ installOn: aTDTopezServer
     registerEditorClass: TDClassSelectorListElementBuilder
       for: Behavior
       aspect: #'instanceSelectors';
-    registerEditorClass: TDClassHierarchyListElementBuilder
-      for: Behavior
-      aspect: #'hierarchyList';
     registerEditorClass: TDClassDefinitionClientElementBuilder
       for: Class
       aspect: #'classDefinition';
+    registerEditorClass: TDClassHistorySelectorListElementBuilder
+      for: Behavior
+      aspect: #'historyClassSelectors';
+    registerEditorClass: TDClassHistorySelectorListElementBuilder
+      for: Behavior
+      aspect: #'historyInstanceSelectors';
+    registerEditorClass: TDClassHierarchyListElementBuilder
+      for: Behavior
+      aspect: #'hierarchyList';
+    registerEditorClass: TDClassHistoryDefinitionClientElementBuilder
+      for: Class
+      aspect: #'historyClassDefinition';
     registerEditorClass: TDMethodDefinitionElementBuilder
       for: TDMethodDefinition
       aspect: #'method';
