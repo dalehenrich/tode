@@ -1,8 +1,6 @@
 as yet unclassified
 clientListCategories: listElement
   | items ar beh className |
-  false
-    ifTrue: [ ^ self clientListAll: listElement ].
   items := OrderedCollection new.
   ar := OrderedCollection new.
   className := self theClass name.
@@ -14,9 +12,11 @@ clientListCategories: listElement
         add:
           (TDClientListItemAttributes
             object:
-              {nil.
-              nil.
-              nil}
+              (TDProtocolDefinition new
+                className: className;
+                isMeta: beh isMeta;
+                categoryName: category asString;
+                yourself)
             parent: nil
             aspect: listElement aspect).
       (beh selectorsIn: category) sorted
@@ -25,10 +25,7 @@ clientListCategories: listElement
           items
             add:
               (TDClientListItemAttributes
-                object:
-                  {className.
-                  (beh isMeta).
-                  selector}
+                object: (self methodDefinitionFor: selector)
                 parent: nil
                 aspect: listElement aspect) ] ].
   listElement ~~ nil

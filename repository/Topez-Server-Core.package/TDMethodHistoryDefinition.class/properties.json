@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"enableProtocol" ],
-	"name" : "TDClassSelectorListElementBuilder",
+		"theBehavior" ],
+	"name" : "TDMethodHistoryDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDClientListElementBuilder",
+	"super" : "TDMethodDefinition",
 	"type" : "normal" }

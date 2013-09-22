@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"enableProtocol" ],
-	"name" : "TDClassSelectorListElementBuilder",
+		"categoryName",
+		"className",
+		"isMeta" ],
+	"name" : "TDProtocolDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDClientListElementBuilder",
+	"super" : "TDDefinition",
 	"type" : "normal" }

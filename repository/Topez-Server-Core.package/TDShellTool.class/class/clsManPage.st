@@ -4,6 +4,8 @@ clsManPage
   cls - class manipulation support
 
 SYNOPSIS
+  cls accessors <class-name> [ instance|class ]
+      accessors @<class-path> [ instance|class ]
   cls comment <class-name>
       comment @<class-path>
   cls copy <class-name> <new-name>

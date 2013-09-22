@@ -1,6 +1,6 @@
 as yet unclassified
 cmdTAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-t - toggle list categories"
+  "CMD-t - cycle through protocol display options"
 
-  self listCategories: self listCategories not.
+  self enableProtocol: self enableProtocol not.
   ^ #'refreshList'

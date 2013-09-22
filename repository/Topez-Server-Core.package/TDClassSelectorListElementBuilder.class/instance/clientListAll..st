@@ -11,10 +11,7 @@ clientListAll: listElement
       items
         add:
           (TDClientListItemAttributes
-            object:
-              {className.
-              (beh isMeta).
-              selector}
+            object: (self methodDefinitionFor: selector)
             parent: nil
             aspect: listElement aspect) ].
   listElement ~~ nil
