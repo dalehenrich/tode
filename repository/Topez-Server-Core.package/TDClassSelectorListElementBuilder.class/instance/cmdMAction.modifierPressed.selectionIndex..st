@@ -2,11 +2,12 @@ as yet unclassified
 cmdMAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
   "CMD-m - browse implementors"
 
-  | itemAttribute classAttributes selector defs |
+  | itemAttribute classAttributes def defs |
+  selectionIndex == 0
+    ifTrue: [ ^ false ].
   itemAttribute := listElement itemCache at: selectionIndex.
-  classAttributes := itemAttribute object.
-  selector := classAttributes at: 3.
-  defs := TDMethodDefinition implementorsOf: selector.
+  def := itemAttribute object.
+  defs := TDMethodDefinition implementorsOf: def selector.
   defs
     editUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')

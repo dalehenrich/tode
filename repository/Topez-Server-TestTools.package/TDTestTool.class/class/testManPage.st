@@ -4,7 +4,7 @@ testManPage
   test - execute sunit commands
 
 SYNOPSIS
-  test class <class-name>
+  test class <class-name> [ <class-name> ... ]
   test package <package-name>
   test project <configuration-base-name>
   test suite <sunit-suite-file>

@@ -18,6 +18,7 @@
 		"characterLimit",
 		"resultStack",
 		"enableFormatting",
+		"enableProtocol",
 		"resultStackIndex" ],
 	"name" : "TDServerStatus",
 	"pools" : [

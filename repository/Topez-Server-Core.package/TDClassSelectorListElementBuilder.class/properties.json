@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"enableProtocol" ],
 	"name" : "TDClassSelectorListElementBuilder",
 	"pools" : [
 		 ],

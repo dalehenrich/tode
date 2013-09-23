@@ -4,7 +4,8 @@
 		"listLimit",
 		"displayOops",
 		"characterLimit",
-		"enableFormatting" ],
+		"enableFormatting",
+		"enableProtocol" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

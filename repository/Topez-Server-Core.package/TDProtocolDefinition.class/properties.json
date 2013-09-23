@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"categoryName",
+		"className",
+		"isMeta" ],
+	"name" : "TDProtocolDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDDefinition",
+	"type" : "normal" }
