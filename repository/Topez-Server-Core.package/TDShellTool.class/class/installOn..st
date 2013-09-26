@@ -63,6 +63,18 @@ installOn: aTDTopezServer
     registerBuilderClass: TDCharacterNodeBuilder
       for: Character
       aspect: #'inspect';
+    registerBuilderClass: TDCollectionNodeBuilder
+      for: Collection
+      aspect: #'view';
+    registerBuilderClass: TDCollectionNodeBuilder
+      for: Collection
+      aspect: #'inspect';
+    registerBuilderClass: TDUnorderedCollectionNodeBuilder
+      for: UnorderedCollection
+      aspect: #'view';
+    registerBuilderClass: TDUnorderedCollectionNodeBuilder
+      for: UnorderedCollection
+      aspect: #'inspect';
     registerEditorClass: TDClientObjectElementBuilder
       for: Object
       aspect: #'navigate';

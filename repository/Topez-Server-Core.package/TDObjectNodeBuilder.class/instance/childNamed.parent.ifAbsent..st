@@ -7,7 +7,7 @@ childNamed: elementName parent: parentNode ifAbsent: absentBlock
         on: Error
         do: [ :ex | 'error accessing index: ' , elementName printString , ' --> ' , ex description ] ]
     ifFalse: [ 
-      (#('(class)' '(oop)' '(value)') includes: elementName)
+      (self specialChildNames includes: elementName)
         ifTrue: [ 
           obj := self
             objectValueForSpecialElementName: elementName

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDCollectionNodeBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDObjectNodeBuilder",
+	"type" : "normal" }

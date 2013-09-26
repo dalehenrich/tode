@@ -9,7 +9,7 @@
 		"toolName" : "DataCurator 12/21/2012 11:43",
 		"toolReadMe" : "DataCurator 12/21/2012 11:43",
 		"ts" : "07/09/2013 15:24",
-		"tsManPage" : "dkh 09/20/2013 07:37" },
+		"tsManPage" : "dkh 09/24/2013 10:13" },
 	"instance" : {
 		"defaultHomeResultsPath" : "DataCurator 12/23/2012 13:28",
 		"defaultHomeTestPath" : "DataCurator 12/21/2012 18:55",
@@ -27,6 +27,6 @@
 		"testproject" : "dkh 09/13/2013 08:53",
 		"testsuite" : "07/09/2013 15:33",
 		"tsdebug" : "07/09/2013 15:25",
-		"tslist" : "dkh 09/20/2013 08:23",
+		"tslist" : "dkh 09/24/2013 10:24",
 		"tsrerun" : "07/10/2013 06:47",
 		"tsrun" : "07/09/2013 15:25" } }
