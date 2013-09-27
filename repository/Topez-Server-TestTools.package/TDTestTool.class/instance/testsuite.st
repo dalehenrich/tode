@@ -12,4 +12,4 @@ testsuite
       | suiteNode |
       suiteNode := self topez lookup: suitePath.
       suiteNode evaluateInContext: objIn ].
-  ^ self testSuite: suite
+  ^ self testsuite: suite

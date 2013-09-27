@@ -1,5 +1,5 @@
 as yet unclassified
-testSuite: suite
+testsuite: suite
   | node testNode |
   node := topez homeNode.
   testNode := node
