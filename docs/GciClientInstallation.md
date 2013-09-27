@@ -40,8 +40,8 @@ Define a session description:
 ```Smalltalk
 | sessionDescription |
 sessionDescription := OGCustomSessionDescription new
-    name: '3.1.0.1';
-    gemstoneVersion: '3.1.0.1';
+    name: 'tode';
+    gemstoneVersion: '3.1.0.4';
     gciLibraryName: 'libgcirpc-3.1.0.1-32.dylib'; "or libgcirpc-3.1.0.1-32.so for Linux"
     adornmentColor: Color lightGreen;
     stoneHost: 'localhost';
@@ -63,41 +63,35 @@ TDTopezClient sessionMap
 
 Define window sizes.
 
-1280x800 display (using Consolas Regular 10 FreeType font):
-
-```Smalltalk
-TDTopezClient
-  	windowOrigin: 3@0.5;
-  	listWindowWidth: 22;
-	  codeWindowHeight: 19;
-  	codeWindowWidth: 70;
-  	initialize.
-```
-
 1440x900 display (using Consolas Regular 10 FreeType font):
 
 ```Smalltalk
-TDTopezClient
+TDTopezGemStoneClient
       windowOrigin: 5@0.5;
       listWindowWidth: 24;
-      codeWindowHeight: 21;
+      codeWindowHeight: 17; "21"
       codeWindowWidth: 80;
+      shellWindowHeight: 17; "14"
+      debuggerWindowWidth: 72;
       initialize.
 ```
-1440x900 display (using Bitmap DejaVu Sans Regular 9 font):
+
+1280x800 display (using Bitmap DejaVu Sans Regular 9 font):
 
 ```Smalltalk
-TDTopezClient
-      windowOrigin: 5@0.5;
-      listWindowWidth: 18;
-      codeWindowHeight: 21;
-      codeWindowWidth: 65;
-      initialize.
+TDTopezGemStoneClient
+        windowOrigin: 1.5@0.5;
+        listWindowWidth: 15;
+        codeWindowHeight:17;
+        codeWindowWidth: 54;
+        shellWindowHeight:17;
+        debuggerWindowWidth:24;
+        initialize .
 ```
 
 Login using the session:
 
 ```Smalltalk
-TDShell open: '3.1.0.1'
+TDShell open: 'tode'
 ```
 
