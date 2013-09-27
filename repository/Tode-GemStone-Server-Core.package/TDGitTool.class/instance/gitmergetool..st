@@ -13,7 +13,7 @@ gitmergetool: gitRepoDirectory
   dictionary keys
     do: [ :path | 
       gitRepoDirectory
-        fileNamed: path
+        readOnlyFileNamed: path
         do: [ :fileStream | 
           | triplet conflict |
           triplet := self parseSourceConflictsOn: fileStream.
@@ -30,5 +30,5 @@ gitmergetool: gitRepoDirectory
   mergeTool
     gitmerge: merger
     gitTool: self
-    mergerCompletionBlock: [ self halt ]
+    mergerCompletionBlock: [  ]
     mergerAbortBlock: [  ]
