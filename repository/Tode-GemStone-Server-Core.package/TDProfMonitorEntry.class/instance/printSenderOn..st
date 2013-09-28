@@ -3,8 +3,7 @@ printSenderOn: aStream
   | tallyPct totalPct methodMs elapsedPct |
   tallyPct := self tally asFloat * 100.0 / self overallTotalSamples.
   totalPct := self total asFloat * 100.0 / self overallTotalSamples.
-  methodMs := self total * self overallElapsedTime asFloat
-    / self overallTotalSamples.
+  methodMs := self methodMs.
   elapsedPct := self tally * self overallElapsedTime * 100.0
     / self overallTotalSamples / methodMs.
   aStream

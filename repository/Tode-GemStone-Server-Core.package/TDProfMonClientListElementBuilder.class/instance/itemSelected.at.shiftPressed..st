@@ -1,7 +1,9 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
   | entry |
-  entry := self object profMonResults at: index.
+  index <= 3
+    ifTrue: [ ^ nil ].
+  entry := self object profMonResults at: index - 3.
   entry parentEntry: nil.
   entry
     editUsing:

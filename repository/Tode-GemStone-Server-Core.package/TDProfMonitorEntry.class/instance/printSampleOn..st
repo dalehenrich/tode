@@ -7,7 +7,9 @@ printSampleOn: aStream
     nextPutAll: (self tally asString width: -4);
     nextPutAll: ' ';
     nextPutAll: (tallyPct asStringUsingFormat: #(-6 2 false));
-    nextPutAll: ' (';
+    nextPutAll: ' ';
     nextPutAll: (totalPct asStringUsingFormat: #(-6 2 false));
-    nextPutAll: ') ';
+    nextPutAll: ' ';
+    nextPutAll: (self methodMs asStringUsingFormat: #(-5 1 false));
+    nextPutAll: ' ';
     nextPutAll: (self profMonEntry asStringWidth: 25)
