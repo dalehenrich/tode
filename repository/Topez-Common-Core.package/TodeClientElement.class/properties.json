@@ -18,7 +18,10 @@
 		"editorWindowName",
 		"keyboardEventBlock",
 		"keyboardEventBlockOop",
+		"menuActionBlock",
+		"menuActionBlockOop",
 		"cmdKeyCodePoints",
+		"actionSpec",
 		"windowBuilder" ],
 	"name" : "TodeClientElement",
 	"pools" : [
