@@ -1,0 +1,18 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parentEntry",
+		"parentIndex",
+		"profMon",
+		"profMonEntry",
+		"master" ],
+	"name" : "TDProfMonitorEntry",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
