@@ -58,9 +58,9 @@ createBoundsDictionary
             extent: listWidth @ twoThirdHeight);
     at: #'context'
       put:
-        (hierarcyOrigin + codeWidth + listWidth
+        (hierarcyOrigin + codeWidth
             @ (top + thirdHeight + codeWindowExtent y)
-            extent: listWidth @ twoThirdHeight);
+            extent: debuggerWidth @ (self shellWindowHeight * height));
     at: #'evaluator'
       put:
         (classListsOrigin @ (top + thirdHeight + codeWindowExtent y)
