@@ -1,5 +1,5 @@
 as yet unclassified
 menuActionBlock
-  "works in concert with #actionSpec"
+  "works in concert with #menuActionSpec"
 
-  ^ [ :actionSymbol :listElement :index |  ]
+  ^ [ :actionSymbol :listElement :index | nil ]

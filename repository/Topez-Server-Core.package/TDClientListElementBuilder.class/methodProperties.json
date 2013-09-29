@@ -2,8 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"actionSpec" : "dkh 09/28/2013 16:01",
-		"buildClientElementUsing:editorAspect:" : "dkh 09/28/2013 16:00",
+		"buildClientElementUsing:editorAspect:" : "dkh 09/29/2013 09:22",
 		"clientList:" : "DataCurator 01/16/2013 07:43",
 		"clientListElement" : "dkh 06/11/2013 18:06",
 		"cmdBAction:modifierPressed:selectionIndex:" : "DataCurator 02/06/2013 19:50",
@@ -35,9 +34,12 @@
 		"itemSelectedBlock" : "DataCurator 01/25/2013 15:08",
 		"keyboardEventBlock" : "DataCurator 02/09/2013 07:34",
 		"listBlock" : "DataCurator 01/11/2013 15:36",
-		"menuActionBlock" : "dkh 09/28/2013 16:01",
+		"menuActionBlock" : "dkh 09/29/2013 09:38",
+		"menuActionSpec" : "dkh 09/29/2013 12:21",
+		"objectMenuActionSpec" : "dkh 09/29/2013 12:20",
 		"selectedClass:selectionIndex:" : "DataCurator 02/07/2013 14:28",
 		"selectedIndex" : "DataCurator 01/11/2013 14:26",
 		"theBehavior" : "DataCurator 02/07/2013 14:10",
 		"theClass" : "DataCurator 02/07/2013 14:11",
-		"windowIsClosingBlock" : "DataCurator 01/26/2013 17:49" } }
+		"windowIsClosingBlock" : "DataCurator 01/26/2013 17:49",
+		"windowMenuActionSpec" : "dkh 09/29/2013 12:21" } }
