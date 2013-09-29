@@ -20,6 +20,8 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     parent: aTDEditorSpec parentObject;
     windowIsClosingBlock: self windowIsClosingBlock;
     keyboardEventBlock: self keyboardEventBlock;
+    actionSpec: self actionSpec;
+    menuActionBlock: self menuActionBlock;
     cmdKeyCodePoints: self cmdKeyCodePoints;
     editorWindowLabel: theWindowLabel;
     editorWindowId: aTDEditorSpec windowId;
