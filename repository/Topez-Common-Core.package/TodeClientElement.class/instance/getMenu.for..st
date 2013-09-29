@@ -1,6 +1,6 @@
 as yet unclassified
 getMenu: aMenu for: menuTarget
-	self actionSpec
+	self menuActionSpec
 		do: [ :spec | 
 			| char shortCut |
 			shortCut := '.'.

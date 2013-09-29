@@ -20,8 +20,8 @@
 		"keyboardEventBlockOop",
 		"menuActionBlock",
 		"menuActionBlockOop",
+		"menuActionSpec",
 		"cmdKeyCodePoints",
-		"actionSpec",
 		"windowBuilder" ],
 	"name" : "TodeClientElement",
 	"pools" : [
