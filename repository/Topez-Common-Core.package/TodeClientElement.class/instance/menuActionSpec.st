@@ -1,6 +1,6 @@
 accessing
 menuActionSpec
-	"label, shortcut codepoint, actionSymbol"
+	"label, shortcut character, actionSymbol"
 
 	menuActionSpec ifNil: [ menuActionSpec := #() ].
 	^ menuActionSpec
