@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"batchMenuActionSpec" : "dkh 09/29/2013 13:43",
 		"cmdGAction:modifierPressed:selectionIndex:" : "dkh 08/15/2013 07:44",
 		"cmdJAction:modifierPressed:selectionIndex:" : "dkh 08/15/2013 07:44",
-		"definitions" : "dkh 08/14/2013 17:42" } }
+		"definitions" : "dkh 08/14/2013 17:42",
+		"menuActionSpec" : "dkh 09/29/2013 13:50" } }

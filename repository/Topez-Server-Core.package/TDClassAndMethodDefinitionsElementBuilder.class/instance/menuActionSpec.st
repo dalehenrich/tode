@@ -4,4 +4,4 @@ menuActionSpec
 
   "works in concert with menuActionBlock"
 
-  ^ self basicMenuActionSpec
+  ^ self methodMenuActionSpec , {#('-')} , self standardMenuActionSpec

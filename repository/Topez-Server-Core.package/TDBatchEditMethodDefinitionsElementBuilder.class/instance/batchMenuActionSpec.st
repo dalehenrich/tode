@@ -1,7 +1,8 @@
 as yet unclassified
-menuActionSpec
+batchMenuActionSpec
   "label, shortcut character, actionSymbol"
 
   "works in concert with menuActionBlock"
 
-  ^ self basicMenuActionSpec
+  ^ {#('next match' $g #'nextMatch').
+  #('replace' $j #'performReplace')}
