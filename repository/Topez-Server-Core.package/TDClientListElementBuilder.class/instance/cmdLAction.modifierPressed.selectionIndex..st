@@ -1,5 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-l - refresh"
-
-  ^ #'refreshList'
+  ^ self refreshListMenuAction: listElement selectionIndex: selectionIndex

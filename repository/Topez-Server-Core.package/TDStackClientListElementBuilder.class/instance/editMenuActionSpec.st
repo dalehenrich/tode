@@ -1,3 +1,3 @@
 as yet unclassified
 editMenuActionSpec
-  ^ {#('copy' $c #'copyCopy')}
+  ^ {#('copy' $c #'copyObjectMenuAction:selectionIndex:')}

@@ -1,5 +1,5 @@
-as yet unclassified
+menu action specs
 methodMenuActionSpec
-  ^ {#('senders' $n #'browseSenders').
-  #('implementors' $m #'browseImplementors').
-  #('versions' nil #'browseMethodVersions')}
+  ^ {#('senders' $n #'browseSendersMenuAction:selectionIndex:').
+  #('implementors' $m #'browseImplementorsMenuAction:selectionIndex:').
+  #('versions' nil #'browseMethodVersionsMenuAction:selectionIndex:')}

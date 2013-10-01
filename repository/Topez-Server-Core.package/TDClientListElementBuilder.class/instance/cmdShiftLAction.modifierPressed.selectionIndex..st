@@ -1,5 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdShiftLAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-L - list windows"
-
-  ^ #'listWindows'
+  ^ self listWindowsMenuAction: listElement selectionIndex: selectionIndex

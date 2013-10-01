@@ -1,4 +1,4 @@
-as yet unclassified
+menu action specs
 menuActionSpec
   "label, shortcut character, actionSymbol"
 

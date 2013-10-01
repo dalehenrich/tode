@@ -1,4 +1,4 @@
-as yet unclassified
+menu action specs
 editMenuActionSpec
-  ^ {#('copy' $c #'copyCopy').
-  #('paste' $v #'pasteObject')}
+  ^ {#('copy' $c #'copyObjectMenuAction:selectionIndex:').
+  #('paste' $v #'pasteObject:selectionIndex:')}

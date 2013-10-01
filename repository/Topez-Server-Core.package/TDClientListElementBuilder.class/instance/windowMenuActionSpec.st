@@ -1,5 +1,5 @@
-as yet unclassified
+menu action specs
 windowMenuActionSpec
-  ^ {#('clone window' $C #'cloneWindow').
-  #('list windows' $L #'listWindows').
-  #('refresh window' $l #'refreshList')}
+  ^ {#('clone window' $C #'cloneWindowMenuAction:selectionIndex:').
+  #('list windows' $L #'listWindowsMenuAction:selectionIndex:').
+  #('refresh window' $l #'refreshListMenuAction:selectionIndex:')}

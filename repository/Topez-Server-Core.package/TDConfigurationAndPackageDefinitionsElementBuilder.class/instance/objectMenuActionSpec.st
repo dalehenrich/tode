@@ -1,3 +1,3 @@
-as yet unclassified
+menu action specs
 objectMenuActionSpec
-  ^ {#('print' $p #'printObject')}
+  ^ {#('print' $p #'printObjectMenuAction:selectionIndex:')}

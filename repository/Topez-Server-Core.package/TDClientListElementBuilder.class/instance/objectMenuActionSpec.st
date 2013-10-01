@@ -1,5 +1,5 @@
-as yet unclassified
+menu action specs
 objectMenuActionSpec
-  ^ {#('browse code' $B #'browseFullClass').
-  #('references' $N #'browseReferences').
-  #('print' $p #'printObject')}
+  ^ {#('browse code' $B #'browseFullClassMenuAction:selectionIndex:').
+  #('references' $N #'browseReferencesMenuAction:selectionIndex:').
+  #('print' $p #'printObjectMenuAction:selectionIndex:')}

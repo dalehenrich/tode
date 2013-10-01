@@ -1,5 +1,5 @@
-as yet unclassified
+menu action specs
 editMenuActionSpec
-  ^ {#('cut' $x #'cutObject').
-  #('copy' $c #'copyCopy').
-  #('paste' $v #'pasteObject')}
+  ^ {#('cut' $x #'cutObjectMenuAction:selectionIndex:').
+  #('copy' $c #'copyObjectMenuAction:selectionIndex:').
+  #('paste' $v #'pasteObjectMenuAction:selectionIndex:')}

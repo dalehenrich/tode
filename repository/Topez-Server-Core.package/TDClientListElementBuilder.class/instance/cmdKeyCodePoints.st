@@ -1,3 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdKeyCodePoints
   ^ self codePointMap keys asArray
