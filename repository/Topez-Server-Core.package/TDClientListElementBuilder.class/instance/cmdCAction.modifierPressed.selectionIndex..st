@@ -1,5 +1,3 @@
 keyboard actions
 cmdCAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-c - copy object"
-
-  ^ false
+  ^ self copyObjectMenuAction: listElement selectionIndex: selectionIndex

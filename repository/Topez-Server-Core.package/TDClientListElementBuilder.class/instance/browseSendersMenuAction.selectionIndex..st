@@ -1,3 +1,3 @@
 menu actions
 browseSendersMenuAction: listElement selectionIndex: selectionIndex
-  self subclassResponsibility
+  ^ false

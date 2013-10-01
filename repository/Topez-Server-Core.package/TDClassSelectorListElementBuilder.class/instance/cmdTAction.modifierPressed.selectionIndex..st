@@ -1,6 +1,5 @@
-as yet unclassified
+keyboard actions
 cmdTAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-t - cycle through protocol display options"
-
-  self enableProtocol: self enableProtocol not.
-  ^ #'refreshList'
+  ^ self
+    toggleEnableProtocolMenuAction: listElement
+    selectionIndex: selectionIndex

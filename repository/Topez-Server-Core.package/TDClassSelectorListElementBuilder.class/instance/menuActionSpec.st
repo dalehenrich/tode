@@ -1,4 +1,4 @@
-as yet unclassified
+menu action specs
 menuActionSpec
   "label, shortcut character, actionSymbol"
 
@@ -9,7 +9,7 @@ menuActionSpec
   ^ self methodMenuActionSpec
     ,
       {#('-').
-      #('new method' $o #'newMethodTemplate').
-      #('toggle protocol' $t #'toggleEnableProtocol').
+      #('new method' $o #'newMethodTemplateMenuAction:selectionIndex:').
+      #('toggle protocol' $t #'toggleEnableProtocolMenuAction:selectionIndex:').
       #('-')}
     , self standardMenuActionSpec

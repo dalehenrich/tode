@@ -1,5 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdJAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-j - db down"
-
-  self object debugTool dbdown
+  ^ self dbDownMenuAction: listElement selectionIndex: selectionIndex

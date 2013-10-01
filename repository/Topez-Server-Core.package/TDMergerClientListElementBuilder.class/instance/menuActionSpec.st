@@ -1,13 +1,14 @@
-as yet unclassified
+menu action specs
 menuActionSpec
   "label, shortcut character, actionSymbol"
 
   "works in concert with menuActionBlock"
 
-  ^ {#('local def' $d #'selectLocalDefinition').
-  #('edit def' $e #'selectEditDefinition').
-  #('remote def' $r #'selectRemoveDefinition').
+  ^ {#('local def' $d #'selectLocalDefinitionMenuAction:selectionIndex:').
+  #('edit def' $e #'selectEditDefinitionMenuAction:selectionIndex:').
+  #('remote def' $r #'selectRemoteDefinitionMenuAction:selectionIndex:').
   #('-').
-  #('do merge' $j #'doMerge').
+  #('do merge' $j #'doMergeMenuAction:selectionIndex:').
   #('-').
-  #('toggle diff' $t #'toggleDiff')} , self basicMenuActionSpec
+  #('toggle diff' $t #'toggleDiffMenuAction:selectionIndex:')}
+    , self basicMenuActionSpec

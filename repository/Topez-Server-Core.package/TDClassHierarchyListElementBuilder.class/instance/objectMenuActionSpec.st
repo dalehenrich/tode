@@ -1,4 +1,4 @@
-as yet unclassified
+menu action specs
 objectMenuActionSpec
   ^ {#('browse code' $B #'browseFullClassMenuAction:selectionIndex:').
   #('browse class' $b #'browseClassDefinitionMenuAction:selectionIndex:').

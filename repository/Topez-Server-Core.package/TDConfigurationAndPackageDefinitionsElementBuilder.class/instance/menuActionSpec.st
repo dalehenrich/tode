@@ -4,6 +4,6 @@ menuActionSpec
 
   "works in concert with menuActionBlock"
 
-  ^ {#('browse definitions' $E #'browsePackageOrConfiguration').
-  #('browse tests' $T #'browsePackageOrConfigurationTests')}
+  ^ {#('browse definitions' $E #'browsePackageOrConfigurationMenuAction:selectionIndex:').
+  #('browse tests' $T #'browsePackageOrConfigurationTestsMenuAction:selectionIndex:')}
     , self standardMenuActionSpec

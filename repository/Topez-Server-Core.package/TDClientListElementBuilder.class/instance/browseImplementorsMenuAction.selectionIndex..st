@@ -1,3 +1,3 @@
 menu actions
 browseImplementorsMenuAction: listElement selectionIndex: selectionIndex
-  self subclassResponsibility
+  ^ false

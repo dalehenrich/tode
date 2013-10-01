@@ -1,16 +1,16 @@
-as yet unclassified
+menu action specs
 menuActionSpec
   "label, shortcut character, actionSymbol"
 
   "works in concert with menuActionBlock"
 
-  ^ {#('step into' $j #'dbStepInto').
-  #('step over' $o #'dbStepOver').
-  #('step thru' $t #'dbStepThru').
+  ^ {#('step into' $i #'dbStepIntoMenuAction:selectionIndex:').
+  #('step over' $o #'dbStepOverMenuAction:selectionIndex:').
+  #('step thru' $t #'dbStepThruMenuAction:selectionIndex:').
   #('-').
-  #('stack up' $k #'dbUp').
-  #('stack down' $j #'dbDown').
+  #('stack up' $k #'dbUpMenuAction:selectionIndex:').
+  #('stack down' $j #'dbDownMenuAction:selectionIndex:').
   #('-').
-  #('continue' nil #'dbContinue').
-  #('restart' nil #'dbRestart').
+  #('continue' nil #'dbContinueMenuAction:selectionIndex:').
+  #('restart' nil #'dbRestartMenuAction:selectionIndex:').
   #('-')} , self methodMenuActionSpec , {#('-')} , self standardMenuActionSpec
