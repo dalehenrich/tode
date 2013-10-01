@@ -35,6 +35,8 @@ SYNOPSIS
      diff @<workingCopy-path>
      diff
   mc dirty 
+  mc fileout <directory-path> <package-name> [<package-name>]...
+     fileout <directory-path> @<workingCopy-path> [@<workingCopy-path>]...
   mc halo <name> <regex-pkg-pattern> 
   mc halorm <name> 
   mc list [<regex-pkg-pattern>]
