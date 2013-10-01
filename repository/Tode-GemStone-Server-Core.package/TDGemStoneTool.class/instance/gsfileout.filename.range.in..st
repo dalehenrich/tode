@@ -8,12 +8,28 @@ gsfileout: methodRef filename: filename range: ar in: directory
   directory
     forceNewFileNamed: filename
     do: [ :fileStream | 
-      | src |
-      fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 1)).
-      src := methodRef sourceCode.
-      fileStream nextPutAll: src.
-      src last == lf
-        ifFalse: [ fileStream nextPut: lf ].
-      fileStream
-        nextPutAll:
-          (originalSource copyFrom: (ar at: 2) + 1 to: originalSource size) ]
+      ar == #'append'
+        ifTrue: [ 
+          fileStream nextPutAll: originalSource.
+          originalSource last == lf
+            ifFalse: [ fileStream nextPut: lf ].
+          fileStream
+            nextPutAll: 'category: ';
+            nextPutAll:
+                (methodRef actualClass _categoryOfSelector: methodRef selector) asString
+                    printString;
+            lf.
+          methodRef actualClass
+            fileOutMethod: methodRef selector
+            environmentId: 0
+            on: fileStream ]
+        ifFalse: [ 
+          | src |
+          src := methodRef sourceCode.
+          fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 1)).
+          fileStream nextPutAll: src.
+          src last == lf
+            ifFalse: [ fileStream nextPut: lf ].
+          fileStream
+            nextPutAll:
+              (originalSource copyFrom: (ar at: 2) + 1 to: originalSource size) ] ]

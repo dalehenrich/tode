@@ -4,35 +4,44 @@ gsfileout: directoryPath externalMethodMap: externalMethodMap defaultHeader: def
   directory := ServerFileDirectory on: directoryPath.
   externalMethodMap
     keysAndValuesDo: [ :clsName :methodRefs | 
-      | filename cls |
+      | filenames cls |
       Transcript
         cr;
         show: '--->' , clsName asString.
-      filename := self gsfileoutGsFileNameFor: clsName.
-      (directory fileExists: filename)
-        ifFalse: [ ^ self error: 'No .gs file found for: ' , clsName printString ].
+      filenames := self gsfileoutGsFileNameFor: clsName.
+      filenames
+        do: [ :filename | 
+          (directory fileExists: filename)
+            ifFalse: [ ^ self error: 'No .gs file found for: ' , clsName printString ] ].
       cls := Smalltalk at: clsName.
-      methodRefs
+      (methodRefs asArray sort: [ :a :b | a selector <= b selector ])
         do: [ :methodRef | 
-          | beh sourceMap ar gsSource |
+          | beh sourceMap ar done |
           beh := cls.
           methodRef classIsMeta
             ifTrue: [ beh := beh class ].
-          gsSource := beh
-            fileOutMethod: methodRef selector asSymbol
-            environmentId: 0.
-          sourceMap := self
-            gsfileoutBuildMethodSourceMapFor: beh
-            filename: filename
-            in: directory.
-          ar := sourceMap
-            at: methodRef selector asSymbol
-            ifAbsent: [ 
-              self
-                error:
-                  'No source entry  found for: ' , clsName printString , '>>' , methodRef selector ].
-          self
-            gsfileout: methodRef
-            filename: filename
-            range: ar
-            in: directory ] ]
+          done := false.
+          1 to: filenames size do: [ :index | 
+            | filename lastFile |
+            filename := filenames at: index.
+            lastFile := index = filenames size.
+            done
+              ifFalse: [ 
+                sourceMap := self
+                  gsfileoutBuildMethodSourceMapFor: beh
+                  filename: filename
+                  in: directory.
+                ar := sourceMap
+                  at: methodRef selector asSymbol
+                  ifAbsent: [ 
+                    lastFile
+                      ifTrue: [ #'append' ]
+                      ifFalse: [ #'notFound' ] ].
+                ar ~~ #'notFound'
+                  ifTrue: [ 
+                    self
+                      gsfileout: methodRef
+                      filename: filename
+                      range: ar
+                      in: directory.
+                    done := true ] ] ] ] ]

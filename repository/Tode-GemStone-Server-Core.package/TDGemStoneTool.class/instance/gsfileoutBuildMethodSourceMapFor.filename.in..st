@@ -35,6 +35,7 @@ gsfileoutBuildMethodSourceMapFor: behavior filename: filename in: directory
                   (ignored isKindOf: SecurityError)
                     ifFalse: [ 
                       "primitive compilation errors expected"
-                      self halt ] ] ].
+                      false
+                        ifTrue: [ self halt ] ] ] ].
           line := fileStream nextLine ] ].
   ^ map
