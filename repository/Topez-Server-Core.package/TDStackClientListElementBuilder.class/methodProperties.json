@@ -13,7 +13,10 @@
 		"cmdOAction:modifierPressed:selectionIndex:" : "dkh 08/15/2013 16:55",
 		"cmdTAction:modifierPressed:selectionIndex:" : "dkh 07/16/2013 19:29",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:11",
+		"editMenuActionSpec" : "dkh 09/30/2013 20:39",
 		"itemSelected:at:shiftPressed:" : "dkh 04/11/2013 15:09",
+		"menuActionSpec" : "dkh 09/30/2013 20:46",
+		"objectMenuActionSpec" : "dkh 09/30/2013 20:37",
 		"selectedClass:selectionIndex:" : "DataCurator 02/07/2013 14:28",
 		"selectedIndex" : "DataCurator 01/23/2013 15:12",
 		"windowIsClosingBlock" : "dkh 07/15/2013 02:30" } }
