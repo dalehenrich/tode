@@ -1,5 +1,5 @@
 as yet unclassified
-gsfileout: directoryPath externalMethodMap: externalMethodMap defaultHeader: defaultHeader
+gsfileout: directoryPath externalMethodMap: externalMethodMap classToFilenameMap: classToFilenameMap defaultHeader: defaultHeader
   | directory |
   directory := ServerFileDirectory on: directoryPath.
   externalMethodMap
@@ -8,7 +8,9 @@ gsfileout: directoryPath externalMethodMap: externalMethodMap defaultHeader: def
       Transcript
         cr;
         show: '--->' , clsName asString.
-      filenames := self gsfileoutGsFileNameFor: clsName.
+      filenames := classToFilenameMap
+        at: clsName
+        ifAbsent: [ {(clsName asLowercase , '.gs')} ].
       filenames
         do: [ :filename | 
           (directory fileExists: filename)
