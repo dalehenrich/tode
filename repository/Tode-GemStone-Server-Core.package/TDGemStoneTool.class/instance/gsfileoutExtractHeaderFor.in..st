@@ -1,15 +1,15 @@
 as yet unclassified
-gsfileoutExtractHeaderFor: pair in: directory
+gsfileoutExtractHeaderFor: filename in: directory
   | header |
-  (directory fileExists: (pair at: 2))
+  (directory fileExists: filename)
     ifFalse: [ ^ '' ].
   header := WriteStream on: String new.
   directory
-    readOnlyFileNamed: (pair at: 2)
+    readOnlyFileNamed: filename
     do: [ :fileStream | 
       | line |
       line := fileStream nextLine.
-      [ line notNil and: [ line size = 1 or: [ line beginsWith: '!' ] ] ]
+      [ line notNil and: [ line beginsWith: '!' ] ]
         whileTrue: [ 
           header nextPutAll: line.
           line := fileStream nextLine ].

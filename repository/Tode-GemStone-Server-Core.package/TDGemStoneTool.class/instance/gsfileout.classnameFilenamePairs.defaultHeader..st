@@ -5,7 +5,7 @@ gsfileout: directoryPath classnameFilenamePairs: classnameFilenamePairs defaultH
   classnameFilenamePairs
     do: [ :pair | 
       | header |
-      header := self gsfileoutExtractHeaderFor: pair in: directory.
+      header := self gsfileoutExtractHeaderFor: (pair at: 2) in: directory.
       header isEmpty
         ifTrue: [ header := defaultHeader ].
       directory
