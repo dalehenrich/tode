@@ -1,5 +1,5 @@
 as yet unclassified
-gsfileout: directoryPath classDefs: classNameList filename: filename defaultHeader: defaultHeader
+gsfileout: directoryPath classes: classNameList filename: filename defaultHeader: defaultHeader
   | directory header |
   directory := ServerFileDirectory on: directoryPath.
   header := self gsfileoutExtractHeaderFor: filename in: directory.
@@ -10,6 +10,9 @@ gsfileout: directoryPath classDefs: classNameList filename: filename defaultHead
     do: [ :fileStream | 
       header isEmpty
         ifFalse: [ fileStream nextPutAll: header ].
+      fileStream
+        nextPutAll: '! ------------------- Class definitions ';
+        lf.
       classNameList
         do: [ :clsName | 
           | cls |
@@ -30,9 +33,8 @@ gsfileout: directoryPath classDefs: classNameList filename: filename defaultHead
           cls comment isEmpty not
             ifTrue: [ 
               fileStream
-                nextPut: Character lf;
+                lf;
                 nextPutAll: 'expectvalue %Boolean';
-                nextPut: Character lf;
                 lf;
                 nextPutAll: '! ------------------- Class comment for ';
                 nextPutAll: clsName asString;
@@ -48,4 +50,33 @@ gsfileout: directoryPath classDefs: classNameList filename: filename defaultHead
                 nextPutAll: 'true';
                 lf;
                 nextPut: $%;
-                lf ] ] ]
+                lf ] ].
+      fileStream
+        nextPutAll: '! ------------------- Class methods ';
+        lf.
+      classNameList
+        do: [ :clsName | 
+          | cls |
+          cls := Smalltalk classNamed: clsName.
+          self gsfileOutMethods: cls on: fileStream ].
+      fileStream
+        nextPutAll: '! ------------------- Class initializers ';
+        lf.
+      classNameList
+        do: [ :clsName | 
+          | cls |
+          cls := Smalltalk classNamed: clsName.
+          (cls class selectors includes: #'initialize')
+            ifFalse: [ ^ self ].
+          fileStream
+            lf;
+            nextPutAll: 'expectvalue %Boolean';
+            lf;
+            nextPutAll: 'doit';
+            lf;
+            nextPutAll: cls name asString , ' initialize.';
+            lf;
+            nextPutAll: 'true';
+            lf;
+            nextPutAll: '%';
+            lf ] ]

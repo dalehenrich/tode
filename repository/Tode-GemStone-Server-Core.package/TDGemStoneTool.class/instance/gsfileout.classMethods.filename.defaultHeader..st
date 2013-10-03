@@ -14,7 +14,7 @@ gsfileout: directoryPath classMethods: classNameList filename: filename defaultH
         do: [ :clsName | 
           | cls |
           cls := Smalltalk classNamed: clsName.
-          cls fileOutMethodsOn: fileStream ].
+          self gsfileOutMethods: cls on: fileStream ].
       fileStream
         nextPutAll: '! ------------------- Class initializers ';
         lf.
@@ -25,9 +25,14 @@ gsfileout: directoryPath classMethods: classNameList filename: filename defaultH
           (cls class selectors includes: #'initialize')
             ifFalse: [ ^ self ].
           fileStream
+            lf;
+            nextPutAll: 'expectvalue %Boolean';
+            lf;
             nextPutAll: 'doit';
             lf;
             nextPutAll: cls name asString , ' initialize.';
+            lf;
+            nextPutAll: 'true';
             lf;
             nextPutAll: '%';
             lf ] ]
