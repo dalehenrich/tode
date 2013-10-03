@@ -1,0 +1,58 @@
+TDScriptLeafNode{#name:'fileout',#contents:'[ :topez :objIn :tokens :windowId | 
+| mcTool path classToFilenameMap |
+mcTool := topez toolInstanceFor: \'mc\'.
+path := \'/export/foos2/users/dhenrich/3.0/k_gss64bit/junk\'.
+classToFilenameMap := Dictionary new
+  at: #\'CharacterCollection\' put: #(\'charcoll.gs\' \'charcoll2.gs\');
+  at: #\'BlockClosure\' put: #(\'blockclosure.gs\' \'blockclosure2.gs\');
+  at: #\'Collection\' put: #(\'collect.gs\' \'collect2.gs\');
+  at: #\'AbstractIndexSpecification\' put: #(\'abstractindexspec.gs\');
+  at: #\'IdentityIndexSpecification\' put: #(\'identityindexspec.gs\');
+  at: #\'EqualityIndexSpecification\' put: #(\'equalityindexspec.gs\');
+  at: #\'RcEqualityIndexSpecification\' put: #(\'rcequalityindexspec.gs\');
+  at: #\'RangeIndexReadStream\' put: #(\'rangeindexreadstr.gs\');
+  at: #\'SetValuedPathEvaluator\' put: #(\'setpatheval.gs\');
+  at: #\'SetValuedPathTerm\' put: #(\'setpathterm.gs\');
+  at: #\'EqualityIndexQueryEvaluator\' put: #(\'equalityquery.gs\');
+  at: #\'IndexedQueryEvaluator\' put: #(\'indexquery.gs\');
+  at: #\'IdentityIndexQueryEvaluator\' put: #(\'identityquery.gs\');
+  at: #\'UnorderedCollection\'
+    put: #(\'unorderedcoll.gs\' \'unorderedcoll2.gs\' \'unorderedcoll3.gs\');
+  at: #\'Object\' put: #(\'object.gs\' \'object2.gs\' \'object3.gs\' \'object4.gs\');
+  at: #\'IndexManager\' put: #(\'IndexManager.gs\');
+  at: #\'RangeEqualityIndex\' put: #(\'rangeindex.gs\');
+  at: #\'RcRangeEqualityIndex\' put: #(\'rcrangeindex.gs\');
+  at: #\'SequenceableCollection\' put: #(\'sequenc.gs\' \'sequenc2.gs\');
+  at: #\'Symbol\' put: #(\'symbol2.gs\' \'symbola.gs\' \'symbol.gs\' \'symbol3.gs\');
+  at: #\'String\' put: #(\'string2.gs\' \'string.gs\' \'string3.gs\');
+  at: #\'Character\' put: #(\'charact.gs\' \'charact2.gs\');
+  at: #\'Stream\' put: #(\'stream2.gs\' \'stream.gs\');
+  at: #\'PositionableStreamPortable\'
+    put: #(\'positioPortable.gs\' \'positioPortable2.gs\');
+  at: #\'UndefinedObject\' put: #(\'undefin2.gs\' \'undefin.gs\' \'undefin3.gs\');
+  yourself.
+{{{\'PetitParser\'}.
+{\'ppclasses.gs\'.
+\'ppmethods.gs\'}}.
+{{\'PPStream\'}.
+{\'ppstream.gs\'. nil}}.
+{{\'Index-Query\'.
+\'Index-Evaluators\'}.
+{\'idxqueryclasses.gs\'.
+\'idxquerymethods.gs\'}}}
+  do: [ :spec | 
+    | pkgList filenames |
+    pkgList := spec at: 1.
+    filenames := spec at: 2.
+    mcTool
+      mcfileout: path
+      packageNames: pkgList
+      definitionsFilename: (filenames at: 1)
+      methodsFilename: (filenames at: 2)
+      classToFilenameMap: classToFilenameMap
+      defaultHeader:
+        \'!=========================================================================
+! Copyright (C) GemTalk Systems, LLC. 2013.  All Rights Reserved.
+!=========================================================================
+
+\' withGemstoneLineEndings ] ]'}

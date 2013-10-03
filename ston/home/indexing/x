@@ -1,7 +1,26 @@
-TDSmalltalkLeafNode{#name:'x',#contents:'| query nsc options |
-nsc := IXFamilyTree createFamily population.
-GsQuery
-  fromString:
-    \'((1 <= each.numberOfChildren) not & (each.numberOfChildren <= 3)) not\'
-  on: nsc
-  options: GsQueryOptions default - GsQueryOptions autoOptimize'}
+TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | 
+| nsc expected1 expected2 expected3 |
+nsc := tokens  size > 1
+  ifTrue: [ (topez lookup: (tokens at: 2)) dotSelfObject ]
+  ifFalse: [ IXQuerySetValuedPathTermTests xxx population ].
+expected1 := IdentitySet new.
+expected2 := IdentitySet new.
+expected3 := IdentitySet new.
+nsc
+  do: [ :each | 
+    each.sons
+      ifNotNil: [ :sons | 
+        sons
+          do: [ :son | 
+            son.numberOfChildren
+              ifNotNil: [ :numberOfChildren | 
+                2 < numberOfChildren
+                  ifTrue: [ 
+                    expected1 add: each.
+                    numberOfChildren <= 4
+                      ifTrue: [ expected2 add: each ] ].
+                numberOfChildren <= 4
+                  ifTrue: [ expected3 add: each ] ] ] ] ].
+{expected1.
+expected2.
+expected3} ]'}

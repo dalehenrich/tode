@@ -1,0 +1,16 @@
+TDScriptLeafNode{#name:'xxx',#contents:'[ :topez :objIn :tokens :windowId | 
+| gsTool path |
+gsTool := topez toolInstanceFor: \'gs\'.
+path := \'/export/foos2/users/dhenrich/3.0/k_gss64bit/junk\'.
+gsTool
+  gsfileout: path
+  classnameFilenamePairs:
+    {{\'GsQuery\'.
+    \'gsquery.gs\'}.
+\t{\'GsQueryTokenParser\'. \'gsquerytokenparser.gs\'}}
+  defaultHeader:
+    \'!=========================================================================
+! Copyright (C) GemTalk Systems, LLC. 2013.  All Rights Reserved.
+!=========================================================================
+
+\' withGemstoneLineEndings ]'}

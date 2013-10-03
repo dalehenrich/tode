@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 6e83ee30cfdfd615bbbfb0393dbdeff14af42c7f
+TDTxtLeafNode{#name:'status',#contents:'commit b3f3fc7dc38f6883ed2aa75e15676aa03c8b0f60
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Sep 17 12:23:59 2013 -0700
+Date:   Wed Oct 2 17:16:23 2013 -0700
 
-    `git mergetool` implemented ... this is a rough cut implementation as TDMerger and TDGitMerger deserve to be ... merged ... there is a fair amount of shared state and behavior ... TDGitMerger is not based on definitions but files whereas TDMerger is based on monticello definitions...
+    `mc fileout` will now file out source to files (classes and methods) or a single file.. make the `gs fileout` command compatible with the gemstone filein process (entails building our own versions of the class-based fileout methods)
 '}

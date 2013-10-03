@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'move UnorderedCollection>>_evaluatorFor:isRangeEqualityOperation: back to GemStone-Indexing-Extensions where it belongs',#runs:RunArray{#runs:[74,28,17],#values:[[],[TextColor{#color:Color{#rgb:0}}],[]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'preparing to push code into gs svn repo ... move RB-related code into Index-Obsolete package ...',#runs:RunArray{#runs:[96],#values:[[]],#lastIndex:86,#lastRun:1,#lastOffset:85}}}

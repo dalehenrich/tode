@@ -1,0 +1,73 @@
+TDScriptLeafNode{#name:'profileQuery',#contents:'[ :topez :objIn :tokens :windowId | 
+| nsc indexSpec query inst pfTool sampleBlock bruteForceBlock elementValueBlock selectBlock profiles repeat |
+\"profile [[indexed|query|brute|element|select|debug]...]\"
+profiles := #(\'query\' \'indexed\' \'brute\' \'element\' ).
+tokens size > 1
+  ifTrue: [ profiles := tokens copyFrom: 2 to: tokens size ].
+nsc := (IXFamilyTree createFamily: 6) population.
+indexSpec := GsIndexSpec new
+  equalityIndex: \'each.sons.*.numberOfChildren\' lastElementClass: Integer;
+  yourself.
+query := (GsQuery fromString: \'2 < each.sons.*.numberOfChildren <= 4\')
+  on: nsc;
+  yourself.
+repeat := 100.
+sampleBlock := [ repeat timesRepeat: [ query asIdentityBag ] ].
+bruteForceBlock := [ 
+| expected |
+repeat
+  timesRepeat: [ 
+    expected := IdentitySet new.
+    nsc
+      do: [ :each | 
+        each.sons
+          ifNotNil: [ :sons | 
+            sons
+              do: [ :son | 
+                son.numberOfChildren
+                  ifNotNil: [ :numberOfChildren | 
+                    2 < numberOfChildren & (numberOfChildren <= 4)
+                      ifTrue: [ expected add: each ] ] ] ] ] ] ].
+elementValueBlock := [ repeat timesRepeat: [ nsc select: [ :each | query elementValue: each ] ] ].
+selectBlock := [ 
+repeat
+  timesRepeat: [ 
+    nsc
+      select: { :each | 
+        \"2 < each.sons.*.numberOfChildren <= 4\"
+        true } ] ].
+pfTool := topez toolInstanceFor: \'pf\'.
+(profiles includes: \'indexed\')
+  ifTrue: [ 
+    [ 
+    indexSpec createIndexesOn: nsc.
+    query optimize.
+    pfTool
+      pfmonitor: sampleBlock;
+      pfview: \'Indexed: \' , nsc size printString;
+      pfclean ]
+      ensure: [ indexSpec removeIndexesFrom: nsc ] ].
+(profiles includes: \'query\')
+  ifTrue: [ 
+    query optimize.
+    pfTool
+      pfmonitor: sampleBlock;
+      pfview: \'Query: \' , nsc size printString;
+      pfclean ].
+(profiles includes: \'brute\')
+  ifTrue: [ 
+    pfTool
+      pfmonitor: bruteForceBlock;
+      pfview: \'Brute force: \' , nsc size printString;
+      pfclean ].
+(profiles includes: \'element\')
+  ifTrue: [ 
+    query bindForElementValue.
+    pfTool
+      pfmonitor: elementValueBlock;
+      pfview: \'Element value: \' , nsc size printString;
+      pfclean ].
+(profiles includes: \'debug\')
+  ifTrue: [ 
+    query bindForElementValue.
+    bruteForceBlock value ] ]'}

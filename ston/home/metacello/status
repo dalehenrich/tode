@@ -1,11 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit d0244879f0ae656d28ae3cf2cc5249525680ede1
-Merge: 21c694b 1d4b3a1
+TDTxtLeafNode{#name:'status',#contents:'commit 52021a7338bc1e26929a1c3099232754e9a7f8bd
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Fri Sep 13 08:30:34 2013 +0200
+Date:   Tue Sep 24 10:07:27 2013 -0700
 
-    Merge branch \'master\' into pharo30_merge
-    
-    Conflicts:
-    \t.travis.yml
-    \trepository/Metacello-TestsMCB.package/monticello.meta/version
+    Issue #202: MetacelloScriptingEnsureLoadedTestCase>>testWarningDuringLoad log package contents ... classes defined in package ... may have to resort to snapshot spelunking?
 '}

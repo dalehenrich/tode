@@ -1,14 +1,24 @@
-TDSmalltalkLeafNode{#name:'xx',#contents:'| query nsc expected intersection |
-nsc := IXFamilyTree createFamily population.
-expected := nsc
-  select: { :each | (1 <= each.numberOfChildren) & (each.numberOfChildren <= 3) }.
-query := \'(1 <= each.numberOfChildren) & (each.numberOfChildren <= 3)\'
-  asCachedQueryOn: nsc.
-query size = expected size
-  ifTrue: [ 
-    | result |
-    result := query select: [ :each | expected includes: each ].
-    result size = expected size.
-    result := expected select: [ :each | query includes: each ].
-    result size = expected size ]
-  ifFalse: [ false ]'}
+TDSmalltalkLeafNode{#name:'xx',#contents:'| nsc indexSpec query inst profMonitor |
+nsc := (IXFamilyTree createFamily: 6) population.
+indexSpec := GsIndexSpec new
+  equalityIndex: \'each.sons.*.numberOfChildren\' lastElementClass: Integer;
+  yourself.
+[ 
+indexSpec createIndexesOn: nsc.
+query := (GsQuery fromString: \'2 < each.sons.*.numberOfChildren <= 4\')
+  on: nsc;
+  optimize;
+  yourself.
+inst := ProfMonitor new.
+inst monitorBlock: [ 100 timesRepeat: [ query asIdentityBag ] ].
+profMonitor := TDProfMonitor new
+  profMonResults: inst results;
+  yourself.
+inst removeResults.
+profMonitor
+  editUsing:
+    ((TDEditorSpec topez: nil topez editorAspect: #\'profMonResults\')
+      windowocation: #\'debugger\';
+      yourself).
+^ profMonitor ]
+  ensure: [ indexSpec removeIndexesFrom: nsc ]'}

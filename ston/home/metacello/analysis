@@ -1,0 +1,25 @@
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'--transcript--\'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [0]: \'
+--transcript--\'Fetched -> ConfigurationOfIssue181-dkh.1 --- cache --- cache\'
+--transcript--\'Loaded -> ConfigurationOfIssue181-dkh.1 --- cache --- cache\'
+--transcript--\'Loading 0.9.1 of ConfigurationOfIssue181...\'
+--transcript--\'Fetched -> BaselineOfExternal-dkh.3 --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository\'
+--transcript--\'Loaded -> BaselineOfExternal-dkh.3 --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository\'
+--transcript--\'Project: External baseline\'
+--transcript--\'Fetched -> External-Core-dkh.5 --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository\'
+--transcript--\'Loaded -> External-Core-dkh.5 --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository --- cache\'
+--transcript--\'...finished 0.9.1\'
+--transcript--\'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [1]: 0\'
+--transcript--\'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [2]: \'
+
+=============================================
+
+--transcript--\'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [0]: \'
+--transcript--\'Fetched -> ConfigurationOfIssue181-dkh.1 --- cache --- cache\'
+--transcript--\'Loaded -> ConfigurationOfIssue181-dkh.1 --- cache --- cache\'
+--transcript--\'Loading 0.9.1 of ConfigurationOfIssue181...\'
+--transcript--\'Fetched -> BaselineOfExternal-dkh.3 --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository\'
+--transcript--\'Loaded -> BaselineOfExternal-dkh.3 --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository --- github://dalehenrich/external:1ac58502ade7814e1590f71d615cca434b1a4fd5/repository\'
+--transcript--\'Project: External baseline\'
+--transcript--\'...finished 0.9.1\'
+--transcript--\'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [1]: 0\'
+--transcript--\'Missing class: ExternalCore\'',#runs:RunArray{#runs:[2323],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
