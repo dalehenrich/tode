@@ -4,4 +4,4 @@ stonContents: aSTONString
   directoryEntry := self directoryEntry.
   directoryEntry sourceDirectory
     forceNewFileNamed: directoryEntry name
-    do: [ :fileStream | ^ fileStream nextPutAll: (STON fromString: aSTONString) ]
+    do: [ :fileStream | fileStream nextPutAll: (STON fromString: aSTONString) asString ]
