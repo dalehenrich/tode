@@ -1,0 +1,68 @@
+! expect a .topazini
+login
+
+iferr 1 stack
+
+!
+! Upgrade to GLASS 1.0-beta.9
+!
+run
+ConfigurationOfGLASS project updateProject.
+GsDeployer deploy: [ (ConfigurationOfGLASS project version: '1.0-beta.9.1') load ].
+%
+
+commit
+errorCount
+
+!
+! Install most recent Metacello
+!
+run
+[
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:issue_196/repository';
+  load: 'ALL'.
+  ] on: Warning
+    do: [:ex | 
+      Transcript cr; show: ex description.
+      ex resume].
+%
+commit
+errorCount
+
+!
+! Install GLASS1
+!
+run
+Metacello new
+  baseline: 'GLASS1';
+  repository: 'github://glassdb/glass:master/repository';
+  onConflict: [ :ex | ex allow ];
+  onWarning: [ :ex | 
+        Transcript
+          cr;
+          show: ex description.
+        ex resume ];
+  load: 'default'.
+%
+!
+! Install tode
+!
+run
+Metacello new
+    baseline: 'Tode';
+    repository: 'github://dalehenrich/tode:master/repository';
+    load: 'GemStone'.
+%
+commit
+errorCount
+
+run
+| stonTool topez |
+topez := TDTopezServer for: 0.
+stonTool := topez toolInstanceFor: 'ston'.
+stonTool stonImportFrom: '/opt/git/tode/ston/home.ston' to: (topez lookup: '/').
+%
+commit
+errorCount
