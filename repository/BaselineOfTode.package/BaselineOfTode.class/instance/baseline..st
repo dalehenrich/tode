@@ -71,6 +71,13 @@ baseline: spec
         group: 'Pharo Dev' with: #('Pharo' 'Common Tests');
         yourself ].
   spec
+    for: #'pharo1.4.x'
+    do: [       
+		spec 
+			package: 'Topez-Pharo-Common' with: [spec includes: 'Tode-Pharo14'];
+		 	package: 'Tode-Pharo14' with: [spec requires: 'Topez-Pharo-Common'];
+			yourself].
+  spec
     for: #'gemstone'
     do: [ 
       spec
