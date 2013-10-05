@@ -1,0 +1,27 @@
+TDScriptLeafNode{#name:'profileRemoveIndexes',#contents:'[ :topez :objIn :tokens :windowId | 
+| nsc indexSpec query inst pfTool sampleBlock profiles repeat nscList |
+\"profile [[indexed]...]\"
+profiles := #(\'indexed\').
+tokens size > 1
+  ifTrue: [ profiles := tokens copyFrom: 2 to: tokens size ].
+nsc := (IXFamilyTree createFamily: 6) population.
+indexSpec := GsIndexSpec new
+  equalityIndex: \'each.sons.*.numberOfChildren\' lastElementClass: Integer;
+  yourself.
+query := (GsQuery fromString: \'2 < each.sons.*.numberOfChildren <= 4\')
+  on: nsc;
+  yourself.
+repeat := 10.
+nscList := {}.
+repeat timesRepeat: [ nscList add: nsc copy ].
+nscList do: [ :each | indexSpec createIndexesOn: each ].
+sampleBlock := [ nscList do: [ :each | indexSpec removeIndexesFrom: each ] ].
+pfTool := topez toolInstanceFor: \'pf\'.
+[ 
+indexSpec createIndexesOn: nsc.
+query optimize.
+pfTool
+  pfmonitor: sampleBlock;
+  pfview: \'Indexed: \' , nsc size printString;
+  pfclean ]
+  ensure: [ nscList do: [ :each | each _hasIndexes ifTrue: [ indexSpec removeIndexesFrom: each ]] ] ]'}

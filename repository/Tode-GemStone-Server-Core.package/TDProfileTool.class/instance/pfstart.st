@@ -3,7 +3,7 @@ pfstart
   "pf start"
 
   | profMon |
-  self clean.
+  self pfclean.
   profMon := ProfMonitor new.
   self class profMonitor: profMon.
   profMon startMonitoring

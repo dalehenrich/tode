@@ -1,9 +1,0 @@
-{
-	"class" : {
-		"isAbstract" : "DataCurator 01/21/2013 16:52" },
-	"instance" : {
-		"dsDisplayFor:level:" : "DataCurator 02/01/2013 17:00",
-		"executeNodeBuilderLookupSpecs:" : "DataCurator 01/26/2013 22:37",
-		"executeNodeBuilderSpecs:" : "DataCurator 01/24/2013 22:50",
-		"executeWindowBuilderLookupSpecs:" : "DataCurator 01/26/2013 22:32",
-		"executeWindowBuilderSpecs:" : "dkh 09/01/2013 07:11" } }

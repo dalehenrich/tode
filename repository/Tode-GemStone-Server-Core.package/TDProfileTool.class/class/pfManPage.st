@@ -9,6 +9,7 @@ SYNOPSIS
   pf stop
   pf gather
   pf report [<tally>]
+  pf vew [<window-label>]
   pf clean
 
 DESCRIPTION

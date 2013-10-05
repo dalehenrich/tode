@@ -1,5 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdOAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-o - step over"
-
-  self object debugTool dbover
+  ^ self dbStepOverMenuAction: listElement selectionIndex: selectionIndex

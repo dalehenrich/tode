@@ -7,6 +7,7 @@ SYNOPSIS
   mm commit <config> [@<commit-message-path>]
   mm diff [ <config-name> [all|dirty] ]
   mm dirty
+  mm fileout <directory-path> <config-name>
 ?  mm get [image|new|registry] <config> [<config> ... ]
   mm list [<config> [<config> ... ]]
   mm locked

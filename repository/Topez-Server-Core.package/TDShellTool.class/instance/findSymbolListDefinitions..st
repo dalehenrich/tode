@@ -2,5 +2,5 @@ as yet unclassified
 findSymbolListDefinitions: symbolListName
   "find symbolListName <category-name>"
 
-  ^ (TDSymbolDictionaryDefinition new symbolListNameName: symbolListNameName)
+  ^ (TDSymbolDictionaryDefinition new symbolListNameName: symbolListName)
     classDefinitions

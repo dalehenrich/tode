@@ -1,9 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"expectedFailures" : "DataCurator 01/24/2013 09:24",
-		"stack" : "dkh 01/23/2013 14:50",
-		"testNodeLookup" : "DataCurator 01/26/2013 22:33",
-		"testNodeView" : "dkh 04/09/2013 15:41",
-		"testWindowLookup" : "dkh 06/01/2013 10:40" } }

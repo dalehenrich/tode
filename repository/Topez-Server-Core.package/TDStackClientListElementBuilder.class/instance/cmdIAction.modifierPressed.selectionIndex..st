@@ -1,5 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdIAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-i - step into"
-
-  self object debugTool dbinto
+  ^ self dbStepIntoMenuAction: listElement selectionIndex: selectionIndex

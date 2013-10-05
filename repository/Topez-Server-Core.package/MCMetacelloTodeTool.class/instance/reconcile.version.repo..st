@@ -27,7 +27,9 @@ reconcile: configurationClass version: versionString repo: repo
   changed := newVersions copy.
   changed removeAllFoundIn: added.
   filtered := added
-    reject: [ :resolved | resolved name beginsWith: 'BaselineOf' ].
+    reject: [ :resolved | 
+      (resolved name beginsWith: 'BaselineOf')
+        or: [ resolved name beginsWith: 'Metacello-Cypress' ] ].
   filtered isEmpty
     ifFalse: [ filtered asArray error: 'Added packages' ].
   removed isEmpty

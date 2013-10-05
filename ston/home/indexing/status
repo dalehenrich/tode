@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 740425ea224058c1560934467eebd5d5fc64b93d
+TDTxtLeafNode{#name:'status',#contents:'commit bd5eb87919c4284af8f3fccf1bc544b1ba1581b4
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Thu Aug 29 21:14:25 2013 -0700
+Date:   Mon Sep 30 17:02:18 2013 -0700
 
-    move UnorderedCollection>>_evaluatorFor:isRangeEqualityOperation: back to GemStone-Indexing-Extensions where it belongs
+    preparing to push code into gs svn repo ... move RB-related code into Index-Obsolete package ...
 '}

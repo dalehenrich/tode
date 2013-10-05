@@ -1,4 +1,4 @@
-as yet unclassified
+keyboard actions
 codePointMap
   "
 []	CMD-B - browse class hierarchy

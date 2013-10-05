@@ -1,0 +1,15 @@
+TDScriptLeafNode{#name:'run',#contents:'[ :topez :objIn :tokens :windowId | 
+| expected nsc |
+nsc := (topez lookup: (tokens at: 2)) dotSelfObject.
+expected := IdentitySet new.
+nsc
+  do: [ :each | 
+    each.sons
+      ifNotNil: [ :sons | 
+        sons
+          do: [ :son | 
+            son.numberOfChildren
+              ifNotNil: [ :numberOfChildren | 
+                2 < numberOfChildren & (numberOfChildren <= 4)
+                  ifTrue: [ expected add: each ] ] ] ] ].
+expected ]'}

@@ -1,8 +1,7 @@
 as yet unclassified
 selectedDefinition: listElement selectionIndex: selectionIndex
-  | itemAttribute className def |
+  | itemAttribute |
   selectionIndex == 0
     ifTrue: [ ^ nil ].
   itemAttribute := listElement itemCache at: selectionIndex.
-  className := itemAttribute object.
-  ^ TDClassDefinition className: className
+  ^ itemAttribute object

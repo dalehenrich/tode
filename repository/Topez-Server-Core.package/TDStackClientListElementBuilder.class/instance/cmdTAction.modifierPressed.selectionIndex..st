@@ -1,5 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdTAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-t - step thru"
-
-  self object debugTool dbthru
+  ^ self dbStepThruMenuAction: listElement selectionIndex: selectionIndex

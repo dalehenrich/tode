@@ -1,3 +1,5 @@
 as yet unclassified
 elementSource
-  ^ self theBehavior sourceCodeAt: self selector
+  ^ self isMethodForBlock
+    ifTrue: [ self object sourceString ]
+    ifFalse: [ self theBehavior sourceCodeAt: self selector ]

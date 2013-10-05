@@ -4,13 +4,13 @@ clientList: listElement
   items := OrderedCollection new.
   ar := OrderedCollection new.
   self
-    classHierarchy: [ :className :indents | 
+    classHierarchy: [ :classDef :indents | 
       | defs methodDefs |
-      defs := classMap at: className.
+      defs := classMap at: classDef className.
       (defs at: 1)
-        ifNotNil: [ :classDef | 
-          classDef
-            addToClientListFor: className
+        ifNotNil: [ :def | 
+          def
+            addToClientListFor: classDef
             names: ar
             items: items
             indents: indents
@@ -19,7 +19,7 @@ clientList: listElement
       methodDefs
         do: [ :methodDef | 
           methodDef
-            addToClientListFor: className
+            addToClientListFor: classDef
             names: ar
             items: items
             indents: indents

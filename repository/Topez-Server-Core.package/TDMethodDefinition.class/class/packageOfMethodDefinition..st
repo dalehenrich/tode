@@ -5,7 +5,7 @@ packageOfMethodDefinition: aMethodDefinition
   selector := aMethodDefinition selector.
   packageName := cls categoryOfSelector: selector.
   (packageName beginsWith: '*')
-    ifFalse: [ ^ aMethodDefinition asClassDefinition packageOf ].
+    ifFalse: [ ^ aMethodDefinition asTDClassDefinition packageOf ].
   ^ TDPackageList current definitionList
     detect: [ :def | self category: packageName matches: def packageName ]
     ifNone: [ nil ]

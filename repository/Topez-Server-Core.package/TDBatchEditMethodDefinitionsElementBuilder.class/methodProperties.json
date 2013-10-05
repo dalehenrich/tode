@@ -2,6 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"cmdGAction:modifierPressed:selectionIndex:" : "dkh 08/15/2013 07:44",
-		"cmdJAction:modifierPressed:selectionIndex:" : "dkh 08/15/2013 07:44",
-		"definitions" : "dkh 08/14/2013 17:42" } }
+		"batchMenuActionSpec" : "dkh 10/01/2013 06:54",
+		"cmdGAction:modifierPressed:selectionIndex:" : "dkh 10/01/2013 07:17",
+		"cmdJAction:modifierPressed:selectionIndex:" : "dkh 10/01/2013 07:18",
+		"definitions" : "dkh 08/14/2013 17:42",
+		"menuActionSpec" : "dkh 09/29/2013 13:50",
+		"nextMatchMenuAction:selectionIndex:" : "dkh 10/01/2013 06:55",
+		"performReplaceMenuAction:selectionIndex:" : "dkh 10/01/2013 06:56" } }

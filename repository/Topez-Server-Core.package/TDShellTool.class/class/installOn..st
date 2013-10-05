@@ -63,6 +63,18 @@ installOn: aTDTopezServer
     registerBuilderClass: TDCharacterNodeBuilder
       for: Character
       aspect: #'inspect';
+    registerBuilderClass: TDCollectionNodeBuilder
+      for: Collection
+      aspect: #'view';
+    registerBuilderClass: TDCollectionNodeBuilder
+      for: Collection
+      aspect: #'inspect';
+    registerBuilderClass: TDUnorderedCollectionNodeBuilder
+      for: UnorderedCollection
+      aspect: #'view';
+    registerBuilderClass: TDUnorderedCollectionNodeBuilder
+      for: UnorderedCollection
+      aspect: #'inspect';
     registerEditorClass: TDClientObjectElementBuilder
       for: Object
       aspect: #'navigate';
@@ -82,16 +94,19 @@ installOn: aTDTopezServer
       for: TDDefinitionList
       aspect: #'definitionList';
     registerEditorClass: TDClassHierarchyListElementBuilder
-      for: Behavior
+      for: TDClassDefinition
       aspect: #'hierarchyList';
     registerEditorClass: TDClassSelectorListElementBuilder
-      for: Behavior
+      for: TDClassDefinition
       aspect: #'classSelectors';
     registerEditorClass: TDClassSelectorListElementBuilder
-      for: Behavior
+      for: TDClassDefinition
       aspect: #'instanceSelectors';
     registerEditorClass: TDClassDefinitionClientElementBuilder
       for: Class
+      aspect: #'classDefinition';
+    registerEditorClass: TDClassDefinitionClientElementBuilder
+      for: TDClassDefinition
       aspect: #'classDefinition';
     registerEditorClass: TDClassHistorySelectorListElementBuilder
       for: Behavior

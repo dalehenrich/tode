@@ -4,6 +4,7 @@ gsManPage
   gs - execute gemstone commands
 
 SYNOPSIS
+  gs fileout <directory-path> <class-name> <filename> [ <class-name> <filename> ... ] 
   gs instances <className>
      instances @<class-path>
   gs dataDir

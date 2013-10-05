@@ -1,8 +1,7 @@
 as yet unclassified
 theBehavior
-  | beh cl |
-  beh := self object.
-  cl := Smalltalk classNamed: beh theNonMetaClass name.
-  beh isMeta
+  | cl |
+  cl := self theClass.
+  self isMeta
     ifTrue: [ cl := cl class ].
   ^ cl

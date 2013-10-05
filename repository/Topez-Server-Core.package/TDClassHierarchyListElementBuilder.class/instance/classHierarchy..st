@@ -1,10 +1,10 @@
 as yet unclassified
 classHierarchy: elementBlock
-  self baseClassNamesList size = 1
+  self baseClassDefinitionList size = 1
     ifTrue: [ 
-      | className |
-      className := self baseClassNamesList first.
-      selectedClass := Smalltalk classNamed: className ].
+      | classDef |
+      classDef := self baseClassDefinitionList first.
+      selectedClass := classDef theClass ].
   TDClassDefinition
-    processClassNamesBlock: [ self classNamesList ]
+    processClassDefinitionsBlock: [ self classDefinitionList ]
     elementBlock: elementBlock

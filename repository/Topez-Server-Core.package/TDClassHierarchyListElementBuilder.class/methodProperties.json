@@ -2,16 +2,18 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baseClassNamesList" : "dkh 03/24/2013 09:50",
-		"classHierarchy:" : "dkh 03/24/2013 09:53",
-		"classNamesList" : "dkh 03/24/2013 09:53",
-		"clientList:" : "dkh 05/28/2013 14:00",
-		"cmdBAction:modifierPressed:selectionIndex:" : "dkh 04/11/2013 14:43",
-		"cmdCAction:modifierPressed:selectionIndex:" : "DataCurator 02/09/2013 07:33",
-		"cmdVAction:modifierPressed:selectionIndex:" : "DataCurator 02/09/2013 07:31",
-		"cmdXAction:modifierPressed:selectionIndex:" : "DataCurator 02/09/2013 07:30",
+		"baseClassDefinitionList" : "dkh 10/05/2013 11:34",
+		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 10/05/2013 11:34",
+		"classDefinitionList" : "dkh 10/05/2013 11:34",
+		"classHierarchy:" : "dkh 10/05/2013 11:34",
+		"clientList:" : "dkh 10/05/2013 11:34",
+		"copyObjectMenuAction:selectionIndex:" : "dkh 10/05/2013 11:34",
+		"cutObjectMenuAction:selectionIndex:" : "dkh 10/05/2013 11:34",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:13",
 		"editorWindowLabel" : "DataCurator 01/25/2013 02:03",
-		"itemSelected:at:shiftPressed:" : "dkh 06/01/2013 10:34",
+		"itemSelected:at:shiftPressed:" : "dkh 10/05/2013 11:34",
+		"menuActionSpec" : "dkh 09/29/2013 13:40",
+		"objectMenuActionSpec" : "dkh 09/30/2013 21:11",
+		"pasteObjectMenuAction:selectionIndex:" : "dkh 10/05/2013 11:34",
 		"selectedClass:selectionIndex:" : "DataCurator 02/07/2013 14:30",
-		"selectedDefinition:selectionIndex:" : "DataCurator 02/07/2013 14:17" } }
+		"selectedDefinition:selectionIndex:" : "dkh 10/05/2013 11:34" } }

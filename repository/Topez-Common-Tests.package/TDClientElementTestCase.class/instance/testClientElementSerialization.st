@@ -14,6 +14,8 @@ testClientElementSerialization
     editorWindowLocation: #'editorWindowLocation';
     editorWindowName: #'editorWindowName';
     keyboardEventBlockOop: #'keyboardEventBlockOop';
+    menuActionBlockOop: #'menuActionBlockOop';
+    menuActionSpec: #'menuActionSpec';
     cmdKeyCodePoints: #'cmdKeyCodePoints';
     windowBuilder: #'windowBuilder';
     yourself.

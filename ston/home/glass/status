@@ -1,12 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 6f7c578d1effe05b442aba1d07a9a93974de9db4
+TDTxtLeafNode{#name:'status',#contents:'commit 8143cdb11bef177419cca642be4c8fe24d0f47dc
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Sep 3 14:55:38 2013 -0700
+Date:   Tue Sep 17 06:29:47 2013 -0700
 
-    work to improve definition diff capabilities:
-    
-    Add UseTimeStampInComparisons class var to MCMethodDefinition to control whether or not the method timeStamp is significant or not during equality comparisons.
-    
-    useful printString defined for MCConflict>>printOn:.
-    
-    use #trimBoth on source in MCMethodDefinition>>= ... no need to generate diffs because of trailing separators.
+    fiddle with the Sport package some more
 '}

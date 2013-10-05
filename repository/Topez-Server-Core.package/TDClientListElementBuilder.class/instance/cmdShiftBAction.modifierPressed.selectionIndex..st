@@ -1,13 +1,5 @@
-as yet unclassified
+keyboard actions
 cmdShiftBAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
   "CMD-B - browse class hierarchy"
 
-  | cls |
-  cls := self selectedClass: listElement selectionIndex: selectionIndex.
-  cls
-    editUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'hierarchyList')
-        parentObject: listElement parent;
-        windowName: #'hierarchy';
-        yourself).
-  ^ true
+  ^ self browseFullClassMenuAction: listElement selectionIndex: selectionIndex

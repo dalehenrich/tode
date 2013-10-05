@@ -1,0 +1,20 @@
+TDScriptLeafNode{#name:'test',#contents:'[ :topez :objIn :tokens :windowId | 
+| switch testTool tsTool |
+\"test [class|project|run]\"
+switch := \'project\'.
+tokens size > 1
+  ifTrue: [ switch := tokens at: 2 ].
+testTool := topez toolInstanceFor: \'test\'.
+tsTool := topez toolInstanceFor: \'ts\'.
+switch = \'project\'
+  ifTrue: [ testTool testproject: \'Indexing\' ].
+switch = \'class\'
+  ifTrue: [ 
+    false
+      ifTrue: [ testTool testclass: #(\'GsQueryParserTests\' \'GsQueryGrammarTests\') ]
+      ifFalse: [ testTool testclass: #(\'IXQuerySetValuedPathTermTests\') ] ].
+switch = \'run\'
+  ifTrue: [ tsTool tsrun: \'IXQuerySetValuedPathTermTests>>testIndexedQuery2\' ]
+  ifFalse: [ 
+    tsTool tslist: #(\'errors\' \'failures\') openEditor: true.
+    tsTool testSummary ] ]'}

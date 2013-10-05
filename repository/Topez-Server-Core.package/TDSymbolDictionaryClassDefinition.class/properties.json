@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"symbolDictionary" ],
+	"name" : "TDSymbolDictionaryClassDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDClassDefinition",
+	"type" : "normal" }

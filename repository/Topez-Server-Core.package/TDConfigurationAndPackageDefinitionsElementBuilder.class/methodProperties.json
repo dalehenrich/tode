@@ -2,14 +2,19 @@
 	"class" : {
 		 },
 	"instance" : {
+		"browseFullClassMenuAction:selectionIndex:" : "dkh 09/30/2013 21:24",
+		"browsePackageOrConfigurationMenuAction:selectionIndex:" : "dkh 10/01/2013 07:12",
+		"browsePackageOrConfigurationTestsMenuAction:selectionIndex:" : "dkh 10/01/2013 07:13",
+		"browseReferencesMenuAction:selectionIndex:" : "dkh 10/01/2013 07:11",
 		"clientList:" : "dkh 05/28/2013 14:01",
-		"cmdCAction:modifierPressed:selectionIndex:" : "DataCurator 02/09/2013 07:33",
-		"cmdShiftBAction:modifierPressed:selectionIndex:" : "DataCurator 02/06/2013 00:57",
-		"cmdShiftEAction:modifierPressed:selectionIndex:" : "dkh 04/11/2013 14:44",
-		"cmdShiftNAction:modifierPressed:selectionIndex:" : "DataCurator 02/07/2013 13:58",
-		"cmdShiftTAction:modifierPressed:selectionIndex:" : "dkh 04/11/2013 14:44",
-		"cmdVAction:modifierPressed:selectionIndex:" : "DataCurator 02/09/2013 07:33",
+		"cmdShiftEAction:modifierPressed:selectionIndex:" : "dkh 10/01/2013 07:28",
+		"cmdShiftTAction:modifierPressed:selectionIndex:" : "dkh 10/01/2013 07:29",
+		"copyObjectMenuAction:selectionIndex:" : "dkh 10/01/2013 07:07",
+		"editMenuActionSpec" : "dkh 09/30/2013 21:13",
 		"editorWindowLabel" : "dkh 02/05/2013 13:43",
 		"editorWindowLocation" : "dkh 02/05/2013 13:43",
 		"editorWindowName" : "dkh 02/05/2013 13:43",
-		"itemSelected:at:shiftPressed:" : "DataCurator 02/05/2013 15:13" } }
+		"itemSelected:at:shiftPressed:" : "DataCurator 02/05/2013 15:13",
+		"menuActionSpec" : "dkh 10/01/2013 07:12",
+		"objectMenuActionSpec" : "dkh 09/30/2013 21:11",
+		"pasteObjectMenuAction:selectionIndex:" : "dkh 10/01/2013 07:09" } }

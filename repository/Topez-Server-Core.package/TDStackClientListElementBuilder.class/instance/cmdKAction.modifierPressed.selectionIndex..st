@@ -1,5 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdKAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-k - db up"
-
-  self object debugTool dbup
+  ^ self dbUpMenuAction: listElement selectionIndex: selectionIndex

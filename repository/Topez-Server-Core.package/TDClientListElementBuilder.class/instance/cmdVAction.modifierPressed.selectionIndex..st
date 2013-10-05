@@ -1,5 +1,3 @@
-as yet unclassified
+keyboard actions
 cmdVAction: listElement modifierPressed: modifierPressed selectionIndex: selectionIndex
-  "CMD-v - paste object"
-
-  ^ false
+  ^ self pasteObjectMenuAction: listElement selectionIndex: selectionIndex
