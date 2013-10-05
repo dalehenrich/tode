@@ -1,1 +1,25 @@
-TDTxtLeafNode{#name:'analysis',#contents:nil}
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'  #1 [289256449 sz:39  String] IndexUnitTest debug: #testBasicPathTerm
+  #2 [289255937 sz:43  String] IndexUnitTest debug: #testSessionAutoCommit
+
+/home/tests/suite/-> [662854657 sz:3 TestSuite] anOrderedCollection( \'IndexUnitTest\') tests
+/home/tests/result/ ([662855681 sz:3 TestResult] 63 run, 63 passes, 0 expected defects, 0 failures, 0 errors, 0 unexpected passes):
+
+BUT:
+
+tode 1 > ts run IndexUnitTest>>testBasicPathTerm
+a ResumableTestFailure occurred (error 2702), 
+
+I think that GsTestCases must throw different exceptions or something ...
+
+
+  #1 [31342593 sz:19 cls: 74753 String] addSegment:logging:
+  #2 [31342081 sz:33 cls: 74753 String] auditDirectObject:occurrences:on:
+  #3 [31341569 sz:16 cls: 74753 String] cacheQueryResult
+  #4 [31341057 sz:7 cls: 74753 String] expect:
+  #5 [31340545 sz:14 cls: 74753 String] fromString:on:
+  #6 [31340033 sz:22 cls: 74753 String] fromString:on:options:
+  #7 [31339521 sz:19 cls: 74753 String] fromString:options:
+  #8 [31339009 sz:5 cls: 74753 String] specs
+  #9 [31338497 sz:22 cls: 74753 String] subclassResponsibility
+  #10 [31337985 sz:40 cls: 74753 String] _findAllValuesThroughSetsNotIdenticalTo:
+',#runs:RunArray{#runs:[147,18,19,9,2,43,1,19,18,10,2,80,10,8,1,7,33,46,1,77,606],#values:[[TextColor{#color:Color{#rgb:0}}],[TextEmphasis{#emphasisCode:0,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}],[TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}],[TextColor{#color:Color{#rgb:1023}}],[TextColor{#color:Color{#rgb:0}}],[TextEmphasis{#emphasisCode:0,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}],[TextEmphasis{#emphasisCode:1,#setMode:true}],[TextEmphasis{#emphasisCode:0,#setMode:true}],[TextColor{#color:@20}],[TextEmphasis{#emphasisCode:0,#setMode:true}],[TextColor{#color:Color{#rgb:537395712}}],[TextEmphasis{#emphasisCode:0,#setMode:true}],[TextColor{#color:Color{#rgb:644035584}}],[TextColor{#color:Color{#rgb:0}}],[TextEmphasis{#emphasisCode:2,#setMode:true},TextEmphasis{#emphasisCode:1,#setMode:true}],[TextColor{#color:@47}],[@36],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}

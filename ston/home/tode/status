@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit b3f3fc7dc38f6883ed2aa75e15676aa03c8b0f60
+TDTxtLeafNode{#name:'status',#contents:'commit 1e19eda0b30c7cfa531737c0b30afa0b106e6f9f
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Wed Oct 2 17:16:23 2013 -0700
+Date:   Sat Oct 5 15:39:54 2013 -0700
 
-    `mc fileout` will now file out source to files (classes and methods) or a single file.. make the `gs fileout` command compatible with the gemstone filein process (entails building our own versions of the class-based fileout methods)
+    address test failure: TDClientElementTestCase>>testClientElementSerialization ... update MCMetacelloTodeTool implementation and ignore \'Metacello-Cypress\' package for ConfigurationOfMetacello ...
 '}
