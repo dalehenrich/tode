@@ -1,6 +1,7 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 1e19eda0b30c7cfa531737c0b30afa0b106e6f9f
+TDTxtLeafNode{#name:'status',#contents:'commit e36527bdc003b0afbeb4bd043e1decebb7bf0034
+Merge: 1e19eda f4da2b6
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sat Oct 5 15:39:54 2013 -0700
+Date:   Sat Oct 5 15:41:04 2013 -0700
 
-    address test failure: TDClientElementTestCase>>testClientElementSerialization ... update MCMetacelloTodeTool implementation and ignore \'Metacello-Cypress\' package for ConfigurationOfMetacello ...
+    Merge branch \'issue_28\' of github.com:dalehenrich/tode into issue_28
 '}
