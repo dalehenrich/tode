@@ -4,7 +4,7 @@ browseClassDefinitionMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex == 0
     ifTrue: [ ^ false ].
   itemAttribute := listElement itemCache at: selectionIndex.
-  def := itemAttribute object asClassDefinition.
+  def := itemAttribute object asTDClassDefinition.
   {def}
     editUsing:
       (TDEditorSpec topez: listElement topez editorAspect: #'definitionList').

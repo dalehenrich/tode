@@ -1,10 +1,11 @@
 as yet unclassified
-addToClientListFor: clsName names: nameList items: items indents: indents aspect: aspect
+addToClientListFor: clsDef names: nameList items: items indents: indents aspect: aspect
   | space meths |
   space := ''.
-  (indents at: clsName) timesRepeat: [ space := space , ' ' ].
+  (indents at: clsDef) timesRepeat: [ space := space , ' ' ].
   nameList
-    add: (Text string: space , clsName asString attribute: TextEmphasis italic).
+    add:
+      (Text string: space , clsDef className asString attribute: TextEmphasis italic).
   items
     add: (TDClientListItemAttributes object: self parent: nil aspect: aspect).
   space := space , '  '.

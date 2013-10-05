@@ -1,13 +1,13 @@
 as yet unclassified
-baseClassNamesList
-  | classes |
+baseClassDefinitionList
+  | classDefs |
   classMap := Dictionary new.
-  classes := IdentitySet new.
+  classDefs := Set new.
   self definitions
     do: [ :def | 
       (classMap
         at: def theClassName
         ifAbsent: [ classMap at: def theClassName put: OrderedCollection new ])
         add: def.
-      classes add: def theClassName ].
-  ^ classes asArray
+      classDefs add: def asTDClassDefinition ].
+  ^ classDefs asArray

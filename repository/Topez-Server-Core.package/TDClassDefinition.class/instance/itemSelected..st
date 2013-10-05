@@ -1,8 +1,6 @@
 as yet unclassified
 itemSelected: topez
-  | cl |
-  cl := Smalltalk classNamed: self theClassName.
-  cl
+  self asTDClassDefinition
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'hierarchyList')
         windowName: #'hierarchy';

@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 10/01/2013 06:59",
+		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 10/05/2013 09:55",
 		"browseImplementorsMenuAction:selectionIndex:" : "dkh 10/01/2013 06:59",
 		"browseSendersMenuAction:selectionIndex:" : "dkh 10/01/2013 07:00",
 		"clientList:" : "dkh 09/22/2013 11:37",
@@ -16,12 +16,13 @@
 		"editorWindowLabel" : "DataCurator 01/27/2013 01:34",
 		"enableProtocol" : "dkh 09/22/2013 11:36",
 		"enableProtocol:" : "dkh 09/22/2013 11:37",
+		"isMeta" : "dkh 10/05/2013 10:29",
 		"itemSelected:at:shiftPressed:" : "dkh 09/22/2013 10:52",
 		"menuActionSpec" : "dkh 10/01/2013 07:03",
-		"methodDefinitionFor:" : "dkh 09/22/2013 11:55",
+		"methodDefinitionFor:" : "dkh 10/05/2013 10:32",
 		"newMethodTemplateMenuAction:selectionIndex:" : "dkh 10/01/2013 07:03",
 		"objectMenuActionSpec" : "dkh 09/30/2013 21:11",
 		"pasteObjectMenuAction:selectionIndex:" : "dkh 10/01/2013 07:00",
-		"theBehavior" : "DataCurator 01/27/2013 01:24",
-		"theClass" : "DataCurator 01/27/2013 01:31",
+		"theBehavior" : "dkh 10/05/2013 10:29",
+		"theClass" : "dkh 10/05/2013 10:09",
 		"toggleEnableProtocolMenuAction:selectionIndex:" : "dkh 10/01/2013 07:04" } }

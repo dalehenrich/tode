@@ -4,13 +4,13 @@ clientList: listElement
   items := OrderedCollection new.
   ar := OrderedCollection new.
   self
-    classHierarchy: [ :className :indents | 
+    classHierarchy: [ :classDef :indents | 
       | stream cl |
-      cl := Smalltalk classNamed: className.
+      cl := classDef theClass.
       stream := WriteStream on: String new.
       stream
-        space: (indents at: className);
-        nextPutAll: className asString.
+        space: (indents at: classDef);
+        nextPutAll: classDef className asString.
       stream contents.
       ar add: stream contents asText allBold.
       selectedClass == cl
@@ -18,7 +18,7 @@ clientList: listElement
       items
         add:
           (TDClientListItemAttributes
-            object: className
+            object: classDef
             parent: nil
             aspect: listElement aspect) ].
   listElement ~~ nil

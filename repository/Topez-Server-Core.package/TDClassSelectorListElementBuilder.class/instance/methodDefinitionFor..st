@@ -1,6 +1,5 @@
 as yet unclassified
 methodDefinitionFor: selector
-  ^ TDMethodDefinition
-    className: self theClass name
-    isMeta: self theBehavior isMeta
-    selector: selector
+  ^ self object asTDClassDefinition
+    methodDefinitionFor: selector
+    isMeta: self isMeta

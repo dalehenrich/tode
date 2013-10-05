@@ -1,3 +1,3 @@
 as yet unclassified
-asClassDefinition
+asTDClassDefinition
   ^ self

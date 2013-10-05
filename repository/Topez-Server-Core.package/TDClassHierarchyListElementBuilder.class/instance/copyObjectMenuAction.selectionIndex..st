@@ -1,9 +1,8 @@
 menu actions
 copyObjectMenuAction: listElement selectionIndex: selectionIndex
-  | itemAttribute className def |
+  | itemAttribute def |
   itemAttribute := listElement itemCache at: selectionIndex.
-  className := itemAttribute object.
-  def := TDClassDefinition className: className.
+  def := itemAttribute object.
   self objectClipboard: def.
   listElement topez commitTransaction.
   ^ STON

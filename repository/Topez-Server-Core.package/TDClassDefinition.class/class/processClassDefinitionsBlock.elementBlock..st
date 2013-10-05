@@ -1,6 +1,6 @@
 as yet unclassified
-processClassNamesBlock: classNamesesBlock elementBlock: elementBlock
-  | order classNames indents results classes |
+processClassDefinitionsBlock: classDefinitionsBlock elementBlock: elementBlock
+  | order classDefinitions indents results classes |
   order := SortedCollection
     sortBlock: [ :assoc1 :assoc2 | 
       | result chain1 chain2 max i |
@@ -17,28 +17,31 @@ processClassNamesBlock: classNamesesBlock elementBlock: elementBlock
       result isNil
         ifTrue: [ chain1 size < chain2 size ]
         ifFalse: [ result ] ].
-  classNames := classNamesesBlock value.
-  classes := (classNames
-    collect: [ :className | Smalltalk at: className asSymbol ifAbsent: [  ] ])
+  classDefinitions := classDefinitionsBlock value.
+  classes := (classDefinitions collect: [ :classDef | classDef theClass ])
     reject: [ :cl | cl isNil ].
-  classNames
-    do: [ :className | 
+  classDefinitions
+    do: [ :classDef | 
       | supersChain |
-      supersChain := {className}.
-      (Smalltalk at: className asSymbol ifAbsent: [  ])
+      supersChain := {classDef}.
+      classDef theClass
         ifNotNil: [ :cl | 
           supersChain := cl withAllSuperclasses reversed.
           supersChain
-            removeAllSuchThat: [ :class | (classes includes: class) not ] ].
-      order add: supersChain contents -> className ].
+            removeAllSuchThat: [ :class | (classes includes: class) not ].
+          supersChain := supersChain
+            collect: [ :cl | 
+              (TDClassDefinition className: cl name)
+                username: classDef username;
+                yourself ] ].
+      order add: supersChain -> classDef ].
   indents := IdentityDictionary new.
   order do: [ :assoc | indents at: assoc value put: assoc key size - 1 ].
-  classNames := classNames asArray sorted: [ :a :b | a <= b ].
   results := OrderedCollection new.
   order
     do: [ :assoc | 
-      | className element |
-      className := assoc value.
-      element := elementBlock value: className value: indents.
+      | classDef element |
+      classDef := assoc value.
+      element := elementBlock value: classDef value: indents.
       results add: element ].
   ^ results asArray

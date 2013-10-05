@@ -1,3 +1,3 @@
 as yet unclassified
 theClass
-  ^ Smalltalk classNamed: self object theNonMetaClass name
+  ^ self object asTDClassDefinition theClass
