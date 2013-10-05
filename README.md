@@ -14,7 +14,7 @@ for details on installing Metacello.*
 Metacello new
     baseline: 'Tode';
     repository: 'github://dalehenrich/tode:master/repository';
-    load: 'GemStone'.
+    load: 'GemStone Dev'.
 ```
 
 *I have not renamed the Baseline ... yet*
