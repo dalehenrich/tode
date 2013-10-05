@@ -1,17 +1,17 @@
 {
 	"class" : {
 		"installOn:" : "dkh 09/17/2013 11:04",
-		"mg" : "09/02/2013 07:35",
-		"mgManPage" : "09/02/2013 07:47",
-		"priority" : "09/02/2013 07:36",
-		"toolName" : "09/02/2013 07:36",
-		"toolReadMe" : "09/02/2013 07:36" },
+		"mg" : " 09/02/2013 07:35",
+		"mgManPage" : " 09/02/2013 07:47",
+		"priority" : " 09/02/2013 07:36",
+		"toolName" : " 09/02/2013 07:36",
+		"toolReadMe" : " 09/02/2013 07:36" },
 	"instance" : {
 		"createMergerNode" : "dkh 09/02/2013 11:55",
 		"gitmerge:gitTool:mergerCompletionBlock:mergerAbortBlock:" : "dkh 09/17/2013 12:14",
-		"merger" : "09/02/2013 07:55",
-		"merger:" : "09/02/2013 07:55",
-		"mergerNode" : "09/02/2013 07:55",
-		"mergerNode:" : "09/02/2013 07:55",
+		"merger" : " 09/02/2013 07:55",
+		"merger:" : " 09/02/2013 07:55",
+		"mergerNode" : " 09/02/2013 07:55",
+		"mergerNode:" : " 09/02/2013 07:55",
 		"mergerWindowClosing" : "dkh 09/02/2013 15:10",
 		"mgmerge:mergerCompletionBlock:mergerAbortBlock:" : "dkh 09/02/2013 15:08" } }

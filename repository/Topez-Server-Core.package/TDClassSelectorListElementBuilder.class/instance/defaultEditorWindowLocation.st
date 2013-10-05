@@ -1,5 +1,5 @@
 as yet unclassified
 defaultEditorWindowLocation
-  ^ self object isMeta
+  ^ self isMeta
     ifTrue: [ 'classSelectors' ]
     ifFalse: [ 'instanceSelectors' ]

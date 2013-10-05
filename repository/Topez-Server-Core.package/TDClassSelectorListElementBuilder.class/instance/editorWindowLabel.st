@@ -1,5 +1,5 @@
 as yet unclassified
 editorWindowLabel
-  ^ self object isMeta
+  ^ self isMeta
     ifTrue: [ 'class' ]
     ifFalse: [ 'instance' ]

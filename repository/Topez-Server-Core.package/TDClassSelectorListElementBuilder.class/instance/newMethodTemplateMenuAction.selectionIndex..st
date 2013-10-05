@@ -9,7 +9,7 @@ newMethodTemplateMenuAction: listElement selectionIndex: selectionIndex
   def := TDMethodTemplateDefinition
     className: self theClass name
     protocol: protocol
-    isMeta: self object isMeta.
+    isMeta: self isMeta.
   ^ def
     editUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'method')

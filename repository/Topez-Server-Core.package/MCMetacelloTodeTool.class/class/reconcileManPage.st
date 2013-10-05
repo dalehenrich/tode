@@ -4,7 +4,8 @@ reconcileManPage
   reconcile - reconcile config version against git repo
 
 SYNOPSIS
-  reconcile <configuration> <version> <git-repository>
+  reconcile <configuration> <version> <repository>
+            <configuration> <version> @<repo-path>
 
 DESCRIPTION
 
