@@ -6,5 +6,9 @@ gitstatus
 
   | response |
   response := self performGitCommand: 'status' defaultArgs: ''.
-  response editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  response
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'gitStatus';
+        yourself).
   ^ response
