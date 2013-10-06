@@ -6,5 +6,9 @@ gitadd
 
   | response |
   response := self performGitCommand: 'add' defaultArgs: '.'.
-  response editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  response
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'gitStatus';
+        yourself).
   ^ response

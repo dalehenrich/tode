@@ -1,0 +1,8 @@
+TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | 
+| list sortedDefs |
+sortedDefs := Array new.
+list := #(TDClassDefinition TDMethodDefinition Object TDDefinition) collect: [ :className | TDClassDefinition className: className ].
+TDClassDefinition
+  processClassDefinitionsBlock: [ list ]
+  elementBlock: [ :classDef :indents | sortedDefs add: classDef ].
+sortedDefs ]'}

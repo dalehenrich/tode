@@ -1,0 +1,17 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"baseDirectory",
+		"filePath",
+		"local",
+		"remote" ],
+	"name" : "TDGitDiff",
+	"pools" : [
+		 ],
+	"super" : "TDMergeOperation",
+	"type" : "normal" }

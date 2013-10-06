@@ -6,5 +6,9 @@ gitcommit
 
   | response |
   response := self performGitCommand: 'commit' requiredCommandArgs: 2.
-  response editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  response
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'gitStatus';
+        yourself).
   ^ response

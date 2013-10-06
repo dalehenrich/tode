@@ -1,0 +1,3 @@
+accessing
+windowIsClosing
+  self diffTool mergerWindowClosing

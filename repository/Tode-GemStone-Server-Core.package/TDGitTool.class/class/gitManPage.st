@@ -10,6 +10,8 @@ SYNOPSIS
       checkout `git-command-args` [ @<git-repo-directory> ]
   git commit `git-command-args` [ <git-repo-path> ]
       commit `git-command-args` [ @<git-repo-directory> ]
+  git difftool <commitish-1> <commitish-2> [ <git-repo-path> ]
+      difftool  <commitish-1> <commitish-2> [ @<git-repo-directory> ]
   git help [ `git-command-args` [ <git-repo-path> ]]
       help [ `git-command-args` [ @<git-repo-directory> ]]
   git log [ `git-command-args` [ <git-repo-path> ]]

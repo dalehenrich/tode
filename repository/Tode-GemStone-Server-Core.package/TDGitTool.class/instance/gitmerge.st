@@ -6,5 +6,9 @@ gitmerge
 
   | response |
   response := self performGitCommand: 'merge' requiredCommandArgs: 2.
-  response editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  response
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'gitStatus';
+        yourself).
   ^ response

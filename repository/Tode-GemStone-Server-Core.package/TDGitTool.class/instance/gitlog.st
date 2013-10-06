@@ -6,5 +6,9 @@ gitlog
 
   | response |
   response := self performGitCommand: 'log' defaultArgs: '-10'.
-  response editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  response
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'gitStatus';
+        yourself).
   ^ response

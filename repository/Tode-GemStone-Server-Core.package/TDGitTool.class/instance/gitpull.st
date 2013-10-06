@@ -6,5 +6,9 @@ gitpull
 
   | response |
   response := self performGitCommand: 'pull' requiredCommandArgs: 2.
-  response editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  response
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'gitStatus';
+        yourself).
   ^ response

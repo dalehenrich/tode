@@ -6,5 +6,9 @@ gitcheckout
 
   | response |
   response := self performGitCommand: 'checkout' requiredCommandArgs: 2.
-  response editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  response
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'gitStatus';
+        yourself).
   ^ response
