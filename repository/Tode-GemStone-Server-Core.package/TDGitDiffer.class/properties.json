@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 10/05/2013 18:24",
+	"instvars" : [
+		"diffs",
+		"gitTool",
+		"diffTool" ],
+	"name" : "TDGitDiffer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
