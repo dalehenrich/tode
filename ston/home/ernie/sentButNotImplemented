@@ -1,0 +1,31 @@
+TDScriptLeafNode{#name:'sentButNotImplemented',#contents:'[ :topez :objIn :tokens :windowId | 
+| shTool sentNotImplemented filterBlock |
+shTool := topez toolInstanceFor: \'port\'.
+sentNotImplemented := shTool portsentButNotImplemented.
+filterBlock := [ :definition | 
+definition configurationOf
+  ifNil: [ true ]
+  ifNotNil: [ :configurationDef | (#(\'Tode\' \'RB\') includes: configurationDef configurationName ) not  ] ].
+sentNotImplemented := sentNotImplemented
+  select: [ :sym | 
+    ((shTool findPureSender: sym)
+      detect: [ :def | filterBlock value: def ]
+      ifNone: [  ]) notNil ].
+sentNotImplemented := sentNotImplemented asArray sorted: [ :a :b | a <= b ].
+sentNotImplemented
+  editUsing:
+    ((TDMiniToolSpec
+      topez: topez
+      clientListBlock: [ :miniTool :listElement | miniTool builder object collect: [ :each | each asString ] ]
+      menuActionSpecBlock: [ :miniTool | {#(\'senders\' nil #\'sendersMenuAction\')} , miniTool builder basicMenuActionSpec ]
+      menuActionBlock: [ :miniTool :actionSymbol :listElement :index | 
+        actionSymbol == #\'sendersMenuAction\'
+          ifTrue: [ 
+            | methods |
+            methods := shTool findPureSender: (sentNotImplemented at: index).
+            methods := methods select: filterBlock.
+            shTool browseMethods: methods ]
+          ifFalse: [ miniTool builder perform: actionSymbol with: listElement with: index ] ]
+      itemSelectedBlock: [ :miniTool :listElement :index :shiftPressed | nil ])
+      windowLabel: \'Sent but not Implemented\';
+      yourself) ]'}

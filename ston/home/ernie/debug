@@ -1,0 +1,10 @@
+TDScriptLeafNode{#name:'debug',#contents:'[ :topez :objIn :tokens :windowId | 
+| symbolList cls testClassName testSelector |
+testClassName := tokens at: 2.
+testSelector := tokens at: 3.
+symbolList := (AllUsers
+  userWithId: \'Ernie\'
+  ifAbsent: [ self error: \'No user named\' , self username printString , \' found.\' ])
+  symbolList.
+cls := symbolList objectNamed: testClassName asSymbol.
+cls debug: testSelector asSymbol ]'}

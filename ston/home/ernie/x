@@ -1,8 +1,22 @@
 TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | 
-| list sortedDefs |
-sortedDefs := Array new.
-list := #(TDClassDefinition TDMethodDefinition Object TDDefinition) collect: [ :className | TDClassDefinition className: className ].
-TDClassDefinition
-  processClassDefinitionsBlock: [ list ]
-  elementBlock: [ :classDef :indents | sortedDefs add: classDef ].
-sortedDefs ]'}
+| allClasses legalCharacters detectBlock bad |
+legalCharacters := (32 to: 126) collect: [ :each | Character codePoint: each ].
+legalCharacters := legalCharacters asIdentitySet
+  add: Character tab;
+  add: Character lf;
+  yourself.
+allClasses := Globals select: [ :each | each isBehavior ].
+detectBlock := [ :aClass :eachSelector | 
+| source characters |
+source := aClass sourceCodeAt: eachSelector.
+characters := source asIdentitySet - legalCharacters.
+characters := characters collect: [ :each | each codePoint ].
+characters isEmpty ].
+bad := Array new.
+allClasses
+  do: [ :eachClass | 
+    eachClass selectors
+      do: [ :sel | 
+        (detectBlock value: eachClass value: sel)
+          ifFalse: [ bad add: eachClass -> sel ] ] ].
+\tbad ]'}

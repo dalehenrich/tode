@@ -1,7 +1,12 @@
-TDTxtLeafNode{#name:'status',#contents:'commit e36527bdc003b0afbeb4bd043e1decebb7bf0034
-Merge: 1e19eda f4da2b6
+TDTxtLeafNode{#name:'status',#contents:'commit 0444210538a992b14a667f3453c41b36eab4677f
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sat Oct 5 15:41:04 2013 -0700
+Date:   Mon Oct 7 14:34:54 2013 -0700
 
-    Merge branch \'issue_28\' of github.com:dalehenrich/tode into issue_28
+    implement TDMiniToolSpec and TDMiniToolClientListElementBuilder which allows for creation of list-based tools without having to create a TDClientListElementBuilder subclass...only need to specify blocks for:
+    
+      TDMiniToolSpec class>>topez:clientListBlock:menuActionSpecBlock:menuActionBlock:itemSelectedBlock:
+    
+    to create custom list behavior.
+    
+    fix `mc fileout` API so that .gs files with multiple classes can be updated correctly (i.e., the method is matched based on proper class)
 '}
