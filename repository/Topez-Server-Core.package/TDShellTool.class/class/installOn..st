@@ -75,6 +75,9 @@ installOn: aTDTopezServer
     registerBuilderClass: TDUnorderedCollectionNodeBuilder
       for: UnorderedCollection
       aspect: #'inspect';
+    registerEditorClass: TDMiniToolClientListElementBuilder
+      for: Object
+      aspect: #'miniTool';
     registerEditorClass: TDClientObjectElementBuilder
       for: Object
       aspect: #'navigate';

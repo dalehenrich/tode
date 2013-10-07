@@ -1,0 +1,18 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"builder",
+		"clientListBlock",
+		"itemSelectedBlock",
+		"menuActionBlock",
+		"menuActionSpecBlock" ],
+	"name" : "TDMiniToolSpec",
+	"pools" : [
+		 ],
+	"super" : "TDEditorSpec",
+	"type" : "normal" }

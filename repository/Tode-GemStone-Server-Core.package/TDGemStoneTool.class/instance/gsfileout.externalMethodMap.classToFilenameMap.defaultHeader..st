@@ -8,14 +8,14 @@ gsfileout: directoryPath externalMethodMap: externalMethodMap classToFilenameMap
       Transcript
         cr;
         show: '--->' , clsName asString.
+      cls := Smalltalk classNamed: clsName.
       filenames := classToFilenameMap
-        at: clsName
+        at: cls theNonMetaClass name
         ifAbsent: [ {(clsName asLowercase , '.gs')} ].
       filenames
         do: [ :filename | 
           (directory fileExists: filename)
             ifFalse: [ ^ self error: 'No .gs file found for: ' , clsName printString ] ].
-      cls := Smalltalk at: clsName.
       (methodRefs asArray sort: [ :a :b | a selector <= b selector ])
         do: [ :methodRef | 
           | beh sourceMap ar done |
@@ -33,7 +33,7 @@ gsfileout: directoryPath externalMethodMap: externalMethodMap classToFilenameMap
                   gsfileoutBuildMethodSourceMapFor: beh
                   filename: filename
                   in: directory.
-                ar := sourceMap
+                ar := (sourceMap at: beh name ifAbsent: [ Dictionary new ])
                   at: methodRef selector asSymbol
                   ifAbsent: [ 
                     lastFile
