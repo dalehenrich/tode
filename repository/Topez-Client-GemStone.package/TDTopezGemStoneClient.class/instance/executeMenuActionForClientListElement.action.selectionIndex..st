@@ -5,7 +5,7 @@ executeMenuActionForClientListElement: aClientElement action: aSymbol selectionI
 		rawReceiverNB: aClientElement menuActionBlockOopType
 		perform: #value:value:value:
 		withArgs:
-			{(aSymbol asString).
+			{(aSymbol asSymbol).
 			(aClientElement clientElementOopType).
 			selectionIndex}.
 	^ self session library localFor: oopType
