@@ -1,0 +1,27 @@
+TDScriptLeafNode{#name:'fileoutTests',#contents:'[ :topez :objIn :tokens :windowId | 
+| mcTool path classToFilenameMap |
+mcTool := topez toolInstanceFor: \'mc\'.
+path := \'/export/foos2/users/dhenrich/3.0/k_gss64bit/indexTests\'.
+classToFilenameMap := Dictionary new yourself.
+{{{\'Index-Tests\'}.
+{\'idxquerytests.gs\'.
+nil}}.{{\'PetitTests\'}.
+{\'pptests.gs\'.
+nil}}}
+  do: [ :spec | 
+    | pkgList filenames |
+    pkgList := spec at: 1.
+    filenames := spec at: 2.
+    mcTool
+      mcfileout: path
+      packageNames: pkgList
+      definitionsFilename: (filenames at: 1)
+      methodsFilename: (filenames at: 2)
+      classToFilenameMap: classToFilenameMap
+      defaultHeader:
+        \'!=========================================================================
+! Copyright (C) GemTalk Systems, LLC. 2013.  All Rights Reserved.
+!=========================================================================
+
+\'
+          withGemstoneLineEndings ] ]'}
