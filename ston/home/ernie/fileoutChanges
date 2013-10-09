@@ -10,11 +10,13 @@ classToFilenameMap := Dictionary new
   at: #\'GsAbstractQueryPredicate\' put: #(\'idxquerymethods.gs\');
   at: #\'GsAbstractReferenceAssociation\' put: #(\'idxquerymethods.gs\');
   at: #\'GsOptions\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsIndexOptions\' put: #(\'idxquerymethods.gs\');
   at: #\'GsIndexSpec\' put: #(\'idxquerymethods.gs\');
   at: #\'GsPathPathPredicate\' put: #(\'idxquerymethods.gs\');
   at: #\'GsQueryFormula\' put: #(\'idxquerymethods.gs\');
   at: #\'GsQueryGrammar\' put: #(\'idxquerymethods.gs\');
   at: #\'GsQueryLiteral\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsQueryOptions\' put: #(\'idxquerymethods.gs\');
   at: #\'GsQueryParser\' put: #(\'idxquerymethods.gs\');
   at: #\'GsQueryPredicate\' put: #(\'idxquerymethods.gs\');
   at: #\'IndexedQueryEvaluator\' put: #(\'indexquery.gs\');
