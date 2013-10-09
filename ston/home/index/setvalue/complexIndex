@@ -1,0 +1,17 @@
+TDScriptLeafNode{#name:'complexIndex',#contents:'[ :topez :objIn :tokens :windowId | 
+| tree population adamSons populationIndexSpec |
+\"explore index sharing for set-valued indexes\"
+tree := (topez lookup: \'/home/index/family\') dotSelfObject.
+population := tree population.
+adamSons := tree adam sons.
+populationIndexSpec := GsIndexSpec new
+  equalityIndex: \'each.sons.*.firstName\' lastElementClass: String;
+  equalityIndex: \'each.sons.*.mother.middleName\' lastElementClass: String;
+  yourself.
+IndexManager current removeAllIncompleteIndexesOn: population.
+[ populationIndexSpec createIndexesOn: population ]
+  ensure: [ 
+    IndexManager current removeAllIncompleteIndexesOn: population.
+    true
+      ifTrue: [ populationIndexSpec removeIndexesFrom: population ].
+    population ] ]'}

@@ -1,0 +1,11 @@
+TDObjectGatewayNode{#name:'family',#contents:'UserGlobals
+  at: #\'FamilyTree\'
+  ifAbsent: [ 
+    | tree siblings |
+    tree := IXFamilyTree createFamily: 1.
+    siblings := tree
+      createGeneration: tree adam
+      mother: tree eve
+      maxChildren: 15.
+    tree population addAll: siblings.
+    UserGlobals at: #\'FamilyTree\' put: tree ]'}
