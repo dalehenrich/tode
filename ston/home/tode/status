@@ -1,12 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 0444210538a992b14a667f3453c41b36eab4677f
+TDTxtLeafNode{#name:'status',#contents:'commit 7aebc1ddd51ef28ebaede052d46f4723823df329
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Mon Oct 7 14:34:54 2013 -0700
+Date:   Wed Oct 9 15:58:37 2013 -0700
 
-    implement TDMiniToolSpec and TDMiniToolClientListElementBuilder which allows for creation of list-based tools without having to create a TDClientListElementBuilder subclass...only need to specify blocks for:
-    
-      TDMiniToolSpec class>>topez:clientListBlock:menuActionSpecBlock:menuActionBlock:itemSelectedBlock:
-    
-    to create custom list behavior.
-    
-    fix `mc fileout` API so that .gs files with multiple classes can be updated correctly (i.e., the method is matched based on proper class)
+    ensure that lf is used in exported source files in TDGemStoneTool>>gsfileout:filename:range:in:
 '}

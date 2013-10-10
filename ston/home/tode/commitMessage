@@ -1,7 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'implement TDMiniToolSpec and TDMiniToolClientListElementBuilder which allows for creation of list-based tools without having to create a TDClientListElementBuilder subclass...only need to specify blocks for:
-
-  TDMiniToolSpec class>>topez:clientListBlock:menuActionSpecBlock:menuActionBlock:itemSelectedBlock:
-
-to create custom list behavior.
-
-fix `mc fileout` API so that .gs files with multiple classes can be updated correctly (i.e., the method is matched based on proper class)',#runs:RunArray{#runs:[10,14,5,34,148,270],#values:[[],[TextColor{#color:Color{#rgb:1023}}],[],[TextColor{#color:@9}],[],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'ensure that lf is used in exported source files in TDGemStoneTool>>gsfileout:filename:range:in:',#runs:RunArray{#runs:[95],#values:[[]],#lastIndex:52,#lastRun:1,#lastOffset:51}}}

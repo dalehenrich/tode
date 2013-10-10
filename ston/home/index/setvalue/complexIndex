@@ -1,17 +1,34 @@
 TDScriptLeafNode{#name:'complexIndex',#contents:'[ :topez :objIn :tokens :windowId | 
-| tree population adamSons populationIndexSpec |
-\"explore index sharing for set-valued indexes\"
+| tree population populationIndexSpec query halt create |
+\"explore index sharing for set-valued indexes ... aka mystery of #_findFirstUnsharedPathTerm\"
+create := halt := false.
+tokens size > 1
+  ifTrue: [ 
+    halt := (tokens at: 2) = \'halt\'.
+    create := (tokens at: 2) = \'create\' ].
 tree := (topez lookup: \'/home/index/family\') dotSelfObject.
 population := tree population.
-adamSons := tree adam sons.
 populationIndexSpec := GsIndexSpec new
-  equalityIndex: \'each.sons.*.firstName\' lastElementClass: String;
-  equalityIndex: \'each.sons.*.mother.middleName\' lastElementClass: String;
+  equalityIndex: \'each.sons.*.antiqueCollection.contents.*.label\'
+    lastElementClass: String;
+  identityIndex: \'each.sons.*.antiqueCollection\';
   yourself.
 IndexManager current removeAllIncompleteIndexesOn: population.
-[ populationIndexSpec createIndexesOn: population ]
-  ensure: [ 
-    IndexManager current removeAllIncompleteIndexesOn: population.
-    true
-      ifTrue: [ populationIndexSpec removeIndexesFrom: population ].
-    population ] ]'}
+[ 
+create
+  ifTrue: [ populationIndexSpec createIndexesOn: population ].
+halt
+  ifTrue: [ 
+    population halt.
+    population ]
+  ifFalse: [ 
+    | coll |
+    coll := IXAntiqueCollection new askingPrice: 250.
+    query := (GsQuery fromString: \'each.antiqueCollection > coll\')
+      bind: \'coll\' to: coll;
+      on: population;
+      yourself.
+    query queryResult ] ]
+  ensure: [ IndexManager current removeAllIncompleteIndexesOn: population ].
+true
+  ifTrue: [ populationIndexSpec removeIndexesFrom: population ] ]'}
