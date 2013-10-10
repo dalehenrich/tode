@@ -7,5 +7,5 @@ pasteIntoBehavior: aBehavior
   source := method sourceString.
   category := method inClass categoryOfSelector: self selector.
   category ifNil: [ category := ClassOrganizer default ].
-  aBehavior compile: source classified: category.
+  aBehavior compile: source withGemstoneLineEndings classified: category.
   ^ true

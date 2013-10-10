@@ -16,5 +16,7 @@ pasteIntoProtocolDefinition: aProtocolDefinition
         toCategory: category ]
     ifFalse: [ 
       "adding method to behavior"
-      aProtocolDefinition theBehavior compile: source classified: category ].
+      aProtocolDefinition theBehavior
+        compile: source withGemstoneLineEndings
+        classified: category ].
   ^ true

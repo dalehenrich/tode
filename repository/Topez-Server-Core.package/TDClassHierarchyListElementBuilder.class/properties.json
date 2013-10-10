@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 10/05/2013 11:34",
+	"commentStamp" : "",
 	"instvars" : [
 		"selectedClass" ],
 	"name" : "TDClassHierarchyListElementBuilder",
