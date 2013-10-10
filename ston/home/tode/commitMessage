@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'ensure that lf is used in exported source files in TDGemStoneTool>>gsfileout:filename:range:in:',#runs:RunArray{#runs:[95],#values:[[]],#lastIndex:52,#lastRun:1,#lastOffset:51}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'ensure that lf is used when compiling methods from tode ... sneaky cr showing up in comments',#runs:RunArray{#runs:[92],#values:[[]],#lastIndex:92,#lastRun:1,#lastOffset:91}}}

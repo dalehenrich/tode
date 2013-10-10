@@ -6,6 +6,7 @@ classToFilenameMap := Dictionary new
   at: #\'AbstractIndexSpecification\' put: #(\'abstractindexspec.gs\');
   at: #\'Array\' put: #(\'array2.gs\');
   at: #\'CollectionBasedPathEvaluator\' put: #(\'idxquerymethods.gs\');
+  at: #\'CollectionBasedPathTerm\' put: #(\'collbasedpathterm.gs\');
   at: #\'EqualityIndexSpecification\' put: #(\'equalityindexspec.gs\');
   at: #\'Gs32DisjunctiveClauseOptimizer\' put: #(\'idxquerymethods.gs\');
   at: #\'GsAbstractQueryPredicate\' put: #(\'idxquerymethods.gs\');

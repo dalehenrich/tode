@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 7aebc1ddd51ef28ebaede052d46f4723823df329
+TDTxtLeafNode{#name:'status',#contents:'commit df6866466c040d13c22fe8b185a2c21598a9344a
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Wed Oct 9 15:58:37 2013 -0700
+Date:   Thu Oct 10 05:14:39 2013 -0700
 
-    ensure that lf is used in exported source files in TDGemStoneTool>>gsfileout:filename:range:in:
+    ensure that lf is used when compiling methods from tode ... sneaky cr showing up in comments
 '}
