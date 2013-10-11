@@ -12,20 +12,33 @@ package
     methodDict keys
       do: [ :selector | 
         | cat |
-        cat := (beh categoryOfSelector: selector) asString asLowercase.
-        (cat beginsWith: \'*\')
+        (beh == Behavior and: [ selector == #\'_compileMethod:category:using:\' ])
+          not
           ifTrue: [ 
-            (packagePrefixes detect: [ :prefix | cat beginsWith: prefix ] ifNone: [  ])
-              ifNil: [ 
-                loose
-                  add:
-                    {beh.
-                    cat.
-                    selector} ] ]
-          ifFalse: [ 
-            loose
-              add:
-                {beh.
-                cat.
-                selector} ] ] ].
+            | add |
+            add := false.
+            cat := (beh categoryOfSelector: selector) asString asLowercase.
+            (cat beginsWith: \'*\')
+              ifTrue: [ 
+                packagePrefixes
+                  detect: [ :prefix | cat beginsWith: prefix ]
+                  ifNone: [ add := true ] ]
+              ifFalse: [ add := true ].
+            add
+              ifTrue: [ 
+                | ar persistentMethodDict sessionMethod |
+\t\t\t\t\tar := {beh.
+                            cat.
+                            selector} .
+                persistentMethodDict := beh persistentMethodDictForEnv: 0.
+                (persistentMethodDict at: selector ifAbsent: [  ])
+\t\t\t\t\tifNil:[loose
+                          add:ar]
+                  ifNotNil: [ :baseMethod | 
+                    sessionMethod := beh compiledMethodAt: selector.
+                    sessionMethod sourceString ~= baseMethod sourceString
+                      ifTrue: [ 
+                        loose
+                          add:ar
+                            ] ] ] ] ] ].
 loose ]'}
