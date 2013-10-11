@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'ensure that lf is used when compiling methods from tode ... sneaky cr showing up in comments',#runs:RunArray{#runs:[92],#values:[[]],#lastIndex:92,#lastRun:1,#lastOffset:91}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'replace config/pkgs panes with class category pane after working with Paul DeBruicker',#runs:RunArray{#runs:[85],#values:[[]],#lastIndex:85,#lastRun:1,#lastOffset:84}}}

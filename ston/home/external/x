@@ -1,4 +1,3 @@
-TDTopezLeafNode{#name:'x',#contents:'#mc merge External-Core External-Core.simple-dkh.7 @mcRepo
-#mc merge External-Core External-Core.simple-dkh.8 @mcRepo
-#mc merge External-Core External-Core.simple-dkh.9 @mcRepo
-git mergetool @gitRepo'}
+TDSmalltalkLeafNode{#name:'x',#contents:'| tmp |
+tmp := 3 +4.
+^tmp'}

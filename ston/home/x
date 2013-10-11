@@ -1,0 +1,1 @@
+TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | (TDClassCategoryList current) definitionList; yourself]'}

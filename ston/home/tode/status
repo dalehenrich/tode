@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit df6866466c040d13c22fe8b185a2c21598a9344a
+TDTxtLeafNode{#name:'status',#contents:'commit c6aa4614ab7a0a2e9a69e5293ce155c3eb180349
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Thu Oct 10 05:14:39 2013 -0700
+Date:   Thu Oct 10 19:56:42 2013 -0700
 
-    ensure that lf is used when compiling methods from tode ... sneaky cr showing up in comments
+    replace config/pkgs panes with class category pane after working with Paul DeBruicker
 '}
