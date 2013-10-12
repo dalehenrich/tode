@@ -21,6 +21,8 @@ createBoundsDictionary
   classDefOrigin := hierarcyOrigin + listWidth.
   boundsDictionary := Dictionary new.
   boundsDictionary
+    at: #'classCategories'
+      put: (classListsOrigin @ top extent: listWindowExtent);
     at: #'configurations'
       put: (classListsOrigin @ top extent: thirdListWindowExtent);
     at: #'packages'
