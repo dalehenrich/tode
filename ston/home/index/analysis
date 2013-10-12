@@ -1,5 +1,11 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'It looks like I really need to change DependencyList>>getInstVarOffsetWithPathTerm: to return a list of instance variable offsets for the given path term with the introduction of enumerated path terms ... given that this method is only used for non collection-based indexes it should be okay, but I still need to make sure that enumerated path terms don\'t confuse this method ...
-
-more importantly, IdentityIndex>>traverse:upTo:startingAt:into: and IdentityIndex>>traverse:upTo:startingAt:into:addingIndex: need to be changed to not assume that when indicatesNsc is true, the nextObj is a collection ... perhaps a message should be sent to the pathterm to resolve this ...
-
-DONE',#runs:RunArray{#runs:[38,45,316,45,5,57,172],#values:[[],[TextColor{#color:Color{#rgb:0}}],[],[TextColor{#color:@9}],[],[TextColor{#color:@9}],[]],#lastIndex:678,#lastRun:7,#lastOffset:171}}}
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'  #1 [248688641 sz:38  String] IndexUnitTest debug: #testBasicQueries
+  #2 [248687105 sz:39  String] IndexUnitTest debug: #testIndexBug33804
+  #3 [248685569 sz:39  String] IndexUnitTest debug: #testIndexBug33805
+  #4 [248684033 sz:45  String] IndexUnitTest debug: #testIndexBug33805Simple
+  #5 [248678913 sz:39  String] IndexUnitTest debug: #testIndexBug33889
+  #6 [248677377 sz:46  String] IndexUnitTest debug: #testIndexBug33967Sorting
+  #7 [248675841 sz:39  String] IndexUnitTest debug: #testIndexBug34108
+  #8 [248674305 sz:39  String] IndexUnitTest debug: #testIndexBug34306
+  #9 [248672769 sz:39  String] IndexUnitTest debug: #testIndexBug35061
+  #10 [248645377 sz:41  String] IndexUnitTest debug: #testIndexBug40076_1
+',#runs:RunArray{#runs:[725],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
