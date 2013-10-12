@@ -5,6 +5,7 @@ path := \'/export/foos2/users/dhenrich/3.0/k_gss64bit/image\'.
 classToFilenameMap := Dictionary new
   at: #\'AbstractIndexSpecification\' put: #(\'abstractindexspec.gs\');
   at: #\'Array\' put: #(\'array2.gs\');
+  at: #\'CharacterCollection\' put: #(\'charcoll.gs\');
   at: #\'CollectionBasedPathEvaluator\' put: #(\'idxquerymethods.gs\');
   at: #\'CollectionBasedPathTerm\' put: #(\'collbasedpathterm.gs\');
   at: #\'DependencyList\' put: #(\'dependencylist.gs\');
@@ -30,10 +31,13 @@ classToFilenameMap := Dictionary new
   at: #\'IndexedQueryEvaluator\' put: #(\'indexquery.gs\');
   at: #\'IndexList\' put: #(\'indexlist.gs\');
   at: #\'IndexManager\' put: #(\'IndexManager.gs\');
+  at: #\'PathEvaluator\' put: #(\'pathevaluator.gs\');
   at: #\'PathTerm\' put: #(\'pathterm.gs\');
+  at: #\'SelectorPathEvaluator\' put: #(\'idxquerymethods.gs\');
+  at: #\'SelectorPathTerm\' put: #(\'selectorpathterm.gs\');
   at: #\'SetValuedPathTerm\' put: #(\'setpathterm.gs\');
   at: #\'UnicodeIndexSpecification\' put: #(\'idxquerymethods.gs\');
-  at: #\'UnorderedCollection\' put: #(\'unorderedcoll3.gs\');
+  at: #\'UnorderedCollection\' put: #(\'unorderedcoll.gs\' \'unorderedcoll3.gs\');
   yourself.
 externalMethodMap := Dictionary new.
 current := GsPackagePolicy current.
@@ -45,18 +49,17 @@ looseChanges := node block
   value: objIn
   value: tokens
   value: windowId.
-looseChanges do: [:ar |
-
-        | beh cat meth set selector|
-beh := ar at: 1.
-cat := ar at: 2.
-selector := ar at: 3.
-            meth := MethodReference class: beh selector: selector asSymbol.
-                    set := externalMethodMap
-                      at: meth actualClass theNonMetaClass name
-                      ifAbsent: [ externalMethodMap at: meth actualClass name put: Set new ].
-                    set add: meth ] 
-                .
+looseChanges
+  do: [ :ar | 
+    | beh cat meth set selector |
+    beh := ar at: 1.
+    cat := ar at: 2.
+    selector := ar at: 3.
+    meth := MethodReference class: beh selector: selector asSymbol.
+    set := externalMethodMap
+      at: meth actualClass theNonMetaClass name
+      ifAbsent: [ externalMethodMap at: meth actualClass name put: Set new ].
+    set add: meth ].
 gsTool
   gsfileout: path
   externalMethodMap: externalMethodMap

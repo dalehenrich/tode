@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit c6aa4614ab7a0a2e9a69e5293ce155c3eb180349
+TDTxtLeafNode{#name:'status',#contents:'commit 9de8fa99b5a21333d1f9dd2afc6bc211e6183e82
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Thu Oct 10 19:56:42 2013 -0700
+Date:   Fri Oct 11 19:34:40 2013 -0700
 
-    replace config/pkgs panes with class category pane after working with Paul DeBruicker
+    Attempt to get around security violations in TDSymbolDictionaryDefinition>>classDefinitions ... TDSimpleDiff created to support generic in-image text diff views...
 '}
