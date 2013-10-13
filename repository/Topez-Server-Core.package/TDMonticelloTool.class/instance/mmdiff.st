@@ -31,7 +31,7 @@ mmdiff
     diffDirty: diffDirty.
   patches isEmpty
     ifTrue: [ ^ 'No dirty packages' asText allBold ].
-  stream contents
+  (TDTxtLeafNode new contents: stream contents)
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'mcDiff';

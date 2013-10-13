@@ -34,7 +34,7 @@ mcdiff
             add:
               {workingCopy.
               patch} ] ].
-  stream contents
+  (TDTxtLeafNode new contents: stream contents)
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'mcDiff';

@@ -5,5 +5,5 @@ mcdirty
   | dirty |
   dirty := MCWorkingCopy allManagers select: [ :wc | wc modified ].
   dirty := dirty sort: [ :a :b | a packageName <= b packageName ].
-  dirty editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
+  self mcBrowseWorkingCopies: dirty label: 'Dirty Packages'.
   ^ dirty

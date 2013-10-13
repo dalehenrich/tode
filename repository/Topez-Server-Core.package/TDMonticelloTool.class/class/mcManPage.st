@@ -9,8 +9,8 @@ SYNOPSIS
      adopt @<workingCopy-path> @<version-path>
      adopt <pkg-name> @<version-path>
      adopt @<workingCopy-path> <version-name> <repository-spec>
-  mc ancestors <pkg-name> [<limit>]
-     ancestors @<workingCopy-path> [<limit>]
+  mc ancestors <pkg-name>
+     ancestors @<workingCopy-path> 
   mc browse <version-name> <repository-spec>
      browse <version-name> @<repository-path>
      browse <package-name>

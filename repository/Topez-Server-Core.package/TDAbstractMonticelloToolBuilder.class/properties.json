@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"mcTool",
+		"theMiniTool" ],
+	"name" : "TDAbstractMonticelloToolBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDToolBuilder",
+	"type" : "normal" }

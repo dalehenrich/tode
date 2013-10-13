@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clientList:listElement:" : "dkh 10/12/2013 15:54",
+		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 10/12/2013 15:53",
+		"mcTool" : "dkh 10/12/2013 15:40",
+		"mcTool:" : "dkh 10/12/2013 15:44",
+		"menuAction:actionSymbol:listElement:selectedIndex:" : "dkh 10/12/2013 15:46",
+		"menuActionSpec:" : "dkh 10/12/2013 15:54",
+		"printObjectMenuAction:selectionIndex:" : "dkh 10/12/2013 15:42",
+		"theList" : "dkh 10/12/2013 15:45" } }
