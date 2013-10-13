@@ -7,4 +7,4 @@ mcdelete
   | packageName wc |
   packageName := tokens at: 2.
   wc := self resolveWorkingCopyReference: packageName.
-  ^ wc unregister
+  ^ self mcdeleteWorkingCopy: wc

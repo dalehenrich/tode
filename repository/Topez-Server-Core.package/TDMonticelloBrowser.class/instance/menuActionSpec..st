@@ -8,6 +8,6 @@ menuActionSpec: miniTool
   #('recompile' nil #'workingCopyRecompile:selectedIndex:').
   #('revert' nil #'workingCopyRevert:selectedIndex:').
   #('-').
-  #('delete' nil #'workingCopyRevert:selectedIndex:').
-  #('unload' nil #'workingCopyRevert:selectedIndex:').
+  #('delete' nil #'workingDelete:selectedIndex:').
+  #('unload' nil #'workingUnload:selectedIndex:').
   #('-')} , miniTool builder basicMenuActionSpec
