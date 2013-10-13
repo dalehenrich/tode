@@ -3,8 +3,9 @@
 		 },
 	"instance" : {
 		"clientList:listElement:" : "dkh 10/12/2013 15:21",
+		"defaultRepositoryGroup:selectedIndex:" : "dkh 10/12/2013 22:15",
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 10/12/2013 15:21",
-		"menuActionSpec:" : "dkh 10/12/2013 21:16",
+		"menuActionSpec:" : "dkh 10/12/2013 22:13",
 		"theList" : "dkh 10/12/2013 15:45",
 		"windowName" : "dkh 10/12/2013 16:00",
 		"workingCopies" : "dkh 10/12/2013 13:34",
@@ -13,6 +14,7 @@
 		"workingCopyDiff:selectedIndex:" : "dkh 10/12/2013 17:56",
 		"workingCopyHistory:selectedIndex:" : "dkh 10/12/2013 17:22",
 		"workingCopyRecompile:selectedIndex:" : "dkh 10/12/2013 21:14",
+		"workingCopyRepositoryGroup:selectedIndex:" : "dkh 10/12/2013 22:02",
 		"workingCopyRevert:selectedIndex:" : "dkh 10/12/2013 20:26",
 		"workingDelete:selectedIndex:" : "dkh 10/12/2013 21:18",
 		"workingUnload:selectedIndex:" : "dkh 10/12/2013 21:18" } }

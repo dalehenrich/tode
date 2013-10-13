@@ -5,6 +5,9 @@ menuActionSpec: miniTool
   #('changes' nil #'workingCopyDiff:selectedIndex:').
   #('history' nil #'workingCopyHistory:selectedIndex:').
   #('-').
+  #('repository group' nil #'workingCopyRepositoryGroup:selectedIndex:').
+  #('repositories' nil #'defaultRepositoryGroup:selectedIndex:').
+  #('-').
   #('recompile' nil #'workingCopyRecompile:selectedIndex:').
   #('revert' nil #'workingCopyRevert:selectedIndex:').
   #('-').

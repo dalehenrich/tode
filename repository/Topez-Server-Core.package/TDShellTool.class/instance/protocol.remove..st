@@ -1,5 +1,5 @@
 as yet unclassified
-protocol: theBehavior remove: protoName
+protocol: theBehavior remove: protoNames
   <manPageApi: 'protocol' description:
     'remove method protocol from given behavior'>
-  ^ theBehavior removeCategory: protoName
+  ^ protoNames collect: [ :protoName | theBehavior removeCategory: protoName ]

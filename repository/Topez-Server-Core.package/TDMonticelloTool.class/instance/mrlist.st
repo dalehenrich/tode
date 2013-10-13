@@ -2,19 +2,14 @@ as yet unclassified
 mrlist
   "mr list [<regex-repo-pattern>]"
 
-  | pattern list stream displayPolicy |
-  pattern := tokens size > 1
-    ifTrue: [ tokens at: 2 ].
+  | pattern list repos label |
+  label := 'Repositories'.
+  tokens size > 1
+    ifTrue: [ 
+      pattern := tokens at: 2.
+      label := 'Repositories matching: ' , pattern printString ].
   list := self findMatchingRepositories: pattern topez: topez.
-  displayPolicy := topez displayPolicy
-    compacted: true;
-    yourself.
-  stream := displayPolicy stream.
-  list
-    do: [ :pkg | 
-      pkg displayOnPolicy: displayPolicy.
-      stream cr ].
-  ^ TDCommandResult new
-    displayText: stream contents;
-    resultObject: (list collect: [ :each | each repository ]);
-    yourself
+  repos := list collect: [ :each | each repository ].
+  repos := repos sort: [ :a :b | a description < b description ].
+  self mrBrowseRepositories: repos label: label.
+  ^ list

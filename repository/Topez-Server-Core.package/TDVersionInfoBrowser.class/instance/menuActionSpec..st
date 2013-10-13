@@ -4,4 +4,6 @@ menuActionSpec: miniTool
   ^ {#('diff vs workingCopy' nil #'versionInfoDiffVsWorkingCopy:selectedIndex:').
   #('select' nil #'versionInfoSelect:selectedIndex:').
   #('diff vs selection' nil #'versionInfoDiffVsSelection:selectedIndex:').
-  #('-')} , miniTool builder basicMenuActionSpec
+  #('-').
+  #('paste package' $v #'pastePackage:selectionIndex:')}
+    , miniTool builder basicMenuActionSpec
