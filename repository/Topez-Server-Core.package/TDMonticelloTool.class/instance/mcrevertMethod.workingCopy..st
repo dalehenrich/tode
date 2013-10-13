@@ -1,8 +1,12 @@
 as yet unclassified
-mcrevertMethod: methodTokens from: versionName in: targetRepos
-  "mc revert <pkg-name> <method-spec>"
-
-  | gofer method snapshot methodDefinition methodSpec |
+mcrevertMethod: methodTokens workingCopy: workingCopy
+  | gofer method snapshot methodDefinition methodSpec info versionName repositories targetRepos version |
+  info := workingCopy ancestry ancestors first.
+  versionName := info name.
+  repositories := workingCopy repositoryGroup repositories
+    reject: [ :repo | repo = MCCacheRepository default ].
+  targetRepos := repositories
+    select: [ :repo | (version := repo versionWithInfo: info) notNil ].
   method := self lookupMethodIn: methodTokens.
   methodSpec := method inClass name asString , '>>' , method selector asString.
   snapshot := self
