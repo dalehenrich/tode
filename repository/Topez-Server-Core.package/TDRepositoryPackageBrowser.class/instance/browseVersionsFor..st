@@ -7,5 +7,6 @@ browseVersionsFor: packageName
     ifAbsent: [ ^ false ].
   self mcTool
     mrBrowseRepositoryVersions: versions
+    in: self repository
     label:
       'Versions of ' , packageName printString , ' in ' , self repository description
