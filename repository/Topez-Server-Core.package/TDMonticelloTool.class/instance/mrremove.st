@@ -8,11 +8,9 @@ mrremove
 
   | repo workingCopy packageName repositoryGroup |
   repo := self resolveRepositoryReference: (tokens at: 2).
-  repositoryGroup := tokens size > 2
+  ^ tokens size > 2
     ifTrue: [ 
       packageName := tokens at: 3.
       workingCopy := self resolveWorkingCopyReference: packageName.
-      workingCopy repositoryGroup ]
-    ifFalse: [ MCRepositoryGroup default ].
-  repositoryGroup removeRepository: repo.
-  ^ workingCopy
+      self mrremoveRepository: repo from: workingCopy ]
+    ifFalse: [ self mrremoveRepository: repo ]

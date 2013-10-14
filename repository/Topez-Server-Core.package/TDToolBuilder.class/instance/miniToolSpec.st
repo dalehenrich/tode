@@ -7,7 +7,8 @@ miniToolSpec
         clientListBlock: self clientListBlock
         menuActionSpecBlock: self menuActionSpecBlock
         menuActionBlock: self menuActionBlock
-        itemSelectedBlock: self itemSelectedBlock)
+        itemSelectedBlock: self itemSelectedBlock
+        keyboardActionBlock: self keyboardActionBlock)
         windowLabel: self windowLabel;
         windowId: self windowId;
         windowName: self windowName;

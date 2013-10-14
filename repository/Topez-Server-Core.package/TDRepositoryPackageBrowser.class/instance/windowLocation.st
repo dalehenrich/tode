@@ -1,0 +1,3 @@
+accessing
+windowLocation
+  ^ #'app1'

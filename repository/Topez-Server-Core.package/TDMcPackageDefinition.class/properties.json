@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 10/13/2013 07:59",
+	"instvars" : [
+		"packageName" ],
+	"name" : "TDMcPackageDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDPackageBasedDefinition",
+	"type" : "normal" }

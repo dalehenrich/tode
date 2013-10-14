@@ -1,3 +1,3 @@
-as yet unclassified
+cut/copy/paste
 pasteIntoConfigurationDefinition: aTDConfigurationDefinition
   ^ false

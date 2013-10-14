@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 10/13/2013 07:49",
+	"instvars" : [
+		"workingCopies" ],
+	"name" : "TDWorkingCopyBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractMonticelloToolBuilder",
+	"type" : "normal" }

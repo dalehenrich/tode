@@ -9,6 +9,7 @@
 		"builder",
 		"clientListBlock",
 		"itemSelectedBlock",
+		"keyboardActionBlock",
 		"menuActionBlock",
 		"menuActionSpecBlock" ],
 	"name" : "TDMiniToolSpec",

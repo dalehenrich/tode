@@ -1,6 +1,6 @@
 as yet unclassified
 mcBrowseWorkingCopies: workingCopies label: labelString
-  (TDMonticelloBrowser new
+  (TDWorkingCopyBrowser new
     topez: topez;
     mcTool: self;
     workingCopies: workingCopies;

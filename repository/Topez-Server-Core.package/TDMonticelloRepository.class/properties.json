@@ -7,10 +7,11 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"url",
+		"description",
 		"repository",
 		"packageMap" ],
 	"name" : "TDMonticelloRepository",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TDDefinition",
 	"type" : "normal" }

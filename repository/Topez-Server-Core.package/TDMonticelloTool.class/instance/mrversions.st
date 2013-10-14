@@ -6,14 +6,14 @@ mrversions
 
   "underlined if version is loaded in image, bold if version is not in the version history of the loaded package"
 
-  | repo resolvedReferences packageName versions displayPolicy stream loadedVersions loadedVersion ancestorNames wc limit |
+  | repo packageName versions displayPolicy stream loadedVersions loadedVersion ancestorNames wc limit |
   packageName := tokens at: 3.
   repo := self resolveRepositoryReference: (tokens at: 2).
   tokens size > 3
     ifTrue: [ limit := (tokens at: 4) asNumber ].
-  resolvedReferences := self resolvedReferencesForRepository: repo.
-  versions := resolvedReferences
-    at: packageName
+  versions := self
+    mrVersionsFor: packageName
+    in: repo
     ifAbsent: [ ^ 'No package named: ' , packageName printString , ' found.' ].
   displayPolicy := topez displayPolicy.
   stream := displayPolicy stream.
