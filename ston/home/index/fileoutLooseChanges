@@ -33,10 +33,13 @@ classToFilenameMap := Dictionary new
   at: #\'IndexManager\' put: #(\'IndexManager.gs\');
   at: #\'PathEvaluator\' put: #(\'pathevaluator.gs\');
   at: #\'PathTerm\' put: #(\'pathterm.gs\');
+  at: #\'RcUnicodeIndexSpecification\' put: #(\'idxquerymethods.gs\');
+  at: #\'RcUnicodeRangeEqualityIndex\' put: #(\'rcunicoderangeindex.gs\');
   at: #\'SelectorPathEvaluator\' put: #(\'idxquerymethods.gs\');
   at: #\'SelectorPathTerm\' put: #(\'selectorpathterm.gs\');
   at: #\'SetValuedPathTerm\' put: #(\'setpathterm.gs\');
   at: #\'UnicodeIndexSpecification\' put: #(\'idxquerymethods.gs\');
+  at: #\'UnicodeRangeEqualityIndex\' put: #(\'unicoderangeindex.gs\');
   at: #\'UnorderedCollection\' put: #(\'unorderedcoll.gs\' \'unorderedcoll3.gs\');
   yourself.
 externalMethodMap := Dictionary new.

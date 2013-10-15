@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 9de8fa99b5a21333d1f9dd2afc6bc211e6183e82
+TDTxtLeafNode{#name:'status',#contents:'commit 5549e1de90fcffa355dd6c97bbf3fb11d8ce2eff
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Fri Oct 11 19:34:40 2013 -0700
+Date:   Mon Oct 14 16:13:25 2013 -0700
 
-    Attempt to get around security violations in TDSymbolDictionaryDefinition>>classDefinitions ... TDSimpleDiff created to support generic in-image text diff views...
+    checkpoint: support for geting backup directory path from client ... need repository for TDRepositoryVersionsBrowser ... make it easier to get text attributes set correctly for loaded versions .... add in stubs for (still) missing menu items for the family of Monticello Browser tools ...
 '}
