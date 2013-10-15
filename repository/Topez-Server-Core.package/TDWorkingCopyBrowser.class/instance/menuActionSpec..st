@@ -2,7 +2,6 @@ tools
 menuActionSpec: miniTool
   theMiniTool := miniTool.
   ^ {#('browse' nil #'workingCopyBrowse:selectedIndex:').
-  #('changes' nil #'workingCopyDiff:selectedIndex:').
   #('history' nil #'workingCopyHistory:selectedIndex:').
   #('-').
   #('repository group' nil #'workingCopyRepositoryGroup:selectedIndex:').

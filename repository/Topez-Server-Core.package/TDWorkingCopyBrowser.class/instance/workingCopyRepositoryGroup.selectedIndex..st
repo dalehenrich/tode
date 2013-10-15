@@ -9,6 +9,6 @@ workingCopyRepositoryGroup: listElement selectedIndex: index
       ^ true ].
   wc := self workingCopies at: index.
   self mcTool
-    mrBrowseRepositories: wc repositoryGroup repositories
+    mrBrowseRepositorGroup: wc
     label: wc package name , ' repository group'.
   ^ true

@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 10/13/2013 07:49",
+	"commentStamp" : "",
 	"instvars" : [
 		"workingCopies" ],
 	"name" : "TDWorkingCopyBrowser",
