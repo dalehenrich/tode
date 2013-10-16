@@ -1,11 +1,1 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'  #1 [248688641 sz:38  String] IndexUnitTest debug: #testBasicQueries
-  #2 [248687105 sz:39  String] IndexUnitTest debug: #testIndexBug33804
-  #3 [248685569 sz:39  String] IndexUnitTest debug: #testIndexBug33805
-  #4 [248684033 sz:45  String] IndexUnitTest debug: #testIndexBug33805Simple
-  #5 [248678913 sz:39  String] IndexUnitTest debug: #testIndexBug33889
-  #6 [248677377 sz:46  String] IndexUnitTest debug: #testIndexBug33967Sorting
-  #7 [248675841 sz:39  String] IndexUnitTest debug: #testIndexBug34108
-  #8 [248674305 sz:39  String] IndexUnitTest debug: #testIndexBug34306
-  #9 [248672769 sz:39  String] IndexUnitTest debug: #testIndexBug35061
-  #10 [248645377 sz:41  String] IndexUnitTest debug: #testIndexBug40076_1
-',#runs:RunArray{#runs:[725],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'I think I\'ve correctly propogated the collator throughout the GsQuery universe ... and now I can start using the collator in the unicode queries and index',#runs:RunArray{#runs:[154],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:154,#lastRun:1,#lastOffset:153}}}

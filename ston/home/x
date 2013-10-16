@@ -1,1 +1,5 @@
-TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | (TDClassCategoryList current) definitionList; yourself]'}
+TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | 
+| symbol |
+\t#(145869057 145869313 145869569 145869825) do: [:oop |
+symbol := Object _objectForOop: oop.
+IXFamilyTree class removeSelector: symbol] ]'}
