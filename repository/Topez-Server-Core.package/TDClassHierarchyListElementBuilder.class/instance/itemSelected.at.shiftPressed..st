@@ -1,6 +1,6 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect classDef itemAttribute |
+  | aspect classDef itemAttribute oldSelectedClass |
   itemAttribute := listElement itemCache at: index.
   classDef := itemAttribute object.
   aspect := itemAttribute aspect.
@@ -20,11 +20,12 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         ((TDEditorSpec topez: listElement topez editorAspect: #'classSelectors')
             windowName: #'classSelectors';
             yourself).
-  listElement selectedIndex ~~ index
+  selectedClass ~~ classDef theClass
     ifTrue: [ 
       classDef
         editUsing:
           ((TDEditorSpec topez: listElement topez editorAspect: #'hierarchyList')
             windowName: #'hierarchy';
-            yourself) ].
+            yourself).
+      selectedClass := classDef theClass ].
   ^ nil
