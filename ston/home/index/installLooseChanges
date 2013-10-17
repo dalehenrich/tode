@@ -25,17 +25,15 @@ looseChanges
   do: [ :ar | 
     | beh compileString |
     beh := ar at: 1.
-    compileString := beh theNonMetaClass name asString , \' compileMethod: \'
+    compileString := beh name asString , \' compileMethod: \'
       ,
         (beh compiledMethodAt: (ar at: 3)) sourceString withGemstoneLineEndings
           printString
       , \' dictionaries: System myUserProfile symbolList \' , \' category: \'
       , (ar at: 2) printString , \' environmentId: 0. true\'.
-    (systemUser
-      executeString: compileString)
+    (systemUser executeString: compileString)
       ifFalse: [ nil error: \'expected true\' ].
-    (systemUser
-      executeString: \'System commitTransaction\')
+    (systemUser executeString: \'System commitTransaction\')
       ifFalse: [ nil error: \'expected true\' ] ] ]
   ensure: [ systemUser ifNotNil: [ systemUser logout ] ].
 true ]'}
