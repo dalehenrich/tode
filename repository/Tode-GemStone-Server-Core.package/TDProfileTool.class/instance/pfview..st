@@ -16,4 +16,4 @@ pfview: label
         windowLabel: label;
         windowLocation: #'debugger';
         yourself).
-  ^ profMon
+  ^ profMonitorView

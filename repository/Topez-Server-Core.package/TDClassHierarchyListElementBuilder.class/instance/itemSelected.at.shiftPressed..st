@@ -20,12 +20,12 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         ((TDEditorSpec topez: listElement topez editorAspect: #'classSelectors')
             windowName: #'classSelectors';
             yourself).
-  selectedClass ~~ classDef theClass
+  (theWindowName ~~ #'hierarchy' or: [ selectedClass ~~ classDef theClass ])
     ifTrue: [ 
       classDef
         editUsing:
           ((TDEditorSpec topez: listElement topez editorAspect: #'hierarchyList')
             windowName: #'hierarchy';
             yourself).
-      selectedClass := classDef theClass ].
+      selectedClass := classDef theClass ].	""
   ^ nil

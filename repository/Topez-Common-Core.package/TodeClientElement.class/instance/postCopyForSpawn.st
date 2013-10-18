@@ -3,4 +3,5 @@ postCopyForSpawn
   "generate new windowName so navigation will occur in spawned window"
 
   editorWindowName ifNil: [ ^ self ].
-  editorWindowName := self clientElementOop asString asSymbol
+  editorWindowName := self clientElementOop asString asSymbol.
+  self windowBuilder theWindowName: editorWindowName
