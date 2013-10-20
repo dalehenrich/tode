@@ -8,6 +8,7 @@ browseVersionsFor: packageName
   versionsWindowId := self mcTool
     mrBrowseRepositoryVersions: versions
     in: self repository
+    workingCopy: self workingCopy
     parentBuilder: self
     windowId: versionsWindowId
     label:

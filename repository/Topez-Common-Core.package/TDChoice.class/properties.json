@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"prompt",
+		"labels",
+		"values",
+		"lines" ],
+	"name" : "TDChoice",
+	"pools" : [
+		 ],
+	"super" : "TDInteraction",
+	"type" : "normal" }

@@ -6,4 +6,5 @@ browseRepositoryPackages: listElement selectedIndex: selectedIndex
   repository := self repositories at: selectedIndex.
   self mcTool
     mrBrowseRepositoryPackges: repository
+    workingCopy: self workingCopy
     label: 'Packages for ' , repository description

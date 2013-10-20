@@ -1,10 +1,20 @@
 tools
 menuActionSpec: miniTool
+  | theSpec |
   theMiniTool := miniTool.
-  ^ {#('adopt' nil #'adoptVersion:selectedIndex:').
-  #('browse' nil #'browseVersion:selectedIndex:').
-  #('changes' nil #'versionChanges:selectedIndex:').
-  #('history' nil #'versionHistory:selectedIndex:').
-  #('load' nil #'loadVersion:selectedIndex:').
-  #('merge' nil #'mergeVersion:selectedIndex:').
-  #('-')} , self standardMenuActionSpec
+  theSpec := #().
+  self workingCopy
+    ifNotNil: [ 
+      theSpec := theSpec
+        ,
+          {#('adopt' nil #'adoptVersion:selectedIndex:').
+          #('changes' nil #'versionChanges:selectedIndex:').
+          #('merge' nil #'mergeVersion:selectedIndex:').
+          #('-')} ].
+  ^ theSpec
+    ,
+      {#('browse' nil #'browseVersion:selectedIndex:').
+      #('history' nil #'versionHistory:selectedIndex:').
+      #('load' nil #'loadVersion:selectedIndex:').
+      #('-')}
+    , self standardMenuActionSpec

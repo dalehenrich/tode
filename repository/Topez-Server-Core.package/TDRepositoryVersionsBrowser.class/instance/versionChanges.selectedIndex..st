@@ -1,7 +1,9 @@
 actions
 versionChanges: listElement selectedIndex: index
-  | version |
+  | resolvedVersion version |
   index = 0
     ifTrue: [ ^ false ].
-  self halt.
+  resolvedVersion := self versions at: index.
+  version := resolvedVersion version.
+  self browseChangesBetween: self workingCopy and: version info.
   ^ true

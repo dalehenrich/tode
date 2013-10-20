@@ -15,4 +15,4 @@ mcadopt
     ifFalse: [ 
       repoSpec := tokens at: 4.
       self versionFor: versionName in: repoSpec ].
-  ^ wc adopt: version
+  ^ self mcadopt: wc version: version

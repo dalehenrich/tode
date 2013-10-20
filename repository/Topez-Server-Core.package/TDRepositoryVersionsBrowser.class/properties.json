@@ -9,7 +9,8 @@
 		"versions",
 		"repository",
 		"versionInfoWindowId",
-		"versionInfoSummaryWindowId" ],
+		"versionInfoSummaryWindowId",
+		"workingCopy" ],
 	"name" : "TDRepositoryVersionsBrowser",
 	"pools" : [
 		 ],

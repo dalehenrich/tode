@@ -1,7 +1,10 @@
 actions
 browseVersion: listElement selectedIndex: index
-  | version |
+  | resolvedVersion version snapshot |
   index = 0
     ifTrue: [ ^ false ].
-  self halt.
+  resolvedVersion := self versions at: index.
+  version := resolvedVersion version.
+  snapshot := version snapshot.
+  self mcTool mcbrowseSnapshot: snapshot.
   ^ true

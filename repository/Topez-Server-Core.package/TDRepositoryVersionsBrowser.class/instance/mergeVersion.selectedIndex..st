@@ -1,7 +1,9 @@
 actions
 mergeVersion: listElement selectedIndex: index
-  | version |
+  | resolvedVersion version |
   index = 0
     ifTrue: [ ^ false ].
-  self halt.
+  resolvedVersion := self versions at: index.
+  version := resolvedVersion version.
+  self mcTool mcmerge: self workingCopy and: version in: self repository.
   ^ true
