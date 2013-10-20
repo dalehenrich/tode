@@ -7,7 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"versions",
-		"repository" ],
+		"repository",
+		"versionInfoWindowId",
+		"versionInfoSummaryWindowId" ],
 	"name" : "TDRepositoryVersionsBrowser",
 	"pools" : [
 		 ],

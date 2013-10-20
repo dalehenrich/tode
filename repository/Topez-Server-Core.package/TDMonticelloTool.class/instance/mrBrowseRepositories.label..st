@@ -1,8 +1,7 @@
 as yet unclassified
-mrBrowseRepositories: repositories label: labelString
-  (TDRepositoryBrowser new
-    topez: topez;
-    mcTool: self;
-    repositories: repositories;
-    windowLabel: labelString;
-    yourself) open
+mrBrowseRepositories: repositoryBlock label: labelString
+  ^ self
+    mrBrowseRepositories: repositoryBlock
+    parentBuilder: nil
+    windowId: nil
+    label: labelString

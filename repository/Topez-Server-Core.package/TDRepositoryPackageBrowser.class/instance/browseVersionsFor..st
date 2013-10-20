@@ -5,8 +5,10 @@ browseVersionsFor: packageName
     mrVersionsFor: packageName
     in: self repository
     ifAbsent: [ ^ false ].
-  self mcTool
+  versionsWindowId := self mcTool
     mrBrowseRepositoryVersions: versions
     in: self repository
+    parentBuilder: self
+    windowId: versionsWindowId
     label:
       'Versions of ' , packageName printString , ' in ' , self repository description

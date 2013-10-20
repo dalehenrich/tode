@@ -1,3 +1,0 @@
-accessing
-windowName
-  ^ #'mcRepositoryBrowser'

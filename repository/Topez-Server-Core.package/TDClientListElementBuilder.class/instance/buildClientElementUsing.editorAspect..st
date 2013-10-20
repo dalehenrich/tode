@@ -1,6 +1,6 @@
 as yet unclassified
 buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
-  | clientListElement theWindowLabel |
+  | clientListElement theWindowLabel theWindowIsClosingBlock |
   self
     theEditorSpec: aTDEditorSpec;
     theWindowName: aTDEditorSpec windowName;
@@ -14,11 +14,14 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     ifTrue: [ clientListElement parentList: aTDEditorSpec parentList ].
   theWindowLabel := aTDEditorSpec windowLabel.
   theWindowLabel ifNil: [ theWindowLabel := self editorWindowLabel ].
+  theWindowIsClosingBlock := aTDEditorSpec windowIsClosingBlock.
+  theWindowIsClosingBlock
+    ifNil: [ theWindowIsClosingBlock := self windowIsClosingBlock ].
   ^ clientListElement
     topez: aTDEditorSpec topez;
     aspect: editorAspect;
     parent: aTDEditorSpec parentObject;
-    windowIsClosingBlock: self windowIsClosingBlock;
+    windowIsClosingBlock: theWindowIsClosingBlock;
     keyboardEventBlock: self keyboardEventBlock;
     menuActionSpec: self menuActionSpec;
     menuActionBlock: self menuActionBlock;

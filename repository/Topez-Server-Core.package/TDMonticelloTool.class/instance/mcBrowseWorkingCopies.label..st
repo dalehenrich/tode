@@ -1,8 +1,7 @@
 as yet unclassified
-mcBrowseWorkingCopies: workingCopies label: labelString
-  (TDWorkingCopyBrowser new
-    topez: topez;
-    mcTool: self;
-    workingCopies: workingCopies;
-    windowLabel: labelString;
-    yourself) open
+mcBrowseWorkingCopies: workingCopyBlock label: labelString
+  ^ self
+    mcBrowseWorkingCopies: workingCopyBlock
+    parentBuilder: nil
+    windowId: nil
+    label: labelString

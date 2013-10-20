@@ -5,9 +5,11 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   index = 0
     ifTrue: [ ^ false ].
   versionInfo := self versionInfos at: index.
-  versionInfo summary
+  versionInfoSummaryWindowId := versionInfo summary
     editUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'edit')
         windowName: #'mcVersionInfo';
+        windowId: versionInfoSummaryWindowId;
+        windowIsClosingBlock: [ :ignoredListElement | self versionSummaryIsClosing ];
         yourself).
   ^ true

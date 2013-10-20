@@ -1,4 +1,5 @@
 tools
 clientList: miniTool listElement: listElement
   theMiniTool := miniTool.
-  ^ self workingCopies collect: [ :wc | wc printString ]
+  workingCopies := self workingCopyBlock value.
+  ^ workingCopies collect: [ :wc | wc printString ]

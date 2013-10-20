@@ -4,5 +4,9 @@ workingCopyHistory: listElement selectedIndex: index
   index = 0
     ifTrue: [ ^ false ].
   wc := self workingCopies at: index.
-  self mcTool mcBrowseVersionInfoFor: wc label: 'History for ' , wc package name.
+  versionInfoWindowId := self mcTool
+    mcBrowseVersionInfoFor: wc
+    parentBuilder: self
+    windowId: versionInfoWindowId
+    label: 'History for ' , wc package name.
   ^ true

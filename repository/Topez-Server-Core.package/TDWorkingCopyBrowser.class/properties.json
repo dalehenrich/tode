@@ -6,7 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"workingCopies" ],
+		"workingCopies",
+		"workingCopyBlock",
+		"repositoryGoupWindowId",
+		"versionInfoWindowId",
+		"defaultRepositoryWindowId" ],
 	"name" : "TDWorkingCopyBrowser",
 	"pools" : [
 		 ],

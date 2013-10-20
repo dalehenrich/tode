@@ -17,7 +17,8 @@
 		"windowLocation",
 		"selectionIndex",
 		"highlightIndex",
-		"parentList" ],
+		"parentList",
+		"windowIsClosingBlock" ],
 	"name" : "TDEditorSpec",
 	"pools" : [
 		 ],

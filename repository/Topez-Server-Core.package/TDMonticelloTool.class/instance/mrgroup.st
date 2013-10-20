@@ -9,6 +9,6 @@ mrgroup
   workingCopy := workingCopy := self resolveWorkingCopyReference: packageName.
   group := workingCopy repositoryGroup.
   self
-    mrBrowseRepositories: group repositories
+    mrBrowseRepositories: [ group repositories ]
     label: packageName , ' repository group'.
   ^ group

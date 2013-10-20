@@ -8,7 +8,9 @@
 	"instvars" : [
 		"topez",
 		"miniToolSpec",
-		"windowLabel" ],
+		"windowLabel",
+		"parentBuilder",
+		"windowId" ],
 	"name" : "TDToolBuilder",
 	"pools" : [
 		 ],

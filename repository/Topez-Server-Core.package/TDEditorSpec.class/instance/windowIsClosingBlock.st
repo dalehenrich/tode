@@ -1,0 +1,5 @@
+accessing
+windowIsClosingBlock
+  " [ :listElement | ... ]"
+
+  ^ windowIsClosingBlock

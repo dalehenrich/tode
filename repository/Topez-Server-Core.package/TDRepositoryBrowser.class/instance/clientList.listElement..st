@@ -1,4 +1,5 @@
 tools
 clientList: miniTool listElement: listElement
   theMiniTool := miniTool.
-  ^ self repositories collect: [ :repo | repo description ]
+  repositories := repositoryBlock value.
+  ^ repositories collect: [ :repo | repo description ]

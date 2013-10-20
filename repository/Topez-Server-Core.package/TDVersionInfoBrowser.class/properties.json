@@ -7,7 +7,11 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"workingCopy",
-		"selectedVersionInfo" ],
+		"repository",
+		"versionInfos",
+		"versionInfoBlock",
+		"selectedVersionInfo",
+		"versionInfoSummaryWindowId" ],
 	"name" : "TDVersionInfoBrowser",
 	"pools" : [
 		 ],

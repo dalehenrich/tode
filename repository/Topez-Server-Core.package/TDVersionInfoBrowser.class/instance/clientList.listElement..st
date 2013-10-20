@@ -1,7 +1,8 @@
 tools
 clientList: miniTool listElement: listElement
   theMiniTool := miniTool.
-  ^ self versionInfos
+  versionInfos := versionInfoBlock value.
+  ^ versionInfos
     collect: [ :vi | 
       vi == selectedVersionInfo
         ifTrue: [ vi name asText allBold ]

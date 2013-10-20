@@ -3,7 +3,8 @@
 		 },
 	"instance" : {
 		"browseVersions:selectedIndex:" : "dkh 10/13/2013 14:32",
-		"browseVersionsFor:" : "dkh 10/13/2013 21:30",
+		"browseVersionsFor:" : "dkh 10/19/2013 16:05",
+		"childIsClosing:" : "dkh 10/19/2013 12:44",
 		"clientList:listElement:" : "dkh 10/15/2013 13:30",
 		"copyObjectMenuAction:selectionIndex:" : "dkh 10/13/2013 10:52",
 		"editMenuActionSpec" : "dkh 10/13/2013 10:50",
@@ -13,6 +14,8 @@
 		"packagesSpec" : "dkh 10/13/2013 10:29",
 		"repository" : "dkh 10/13/2013 10:25",
 		"repository:" : "dkh 10/13/2013 10:25",
+		"savePackage:selectedIndex:" : "dkh 10/19/2013 16:50",
 		"theList" : "dkh 10/13/2013 11:00",
+		"windowIsClosing:" : "dkh 10/20/2013 10:39",
 		"windowLocation" : "dkh 10/13/2013 15:01",
 		"windowName" : "dkh 10/13/2013 14:52" } }

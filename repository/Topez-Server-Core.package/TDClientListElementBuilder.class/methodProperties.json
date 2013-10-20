@@ -9,7 +9,7 @@
 		"browseMethodVersionsMenuAction:selectionIndex:" : "dkh 10/01/2013 07:39",
 		"browseReferencesMenuAction:selectionIndex:" : "dkh 09/30/2013 21:33",
 		"browseSendersMenuAction:selectionIndex:" : "dkh 10/01/2013 06:40",
-		"buildClientElementUsing:editorAspect:" : "dkh 09/29/2013 09:22",
+		"buildClientElementUsing:editorAspect:" : "dkh 10/20/2013 10:15",
 		"clientList:" : "DataCurator 01/16/2013 07:43",
 		"clientListElement" : "dkh 06/11/2013 18:06",
 		"cloneWindowMenuAction:selectionIndex:" : "dkh 09/30/2013 21:31",
@@ -42,6 +42,7 @@
 		"editMenuActionSpec" : "dkh 09/30/2013 21:13",
 		"firstList:" : "DataCurator 01/11/2013 15:36",
 		"inspectBuilderMenuAction:selectionIndex:" : "dkh 10/05/2013 07:57",
+		"inspectWindowModelMenuAction:selectionIndex:" : "dkh 10/19/2013 10:16",
 		"itemSelected:at:shiftPressed:" : "DataCurator 01/25/2013 15:08",
 		"itemSelectedBlock" : "DataCurator 01/25/2013 15:08",
 		"keyboardEventBlock" : "DataCurator 02/09/2013 07:34",
@@ -60,5 +61,4 @@
 		"standardMenuActionSpec" : "dkh 09/29/2013 13:47",
 		"theBehavior" : "DataCurator 02/07/2013 14:10",
 		"theClass" : "DataCurator 02/07/2013 14:11",
-		"windowIsClosingBlock" : "DataCurator 01/26/2013 17:49",
-		"windowMenuActionSpec" : "dkh 10/12/2013 11:04" } }
+		"windowMenuActionSpec" : "dkh 10/20/2013 09:49" } }

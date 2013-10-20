@@ -1,12 +1,15 @@
 as yet unclassified
 buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
-  | theWindowLabel |
+  | theWindowLabel theWindowIsClosingBlock |
   self
     theEditorSpec: aTDEditorSpec;
     theWindowName: aTDEditorSpec windowName;
     theWindowLocation: aTDEditorSpec windowLocation.
   theWindowLabel := aTDEditorSpec windowLabel.
   theWindowLabel ifNil: [ theWindowLabel := self editorWindowLabel ].
+  theWindowIsClosingBlock := aTDEditorSpec windowIsClosingBlock.
+  theWindowIsClosingBlock
+    ifNil: [ theWindowIsClosingBlock := self windowIsClosingBlock ].
   ^ self clientSourceElement
     theObject: self object;
     aspect: aTDEditorSpec editorAspect;
@@ -20,5 +23,6 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;
     editorAspectSelector: #'activateCodeEditor';
+    windowIsClosingBlock: theWindowIsClosingBlock;
     windowBuilder: self;
     yourself

@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"topez:clientListBlock:menuActionSpecBlock:menuActionBlock:itemSelectedBlock:keyboardActionBlock:" : "dkh 10/13/2013 08:54" },
+		"topez:clientListBlock:menuActionSpecBlock:menuActionBlock:itemSelectedBlock:keyboardActionBlock:windowIsClosingBlock:" : "dkh 10/19/2013 10:55" },
 	"instance" : {
 		"builder" : "10/07/2013 10:34",
 		"builder:" : "10/07/2013 10:34",
@@ -18,4 +18,5 @@
 		"menuActionBlock:" : "10/07/2013 10:23",
 		"menuActionSpec:" : "10/07/2013 10:35",
 		"menuActionSpecBlock" : "10/07/2013 10:23",
-		"menuActionSpecBlock:" : "10/07/2013 10:23" } }
+		"menuActionSpecBlock:" : "10/07/2013 10:23",
+		"windowIsClosing:" : "dkh 10/20/2013 10:40" } }

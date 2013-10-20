@@ -1,3 +1,4 @@
 launching
 open
-  self editUsing: self miniToolSpec
+  windowId := self editUsing: self miniToolSpec.
+  ^ windowId

@@ -1,7 +1,10 @@
 actions
 defaultRepositoryGroup: listElement selectedIndex: index
-  | repos |
-  repos := MCRepositoryGroup default repositories
-    sort: [ :a :b | a description < b description ].
-  self mcTool mrBrowseRepositories: repos label: 'Repositories'.
+  defaultRepositoryWindowId := self mcTool
+    mrBrowseRepositories: [ 
+      MCRepositoryGroup default repositories
+        sort: [ :a :b | a description < b description ] ]
+    parentBuilder: self
+    windowId: defaultRepositoryWindowId
+    label: 'Repositories'.
   ^ true

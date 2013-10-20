@@ -1,5 +1,4 @@
 as yet unclassified
 excludedInstVarNames
   ^ super excludedInstVarNames
-    ,
-      #(#'itemCache' #'parent' #'listBlock' #'itemSelectedBlock' #'windowIsClosingBlock')
+    , #(#'itemCache' #'parent' #'listBlock' #'itemSelectedBlock')

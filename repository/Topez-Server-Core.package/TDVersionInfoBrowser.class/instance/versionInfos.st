@@ -1,3 +1,4 @@
 accessing
 versionInfos
-  ^ self workingCopy ancestry allAncestors
+  versionInfos ifNil: [ versionInfos := versionInfoBlock value ].
+  ^ versionInfos

@@ -8,7 +8,8 @@ miniToolSpec
         menuActionSpecBlock: self menuActionSpecBlock
         menuActionBlock: self menuActionBlock
         itemSelectedBlock: self itemSelectedBlock
-        keyboardActionBlock: self keyboardActionBlock)
+        keyboardActionBlock: self keyboardActionBlock
+        windowIsClosingBlock: self windowIsClosingBlock)
         windowLabel: self windowLabel;
         windowId: self windowId;
         windowName: self windowName;
