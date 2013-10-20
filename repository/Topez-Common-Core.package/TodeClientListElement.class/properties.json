@@ -14,8 +14,6 @@
 		"itemSelectedBlockOop",
 		"selectedIndex",
 		"parent",
-		"windowIsClosingBlock",
-		"windowIsClosingBlockOop",
 		"highlightedIndex",
 		"parentList" ],
 	"name" : "TodeClientListElement",

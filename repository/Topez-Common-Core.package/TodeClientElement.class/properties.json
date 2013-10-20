@@ -22,6 +22,8 @@
 		"menuActionBlockOop",
 		"menuActionSpec",
 		"cmdKeyCodePoints",
+		"windowIsClosingBlock",
+		"windowIsClosingBlockOop",
 		"windowBuilder" ],
 	"name" : "TodeClientElement",
 	"pools" : [
