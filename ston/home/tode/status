@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 3e8d3314999f025b7f16975942ddfb2da40b15bd
+TDTxtLeafNode{#name:'status',#contents:'commit aa5eeb91af376384d0e0c720d4d7dc00135986b5
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sun Oct 20 20:57:22 2013 -0700
+Date:   Mon Oct 21 10:17:34 2013 -0700
 
     clean up TDClientElementTestCase>>testClientElementSerialization
 '}

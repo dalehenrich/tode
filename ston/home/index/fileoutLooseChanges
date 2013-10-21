@@ -1,7 +1,7 @@
 TDScriptLeafNode{#name:'fileoutLooseChanges',#contents:'[ :topez :objIn :tokens :windowId | 
 | gsTool path classToFilenameMap externalMethodMap current packages node looseChanges |
 gsTool := topez toolInstanceFor: \'gs\'.
-path := \'/export/foos2/users/dhenrich/3.0/j_gss64bit/image\'.
+path := \'/export/foos2/users/dhenrich/3.0/l_gss64bit/image\'.
 classToFilenameMap := Dictionary new
   at: #\'AbstractIndexSpecification\' put: #(\'abstractindexspec.gs\');
   at: #\'Array\' put: #(\'array2.gs\');

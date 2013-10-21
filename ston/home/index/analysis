@@ -1,1 +1,7 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'Implementing AbstractBagEnumerator>>_findTraversedCollectionBasedValues:and:do: as we follow the chain working down from CollectionBasedPathEvaluator ',#runs:RunArray{#runs:[103,46,1],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],[@7]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'userBlock instance variable in AbstractBagEnumerator (and PathEvaluator and IndexedQueryEvaluator) to avoid passing aBlock through a bunch of message sends.
+
+Is it okay to add iv to IndexedQueryEvaluator?
+
+Need to preserve the 3.1 code for ObsoletePathEvaluator ... useful for testing purposes?
+
+GsQueryFormula>>isRangeEqualityOperation: allows lots of invalid operators???',#runs:RunArray{#runs:[373],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:297,#lastRun:1,#lastOffset:296}}}
