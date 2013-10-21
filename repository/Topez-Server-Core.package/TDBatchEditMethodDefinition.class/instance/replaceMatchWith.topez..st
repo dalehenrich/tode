@@ -10,7 +10,9 @@ replaceMatchWith: replacementString topez: topez
     copyReplaceFrom: matchingRange _from
     to: matchingRange _to
     with: replacementString.
-  self theBehavior compile: newSource classified: self methodCategory.
+  self theBehavior
+    compile: newSource withGemstoneLineEndings
+    classified: self methodCategory.
   matchingRanges := nil.
   matchIndex > self matchingRanges size
     ifTrue: [ 

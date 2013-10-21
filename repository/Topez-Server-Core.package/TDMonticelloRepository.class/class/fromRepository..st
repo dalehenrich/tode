@@ -7,5 +7,5 @@ fromRepository: aRepository
   url := Url absoluteFromText: descr.
   ^ self new
     url: url;
-    repository: aRepository;
+    description: descr;
     yourself

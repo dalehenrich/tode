@@ -1,0 +1,4 @@
+accessing
+childIsClosing: aTDToolBuilder
+  "noop"
+

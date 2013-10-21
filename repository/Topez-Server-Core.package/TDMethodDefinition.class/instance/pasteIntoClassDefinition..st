@@ -7,5 +7,7 @@ pasteIntoClassDefinition: aTDClassDefinition
   source := method sourceString.
   category := method inClass categoryOfSelector: self selector.
   category ifNil: [ category := ClassOrganizer default ].
-  aTDClassDefinition theClass compile: source classified: category.
+  aTDClassDefinition theClass
+    compile: source withGemstoneLineEndings
+    classified: category.
   ^ true

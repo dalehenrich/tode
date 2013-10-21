@@ -4,7 +4,7 @@ tsrun: arg
   (arg beginsWith: '@')
     ifTrue: [ 
       | methodOrClass |
-      methodOrClass := self self resolveAtPathReference: arg.
+      methodOrClass := self resolveAtPathReference: arg.
       methodOrClass isBehavior
         ifTrue: [ ^ self runTestClass: cls ].
       cls := methodOrClass inClass.

@@ -1,3 +1,5 @@
-TDSmalltalkLeafNode{#name:'x',#contents:'| repo |
-repo := MCGitHubRepository
-  location: \'github://glassdb/zinc:gemstone3.1/repository\''}
+TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | 
+| symbol |
+\t#(145869057 145869313 145869569 145869825) do: [:oop |
+symbol := Object _objectForOop: oop.
+IXFamilyTree class removeSelector: symbol] ]'}

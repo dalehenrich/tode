@@ -1,0 +1,3 @@
+accessing
+theList
+  ^ self packageTextList

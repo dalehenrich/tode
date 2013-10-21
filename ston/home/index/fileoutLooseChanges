@@ -1,0 +1,81 @@
+TDScriptLeafNode{#name:'fileoutLooseChanges',#contents:'[ :topez :objIn :tokens :windowId | 
+| gsTool path classToFilenameMap externalMethodMap current packages node looseChanges |
+gsTool := topez toolInstanceFor: \'gs\'.
+path := \'/export/foos2/users/dhenrich/3.0/l_gss64bit/image\'.
+classToFilenameMap := Dictionary new
+  at: #\'AbstractIndexSpecification\' put: #(\'abstractindexspec.gs\');
+  at: #\'Array\' put: #(\'array2.gs\');
+  at: #\'CharacterCollection\' put: #(\'charcoll.gs\');
+  at: #\'CollectionBasedPathEvaluator\' put: #(\'idxquerymethods.gs\');
+  at: #\'CollectionBasedPathTerm\' put: #(\'collbasedpathterm.gs\');
+  at: #\'DependencyList\' put: #(\'dependencylist.gs\');
+  at: #\'EqualityIndexSpecification\' put: #(\'equalityindexspec.gs\');
+  at: #\'EnumeratedPathEvaluator\' put: #(\'idxquerymethods.gs\');
+  at: #\'EnumeratedPathTerm\' put: #(\'enumeratedpathterm.gs\');
+  at: #\'Gs32DisjunctiveClauseOptimizer\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsAbstractQueryOptimizer\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsAbstractQueryPredicate\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsAbstractReferenceAssociation\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsClauseOptimizer\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsCompoundClause\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsOptions\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsIndexOptions\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsIndexSpec\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsPathPathPredicate\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsRangeQueryPredicate\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsQuery\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsQueryFormula\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsQueryGrammar\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsQueryLiteral\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsQueryOptions\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsQueryParser\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsQueryPredicate\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsUnaryClause\' put: #(\'idxquerymethods.gs\');
+  at: #\'IdentityIndex\' put: #(\'identityindex.gs\');
+  at: #\'IdentityIndexSpecification\' put: #(\'identityindexspec.gs\');
+  at: #\'IndexedQueryEvaluator\' put: #(\'indexquery.gs\');
+  at: #\'IndexList\' put: #(\'indexlist.gs\');
+  at: #\'IndexManager\' put: #(\'IndexManager.gs\');
+  at: #\'PathEvaluator\' put: #(\'pathevaluator.gs\');
+  at: #\'PathTerm\' put: #(\'pathterm.gs\');
+  at: #\'RcUnicodeIndexSpecification\' put: #(\'idxquerymethods.gs\');
+  at: #\'RcUnicodeRangeEqualityIndex\' put: #(\'rcunicoderangeindex.gs\');
+  at: #\'SelectorPathEvaluator\' put: #(\'idxquerymethods.gs\');
+  at: #\'SelectorPathTerm\' put: #(\'selectorpathterm.gs\');
+  at: #\'SetValuedPathTerm\' put: #(\'setpathterm.gs\');
+  at: #\'UnicodeIndexSpecification\' put: #(\'idxquerymethods.gs\');
+  at: #\'UnicodeRangeEqualityIndex\' put: #(\'unicoderangeindex.gs\');
+  at: #\'UnorderedCollection\' put: #(\'unorderedcoll.gs\' \'unorderedcoll3.gs\');
+  yourself.
+externalMethodMap := Dictionary new.
+current := GsPackagePolicy current.
+packages := {}.
+current packages_Do: [ :pkg | packages add: pkg ].
+node := topez lookup: \'/home/index/looseChanges\'.
+looseChanges := node block
+  value: topez
+  value: objIn
+  value: tokens
+  value: windowId.
+looseChanges
+  do: [ :ar | 
+    | beh cat meth set selector |
+    beh := ar at: 1.
+    cat := ar at: 2.
+    selector := ar at: 3.
+    meth := MethodReference class: beh selector: selector asSymbol.
+    set := externalMethodMap
+      at: meth actualClass theNonMetaClass name
+      ifAbsent: [ externalMethodMap at: meth actualClass name put: Set new ].
+    set add: meth ].
+gsTool
+  gsfileout: path
+  externalMethodMap: externalMethodMap
+  classToFilenameMap: classToFilenameMap
+  defaultHeader:
+    \'!=========================================================================
+! Copyright (C) GemTalk Systems, LLC. 2013.  All Rights Reserved.
+!=========================================================================
+
+\'
+      withGemstoneLineEndings ]'}

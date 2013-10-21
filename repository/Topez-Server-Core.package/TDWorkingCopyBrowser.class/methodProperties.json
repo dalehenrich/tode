@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"childIsClosing:" : "dkh 10/19/2013 17:53",
+		"clientList:listElement:" : "dkh 10/19/2013 10:08",
+		"defaultRepositoryGroup:selectedIndex:" : "dkh 10/19/2013 16:42",
+		"definitionForSelection:" : "dkh 10/13/2013 07:59",
+		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 10/19/2013 10:23",
+		"menuActionSpec:" : "dkh 10/20/2013 20:28",
+		"theList" : "dkh 10/13/2013 07:49",
+		"windowIsClosing:" : "dkh 10/20/2013 10:39",
+		"windowLocation" : "dkh 10/13/2013 15:00",
+		"windowName" : "dkh 10/13/2013 07:49",
+		"workingCopies" : "dkh 10/19/2013 10:09",
+		"workingCopyBlock" : "dkh 10/19/2013 09:56",
+		"workingCopyBlock:" : "dkh 10/19/2013 09:56",
+		"workingCopyBrowse:selectedIndex:" : "dkh 10/13/2013 07:49",
+		"workingCopyHistory:selectedIndex:" : "dkh 10/19/2013 17:53",
+		"workingCopyRecompile:selectedIndex:" : "dkh 10/13/2013 07:51",
+		"workingCopyRepositoryGroup:selectedIndex:" : "dkh 10/19/2013 16:43",
+		"workingCopyRevert:selectedIndex:" : "dkh 10/13/2013 07:51",
+		"workingDelete:selectedIndex:" : "dkh 10/13/2013 09:44",
+		"workingUnload:selectedIndex:" : "dkh 10/13/2013 09:44" } }

@@ -1,0 +1,31 @@
+TDScriptLeafNode{#name:'looseChanges',#contents:'[ :topez :objIn :tokens :windowId | 
+| current packages package loose packagePrefixes |
+current := GsPackagePolicy current.
+packages := {}.
+current packages_Do: [ :pkg | packages add: pkg ].
+package := packages detect: [ :pkg | pkg symbolDict name == #\'UserGlobals\' ].
+loose := {}.
+packagePrefixes := MCWorkingCopy allManagers
+  collect: [ :wc | \'*\' , wc packageName asLowercase ].
+package
+  behaviorAndMethodDictDo: [ :beh :methodDict | 
+    methodDict keys
+      do: [ :selector | 
+        | cat |
+        cat := (beh categoryOfSelector: selector) asString asLowercase.
+        (cat beginsWith: \'*\')
+          ifTrue: [ 
+            (packagePrefixes detect: [ :prefix | cat beginsWith: prefix ] ifNone: [  ])
+              ifNil: [ 
+                loose
+                  add:
+                    {beh.
+                    cat.
+                    selector} ] ]
+          ifFalse: [ 
+            loose
+              add:
+                {beh.
+                cat.
+                selector} ] ] ].
+loose ]'}

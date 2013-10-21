@@ -25,7 +25,7 @@ gsfileout: methodRef filename: filename range: ar in: directory
             on: fileStream ]
         ifFalse: [ 
           | src |
-          src := methodRef sourceCode.
+          src := methodRef sourceCode withGemstoneLineEndings.
           fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 1)).
           fileStream nextPutAll: src.
           src last == lf

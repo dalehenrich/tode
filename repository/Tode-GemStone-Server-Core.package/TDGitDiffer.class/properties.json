@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 10/05/2013 18:24",
+	"commentStamp" : "",
 	"instvars" : [
 		"diffs",
 		"gitTool",

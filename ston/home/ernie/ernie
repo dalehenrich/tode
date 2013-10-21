@@ -2,6 +2,6 @@ TDScriptLeafNode{#name:'ernie',#contents:'[ :topez :objIn :tokens :windowId |
 | shellTool classDefs |
 shellTool := topez toolInstanceFor: \'find\'.
 classDefs := shellTool findSymbolDictionary: #\'UserGlobals\' username: \'Ernie\'.
-\tclassDefs add: TestAsserter asTDClassDefinition.
+classDefs add: TestAsserter asTDClassDefinition.
 classDefs editUsing: (TDEditorSpec topez: topez editorAspect: #\'definitionList\').
 classDefs ]'}

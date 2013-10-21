@@ -1,0 +1,54 @@
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'17:30:34 ClassOrganizerTestCase debug: #test_sentButNotImplemented - start...FAILURE: Sent but not implemented in base image
+#\'findTokens:\'
+#\'isArray\'
+#\'readFrom:\'
+#\'subclassResponsibility\'
+#\'subclassResponsibilty\'
+
+--------------------------------------
+17:27:23 BehaviorTestCase debug: #testBug2023 - start...pass; 0 page(s); CPU=0.0%; 3 ms
+17:27:23 BehaviorTestCase debug: #testBug38383 - start...FAILURE:
+fail - ResumableTestFailure: 1 ResumableTestFailure (ResumableTestFailure) >> signal: (envId 0) @4 line 3  [GsNMethod 31166977]
+2 AbstractException class (ResumableTestFailure class) >> signal: (envId 0) @3 line 4  [GsNMethod 4352513]
+3 AbstractException class (ResumableTestFailure class) >> sunitSignalWith: (envId 0) @2 line 2  [GsNMethod 3414273]
+4 GSTestCase (BehaviorTestCase) >> assert:description: (envId 0) @5 line 4  [GsNMethod 31018497]
+5 GSTestCase (BehaviorTestCase) >> assert: (envId 0) @2 line 3  [GsNMethod 31016705]
+6 [] in  BehaviorTestCase (ExecBlock1) >> checkBug38383forClass:legalCharacters: (envId 0) @10 line 8  [GsNMethod 32510977]
+7 Collection (Array) >> do: (envId 0) @5 line 10  [GsNMethod 2487553]
+8 BehaviorTestCase (BehaviorTestCase) >> checkBug38383forClass:legalCharacters: (envId 0) @3 line 3  [GsNMethod 32506113]
+9 [] in  BehaviorTestCase (ExecBlock1) >> testBug38383 (envId 0) @2 line 12  [GsNMethod 31758337]
+10 [] in  KeyValueDictionary (ExecBlock2) >> do: (envId 0) @2 line 6  [GsNMethod 3510785]
+11 IdentityDictionary (SymbolDictionary) >> keysAndValuesDo: (envId 0) @22 line 17  [GsNMethod 3646465]
+12 KeyValueDictionary (SymbolDictionary) >> do: (envId 0) @2 line 6  [GsNMethod 3511041]
+13 BehaviorTestCase (BehaviorTestCase) >> testBug38383 (envId 0) @14 line 11  [GsNMethod 31742977]
+14 TestCase (BehaviorTestCase) >> performTest (envId 0) @3 line 2  [GsNMethod 17272577]
+15 GSTestCase (BehaviorTestCase) >> performTest (envId 0) @5 line 6  [GsNMethod 31099905]
+16 [] in  TestCase (ExecBlock0) >> runCase (envId 0) @3 line 5  [GsNMethod 17262849]
+17 ExecBlock (ExecBlock0) >> ensure: (envId 0) @2 line 12  [GsNMethod 3655937]
+18 TestCase (BehaviorTestCase) >> runCase (envId 0) @4 line 6  [GsNMethod 17263617]
+19 [] in  GSTestCase (ExecBlock0) >> runCase (envId 0) @2 line 11  [GsNMethod 31118593]
+20 System class (System class) >> millisecondsToRun: (envId 0) @4 line 13  [GsNMethod 4600833]
+21 [] in  GSTestCase (ExecBlock0) >> runCase (envId 0) @2 line 11  [GsNMethod 31119105]
+22 Time class (Time class) >> secondsElapsedTime: (envId 0) @5 line 11  [GsNMethod 11096321]
+23 Time class (Time class) >> millisecondsElapsedTime: (envId 0) @2 line 6  [GsNMethod 11094017]
+24 GSTestCase (BehaviorTestCase) >> runCase (envId 0) @15 line 10  [GsNMethod 31118081]
+25 [] in  GSTestResult (ExecBlock0) >> runCase: (envId 0) @2 line 4  [GsNMethod 30940417]
+26 ExecBlock (ExecBlock0) >> on:do: (envId 0) @3 line 42  [GsNMethod 3684609]
+27 [] in  GSTestResult (ExecBlock0) >> runCase: (envId 0) @4 line 6  [GsNMethod 30941441]
+28 ExecBlock (ExecBlock0) >> on:do: (envId 0) @3 line 42  [GsNMethod 3684609]
+29 GSTestResult (GSTestResult) >> runCase: (envId 0) @2 line 11  [GsNMethod 30939905]
+30 TestCase (BehaviorTestCase) >> run: (envId 0) @2 line 2  [GsNMethod 17264897]
+31 [] in  GSTestSuite (ExecBlock1) >> run: (envId 0) @3 line 5  [GsNMethod 30962945]
+32 Collection (OrderedCollection) >> do: (envId 0) @5 line 10  [GsNMethod 2487553]
+33 GSTestSuite (GSTestSuite) >> run: (envId 0) @3 line 3  [GsNMethod 30962689]
+34 [] in  GSTestSuite (ExecBlock1) >> run: (envId 0) @3 line 5  [GsNMethod 30962945]
+35 Collection (OrderedCollection) >> do: (envId 0) @5 line 10  [GsNMethod 2487553]
+36 GSTestSuite (GSTestSuite) >> run: (envId 0) @3 line 3  [GsNMethod 30962689]
+37 [] in  GSTestSuite (ExecBlock0) >> run (envId 0) @2 line 5  [GsNMethod 30959361]
+38 ExecBlock (ExecBlock0) >> ensure: (envId 0) @2 line 12  [GsNMethod 3655937]
+39 BlockClosure (ExecBlock0) >> sunitEnsure: (envId 0) @2 line 6  [GsNMethod 17373185]
+40 GSTestSuite (GSTestSuite) >> run (envId 0) @5 line 5  [GsNMethod 30959105]
+41 GSTestCase class (CoreTestCase class) >> runEx: (envId 0) @3 line 4  [GsNMethod 31000065]
+42 Executed Code            @2 line 1  [GsNMethod 76518401]
+43 <Reenter marker>
+',#runs:RunArray{#runs:[4211],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}

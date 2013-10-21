@@ -1,13 +1,21 @@
 accessing
 classDefinitions
-  | defs |
+  | defs symDict |
   defs := OrderedCollection new.
-  self symbolDictionary
-    classesDo: [ :aUserProfile :aSymbolDictionary :cls | 
-      defs
-        add:
-          (TDClassDefinition new
-            username: self username;
-            className: cls name;
-            yourself) ].
+  symDict := self symbolDictionary.
+  symDict keys
+    do: [ :globalKey | 
+      [ 
+      | glob |
+      glob := symDict at: globalKey.
+      glob isBehavior
+        ifTrue: [ 
+          defs
+            add:
+              (TDClassDefinition new
+                username: self username;
+                className: glob name;
+                yourself) ] ]
+        on: SecurityError
+        do: [ :ex | self halt ] ].
   ^ defs

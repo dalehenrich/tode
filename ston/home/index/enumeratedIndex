@@ -1,0 +1,18 @@
+TDScriptLeafNode{#name:'enumeratedIndex',#contents:'[ :topez :objIn :tokens :windowId | 
+| nsc expected query queryBag expectedBag intersection |
+nsc := {(1 -> 0).
+(2 -> 1).
+(3 -> 2)} asSet.
+expected := (nsc select: { :each | each.key = 1 })
+  , (nsc select: { :each | each.value = 1 }).
+query := (GsQuery fromString: \'each.key|value = 1\')
+  requirePathTerms;
+  on: nsc.
+queryBag := query asIdentityBag.
+expectedBag := expected asIdentityBag.
+query size == expected size
+  ifFalse: [ nil error: \'query size mismatch\' ].
+intersection := query intersection: expected.
+intersection size == query size
+  ifFalse: [ nil error: \'intersection size mismatch\' ].
+queryBag ]'}

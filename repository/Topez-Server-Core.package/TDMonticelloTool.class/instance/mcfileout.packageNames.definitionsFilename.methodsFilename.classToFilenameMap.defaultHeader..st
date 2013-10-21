@@ -26,25 +26,27 @@ mcfileout: directoryPath packageNames: packageNames definitionsFilename: definit
   classDefs := classes collect: [ :cls | TDClassDefinition className: cls name ].
   classDefs := TDClassDefinition classHierarchyOrder: classDefs.
   classNameList := classDefs collect: [ :def | def className ].
-  methodsFilename == nil
+  classNameList isEmpty not
     ifTrue: [ 
-      "fileout class definitions and methods into same file"
-      gsTool
-        gsfileout: directoryPath
-        classes: classNameList
-        filename: definitionFilename
-        defaultHeader: defaultHeader ]
-    ifFalse: [ 
-      "fileout class definitions and methods into separate files"
-      gsTool
-        gsfileout: directoryPath
-        classDefs: classNameList
-        filename: definitionFilename
-        defaultHeader: defaultHeader.
-      classNameList := classNameList sort: [ :a :b | a <= b ].
-      gsTool
-        gsfileout: directoryPath
-        classMethods: classNameList
-        filename: methodsFilename
-        defaultHeader: defaultHeader ].
+      methodsFilename == nil
+        ifTrue: [ 
+          "fileout class definitions and methods into same file"
+          gsTool
+            gsfileout: directoryPath
+            classes: classNameList
+            filename: definitionFilename
+            defaultHeader: defaultHeader ]
+        ifFalse: [ 
+          "fileout class definitions and methods into separate files"
+          gsTool
+            gsfileout: directoryPath
+            classDefs: classNameList
+            filename: definitionFilename
+            defaultHeader: defaultHeader.
+          classNameList := classNameList sort: [ :a :b | a <= b ].
+          gsTool
+            gsfileout: directoryPath
+            classMethods: classNameList
+            filename: methodsFilename
+            defaultHeader: defaultHeader ] ].
   ^ packageNames

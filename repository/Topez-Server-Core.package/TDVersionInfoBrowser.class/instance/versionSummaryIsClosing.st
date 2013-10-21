@@ -1,0 +1,3 @@
+accessing
+versionSummaryIsClosing
+  versionInfoSummaryWindowId := nil

@@ -4,5 +4,4 @@ mccreate
 
   | packageName |
   packageName := tokens at: 2.
-  PackageInfo registerPackageName: packageName.
-  ^ MCWorkingCopy forPackage: (MCPackage new name: packageName)
+  ^ self mccreate: packageName

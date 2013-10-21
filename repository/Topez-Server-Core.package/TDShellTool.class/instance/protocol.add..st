@@ -1,4 +1,4 @@
 as yet unclassified
-protocol: theBehavior add: protoName
+protocol: theBehavior add: protoNames
   <manPageApi: 'protocol' description: 'add method protocol for given behavior'>
-  ^ theBehavior addCategory: protoName
+  ^ protoNames collect: [ :protoName | theBehavior addCategory: protoName ]

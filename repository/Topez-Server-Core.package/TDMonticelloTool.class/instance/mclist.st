@@ -2,18 +2,15 @@ as yet unclassified
 mclist
   "mc list <regex-pkg-pattern> "
 
-  | pattern list stream displayPolicy |
-  pattern := tokens size > 1
-    ifTrue: [ tokens at: 2 ].
-  list := self findMatchingPackages: pattern topez: topez.
-  displayPolicy := topez displayPolicy
-    compacted: true;
-    yourself.
-  stream := displayPolicy stream.
-  list := list sort: [ :a :b | a name <= b name ].
-  list
-    do: [ :pkg | 
-      pkg displayOnPolicy: displayPolicy.
-      stream cr ].
-  list editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
-  ^ list
+  | pattern label block |
+  label := 'Working Copies'.
+  tokens size > 1
+    ifTrue: [ 
+      pattern := tokens at: 2.
+      label := 'Packages matching: ' , pattern printString ].
+  block := [ 
+  | wcList |
+  wcList := self findMatchingPackages: pattern topez: topez.
+  wcList := wcList sort: [ :a :b | a packageName < b packageName ] ].
+  self mcBrowseWorkingCopies: block label: label.
+  ^ block value

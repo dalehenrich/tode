@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"repository",
+		"versionsWindowId",
+		"workingCopy" ],
+	"name" : "TDRepositoryPackageBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractMonticelloToolBuilder",
+	"type" : "normal" }

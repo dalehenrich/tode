@@ -6,7 +6,7 @@ gsfileout
 
   | directoryPath classnameFilenamePairs |
   directoryPath := tokens at: 2.
-  classnameFilenamePairs := #().
+  classnameFilenamePairs := {}.
   3 to: tokens size by: 2 do: [ :index | 
     | classname filename |
     classname := tokens at: index.

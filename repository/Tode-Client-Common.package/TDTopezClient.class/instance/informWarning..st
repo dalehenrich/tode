@@ -6,7 +6,7 @@ informWarning: aDescription
     trueChoice: 'Proceed'
     falseChoice: 'Abort'
     cancelChoice: 'Debug'
-    default: false.
+    default: true.
   answer ifNil: [ ^ #'debug' ].
   answer
     ifTrue: [ ^ #'resume' ].

@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"prompt",
+		"template" ],
+	"name" : "TDText",
+	"pools" : [
+		 ],
+	"super" : "TDInteraction",
+	"type" : "normal" }

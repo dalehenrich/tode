@@ -1,3 +1,3 @@
 as yet unclassified
 windowLocation
-  ^ #'classes'
+  ^ #'classCategories'

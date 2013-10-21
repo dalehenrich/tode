@@ -4,4 +4,5 @@ menuActionSpec
 
   "works in concert with menuActionBlock"
 
-  ^ self standardMenuActionSpec
+  ^ {#('create accessors' nil #'createAccessorsMenuAction:selectionIndex:').
+  #('-')} , self standardMenuActionSpec

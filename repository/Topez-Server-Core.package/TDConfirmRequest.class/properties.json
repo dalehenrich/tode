@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDConfirmRequest",
+	"pools" : [
+		 ],
+	"super" : "TDInteractionRequest",
+	"type" : "normal" }

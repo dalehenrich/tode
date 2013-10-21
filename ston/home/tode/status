@@ -1,7 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit e36527bdc003b0afbeb4bd043e1decebb7bf0034
-Merge: 1e19eda f4da2b6
+TDTxtLeafNode{#name:'status',#contents:'commit 1b01f33f1140901f69daff6f17b7f25efd38a675
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sat Oct 5 15:41:04 2013 -0700
+Date:   Tue Oct 15 16:38:11 2013 -0700
 
-    Merge branch \'issue_28\' of github.com:dalehenrich/tode into issue_28
+    checkpoint: implement TDRepositoryBrowser>>workingCopyDiff:selectedIndex: (moved form TDWorkingCopyBrowser>>workingCopyDiff:selectedIndex:) and TDRepositoryVersionsBrowser>>loadVersion:selectedIndex: plus supporting TDMonticello tool support
 '}

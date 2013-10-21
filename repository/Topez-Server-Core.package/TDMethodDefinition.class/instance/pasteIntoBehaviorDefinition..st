@@ -7,5 +7,7 @@ pasteIntoBehaviorDefinition: aBehaviorDefinition
   source := method sourceString.
   category := method inClass categoryOfSelector: self selector.
   category ifNil: [ category := ClassOrganizer default ].
-  aBehaviorDefinition theBehavior compile: source classified: category.
+  aBehaviorDefinition theBehavior
+    compile: source withGemstoneLineEndings
+    classified: category.
   ^ true

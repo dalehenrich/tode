@@ -5,5 +5,5 @@ _extractPackageDefinitions
   defs := Dictionary new.
   version ifNil: [ ^ defs ].
   version packages
-    do: [ :pkg | defs at: pkg name put: (TDPackageDefinition new packageName: pkg name) ].
+    do: [ :pkg | defs at: pkg name put: (TDMcPackageDefinition new packageName: pkg name) ].
   ^ defs

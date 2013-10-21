@@ -1,0 +1,59 @@
+TDScriptLeafNode{#name:'collatorComparison',#contents:'[ :topez :objIn :tokens :windowId | 
+| tree population populationIndexSpec query halt create result collator_VietNam collator_Germany collator_Greece collator_UnitedStates collator_POSIX |
+\"http://demo.icu-project.org/icu-bin/locexp?d_=en&x=col&_=root
+http://www.columbia.edu/~fdc/utf8/
+http://www.localeplanet.com/icu/\"
+\"simple enumerated index\"
+create := halt := false.
+tokens size > 1
+  ifTrue: [ 
+    halt := (tokens at: 2) = \'halt\'.
+    create := (tokens at: 2) = \'create\' ].
+tree := (topez lookup: \'/home/index/family\') dotSelfObject.
+population := tree population.
+collator_VietNam := IcuCollator forLocaleNamed: \'vi_VN\'.
+collator_Greece := IcuCollator forLocaleNamed: \'el_GR\'.
+collator_Germany := IcuCollator forLocaleNamed: \'de_DE\'.
+collator_UnitedStates := IcuCollator forLocaleNamed: \'en_US\'.
+collator_POSIX := IcuCollator forLocaleNamed: \'en_US_POSIX\'.
+populationIndexSpec := GsIndexSpec new
+  unicodeIndex: \'each.unicodeField\' collator: collator_Greece;
+  yourself.
+IndexManager current removeAllIncompleteIndexesOn: population.
+[ 
+create
+  ifTrue: [ populationIndexSpec createIndexesOn: population ].
+result := halt
+  ifTrue: [ 
+    population halt.
+    population ]
+  ifFalse: [ 
+    | expected_VN expected_GR expected_DE expected_ASCII expected_US expected_POSIX options unicodeField |
+    options := GsQuery defaultQueryOptions + GsQueryOptions cacheQueryResult.
+    unicodeField := \'\'.
+    expected_VN := population asArray
+      sorted: [ :a :b | (a stringField compareTo: b stringField collator: collator_VietNam) <= 0 ].
+    expected_DE := population asArray
+      sorted: [ :a :b | (a stringField compareTo: b stringField collator: collator_Germany) <= 0 ].
+    expected_GR := population asArray
+      sorted: [ :a :b | (a stringField compareTo: b stringField collator: collator_Greece) <= 0 ].
+    expected_US := population asArray
+      sorted: [ :a :b | (a stringField compareTo: b stringField collator: collator_UnitedStates) <= 0 ].
+    expected_POSIX := population asArray
+      sorted: [ :a :b | (a stringField compareTo: b stringField collator: collator_POSIX) <= 0 ].
+    expected_ASCII := population asArray
+      sorted: [ :a :b | a stringField <= b stringField ].
+    query := (GsQuery fromString: \'each.unicodeField = string\' options: options)
+      bind: \'string\' to: unicodeField;
+      on: population collator: collator_VietNam;
+      yourself.
+    result := {(expected_VN collect: [ :each | each stringField ]).
+    (expected_DE collect: [ :each | each stringField ]).
+    (expected_GR collect: [ :each | each stringField ]).
+    (expected_US collect: [ :each | each stringField ]).
+    (expected_POSIX collect: [ :each | each stringField ]).
+    (expected_ASCII collect: [ :each | each stringField ])} ] ]
+  ensure: [ IndexManager current removeAllIncompleteIndexesOn: population ].
+true
+  ifTrue: [ populationIndexSpec removeIndexesFrom: population ].
+result ]'}

@@ -1,0 +1,3 @@
+actions
+definitionForSelection: selectionIndex
+  self subclassResponsibility

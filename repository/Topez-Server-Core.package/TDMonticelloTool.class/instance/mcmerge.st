@@ -5,38 +5,12 @@ mcmerge
       merge <package-name> <version-name> @<repository-path>
 	"
 
-  | packageName wc package version imageSnapshot versionSnapshot commonAncestorSnapshot merger commonAncestorInfo repoGroup versionName repoSpec repo mergeTool |
+  | packageName wc package version versionName repoSpec repo |
   packageName := tokens at: 2.
   wc := self resolveWorkingCopyReference: packageName.
   package := wc package.
-  imageSnapshot := package snapshot.
   versionName := tokens at: 3.
   repoSpec := tokens at: 4.
   repo := self resolveRepositoryReference: repoSpec.
   version := self versionFor: versionName in: repoSpec.
-  (wc ancestry hasAncestor: version info)
-    ifTrue: [ 
-      ^ 'No Changes: ' , versionName printString , ' already in '
-        , packageName printString , ' ancestry' ].
-  versionSnapshot := version snapshot.
-  commonAncestorInfo := version info commonAncestorWith: wc ancestry.
-  repoGroup := MCRepositoryGroup new
-    addRepository: repo;
-    yourself.
-  commonAncestorSnapshot := (repoGroup versionWithInfo: commonAncestorInfo)
-    snapshot.
-  merger := MCThreeWayMerger
-    base: imageSnapshot
-    target: versionSnapshot
-    ancestor: commonAncestorSnapshot.
-  mergeTool := topez toolInstanceFor: 'mg'.
-  mergeTool
-    mgmerge: merger
-    mergerCompletionBlock: [ 
-      | imagePatch |
-      imagePatch := version workingCopy package snapshot
-        patchRelativeToBase: commonAncestorSnapshot.
-      imagePatch isEmpty
-        ifTrue: [ version workingCopy loaded: version ]
-        ifFalse: [ version workingCopy merged: version ] ]
-    mergerAbortBlock: [  ]
+  ^ self mcmerge: wc and: version in: repo

@@ -10,8 +10,8 @@ doMerge
   unresolved := self operations select: [ :each | each resolved not ].
   unresolved isEmpty
     ifFalse: [ 
-      self
-        error:
+      ^ self
+        inform:
           'Cannot perform merger: unresolved conflicts: ' , unresolved asArray printString ].
   self operations do: [ :ea | ea applyTo: self ].
   self mergerCompletionBlock value.

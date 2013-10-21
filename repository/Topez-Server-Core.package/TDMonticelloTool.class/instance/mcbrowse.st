@@ -21,10 +21,4 @@ mcbrowse
       packageName := tokens at: 2.
       workingCopy := self resolveWorkingCopyReference: packageName.
       snapshot := workingCopy package snapshot ].
-  mcDefinitions := snapshot definitions
-    select: [ :def | def isOrganizationDefinition not ].
-  definitions := mcDefinitions collect: [ :def | def asTDDefinition ].
-  definitions
-    editUsing:
-      (TDEditorSpec topez: self topez editorAspect: #'externalDefinitionList').
-  ^ definitions
+  ^ self mcbrowseSnapshot: snapshot

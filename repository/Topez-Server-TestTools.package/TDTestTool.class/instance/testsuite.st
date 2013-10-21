@@ -7,7 +7,7 @@ testsuite
   | suitePath suite node testNode |
   suitePath := tokens at: 2.
   suite := (suitePath beginsWith: '@')
-    ifTrue: [ self self resolveAtPathReference: suitePath ]
+    ifTrue: [ self resolveAtPathReference: suitePath ]
     ifFalse: [ 
       | suiteNode |
       suiteNode := self topez lookup: suitePath.

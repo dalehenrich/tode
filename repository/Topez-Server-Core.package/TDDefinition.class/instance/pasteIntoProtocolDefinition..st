@@ -1,3 +1,3 @@
-as yet unclassified
+cut/copy/paste
 pasteIntoProtocolDefinition: aProtocolDefinition
   ^ false
