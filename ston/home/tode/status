@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 1b01f33f1140901f69daff6f17b7f25efd38a675
+TDTxtLeafNode{#name:'status',#contents:'commit 3e8d3314999f025b7f16975942ddfb2da40b15bd
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Oct 15 16:38:11 2013 -0700
+Date:   Sun Oct 20 20:57:22 2013 -0700
 
-    checkpoint: implement TDRepositoryBrowser>>workingCopyDiff:selectedIndex: (moved form TDWorkingCopyBrowser>>workingCopyDiff:selectedIndex:) and TDRepositoryVersionsBrowser>>loadVersion:selectedIndex: plus supporting TDMonticello tool support
+    clean up TDClientElementTestCase>>testClientElementSerialization
 '}
