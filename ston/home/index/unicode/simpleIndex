@@ -35,7 +35,7 @@ result := halt
       yourself.
     result := {(sorted collect: [ :each | each unicodeField ]).
     (expected collect: [ :each | each unicodeField ]).
-    (query halt queryResult collect: [ :each | each unicodeField ])} ] ]
+    (query queryResult collect: [ :each | each unicodeField ])} ] ]
   ensure: [ IndexManager current removeAllIncompleteIndexesOn: population ].
 true
   ifTrue: [ populationIndexSpec removeIndexesFrom: population ].

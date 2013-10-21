@@ -19,7 +19,7 @@ SYNOPSIS
      remove @<repository-path> [ <package-name> ]
      remove <repository-spec> [ @<workingCopy-path> ]
      remove @<repository-path> [ @<workingCopy-path> ]
-  mr versions <repository-spec> <package-name> [<limit>]
+  mr versions <repository-spec> <package-name>
      versions @<repository-path> <package-name>
 
 DESCRIPTION

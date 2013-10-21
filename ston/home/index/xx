@@ -1,6 +1,5 @@
 TDScriptLeafNode{#name:'xx',#contents:'[ :topez :objIn :tokens :windowId | 
-| tree population inventory|
+| tree population inventory |
 tree := (topez lookup: \'/home/index/family\') dotSelfObject.
 population := tree population.
-inventory := GsObjectInventory profileObjectsIn: population.
-\t{inventory instanceCountReport. inventory byteCountReport} ]'}
+population do: [ :person | ({Unicode7. Unicode16. Unicode32} includes: person unicodeField class) ifFalse: [nil halt]] ]'}

@@ -1,15 +1,1 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'Before adding the collator args, we need to weed out the duplication:
-
-  PathEvaluator>>findAllValuesEqualTo: needs to call 
-    PathEvaluator>>findAllValuesEqualTo:do:
-
-  and so on ... 
-
-  CollectionBasedPathEvaluator>>findAllValuesWithComparison:to: and 
-    CollectionBasedPathEvaluator>>findAllValuesWithComparison:to:do: 
-  are good examples of what to do 
-  (CollectionBasedPathEvaluator>>findAllValuesWithComparison:to: should
-  be moved up to PathEvaluator but PathEvaluator>>findAllValuesWithComparison:to:do:
-  needs to be remimplemented itself ... 
-
-  and so on...',#runs:RunArray{#runs:[575],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'Implementing AbstractBagEnumerator>>_findTraversedCollectionBasedValues:and:do: as we follow the chain working down from CollectionBasedPathEvaluator ',#runs:RunArray{#runs:[103,46,1],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],[@7]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
