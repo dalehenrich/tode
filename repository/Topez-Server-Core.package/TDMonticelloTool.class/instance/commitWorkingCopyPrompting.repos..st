@@ -18,5 +18,12 @@ commitWorkingCopyPrompting: aWorkingCopy repos: targetRepos
               commitMessage} ].
       notification resume: nil ].
   newVersion
-    ifNotNil: [ targetRepos do: [ :repository | repository storeVersion: newVersion ] ].
+    ifNotNil: [ 
+      targetRepos
+        do: [ :repository | 
+          repository storeVersion: newVersion.
+          Transcript
+            cr;
+            show:
+                'Committed: ' , newVersion printString , ' -- ' , repository printString ] ].
   ^ newVersion
