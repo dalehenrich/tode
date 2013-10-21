@@ -17,6 +17,7 @@ testClientElementSerialization
     menuActionBlockOop: #'menuActionBlockOop';
     menuActionSpec: #'menuActionSpec';
     cmdKeyCodePoints: #'cmdKeyCodePoints';
+    windowIsClosingBlockOop: #'windowIsClosingBlockOop';
     windowBuilder: #'windowBuilder';
     yourself.
   serverClientElement blockCache add: #'blockCacheEntry'.
