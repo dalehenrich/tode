@@ -6,6 +6,7 @@ menuActionSpec: miniTool
   self workingCopy
     ifNotNil: [ 
       workingCopyMenuSpec := {#('changes' nil #'workingCopyDiff:selectedIndex:').
+      #('save' nil #'workingCopySave:selectedIndex:').
       #('-')} ].
   ^ workingCopyMenuSpec
     ,

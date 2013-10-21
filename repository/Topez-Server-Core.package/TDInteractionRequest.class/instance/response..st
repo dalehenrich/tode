@@ -1,3 +1,3 @@
 signaling
 response: anObject
-  self subclassResponsibility
+  self resume: anObject
