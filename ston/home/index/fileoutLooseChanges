@@ -1,26 +1,31 @@
 TDScriptLeafNode{#name:'fileoutLooseChanges',#contents:'[ :topez :objIn :tokens :windowId | 
 | gsTool path classToFilenameMap externalMethodMap current packages node looseChanges |
 gsTool := topez toolInstanceFor: \'gs\'.
-path := \'/export/foos2/users/dhenrich/3.0/l_gss64bit/image\'.
+path := \'/export/foos2/users/dhenrich/3.0/j_gss64bit/image\'.
 classToFilenameMap := Dictionary new
+  at: #\'AbstractBagEnumerator\' put: #(\'bagenumerator.gs\');
   at: #\'AbstractIndexSpecification\' put: #(\'abstractindexspec.gs\');
   at: #\'Array\' put: #(\'array2.gs\');
+  at: #\'BagUnicodeEnumerator\' put: #(\'bagenumerator.gs\');
   at: #\'CharacterCollection\' put: #(\'charcoll.gs\');
   at: #\'CollectionBasedPathEvaluator\' put: #(\'idxquerymethods.gs\');
   at: #\'CollectionBasedPathTerm\' put: #(\'collbasedpathterm.gs\');
   at: #\'DependencyList\' put: #(\'dependencylist.gs\');
-  at: #\'EqualityIndexSpecification\' put: #(\'equalityindexspec.gs\');
   at: #\'EnumeratedPathEvaluator\' put: #(\'idxquerymethods.gs\');
   at: #\'EnumeratedPathTerm\' put: #(\'enumeratedpathterm.gs\');
+  at: #\'EqualityIndexQueryEvaluator\' put: #(\'equalityquery.gs\');
+  at: #\'EqualityIndexSpecification\' put: #(\'equalityindexspec.gs\');
   at: #\'Gs32DisjunctiveClauseOptimizer\' put: #(\'idxquerymethods.gs\');
   at: #\'GsAbstractQueryOptimizer\' put: #(\'idxquerymethods.gs\');
   at: #\'GsAbstractQueryPredicate\' put: #(\'idxquerymethods.gs\');
   at: #\'GsAbstractReferenceAssociation\' put: #(\'idxquerymethods.gs\');
   at: #\'GsClauseOptimizer\' put: #(\'idxquerymethods.gs\');
   at: #\'GsCompoundClause\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsConstantPathPredicate\' put: #(\'idxquerymethods.gs\');
   at: #\'GsOptions\' put: #(\'idxquerymethods.gs\');
   at: #\'GsIndexOptions\' put: #(\'idxquerymethods.gs\');
   at: #\'GsIndexSpec\' put: #(\'idxquerymethods.gs\');
+  at: #\'GsPathConstantPredicate\' put: #(\'idxquerymethods.gs\');
   at: #\'GsPathPathPredicate\' put: #(\'idxquerymethods.gs\');
   at: #\'GsRangeQueryPredicate\' put: #(\'idxquerymethods.gs\');
   at: #\'GsQuery\' put: #(\'idxquerymethods.gs\');

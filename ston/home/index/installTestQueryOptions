@@ -1,0 +1,54 @@
+TDScriptLeafNode{#name:'installTestQueryOptions',#contents:'[ :topez :objIn :tokens :windowId | 
+| systemUser gemNRS stoneNRS stoneName netldiName restore init |
+init := restore := false.
+tokens size > 1
+  ifTrue: [ 
+    restore := (tokens at: 2) = \'restore\'.
+    init := (tokens at: 2) = \'init\' ].
+stoneNRS := GsNetworkResourceString defaultFromCurrentStone.
+stoneName := stoneNRS body.
+(stoneName beginsWith: \'j_\')
+  ifTrue: [ netldiName := \'j_gs64ldi\' ].
+(stoneName beginsWith: \'k_\')
+  ifTrue: [ netldiName := \'k_gs64ldi\' ].
+(stoneName beginsWith: \'l_\')
+  ifTrue: [ netldiName := \'l_gs64ldi\' ].
+gemNRS := GsNetworkResourceString new
+  protocol: \'tcp\';
+  node: \'foos\';
+  netldi: netldiName;
+  resource: \'task\';
+  body: GsNetLDI gemnetobject;
+  yourself.
+systemUser := GsExternalSession new
+  stoneNRS: stoneNRS;
+  gemNRS: gemNRS;
+  username: \'SystemUser\';
+  password: \'swordfish\';
+  yourself.
+[ 
+systemUser login.
+restore
+  ifTrue: [ 
+    systemUser
+      executeString: \'GsQuery defaultQueryOptions: (GsQueryOptions default ).
+System commit\' ]
+  ifFalse: [ 
+    init
+      ifTrue: [ systemUser
+      executeString: \'GsQueryFormula
+    negatedOperatorMap;
+    inverseOperatorMap;
+    comparisonSelectorMap.
+System commit\'  ]
+      ifFalse: [ systemUser executeString: \'GsQuery defaultQueryOptions: (GsQueryOptions new
+    setApplyDeMorgansLaws;
+    setConsolidateEnumerablePredicates;
+    setConsolidateRangePredicates;
+    setNormalizePredicates;
+    setRemoveRedundantPredicates;
+    setReorderPredicates;
+    setTransformCommonPaths).
+System commit\' ] ] ]
+  ensure: [ systemUser ifNotNil: [ systemUser logout ] ].
+true ]'}

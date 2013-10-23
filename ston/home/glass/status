@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 8143cdb11bef177419cca642be4c8fe24d0f47dc
+TDTxtLeafNode{#name:'status',#contents:'commit bc4ec6bcc8effa550b655f36b1637fc4ad444b69
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Sep 17 06:29:47 2013 -0700
+Date:   Mon Oct 21 16:41:59 2013 -0700
 
-    fiddle with the Sport package some more
+    bugfix for https://github.com/dalehenrich/tode/issues/42 ... GsFile class>>lastErrorString returns only the last error string for the client ... GsFile class>>serverErrorString returns the last error string for the server ... added GsFile class>>lastErrorString: that takes onClient as arg and answers the correct errorString ...
 '}

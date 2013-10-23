@@ -4,4 +4,11 @@ Is it okay to add iv to IndexedQueryEvaluator?
 
 Need to preserve the 3.1 code for ObsoletePathEvaluator ... useful for testing purposes?
 
-GsQueryFormula>>isRangeEqualityOperation: allows lots of invalid operators???',#runs:RunArray{#runs:[373],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:297,#lastRun:1,#lastOffset:296}}}
+GsQueryFormula>>isRangeEqualityOperation: allows lots of invalid operators???
+
+EqualityIndexQueryEvaluator patterns (doBlock nil, notnil):
+
+  stream makeNscComparing: #\'=\' key: aValue
+  [ stream atEnd ] whileFalse: [ aBlock value: stream next ] 
+
+review IdentityIndexQueryEvaluator then pull trigger ...',#runs:RunArray{#runs:[375,58,30,4,6,6,5,6,23,6,8,6,17,27,22],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],@12,[TextColor{#color:Color{#rgb:512}}],[TextColor{#color:@14}],[TextColor{#color:Color{#rgb:512}}],@12,@18,@12,@23,[@7],[@10],[@7]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
