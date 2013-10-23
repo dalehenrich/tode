@@ -1,14 +1,6 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'userBlock instance variable in AbstractBagEnumerator (and PathEvaluator and IndexedQueryEvaluator) to avoid passing aBlock through a bunch of message sends.
-
-Is it okay to add iv to IndexedQueryEvaluator?
-
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'
 Need to preserve the 3.1 code for ObsoletePathEvaluator ... useful for testing purposes?
 
 GsQueryFormula>>isRangeEqualityOperation: allows lots of invalid operators???
 
-EqualityIndexQueryEvaluator patterns (doBlock nil, notnil):
-
-  stream makeNscComparing: #\'=\' key: aValue
-  [ stream atEnd ] whileFalse: [ aBlock value: stream next ] 
-
-review IdentityIndexQueryEvaluator then pull trigger ...',#runs:RunArray{#runs:[375,58,30,4,6,6,5,6,23,6,8,6,17,27,22],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],@12,[TextColor{#color:Color{#rgb:512}}],[TextColor{#color:@14}],[TextColor{#color:Color{#rgb:512}}],@12,@18,@12,@23,[@7],[@10],[@7]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+unicode flavors of BtreeQuerySpec ... ready for creating indexed unicode queries (w/o c code support ... I think?) otherwise will have to implement the unicode support in c which isn\'t bad idea',#runs:RunArray{#runs:[363],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:342,#lastRun:1,#lastOffset:341}}}
