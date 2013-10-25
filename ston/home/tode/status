@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit aa5eeb91af376384d0e0c720d4d7dc00135986b5
+TDTxtLeafNode{#name:'status',#contents:'commit 3a1d1c908907f6cf53273a5232754ade47741920
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Mon Oct 21 10:17:34 2013 -0700
+Date:   Thu Oct 24 20:30:51 2013 -0700
 
-    clean up TDClientElementTestCase>>testClientElementSerialization
+    add support for inspecting objects with dynamic instance variables
 '}

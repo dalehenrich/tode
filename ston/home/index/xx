@@ -1,5 +1,6 @@
 TDScriptLeafNode{#name:'xx',#contents:'[ :topez :objIn :tokens :windowId | 
-| tree population inventory |
-tree := (topez lookup: \'/home/index/family\') dotSelfObject.
-population := tree population.
-population do: [ :person | ({Unicode7. Unicode16. Unicode32} includes: person unicodeField class) ifFalse: [nil halt]] ]'}
+| obj |
+obj := BtreeNode new.
+obj collator: IcuCollator default.
+obj collator.
+\tobj ]'}

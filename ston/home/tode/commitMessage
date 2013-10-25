@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'clean up TDClientElementTestCase>>testClientElementSerialization',#runs:RunArray{#runs:[9,55],#values:[[],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'add support for inspecting objects with dynamic instance variables',#runs:RunArray{#runs:[66],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:66,#lastRun:1,#lastOffset:65}}}

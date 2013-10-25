@@ -3,4 +3,27 @@ Need to preserve the 3.1 code for ObsoletePathEvaluator ... useful for testing p
 
 GsQueryFormula>>isRangeEqualityOperation: allows lots of invalid operators???
 
-unicode flavors of BtreeQuerySpec ... ready for creating indexed unicode queries (w/o c code support ... I think?) otherwise will have to implement the unicode support in c which isn\'t bad idea',#runs:RunArray{#runs:[363],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:342,#lastRun:1,#lastOffset:341}}}
+Remove:
+
+  IndexManager>>_createIndex:for:on:withLastElementClass:
+  IndexManager>>_createIndex:for:on:withLastElementClass:equalityIndexClass:
+  Unicode16>>_idxForCompareEqualTo:collator:
+  Unicode32>>_idxForCompareEqualTo:collator:
+  Unicode7>>_idxForCompareEqualTo:collator:
+  BtreeInteriorNode>>_compareKey:value:equalToEntryAt:
+  BtreeInteriorNode>>_compareKey:value:greaterThanEntryAt:
+  BtreeInteriorNode>>_compareKey:value:lessThanEntryAt:
+  BtreeInteriorNode>>_compareKey:value:lessThanOrEqualToEntryAt:
+  BtreeLeafNode>>_compareKey:value:equalToEntryAt:
+  BtreeLeafNode>>_compareKey:value:greaterThanEntryAt:
+  BtreeLeafNode>>_compareKey:value:lessThanEntryAt:
+  BtreeLeafNode>>_compareKey:value:lessThanOrEqualToEntryAt:
+
+INEFFICIENT METHODS with new BtreeComparisonForCompare classes:
+
+  BtreeNode>>_compareKey:equalToEntryAt:
+  BtreeNode>>_compareKey:greaterThanEntryAt:
+  BtreeNode>>_compareKey:greaterThanOrEqualToEntryAt:
+  BtreeNode>>_compareKey:lessThanEntryAt:
+  BtreeNode>>_compareKey:lessThanOrEqualToEntryAt:
+  BtreeNode>>_compareLastKeyLessThanOrEqualToKey:value:',#runs:RunArray{#runs:[1256],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}

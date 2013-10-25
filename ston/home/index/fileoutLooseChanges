@@ -7,7 +7,12 @@ classToFilenameMap := Dictionary new
   at: #\'AbstractIndexSpecification\' put: #(\'abstractindexspec.gs\');
   at: #\'Array\' put: #(\'array2.gs\');
   at: #\'BagUnicodeEnumerator\' put: #(\'bagenumerator.gs\');
+  at: #\'BtreeComparisonForCompare\' put: #(\'btreecompforcompare.gs\');
+  at: #\'BtreeComparisonForSort\' put: #(\'btreecompforsort.gs\');
   at: #\'BtreeComparisonQuerySpec\' put: #(\'btreecompquery.gs\');
+  at: #\'BtreeInteriorNode\' put: #(\'btreeinterior.gs\');
+  at: #\'BtreeLeafNode\' put: #(\'btreeleaf.gs\');
+  at: #\'BtreeNode\' put: #(\'btreenode.gs\');
   at: #\'BtreeRangeComparisonQuerySpec\' put: #(\'btreerangecompquery.gs\');
   at: #\'CharacterCollection\' put: #(\'charcoll.gs\');
   at: #\'CollectionBasedPathEvaluator\' put: #(\'idxquerymethods.gs\');
@@ -46,12 +51,14 @@ classToFilenameMap := Dictionary new
   at: #\'PathEvaluator\' put: #(\'pathevaluator.gs\');
   at: #\'PathTerm\' put: #(\'pathterm.gs\');
   at: #\'QueryExecuter\' put: #(\'queryexecuter.gs\');
+  at: #\'RangeEqualityIndex\' put: #(\'rangeindex.gs\');
   at: #\'RcUnicodeIndexSpecification\' put: #(\'idxquerymethods.gs\');
   at: #\'RcUnicodeRangeEqualityIndex\' put: #(\'rcunicoderangeindex.gs\');
   at: #\'SelectorPathEvaluator\' put: #(\'idxquerymethods.gs\');
   at: #\'SelectorPathTerm\' put: #(\'selectorpathterm.gs\');
   at: #\'SetValuedPathEvaluator\' put: #(\'setpatheval.gs\');
   at: #\'SetValuedPathTerm\' put: #(\'setpathterm.gs\');
+  at: #\'UndefinedObject\' put: #(\'undefin.gs\');
   at: #\'Unicode16\' put: #(\'icu.gs\');
   at: #\'Unicode32\' put: #(\'icu.gs\');
   at: #\'Unicode7\' put: #(\'icu.gs\');
