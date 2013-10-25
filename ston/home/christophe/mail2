@@ -1,0 +1,36 @@
+TDScriptLeafNode{#name:'mail2',#contents:'[ :topez :objIn :tokens :windowId | 
+| tool configurationClass versionString methodSectionMap orderedAttributeList packageVersions |
+configurationClass := ConfigurationOfMetacello.
+versionString := \'1.0-beta.32\'.
+tool := MCTodeDeployTool new.
+orderedAttributeList := #(#\'common\' #\'squeakCommon\' #\'pharo\' #\'squeak\' #\'gemstone\' #\'pharo1.1.x\' #\'pharo1.2.x\' #\'pharo1.3.x\' #\'pharo1.4.x\' #\'pharo2.x\' #\'pharo3.x\' #\'gs3.1.0.x\' #\'gs3.2.0.x\').
+methodSectionMap := tool
+  createMethodSectionMapFor: configurationClass
+  attributeList: orderedAttributeList
+  version: versionString.
+packageVersions := Dictionary new.
+orderedAttributeList
+  do: [ :attribute | 
+    | sections |
+    sections := methodSectionMap
+      at: attribute asMetacelloAttributePath
+      ifAbsent: [ #() ].
+    sections
+      do: [ :methodSection | 
+        | versionSpec |
+        versionSpec := methodSection versionSpec.
+        versionSpec packages
+          specListDo: [ :packageSpec | 
+            | file |
+            (file := packageSpec getFile) notNil
+              ifTrue: [ 
+                | ref refs |
+                ref := GoferVersionReference name: file.
+                ref versionNumber > 0
+                  ifTrue: [ 
+                    \"only record packages whose names include a version number\"
+                    refs := packageVersions
+                      at: attribute
+                      ifAbsent: [ packageVersions at: attribute put: Set new ].
+                    refs add: ref ] ] ] ] ].
+{packageVersions. methodSectionMap} ]'}
