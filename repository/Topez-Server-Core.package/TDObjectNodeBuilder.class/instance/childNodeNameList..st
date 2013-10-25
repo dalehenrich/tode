@@ -1,9 +1,11 @@
 as yet unclassified
 childNodeNameList: parentNode
-  | indexedSize coll specialElements |
-  coll := parentNode basicContents class allInstVarNames sorted
-    collect: [ :each | each asString ].
-  indexedSize := (Reflection sizeOf: parentNode basicContents) - coll size.
+  | parentObj indexedSize coll specialElements ivs dvs |
+  parentObj := parentNode basicContents.
+  ivs := parentObj class allInstVarNames.
+  dvs := parentObj dynamicInstanceVariables.
+  coll := (ivs , dvs) sorted collect: [ :each | each asString ].
+  indexedSize := (Reflection sizeOf: parentObj) - coll size.
   specialElements := self specialChildNodeNameList: parentNode.
   ^ specialElements , coll
     , ((1 to: indexedSize) collect: [ :each | each asString ])
