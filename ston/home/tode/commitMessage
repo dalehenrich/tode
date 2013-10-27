@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'add support for inspecting objects with dynamic instance variables',#runs:RunArray{#runs:[66],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:66,#lastRun:1,#lastOffset:65}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'add `mc compare rimage` for doing reverse compare ... refactor MCTodeDeployTool>>createMethodSectionMapFor:version: ',#runs:RunArray{#runs:[63,53],#values:[[TextColor{#color:Color{#rgb:0}}],[]],#lastIndex:64,#lastRun:2,#lastOffset:0}}}
