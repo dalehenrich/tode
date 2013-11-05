@@ -42,7 +42,7 @@ Define a session description:
 sessionDescription := OGCustomSessionDescription new
     name: 'tode';
     gemstoneVersion: '3.1.0.4';
-    gciLibraryName: 'libgcirpc-3.1.0.1-32.dylib'; "or libgcirpc-3.1.0.1-32.so for Linux"
+    gciLibraryName: 'libgcirpc-3.1.0.4-32.dylib'; "or libgcirpc-3.1.0.4-32.so for Linux"
     adornmentColor: Color lightGreen;
     stoneHost: 'localhost';
     stoneName: 'seaside';
