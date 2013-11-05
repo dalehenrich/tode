@@ -21,7 +21,7 @@ cp $GEMSTONE/lib32/*.so <path_to_vm_executable>
 The GCI libraries must be in the Cog vm's `MacOS/Plugins` directory: 
 
 ```Shell
-cp $GEMSTONE/lib3/2*.dylib <path_to_Cog_vm>/Contents/MacOS/Plugins
+cp $GEMSTONE/lib32/*.dylib <path_to_Cog_vm>/Contents/MacOS/Plugins
 ```
 
 ## Pharo Image Tode Installation
