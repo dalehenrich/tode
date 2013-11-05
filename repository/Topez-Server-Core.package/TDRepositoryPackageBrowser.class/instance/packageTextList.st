@@ -7,11 +7,13 @@ packageTextList
   resolvedReferences := packagesSpec at: 3.
   ^ packageNames
     collect: [ :packageName | 
-      | attributes |
+      | attributes packageNameString |
+      packageNameString := packageName.
       attributes := {(TextEmphasis normal)}.
       loadedVersions
         at: packageName
         ifPresent: [ :versionReference | 
+          packageNameString := packageName , ' (' , versionReference name , ')'.
           attributes add: TextEmphasis underlined.
           resolvedReferences
             at: versionReference packageName
@@ -24,4 +26,4 @@ packageTextList
                   newest := sameBranch first.
                   newest versionNumber > versionReference versionNumber
                     ifTrue: [ attributes add: TextEmphasis bold ] ] ] ].
-      Text string: packageName attributes: attributes ]
+      Text string: packageNameString attributes: attributes ]
