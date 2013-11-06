@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'add `mc compare rimage` for doing reverse compare ... refactor MCTodeDeployTool>>createMethodSectionMapFor:version: ',#runs:RunArray{#runs:[63,53],#values:[[TextColor{#color:Color{#rgb:0}}],[]],#lastIndex:64,#lastRun:2,#lastOffset:0}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'tweak TDGemStoneTool>>gsfileout:filename:range:in: to compensate for some 3.2 fileout bugfixes ...',#runs:RunArray{#runs:[98],#values:[[]],#lastIndex:98,#lastRun:1,#lastOffset:97}}}

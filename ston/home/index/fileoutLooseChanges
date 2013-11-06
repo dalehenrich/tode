@@ -1,12 +1,13 @@
 TDScriptLeafNode{#name:'fileoutLooseChanges',#contents:'[ :topez :objIn :tokens :windowId | 
 | gsTool path classToFilenameMap externalMethodMap current packages node looseChanges |
 gsTool := topez toolInstanceFor: \'gs\'.
-path := \'/export/foos2/users/dhenrich/3.0/j_gss64bit/image\'.
+path := \'/export/foos2/users/dhenrich/3.0/l_gss64bit/image\'.
 classToFilenameMap := Dictionary new
   at: #\'AbstractBagEnumerator\' put: #(\'bagenumerator.gs\');
   at: #\'AbstractIndexSpecification\' put: #(\'abstractindexspec.gs\');
   at: #\'Array\' put: #(\'array2.gs\');
   at: #\'BagUnicodeEnumerator\' put: #(\'bagenumerator.gs\');
+  at: #\'BtreeBasicLeafNode\' put: #(\'btreebasicleaf.gs\');
   at: #\'BtreeComparisonForCompare\' put: #(\'btreecompforcompare.gs\');
   at: #\'BtreeComparisonForSort\' put: #(\'btreecompforsort.gs\');
   at: #\'BtreeComparisonQuerySpec\' put: #(\'btreecompquery.gs\');
@@ -14,6 +15,10 @@ classToFilenameMap := Dictionary new
   at: #\'BtreeLeafNode\' put: #(\'btreeleaf.gs\');
   at: #\'BtreeNode\' put: #(\'btreenode.gs\');
   at: #\'BtreeRangeComparisonQuerySpec\' put: #(\'btreerangecompquery.gs\');
+  at: #\'BtreeReadStream\' put: #(\'btreereadstr.gs\');
+  at: #\'BtreeUnicodeComparisonQuerySpec\' put: #(\'btreeunicodecompquery.gs\');
+  at: #\'BtreeUnicodeRangeComparisonQuerySpec\'
+    put: #(\'btreeunicodecompquery.gs\');
   at: #\'CharacterCollection\' put: #(\'charcoll.gs\');
   at: #\'CollectionBasedPathEvaluator\' put: #(\'idxquerymethods.gs\');
   at: #\'CollectionBasedPathTerm\' put: #(\'collbasedpathterm.gs\');
@@ -52,6 +57,7 @@ classToFilenameMap := Dictionary new
   at: #\'PathTerm\' put: #(\'pathterm.gs\');
   at: #\'QueryExecuter\' put: #(\'queryexecuter.gs\');
   at: #\'RangeEqualityIndex\' put: #(\'rangeindex.gs\');
+  at: #\'RangeIndexReadStream\' put: #(\'rangeindexreadstr.gs\');
   at: #\'RcUnicodeIndexSpecification\' put: #(\'idxquerymethods.gs\');
   at: #\'RcUnicodeRangeEqualityIndex\' put: #(\'rcunicoderangeindex.gs\');
   at: #\'SelectorPathEvaluator\' put: #(\'idxquerymethods.gs\');

@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 6e8daac114840821f908b85a2a65d8fb2f53c226
+TDTxtLeafNode{#name:'status',#contents:'commit fc0318d2dd212568985edff7f268fb90a41fac44
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sat Oct 26 20:54:47 2013 -0700
+Date:   Wed Nov 6 06:37:59 2013 -0800
 
-    add `mc compare rimage` for doing reverse compare ... refactor MCTodeDeployTool>>createMethodSectionMapFor:version:
+    tweak TDGemStoneTool>>gsfileout:filename:range:in: to compensate for some 3.2 fileout bugfixes ...
 '}

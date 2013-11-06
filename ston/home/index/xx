@@ -1,6 +1,3 @@
 TDScriptLeafNode{#name:'xx',#contents:'[ :topez :objIn :tokens :windowId | 
-| obj |
-obj := BtreeNode new.
-obj collator: IcuCollator default.
-obj collator.
-\tobj ]'}
+BtreeRangeComparisonQuerySpec
+subclass: \'BtreeUnicodeRangeComparisonQuerySpec\' instVarNames: #(\'collator\') classVars: #() classInstVars: #() poolDictionaries: #() inDictionary: Globals newVersionOf: BtreeUnicodeRangeComparisonQuerySpec description: \'\' options: #()]'}
