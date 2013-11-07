@@ -2,10 +2,10 @@ TDScriptLeafNode{#name:'writeChunks',#contents:'[ :topez :objIn :tokens :windowI
 | mcTool fileoutDir |
 mcTool := topez toolInstanceFor: \'mc\'.
 fileoutDir := ServerFileDirectory on: \'/opt/git/CypressReferenceImplementation\'.
-#(\'Cypress-Definitions\' \'Cypress-Structure\' \'Cypress-Mocks\' \'Cypress-Tests\')
+#(\'Cypress-Definitions\' \'Cypress-Structure\' \'Cypress-Mocks\' \'Cypress-Tests\' \'Cypress-GemStoneFileServer\')
   do: [ :packageName | 
     | stream snapshot wc |
-    mcTool mccreate: packageName. \"assuming packages don\'t exist\"
+    mcTool mccreate: packageName.\t\"assuming packages don\'t exist\"
     wc := mcTool resolveWorkingCopyReference: packageName.
     snapshot := wc package snapshot.
     stream := WriteStream on: String new.
