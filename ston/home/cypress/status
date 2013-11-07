@@ -1,10 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 16ae364603b31c3360e068a05f3d716e4a210961
+TDTxtLeafNode{#name:'status',#contents:'commit ebe35cec73896d8e12abe0120521f5a8c8317586
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sat Aug 31 15:16:51 2013 -0700
+Date:   Sun Sep 1 00:25:08 2013 -0700
 
-    move methods to GLASS base:
-    
-      Url class>>absoluteFromText:
-      Url class>>schemeName
-      Url class>>urlClassForScheme:
+    define projectClass method to use MetacelloCypressBaselineProject for better loading of Cypress packages
 '}

@@ -1,0 +1,14 @@
+TDScriptLeafNode{#name:'writeChunks',#contents:'[ :topez :objIn :tokens :windowId | 
+| mcTool fileoutDir |
+mcTool := topez toolInstanceFor: \'mc\'.
+fileoutDir := ServerFileDirectory on: \'/opt/git/CypressReferenceImplementation\'.
+#(\'Cypress-Definitions\' \'Cypress-Structure\' \'Cypress-Tests\')
+  do: [ :packageName | 
+    | stream snapshot wc |
+    wc := mcTool resolveWorkingCopyReference: packageName.
+    snapshot := wc package snapshot.
+    stream := WriteStream on: String new.
+    (MCStWriter on: stream) writeSnapshot: snapshot.
+    fileoutDir
+      forceNewFileNamed: packageName , \'.st\'
+      do: [ :fileStream | fileStream nextPutAll: stream contents ] ] ]'}

@@ -1,14 +1,11 @@
 TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'BEFORE CHECKIN:
 
-BtreeNode primitive survey complete...
-BtreeLeafNode and subclasses primitive survey complete...
-BtreeInteriorNode and subclasses primitive survey complete...
 
 working on BtreeBasicLeafNode>>_addValues:start:end:into: (primitive 555) prim failure code written (i.e., correct BtreeUnicode*ComparisonQuerySpec class created ) ... now need the equivalent set of classes defined in c++ code...
 
-RelRelate code for Unicde*, DateTime, and DateAndTime classes needs to be written.
+relops.c code for Unicode* needs to be written ... RelDecrypt() does not need collator arg, as decryption takes place without a coolator.
 
-BtreeUnicodeComparisonQuerySpec and BtreeUnicodeRangeComparisonQuerySpec need to have kernel oops assigned ...
+relops.c code DateTime and DateAndTime classes needs to be written.
 
 EVENTUALLY:
 
@@ -45,4 +42,4 @@ INEFFICIENT METHODS with new BtreeComparisonForCompare classes:
   BtreeNode>>_compareKey:greaterThanOrEqualToEntryAt:
   BtreeNode>>_compareKey:lessThanEntryAt:
   BtreeNode>>_compareKey:lessThanOrEqualToEntryAt:
-  BtreeNode>>_compareLastKeyLessThanOrEqualToKey:value:',#runs:RunArray{#runs:[69,15,30,32,88,256,2,31,5,36,1555],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],@6,@9,@6,[TextColor{#color:Color{#rgb:1023}}],[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:1023}}],@15,[TextColor{#color:Color{#rgb:1023}}],@15],#lastIndex:574,#lastRun:11,#lastOffset:9}}}
+  BtreeNode>>_compareLastKeyLessThanOrEqualToKey:value:',#runs:RunArray{#runs:[75,380,1517],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:1023}}],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:386,#lastRun:2,#lastOffset:310}}}

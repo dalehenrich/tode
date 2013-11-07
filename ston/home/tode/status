@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit fc0318d2dd212568985edff7f268fb90a41fac44
+TDTxtLeafNode{#name:'status',#contents:'commit bb30cd6f86e03802e8c06992c0f23a923e7b8e5f
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Wed Nov 6 06:37:59 2013 -0800
+Date:   Wed Nov 6 06:41:37 2013 -0800
 
-    tweak TDGemStoneTool>>gsfileout:filename:range:in: to compensate for some 3.2 fileout bugfixes ...
+    index script checkpoint
 '}
