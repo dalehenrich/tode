@@ -2,7 +2,7 @@ TDScriptLeafNode{#name:'writeChunks',#contents:'[ :topez :objIn :tokens :windowI
 | mcTool fileoutDir |
 mcTool := topez toolInstanceFor: \'mc\'.
 fileoutDir := ServerFileDirectory on: \'/opt/git/CypressReferenceImplementation\'.
-#(\'Cypress-Definitions\' \'Cypress-Structure\' \'Cypress-Tests\')
+#(\'Cypress-Definitions\' \'Cypress-Structure\' \'Cypress-Mocks\' \'Cypress-Tests\')
   do: [ :packageName | 
     | stream snapshot wc |
     wc := mcTool resolveWorkingCopyReference: packageName.
