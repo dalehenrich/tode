@@ -5,6 +5,7 @@ fileoutDir := ServerFileDirectory on: \'/opt/git/CypressReferenceImplementation\
 #(\'Cypress-Definitions\' \'Cypress-Structure\' \'Cypress-Mocks\' \'Cypress-Tests\')
   do: [ :packageName | 
     | stream snapshot wc |
+    mcTool mccreate: packageName. \"assuming packages don\'t exist\"
     wc := mcTool resolveWorkingCopyReference: packageName.
     snapshot := wc package snapshot.
     stream := WriteStream on: String new.
