@@ -1,0 +1,8 @@
+TDScriptLeafNode{#name:'interact',#contents:'[ :topez :objIn :tokens :windowId | 
+[ GsConfirmInteraction prompt: \'answer\' ]
+  on: GsInteractionRequest
+  do: [ :ex | 
+    | interaction |
+    interaction := ex interaction.
+    ex response: (interaction ok) ].
+]'}
