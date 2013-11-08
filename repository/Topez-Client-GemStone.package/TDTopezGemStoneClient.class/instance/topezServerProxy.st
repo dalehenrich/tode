@@ -13,7 +13,7 @@ topezServerProxy
 			topezServerProxy := self session asOopType: topezServerOop.
 			self session clientForwarderCache at: transcriptOopType put: Transcript.
 			self session clientForwarderCache at: topezClientOopType put: self.
-			self session rawReceiverNB: topezServerProxy perform: #authorInitials: withArgs: {(Author fullNamePerSe)}.
+			self session rawReceiverNB: topezServerProxy perform: #authorInitials: withArgs: {(Author fullName)}.
 			self sessionDescription backupDirectory isEmpty not
 				ifTrue: [ 
 					[ 
