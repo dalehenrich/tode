@@ -6,10 +6,10 @@ copyToRepository: listElement selectedIndex: index
   repositories := MCRepositoryGroup default repositories.
   repositoryDescriptions := repositories collect: [ :repo | repo description ].
   selectionIndexes := (1 to: repositoryDescriptions size) asArray.
-  selectionIndex := TDChoiceRequest
+  selectionIndex := (GsChoiceInteraction
     prompt: 'Choose target repository'
     labels: repositoryDescriptions
-    values: values.
+    values: values) signal.
   selectionIndex ifNil: [ ^ false ].
   resolvedVersion := self versions at: index.
   version := resolvedVersion version.

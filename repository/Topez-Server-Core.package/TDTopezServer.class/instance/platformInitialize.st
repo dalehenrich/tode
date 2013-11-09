@@ -21,15 +21,6 @@ platformInitialize
                     ifTrue: [ ex resume ].
                   action == #'debug'
                     ifTrue: [ self error: 'Debug Warning: ' , ex description ] ] ] ].
-      TDInteractionRequest defaultHandlers isEmpty
-        ifTrue: [ 
-          "signalled from native tODE interactions"
-          TDInteractionRequest
-            addDefaultHandler: [ :ex | 
-              | result |
-              result := self topezClientForwarder
-                interactWith: (STON toString: ex interaction).
-              ex response: (STON fromString: result) ] ].
       GsInteractionRequest defaultHandlers isEmpty
         ifTrue: [ 
           "signalled from GemStone base interactions"
