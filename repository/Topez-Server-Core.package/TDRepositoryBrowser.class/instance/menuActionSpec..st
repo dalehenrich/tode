@@ -10,7 +10,8 @@ menuActionSpec: miniTool
       #('-')} ].
   ^ workingCopyMenuSpec
     ,
-      {#('packages' nil #'browseRepositoryPackages:selectedIndex:').
+      {#('set user/password' nil #'setUserPassword:selectedIndex:').
+      #('packages' nil #'browseRepositoryPackages:selectedIndex:').
       #('remove repository' nil #'removeRepository:selectedIndex:').
       #('flush' nil #'flushRepositoryCache:selectedIndex:').
       #('-')}
