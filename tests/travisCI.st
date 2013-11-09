@@ -3,7 +3,7 @@
 Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-Smalltalk at: #ConfigurationOfGlass ifPresent: [:cl |
+Smalltalk at: #ConfigurationOfGLASS ifPresent: [:cl |
   "Load GLASS1"
   cl project updateProject.
   (Smalltalk at: #GsDeployer) deploy: [ (cl project version: '1.0-beta.9.1') load ].
