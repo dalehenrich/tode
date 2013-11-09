@@ -2,7 +2,8 @@ tools
 menuActionSpec: miniTool
   | theSpec |
   theMiniTool := miniTool.
-  theSpec := #().
+  theSpec := {#('copy to repository' nil #'copyToRepository:selectedIndex:').
+  #('-')}.
   self workingCopy
     ifNotNil: [ 
       theSpec := theSpec
