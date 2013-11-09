@@ -8,21 +8,26 @@ platformInitialize
   (Warning respondsTo: #'addDefaultHandler:')
     ifTrue: [ 
       "3.0 only"
-      Warning defaultHandlers isEmpty
+      false
         ifTrue: [ 
-          Warning
-            addDefaultHandler: [ :ex | 
-              | action |
-              action := self topezClientForwarder informWarning: ex description.
-              action == #'resume'
-                ifTrue: [ ex resume ].
-              action == #'debug'
-                ifTrue: [ self error: 'Debug Warning: ' , ex description ] ] ].
-      TDInteractionRequest defaultHandlers isEmpty
+          Warning defaultHandlers isEmpty
+            ifTrue: [ 
+              Warning
+                addDefaultHandler: [ :ex | 
+                  | action |
+                  action := self topezClientForwarder
+                    informWarning: ex description.
+                  action == #'resume'
+                    ifTrue: [ ex resume ].
+                  action == #'debug'
+                    ifTrue: [ self error: 'Debug Warning: ' , ex description ] ] ] ].
+      GsInteractionRequest defaultHandlers isEmpty
         ifTrue: [ 
-          TDInteractionRequest
+          "signalled from GemStone base interactions"
+          GsInteractionRequest
             addDefaultHandler: [ :ex | 
               | result |
               result := self topezClientForwarder
-                interactWith: (STON toString: ex interaction).
+                interactWith:
+                  (STON toString: ex interaction copyAsTodeInteraction).
               ex response: (STON fromString: result) ] ] ]

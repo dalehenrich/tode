@@ -2,8 +2,8 @@
 
 The current incarnation of **tODE** is very loosely based upon the [**Topaz Programming Environment**][3] for GemStone/S.
 
-The current implementation (still in development) uses a [Pharo1.4][1] image as the GCI client running against a [GemStone/S 3.1.0.x][2] stone using
-version 1.0-beta.9 of GLASS.
+The current implementation (still in development) uses a [Pharo1.4][1] or [Pharo2.0][4]image 
+as the GCI client running against a [GemStone/S 3.1.0.x][2] stone.
 
 *See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
 for details on installing Metacello.*
@@ -11,6 +11,34 @@ for details on installing Metacello.*
 ### GemStone Server Installation
 
 ```Smalltalk
+"GLASS 1.0-beta.9.1"
+ConfigurationOfGLASS project updateProject.
+GsDeployer deploy: [ (ConfigurationOfGLASS project version: '1.0-beta.9.1') load ].
+
+"Most recent Metacello"
+[
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
+  load: 'ALL'.
+  ] on: Warning
+    do: [:ex |
+      Transcript cr; show: ex description.
+      ex resume].
+
+"GLASS1"
+Metacello new
+  baseline: 'GLASS1';
+  repository: 'github://glassdb/glass:master/repository';
+  onConflict: [ :ex | ex allow ];
+  onWarning: [ :ex |
+        Transcript
+          cr;
+          show: ex description.
+        ex resume ];
+  load: 'default'.
+
+"tODE"
 Metacello new
     baseline: 'Tode';
     repository: 'github://dalehenrich/tode:master/repository';
@@ -42,4 +70,4 @@ Here's a recent screen shot:
 [1]: http://www.pharo-project.org/pharo-download/release-1-4
 [2]: http://gemstonesoup.wordpress.com/2012/09/21/gemstones-3-1-0-1-is-shipping/
 [3]: http://community.gemstone.com/download/attachments/6816350/GS64-Topaz-3.0.pdf?version=1
- 
+[4]: http://www.pharo-project.org/pharo-download/release-2-0 

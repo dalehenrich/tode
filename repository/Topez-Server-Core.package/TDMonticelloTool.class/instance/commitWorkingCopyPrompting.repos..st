@@ -4,12 +4,12 @@ commitWorkingCopyPrompting: aWorkingCopy repos: targetRepos
   newVersion := [ aWorkingCopy newVersion ]
     on: MCVersionNameAndMessageRequest
     do: [ :notification | 
-      versionName := TDTextRequest
+      versionName := (GsTextInteraction
         prompt: 'Please enter a name for your version:'
-        template: notification suggestedName.
+        template: notification suggestedName) signal.
       versionName ifNil: [ notification resume: nil ].
-      commitMessage := TDMultiLineTextRequest
-        prompt: 'Please enter a commit message:'.
+      commitMessage := (GsMultiLineTextInteraction
+        prompt: 'Please enter a commit message:') signal.
       (commitMessage ~~ nil and: [ commitMessage isEmpty not ])
         ifTrue: [ 
           notification

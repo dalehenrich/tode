@@ -1,5 +1,10 @@
 TDScriptLeafNode{#name:'xx',#contents:'[ :topez :objIn :tokens :windowId | 
-| tree population inventory |
-tree := (topez lookup: \'/home/index/family\') dotSelfObject.
-population := tree population.
-population do: [ :person | ({Unicode7. Unicode16. Unicode32} includes: person unicodeField class) ifFalse: [nil halt]] ]'}
+{(7 asBitString).
+(8 asBitString).
+(15 asBitString).
+(16 asBitString).
+((23 - 8) asBitString).
+((10 bitShift: 7) asBitString).\t\"10100000000\"
+(10 bitShift: 7).\t\"1280\"
+((1 bitShift: 7) asBitString).\t\"10000000\"
+(1 bitShift: 7)\t\"128\"} ]'}

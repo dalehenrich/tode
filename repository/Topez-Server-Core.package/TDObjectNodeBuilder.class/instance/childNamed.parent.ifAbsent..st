@@ -13,12 +13,15 @@ childNamed: elementName parent: parentNode ifAbsent: absentBlock
             objectValueForSpecialElementName: elementName
             for: parentNode basicContents ]
         ifFalse: [ 
-          | parent ivarIndex |
+          | parent ivarIndex elementSymbol |
           parent := parentNode basicContents.
-          (ivarIndex := parent class allInstVarNames
-            indexOf: elementName asSymbol) = 0
-            ifTrue: [ ^ absentBlock value ].
-          obj := parent instVarAt: ivarIndex ] ].
+          elementSymbol := elementName asSymbol.
+          (ivarIndex := parent class allInstVarNames indexOf: elementSymbol) = 0
+            ifTrue: [ 
+              (parent dynamicInstanceVariables includes: elementSymbol)
+                ifTrue: [ obj := parent dynamicInstVarAt: elementSymbol ]
+                ifFalse: [ ^ absentBlock value ] ]
+            ifFalse: [ obj := parent instVarAt: ivarIndex ] ] ].
   ^ (obj
     asTDObjectNode: parentNode
     topez: parentNode topez

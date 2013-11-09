@@ -13,12 +13,6 @@ gsfileout: methodRef filename: filename range: ar in: directory
           fileStream nextPutAll: originalSource.
           originalSource last == lf
             ifFalse: [ fileStream nextPut: lf ].
-          fileStream
-            nextPutAll: 'category: ';
-            nextPutAll:
-                (methodRef actualClass _categoryOfSelector: methodRef selector) asString
-                    printString;
-            lf.
           methodRef actualClass
             fileOutMethod: methodRef selector
             environmentId: 0

@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"topez:clientListBlock:menuActionSpecBlock:menuActionBlock:itemSelectedBlock:" : "dkh 10/30/2013 02:50",
 		"topez:clientListBlock:menuActionSpecBlock:menuActionBlock:itemSelectedBlock:keyboardActionBlock:windowIsClosingBlock:" : "dkh 10/19/2013 10:55" },
 	"instance" : {
 		"builder" : "10/07/2013 10:34",
@@ -19,4 +20,4 @@
 		"menuActionSpec:" : "10/07/2013 10:35",
 		"menuActionSpecBlock" : "10/07/2013 10:23",
 		"menuActionSpecBlock:" : "10/07/2013 10:23",
-		"windowIsClosing:" : "dkh 10/20/2013 10:40" } }
+		"windowIsClosing:" : "dkh 10/30/2013 03:02" } }

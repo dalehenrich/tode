@@ -1,7 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'work to improve definition diff capabilities:
-
-Add UseTimeStampInComparisons class var to MCMethodDefinition to control whether or not the method timeStamp is significant or not during equality comparisons.
-
-useful printString defined for MCConflict>>printOn:.
-
-use #trimBoth on source in MCMethodDefinition>>= ... no need to generate diffs because of trailing separators.',#runs:RunArray{#runs:[51,25,14,18,131,20,113],#values:[[],[TextColor{#color:Color{#rgb:1023}}],@6,@7,[],[TextColor{#color:Color{#rgb:1023}}],[]],#lastIndex:47,#lastRun:1,#lastOffset:46}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'straighten out selectors in GsConfirmInteraction (#cancel was overloaded)',#runs:RunArray{#runs:[28,20,25],#values:[[],[TextColor{#color:Color{#rgb:1023}}],[]],#lastIndex:73,#lastRun:3,#lastOffset:24}}}

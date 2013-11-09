@@ -1,16 +1,15 @@
 TDScriptLeafNode{#name:'xxx',#contents:'[ :topez :objIn :tokens :windowId | 
-| gsTool path |
-gsTool := topez toolInstanceFor: \'gs\'.
-path := \'/export/foos2/users/dhenrich/3.0/k_gss64bit/junk\'.
-gsTool
-  gsfileout: path
-  classnameFilenamePairs:
-    {{\'GsQuery\'.
-    \'gsquery.gs\'}.
-\t{\'GsQueryTokenParser\'. \'gsquerytokenparser.gs\'}}
-  defaultHeader:
-    \'!=========================================================================
-! Copyright (C) GemTalk Systems, LLC. 2013.  All Rights Reserved.
-!=========================================================================
+\"#define OOP_CLASS_RCINDEX_BUCKET          88065U  /* v1.1 oop  689 */
+#define OOP_CLASS_BTREE_UNICODE_COMPARISON_QUERY_SPEC       155393U
+#define OOP_CLASS_BTREE_UNICODE_RANGE_COMPARISON_QUERY_SPEC 155649U
+#define OOP_PossibleDeadSymbols         248577U
+#define OOP_CLASS_GsSecureSocket        248833U
 
-\' withGemstoneLineEndings ]'}
+\"
+{88065.
+(Object _oop11toOop20: 689).
+(Object _oop20toOop11: 88065).
+(Object _oop20toOop11: 155393).
+(Object _oop20toOop11: 155649).
+248833 - 248577.
+248833 + 256} ]'}

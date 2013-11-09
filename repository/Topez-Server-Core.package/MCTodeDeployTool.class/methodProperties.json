@@ -5,7 +5,8 @@
 	"instance" : {
 		"commitVersion:baseVersionNumber:branch:author:into:repositoryGroup:commitMessage:" : "dkh 07/25/2013 09:52",
 		"createBranchMapFor:version:" : "dkh 06/29/2013 18:42",
-		"createMethodSectionMapFor:version:" : "dkh 06/29/2013 18:42",
+		"createMethodSectionMapFor:attributeList:version:" : "dkh 10/25/2013 15:00",
+		"createMethodSectionMapFor:version:" : "dkh 10/25/2013 15:00",
 		"createSectionMapFor:version:" : "dkh 06/29/2013 20:10",
 		"modifyConfiguration:releaseVersion:" : "dkh 08/11/2013 08:25",
 		"modifyConfiguration:symbolictVersion:version:" : "dkh 08/11/2013 08:28",

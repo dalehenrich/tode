@@ -1,0 +1,1 @@
+TDScriptLeafNode{#name:'inform',#contents:'[ :topez :objIn :tokens :windowId | self inform: \'Consider yourself informed!\' ]'}

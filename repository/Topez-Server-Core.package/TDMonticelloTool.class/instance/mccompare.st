@@ -8,9 +8,11 @@ mccompare
       compare image <package-name> <version-name> <repository-spec>
   "
 
-  | stream version1 version2 snapshot1 snapshot2 patch diffy resolutionAr |
+  | stream version1 version2 snapshot1 snapshot2 resolutionAr patch |
   (tokens at: 2) = 'image'
     ifTrue: [ ^ self mccompareimage ].
+  (tokens at: 2) = 'rimage'
+    ifTrue: [ ^ self mccomparerimage ].
   resolutionAr := self resolveVersionReferenceStartingAt: 2 inTokens: tokens.
   version1 := resolutionAr at: 1.
   snapshot1 := version1 snapshot.
@@ -19,21 +21,12 @@ mccompare
     inTokens: tokens.
   version2 := resolutionAr at: 1.
   snapshot2 := version2 snapshot.
-  patch := snapshot1 patchRelativeToBase: snapshot2.
   stream := TextStream on: Text new.
   stream
     nextPutAll:
         ('==================== ' , version1 info name , ' vs' , version2 info name
             , ' ====================') asText allBold;
     cr.
-  patch isEmpty
-    ifTrue: [ 
-      stream
-        nextPutAll: '... no changes';
-        cr.
-      ^ stream contents ].
-  diffy := MCDiffyTextWriter on: stream.
-  diffy writePatch: patch.
-  stream cr.
+  patch := self mccompare: snapshot1 to: snapshot2 on: stream.
   stream contents editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
   ^ patch

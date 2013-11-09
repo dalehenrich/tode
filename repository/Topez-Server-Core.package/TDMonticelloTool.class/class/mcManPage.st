@@ -24,6 +24,7 @@ SYNOPSIS
      compare <version-name> <repository-spec> @<version-path>
      compare @<version-path> @<version-path>
   mc compare image <package-name> <version-name> <repository-spec>
+  mc compare rimage <package-name> <version-name> <repository-spec>
   mc copy <version-name> <source-repository-spec> <dest1-repository-spec> [ <dest2-repository-spec> ... ]
      copy @<version-path> <dest1-repository-spec> [ <dest2-repository-spec> ... ]
      copy @<version-path> @<repository-path> [ @<repository-path-list> ...]
