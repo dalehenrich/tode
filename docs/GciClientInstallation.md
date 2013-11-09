@@ -21,10 +21,15 @@ cp $GEMSTONE/lib32/*.so <path_to_vm_executable>
 The GCI libraries must be in the Cog vm's `MacOS/Plugins` directory: 
 
 ```Shell
-cp $GEMSTONE/lib3/2*.dylib <path_to_Cog_vm>/Contents/MacOS/Plugins
+cp $GEMSTONE/lib32/*.dylib <path_to_Cog_vm>/Contents/MacOS/Plugins
 ```
 
 ## Pharo Image Tode Installation
+
+Be sure to update Metacello before this step.
+
+*See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
+for details on installing Metacello.*
 
 ```Smalltalk
 Metacello new
@@ -35,31 +40,6 @@ Metacello new
 
 ## Tode setup
 
-Define a session description:
-
-```Smalltalk
-| sessionDescription |
-sessionDescription := OGCustomSessionDescription new
-    name: 'tode';
-    gemstoneVersion: '3.1.0.4';
-    gciLibraryName: 'libgcirpc-3.1.0.1-32.dylib'; "or libgcirpc-3.1.0.1-32.so for Linux"
-    adornmentColor: Color lightGreen;
-    stoneHost: 'localhost';
-    stoneName: 'seaside';
-    gemHost: 'localhost';
-    netLDI: '50377';
-    gemTask: 'gemnetobject';
-    userId: 'DataCurator';
-    password: 'swordfish';
-    osUserId: '';
-    osPassword: '';
-    backupDirectory: '';
-    dataDirectory: '';
-    yourself.
-TDTopezClient sessionMap 
-    at: sessionDescription name
-    put: sessionDescription.
-```
 
 Define window sizes.
 
@@ -88,6 +68,33 @@ TDTopezGemStoneClient
         debuggerWindowWidth:24;
         initialize .
 ```
+
+Define a session description:
+
+```Smalltalk
+| sessionDescription |
+sessionDescription := OGCustomSessionDescription new
+    name: 'tode';
+    gemstoneVersion: '3.1.0.4';
+    gciLibraryName: 'libgcirpc-3.1.0.4-32.dylib'; "or libgcirpc-3.1.0.4-32.so for Linux"
+    adornmentColor: Color lightGreen;
+    stoneHost: 'localhost';
+    stoneName: 'seaside';
+    gemHost: 'localhost';
+    netLDI: '50377';
+    gemTask: 'gemnetobject';
+    userId: 'DataCurator';
+    password: 'swordfish';
+    osUserId: '';
+    osPassword: '';
+    backupDirectory: '';
+    dataDirectory: '';
+    yourself.
+TDTopezClient sessionMap 
+    at: sessionDescription name
+    put: sessionDescription.
+```
+
 
 Login using the session:
 
