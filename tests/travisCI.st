@@ -5,8 +5,6 @@ gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 Smalltalk at: #ConfigurationOfGLASS ifPresent: [:cl |
   "Load GLASS1"
-  cl project updateProject.
-  (Smalltalk at: #GsDeployer) deploy: [ (cl project version: '1.0-beta.9.1') load ].
   Metacello new
     baseline: 'GLASS1';
     repository: 'github://glassdb/glass:master/repository';
