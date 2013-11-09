@@ -26,8 +26,19 @@ platformInitialize
           "signalled from GemStone base interactions"
           GsInteractionRequest
             addDefaultHandler: [ :ex | 
-              | result |
-              result := self topezClientForwarder
-                interactWith:
-                  (STON toString: ex interaction copyAsTodeInteraction).
-              ex response: (STON fromString: result) ] ] ]
+              | result handler |
+              handler := GsInteractionHandler new
+                defaultBlock: [ :interaction | 
+                      result := self topezClientForwarder
+                        interactWith:
+                          (STON toString: interaction copyAsTodeInteraction).
+                      ex response: (STON fromString: result) ];
+                inspectBlock: [ :interaction | 
+                      interaction theObject
+                        editUsing:
+                          ((TDEditorSpec topez: self editorAspect: #'inspect')
+                            builderAspect: #'inspect';
+                            yourself).
+                      interaction theObject ];
+                yourself.
+              ex interaction interactWith: handler ] ] ]
