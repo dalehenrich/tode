@@ -1,4 +1,4 @@
-as yet unclassified
+parsing
 line: aString forEachCommand: aBlock
   (self isolate: aString)
     do: [ :isolated | 

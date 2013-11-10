@@ -1,3 +1,3 @@
-as yet unclassified
+private
 tokens: aCollection
   tokens := aCollection

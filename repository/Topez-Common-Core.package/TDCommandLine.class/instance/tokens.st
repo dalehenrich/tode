@@ -1,4 +1,4 @@
-as yet unclassified
+parsing
 tokens
   tokens ifNil: [ tokens := self tokenize: self commandLine trimBoth ].
   ^ tokens

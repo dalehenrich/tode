@@ -1,5 +1,5 @@
-as yet unclassified
-parseOptions: optionSpec do: optionBlock nonOptionsDo: nonOptionBlock
+parsing
+getOpts: optionSpec do: optionBlock nonOptionsDo: nonOptionBlock
   | optionSpecs opt optArg |
   optionSpecs := self parseOptionSpec: optionSpec.
   self skipWhiteSpace.

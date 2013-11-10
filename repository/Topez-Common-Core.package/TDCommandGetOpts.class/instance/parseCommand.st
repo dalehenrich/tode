@@ -1,4 +1,4 @@
-as yet unclassified
+private
 parseCommand
   | char cmdStream |
   stream atEnd

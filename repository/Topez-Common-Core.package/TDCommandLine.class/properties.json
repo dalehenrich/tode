@@ -9,8 +9,7 @@
 		"commandLine",
 		"redirectTarget",
 		"tokens",
-		"options",
-		"arguments" ],
+		"argPtrs" ],
 	"name" : "TDCommandLine",
 	"pools" : [
 		 ],

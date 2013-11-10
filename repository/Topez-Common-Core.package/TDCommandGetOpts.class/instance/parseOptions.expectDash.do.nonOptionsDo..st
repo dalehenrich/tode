@@ -1,4 +1,4 @@
-as yet unclassified
+private
 parseOptions: optionSpecs expectDash: expectDash do: optionBlock nonOptionsDo: nonOptionBlock
   | peek opt spec |
   expectDash

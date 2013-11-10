@@ -1,4 +1,4 @@
-as yet unclassified
+private
 parseNonOptionArgs: nonOptionArgsBlock
   | peek nonOptionArgsStream nonOptionArgs |
   nonOptionArgsStream := WriteStream on: String new.

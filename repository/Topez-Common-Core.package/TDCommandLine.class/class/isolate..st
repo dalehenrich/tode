@@ -1,4 +1,4 @@
-as yet unclassified
+private
 isolate: aString
   | isolated command final escaped |
   isolated := OrderedCollection new.

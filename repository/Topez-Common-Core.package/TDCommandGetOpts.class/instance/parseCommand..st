@@ -1,4 +1,4 @@
-as yet unclassified
-parse: aStream
+parsing
+parseCommand: aStream
   stream := aStream.
   command := self parseCommand

@@ -1,3 +1,3 @@
-as yet unclassified
+private
 commandLine: aString
   commandLine := aString

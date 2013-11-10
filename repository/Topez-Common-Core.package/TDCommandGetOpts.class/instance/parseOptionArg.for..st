@@ -1,4 +1,4 @@
-as yet unclassified
+private
 parseOptionArg: required for: opt
   | peek endBlock optionArgStream |
   optionArgStream := WriteStream on: String new.

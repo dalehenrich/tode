@@ -5,11 +5,11 @@ test04
     add: $a -> nil;
     add: $b -> nil;
     yourself.
-  parser := TDCommandGetOpts parse: (ReadStream on: 'testopt -ba').
+  parser := TDCommandGetOpts parseCommand: (ReadStream on: 'testopt -ba').
   self assert: parser command = 'testopt'.
   processedOption := false.
   parser
-    parseOptions: 'abc:'
+    getOpts: 'abc:'
     do: [ :opt :optArg | 
       processedOption := true.
       self assert: (options at: opt) = optArg ]

@@ -1,4 +1,4 @@
-as yet unclassified
+private
 scan: aString delim: delim
   | scanned command stream final escaped |
   scanned := OrderedCollection new.

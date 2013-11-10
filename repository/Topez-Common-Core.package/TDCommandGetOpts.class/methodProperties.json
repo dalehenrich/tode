@@ -1,13 +1,15 @@
 {
 	"class" : {
-		"parse:" : "dkh 11/10/2013 06:27" },
+		"getOptsFor:spec:do:nonOptionsDo:" : "dkh 11/10/2013 07:16",
+		"parseCommand:" : "dkh 11/10/2013 07:15" },
 	"instance" : {
 		"command" : "dkh 11/10/2013 06:27",
-		"parse:" : "dkh 11/10/2013 06:27",
+		"getOpts:do:nonOptionsDo:" : "dkh 11/10/2013 07:11",
 		"parseCommand" : "dkh 11/10/2013 06:27",
+		"parseCommand:" : "dkh 11/10/2013 07:15",
 		"parseNonOptionArgs:" : "dkh 11/10/2013 06:27",
 		"parseOptionArg:for:" : "dkh 11/10/2013 06:27",
 		"parseOptionSpec:" : "dkh 11/10/2013 06:27",
-		"parseOptions:do:nonOptionsDo:" : "dkh 11/10/2013 06:27",
 		"parseOptions:expectDash:do:nonOptionsDo:" : "dkh 11/10/2013 06:27",
-		"skipWhiteSpace" : "dkh 11/10/2013 06:27" } }
+		"skipWhiteSpace" : "dkh 11/10/2013 06:27",
+		"stream:" : "dkh 11/10/2013 07:16" } }

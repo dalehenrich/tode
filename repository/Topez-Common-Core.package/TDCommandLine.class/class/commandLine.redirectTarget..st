@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 commandLine: commandLine redirectTarget: redirectTarget
   ^ self new
     commandLine: commandLine;

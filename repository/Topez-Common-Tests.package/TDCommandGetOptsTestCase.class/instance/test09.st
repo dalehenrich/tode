@@ -4,11 +4,12 @@ test09
   options := Dictionary new
     add: $c -> 'foo';
     yourself.
-  parser := TDCommandGetOpts parse: (ReadStream on: 'testopt -c foo arg1').
+  parser := TDCommandGetOpts
+    parseCommand: (ReadStream on: 'testopt -c foo arg1').
   self assert: parser command = 'testopt'.
   processNonOption := processedOption := false.
   parser
-    parseOptions: 'abc:'
+    getOpts: 'abc:'
     do: [ :opt :optArg | 
       processedOption := true.
       self assert: (options at: opt) = optArg ]
