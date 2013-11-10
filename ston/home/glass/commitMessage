@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'straighten out selectors in GsConfirmInteraction (#cancel was overloaded)',#runs:RunArray{#runs:[28,20,25],#values:[[],[TextColor{#color:Color{#rgb:1023}}],[]],#lastIndex:73,#lastRun:3,#lastOffset:24}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'implement GsInspectInteraction to support tODE and GemTools',#runs:RunArray{#runs:[59],#values:[[]],#lastIndex:59,#lastRun:1,#lastOffset:58}}}

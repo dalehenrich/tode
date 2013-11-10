@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 4851202683954495122cce833231cbb06a478f30
+TDTxtLeafNode{#name:'status',#contents:'commit 5b58e3b9ad7a53d7814612c408ee4fa19db4872a
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Fri Nov 8 16:37:23 2013 -0800
+Date:   Sat Nov 9 15:34:25 2013 -0800
 
-    Final bits for fixing Issue #45 (dependes upon glassdb commit 3f347c0819a3d995efe938e5d95517f5518ff03c or later). Hook into GsInteraction mechanism for tODE ... can now get rid of TDInteractionRequest hierarchy and use GsInteractionRequest ... add TDMonticelloTool>>mccopyVersion:to: in support of TDRepositoryVersionsBrowser>>copyToRepository:selectedIndex: menu item (copy to repository)
+    add support for GsInspectInteraction (Object>>inspect)
 '}
