@@ -2,8 +2,8 @@ as yet unclassified
 ston
   <topezCommand: 'ston' manPage: #'stonManPage'>
   ^ [ :topez :objIn :tokens :windowId | 
-  (self
-    topez: topez
+  self
+    performSubCommand: topez
     objIn: objIn
     tokens: tokens
-    windowId: windowId) ston ]
+    windowId: windowId ]

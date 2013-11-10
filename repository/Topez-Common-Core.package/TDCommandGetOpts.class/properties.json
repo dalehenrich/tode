@@ -4,14 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 11/10/2013 06:27",
 	"instvars" : [
-		"commandLine",
-		"redirectTarget",
-		"tokens",
+		"stream",
+		"command",
 		"options",
 		"arguments" ],
-	"name" : "TDCommandLine",
+	"name" : "TDCommandGetOpts",
 	"pools" : [
 		 ],
 	"super" : "Object",

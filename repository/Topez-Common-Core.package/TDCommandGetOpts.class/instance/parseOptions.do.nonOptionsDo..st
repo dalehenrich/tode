@@ -1,0 +1,11 @@
+as yet unclassified
+parseOptions: optionSpec do: optionBlock nonOptionsDo: nonOptionBlock
+  | optionSpecs opt optArg |
+  optionSpecs := self parseOptionSpec: optionSpec.
+  self skipWhiteSpace.
+  self
+    parseOptions: optionSpecs
+    expectDash: true
+    do: optionBlock
+    nonOptionsDo: nonOptionBlock.
+  self parseNonOptionArgs: nonOptionBlock

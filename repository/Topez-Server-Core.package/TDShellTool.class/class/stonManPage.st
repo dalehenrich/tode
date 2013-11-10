@@ -8,6 +8,7 @@ SYNOPSIS
        export <path> @<server-path>
   ston import <path> <server-file-path>
        import <path> @<server-path>
+  ston rsync <source> <destination>
 
 DESCRIPTION
 '

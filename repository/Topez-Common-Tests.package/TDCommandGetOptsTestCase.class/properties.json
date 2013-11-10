@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Common-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 11/10/2013 06:28",
+	"instvars" : [
+		 ],
+	"name" : "TDCommandGetOptsTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
