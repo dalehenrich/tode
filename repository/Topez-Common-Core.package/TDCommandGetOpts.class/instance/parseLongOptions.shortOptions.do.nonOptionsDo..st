@@ -1,5 +1,5 @@
 private
-parseLongOptions: optionSpecs do: optionBlock nonOptionsDo: nonOptionBlock
+parseLongOptions: optionSpecs shortOptions: shortOptionAliases do: optionBlock nonOptionsDo: nonOptionBlock
   | peek opt spec |
   peek := stream peek.
   peek == $-
@@ -14,8 +14,39 @@ parseLongOptions: optionSpecs do: optionBlock nonOptionsDo: nonOptionBlock
   peek := stream peek.
   peek == $-
     ifFalse: [ 
+      | alias |
       "no second dash ... old-style option or???"
-      self halt ].
+      shortOptionAliases isEmpty
+        ifTrue: [ self error: 'Unexpected short option: ' , peek asString ].
+      opt := stream next.
+      alias := shortOptionAliases
+        at: peek
+        ifAbsent: [ ^ self error: 'Unknown option: ' , opt asString ].
+      spec := optionSpecs
+        at: alias
+        ifAbsent: [ ^ self error: 'Unknown option: ' , alias ].
+      spec == #'none'
+        ifTrue: [ 
+          optionBlock value: alias value: nil.
+          stream atEnd
+            ifTrue: [ ^ self ].
+          self skipWhiteSpace.
+          ^ self
+            parseLongOptions: optionSpecs
+            shortOptions: shortOptionAliases
+            do: optionBlock
+            nonOptionsDo: nonOptionBlock ]
+        ifFalse: [ 
+          | optArg |
+          optArg := self parseOptionArg: spec == #'required' for: opt.
+          optionBlock value: alias value: optArg.
+          stream atEnd
+            ifTrue: [ ^ self ].
+          ^ self
+            parseLongOptions: optionSpecs
+            shortOptions: shortOptionAliases
+            do: optionBlock
+            nonOptionsDo: nonOptionBlock ] ].
   stream next.
   stream atEnd
     ifTrue: [ 
@@ -41,8 +72,9 @@ parseLongOptions: optionSpecs do: optionBlock nonOptionsDo: nonOptionBlock
       peek isSeparator
         ifFalse: [ self error: 'Unexpected character' ].
       self skipWhiteSpace.
-      self
+      ^ self
         parseLongOptions: optionSpecs
+        shortOptions: shortOptionAliases
         do: optionBlock
         nonOptionsDo: nonOptionBlock ]
     ifFalse: [ 
@@ -51,7 +83,8 @@ parseLongOptions: optionSpecs do: optionBlock nonOptionsDo: nonOptionBlock
       optionBlock value: opt value: optArg.
       stream atEnd
         ifTrue: [ ^ self ].
-      self
+      ^ self
         parseLongOptions: optionSpecs
+        shortOptions: shortOptionAliases
         do: optionBlock
         nonOptionsDo: nonOptionBlock ]
