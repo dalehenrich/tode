@@ -2,6 +2,6 @@ as yet unclassified
 getOpts: optionsSpec
   self todeCommand
     getOpts: optionsSpec
-    optionsAndArguments: [ :optionDictionary :arguments | 
+    optionsAndArguments: [ :optionDictionary :argsIn | 
       options := optionDictionary.
-      args := arguments ]
+      arguments := argsIn ]
