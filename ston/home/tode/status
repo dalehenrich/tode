@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 5b58e3b9ad7a53d7814612c408ee4fa19db4872a
+TDTxtLeafNode{#name:'status',#contents:'commit 768970b5a01c61f5b11202221ade7a79a0c909ba
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sat Nov 9 15:34:25 2013 -0800
+Date:   Sun Nov 10 07:47:22 2013 -0800
 
-    add support for GsInspectInteraction (Object>>inspect)
+    Issue #16: merge TDCommandGetOpts into TDCommandLine ... ready for trial by fire
 '}

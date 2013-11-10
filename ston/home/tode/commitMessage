@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'add support for GsInspectInteraction (Object>>inspect)',#runs:RunArray{#runs:[54],#values:[[]],#lastIndex:54,#lastRun:1,#lastOffset:53}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'Issue #16: merge TDCommandGetOpts into TDCommandLine ... ready for trial by fire',#runs:RunArray{#runs:[80],#values:[[]],#lastIndex:62,#lastRun:1,#lastOffset:61}}}
