@@ -8,7 +8,7 @@ SYNOPSIS
   mm diff [ <config-name> [all|dirty] ]
   mm dirty
   mm fileout <directory-path> <config-name>
-?  mm get [image|new|registry] <config> [<config> ... ]
+  mm get [image|new|registry] <config> [<config> ... ]
   mm list [<config> [<config> ... ]]
   mm locked
 ?  mm load [image|new|registry] <config> [<config> ... ]
