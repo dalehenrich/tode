@@ -1,4 +1,4 @@
-parsing
+private
 getCommandOpts: optionSpec optionsAndArguments: optsAndArgsBlock
   | options args |
   options := Dictionary new.

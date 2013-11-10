@@ -1,3 +1,3 @@
 accessing
 subCommand
-  ^ tokens at: 2
+  ^ self rawTokens at: 2

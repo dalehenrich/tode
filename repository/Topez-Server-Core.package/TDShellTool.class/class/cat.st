@@ -1,9 +1,4 @@
 as yet unclassified
 cat
-    <topezCommand: 'cat' manPage: #'catManPage'>
-    ^ [ :topez :objIn :tokens :windowId | 
-    (self
-        topez: topez
-        objIn: objIn
-        tokens: tokens
-        windowId: windowId) cat ]
+  <topezCommand: 'cat' manPage: #'catManPage'>
+  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) cat ]

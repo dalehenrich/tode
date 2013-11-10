@@ -1,3 +1,3 @@
 as yet unclassified
 block
-  ^ [ :aTopez :objIn :tokens :windowId | self gateway ]
+  ^ [ :aTopez :objIn :tokens :todeCommand | self gateway ]

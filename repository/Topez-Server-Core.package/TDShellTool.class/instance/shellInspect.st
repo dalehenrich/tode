@@ -2,7 +2,8 @@ as yet unclassified
 shellInspect
   "inspect [ windowId | windowName ] [ path ]"
 
-  | contextObject parentNode |
+  | contextObject parentNode theWindowId |
+  theWindowId := nil.
   contextObject := objIn.
   parentNode := nil.
   tokens size > 1
@@ -11,12 +12,12 @@ shellInspect
       theTokens := tokens copyWithoutIndex: 1.
       (tokens at: 2) isAllDigits
         ifTrue: [ 
-          windowId := (tokens at: 2) asNumber.
+          theWindowId := (tokens at: 2) asNumber.
           theTokens := tokens copyWithoutIndex: 2 ]
         ifFalse: [ 
           ((tokens at: 2) beginsWith: '#')
             ifTrue: [ 
-              windowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
+              theWindowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
               theTokens := tokens copyWithoutIndex: 2 ] ].
       theTokens size > 0
         ifTrue: [ 

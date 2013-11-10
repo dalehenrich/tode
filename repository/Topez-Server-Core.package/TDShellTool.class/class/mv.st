@@ -1,9 +1,4 @@
 as yet unclassified
 mv
-    <topezCommand: 'mv' manPage: #'mvManPage'>
-    ^ [ :topez :objIn :tokens :windowId | 
-    (self
-        topez: topez
-        objIn: objIn
-        tokens: tokens
-        windowId: windowId) mv ]
+  <topezCommand: 'mv' manPage: #'mvManPage'>
+  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) mv ]

@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"db" : "07/09/2013 15:52",
+		"db" : "dkh 11/10/2013 10:27",
 		"dbManPage" : "dkh 05/09/2013 10:39",
-		"debug" : "DataCurator 12/30/2012 08:18",
+		"debug" : "dkh 11/10/2013 10:14",
 		"debugManPage" : "dkh 04/04/2013 15:57",
 		"haloReadMe" : "DataCurator 12/20/2012 07:31",
 		"initialize" : "dkh 02/23/2013 14:49",
@@ -23,7 +23,7 @@
 		"breakSet:selector:step:" : "dkh 06/08/2013 16:23",
 		"breakSet:step:" : "dkh 06/08/2013 16:24",
 		"breakSteps:" : "dkh 05/09/2013 11:04",
-		"createStackNodeFor:" : " 09/02/2013 08:12",
+		"createStackNodeFor:" : "09/02/2013 08:12",
 		"dbContinue:" : "dkh 04/01/2013 20:56",
 		"dbFinishStep:" : "dkh 08/15/2013 16:58",
 		"dbStep:for:" : "dkh 04/01/2013 20:57",
@@ -34,7 +34,7 @@
 		"dbinto" : "07/09/2013 15:54",
 		"dbover" : "dkh 08/15/2013 16:54",
 		"dbrestart" : "07/09/2013 15:54",
-		"dbstack" : "07/09/2013 15:54",
+		"dbstack" : "dkh 11/10/2013 10:51",
 		"dbthru" : "07/09/2013 15:54",
 		"dbup" : "dkh 09/14/2013 01:35",
 		"debug" : "dkh 08/15/2013 16:48",

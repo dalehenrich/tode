@@ -1,3 +1,3 @@
 accessing
 command
-  ^ self tokens at: 1
+  ^ self rawTokens at: 1

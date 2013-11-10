@@ -1,4 +1,7 @@
 parsing
 tokens
-  tokens ifNil: [ tokens := self tokenize: self commandLine trimBoth ].
-  ^ tokens
+  ^ self hasSubCommand
+    ifTrue: [ 
+      self rawTokens.
+      tokens copyFrom: 2 to: tokens size ]
+    ifFalse: [ self rawTokens ]

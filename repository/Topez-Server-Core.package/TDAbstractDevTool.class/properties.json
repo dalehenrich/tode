@@ -10,7 +10,8 @@
 		"topez",
 		"objIn",
 		"tokens",
-		"windowId" ],
+		"windowId",
+		"todeCommand" ],
 	"name" : "TDAbstractDevTool",
 	"pools" : [
 		 ],
