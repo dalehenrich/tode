@@ -1,6 +1,6 @@
 parsing
 getOpts: optionSpec do: optionBlock nonOptionsDo: nonOptionBlock
-  | optionSpecs opt optArg |
+  | optionSpecs |
   optionSpecs := self parseOptionSpec: optionSpec.
   self skipWhiteSpace.
   self
