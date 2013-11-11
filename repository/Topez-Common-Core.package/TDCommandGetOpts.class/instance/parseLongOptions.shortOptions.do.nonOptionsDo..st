@@ -1,6 +1,7 @@
 private
 parseLongOptions: optionSpecs shortOptions: shortOptionAliases do: optionBlock nonOptionsDo: nonOptionBlock
   | peek opt spec |
+  self skipWhiteSpace.
   peek := stream peek.
   peek == $-
     ifFalse: [ 

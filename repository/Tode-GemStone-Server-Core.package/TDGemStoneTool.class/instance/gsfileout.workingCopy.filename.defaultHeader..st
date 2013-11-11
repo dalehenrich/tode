@@ -1,5 +1,5 @@
 as yet unclassified
-gsfileout: directoryPath classes: classNameList filename: filename defaultHeader: defaultHeader
+gsfileout: directoryPath workingCopy: workingCopy filename: filename defaultHeader: defaultHeader
   | directory header |
   directory := ServerFileDirectory on: directoryPath.
   header := self gsfileoutExtractHeaderFor: filename in: directory.
@@ -8,31 +8,38 @@ gsfileout: directoryPath classes: classNameList filename: filename defaultHeader
   directory
     forceNewFileNamed: filename
     do: [ :fileStream | 
+      | packageInfo methodRefs |
       header isEmpty
         ifFalse: [ fileStream nextPutAll: header ].
       fileStream
         nextPutAll: '! ------------------- Class definitions ';
         lf.
-      classNameList
-        do: [ :clsName | 
-          | cls |
-          cls := Smalltalk classNamed: clsName.
-          self gsfileoutClass: cls on: fileStream ].
+      packageInfo := MetacelloPlatform current packageInfoFor: workingCopy.
+      packageInfo classes do: [ :cls | self gsfileoutClass: cls on: fileStream ].
       fileStream
         nextPutAll: '! ------------------- Class methods ';
         lf.
-      classNameList
-        do: [ :clsName | 
-          | cls |
-          cls := Smalltalk classNamed: clsName.
-          self gsfileOutMethods: cls on: fileStream ].
+      packageInfo classes
+        do: [ :cls | self gsfileOutMethods: cls on: fileStream ].
+      fileStream
+        nextPutAll: '! ------------------- Extension Methods ';
+        lf.
+      methodRefs := packageInfo extensionMethods.
+      methodRefs := methodRefs asArray
+        sorted: [ :a :b | a classSymbol <= b classSymbol and: [ a selector <= b selector ] ].
+      methodRefs
+        do: [ :methodRef | 
+          | nativeStream |
+          nativeStream := WriteStream on: String new.
+          methodRef actualClass
+            fileOutMethod: methodRef selector
+            on: nativeStream.
+          fileStream nextPutAll: nativeStream contents encodeAsUTF8 asString ].
       fileStream
         nextPutAll: '! ------------------- Class initializers ';
         lf.
-      classNameList
-        do: [ :clsName | 
-          | cls |
-          cls := Smalltalk classNamed: clsName.
+      packageInfo classes
+        do: [ :cls | 
           (cls class selectors includes: #'initialize')
             ifFalse: [ ^ self ].
           fileStream

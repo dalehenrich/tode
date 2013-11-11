@@ -5,4 +5,4 @@ resolveWorkingCopyReference: packageName
     ifFalse: [ 
       MCWorkingCopy allManagers
         detect: [ :wc | wc packageName = packageName ]
-        ifNone: [ ^ 'No package named ' , packageName printString , ' found.' ] ]
+        ifNone: [ ^ self error: 'No package named ' , packageName printString , ' found.' ] ]

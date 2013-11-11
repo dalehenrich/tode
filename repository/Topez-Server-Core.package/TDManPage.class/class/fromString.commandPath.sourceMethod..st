@@ -1,5 +1,7 @@
 as yet unclassified
 fromString: manPage commandPath: commandPath sourceMethod: sourceMethod
+  "see http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap12.html for tips on documenting command syntax"
+
   | summaryIndex synopsisIndex descriptIndex |
   summaryIndex := 'NAME' size.
   synopsisIndex := manPage indexOfSubCollection: 'SYNOPSIS'.

@@ -1,18 +1,45 @@
 as yet unclassified
 gsfileout
   "
-  gs fileout <directory-path> <class-name> <filename> [ <class-name> <filename> ... ] 
+  gs fileout -dfilesystem-path>|--directory=<filesystem-path> 
+             [--class|--package|--category] <fileout-pair>...
 "
 
-  | directoryPath classnameFilenamePairs |
-  directoryPath := tokens at: 2.
-  classnameFilenamePairs := {}.
-  3 to: tokens size by: 2 do: [ :index | 
-    | classname filename |
-    classname := tokens at: index.
-    filename := tokens at: index + 1.
-    classnameFilenamePairs
+  | directoryPath fileoutPairs |
+  self
+    processCommandOptions:
+      {#('directory' $d #'required').
+      #('class' nil #'none').
+      #('package' nil #'none').
+      #('category' nil #'none')}.
+  directoryPath := options at: 'directory'.
+  fileoutPairs := {}.
+  1 to: arguments size by: 2 do: [ :index | 
+    | itemName filename |
+    itemName := arguments at: index.
+    filename := arguments at: index + 1.
+    fileoutPairs
       add:
-        {classname.
+        {itemName.
         filename} ].
-  ^ self gsfileout: directoryPath classnameFilenamePairs: classnameFilenamePairs
+  options
+    at: 'class'
+    ifPresent: [ :ignored | 
+      self
+        gsfileout: directoryPath
+        classnameFilenamePairs: fileoutPairs
+        defaultHeader: '' ].
+  options
+    at: 'package'
+    ifPresent: [ :ignored | 
+      self
+        gsfileout: directoryPath
+        packageFilenamePairs: fileoutPairs
+        defaultHeader: '' ].
+  options
+    at: 'category'
+    ifPresent: [ :ignored | 
+      self
+        gsfileout: directoryPath
+        categoryFilenamePairs: fileoutPairs
+        defaultHeader: '' ]

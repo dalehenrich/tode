@@ -4,7 +4,6 @@ getLongOpts: optionSpecs short: shortOptionAliases do: optionBlock nonOptionsDo:
 
   "shortOptionAliases is expected to be a dictionary whose keys are option characters and whose values are option names (i.e., keys into the optionSpecs dicationary)"
 
-  self skipWhiteSpace.
   self
     parseLongOptions: optionSpecs
     shortOptions: shortOptionAliases

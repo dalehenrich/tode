@@ -4,15 +4,9 @@ gsfileout: directoryPath classnameFilenamePairs: classnameFilenamePairs defaultH
   directory := ServerFileDirectory on: directoryPath.
   classnameFilenamePairs
     do: [ :pair | 
-      | header |
-      header := self gsfileoutExtractHeaderFor: (pair at: 2) in: directory.
-      header isEmpty
-        ifTrue: [ header := defaultHeader ].
-      directory
-        forceNewFileNamed: (pair at: 2)
-        do: [ :fileStream | 
-          self
-            gsfileoutClass: (Smalltalk classNamed: (pair at: 1))
-            header: header
-            on: fileStream ] ].
+      self
+        gsfileout: directoryPath
+        classes: {(pair at: 1)}
+        filename: (pair at: 2)
+        defaultHeader: defaultHeader ].
   ^ classnameFilenamePairs
