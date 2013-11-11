@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 768970b5a01c61f5b11202221ade7a79a0c909ba
+TDTxtLeafNode{#name:'status',#contents:'commit ca4621f7b19e2e762b55314f3cec55d65408d105
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sun Nov 10 07:47:22 2013 -0800
+Date:   Sun Nov 10 16:57:12 2013 -0800
 
-    Issue #16: merge TDCommandGetOpts into TDCommandLine ... ready for trial by fire
+    Issue #16: splice the short/long/mixed option handling into TDAbstractDevTool ... TDAbstractDevTool>>processCommandOptions: helper method for creating mixed option specs and getting command options ... implement option/arg handling for `ston rsync` command
 '}
