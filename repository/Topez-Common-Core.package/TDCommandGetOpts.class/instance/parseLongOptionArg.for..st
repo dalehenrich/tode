@@ -1,30 +1,21 @@
 private
 parseLongOptionArg: required for: opt
-  | peek endBlock optionArgStream |
-  optionArgStream := WriteStream on: String new.
-  endBlock := [ 
-  | optArg |
-  optArg := optionArgStream contents.
-  optArg isEmpty
-    ifTrue: [ 
-      required
-        ifTrue: [ self error: 'Missing required argument for option: ' , opt asString ]
-        ifFalse: [ ^ nil ] ].
-  optArg ].
+  | emptyTokenBlock peek |
+  emptyTokenBlock := [ 
+  required
+    ifTrue: [ self error: 'Missing required argument for option: ' , opt asString ]
+    ifFalse: [ nil ] ].
   stream atEnd
-    ifTrue: [ ^ endBlock value ].
+    ifTrue: [ ^ emptyTokenBlock value ].
   peek := stream peek.
   peek == $=
-    ifFalse: [ ^ endBlock value ].
+    ifFalse: [ ^ emptyTokenBlock value ].
   stream next.
   stream atEnd
-    ifTrue: [ ^ endBlock value ].
+    ifTrue: [ ^ emptyTokenBlock value ].
   peek := stream peek.
-  [ peek isSeparator ]
-    whileFalse: [ 
-      stream next.
-      optionArgStream nextPut: peek.
-      stream atEnd
-        ifTrue: [ ^ endBlock value ].
-      peek := stream peek ].
-  ^ endBlock value
+  self
+    parseArgToken: [ :token | 
+      token isEmpty
+        ifTrue: [ ^ emptyTokenBlock value ].
+      ^ token ]
