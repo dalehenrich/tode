@@ -27,5 +27,9 @@
 		"removeChildNode:" : "dkh 11/28/2012 05:31",
 		"renderNameTextAttributes" : "dkh 12/27/2012 16:41",
 		"resolveSpecialChildNamed:ifAbsent:" : "DataCurator 01/23/2013 18:27",
+		"rsyncChildNamed:ifAbsent:" : "dkh 11/10/2013 21:53",
+		"rsyncChildrenUsing:" : "dkh 11/10/2013 20:00",
+		"rsyncLeafNode:" : "dkh 11/10/2013 20:28",
+		"rsyncUsing:" : "dkh 11/10/2013 19:58",
 		"stonExportUsing:to:" : "dkh 09/14/2013 23:11",
 		"stonOn:" : "dkh 05/17/2013 18:24" } }

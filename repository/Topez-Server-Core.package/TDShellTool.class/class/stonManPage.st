@@ -27,6 +27,7 @@ DESCRIPTION
     How to copy it:
       -n, --dry-run              Perform a trial run with no changes made
       -t, --times                Preserve times
+      -x, --one-file-system       Don''t cross filesystem boundaries
 
     Destination options:
       -b, --backup                Make backups (see --suffix & --backup-dir)

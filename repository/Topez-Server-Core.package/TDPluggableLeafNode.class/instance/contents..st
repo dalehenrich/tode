@@ -1,3 +1,4 @@
 as yet unclassified
 contents: anObject
-    ^ self setContentsBlock value: self value: anObject
+  self modified.
+  ^ self setContentsBlock value: self value: anObject

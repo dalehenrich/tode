@@ -1,15 +1,14 @@
 {
-	"category" : "Topez-Server-Core",
+	"category" : "Topez-Server-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"creationTime",
-		"modificationTime" ],
-	"name" : "TDLeafNode",
+		 ],
+	"name" : "TDShellStonCommandTests",
 	"pools" : [
 		 ],
-	"super" : "TDNode",
+	"super" : "TDShellToolTests",
 	"type" : "normal" }

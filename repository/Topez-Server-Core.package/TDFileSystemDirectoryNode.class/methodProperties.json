@@ -12,4 +12,8 @@
 		"dotSelfObject" : "08/08/2013 06:36",
 		"listContents:" : "dkh 08/06/2013 10:18",
 		"resolveSpecialChildNamed:ifAbsent:" : "08/07/2013 05:54",
+		"rsyncChildNamed:ifAbsent:" : "dkh 11/10/2013 22:28",
+		"rsyncChildrenUsing:" : "dkh 11/10/2013 22:28",
+		"rsyncLeafNode:" : "dkh 11/10/2013 22:29",
+		"rsyncUsing:" : "dkh 11/10/2013 22:27",
 		"stonOn:" : "08/07/2013 06:05" } }

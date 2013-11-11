@@ -6,10 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"creationTime",
-		"modificationTime" ],
-	"name" : "TDLeafNode",
+		"rsyncOptions",
+		"rsyncArgs",
+		"rsyncTool",
+		"destinationNode" ],
+	"name" : "TDSTONRsync",
 	"pools" : [
 		 ],
-	"super" : "TDNode",
+	"super" : "Object",
 	"type" : "normal" }
