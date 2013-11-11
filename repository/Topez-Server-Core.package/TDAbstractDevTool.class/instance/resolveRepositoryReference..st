@@ -1,4 +1,4 @@
-as yet unclassified
+monticello
 resolveRepositoryReference: repositoryDescription
   ^ (repositoryDescription beginsWith: '@')
     ifTrue: [ self resolveAtPathReference: repositoryDescription ]

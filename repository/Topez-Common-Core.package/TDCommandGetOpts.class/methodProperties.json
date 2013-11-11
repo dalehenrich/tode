@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"getLongOptsFor:longOptionSpec:shortOptionAliases:do:nonOptionsDo:" : "dkh 11/10/2013 15:40",
 		"getOptsFor:spec:do:nonOptionsDo:" : "dkh 11/10/2013 07:16",
 		"parseCommand:" : "dkh 11/10/2013 07:15" },
 	"instance" : {
@@ -12,7 +13,7 @@
 		"parseLongOptionArg:for:" : "dkh 11/10/2013 13:56",
 		"parseLongOptionName" : "dkh 11/10/2013 13:37",
 		"parseLongOptions:shortOptions:do:nonOptionsDo:" : "dkh 11/10/2013 15:26",
-		"parseNonOptionArgs:" : "dkh 11/10/2013 06:27",
+		"parseNonOptionArgs:" : "dkh 11/10/2013 16:52",
 		"parseOptionArg:for:" : "dkh 11/10/2013 06:27",
 		"parseOptionSpec:" : "dkh 11/10/2013 06:27",
 		"parseOptions:expectDash:do:nonOptionsDo:" : "dkh 11/10/2013 06:27",

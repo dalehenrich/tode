@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 todeCommand: aTDCommandLine
   todeCommand := aTDCommandLine.
   todeCommand

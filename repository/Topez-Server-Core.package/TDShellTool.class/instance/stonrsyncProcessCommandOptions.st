@@ -1,17 +1,6 @@
 as yet unclassified
-stonManPage
-  ^ 'NAME
-  ston - import/export objects to/from disk (STON format)
-
-SYNOPSIS
-  ston export <path> <server-file-path>
-       export <path> @<server-path>
-  ston import <path> <server-file-path>
-       import <path> @<server-path>
-  ston rsync [option]... source [source]... destination
-
-DESCRIPTION
-
+stonrsyncProcessCommandOptions
+  "
   rsync
     What to copy:
       -r, --recursive            Recurse into directories
@@ -42,4 +31,29 @@ DESCRIPTION
 
     Misc Others:
       -h, --help                  show this help screen
-'
+  "
+
+  self
+    processCommandOptions:
+      {#('backup' $b #'none').
+      #('recursive' $r #'none').
+      #('relative' $R #'none').
+      #('exclude' nil #'required').
+      #('exclude-from' nil #'required').
+      #('ignore-times' $I #'none').
+      #('size-only' nil #'none').
+      #('modify-window' nil #'required').
+      #('include' nil #'required').
+      #('include-from' nil #'none').
+      #('dry-run' $N #'none').
+      #('times' $T #'none').
+      #('backup-dir' nil #'required').
+      #('suffix' nil #'required').
+      #('existing' nil #'none').
+      #('delete' nil #'none').
+      #('delete-excluded' nil #'none').
+      #('delete-after' nil #'none').
+      #('force' nil #'none').
+      #('ignore-errors' nil #'none').
+      #('update' $u #'none').
+      #('help' $h #'none')}

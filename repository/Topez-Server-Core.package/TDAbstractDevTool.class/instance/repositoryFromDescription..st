@@ -1,4 +1,4 @@
-as yet unclassified
+monticello
 repositoryFromDescription: aRepositoryDescription
   | project repositorySpec |
   project := MetacelloMCProject new.

@@ -24,4 +24,4 @@ parseNonOptionArgs: nonOptionArgsBlock
   nonOptionArgs isEmpty
     ifFalse: [ nonOptionArgsBlock value: nonOptionArgs ].
   self skipWhiteSpace.
-  self parseNonOptions: nonOptionArgsBlock
+  self parseNonOptionArgs: nonOptionArgsBlock

@@ -1,4 +1,4 @@
-as yet unclassified
+metacello
 modifiedPackagesForProjectSpec: projectSpec
   ^ (self packagesForProjectSpec: projectSpec)
     select: [ :pkg | 

@@ -75,7 +75,7 @@
 		"stack" : "dkh 11/10/2013 10:21",
 		"stackManPage" : "dkh 06/04/2013 21:18",
 		"ston" : "dkh 11/10/2013 10:33",
-		"stonManPage" : "dkh 11/10/2013 12:38",
+		"stonManPage" : "dkh 11/10/2013 15:58",
 		"testSuiteClasses" : "DataCurator 01/23/2013 18:04",
 		"toolName" : "dkh 12/21/2012 11:26",
 		"toolReadMe" : "dkh 12/21/2012 11:23",
@@ -176,6 +176,9 @@
 		"stonImportFrom:to:" : "dkh 06/06/2013 09:55",
 		"stonexport" : "dkh 11/09/2013 16:45",
 		"stonimport" : "dkh 11/09/2013 16:46",
+		"stonrsync" : "dkh 11/10/2013 16:48",
+		"stonrsync:to:options:" : "dkh 11/10/2013 16:51",
+		"stonrsyncProcessCommandOptions" : "dkh 11/10/2013 16:45",
 		"symbolListForNode:" : "dkh 06/04/2013 14:15",
 		"touch" : "dkh 05/17/2013 07:05",
 		"view" : "dkh 06/03/2013 07:49" } }
