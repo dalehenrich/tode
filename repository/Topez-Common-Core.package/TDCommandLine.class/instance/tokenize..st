@@ -1,16 +1,18 @@
 private
 tokenize: aString
-  | list token final escaped delimited stream |
+  | list token final escaped delimited stream count |
   list := OrderedCollection new.
   argPtrs := OrderedCollection new.
   token := WriteStream on: String new.
   escaped := false.
   delimited := false.
   stream := ReadStream on: aString.
+  count := 0.
   [ stream atEnd ]
     whileFalse: [ 
       | char |
       char := stream next.
+      count := count + 1.
       escaped
         ifTrue: [ 
           char = $`
@@ -22,7 +24,7 @@ tokenize: aString
               delimited
                 ifFalse: [ 
                   list add: token contents.
-                  argPtrs add: stream position.
+                  argPtrs add: count.
                   token := WriteStream on: String new ].
               delimited := true ]
             ifFalse: [ 
@@ -34,5 +36,5 @@ tokenize: aString
   final isEmpty
     ifFalse: [ 
       list add: final.
-      argPtrs add: stream position ].
+      argPtrs add: count + 1 ].
   ^ list

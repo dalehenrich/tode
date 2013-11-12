@@ -22,6 +22,5 @@ testMixed23
       errorSignalled := true ].
   self assert: errorSignalled.
   self
-    assert:
-      (exception description
-        includesSubstring: 'Missing required argument for option: category')
+    assert: exception description
+    includesSubstring: 'Missing required argument for option: category'
