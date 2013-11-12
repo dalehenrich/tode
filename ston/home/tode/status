@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 2857fc9d2dbf16c8211ee597bc5b45cec6f44f70
+TDTxtLeafNode{#name:'status',#contents:'commit 4921a8edfa0b03bd69bb17f5a376354d2c787d87
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Mon Nov 11 22:20:04 2013 -0800
+Date:   Mon Nov 11 22:45:51 2013 -0800
 
-    write TDLeafNode creationTime modificationTime for STON
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-11T22:20:08.20327997207642-08:00']}
+    update manPage for `ston rsync` and flesh out the first test
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-11T22:45:54.96199893951416-08:00']}

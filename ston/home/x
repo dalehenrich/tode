@@ -1,5 +1,13 @@
 TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | 
-| symbol |
-\t#(145869057 145869313 145869569 145869825) do: [:oop |
-symbol := Object _objectForOop: oop.
-IXFamilyTree class removeSelector: symbol] ]',#creationTime:nil,#modificationTime:nil}
+\tSmalltalk
+\t\tat: #BaselineOfGLASS1
+\t\tifPresent: [ :ignored | 
+\t\t\t(Smalltalk at: #MetacelloProjectRegistration)
+\t\t\t\tifPresent: [ :cls | 
+\t\t\t\t\t(cls registrationForClassNamed: \'BaselineOfGLASS1\' ifAbsent: [  ])
+\t\t\t\t\t\tifNotNil: [ :registration | 
+\t\t\t\t\t\t\tregistration loadedInImage
+\t\t\t\t\t\t\t\tifTrue: [ ^ self ] ] ] ].
+\tConfigurationOfGLASS project updateProject.
+\tGsDeployer deploy: [ (ConfigurationOfGLASS project version: \'1.0-beta.9.1\') load ].
+\tSystem commit ]',#creationTime:nil,#modificationTime:DateAndTime['2013-11-12T10:15:52.8852059841156-08:00']}
