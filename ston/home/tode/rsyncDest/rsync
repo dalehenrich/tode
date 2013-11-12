@@ -1,0 +1,9 @@
+TDScriptLeafNode{#name:'rsync',#contents:'[ :topez :objIn :tokens :todeCommand | 
+| stonTool command |
+\t\"newer\"
+command := TDCommandLine
+  commandLine: \'ston --update rsync rsyncDest\'
+  redirectTarget: nil.
+stonTool := topez toolInstanceFor: \'ston\'.
+stonTool todeCommand: command.
+stonTool stonrsync ]'}

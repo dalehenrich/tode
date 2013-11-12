@@ -9,7 +9,7 @@ looseChanges := node block
 gemNRS := GsNetworkResourceString new
   protocol: \'tcp\';
   node: \'foos\';
-  netldi: \'46227\';
+  netldi: \'53436\';
   resource: \'task\';
   body: GsNetLDI gemnetobject;
   yourself.
