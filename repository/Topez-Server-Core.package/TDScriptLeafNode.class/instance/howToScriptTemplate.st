@@ -1,5 +1,5 @@
 as yet unclassified
-scriptTemplate
+howToScriptTemplate
   ^ '[ :topez :objIn :tokens :command | 
 | opts args result |
 "for help: ./'

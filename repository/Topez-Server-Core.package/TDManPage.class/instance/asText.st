@@ -25,14 +25,17 @@ asText
     cr;
     nextPutAll: '  ';
     nextPutAll: self examples;
-    cr;
-    cr;
-    nextPutAll: 'SEE ALSO' asText allBold;
-    cr;
-    nextPutAll: '  ';
-    nextPutAll: self commandPath;
-    cr;
-    nextPutAll: '  ';
-    nextPutAll: self sourceMethod;
     cr.
+  (commandPath notNil or: [ sourceMethod notNil ])
+    ifTrue: [ 
+      aStream
+        cr;
+        nextPutAll: 'SEE ALSO' asText allBold;
+        cr;
+        nextPutAll: '  ';
+        nextPutAll: self commandPath;
+        cr;
+        nextPutAll: '  ';
+        nextPutAll: self sourceMethod;
+        cr ].
   ^ aStream contents

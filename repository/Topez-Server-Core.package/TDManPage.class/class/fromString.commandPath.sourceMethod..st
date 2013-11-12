@@ -13,7 +13,7 @@ fromString: manPageString commandPath: commandPath sourceMethod: sourceMethod
     ifTrue: [ descriptIndex := exampleIndex ].
   synopsisIndex == 0
     ifTrue: [ synopsisIndex := descriptIndex ].
-  ^ self new
+  manPage := self new
     summary:
         (manPageString copyFrom: summaryIndex + 1 to: synopsisIndex - 1) trimBoth;
     synopsis:
@@ -25,6 +25,9 @@ fromString: manPageString commandPath: commandPath sourceMethod: sourceMethod
     examples:
         (manPageString copyFrom: exampleIndex + 'EXAMPLES' size to: manPageString size)
             trimBoth;
-    commandPath: commandPath;
-    sourceMethod: sourceMethod;
-    yourself
+    yourself.
+  commandPath notNil
+    ifTrue: [ manPage commandPath: commandPath ].
+  sourceMethod notNil
+    ifTrue: [ manPage sourceMethod: sourceMethod ].
+  ^ manPage
