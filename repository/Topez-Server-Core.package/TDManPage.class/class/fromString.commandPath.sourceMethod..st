@@ -1,22 +1,30 @@
 as yet unclassified
-fromString: manPage commandPath: commandPath sourceMethod: sourceMethod
+fromString: manPageString commandPath: commandPath sourceMethod: sourceMethod
   "see http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap12.html for tips on documenting command syntax"
 
-  | summaryIndex synopsisIndex descriptIndex exampleIndex |
+  | summaryIndex synopsisIndex descriptIndex exampleIndex manPage |
   summaryIndex := 'NAME' size.
-  synopsisIndex := manPage indexOfSubCollection: 'SYNOPSIS'.
-  descriptIndex := manPage indexOfSubCollection: 'DESCRIPTION'.
-  exampleIndex := manPage indexOfSubCollection: 'EXAMPLES'.
+  synopsisIndex := manPageString indexOfSubCollection: 'SYNOPSIS'.
+  descriptIndex := manPageString indexOfSubCollection: 'DESCRIPTION'.
+  exampleIndex := manPageString indexOfSubCollection: 'EXAMPLES'.
+  exampleIndex == 0
+    ifTrue: [ exampleIndex := manPageString size ].
+  descriptIndex == 0
+    ifTrue: [ descriptIndex := exampleIndex ].
+  synopsisIndex == 0
+    ifTrue: [ synopsisIndex := descriptIndex ].
   ^ self new
-    summary: (manPage copyFrom: summaryIndex + 1 to: synopsisIndex - 1) trimBoth;
+    summary:
+        (manPageString copyFrom: summaryIndex + 1 to: synopsisIndex - 1) trimBoth;
     synopsis:
-        (manPage copyFrom: synopsisIndex + 'SYNOPSIS' size to: descriptIndex - 1)
+        (manPageString copyFrom: synopsisIndex + 'SYNOPSIS' size to: descriptIndex - 1)
             trimBoth;
     description:
-        (manPage copyFrom: descriptIndex + 'DESCRIPTION' size to: exampleIndex - 1)
+        (manPageString copyFrom: descriptIndex + 'DESCRIPTION' size to: exampleIndex - 1)
             trimBoth;
     examples:
-        (manPage copyFrom: exampleIndex + 'EXAMPLES' size to: manPage size) trimBoth;
+        (manPageString copyFrom: exampleIndex + 'EXAMPLES' size to: manPageString size)
+            trimBoth;
     commandPath: commandPath;
     sourceMethod: sourceMethod;
     yourself
