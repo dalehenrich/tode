@@ -1,8 +1,6 @@
 evaluator engine
 evaluateCommand: command
 	| tokens |
-	false
-		ifTrue: [ ^ self evaluateCommandOld: command ].
 	(command commandLine notEmpty and: [ command commandLine first = $# ])
 		ifTrue: [ ^ '' ].
 	tokens := command tokens.

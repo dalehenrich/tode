@@ -1,3 +1,3 @@
 evaluator engine
 builtIns
-    ^ #('logout' 'close' 'collapse' 'exit' 'expand')
+    ^ #('logout' 'close' 'collapse' 'exit' 'expand' 'installTode')
