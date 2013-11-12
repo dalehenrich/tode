@@ -13,6 +13,10 @@ SYNOPSIS
 DESCRIPTION
 
   rsync
+
+    A trailing / on a source name means ''copy the contents of this directory''. 
+    Without a trailing slash it means ''copy the directory''. 
+
     What to copy:
       -r, --recursive            Recurse into directories
       -R, --relative             Use relative path names
