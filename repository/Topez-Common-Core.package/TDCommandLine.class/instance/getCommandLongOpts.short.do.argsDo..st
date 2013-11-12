@@ -4,7 +4,7 @@ getCommandLongOpts: optionSpec short: shortOptionAliases do: optionBlock argsDo:
   optionString := commandLine copyFrom: self commandArgPtr to: commandLine size.
   optionStream := ReadStream on: optionString.
   TDCommandGetOpts
-    getLongOptsFor: optionStream
+    getOptsLongFor: optionStream
     longOptionSpec: optionSpec
     shortOptionAliases: shortOptionAliases
     do: optionBlock

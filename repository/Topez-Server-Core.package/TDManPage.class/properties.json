@@ -9,6 +9,7 @@
 		"summary",
 		"synopsis",
 		"description",
+		"examples",
 		"commandPath",
 		"sourceMethod" ],
 	"name" : "TDManPage",

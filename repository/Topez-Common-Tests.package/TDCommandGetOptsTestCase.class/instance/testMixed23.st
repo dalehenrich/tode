@@ -9,7 +9,7 @@ testMixed23
   errorSignalled := false.
   [ 
   parser
-    getMixedLongShortOpts:
+    getOptsMixedLongShort:
       {#('directory' $d #'required').
       #('class' nil #'none').
       #('package' nil #'none').

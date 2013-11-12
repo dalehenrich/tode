@@ -20,7 +20,7 @@ testLong21
     at: 'category' put: #'none';
     yourself.
   parser
-    getLongOpts: optionsSpec
+    getOptsLong: optionsSpec
     do: [ :opt :optArg | 
       processedOption := true.
       parsedOptions at: opt put: optArg ]

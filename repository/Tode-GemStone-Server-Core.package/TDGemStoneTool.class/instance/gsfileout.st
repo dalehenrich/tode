@@ -7,7 +7,7 @@ gsfileout
 
   | directoryPath fileoutPairs |
   self
-    processCommandOptions:
+    getOptsMixedLongShort:
       {#('directory' $d #'required').
       #('class' nil #'none').
       #('package' nil #'none').

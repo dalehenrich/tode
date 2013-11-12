@@ -11,7 +11,7 @@ testMixed14
   self assert: parser command = 'testopt'.
   processNonOption := processedOption := false.
   parser
-    getLongOpts: self longOptionSpec
+    getOptsLong: self longOptionSpec
     short: self shortOptionAliases
     do: [ :opt :optArg | 
       processedOption := true.

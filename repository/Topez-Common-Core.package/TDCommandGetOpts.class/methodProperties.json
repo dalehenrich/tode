@@ -1,14 +1,14 @@
 {
 	"class" : {
-		"getLongOptsFor:longOptionSpec:shortOptionAliases:do:nonOptionsDo:" : "dkh 11/10/2013 15:40",
 		"getOptsFor:spec:do:nonOptionsDo:" : "dkh 11/10/2013 07:16",
+		"getOptsLongFor:longOptionSpec:shortOptionAliases:do:nonOptionsDo:" : "dkh 11/11/2013 16:42",
 		"parseCommand:" : "dkh 11/10/2013 07:15" },
 	"instance" : {
 		"command" : "dkh 11/10/2013 06:27",
-		"getLongOpts:do:nonOptionsDo:" : "dkh 11/10/2013 14:29",
-		"getLongOpts:short:do:nonOptionsDo:" : "dkh 11/11/2013 12:30",
-		"getMixedLongShortOpts:do:nonOptionsDo:" : "dkh 11/11/2013 12:00",
 		"getOpts:do:nonOptionsDo:" : "dkh 11/10/2013 12:54",
+		"getOptsLong:do:nonOptionsDo:" : "dkh 11/11/2013 16:43",
+		"getOptsLong:short:do:nonOptionsDo:" : "dkh 11/11/2013 16:40",
+		"getOptsMixedLongShort:do:nonOptionsDo:" : "dkh 11/11/2013 16:41",
 		"parseArgToken:" : "dkh 11/11/2013 08:35",
 		"parseCommand" : "dkh 11/10/2013 06:27",
 		"parseCommand:" : "dkh 11/10/2013 07:15",

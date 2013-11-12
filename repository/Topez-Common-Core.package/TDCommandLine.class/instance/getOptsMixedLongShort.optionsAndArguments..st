@@ -1,5 +1,5 @@
 parsing
-getMixedLongShortOpts: mixedOptionSpecs optionsAndArguments: optsAndArgsBlock
+getOptsMixedLongShort: mixedOptionSpecs optionsAndArguments: optsAndArgsBlock
   "mixedOptionSpecs is an array of option specs, for example:
 
     {#('directory' $d #'required').
@@ -24,6 +24,6 @@ getMixedLongShortOpts: mixedOptionSpecs optionsAndArguments: optsAndArgsBlock
       shortOptionCharacter
         ifNotNil: [ shortOptionAliases at: shortOptionCharacter put: optionName ] ].
   ^ self
-    getLongOpts: longOptionsSpec
+    getOptsLong: longOptionsSpec
     short: shortOptionAliases
     optionsAndArguments: optsAndArgsBlock

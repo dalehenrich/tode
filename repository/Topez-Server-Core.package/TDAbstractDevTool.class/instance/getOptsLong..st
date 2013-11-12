@@ -1,7 +1,7 @@
 command-options
-getLongOpts: longOptionsSpec
+getOptsLong: longOptionsSpec
   self todeCommand
-    getLongOpts: longOptionsSpec
+    getOptsLong: longOptionsSpec
     optionsAndArguments: [ :optionDictionary :argsIn | 
       options := optionDictionary.
       arguments := argsIn ]

@@ -4,7 +4,7 @@ gsManPage
   gs - execute gemstone commands
 
 SYNOPSIS
-  gs fileout -dfilesystem-path>|--directory=<filesystem-path> 
+  gs fileout -d<filesystem-path>|--directory=<filesystem-path> 
              [--class|--package|--category] <fileout-pair>...
   gs instances <className>
      instances @<class-path>

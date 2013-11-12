@@ -1,5 +1,5 @@
 parsing
-getLongOpts: longOptionSpec short: shortOptionAliases optionsAndArguments: optsAndArgsBlock
+getOptsLong: longOptionSpec short: shortOptionAliases optionsAndArguments: optsAndArgsBlock
   | options args |
   options := Dictionary new.
   args := OrderedCollection new.

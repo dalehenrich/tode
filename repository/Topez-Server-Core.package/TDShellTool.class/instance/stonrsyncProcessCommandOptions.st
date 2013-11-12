@@ -35,7 +35,7 @@ stonrsyncProcessCommandOptions
   "
 
   self
-    processCommandOptions:
+    getOptsMixedLongShort:
       {#('backup' $b #'none').
       #('recursive' $r #'none').
       #('relative' $R #'none').

@@ -12,7 +12,7 @@ testMixed22
   processNonOption := processedOption := false.
   parsedOptions := Dictionary new.
   parser
-    getMixedLongShortOpts:
+    getOptsMixedLongShort:
       {#('directory' $d #'required').
       #('class' nil #'none').
       #('package' nil #'none').

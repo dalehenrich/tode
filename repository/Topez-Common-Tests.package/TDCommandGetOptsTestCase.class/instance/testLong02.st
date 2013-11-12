@@ -10,7 +10,7 @@ testLong02
   self assert: parser command = 'testopt'.
   processedOption := false.
   parser
-    getLongOpts: self longOptionSpec
+    getOptsLong: self longOptionSpec
     do: [ :opt :optArg | 
       processedOption := true.
       self assert: (options at: opt) = optArg ]
