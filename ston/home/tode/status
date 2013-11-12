@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit f92ae298cff4221e923e562440f3736951fe24ec
+TDTxtLeafNode{#name:'status',#contents:'commit 2857fc9d2dbf16c8211ee597bc5b45cec6f44f70
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Mon Nov 11 22:10:25 2013 -0800
+Date:   Mon Nov 11 22:20:04 2013 -0800
 
-    tweak TDManPage class>>fromString:commandPath:sourceMethod:
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-11T22:10:28.97014594078064-08:00']}
+    write TDLeafNode creationTime modificationTime for STON
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-11T22:20:08.20327997207642-08:00']}
