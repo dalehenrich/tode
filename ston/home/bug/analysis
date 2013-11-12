@@ -7,4 +7,4 @@ The three solutions I can think of to fix that are
 
 I don\'t imagine I\'ll have two images downloading the same file at the same time so 3 would be the easiest probably to implement, but two may be more robust in a multiuser system
 
-Let me know what you think.',#runs:RunArray{#runs:[691],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+Let me know what you think.',#runs:RunArray{#runs:[691],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:nil,#modificationTime:nil}

@@ -2,4 +2,4 @@ TDScriptLeafNode{#name:'confirm',#contents:'[ :topez :objIn :tokens :windowId |
 (GsConfirmInteraction
   prompt: \'Warning: \'\'you have been warned\'\'. Press \'\'Proceed\'\' to continue.\'
   confirm: \'Proceed\'
-  cancel: \'Debug\') halt signal ]'}
+  cancel: \'Debug\') halt signal ]',#creationTime:nil,#modificationTime:nil}

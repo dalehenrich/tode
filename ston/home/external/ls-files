@@ -11,4 +11,4 @@ TDTxtLeafNode{#name:'ls-files',#contents:Text{#string:'foos:external>git ls-file
 100644 58f9e7810ce129106e46802475b6824b0939276a 1\trepository/External-Core.package/monticello.meta/version
 100644 3b3fb6889e375f121b85d98603d0157d65a3f5a6 2\trepository/External-Core.package/monticello.meta/version
 100644 0238781e2a5ea2e893ad0ebeb6f789c028a4ffe1 3\trepository/External-Core.package/monticello.meta/version
-',#runs:RunArray{#runs:[1458],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+',#runs:RunArray{#runs:[1458],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:nil,#modificationTime:nil}

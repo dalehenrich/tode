@@ -35,4 +35,4 @@ statusNode := topez
           name: \'status\';
           yourself) ].
 statusNode contents: loaded printString.
-loaded ]'}
+loaded ]',#creationTime:nil,#modificationTime:nil}

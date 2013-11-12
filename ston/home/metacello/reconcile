@@ -4,4 +4,4 @@ TDScriptLeafNode{#name:'reconcile',#contents:'\"This is source for a block.  \"
     topez: topez
     objIn: objIn
     tokens: tokens
-    windowId: windowId) reconcile ]'}
+    windowId: windowId) reconcile ]',#creationTime:nil,#modificationTime:nil}

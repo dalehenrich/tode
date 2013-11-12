@@ -7,4 +7,4 @@ TDScriptLeafNode{#name:'install',#contents:'[ :topez :objIn :tokens :windowId |
 \tbaseline: \'Metacello\';
 \trepository: \'filetree:///opt/git/metacello-work/repository\';
 \tload: \'ALL\'.
-\t]'}
+\t]',#creationTime:nil,#modificationTime:nil}

@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'tweak TDManPage class>>fromString:commandPath:sourceMethod:',#runs:RunArray{#runs:[6,53],#values:[[],[TextColor{#color:Color{#rgb:1023}}]],#lastIndex:7,#lastRun:2,#lastOffset:0}}}
+TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'tweak TDManPage class>>fromString:commandPath:sourceMethod:',#runs:RunArray{#runs:[6,53],#values:[[],[TextColor{#color:Color{#rgb:1023}}]],#lastIndex:7,#lastRun:2,#lastOffset:0}},#creationTime:nil,#modificationTime:DateAndTime['2013-11-11T22:10:13.35273504257202-08:00']}

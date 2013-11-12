@@ -5,4 +5,4 @@ TDScriptLeafNode{#name:'cmds',#contents:'[ :topez :objIn :tokens :windowId |
 parser := TDCommandLineParser parse: (ReadStream on: \'testopt -a -b\').
 \tparser parseOptions: \'ab\' do: [:opt :optArg |
 \t\toptions add: opt-> optArg] nonOptionsDo: [:nonOption |nonOptions add: nonOption].
-\t{options. nonOptions} ]'}
+\t{options. nonOptions} ]',#creationTime:nil,#modificationTime:nil}

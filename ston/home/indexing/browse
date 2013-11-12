@@ -8,4 +8,4 @@ indexSpecClassNames := indexSpecDefs collect: [ :def | def className ].
 defs := defs reject: [ :def | indexSpecClassNames includes: def className ].
 defs addAll: indexSpecDefs.
 findTool browseClasses: defs.
-defs ]'}
+defs ]',#creationTime:nil,#modificationTime:nil}

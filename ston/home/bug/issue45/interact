@@ -4,4 +4,4 @@ TDScriptLeafNode{#name:'interact',#contents:'[ :topez :objIn :tokens :windowId |
   do: [ :ex | 
     | interaction |
     interaction := ex interaction.
-    ex response: interaction ok ] ]'}
+    ex response: interaction ok ] ]',#creationTime:nil,#modificationTime:nil}

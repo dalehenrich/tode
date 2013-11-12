@@ -28,4 +28,4 @@ TDTxtLeafNode{#name:'sample',#contents:Text{#string:'  query := \'((1 <= each.nu
     (each.numberOfChildren >= 1) | (each.numberOfChildren > 3)
   query withOriginalFormula
     (each.numberOfChildren >= 1) | (each.numberOfChildren > 3)
-',#runs:RunArray{#runs:[1206],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:762,#lastRun:1,#lastOffset:761}}}
+',#runs:RunArray{#runs:[1206],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:762,#lastRun:1,#lastOffset:761}},#creationTime:nil,#modificationTime:nil}

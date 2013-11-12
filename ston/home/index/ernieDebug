@@ -7,4 +7,4 @@ symbolList := (AllUsers
   ifAbsent: [ self error: \'No user named\' , self username printString , \' found.\' ])
   symbolList.
 cls := symbolList objectNamed: testClassName asSymbol.
-cls debug: testSelector asSymbol ]'}
+cls debug: testSelector asSymbol ]',#creationTime:nil,#modificationTime:nil}

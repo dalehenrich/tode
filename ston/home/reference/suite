@@ -7,4 +7,4 @@ projectSpec version currentlyLoadedClassesInVersion
   do: [ :cl | 
     (cl inheritsFrom: TestCase)
       ifTrue: [ suite addTests: cl suite tests ] ].
-^ suite'}
+^ suite',#creationTime:nil,#modificationTime:nil}

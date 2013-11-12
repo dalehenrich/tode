@@ -25,4 +25,4 @@ diffs := looseChanges
       yourself ].
 differ := TDGitDiffer new diffs: diffs.
 diffTool := topez toolInstanceFor: \'mg\'.
-diffTool gitdiff: differ gitTool: self ]'}
+diffTool gitdiff: differ gitTool: self ]',#creationTime:nil,#modificationTime:nil}

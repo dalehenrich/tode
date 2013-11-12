@@ -12,4 +12,4 @@ nsc
               ifNotNil: [ :numberOfChildren | 
                 2 < numberOfChildren & (numberOfChildren <= 4)
                   ifTrue: [ expected add: each ] ] ] ] ].
-expected ]'}
+expected ]',#creationTime:nil,#modificationTime:nil}

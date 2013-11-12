@@ -4,4 +4,4 @@ shellTool := topez toolInstanceFor: \'find\'.
 classDefs := shellTool findSymbolDictionary: #\'UserGlobals\' username: \'Ernie\'.
 classDefs add: TestAsserter asTDClassDefinition.
 classDefs editUsing: (TDEditorSpec topez: topez editorAspect: #\'definitionList\').
-classDefs ]'}
+classDefs ]',#creationTime:nil,#modificationTime:nil}

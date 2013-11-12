@@ -16,4 +16,4 @@ formatter := [ :aString |
   formattedCode ].
 GsQueryOptions
   compile: (formatter value: combineWith);
-  compile: (formatter value: negateWith)'}
+  compile: (formatter value: negateWith)',#creationTime:nil,#modificationTime:nil}

@@ -3,4 +3,4 @@ TDChoiceRequest labels: #(\'one\' \'two\').
 TDConfirmRequest prompt: \'Well?\' confirm: \'Yes?\' cancel: \'No?\'.
 TDInformRequest message: \'Informing you\'.
 TDMultiLineTextRequest prompt: \'Multiple lines\' template: \'template\'.
-\tTDTextRequest prompt: \'single line\' template: \'template\' ]'}
+\tTDTextRequest prompt: \'single line\' template: \'template\' ]',#creationTime:nil,#modificationTime:nil}

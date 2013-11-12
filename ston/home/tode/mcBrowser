@@ -7,4 +7,4 @@ browser := TDMonticelloBrowser new
   mcTool: mcTool;
   workingCopies: workingCopies;
   yourself.
-\tbrowser open ]'}
+\tbrowser open ]',#creationTime:nil,#modificationTime:nil}

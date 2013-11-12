@@ -3,4 +3,4 @@ Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
 Date:   Sat Nov 9 06:09:10 2013 -0800
 
     Issue #212: more correct version of bug fix now that I\'ve verified that the proposed bugfix works in the wild (https://travis-ci.org/dalehenrich/metacello-work/builds/13719518) with only a test in MetacelloProjectRegistrationTestCase>>testBasicHasLoadConflicts failing ...
-'}
+',#creationTime:nil,#modificationTime:nil}

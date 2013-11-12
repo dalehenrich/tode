@@ -7,4 +7,4 @@ Metacello new
   baseline: \'Metacello\';
   repository: \'filetree:///opt/git/metacello-work/repository\';
   lock.
-MetacelloProjectRegistration primeRegistryFromImage'}
+MetacelloProjectRegistration primeRegistryFromImage',#creationTime:nil,#modificationTime:nil}

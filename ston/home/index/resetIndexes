@@ -9,4 +9,4 @@ UserGlobals
   ifFalse: [ 
     IndexManager
       removeAllIncompleteIndexes;
-      removeAllIndexes ] ]'}
+      removeAllIndexes ] ]',#creationTime:nil,#modificationTime:nil}

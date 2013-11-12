@@ -57,4 +57,4 @@ gofer
   repository:
     (TDMonticelloTool new
       repositoryFromDescription: \'filetree:///opt/git/Seaside31/repository\').
-gofer push'}
+gofer push',#creationTime:nil,#modificationTime:nil}

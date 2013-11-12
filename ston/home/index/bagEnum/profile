@@ -54,4 +54,4 @@ Transcript
       \'Results: \' , evaluatorResult size printString , \' -- \'
           , enumeratorResult size printString.
 {evaluatorResult.
-enumeratorResult} ]'}
+enumeratorResult} ]',#creationTime:nil,#modificationTime:nil}

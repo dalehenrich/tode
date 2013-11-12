@@ -1,4 +1,4 @@
 TDSmalltalkLeafNode{#name:'lock',#contents:'Metacello new
   baseline: \'FileTree\';
   repository: \'filetree:///opt/git/gs/filetree/repository\';
-  lock'}
+  lock',#creationTime:nil,#modificationTime:nil}

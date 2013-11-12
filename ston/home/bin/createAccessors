@@ -26,4 +26,4 @@ TDScriptLeafNode{#name:'createAccessors',#contents:'[ :topez :objIn :tokens :win
                 , \'\'\'.\"\' , newLine , \'   \' , aSelector , \' := \' , varName
                 , newLine
             dictionaries: #()
-            category: #\'updating\' ] ]] '}
+            category: #\'updating\' ] ]] ',#creationTime:nil,#modificationTime:nil}

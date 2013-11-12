@@ -43,4 +43,4 @@ DESCRIPTION
        --halt     halts after the index is created
   -h,  --help     producce this message    
 \' topez: topez ].
-result ]'}
+result ]',#creationTime:DateAndTime['2013-11-11T15:00:26.75465106964111-08:00'],#modificationTime:DateAndTime['2013-11-11T22:07:52.07960605621338-08:00']}

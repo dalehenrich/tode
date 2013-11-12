@@ -12,4 +12,4 @@ resetAll
       removeAllIndexes;
       resetAllIndexes ].
 \tIXQueryTestResource current. \"force creation of new resources\"
-indexManager ]'}
+indexManager ]',#creationTime:nil,#modificationTime:nil}

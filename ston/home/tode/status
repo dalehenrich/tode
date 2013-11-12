@@ -3,4 +3,4 @@ Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
 Date:   Mon Nov 11 22:10:25 2013 -0800
 
     tweak TDManPage class>>fromString:commandPath:sourceMethod:
-'}
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-11T22:10:28.97014594078064-08:00']}

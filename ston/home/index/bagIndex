@@ -15,4 +15,4 @@ query := (GsQuery fromString: \'each.value = 5\')
   on: nsc;
   yourself.
 query queryResult ]
-  ensure: [ indexSpec removeIndexesFrom: nsc ] ]'}
+  ensure: [ indexSpec removeIndexesFrom: nsc ] ]',#creationTime:nil,#modificationTime:nil}

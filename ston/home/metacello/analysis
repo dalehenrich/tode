@@ -22,4 +22,4 @@ TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'--transcript--\'Metacello
 --transcript--\'Project: External baseline\'
 --transcript--\'...finished 0.9.1\'
 --transcript--\'MetacelloScriptingWarningTestCase>>testWarningDuringLoad [1]: 0\'
---transcript--\'Missing class: ExternalCore\'',#runs:RunArray{#runs:[2323],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+--transcript--\'Missing class: ExternalCore\'',#runs:RunArray{#runs:[2323],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:nil,#modificationTime:nil}

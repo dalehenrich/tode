@@ -17,4 +17,4 @@ workingCopies
     | rg |
     rg := wc repositoryGroup.
     rg repositories do: [ :repo | rg removeRepository: repo ].
-    rg addRepository: newRepo ] ]'}
+    rg addRepository: newRepo ] ]',#creationTime:nil,#modificationTime:nil}

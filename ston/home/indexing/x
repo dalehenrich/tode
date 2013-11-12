@@ -23,4 +23,4 @@ nsc
                   ifTrue: [ expected3 add: each ] ] ] ] ].
 {expected1.
 expected2.
-expected3} ]'}
+expected3} ]',#creationTime:nil,#modificationTime:nil}

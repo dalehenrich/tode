@@ -31,4 +31,4 @@ halt
     query queryResult ] ]
   ensure: [ IndexManager current removeAllIncompleteIndexesOn: population ].
 true
-  ifTrue: [ populationIndexSpec removeIndexesFrom: population ] ]'}
+  ifTrue: [ populationIndexSpec removeIndexesFrom: population ] ]',#creationTime:nil,#modificationTime:nil}

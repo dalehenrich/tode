@@ -3,4 +3,4 @@ Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
 Date:   Sat Nov 9 15:30:44 2013 -0800
 
     implement GsInspectInteraction to support tODE and GemTools
-'}
+',#creationTime:nil,#modificationTime:nil}

@@ -51,4 +51,4 @@ fail - ResumableTestFailure: 1 ResumableTestFailure (ResumableTestFailure) >> si
 41 GSTestCase class (CoreTestCase class) >> runEx: (envId 0) @3 line 4  [GsNMethod 31000065]
 42 Executed Code            @2 line 1  [GsNMethod 76518401]
 43 <Reenter marker>
-',#runs:RunArray{#runs:[4211],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+',#runs:RunArray{#runs:[4211],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:nil,#modificationTime:nil}

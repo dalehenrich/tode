@@ -33,4 +33,4 @@ orderedAttributeList
                       at: attribute
                       ifAbsent: [ packageVersions at: attribute put: Set new ].
                     refs add: ref ] ] ] ] ].
-{packageVersions. methodSectionMap} ]'}
+{packageVersions. methodSectionMap} ]',#creationTime:nil,#modificationTime:nil}

@@ -55,4 +55,4 @@ classToFilenameMap := Dictionary new
 ! Copyright (C) GemTalk Systems, LLC. 2013.  All Rights Reserved.
 !=========================================================================
 
-\' withGemstoneLineEndings ] ]'}
+\' withGemstoneLineEndings ] ]',#creationTime:nil,#modificationTime:nil}

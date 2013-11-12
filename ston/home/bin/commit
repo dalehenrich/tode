@@ -40,4 +40,4 @@ commitedVersions isEmpty
                   name: \'status\';
                   yourself) ].
         statusNode contents: status.
-         commitedVersions] ] ]'}
+         commitedVersions] ] ]',#creationTime:nil,#modificationTime:nil}

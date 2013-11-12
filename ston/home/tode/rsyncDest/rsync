@@ -6,4 +6,4 @@ command := TDCommandLine
   redirectTarget: nil.
 stonTool := topez toolInstanceFor: \'ston\'.
 stonTool todeCommand: command.
-stonTool stonrsync ]'}
+stonTool stonrsync ]',#creationTime:DateAndTime['2013-11-10T22:00:34.30449795722961-08:00'],#modificationTime:DateAndTime['2013-11-10T22:01:00.96769905090332-08:00']}

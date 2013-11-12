@@ -2,4 +2,4 @@ TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'prompt:
 
 Then 
   implement TDRepositoryPackageBrowser>>savePackage:selectedIndex:
-',#runs:RunArray{#runs:[17,65],#values:[[],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:9,#lastRun:1,#lastOffset:8}}}
+',#runs:RunArray{#runs:[17,65],#values:[[],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:9,#lastRun:1,#lastOffset:8}},#creationTime:nil,#modificationTime:nil}
