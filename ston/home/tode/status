@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 4921a8edfa0b03bd69bb17f5a376354d2c787d87
+TDTxtLeafNode{#name:'status',#contents:'commit 89e0bd588ea3de68b607b663d04bf9cafab42507
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Mon Nov 11 22:45:51 2013 -0800
+Date:   Tue Nov 12 12:59:12 2013 -0800
 
-    update manPage for `ston rsync` and flesh out the first test
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-11T22:45:54.96199893951416-08:00']}
+    defined a new script template: TDScriptLeafNode>>minimalScriptTemplate ... define Dictionary>>at:ifAbsent:ifPresent: for better script layout
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-12T12:59:12.84479403495789-08:00']}
