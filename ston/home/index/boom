@@ -9,21 +9,25 @@ command
 opts at: \'option\' ifAbsent: [  ] ifPresent: [ :optValue |  ].
 opts
   at: \'help\'
-  ifAbsent: [ IXQueryTestResource reset.
-\t\tIXQueryTestResource current theTree ]
+  ifAbsent: [ 
+    IXQueryTestResource reset.
+    IXQueryTestResource current theTree ]
   ifPresent: [ :ignored | 
     TDManPage
       viewManPage:
         \'NAME
   boom - boom sript utility template
 SYNOPSIS
-  boom [-h|--help] [-o|--option=<something>] <operand>
+  boom [-h|--help]
 DESCRIPTION
-EXAMPLES
-  ./boom --help
-  ./boom -h
+  Trigger a SIGSEGV (in this case) when the following is run:
 
-  ./boom --option=something operand
-  ./boom -o something -- operand
+    IXQueryTestResource reset.
+    IXQueryTestResource current theTree
+
+  WARNING: your image will hang and the gem process dies.
+EXAMPLES
+  ./boom 
+  ./boom -h
 \'
-      topez: topez ] ]',#creationTime:DateAndTime['2013-11-13T07:37:56.87901401519775-08:00'],#modificationTime:DateAndTime['2013-11-13T07:40:20.80800604820251-08:00']}
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-13T07:37:56.87901401519775-08:00'],#modificationTime:DateAndTime['2013-11-13T12:39:25.55780100822449-08:00']}
