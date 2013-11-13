@@ -1,0 +1,29 @@
+TDScriptLeafNode{#name:'boom',#contents:'[ :topez :objIn :tokens :command | 
+| opts args |
+\"for help: ./boom -h\"
+command
+  getOptsMixedLongShort: {#(\'help\' $h #\'none\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
+opts at: \'option\' ifAbsent: [  ] ifPresent: [ :optValue |  ].
+opts
+  at: \'help\'
+  ifAbsent: [ IXQueryTestResource reset.
+\t\tIXQueryTestResource current theTree ]
+  ifPresent: [ :ignored | 
+    TDManPage
+      viewManPage:
+        \'NAME
+  boom - boom sript utility template
+SYNOPSIS
+  boom [-h|--help] [-o|--option=<something>] <operand>
+DESCRIPTION
+EXAMPLES
+  ./boom --help
+  ./boom -h
+
+  ./boom --option=something operand
+  ./boom -o something -- operand
+\'
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-13T07:37:56.87901401519775-08:00'],#modificationTime:DateAndTime['2013-11-13T07:40:20.80800604820251-08:00']}
