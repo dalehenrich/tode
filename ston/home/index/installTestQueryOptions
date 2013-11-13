@@ -1,47 +1,29 @@
-TDScriptLeafNode{#name:'installTestQueryOptions',#contents:'[ :topez :objIn :tokens :windowId | 
-| systemUser gemNRS stoneNRS stoneName netldiName restore init |
-init := restore := false.
-tokens size > 1
-  ifTrue: [ 
-    restore := (tokens at: 2) = \'restore\'.
-    init := (tokens at: 2) = \'init\' ].
+TDScriptLeafNode{#name:'installTestQueryOptions',#contents:'[ :topez :objIn :tokens :command | 
+| opts args restore init stoneNRS netldiName expression |
+\"for help: ./installTestQueryOptions -h\"
+command
+  getOptsMixedLongShort:
+    {#(\'help\' $h #\'none\').
+    #(\'init\' $i #\'none\').
+    #(\'restore\' $r #\'none\').
+    #(\'netldi\' nil #\'required\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
 stoneNRS := GsNetworkResourceString defaultFromCurrentStone.
-stoneName := stoneNRS body.
-(stoneName beginsWith: \'j_\')
-  ifTrue: [ netldiName := \'j_gs64ldi\' ].
-(stoneName beginsWith: \'k_\')
-  ifTrue: [ netldiName := \'k_gs64ldi\' ].
-(stoneName beginsWith: \'l_\')
-  ifTrue: [ netldiName := \'l_gs64ldi\' ].
-gemNRS := GsNetworkResourceString new
-  protocol: \'tcp\';
-  node: \'foos\';
-  netldi: netldiName;
-  resource: \'task\';
-  body: GsNetLDI gemnetobject;
-  yourself.
-systemUser := GsExternalSession new
-  stoneNRS: stoneNRS;
-  gemNRS: gemNRS;
-  username: \'SystemUser\';
-  password: \'swordfish\';
-  yourself.
-[ 
-systemUser login.
-restore
-  ifTrue: [ 
-    systemUser
-      executeString: \'GsQuery defaultQueryOptions: (GsQueryOptions default ).
-System commit\' ]
-  ifFalse: [ 
-    init
-      ifTrue: [ systemUser
-      executeString: \'GsQueryFormula
-    negatedOperatorMap;
-    inverseOperatorMap;
-    comparisonSelectorMap.
-System commit\'  ]
-      ifFalse: [ systemUser executeString: \'GsQuery defaultQueryOptions: (GsQueryOptions new
+opts
+  at: \'netldi\'
+  ifAbsent: [ 
+    | stoneName |
+    stoneName := stoneNRS body.
+    (stoneName beginsWith: \'j_\')
+      ifTrue: [ netldiName := \'j_gs64ldi\' ].
+    (stoneName beginsWith: \'k_\')
+      ifTrue: [ netldiName := \'k_gs64ldi\' ].
+    (stoneName beginsWith: \'l_\')
+      ifTrue: [ netldiName := \'l_gs64ldi\' ] ]
+  ifPresent: [ :optValue | netldiName := optValue ].
+expression := \'GsQuery defaultQueryOptions: (GsQueryOptions new
     setApplyDeMorgansLaws;
     setConsolidateEnumerablePredicates;
     setConsolidateRangePredicates;
@@ -49,6 +31,73 @@ System commit\'  ]
     setRemoveRedundantPredicates;
     setReorderPredicates;
     setTransformCommonPaths).
-System commit\' ] ] ]
-  ensure: [ systemUser ifNotNil: [ systemUser logout ] ].
-true ]',#creationTime:nil,#modificationTime:nil}
+System commit\'.
+opts at: \'init\' ifPresent: [ :optValue | expression := \'GsQueryFormula
+    negatedOperatorMap;
+    inverseOperatorMap;
+    comparisonSelectorMap.
+System commit\' ].
+opts
+  at: \'restore\'
+  ifPresent: [ :optValue | expression := \'GsQuery defaultQueryOptions: (GsQueryOptions default ).
+System commit\' ].
+opts
+  at: \'help\'
+  ifAbsent: [ 
+    | systemUser gemNRS stoneNRS |
+    gemNRS := GsNetworkResourceString new
+      protocol: \'tcp\';
+      node: \'foos\';
+      netldi: netldiName;
+      resource: \'task\';
+      body: GsNetLDI gemnetobject;
+      yourself.
+    systemUser := GsExternalSession new
+      stoneNRS: stoneNRS;
+      gemNRS: gemNRS;
+      username: \'SystemUser\';
+      password: \'swordfish\';
+      yourself.
+    [ 
+    systemUser login.
+    systemUser executeString: expression ]
+      ensure: [ systemUser ifNotNil: [ systemUser logout ] ] ]
+  ifPresent: [ :ignored | 
+    TDManPage
+      viewManPage:
+        \'NAME
+  installTestQueryOptions - installTestQueryOptions utility
+SYNOPSIS
+  installTestQueryOptions [-h|--help] [--init] [--restore] [--netldi=<netldi-name>]
+DESCRIPTION
+  Since SystemUser owns the GsQuery class>>defaultQueryOptions: slot, the default
+  values cannot be easily changed for tests. This utility uses GsExternalSession
+  to login as SystemUser and change the option settings.
+
+  With no options set, this utility defines the GsQuery class>>defaultQueryOptions:
+  as follows:
+
+    GsQuery defaultQueryOptions: (GsQueryOptions new
+      setApplyDeMorgansLaws;
+      setConsolidateEnumerablePredicates;
+      setConsolidateRangePredicates;
+      setNormalizePredicates;
+      setRemoveRedundantPredicates;
+      setReorderPredicates;
+      setTransformCommonPaths).
+
+  With the restore option set, this utility restores the standard defaults:
+
+    GsQuery defaultQueryOptions: (GsQueryOptions default ).
+
+  With the init option set, the GsQueryFormula class is initialized:
+
+    GsQueryFormula
+      negatedOperatorMap;
+      inverseOperatorMap;
+      comparisonSelectorMap.
+
+
+EXAMPLES
+\'
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:02:09.7072319984436-08:00'],#modificationTime:DateAndTime['2013-11-12T21:27:12.34981489181519-08:00']}
