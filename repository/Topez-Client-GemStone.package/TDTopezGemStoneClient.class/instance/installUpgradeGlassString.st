@@ -8,7 +8,7 @@ installUpgradeGlassString
         (cls registrationForClassNamed: ''BaselineOfGLASS1'' ifAbsent: [  ])
           ifNotNil: [ :registration | 
             registration loadedInImage
-              ifTrue: [ ^ self ] ] ] ].
+              ifTrue: [ ^ nil ] ] ] ].
 Transcript cr; show: ''-----Upgrading GLASS to 1.0-beta.9.1''.
 ConfigurationOfGLASS project updateProject.
 GsDeployer
