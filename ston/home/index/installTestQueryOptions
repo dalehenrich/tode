@@ -1,16 +1,21 @@
 TDScriptLeafNode{#name:'installTestQueryOptions',#contents:'[ :topez :objIn :tokens :command | 
-| opts args restore init stoneNRS netldiName expression |
+| opts args restore init stoneNRS netldiName expression verbose |
 \"for help: ./installTestQueryOptions -h\"
 command
   getOptsMixedLongShort:
     {#(\'help\' $h #\'none\').
     #(\'init\' $i #\'none\').
     #(\'restore\' $r #\'none\').
-    #(\'netldi\' nil #\'required\')}
+    #(\'netldi\' nil #\'required\').
+    #(\'verbose\' $v #\'none\')}
   optionsAndArguments: [ :options :operands | 
     opts := options.
     args := operands ].
 stoneNRS := GsNetworkResourceString defaultFromCurrentStone.
+opts
+  at: \'verbose\'
+  ifAbsent: [ verbose := false ]
+  ifPresent: [ :ignored | verbose := true ].
 opts
   at: \'netldi\'
   ifAbsent: [ 
@@ -23,6 +28,11 @@ opts
     (stoneName beginsWith: \'l_\')
       ifTrue: [ netldiName := \'l_gs64ldi\' ] ]
   ifPresent: [ :optValue | netldiName := optValue ].
+verbose
+  ifTrue: [ 
+    Transcript
+      cr;
+      show: \'netldi=\' , netldiName printString ].
 expression := \'GsQuery defaultQueryOptions: (GsQueryOptions new
     setApplyDeMorgansLaws;
     setConsolidateEnumerablePredicates;
@@ -32,19 +42,23 @@ expression := \'GsQuery defaultQueryOptions: (GsQueryOptions new
     setReorderPredicates;
     setTransformCommonPaths).
 System commit\'.
-opts at: \'init\' ifPresent: [ :optValue | expression := \'GsQueryFormula
+opts
+  at: \'init\'
+  ifPresent: [ :optValue | 
+    expression := \'GsQueryFormula
     negatedOperatorMap;
     inverseOperatorMap;
     comparisonSelectorMap.
 System commit\' ].
 opts
   at: \'restore\'
-  ifPresent: [ :optValue | expression := \'GsQuery defaultQueryOptions: (GsQueryOptions default ).
+  ifPresent: [ :optValue | 
+    expression := \'GsQuery defaultQueryOptions: (GsQueryOptions default ).
 System commit\' ].
 opts
   at: \'help\'
   ifAbsent: [ 
-    | systemUser gemNRS stoneNRS |
+    | systemUser gemNRS |
     gemNRS := GsNetworkResourceString new
       protocol: \'tcp\';
       node: \'foos\';
@@ -69,6 +83,7 @@ opts
   installTestQueryOptions - installTestQueryOptions utility
 SYNOPSIS
   installTestQueryOptions [-h|--help] [--init] [--restore] [--netldi=<netldi-name>]
+\t\t                   [-v|--verbose]
 DESCRIPTION
   Since SystemUser owns the GsQuery class>>defaultQueryOptions: slot, the default
   values cannot be easily changed for tests. This utility uses GsExternalSession
@@ -97,7 +112,7 @@ DESCRIPTION
       inverseOperatorMap;
       comparisonSelectorMap.
 
-
+  The verbose option logs detailed information to the Transcript.
 EXAMPLES
 \'
-      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:02:09.7072319984436-08:00'],#modificationTime:DateAndTime['2013-11-12T21:27:12.34981489181519-08:00']}
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:02:09.7072319984436-08:00'],#modificationTime:DateAndTime['2013-11-12T21:57:09.5330491065979-08:00']}
