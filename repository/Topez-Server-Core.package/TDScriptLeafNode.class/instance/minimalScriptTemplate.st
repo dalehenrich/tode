@@ -16,7 +16,7 @@ command
 opts
   at: ''option''
   ifAbsent: [ 
-    "iption not specified ... what is the default action?"
+    "option not specified ... what is the default action?"
      ]
   ifPresent: [ :optValue | 
     "do something with  optionValue"
