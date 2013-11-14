@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit f740551d1768be4977e0b720f42fc4bbc5967df7
+TDTxtLeafNode{#name:'status',#contents:'commit ab744b4cd64dc9fa5041cbdd826e328fc7a66b51
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Thu Nov 14 10:06:48 2013 -0800
+Date:   Thu Nov 14 12:25:07 2013 -0800
 
-    Issue #37: checkpoint on `ston rsync` work ... even more options implemented, even more tests written ...
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-14T10:06:48.65456104278564-08:00']}
+    add builtin login command to allow user to dynamically switch netldi name to be used (and potentially other login parameters as well)
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-14T14:02:43.19944000244141-08:00']}
