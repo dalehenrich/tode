@@ -1,43 +1,70 @@
-TDScriptLeafNode{#name:'commit',#contents:'[ :topez :objIn :tokens :windowId | 
-| projectName commitMessage mmTool commitedVersions |
-\"/home/bin/commit Tode `commit message`
-/home/bin/commit Tode @commitMessage\"
-projectName := tokens at: 2.
-commitMessage := tokens at: 3.
-mmTool := topez toolInstanceFor: \'mm\'.
-(commitMessage beginsWith: \'@\')
-  ifTrue: [ commitMessage := (mmTool resolveAtPathReference: commitMessage) asString ].
-Transcript
-  cr;
-  show: \'======= committing \' , projectName printString , \'=======\'.
-commitedVersions := mmTool mmCommit: projectName commitMessage: commitMessage.
-commitedVersions isEmpty
-  ifTrue: [ \'No dirty packages to commit\' ]
-  ifFalse: [ 
-    | repo |
-    repo := (topez lookup: \'repo\') dotSelfObject.
-    repo class description = MCFileTreeRepository description
-      ifTrue: [ 
-        | status statusNode gitRepoDir gitTool commitMessageFileName |
-        gitRepoDir := (topez lookup: \'gitRepo\') dotSelfObject.
-        gitTool := topez toolInstanceFor: \'git\'.
-        commitMessageFileName := gitTool createTmpFileWith: commitMessage.
-        gitTool
-          gitaddIn: gitRepoDir with: \'.\';
-          gitstatusIn: gitRepoDir with: \'\';
-          gitcommitIn: gitRepoDir with: \'-a --file=\' , commitMessageFileName;
-          gitstatusIn: gitRepoDir with: \'\'.
-        status := gitTool gitlogIn: gitRepoDir with: \'-1\'.
-        Transcript
-          cr;
-          show: \'==============\'.
-        statusNode := topez
-          lookup: \'status\'
-          ifAbsent: [ 
-            topez currentNode
-              addChildNode:
-                (TDTxtLeafNode new
-                  name: \'status\';
-                  yourself) ].
-        statusNode contents: status.
-         commitedVersions] ] ]',#creationTime:nil,#modificationTime:nil}
+TDScriptLeafNode{#name:'commit',#contents:'[ :topez :objIn :tokens :command | 
+| opts args |
+\"for help: /home/bin/commit -h\"
+command
+  getOptsMixedLongShort:
+    {#(\'help\' $h #\'none\').
+    #(\'cypress\' $y #\'none\').
+    #(\'git\' $g #\'none\').
+    #(\'config\' $c #\'none\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
+opts
+  at: \'help\'
+  ifAbsent: [ 
+    | mmTool commitedVersions projectName commitMessage |
+    projectName := args at: 1.
+    commitMessage := args at: 2.
+    mmTool := topez toolInstanceFor: \'mm\'.
+    (commitMessage beginsWith: \'@\')
+      ifTrue: [ commitMessage := (mmTool resolveAtPathReference: commitMessage) asString ].
+    Transcript
+      cr;
+      show: \'======= committing \' , projectName printString , \'=======\'.
+    commitedVersions := mmTool
+      mmCommit: projectName
+      commitMessage: commitMessage.
+    commitedVersions isEmpty
+      ifTrue: [ \'No dirty packages to commit\' ]
+      ifFalse: [ 
+        | repo |
+        repo := (topez lookup: \'repo\') dotSelfObject.
+        repo class description = MCFileTreeRepository description
+          ifTrue: [ 
+            | status statusNode gitRepoDir gitTool commitMessageFileName |
+            gitRepoDir := (topez lookup: \'gitRepo\') dotSelfObject.
+            gitTool := topez toolInstanceFor: \'git\'.
+            commitMessageFileName := gitTool createTmpFileWith: commitMessage.
+            gitTool
+              gitaddIn: gitRepoDir with: \'.\';
+              gitstatusIn: gitRepoDir with: \'\';
+              gitcommitIn: gitRepoDir
+                with: \'-a --file=\' , commitMessageFileName;
+              gitstatusIn: gitRepoDir with: \'\'.
+            status := gitTool gitlogIn: gitRepoDir with: \'-1\'.
+            Transcript
+              cr;
+              show: \'==============\'.
+            statusNode := topez
+              lookup: \'status\'
+              ifAbsent: [ 
+                topez currentNode
+                  addChildNode:
+                    (TDTxtLeafNode new
+                      name: \'status\';
+                      yourself) ].
+            statusNode contents: status.
+            commitedVersions ] ] ]
+  ifPresent: [ :ignored | TDManPage viewManPage: \'NAME
+  commit - commit project
+SYNOPSIS
+  commit [-h|--help][--git][--cypress][--config]
+         <project-name> <commit-message>|@<commit-message-path>
+DESCRIPTION
+  The dirty packages in the project are committed, then a git commit is 
+  performed.
+EXAMPLES
+  /home/bin/commit Tode `commit message`
+  /home/bin/commit Tode @commitMessage
+\' topez: topez ] ]',#creationTime:nil,#modificationTime:DateAndTime['2013-11-13T21:54:10.16382694244385-08:00']}

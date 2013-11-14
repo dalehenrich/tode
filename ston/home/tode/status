@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 89e0bd588ea3de68b607b663d04bf9cafab42507
+TDTxtLeafNode{#name:'status',#contents:'commit f740551d1768be4977e0b720f42fc4bbc5967df7
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Nov 12 12:59:12 2013 -0800
+Date:   Thu Nov 14 10:06:48 2013 -0800
 
-    defined a new script template: TDScriptLeafNode>>minimalScriptTemplate ... define Dictionary>>at:ifAbsent:ifPresent: for better script layout
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-12T12:59:12.84479403495789-08:00']}
+    Issue #37: checkpoint on `ston rsync` work ... even more options implemented, even more tests written ...
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-14T10:06:48.65456104278564-08:00']}
