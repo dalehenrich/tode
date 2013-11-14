@@ -8,20 +8,32 @@ rsyncLeafNode: aTDLeafNode
     ifAbsent: [  ].
   destinationLeaf
     ifNotNil: [ 
-      | sourceSeconds sourceSize destinationSeconds destinationSize modifyWindow |
+      | sourceSeconds sourceSize destinationSeconds destinationSize modifyWindow checksum |
       sourceSeconds := aTDLeafNode modificationTime asSeconds truncated.
       destinationSeconds := destinationLeaf modificationTime asSeconds truncated.
-      sourceSize := aTDLeafNode contents size.
-      destinationSize := destinationLeaf contents size.
+      sourceSize := aTDLeafNode rsyncSize.
+      destinationSize := destinationLeaf rsyncSize.
+      checksum := self isOptionSet: 'checksum'.
       (self isOptionSet: 'ignore-times')
+        ifTrue: [ 
+          "unconditionally transfer all files ... unless checksum set"
+          checksum
+            ifTrue: [ 
+              (aTDLeafNode rsyncEquals: destinationLeaf with: self)
+                ifTrue: [ ^ self ] ] ]
         ifFalse: [ 
           sourceSize = destinationSize
-            ifTrue: [ ^ self ].
-          (self isOptionSet: 'size-only')
-            ifTrue: [ ^ self ].
-          modifyWindow := self optionValue: 'modify-window'.
-          (destinationSeconds - sourceSeconds) abs <= modifyWindow
-            ifTrue: [ ^ self ] ].
+            ifTrue: [ 
+              checksum
+                ifTrue: [ 
+                  (aTDLeafNode rsyncEquals: destinationLeaf with: self)
+                    ifTrue: [ ^ self ] ]
+                ifFalse: [ 
+                  (self isOptionSet: 'size-only')
+                    ifTrue: [ ^ self ].
+                  modifyWindow := (self optionValue: 'modify-window') asNumber.
+                  (destinationSeconds - sourceSeconds) abs <= modifyWindow
+                    ifTrue: [ ^ self ] ] ] ].
       (self isOptionSet: 'update')
         ifTrue: [ 
           destinationSeconds > sourceSeconds

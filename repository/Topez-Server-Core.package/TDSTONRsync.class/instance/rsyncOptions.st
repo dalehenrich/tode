@@ -1,5 +1,4 @@
 accessing
 rsyncOptions
-
-   "Return the value of the instance variable 'rsyncOptions'."
-   ^rsyncOptions
+  rsyncOptions ifNil: [ rsyncOptions := Dictionary new ].
+  ^ rsyncOptions

@@ -1,0 +1,3 @@
+rsync
+rsyncSize
+  ^ self halt

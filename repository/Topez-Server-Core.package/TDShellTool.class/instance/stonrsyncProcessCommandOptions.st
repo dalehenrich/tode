@@ -37,6 +37,7 @@ stonrsyncProcessCommandOptions
   self
     getOptsMixedLongShort:
       {#('backup' $b #'none').
+      #('checksum' $c #'none').
       #('recursive' $r #'none').
       #('relative' $R #'none').
       #('exclude' nil #'required').

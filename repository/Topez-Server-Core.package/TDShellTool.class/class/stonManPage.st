@@ -13,7 +13,7 @@ SYNOPSIS
 DESCRIPTION
 
   rsync
-
+  -----
     A trailing / on a source name means ''copy the contents of this directory''. 
     Without a trailing slash it means ''copy the directory''. 
 
@@ -36,6 +36,7 @@ DESCRIPTION
     Destination options:
       -b, --backup                Make backups (see --suffix & --backup-dir)
           --backup-dir=DIR        Make backups into this directory
+      -c, --checksum              Skip based on checksum, not mod-time & size
           --suffix=SUFFIX         Override backup suffix
           --existing              Only update files that already exist
           --delete                Delete files that don''t exist on the sending side
@@ -47,4 +48,9 @@ DESCRIPTION
 
     Misc Others:
       -h, --help                  show this help screen
+
+  rsync references:
+    http://ss64.com/bash/rsync.html
+    http://ss64.com/bash/rsync_options.html
+    http://en.wikipedia.org/wiki/Rsync#Determining_which_files_to_send
 '

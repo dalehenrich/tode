@@ -5,4 +5,5 @@ stonrsync: sourcePaths to: destinationPath options: rsynOptions
     rsyncTool: self;
     rsyncOptions: self options;
     rsyncArgs: self arguments.
-  rsync rsync: sourcePaths to: destinationPath
+  rsync rsync: sourcePaths to: destinationPath.
+  ^ rsync
