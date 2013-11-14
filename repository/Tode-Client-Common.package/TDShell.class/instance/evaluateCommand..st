@@ -1,11 +1,9 @@
 evaluator engine
 evaluateCommand: command
-	| tokens |
 	(command commandLine notEmpty and: [ command commandLine first = $# ])
 		ifTrue: [ ^ '' ].
-	tokens := command tokens.
-	tokens isEmpty
+	command tokens isEmpty
 		ifTrue: [ ^ '' ].
-	(self builtIns includes: (tokens at: 1))
-		ifTrue: [ ^ self executeBuiltIn: tokens ].
+	(self builtIns includes: command command)
+		ifTrue: [ ^ self executeBuiltIn: command ].
 	^ (self topezClient evaluateCommand: command) convertTDEvaluateTokenResponseToText

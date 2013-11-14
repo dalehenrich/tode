@@ -1,4 +1,8 @@
 evaluator engine
-executeBuiltIn: tokens
-    self perform: (tokens at: 1) asSymbol.
-    ^ tokens at: 1
+executeBuiltIn: command
+	| cmd |
+	cmd := command command.
+	cmd = 'login'
+		ifTrue: [ self executeLogin: command ]
+		ifFalse: [ self perform: cmd asSymbol ].
+	^ cmd
