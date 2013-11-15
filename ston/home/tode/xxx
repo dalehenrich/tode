@@ -1,15 +1,5 @@
 TDScriptLeafNode{#name:'xxx',#contents:'[ :topez :objIn :tokens :windowId | 
-\"#define OOP_CLASS_RCINDEX_BUCKET          88065U  /* v1.1 oop  689 */
-#define OOP_CLASS_BTREE_UNICODE_COMPARISON_QUERY_SPEC       155393U
-#define OOP_CLASS_BTREE_UNICODE_RANGE_COMPARISON_QUERY_SPEC 155649U
-#define OOP_PossibleDeadSymbols         248577U
-#define OOP_CLASS_GsSecureSocket        248833U
-
-\"
-{88065.
-(Object _oop11toOop20: 689).
-(Object _oop20toOop11: 88065).
-(Object _oop20toOop11: 155393).
-(Object _oop20toOop11: 155649).
-248833 - 248577.
-248833 + 256} ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:@2}
+| tstTool tpz |
+tpz := TDTopezServer for: 1.
+tstTool := tpz toolInstanceFor: \'test\'.
+tstTool testpackage: \'Index-Tests\' ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-11-15T12:29:01.69624590873718-08:00']}

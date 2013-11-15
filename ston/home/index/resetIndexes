@@ -1,12 +1,53 @@
-TDScriptLeafNode{#name:'resetIndexes',#contents:'[ :topez :objIn :tokens :windowId | 
-UserGlobals
-  removeKey: #\'FamilyTree\' ifAbsent: [].
-(tokens size > 1 and: [ (tokens at: 2) = \'hard\' ])
-  ifTrue: [ 
-    IndexManager current resetAllIndexes.
-    DependencyList depMapKeys do: [ :obj | DependencyList set: nil for: obj ].
-    DependencyList depMapKeys ]
-  ifFalse: [ 
+TDScriptLeafNode{#name:'resetIndexes',#contents:'[ :topez :objIn :tokens :command | 
+| opts args |
+\"for help: ./resetIndexes -h\"
+command
+  getOptsMixedLongShort:
+    {#(\'help\' $h #\'none\').
+    #(\'hard\' nil #\'none\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
+opts
+  at: \'help\'
+  ifAbsent: [ 
+    UserGlobals removeKey: #\'FamilyTree\' ifAbsent: [  ].
+    IXQueryTestResource reset.
+    opts
+      at: \'hard\'
+      ifAbsent: [ 
+        IndexManager
+          removeAllIncompleteIndexes;
+          removeAllIndexes ]
+      ifPresent: [ :ignored | 
+        IndexManager current resetAllIndexes.
+        DependencyList depMapKeys
+          do: [ :obj | DependencyList set: nil for: obj ].
+        DependencyList depMapKeys ] ]
+  ifPresent: [ :ignored | TDManPage viewManPage: \'NAME
+  resetIndexes - remove indexes from all collections in repository
+SYNOPSIS
+  resetIndexes [-h|--help][--hard]
+DESCRIPTION
+  Unconditionally removes FamilyTree global and resets IXQueryTestREsource:
+
+    UserGlobals removeKey: #\'\'FamilyTree\'\' ifAbsent: [  ].
+    IXQueryTestResource current reset.
+
+  With no --hard option, tries to gently remove indexes:
+
     IndexManager
       removeAllIncompleteIndexes;
-      removeAllIndexes ] ]',#creationTime:nil,#modificationTime:nil}
+      removeAllIndexes 
+
+  With --hard takes exreme measures to remove indexes:
+
+    IndexManager current resetAllIndexes.
+      DependencyList depMapKeys
+        do: [ :obj | DependencyList set: nil for: obj ].
+      DependencyList depMapKeys 
+EXAMPLES
+
+  ./resetIndexes 
+  ./resetIndexes --hard
+\' topez: topez ] ]',#creationTime:nil,#modificationTime:DateAndTime['2013-11-15T13:42:55.58071494102478-08:00']}
