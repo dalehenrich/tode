@@ -13,6 +13,7 @@ SYNOPSIS
   gs mreferences @<object-path>
   gs objectAudit [<maxThreads>]
   gs references @<object-path>
+  gs sessionDescription
 
 DESCRIPTION
 
