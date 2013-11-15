@@ -17,7 +17,8 @@ executeLogin: command
 					| sessionDescription |
 					sessionDescription := self topezClient sessionDescription copy.
 					sessionDescription netLDI: netldiName.
-					self topezClient sessionDescription: sessionDescription ] ]
+					self topezClient sessionDescription: sessionDescription.
+					shellWindow setLabel: self label , ' (netldi=', netldiName , ')' ] ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
 				prompt: 'Help for ' , command command;
