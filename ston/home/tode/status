@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit ab744b4cd64dc9fa5041cbdd826e328fc7a66b51
+TDTxtLeafNode{#name:'status',#contents:'commit 4622cd12bacead118a0674c54699ab909c83cd26
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Thu Nov 14 12:25:07 2013 -0800
+Date:   Thu Nov 14 17:04:21 2013 -0800
 
-    add builtin login command to allow user to dynamically switch netldi name to be used (and potentially other login parameters as well)
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-14T14:02:43.19944000244141-08:00']}
+    sort associations for dictionary builder (TDDictionaryNodeBuilder) ... add `gs sessionDescription` command to easily get the gem pid for attaching gdb ...
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-14T17:04:21.54576301574707-08:00']}
