@@ -12,19 +12,24 @@ command
     args := operands ].
 opts
   at: \'index\'
-  ifPresent: [ :repoPath | indexRepo := mcTool resolveRepositoryReference: repoPath ]
-  ifAbsent: [ indexRepo := mcTool resolveAtPathReference: \'@/home/indexing/repo\' ].
+  ifAbsent: [ indexRepo := mcTool resolveAtPathReference: \'@/home/indexing/repo\' ]
+  ifPresent: [ :repoPath | indexRepo := mcTool resolveRepositoryReference: repoPath ].
 opts
   at: \'petit\'
-  ifPresent: [ :repoPath | petitRepo := mcTool resolveRepositoryReference: repoPath ]
-  ifAbsent: [ petitRepo := mcTool resolveAtPathReference: \'@/home/petit/repo\' ].
+  ifAbsent: [ petitRepo := mcTool resolveAtPathReference: \'@/home/petit/repo\' ]
+  ifPresent: [ :repoPath | petitRepo := mcTool resolveRepositoryReference: repoPath ].
 opts
   at: \'help\'
+  ifAbsent: [ 
+    mcTool mcload: \'Index-Family\' from: indexRepo.
+    mcTool mcload: \'PetitTests\' from: petitRepo.
+    mcTool mcload: \'Index-Tests\' from: indexRepo.
+    mcTool mcload: \'Gemstone-Btee-Tests\' from: indexRepo ]
   ifPresent: [ :ignored | 
     TDManPage
       viewManPage:
         \'NAME
-  install - install Index-Family and Index-Tests packages
+  install - install Index-Family, Index-Tests, Gemstone-Btree-Tests packages
 SYNOPSIS
   install [-h|--help]
 \t\t   [--index=<index-repository>]
@@ -44,9 +49,4 @@ EXAMPLES
   ./install --index=filetree:///opt/git/tode/repository 
             -p filetree:///opt/git/PetitParser/packages
 \'
-      topez: topez ]
-  ifAbsent: [ 
-    mcTool mcload: \'Index-Family\' from: indexRepo.
-    mcTool mcload: \'PetitTests\' from: petitRepo.
-    mcTool mcload: \'Index-Tests\' from: indexRepo ].
- ]',#creationTime:DateAndTime['2013-11-12T21:35:05.97038102149963-08:00'],#modificationTime:@2}
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:35:05.97038102149963-08:00'],#modificationTime:DateAndTime['2013-11-14T17:13:31.43108510971069-08:00']}
