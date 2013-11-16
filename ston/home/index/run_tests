@@ -1,0 +1,44 @@
+TDScriptLeafNode{#name:'run_tests',#contents:'[ :topez :objIn :tokens :command | 
+| opts args |
+\"for help: ./run_tests -h\"
+command
+  getOptsMixedLongShort:
+    {#(\'help\' $h #\'none\').
+    #(\'init\' $i #\'none\').
+    #(\'reset\' $r #\'none\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
+opts
+  at: \'help\'
+  ifAbsent: [ 
+    | tstTool tpz |
+    opts
+      at: \'init\'
+      ifPresent: [ :ignored | topez evaluateTopezScript: \'./installTestQueryOptions\' ].
+    opts
+      at: \'reset\'
+      ifPresent: [ :ignored | topez evaluateTopezScript: \'./resetIndexes\' ].
+    tpz := TDTopezServer for: 1.
+    tstTool := tpz toolInstanceFor: \'test\'.
+    tstTool testpackage: \'Index-Tests\' ]
+  ifPresent: [ :ignored | TDManPage viewManPage: \'NAME
+  run_tests - run indexing tests
+SYNOPSIS
+  run_tests [-h|--help][-r|--reset][-i|init]
+DESCRIPTION
+  Run the tests in the Index-Tests package.
+
+  With --reset option set, runs `./resetIndexes` to gently reset indexes.
+
+  With the --init option set, runs `./installTestQueryOptions` to prime the
+  GsQuery class>>defaultQueryOptions: with defaults expected by tests. Thus 
+  avoiding authorization errors.
+
+EXAMPLES
+
+  ./run_tests
+  ./run_tests --reset
+  ./run_tests --init
+  ./run_tests -ir
+\' topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-11-16T12:56:54.37083101272583-08:00']}

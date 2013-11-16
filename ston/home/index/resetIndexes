@@ -24,7 +24,10 @@ opts
         DependencyList depMapKeys
           do: [ :obj | DependencyList set: nil for: obj ].
         DependencyList depMapKeys ] ]
-  ifPresent: [ :ignored | TDManPage viewManPage: \'NAME
+  ifPresent: [ :ignored | 
+    TDManPage
+      viewManPage:
+        \'NAME
   resetIndexes - remove indexes from all collections in repository
 SYNOPSIS
   resetIndexes [-h|--help][--hard]
@@ -40,7 +43,7 @@ DESCRIPTION
       removeAllIncompleteIndexes;
       removeAllIndexes 
 
-  With --hard takes exreme measures to remove indexes:
+  With --hard takes extreme measures to remove indexes:
 
     IndexManager current resetAllIndexes.
       DependencyList depMapKeys
@@ -50,4 +53,5 @@ EXAMPLES
 
   ./resetIndexes 
   ./resetIndexes --hard
-\' topez: topez ] ]',#creationTime:nil,#modificationTime:DateAndTime['2013-11-15T13:42:55.58071494102478-08:00']}
+\'
+      topez: topez ] ]',#creationTime:nil,#modificationTime:DateAndTime['2013-11-16T12:30:59.07993006706238-08:00']}
