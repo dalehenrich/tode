@@ -24,7 +24,7 @@ opts
     mcTool mcload: \'Index-Family\' from: indexRepo.
     mcTool mcload: \'PetitTests\' from: petitRepo.
     mcTool mcload: \'Index-Tests\' from: indexRepo.
-    mcTool mcload: \'Gemstone-Btee-Tests\' from: indexRepo ]
+    mcTool mcload: \'Gemstone-Btree-Tests\' from: indexRepo ]
   ifPresent: [ :ignored | 
     TDManPage
       viewManPage:
@@ -49,4 +49,4 @@ EXAMPLES
   ./install --index=filetree:///opt/git/tode/repository 
             -p filetree:///opt/git/PetitParser/packages
 \'
-      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:35:05.97038102149963-08:00'],#modificationTime:DateAndTime['2013-11-14T17:13:31.43108510971069-08:00']}
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:35:05.97038102149963-08:00'],#modificationTime:DateAndTime['2013-11-15T19:41:54.69607710838318-08:00']}

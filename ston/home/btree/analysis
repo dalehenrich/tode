@@ -7,4 +7,4 @@ TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'/home/tests/suite/-> [190
 \tunexpectedPassed@ -> [189998337 sz:0 Array] anArray( )
 
 
-a InternalError occurred (error 2261), The object with object ID 20 is corrupt. Reason: \'relops: encrypt -- bad cachValueKind\'',#runs:RunArray{#runs:[935],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:nil,#modificationTime:DateAndTime['2013-11-15T20:04:42.00846695899963-08:00']}
+a InternalError occurred (error 2261), The object with object ID 20 is corrupt. Reason: \'relops: encrypt -- bad cachValueKind\'',#runs:RunArray{#runs:[935],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:DateAndTime['2013-11-15T20:05:02.99008011817932-08:00'],#modificationTime:@9}
