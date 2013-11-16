@@ -20,17 +20,35 @@ parseLongOptions: optionSpecs shortOptions: shortOptionAliases do: optionBlock n
       shortOptionAliases isEmpty
         ifTrue: [ self error: 'Unexpected short option: ' , peek asString ].
       opt := stream next.
-      alias := shortOptionAliases
-        at: peek
-        ifAbsent: [ ^ self error: 'Unknown option: ' , opt asString ].
-      spec := optionSpecs
-        at: alias
-        ifAbsent: [ ^ self error: 'Unknown option: ' , alias ].
+      self
+        resolveAliasFor: opt
+        optionSpecs: optionSpecs
+        shortOptions: shortOptionAliases
+        do: [ :aliasString :specSymbol | 
+          alias := aliasString.
+          spec := specSymbol ].
       spec == #'none'
         ifTrue: [ 
           optionBlock value: alias value: nil.
           stream atEnd
             ifTrue: [ ^ self ].
+          peek := stream peek.
+          [ peek isSeparator ]
+            whileFalse: [ 
+              stream next.
+              self
+                resolveAliasFor: peek
+                optionSpecs: optionSpecs
+                shortOptions: shortOptionAliases
+                do: [ :aliasString :specSymbol | 
+                  alias := aliasString.
+                  spec := specSymbol.
+                  spec == #'required'
+                    ifTrue: [ self error: 'missing required option value: ' , alias asString ].
+                  optionBlock value: alias value: nil.
+                  stream atEnd
+                    ifTrue: [ ^ self ].
+                  peek := stream peek ] ].
           self skipWhiteSpace.
           ^ self
             parseLongOptions: optionSpecs
