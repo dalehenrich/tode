@@ -1,10 +1,34 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'/home/tests/suite/-> [190001921 sz:3 TestSuite] Index-Tests tests
-/home/tests/result/ ([190001665 sz:3 TestResult] 421 run, 414 passes, 1 expected defects, 5 failures, 1 errors, 0 unexpected passes):
-\terrors@ -> [190000385 sz:1 Array] anArray( IXQueryUnicodeTests>>#testLessThanIndexedQuery)
-\tfailures@ -> [189999105 sz:5 Array] anArray( IXGsClassicQueryBlockOptimizerTests>>#testQueryOptionsReorderPredicates, IXQueryExecuterOptimizationSamples>>#testPredicateOrdering...
-\tpassed@ -> [189998849 sz:414 Array] anArray( GsQueryGrammarTests>>#testExpression1, GsQueryGrammarTests>>#testExpression10, GsQueryGrammarTests>>#testExpression11, GsQueryGramm...
-\texpectedDefects@ -> [189998593 sz:1 Array] anArray( IXQuerySetValuedPathTermTests>>#testQuery5)
-\tunexpectedPassed@ -> [189998337 sz:0 Array] anArray( )
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'TEST COVERAGE for `ston rsync`:
 
+    What to copy:
+      -r, --recursive            Recurse into directories
+      -R, --relative             Use relative path names
+          --exclude=PATTERN      Exclude files matching PATTERN
+          --exclude-from=FILE    Read exclude patterns from FILE
+[]      -I, --ignore-times         Don\'\'t exclude files that match length and time
+[]          --size-only            only use file size when determining if a file should be transferred
+[]          --modify-window=NUM    Timestamp window (seconds) for file match (default=0)
+          --include=PATTERN      Don\'\'t exclude files matching PATTERN
+          --include-from=FILE    Read include patterns from FILE
 
-a InternalError occurred (error 2261), The object with object ID 20 is corrupt. Reason: \'relops: encrypt -- bad cachValueKind\'',#runs:RunArray{#runs:[935],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:nil,#modificationTime:DateAndTime['2013-11-15T20:04:42.00846695899963-08:00']}
+    How to copy it:
+      -n, --dry-run              Perform a trial run with no changes made
+[]      -t, --times                Preserve times
+      -x, --one-file-system       Don\'\'t cross filesystem boundaries
+
+    Destination options:
+      -b, --backup                Make backups (see --suffix & --backup-dir)
+          --backup-dir=DIR        Make backups into this directory
+[]      -c, --checksum              Skip based on checksum, not mod-time & size
+          --suffix=SUFFIX         Override backup suffix
+          --existing              Only update files that already exist
+          --delete                Delete files that don\'\'t exist on the sending side
+          --delete-excluded       also delete excluded files on the receiving side
+          --delete-after          Receiver deletes after transfer, not during
+          --force                 Force deletion of directories even if not empty
+          --ignore-errors         Delete even if there are IO errors
+[]      -u, --update                update only (don\'\'t overwrite newer files)
+
+    Misc Others:
+[]      -h, --help                  show this help screen
+',#runs:RunArray{#runs:[1850],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:1794,#lastRun:1,#lastOffset:1793}},#creationTime:nil,#modificationTime:DateAndTime['2013-11-17T13:41:15.17733311653137-08:00']}

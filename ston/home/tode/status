@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 4622cd12bacead118a0674c54699ab909c83cd26
+TDTxtLeafNode{#name:'status',#contents:'commit ce6197edf4468954c1d264ddde8b9a120d623613
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Thu Nov 14 17:04:21 2013 -0800
+Date:   Sun Nov 17 14:41:14 2013 -0800
 
-    sort associations for dictionary builder (TDDictionaryNodeBuilder) ... add `gs sessionDescription` command to easily get the gem pid for attaching gdb ...
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-14T17:04:21.54576301574707-08:00']}
+    implement --times, --existing, and --dry-run (bits and pieces ... testing should wait until all of the options are implemented)
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-17T14:41:17.14948797225952-08:00']}
