@@ -1,4 +1,4 @@
-private
+validation
 validateRsyncMatchForNode: sourceNode
   | destNode rsync |
   rsync := TDSTONRsync new.

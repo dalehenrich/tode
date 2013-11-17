@@ -1,4 +1,4 @@
-private
+validation
 validate: sourceNodePath notEquals: destNodePath with: aTDSTONRsync
   | source dest |
   source := self topez lookup: sourceNodePath.

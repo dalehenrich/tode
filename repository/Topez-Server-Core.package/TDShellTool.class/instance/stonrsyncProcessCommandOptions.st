@@ -48,7 +48,7 @@ stonrsyncProcessCommandOptions
       #('include' nil #'required').
       #('include-from' nil #'none').
       #('dry-run' $N #'none').
-      #('times' $T #'none').
+      #('times' $t #'none').
       #('one-file-system' $x #'none').
       #('backup-dir' nil #'required').
       #('suffix' nil #'required').

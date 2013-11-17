@@ -2,12 +2,12 @@ rsync
 rsyncLeafNode: aTDLeafNode
   "check options and determine whether or not the leaf node should by rsynced ... for now do it uncoditionally"
 
-  | destinationLeaf |
-  destinationLeaf := destinationNode
+  (destinationNode
     rsyncChildNamed: aTDLeafNode name
-    ifAbsent: [  ].
-  destinationLeaf
-    ifNotNil: [ 
+    ifAbsent: [ 
+      (self isOptionSet: 'existing')
+        ifTrue: [ ^ self ] ])
+    ifNotNil: [ :destinationLeaf | 
       | sourceSeconds sourceSize destinationSeconds destinationSize modifyWindow checksum |
       sourceSeconds := aTDLeafNode modificationTime asSeconds truncated.
       destinationSeconds := destinationLeaf modificationTime asSeconds truncated.
@@ -38,4 +38,8 @@ rsyncLeafNode: aTDLeafNode
         ifTrue: [ 
           destinationSeconds > sourceSeconds
             ifTrue: [ ^ self ] ] ].
-  destinationNode rsyncLeafNode: aTDLeafNode
+  self isDryRun
+    ifFalse: [ 
+      destinationNode
+        rsyncLeafNode: aTDLeafNode
+        preserveTimes: (self isOptionSet: 'times') ]

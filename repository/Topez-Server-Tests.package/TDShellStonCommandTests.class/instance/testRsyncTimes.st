@@ -1,5 +1,5 @@
 tests
-testRsync
+testRsyncTimes
   | stonTool command childNode tmpNode nodePath srcNode destNode rsync |
   nodePath := self rootNodePath.
   self topez ensureChildrenExistIn: nodePath.
@@ -12,7 +12,7 @@ testRsync
       srcNode addChildNode: childNode.
       command := TDCommandLine
         commandLine:
-          'ston rsync ' , srcNode printString , childNode name , ' '
+          'ston rsync --times ' , srcNode printString , childNode name , ' '
             , destNode printString
         redirectTarget: nil.
       command hasSubCommand: true.
@@ -26,4 +26,4 @@ testRsync
       self
         validateModificationTimes: '/tmp/tests/ston/src/' , childNode name
         between: '/tmp/tests/ston/dest/' , childNode name
-        match: false ]
+        match: true ]

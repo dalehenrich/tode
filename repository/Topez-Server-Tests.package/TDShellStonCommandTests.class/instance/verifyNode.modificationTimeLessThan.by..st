@@ -1,4 +1,4 @@
-private
+validation
 verifyNode: nodePath modificationTimeLessThan: oldestModificationTime by: duration
   | node x |
   node := self topez lookup: nodePath.
