@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 1356e4c3ceb0b0e5d94bd645769854497c4d8360
+TDTxtLeafNode{#name:'status',#contents:'commit fa8b2a9e721cdc256864011ab6ddfc7da5b1ea52
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sat Nov 9 06:09:10 2013 -0800
+Date:   Mon Nov 18 08:34:25 2013 -0800
 
-    Issue #212: more correct version of bug fix now that I\'ve verified that the proposed bugfix works in the wild (https://travis-ci.org/dalehenrich/metacello-work/builds/13719518) with only a test in MetacelloProjectRegistrationTestCase>>testBasicHasLoadConflicts failing ...
-',#creationTime:nil,#modificationTime:nil}
+    Issue #215: fix a bug in MetacelloMCVersionSpec>>packageSpecsInLoadOrderForMap:
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-18T08:34:27.88714694976807-08:00']}

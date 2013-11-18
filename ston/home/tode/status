@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit ce6197edf4468954c1d264ddde8b9a120d623613
+TDTxtLeafNode{#name:'status',#contents:'commit 1a2006b921192ec2e55621a21e39b0417eeebfff
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sun Nov 17 14:41:14 2013 -0800
+Date:   Sun Nov 17 22:47:12 2013 -0800
 
-    implement --times, --existing, and --dry-run (bits and pieces ... testing should wait until all of the options are implemented)
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-17T14:41:17.14948797225952-08:00']}
+    restructuring around the `mc unload` command ... support additional scriptiong needs ...
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-17T22:47:15.7930600643158-08:00']}

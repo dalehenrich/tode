@@ -1,0 +1,51 @@
+TDSmalltalkLeafNode{#name:'script',#contents:'| unloadBlock unregisterBlock |
+unloadBlock := [ 
+| gofer |
+gofer := Gofer new.
+(#(\'BaselineOfExternal\' \'External-Core\' \'External-Tests\' \'BaselineOfSample\' \'Example-Core\' \'Example-Tests\' \'Sample-Core\' \'Sample-Tests\')
+  select: [ :packageName | 
+    (MCWorkingCopy allManagers
+      detect: [ :wc | wc packageName = packageName ]
+      ifNone: [  ]) notNil ])
+  do: [ :packageName | gofer package: packageName ].
+gofer unload ].
+unregisterBlock := [ 
+Metacello new
+  baseline: \'Sample\';
+  unregister.
+Metacello new
+  baseline: \'External\';
+  unregister ].
+unregisterBlock value.
+Metacello new
+  baseline: \'Example\';
+  repository: \'github://dalehenrich/example:otto/repository\';
+  get.
+Metacello new
+  baseline: \'Example\';
+  repository: \'github://dalehenrich/example:otto/repository\';
+  load.
+self halt.
+unloadBlock value.
+[ 
+Metacello new
+  baseline: \'Sample\';
+  repository: \'filetree:///opt/git/otto/sample/repository\';
+  lock.
+Metacello new
+  baseline: \'External\';
+  repository: \'server:///opt/git/otto/extDir\';
+  lock.
+Metacello new
+  baseline: \'Example\';
+  repository: \'github://dalehenrich/example:otto/repository\';
+  onLock: [ :ex | ex disallow ];
+  onConflict: [ :ex :existing | 
+        existing locked
+          ifTrue: [ ex disallow ].
+        ex pass ];
+  load.
+self halt ]
+  ensure: [ 
+    unloadBlock value.
+    unregisterBlock value ]',#creationTime:DateAndTime['2013-11-18T06:19:35.50803899765015-08:00'],#modificationTime:DateAndTime['2013-11-18T08:43:14.91722011566162-08:00']}
