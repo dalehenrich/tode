@@ -4,7 +4,6 @@ mcunload
       unload @<workingCopy-path>
   "
 
-  | packageName workingCopy |
+  | packageName |
   packageName := tokens at: 2.
-  workingCopy := self resolveWorkingCopyReference: packageName.
-  ^ self mcunloadWorkingCopy: workingCopy
+  ^ self mcunloadPackageNamed: packageName
