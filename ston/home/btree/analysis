@@ -1,10 +1,34 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'/home/tests/suite/-> [190001921 sz:3 TestSuite] Index-Tests tests
-/home/tests/result/ ([190001665 sz:3 TestResult] 421 run, 414 passes, 1 expected defects, 5 failures, 1 errors, 0 unexpected passes):
-\terrors@ -> [190000385 sz:1 Array] anArray( IXQueryUnicodeTests>>#testLessThanIndexedQuery)
-\tfailures@ -> [189999105 sz:5 Array] anArray( IXGsClassicQueryBlockOptimizerTests>>#testQueryOptionsReorderPredicates, IXQueryExecuterOptimizationSamples>>#testPredicateOrdering...
-\tpassed@ -> [189998849 sz:414 Array] anArray( GsQueryGrammarTests>>#testExpression1, GsQueryGrammarTests>>#testExpression10, GsQueryGrammarTests>>#testExpression11, GsQueryGramm...
-\texpectedDefects@ -> [189998593 sz:1 Array] anArray( IXQuerySetValuedPathTermTests>>#testQuery5)
-\tunexpectedPassed@ -> [189998337 sz:0 Array] anArray( )
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'REL_ScaledDecimal_CACHE:
+ RelValueHolder [ 
+\tkey: 406493201.19543504714966
+\tvalue: 2013-11-18T18:46:41.19543504714966-08:00
+\t\tobj[0] 360287970189639694
+\t\tobj[1] 40649320119543504714966
+\t\tint[0] 50000000000000e
+\t\tint[1] 89b9aa39f6581c63cd6
+\t\tbyte[0-3] e 0 0 0
+\t\tbyte[4-7] 0 0 0 5
+\t\tbyte[8-11] d6 3c c6 81
+\t\tbyte[12-15] 65 9f a3 9a
+\t\trelTypeValue: 13
+\t\trelType: REL_ScaledDecimal_CACHE
+  ]
 
+REL_SMALL_DBL_CACHE:
 
-a InternalError occurred (error 2261), The object with object ID 20 is corrupt. Reason: \'relops: encrypt -- bad cachValueKind\'',#runs:RunArray{#runs:[935],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:DateAndTime['2013-11-15T20:05:02.99008011817932-08:00'],#modificationTime:@9}
+  RelImmediateValueHolder [ 
+\tkey: 4.0649791451419210E+08
+\tvalue: 2013-11-18T20:05:14.5141921043396-08:00
+\t\tobj[0] 504403158265495552
+\t\tobj[1] -1
+\t\tint[0] 700000000000000
+\t\tint[1] -1
+\t\tbyte[0-3] 0 0 0 0
+\t\tbyte[4-7] 0 0 0 7
+\t\tbyte[8-11] 0 0 0 0
+\t\tbyte[12-15] 0 0 0 0
+\t\trelTypeValue: 15
+\t\trelType: REL_SMALL_DBL_CACHE
+
+\t\t\tfullyInstantiatedValue: 4.0649791451419210E+08
+  ]',#runs:RunArray{#runs:[387,2,19,3,370],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],[TextColor{#color:@8}],@9,[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:DateAndTime['2013-11-15T20:05:02.99008011817932-08:00'],#modificationTime:DateAndTime['2013-11-18T20:05:54.03938388824463-08:00']}
