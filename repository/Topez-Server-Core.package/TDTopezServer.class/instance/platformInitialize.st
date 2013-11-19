@@ -39,6 +39,6 @@ platformInitialize
                           ((TDEditorSpec topez: self editorAspect: #'inspect')
                             builderAspect: #'inspect';
                             yourself).
-                      interaction theObject ];
+                      ex response: interaction theObject ];
                 yourself.
               ex interaction interactWith: handler ] ] ]
