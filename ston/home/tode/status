@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 1a2006b921192ec2e55621a21e39b0417eeebfff
+TDTxtLeafNode{#name:'status',#contents:'commit 82a1601fcc14a4fed96da262bec68bbc3cfb44a3
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sun Nov 17 22:47:12 2013 -0800
+Date:   Tue Nov 19 14:57:35 2013 -0800
 
-    restructuring around the `mc unload` command ... support additional scriptiong needs ...
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-17T22:47:15.7930600643158-08:00']}
+    fix tiny problem with opening inspector ...
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-19T14:57:36.35167908668518-08:00']}
