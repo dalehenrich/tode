@@ -11,7 +11,7 @@ opts
   ifAbsent: [ 
     | mcTool |
     mcTool := topez toolInstanceFor: \'mc\'.
-    #(\'BaselineOfExample\' \'BaselineOfExternal\' \'External-Core\' \'External-Tests\' \'BaselineOfSample\' \'Example-Core\' \'Example-Tests\' \'Sample-Core\' \'Sample-Tests\')
+    #(\'BaselineOfExample\' \'BaselineOfAlternate\' \'ConfigurationOfExternal\' \'BaselineOfExternal\' \'External-Core\' \'External-Tests\' \'BaselineOfSample\' \'Example-Core\' \'Example-Tests\' \'Alternate-Core\' \'Alternate-Tests\' \'Sample-Core\' \'Sample-Tests\')
       do: [ :packageName | mcTool mcunloadPackageNamed: packageName ifAbsent: [  ] ] ]
   ifPresent: [ :ignored | 
     TDManPage
@@ -28,4 +28,4 @@ EXAMPLES
   ./unload --help
   ./unload -h
 \'
-      topez: topez ] ]',#creationTime:DateAndTime['2013-11-17T18:03:33.30497598648071-08:00'],#modificationTime:DateAndTime['2013-11-18T06:18:16.16064596176147-08:00']}
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-17T18:03:33.30497598648071-08:00'],#modificationTime:DateAndTime['2013-11-23T09:20:35.29841709136963-08:00']}

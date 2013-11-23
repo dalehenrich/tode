@@ -3,4 +3,4 @@ Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
 Date:   Mon Nov 18 08:34:25 2013 -0800
 
     Issue #215: fix a bug in MetacelloMCVersionSpec>>packageSpecsInLoadOrderForMap:
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-18T08:34:27.88714694976807-08:00']}
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-22T20:32:53.17562794685364-08:00']}
