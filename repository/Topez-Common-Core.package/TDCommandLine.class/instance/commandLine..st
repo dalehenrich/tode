@@ -1,3 +1,3 @@
 private
 commandLine: aString
-  commandLine := aString
+  commandLine := aString trimBoth
