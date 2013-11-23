@@ -14,6 +14,7 @@
 		"testRsync" : "dkh 11/17/2013 13:23",
 		"testRsyncChecksum" : "dkh 11/13/2013 20:11",
 		"testRsyncChecksumIgnored" : "dkh 11/13/2013 20:09",
+		"testRsyncDir" : "dkh 11/20/2013 14:58",
 		"testRsyncExisting" : "dkh 11/17/2013 13:52",
 		"testRsyncIgnoreTimes" : "dkh 11/13/2013 20:33",
 		"testRsyncModifyWindow" : "dkh 11/13/2013 19:36",
