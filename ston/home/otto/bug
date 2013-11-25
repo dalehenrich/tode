@@ -1,0 +1,9 @@
+TDTxtLeafNode{#name:'bug',#contents:Text{#string:'PROBLEM:
+
+ConfigurationOf is not loading from the locked repository...
+
+Here are the places where we see the locked project spec:
+
+  1. MetacelloMCVersionSpecLoader>>load
+  2. MetacelloMCProjectSpec>>compareCurrentVersion:targetVersionStatus:using:
+  3. MetacelloGenericProjectSpec>>load [looks promising]',#runs:RunArray{#runs:[171,134],#values:[[],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:DateAndTime['2013-11-23T15:24:12.4205219745636-08:00'],#modificationTime:DateAndTime['2013-11-23T15:29:34.98938894271851-08:00']}
