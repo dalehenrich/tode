@@ -6,12 +6,13 @@ command
     {#(\'help\' $h #\'none\').
     #(\'init\' $i #\'none\').
     #(\'restore\' $r #\'none\').
+    #(\'noRestrictedClasses\' $n #\'none\').
     #(\'netldi\' nil #\'required\').
     #(\'verbose\' $v #\'none\')}
   optionsAndArguments: [ :options :operands | 
     opts := options.
     args := operands ].
-stoneNRS := GsNetworkResourceString defaultFromCurrentStone.
+stoneNRS := GsNetworkResourceString defaultStoneNRSFromCurrent.
 opts
   at: \'verbose\'
   ifAbsent: [ verbose := false ]
@@ -42,13 +43,18 @@ expression := \'GsQuery defaultQueryOptions: (GsQueryOptions new
     setReorderPredicates;
     setTransformCommonPaths).
 System commit\'.
-opts
-  at: \'init\'
-  ifPresent: [ :optValue | 
-    expression := \'GsQueryFormula
+opts at: \'init\' ifPresent: [ :optValue | expression := \'GsQueryFormula
     negatedOperatorMap;
     inverseOperatorMap;
     comparisonSelectorMap.
+System commit\' ].
+opts
+  at: \'noRestrictedClasses\'
+  ifPresent: [ :optValue | expression := \'| cls index set |
+cls := GsPackagePolicy.
+index := cls class allInstVarNames indexOfIdentical: #\'\'restrictedClasses\'\'.
+set := cls instVarAt: index.
+set removeAll: set.
 System commit\' ].
 opts
   at: \'restore\'
@@ -59,12 +65,17 @@ opts
   at: \'help\'
   ifAbsent: [ 
     | systemUser gemNRS |
+    verbose
+      ifTrue: [ 
+        Transcript
+          cr;
+          show: \'exspression=\' , expression printString ].
     gemNRS := GsNetworkResourceString new
       protocol: \'tcp\';
       node: \'foos\';
       netldi: netldiName;
       resource: \'task\';
-      body: GsNetLDI gemnetobject;
+      body: \'gemnetobject\';
       yourself.
     systemUser := GsExternalSession new
       stoneNRS: stoneNRS;
@@ -83,7 +94,7 @@ opts
   installTestQueryOptions - installTestQueryOptions utility
 SYNOPSIS
   installTestQueryOptions [-h|--help] [--init] [--restore] [--netldi=<netldi-name>]
-\t\t                   [-v|--verbose]
+\t\t                   [--noRestrictedClasses][-v|--verbose]
 DESCRIPTION
   Since SystemUser owns the GsQuery class>>defaultQueryOptions: slot, the default
   values cannot be easily changed for tests. This utility uses GsExternalSession
@@ -114,5 +125,8 @@ DESCRIPTION
 
   The verbose option logs detailed information to the Transcript.
 EXAMPLES
+
+  ./installTestQueryOptions
+  ./installTestQueryOptions --noRestrictedClasses
 \'
-      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:02:09.7072319984436-08:00'],#modificationTime:DateAndTime['2013-11-12T21:57:09.5330491065979-08:00']}
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:02:09.7072319984436-08:00'],#modificationTime:DateAndTime['2013-11-22T16:25:27.05448698997498-08:00']}
