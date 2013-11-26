@@ -10,5 +10,5 @@ rsync: sourcePaths to: destinationPath
       sourceNode := self topez lookup: sourcePath.
       destinationNode := originalDestinationNode.
       (sourcePath endsWith: '/')
-        ifTrue: [ sourceNode rsyncUsing: self ]
-        ifFalse: [ sourceNode rsyncChildrenUsing: self ] ]
+        ifTrue: [ sourceNode rsyncCopyNodeChildrenUsing: self ]
+        ifFalse: [ sourceNode rsyncCopyNodeUsing: self ] ]

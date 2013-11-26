@@ -1,5 +1,5 @@
 rsync
-rsyncLeafNode: aTDLeafNode preserveTimes: preserveTimes
+rsyncCopyLeafNode: aTDLeafNode preserveTimes: preserveTimes
   | newNode |
   newNode := aTDLeafNode cp: '.' in: self.
   preserveTimes

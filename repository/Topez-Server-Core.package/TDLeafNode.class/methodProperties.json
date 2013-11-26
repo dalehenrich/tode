@@ -16,11 +16,12 @@
 		"modified" : "dkh 11/10/2013 20:56",
 		"postCopy" : "dkh 11/10/2013 21:03",
 		"renderNameTextAttributes" : "dkh 12/27/2012 16:42",
+		"rsyncCopyNodeChildrenUsing:" : "dkh 11/26/2013 11:03",
+		"rsyncCopyNodeUsing:" : "dkh 11/26/2013 11:01",
 		"rsyncEquals:with:" : "dkh 11/13/2013 14:54",
 		"rsyncMatches:with:" : "dkh 11/13/2013 14:30",
 		"rsyncSize" : "dkh 11/13/2013 14:30",
 		"rsyncTimesTo:" : "dkh 11/17/2013 13:09",
-		"rsyncUsing:" : "dkh 11/10/2013 20:14",
 		"stonExportUsing:to:" : "dkh 09/14/2013 23:11",
 		"stonOn:" : "dkh 11/11/2013 22:14",
 		"tempSymbolList" : "dkh 06/05/2013 12:47" } }

@@ -1,5 +1,5 @@
 rsync
-rsyncLeafNode: aTDLeafNode
+rsyncCopyLeafNode: aTDLeafNode
   "check options and determine whether or not the leaf node should by rsynced ... for now do it uncoditionally"
 
   (destinationNode
@@ -41,5 +41,5 @@ rsyncLeafNode: aTDLeafNode
   self isDryRun
     ifFalse: [ 
       destinationNode
-        rsyncLeafNode: aTDLeafNode
+        rsyncCopyLeafNode: aTDLeafNode
         preserveTimes: (self isOptionSet: 'times') ]
