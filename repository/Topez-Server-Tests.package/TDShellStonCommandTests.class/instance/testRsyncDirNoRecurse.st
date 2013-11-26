@@ -1,5 +1,5 @@
 tests
-testRsyncDir
+testRsyncDirNoRecurse
   | stonTool command childNode tmpNode nodePath srcNode destNode rsync |
   nodePath := self rootNodePath.
   self topez ensureChildrenExistIn: nodePath.
@@ -8,21 +8,19 @@ testRsyncDir
   destNode := tmpNode addChild: 'dest'.
   self standardLeafNodes
     do: [ :childNode | 
-      childNode modificationTime: childNode modificationTime - (Duration seconds: 5).
+      | srcPath |
+      childNode
+        modificationTime: childNode modificationTime - (Duration seconds: 5).
       srcNode addChildNode: childNode.
+      srcPath := srcNode printString.
+      srcPath := srcPath copyFrom: 1 to: srcPath size - 1.	"remove trailing /"
       command := TDCommandLine
-        commandLine:
-          'ston rsync ' , srcNode printString , ' ' , destNode printString
+        commandLine: 'ston rsync ' , srcPath , ' ' , destNode printString
         redirectTarget: nil.
       command hasSubCommand: true.
       stonTool := topez toolInstanceFor: 'ston'.
       stonTool todeCommand: command.
       rsync := stonTool stonrsync.
       self
-        validate: '/tmp/tests/ston/src/' , childNode name
-        equals: '/tmp/tests/ston/dest/' , childNode name
-        with: rsync.
-      self
-        validateModificationTimes: '/tmp/tests/ston/src/' , childNode name
-        between: '/tmp/tests/ston/dest/' , childNode name
-        match: false ]
+        should: [ self topez lookup: '/tmp/tests/ston/dest/' , childNode name ]
+        raise: Error ]
