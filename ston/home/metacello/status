@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit fa8b2a9e721cdc256864011ab6ddfc7da5b1ea52
+TDTxtLeafNode{#name:'status',#contents:'commit 4e8b9cd0fd22bf44c015a4d295ce66c65b8590ec
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Mon Nov 18 08:34:25 2013 -0800
+Date:   Sun Nov 24 21:04:59 2013 -0800
 
-    Issue #215: fix a bug in MetacelloMCVersionSpec>>packageSpecsInLoadOrderForMap:
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-18T08:34:27.88714694976807-08:00']}
+    Issue #215: add tests cases and fix a minor bug (which is why tests cases are important)
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-26T10:02:17.39189291000366-08:00']}

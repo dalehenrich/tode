@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 82a1601fcc14a4fed96da262bec68bbc3cfb44a3
+TDTxtLeafNode{#name:'status',#contents:'commit de49e2facfb9c3ab4d2106f2efafd2ef5b491a2a
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Nov 19 14:57:35 2013 -0800
+Date:   Tue Nov 26 15:22:24 2013 -0800
 
-    fix tiny problem with opening inspector ...
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-19T14:57:36.35167908668518-08:00']}
+    checkpoint: `rsync --relative` implemented
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-26T15:22:24.73418402671814-08:00']}
