@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit de49e2facfb9c3ab4d2106f2efafd2ef5b491a2a
+TDTxtLeafNode{#name:'status',#contents:'commit d65dc8976ee8a334642422c1988827cbfe0e054f
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Nov 26 15:22:24 2013 -0800
+Date:   Wed Nov 27 11:20:49 2013 -0800
 
-    checkpoint: `rsync --relative` implemented
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-26T15:22:24.73418402671814-08:00']}
+    Issue #37: as part of the script sharing work, I am merging the filesystem and objectSystem into a seamless whole...once you\'ve spliced a file system \"mount point\" into the objectory (object directory) you should be able to `cp` and `rsync` objects and files back and forth (with some initial limitiations) objects are stored in STON format on disk and disk entities have a TDFileSystemNode that represents them ... I\'ve filled out the basic apis without a lot of testing ...
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-27T11:20:50.11609196662903-08:00']}

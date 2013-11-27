@@ -1,5 +1,5 @@
 TDScriptLeafNode{#name:'xxx',#contents:'[ :topez :objIn :tokens :windowId | 
-| tstTool tpz |
-tpz := TDTopezServer for: 1.
-tstTool := tpz toolInstanceFor: \'test\'.
-tstTool testpackage: \'Index-Tests\' ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-11-15T12:29:01.69624590873718-08:00']}
+| dir parent|
+dir := ServerFileDirectory on: \'/tmp/tode/\' , \'/tmp/ston/tests\'.
+dir assureExistence.
+dir halt asTDObjectNode: parent topez: topez aspect: #\'view\' ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-11-27T10:54:30.28450798988342-08:00']}
