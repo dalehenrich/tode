@@ -1,7 +1,9 @@
 as yet unclassified
 methodCategory
-  | method category |
-  method := self method.
-  category := method inClass categoryOfSelector: self selector.
-  category ifNil: [ category := ClassOrganizer default ].
-  ^ category
+  methodCategory
+    ifNil: [ 
+      | method category |
+      method := self method.
+      methodCategory := method inClass categoryOfSelector: self selector.
+      methodCategory ifNil: [ category := ClassOrganizer default ] ].
+  ^ methodCategory

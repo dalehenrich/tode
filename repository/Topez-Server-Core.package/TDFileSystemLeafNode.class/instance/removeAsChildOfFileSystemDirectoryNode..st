@@ -1,0 +1,3 @@
+as yet unclassified
+removeAsChildOfFileSystemDirectoryNode: aTDFileSystemDirectoryNode
+  ^ aTDFileSystemDirectoryNode removeChildFileSystemLeafNode: self

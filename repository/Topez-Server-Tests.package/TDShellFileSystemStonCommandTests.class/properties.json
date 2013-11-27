@@ -7,7 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TDShellStonCommandTests",
+	"name" : "TDShellFileSystemStonCommandTests",
 	"pools" : [
 		 ],
 	"super" : "TDShellAbstractStonCommandTests",

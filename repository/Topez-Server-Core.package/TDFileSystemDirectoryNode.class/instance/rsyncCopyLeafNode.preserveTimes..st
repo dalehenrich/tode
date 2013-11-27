@@ -1,3 +1,7 @@
 rsync
 rsyncCopyLeafNode: aTDLeafNode preserveTimes: preserveTimes
-  self halt
+  | newNode |
+  newNode := aTDLeafNode copy.
+  preserveTimes
+    ifTrue: [ aTDLeafNode rsyncTimesTo: newNode ].
+  ^ self addChildLeafNode: newNode

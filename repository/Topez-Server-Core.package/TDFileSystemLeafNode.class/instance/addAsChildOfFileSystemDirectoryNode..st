@@ -1,0 +1,3 @@
+as yet unclassified
+addAsChildOfFileSystemDirectoryNode: aTDFileSystemDirectoryNode
+  ^ aTDFileSystemDirectoryNode addChildFileSystemLeafNode: self

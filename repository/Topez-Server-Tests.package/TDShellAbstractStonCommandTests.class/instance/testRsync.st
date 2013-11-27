@@ -1,9 +1,7 @@
 tests
 testRsync
-  | stonTool command childNode tmpNode nodePath srcNode destNode rsync |
-  nodePath := self rootNodePath.
-  self topez ensureChildrenExistIn: nodePath.
-  tmpNode := topez lookup: nodePath.
+  | stonTool command childNode tmpNode srcNode destNode rsync |
+  tmpNode := self lookupNode: self rootNodePath.
   srcNode := tmpNode addChild: 'src'.
   destNode := tmpNode addChild: 'dest'.
   self standardLeafNodes

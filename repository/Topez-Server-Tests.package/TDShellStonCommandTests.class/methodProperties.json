@@ -2,16 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"differentLeafNodes" : "dkh 11/13/2013 16:15",
-		"removeTestRootNode" : "dkh 11/13/2013 15:42",
-		"rootNodePath" : "dkh 11/13/2013 15:37",
-		"setUp" : "dkh 11/13/2013 15:42",
-		"smallSetLeafNodes" : "dkh 11/17/2013 13:44",
-		"standardLeafNodes" : "dkh 11/13/2013 15:33",
-		"subtlyDifferentLeafNodes" : "dkh 11/13/2013 20:04",
-		"tearDown" : "dkh 11/13/2013 15:42",
+		"lookupNode:" : "dkh 11/27/2013 08:23",
 		"testLeafNodeRsyncMatches" : "dkh 11/13/2013 15:21",
-		"testRsync" : "dkh 11/17/2013 13:23",
 		"testRsyncChecksum" : "dkh 11/13/2013 20:11",
 		"testRsyncChecksumIgnored" : "dkh 11/13/2013 20:09",
 		"testRsyncDiContentsrRecurseRelativeB" : "dkh 11/26/2013 15:19",

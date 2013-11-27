@@ -2,6 +2,7 @@
 	"class" : {
 		"directoryEntry:" : "08/07/2013 06:09" },
 	"instance" : {
+		"addAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:28",
 		"cat" : "08/07/2013 06:15",
 		"created" : "dkh 11/10/2013 21:03",
 		"creationTime" : "dkh 11/10/2013 21:02",
@@ -9,6 +10,8 @@
 		"directoryEntry:" : "08/07/2013 06:09",
 		"modificationTime" : "dkh 11/10/2013 21:02",
 		"modified" : "dkh 11/10/2013 21:03",
+		"removeAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:37",
+		"rsyncCopyNodeUsing:" : "dkh 11/27/2013 07:31",
 		"rsyncSize" : "dkh 11/13/2013 14:31",
 		"stonContents" : "08/07/2013 06:25",
 		"stonContents:" : "dkh 10/04/2013 11:02",

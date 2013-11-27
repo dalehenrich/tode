@@ -13,6 +13,7 @@
 		"smalltalkTextColor" : "DataCurator 12/21/2012 18:09",
 		"topezTextAttributes" : "DataCurator 11/29/2012 20:36" },
 	"instance" : {
+		"addAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:20",
 		"addTempValueTo:" : "07/12/2013 08:46",
 		"aspect" : "dkh 04/10/2013 08:27",
 		"block" : "DataCurator 12/01/2012 10:51",
@@ -41,6 +42,7 @@
 		"parent:" : "DataCurator 01/24/2013 13:15",
 		"printName" : "DataCurator 01/24/2013 19:45",
 		"printOn:" : "DataCurator 01/24/2013 19:46",
+		"removeAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:35",
 		"renderNameText" : "DataCurator 11/29/2012 18:48",
 		"renderNameText:textAttributes:" : "DataCurator 11/29/2012 18:26",
 		"renderNameText:textAttributes:on:" : "dkh 12/27/2012 16:40",
