@@ -11,4 +11,6 @@
 		"standardLeafNodes" : "dkh 11/27/2013 07:49",
 		"subtlyDifferentLeafNodes" : "dkh 11/27/2013 07:49",
 		"tearDown" : "dkh 11/27/2013 07:50",
-		"testRsync" : "dkh 11/29/2013 08:38" } }
+		"testRsync" : "dkh 11/29/2013 08:38",
+		"validate:equals:with:" : "dkh 11/29/2013 09:55",
+		"validateModificationTimes:between:match:" : "dkh 11/29/2013 09:55" } }

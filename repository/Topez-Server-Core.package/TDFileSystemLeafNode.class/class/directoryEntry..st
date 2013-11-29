@@ -1,6 +1,10 @@
 as yet unclassified
 directoryEntry: aDirectoryEntry
-  ^ self new
+  | fsNode |
+  fsNode := self new
     name: aDirectoryEntry name;
     directoryEntry: aDirectoryEntry;
-    yourself
+    yourself.
+  ^ (aDirectoryEntry name endsWith: self stonFileExtension)
+    ifTrue: [ STON fromString: fsNode cat ]
+    ifFalse: [ fsNode ]

@@ -1,6 +1,6 @@
 as yet unclassified
 addChildLeafNode: aNode
   self fileDirectory
-    forceNewFileNamed: aNode name
+    forceNewFileNamed: aNode name , self stonFileExtension
     do: [ :fileStream | STON put: aNode onStream: fileStream ].
-  ^ self _childNodeFor: aNode name
+  ^ self _childNodeFor: aNode name , self stonFileExtension
