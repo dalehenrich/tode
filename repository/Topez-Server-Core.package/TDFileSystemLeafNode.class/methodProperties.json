@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"directoryEntry:" : "dkh 11/29/2013 09:30" },
+		"directoryEntry:" : "dkh 11/29/2013 09:30",
+		"fileSystemProxy:for:" : "dkh 11/29/2013 11:24" },
 	"instance" : {
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:28",
 		"cat" : "08/07/2013 06:15",
@@ -16,5 +17,4 @@
 		"rsyncSize" : "dkh 11/13/2013 14:31",
 		"stonContents" : "08/07/2013 06:25",
 		"stonContents:" : "dkh 10/04/2013 11:02",
-		"stonFileExtension" : "dkh 11/29/2013 09:21",
 		"stonOn:" : "08/07/2013 06:08" } }

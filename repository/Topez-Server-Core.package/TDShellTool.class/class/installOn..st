@@ -141,7 +141,7 @@ installOn: aTDTopezServer
     registerEditorClass: TDDirectoryNodeClientListElementBuilder
       for: TDDirectoryNode
       aspect: #'edit';
-    registerEditorClass: TDClientSourceElementBuilder
+    registerEditorClass: TDClientSourceLeafNodeElementBuilder
       for: TDLeafNode
       aspect: #'edit';
     registerEditorClass: TDClientSourceElementBuilder for: Text aspect: #'edit';
