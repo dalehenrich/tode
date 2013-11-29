@@ -1,7 +1,8 @@
 tests
 testRsync
-  | stonTool command childNode tmpNode srcNode destNode rsync |
-  tmpNode := self lookupNode: self rootNodePath.
+  | stonTool command childNode tmpNode srcNode destNode rsync rootPath |
+  rootPath := self rootNodePath.
+  tmpNode := self lookupNode: rootPath.
   srcNode := tmpNode addChild: 'src'.
   destNode := tmpNode addChild: 'dest'.
   self standardLeafNodes
@@ -18,10 +19,10 @@ testRsync
       stonTool todeCommand: command.
       rsync := stonTool stonrsync.
       self
-        validate: '/tmp/tests/ston/src/' , childNode name
-        equals: '/tmp/tests/ston/dest/' , childNode name
+        validate: rootPath , '/src/' , childNode name
+        equals: rootPath , '/dest/' , childNode name
         with: rsync.
       self
-        validateModificationTimes: '/tmp/tests/ston/src/' , childNode name
-        between: '/tmp/tests/ston/dest/' , childNode name
+        validateModificationTimes: rootPath , '/src/' , childNode name
+        between: rootPath , '/dest/' , childNode name
         match: false ]

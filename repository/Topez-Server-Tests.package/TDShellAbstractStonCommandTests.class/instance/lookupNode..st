@@ -1,3 +1,4 @@
 private
 lookupNode: nodePath
-  self subclassResponsibility
+  self topez ensureChildrenExistIn: nodePath.
+  ^ self topez lookup: nodePath

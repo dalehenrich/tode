@@ -2,7 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"lookupNode:" : "dkh 11/27/2013 08:23",
 		"testLeafNodeRsyncMatches" : "dkh 11/13/2013 15:21",
 		"testRsyncChecksum" : "dkh 11/13/2013 20:11",
 		"testRsyncChecksumIgnored" : "dkh 11/13/2013 20:09",

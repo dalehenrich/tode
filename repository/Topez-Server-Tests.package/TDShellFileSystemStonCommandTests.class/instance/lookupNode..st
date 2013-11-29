@@ -1,6 +1,10 @@
 private
 lookupNode: nodePath
-  | dir |
-  dir := ServerFileDirectory on: '/tmp/tode/' , nodePath.
+  | dir parentNode diskPath diskRootNode |
+  diskPath := self fileSystemRootPath , nodePath.
+  dir := ServerFileDirectory on: diskPath.
   dir assureExistence.
-  ^ dir asTDNode: self topez
+  parentNode := (super lookupNode: self rootNodePath) parent.
+  diskRootNode := dir asTDObjectNode: nil topez: self topez aspect: #'view'.
+  parentNode addChildNode: diskRootNode.
+  ^ diskRootNode

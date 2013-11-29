@@ -1,3 +1,3 @@
 private
 rootNodePath
-  ^ '/tmp/tests/ston/'
+  ^ '/tmp/tests/ston'
