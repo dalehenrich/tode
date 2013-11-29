@@ -72,11 +72,11 @@ baseline: spec
         yourself ].
   spec
     for: #'pharo1.4.x'
-    do: [       
-		spec 
-			package: 'Topez-Pharo-Common' with: [spec includes: 'Tode-Pharo14'];
-		 	package: 'Tode-Pharo14' with: [spec requires: 'Topez-Pharo-Common'];
-			yourself].
+    do: [ 
+      spec
+        package: 'Topez-Pharo-Common' with: [ spec includes: 'Tode-Pharo14' ];
+        package: 'Tode-Pharo14' with: [ spec requires: 'Topez-Pharo-Common' ];
+        yourself ].
   spec
     for: #'gemstone'
     do: [ 
@@ -109,6 +109,8 @@ baseline: spec
           with: [ spec requires: #('Topez-Server-Core' 'Topez-Server-DebugTools') ];
         package: 'Topez-Server-TestProcessTools'
           with: [ spec requires: #('Topez-Server-ProcessTools' 'Topez-Server-TestTools') ];
+        package: 'Topez-Server-Obsolete'
+          with: [ spec requires: #('Topez-Server-Core') ];
         yourself.
       spec
         group: 'default' with: #('GemStone');
