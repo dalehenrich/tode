@@ -1,3 +1,3 @@
-accessing
+private
 modified
   modificationTime := DateAndTime now

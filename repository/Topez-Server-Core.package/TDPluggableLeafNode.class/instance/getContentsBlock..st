@@ -1,3 +1,3 @@
-as yet unclassified
+pluggable accessing
 getContentsBlock: aBlock
     getContentsBlock := aBlock

@@ -6,5 +6,5 @@ directoryEntry: aDirectoryEntry
     directoryEntry: aDirectoryEntry;
     yourself.
   ^ (aDirectoryEntry name endsWith: self stonFileExtension)
-    ifTrue: [ STON fromString: fsNode cat ]
+    ifTrue: [ self fileSystemProxy: fsNode ]
     ifFalse: [ fsNode ]

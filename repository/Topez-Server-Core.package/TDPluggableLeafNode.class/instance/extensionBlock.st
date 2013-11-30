@@ -1,3 +1,3 @@
-as yet unclassified
+pluggable accessing
 extensionBlock
     ^ extensionBlock

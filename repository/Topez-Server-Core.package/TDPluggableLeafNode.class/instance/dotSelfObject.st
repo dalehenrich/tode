@@ -1,3 +1,3 @@
 as yet unclassified
 dotSelfObject
-  self halt
+  ^ self dotSelfBlock value: self

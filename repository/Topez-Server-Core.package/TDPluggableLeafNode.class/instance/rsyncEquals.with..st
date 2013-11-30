@@ -1,3 +1,3 @@
 rsync
 rsyncEquals: destNode with: aTDSTONRsync
-  ^ self halt
+  ^ self rsyncEqualsBlock value: self value: destNode value: aTDSTONRsync

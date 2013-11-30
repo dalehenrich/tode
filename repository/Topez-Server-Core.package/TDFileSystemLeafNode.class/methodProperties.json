@@ -1,9 +1,11 @@
 {
 	"class" : {
-		"directoryEntry:" : "dkh 11/29/2013 09:30",
-		"fileSystemProxy:for:" : "dkh 11/29/2013 11:24" },
+		"directoryEntry:" : "dkh 11/30/2013 09:05",
+		"fileSystemLeafNodeProxy:" : "dkh 11/30/2013 11:43",
+		"fileSystemProxy:" : "dkh 11/30/2013 12:00" },
 	"instance" : {
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:28",
+		"asTDLeafNode" : "dkh 11/30/2013 08:55",
 		"cat" : "08/07/2013 06:15",
 		"created" : "dkh 11/10/2013 21:03",
 		"creationTime" : "dkh 11/10/2013 21:02",

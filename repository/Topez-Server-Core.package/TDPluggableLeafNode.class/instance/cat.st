@@ -1,3 +1,3 @@
 as yet unclassified
 cat
-  self halt
+  ^ self catBlock value: self

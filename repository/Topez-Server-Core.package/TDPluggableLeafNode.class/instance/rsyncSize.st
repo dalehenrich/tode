@@ -1,3 +1,3 @@
 rsync
 rsyncSize
-  ^ self halt
+  ^ self rsyncSizeBlock value: self

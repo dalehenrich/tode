@@ -1,3 +1,3 @@
-accessing
+as yet unclassified
 creationTime
-  self halt
+  ^ self timeBlock value: self value: #'creationTime'
