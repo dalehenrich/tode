@@ -15,6 +15,9 @@ fileSystemLeafNodeProxy: aTDFileSystemLeafNode
     dotSelfBlock: [ :theNode | theNode basicContents asTDLeafNode dotSelfObject ];
     getElementSourceBlock: [ :theNode | theNode basicContents asTDLeafNode elementSource ];
     setElementSourceBlock: [ :theNode :newSource | theNode basicContents asTDLeafNode elementSource: newSource ];
-    rsyncEqualsBlock: [ :theNode :destNode :aTDSTONRsync | theNode basicContents asTDLeafNode rsyncEquals: destNode with: aTDSTONRsync ];
+    rsyncEqualsBlock: [ :theNode :destNode :aTDSTONRsync | 
+          theNode basicContents asTDLeafNode
+            rsyncEquals: destNode asTDLeafNode
+            with: aTDSTONRsync ];
     rsyncSizeBlock: [ :theNode | theNode basicContents asTDLeafNode rsyncSize ];
     yourself
