@@ -1,5 +1,5 @@
 tests
-testRsyncDiContentsrRecurseRelativeB
+testRsyncDirContentsRecurseRelativeB
   | stonTool command childNode tmpNode nodePath srcNode destNode rsync shellTool |
   nodePath := self rootNodePath.
   self topez ensureChildrenExistIn: nodePath.

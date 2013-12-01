@@ -24,6 +24,5 @@
 		"resolveSpecialChildNamed:ifAbsent:" : "08/07/2013 05:54",
 		"rsyncChildNamed:ifAbsent:" : "dkh 11/29/2013 09:45",
 		"rsyncCopyLeafNode:preserveTimes:" : "dkh 11/27/2013 10:24",
-		"rsyncCopyNodeUsing:" : "dkh 11/26/2013 11:00",
 		"stonOn:" : "08/07/2013 06:05",
 		"touch:nodeClass:in:" : "dkh 11/26/2013 15:54" } }
