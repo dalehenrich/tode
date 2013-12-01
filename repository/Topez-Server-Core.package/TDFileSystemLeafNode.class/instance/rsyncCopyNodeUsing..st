@@ -1,3 +1,5 @@
 rsync
 rsyncCopyNodeUsing: aSTONRsync
-  aSTONRsync rsyncCopyFileSystemLeafNode: self
+  (self name endsWith: self stonFileExtension)
+    ifTrue: [ aSTONRsync rsyncCopyLeafNode: self asTDLeafNode ]
+    ifFalse: [ aSTONRsync rsyncCopyFileSystemLeafNode: self ]

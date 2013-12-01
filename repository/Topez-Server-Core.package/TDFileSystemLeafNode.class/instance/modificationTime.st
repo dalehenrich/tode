@@ -1,3 +1,5 @@
 accessing
 modificationTime
-  self halt
+  ^ (self name endsWith: self stonFileExtension)
+    ifTrue: [ self asTDLeafNode modificationTime ]
+    ifFalse: [ self directoryEntry modificationTime asDateAndTime ]
