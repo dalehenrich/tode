@@ -5,4 +5,4 @@ runStonCommandLine: commandLineString
   command hasSubCommand: true.
   stonTool := topez toolInstanceFor: 'ston'.
   stonTool todeCommand: command.
-  stonTool stonrsync
+  ^ stonTool stonrsync

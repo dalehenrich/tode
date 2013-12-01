@@ -1,0 +1,3 @@
+tests
+testRsyncChecksumIgnored
+  self rsyncChecksum: ''

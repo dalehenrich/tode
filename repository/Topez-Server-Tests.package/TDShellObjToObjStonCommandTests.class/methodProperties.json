@@ -5,8 +5,6 @@
 		"lookupDestNode:" : "dkh 12/01/2013 09:43",
 		"lookupSrcNode:" : "dkh 12/01/2013 09:43",
 		"testLeafNodeRsyncMatches" : "dkh 12/01/2013 09:07",
-		"testRsyncChecksum" : "dkh 12/01/2013 09:07",
-		"testRsyncChecksumIgnored" : "dkh 12/01/2013 09:07",
 		"testRsyncDiContentsrRecurseRelativeB" : "dkh 12/01/2013 09:07",
 		"testRsyncDirContents" : "dkh 12/01/2013 09:07",
 		"testRsyncDirContentsRecurseRelativeA" : "dkh 12/01/2013 09:07",
@@ -26,8 +24,6 @@
 		"testRsyncTimes" : "dkh 12/01/2013 09:07",
 		"testRsyncUpdateBasic" : "dkh 12/01/2013 09:07",
 		"testRsyncUpdateSpecific" : "dkh 12/01/2013 09:07",
-		"validate:notEquals:with:" : "dkh 12/01/2013 09:07",
-		"validateNode:modificationTime:" : "dkh 12/01/2013 09:07",
 		"validateRsyncMatchForNode:" : "dkh 12/01/2013 09:07",
 		"verifyNode:modificationTimeGreaterThan:by:" : "dkh 12/01/2013 09:07",
 		"verifyNode:modificationTimeLessThan:by:" : "dkh 12/01/2013 09:07" } }
