@@ -1,6 +1,6 @@
 tests
 testRsync
-  | stonTool command childNode tmpSrcNode tmpDestNode srcNode destNode rsync rootPath |
+  | childNode tmpSrcNode tmpDestNode srcNode destNode rsync rootPath |
   rootPath := self rootNodePath.
   tmpSrcNode := self lookupSrcNode: rootPath.
   tmpDestNode := self lookupDestNode: rootPath.
@@ -10,15 +10,10 @@ testRsync
     do: [ :childNode | 
       childNode modificationTime: childNode modificationTime - (Duration seconds: 5).
       srcNode addChildNode: childNode.
-      command := TDCommandLine
-        commandLine:
+      rsync := self
+        runStonCommandLine:
           'ston rsync ' , srcNode printString , childNode name , ' '
-            , destNode printString
-        redirectTarget: nil.
-      command hasSubCommand: true.
-      stonTool := topez toolInstanceFor: 'ston'.
-      stonTool todeCommand: command.
-      rsync := stonTool stonrsync.
+            , destNode printString.
       self
         validate: rootPath , 'src/' , childNode name
         equals: rootPath , 'dest/' , childNode name
