@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 12/01/2013 09:07",
 	"instvars" : [
 		 ],
-	"name" : "TDShellStonCommandTests",
+	"name" : "TDShellFsToFsStonCommandTests",
 	"pools" : [
 		 ],
 	"super" : "TDShellAbstractStonCommandTests",
