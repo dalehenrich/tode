@@ -1,5 +1,5 @@
 tests
-rsyncDirRecurseRelativeA: dirContents
+rsyncRecurseRelativeFullPath: dirContents
   | rootPath tmpSrcNode tmpDestNode childNode srcNode destNode rsync trailingSlash |
   rootPath := self rootNodePath.
   tmpSrcNode := self lookupSrcNode: rootPath.
@@ -18,13 +18,13 @@ rsyncDirRecurseRelativeA: dirContents
       srcNode addChildNode: childNode.
       rsync := self
         runStonCommandLine:
-          'ston rsync --recursive --relative foo/bar/src' , trailingSlash , ' '
-            , destNode printString.
+          'ston rsync --recursive --relative ' , rootPath , 'foo/bar/src' , trailingSlash
+            , ' ' , destNode printString.
       self
         validate: rootPath , 'foo/bar/src/' , childNode name
-        equals: rootPath , 'dest/foo/bar/src/' , childNode name
+        equals: rootPath , 'dest' , rootPath , 'foo/bar/src/' , childNode name
         with: rsync.
       self
         validateModificationTimes: rootPath , 'foo/bar/src/' , childNode name
-        between: rootPath , 'dest/foo/bar/src/' , childNode name
+        between: rootPath , 'dest' , rootPath , 'foo/bar/src/' , childNode name
         match: false ]

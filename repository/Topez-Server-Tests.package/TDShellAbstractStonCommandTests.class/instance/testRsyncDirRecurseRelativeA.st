@@ -1,3 +1,0 @@
-tests
-testRsyncDirRecurseRelativeA
-  self rsyncDirRecurseRelativeA: false
