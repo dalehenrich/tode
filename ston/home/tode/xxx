@@ -1,5 +1,11 @@
 TDScriptLeafNode{#name:'xxx',#contents:'[ :topez :objIn :tokens :windowId | 
-| dir parent|
-dir := ServerFileDirectory on: \'/tmp/tode/\' , \'/tmp/ston/tests\'.
+| dir parentNode nodePath |
+nodePath := \'/tmp/tests/ston/\'.
+topez ensureChildrenExistIn: nodePath.
+dir := ServerFileDirectory on: \'/tmp/tode/\' , nodePath.
 dir assureExistence.
-dir halt asTDObjectNode: parent topez: topez aspect: #\'view\' ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-11-27T10:54:30.28450798988342-08:00']}
+parentNode := topez lookup: nodePath.
+dir := ServerFileDirectory on: \'/tmp/tode/\' , (nodePath findTokens: \'/\') first.
+parentNode
+  addChildNode: (dir asTDObjectNode: parentNode topez: topez aspect: #\'view\').
+dir ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-11-28T07:56:54.92622590065002-08:00']}

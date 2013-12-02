@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit d65dc8976ee8a334642422c1988827cbfe0e054f
+TDTxtLeafNode{#name:'status',#contents:'commit bfa1d7a52d858068cba3741e870b37700ed38189
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Wed Nov 27 11:20:49 2013 -0800
+Date:   Sun Dec 1 21:20:24 2013 -0800
 
-    Issue #37: as part of the script sharing work, I am merging the filesystem and objectSystem into a seamless whole...once you\'ve spliced a file system \"mount point\" into the objectory (object directory) you should be able to `cp` and `rsync` objects and files back and forth (with some initial limitiations) objects are stored in STON format on disk and disk entities have a TDFileSystemNode that represents them ... I\'ve filled out the basic apis without a lot of testing ...
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-27T11:20:50.11609196662903-08:00']}
+    Issue #37: `use #beRounded DateAndTimes ... avoid SmallDouble serialization impreciseness ... TDShellFsToFsStonCommandTests are green
+',#creationTime:nil,#modificationTime:DateAndTime['2013-12-02T07:41:22.33284211158752-08:00']}
