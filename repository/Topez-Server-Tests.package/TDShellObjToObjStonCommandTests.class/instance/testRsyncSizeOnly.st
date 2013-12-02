@@ -6,7 +6,7 @@ testRsyncSizeOnly
   tmpNode := topez lookup: nodePath.
   srcNode := tmpNode addChild: 'src'.
   destNode := tmpNode addChild: 'dest'.
-  oldestModificationTime := DateAndTime now + (Duration minutes: 6).
+  oldestModificationTime := (DateAndTime now + (Duration minutes: 6)) beRounded.
   srcModificationTime := oldestModificationTime - (Duration minutes: 6).
   self standardLeafNodes
     do: [ :childNode | 

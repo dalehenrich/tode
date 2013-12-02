@@ -6,8 +6,8 @@ testRsyncUpdateBasic
   tmpNode := topez lookup: nodePath.
   srcNode := tmpNode addChild: 'src'.
   destNode := tmpNode addChild: 'dest'.
-  destModificationTime := DateAndTime now + (Duration days: 5).
-  srcModificationTime := DateAndTime now - (Duration days: 5).
+  destModificationTime := (DateAndTime now + (Duration days: 5)) beRounded.
+  srcModificationTime := (DateAndTime now - (Duration days: 5)) beRounded.
   self standardLeafNodes
     do: [ :childNode | 
       "pack destNode with nodes with newer timestamps"

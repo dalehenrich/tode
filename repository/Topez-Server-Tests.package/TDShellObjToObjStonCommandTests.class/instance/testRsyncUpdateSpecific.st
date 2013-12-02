@@ -6,9 +6,9 @@ testRsyncUpdateSpecific
   tmpNode := topez lookup: nodePath.
   srcNode := tmpNode addChild: 'src'.
   destNode := tmpNode addChild: 'dest'.
-  newestModificationTime := DateAndTime now + (Duration days: 5).
-  oldestModificationTime := DateAndTime now - (Duration days: 10).
-  srcModificationTime := DateAndTime now - (Duration days: 5).
+  newestModificationTime := (DateAndTime now + (Duration days: 5)) beRounded.
+  oldestModificationTime := (DateAndTime now - (Duration days: 10)) beRounded.
+  srcModificationTime := (DateAndTime now - (Duration days: 5)) beRounded.
   nodes := self differentLeafNodes.
   newest := nodes atRandom.	"pick one of the nodes to be newer and therefore WILL NOT be UPDATED"
   nodes

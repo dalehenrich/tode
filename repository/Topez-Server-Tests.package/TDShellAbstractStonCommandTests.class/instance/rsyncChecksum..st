@@ -8,7 +8,7 @@ rsyncChecksum: rsyncOptionString
   tmpDestNode := self lookupDestNode: rootPath.
   srcNode := tmpSrcNode addChild: 'src'.
   destNode := tmpDestNode addChild: 'dest'.
-  srcModificationTime := DateAndTime now - (Duration days: 5).
+  srcModificationTime := (DateAndTime now - (Duration days: 5)) beRounded.
   self subtlyDifferentLeafNodes
     do: [ :childNode | 
       childNode modificationTime: srcModificationTime.

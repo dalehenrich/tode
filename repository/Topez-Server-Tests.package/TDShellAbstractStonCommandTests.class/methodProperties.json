@@ -13,7 +13,7 @@
 		"removeTestRootNode" : "dkh 12/01/2013 09:42",
 		"rootNodePath" : "dkh 12/01/2013 09:49",
 		"rsync:" : "dkh 12/01/2013 11:18",
-		"rsyncChecksum:" : "dkh 12/01/2013 10:26",
+		"rsyncChecksum:" : "dkh 12/01/2013 21:17",
 		"rsyncDirRecurse:" : "dkh 12/01/2013 19:44",
 		"rsyncRecurseRelativeFullPath:" : "dkh 12/01/2013 20:43",
 		"rsyncRecurseRelativeRelativePath:" : "dkh 12/01/2013 20:33",
@@ -36,4 +36,4 @@
 		"validate:equals:with:" : "dkh 11/29/2013 09:55",
 		"validate:notEquals:with:" : "dkh 12/01/2013 10:27",
 		"validateModificationTimes:between:match:" : "dkh 12/01/2013 19:19",
-		"validateNode:modificationTime:" : "dkh 12/01/2013 10:13" } }
+		"validateNode:modificationTime:" : "dkh 12/01/2013 21:18" } }

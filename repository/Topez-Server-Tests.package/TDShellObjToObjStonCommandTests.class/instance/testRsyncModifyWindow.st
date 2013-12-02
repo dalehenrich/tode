@@ -6,7 +6,7 @@ testRsyncModifyWindow
   tmpNode := topez lookup: nodePath.
   srcNode := tmpNode addChild: 'src'.
   destNode := tmpNode addChild: 'dest'.
-  newestModificationTime := DateAndTime now + (Duration minutes: 6).
+  newestModificationTime := (DateAndTime now + (Duration minutes: 6)) beRounded.
   oldestModificationTime := newestModificationTime - (Duration minutes: 10).
   srcModificationTime := newestModificationTime - (Duration minutes: 6).
   nodes := self standardLeafNodes.

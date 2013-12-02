@@ -6,7 +6,7 @@ testRsyncIgnoreTimes
   tmpNode := topez lookup: nodePath.
   srcNode := tmpNode addChild: 'src'.
   destNode := tmpNode addChild: 'dest'.
-  srcModificationTime := DateAndTime now - (Duration days: 5).
+  srcModificationTime := (DateAndTime now - (Duration days: 5)) beRounded.
   self standardLeafNodes
     do: [ :childNode | 
       childNode modificationTime: srcModificationTime.
