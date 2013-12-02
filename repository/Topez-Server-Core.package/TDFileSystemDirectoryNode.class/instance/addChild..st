@@ -1,4 +1,4 @@
 as yet unclassified
 addChild: childName
-  self fileDirectory createDirectory: childName.
+  (self fileDirectory directoryNamed: childName) assureExistence.
   ^ self _childNodeFor: childName

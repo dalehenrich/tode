@@ -25,9 +25,9 @@ rsyncDirRecurse: recurseOption
         ifFalse: [ 
           self
             validate: rootPath , 'src/' , childNode name
-            equals: rootPath , 'src/' , childNode name
+            equals: rootPath , 'dest/src/' , childNode name
             with: rsync.
           self
             validateModificationTimes: rootPath , 'src/' , childNode name
-            between: rootPath , 'src/' , childNode name
+            between: rootPath , 'dest/src/' , childNode name
             match: false ] ]
