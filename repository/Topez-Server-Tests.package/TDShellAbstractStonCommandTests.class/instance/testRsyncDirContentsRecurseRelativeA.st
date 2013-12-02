@@ -1,0 +1,3 @@
+tests
+testRsyncDirContentsRecurseRelativeA
+  self rsyncDirRecurseRelativeA: true

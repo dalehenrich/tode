@@ -4,6 +4,7 @@
 	"instance" : {
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:33",
 		"addChild:" : "dkh 11/28/2012 05:31",
+		"addChildIfAbsent:" : "dkh 12/01/2013 19:55",
 		"addChildNode:" : "DataCurator 01/23/2013 18:23",
 		"addTempValueTo:" : "07/12/2013 08:47",
 		"asTDNode:" : "DataCurator 01/26/2013 23:22",

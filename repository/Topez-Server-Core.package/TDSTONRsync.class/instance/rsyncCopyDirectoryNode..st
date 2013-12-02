@@ -7,5 +7,5 @@ rsyncCopyDirectoryNode: aTDDirectoryNode
       "If you don't specify --recursive then rsync won't copy directories at all."
       ^ self ].
   self isDryRun
-    ifFalse: [ destinationNode := destinationNode addChild: aTDDirectoryNode name ].
+    ifFalse: [ destinationNode := destinationNode addChildIfAbsent: aTDDirectoryNode name ].
   aTDDirectoryNode rsyncCopyNodeChildrenUsing: self
