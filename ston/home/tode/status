@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 6f20fdd55847764179fd8006a2b5f39e839c4af3
+TDTxtLeafNode{#name:'status',#contents:'commit b032dcc5621d04da4db4a7831c611ff6f4954817
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Mon Dec 2 08:10:21 2013 -0800
+Date:   Tue Dec 3 15:46:33 2013 -0800
 
-    script bolero
-',#creationTime:nil,#modificationTime:DateAndTime['2013-12-02T16:13:52.26113104820251-08:00']}
+    Issue #37: `ston rsync` implementation not complete, however, we\'ve hit point where perhaps enough of the `rsync` functionality has been completed where with the File System leaf node support, I think we\'ve got enough functionality to form the foundation for a pretty nice sharing model ... will start heading in that direction and see if additional `rsync` functionality is called for ... tests are green for all four combos of fs/obj node structure: TDShellFsToFsStonCommandTests TDShellObjToObjStonCommandTests TDShellFsToObjStonCommandTests TDShellObjToFsStonCommandTests
+',#creationTime:nil,#modificationTime:DateAndTime['2013-12-03T15:46:33.76795506477356-08:00']}
