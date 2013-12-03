@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit bfa1d7a52d858068cba3741e870b37700ed38189
+TDTxtLeafNode{#name:'status',#contents:'commit 6f20fdd55847764179fd8006a2b5f39e839c4af3
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sun Dec 1 21:20:24 2013 -0800
+Date:   Mon Dec 2 08:10:21 2013 -0800
 
-    Issue #37: `use #beRounded DateAndTimes ... avoid SmallDouble serialization impreciseness ... TDShellFsToFsStonCommandTests are green
-',#creationTime:nil,#modificationTime:DateAndTime['2013-12-02T07:41:22.33284211158752-08:00']}
+    script bolero
+',#creationTime:nil,#modificationTime:DateAndTime['2013-12-02T16:13:52.26113104820251-08:00']}
