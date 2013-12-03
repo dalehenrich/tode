@@ -1,21 +1,18 @@
 tests
-rsync: dirContents
+testRsyncTimes
   | childNode srcNode destNode rsync rootPath |
   rootPath := self rootNodePath.
   srcNode := self lookupSrcNode: rootPath , 'src'.
   destNode := self lookupDestNode: rootPath , 'dest'.
   self standardLeafNodes
     do: [ :childNode | 
-      | childNameString |
       childNode
-        modificationTime: childNode modificationTime - (Duration seconds: 5).
+        modificationTime:
+          (childNode modificationTime - (Duration seconds: 5)) beRounded.
       srcNode addChildNode: childNode.
-      childNameString := dirContents
-        ifTrue: [ '' ]
-        ifFalse: [ childNode name ].
       rsync := self
         runStonCommandLine:
-          'ston rsync ' , srcNode printString , childNameString , ' '
+          'ston rsync --times ' , srcNode printString , childNode name , ' '
             , destNode printString.
       self
         validate: rootPath , 'src/' , childNode name
@@ -24,4 +21,4 @@ rsync: dirContents
       self
         validateModificationTimes: rootPath , 'src/' , childNode name
         between: rootPath , 'dest/' , childNode name
-        match: false ]
+        match: true ]

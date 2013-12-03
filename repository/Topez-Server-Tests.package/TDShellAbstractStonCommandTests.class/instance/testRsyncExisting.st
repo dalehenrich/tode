@@ -1,11 +1,9 @@
 tests
 testRsyncExisting
-  | stonTool command childNode tmpNode nodePath srcNode destNode rsync srcModificationTime destModificationTime existingNodeNames |
-  nodePath := self rootNodePath.
-  self topez ensureChildrenExistIn: nodePath.
-  tmpNode := topez lookup: nodePath.
-  srcNode := tmpNode addChild: 'src'.
-  destNode := tmpNode addChild: 'dest'.
+  | childNode srcNode destNode rsync rootPath srcModificationTime destModificationTime existingNodeNames |
+  rootPath := self rootNodePath.
+  srcNode := self lookupSrcNode: rootPath , 'src'.
+  destNode := self lookupDestNode: rootPath , 'dest'.
   srcModificationTime := (DateAndTime now - (Duration seconds: 5)) beRounded.
   destModificationTime := (DateAndTime now - (Duration seconds: 10)) beRounded.
   self smallSetLeafNodes
@@ -14,32 +12,27 @@ testRsyncExisting
       childNode modificationTime: destModificationTime.
       destNode addChildNode: childNode.
       self
-        validateNode: '/tmp/tests/ston/dest/' , childNode name
+        validateNode: rootPath , 'dest/' , childNode name
         modificationTime: destModificationTime ].
   existingNodeNames := self smallSetLeafNodes collect: [ :each | each name ].
   self standardLeafNodes
     do: [ :childNode | 
       childNode modificationTime: srcModificationTime.
       srcNode addChildNode: childNode.
-      command := TDCommandLine
-        commandLine:
+      rsync := self
+        runStonCommandLine:
           'ston rsync --existing ' , srcNode printString , childNode name , ' '
-            , destNode printString
-        redirectTarget: nil.
-      command hasSubCommand: true.
-      stonTool := topez toolInstanceFor: 'ston'.
-      stonTool todeCommand: command.
-      rsync := stonTool stonrsync.
+            , destNode printString.
       (existingNodeNames includes: childNode name)
         ifTrue: [ 
           self
-            validate: '/tmp/tests/ston/src/' , childNode name
-            equals: '/tmp/tests/ston/dest/' , childNode name
+            validate: rootPath , 'src/' , childNode name
+            equals: rootPath , 'dest/' , childNode name
             with: rsync ]
         ifFalse: [ 
           | missing |
           missing := false.
           self topez
-            lookup: '/tmp/tests/ston/dest/' , childNode name
+            lookup: rootPath , 'dest/' , childNode name
             ifAbsent: [ missing := true ].
           self assert: missing ] ]

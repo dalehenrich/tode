@@ -1,17 +1,15 @@
 tests
 rsyncRecurseRelativeFullPath: dirContents
-  | rootPath tmpSrcNode tmpDestNode childNode srcNode destNode rsync trailingSlash |
+  | rootPath childNode srcNode destNode rsync trailingSlash |
   rootPath := self rootNodePath.
-  tmpSrcNode := self lookupSrcNode: rootPath.
-  tmpDestNode := self lookupDestNode: rootPath.
-  srcNode := tmpSrcNode addChild: 'foo'.
+  srcNode := self lookupSrcNode: rootPath , 'foo'.
+  destNode := self lookupDestNode: rootPath , 'dest'.
+  topez setCurrentNode: srcNode parent.
   srcNode := srcNode addChild: 'bar'.
   srcNode := srcNode addChild: 'src'.
-  destNode := tmpDestNode addChild: 'dest'.
   trailingSlash := dirContents
     ifTrue: [ '/' ]
     ifFalse: [ '' ].
-  topez setCurrentNode: tmpSrcNode.
   self standardLeafNodes
     do: [ :childNode | 
       childNode modificationTime: childNode modificationTime - (Duration seconds: 5).

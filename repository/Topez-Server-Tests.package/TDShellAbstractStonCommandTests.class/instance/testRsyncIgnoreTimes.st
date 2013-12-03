@@ -1,19 +1,16 @@
 tests
-rsyncChecksum: rsyncOptionString
-  "only difference is first char in destination ... timestamps and sizes the same"
-
+testRsyncIgnoreTimes
   | childNode srcNode destNode rsync rootPath srcModificationTime |
   rootPath := self rootNodePath.
   srcNode := self lookupSrcNode: rootPath , 'src'.
   destNode := self lookupDestNode: rootPath , 'dest'.
   srcModificationTime := (DateAndTime now - (Duration days: 5)) beRounded.
-  self subtlyDifferentLeafNodes
+  self standardLeafNodes
     do: [ :childNode | 
       childNode modificationTime: srcModificationTime.
       destNode addChildNode: childNode ].
   self standardLeafNodes
     do: [ :childNode | 
-      | rsync |
       childNode modificationTime: srcModificationTime.
       srcNode addChildNode: childNode.
       self
@@ -21,16 +18,13 @@ rsyncChecksum: rsyncOptionString
         modificationTime: srcModificationTime.
       rsync := self
         runStonCommandLine:
-          'ston rsync ' , rsyncOptionString , ' ' , srcNode printString , childNode name
-            , ' ' , destNode printString.
-      rsyncOptionString isEmpty
-        ifTrue: [ 
-          self
-            validate: rootPath , 'src/' , childNode name
-            notEquals: rootPath , 'dest/' , childNode name
-            with: rsync ]
-        ifFalse: [ 
-          self
-            validate: rootPath , 'src/' , childNode name
-            equals: rootPath , 'dest/' , childNode name
-            with: rsync ] ]
+          'ston rsync --ignore-times ' , srcNode printString , childNode name , ' '
+            , destNode printString.
+      self
+        validate: rootPath , 'src/' , childNode name
+        equals: rootPath , 'dest/' , childNode name
+        with: rsync.
+      self
+        verifyNode: rootPath , 'dest/' , childNode name
+        modificationTimeGreaterThan: srcModificationTime
+        by: (Duration days: 3) ]

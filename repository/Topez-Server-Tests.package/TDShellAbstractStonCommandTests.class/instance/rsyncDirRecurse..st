@@ -1,11 +1,9 @@
 tests
 rsyncDirRecurse: recurseOption
-  | childNode tmpSrcNode tmpDestNode srcNode destNode rsync rootPath |
+  | childNode srcNode destNode rsync rootPath |
   rootPath := self rootNodePath.
-  tmpSrcNode := self lookupSrcNode: rootPath.
-  tmpDestNode := self lookupDestNode: rootPath.
-  srcNode := tmpSrcNode addChild: 'src'.
-  destNode := tmpDestNode addChild: 'dest'.
+  srcNode := self lookupSrcNode: rootPath , 'src'.
+  destNode := self lookupDestNode: rootPath , 'dest'.
   self standardLeafNodes
     do: [ :childNode | 
       | srcPath |

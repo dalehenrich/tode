@@ -2,21 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"lookupDestNode:" : "dkh 12/01/2013 09:43",
-		"lookupSrcNode:" : "dkh 12/01/2013 09:43",
-		"testLeafNodeRsyncMatches" : "dkh 12/01/2013 09:07",
-		"testRsyncExisting" : "dkh 12/01/2013 21:15",
-		"testRsyncFileNoRelative" : "dkh 12/01/2013 09:07",
-		"testRsyncFileRelative" : "dkh 12/01/2013 09:07",
-		"testRsyncFileSystemLeaf" : "dkh 12/01/2013 09:07",
-		"testRsyncIgnoreTimes" : "dkh 12/01/2013 21:15",
-		"testRsyncModifyWindow" : "dkh 12/01/2013 21:16",
-		"testRsyncModifyWindowIgnored" : "dkh 12/01/2013 21:16",
-		"testRsyncNoRelative" : "dkh 12/01/2013 09:07",
-		"testRsyncSizeOnly" : "dkh 12/01/2013 21:16",
-		"testRsyncTimes" : "dkh 12/01/2013 09:07",
-		"testRsyncUpdateBasic" : "dkh 12/01/2013 21:16",
-		"testRsyncUpdateSpecific" : "dkh 12/01/2013 21:17",
-		"validateRsyncMatchForNode:" : "dkh 12/01/2013 09:07",
-		"verifyNode:modificationTimeGreaterThan:by:" : "dkh 12/01/2013 09:07",
-		"verifyNode:modificationTimeLessThan:by:" : "dkh 12/01/2013 09:07" } }
+		"lookupDestNode:" : "dkh 12/03/2013 11:38",
+		"lookupSrcNode:" : "dkh 12/03/2013 11:38",
+		"testLeafNodeRsyncMatches" : "dkh 12/03/2013 11:48",
+		"testRsyncFileRelativeTrailingSlash" : "dkh 12/03/2013 15:12" } }

@@ -1,10 +1,10 @@
 private
 lookupFsNode: nodePath
-  | dir parentNode diskPath diskRootNode |
+  | dir diskPath diskRootNode rootNode |
   diskPath := self fileSystemRootPath , nodePath.
   dir := ServerFileDirectory on: diskPath.
   dir assureExistence.
-  parentNode := (self lookupNode: self rootNodePath) parent.
+  rootNode := self lookupNode: self rootNodePath.
   diskRootNode := dir asTDObjectNode: nil topez: self topez aspect: #'view'.
-  parentNode addChildNode: diskRootNode.
+  rootNode addChildNode: diskRootNode.
   ^ diskRootNode

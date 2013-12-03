@@ -1,11 +1,9 @@
 tests
 testRsyncUpdateSpecific
-  | tmpNode nodePath srcNode destNode srcModificationTime nodes newest newestModificationTime oldestModificationTime |
-  nodePath := self rootNodePath.
-  self topez ensureChildrenExistIn: nodePath.
-  tmpNode := topez lookup: nodePath.
-  srcNode := tmpNode addChild: 'src'.
-  destNode := tmpNode addChild: 'dest'.
+  | childNode srcNode destNode rsync rootPath newestModificationTime oldestModificationTime srcModificationTime nodes newest |
+  rootPath := self rootNodePath.
+  srcNode := self lookupSrcNode: rootPath , 'src'.
+  destNode := self lookupDestNode: rootPath , 'dest'.
   newestModificationTime := (DateAndTime now + (Duration days: 5)) beRounded.
   oldestModificationTime := (DateAndTime now - (Duration days: 10)) beRounded.
   srcModificationTime := (DateAndTime now - (Duration days: 5)) beRounded.
@@ -18,39 +16,33 @@ testRsyncUpdateSpecific
         ifFalse: [ childNode modificationTime: oldestModificationTime ].
       destNode addChildNode: childNode ].
   self
-    validateNode: '/tmp/tests/ston/dest/' , newest name
+    validateNode: rootPath , 'dest/' , newest name
     modificationTime: newestModificationTime.
   self standardLeafNodes
     do: [ :childNode | 
-      | rsync stonTool command |
       "pack destNode with nodes with older timestamps"
       childNode modificationTime: srcModificationTime.
       srcNode addChildNode: childNode.
       self
-        validateNode: '/tmp/tests/ston/src/' , childNode name
+        validateNode: rootPath , 'src/' , childNode name
         modificationTime: srcModificationTime.
-      command := TDCommandLine
-        commandLine:
+      rsync := self
+        runStonCommandLine:
           'ston rsync --update ' , srcNode printString , childNode name , ' '
-            , destNode printString
-        redirectTarget: nil.
-      command hasSubCommand: true.
-      stonTool := topez toolInstanceFor: 'ston'.
-      stonTool todeCommand: command.
-      rsync := stonTool stonrsync.
+            , destNode printString.
       newest name = childNode name
         ifTrue: [ 
           "newest file should have been preserved ... newest modification time"
           self
-            validateNode: '/tmp/tests/ston/dest/' , childNode name
+            validateNode: rootPath , 'dest/' , childNode name
             modificationTime: newestModificationTime ]
         ifFalse: [ 
           "older files should equal the src nodes"
           self
-            validate: '/tmp/tests/ston/src/' , childNode name
-            equals: '/tmp/tests/ston/dest/' , childNode name
+            validate: rootPath , 'src/' , childNode name
+            equals: rootPath , 'dest/' , childNode name
             with: rsync.	"and have their timestamps changed"
           self
-            verifyNode: '/tmp/tests/ston/dest/' , childNode name
+            verifyNode: rootPath , 'dest/' , childNode name
             modificationTimeGreaterThan: oldestModificationTime
             by: (Duration days: 5) ] ]

@@ -1,11 +1,9 @@
 tests
 testRsyncUpdateBasic
-  | tmpNode nodePath srcNode destNode destModificationTime srcModificationTime |
-  nodePath := self rootNodePath.
-  self topez ensureChildrenExistIn: nodePath.
-  tmpNode := topez lookup: nodePath.
-  srcNode := tmpNode addChild: 'src'.
-  destNode := tmpNode addChild: 'dest'.
+  | childNode srcNode destNode rsync rootPath destModificationTime srcModificationTime |
+  rootPath := self rootNodePath.
+  srcNode := self lookupSrcNode: rootPath , 'src'.
+  destNode := self lookupDestNode: rootPath , 'dest'.
   destModificationTime := (DateAndTime now + (Duration days: 5)) beRounded.
   srcModificationTime := (DateAndTime now - (Duration days: 5)) beRounded.
   self standardLeafNodes
@@ -14,26 +12,20 @@ testRsyncUpdateBasic
       childNode modificationTime: destModificationTime.
       destNode addChildNode: childNode.
       self
-        validateNode: '/tmp/tests/ston/dest/' , childNode name
+        validateNode: rootPath , 'dest/' , childNode name
         modificationTime: destModificationTime ].
   self standardLeafNodes
     do: [ :childNode | 
-      | rsync stonTool command |
       "pack destNode with nodes with older timestamps"
       childNode modificationTime: srcModificationTime.
       srcNode addChildNode: childNode.
       self
-        validateNode: '/tmp/tests/ston/src/' , childNode name
+        validateNode: rootPath , 'src/' , childNode name
         modificationTime: srcModificationTime.
-      command := TDCommandLine
-        commandLine:
+      rsync := self
+        runStonCommandLine:
           'ston rsync --update ' , srcNode printString , childNode name , ' '
-            , destNode printString
-        redirectTarget: nil.
-      command hasSubCommand: true.
-      stonTool := topez toolInstanceFor: 'ston'.
-      stonTool todeCommand: command.
-      rsync := stonTool stonrsync.
+            , destNode printString.
       self
-        validateNode: '/tmp/tests/ston/dest/' , childNode name
+        validateNode: rootPath , 'dest/' , childNode name
         modificationTime: destModificationTime ]
