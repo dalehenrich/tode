@@ -1,11 +1,15 @@
 TDScriptLeafNode{#name:'xxx',#contents:'[ :topez :objIn :tokens :windowId | 
-| dir parentNode nodePath |
-nodePath := \'/tmp/tests/ston/\'.
-topez ensureChildrenExistIn: nodePath.
-dir := ServerFileDirectory on: \'/tmp/tode/\' , nodePath.
+| dir diskPath gatewayRootNode rootNode path nodePath basePath |
+nodePath := \'/tmp/tests/ston/gateway\'.
+diskPath := \'/tmp/todeRoot\' , nodePath.
+dir := ServerFileDirectory on: diskPath.
 dir assureExistence.
-parentNode := topez lookup: nodePath.
-dir := ServerFileDirectory on: \'/tmp/tode/\' , (nodePath findTokens: \'/\') first.
-parentNode
-  addChildNode: (dir asTDObjectNode: parentNode topez: topez aspect: #\'view\').
-dir ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-11-28T07:56:54.92622590065002-08:00']}
+basePath := \'/tmp/tests/ston\'.
+topez ensureChildrenExistIn: basePath.
+rootNode := topez lookup: basePath.
+path := nodePath findTokens: \'/\'.
+gatewayRootNode := TDObjectGatewayNode new
+  name: path last;
+  contents: \'ServerFileDirectory on: \' , diskPath printString.
+rootNode addChildNode: gatewayRootNode.
+gatewayRootNode ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-12-05T07:28:49.74683403968811-08:00']}
