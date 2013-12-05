@@ -1,3 +1,5 @@
 rsync
 rsyncSize
-  ^ self halt
+  ^ (self name endsWith: self stonFileExtension)
+    ifTrue: [ self asTDLeafNode rsyncSize ]
+    ifFalse: [ self halt ]

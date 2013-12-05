@@ -9,7 +9,10 @@ testRsyncSizeOnly
   self standardLeafNodes
     do: [ :childNode | 
       childNode modificationTime: oldestModificationTime.
-      destNode addChildNode: childNode ].
+      destNode addChildNode: childNode.
+      self
+        validateNode: rootPath , 'dest/' , childNode name
+        modificationTime: oldestModificationTime ].
   changedSize := self differentLeafNodes atRandom.	"pick one of the nodes to have it's size changed ... should be the only one that gets transferred"
   changedSize modificationTime: oldestModificationTime.
   destNode addChildNode: changedSize.

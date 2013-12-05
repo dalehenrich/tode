@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 12/05/2013 08:27",
+	"instvars" : [
+		 ],
+	"name" : "TDShellGwObjToGwObjStonCommandTests",
+	"pools" : [
+		 ],
+	"super" : "TDShellAbstractStonCommandTests",
+	"type" : "normal" }

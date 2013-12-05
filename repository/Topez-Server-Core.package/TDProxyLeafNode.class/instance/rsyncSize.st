@@ -1,3 +1,3 @@
 rsync
 rsyncSize
-  ^ self basicContents size
+  ^ self basicContents rsyncSize
