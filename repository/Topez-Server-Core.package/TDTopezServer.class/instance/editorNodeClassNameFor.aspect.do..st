@@ -1,7 +1,7 @@
 accessing
 editorNodeClassNameFor: anObject aspect: anAspect do: aBlock
   self
-    lookupClassNameFor: anObject
+    lookupClassNameFor: anObject classForEditorNodeLookup
     aspect: anAspect
     defaultAspect: #'navigate'
     in: self class nodeEditors

@@ -2,4 +2,4 @@ as yet unclassified
 elementSource
   "override as needed"
 
-  ^ self object contents
+  ^ self object elementSource

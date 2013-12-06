@@ -1,3 +1,3 @@
 as yet unclassified
 asTDLeafNode
-  ^ STON fromString: self cat
+  ^ STON fromString: self fileContents

@@ -1,7 +1,7 @@
 accessing
 builderClassNameFor: anObject aspect: anAspect do: aBlock
   self
-    lookupClassNameFor: anObject
+    lookupClassNameFor: anObject class
     aspect: anAspect
     defaultAspect: #'view'
     in: self class nodeBuilders

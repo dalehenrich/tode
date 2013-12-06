@@ -1,3 +1,5 @@
-as yet unclassified
+accessing
 renderNameTextAttributes
-  ^ self class fileLeafTextAttributes
+  ^ (self name endsWith: self stonFileExtension)
+    ifTrue: [ self asTDLeafNode renderNameTextAttributes ]
+    ifFalse: [ super renderNameTextAttributes ]
