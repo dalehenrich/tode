@@ -1,5 +1,7 @@
 rsync
 rsyncChildNamed: childName ifAbsent: absentBlock
+  "receiver is a destination node"
+
   | dir newNode fileName |
   fileName := childName , self stonFileExtension.
   dir := self fileDirectory.

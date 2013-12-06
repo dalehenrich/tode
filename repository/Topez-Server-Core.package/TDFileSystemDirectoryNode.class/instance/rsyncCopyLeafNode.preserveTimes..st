@@ -1,5 +1,7 @@
 rsync
 rsyncCopyLeafNode: aTDLeafNode preserveTimes: preserveTimes
+  "receiver is a destination node"
+
   | newNode |
   newNode := aTDLeafNode copy.
   preserveTimes

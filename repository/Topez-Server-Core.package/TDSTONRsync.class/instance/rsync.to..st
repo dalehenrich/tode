@@ -25,5 +25,5 @@ rsync: sourcePaths to: destinationPath
               destinationPaths
                 do: [ :childName | destinationNode := destinationNode addChildIfAbsent: childName ] ] ].
       (sourcePath endsWith: '/')
-        ifTrue: [ sourceNode rsyncCopyNodeChildrenUsing: self ]
-        ifFalse: [ sourceNode rsyncCopyNodeUsing: self ] ]
+        ifTrue: [ sourceNode rsyncCopyChildrenUsing: self ]
+        ifFalse: [ sourceNode rsyncCopyUsing: self ] ]
