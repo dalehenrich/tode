@@ -1,3 +1,3 @@
-as yet unclassified
+ston
 stonOn: stonWriter
   self basicContents stonOn: stonWriter

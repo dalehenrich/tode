@@ -34,4 +34,5 @@
 		"rsyncCopyNodeChildrenUsing:" : "dkh 11/26/2013 11:02",
 		"rsyncCopyNodeUsing:" : "dkh 11/26/2013 11:00",
 		"stonExportUsing:to:" : "dkh 09/14/2013 23:11",
-		"stonOn:" : "dkh 05/17/2013 18:24" } }
+		"stonOn:" : "dkh 05/17/2013 18:24",
+		"stonProcessSubObjects:" : "dkh 12/05/2013 21:54" } }

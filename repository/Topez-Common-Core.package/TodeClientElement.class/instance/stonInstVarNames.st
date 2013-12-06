@@ -1,4 +1,4 @@
-as yet unclassified
+ston
 stonInstVarNames
   | oc |
   oc := self class allInstVarNames asOrderedCollection.

@@ -1,4 +1,4 @@
-as yet unclassified
+ston
 stonOn: stonWriter
   stonWriter
     writeObject: self
