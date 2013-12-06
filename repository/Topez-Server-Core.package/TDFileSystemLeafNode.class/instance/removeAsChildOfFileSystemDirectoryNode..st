@@ -1,3 +1,7 @@
 as yet unclassified
 removeAsChildOfFileSystemDirectoryNode: aTDFileSystemDirectoryNode
-  ^ aTDFileSystemDirectoryNode removeChildFileSystemLeafNode: self
+  ^ (self name endsWith: self stonFileExtension)
+    ifTrue: [ 
+      self parent ifNil: [ self parent: aTDFileSystemDirectoryNode ].
+      aTDFileSystemDirectoryNode removeChildFileSystemLeafNode: self ]
+    ifFalse: [ aTDFileSystemDirectoryNode removeChildFileSystemLeafNode: self ]

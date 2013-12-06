@@ -1,1 +1,0 @@
-TDSmalltalkLeafNode{#name:'xx',#contents:'| tmp |\ntmp := 3 + 6.\n^ tmp',#creationTime:DateAndTime['2013-12-05T22:10:56.54875302314758-08:00'],#modificationTime:DateAndTime['2013-12-06T10:55:20.10340809822083-08:00']}
