@@ -1,13 +1,5 @@
 TDScriptLeafNode{#name:'x',#contents:'[ :topez :objIn :tokens :windowId | 
-\tSmalltalk
-\t\tat: #BaselineOfGLASS1
-\t\tifPresent: [ :ignored | 
-\t\t\t(Smalltalk at: #MetacelloProjectRegistration)
-\t\t\t\tifPresent: [ :cls | 
-\t\t\t\t\t(cls registrationForClassNamed: \'BaselineOfGLASS1\' ifAbsent: [  ])
-\t\t\t\t\t\tifNotNil: [ :registration | 
-\t\t\t\t\t\t\tregistration loadedInImage
-\t\t\t\t\t\t\t\tifTrue: [ ^ self ] ] ] ].
-\tConfigurationOfGLASS project updateProject.
-\tGsDeployer deploy: [ (ConfigurationOfGLASS project version: \'1.0-beta.9.1\') load ].
-\tSystem commit ]',#creationTime:nil,#modificationTime:DateAndTime['2013-11-12T10:15:52.8852059841156-08:00']}
+| coll |
+\tcoll := RcIdentityBag new.
+\tcoll addAll: #(1 2 3).
+\tcoll sorted: [:a :b | a <= b ].  ]',#creationTime:nil,#modificationTime:DateAndTime['2013-12-05T14:27:40.03425407409668-08:00']}
