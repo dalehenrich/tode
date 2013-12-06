@@ -1,3 +1,3 @@
 rsync
 rsyncCopyNodeUsing: aSTONRsync
-  self halt
+  aSTONRsync rsyncCopyLeafNode: self

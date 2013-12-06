@@ -1,3 +1,6 @@
 as yet unclassified
 asTDLeafNode
-  ^ STON fromString: self fileContents
+  | node |
+  node := STON fromString: self fileContents.
+  node parent: self parent.
+  ^ node
