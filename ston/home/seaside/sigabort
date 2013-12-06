@@ -1,0 +1,3 @@
+TDSmalltalkLeafNode{#name:'sigabort',#contents:'true
+  ifTrue: [ #(-6 -7) do: [ :sessionId | System sendSigAbortToSession: sessionId ] ].
+System currentSessionNames',#creationTime:DateAndTime['2013-12-05T16:55:48.52631807327271-08:00'],#modificationTime:DateAndTime['2013-12-05T17:15:35.80631995201111-08:00']}
