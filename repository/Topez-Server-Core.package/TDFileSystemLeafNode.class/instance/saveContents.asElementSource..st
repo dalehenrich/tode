@@ -9,7 +9,8 @@ saveContents: anObject asElementSource: asElementSource
         ifTrue: [ aNode elementSource: anObject ]
         ifFalse: [ aNode contents: anObject ].
       filename := aNode name , self stonFileExtension.
-      fileContents := STON toString: aNode ]
+      STONWriter
+        plainTextNewlinesDuring: [ fileContents := STON toString: aNode ] ]
     ifFalse: [ 
       filename := self name.
       fileContents := anObject ].
