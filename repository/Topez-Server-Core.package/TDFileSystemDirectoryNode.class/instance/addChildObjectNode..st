@@ -3,8 +3,7 @@ addChildObjectNode: anObjectNode
   "Have to stash the object node in /tmp, since we don't want to serialize live objects to disk ... does not scale well"
 
   | objectPath objectRoot objectNode |
-  objectPath := '/tmp/objects/' , anObjectNode dotSelfObject asOop printString
-    , '/'.
+  objectPath := '/tmp/o/' , anObjectNode dotSelfObject asOop printString , '/'.
   self topez ensureChildrenExistIn: objectPath.
   objectRoot := self topez lookup: objectPath.
   objectRoot addChildNode: anObjectNode.

@@ -1,4 +1,4 @@
 as yet unclassified
 rsync
   <topezCommand: 'rsync' manPage: #'rsyncManPage'>
-  ^ [ :topez :objIn :tokens :command | self performSubCommand: topez objIn: objIn todeCommand: command ]
+  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) rsync ]
