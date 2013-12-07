@@ -1,3 +1,3 @@
-as yet unclassified
+pluggable accessing
 renderAttributeBlock: aBlock
     renderAttributeBlock := aBlock

@@ -1,0 +1,40 @@
+TDScriptLeafNode{#name:'dateTime',#contents:'[ :topez :objIn :tokens :command | 
+| opts args |
+\"for help: ./dateTime -h\"
+command
+  getOptsMixedLongShort: {#(\'help\' $h #\'none\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
+opts
+  at: \'help\'
+  ifAbsent: [ 
+    | dateTime ms msSince2001 dateTime2001 dateTime2001Ms |
+    dateTime := DateTime fromString: \'9/11/2013 15:55:07\'.
+    ms := dateTime asMillisecondsGmt + (dateTime _localOffset * 1000).
+    dateTime2001 := DateTime fromString: \'1/1/2001 0:00:00\'.
+    dateTime2001Ms := dateTime2001 asMillisecondsGmt
+      + (dateTime2001 _localOffset * 1000).
+    msSince2001 := ms - dateTime2001Ms.
+    {dateTime.
+    ms.
+    dateTime2001Ms.
+    msSince2001.
+    (msSince2001 asHexString).
+    (dateTime asRFC1123String).
+    (DateAndTime
+      date: dateTime asDate
+      time: dateTime asTime
+      offset: (Duration seconds: dateTime _localOffset))} ]
+  ifPresent: [ :ignored | 
+    TDManPage
+      viewManPage:
+        \'NAME
+  dateTime - dateTime utility
+SYNOPSIS
+  dateTime [-h|--help] 
+DESCRIPTION
+EXAMPLES
+  ./dateTime 
+\'
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-19T16:00:27.63569188117981-08:00'],#modificationTime:DateAndTime['2013-11-19T16:23:07.74010610580444-08:00']}

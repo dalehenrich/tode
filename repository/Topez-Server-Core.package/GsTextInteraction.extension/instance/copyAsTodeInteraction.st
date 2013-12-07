@@ -1,6 +1,12 @@
 *topez-server-core
 copyAsTodeInteraction
-  ^ TDText new
-    prompt: self prompt;
-    template: self template;
-    yourself
+  ^ self requestPassword
+    ifTrue: [ 
+      TDText new
+        requestPassword: self prompt;
+        yourself ]
+    ifFalse: [ 
+      TDText new
+        prompt: self prompt;
+        template: self template;
+        yourself ]

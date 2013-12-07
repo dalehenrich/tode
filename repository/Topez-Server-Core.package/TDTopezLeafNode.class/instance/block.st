@@ -1,3 +1,3 @@
 rendering
 block
-  ^ [ :aTopez :objIn :tokens :windowId | aTopez evaluateTopezScript: self contents ]
+  ^ [ :aTopez :objIn :tokens :todeCommand | aTopez evaluateTopezScript: self contents ]

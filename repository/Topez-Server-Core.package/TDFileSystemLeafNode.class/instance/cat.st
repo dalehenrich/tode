@@ -1,7 +1,5 @@
-as yet unclassified
+accessing
 cat
-  | directoryEntry |
-  directoryEntry := self directoryEntry.
-  directoryEntry sourceDirectory
-    fileNamed: directoryEntry name
-    do: [ :fileStream | ^ fileStream contents asString ]
+  ^ (self name endsWith: self stonFileExtension)
+    ifTrue: [ self asTDLeafNode cat ]
+    ifFalse: [ self fileContents ]

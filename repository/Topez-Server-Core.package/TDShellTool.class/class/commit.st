@@ -1,9 +1,4 @@
 as yet unclassified
 commit
-    <topezCommand: 'commit' manPage: #'commitManPage'>
-    ^ [ :topez :objIn :tokens :windowId | 
-    (self
-        topez: topez
-        objIn: objIn
-        tokens: tokens
-        windowId: windowId) commit ]
+  <topezCommand: 'commit' manPage: #'commitManPage'>
+  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) commit ]

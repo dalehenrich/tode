@@ -28,4 +28,4 @@ sentNotImplemented
           ifFalse: [ miniTool builder perform: actionSymbol with: listElement with: index ] ]
       itemSelectedBlock: [ :miniTool :listElement :index :shiftPressed | nil ])
       windowLabel: \'Sent but not Implemented\';
-      yourself) ]'}
+      yourself) ]',#creationTime:nil,#modificationTime:nil}

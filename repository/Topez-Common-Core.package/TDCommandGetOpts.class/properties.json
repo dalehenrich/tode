@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 11/10/2013 06:27",
+	"instvars" : [
+		"stream",
+		"command",
+		"options",
+		"arguments" ],
+	"name" : "TDCommandGetOpts",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

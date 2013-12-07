@@ -4,4 +4,4 @@ index := cls class allInstVarNames indexOfIdentical: #\'restrictedClasses\'.
 set := cls instVarAt: index.
 set removeAll: set.
 false
-  ifTrue: [ SetValuedPathTerm category: \'Index-Family\' ]'}
+  ifTrue: [ SetValuedPathTerm category: \'Index-Family\' ]',#creationTime:nil,#modificationTime:nil}

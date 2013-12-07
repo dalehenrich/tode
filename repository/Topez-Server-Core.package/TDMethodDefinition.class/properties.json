@@ -9,7 +9,8 @@
 		"selector",
 		"deletedMethod",
 		"messagePattern",
-		"messagePatternIsRegex" ],
+		"messagePatternIsRegex",
+		"methodCategory" ],
 	"name" : "TDMethodDefinition",
 	"pools" : [
 		 ],

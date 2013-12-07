@@ -1,0 +1,3 @@
+rsync
+rsyncCopyNodeChildrenUsing: aSTONRsync
+  self subclassResponsibility

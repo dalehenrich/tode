@@ -3,4 +3,4 @@ Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
 Date:   Sun Sep 1 00:25:08 2013 -0700
 
     define projectClass method to use MetacelloCypressBaselineProject for better loading of Cypress packages
-'}
+',#creationTime:nil,#modificationTime:nil}

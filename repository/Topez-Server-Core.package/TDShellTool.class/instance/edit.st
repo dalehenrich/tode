@@ -2,7 +2,8 @@ as yet unclassified
 edit
   "edit [ windowId | windowName ] [ path ]"
 
-  | contextObject |
+  | contextObject theWindowId |
+  theWindowId := nil.
   contextObject := objIn.
   tokens size > 1
     ifTrue: [ 
@@ -10,12 +11,12 @@ edit
       theTokens := tokens copyWithoutIndex: 1.
       (tokens at: 2) isAllDigits
         ifTrue: [ 
-          windowId := (tokens at: 2) asNumber.
+          theWindowId := (tokens at: 2) asNumber.
           theTokens := tokens copyWithoutIndex: 2 ]
         ifFalse: [ 
           ((tokens at: 2) beginsWith: '#')
             ifTrue: [ 
-              windowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
+              theWindowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
               theTokens := tokens copyWithoutIndex: 2 ] ].
       theTokens size > 0
         ifTrue: [ 
@@ -26,12 +27,12 @@ edit
               ((TDEditorSpec topez: topez editorAspect: #'edit')
                 builderAspect: #'view';
                 parentObject: contextNode parent;
-                windowId: windowId;
+                windowId: theWindowId;
                 yourself) ] ].
   contextObject
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         builderAspect: #'view';
-        windowId: windowId;
+        windowId: theWindowId;
         yourself).
   ^ contextObject

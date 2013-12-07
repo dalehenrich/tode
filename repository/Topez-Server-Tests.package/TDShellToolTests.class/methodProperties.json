@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"isAbstract" : "dkh 12/03/2013 11:53" },
 	"instance" : {
 		"createMockClass" : "dkh 09/22/2013 07:02",
 		"createMockClassVersion" : "dkh 09/22/2013 06:59",

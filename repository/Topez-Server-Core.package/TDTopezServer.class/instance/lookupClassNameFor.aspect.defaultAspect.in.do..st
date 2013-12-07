@@ -1,7 +1,7 @@
 accessing
-lookupClassNameFor: anObject aspect: anAspect defaultAspect: defaultAspect in: nodeDictionary do: aBlock
+lookupClassNameFor: aClass aspect: anAspect defaultAspect: defaultAspect in: nodeDictionary do: aBlock
   | class classMap className |
-  class := anObject class.
+  class := aClass.
   [ class notNil and: [ classMap isNil ] ]
     whileTrue: [ 
       classMap := nodeDictionary at: class name ifAbsent: [  ].
@@ -19,7 +19,7 @@ lookupClassNameFor: anObject aspect: anAspect defaultAspect: defaultAspect in: n
         ifTrue: [ 
           "if anAspect is not found at all, default to <defaultAspect>"
           ^ self
-            lookupClassNameFor: anObject
+            lookupClassNameFor: class
             aspect: defaultAspect
             defaultAspect: defaultAspect
             in: nodeDictionary

@@ -1,0 +1,46 @@
+TDScriptLeafNode{#name:'basic',#contents:'[ :topez :objIn :tokens :command | 
+| opts args tree population populationIndexSpec result |
+command
+  getOptsMixedLongShort:
+    {#(\'clean \' $x #\'none\').
+    #(\'create\' $c #\'none\').
+    #(\'halt\' nil #\'none\').
+    #(\'help\' $h #\'none\')}
+  optionsAndArguments: [ :options :arguments | 
+    opts := options.
+    args := arguments ].
+tree := (topez lookup: \'/home/index/family\') dotSelfObject.
+population := tree population.
+populationIndexSpec := GsIndexSpec new
+  equalityIndex: \'each.firstName\' lastElementClass: String;
+  yourself.
+IndexManager current removeAllIncompleteIndexesOn: population.
+[ 
+opts
+  at: \'create\'
+  ifPresent: [ :ignored | populationIndexSpec createIndexesOn: population ].
+opts
+  at: \'halt\'
+  ifPresent: [ :ignored | 
+    population halt.
+    population ]
+  ifAbsent: [ result := population select: { :each | each.firstName < nil } ] ]
+  ensure: [ IndexManager current removeAllIncompleteIndexesOn: population ].
+opts
+  at: \'clean\'
+  ifPresent: [ :ignored | populationIndexSpec removeIndexesFrom: population ].
+opts at: \'help\' ifPresent: [ :ignored | TDManPage viewManPage: \'NAME
+  basic - QueryBlock select query
+SYNOPSIS
+  basic [-h|--help] [-x|--clean] [-c|--create] [--halt]
+DESCRIPTION
+  Run a QueryBlock query against the population in `/home/index/family`. Index
+  created against `each.firstName`. With no options specified the query is run
+  against the population. The script answers the result of the query. 
+
+  -c,  --create   creates an index on the population collection
+  -x,  --clean    removes index from the population collection
+       --halt     halts after the index is created
+  -h,  --help     producce this message    
+\' topez: topez ].
+result ]',#creationTime:DateAndTime['2013-11-11T15:00:26.75465106964111-08:00'],#modificationTime:DateAndTime['2013-11-11T22:07:52.07960605621338-08:00']}

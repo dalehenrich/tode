@@ -19,4 +19,4 @@ allClasses
       do: [ :sel | 
         (detectBlock value: eachClass value: sel)
           ifFalse: [ bad add: eachClass -> sel ] ] ].
-\tbad ]'}
+\tbad ]',#creationTime:nil,#modificationTime:nil}

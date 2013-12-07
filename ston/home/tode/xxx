@@ -1,15 +1,15 @@
 TDScriptLeafNode{#name:'xxx',#contents:'[ :topez :objIn :tokens :windowId | 
-\"#define OOP_CLASS_RCINDEX_BUCKET          88065U  /* v1.1 oop  689 */
-#define OOP_CLASS_BTREE_UNICODE_COMPARISON_QUERY_SPEC       155393U
-#define OOP_CLASS_BTREE_UNICODE_RANGE_COMPARISON_QUERY_SPEC 155649U
-#define OOP_PossibleDeadSymbols         248577U
-#define OOP_CLASS_GsSecureSocket        248833U
-
-\"
-{88065.
-(Object _oop11toOop20: 689).
-(Object _oop20toOop11: 88065).
-(Object _oop20toOop11: 155393).
-(Object _oop20toOop11: 155649).
-248833 - 248577.
-248833 + 256} ]'}
+| dir diskPath gatewayRootNode rootNode path nodePath basePath |
+nodePath := \'/tmp/tests/ston/gateway\'.
+diskPath := \'/tmp/todeRoot\' , nodePath.
+dir := ServerFileDirectory on: diskPath.
+dir assureExistence.
+basePath := \'/tmp/tests/ston\'.
+topez ensureChildrenExistIn: basePath.
+rootNode := topez lookup: basePath.
+path := nodePath findTokens: \'/\'.
+gatewayRootNode := TDObjectGatewayNode new
+  name: path last;
+  contents: \'ServerFileDirectory on: \' , diskPath printString.
+rootNode addChildNode: gatewayRootNode.
+gatewayRootNode ]',#creationTime:DateAndTime['2013-11-12T10:51:54.65047597885132-08:00'],#modificationTime:DateAndTime['2013-12-05T07:28:49.74683403968811-08:00']}

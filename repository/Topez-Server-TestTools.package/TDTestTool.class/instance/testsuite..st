@@ -1,7 +1,9 @@
 as yet unclassified
 testsuite: suite
-  | node testNode |
-  node := topez homeNode.
+  | node testNode rootPath |
+  rootPath := '/tmp/t/'.
+  topez ensureChildrenExistIn: rootPath.
+  node := topez lookup: rootPath.
   testNode := node
     childNamed: 'tests'
     ifAbsent: [ 

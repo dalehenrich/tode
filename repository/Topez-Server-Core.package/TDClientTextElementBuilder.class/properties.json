@@ -10,5 +10,5 @@
 	"name" : "TDClientTextElementBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDClientSourceElementBuilder",
+	"super" : "TDClientSourceLeafNodeElementBuilder",
 	"type" : "normal" }

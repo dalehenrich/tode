@@ -1,0 +1,82 @@
+TDScriptLeafNode{#name:'lockNload',#contents:'[ :topez :objIn :tokens :command | 
+| opts args |
+\"for help: ./lockNload -h\"
+command
+  getOptsMixedLongShort:
+    {#(\'help\' $h #\'none\').
+    #(\'unregister\' $u #\'none\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
+opts
+  at: \'help\'
+  ifAbsent: [ 
+    Metacello new
+      baseline: \'Example\';
+      unregister.
+    Metacello new
+      baseline: \'Alternate\';
+      unregister.
+    Metacello new
+      configuration: \'External\';
+      unregister.
+    Metacello new
+      baseline: \'Sample\';
+      unregister.
+    opts
+      at: \'unregister\'
+      ifAbsent: [ 
+        Metacello new
+          baseline: \'Alternate\';
+          repository: \'filetree:///opt/git/otto/alternate/repository\';
+          lock.
+        Metacello new
+          baseline: \'External\';
+          repository: \'filetree:///opt/git/otto/externalDir/repository\';
+          lock.
+        Metacello new
+          baseline: \'Sample\';
+          repository: \'filetree:///opt/git/otto/sample/repository\';
+          lock.
+        Metacello new
+          baseline: \'Example\';
+          repository: \'filetree:///opt/git/otto/example/repository\';
+          get.
+        Metacello registry
+          baseline: \'Example\';
+          onLock: [ :ex :existing | 
+                Transcript
+                  cr;
+                  show: \'Honoring: \' , existing printString.
+                ex honor ];
+          onConflict: [ :ex :existing :new | 
+                existing locked
+                  ifTrue: [ ex disallow ].
+                ex pass ];
+          load: \'Tests\' ] ]
+  ifPresent: [ :ignored | 
+    TDManPage
+      viewManPage:
+        \'NAME
+  lockNload - lockNload sript utility template
+SYNOPSIS
+  lockNload [-h|--help] [-u|--unregister]
+
+DESCRIPTION
+  lock the External and Sample projects, then load the example proejct using the 
+  following script:
+    ./load --baseline=Example --repo=@exampleDir --load=Tests
+
+  If --unregister is specifed, the projects are unregistered, but no loading is 
+  performed.
+
+
+EXAMPLES
+  ./lockNload --help
+  ./lockNload -h
+
+  ./lockNload --unregister
+
+  ./lockNload
+\'
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-23T13:35:19.71847891807556-08:00'],#modificationTime:DateAndTime['2013-11-23T18:16:09.53980708122253-08:00']}

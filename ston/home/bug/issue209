@@ -2,4 +2,4 @@ TDScriptLeafNode{#name:'issue209',#contents:'[ :topez :objIn :tokens :windowId |
 MCRepositoryGroup default repositoriesDo: [ :rep | rep flushCache ].
 Metacello new
   baseline: \'External\'; repository: \'github://dalehenrich/external:master/repository\';
-  get ]'}
+  get ]',#creationTime:nil,#modificationTime:nil}

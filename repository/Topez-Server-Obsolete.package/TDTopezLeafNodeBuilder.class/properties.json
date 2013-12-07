@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Obsolete",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDTopezLeafNodeBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDExecutableLeafNodeBuilder",
+	"type" : "normal" }

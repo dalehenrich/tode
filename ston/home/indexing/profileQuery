@@ -70,4 +70,4 @@ pfTool := topez toolInstanceFor: \'pf\'.
 (profiles includes: \'debug\')
   ifTrue: [ 
     query bindForElementValue.
-    bruteForceBlock value ] ]'}
+    bruteForceBlock value ] ]',#creationTime:nil,#modificationTime:nil}

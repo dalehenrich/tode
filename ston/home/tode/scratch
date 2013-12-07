@@ -5,4 +5,4 @@ TDTxtLeafNode{#name:'scratch',#contents:Text{#string:'    GsIndexSpec new
         collator: (IcuCollator forLocaleNamed: \'en_GB\')
         requireUnicodeStrings: true;
       createIndexesOn: myEmployees.
-',#runs:RunArray{#runs:[267],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:232,#lastRun:1,#lastOffset:231}}}
+',#runs:RunArray{#runs:[267],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:232,#lastRun:1,#lastOffset:231}},#creationTime:nil,#modificationTime:nil}

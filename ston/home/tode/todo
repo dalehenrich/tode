@@ -5,4 +5,4 @@ TDTxtLeafNode{#name:'todo',#contents:Text{#string:'1. bedit should take an edit 
 5. consider method protocol windows on left?
 6. mv /home/test to /tmp/test/randomNum dir?
 7. isolate window sizing from sesssion descriptions on client
-8. finish implementation of `find symbolists` and `find symbolList` using TDSymbolDictionaryDefinition and TDSymbolListList',#runs:RunArray{#runs:[489,28,21],#values:[[],[TextColor{#color:Color{#rgb:536871424}}],[]],#lastIndex:518,#lastRun:3,#lastOffset:0}}}
+8. finish implementation of `find symbolists` and `find symbolList` using TDSymbolDictionaryDefinition and TDSymbolListList',#runs:RunArray{#runs:[489,28,21],#values:[[],[TextColor{#color:Color{#rgb:536871424}}],[]],#lastIndex:518,#lastRun:3,#lastOffset:0}},#creationTime:nil,#modificationTime:nil}

@@ -9,7 +9,7 @@ looseChanges := node block
 gemNRS := GsNetworkResourceString new
   protocol: \'tcp\';
   node: \'foos\';
-  netldi: \'46227\';
+  netldi: \'53436\';
   resource: \'task\';
   body: GsNetLDI gemnetobject;
   yourself.
@@ -36,4 +36,4 @@ looseChanges
     (systemUser executeString: \'System commitTransaction\')
       ifFalse: [ nil error: \'expected true\' ] ] ]
   ensure: [ systemUser ifNotNil: [ systemUser logout ] ].
-true ]'}
+true ]',#creationTime:nil,#modificationTime:DateAndTime['2013-11-11T15:21:43.1808819770813-08:00']}

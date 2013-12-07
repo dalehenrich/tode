@@ -1,1 +1,1 @@
-TDScriptLeafNode{#name:'warn',#contents:'[ :topez :objIn :tokens :windowId | Warning signal: \'warning\' ]'}
+TDScriptLeafNode{#name:'warn',#contents:'[ :topez :objIn :tokens :windowId | Warning signal: \'warning\' ]',#creationTime:nil,#modificationTime:nil}

@@ -4,4 +4,4 @@ TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'release 1.0.5:
 - fix Issue #92: Mac case insensitivity `must` be addressed
 - fix Issue #97: Load packages from repos with no monticello meta data 
 - fix Issue #101: Refactor MCFileTreeStCypressWriter>>writeDefinitions: to ease Issue #11 integration
-for details: https://github.com/dalehenrich/filetree/issues?direction=desc&milestone=9&page=1&sort=updated&state=closed ',#runs:RunArray{#runs:[16,396],#values:[[],[TextColor{#color:Color{#rgb:536871424}}]],#lastIndex:293,#lastRun:2,#lastOffset:276}}}
+for details: https://github.com/dalehenrich/filetree/issues?direction=desc&milestone=9&page=1&sort=updated&state=closed ',#runs:RunArray{#runs:[16,396],#values:[[],[TextColor{#color:Color{#rgb:536871424}}]],#lastIndex:293,#lastRun:2,#lastOffset:276}},#creationTime:nil,#modificationTime:nil}

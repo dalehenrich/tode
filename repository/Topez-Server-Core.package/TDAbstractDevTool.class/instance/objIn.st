@@ -1,3 +1,3 @@
-metacello
+accessing
 objIn
     ^ objIn

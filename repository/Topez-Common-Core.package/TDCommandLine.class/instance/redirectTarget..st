@@ -1,3 +1,3 @@
-as yet unclassified
+private
 redirectTarget: aString
   redirectTarget := aString

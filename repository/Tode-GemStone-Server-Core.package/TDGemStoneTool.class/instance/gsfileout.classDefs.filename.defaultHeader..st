@@ -14,38 +14,4 @@ gsfileout: directoryPath classDefs: classNameList filename: filename defaultHead
         do: [ :clsName | 
           | cls |
           cls := Smalltalk classNamed: clsName.
-          fileStream
-            nextPut: Character lf;
-            nextPutAll: 'expectvalue %String';
-            nextPut: Character lf;
-            nextPutAll: 'doit';
-            nextPut: Character lf;
-            nextPut: $(;
-            nextPutAll:
-                (cls _definitionInContext: System myUserProfile withConstraints: false);
-            nextPutAll: ') definition.';
-            nextPut: Character lf;
-            nextPut: $%;
-            nextPut: Character lf.
-          cls comment isEmpty not
-            ifTrue: [ 
-              fileStream
-                nextPut: Character lf;
-                nextPutAll: 'expectvalue %Boolean';
-                nextPut: Character lf;
-                lf;
-                nextPutAll: '! ------------------- Class comment for ';
-                nextPutAll: clsName asString;
-                lf;
-                nextPutAll: 'doit';
-                lf;
-                nextPutAll: clsName asString;
-                nextPutAll: ' comment: ';
-                lf;
-                nextPutAll: cls comment printString;
-                nextPut: $.;
-                lf;
-                nextPutAll: 'true';
-                lf;
-                nextPut: $%;
-                lf ] ] ]
+          self gsfileoutClass: cls on: fileStream ] ]

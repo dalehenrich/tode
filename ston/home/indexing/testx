@@ -7,4 +7,4 @@ TDTopezLeafNode{#name:'testx',#contents:'./resetPP
 #test class IXQuerySetValuedPathTermTests
 #ts list errors failures
 #ts list
-ts run IXQuerySetValuedPathTermTests>>testQuery3'}
+ts run IXQuerySetValuedPathTermTests>>testQuery3',#creationTime:nil,#modificationTime:nil}

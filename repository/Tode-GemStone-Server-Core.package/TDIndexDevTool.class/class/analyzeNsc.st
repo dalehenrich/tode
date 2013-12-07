@@ -1,9 +1,4 @@
 as yet unclassified
 analyzeNsc
-    <topezCommand: 'analyzeNsc' manPage: #'analyzeNscManPage'>
-    ^ [ :topez :objIn :tokens :windowId | 
-    (TDIndexDevTool
-        topez: topez
-        objIn: objIn
-        tokens: tokens
-        windowId: windowId) analyzeNsc ]
+  <topezCommand: 'analyzeNsc' manPage: #'analyzeNscManPage'>
+  ^ [ :topez :objIn :tokens :command | (TDIndexDevTool topez: topez objIn: objIn todeCommand: command) analyzeNsc ]

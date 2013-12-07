@@ -1,9 +1,4 @@
 as yet unclassified
 configs
   <topezCommand: 'configs' manPage: #'configsManPage'>
-  ^ [ :topez :objIn :tokens :windowId | 
-  (self
-    topez: topez
-    objIn: objIn
-    tokens: tokens
-    windowId: windowId) configs ]
+  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) configs ]

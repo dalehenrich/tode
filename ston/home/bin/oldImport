@@ -4,4 +4,4 @@ stonTool := topez toolInstanceFor: \'ston\'.
 stonTool
   stonImportFrom: \'/opt/git/tode/ston/home.ston\' to: (topez lookup: \'/\');
   stonImportFrom: \'/opt/git/tode/ston/bin.ston\' to: (topez lookup: \'/home\').
-topez setCurrentNode: (topez lookup: \'/home\') ]'}
+topez setCurrentNode: (topez lookup: \'/home\') ]',#creationTime:nil,#modificationTime:nil}

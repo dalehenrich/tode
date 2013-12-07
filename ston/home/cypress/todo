@@ -1,1 +1,1 @@
-TDTxtLeafNode{#name:'todo',#contents:Text{#string:'',#runs:RunArray{#runs:[],#values:[],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}}}
+TDTxtLeafNode{#name:'todo',#contents:Text{#string:'',#runs:RunArray{#runs:[],#values:[],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:nil,#modificationTime:nil}

@@ -19,6 +19,12 @@ printOn: aStream
     nextPutAll: self description;
     lf;
     lf;
+    nextPutAll: 'EXAMPLES';
+    lf;
+    nextPutAll: '  ';
+    nextPutAll: self examples;
+    lf;
+    lf;
     nextPutAll: 'SEE ALSO';
     lf;
     nextPutAll: '  ';

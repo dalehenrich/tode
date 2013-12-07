@@ -15,4 +15,4 @@ query size == expected size
 intersection := query intersection: expected.
 intersection size == query size
   ifFalse: [ nil error: \'intersection size mismatch\' ].
-queryBag ]'}
+queryBag ]',#creationTime:nil,#modificationTime:nil}

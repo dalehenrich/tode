@@ -1,5 +1,1 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'prompt:
-
-Then 
-  implement TDRepositoryPackageBrowser>>savePackage:selectedIndex:
-',#runs:RunArray{#runs:[17,65],#values:[[],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:9,#lastRun:1,#lastOffset:8}}}
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'TDFileSystemLeafNode>>stonContents and TDFileSystemLeafNode>>stonContents: should be nuked ... edit/save is working ... now need to get all of the styling right when we\'re doing the proxy ... sytax highlighting, etc. ...',#runs:RunArray{#runs:[34,5,35,146],#values:[[],[TextColor{#color:Color{#rgb:0}}],@6,[@8]],#lastIndex:220,#lastRun:4,#lastOffset:145}},#creationTime:nil,#modificationTime:DateAndTime['2013-12-05T23:20:55.10742807388306-08:00']}

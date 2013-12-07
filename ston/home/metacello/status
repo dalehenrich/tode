@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 52021a7338bc1e26929a1c3099232754e9a7f8bd
+TDTxtLeafNode{#name:'status',#contents:'commit 4e8b9cd0fd22bf44c015a4d295ce66c65b8590ec
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Tue Sep 24 10:07:27 2013 -0700
+Date:   Sun Nov 24 21:04:59 2013 -0800
 
-    Issue #202: MetacelloScriptingEnsureLoadedTestCase>>testWarningDuringLoad log package contents ... classes defined in package ... may have to resort to snapshot spelunking?
-'}
+    Issue #215: add tests cases and fix a minor bug (which is why tests cases are important)
+',#creationTime:nil,#modificationTime:DateAndTime['2013-11-26T10:02:17.39189291000366-08:00']}

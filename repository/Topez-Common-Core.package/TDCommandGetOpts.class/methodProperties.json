@@ -1,0 +1,24 @@
+{
+	"class" : {
+		"getOptsFor:spec:do:nonOptionsDo:" : "dkh 11/10/2013 07:16",
+		"getOptsLongFor:longOptionSpec:shortOptionAliases:do:nonOptionsDo:" : "dkh 11/11/2013 16:42",
+		"parseCommand:" : "dkh 11/10/2013 07:15" },
+	"instance" : {
+		"command" : "dkh 11/10/2013 06:27",
+		"getOpts:do:nonOptionsDo:" : "dkh 11/10/2013 12:54",
+		"getOptsLong:do:nonOptionsDo:" : "dkh 11/11/2013 16:43",
+		"getOptsLong:short:do:nonOptionsDo:" : "dkh 11/11/2013 16:40",
+		"getOptsMixedLongShort:do:nonOptionsDo:" : "dkh 11/11/2013 16:41",
+		"parseArgToken:" : "dkh 11/11/2013 08:35",
+		"parseCommand" : "dkh 11/10/2013 06:27",
+		"parseCommand:" : "dkh 11/10/2013 07:15",
+		"parseLongOptionArg:for:" : "dkh 11/11/2013 08:25",
+		"parseLongOptionName" : "dkh 11/10/2013 13:37",
+		"parseLongOptions:shortOptions:do:nonOptionsDo:" : "dkh 11/16/2013 12:55",
+		"parseNonOptionArgs:" : "dkh 11/11/2013 08:11",
+		"parseOptionArg:for:" : "dkh 11/11/2013 08:21",
+		"parseOptionSpec:" : "dkh 11/10/2013 06:27",
+		"parseOptions:expectDash:do:nonOptionsDo:" : "dkh 11/10/2013 06:27",
+		"resolveAliasFor:optionSpecs:shortOptions:do:" : "dkh 11/16/2013 12:46",
+		"skipWhiteSpace" : "dkh 11/10/2013 06:27",
+		"stream:" : "dkh 11/10/2013 07:16" } }

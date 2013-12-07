@@ -16,28 +16,22 @@ gsfileOutMethods: cls on: aStream
     lf.
   sels := SortedCollection withAll: cls class selectors.
   1 to: sels size do: [ :i | 
-    | sel |
+    | sel nativeStream |
     sel := sels at: i.
-    aStream
-      nextPutAll: 'category: ''';
-      nextPutAll: (cls class _categoryOfSelector: sel);
-      nextPut: $';
-      lf.
-    cls class fileOutMethod: sel on: aStream ].
+    nativeStream := WriteStream on: String new.
+    cls class fileOutMethod: sel on: nativeStream.
+    aStream nextPutAll: nativeStream contents encodeAsUTF8 asString ].
   aStream
     nextPutAll: '! ------------------- Instance methods for ';
     nextPutAll: nm;
     lf.
   sels := SortedCollection withAll: cls selectors.
   1 to: sels size do: [ :i | 
-    | sel |
+    | sel nativeStream |
     sel := sels at: i.
-    aStream
-      nextPutAll: 'category: ''';
-      nextPutAll: (cls _categoryOfSelector: sel);
-      nextPut: $';
-      lf.
-    cls fileOutMethod: sel on: aStream ].
+    nativeStream := WriteStream on: String new.
+    cls fileOutMethod: sel on: nativeStream.
+    aStream nextPutAll: nativeStream contents encodeAsUTF8 asString ].
   cat := cls _classCategory.	"File out the category name"
   cat ~~ nil
     ifTrue: [ 

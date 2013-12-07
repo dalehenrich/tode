@@ -7,6 +7,7 @@ listContents: limit
     do: [ :directoryEntry | 
       | child |
       child := directoryEntry asTDFileSystemNode.
+      child parent: self.
       count := count + 1.
       (limit > 0 and: [ count > limit ])
         ifTrue: [ 

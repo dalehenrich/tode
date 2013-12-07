@@ -21,4 +21,4 @@ allClasses
         ar := detectBlock value: eachClass value: sel.
         (ar at: 1) isEmpty
           ifFalse: [ bad add: eachClass -> {sel. ar} ] ] ].
-bad ]'}
+bad ]',#creationTime:nil,#modificationTime:nil}

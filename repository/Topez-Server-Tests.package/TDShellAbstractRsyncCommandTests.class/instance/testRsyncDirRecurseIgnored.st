@@ -1,0 +1,3 @@
+tests
+testRsyncDirRecurseIgnored
+  self rsyncDirRecurse: ''

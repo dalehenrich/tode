@@ -1,0 +1,43 @@
+TDScriptLeafNode{#name:'runZinc',#contents:'[ :topez :objIn :tokens :command | 
+| opts args portNumber |
+\"for help: ./runZinc -h\"
+command
+  getOptsMixedLongShort:
+    {#(\'help\' $h #\'none\').
+    #(\'port\' $p #\'required\').
+    #(\'wagszinc\' nil #\'none\').
+    #(\'znzinc\' nil #\'none\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
+opts
+  at: \'port\'
+  ifAbsent: [ portNumber := 4343 ]
+  ifPresent: [:port | portNumber := port asNumber].
+opts
+  at: \'wagszinc\'
+  ifAbsent: [  ]
+  ifPresent: [:ignored| (WAGsZincAdaptor port: portNumber) start ].
+opts
+  at: \'znzinc\'
+  ifAbsent: [  ]
+  ifPresent: [:ignored| (ZnZincServerAdaptor port: portNumber) start ].
+opts
+  at: \'help\'
+  ifAbsent: [  ]
+  ifPresent: [ :ignored | 
+    TDManPage
+      viewManPage:
+        \'NAME
+  runZinc - runZinc sript utility template
+SYNOPSIS
+  runZinc [-h|--help] [--wagszinc] [--znzinc] [--port=<port-number>]
+DESCRIPTION
+  run WAGsZincAdaptor with --wagszinc
+  run ZnZincServerAdaptor with --znzinc
+EXAMPLES
+  ./runZinc --wagszinc
+  ./runZinc --znzinc
+
+\'
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T23:30:30.64461088180542-08:00'],#modificationTime:DateAndTime['2013-11-12T23:37:00.06513595581055-08:00']}

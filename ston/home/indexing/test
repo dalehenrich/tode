@@ -17,4 +17,4 @@ switch = \'run\'
   ifTrue: [ tsTool tsrun: \'IXQuerySetValuedPathTermTests>>testIndexedQuery2\' ]
   ifFalse: [ 
     tsTool tslist: #(\'errors\' \'failures\') openEditor: true.
-    tsTool testSummary ] ]'}
+    tsTool testSummary ] ]',#creationTime:nil,#modificationTime:nil}

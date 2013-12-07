@@ -1,0 +1,52 @@
+TDScriptLeafNode{#name:'install',#contents:'[ :topez :objIn :tokens :command | 
+| opts args indexRepo petitRepo mcTool |
+\"for help: ./install -h\"
+mcTool := topez toolInstanceFor: \'mc\'.
+command
+  getOptsMixedLongShort:
+    {#(\'help\' $h #\'none\').
+    #(\'index\' $i #\'required\').
+    #(\'petit\' $p #\'required\')}
+  optionsAndArguments: [ :options :operands | 
+    opts := options.
+    args := operands ].
+opts
+  at: \'index\'
+  ifAbsent: [ indexRepo := mcTool resolveAtPathReference: \'@/home/indexing/repo\' ]
+  ifPresent: [ :repoPath | indexRepo := mcTool resolveRepositoryReference: repoPath ].
+opts
+  at: \'petit\'
+  ifAbsent: [ petitRepo := mcTool resolveAtPathReference: \'@/home/petit/repo\' ]
+  ifPresent: [ :repoPath | petitRepo := mcTool resolveRepositoryReference: repoPath ].
+opts
+  at: \'help\'
+  ifAbsent: [ 
+    mcTool mcload: \'Index-Family\' from: indexRepo.
+    mcTool mcload: \'PetitTests\' from: petitRepo.
+    mcTool mcload: \'Index-Tests\' from: indexRepo.
+    mcTool mcload: \'Gemstone-Btree-Tests\' from: indexRepo ]
+  ifPresent: [ :ignored | 
+    TDManPage
+      viewManPage:
+        \'NAME
+  install - install Index-Family, Index-Tests, Gemstone-Btree-Tests packages
+SYNOPSIS
+  install [-h|--help]
+\t\t   [--index=<index-repository>]
+\t\t   [--petit=<petit-repository>]
+DESCRIPTION
+  Also installs PetitTests, since they are currently a pre-requisite of Index-Tests.
+
+  The default <index-repository> is @/home/index/repo. Use the 
+  The default <petit-repository> is @/home/petit/repo.
+EXAMPLES
+
+  ./install 
+
+  ./install --index=@/home/index/repo 
+            --petit=@/home/petit/repo
+
+  ./install --index=filetree:///opt/git/tode/repository 
+            -p filetree:///opt/git/PetitParser/packages
+\'
+      topez: topez ] ]',#creationTime:DateAndTime['2013-11-12T21:35:05.97038102149963-08:00'],#modificationTime:DateAndTime['2013-11-15T19:41:54.69607710838318-08:00']}

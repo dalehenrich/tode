@@ -37,4 +37,4 @@ repo class description = MCFileTreeRepository description
               name: \'status\';
               yourself) ].
     statusNode contents: status ].
-loaded ]'}
+loaded ]',#creationTime:nil,#modificationTime:nil}

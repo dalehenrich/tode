@@ -1,11 +1,11 @@
 {
 	"class" : {
-		"deploy" : "dkh 06/29/2013 18:22",
+		"deploy" : "dkh 11/10/2013 10:12",
 		"deployManPage" : "dkh 07/02/2013 00:02",
-		"distribute" : "dkh 06/30/2013 08:52",
+		"distribute" : "dkh 11/10/2013 10:13",
 		"distributeManPage" : "dkh 06/30/2013 08:54",
 		"installOn:" : "dkh 10/05/2013 14:56",
-		"reconcile" : "dkh 06/30/2013 07:23",
+		"reconcile" : "dkh 11/10/2013 10:13",
 		"reconcileManPage" : "dkh 10/05/2013 14:59" },
 	"instance" : {
 		"attributeMap" : "dkh 06/29/2013 21:53",

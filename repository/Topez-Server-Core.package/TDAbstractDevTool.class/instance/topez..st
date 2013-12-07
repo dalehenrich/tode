@@ -1,3 +1,3 @@
-metacello
+accessing
 topez: aTopez
     topez := aTopez

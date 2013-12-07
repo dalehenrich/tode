@@ -19,8 +19,7 @@ haloProcessesBlock: aTDTopezServer
           debugTool := TDDebugTool
             topez: parentNode topez
             objIn: nil
-            tokens: #()
-            windowId: nil.
+            todeCommand: nil.
           debugNode := debugTool
             debugNode: theNode
             process: process

@@ -7,6 +7,6 @@ evaluateTopezScriptCommand: command
       tokens isEmpty
         ifFalse: [ 
           | commandResult |
-          commandResult := self evaluateTokens: tokens objIn: objIn value.
+          commandResult := self evaluateCommand: command objIn: objIn value.
           result := commandResult resultObject ] ].
   ^ result

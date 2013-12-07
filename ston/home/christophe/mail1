@@ -20,4 +20,4 @@ methodSections
       at: methodSection attributePath
       ifAbsent: [ methodSectionMap at: methodSection attributePath put: OrderedCollection new ].
     coll add: methodSection ].
-methodSectionMap ]'}
+methodSectionMap ]',#creationTime:nil,#modificationTime:nil}

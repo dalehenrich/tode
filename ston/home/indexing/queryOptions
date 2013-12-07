@@ -11,4 +11,4 @@ TDSmalltalkLeafNode{#name:'queryOptions',#contents:'#(#\'applyDeMorgansLaws\' #\
       compile: (formatter value: iv , \': aBoolean \' , iv , \' := aBoolean\');
       compile: (formatter value: \'set\' , iv capitalized , \' \' , iv , \' := true\');
       compile:
-          (formatter value: \'clear\' , iv capitalized , \' \' , iv , \' := false\') ]'}
+          (formatter value: \'clear\' , iv capitalized , \' \' , iv , \' := false\') ]',#creationTime:nil,#modificationTime:nil}

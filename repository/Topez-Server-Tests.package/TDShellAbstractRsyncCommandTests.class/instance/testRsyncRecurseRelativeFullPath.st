@@ -1,0 +1,3 @@
+tests
+testRsyncRecurseRelativeFullPath
+  self rsyncRecurseRelativeFullPath: false

@@ -1,6 +1,6 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 56044a6330cfec5950711e8bb8b5f643b1733fb1
+TDTxtLeafNode{#name:'status',#contents:'commit f067b7fe5d170078e4da00c35c8046deee3890e5
 Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Fri Nov 8 16:07:38 2013 -0800
+Date:   Sat Nov 9 15:30:44 2013 -0800
 
-    straighten out selectors in GsConfirmInteraction (#cancel was overloaded)
-'}
+    implement GsInspectInteraction to support tODE and GemTools
+',#creationTime:nil,#modificationTime:nil}

@@ -1,4 +1,4 @@
-as yet unclassified
+metacello
 getRegistrationFor: configName
   "baseline then config is a better lookup order"
 

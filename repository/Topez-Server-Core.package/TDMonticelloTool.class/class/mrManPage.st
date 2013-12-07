@@ -9,6 +9,8 @@ SYNOPSIS
      add <repository-spec> @<workingCopy-path>
      add @<repository-path> @<workingCopy-path>
   mr create <repository-spec>
+  mr creds <repository-spec> <username> <password>
+     creds @<repository-path> <username> <password>
   mr flush 
   mr group <package-name>
      group @<workingCopy-path>

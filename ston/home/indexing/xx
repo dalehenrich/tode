@@ -21,4 +21,4 @@ profMonitor
       windowocation: #\'debugger\';
       yourself).
 ^ profMonitor ]
-  ensure: [ indexSpec removeIndexesFrom: nsc ]'}
+  ensure: [ indexSpec removeIndexesFrom: nsc ]',#creationTime:nil,#modificationTime:nil}

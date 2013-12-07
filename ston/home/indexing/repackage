@@ -35,4 +35,4 @@ family classDefinitions
                   ifTrue: [ query pasteTDDefinition: classDef ]
                   ifFalse: [ 
                     (classDef theClass inheritsFrom: PathEvaluator)
-                      ifTrue: [ evaluators pasteTDDefinition: classDef ] ] ] ] ] ]'}
+                      ifTrue: [ evaluators pasteTDDefinition: classDef ] ] ] ] ] ]',#creationTime:nil,#modificationTime:nil}

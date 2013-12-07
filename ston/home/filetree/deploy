@@ -3,4 +3,4 @@ TDScriptLeafNode{#name:'deploy',#contents:'^ [ :topez \"This is source for a blo
   topez: topez
   objIn: objIn
   tokens: tokens
-  windowId: windowId) deploy ]'}
+  windowId: windowId) deploy ]',#creationTime:nil,#modificationTime:nil}

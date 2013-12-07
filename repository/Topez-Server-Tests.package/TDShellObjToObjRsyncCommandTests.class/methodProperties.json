@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"lookupDestNode:" : "dkh 12/06/2013 17:46",
+		"lookupSrcNode:" : "dkh 12/06/2013 17:46",
+		"testLeafNodeRsyncMatches" : "dkh 12/06/2013 17:46",
+		"testRsyncFileRelativeTrailingSlash" : "dkh 12/06/2013 17:52" } }

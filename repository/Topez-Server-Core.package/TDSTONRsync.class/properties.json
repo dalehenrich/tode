@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rsyncOptions",
+		"rsyncArgs",
+		"rsyncTool",
+		"destinationNode" ],
+	"name" : "TDSTONRsync",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

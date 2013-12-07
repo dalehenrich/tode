@@ -1,0 +1,4 @@
+as yet unclassified
+removeAsChildOfFileSystemDirectoryNode: aTDFileSystemDirectoryNode
+  ^ self basicContents
+    removeAsChildOfFileSystemDirectoryNode: aTDFileSystemDirectoryNode

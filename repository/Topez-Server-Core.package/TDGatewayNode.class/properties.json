@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"creationTime",
+		"modificationTime",
+		"readMe" ],
 	"name" : "TDGatewayNode",
 	"pools" : [
 		 ],

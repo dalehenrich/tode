@@ -24,4 +24,4 @@ pfTool
   pfmonitor: sampleBlock;
   pfview: \'Indexed: \' , nsc size printString;
   pfclean ]
-  ensure: [ nscList do: [ :each | each _hasIndexes ifTrue: [ indexSpec removeIndexesFrom: each ]] ] ]'}
+  ensure: [ nscList do: [ :each | each _hasIndexes ifTrue: [ indexSpec removeIndexesFrom: each ]] ] ]',#creationTime:nil,#modificationTime:nil}

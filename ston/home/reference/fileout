@@ -3,4 +3,4 @@ TDSmalltalkLeafNode{#name:'fileout',#contents:'| file |
   do: [ :name | 
     file := GsFile openWriteOnServer: \'/tmp/\' , name , \'.gs\'.
     SystemOrganizer new fileOutCategory: name asSymbol on: file.
-    file close ]'}
+    file close ]',#creationTime:nil,#modificationTime:nil}

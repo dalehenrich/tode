@@ -1,3 +1,3 @@
-as yet unclassified
+metacello
 packagesForProjectSpec: projectSpec
   ^ projectSpec version packages

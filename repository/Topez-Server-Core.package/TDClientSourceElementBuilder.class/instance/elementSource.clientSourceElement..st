@@ -1,4 +1,4 @@
 as yet unclassified
 elementSource: source clientSourceElement: clientSourceElement
-  self object contents: source.
+  self object elementSource: source.
   clientSourceElement topez commitTransaction

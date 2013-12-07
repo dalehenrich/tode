@@ -47,4 +47,4 @@ TDTxtLeafNode{#name:'todo',#contents:Text{#string:'[x]1. rename GsQueryClause to
     example ... this is where I saw the initial problem
 20. Remove redundant predicates can be done based on variable names and variable
     values
-[x]21. repackage to allow parallel work to go on ... either that or fix merge tools',#runs:RunArray{#runs:[93,1,2088,366,1,619,1,82],#values:[[],[TextEmphasis{#emphasisCode:1,#setMode:true}],@6,[TextColor{#color:Color{#rgb:0}}],[@10,TextEmphasis{#emphasisCode:1,#setMode:true}],[@10],[@10,TextEmphasis{#emphasisCode:1,#setMode:true}],@14],#lastIndex:3170,#lastRun:8,#lastOffset:0}}}
+[x]21. repackage to allow parallel work to go on ... either that or fix merge tools',#runs:RunArray{#runs:[93,1,2088,366,1,619,1,82],#values:[[],[TextEmphasis{#emphasisCode:1,#setMode:true}],@6,[TextColor{#color:Color{#rgb:0}}],[@10,TextEmphasis{#emphasisCode:1,#setMode:true}],[@10],[@10,TextEmphasis{#emphasisCode:1,#setMode:true}],@14],#lastIndex:3170,#lastRun:8,#lastOffset:0}},#creationTime:nil,#modificationTime:nil}

@@ -3,4 +3,4 @@ TDSmalltalkLeafNode{#name:'classFileout',#contents:'| file |
   do: [ :name | 
     file := GsFile openWriteOnServer: \'/Users/dhenrich/cypress/\' , name , \'.gs\'.
     (Smalltalk at: name asSymbol) fileOutClassOn: file.
-    file close ]'}
+    file close ]',#creationTime:nil,#modificationTime:nil}

@@ -3,4 +3,4 @@ repo := CypressFileSystemRepository
   onUrl: \'cypressft:/export/galbadia1/users/rsargent/git/gitRepos/\' asUrl
   alias: \'Cypress\'.
 repo gemStoneFileoutsEnabled: true.
-repo'}
+repo',#creationTime:nil,#modificationTime:nil}

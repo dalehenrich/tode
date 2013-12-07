@@ -1,7 +1,5 @@
 as yet unclassified
 dbstack
-  ^ (topez commands at: 'ds') block
-    value: topez
-    value: self defaultHomeNode
-    value: {'ds'}
-    value: nil
+  | dsTool |
+  dsTool := topez toolInstanceFor: 'ds'.
+  ^ dsTool ds: self defaultHomeNode level: 1

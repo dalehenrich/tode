@@ -1,3 +1,3 @@
 rendering
 block
-  ^ [ :aTopez :objIn :tokens :windowId | self dotSelfObject ]
+  ^ [ :aTopez :objIn :tokens :todeCommand | self dotSelfObject ]

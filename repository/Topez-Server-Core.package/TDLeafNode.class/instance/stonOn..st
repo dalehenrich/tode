@@ -1,7 +1,7 @@
-as yet unclassified
+ston
 stonOn: stonWriter
   stonWriter
     writeObject: self
     streamMap: [ :dictionary | 
-      #(#'name' #'contents')
+      #(#'name' #'contents' #'creationTime' #'modificationTime')
         do: [ :each | dictionary at: each asSymbol put: (self instVarNamed: each) ] ]

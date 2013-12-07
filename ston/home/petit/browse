@@ -4,4 +4,4 @@ findTool := topez toolInstanceFor: \'find\'.
 defs := OrderedCollection new.
 #(\'PetitParser-cypress\' \'PetitTests\' \'PetitSmalltalk\')
   do: [ :packageName | defs addAll: (findTool findPackageDefinitions: packageName) ].
-(topez toolInstanceFor: \'browse\') browseClasses: defs ]'}
+(topez toolInstanceFor: \'browse\') browseClasses: defs ]',#creationTime:nil,#modificationTime:nil}

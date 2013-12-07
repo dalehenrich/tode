@@ -12,4 +12,4 @@ fileoutDir := ServerFileDirectory on: \'/opt/git/CypressReferenceImplementation\
     (MCStWriter on: stream) writeSnapshot: snapshot.
     fileoutDir
       forceNewFileNamed: packageName , \'.st\'
-      do: [ :fileStream | fileStream nextPutAll: stream contents ] ] ]'}
+      do: [ :fileStream | fileStream nextPutAll: stream contents ] ] ]',#creationTime:nil,#modificationTime:nil}

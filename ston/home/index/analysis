@@ -42,4 +42,4 @@ INEFFICIENT METHODS with new BtreeComparisonForCompare classes:
   BtreeNode>>_compareKey:greaterThanOrEqualToEntryAt:
   BtreeNode>>_compareKey:lessThanEntryAt:
   BtreeNode>>_compareKey:lessThanOrEqualToEntryAt:
-  BtreeNode>>_compareLastKeyLessThanOrEqualToKey:value:',#runs:RunArray{#runs:[75,380,1517],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:1023}}],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:386,#lastRun:2,#lastOffset:310}}}
+  BtreeNode>>_compareLastKeyLessThanOrEqualToKey:value:',#runs:RunArray{#runs:[75,380,1517],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:1023}}],[TextColor{#color:Color{#rgb:0}}]],#lastIndex:386,#lastRun:2,#lastOffset:310}},#creationTime:nil,#modificationTime:nil}

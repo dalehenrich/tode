@@ -1,0 +1,38 @@
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'RelDateTimeValueHolder [ 
+// ints[0]    5 bits cachedValueKind, 
+//            4 bits millisecondCacheKind (16r0 for REL_SMALL_INT_MILLI_SECS)*, 
+//            1 bits exactMillisecondMatch (16r1 - true, 16r0 - false)
+//           51 bits spare
+// ints[1]    Smallinteger representing milliseconds since January 1, 2001
+//
+// 2013-11-09T15:55:07-08:00
+//
+\tkey: 9/11/2013 15:55:07
+\tvalue: 9/11/2013 15:55:07
+\t\tobj[0] 523
+\t\tobj[1] 405705307000
+\t\tint[0] 20b
+\t\tint[1] 5e75ebb378
+\t\tbyte[0][0-3] 0 0 0 0
+\t\tbyte[0][4-7] 0 0 2 b
+\t\tbyte[1][0-3] 78 b3 eb 75
+\t\tbyte[1][4-7] 5e 0 0 0
+\t\trelTypeValue: 19
+\t\trelType: REL_DateTime_CACHE
+
+\t\t\tREL_FULLY_CACHED
+\t\t\tmillisecondCacheKind: REL_SMALL_INT_MILLI_SECS
+\t\t\tmilliseconds: 405705307000
+\t\t\texactMillisecondMatch: true
+\t\t\tfullyInstantiatedValue: 9/11/2013 15:55:07
+\t\t\t                   key: 9/11/2013 15:55:07
+]
+* millisecondCacheKind:
+  00 REL_SMALL_INT_MILLI_SECS
+  01 REL_LRG_INT_MILLI_SECS
+  02 REL_ScaledDecimal_MILLI_SECS
+  03 REL_FRACTION_MILLI_SECS
+  04 REL_SMALL_DBL_MILLI_SECS
+  05 REL_FLOAT_MILLI_SECS
+  06 REL_DECIMAL_FLOAT_MILLI_SECS
+',#runs:RunArray{#runs:[117,24,184,25,78,12,23,10,193,24,18,12,126,53,1,27,1,33,1,28,1,29,1,25,1,33,1],#values:[[TextColor{#color:Color{#rgb:0}}],[TextColor{#color:Color{#rgb:536871424}}],@6,[TextColor{#color:Color{#rgb:1023}}],@6,@12,@6,@12,@6,@9,@6,@12,@6,@9,@6,@9,@6,@9,@6,@9,@6,@9,@6,@9,[@7],@9,[@7]],#lastIndex:147,#lastRun:3,#lastOffset:5}},#creationTime:DateAndTime['2013-11-15T20:05:02.99008011817932-08:00'],#modificationTime:DateAndTime['2013-11-19T16:25:11.121169090271-08:00']}

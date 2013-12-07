@@ -1,0 +1,3 @@
+TDObjectGatewayNode{#name:'repo',#contents:'(TDMonticelloRepository
+  fromDescription: \'filetree:///opt/git/PharoCompatibility/repository\')
+  repository'}

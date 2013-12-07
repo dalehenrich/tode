@@ -6,7 +6,7 @@
 		"addBlock:" : "dkh 11/29/2012 17:59",
 		"basicContents" : "DataCurator 11/30/2012 10:51",
 		"basicContents:" : "DataCurator 11/30/2012 10:51",
-		"block" : "dkh 06/05/2013 10:53",
+		"block" : "dkh 11/10/2013 10:56",
 		"childNamed:ifAbsent:" : "DataCurator 01/09/2013 18:37",
 		"childrenAndNamesDo:" : "dkh 04/11/2013 20:59",
 		"childrenDo:" : "DataCurator 12/12/2012 16:18",
@@ -35,5 +35,9 @@
 		"renderAttributeBlock" : "DataCurator 12/07/2012 15:54",
 		"renderAttributeBlock:" : "DataCurator 12/07/2012 15:54",
 		"renderNameTextAttributes" : "DataCurator 12/07/2012 16:02",
+		"rsyncChildNamed:ifAbsent:" : "dkh 11/10/2013 22:30",
+		"rsyncCopyLeafNode:preserveTimes:" : "dkh 11/26/2013 11:11",
+		"rsyncCopyNodeChildrenUsing:" : "dkh 11/26/2013 11:02",
+		"rsyncCopyNodeUsing:" : "dkh 11/26/2013 11:00",
 		"stonExportUsing:to:" : "dkh 09/14/2013 02:03",
 		"stonOn:" : "dkh 05/17/2013 18:23" } }

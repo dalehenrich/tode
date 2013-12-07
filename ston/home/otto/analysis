@@ -1,0 +1,10 @@
+TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'/opt/git/otto/example -> github://dalehenrich/example:otto/repository
+                         filetree:///opt/git/otto/example/repository
+/opt/git/otto/extDir  -> http://ss3.gemstone.com/ss/external
+                         server:///opt/git/otto/extDir
+/opt/git/otto/sample  -> github://dalehenrich/sample:otto/repository
+                         filetree:///opt/git/otto/sample/repository
+
+example will be the primary project and there will be dependencies on external and sample. All of the project references will use the ss3 or github form of the repository:
+
+  ./load --baseline=Example --repo=@exampleDir --load=Tests',#runs:RunArray{#runs:[25,7,63,43,26,90,26,69,42,234],#values:[[TextColor{#color:Color{#rgb:0}}],[TextEmphasis{#emphasisCode:0,#setMode:true}],@6,[TextColor{#color:Color{#rgb:536871424}}],@6,[TextEmphasis{#emphasisCode:0,#setMode:true}],[@7],[@10],@11,[TextEmphasis{#emphasisCode:0,#setMode:true}]],#lastIndex:100,#lastRun:4,#lastOffset:4}},#creationTime:DateAndTime['2013-11-17T15:11:44.84781908988953-08:00'],#modificationTime:DateAndTime['2013-11-18T07:17:18.73640108108521-08:00']}

@@ -1,3 +1,3 @@
 as yet unclassified
 contents
-    ^ contents
+  ^ self basicContents

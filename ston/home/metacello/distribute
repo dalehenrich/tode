@@ -4,4 +4,4 @@ TDScriptLeafNode{#name:'distribute',#contents:'\"This is source for a block.  \"
     topez: topez
     objIn: objIn
     tokens: tokens
-    windowId: windowId) distribute ]'}
+    windowId: windowId) distribute ]',#creationTime:nil,#modificationTime:nil}
