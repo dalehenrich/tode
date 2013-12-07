@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"isAbstract" : "dkh 12/06/2013 17:42" },
+		"isAbstract" : "dkh 12/06/2013 18:34" },
 	"instance" : {
 		"compareVersionsEqual:" : "dkh 12/06/2013 17:42",
 		"differentLeafNodes" : "dkh 12/06/2013 17:42",
@@ -14,14 +14,14 @@
 		"lookupObjNode:" : "dkh 12/06/2013 17:42",
 		"lookupSrcNode:" : "dkh 12/06/2013 17:42",
 		"removeTestRootNode" : "dkh 12/06/2013 17:42",
-		"rootNodePath" : "dkh 12/06/2013 17:42",
+		"rootNodePath" : "dkh 12/06/2013 18:05",
 		"rsync:" : "dkh 12/06/2013 17:49",
 		"rsyncChecksum:" : "dkh 12/06/2013 17:50",
 		"rsyncDirRecurse:" : "dkh 12/06/2013 17:50",
 		"rsyncFileRelative:" : "dkh 12/06/2013 17:50",
 		"rsyncRecurseRelativeFullPath:" : "dkh 12/06/2013 17:50",
 		"rsyncRecurseRelativeRelativePath:" : "dkh 12/06/2013 17:50",
-		"runRsyncCommandLine:" : "dkh 12/06/2013 17:49",
+		"runRsyncCommandLine:" : "dkh 12/06/2013 18:27",
 		"runStonCommandLine:" : "dkh 12/06/2013 17:49",
 		"ryncModifyWindow:" : "dkh 12/06/2013 17:50",
 		"setUp" : "dkh 12/06/2013 17:42",

@@ -1,3 +1,3 @@
 as yet unclassified
 defaultHomeTestPath
-  ^ '/home/tests/'
+  ^ '/tmp/t/tests/'
