@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 12/06/2013 17:46",
+	"instvars" : [
+		 ],
+	"name" : "TDShellObjToObjRsyncCommandTests",
+	"pools" : [
+		 ],
+	"super" : "TDShellAbstractRsyncCommandTests",
+	"type" : "normal" }

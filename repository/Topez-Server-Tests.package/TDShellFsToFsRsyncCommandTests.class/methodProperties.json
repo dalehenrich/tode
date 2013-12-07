@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"expectedFailures" : "dkh 12/06/2013 17:42",
+		"lookupDestNode:" : "dkh 12/06/2013 17:42",
+		"lookupSrcNode:" : "dkh 12/06/2013 17:42",
+		"testRsyncFileSystemLeaf" : "dkh 12/06/2013 17:42" } }
