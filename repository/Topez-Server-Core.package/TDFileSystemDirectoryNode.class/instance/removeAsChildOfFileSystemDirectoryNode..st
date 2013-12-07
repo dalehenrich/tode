@@ -1,7 +1,11 @@
 as yet unclassified
 removeAsChildOfFileSystemDirectoryNode: aTDFileSystemDirectoryNode
-  aTDFileSystemDirectoryNode parent == self
-    ifFalse: [ self error: aTDFileSystemDirectoryNode name , ' is not my child.' ].
-  (self fileDirectory directoryNamed: aTDFileSystemDirectoryNode name)
+  self parent == aTDFileSystemDirectoryNode
+    ifFalse: [ 
+      self
+        error:
+          self name printString , ' is not my child ('
+            , aTDFileSystemDirectoryNode name printString , ').' ].
+  (aTDFileSystemDirectoryNode fileDirectory directoryNamed: self name)
     recursiveDelete.
-  ^ aTDFileSystemDirectoryNode
+  ^ self
