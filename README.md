@@ -6,14 +6,14 @@
    note the port that the netldi process is runnng on using `gslist -l`.
    In the example below, the Netldi process is running on port 53241:
 
-```Shell
-topeka:3.1.0.4 dhenrich$ gslist -lc
-Status   Version    Owner    Pid   Port   Started     Type       Name
-------- --------- --------- ----- ----- ------------ ------      ----
-exists  3.1.0.4   dhenrich   3646 53241 Dec 02 20:03 Netldi      gs64ldi
-exists  3.1.0.4   dhenrich   1087 49676 Dec 02 13:13 Stone       seaside31
-exists  3.1.0.4   dhenrich   1088 49668 Dec 02 13:13 cache       seaside31~5d1218508dadd8c0
-```
+  ```Shell
+  topeka:3.1.0.4 dhenrich$ gslist -lc
+  Status   Version    Owner    Pid   Port   Started     Type       Name
+  ------- --------- --------- ----- ----- ------------ ------      ----
+  exists  3.1.0.4   dhenrich   3646 53241 Dec 02 20:03 Netldi      gs64ldi
+  exists  3.1.0.4   dhenrich   1087 49676 Dec 02 13:13 Stone       seaside31
+  exists  3.1.0.4   dhenrich   1088 49668 Dec 02 13:13 cache       seaside31~5d1218508dadd8c0
+  ```
 1. Download the [tODE_3.1 one-click Pharo image](http://seaside.gemtalksystems.com/tODE/tODE_3.1.app.zip) and launch the image.
 2. Evaluate the following expression in the **tODE Shell** window to
    open the tODE shell console:
