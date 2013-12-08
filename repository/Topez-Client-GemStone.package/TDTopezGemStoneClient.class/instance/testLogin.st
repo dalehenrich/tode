@@ -1,46 +1,27 @@
 builtins
 testLogin
-	| testSession |
+	[ 
+	| testSession description gemstoneVersion |
+	description := self sessionDescription.
+	gemstoneVersion := description gemstoneVersion.
+	((gemstoneVersion beginsWith: '2') or: [ gemstoneVersion beginsWith: '3.0' ])
+		ifTrue: [ ^ 'tODE is not supported on ' , gemstoneVersion printString , '. You must use GemStone version ''3.1.0'' or later.' ].
 	testSession := self loginUsing: TodeInstallSession.
-	[ 	| transcriptOop transcriptOopType |
+	[ 
+	| transcriptOop transcriptOopType |
 	transcriptOop := testSession executeStringNB: self installTranscriptClientForwarder envId: self environmentId.
 	transcriptOopType := testSession asOopType: transcriptOop.
 	testSession clientForwarderCache at: transcriptOopType put: Transcript.
-	^testSession
-		executeStringNB: '| stream stoneVersionReport |
-		stream := WriteStream on: String new.
-		stoneVersionReport := System stoneVersionReport.
-		stream 
-		  nextPutAll: ''Stone            : '', System stoneName; 
-		  cr;
-		  nextPutAll: ''Stone host       : '', (stoneVersionReport at: ''nodeName'');
-		  cr;
-		  nextPutAll: ''GemStone version : '', (stoneVersionReport at: ''gsVersion'');
-		  cr;
-		  nextPutAll: ''cpu kind         : '', (stoneVersionReport at: ''cpuKind'');
-		  cr;
-		  nextPutAll: ''GLASS version    : '', (ConfigurationOfGLASS project currentVersion printString);
-		  cr;
-		  nextPutAll: ''Metacello version: '', (ConfigurationOfMetacello project currentVersion printString);
-		  cr;
-		  yourself.
-	   #( ''GLASS1'' ''Tode'') do: [:baselineName |
-		 Smalltalk at: #BaselineOfGLASS1 
-		   ifAbsent: [ stream nextPutAll: baselineName, '' not installed''; cr ].
-		 Smalltalk at: #BaselineOfGLASS1 		
-		   ifPresent: [ :ignored | 
-           Smalltalk at: #''MetacelloProjectRegistration''
-             ifPresent: [ :cls | 
-               (cls registrationForClassNamed: ''BaselineOf'', baselineName ifAbsent: [  ])
-                 ifNil: [ stream nextPutAll: baselineName, '' not installed''; cr]
-                 ifNotNil: [ :registration | 
-                   registration loadedInImage
-                     ifTrue: [ 
-	                    stream nextPutAll: baselineName, '':''; cr.
-                       registration baselineProjectSpec repositories
-                         do: [ :repo | stream nextPutAll: ''       repository: '', repo createRepository directory pathName; cr ] ]
-                     ifFalse: [ stream nextPutAll: baselineName, '' not installed''; cr ] ] ] ]
-               ].
- 		stream contents' envId: self environmentId
-  ]
-		ensure: [ testSession logout ]
+	^ self testLogin: testSession ]
+		ensure: [ testSession logout ] ]
+		on: Error
+		do: [ :ex | 
+			(ex description endsWith: 'External module not found')
+				ifTrue: [ ^ self testLoginExternalModuleNotFound ].
+			(ex description includesSubString: 'Client version is')
+				ifTrue: [ ^ self testLoginGciVersionMismatch: ex ].
+			(ex description includesSubString: 'Stone Repository monitor cannot be reached')
+				ifTrue: [ ^ self testLoginStoneNotFound: ex ].
+			(ex description includesSubString: 'NetLDI service')
+				ifTrue: [ ^ self testLoginNetLDIServiceNotFound: ex ].
+			^self testLoginGenericError: ex ]

@@ -32,23 +32,85 @@
   ```Smalltalk
   TDShell open: '3.1.0_mac'.
   ```
-3. Enter the following command (editted to match your stone's
-   attributes) in the tode shell console:
+3. Enter the following command, edited to match your stone's
+   attributes, in the tODE shell console:
 
   ```Shell
-  sessionDescription --netldi=50377 --stoneName=seaside --stoneHost=localhost
+  sessionDescription --netldi=50377 --stoneName=seaside --serverHost=localhost --version=3.1.0.3
   ```
   This command sets the most commonly changed fields in the session
-  description. If you want to view (or edit) any of the other fields in
+  description. 
+
+  If you want to edit any of the other fields in
   the session description use the following command:
 
   ```Shell
   sessionDescription -e
   ```
- To get additional information about the `sessionDescription` command:
+  After directly editting a session description, you should stash the full session description
+  in a workspace (or file) so that you can easily reset your session
+  description to a known state. The -l flag is useful for that:
+
+  ```Shell
+  sessionDescription -l
+  ```
+  since it produces a Smalltalk expression that installs a session
+  description in the **TDTopezGemStoneClient** sessionMap.
+ 
+  To get additional information about the `sessionDescription` command:
 
   ```Shell
   sessionDescription -h
+  ```
+4. Now enter the `testLogin` command to verify that you can log into
+   GemStone using your session description:
+
+  ```Shell
+  testLogin
+  ```
+  If successful, you should get a report that looks something like the following:
+
+  ```
+  tode 1 > testLogin
+  Stone            : !TCP@foos#server!k_gs64stone
+  Stone host       : foos
+  GemStone version : 3.2.0
+  cpu kind         : x86_64
+  GLASS version    : >=1.0-beta.9.1 [ConfigurationOfGLASS]
+  Metacello version: >=1.0-beta.32.1 [ConfigurationOfMetacello]
+  GLASS1:
+         repository: /export/foos2/users/dhenrich/3.0/k_gss64bit/github-cache/glassdb/glass/master/glassdb-glass-8b0a998/repository
+  Tode:
+         repository: /opt/git/tode/repository
+  ```
+  If an error like the following occurs:
+
+  ```
+  tode 1 > testLogin
+  Error running testLogin:
+
+  'Error: Unable to create a GemStone session.
+  NetLDI service ''53436'' not found on node ''faas'' port 53436 :
+  getaddrinfo failed, EAI error 8, nodename nor servname provided, or not known,  
+  For further information about login   failures, check the gem log file'
+
+	  Unable to connect to netLDI '53436' on host 'faas'.
+	  Please make sure that the netLDI '53436' is running on host 'faas',
+	  is listening on the correct port, and that you can reach host 'faas'
+	  from this machine.
+  ```
+  The instructions should provide some help in remedying the situation.
+  If still have trouble, copy the output from `sessiondescription -l` and `testLogin`
+  and include the information in your mail to the 
+  [GLASS](http://lists.gemtalksystems.com/mailman/listinfo/glass) or 
+  [tODE](https://groups.google.com/forum/#!forum/tode_st) mailing
+  lists.
+
+5. Finally run the `installTode` command to install tODE on your
+   GemStone server:
+
+  ```Shell
+  installTode
   ```
 
 ### GemStone Server Installation
