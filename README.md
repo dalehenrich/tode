@@ -1,12 +1,10 @@
 # tODE: the Object-centric Development Environment [![Build Status](https://travis-ci.org/dalehenrich/tode.png?branch=master)](https://travis-ci.org/dalehenrich/tode)
 
-The current incarnation of **tODE** is very loosely based upon the [**Topaz Programming Environment**][3] for GemStone/S.
+## Installation
 
-The current implementation (still in development) uses a [Pharo1.4][1] or [Pharo2.0][4]image 
-as the GCI client running against a [GemStone/S 3.1.0.x][2] stone.
-
-*See the [Metacello installation instructions](https://github.com/dalehenrich/metacello-work/blob/master/README.md) 
-for details on installing Metacello.*
+1. download the [tODE_3.1 one-click Pharo image](http://seaside.gemtalksystems.com/tODE/tODE_3.1.app.zip).
+2. 
+![Image](docs/sessionDescription.png?raw=true)
 
 ### GemStone Server Installation
 
