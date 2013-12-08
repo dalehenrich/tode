@@ -18,27 +18,27 @@ exists  3.1.0.4   dhenrich   1088 49668 Dec 02 13:13 cache       seaside31~5d121
 2. Evaluate the following expression in the **tODE Shell** window to
    open the tODE shell console:
 
-```Smalltalk
-TDShell open: '3.1.0_mac'.
-```
+  ```Smalltalk
+  TDShell open: '3.1.0_mac'.
+  ```
 3. Enter the following command (editted to match your stone's
    attributes) at the `tode 1 >` prompt and hit return.:
 
-```Shell
-sessionDescription --netldi=50377 --stoneName=seaside --stoneHost=localhost
-```
+  ```Shell
+  sessionDescription --netldi=50377 --stoneName=seaside --stoneHost=localhost
+  ```
   This command sets the most commonly changed fields in the session
   description. If you want to view (or edit) any of the other fields in
   the session description use the following command:
 
-```Shell
-sessionDescription -e
-```
+  ```Shell
+  sessionDescription -e
+  ```
   Use the following to get help on the `sessionDescription` command:
 
-```Shell
-sessionDescription -h
-```
+  ```Shell
+  sessionDescription -h
+  ```
 
 ### GemStone Server Installation
 
