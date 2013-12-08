@@ -2,7 +2,7 @@ evaluator engine
 executeBuiltIn: command
 	| cmd |
 	cmd := command command.
-	cmd = 'installTode'
+	^cmd = 'installTode'
 		ifTrue: [ self executeInstallTode: command ]
 		ifFalse: [ 
 			cmd = 'sessionDescription'
