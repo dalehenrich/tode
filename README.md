@@ -2,9 +2,20 @@
 
 ## Installation
 
-0. After [installing](http://seaside.gemtalksystems.com/downloads.html) and [starting GemStone](https://code.google.com/p/glassdb/wiki/StartingANativeStone), 
-   note the port that the netldi process is runnng on using `gslist -l`.
-   In the example below, the Netldi process is running on port 53241:
+0. [Install version 3.1.0.5 of GemStone/S](http://seaside.gemtalksystems.com/downloads.html):
+
+  ```Shell
+  installGemstone.sh 3.1.0.5
+  source /opt/gemstone/product/seaside/defSeaside
+  ```
+1. [Start the stone and netldi processes](https://code.google.com/p/glassdb/wiki/StartingANativeStone):
+
+  ```Shell
+  startGemstone
+  startnet
+  ```
+2. Note the port that the netldi process is runnng on using `gslist -l`.
+  In the example below, the Netldi process is running on port 53241:
 
   ```Shell
   topeka:3.1.0.4 dhenrich$ gslist -lc
@@ -22,7 +33,7 @@
   TDShell open: '3.1.0_mac'.
   ```
 3. Enter the following command (editted to match your stone's
-   attributes) at the `tode 1 >` prompt and hit return.:
+   attributes) in the tode shell console:
 
   ```Shell
   sessionDescription --netldi=50377 --stoneName=seaside --stoneHost=localhost
@@ -34,7 +45,7 @@
   ```Shell
   sessionDescription -e
   ```
-  Use the following to get help on the `sessionDescription` command:
+ To get additional information about the `sessionDescription` command:
 
   ```Shell
   sessionDescription -h
