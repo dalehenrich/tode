@@ -4,7 +4,11 @@ updateSessionDescription: options
 	sessionDescription := self topezClient sessionDescription.
 	options at: 'netldi' ifPresent: [ :netldiName | sessionDescription netLDI: netldiName ].
 	options at: 'version' ifPresent: [ :version | sessionDescription gemstoneVersion: version ].
-	options at: 'stoneName' ifPresent: [ :stoneName | sessionDescription stoneName: stoneName ].
+	options
+		at: 'stoneName'
+		ifPresent: [ :stoneName | 
+			sessionDescription stoneName: stoneName.
+			self shellWindow setLabel: self label ].
 	options
 		at: 'serverHost'
 		ifPresent: [ :hostName | 

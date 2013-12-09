@@ -1,3 +1,5 @@
 stash
 label
-  ^ 'GemStone Shell: ' , self sessionName
+	| sessionDescription |
+	sessionDescription := self topezClient sessionDescription.
+	^ 'GemStone Shell: ' , self sessionName , ' (' , sessionDescription stoneName , ')'

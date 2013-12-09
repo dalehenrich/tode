@@ -1,5 +1,5 @@
 login
 isOnMacintosh
 
-	^SmalltalkImage current platformName = 'Mac OS'.
+	^Smalltalk os platformName = 'Mac OS'.
 	

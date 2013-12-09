@@ -1,5 +1,5 @@
 login
 isOnWindows
 
-	^SmalltalkImage current platformName = 'Win32'.
+	^Smalltalk os platformName = 'Win32'.
 	

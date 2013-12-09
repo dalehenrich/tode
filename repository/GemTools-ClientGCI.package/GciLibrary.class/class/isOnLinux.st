@@ -1,5 +1,5 @@
 login
 isOnLinux
 
-	^SmalltalkImage current platformName = 'unix' and: [SmalltalkImage current osVersion beginsWith: 'linux'].
+	^Smalltalk os platformName = 'unix' and: [SmalltalkImage current osVersion beginsWith: 'linux'].
 	
