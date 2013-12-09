@@ -112,6 +112,15 @@
   ```Shell
   installTode
   ```
+  If you have custom installation, you should look at `installTode --help` to see how to
+  customize the `installTode` script.
+
+6. Immediately after the `installTode` command finishes, I recommend
+   that you create a backup of your tODE installation:
+
+  ```Shell
+  bu backup virgin_tode.dbf
+  ```
 
 ### GemStone Server Installation
 
