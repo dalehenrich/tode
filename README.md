@@ -36,7 +36,7 @@
    attributes, in the tODE shell console:
 
   ```Shell
-  sessionDescription --netldi=50377 --stoneName=seaside --serverHost=localhost --version=3.1.0.3
+  sessionDescription --netldi=50377 --stoneName=seaside --serverHost=localhost
   ```
   This command sets the most commonly changed fields in the session
   description. 
@@ -122,50 +122,8 @@
   bu backup virgin_tode.dbf
   ```
 
-### GemStone Server Installation
 
-```Smalltalk
-"GLASS 1.0-beta.9.1"
-ConfigurationOfGLASS project updateProject.
-GsDeployer deploy: [ (ConfigurationOfGLASS project version: '1.0-beta.9.1') load ].
-
-"Most recent Metacello"
-[
-Metacello new
-  baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
-  load: 'ALL'.
-  ] on: Warning
-    do: [:ex |
-      Transcript cr; show: ex description.
-      ex resume].
-
-"GLASS1"
-Metacello new
-  baseline: 'GLASS1';
-  repository: 'github://glassdb/glass:master/repository';
-  onConflict: [ :ex | ex allow ];
-  onWarning: [ :ex |
-        Transcript
-          cr;
-          show: ex description.
-        ex resume ];
-  load: 'default'.
-
-"tODE"
-Metacello new
-    baseline: 'Tode';
-    repository: 'github://dalehenrich/tode:master/repository';
-    load: 'GemStone Dev'.
-```
-
-*I have not renamed the Baseline ... yet*
-
-### Pharo Client Installation
-
-See the [Gci client installation instructions](https://github.com/dalehenrich/tode/blob/master/docs/GciClientInstallation.md).
-
-### tODE Documentation
+### Additional tODE Documentation
 
 - [Getting Started with tODE](https://github.com/dalehenrich/tode/blob/master/docs/GettingStarted.md)
 - [object shell man page summary](https://github.com/dalehenrich/tode/blob/master/docs/man/ManPageSummary.md)
@@ -173,7 +131,7 @@ See the [Gci client installation instructions](https://github.com/dalehenrich/to
 - [object shell man pages](https://github.com/dalehenrich/tode/tree/master/docs/man)
 
 Here's a video of my 
-[Smalltalks 2012](http://www.fast.org.ar/smalltalks2012?_s=bvlW29Av2dix9EWt&_k=OGfhqoGSxR431Tth) 
+[Smalltalks 2013](http://www.youtube.com/watch?v=m4LcZ4_1Yic&list=PLCGAAdUizzH027lLWKXh_44cGuEsay7-R&index=16) 
 presentation:
 [topez: A Stepping Stone to tODE](http://www.youtube.com/watch?v=pIp_Y46iB_I&list=PLCGAAdUizzH31VumrhrK2HHepHu3DBpY0&index=14).
 

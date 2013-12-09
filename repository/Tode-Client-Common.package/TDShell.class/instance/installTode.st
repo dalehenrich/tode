@@ -1,3 +1,0 @@
-session management
-installTode
-	self topezClient installTode
