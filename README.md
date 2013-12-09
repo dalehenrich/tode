@@ -76,12 +76,10 @@
   Stone host       : foos
   GemStone version : 3.2.0
   cpu kind         : x86_64
-  GLASS version    : >=1.0-beta.9.1 [ConfigurationOfGLASS]
-  Metacello version: >=1.0-beta.32.1 [ConfigurationOfMetacello]
-  GLASS1:
-         repository: /export/foos2/users/dhenrich/3.0/k_gss64bit/github-cache/glassdb/glass/master/glassdb-glass-8b0a998/repository
-  Tode:
-         repository: /opt/git/tode/repository
+  GLASS version    : >=1.0-beta.8.7.3 [ConfigurationOfGLASS]
+  Metacello version: >=1.0-beta.31.2 [ConfigurationOfMetacello]
+  GLASS1 not installed
+  Tode not installed
   ```
   If an error like the following occurs:
 
@@ -120,6 +118,22 @@
 
   ```Shell
   bu backup virgin_tode.dbf
+  ```
+7. Now is also a good time to run the `testLogin` command again, so you
+   can contrast with the original report:
+
+  ```
+  tode 1 > testLogin
+  Stone            : !TCP@foos#server!k_gs64stone
+  Stone host       : foos
+  GemStone version : 3.2.0
+  cpu kind         : x86_64
+  GLASS version    : >=1.0-beta.9.1 [ConfigurationOfGLASS]
+  Metacello version: >=1.0-beta.32.1 [ConfigurationOfMetacello]
+  GLASS1:
+         repository: /opt/gemstone/log/github-cache/glassdb/glass/master/glassdb-glass-8b0a998/repository
+  Tode:
+         repository: /opt/gemstone/log/github-cache/dalehenrich/tode/master/dalehenrich-tode-fd02f13/repository
   ```
 
 

@@ -1,11 +1,12 @@
 builtins
 testLoginGciVersionMismatch: ex
-	| stream description netLDI stoneHost gciLibraryName gemstoneVersion |
+	| stream description netLDI stoneHost gciLibraryName gemstoneVersion stoneName |
 	description := self sessionDescription.
 	netLDI := description netLDI.
 	stoneHost := description stoneHost.
 	gciLibraryName := description gciLibraryName.
 	gemstoneVersion := description gemstoneVersion.
+	stoneName := description stoneName.
 	stream := WriteStream on: String new.
 	stream
 		nextPutAll: 'Error running testLogin:';
@@ -27,5 +28,12 @@ testLoginGciVersionMismatch: ex
 		tab;
 		nextPutAll: 'is the same version as (or is compatable with) version ' , gemstoneVersion printString;
 		cr;
+		tab;
+		nextPutAll: 'Finally, you should make sure that the stone ' , stoneName printString , ' is running';
+		cr;
+		tab;
+		nextPutAll: 'on host ' , stoneHost printString , '.';
+		cr;
+		tab;
 		yourself.
 	^ stream contents
