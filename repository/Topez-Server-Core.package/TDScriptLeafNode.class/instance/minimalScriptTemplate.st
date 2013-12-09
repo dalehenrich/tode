@@ -7,28 +7,13 @@ minimalScriptTemplate
     ,
       ' -h"
 command
-  getOptsMixedLongShort:
-    {#(''help'' $h #''none'').
-    #(''option'' $o #''required'')}
+  getOptsMixedLongShort: {#(''help'' $h #''none'')}
   optionsAndArguments: [ :options :operands | 
     opts := options.
     args := operands ].
 opts
-  at: ''option''
-  ifAbsent: [ 
-    "option not specified ... what is the default action?"
-     ]
-  ifPresent: [ :optValue | 
-    "do something with  optionValue"
-     ].
-opts
   at: ''help''
-  ifAbsent: [ 
-    "script body ... executed only when help option not specified"
-    args
-      do: [ :arg | 
-        "do something with operands ... if present"
-         ] ]
+  ifAbsent: [ "WRITE SCRIPT HERE" ]
   ifPresent: [ :ignored | 
     TDManPage
       viewManPage:
@@ -40,22 +25,14 @@ opts
 SYNOPSIS
   ' , self name
     ,
-      ' [-h|--help] [-o|--option=<something>] <operand>
+      ' [-h|--help]
 DESCRIPTION
 EXAMPLES
-  ./'
-    , self name
+  ./' , self name
     ,
       ' --help
   ./' , self name
     ,
       ' -h
-
-  ./' , self name
-    ,
-      ' --option=something operand
-  ./' , self name
-    ,
-      ' -o something -- operand
 ''
       topez: topez ] ]'
