@@ -1,4 +1,4 @@
-as yet unclassified
+builtins
 installGLASS1String
 ^'Transcript cr; show: ''-----Upgrading GLASS1 to most recent master version''.
 Metacello new

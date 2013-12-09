@@ -2,7 +2,7 @@ builtins
 testLogin: testSession
 	^ testSession
 		executeStringNB:
-			'| stream stoneVersionReport |
+			'| stream stoneVersionReport glassConfig metacelloConfig|
 		stream := WriteStream on: String new.
 		stoneVersionReport := System stoneVersionReport.
 		stream 
@@ -14,18 +14,23 @@ testLogin: testSession
 		  cr;
 		  nextPutAll: ''cpu kind         : '', (stoneVersionReport at: ''cpuKind'');
 		  cr;
-		  nextPutAll: ''GLASS version    : '', (ConfigurationOfGLASS project currentVersion printString);
-		  cr;
-		  nextPutAll: ''Metacello version: '', (ConfigurationOfMetacello project currentVersion printString);
-		  cr;
-		  yourself.
+		yourself.
+		(System myUserProfile symbolList objectNamed: #ConfigurationOfGLASS) == nil ifTrue: [ stream nextPutAll: ''GLASS not installed''; cr ].
+		(glassConfig := System myUserProfile symbolList objectNamed: #ConfigurationOfGLASS) ~~ nil ifTrue: [
+		  (metacelloConfig := System myUserProfile symbolList objectNamed: #ConfigurationOfMetacello) ~~ nil ifTrue: [
+		    stream
+		      nextPutAll: ''GLASS version    : '', (glassConfig project currentVersion printString);
+		      cr;
+		      nextPutAll: ''Metacello version: '', (metacelloConfig project currentVersion printString);
+		      cr;
+		      yourself ] ].
 	   #( ''GLASS1'' ''Tode'') do: [:baselineName |
-		 Smalltalk at: #BaselineOfGLASS1 
-		   ifAbsent: [ stream nextPutAll: baselineName, '' not installed''; cr ].
-		 Smalltalk at: #BaselineOfGLASS1 		
-		   ifPresent: [ :ignored | 
-           Smalltalk at: #''MetacelloProjectRegistration''
-             ifPresent: [ :cls | 
+		 (System myUserProfile symbolList objectNamed: #BaselineOfGLASS1)
+		   == nil ifTrue: [ stream nextPutAll: baselineName, '' not installed''; cr ].
+		 (System myUserProfile symbolList objectNamed: #BaselineOfGLASS1) 		
+		   ~~ nil ifTrue: [ | cls |
+           (cls := System myUserProfile symbolList objectNamed: #''MetacelloProjectRegistration'')
+             ~~ nil ifTrue: [
                (cls registrationForClassNamed: ''BaselineOf'', baselineName ifAbsent: [  ])
                  ifNil: [ stream nextPutAll: baselineName, '' not installed''; cr]
                  ifNotNil: [ :registration | 

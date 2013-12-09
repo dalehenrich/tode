@@ -1,4 +1,4 @@
-as yet unclassified
+builtins
 installTranscriptClientForwarder
 	^ '| transcriptClientForwarder |
 transcriptClientForwarder := ClientForwarder new.

@@ -1,4 +1,4 @@
-as yet unclassified
+builtins
 installMetacelloString
 ^'Transcript cr; show: ''-----Upgrading Metacello to latest master version''.
 [

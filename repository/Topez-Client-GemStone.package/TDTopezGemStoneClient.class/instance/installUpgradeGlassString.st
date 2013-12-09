@@ -1,4 +1,4 @@
-as yet unclassified
+builtins
 installUpgradeGlassString
 ^'Smalltalk
   at: #''BaselineOfGLASS1''
