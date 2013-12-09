@@ -52,11 +52,29 @@
   description to a known state. The -l flag is useful for that:
 
   ```Shell
-  sessionDescription -l
+  tode 1 > sessionDescription -l
+  | description |
+  description := OGCustomSessionDescription new
+  	name: 'k_foos';
+  	gemstoneVersion: '3.2.0';
+  	gciLibraryName: 'libgcirpc-3.2.0-32.dylib';
+  	adornmentColor: Color lightYellow;
+  	stoneHost: 'foos';
+  	stoneName: 'k_gs64stone';
+  	gemHost: 'foos';
+  	netLDI: '53436';
+  	gemTask: 'gemnetobject';
+  	userId: 'DataCurator';
+  	password: 'swordfish';
+  	osUserId: '';
+  	osPassword: '';
+  	backupDirectory: '/export/foos2/users/dhenrich/3.0/k_gss64bit/backups/';
+  	dataDirectory: '';
+  	yourself.
+  TDTopezGemStoneClient sessionMap 
+    at: description name
+    put: description.
   ```
-  since it produces a Smalltalk expression that installs a session
-  description in the **TDTopezGemStoneClient** sessionMap.
- 
   To get additional information about the `sessionDescription` command:
 
   ```Shell
@@ -135,19 +153,18 @@
   Tode:
          repository: /opt/gemstone/log/github-cache/dalehenrich/tode/master/dalehenrich-tode-fd02f13/repository
   ```
-
+Now that you've got tODE installed, you should take a look at [Getting Started with tODE](docs/GettingStarted.md).
 
 ### Additional tODE Documentation
 
-- [Getting Started with tODE](https://github.com/dalehenrich/tode/blob/master/docs/GettingStarted.md)
 - [object shell man page summary](https://github.com/dalehenrich/tode/blob/master/docs/man/ManPageSummary.md)
 - [keybard shortcuts](https://github.com/dalehenrich/tode/blob/master/docs/man/KeyboardMapSummary.md)
 - [object shell man pages](https://github.com/dalehenrich/tode/tree/master/docs/man)
 
 Here's a video of my 
 [Smalltalks 2013](http://www.youtube.com/watch?v=m4LcZ4_1Yic&list=PLCGAAdUizzH027lLWKXh_44cGuEsay7-R&index=16) 
-presentation:
-[topez: A Stepping Stone to tODE](http://www.youtube.com/watch?v=pIp_Y46iB_I&list=PLCGAAdUizzH31VumrhrK2HHepHu3DBpY0&index=14).
+presentation 
+**tODE: And Now For Something Completely Different**.
 
 Here's a recent screen shot:
 
