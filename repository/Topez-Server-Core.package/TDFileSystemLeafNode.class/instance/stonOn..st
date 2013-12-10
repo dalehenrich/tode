@@ -1,6 +1,5 @@
 as yet unclassified
 stonOn: stonWriter
-  "serializing a directoryEntry is problematic ... what will it be materialized as on another system?
-"
-
-  self shouldNotImplement
+  ^ (self name endsWith: self stonFileExtension)
+    ifTrue: [ self asTDLeafNode stonOn: stonWriter ]
+    ifFalse: [ self halt ]
