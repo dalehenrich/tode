@@ -1,6 +1,6 @@
 as yet unclassified
 methodDefinitionsFor: methodRefs messagePattern: messagePattern isRegex: isRegex
-  ^ methodRefs
+  ^ (methodRefs select: [ :meth | meth actualClass notNil ])
     collect: [ :meth | 
       TDMethodDefinition
         className: meth actualClass theNonMetaClass name

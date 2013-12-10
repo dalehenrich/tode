@@ -1,7 +1,6 @@
 accessing
 classDefinitionNamed: aClassName
-  ^ TDSymbolDictionaryClassDefinition new
+  ^ TDClassDefinition new
     username: self username;
     className: aClassName;
-    symbolDictionary: self;
     yourself
