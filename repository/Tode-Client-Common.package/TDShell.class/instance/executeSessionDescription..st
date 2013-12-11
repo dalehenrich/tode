@@ -6,6 +6,7 @@ executeSessionDescription: command
 			{#('help' $h #none).
 			#('edit' $e #none).
 			#('list' $l #none).
+			#('backupDir' nil #required).
 			#('netldi' nil #required).
 			#('version' nil #required).
 			#('stoneName' nil #required).
@@ -37,7 +38,7 @@ SYNOPSIS
   sessionDescription -l|--list
   sessionDescription [--netldi=<netldi-name>] [--stoneName=<stone-name>] \
                      [--serverHost=<hostname-or-ip-address>] \
-                     [--version=<gemstone-version>] 
+                     [--version=<gemstone-version>] [--backupDir=<server-backup-dir>]
 
 DESCRIPTION
   With no options specified, resets the session descripton gciLibraryName to match the current
@@ -50,8 +51,8 @@ DESCRIPTION
   With -e option specified, brings up an editor dialog on the entire sessions description and you
   can change any of the fields.
 
-  With one or more of the  --netldi, --stoneName, --serverHost, or --version options set, updates 
-  the corresponding session description with the new value. 
+  With one or more of the  ---backupDir, -netldi, --stoneName, --serverHost, or --version options set, 
+  updates the corresponding session description with the new value. 
 
   Note that the <gemstone-version> specified should refer to the version field of the libgcirpc 
   library name. 
@@ -60,6 +61,6 @@ EXAMPLES
   sessionDescription -h
   sessionDescription -l
   sessionDescription
-  sessionDescription --netldi=50377 --stoneName=seaside --serverHost=192.168.1.3
+  sessionDescription --netldi=50377 --stoneName=seaside --serverHost=192.168.1.3 --backupDir=/opt/backups
 
 ') interact ]

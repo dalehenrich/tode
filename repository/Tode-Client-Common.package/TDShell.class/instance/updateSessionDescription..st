@@ -4,6 +4,7 @@ updateSessionDescription: options
 	sessionDescription := self topezClient sessionDescription.
 	options at: 'netldi' ifPresent: [ :netldiName | sessionDescription netLDI: netldiName ].
 	options at: 'version' ifPresent: [ :version | sessionDescription gemstoneVersion: version ].
+	options at: 'backupDir' ifPresent: [ :backupDir | sessionDescription backupDirectory: backupDir ].
 	options
 		at: 'stoneName'
 		ifPresent: [ :stoneName | 
