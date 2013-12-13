@@ -21,8 +21,8 @@ SYNOPSIS
      remove @<repository-path> [ <package-name> ]
      remove <repository-spec> [ @<workingCopy-path> ]
      remove @<repository-path> [ @<workingCopy-path> ]
-  mr versions <repository-spec> <package-name>
-     versions @<repository-path> <package-name>
+  mr versions [-g|--git][-m--monticello] <repository-spec> <package-name>
+     versions [-g|--git][-m--monticello] @<repository-path> <package-name>
 
 DESCRIPTION
 

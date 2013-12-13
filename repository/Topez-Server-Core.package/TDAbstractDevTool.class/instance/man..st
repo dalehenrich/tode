@@ -1,9 +1,5 @@
 as yet unclassified
 man: command
-  "man <command-name>
-   man @<command-path>
-  "
-
   | node man |
   node := (command beginsWith: '@')
     ifTrue: [ self resolveAtPathNodeReference: command ]

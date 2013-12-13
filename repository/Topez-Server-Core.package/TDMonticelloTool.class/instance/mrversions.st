@@ -1,12 +1,28 @@
 as yet unclassified
 mrversions
-  "mr versions <repository-spec> <package-name>
-      versions @<repository-path> <package-name>
+  "
+  mr versions [-g|--git][-m|--monticello] <repository-spec> <package-name>
+     versions [-g|--git][-m|--monticello] @<repository-path> <package-name>
   "
 
   | repo packageName versions loadedVersions wc |
-  packageName := tokens at: 3.
-  repo := self resolveRepositoryReference: (tokens at: 2).
+  self
+    getOptsMixedLongShort:
+      {#('help' $h #'none').
+      #('git' $g #'none').
+      #('monticello' $m #'none')}.
+  self options
+    at: 'help'
+    ifPresent: [ :ignored | ^ self man: self todeCommand command ].
+  packageName := self arguments at: 2.
+  repo := self resolveRepositoryReference: (self arguments at: 1).
+  self options
+    at: 'git'
+    ifPresent: [ :ignored | 
+      ^ self
+        mrBrowseGitVersionsFor: packageName
+        in: repo
+        ifAbsent: [ ^ 'No package named: ' , packageName printString , ' found.' ] ].
   versions := self
     mrVersionsFor: packageName
     in: repo

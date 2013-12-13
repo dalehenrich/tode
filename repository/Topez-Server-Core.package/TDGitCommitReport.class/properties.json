@@ -1,0 +1,19 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"commit",
+		"commitPrefix",
+		"committer",
+		"commitDate",
+		"subject",
+		"body" ],
+	"name" : "TDGitCommitReport",
+	"pools" : [
+		 ],
+	"super" : "TDStandardTool",
+	"type" : "normal" }
