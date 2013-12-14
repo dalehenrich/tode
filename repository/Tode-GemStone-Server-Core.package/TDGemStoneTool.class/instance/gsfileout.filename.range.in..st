@@ -3,7 +3,7 @@ gsfileout: methodRef filename: filename range: ar in: directory
   | originalSource lf |
   lf := Character lf.
   directory
-    fileNamed: filename
+    readOnlyFileNamed: filename
     do: [ :fileStream | originalSource := fileStream contents ].
   directory
     forceNewFileNamed: filename

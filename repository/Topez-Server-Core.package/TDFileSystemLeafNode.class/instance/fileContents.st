@@ -3,5 +3,5 @@ fileContents
   | directoryEntry |
   directoryEntry := self directoryEntry.
   directoryEntry sourceDirectory
-    fileNamed: directoryEntry name
+    readOnlyFileNamed: directoryEntry name
     do: [ :fileStream | ^ fileStream contents asString ]
