@@ -4,9 +4,10 @@ executeInstallTode: command
 	command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
+			#('clientScriptPath' nil #required).
 			#('force' $f #none).
 			#('serverScriptPath' nil #required).
-			#('clientScriptPath' nil #required)}
+			#('topaz' $t #none)}
 		optionsAndArguments: [ :opts :args | 
 			options := opts.
 			arguments := args ].
@@ -23,6 +24,7 @@ executeInstallTode: command
 						at: 'serverScriptPath'
 						ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
 						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
+			options at: 'topaz' ifPresent: [ ^ self topezClient installTodeTopazScript: forceGLASSInstall scriptDirectory: scriptDirectory ].
 			^ self topezClient installTode: forceGLASSInstall scriptDirectory: scriptDirectory ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
@@ -33,8 +35,9 @@ executeInstallTode: command
 
 SYNOPSIS
   installTode [-h|--help]
-  installTode --serverScriptPath=<server-script-directory>
-  installTode --clientScriptPath=<client-script-directory>
+  installTode [-t|--topaz] --serverScriptPath=<server-script-directory> 
+  installTode [-t|--topaz] --clientScriptPath=<client-script-directory>
+  installTode 
 
 DESCRIPTION
   With no arguments, install tODE into a "seaside extent" (an extent with GLASS already installed).
@@ -56,10 +59,13 @@ DESCRIPTION
   If --serverScriptPath is specified, the scripts will be loaded from the specified directory on
   the server system - where the stone and gems are executing.
 
+  If --topaz is present, instead of executing the install script, it is returned as a topaz script.
+
 EXAMPLES
   installTode -h
   installTode
   installTode --clientScriptPath=/opt/git/tode/installTode
   installTode --serverScriptPath=/opt/git/todeHome/install
+  installTode --topaz --clientScriptPath=/opt/git/tode/installTode
 
 ') interact ]
