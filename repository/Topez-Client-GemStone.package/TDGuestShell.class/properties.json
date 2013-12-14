@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Client-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDGuestShell",
+	"pools" : [
+		 ],
+	"super" : "TDShell",
+	"type" : "normal" }
