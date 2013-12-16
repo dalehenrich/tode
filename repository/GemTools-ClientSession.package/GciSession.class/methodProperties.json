@@ -15,6 +15,8 @@
 		"continue:" : "dkh 4/1/2013 20:45",
 		"continueWith:replaceTopOfStackWith:" : "dkh 1/10/2013 08:14",
 		"debuggerRequested:" : "dkh 2/4/2013 14:30",
+		"disableGemTrace" : "dkh 12/16/2013 14:03",
+		"enableGemTrace" : "dkh 12/16/2013 14:02",
 		"environmentId" : "dkh 2/24/2013 07:15",
 		"executeStringExpectingStringNB:envId:" : "dkh 2/24/2013 06:57",
 		"executeStringNB:envId:" : "dkh 2/24/2013 06:59",
