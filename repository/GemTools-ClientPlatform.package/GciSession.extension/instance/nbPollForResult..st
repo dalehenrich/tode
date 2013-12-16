@@ -17,14 +17,14 @@ nbPollForResult: hardBreakSent
 					[ World displayWorldSafely ] fork.
 					trigger := Time now addSeconds: 1 ].
 			(Delay forMilliseconds: 500) wait.
-			Transcript show: '.'.
 			GciUserInterruptHandler interrupted
 				ifTrue: [ 
-					Transcript
-						cr;
-						show: 'interrupted: ', hardBreakSent printString.
 					hardBreakSent not
-						ifTrue: [ GciUserInterrupt signal ] ] ].
+						ifTrue: [ 
+							Transcript
+								cr;
+								show: 'interrupted: ' , hardBreakSent printString.
+							GciUserInterrupt signal ] ] ].
 	^ assoc value ]
 		on: GciUserInterrupt
 		do: [ :ex | 
