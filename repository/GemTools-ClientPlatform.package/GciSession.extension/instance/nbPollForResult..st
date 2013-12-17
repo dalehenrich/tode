@@ -16,7 +16,7 @@ nbPollForResult: hardBreakSent
 					"don't need to be flashing wildly ... an update per second will do"
 					[ World displayWorldSafely ] fork.
 					trigger := Time now addSeconds: 1 ].
-			(Delay forMilliseconds: 500) wait.
+			(Delay forMilliseconds: i) wait.
 			GciUserInterruptHandler interrupted
 				ifTrue: [ 
 					hardBreakSent not
