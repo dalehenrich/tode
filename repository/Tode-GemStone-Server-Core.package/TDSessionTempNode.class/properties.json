@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TDSessionObjectNode",
+	"name" : "TDSessionTempNode",
 	"pools" : [
 		 ],
-	"super" : "TDObjectNode",
+	"super" : "TDDirectoryNode",
 	"type" : "normal" }

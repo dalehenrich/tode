@@ -5,7 +5,7 @@ createMergerNode
   topez ensureChildrenExistIn: nodePath.
   parentNode := topez lookup: nodePath.
   node := self merger
-    asTDSessionObjectNode: parentNode
+    asTDObjectNode: parentNode
     topez: parentNode topez
     aspect: #'view'.
   node name: 'merger'.
