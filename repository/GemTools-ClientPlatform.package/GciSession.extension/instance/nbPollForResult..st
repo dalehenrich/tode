@@ -1,7 +1,6 @@
 *gemtools-clientplatform
 nbPollForResult: hardBreakSent
 	| debuggerChoice terminated |
-	GciUserInterruptHandler reset.
 	[ 
 	| i assoc trigger |
 	i := 0.
