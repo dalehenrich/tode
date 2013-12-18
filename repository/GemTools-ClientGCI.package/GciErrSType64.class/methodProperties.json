@@ -3,7 +3,8 @@
 		"err_CompilerError" : "dkh 3/30/2013 14:04",
 		"err_Error" : "dkh 3/30/2013 14:05",
 		"err_Halt" : "dkh 3/30/2013 14:04",
-		"initialize" : "dkh 3/30/2013 14:49" },
+		"err_Hardbreak" : "dkh 12/18/2013 07:38",
+		"initialize" : "dkh 12/18/2013 07:39" },
 	"instance" : {
 		"argsOffset" : "dkh 3/30/2013 14:15",
 		"argsSize" : "dkh 3/30/2013 14:12",
@@ -12,6 +13,7 @@
 		"isBreakpoint" : "dkh 3/30/2013 14:52",
 		"isCompileError" : "dkh 3/30/2013 14:04",
 		"isHalt" : "dkh 3/30/2013 14:48",
+		"isHardbreak" : "dkh 12/18/2013 07:39",
 		"maxMessageSize" : "dkh 8/5/2007 09:37",
 		"printOn:" : "dkh 3/31/2013 10:35",
 		"readArguments" : "dkh 3/30/2013 14:16",

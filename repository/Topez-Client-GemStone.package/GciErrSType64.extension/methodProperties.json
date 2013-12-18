@@ -2,6 +2,6 @@
 	"class" : {
 		"library:session:" : "dkh 3/30/2013 13:49" },
 	"instance" : {
-		"asGsRuntimeException:" : "dkh 7/14/2013 12:35",
+		"asGsRuntimeException:" : "dkh 12/18/2013 07:46",
 		"initializeUsingSton:session:" : "dkh 5/15/2013 14:33",
 		"readArgumentsAndExceptionClassUsingStonIn:" : "dkh 3/30/2013 15:28" } }

@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		"err_CompilerError",
 		"err_Error",
-		"err_Halt" ],
+		"err_Halt",
+		"err_Hardbreak" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "JGF 4/13/2007 13:44",
