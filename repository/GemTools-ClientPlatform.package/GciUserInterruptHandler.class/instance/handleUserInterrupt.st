@@ -4,4 +4,4 @@ handleUserInterrupt
 	Assume no system-vital processes have a lower priority than this, and are thus ok to interrupt"
 
   Interrupted := true.
-  super handleUserInterrupt
+  "super handleUserInterrupt"
