@@ -60,6 +60,12 @@ codePointMap
             cmdShiftNAction: listElement
             modifierPressed: modifierPressed
             selectionIndex: selectionIndex ];
+    at: $P codePoint
+      put: [ :modifierPressed :listElement :selectionIndex | 
+          self
+            cmdShiftPAction: listElement
+            modifierPressed: modifierPressed
+            selectionIndex: selectionIndex ];
     at: $T codePoint
       put: [ :modifierPressed :listElement :selectionIndex | 
           self

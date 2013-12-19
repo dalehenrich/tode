@@ -23,7 +23,8 @@
 		"reset" : "dkh 04/06/2013 09:40",
 		"resetForInstall" : "dkh 04/06/2013 09:44",
 		"rootNode" : "DataCurator 11/28/2012 05:40",
-		"select" : "dkh 05/28/2013 06:19" },
+		"select" : "dkh 05/28/2013 06:19",
+		"toolInstanceFor:" : "dkh 12/18/2013 18:55" },
 	"instance" : {
 		"accumulateBlocks" : "DataCurator 01/22/2013 14:21",
 		"accumulateScriptText" : "DataCurator 01/26/2013 11:30",

@@ -5,6 +5,7 @@ psManPage
 
 SYNOPSIS
   ps delay <seconds>
+  ps debug @<process-path>
   ps kill @<process-path>
   ps kill9 @<process-path>
   ps list 
