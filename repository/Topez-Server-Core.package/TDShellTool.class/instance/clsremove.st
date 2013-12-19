@@ -7,5 +7,7 @@ clsremove
 
   | clsName theClass |
   clsName := tokens at: 2.
-  theClass := self resolveClassReference: clsName.
+  [ theClass := self resolveClassReference: clsName ]
+    on: Error
+    do: [ :ex | ^ 'Class ' , clsName printString , ' not found' ].
   ^ self clsremove: theClass

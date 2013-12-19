@@ -13,7 +13,7 @@ saveContents: anObject asElementSource: asElementSource
         plainTextNewlinesDuring: [ fileContents := STON toString: aNode ] ]
     ifFalse: [ 
       filename := self name.
-      fileContents := anObject ].
+      fileContents := anObject withGemstoneLineEndings ].
   self fileDirectory
     forceNewFileNamed: filename
     do: [ :fileStream | fileStream nextPutAll: fileContents ]
