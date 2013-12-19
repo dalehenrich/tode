@@ -4,11 +4,12 @@ gsManPage
   gs - execute gemstone commands
 
 SYNOPSIS
+#  gs dataDir
   gs fileout -d<filesystem-path>|--directory=<filesystem-path> 
              [--class|--package|--category] <fileout-pair>...
+  gs halt -m|--almostOutOfMemory=<percent>
   gs instances <className>
      instances @<class-path>
-  gs dataDir
   gs mfc [<maxThreads>]
   gs mreferences @<object-path>
   gs objectAudit [<maxThreads>]
