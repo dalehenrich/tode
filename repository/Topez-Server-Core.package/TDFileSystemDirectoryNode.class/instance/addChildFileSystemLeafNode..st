@@ -2,7 +2,8 @@ as yet unclassified
 addChildFileSystemLeafNode: aNode
   "don't transfer big files this way:)"
 
-  (aNode parent fileDirectory fileExists: aNode name)
+  (aNode parent notNil
+    and: [ aNode parent fileDirectory fileExists: aNode name ])
     ifTrue: [ 
       aNode parent fileDirectory
         readOnlyFileNamed: aNode name
