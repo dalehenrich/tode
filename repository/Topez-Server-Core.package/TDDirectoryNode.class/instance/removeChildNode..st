@@ -1,4 +1,4 @@
 as yet unclassified
 removeChildNode: aNode
-    aNode parent: nil.
-    ^ self contents removeKey: aNode name
+  aNode parent: nil.
+  ^ self removeChildNamed: aNode name

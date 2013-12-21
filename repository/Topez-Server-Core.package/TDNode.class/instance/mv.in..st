@@ -1,6 +1,6 @@
 as yet unclassified
 mv: destinationPath in: baseNode
-  | path newName destinationNode |
+  | path newName destinationNode oldName |
   self canMove
     ifFalse: [ self error: 'Cannot move: ' , self printString ].
   path := destinationPath findTokens: '/'.
@@ -18,6 +18,7 @@ mv: destinationPath in: baseNode
       self
         error:
           'Cannot move: ' , self printString , ' to: ' , destinationNode printString ].
-  self parent removeChildNode: self.
+  oldName := self name.
   self name: newName.
-  destinationNode addChildNode: self
+  destinationNode addChildNode: self.
+  self parent removeChildNamed: oldName

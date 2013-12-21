@@ -6,4 +6,8 @@ objectValueForSpecialElementName: elementName for: anObject
     ifTrue: [ ^ Reflection classOf: anObject ].
   elementName = '(value)'
     ifTrue: [ ^ anObject asString ].
+  elementName = '(invariant)'
+    ifTrue: [ ^ anObject isInvariant ].
+  elementName = '(dependents)'
+    ifTrue: [ ^ DependencyList for: anObject ].
   ^ nil

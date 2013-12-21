@@ -2,8 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addAsChildOfFileSystemDirectoryNode:" : "dkh 12/20/2013 13:47",
 		"basicContents:" : "dkh 11/30/2013 14:48",
 		"block" : "dkh 11/30/2013 14:50",
+		"canMove" : "dkh 12/20/2013 13:38",
 		"cat" : "dkh 11/30/2013 14:50",
 		"childrenAndNamesDo:" : "dkh 12/07/2013 08:46",
 		"classForEditorNodeLookup" : "dkh 12/06/2013 10:26",
@@ -22,6 +24,7 @@
 		"modificationTime" : "dkh 11/30/2013 14:52",
 		"modificationTime:" : "dkh 11/30/2013 14:52",
 		"modified" : "dkh 11/30/2013 14:54",
+		"name:" : "dkh 12/20/2013 13:43",
 		"parent" : "dkh 12/06/2013 15:43",
 		"parent:" : "dkh 12/06/2013 15:27",
 		"removeAsChildOfFileSystemDirectoryNode:" : "dkh 12/06/2013 11:56",

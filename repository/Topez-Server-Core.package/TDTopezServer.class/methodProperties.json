@@ -63,6 +63,7 @@
 		"ensureChildrenExistIn:" : "dkh 03/10/2013 09:29",
 		"ensureSessionMethodsEnabled" : "dkh 02/23/2013 17:34",
 		"evaluateCommand:objIn:" : "dkh 11/10/2013 08:10",
+		"evaluateCommandString:" : "dkh 12/20/2013 12:37",
 		"evaluateSTONCommand:" : "dkh 11/10/2013 08:12",
 		"evaluateSTONTokens:redirectTarget:" : "dkh 06/04/2013 21:11",
 		"evaluateString:inContext:" : "dkh 06/04/2013 14:10",

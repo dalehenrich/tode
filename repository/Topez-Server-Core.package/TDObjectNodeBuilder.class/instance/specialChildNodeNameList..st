@@ -1,5 +1,11 @@
 as yet unclassified
 specialChildNodeNameList: parentNode
-  ^ parentNode topez displayOops
+  | specialList |
+  specialList := parentNode topez displayOops
     ifTrue: [ #('(class)' '(oop)') ]
-    ifFalse: [ #('(class)') ]
+    ifFalse: [ #('(class)') ].
+  parentNode basicContents isInvariant
+    ifTrue: [ specialList := specialList , #('(invariant)') ].
+  (DependencyList for: parentNode basicContents)
+    ifNotNil: [ specialList := specialList , #('(dependents)') ].
+  ^ specialList
