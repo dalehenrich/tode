@@ -25,7 +25,12 @@ cp: destinationPath in: baseNode
       ^ self
         error:
           'Cannot copy: ' , self printString , ' to: ' , destinationNode printString ].
-  (destinationDirectoryNode printString = self parent printString
-    and: [ newName = self name ])
-    ifTrue: [ self error: 'Attempting to copy onto self' ].
+  (destinationIsDirectory and: [ self isLeaf not ])
+    ifTrue: [ 
+      destinationDirectoryNode printString = self printString
+        ifTrue: [ self error: 'Attempting to copy onto self' ] ]
+    ifFalse: [ 
+      (destinationDirectoryNode printString = self parent printString
+        and: [ newName = self name ])
+        ifTrue: [ self error: 'Attempting to copy onto self' ] ].
   ^ self copyTo: destinationDirectoryNode as: newName
