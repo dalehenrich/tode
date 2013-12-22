@@ -16,7 +16,7 @@ testLeafNodeMv
         evaluateCommandString:
           'mv ' , srcNode printString , childNode name , ' ' , destNode printString.
       compareBlock value: childNode value: mvNode value: #'=='.
-      node := self lookupDestNode: destNode printString , childNode name.
+      node := self topez lookup: destNode printString , childNode name.
       compareBlock value: childNode value: node value: #'=='.
       compareBlock value: mvNode value: node value: #'=='.
       noSrcChild := false.

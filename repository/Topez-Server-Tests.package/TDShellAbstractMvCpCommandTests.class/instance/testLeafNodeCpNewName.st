@@ -23,7 +23,7 @@ testLeafNodeCpNewName
         value: copyNode
         value: #'~~'
         value: #'~='.
-      node := self lookupDestNode: destNode printString , newName.
+      node := self topez lookup: destNode printString , newName.
       compareBlock
         value: childNode
         value: node

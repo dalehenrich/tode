@@ -34,6 +34,4 @@ cp: destinationPath in: baseNode
   (destinationNode printString = self parent printString
     and: [ newName = self name ])
     ifTrue: [ self error: 'Attempting to copy onto self' ].
-  copy := self copy.
-  copy name: newName.
-  ^ destinationNode addChildNode: copy
+  ^ self copyTo: destinationNode as: newName

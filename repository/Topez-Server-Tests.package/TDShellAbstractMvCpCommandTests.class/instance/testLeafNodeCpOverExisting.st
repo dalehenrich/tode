@@ -23,7 +23,7 @@ testLeafNodeCpOverExisting
         evaluateCommandString:
           'cp ' , srcNode printString , childNode name , ' ' , targetNode printString.
       compareBlock value: childNode value: copyNode value: #'~~'.
-      node := self lookupDestNode: destNode printString , childNode name.
+      node := self topez lookup: destNode printString , childNode name.
       compareBlock value: childNode value: node value: #'~~'.
       compareBlock value: copyNode value: node value: #'=='.
       noTargetChild := false.

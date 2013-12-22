@@ -35,6 +35,4 @@ mv: destinationPath in: baseNode
   (destinationNode printString = self parent printString
     and: [ newName = self name ])
     ifTrue: [ self error: 'Attempting to move onto self' ].
-  self parent removeChildNode: self.
-  self name: newName.
-  destinationNode addChildNode: self
+  ^ self moveTo: destinationNode as: newName
