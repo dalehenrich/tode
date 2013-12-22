@@ -1,6 +1,6 @@
 as yet unclassified
 cp: destinationPath in: baseNode
-  | path newName destinationNode copy destinationDirectoryNode destinationIsDirectory |
+  | path newName destinationNode destinationDirectoryNode destinationIsDirectory |
   self canMove
     ifFalse: [ self error: 'Cannot copy: ' , self printString ].
   path := destinationPath findTokens: '/'.
@@ -24,7 +24,8 @@ cp: destinationPath in: baseNode
     ifFalse: [ 
       ^ self
         error:
-          'Cannot copy: ' , self printString , ' to: ' , destinationNode printString ].
+          'Cannot copy: ' , self printString , ' to: '
+            , destinationDirectoryNode printString ].
   (destinationIsDirectory and: [ self isLeaf not ])
     ifTrue: [ 
       destinationDirectoryNode printString = self printString

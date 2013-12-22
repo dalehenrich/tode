@@ -1,3 +1,3 @@
 as yet unclassified
-moveTo: destinationNode as: newName
+moveTo: parentNode as: newName
   self subclassResponsibility

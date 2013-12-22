@@ -10,6 +10,7 @@
 		"testDirectoryNodeCpOverExisting" : "dkh 12/22/2013 12:18",
 		"testDirectoryNodeCpOverSelf" : "dkh 12/22/2013 12:49",
 		"testDirectoryNodeCpSelfToDot" : "dkh 12/22/2013 12:48",
+		"testDirectoryNodeMv" : "dkh 12/22/2013 15:01",
 		"testLeafNodeCp" : "dkh 12/22/2013 10:38",
 		"testLeafNodeCpNewName" : "dkh 12/22/2013 10:39",
 		"testLeafNodeCpNoDestParent" : "dkh 12/22/2013 10:58",

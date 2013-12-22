@@ -1,3 +1,5 @@
 as yet unclassified
-moveTo: destinationNode as: newName
-  ^ destinationNode moveDirectoryNode: self as: newName
+moveTo: parentNode as: newName
+  "rename receiver to newName and relocate in parentNode"
+
+  ^ parentNode moveDirectoryNode: self as: newName

@@ -1,3 +1,5 @@
 as yet unclassified
 moveDirectoryNode: aDirectoryNode as: newName
-  self halt
+  aDirectoryNode parent removeChildNode: aDirectoryNode.
+  aDirectoryNode name: newName.
+  ^ self addChildNode: aDirectoryNode
