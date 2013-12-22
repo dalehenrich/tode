@@ -30,7 +30,7 @@
 		"childrenDo:" : "DataCurator 12/12/2012 15:16",
 		"contents" : "dkh 11/30/2013 08:38",
 		"copyTo:as:" : "dkh 12/22/2013 08:51",
-		"cp:in:" : "dkh 12/22/2013 15:26",
+		"cp:in:" : "dkh 12/22/2013 15:51",
 		"extension" : "dkh 12/27/2012 16:40",
 		"findMatchingPathFor:with:" : "dkh 03/28/2013 08:21",
 		"isLeaf" : "dkh 11/28/2012 05:31",
@@ -41,7 +41,7 @@
 		"lookupPath:ifAbsent:" : "dkh 11/28/2012 05:31",
 		"mkdir:in:" : "dkh 11/28/2012 05:31",
 		"moveTo:as:" : "dkh 12/22/2013 15:34",
-		"mv:in:" : "dkh 12/22/2013 15:36",
+		"mv:in:" : "dkh 12/22/2013 15:51",
 		"name" : "dkh 11/28/2012 05:31",
 		"name:" : "dkh 11/28/2012 05:31",
 		"parent" : "dkh 11/28/2012 05:31",
@@ -66,4 +66,5 @@
 		"tempSymbolList" : "dkh 10/24/2013 15:59",
 		"topez" : "dkh 11/28/2012 05:31",
 		"topez:" : "dkh 11/28/2012 05:31",
-		"touch:nodeClass:in:" : "dkh 05/17/2013 07:05" } }
+		"touch:nodeClass:in:" : "dkh 05/17/2013 07:05",
+		"validate:for:in:andDo:" : "dkh 12/22/2013 15:50" } }
