@@ -3,12 +3,14 @@
 		"isAbstract" : "dkh 12/21/2013 12:44" },
 	"instance" : {
 		"rootNodePath" : "dkh 12/21/2013 12:46",
-		"testDirectoryNodeCp" : "dkh 12/21/2013 20:29",
+		"testDirectoryNodeCp" : "dkh 12/21/2013 20:38",
 		"testLeafNodeCp" : "dkh 12/21/2013 13:33",
 		"testLeafNodeCpNewName" : "dkh 12/21/2013 13:37",
 		"testLeafNodeCpNoDestParent" : "dkh 12/21/2013 13:31",
 		"testLeafNodeCpOverExisting" : "dkh 12/21/2013 20:24",
+		"testLeafNodeCpOverSelf" : "dkh 12/22/2013 08:42",
 		"testLeafNodeMv" : "dkh 12/21/2013 13:19",
 		"testLeafNodeMvNewName" : "dkh 12/21/2013 20:21",
 		"testLeafNodeMvNoDestParent" : "dkh 12/21/2013 18:03",
-		"testLeafNodeMvOverExisting" : "dkh 12/21/2013 20:25" } }
+		"testLeafNodeMvOverExisting" : "dkh 12/21/2013 20:25",
+		"testLeafNodeMvOverSelf" : "dkh 12/22/2013 08:42" } }
