@@ -1,37 +1,31 @@
 as yet unclassified
 cp: destinationPath in: baseNode
-  | path newName destinationNode copy |
+  | path newName destinationNode copy destinationDirectoryNode destinationIsDirectory |
   self canMove
     ifFalse: [ self error: 'Cannot copy: ' , self printString ].
   path := destinationPath findTokens: '/'.
+  newName := path last.
   destinationNode := baseNode lookupPath: path ifAbsent: [  ].
-  destinationNode == nil
-    ifTrue: [ 
-      "last element doesn't exist ... newName of copy?"
-      newName := path last.
-      path := path copyFrom: 1 to: path size - 1.
-      destinationNode := baseNode
-        lookupPath: path
-        ifAbsent: [ ^ self error: 'Node does not exist: ' , destinationPath ] ]
-    ifFalse: [ 
-      "copy to existing element"
+  destinationIsDirectory := false.
+  destinationNode
+    ifNotNil: [ 
       destinationNode isLeaf
-        ifTrue: [ 
-          "replace leaf"
-          newName := path last.
-          path := path copyFrom: 1 to: path size - 1.
-          destinationNode := baseNode
-            lookupPath: path
-            ifAbsent: [ ^ self error: 'Node does not exist: ' , destinationPath ] ]
-        ifFalse: [ 
-          "copy child using my name"
-          newName := self name ] ].
-  destinationNode canEnter
+        ifFalse: [ destinationIsDirectory := true ] ].
+  destinationIsDirectory
+    ifTrue: [ 
+      newName := self name.
+      destinationDirectoryNode := destinationNode ]
+    ifFalse: [ 
+      path := path copyFrom: 1 to: path size - 1.
+      destinationDirectoryNode := baseNode
+        lookupPath: path
+        ifAbsent: [ ^ self error: 'Node does not exist: ' , destinationPath ] ].
+  destinationDirectoryNode canEnter
     ifFalse: [ 
       ^ self
         error:
           'Cannot copy: ' , self printString , ' to: ' , destinationNode printString ].
-  (destinationNode printString = self parent printString
+  (destinationDirectoryNode printString = self parent printString
     and: [ newName = self name ])
     ifTrue: [ self error: 'Attempting to copy onto self' ].
-  ^ self copyTo: destinationNode as: newName
+  ^ self copyTo: destinationDirectoryNode as: newName

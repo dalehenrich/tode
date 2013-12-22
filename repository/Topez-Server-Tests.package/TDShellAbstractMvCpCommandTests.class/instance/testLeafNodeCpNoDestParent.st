@@ -12,5 +12,5 @@ testLeafNodeCpNoDestParent
           self topez
             evaluateCommandString:
               'cp ' , srcNode printString , childNode name , ' ' , destNode printString
-                , 'xxx/yyy' s ]
+                , 'xxx/yyy' ]
         raise: Error ]
