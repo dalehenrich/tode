@@ -24,5 +24,5 @@ testDirectoryNodeMvIntoExisting
       compareBlock
         value: childNode
         value: copyNode
-        value: #'=='
+        value: self moveNodeOperator
         value: #'=' ]

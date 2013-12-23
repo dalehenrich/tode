@@ -23,7 +23,7 @@ testDirectoryNodeMv
       compareBlock
         value: childNode
         value: copyNode
-        value: #'=='
+        value: self moveNodeOperator
         value: #'=' ].
   noSrcNode := false.
   srcParentNode childNamed: srcNode name ifAbsent: [ noSrcNode := true ].

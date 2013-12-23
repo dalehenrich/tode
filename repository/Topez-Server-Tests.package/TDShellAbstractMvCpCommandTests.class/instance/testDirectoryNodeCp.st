@@ -21,5 +21,5 @@ testDirectoryNodeCp
       compareBlock
         value: childNode
         value: copyNode
-        value: #'~~'
+        value: self copyNodeOperator
         value: #'=' ]

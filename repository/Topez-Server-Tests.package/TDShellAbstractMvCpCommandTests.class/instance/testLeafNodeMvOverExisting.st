@@ -22,9 +22,9 @@ testLeafNodeMvOverExisting
       mvNode := self topez
         evaluateCommandString:
           'mv ' , srcNode printString , childNode name , ' ' , targetNode printString.
-      compareBlock value: childNode value: mvNode value: #'=='.
+      compareBlock value: childNode value: mvNode value: self moveNodeOperator.
       node := self topez lookup: destNode printString , childNode name.
-      compareBlock value: childNode value: node value: #'=='.
+      compareBlock value: childNode value: node value: self moveNodeOperator.
       compareBlock value: mvNode value: node value: #'=='.
       noTargetChild := false.
       srcNode
