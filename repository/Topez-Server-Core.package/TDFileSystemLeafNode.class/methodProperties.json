@@ -2,7 +2,7 @@
 	"class" : {
 		"directoryEntry:" : "dkh 11/30/2013 09:05",
 		"fileSystemLeafNodeProxy:" : "dkh 11/30/2013 14:58",
-		"fileSystemProxy:" : "dkh 12/06/2013 21:16",
+		"fileSystemProxy:" : "dkh 12/23/2013 12:29",
 		"typeSignature" : "dkh 12/06/2013 12:10" },
 	"instance" : {
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 12/20/2013 13:51",
@@ -10,7 +10,7 @@
 		"block" : "dkh 12/06/2013 15:02",
 		"canMove" : "dkh 12/20/2013 13:39",
 		"cat" : "dkh 12/06/2013 11:04",
-		"childNamed:ifAbsent:" : "dkh 12/23/2013 10:01",
+		"childNamed:ifAbsent:" : "dkh 12/23/2013 12:32",
 		"childrenAndNamesDo:" : "dkh 12/07/2013 08:44",
 		"classForEditorNodeLookup" : "dkh 12/06/2013 10:38",
 		"contents" : "dkh 12/06/2013 16:18",
