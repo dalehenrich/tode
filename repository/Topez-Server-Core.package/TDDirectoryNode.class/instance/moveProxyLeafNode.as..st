@@ -1,5 +1,5 @@
 as yet unclassified
-moveLeafNode: leafNode as: newName
+moveProxyLeafNode: leafNode as: newName
   | childNode theLeafNode oldName |
   oldName := leafNode name.
   theLeafNode := leafNode asTDLeafNode.

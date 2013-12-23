@@ -6,11 +6,9 @@ testLeafNodeMvOverExisting
   destNode := self lookupDestNode: rootPath , 'dest'.
   targetNodeMaster := self differentLeafNodes at: 1.
   targetNodeMaster name: 'targetMaster'.
-  compareBlock := [ :aNode :bNode :operator | 
-  self assert: (bNode perform: operator with: aNode).
+  compareBlock := [ :aNode :bNode | 
   self assert: bNode contents = aNode contents.
-  self assert: bNode name = aNode name.
-  self assert: bNode parent == destNode ].
+  self assert: bNode name = aNode name ].
   self standardLeafNodes
     do: [ :childNode | 
       | mvNode node targetNode noTargetChild noSrcChild |
@@ -22,10 +20,10 @@ testLeafNodeMvOverExisting
       mvNode := self topez
         evaluateCommandString:
           'mv ' , srcNode printString , childNode name , ' ' , targetNode printString.
-      compareBlock value: childNode value: mvNode value: self moveNodeOperator.
+      compareBlock value: childNode value: mvNode.
       node := self topez lookup: destNode printString , childNode name.
-      compareBlock value: childNode value: node value: self moveNodeOperator.
-      compareBlock value: mvNode value: node value: self moveNodeOperator.
+      compareBlock value: childNode value: node.
+      compareBlock value: mvNode value: node.
       noTargetChild := false.
       srcNode
         childNamed: targetNodeMaster name

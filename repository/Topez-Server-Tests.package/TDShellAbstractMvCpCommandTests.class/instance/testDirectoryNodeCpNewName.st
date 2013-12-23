@@ -9,17 +9,12 @@ testDirectoryNodeCpNewName
   self topez
     evaluateCommandString:
       'cp ' , srcNode printString , ' ' , destNode printString , newName.
-  compareBlock := [ :aNode :bNode :nodeOperator :nameOperator | 
-  self assert: (bNode perform: nodeOperator with: aNode).
+  compareBlock := [ :aNode :bNode | 
   self assert: bNode contents = aNode contents.
-  self assert: (bNode name perform: nameOperator with: aNode name) ].
+  self assert: bNode name = aNode name ].
   parentNode := self topez lookup: destNode printString , newName.
   self standardLeafNodes
     do: [ :childNode | 
       | copyNode |
       copyNode := self topez lookup: parentNode printString , childNode name.
-      compareBlock
-        value: childNode
-        value: copyNode
-        value: self copyNodeOperator
-        value: #'=' ]
+      compareBlock value: childNode value: copyNode ]

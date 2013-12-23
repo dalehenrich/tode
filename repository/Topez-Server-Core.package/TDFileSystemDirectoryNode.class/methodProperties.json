@@ -20,7 +20,6 @@
 		"fileDirectory" : "dkh 11/27/2013 10:13",
 		"listContents:" : "dkh 12/06/2013 15:18",
 		"moveDirectoryNode:as:" : "dkh 12/22/2013 19:49",
-		"moveLeafNode:as:" : "dkh 12/22/2013 20:30",
 		"removeAsChildOfFileSystemDirectoryNode:" : "dkh 12/06/2013 18:49",
 		"removeChildFileSystemLeafNode:" : "dkh 11/27/2013 10:40",
 		"removeChildNamed:" : "dkh 12/20/2013 14:28",

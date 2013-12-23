@@ -10,22 +10,15 @@ testDirectoryNodeMv
   copyDirNode := self topez
     evaluateCommandString:
       'mv ' , srcNode printString , ' ' , destNode printString.
-  compareBlock := [ :aNode :bNode :nodeOperator :nameOperator | 
-  | x y |
-  self assert: (bNode perform: nodeOperator with: aNode).
+  compareBlock := [ :aNode :bNode | 
   self assert: bNode contents = aNode contents.
-  self assert: (bNode name perform: nameOperator with: aNode name).
-  self assert: (bNode parent perform: self moveNodeOperator with: parentNode) ].
+  self assert: bNode name = aNode name ].
   parentNode := self topez lookup: destNode printString , 'src/'.
   originalNodes
     do: [ :childNode | 
       | copyNode |
       copyNode := self topez lookup: parentNode printString , childNode name.
-      compareBlock
-        value: childNode
-        value: copyNode
-        value: self moveNodeOperator
-        value: #'=' ].
+      compareBlock value: childNode value: copyNode ].
   noSrcNode := false.
   srcParentNode childNamed: srcNode name ifAbsent: [ noSrcNode := true ].
   self assert: noSrcNode

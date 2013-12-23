@@ -1,5 +1,7 @@
 as yet unclassified
 moveLeafNode: leafNode as: newName
+  | theLeafNode |
   leafNode parent removeChildNode: leafNode.
-  leafNode name: newName.
-  ^ self addChildNode: leafNode
+  theLeafNode := leafNode copy.
+  theLeafNode name: newName.
+  ^ self addChildNode: theLeafNode
