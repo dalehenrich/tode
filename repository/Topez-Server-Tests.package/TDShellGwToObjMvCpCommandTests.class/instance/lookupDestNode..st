@@ -1,3 +1,3 @@
 running
 lookupDestNode: nodePath
-  ^ self lookupGwNode: nodePath
+  ^ self lookupObjNode: nodePath

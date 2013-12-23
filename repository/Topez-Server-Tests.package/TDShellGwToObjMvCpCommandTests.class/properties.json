@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 12/23/2013 12:41",
 	"instvars" : [
 		 ],
-	"name" : "TDShellGwObjToGwObjRsyncCommandTests",
+	"name" : "TDShellGwToObjMvCpCommandTests",
 	"pools" : [
 		 ],
-	"super" : "TDShellAbstractRsyncCommandTests",
+	"super" : "TDShellAbstractMvCpCommandTests",
 	"type" : "normal" }
