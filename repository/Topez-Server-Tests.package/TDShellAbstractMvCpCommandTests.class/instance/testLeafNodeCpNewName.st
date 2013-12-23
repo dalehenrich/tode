@@ -4,10 +4,9 @@ testLeafNodeCpNewName
   rootPath := self rootNodePath.
   srcNode := self lookupSrcNode: rootPath , 'src'.
   destNode := self lookupDestNode: rootPath , 'dest'.
-  compareBlock := [ :aNode :bNode :nodeOperator :nameOperator | 
+  compareBlock := [ :aNode :bNode :nodeOperator | 
   self assert: (bNode perform: nodeOperator with: aNode).
   self assert: bNode contents = aNode contents.
-  self assert: (bNode name perform: nameOperator with: aNode name).
   self assert: bNode parent == destNode ].
   self standardLeafNodes
     do: [ :childNode | 
@@ -18,19 +17,7 @@ testLeafNodeCpNewName
         evaluateCommandString:
           'cp ' , srcNode printString , childNode name , ' ' , destNode printString
             , newName.
-      compareBlock
-        value: childNode
-        value: copyNode
-        value: self copyNodeOperator
-        value: #'~='.
+      compareBlock value: childNode value: copyNode value: self copyNodeOperator.
       node := self topez lookup: destNode printString , newName.
-      compareBlock
-        value: childNode
-        value: node
-        value: self copyNodeOperator
-        value: #'~='.
-      compareBlock
-        value: copyNode
-        value: node
-        value: #'=='
-        value: #'=' ]
+      compareBlock value: childNode value: node value: self copyNodeOperator.
+      compareBlock value: copyNode value: node value: self moveNodeOperator ]

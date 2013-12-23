@@ -12,9 +12,8 @@ testDirectoryNodeCpNewName
   compareBlock := [ :aNode :bNode :nodeOperator :nameOperator | 
   self assert: (bNode perform: nodeOperator with: aNode).
   self assert: bNode contents = aNode contents.
-  self assert: (bNode name perform: nameOperator with: aNode name).
-  self assert: bNode parent == parentNode ].
-  parentNode := self lookupDestNode: destNode printString , newName.
+  self assert: (bNode name perform: nameOperator with: aNode name) ].
+  parentNode := self topez lookup: destNode printString , newName.
   self standardLeafNodes
     do: [ :childNode | 
       | copyNode |

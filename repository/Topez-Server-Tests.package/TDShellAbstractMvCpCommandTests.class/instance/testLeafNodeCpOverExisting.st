@@ -25,7 +25,7 @@ testLeafNodeCpOverExisting
       compareBlock value: childNode value: copyNode value: self copyNodeOperator.
       node := self topez lookup: destNode printString , childNode name.
       compareBlock value: childNode value: node value: self copyNodeOperator.
-      compareBlock value: copyNode value: node value: #'=='.
+      compareBlock value: copyNode value: node value: self moveNodeOperator.
       noTargetChild := false.
       srcNode
         childNamed: targetNodeMaster name

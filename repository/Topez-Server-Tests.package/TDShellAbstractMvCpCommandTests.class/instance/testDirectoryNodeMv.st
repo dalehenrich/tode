@@ -11,11 +11,12 @@ testDirectoryNodeMv
     evaluateCommandString:
       'mv ' , srcNode printString , ' ' , destNode printString.
   compareBlock := [ :aNode :bNode :nodeOperator :nameOperator | 
+  | x y |
   self assert: (bNode perform: nodeOperator with: aNode).
   self assert: bNode contents = aNode contents.
   self assert: (bNode name perform: nameOperator with: aNode name).
-  self assert: bNode parent == parentNode ].
-  parentNode := self lookupDestNode: destNode printString , 'src/'.
+  self assert: (bNode parent perform: self moveNodeOperator with: parentNode) ].
+  parentNode := self topez lookup: destNode printString , 'src/'.
   originalNodes
     do: [ :childNode | 
       | copyNode |

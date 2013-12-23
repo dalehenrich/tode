@@ -15,7 +15,7 @@ testDirectoryNodeMvIntoExisting
   self assert: (bNode perform: nodeOperator with: aNode).
   self assert: bNode contents = aNode contents.
   self assert: (bNode name perform: nameOperator with: aNode name).
-  self assert: bNode parent == parentNode ].
+  self assert: (bNode parent perform: self moveNodeOperator with: parentNode) ].
   parentNode := self topez lookup: destNode printString , 'src'.
   originalNodes
     do: [ :childNode | 
