@@ -1,21 +1,21 @@
 tests
-testDirectoryNodeMv
-  | srcNode destNode rootPath copyDirNode compareBlock parentNode noSrcNode srcParentNode originalNodes |
+testDirectoryNodeMvNewName
+  | srcNode destNode rootPath compareBlock parentNode newName originalNodes |
   rootPath := self rootNodePath.
   srcNode := self lookupSrcNode: rootPath , 'src'.
-  srcParentNode := srcNode parent.
   destNode := self lookupDestNode: rootPath , 'dest'.
+  newName := 'src_NEW'.
   originalNodes := self standardLeafNodes
     collect: [ :childNode | srcNode addChildNode: childNode ].
-  copyDirNode := self topez
+  self topez
     evaluateCommandString:
-      'mv ' , srcNode printString , ' ' , destNode printString.
+      'mv ' , srcNode printString , ' ' , destNode printString , newName.
   compareBlock := [ :aNode :bNode :nodeOperator :nameOperator | 
   self assert: (bNode perform: nodeOperator with: aNode).
   self assert: bNode contents = aNode contents.
   self assert: (bNode name perform: nameOperator with: aNode name).
   self assert: bNode parent == parentNode ].
-  parentNode := self lookupDestNode: destNode printString , 'src/'.
+  parentNode := self lookupDestNode: destNode printString , newName.
   originalNodes
     do: [ :childNode | 
       | copyNode |
@@ -24,7 +24,4 @@ testDirectoryNodeMv
         value: childNode
         value: copyNode
         value: #'=='
-        value: #'=' ].
-  noSrcNode := false.
-  srcParentNode childNamed: srcNode name ifAbsent: [ noSrcNode := true ].
-  self assert: noSrcNode
+        value: #'=' ]

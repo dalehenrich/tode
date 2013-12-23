@@ -2,6 +2,8 @@
 	"class" : {
 		"isAbstract" : "dkh 12/21/2013 12:44" },
 	"instance" : {
+		"copyNodeOperator" : "dkh 12/22/2013 18:45",
+		"moveNodeOperator" : "dkh 12/22/2013 18:45",
 		"rootNodePath" : "dkh 12/21/2013 12:46",
 		"testDirectoryNodeCp" : "dkh 12/22/2013 10:38",
 		"testDirectoryNodeCpIntoExisting" : "dkh 12/22/2013 12:20",
@@ -10,7 +12,13 @@
 		"testDirectoryNodeCpOverExisting" : "dkh 12/22/2013 12:18",
 		"testDirectoryNodeCpOverSelf" : "dkh 12/22/2013 12:49",
 		"testDirectoryNodeCpSelfToDot" : "dkh 12/22/2013 12:48",
-		"testDirectoryNodeMv" : "dkh 12/22/2013 15:01",
+		"testDirectoryNodeMv" : "dkh 12/22/2013 18:35",
+		"testDirectoryNodeMvIntoExisting" : "dkh 12/22/2013 18:41",
+		"testDirectoryNodeMvNewName" : "dkh 12/22/2013 18:38",
+		"testDirectoryNodeMvNoDestParent" : "dkh 12/22/2013 18:39",
+		"testDirectoryNodeMvOverExisting" : "dkh 12/22/2013 18:40",
+		"testDirectoryNodeMvOverSelf" : "dkh 12/22/2013 18:42",
+		"testDirectoryNodeMvSelfToDot" : "dkh 12/22/2013 18:43",
 		"testLeafNodeCp" : "dkh 12/22/2013 10:38",
 		"testLeafNodeCpNewName" : "dkh 12/22/2013 10:39",
 		"testLeafNodeCpNoDestParent" : "dkh 12/22/2013 10:58",
