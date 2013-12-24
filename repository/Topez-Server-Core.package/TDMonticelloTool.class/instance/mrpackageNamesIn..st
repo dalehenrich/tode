@@ -1,7 +1,7 @@
 as yet unclassified
 mrpackageNamesIn: repo
   | packageNames loadedVersions resolvedReferences |
-  loadedVersions := self loadedVersions: false.
+  loadedVersions := self loadedVersions: true.
   resolvedReferences := self resolvedReferencesForRepository: repo.
   packageNames := resolvedReferences keys asArray
     sorted: [ :a :b | 
