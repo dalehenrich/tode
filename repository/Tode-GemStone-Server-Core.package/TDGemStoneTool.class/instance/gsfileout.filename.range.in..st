@@ -29,8 +29,12 @@ gsfileout: methodRef filename: filename range: ar in: directory
                 nextPutAll: 'category: ' , cat;
                 nextPut: lf;
                 nextPutAll: 'set compile_env: 0';
-                nextPut: lf;
-                nextPutAll: 'method: ' , methodRef actualClass name asString;
+                nextPut: lf.
+              methodRef classIsMeta
+                ifTrue: [ fileStream nextPutAll: 'classmethod: ' ]
+                ifFalse: [ fileStream nextPutAll: 'method: ' ].
+              fileStream
+                nextPutAll: methodRef actualClass theNonMetaClass name asString;
                 nextPut: lf ].
           fileStream nextPutAll: src.
           src last == lf
