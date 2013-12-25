@@ -18,9 +18,20 @@ gsfileout: methodRef filename: filename range: ar in: directory
             environmentId: 0
             on: fileStream ]
         ifFalse: [ 
-          | src |
+          | src cat fileCat |
           src := methodRef sourceCode withGemstoneLineEndings.
-          fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 1)).
+          (fileCat := ar at: 3)
+            = (cat := methodRef category asString printString)
+            ifTrue: [ fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 1)) ]
+            ifFalse: [ 
+              fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 4)).
+              fileStream
+                nextPutAll: 'category: ' , cat;
+                nextPut: lf;
+                nextPutAll: 'set compile_env: 0';
+                nextPut: lf;
+                nextPutAll: 'method: ' , methodRef actualClass name asString;
+                nextPut: lf ].
           fileStream nextPutAll: src.
           src last == lf
             ifFalse: [ fileStream nextPut: lf ].
