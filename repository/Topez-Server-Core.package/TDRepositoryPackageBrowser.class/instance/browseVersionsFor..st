@@ -5,9 +5,7 @@ browseVersionsFor: packageName
     mrVersionsFor: packageName
     in: self repository
     ifAbsent: [ ^ false ].
-  wc := self mcTool
-    resolveWorkingCopyReference: packageName
-    ifAbsent: [ self error: 'No working copy named ' , packageName printString , ' found.' ].
+  wc := self mcTool resolveWorkingCopyReference: packageName ifAbsent: [  ].
   versionsWindowId := self mcTool
     mrBrowseRepositoryVersions: versions
     in: self repository
