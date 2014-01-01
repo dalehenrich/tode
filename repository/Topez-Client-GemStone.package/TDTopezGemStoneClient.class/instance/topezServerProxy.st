@@ -22,5 +22,9 @@ topezServerProxy
 						perform: #backupDirectory:
 						withArgs: {(self sessionDescription backupDirectory)} ]
 						on: Error
-						do: [ :ignored |  ] ] ].
+						do: [ :ignored |  ] ].
+			TZGemStoneProxyBehavior new
+				topez: self;
+				allGlobalNames;
+				yourself ].
 	^ topezServerProxy
