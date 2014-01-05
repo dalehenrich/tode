@@ -7,4 +7,6 @@ executeBuiltIn: command
 		ifFalse: [ 
 			cmd = 'sessionDescription'
 				ifTrue: [ self executeSessionDescription: command ]
-				ifFalse: [ self perform: cmd asSymbol ] ]
+				ifFalse: [ cmd = 'restoreBackup'
+				ifTrue: [ self executeRestoreBackup: command ]
+				ifFalse: [self perform: cmd asSymbol ] ]]
