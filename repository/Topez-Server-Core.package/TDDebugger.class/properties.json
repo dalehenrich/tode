@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stackNode",
+		"theMiniTool",
+		"homeMethod",
+		"receiver" ],
+	"name" : "TDDebugger",
+	"pools" : [
+		 ],
+	"super" : "TDToolBuilder",
+	"type" : "normal" }

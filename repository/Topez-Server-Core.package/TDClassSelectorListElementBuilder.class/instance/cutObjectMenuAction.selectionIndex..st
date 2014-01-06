@@ -8,5 +8,7 @@ cutObjectMenuAction: listElement selectionIndex: selectionIndex
   listElement topez commitTransaction.
   ^ STON
     toString:
-      {#'addToClipboard:'.
+      {#'refreshList'.
+      nil.
+      #'addToClipboard:'.
       (def label)}
