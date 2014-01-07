@@ -1,5 +1,5 @@
 {
-	"category" : "Topez-Server-Core",
+	"category" : "Topez-Server-DebugTools",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -12,7 +12,9 @@
 		"receiver",
 		"sourceWindowId",
 		"contextWindowId",
-		"terminateProcessOnClose" ],
+		"terminateProcessOnClose",
+		"processTerminated",
+		"processResult" ],
 	"name" : "TDDebugger",
 	"pools" : [
 		 ],
