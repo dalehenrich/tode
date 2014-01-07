@@ -9,7 +9,10 @@
 		"stackNode",
 		"theMiniTool",
 		"homeMethod",
-		"receiver" ],
+		"receiver",
+		"sourceWindowId",
+		"contextWindowId",
+		"terminateProcessOnClose" ],
 	"name" : "TDDebugger",
 	"pools" : [
 		 ],

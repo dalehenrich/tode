@@ -54,8 +54,8 @@
 		"methodMenuActionSpec" : "dkh 09/30/2013 21:13",
 		"objectMenuActionSpec" : "dkh 09/30/2013 21:11",
 		"pasteObjectMenuAction:selectionIndex:" : "dkh 10/01/2013 06:41",
-		"printClientListMenuAction:selectionIndex:" : "dkh 12/18/2013 21:03",
-		"printObjectMenuAction:selectionIndex:" : "dkh 09/30/2013 21:27",
+		"printClientListMenuAction:selectionIndex:" : "dkh 01/06/2014 20:43",
+		"printObjectMenuAction:selectionIndex:" : "dkh 01/06/2014 20:44",
 		"refreshListMenuAction:selectionIndex:" : "dkh 09/30/2013 21:30",
 		"selectedClass:selectionIndex:" : "DataCurator 02/07/2013 14:28",
 		"selectedIndex" : "DataCurator 01/11/2013 14:26",
@@ -63,4 +63,4 @@
 		"standardMenuActionSpec" : "dkh 09/29/2013 13:47",
 		"theBehavior" : "DataCurator 02/07/2013 14:10",
 		"theClass" : "DataCurator 02/07/2013 14:11",
-		"windowMenuActionSpec" : "dkh 10/20/2013 09:49" } }
+		"windowMenuActionSpec" : "dkh 01/06/2014 20:33" } }

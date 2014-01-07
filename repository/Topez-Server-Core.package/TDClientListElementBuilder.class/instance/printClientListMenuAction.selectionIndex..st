@@ -13,5 +13,8 @@ printClientListMenuAction: listElement selectionIndex: selectionIndex
         nextPutAll: text;
         cr ].
   stream contents
-    printUsing: (TDEditorSpec topez: listElement topez editorAspect: #'edit').
+    printUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'edit')
+        windowName: #'printer';
+        yourself).
   ^ true

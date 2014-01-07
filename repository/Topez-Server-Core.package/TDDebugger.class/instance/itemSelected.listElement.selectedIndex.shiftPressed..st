@@ -9,4 +9,16 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   self
     homeMethod: currentFrame homeMethod;
     receiver: currentFrame receiver.
+  sourceWindowId := currentFrame
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'source')
+        parentObject: listElement parent;
+        windowId: sourceWindowId;
+        yourself).
+  contextWindowId := currentFrame
+    editUsing:
+      ((TDEditorSpec topez: listElement topez editorAspect: #'contents')
+        parentObject: listElement parent;
+        windowId: contextWindowId;
+        yourself).
   ^ #'refreshList'

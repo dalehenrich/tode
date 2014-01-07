@@ -2,18 +2,21 @@
 	"class" : {
 		 },
 	"instance" : {
+		"attachProcess:" : "dkh 01/06/2014 20:12",
 		"builder" : "dkh 01/05/2014 18:10",
-		"clientList:listElement:" : "dkh 01/06/2014 07:25",
+		"clientList:listElement:" : "dkh 01/06/2014 19:59",
 		"createStackNodeFor:" : "dkh 01/05/2014 18:01",
-		"editMenuActionSpec" : "dkh 01/05/2014 18:06",
+		"debugProcess:" : "dkh 01/06/2014 20:14",
 		"homeMethod" : "dkh 01/05/2014 18:29",
 		"homeMethod:" : "dkh 01/05/2014 18:29",
-		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 01/06/2014 07:24",
-		"keyboardAction:listElement:char:modifierPressed:selectionIndex:" : "dkh 01/05/2014 18:09",
-		"menuActionSpec:" : "dkh 01/05/2014 18:32",
-		"process:" : "dkh 01/05/2014 18:03",
+		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 01/06/2014 19:54",
+		"menuActionSpec:" : "dkh 01/06/2014 20:05",
+		"objectMenuActionSpec" : "dkh 01/06/2014 20:22",
+		"printObjectMenuAction:selectionIndex:" : "dkh 01/06/2014 21:00",
 		"receiver" : "dkh 01/05/2014 22:07",
 		"receiver:" : "dkh 01/05/2014 22:07",
 		"stackNode" : "dkh 01/05/2014 18:04",
+		"terminateProcessOnClose" : "dkh 01/06/2014 20:14",
 		"theStack" : "dkh 01/05/2014 18:04",
-		"windowIsClosing:" : "dkh 01/05/2014 18:07" } }
+		"windowIsClosing:" : "dkh 01/06/2014 20:16",
+		"windowLocation" : "dkh 01/06/2014 19:47" } }

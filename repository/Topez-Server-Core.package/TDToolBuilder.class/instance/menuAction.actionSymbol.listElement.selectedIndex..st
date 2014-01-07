@@ -1,3 +1,14 @@
 tools
 menuAction: miniTool actionSymbol: actionSymbol listElement: listElement selectedIndex: index
-  ^ false
+  (self respondsTo: actionSymbol)
+    ifTrue: [ 
+      ^ self
+        perform: actionSymbol
+        withArguments:
+          {listElement.
+          index} ].
+  ^ miniTool builder
+    perform: actionSymbol
+    withArguments:
+      {listElement.
+      index}

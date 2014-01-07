@@ -5,5 +5,5 @@ standardMenuActionSpec
   "works in concert with menuActionBlock"
 
   ^ {{('Edit' -> self editMenuActionSpec)}.
-  {('Object' -> self builder objectMenuActionSpec)}.
-  {('Window' -> self builder windowMenuActionSpec)}}
+  {('Object' -> self objectMenuActionSpec)}.
+  {('Window' -> self windowMenuActionSpec)}}

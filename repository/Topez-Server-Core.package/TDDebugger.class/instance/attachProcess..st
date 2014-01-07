@@ -1,3 +1,3 @@
 initialization
-process: aGsProcess
+attachProcess: aGsProcess
   stackNode := self createStackNodeFor: aGsProcess

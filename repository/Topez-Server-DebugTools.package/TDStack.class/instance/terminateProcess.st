@@ -3,5 +3,5 @@ terminateProcess
   process
     ifNotNil: [ :proc | 
       process := nil.
-      self debugTool debuggerClosing.
+      self debugTool ifNotNil: [ self debugTool debuggerClosing ].
       proc terminate ]
