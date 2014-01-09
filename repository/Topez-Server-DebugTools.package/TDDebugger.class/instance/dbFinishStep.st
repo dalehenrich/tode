@@ -12,7 +12,5 @@ dbFinishStep
     ifTrue: [ ^ #'close' ].
   ^ STON
     toString:
-      {#'refreshList'.
-      nil.
-      #'listIndex:'.
+      {#'listIndex:'.
       (currentFrame frameIndex)}
