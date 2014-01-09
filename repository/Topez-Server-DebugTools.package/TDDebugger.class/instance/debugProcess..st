@@ -1,4 +1,3 @@
 initialization
 debugProcess: aGsProcess
-  terminateProcessOnClose := true.
-  self attachProcess: aGsProcess
+  self debugProcess: aGsProcess exception: nil

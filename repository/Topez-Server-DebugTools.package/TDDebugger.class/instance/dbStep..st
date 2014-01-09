@@ -2,7 +2,6 @@ debug ops
 dbStep: stepDirective
   | level stepId processOop stack |
   stack := self theStack.
-  stack := stackNode basicContents.
   processOop := stack process asOop.
   stepId := #(#'into' #'over') indexOf: stepDirective.
   stepId == 1

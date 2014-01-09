@@ -1,3 +1,4 @@
 menu actions
 dbStepThruMenuAction: listElement selectionIndex: selectionIndex
-  ^ self dbThru
+  self dbSetThruBreaksDuring: [ self dbStep: #'over' ].
+  ^ self dbFinishStep

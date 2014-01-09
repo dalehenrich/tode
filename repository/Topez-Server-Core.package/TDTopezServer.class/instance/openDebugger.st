@@ -1,5 +1,15 @@
 accessing
 openDebugger
   self ensureSessionMethodsEnabled.
-  self evaluateTokens: #('debug') objIn: objIn value.
+  true
+    ifTrue: [ self evaluateTokens: #('debug') objIn: objIn value ]
+    ifFalse: [ 
+      | process debugger |
+      process := self serverStatus exceptionProcess.
+      debugger := TDDebugger new
+        topez: self;
+        debugProcess: process exception: self serverStatus exception;
+        windowLabel: process printString;
+        yourself.
+      debugger open ].
   ^ nil

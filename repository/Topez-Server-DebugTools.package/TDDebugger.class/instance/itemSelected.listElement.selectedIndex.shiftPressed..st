@@ -6,19 +6,5 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifTrue: [ ^ false ].
   self theStack navigateFrame: index.
   currentFrame := self theStack currentFrame.
-  self
-    homeMethod: currentFrame homeMethod;
-    receiver: currentFrame receiver.
-  sourceWindowId := currentFrame
-    editUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'source')
-        parentObject: listElement parent;
-        windowId: sourceWindowId;
-        yourself).
-  contextWindowId := currentFrame
-    editUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'contents')
-        parentObject: listElement parent;
-        windowId: contextWindowId;
-        yourself).
+  self selectFrame: currentFrame.
   ^ #'refreshList'

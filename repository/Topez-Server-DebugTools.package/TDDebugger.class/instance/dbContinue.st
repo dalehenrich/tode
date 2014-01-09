@@ -8,4 +8,4 @@ dbContinue
   processTerminated := (self debugExceptionSymbols includes: processResult) not.
   self topez ensureSessionMethodsEnabled.
   stack resetFrames.
-  ^ self dbFinishStep: stackNode
+  ^ self dbFinishStep
