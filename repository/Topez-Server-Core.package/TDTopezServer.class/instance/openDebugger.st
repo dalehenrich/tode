@@ -1,7 +1,7 @@
 accessing
 openDebugger
   self ensureSessionMethodsEnabled.
-  true
+  false
     ifTrue: [ self evaluateTokens: #('debug') objIn: objIn value ]
     ifFalse: [ 
       | process debugger |
