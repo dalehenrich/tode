@@ -5,4 +5,4 @@ findSymbolDictionary: symbolDictionaryName username: username
   ^ (TDSymbolDictionaryDefinition new
     symbolDictionaryName: symbolDictionaryName;
     username: username;
-    yourself) classDefinitions
+    yourself) symbolDictionary
