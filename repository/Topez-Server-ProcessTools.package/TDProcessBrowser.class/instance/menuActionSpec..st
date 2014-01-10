@@ -6,6 +6,7 @@ menuActionSpec: miniTool
   #('-').
   #('kill' $k #'killProcess:selectionIndex:').
   #('terminate' $t #'terminateProcess:selectionIndex:').
+  #('portable' nil #'portableProcess:selectionIndex:').
   #('-').
   #('yield' $y #'yield:selectionIndex:').
   #('refresh list' $l #'refreshListMenuAction:selectionIndex:').
