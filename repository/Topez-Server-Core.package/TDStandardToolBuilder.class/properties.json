@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"mcTool" ],
-	"name" : "TDAbstractMonticelloToolBuilder",
+		 ],
+	"name" : "TDStandardToolBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDStandardToolBuilder",
+	"super" : "TDAbstractToolBuilder",
 	"type" : "normal" }

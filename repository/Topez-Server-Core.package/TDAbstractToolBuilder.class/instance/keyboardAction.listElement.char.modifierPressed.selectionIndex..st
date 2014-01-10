@@ -19,16 +19,8 @@ keyboardAction: miniTool listElement: listElement char: char modifierPressed: mo
     ifTrue: [ selector := #'cutObjectMenuAction:selectionIndex:' ].
   selector
     ifNotNil: [ 
-      (self respondsTo: selector)
-        ifTrue: [ 
-          ^ self
-            perform: selector
-            withArguments:
-              {listElement.
-              selectionIndex} ].
-      ^ self builder
-        perform: selector
-        withArguments:
-          {listElement.
-          selectionIndex} ].
+      ^ self
+        performMenuOrKeyBoardAction: selector
+        listElement: listElement
+        selectionIndex: selectionIndex ].
   ^ false

@@ -4,14 +4,15 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 01/09/2014 18:09",
 	"instvars" : [
 		"topez",
 		"miniToolSpec",
 		"windowLabel",
 		"parentBuilder",
-		"windowId" ],
-	"name" : "TDToolBuilder",
+		"windowId",
+		"theMiniTool" ],
+	"name" : "TDAbstractToolBuilder",
 	"pools" : [
 		 ],
 	"super" : "Object",

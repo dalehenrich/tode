@@ -1,13 +1,14 @@
 {
-	"category" : "Topez-Server-Core",
+	"category" : "Topez-Server-ProcessTools",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"mcTool" ],
-	"name" : "TDAbstractMonticelloToolBuilder",
+		"theProcessList",
+		"processTool" ],
+	"name" : "TDProcessBrowser",
 	"pools" : [
 		 ],
 	"super" : "TDStandardToolBuilder",

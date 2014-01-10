@@ -2,16 +2,16 @@ tools
 keyboardAction: miniTool listElement: listElement char: char modifierPressed: modifierPressed selectionIndex: selectionIndex
   | selector |
   theMiniTool := miniTool.
-  char == $i
-    ifTrue: [ selector := #'dbStepIntoMenuAction:selectionIndex:' ].
-  char == $o
-    ifTrue: [ selector := #'dbStepOverMenuAction:selectionIndex:' ].
-  char == $t
-    ifTrue: [ selector := #'dbStepThruMenuAction:selectionIndex:' ].
+  char == $a
+    ifTrue: [ selector := #'attachProcess:selectionIndex:' ].
+  char == $d
+    ifTrue: [ selector := #'debugProcess:selectionIndex:' ].
   char == $k
-    ifTrue: [ selector := #'dbUpMenuAction:selectionIndex:' ].
-  char == $j
-    ifTrue: [ selector := #'dbDownMenuAction:selectionIndex:' ].
+    ifTrue: [ selector := #'killProcess:selectionIndex:' ].
+  char == $t
+    ifTrue: [ selector := #'terminateProcess:selectionIndex:' ].
+  char == $y
+    ifTrue: [ selector := #'yield:selectionIndex:' ].
   selector
     ifNotNil: [ 
       ^ self

@@ -7,7 +7,6 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"stackNode",
-		"theMiniTool",
 		"homeMethod",
 		"receiver",
 		"sourceWindowId",
@@ -18,5 +17,5 @@
 	"name" : "TDDebugger",
 	"pools" : [
 		 ],
-	"super" : "TDToolBuilder",
+	"super" : "TDStandardToolBuilder",
 	"type" : "normal" }
