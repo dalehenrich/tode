@@ -6,6 +6,8 @@ handleResponseActions: action
 		ifTrue: [ 
 			| ar result |
 			ar := STON fromString: action.
+			ar isArray
+				ifFalse: [ ^ ar ].
 			1 to: ar size by: 2 do: [ :index | 
 				| sel |
 				sel := ar at: index.
