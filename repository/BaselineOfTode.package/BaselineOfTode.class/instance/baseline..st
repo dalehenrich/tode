@@ -136,6 +136,15 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-DebugTools' ];
         yourself ].
   spec
+    for: #'gs3.1.x'
+    do: [ 
+      spec
+        package: 'Topez-Server-DebugTools'
+          with: [ spec includes: 'Tode-Server-31x-GsProcess-Patch' ];
+        package: 'Tode-Server-31x-GsProcess-Patch'
+          with: [ spec requires: 'Topez-Server-DebugTools' ];
+        yourself ].
+  spec
     for: #(#'gs3.1.x' #'gs3.2.x')
     do: [ 
       spec
