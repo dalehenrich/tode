@@ -9,9 +9,5 @@ elementSource: methodSource clientSourceElement: clientSourceElement
     elementSource: methodSource
     clientSourceElement: clientSourceElement.
   self selector asSymbol == newSelector
-    ifTrue: [ 
-      self object trimToHomeFrame.
-      self object stack
-        editUsing:
-          (TDEditorSpec topez: clientSourceElement topez editorAspect: #'stack') ].
+    ifTrue: [ self object trimToHomeFrame ].
   ^ newSelector

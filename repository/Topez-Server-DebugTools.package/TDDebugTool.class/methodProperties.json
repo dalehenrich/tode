@@ -7,7 +7,7 @@
 		"haloReadMe" : "DataCurator 12/20/2012 07:31",
 		"initialize" : "dkh 02/23/2013 14:49",
 		"installExampleOn:" : "dkh 08/14/2013 11:19",
-		"installOn:" : "dkh 07/14/2013 16:33",
+		"installOn:" : "dkh 01/10/2014 16:11",
 		"priority" : "DataCurator 12/19/2012 11:44",
 		"readMeBreakpoint" : "DataCurator 12/20/2012 08:07",
 		"testSuiteClasses" : "DataCurator 01/23/2013 18:04",
@@ -45,5 +45,6 @@
 		"defaultHomeNode" : "DataCurator 12/29/2012 21:14",
 		"gsMethodClass" : "dkh 03/31/2013 08:26",
 		"navigateStack:" : "dkh 08/15/2013 16:45",
+		"refreshView" : "dkh 01/10/2014 12:16",
 		"stackNode" : "DataCurator 12/16/2012 13:04",
 		"theStack" : "dkh 07/14/2013 16:25" } }

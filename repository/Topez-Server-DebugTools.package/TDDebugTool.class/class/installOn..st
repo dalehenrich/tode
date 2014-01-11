@@ -14,8 +14,11 @@ installOn: aTDTopezServer
   self
     installExampleOn: aTDTopezServer;
     yourself.
-  TDTopezServer
-    registerBuilderClass: TDStackNodeBuilder for: TDStack aspect: #'view';
-    registerEditorClass: TDStackClientListElementBuilder
-      for: TDStack
-      aspect: #'stack'
+  false
+    ifTrue: [ 
+      "reenable if using the TDDebugTool debugger"
+      TDTopezServer
+        registerBuilderClass: TDStackNodeBuilder for: TDStack aspect: #'view';
+        registerEditorClass: TDStackClientListElementBuilder
+          for: TDStack
+          aspect: #'stack' ]

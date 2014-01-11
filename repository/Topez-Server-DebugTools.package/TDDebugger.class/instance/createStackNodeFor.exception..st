@@ -9,6 +9,7 @@ createStackNodeFor: aGsProcess exception: anException
   stack := TDStack new
     process: aGsProcess;
     exception: anException;
+    debugTool: self;
     yourself.
   node := stack
     asTDObjectNode: parentNode
