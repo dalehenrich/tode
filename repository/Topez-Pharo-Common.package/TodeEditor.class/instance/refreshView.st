@@ -1,0 +1,3 @@
+accessing
+refreshView
+	self activeEditor refreshView
