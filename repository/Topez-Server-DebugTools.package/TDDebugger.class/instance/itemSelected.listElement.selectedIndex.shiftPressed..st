@@ -8,7 +8,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   currentFrame := self theStack currentFrame.
   self
     homeMethod: currentFrame homeMethod;
-    receiver: currentFrame receiver.
+    receiver: currentFrame frameSelf.
   sourceEditorSpec := (TDEditorSpec topez: self topez editorAspect: #'source')
     parentObject: listElement parent;
     windowId: sourceWindowId;

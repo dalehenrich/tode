@@ -8,6 +8,10 @@ keyboardAction: miniTool listElement: listElement char: char modifierPressed: mo
     ifTrue: [ selector := #'browseFullClassMenuAction:selectionIndex:' ].
   char == $i
     ifTrue: [ selector := #'dbStepIntoMenuAction:selectionIndex:' ].
+  char == $m
+    ifTrue: [ selector := #'browseImplementorsMenuAction:selectionIndex:' ].
+  char == $n
+    ifTrue: [ selector := #'browseSendersMenuAction:selectionIndex:' ].
   char == $N
     ifTrue: [ selector := #'browseReferencesMenuAction:selectionIndex:' ].
   char == $o
