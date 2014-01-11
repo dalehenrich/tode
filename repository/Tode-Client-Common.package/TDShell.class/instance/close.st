@@ -1,4 +1,7 @@
 accessing
 close
-    windowStatus ifNil: [ ^ self ].
-    windowStatus close
+	"close all windows"
+
+	windowStatus ifNil: [ ^ self ].
+	windowStatus close.
+	^ ''
