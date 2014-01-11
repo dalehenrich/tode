@@ -1,4 +1,4 @@
-accessing
+client forwarder
 restoreFromBackup: backupPath
   "restoreFromBackup normally terminates the session, so the client will need to 
     - close all of the windows (including shell window?)

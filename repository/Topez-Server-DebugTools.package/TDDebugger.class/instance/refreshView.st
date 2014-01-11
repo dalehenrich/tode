@@ -1,3 +1,3 @@
 updating
 refreshView
-  (ObjectLogEntry debug: 'refreshView') addToLog
+  self topez refreshViewFor: windowId

@@ -1,4 +1,4 @@
-accessing
+client forwarder
 spawnDebugger: aDebuggerLabel
   | topezOop |
   topezOop := self topezClientForwarder spawnDebugger: aDebuggerLabel.

@@ -1,4 +1,4 @@
-accessing
+client forwarder
 shellHistory
   | historySton |
   historySton := self topezClientForwarder shellHistory.

@@ -10,9 +10,8 @@
 		"miniToolSpec",
 		"windowLabel",
 		"parentBuilder",
-		"windowId",
-		"theMiniTool" ],
-	"name" : "TDAbstractToolBuilder",
+		"windowId" ],
+	"name" : "TDToolBuilder",
 	"pools" : [
 		 ],
 	"super" : "Object",

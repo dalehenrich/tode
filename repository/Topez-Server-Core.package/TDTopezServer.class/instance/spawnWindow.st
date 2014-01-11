@@ -1,4 +1,4 @@
-accessing
+client forwarder
 spawnWindow
   | topezOop |
   topezOop := self topezClientForwarder spawnWindowFromServer.

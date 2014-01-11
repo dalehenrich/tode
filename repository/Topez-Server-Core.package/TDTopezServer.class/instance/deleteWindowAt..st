@@ -1,4 +1,4 @@
-accessing
+client forwarder
 deleteWindowAt: aWindowId
   "close the window with <aWindowId>"
 
