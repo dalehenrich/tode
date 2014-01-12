@@ -1,5 +1,5 @@
 as yet unclassified
-handleDebugExceptionsDuring: aBlock
+handleDebugExceptionsDuring: aBlock 
   "if you make changes here (like adding new return values), see TDDebugTool>>debugExceptionSymbols"
 
   | result |

@@ -9,7 +9,7 @@ performFromServer: aSelector with: args using: aSession
 				ifFalse: [ 
 					| argCount argsOop |
 					argsOop := args.
-					argCount := aSession receiverNB: argsOop performNoDebug: 'size' withArgs: #().
+					argCount := aSession receiverNB: argsOop perform: 'size' withArgs: #().
 					messageArgs := Array new: argCount.
-					1 to: argCount do: [ :i | messageArgs at: i put: (aSession receiverNB: argsOop performNoDebug: 'at:' withArgs: {i}) ] ].
+					1 to: argCount do: [ :i | messageArgs at: i put: (aSession receiverNB: argsOop perform: 'at:' withArgs: {i}) ] ].
 			self perform: aSelector withArguments: messageArgs ]
