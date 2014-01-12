@@ -37,7 +37,7 @@
 		"removeChildNamed:" : "dkh 12/20/2013 14:28",
 		"removeChildNode:" : "dkh 12/20/2013 14:23",
 		"renderNameTextAttributes" : "dkh 12/27/2012 16:41",
-		"resolveSpecialChildNamed:ifAbsent:" : "DataCurator 01/23/2013 18:27",
+		"resolveSpecialChildNamed:ifAbsent:" : "dkh 01/11/2014 17:24",
 		"rsyncChildNamed:ifAbsent:" : "dkh 12/06/2013 14:41",
 		"rsyncCopyLeafNode:preserveTimes:" : "dkh 12/06/2013 14:43",
 		"rsyncCopyNodeChildrenUsing:" : "dkh 11/26/2013 11:02",

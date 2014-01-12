@@ -1,9 +1,7 @@
 debug ops
 dbRestart
-  | stack process level |
+  | stack |
   stack := self theStack.
-  process := stack process.
-  level := stack currentFrame frameIndex.
-  process _trimStackToLevel: level.
+  stack currentFrame trimToHomeFrame.
   stack resetFrames.
   ^ self dbFinishStep
