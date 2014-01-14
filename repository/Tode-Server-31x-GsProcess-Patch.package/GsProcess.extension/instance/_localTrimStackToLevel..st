@@ -1,7 +1,6 @@
 *tode-server-31x-gsprocess-patch
 _localTrimStackToLevel: aLevel
-
-"Deletes stack entries from 1 to (aLevel - 1) inclusive, thus making aLevel the
+  "Deletes stack entries from 1 to (aLevel - 1) inclusive, thus making aLevel the
  new top-of-stack(TOS).  At new TOS, looks in the implementation class of the
  method at TOS, using the selector of the method at TOS.  If that class's method
  dictionary contains a different GsNMethod, the GsNMethod currently in the method
@@ -25,71 +24,59 @@ _localTrimStackToLevel: aLevel
    Raises an error if the new top-of-stack would represent a return
    across an FFI , Ruby C extension, or UserAction call.
 
- Has no effect if aLevel is out of range or aLevel < 2.
-
  Debuggers must not cache or directly manipulate VariableContexts
  when examining or altering stacks.
 
  Provides the ability for a debugger to restart execution after recompiling
  a method that is active on the stack of the receiver."
 
- | fpIdx aMeth oldHome oldmClass newTosIdx oldDepth newDepth newTosFpOfs
-   prevFpIdx envId |
-  self _nativeStack ifTrue:[
-    self _convertToPortableStack .
-  ].
-  "check for argument aLevel out of range"
-  oldDepth := self localStackDepth .
-  aLevel > oldDepth  ifTrue:[ ^ self ].
-  newDepth := oldDepth - (aLevel - 1) .
-
-  1 to: aLevel do:[:n|
-    prevFpIdx := fpIdx .
-    fpIdx := self _localFrameOffsetAt: n  .
-    aMeth := self _fetchMethod:( arStack at:( fpIdx + FP_codePtr_OFS)) .
-    aMeth ifNil:[ self _halt:'Cannot trim stack across a reenter marker'].
-  ].
-
-  "check to see whether new TOS method has been recompiled, and if so,
+  | fpIdx aMeth oldHome oldmClass newTosIdx oldDepth newDepth newTosFpOfs prevFpIdx envId |
+  self _nativeStack
+    ifTrue: [ self _convertToPortableStack ].	"check for argument aLevel out of range"
+  oldDepth := self localStackDepth.
+  aLevel > oldDepth
+    ifTrue: [ ^ self ].
+  newDepth := oldDepth - (aLevel - 1).
+  1 to: aLevel do: [ :n | 
+    prevFpIdx := fpIdx.
+    fpIdx := self _localFrameOffsetAt: n.
+    aMeth := self _fetchMethod: (arStack at: fpIdx + FP_codePtr_OFS).
+    aMeth ifNil: [ self _halt: 'Cannot trim stack across a reenter marker' ] ].	"check to see whether new TOS method has been recompiled, and if so,
    install the new method."
-  oldHome := aMeth homeMethod .
-  oldmClass := oldHome inClass .
-  envId := (oldHome respondsTo: #environmentId) 
-            ifTrue: [oldHome environmentId] ifFalse: [0].
-  (oldmClass isNil or: [self class anonymousSelectors includes: oldHome selector]) ifFalse: [
-    "not an anonymous method"
-    | newMeth oldCptr |
-    newMeth := oldmClass compiledMethodAt: oldHome selector environmentId: envId.
-    newMeth == aMeth ifFalse:[
-      aMeth == oldHome ifFalse:[
-        self _halt:'Cannot trim stack to a block in recompiled method'.
-      ].
-      "install recompiled method"
-      oldCptr := arStack at: (fpIdx + FP_codePtr_OFS) .
-      oldCptr class == GsNMethod ifTrue:[
-        arStack at: (fpIdx + FP_codePtr_OFS) put: newMeth .
-      ] ifFalse:[
-        self _halt:'should not be here'
-      ].
-    ].
-  ].
-  aLevel > 1 ifTrue:[
-    newTosIdx := fpIdx + FP_codePtr_OFS .
-    "push savedIP which is byte offset to first instr in the method"
-    newTosIdx := newTosIdx - 1 .
-    arStack at: newTosIdx put: OC_GSNMETHOD_FIRST_INSTR_OFFSET .
-    "don't need  _tosIsIpNil in arStack object"
-
-    newTosFpOfs := arStack at: prevFpIdx .
-    topFpOffset := newTosFpOfs .  "adjust offset to Top FP"
-    "adjust the depth of the receiver."
-     uaCount_depth := ((uaCount_depth bitShift: -32)  bitShift:32)
-         bitOr: (newDepth bitAnd: 16rFFFFFFFF) .
-    newTosIdx > 1 ifTrue:[ 
+  oldHome := aMeth homeMethod.
+  oldmClass := oldHome inClass.
+  envId := (oldHome respondsTo: #'environmentId')
+    ifTrue: [ oldHome environmentId ]
+    ifFalse: [ 0 ].
+  (oldmClass isNil
+    or: [ self class anonymousSelectors includes: oldHome selector ])
+    ifFalse: [ 
+      | newMeth "not an anonymous method" oldCptr |
+      newMeth := oldmClass
+        compiledMethodAt: oldHome selector
+        environmentId: envId.
+      newMeth == aMeth
+        ifFalse: [ 
+          aMeth == oldHome
+            ifFalse: [ self _halt: 'Cannot trim stack to a block in recompiled method' ].	"install recompiled method"
+          oldCptr := arStack at: fpIdx + FP_codePtr_OFS.
+          oldCptr class == GsNMethod
+            ifTrue: [ arStack at: fpIdx + FP_codePtr_OFS put: newMeth ]
+            ifFalse: [ self _halt: 'should not be here' ] ] ].
+  newTosIdx := fpIdx + FP_codePtr_OFS.	"push savedIP which is byte offset to first instr in the method"
+  newTosIdx := newTosIdx - 1.
+  arStack at: newTosIdx put: OC_GSNMETHOD_FIRST_INSTR_OFFSET.	"don't need  _tosIsIpNil in arStack object"
+  aLevel > 1
+    ifTrue: [ 
+      newTosFpOfs := arStack at: prevFpIdx.
+      topFpOffset := newTosFpOfs.	"adjust offset to Top FP"	"adjust the depth of the receiver."
+      uaCount_depth := ((uaCount_depth bitShift: -32) bitShift: 32)
+        bitOr: (newDepth bitAnd: 16rFFFFFFFF) ].
+  newTosIdx > 1
+    ifTrue: [ 
       "delete the unwanted stack frames.
        Since FP linkages in arStack are relative to   arStack size
          there is no other fixup needed. "
-      arStack removeFrom:1 to: newTosIdx - 1 .
-    ].
-  ].
-  dbgFpsCache := nil . "clear frame offsets cache"
+      arStack removeFrom: 1 to: newTosIdx - 1 ].
+  dbgFpsCache := nil	"clear frame offsets cache"
+
