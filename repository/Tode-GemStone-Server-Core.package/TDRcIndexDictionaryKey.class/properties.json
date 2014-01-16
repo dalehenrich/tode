@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"object",
+		"pathTerm",
+		"indexDictionary" ],
+	"name" : "TDRcIndexDictionaryKey",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -13,6 +13,7 @@ SYNOPSIS
   gs mfc [<maxThreads>]
   gs mreferences @<object-path>
   gs objectAudit [<maxThreads>]
+  gs objectFor <object-oop>
   gs references @<object-path>
   gs sessionDescription
 

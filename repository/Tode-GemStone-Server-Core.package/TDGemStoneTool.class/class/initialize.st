@@ -1,3 +1,8 @@
 as yet unclassified
 initialize
-  self install
+  self install.
+  TDTopezServer
+    registerBuilderClass: TDRcIndexDictionaryNodeBuilder
+      for: RcIndexDictionary
+      aspect: #'view';
+    yourself
