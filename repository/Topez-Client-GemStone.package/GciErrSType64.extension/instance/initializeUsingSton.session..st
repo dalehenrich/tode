@@ -16,6 +16,6 @@ initializeUsingSton: aGciLibrary session: aTodeSession
         on: TDReadingGciErrorArguments
         do: [ :ex | 
           "recursion protection"
-          self halt readArguments ] ].
+          self  readArguments ] ].
   address := nil.
   library := nil
