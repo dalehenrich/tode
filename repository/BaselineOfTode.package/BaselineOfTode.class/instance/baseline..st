@@ -148,6 +148,10 @@ baseline: spec
     for: #(#'gs3.1.x' #'gs3.2.x')
     do: [ 
       spec
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-31x-Core' ];
+        package: 'Topez-Server-31x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
         package: 'Topez-Server-31x-DebugTools'
