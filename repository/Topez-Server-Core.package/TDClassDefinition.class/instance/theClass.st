@@ -6,7 +6,9 @@ theClass
     ifNil: [ 
       | nm |
       nm := self theClassName.
-      ^ ClassOrganizer cachedOrganizer classes
+      cl := ClassOrganizer cachedOrganizer classes
         detect: [ :cl | cl name = nm ]
         ifNone: [ nil ] ].
+  cl isBehavior
+    ifFalse: [ ^ nil ].
   ^ cl
