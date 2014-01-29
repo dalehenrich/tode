@@ -1,1 +1,1 @@
-(name 'Topez-Server-24x-Core-dkh.1' message 'more porting changes' id '1fdbd615-a126-496c-b66a-8d132720fe0e' date '03/31/2013' time '08:21:56' author 'dkh' ancestors () stepChildren ())
+(name 'Topez-Server-24x-Core-dkh.2' message 'Issue #19: more fixes for GemStone2.4' id 'e5b802c2-bc91-4d95-8921-102229d2f272' date '01/29/2014' time '14:34:49' author 'dkh' ancestors ((name 'Topez-Server-24x-Core-dkh.1' message 'more porting changes' id '1fdbd615-a126-496c-b66a-8d132720fe0e' date '03/31/2013' time '08:21:56' author 'dkh' ancestors () stepChildren ())) stepChildren ())
