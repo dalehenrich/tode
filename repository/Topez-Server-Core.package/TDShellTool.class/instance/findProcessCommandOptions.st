@@ -6,4 +6,7 @@ findProcessCommandOptions
 
   "browse [--scriptPath=<tode-path>] browse-command [<browse-arguments>]"
 
-  self getOptsMixedLongShort: {#('scriptPath' nil #'required')}
+  self getOptsMixedLongShort: {#('scriptPath' nil #'optional')}.
+  self options
+    at: 'scriptPath'
+    ifPresent: [ :scriptPath | scriptPath ifNil: [ self options at: 'scriptPath' put: '/home/.' ] ]
