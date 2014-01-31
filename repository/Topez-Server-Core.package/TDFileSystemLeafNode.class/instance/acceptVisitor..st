@@ -1,5 +1,5 @@
 visiting
 acceptVisitor: aTDNodeVisitor
+  aTDNodeVisitor acceptFileSystemLeafNode: self.
   (self name endsWith: self stonFileExtension)
-    ifTrue: [ self asTDLeafNode acceptVisitor: aTDNodeVisitor ]
-    ifFalse: [ aTDNodeVisitor acceptFileSystemLeafNode: self ]
+    ifTrue: [ self asTDLeafNode acceptVisitor: aTDNodeVisitor proxiedBy: self ]

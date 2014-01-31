@@ -5,7 +5,8 @@
 		"fileSystemProxy:" : "dkh 12/23/2013 12:29",
 		"typeSignature" : "dkh 12/06/2013 12:10" },
 	"instance" : {
-		"acceptVisitor:" : "dkh 01/30/2014 12:37",
+		"acceptVisitor:" : "dkh 01/31/2014 10:54",
+		"acceptVisitor:proxiedBy:" : "dkh 01/31/2014 10:52",
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 12/20/2013 13:51",
 		"asTDLeafNode" : "dkh 12/06/2013 16:06",
 		"block" : "dkh 12/06/2013 15:02",
@@ -29,6 +30,7 @@
 		"isLeaf" : "dkh 12/06/2013 21:21",
 		"listContents:" : "dkh 12/19/2013 07:24",
 		"lookup:with:" : "dkh 12/07/2013 08:46",
+		"method" : "dkh 01/31/2014 10:46",
 		"modificationTime" : "dkh 11/30/2013 21:46",
 		"modified" : "dkh 11/10/2013 21:03",
 		"name:" : "dkh 12/20/2013 14:12",

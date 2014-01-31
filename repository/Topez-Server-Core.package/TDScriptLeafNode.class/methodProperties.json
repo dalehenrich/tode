@@ -3,6 +3,7 @@
 		"typeSignature" : "DataCurator 11/30/2012 08:00" },
 	"instance" : {
 		"acceptVisitor:" : "dkh 01/30/2014 12:34",
+		"acceptVisitor:proxiedBy:" : "dkh 01/31/2014 10:50",
 		"block" : "dkh 02/11/2013 13:22",
 		"block:" : "dkh 05/28/2013 06:30",
 		"blockVendor" : "dkh 05/18/2013 10:41",
