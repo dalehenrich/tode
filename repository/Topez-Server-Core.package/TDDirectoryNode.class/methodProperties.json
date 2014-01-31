@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"acceptVisitor:" : "dkh 01/30/2014 12:32",
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:33",
 		"addChild:" : "dkh 11/28/2012 05:31",
 		"addChildIfAbsent:" : "dkh 12/01/2013 19:55",

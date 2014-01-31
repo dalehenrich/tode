@@ -3,6 +3,7 @@
 		"directoryEntry:" : "08/06/2013 08:19" },
 	"instance" : {
 		"_childNodeFor:" : "dkh 11/27/2013 10:26",
+		"acceptVisitor:" : "dkh 01/30/2014 12:30",
 		"addChild:" : "dkh 12/01/2013 19:48",
 		"addChildFileSystemLeafNode:" : "dkh 12/21/2013 08:20",
 		"addChildLeafNode:" : "dkh 12/06/2013 17:29",

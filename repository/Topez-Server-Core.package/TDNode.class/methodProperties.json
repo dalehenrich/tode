@@ -16,6 +16,7 @@
 		"stonFileExtension" : "dkh 11/29/2013 09:21",
 		"topezTextAttributes" : "DataCurator 11/29/2012 20:36" },
 	"instance" : {
+		"acceptVisitor:" : "dkh 01/30/2014 12:32",
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 11/27/2013 10:20",
 		"addTempValueTo:" : "07/12/2013 08:46",
 		"aspect" : "dkh 04/10/2013 08:27",

@@ -1,0 +1,25 @@
+as yet unclassified
+findReferences: variableOrGlobalNameOrPathRef searchScriptRoot: path
+  "find [--scriptPath=<tode-path>] references <variableOrGlobalNameOrPathRef>"
+
+  | rootSearchNode literal leafNodes |
+  literal := (variableOrGlobalNameOrPathRef beginsWith: '@')
+    ifTrue: [ self resolveAtPathReference: variableOrGlobalNameOrPathRef ]
+    ifFalse: [ Smalltalk at: variableOrGlobalNameOrPathRef asSymbol ].
+  rootSearchNode := self topez lookup: path.
+  leafNodes := IdentitySet new.
+  TDExecutableStScriptVisitor
+    topez: self topez
+    visitNode: rootSearchNode
+    andDo: [ :leafNode | 
+      [ 
+      | gsMethod srcOffset |
+      gsMethod := leafNode method.
+      (gsMethod _literalsIncludesValue: literal)
+        ifTrue: [ leafNodes add: leafNode ] ]
+        on: CompileError
+        do: [ :ex | 
+          Transcript
+            cr;
+            show: 'Compile error processing: ' , leafNode printString ] ].
+  ^ leafNodes asArray sort: [ :a :b | a printString < b printString ]

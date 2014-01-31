@@ -1,6 +1,7 @@
 as yet unclassified
 find
   "
+  find [--scriptPath=<tode-path>] find-command [<find-arguments>]
   find amethod <method-spec> 
   find categories
   find category <regex-pattern>
@@ -22,7 +23,8 @@ find
 "
 
   | findTokens command |
-  findTokens := tokens copyFrom: 2 to: tokens size.
+  self findProcessCommandOptions.
+  findTokens := self arguments.
   command := findTokens at: 1.
   command = 'method'
     ifTrue: [ ^ self findMethod: (findTokens at: 2) ].

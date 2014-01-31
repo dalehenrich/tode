@@ -1,0 +1,3 @@
+visitor-leaves
+acceptFileSystemLeafNode: aTDFileSystemLeafNode
+  self acceptLeafNode: aTDFileSystemLeafNode

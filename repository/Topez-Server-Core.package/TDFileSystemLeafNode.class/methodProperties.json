@@ -5,6 +5,7 @@
 		"fileSystemProxy:" : "dkh 12/23/2013 12:29",
 		"typeSignature" : "dkh 12/06/2013 12:10" },
 	"instance" : {
+		"acceptVisitor:" : "dkh 01/30/2014 12:37",
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 12/20/2013 13:51",
 		"asTDLeafNode" : "dkh 12/06/2013 16:06",
 		"block" : "dkh 12/06/2013 15:02",

@@ -1,8 +1,14 @@
 as yet unclassified
 findReferences: variableOrGlobalNameOrPathRef
-  "find references <variableOrGlobalNameOrPathRef>"
+  "find [--scriptPath=<tode-path>] references <variableOrGlobalNameOrPathRef>"
 
   | methodRefs pattern |
+  self options
+    at: 'scriptPath'
+    ifPresent: [ :scriptPath | 
+      ^ self
+        findReferences: variableOrGlobalNameOrPathRef
+        searchScriptRoot: scriptPath ].
   methodRefs := (variableOrGlobalNameOrPathRef beginsWith: '@')
     ifTrue: [ 
       | literal |

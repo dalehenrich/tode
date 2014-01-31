@@ -1,8 +1,11 @@
 as yet unclassified
 findSender: selectorToken
-  "find sender [#]<selector>"
+  "find [--scriptPath=<tode-path>] sender [#]<selector>"
 
   | selector methodRefs |
+  self options
+    at: 'scriptPath'
+    ifPresent: [ :scriptPath | ^ self findSender: selectorToken searchScriptRoot: scriptPath ].
   selector := self resolveSelector: selectorToken.
   methodRefs := (Smalltalk systemNavigation newSendersOf: selector asSymbol)
     collect: [ :gsMethod | MethodReference class: gsMethod inClass selector: gsMethod selector ].
