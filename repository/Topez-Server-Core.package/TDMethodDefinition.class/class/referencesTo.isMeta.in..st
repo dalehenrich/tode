@@ -3,7 +3,7 @@ referencesTo: aVariableOrClassName isMeta: isMeta in: aClassOrNil
   ^ (self rawReferencesTo: aVariableOrClassName isMeta: isMeta in: aClassOrNil)
     collect: [ :methodRef | 
       self
-        className: methodRef actualClass theNonMetaClass name
-        isMeta: methodRef actualClass isMeta
+        className: methodRef classSymbol
+        isMeta: methodRef classIsMeta
         selector: methodRef selector
         messagePattern: aVariableOrClassName ]
