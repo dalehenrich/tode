@@ -6,6 +6,6 @@ tsdebug: arg
   selector := (testSpec at: 2) asSymbol.
   (selector at: 1) = $#
     ifTrue: [ selector := selector copyFrom: 2 to: selector size ].
-  meth := cls compiledMethod at: selector.
+  meth := cls compiledMethodAt: selector.
   meth setBreakAtStepPoint: 1.
   ^ cls debug: selector
