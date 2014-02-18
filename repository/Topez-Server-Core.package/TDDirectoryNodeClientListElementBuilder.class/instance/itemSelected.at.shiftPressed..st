@@ -13,37 +13,19 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   toggled := false.
   index == 1
     ifTrue: [ 
-      "."
-      "toggle between view and inspect on subject of list"
-      toggled := true.
-      (obj respondsTo: #'builderAspect')
+      ".."
+      "lets highlight ourselves in the .. list ..."
+      parentList isEmpty not
         ifTrue: [ 
-          builderAspect := obj builderAspect.
-          builderAspect == #'inspect'
-            ifTrue: [ builderAspect := #'view' ]
-            ifFalse: [ builderAspect := #'inspect' ] ].
-      obj := obj dotSelfObject
-        asTDObjectNode: obj
-        topez: listElement topez
-        aspect: builderAspect.
-      objName := self object displayWith: listElement displayPolicy.
-      obj name: objName ]
+          | ar |
+          ar := parentList removeLast.
+          highlightIndex := ar at: 1.
+          editorAspect := ar at: 2 ] ]
     ifFalse: [ 
-      index == 2
-        ifTrue: [ 
-          ".."
-          "lets highlight ourselves in the .. list ..."
-          parentList isEmpty not
-            ifTrue: [ 
-              | ar |
-              ar := parentList removeLast.
-              highlightIndex := ar at: 1.
-              editorAspect := ar at: 2 ] ]
-        ifFalse: [ 
-          parentList
-            add:
-              {index.
-              (itemAttribute aspect)	"use original aspect"} ] ].
+      parentList
+        add:
+          {index.
+          (itemAttribute aspect)	"use original aspect"} ].
   windowName := listElement editorWindowName.
   toggled
     ifTrue: [ 

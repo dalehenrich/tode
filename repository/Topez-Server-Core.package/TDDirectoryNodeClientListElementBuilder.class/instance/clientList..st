@@ -5,17 +5,6 @@ clientList: listElement
   components := OrderedCollection new.
   max := 'parent' size.
   displayPolicy := listElement displayPolicy.
-  components
-    add:
-      {'.'.
-      (self object dotSelfObject displayWith: displayPolicy)}.
-  items
-    add:
-      (TDClientListItemAttributes
-        object: self object
-        parent: nil
-        aspect: listElement aspect
-        list: listElement parentList).
   self object parent ~~ nil
     ifTrue: [ 
       displayPolicy stream: nil.
