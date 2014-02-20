@@ -1,11 +1,11 @@
 as yet unclassified
-executeMenuActionForClientListElement: aClientElement action: aSymbol selectionIndex: selectionIndex
+executeMenuActionForClientListElement: aClientElement action: aSymbolOrStringOrSpecial selectionIndex: selectionIndex
 	| oopType |
 	oopType := self session
 		rawReceiverNB: aClientElement menuActionBlockOopType
 		perform: #value:value:value:
 		withArgs:
-			{(aSymbol asSymbol).
+			{aSymbolOrStringOrSpecial.
 			(aClientElement clientElementOopType).
 			selectionIndex}.
 	^ self session library localFor: oopType
