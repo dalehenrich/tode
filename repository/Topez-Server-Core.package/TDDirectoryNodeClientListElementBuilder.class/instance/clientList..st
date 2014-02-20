@@ -5,20 +5,35 @@ clientList: listElement
   components := OrderedCollection new.
   max := 'parent' size.
   displayPolicy := listElement displayPolicy.
+  components
+    add:
+      {'.'.
+      (self object dotSelfObject displayWith: displayPolicy)}.
+  items
+    add:
+      ((TDClientListItemAttributes
+        object: self object
+        parent: nil
+        aspect: listElement aspect
+        list: listElement parentList)
+        label: '.';
+        yourself).
   self object parent ~~ nil
     ifTrue: [ 
       displayPolicy stream: nil.
       components
         add:
           {'..'.
-          (self object parent displayWith: displayPolicy)}.
+          (self object parent dotSelfObject displayWith: displayPolicy)}.
       items
         add:
-          (TDClientListItemAttributes
+          ((TDClientListItemAttributes
             object: self object parent
             parent: nil
             aspect: listElement aspect
-            list: listElement parentList) ].
+            list: listElement parentList)
+            label: '..';
+            yourself) ].
   self object
     childrenAndNamesDo: [ :child :nameText | 
       max := max max: nameText size.
