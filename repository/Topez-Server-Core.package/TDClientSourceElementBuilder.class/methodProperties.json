@@ -9,6 +9,7 @@
 		"cmdKeyAction:sourceElement:editorSource:selectionInterval:" : "DataCurator 02/07/2013 16:16",
 		"cmdKeyBlock" : "DataCurator 02/08/2013 18:08",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:10",
+		"editMenuActionSpec" : "dkh 02/23/2014 12:15",
 		"elementSource" : "dkh 12/06/2013 10:52",
 		"elementSource:clientSourceElement:" : "dkh 12/06/2013 10:54",
 		"firstSource" : "dkh 02/16/2013 12:38",
@@ -18,5 +19,8 @@
 		"implementorsOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"menuActionSpec" : "dkh 02/23/2014 09:37",
 		"referencesTo:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
+		"saveMenuActionSpec" : "dkh 02/23/2014 12:17",
 		"sendersOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
-		"setBlock" : "DataCurator 01/26/2013 07:07" } }
+		"setBlock" : "DataCurator 01/26/2013 07:07",
+		"smalltalkMenuActionSpec" : "dkh 02/23/2014 12:26",
+		"standardMenuActionSpec" : "dkh 02/23/2014 12:17" } }

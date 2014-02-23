@@ -1,4 +1,4 @@
-as yet unclassified
+menu support
 apply: menuSpec to: aMenu for: menuTarget
 	| maxLength |
 	maxLength := 0.
@@ -21,11 +21,19 @@ apply: menuSpec to: aMenu for: menuTarget
 						ifTrue: [ aMenu addLine ]
 						ifFalse: [ 
 							(spec at: 2) ifNotNil: [ :char | label := (label padRightTo: maxLength) , ' (' , char asString , ')' ].
-							aMenu
-								add: label
-								target: menuTarget
-								selector: #executeMenuAction:
-								argument: (spec at: 3) ] ]
+							spec size == 3
+								ifTrue: [ 
+									aMenu
+										add: label
+										target: menuTarget
+										selector: #executeMenuAction:
+										argument: (spec at: 3) ]
+								ifFalse: [ 
+									aMenu
+										add: label
+										target: menuTarget
+										selector: (spec at: 4) asSymbol  "presumably #executeLocalMenuAction:, but not required"
+										argument: (spec at: 3) ] ] ]
 				ifFalse: [ 
 					| assoc subMenu |
 					subMenu := MenuMorph new.

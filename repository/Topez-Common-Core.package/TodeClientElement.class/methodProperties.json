@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"activateElement" : "dkh 2/7/2013 12:03",
-		"apply:to:for:" : "dkh 9/29/2013 12:06",
+		"apply:to:for:" : "dkh 2/23/2014 10:17",
 		"aspect" : "DataCurator 01/01/2013 07:57",
 		"aspect:" : "DataCurator 01/01/2013 07:58",
 		"blockCache" : "dkh 12/30/2012 10:53",
@@ -24,7 +24,6 @@
 		"editorWindowName" : "dkh 1/2/2013 20:42",
 		"editorWindowName:" : "dkh 1/2/2013 20:42",
 		"excludedInstVarNames" : "dkh 10/20/2013 09:56",
-		"executeMenuAction:listIndex:" : "dkh 9/28/2013 15:14",
 		"first" : "DataCurator 01/22/2013 10:15",
 		"getMenu:for:" : "dkh 9/29/2013 12:03",
 		"highlightedIndex" : "dkh 2/17/2013 12:16",
