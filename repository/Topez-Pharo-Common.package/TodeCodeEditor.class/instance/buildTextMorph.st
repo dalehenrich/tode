@@ -5,4 +5,4 @@ buildTextMorph
         text: #'contents'
         accept: #'acceptContents:notifying:'
         readSelection: #'getSelection'
-        menu: nil
+        menu: #codeMenu:

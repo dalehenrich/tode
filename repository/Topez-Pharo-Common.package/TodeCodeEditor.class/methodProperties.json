@@ -4,7 +4,7 @@
 	"instance" : {
 		"acceptContents:notifying:" : "dkh 3/29/2013 13:23",
 		"bindingOf:" : "dkh 12/27/2012 09:50",
-		"buildTextMorph" : "dkh 12/27/2012 08:10",
+		"buildTextMorph" : "dkh 2/21/2014 17:57",
 		"clientElement:" : "dkh 1/26/2013 09:32",
 		"cmdBPressed:" : "dkh 2/7/2013 15:47",
 		"cmdKPressed:" : "dkh 2/7/2013 15:47",
@@ -12,6 +12,7 @@
 		"cmdNPressed:" : "dkh 2/7/2013 15:47",
 		"cmdShiftBPressed:" : "dkh 2/7/2013 15:47",
 		"cmdShiftNPressed:" : "dkh 2/7/2013 15:47",
+		"codeMenu:" : "dkh 2/21/2014 17:57",
 		"contents" : "dkh 1/26/2013 09:32",
 		"doItContext" : "dkh 12/27/2012 08:10",
 		"doItReceiver" : "dkh 2/7/2013 10:22",

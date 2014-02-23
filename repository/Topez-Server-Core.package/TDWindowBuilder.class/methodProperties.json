@@ -2,19 +2,26 @@
 	"class" : {
 		"reset" : "DataCurator 02/06/2013 01:52" },
 	"instance" : {
+		"basicMenuActionSpec" : "dkh 02/23/2014 09:32",
 		"buildClientElementUsing:editorAspect:" : "dkh 04/11/2013 14:35",
 		"cmdKeyCodePoints" : "DataCurator 01/27/2013 09:30",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 20:52",
 		"defaultEditorWindowName" : "DataCurator 01/24/2013 13:44",
+		"editMenuActionSpec" : "dkh 02/23/2014 09:33",
 		"editorWindowLabel" : "DataCurator 01/24/2013 16:49",
 		"editorWindowLocation" : "DataCurator 01/27/2013 21:11",
 		"editorWindowName" : "DataCurator 01/24/2013 13:43",
 		"keyboardEventBlock" : "DataCurator 01/27/2013 09:31",
+		"menuActionBlock" : "dkh 02/23/2014 09:35",
+		"menuActionSpec" : "dkh 02/23/2014 09:38",
 		"objectClipboard" : "DataCurator 02/05/2013 22:39",
 		"objectClipboard:" : "DataCurator 02/05/2013 22:40",
+		"objectMenuActionSpec" : "dkh 02/23/2014 09:33",
 		"standardCmdKeyCodePoints" : "DataCurator 01/27/2013 10:36",
+		"standardMenuActionSpec" : "dkh 02/23/2014 09:34",
 		"theEditorSpec" : "dkh 10/05/2013 10:06",
 		"theEditorSpec:" : "dkh 09/15/2013 21:51",
 		"theWindowLocation:" : "DataCurator 01/27/2013 20:51",
 		"theWindowName:" : "DataCurator 01/24/2013 13:40",
-		"windowIsClosingBlock" : "dkh 10/20/2013 09:58" } }
+		"windowIsClosingBlock" : "dkh 10/20/2013 09:58",
+		"windowMenuActionSpec" : "dkh 02/23/2014 09:33" } }

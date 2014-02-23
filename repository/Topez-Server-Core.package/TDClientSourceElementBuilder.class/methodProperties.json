@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"browseClass:editorSource:selectionInterval:" : "dkh 04/11/2013 15:24",
-		"buildClientElementUsing:editorAspect:" : "dkh 10/20/2013 10:15",
+		"buildClientElementUsing:editorAspect:" : "dkh 02/23/2014 09:36",
 		"clientSourceElement" : "DataCurator 01/11/2013 15:41",
 		"clientSourceElementClass" : "DataCurator 01/11/2013 15:41",
 		"cmdKeyAction:sourceElement:editorSource:selectionInterval:" : "DataCurator 02/07/2013 16:16",
@@ -16,6 +16,7 @@
 		"formattedElementSource:" : "dkh 02/16/2013 12:58",
 		"getBlock" : "dkh 02/16/2013 12:38",
 		"implementorsOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
+		"menuActionSpec" : "dkh 02/23/2014 09:37",
 		"referencesTo:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"sendersOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"setBlock" : "DataCurator 01/26/2013 07:07" } }
