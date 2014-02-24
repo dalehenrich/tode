@@ -1,4 +1,4 @@
-as yet unclassified
+menu actions
 referencesTo: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-N - references to"
 

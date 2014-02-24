@@ -1,9 +1,9 @@
 menu action specs
 windowMenuActionSpec
-  ^ {#('clone window' $C #'cloneWindowMenuAction:selectionIndex:').
-  #('inspect builder' nil #'inspectBuilderMenuAction:selectionIndex:').
-  #('inspect client element' nil #'inspectWindowModelMenuAction:selectionIndex:').
-  #('list windows' $L #'listWindowsMenuAction:selectionIndex:').
-  #('print window' $P #'printClientListMenuAction:selectionIndex:').
-  #('refresh window' $l #'refreshListMenuAction:selectionIndex:').
-  #('spawn shell' 'esc' #'spawnShellMenuAction:selectionIndex:')}
+  ^ {#('clone window' $C #'cloneWindowMenuAction:').
+  #('inspect builder' nil #'inspectBuilderMenuAction:').
+  #('inspect client element' nil #'inspectWindowModelMenuAction:').
+  #('list windows' $L #'listWindowsMenuAction:').
+  #('print window' $P #'printClientListMenuAction:').
+  #('refresh window' $l #'refreshListMenuAction:').
+  #('spawn shell' 'esc' #'spawnShellMenuAction:')}

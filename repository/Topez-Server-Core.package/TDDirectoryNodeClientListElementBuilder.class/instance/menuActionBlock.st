@@ -2,10 +2,14 @@ menu actions
 menuActionBlock
   "works in concert with #menuActionSpec"
 
-  ^ [ :actionSymbolOrInteger :listElement :index | 
+  ^ [ :actionSymbolOrInteger :listElement :actionArg | 
   | result |
   actionSymbolOrInteger isSymbol
-    ifTrue: [ result := self perform: actionSymbolOrInteger with: listElement with: index ]
+    ifTrue: [ 
+      result := self
+        handleMenuActions: actionSymbolOrInteger
+        listElement: listElement
+        actionArg: actionArg ]
     ifFalse: [ 
       | ar parentList highlightIndex editorAspect parentIndex parents obj parent |
       parentIndex := actionSymbolOrInteger.

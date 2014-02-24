@@ -1,3 +1,3 @@
 local menu actions
 copySelection
-	self morph textMorph editor copySelection.
+	self theEditor copySelection.

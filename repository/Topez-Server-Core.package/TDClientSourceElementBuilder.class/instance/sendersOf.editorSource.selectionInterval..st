@@ -1,4 +1,4 @@
-as yet unclassified
+menu actions
 sendersOf: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-n - sendersOf"
 

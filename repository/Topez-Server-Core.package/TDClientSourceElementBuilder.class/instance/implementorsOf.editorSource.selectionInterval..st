@@ -1,4 +1,4 @@
-as yet unclassified
+menu actions
 implementorsOf: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-m - implementorsOf"
 

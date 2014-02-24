@@ -1,3 +1,3 @@
 local menu actions
 pasteSelection
-	self morph textMorph editor paste.
+	self theEditor paste.

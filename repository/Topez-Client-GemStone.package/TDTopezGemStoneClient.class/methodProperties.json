@@ -18,6 +18,8 @@
 		"evaluateCommand:" : "dkh 11/10/2013 08:01",
 		"evaluateTokens:redirectTarget:" : "dkh 5/26/2013 20:51",
 		"executeMenuActionForClientListElement:action:selectionIndex:" : "dkh 2/19/2014 18:02",
+		"executeMenuActionForClientSourceElement:action:selectedText:" : "dkh 2/23/2014 17:37",
+		"executeMenuActionForClientSourceElement:action:selectionInterval:" : "dkh 2/23/2014 18:12",
 		"filetreeUtilityClass" : "dkh 12/8/2013 17:42",
 		"getEdgeDictionaryForClientListElement:" : "dkh 6/12/2013 06:48",
 		"getListForClientListElement:" : "dkh 5/28/2013 14:53",

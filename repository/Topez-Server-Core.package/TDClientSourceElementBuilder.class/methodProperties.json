@@ -2,7 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"browseClass:editorSource:selectionInterval:" : "dkh 04/11/2013 15:24",
+		"browseClass:editorSource:selectionInterval:" : "dkh 02/23/2014 18:38",
+		"browseClassReferencesMenuAction:" : "dkh 02/23/2014 18:42",
+		"browseFullClassMenuAction:" : "dkh 02/23/2014 18:42",
 		"buildClientElementUsing:editorAspect:" : "dkh 02/23/2014 09:36",
 		"clientSourceElement" : "DataCurator 01/11/2013 15:41",
 		"clientSourceElementClass" : "DataCurator 01/11/2013 15:41",
@@ -18,9 +20,11 @@
 		"getBlock" : "dkh 02/16/2013 12:38",
 		"implementorsOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"menuActionSpec" : "dkh 02/23/2014 09:37",
+		"objectMenuActionSpec" : "dkh 02/23/2014 18:33",
 		"referencesTo:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"saveMenuActionSpec" : "dkh 02/23/2014 12:17",
 		"sendersOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"setBlock" : "DataCurator 01/26/2013 07:07",
 		"smalltalkMenuActionSpec" : "dkh 02/23/2014 12:26",
-		"standardMenuActionSpec" : "dkh 02/23/2014 12:17" } }
+		"standardMenuActionSpec" : "dkh 02/23/2014 18:43",
+		"theBehavior" : "dkh 02/23/2014 18:42" } }
