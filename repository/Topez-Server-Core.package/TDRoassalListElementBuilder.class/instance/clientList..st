@@ -11,4 +11,4 @@ clientList: listElement
           (TDClientListItemAttributes object: {str} parent: nil aspect: listElement aspect) ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].
-  ^ ar
+  ^ ar -> nil

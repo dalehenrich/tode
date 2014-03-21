@@ -62,4 +62,4 @@ clientList: listElement
         nextPutAll: (compAr at: 2).
       ar add: stream contents asString ].
   listElement ifNotNil: [ listElement itemCache: items ].
-  ^ ar
+  ^ ar -> nil

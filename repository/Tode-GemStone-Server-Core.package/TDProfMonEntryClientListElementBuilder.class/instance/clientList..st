@@ -13,4 +13,4 @@ clientList: listElement
   list add: self object printSenderString.
   (self object children asArray sort: [ :a :b | a total >= b total ])
     do: [ :entry | list add: entry printChildString ].
-  ^ list
+  ^ list -> nil

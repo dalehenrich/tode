@@ -44,4 +44,4 @@ clientList: listElement
       ar add: stream contents asString ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].
-  ^ ar
+  ^ ar -> nil

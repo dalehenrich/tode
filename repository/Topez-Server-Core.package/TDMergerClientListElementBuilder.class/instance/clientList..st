@@ -8,4 +8,4 @@ clientList: listElement
       operation printText ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].
-  ^ labels
+  ^ labels -> nil
