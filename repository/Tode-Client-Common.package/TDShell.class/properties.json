@@ -21,6 +21,7 @@
 		"autoCommit",
 		"adornmentColor",
 		"sessionName",
+		"sessionDescription",
 		"history",
 		"historyIndex" ],
 	"name" : "TDShell",

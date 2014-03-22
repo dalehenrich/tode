@@ -1,4 +1,5 @@
-accessing
+built-ins
 collapse
-    windowStatus ifNil: [ ^ self ].
-    windowStatus collapse
+    windowStatus ifNil: [ ^ nil ].
+    windowStatus collapse.
+	^ nil

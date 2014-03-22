@@ -1,0 +1,19 @@
+{
+	"category" : "Tode-Client-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"windowOrigin",
+		"listWindowWidth",
+		"codeWindowHeight",
+		"codeWindowWidth",
+		"shellWindowHeight",
+		"debuggerWindowWidth" ],
+	"name" : "TDWindowProperties",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

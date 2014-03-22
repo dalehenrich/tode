@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"importFrom:" : "dkh 3/22/2014 10:57",
 		"isValid" : "dkh 3/2/2009 10:31",
 		"label" : "dkh 12/22/2008 09:54",
 		"obConfigure" : "dkh 12/22/2008 10:47",
@@ -22,7 +23,10 @@
 		"defaultUserId" : "dkh 12/22/2008 09:05",
 		"editTemplate" : "dkh 12/8/2013 15:02",
 		"editTemplateOn:" : "dkh 12/8/2013 14:34",
-		"gciLibrary" : "dkh 3/14/2013 14:41",
+		"exportTo:" : "dkh 3/22/2014 10:55",
+		"exportTo:extension:" : "dkh 3/22/2014 10:55",
+		"gciLibrary" : "dkh 3/22/2014 10:25",
+		"gciLibraryExtension" : "dkh 3/22/2014 10:15",
 		"gciLibraryName" : "dkh 3/14/2013 10:20",
 		"gciLibraryName:" : "dkh 3/14/2013 10:20",
 		"gemHost" : "dkh 12/22/2008 09:03",

@@ -1,4 +1,5 @@
-session management
+built-ins
 exit
-    self windowIsClosing.
-    self logout
+	self windowIsClosing.
+	self logout.
+	^ nil

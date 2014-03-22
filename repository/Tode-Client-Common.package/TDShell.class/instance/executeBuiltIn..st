@@ -1,12 +1,13 @@
-evaluator engine
+built-ins
 executeBuiltIn: command
 	| cmd |
 	cmd := command command.
-	^cmd = 'installTode'
+	^ cmd = 'installTode'
 		ifTrue: [ self executeInstallTode: command ]
 		ifFalse: [ 
-			cmd = 'sessionDescription'
-				ifTrue: [ self executeSessionDescription: command ]
-				ifFalse: [ cmd = 'restoreBackup'
+			cmd = 'restoreBackup'
 				ifTrue: [ self executeRestoreBackup: command ]
-				ifFalse: [self perform: cmd asSymbol ] ]]
+				ifFalse: [ 
+					cmd = 'updateClient'
+						ifTrue: [ self executeUpdateClient: command ]
+						ifFalse: [ self perform: cmd asSymbol ] ] ]

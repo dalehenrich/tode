@@ -1,31 +1,16 @@
 built-ins
-executeInstallTode: command
+executeUpdateClient: command
 	| options arguments |
 	command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
-			#('clientScriptPath' nil #required).
-			#('force' $f #none).
-			#('serverScriptPath' nil #required).
-			#('topaz' $t #none)}
+			}
 		optionsAndArguments: [ :opts :args | 
 			options := opts.
 			arguments := args ].
 	options
 		at: 'help'
-		ifAbsent: [ 
-			| forceGLASSInstall scriptDirectory |
-			options at: 'force' ifPresent: [ :ignored | forceGLASSInstall := true ] ifAbsent: [ forceGLASSInstall := false ].
-			options
-				at: 'clientScriptPath'
-				ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
-				ifAbsent: [ 
-					options
-						at: 'serverScriptPath'
-						ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
-						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
-			options at: 'topaz' ifPresent: [ ^ self topezClient installTodeTopazScript: forceGLASSInstall scriptDirectory: scriptDirectory ].
-			^ self topezClient installTode: forceGLASSInstall scriptDirectory: scriptDirectory ]
+		ifAbsent: []
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
 				prompt: 'Help for ' , command command;

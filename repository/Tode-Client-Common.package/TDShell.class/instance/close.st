@@ -1,7 +1,7 @@
-accessing
+built-ins
 close
 	"close all windows"
 
-	windowStatus ifNil: [ ^ self ].
+	windowStatus ifNil: [ ^ nil ].
 	windowStatus close.
-	^ ''
+	^ nil
