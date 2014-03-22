@@ -5,15 +5,12 @@ list
       value - selected index"
 
 	| assoc |
-	firstList
+	self firstList
 		ifNotNil: [ 
-			(firstList isKindOf: Association)
-				ifTrue: [ 
-					assoc := self firstList.
-					firstList := nil ]
-				ifFalse: [ assoc := firstList -> 0 ] ]
+			assoc := self firstList.
+			firstList := nil ]
 		ifNil: [ assoc := self topez getListForClientListElement: self ].
 	(assoc isKindOf: Association)
 		ifFalse: [ ^ assoc ].
-	self selectedIndex: assoc value.
+	assoc value ifNotNil: [ self selectedIndex: assoc value ].
 	^ assoc key
