@@ -1,28 +1,43 @@
 built-ins
 executeUpdateClient: command
-	| options arguments |
+	| options |
 	command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
-			}
-		optionsAndArguments: [ :opts :args | 
-			options := opts.
-			arguments := args ].
+			#('clientScriptPath' nil #required).
+			#('force' $f #none).
+			#('serverScriptPath' nil #required).
+			#('topaz' $t #none)}
+		optionsAndArguments: [ :opts :args | options := opts ].
 	options
 		at: 'help'
-		ifAbsent: []
+		ifAbsent: [ 
+			| forceGLASSInstall scriptDirectory |
+			options at: 'force' ifPresent: [ :ignored | forceGLASSInstall := true ] ifAbsent: [ forceGLASSInstall := false ].
+			options
+				at: 'clientScriptPath'
+				ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
+				ifAbsent: [ 
+					options
+						at: 'serverScriptPath'
+						ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
+						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
+			options
+				at: 'topaz'
+				ifPresent: [ ^ self topezClient installTodeTopazScript: forceGLASSInstall scriptDirectory: scriptDirectory ].
+			^ self topezClient installTode: forceGLASSInstall scriptDirectory: scriptDirectory ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
 				prompt: 'Help for ' , command command;
 				template:
 						'NAME
-  installTode - install tODE on the server
+  updateServer - install tODE on the server
 
 SYNOPSIS
-  installTode [-h|--help]
-  installTode [-t|--topaz] --serverScriptPath=<server-script-directory> 
-  installTode [-t|--topaz] --clientScriptPath=<client-script-directory>
-  installTode 
+  updateServer [-h|--help]
+  updateServer [-t|--topaz] --serverScriptPath=<server-script-directory> 
+  updateServer [-t|--topaz] --clientScriptPath=<client-script-directory>
+  updateServer 
 
 DESCRIPTION
   With no arguments, install tODE into a "seaside extent" (an extent with GLASS already installed).
@@ -33,9 +48,9 @@ DESCRIPTION
     4. install Tode from github://dalehenrich/tode:master/repository
   If tODE has already been installed, step 1 is skipped and the remaining steps are performed.
 
-  For each of the steps, installTode executes a Smalltalk script that is loaded from a directory
-  on disk. If neither --clientScriptPath nor --serverScriptPath is specified then installTode expects
-  to find a directory called `installTode` as a sibling to the `repository` directory from which the
+  For each of the steps, updateServer executes a Smalltalk script that is loaded from a directory
+  on disk. If neither --clientScriptPath nor --serverScriptPath is specified then updateServer expects
+  to find a directory called `updateServer` as a sibling to the `repository` directory from which the
   BaselineOfTode has been installed on the client system.
 
   If --clientScriptPath is specified, the scripts will be loaded from the specified directory on
@@ -47,10 +62,11 @@ DESCRIPTION
   If --topaz is present, instead of executing the install script, it is returned as a topaz script.
 
 EXAMPLES
-  installTode -h
-  installTode
-  installTode --clientScriptPath=/opt/git/tode/installTode
-  installTode --serverScriptPath=/opt/git/todeHome/install
-  installTode --topaz --clientScriptPath=/opt/git/tode/installTode
+  updateServer -h
+  updateServer
+  updateServer --clientScriptPath=/opt/git/tode/installTode
+  updateServer --serverScriptPath=/opt/git/todeHome/install
+  updateServer --topaz --clientScriptPath=/opt/git/tode/installTode
 
-') interact ]
+')
+				interact ]
