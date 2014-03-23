@@ -16,20 +16,20 @@ executeUpdateServer: command
 			options at: 'force' ifPresent: [ :ignored | forceGLASSInstall := true ] ifAbsent: [ forceGLASSInstall := false ].
 			options
 				at: 'clientScriptPath'
-				ifPresent: [ :filename | 
+				ifPresent: [ :dirname | 
 					| path |
-					path := filename.
-					(filename beginsWith: '/')
-						ifFalse: [ path := TDShell serverScriptsHome , filename ].
+					path := dirname.
+					(dirname beginsWith: '/')
+						ifFalse: [ path := TDShell updateServerHome , dirname ].
 					scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
 				ifAbsent: [ 
 					options
 						at: 'serverScriptPath'
-						ifPresent: [ :filename | 
+						ifPresent: [ :dirname | 
 							| path |
-							path := filename.
-							(filename beginsWith: '/')
-								ifFalse: [ path := TDShell serverScriptsHome , filename ].
+							path := dirname.
+							(dirname beginsWith: '/')
+								ifFalse: [ path := TDShell updateServerHome , dirname ].
 							scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
 						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
 			options
