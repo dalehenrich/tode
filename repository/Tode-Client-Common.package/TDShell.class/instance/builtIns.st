@@ -95,6 +95,7 @@ EXAMPLES
   logout
   restoreBackup -h
   script -h
+  sessionDescription -h
   testLogin
   updateClient -h
   updateServer -h
@@ -112,6 +113,7 @@ EXAMPLES
   logout
   restoreBackup -h
   script -h
+  sessionDescription -h
   testLogin
   updateClient -h
   whatsNew
