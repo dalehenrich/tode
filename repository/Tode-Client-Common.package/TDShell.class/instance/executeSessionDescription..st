@@ -7,26 +7,24 @@ executeSessionDescription: command
 			#('edit' nil #none).
 			#('export' nil #required).
 			#('import' nil #required).
-			#('list' nil #none).
-			}
+			#('list' nil #none)}
 		optionsAndArguments: [ :opts :args | options := opts ].
 	options
 		at: 'help'
 		ifAbsent: [ 
 			options
-				at: 'edit'
-				ifPresent: [ :ignored | ^ self editSessionDescription ]
-				ifAbsent: [ 
-					options
-						at: 'export'
-						ifPresent: [ :filepath | 
-							| description |
-							description := self editSessionDescription.
-							self sessionDescription exportTo: filepath.
-							^ description ]
-						ifAbsent: [ 
-							"default or --list"
-							^ self displaySessionDescription ] ] ]
+				at: 'import'
+				ifPresent: [ :importPath | 
+					sessionDescription := OGCustomSessionDescription importFrom: importPath.
+					shellWindow setLabel: self windowLabel.
+					self topezClient sessionDescription: sessionDescription ].
+			options at: 'edit' ifPresent: [ :ignored | self editSessionDescription ].
+			options
+				at: 'export'
+				ifPresent: [ :exportPath | 
+					self editSessionDescription.
+					self sessionDescription exportTo: exportPath ].
+			^ self displaySessionDescription	"default or --list" ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
 				prompt: 'Help for ' , command command;

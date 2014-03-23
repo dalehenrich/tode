@@ -1,3 +1,3 @@
 instance creation
 open: aSessionName
-  ^ self open: aSessionName adornmentColor: nil
+  ^ self openFrom: self sessionDescriptionHome, aSessionName

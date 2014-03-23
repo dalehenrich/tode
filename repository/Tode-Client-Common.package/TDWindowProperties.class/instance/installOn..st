@@ -1,6 +1,6 @@
 installation
-installOn: aTDTopezClient
-	TDTopezClient
+installOn: aTDTopezClientClass
+	aTDTopezClientClass
 		windowOrigin: windowOrigin;
 		listWindowWidth: listWindowWidth;
 		codeWindowHeight: codeWindowHeight;

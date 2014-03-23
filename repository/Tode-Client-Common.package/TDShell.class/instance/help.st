@@ -2,6 +2,7 @@ built-ins
 help
 	^self openWorkspace: '
 Thank you for trying tODE.
+--------------------------
 
 Before getting started, you should clone a copy of the todeHome repository from github:
 
@@ -17,8 +18,10 @@ machines is:
 
   /opt/git/todeHome
 
-Simply edit the paths in the examples below to match the location of your clone if you choose to 
-locate the repository in a different location.
+If you have cloned the repository to a different location, the you should execute the following
+in a Pharo workspace:
+
+  TDShell todeHome: ''new repo location''.
 
 I. Start your stone and netldi
 ------------------------------
@@ -29,21 +32,22 @@ I. Start your stone and netldi
 
 II. Define a session description
 -------------------------------
-   Type the following command at the `tode 1 >` prompt to import the default session description
+   Type the following command at the `tode 1 >` prompt to import the standard session description
    from the todeHome repository:
 
-     sessionDescription --import=/opt/git/todeHome/client/descriptions/default
+     sessionDescription --import=/opt/git/todeHome/client/descriptions/glass
 
    You will need to edit the default session description to match your current installation.
 
-   Pay special attention to the `stoneHost`, `gemHost`, `stoneName` and `netLDI` fields. 
-   Normally the `stoneHost` and `gemHost` will be the same. Use the port number for your
-   netldi process for the `netLDI` field.
+   Pay special attention to the `gemstoneVersion`, `stoneHost`, `gemHost`, `stoneName` and 
+   `netLDI` fields. The `gemstoneVersion` string should have a minimum of 3 fields, i.e.,
+   ''3.2.0''. Normally the `stoneHost` and `gemHost` will be the same. Use the port number 
+   for your netldi process for the `netLDI` field.
 
    The following command will bring up an editor on the current session description and save
-   a copy of the session in `/opt/git/todeHome/client/descriptions/glass`:
+   a copy of the session in `/opt/git/todeHome/client/descriptions`:
 
-     sessionDescription --export=/opt/git/todeHome/client/descriptions/mySession
+     sessionDescription --export=/opt/git/todeHome/client/descriptions/
 
    For additional information about using the `sessionDescription` command use the `--help`
    option:
@@ -53,9 +57,9 @@ II. Define a session description
    Once you''ve created your own session description, you can use the following expression to 
    launch your tODE console from a Pharo workspace:
  
-     TDShell openFrom: ''/opt/git/todeHome/client/descriptions/mySession''
+     TDShell open: ''<description-name>''
 
-   Finally, whe you''ve settled on an acceptable session description, it is a good idea to 
+   Finally, when you''ve settled on an acceptable session description, it is a good idea to 
    commit your changes to your todeHome repository.
 
 III. Run `testLogin` command

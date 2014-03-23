@@ -6,7 +6,8 @@
 		"rootNode" ],
 	"classvars" : [
 		"DebugMode",
-		"EnableDebugger" ],
+		"EnableDebugger",
+		"TodeHome" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"windowStatus",

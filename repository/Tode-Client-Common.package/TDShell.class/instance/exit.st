@@ -1,5 +1,4 @@
 built-ins
 exit
-	self windowIsClosing.
-	self logout.
+	shellWindow delete.
 	^ nil
