@@ -92,11 +92,12 @@ EXAMPLES
   exit
   expand
   help
-  installTode -h
   logout
   restoreBackup -h
+  script -h
   testLogin
   updateClient -h
+  updateServer -h
   whatsNew
 
 '
@@ -108,10 +109,10 @@ EXAMPLES
   exit
   expand
   help
-  installTode -h
   logout
   restoreBackup -h
-  tstLogin
+  script -h
+  testLogin
   updateClient -h
   whatsNew
 '
