@@ -14,7 +14,7 @@ executeScript: command
 				at: 'script'
 				ifPresent: [ :filepath | 
 					| commands |
-					FileStream readOnlyFileNamed: [ :fileStream | commands := fileStream contents ].
+					FileStream readOnlyFileNamed: filepath do: [ :fileStream | commands := fileStream contents ].
 					^ self evaluate: commands ].
 			options
 				at: 'list'
