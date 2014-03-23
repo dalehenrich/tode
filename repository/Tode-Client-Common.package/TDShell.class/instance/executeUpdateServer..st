@@ -16,11 +16,21 @@ executeUpdateServer: command
 			options at: 'force' ifPresent: [ :ignored | forceGLASSInstall := true ] ifAbsent: [ forceGLASSInstall := false ].
 			options
 				at: 'clientScriptPath'
-				ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
+				ifPresent: [ :filename | 
+					| path |
+					path := filename.
+					(filename beginsWith: '/')
+						ifFalse: [ path := TDShell serverScriptsHome , filename ].
+					scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
 				ifAbsent: [ 
 					options
 						at: 'serverScriptPath'
-						ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
+						ifPresent: [ :filename | 
+							| path |
+							path := filename.
+							(filename beginsWith: '/')
+								ifFalse: [ path := TDShell serverScriptsHome , filename ].
+							scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
 						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
 			options
 				at: 'topaz'
@@ -54,17 +64,21 @@ DESCRIPTION
   BaselineOfTode has been installed on the client system.
 
   If --clientScriptPath is specified, the scripts will be loaded from the specified directory on
-  the client system.
+  the client system. If <client-script-directory> is a relative path, the path will be appended
+  to TDShell class>>serverScriptsHome.
 
   If --serverScriptPath is specified, the scripts will be loaded from the specified directory on
-  the server system - where the stone and gems are executing.
+  the server system - where the stone and gems are executing. If <server-script-directory> is a 
+  relative path, the path will be appended to TDShell class>>serverScriptsHome.
 
   If --topaz is present, instead of executing the install script, it is returned as a topaz script.
 
 EXAMPLES
   updateServer -h
   updateServer
+  updateServer --clientScriptPath=installTode
   updateServer --clientScriptPath=/opt/git/tode/installTode
+  updateServer --serverScriptPath=install
   updateServer --serverScriptPath=/opt/git/todeHome/install
   updateServer --topaz --clientScriptPath=/opt/git/tode/installTode
 

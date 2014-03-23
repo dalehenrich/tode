@@ -21,7 +21,7 @@ machines is:
 If you have cloned the repository to a different location, the you should execute the following
 in a Pharo workspace:
 
-  TDShell todeHome: ''new repo location''.
+  TDShell todeHome: ''<path-to-todeHome>''.
 
 I. Start your stone and netldi
 ------------------------------
@@ -32,45 +32,42 @@ I. Start your stone and netldi
 
 II. Define a session description
 -------------------------------
-   Type the following command at the `tode 1 >` prompt to import the standard session description
-   from the todeHome repository:
+   Use the following expressions to define and test your session description (this expression can
+   also be found in the `session setup` workspace:
 
-     sessionDescription --import=/opt/git/todeHome/client/descriptions/glass
-
-   You will need to edit the default session description to match your current installation.
+     (OGCustomSessionDescription new
+       name: ''glass'';
+       gemstoneVersion: ''3.2.0'';
+       adornmentColor: nil;
+       stoneHost: ''localhost'';
+       stoneName: ''seaside'';
+       gemHost: ''localhost'';
+       netLDI: ''50377'';
+       gemTask: ''gemnetobject'';
+       userId: ''DataCurator'';
+       password: ''swordfish'';
+       osUserId: '''';
+       osPassword: '''';
+       backupDirectory: '''';
+       dataDirectory: '''';
+       yourself) exportTo: TDShell sessionDescriptionHome.
+     TDShell testLogin: ''glass''.
 
    Pay special attention to the `gemstoneVersion`, `stoneHost`, `gemHost`, `stoneName` and 
    `netLDI` fields. The `gemstoneVersion` string should have a minimum of 3 fields, i.e.,
    ''3.2.0''. Normally the `stoneHost` and `gemHost` will be the same. Use the port number 
-   for your netldi process for the `netLDI` field.
+   for your netldi process for the `netLDI` field. 
 
-   The following command will bring up an editor on the current session description and save
-   a copy of the session in `/opt/git/todeHome/client/descriptions`:
+   If you have a session description that you are using with GemTools you can copy over the 
+   corresponding fields.
 
-     sessionDescription --export=/opt/git/todeHome/client/descriptions/
+   The #exportTo: message, saves the session description to a location in todeHome. 
+   The #testLogin: message attempts a login using the namedsession description. The 
+   result of the #testLogin: message provides clues that can be used to fine tune the
+   definition of the session description.
 
-   For additional information about using the `sessionDescription` command use the `--help`
-   option:
-
-     sessionDescription --help
-
-   Once you''ve created your own session description, you can use the following expression to 
-   launch your tODE console from a Pharo workspace:
- 
-     TDShell open: ''<description-name>''
-
-   Finally, when you''ve settled on an acceptable session description, it is a good idea to 
-   commit your changes to your todeHome repository.
-
-III. Run `testLogin` command
-----------------------------
-   The `testLogin` command lets you test your session description  and provide information 
-   about the stone you have connected to. 
-
-   Any error messages signalled by the `testLogin` command should provide enough information
-   to guide you through the steps to successfully connect to your stone.
-
-   When you see a message like the following, you have successfully connected to your stone:
+   When you see a message like the following, you have successfully connected to your 
+   stone:
 
       Stone            : !@foos#server!j_gs64stone
       Stone host       : foos
@@ -81,9 +78,16 @@ III. Run `testLogin` command
       GLASS1 not installed
       Tode not installed
 
-   Don''t forget to save and commit your session description to your todeHome repository.
+   Once you''ve created your own session description, you can use the following expression 
+   to launch your tODE console from a Pharo workspace:
+ 
+     TDShell open: ''glass''
 
-IV. Install/Update tODE on server
+   Finally, when you''ve settled on an acceptable session description, it is a good idea to 
+   commit your changes to your todeHome repository.
+
+
+III. Install/Update tODE on server
 ---------------------------------
    The `updateServer` command will install/upgrade tODE on your server. 
 
@@ -96,7 +100,7 @@ IV. Install/Update tODE on server
    the scripts to reference local copies of the various projects as needed. 
 
    All of the scripts are executed on the server, so any file system paths should be relative to the 
-   server.
+   server file system.
 
    After installation is complete, the `testLogin` should return something like the following:
 
@@ -116,7 +120,7 @@ IV. Install/Update tODE on server
 
      updateServer --help
 
-V. Backup and restore
+IV. Backup and restore
 ---------------------
    Once you have installed tODE on the server, you can start using tODE, by simply typing
    commands at the command prompt in the console window. 
@@ -149,7 +153,7 @@ V. Backup and restore
    For a list of the client-side built-in commands use the `builtIns` command (also a client-
    side built-in).
 
-VI. Mounting todeHome
+V. Mounting /home
 ---------------------
    Objects in tODE are shared by serializing the objects to disk using STON 
    (https://github.com/glassdb/ston). One gains access to these shared objects on disk, by using
@@ -161,10 +165,31 @@ VI. Mounting todeHome
      bu backup home.dbf
 
    The `logout` command is necessary because `/home` is a special directory structure that needs to
-   be reset after being redefined and `logout` is a temporary workaround. the `bu` command is used
+   be reset after being redefined and `logout` is a temporary workaround. The `bu` command is used
    to make a backup of the repository now that you''ve defined `/home`.
 
-VII. Client-side scripts
+VI. Client-side scripts
 ------------------------
+   If you find that you are frequently executing sequences of commands involving the logout
+   command or client built-in commands, you can execute client-side scripts using the`script`
+   command. 
+
+   For example, the following sequence of commands is a convenent script for updating both 
+   the client and server:
+
+     updateClient --clientRepo=filetree:///opt/git/tode/repository
+     updateServer --clientScriptPath=/opt/git/todeHome/server/scripts
+     bu backup tode.dbf
+
+   With the `script` command you can save the above commands in a file named
+   `/opt/git/todeHome/client/scripts/updateTode` and invoke the script using the following:
+
+     script --script=/opt/git/todeHome/client/scripts/updateTode
+
+   If you use a relative path for the script, the argument will be appended to 
+   `TDShell clientScriptHome` which is based upon `TDShell todeHome` which you
+   should have already defined:
+
+     script --script=updateTode
 
 ' label: 'Help for tODE'.
