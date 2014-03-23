@@ -4,69 +4,53 @@ executeUpdateClient: command
 	command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
-			#('clientScriptPath' nil #required).
-			#('force' $f #none).
-			#('serverScriptPath' nil #required).
-			#('topaz' $t #none)}
+			#('clientRepo' nil #required)}
 		optionsAndArguments: [ :opts :args | options := opts ].
 	options
 		at: 'help'
 		ifAbsent: [ 
-			| forceGLASSInstall scriptDirectory |
-			options at: 'force' ifPresent: [ :ignored | forceGLASSInstall := true ] ifAbsent: [ forceGLASSInstall := false ].
 			options
-				at: 'clientScriptPath'
-				ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
-				ifAbsent: [ 
-					options
-						at: 'serverScriptPath'
-						ifPresent: [ :path | scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
-						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
-			options
-				at: 'topaz'
-				ifPresent: [ ^ self topezClient installTodeTopazScript: forceGLASSInstall scriptDirectory: scriptDirectory ].
-			^ self topezClient installTode: forceGLASSInstall scriptDirectory: scriptDirectory ]
+				at: 'clientRepo'
+				ifPresent: [ :todeRepository | | result|
+					[ 
+					Metacello new
+						baseline: 'Tode';
+						repository: todeRepository;
+						get.
+					result := Metacello new
+						baseline: 'Tode';
+						repository: todeRepository;
+						onConflict: [ :ex | ex allow ];
+						load: 'GemStone Dev' ]
+						on: Warning
+						do: [ :ex | 
+							Transcript
+								cr;
+								show: 'WARNING: ' , ex description.
+							ex pass ] .
+						^result printString].
+			^ 'Must specify options:
+  updateClient --help
+  updateClient --clientRepo=github://dalehenrich/tode:master
+  updateClient --clientRepo=filetree:///opt/git/tode/repository' ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
 				prompt: 'Help for ' , command command;
 				template:
 						'NAME
-  updateServer - install tODE on the server
+  updateClient - update tODE in client
 
 SYNOPSIS
-  updateServer [-h|--help]
-  updateServer [-t|--topaz] --serverScriptPath=<server-script-directory> 
-  updateServer [-t|--topaz] --clientScriptPath=<client-script-directory>
-  updateServer 
-
+  updateClient --help
+  updateClient --clientRepo=<tode-repository-string> 
+ 
 DESCRIPTION
-  With no arguments, install tODE into a "seaside extent" (an extent with GLASS already installed).
-  The standard installation involves the following steps:
-    1. upgrade GLASS to 1.0-beta9.1
-    2. install Metacello from github://dalehenrich/metacello-work:master/repository
-    3. install GLASS1 from github://glassdb/glass:master/repository
-    4. install Tode from github://dalehenrich/tode:master/repository
-  If tODE has already been installed, step 1 is skipped and the remaining steps are performed.
+  Update the tODE software on the client.
 
-  For each of the steps, updateServer executes a Smalltalk script that is loaded from a directory
-  on disk. If neither --clientScriptPath nor --serverScriptPath is specified then updateServer expects
-  to find a directory called `updateServer` as a sibling to the `repository` directory from which the
-  BaselineOfTode has been installed on the client system.
-
-  If --clientScriptPath is specified, the scripts will be loaded from the specified directory on
-  the client system.
-
-  If --serverScriptPath is specified, the scripts will be loaded from the specified directory on
-  the server system - where the stone and gems are executing.
-
-  If --topaz is present, instead of executing the install script, it is returned as a topaz script.
+  --clientRepo option specifies the repository form which tODE will be loaded.
 
 EXAMPLES
-  updateServer -h
-  updateServer
-  updateServer --clientScriptPath=/opt/git/tode/installTode
-  updateServer --serverScriptPath=/opt/git/todeHome/install
-  updateServer --topaz --clientScriptPath=/opt/git/tode/installTode
-
-')
-				interact ]
+  updateClient --help
+  updateClient --clientRepo=github://dalehenrich/tode:master
+  updateClient --clientRepo=filetree:///opt/git/tode/repository
+') interact ]
