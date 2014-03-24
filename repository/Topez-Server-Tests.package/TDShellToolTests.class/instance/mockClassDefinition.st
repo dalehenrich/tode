@@ -1,6 +1,17 @@
 as yet unclassified
 mockClassDefinition
-  ^ 'Object subclass: ''TDShellClsCommandMockClass''
+  ((System stoneVersionAt: 'gsVersion') beginsWith: '2.')
+    ifTrue: [ ^ 'Object subclass: ''TDShellClsCommandMockClass''
+	instVarNames: #()
+	classVars: #()
+	classInstVars: #()
+	poolDictionaries: #[]
+	inDictionary: ''''
+	category: ''TDShellClsCommandMockClass-Category''
+	options: #()
+' ]
+    ifFalse: [ 
+      ^ 'Object subclass: ''TDShellClsCommandMockClass''
 	instVarNames: #()
 	classVars: #()
 	classInstVars: #()
@@ -8,4 +19,4 @@ mockClassDefinition
 	inDictionary: ''''
 	category: ''TDShellClsCommandMockClass-Category''
 	options: #()
-'
+' ]

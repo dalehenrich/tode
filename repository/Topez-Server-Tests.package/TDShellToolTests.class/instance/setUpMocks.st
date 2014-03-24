@@ -4,5 +4,5 @@ setUpMocks
   mockClass := self createMockClass.
   mockClass
     addCategory: 'instance-side';
-    comment: self mockClassComment.
+    classComment: self mockClassComment stamp: nil.
   mockClass class addCategory: 'class-side'
