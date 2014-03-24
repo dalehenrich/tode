@@ -63,6 +63,12 @@ installOn: aTDTopezServer
     registerBuilderClass: TDCharacterNodeBuilder
       for: Character
       aspect: #'inspect';
+    registerBuilderClass: TDCharacterCollectionNodeBuilder
+      for: stringClass
+      aspect: #'view';
+    registerBuilderClass: TDCharacterCollectionNodeBuilder
+      for: stringClass
+      aspect: #'inspect';
     registerBuilderClass: TDCollectionNodeBuilder
       for: Collection
       aspect: #'view';
