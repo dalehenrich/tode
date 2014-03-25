@@ -1,5 +1,5 @@
 initialize-release
-openAsMorphLabel: labelString
+openAsMorphLabel: labelString welcome: welcome
 	"Build a morph viewing this stream"
 
 	| window textMorph |
@@ -12,12 +12,9 @@ openAsMorphLabel: labelString
 		menu: nil.
 	textMorph acceptOnCR: true.
 	window addMorph: textMorph frame: (0 @ 0 corner: 1 @ 1).
-	self show: self welcomeMessage.
+	welcome
+		ifTrue: [ self show: self welcomeMessage ].
 	self prompt.
-	false
-		ifTrue: [ 
-			labelString ifNotNil: [ self labelStringBlock: [ labelString ] ].
-			self changed: #relabel ].
 	^ window
 		openInWorld;
 		bounds: (self cliShell topezClientClass bounds at: #evaluator);

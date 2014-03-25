@@ -3,7 +3,8 @@ openOnSessionDescription: aSessionDescription
 	sessionDescription := aSessionDescription.
 	sessionName := sessionDescription name.
 	adornmentColor := sessionDescription adornmentColor.
-	shellWindow := (console := TodeConsole todeConsole: self) openLabel: self shellId asString , ': ' , self label.
+	console := TodeConsole todeConsole: self.
+	shellWindow := console openAsMorphLabel: self shellId asString , ': ' , self label welcome: true.
 	shellWindow activate.
 	self windowRegistration.
 	^ shellWindow
