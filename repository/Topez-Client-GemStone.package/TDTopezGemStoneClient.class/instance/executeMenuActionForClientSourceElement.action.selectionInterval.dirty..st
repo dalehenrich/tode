@@ -1,5 +1,5 @@
 as yet unclassified
-executeMenuActionForClientSourceElement: aClientElement action: aSymbolOrStringOrSpecial selectedText: aString
+executeMenuActionForClientSourceElement: aClientElement action: aSymbolOrStringOrSpecial selectionInterval: selectionInterval dirty: dirty
 	| oopType |
 	oopType := self session
 		rawReceiverNB: aClientElement menuActionBlockOopType
@@ -7,7 +7,7 @@ executeMenuActionForClientSourceElement: aClientElement action: aSymbolOrStringO
 		withArgs:
 			{aSymbolOrStringOrSpecial.
 			(aClientElement clientElementOopType).
-			aString.
-			nil.
-			nil}.
+			(selectionInterval first).
+			(selectionInterval last).
+			dirty}.
 	^ self session library localFor: oopType
