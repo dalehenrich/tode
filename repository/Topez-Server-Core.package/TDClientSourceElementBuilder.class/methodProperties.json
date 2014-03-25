@@ -23,8 +23,10 @@
 		"formattedElementSource" : "dkh 02/16/2013 12:58",
 		"formattedElementSource:" : "dkh 02/16/2013 12:58",
 		"getBlock" : "dkh 02/16/2013 12:38",
+		"handleMenuActions:listElement:selectionInterval:dirty:" : "dkh 03/25/2014 13:07",
 		"implementorsOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"inspectItMenuAction:selectedText:" : "dkh 03/24/2014 21:04",
+		"menuActionBlock" : "dkh 03/25/2014 13:05",
 		"menuActionSpec" : "dkh 02/23/2014 09:37",
 		"objectMenuActionSpec" : "dkh 02/23/2014 18:33",
 		"printItMenuAction:selectedText:" : "dkh 03/24/2014 21:03",
@@ -32,6 +34,6 @@
 		"saveMenuActionSpec" : "dkh 02/23/2014 12:17",
 		"sendersOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"setBlock" : "DataCurator 01/26/2013 07:07",
-		"smalltalkMenuActionSpec" : "dkh 02/23/2014 12:26",
+		"smalltalkMenuActionSpec" : "dkh 03/25/2014 10:52",
 		"standardMenuActionSpec" : "dkh 02/23/2014 18:43",
 		"theBehavior" : "dkh 02/23/2014 18:42" } }
