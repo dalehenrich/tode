@@ -7,7 +7,7 @@ printClientListMenuAction: listElement selectionIndex: selectionIndex
     cr;
     nextPutAll: '--------------------';
     cr.
-  (self clientList: listElement)
+  (self clientList: listElement) key
     do: [ :text | 
       stream
         nextPutAll: text;
