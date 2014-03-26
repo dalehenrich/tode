@@ -50,6 +50,8 @@
 		"methodMenuActionSpec" : "dkh 09/30/2013 21:13",
 		"objectMenuActionSpec" : "dkh 09/30/2013 21:11",
 		"pasteObjectMenuAction:selectionIndex:" : "dkh 10/01/2013 06:41",
+		"printClientListMenuAction:" : "dkh 03/26/2014 10:07",
+		"printClientListMenuAction:selectionIndex:" : "dkh 03/26/2014 10:07",
 		"printObjectMenuAction:selectionIndex:" : "dkh 01/06/2014 20:44",
 		"selectedClass:selectionIndex:" : "DataCurator 02/07/2013 14:28",
 		"selectedIndex" : "DataCurator 01/11/2013 14:26",

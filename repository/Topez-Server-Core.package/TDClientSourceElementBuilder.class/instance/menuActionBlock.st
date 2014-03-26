@@ -5,7 +5,7 @@ menuActionBlock
   ^ [ :actionSymbol :sourceElement :arg1 :arg2 :arg3 | 
   | numArgs result |
   numArgs := actionSymbol numArgs.
-  result := numArgs == 2
+  result := numArgs <= 2
     ifTrue: [ self handleMenuActions: actionSymbol listElement: sourceElement actionArg: arg1 ]
     ifFalse: [ 
       self
