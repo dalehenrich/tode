@@ -2,14 +2,16 @@ accessing
 menuActionBlock
   "works in concert with #menuActionSpec"
 
-  ^ [ :actionSymbol :listElement :arg1 :arg2 :arg3 | 
-  | numArgs |
+  ^ [ :actionSymbol :sourceElement :arg1 :arg2 :arg3 | 
+  | numArgs result |
   numArgs := actionSymbol numArgs.
-  numArgs == 2
-    ifTrue: [ self handleMenuActions: actionSymbol listElement: listElement actionArg: arg1 ]
+  result := numArgs == 2
+    ifTrue: [ self handleMenuActions: actionSymbol listElement: sourceElement actionArg: arg1 ]
     ifFalse: [ 
       self
         handleMenuActions: actionSymbol
-        listElement: listElement
+        listElement: sourceElement
         selectionInterval: (arg1 to: arg2)
-        dirty: arg3 ] ]
+        dirty: arg3 ].
+  sourceElement topez commitTransaction.
+  result ]
