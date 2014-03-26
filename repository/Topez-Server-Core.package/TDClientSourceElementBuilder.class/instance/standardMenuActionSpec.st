@@ -4,6 +4,8 @@ standardMenuActionSpec
 
   "works in concert with menuActionBlock"
 
-  ^ self smalltalkMenuActionSpec , {#('-')} , self editMenuActionSpec , {#('-')}
+  ^ self smalltalkMenuActionSpec , {#('-')}
+    , {{('Text' -> self textMenuActionSpec)}} , {#('-')}
+    , self editMenuActionSpec , {#('-')}
     , {{('Window' -> self windowMenuActionSpec)}} , {#('-')}
     , self saveMenuActionSpec

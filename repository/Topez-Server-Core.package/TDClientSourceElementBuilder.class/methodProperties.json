@@ -10,7 +10,8 @@
 		"clientSourceElementClass" : "DataCurator 01/11/2013 15:41",
 		"cmdKeyAction:sourceElement:editorSource:selectionInterval:" : "DataCurator 02/07/2013 16:16",
 		"cmdKeyBlock" : "DataCurator 02/08/2013 18:08",
-		"debugItMenuAction:selectedText:" : "dkh 03/26/2014 10:17",
+		"debugItMenuAction:selectedText:" : "dkh 03/26/2014 14:40",
+		"debugString:" : "dkh 03/26/2014 14:35",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:10",
 		"doItContext" : "dkh 03/24/2014 19:08",
 		"doItLiteralDict" : "dkh 03/24/2014 19:08",
@@ -36,5 +37,6 @@
 		"sendersOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"setBlock" : "DataCurator 01/26/2013 07:07",
 		"smalltalkMenuActionSpec" : "dkh 03/25/2014 10:52",
-		"standardMenuActionSpec" : "dkh 02/23/2014 18:43",
+		"standardMenuActionSpec" : "dkh 03/26/2014 16:02",
+		"textMenuActionSpec" : "dkh 03/26/2014 16:01",
 		"theBehavior" : "dkh 02/23/2014 18:42" } }
