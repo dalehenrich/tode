@@ -1,3 +1,4 @@
 menu support
 executeKeybinding: aKeyboardEvent actionSymbol: actionSymbol
-self halt.
+	self executeMenuAction: actionSymbol.
+	^ true

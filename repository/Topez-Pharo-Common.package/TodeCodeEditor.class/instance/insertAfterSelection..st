@@ -1,3 +1,4 @@
 menu support
 insertAfterSelection: aString
-	self textMorph insertAfterSelection: aString
+	self textMorph insertAfterSelection: aString.
+	^true

@@ -2,11 +2,11 @@
 	"class" : {
 		"initialize" : "dkh 3/25/2014 21:04" },
 	"instance" : {
-		"bindCharacter:to:for:" : "dkh 3/25/2014 21:36",
-		"defaultCmdMap" : "dkh 3/25/2014 19:22",
+		"bindCharacter:to:with:for:" : "dkh 3/26/2014 10:39",
+		"defaultCmdMap" : "dkh 3/26/2014 10:40",
 		"initializeCmdMaps" : "dkh 3/25/2014 21:51",
 		"localCmdMap" : "dkh 3/25/2014 16:49",
 		"localCmdMap:" : "dkh 3/25/2014 21:26",
 		"localShiftCmdMap" : "dkh 3/25/2014 16:49",
 		"localShiftCmdMap:" : "dkh 3/25/2014 21:26",
-		"performCmdActionsWith:shifted:return:" : "dkh 3/25/2014 21:54" } }
+		"performCmdActionsWith:shifted:return:" : "dkh 3/26/2014 10:42" } }

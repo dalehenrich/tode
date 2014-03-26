@@ -1,3 +1,3 @@
 accessing
-refreshView
+activateModel: aModel
 	self subclassResponsibility
