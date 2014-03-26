@@ -2,10 +2,11 @@
 	"class" : {
 		"initialize" : "dkh 3/25/2014 21:04" },
 	"instance" : {
-		"bindBasicCmdKeyShortcuts:" : "dkh 3/26/2014 15:38",
+		"bindBasicCmdKeyShortcuts:" : "dkh 3/26/2014 16:23",
 		"bindCharacter:to:with:for:" : "dkh 3/26/2014 10:39",
 		"defaultCmdMap" : "dkh 3/26/2014 14:42",
-		"dispatchOn:" : "dkh 3/26/2014 15:32",
+		"dispatchCommandOn:return:" : "dkh 3/26/2014 16:20",
+		"dispatchOn:" : "dkh 3/26/2014 16:18",
 		"initializeCmdMaps" : "dkh 3/25/2014 21:51",
 		"localCmdMap" : "dkh 3/25/2014 16:49",
 		"localCmdMap:" : "dkh 3/25/2014 21:26",

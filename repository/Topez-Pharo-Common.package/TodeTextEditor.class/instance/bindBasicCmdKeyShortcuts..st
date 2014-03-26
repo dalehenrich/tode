@@ -1,5 +1,7 @@
 typing support
 bindBasicCmdKeyShortcuts: map
+	"These are the keyboard mappings that are not defined by menu actions...
+	 Standard keyboard navigation/editting keys. "
 	| mod |
 	mod := self model.
 	map
@@ -52,7 +54,7 @@ bindBasicCmdKeyShortcuts: map
 				{#executeLocalMenuAction:keyboardEvent:.
 					#forwardDelete:} -> mod;
 		yourself.
-	#($a #selectAll: $c #copySelection: $e #exchange: $f #find: $g #findAgain: $h #setSearchString: $j #redo: $v #paste: $w #backWord: $x #cut: $y #swapChars: $z #undo:)
+	#($c #copySelection: $v #paste: $x #cut: )
 		pairsDo: [ :char :symbol | 
 			map
 				at: char asciiValue + 1
