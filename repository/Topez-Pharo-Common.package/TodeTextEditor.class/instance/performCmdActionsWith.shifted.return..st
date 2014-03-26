@@ -1,6 +1,6 @@
 typing support
 performCmdActionsWith: aKeyboardEvent shifted: aBoolean return: return
-	| asciiValue actions assoc receiver actionArray selector arg |
+	| asciiValue actions assoc receiver actionArray selector arg numArgs result |
 	self initializeCmdMaps.
 	asciiValue := aKeyboardEvent keyValue.
 	actions := aBoolean
@@ -13,4 +13,8 @@ performCmdActionsWith: aKeyboardEvent shifted: aBoolean return: return
 	arg := actionArray at: 2.
 	selector == #noop:
 		ifTrue: [ ^ false ].
-	return value: (receiver perform: selector with: arg)
+	numArgs := selector numArgs.
+	result := numArgs == 1
+		ifTrue: [ receiver perform: selector with: arg ]
+		ifFalse: [ receiver perform: selector with: arg with: aKeyboardEvent ].
+	return value: result

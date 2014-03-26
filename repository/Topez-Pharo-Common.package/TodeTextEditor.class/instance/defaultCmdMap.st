@@ -1,7 +1,10 @@
 typing support
 defaultCmdMap
-	^ Array
+	| map |
+	map := Array
 		new: 256
 		withAll:
 			{#noop:.
-			nil} -> nil
+			nil} -> nil.
+	self bindBasicCmdKeyShortcuts: map.
+	^ map
