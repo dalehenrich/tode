@@ -17,8 +17,4 @@ dispatchCommandOn: aKeyboardEvent return: return
 		ifTrue: [ 
 			"the control key can be used to invoke shift-cmd shortcuts"
 			^ self performCmdActionsWith: aKeyboardEvent shifted: true return: return ].
-	asciiValue == 13
-		ifTrue: [ 
-			"allow for mapping or CR action"
-			^ self performCmdActionsWith: aKeyboardEvent shifted: false return: return ].
 	^ false

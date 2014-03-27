@@ -13,4 +13,5 @@ spawnWindow: aClientElement
 		clientElement: aClientElement;
 		windowId: windowId;
 		label: label.
-	win extent: self editor topView extent
+	win extent: self editor topView extent.
+	^true
