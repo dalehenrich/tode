@@ -6,7 +6,7 @@ breakDisable: breakTokens
   breakTokens size = 1
     ifTrue: [ 
       "disable all breakpoints"
-      ^ self gsMethodClass _disableAllBreaks ].
+      ^ self breakDisableAll ].
   breakReport := (self gsMethodClass _breakReport: false) at: 2.
   breakRow := breakReport at: (breakTokens at: 2) asNumber.
   breakNumber := breakRow at: 1.
