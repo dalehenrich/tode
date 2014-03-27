@@ -4,4 +4,4 @@ firstList
       key   - list
       value - selected index"
 
-	^ firstList 
+	^ firstList

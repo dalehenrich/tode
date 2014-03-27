@@ -1,6 +1,14 @@
 menu actions
 profileItMenuAction: listElement selectedText: selectedString
-  | tpz |
+  "100 timesRepeat: [| ar | 
+     ar := {}.
+     1 to: 10000 do: [:i | 
+       ar add: i printString -> i ] ]"
+
+  | tpz pfTool |
   tpz := listElement topez.
-  self evaluateString: selectedString.
+  pfTool := tpz toolInstanceFor: 'pf'.
+  pfTool
+    pfmonitor: [ self evaluateString: selectedString ];
+    pfview.
   ^ nil
