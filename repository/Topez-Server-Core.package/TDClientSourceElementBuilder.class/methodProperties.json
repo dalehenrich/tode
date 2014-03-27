@@ -32,6 +32,7 @@
 		"menuActionSpec" : "dkh 02/23/2014 09:37",
 		"objectMenuActionSpec" : "dkh 02/23/2014 18:33",
 		"printItMenuAction:selectedText:" : "dkh 03/24/2014 21:03",
+		"profileItMenuAction:selectedText:" : "dkh 03/26/2014 16:36",
 		"referencesTo:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
 		"saveMenuActionSpec" : "dkh 02/23/2014 12:17",
 		"sendersOf:editorSource:selectionInterval:" : "dkh 04/11/2013 15:00",
@@ -39,4 +40,5 @@
 		"smalltalkMenuActionSpec" : "dkh 03/25/2014 10:52",
 		"standardMenuActionSpec" : "dkh 03/26/2014 16:02",
 		"textMenuActionSpec" : "dkh 03/26/2014 16:01",
-		"theBehavior" : "dkh 02/23/2014 18:42" } }
+		"theBehavior" : "dkh 02/23/2014 18:42",
+		"windowMenuActionSpec" : "dkh 03/26/2014 16:30" } }
