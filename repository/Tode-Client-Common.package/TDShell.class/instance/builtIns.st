@@ -21,6 +21,15 @@ DESCRIPTION
   --------
     Collapse all windows associated with the session.
 
+  debugMode
+  ---------
+    When debugMode is set (`debugMode --set), a debugger is brought up for all errors. 
+
+    When debugMode is cleared (`debugMode --clear`), error descriptions are simply 
+    displayed as the command response.
+
+    See `debugMode -h` for more information.
+
   exit
   ----
     Logout and close console window.
