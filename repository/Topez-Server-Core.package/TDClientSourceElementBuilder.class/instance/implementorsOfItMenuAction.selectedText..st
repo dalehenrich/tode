@@ -1,16 +1,9 @@
 menu actions - Search
 implementorsOfItMenuAction: clientSourceElement selectedText: selectedString
-  "browse method <selectedString>"
-
-  | selector defs |
+  | selector methodDefs findTool browseTool |
   selector := selectedString findSelector.
-  defs := TDMethodDefinition implementorsOf: selector.
-  defs
-    editUsing:
-      ((TDEditorSpec
-        topez: clientSourceElement topez
-        editorAspect: #'methodDefinitionList')
-        windowLocation: #'implementors';
-        windowLabel: 'Implementors of ' , selector;
-        yourself).
+  findTool := self findTool: clientSourceElement.
+  methodDefs := findTool findMethod: selector asString.
+  browseTool := self browseTool: clientSourceElement.
+  browseTool browseMethods: methodDefs label: 'Implementors of ' , selector.
   ^ true

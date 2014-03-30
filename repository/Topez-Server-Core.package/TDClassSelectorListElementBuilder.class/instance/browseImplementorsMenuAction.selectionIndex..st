@@ -1,14 +1,13 @@
 menu actions
 browseImplementorsMenuAction: listElement selectionIndex: selectionIndex
-  | itemAttribute classAttributes def defs |
+  | itemAttribute def methodDefs selector findTool browseTool |
   selectionIndex == 0
     ifTrue: [ ^ false ].
   itemAttribute := listElement itemCache at: selectionIndex.
   def := itemAttribute object.
-  defs := TDMethodDefinition implementorsOf: def selector.
-  defs
-    editUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')
-        windowLocation: #'implementors';
-        yourself).
+  selector := def selector.
+  findTool := self findTool: listElement.
+  methodDefs := findTool findMethod: selector asString.
+  browseTool := self browseTool: listElement.
+  browseTool browseMethods: methodDefs label: 'Implementors of ' , selector.
   ^ true

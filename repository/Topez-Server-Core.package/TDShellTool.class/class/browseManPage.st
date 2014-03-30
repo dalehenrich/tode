@@ -4,19 +4,22 @@ browseManPage
   browse - view class and method search results (see find)
 
 SYNOPSIS
-  browse [--scriptPath=<tode-path>] browse-command [<browse-arguments>]
+  browse [--scriptPath[=<tode-path>]] browse-command [<browse-arguments>]
+
+  browse method [@filter-block-path][--spec|[--regex|-r]] <method-spec> 
   browse amethod <method-spec>
+  browse method [#]<selector>  
+  browse rmethod <regex-pattern> [@filter-block-path]
+
   browse category <regex-pattern>
   browse class <regex-pattern>
   browse diff <method-spec-1> <method-spec-2>
   browse hierarchy <class-name>
   browse list <definitionList-path> [@filter-block-path]
-  browse method [#]<selector>  [@filter-block-path]
   browse package <package-name>
   browse project <project-name>
   browse [--scriptPath=<tode-path>] psender [#]<selector>
   browse [--scriptPath=<tode-path>] references <variableOrGlobalNameOrPathRef> [@filter-block-path]
-  browse rmethod <regex-pattern> [@filter-block-path]
   browse [--scriptPath=<tode-path>] rsender <regex-pattern> [@filter-block-path]
   browse [--scriptPath=<tode-path>] sender [#]<selector> [@filter-block-path]
   browse [--scriptPath=<tode-path>] source <regex-pattern> [@filter-block-path]
@@ -30,8 +33,9 @@ DESCRIPTION
     /home/impelementors
 
   <method-spec> :: method specification
-    Object>>methodSelector
-    Object class>>methodSelector
+    methodSelector
+    className>>methodSelector
+    className class>>methodSelector
 
   <regex-pattern> :: regular expression pattern
 
@@ -42,5 +46,12 @@ DESCRIPTION
 
   <variableOrGlobalNameOrPathRef> :: global name
     <identifier>
-    @<path>  
+    @<path> 
+
+EXAMPLES
+  browse method at:put: 
+  browse method --spec Dictionary>>at:put:
+  browse method -r at\:put\: 
+  browse --scriptPath method at:put: 
+  browse method --filter=@filter at:put: 
 '

@@ -4,8 +4,12 @@ findManPage
   find - search for matching classes and methods (class, method, sender, rmethod, rsender, source, versions)
 
 SYNOPSIS
-  find [--scriptPath=<tode-path>] find-command [<find-arguments>]
-  find amethod <method-spec> 
+  find [--scriptPath[=<tode-path>]] find-command [<find-arguments>]
+
+  find method [--spec|[--regex|-r]] <method-spec> 
+  find method [#]<selector>  
+  find rmethod <regex-pattern> 
+
   find categories
   find category <regex-pattern>
   find class <regex-pattern>
@@ -26,8 +30,9 @@ SYNOPSIS
 
 DESCRIPTION
   <method-spec> :: method specification
-    Object>>methodSelector
-    Object class>>methodSelector
+    methodSelector
+    className>>methodSelector
+    className class>>methodSelector
 
   <regex-pattern> :: regular expression pattern
 

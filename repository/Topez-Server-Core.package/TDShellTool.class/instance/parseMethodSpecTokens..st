@@ -1,9 +1,8 @@
 as yet unclassified
-findMethodSpec: findTokens labelBlock: labelBlock
-  "find amethod <method-spec>"
+parseMethodSpecTokens: methodSpecTokens
+  "class>>selector or class class>>selector"
 
-  | methodSpecTokens methodSpec |
-  methodSpecTokens := findTokens copyFrom: 2 to: findTokens size.
+  | method methodRefs methodSpec |
   methodSpecTokens size == 1
     ifTrue: [ 
       "class>>selector"
@@ -18,5 +17,4 @@ findMethodSpec: findTokens labelBlock: labelBlock
                 , (methodSpecTokens at: 2) ]
             ifFalse: [ self error: 'expecting a <method spec>' ] ]
         ifFalse: [ self error: 'expecting a <method spec>' ] ].
-  labelBlock value: methodSpec.
-  ^ self findMethodSpec: methodSpec
+  ^ methodSpec
