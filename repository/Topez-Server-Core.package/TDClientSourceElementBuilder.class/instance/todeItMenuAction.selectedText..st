@@ -4,4 +4,4 @@ todeItMenuAction: listElement selectedText: selectedString
    inspect"
 
   listElement topez evaluateTopezScript: selectedString.
-  ^ nil
+  ^ true

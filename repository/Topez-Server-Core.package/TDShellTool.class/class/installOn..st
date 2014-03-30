@@ -1,5 +1,7 @@
 as yet unclassified
 installOn: aTDTopezServer
+  "self install"
+
   "builder:
 	 #view		- normal view (i.e., collection of associations for Dictionary)
 	 #inspect - raw object/implementation view

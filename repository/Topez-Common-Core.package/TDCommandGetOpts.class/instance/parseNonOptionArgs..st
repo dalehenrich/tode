@@ -5,4 +5,4 @@ parseNonOptionArgs: nonOptionArgsBlock
       self
         parseArgToken: [ :token | 
           token isEmpty
-            ifFalse: [ nonOptionArgsBlock value: token ] ] ]
+            ifFalse: [ nonOptionArgsBlock cull: token ] ] ]

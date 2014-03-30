@@ -11,4 +11,4 @@ profileItMenuAction: listElement selectedText: selectedString
   pfTool
     pfmonitor: [ self evaluateString: selectedString ];
     pfview.
-  ^ nil
+  ^ true

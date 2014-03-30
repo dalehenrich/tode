@@ -3,4 +3,4 @@ inspectItMenuAction: listElement selectedText: selectedString
   | result |
   result := self evaluateString: selectedString.
   result inspect.
-  ^ nil
+  ^ true
