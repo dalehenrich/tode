@@ -1,14 +1,13 @@
 menu actions
 browseSendersMenuAction: listElement selectionIndex: selectionIndex
-  | itemAttribute classAttributes def defs |
+  | itemAttribute def defs selector findTool browseTool |
   selectionIndex == 0
     ifTrue: [ ^ false ].
   itemAttribute := listElement itemCache at: selectionIndex.
   def := itemAttribute object.
-  defs := TDMethodDefinition sendersOf: def selector.
-  defs
-    editUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')
-        windowLocation: #'implementors';
-        yourself).
+  selector := def selector asString.
+  findTool := self findTool: listElement.
+  defs := findTool findSender: selector.
+  browseTool := self browseTool: listElement.
+  browseTool browseMethods: defs label: 'Senders of ' , selector.
   ^ true

@@ -1,16 +1,9 @@
 menu actions - Search
 sendersOfItMenuAction: clientSourceElement selectedText: selectedString
-  "browse sender <selectedString>"
-
-  | selector defs |
+  | selector defs findTool browseTool |
   selector := selectedString findSelector.
-  defs := TDMethodDefinition sendersOf: selector.
-  defs
-    editUsing:
-      ((TDEditorSpec
-        topez: clientSourceElement topez
-        editorAspect: #'methodDefinitionList')
-        windowLocation: #'implementors';
-        windowLabel: 'Senders of ' , selector;
-        yourself).
+  findTool := self findTool: clientSourceElement.
+  defs := findTool findSender: selector.
+  browseTool := self browseTool: clientSourceElement.
+  browseTool browseMethods: defs label: 'Senders of ' , selector.
   ^ true

@@ -3,6 +3,7 @@ findRegexSender: regexPattern searchScriptRoot: path
   "find [--scriptPath=<tode-path>] rsender <regex-pattern>"
 
   | regex rootSearchNode leafNodes |
+  path ifNil: [ ^ self findRegexSender: regexPattern ].
   regex := self findRegex: regexPattern.
   regex ifNil: [ ^ #() ].
   rootSearchNode := self topez lookup: path.

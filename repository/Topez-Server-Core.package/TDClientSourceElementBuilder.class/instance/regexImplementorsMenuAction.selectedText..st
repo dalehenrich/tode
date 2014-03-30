@@ -4,5 +4,7 @@ regexImplementorsMenuAction: sourceElement selectedText: regex
   findTool := self browseTool: sourceElement.
   methodDefs := findTool findRegexMethod: regex.
   browseTool := self browseTool: sourceElement.
-  browseTool browseMethods: methodDefs label: 'Implementors of (regex) ' , regex.
+  browseTool
+    browseMethods: methodDefs
+    label: 'Implementors of ' , regex , ' (regex)'.
   ^ true

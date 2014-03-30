@@ -29,7 +29,7 @@ browsemethod
         at: 'regex'
         ifPresent: [ :ignored | 
           list := self findRegexMethod: arg.
-          label := 'Implementors of (regex): ' , arg , filteredLabel ]
+          label := 'Implementors of ' , arg , ' (regex)' , filteredLabel ]
         ifAbsent: [ 
           list := self findMethod: arg.
           label := 'Implementors of ' , arg , filteredLabel ] ].

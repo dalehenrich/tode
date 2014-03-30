@@ -3,6 +3,7 @@ findSender: selectorToken searchScriptRoot: path
   "find [--scriptPath=<tode-path>] sender [#]<selector>"
 
   | selector rootSearchNode leafNodes |
+  path ifNil: [ ^ self findSender: selectorToken ].
   selector := (self resolveSelector: selectorToken) asSymbol.
   rootSearchNode := self topez lookup: path.
   leafNodes := IdentitySet new.
