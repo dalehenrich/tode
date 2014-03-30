@@ -1,5 +1,7 @@
 menu actions
 browseReferencesMenuAction: clientElement className: className
+  "browse references <className>"
+
   | defs |
   defs := TDMethodDefinition
     referencesTo: className
@@ -9,5 +11,6 @@ browseReferencesMenuAction: clientElement className: className
     editUsing:
       ((TDEditorSpec topez: clientElement topez editorAspect: #'methodDefinitionList')
         windowLocation: #'implementors';
+        windowLabel: 'References to: ' , className;
         yourself).
   ^ true
