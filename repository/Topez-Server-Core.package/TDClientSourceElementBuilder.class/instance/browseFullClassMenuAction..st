@@ -1,4 +1,4 @@
-menu actions
+menu actions - Search
 browseFullClassMenuAction: listElement
   self
     browseFullClassMenuAction: listElement

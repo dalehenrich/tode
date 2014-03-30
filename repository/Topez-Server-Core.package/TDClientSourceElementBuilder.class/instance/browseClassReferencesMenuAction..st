@@ -1,4 +1,4 @@
-menu actions
+menu actions - Search
 browseClassReferencesMenuAction: listElement
   | cls aVariableOrClassName |
   aVariableOrClassName := self theBehavior theNonMetaClass name asString.

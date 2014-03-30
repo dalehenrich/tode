@@ -1,4 +1,4 @@
-menu actions
+menu actions - keyboard only
 sendersOf: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-n - sendersOf"
 

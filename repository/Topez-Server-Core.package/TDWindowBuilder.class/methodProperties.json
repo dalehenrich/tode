@@ -3,7 +3,7 @@
 		"reset" : "DataCurator 02/06/2013 01:52" },
 	"instance" : {
 		"basicMenuActionSpec" : "dkh 02/23/2014 09:32",
-		"browseFullClassMenuAction:class:" : "dkh 02/23/2014 18:36",
+		"browseFullClassMenuAction:class:" : "dkh 03/29/2014 17:17",
 		"browseReferencesMenuAction:className:" : "dkh 02/23/2014 18:25",
 		"buildClientElementUsing:editorAspect:" : "dkh 04/11/2013 14:35",
 		"cloneWindowMenuAction:" : "dkh 02/23/2014 18:05",

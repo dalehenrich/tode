@@ -1,4 +1,4 @@
-menu actions
+menu actions - Search
 browseItMenuAction: sourceElement selectedText: selection
   | parser regex classes defs |
   parser := RxParser safelyParse: selection.

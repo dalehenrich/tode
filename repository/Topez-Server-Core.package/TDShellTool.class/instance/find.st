@@ -35,7 +35,7 @@ find
   command = 'sender'
     ifTrue: [ ^ self findSender: (findTokens at: 2) ].
   command = 'versions'
-    ifTrue: [ ^ self findVersions: findTokens ].
+    ifTrue: [ ^ self findVersions: findTokens labelBlock: [ :ignored |  ] ].
   command = 'references'
     ifTrue: [ ^ self findReferences: (findTokens at: 2) ].
   command = 'rmethod'

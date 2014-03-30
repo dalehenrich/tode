@@ -1,4 +1,4 @@
-menu actions
+menu actions - keyboard only
 browseClass: sourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-b - browse class"
 

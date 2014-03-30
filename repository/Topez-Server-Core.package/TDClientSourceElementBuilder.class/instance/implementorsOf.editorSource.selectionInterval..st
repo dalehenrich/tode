@@ -1,4 +1,4 @@
-menu actions
+menu actions - keyboard only
 implementorsOf: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-m - implementorsOf"
 

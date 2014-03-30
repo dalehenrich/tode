@@ -21,12 +21,16 @@ browse
   browse versions <method-spec>
 "
 
-  | findTokens command selectBlock list |
+  | findTokens command selectBlock list arg |
   self findProcessCommandOptions.
   findTokens := self arguments.
   command := findTokens at: 1.
   command = 'amethod'
-    ifTrue: [ ^ self browseMethods: (self findMethodSpec: findTokens) ].
+    ifTrue: [ 
+      list := self
+        findMethodSpec: findTokens
+        labelBlock: [ :methodSpec | arg := methodSpec ].
+      ^ self browseMethods: list label: 'Implementors of: ' , arg ].
   selectBlock := [ :each | true ].
   findTokens size > 2
     ifTrue: [ 
@@ -35,69 +39,96 @@ browse
   command = 'list'
     ifTrue: [ 
       list := findTokens size = 1
-        ifTrue: [ objIn ]
+        ifTrue: [ 
+          arg := objIn printSring.
+          objIn ]
         ifFalse: [ 
           | listToken |
           listToken := findTokens at: 2.
+          arg := listToken.
           (topez lookup: listToken) dotSelfObject ].
       list := list select: selectBlock.
-      ^ self browseMethods: list ].
+      ^ self browseMethods: list label: 'List: ' , arg ].
   command = 'method'
     ifTrue: [ 
-      list := (self findMethod: (findTokens at: 2)) select: selectBlock.
-      ^ self browseMethods: list ].
+      arg := findTokens at: 2.
+      list := (self findMethod: arg) select: selectBlock.
+      ^ self browseMethods: list label: 'Implementors of ' , arg ].
   command = 'diff'
     ifTrue: [ ^ self browseDiff: (self findMethods: findTokens) ].
   command = 'psender'
     ifTrue: [ 
+      arg := findTokens at: 2.
       self options
         at: 'scriptPath'
-        ifPresent: [ :scriptPath | ^ self browsePureSender: (findTokens at: 2) searchScriptRoot: scriptPath ].
-      list := (self findPureSender: (findTokens at: 2)) select: selectBlock.
-      ^ self browseMethods: list ].
+        ifPresent: [ :scriptPath | ^ self browsePureSender: arg searchScriptRoot: scriptPath ].
+      list := (self findPureSender: arg) select: selectBlock.
+      ^ self browseMethods: list label: 'Senders of ' , arg ].
   command = 'sender'
     ifTrue: [ 
+      arg := findTokens at: 2.
       self options
         at: 'scriptPath'
-        ifPresent: [ :scriptPath | ^ self browseSender: (findTokens at: 2) searchScriptRoot: scriptPath ].
-      list := (self findSender: (findTokens at: 2)) select: selectBlock.
-      ^ self browseMethods: list ].
+        ifPresent: [ :scriptPath | ^ self browseSender: arg searchScriptRoot: scriptPath ].
+      list := (self findSender: arg) select: selectBlock.
+      ^ self browseMethods: list label: 'Senders of ' , arg ].
   command = 'versions'
-    ifTrue: [ ^ self browseMethods: (self findVersions: findTokens) ].
+    ifTrue: [ 
+      list := self
+        findVersions: findTokens
+        labelBlock: [ :methodSpec | arg := methodSpec ].
+      ^ self browseMethods: list label: 'Versions of ' , arg ].
   command = 'references'
     ifTrue: [ 
+      arg := findTokens at: 2.
       self options
         at: 'scriptPath'
-        ifPresent: [ :scriptPath | ^ self browseReferences: (findTokens at: 2) searchScriptRoot: scriptPath ].
-      list := (self findReferences: (findTokens at: 2)) select: selectBlock.
-      ^ self browseMethods: list ].
+        ifPresent: [ :scriptPath | ^ self browseReferences: arg searchScriptRoot: scriptPath ].
+      list := (self findReferences: arg) select: selectBlock.
+      ^ self browseMethods: list label: 'References to ' , arg ].
   command = 'rmethod'
     ifTrue: [ 
-      list := (self findRegexMethod: (findTokens at: 2)) select: selectBlock.
-      ^ self browseMethods: list ].
+      arg := findTokens at: 2.
+      list := (self findRegexMethod: arg) select: selectBlock.
+      ^ self browseMethods: list label: 'Implementors of (regex): ' , arg ].
   command = 'rsender'
     ifTrue: [ 
+      arg := findTokens at: 2.
       self options
         at: 'scriptPath'
-        ifPresent: [ :scriptPath | ^ self browseRegexSender: (findTokens at: 2) searchScriptRoot: scriptPath ].
-      list := (self findRegexSender: (findTokens at: 2)) select: selectBlock.
-      ^ self browseMethods: list ].
+        ifPresent: [ :scriptPath | ^ self browseRegexSender: arg searchScriptRoot: scriptPath ].
+      list := (self findRegexSender: arg) select: selectBlock.
+      ^ self browseMethods: list label: 'Senders of (regex): ' , arg ].
   command = 'source'
     ifTrue: [ 
+      arg := findTokens at: 2.
       self options
         at: 'scriptPath'
-        ifPresent: [ :scriptPath | ^ self browseSource: (findTokens at: 2) searchScriptRoot: scriptPath ].
-      list := (self findSource: (findTokens at: 2)) select: selectBlock.
-      ^ self browseMethods: list ].
+        ifPresent: [ :scriptPath | ^ self browseSource: arg searchScriptRoot: scriptPath ].
+      list := (self findSource: arg) select: selectBlock.
+      ^ self browseMethods: list label: 'Source references: ' , arg ].
+  arg := findTokens at: 2.
   command = 'package'
-    ifTrue: [ ^ self browseClasses: (self findPackageDefinitions: (findTokens at: 2)) ].
+    ifTrue: [ 
+      list := self findPackageDefinitions: arg.
+      ^ self browseClasses: list label: 'Classes in package: ' , arg ].
   command = 'category'
-    ifTrue: [ ^ self browseClasses: (self findCategoryClassDefinitions: (findTokens at: 2)) ].
+    ifTrue: [ 
+      list := self findCategoryClassDefinitions: arg.
+      ^ self browseClasses: list label: 'Classes in category: ' , arg ].
   command = 'symbolList'
-    ifTrue: [ ^ self browseClasses: (self findSymbolListDefinitions: (findTokens at: 2)) ].
+    ifTrue: [ 
+      list := self findSymbolListDefinitions: arg.
+      ^ self browseClasses: list label: 'Classes in symbolList: ' , arg ].
   command = 'project'
-    ifTrue: [ ^ self browseClasses: (self findProjectDefinitions: (findTokens at: 2)) ].
+    ifTrue: [ 
+      list := self findProjectDefinitions: arg.
+      ^ self browseClasses: arg label: 'Classes in project: ' , arg ].
   command = 'class'
-    ifTrue: [ ^ self browseClasses: (self findClass: (findTokens at: 2)) ].
+    ifTrue: [ 
+      list := self findClass: arg.
+      ^ self browseClasses: list label: 'Classes matching: ' , arg ].
   command = 'hierarchy'
-    ifTrue: [ ^ self browseClasses: (self findClassHierarchy: (findTokens at: 2)) ]
+    ifTrue: [ 
+      list := self findClassHierarchy: arg.
+      ^ self browseClasses: list label: 'Hierarchy for ' , arg ]

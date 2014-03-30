@@ -1,5 +1,7 @@
-menu actions
+menu actions - Search
 implementorsOfItMenuAction: clientSourceElement selectedText: selectedString
+  "browse method <selectedString>"
+
   | selector defs |
   selector := selectedString findSelector.
   defs := TDMethodDefinition implementorsOf: selector.
