@@ -18,10 +18,13 @@ SYNOPSIS
   browse [--scriptPath=<tode-path>] rsender <regex-pattern> [@filter-block-path]
   browse [--scriptPath=<tode-path>] sender [#]<selector> [@filter-block-path]
 
-  browse category <regex-pattern>
+  browse class [--hier|--full] <class-name>
+  ------
   browse class <regex-pattern>
-  browse diff <method-spec-1> <method-spec-2>
   browse hierarchy <class-name>
+
+  browse category <regex-pattern>
+  browse diff <method-spec-1> <method-spec-2>
   browse list <definitionList-path> [@filter-block-path]
   browse package <package-name>
   browse project <project-name>
@@ -63,4 +66,8 @@ EXAMPLES
   browse sender -r at\:put\: 
   browse --scriptPath sender at:put: 
   browse sender --filter=@filter at:put: 
+  --
+  browse class method
+  browse class --hier method
+  browse class --full GsMethod
 '

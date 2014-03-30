@@ -130,5 +130,5 @@ browseX
       ^ self browseClasses: list label: 'Classes matching: ' , arg ].
   command = 'hierarchy'
     ifTrue: [ 
-      list := self findClassHierarchy: arg.
+      list := self findClassHierarchy: {arg}.
       ^ self browseClasses: list label: 'Hierarchy for ' , arg ]

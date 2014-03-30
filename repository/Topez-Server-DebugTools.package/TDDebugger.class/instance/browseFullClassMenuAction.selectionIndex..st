@@ -4,10 +4,7 @@ browseFullClassMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex == 0
     ifTrue: [ ^ false ].
   cls := self theBehavior.
-  cls asTDClassDefinition
-    editUsing:
-      ((TDEditorSpec topez: self topez editorAspect: #'hierarchyList')
-        parentObject: listElement parent;
-        windowName: #'hierarchy';
-        yourself).
+  (listElement topez toolInstanceFor: 'browse')
+    browseClassHierarchy: cls
+    label: 'Hierarchy of ' , cls name asString.
   ^ true

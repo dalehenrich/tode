@@ -59,4 +59,4 @@ find
   command = 'project'
     ifTrue: [ ^ self findProjectDefinitions: (findTokens at: 2) ].
   command = 'hierarchy'
-    ifTrue: [ ^ self findClassHierarchy: (findTokens at: 2) ]
+    ifTrue: [ ^ self findClassHierarchy: {(findTokens at: 2)} ]
