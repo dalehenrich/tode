@@ -16,4 +16,7 @@ executeBuiltIn: command
 								ifFalse: [ 
 									cmd = 'updateClient'
 										ifTrue: [ self executeUpdateClient: command ]
-										ifFalse: [ self perform: cmd asSymbol ] ] ] ] ]
+										ifFalse: [ 
+											cmd = 'debugMode'
+												ifTrue: [ self executeDebugMode: command ]
+												ifFalse: [ self perform: cmd asSymbol ] ] ] ] ] ]
