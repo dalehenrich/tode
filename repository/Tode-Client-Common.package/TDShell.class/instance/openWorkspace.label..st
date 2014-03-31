@@ -1,9 +1,14 @@
 built-ins
 openWorkspace: contents label: workspaceLabel
-	Workspace new
+	| bounds win ws |
+	bounds := self topezClient bounds at: #method.
+	ws := Workspace new
 		toggleStylingActive;
-		openLabel: workspaceLabel;
 		contents: contents;
 		changed: #contents;
 		yourself.
+	win := ws openAsMorphLabel: workspaceLabel.
+	win
+		extent: bounds extent;
+		position: bounds origin.
 	^ contents
