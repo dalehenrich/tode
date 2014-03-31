@@ -7,7 +7,7 @@ findSource: regexPattern searchScriptRoot: path
   regex ifNil: [ ^ #() ].
   rootSearchNode := self topez lookup: path.
   leafNodes := IdentitySet new.
-  TDExecutableStScriptVisitor
+  TDLeafNodeSourceVisitor
     topez: self topez
     visitNode: rootSearchNode
     andDo: [ :leafNode | 
