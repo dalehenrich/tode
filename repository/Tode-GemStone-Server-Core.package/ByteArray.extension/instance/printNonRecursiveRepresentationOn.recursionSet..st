@@ -4,7 +4,6 @@ printNonRecursiveRepresentationOn: aStream recursionSet: anIdentitySet
 	 while avoiding recursion from object reference loops."
 
   | count sz |
-  super printOn: aStream recursionSet: anIdentitySet.
   aStream nextPutAll: '#[ '.
   count := 1.
   sz := self size.
