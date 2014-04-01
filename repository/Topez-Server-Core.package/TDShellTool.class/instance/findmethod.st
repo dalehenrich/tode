@@ -1,25 +1,25 @@
 as yet unclassified
 findmethod
-  "find method [--spec|[--regex|-r]] <method-spec> 
-     <method-spec>
-       [#]selector
-       className>>selector
-       className class>>selector"
+  "
+  find method <selector> 
+  find method --spec <method-spec> 
+  find method --regex <selector-pattern> 
+"
 
-  | arg |
+  | list |
   self
     getSubcommandOptsMixedLongShort:
-      {#('regex' $r #'none').
+      {#('regex' nil #'none').
       #('spec' nil #'none')}.
-  subOptions
-    at: 'spec'
-    ifPresent: [ :ignored | 
-      | methodSpec |
-      methodSpec := self parseMethodSpecTokens: subArguments.
-      ^ self findMethodSpec: methodSpec ]
-    ifAbsent: [ 
-      arg := subArguments at: 1.
+  list := Set new.
+  subArguments
+    do: [ :arg | 
       subOptions
-        at: 'regex'
-        ifPresent: [ :ignored | ^ self findRegexMethod: arg ]
-        ifAbsent: [ ^ self findMethod: arg ] ]
+        at: 'spec'
+        ifPresent: [ :ignored | list addAll: (self findMethodSpec: arg) ]
+        ifAbsent: [ 
+          subOptions
+            at: 'regex'
+            ifPresent: [ :ignored | list addAll: (self findRegexMethod: arg) ]
+            ifAbsent: [ list addAll: (self findMethod: arg) ] ] ].
+  ^ list

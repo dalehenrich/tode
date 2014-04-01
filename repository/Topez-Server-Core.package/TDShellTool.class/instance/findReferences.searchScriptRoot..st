@@ -3,6 +3,7 @@ findReferences: variableOrGlobalNameOrPathRef searchScriptRoot: path
   "find [--scriptPath=<tode-path>] references <variableOrGlobalNameOrPathRef>"
 
   | rootSearchNode literal leafNodes |
+  path ifNil: [ ^ self findReferences: variableOrGlobalNameOrPathRef ].
   literal := (variableOrGlobalNameOrPathRef beginsWith: '@')
     ifTrue: [ self resolveAtPathReference: variableOrGlobalNameOrPathRef ]
     ifFalse: [ Smalltalk at: variableOrGlobalNameOrPathRef asSymbol ].

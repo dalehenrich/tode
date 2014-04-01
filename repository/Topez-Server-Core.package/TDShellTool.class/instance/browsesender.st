@@ -1,13 +1,17 @@
 as yet unclassified
 browsesender
-  "browse [--scriptPath[=<tode-path>]] sender [@filter-block-path][--pure|[--regex|-r]] <method-spec>"
+  "
+  browse [--scriptPath[=<tode-path>]] sender [--filter=@filter-block-path] <selector>...
+  browse [--scriptPath[=<tode-path>]] sender [--filter=@filter-block-path][--pure] <selector>...
+  browse [--scriptPath[=<tode-path>]] sender [--filter=@filter-block-path][--regex]] <selector-pattern>...
+"
 
-  | selectBlock list selector label filteredLabel path |
+  | selectBlock list label filteredLabel path pattern |
   self primeScriptPathOption.
   self
     getSubcommandOptsMixedLongShort:
       {#('filter' nil #'required').
-      #('regex' $r #'none').
+      #('regex' nil #'none').
       #('pure' nil #'none')}.
   subOptions
     at: 'filter'
@@ -17,26 +21,32 @@ browsesender
     ifAbsent: [ 
       filteredLabel := ''.
       selectBlock := [ :each | true ] ].
-  selector := subArguments at: 1.
   options
     at: 'scriptPath'
     ifPresent: [ :scriptPath | 
       path := scriptPath.
       filteredLabel := filteredLabel , ' (' , scriptPath , ')' ]
     ifAbsent: [ path := nil ].
+  list := Set new.
+  pattern := ''.
+  subArguments
+    do: [ :arg | 
+      pattern := pattern , ' ' , arg.
+      subOptions
+        at: 'pure'
+        ifPresent: [ :ignored | list addAll: (self findPureSender: arg searchScriptRoot: path) ]
+        ifAbsent: [ 
+          subOptions
+            at: 'regex'
+            ifPresent: [ :ignored | list addAll: (self findRegexSender: arg searchScriptRoot: path) ]
+            ifAbsent: [ list addAll: (self findSender: arg searchScriptRoot: path) ] ] ].
   subOptions
     at: 'pure'
-    ifPresent: [ :ignored | 
-      list := self findPureSender: selector searchScriptRoot: path.
-      label := 'Senders of ' , selector , ' (pure)' , filteredLabel ]
+    ifPresent: [ :ignored | label := 'Senders of' , pattern , ' (pure)' , filteredLabel ]
     ifAbsent: [ 
       subOptions
         at: 'regex'
-        ifPresent: [ :ignored | 
-          list := self findRegexSender: selector searchScriptRoot: path.
-          label := 'Senders of ' , selector , ' (regex)' , filteredLabel ]
-        ifAbsent: [ 
-          list := self findSender: selector searchScriptRoot: path.
-          label := 'Senders of ' , selector , filteredLabel ] ].
+        ifPresent: [ :ignored | label := 'Senders of' , pattern , ' (regex)' , filteredLabel ]
+        ifAbsent: [ label := 'Senders of' , pattern , filteredLabel ] ].
   list := list select: selectBlock.
   ^ self browseMethods: list label: label

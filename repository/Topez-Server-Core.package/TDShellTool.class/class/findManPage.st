@@ -6,7 +6,9 @@ findManPage
 SYNOPSIS
   find [--scriptPath[=<tode-path>]] find-command [<find-arguments>]
 
-  find method [--spec|[--regex|-r]] <method-spec> 
+  find method <selector> 
+  find method --spec <method-spec> 
+  find method --regex <selector-pattern> 
   ----
   find method [#]<selector>  
   find rmethod <regex-pattern> 

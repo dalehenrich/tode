@@ -8,7 +8,7 @@ rawLiteralReference: literal in: aClassOrNil
       classes := ClassSet new.
       classes addAll: env theNonMetaClass withAllSuperclasses ]
     ifFalse: [ classes := Smalltalk classOrganizer classes ].
-  (Smalltalk classOrganizer referencesToObject: literal in: classes)
+  ((Smalltalk classOrganizer referencesToLiteral: literal in: classes) at: 1)
     do: [ :method | 
       aCollection
         add: (MethodReference class: method inClass selector: method selector) ].
