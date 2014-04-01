@@ -1,3 +1,3 @@
 as yet unclassified
 specialChildNodeNameList: parentNode
-  ^ (super specialChildNodeNameList: parentNode) , #('(utf8)')
+  ^ (super specialChildNodeNameList: parentNode) , #('(size)' '(utf8)')
