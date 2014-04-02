@@ -5,6 +5,7 @@
 		"parseCommand:" : "dkh 11/10/2013 07:15" },
 	"instance" : {
 		"command" : "dkh 11/10/2013 06:27",
+		"error:" : "dkh 04/02/2014 10:22",
 		"getOpts:do:nonOptionsDo:" : "dkh 11/10/2013 12:54",
 		"getOptsLong:do:nonOptionsDo:" : "dkh 11/11/2013 16:43",
 		"getOptsLong:short:do:nonOptionsDo:" : "dkh 11/11/2013 16:40",

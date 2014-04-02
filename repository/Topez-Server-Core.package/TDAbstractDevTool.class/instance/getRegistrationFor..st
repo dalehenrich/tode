@@ -16,4 +16,4 @@ getRegistrationFor: configName
   registry configurationRegistry
     at: configName
     ifPresent: [ :registration | ^ registration ].
-  registry error: 'No configuration name: ' , configName printString
+  self error: 'No configuration name: ' , configName printString
