@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findmethod
   "
   find method <selector> 

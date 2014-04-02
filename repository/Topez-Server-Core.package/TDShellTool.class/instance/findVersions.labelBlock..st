@@ -1,9 +1,8 @@
 as yet unclassified
-findVersions: findTokens labelBlock: labelBlock
+findVersions: methodSpecTokens labelBlock: labelBlock
   "find versions <method-spec>"
 
-  | methodSpecTokens method methodSpec |
-  methodSpecTokens := findTokens copyFrom: 2 to: findTokens size.
+  | method methodSpec |
   methodSpecTokens size == 1
     ifTrue: [ 
       "class>>selector"

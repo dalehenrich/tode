@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browsesender
   "
   browse [--scriptPath[=<tode-path>]] sender [--filter=@filter-block-path] <selector>...

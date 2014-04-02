@@ -7,5 +7,7 @@ browse
   self
     performSubCommand: topez
     objIn: objIn
-    commandOptions: {#('scriptPath' nil #'optional')}
+    commandOptions:
+      {#('help' $h #'optional').
+      #('scriptPath' nil #'optional')}
     todeCommand: command ]

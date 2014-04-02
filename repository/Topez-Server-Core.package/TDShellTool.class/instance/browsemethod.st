@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browsemethod
   "
   browse method [--filter=@filter-block-path] <selector>...

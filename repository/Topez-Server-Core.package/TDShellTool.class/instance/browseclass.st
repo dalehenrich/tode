@@ -1,7 +1,8 @@
-as yet unclassified
+browse
 browseclass
   "
   browse class [--hier] <class-name-pattern>...
+  browse class [--hier] --exact <class-name>...
   browse class -full <class-name>
 "
 
@@ -9,7 +10,8 @@ browseclass
   self
     getSubcommandOptsMixedLongShort:
       {#('full' nil #'none').
-      #('hier' nil #'none')}.
+      #('hier' nil #'none').
+      #('exact' nil #'none')}.
   list := Set new.
   pattern := ''.
   subOptions
@@ -25,7 +27,10 @@ browseclass
       ^ self browseClassHierarchy: cls label: 'Hierarchy for ' , clsNamePattern ].
   subArguments
     do: [ :clsNamePattern | 
-      list addAll: (self findClass: clsNamePattern).
+      subOptions
+        at: 'exact'
+        ifPresent: [ :ignored | list addAll: (self findClassExact: clsNamePattern) ]
+        ifAbsent: [ list addAll: (self findClass: clsNamePattern) ].
       pattern := pattern , ' ' , clsNamePattern ].
   label := 'Classes matching' , pattern.
   subOptions
