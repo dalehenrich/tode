@@ -7,7 +7,7 @@ openWorkspace: contents label: workspaceLabel
 		contents: contents;
 		changed: #contents;
 		yourself.
-	win := ws openAsMorphLabel: workspaceLabel.
+	win := ws openLabel: workspaceLabel.
 	win
 		extent: bounds extent;
 		position: bounds origin.
