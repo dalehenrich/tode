@@ -8,4 +8,5 @@ todeDefineTodeHomeMenuItemOn: aBuilder
 					| path |
 					path := UIManager request: 'Enter todeHome path' initialAnswer: self todeHome.
 					path isEmptyOrNil
-						ifFalse: [ self todeHome: path ] ].
+						ifFalse: [ self todeHome: path ] ];
+		withSeparatorAfter
