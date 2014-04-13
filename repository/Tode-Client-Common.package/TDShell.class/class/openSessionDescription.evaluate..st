@@ -1,7 +1,12 @@
 system menu
 openSessionDescription: sessionDescription evaluate: aCommand
-	| shell  |
+	| shell console |
 	shell := self new.
 	shell openOnSessionDescription: sessionDescription.
-	shell evaluate: aCommand.
-	^shell
+	console := shell console.
+	console
+		nextPutAll: aCommand;
+		cr;
+		flush;
+		processCommand: aCommand.
+	^ shell
