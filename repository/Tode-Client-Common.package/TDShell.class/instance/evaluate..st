@@ -29,4 +29,5 @@ evaluate: aString
 									(TextEmphasis bold)}).
 					self resetStack.
 					^ errorMessage ].
+			self logout.	"TDRestoreFromBackupComplete - logout and return restore message"
 			^ ex description ]
