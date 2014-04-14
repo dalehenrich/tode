@@ -10,7 +10,7 @@ browsemethod
   self
     getSubcommandOptsMixedLongShort:
       {#('filter' nil #'required').
-      #('regex' nil #'none').
+      #('regex' $r #'none').
       #('spec' nil #'none')}.
   subOptions
     at: 'filter'

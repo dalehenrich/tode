@@ -1,17 +1,15 @@
 as yet unclassified
-findSource: regexPattern searchScriptRoot: path
+findSourceExact: searchString searchScriptRoot: path
   "find [--scriptPath=<tode-path>] source <regex-pattern>"
 
-  | regex rootSearchNode leafNodes |
-  path ifNil: [ ^ self findSource: regexPattern ].
-  regex := self findRegex: regexPattern.
-  regex ifNil: [ ^ #() ].
+  | rootSearchNode leafNodes |
+  path ifNil: [ ^ self findSourceExact: searchString ].
   rootSearchNode := self topez lookup: path.
   leafNodes := IdentitySet new.
   TDLeafNodeSourceVisitor
     topez: self topez
     visitNode: rootSearchNode
     andDo: [ :leafNode | 
-      (regex search: leafNode elementSource)
+      (leafNode elementSource includesSubString: searchString)
         ifTrue: [ leafNodes add: leafNode ] ].
   ^ leafNodes asArray sort: [ :a :b | a printString < b printString ]

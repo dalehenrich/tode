@@ -17,7 +17,7 @@ SYNOPSIS
   browse hierarchy <class-name>
 
   browse method [--filter=@filter-block-path] <selector>...
-  browse method [--filter=@filter-block-path] --regex <method-pattern>...
+  browse method [--filter=@filter-block-path] --regex|-r <method-pattern>...
   browse method [--filter=@filter-block-path] --spec <method-spec>...
   ------
   browse amethod <method-spec>
@@ -48,10 +48,14 @@ SYNOPSIS
   browse [--scriptPath=<tode-path>] rsender <regex-pattern> [@filter-block-path]
   browse [--scriptPath=<tode-path>] sender [#]<selector> [@filter-block-path]
 
+  browse [--scriptPath=<tode-path>] source [--filter=@filter-block-path] <regex-pattern>
+  browse [--scriptPath=<tode-path>] source [--filter=@filter-block-path] --exact <source-string>
+  ------
+  browse [--scriptPath=<tode-path>] source <regex-pattern> [@filter-block-path]
+
 ------------------------------------------------------------------------------
   browse diff <method-spec-1> <method-spec-2>
   browse list <definitionList-path> [@filter-block-path]
-  browse [--scriptPath=<tode-path>] source <regex-pattern> [@filter-block-path]
   browse symbolList <regex-pattern>
   browse versions <method-spec>
 

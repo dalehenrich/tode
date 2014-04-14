@@ -19,6 +19,11 @@ SYNOPSIS
   find [--scriptPath=<tode-path>] rsender <regex-pattern>
   find [--scriptPath=<tode-path>] sender [#]<selector>
 
+  find [--scriptPath=<tode-path>] source <regex-pattern>
+  find [--scriptPath=<tode-path>] source --exact <source-string>
+  ----
+  find [--scriptPath=<tode-path>] source <regex-pattern>
+
   find categories
   find category <regex-pattern>
   find class <regex-pattern>
@@ -27,7 +32,6 @@ SYNOPSIS
   find package <package-name>
   find project <project-name>
   find [--scriptPath=<tode-path>] references <variableOrGlobalNameOrPathRef>
-  find [--scriptPath=<tode-path>] source <regex-pattern>
   find symbolList <regex-pattern>
   find symbolLists
   find versions <method-spec>

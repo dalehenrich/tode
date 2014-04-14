@@ -11,7 +11,7 @@ browsesender
   self
     getSubcommandOptsMixedLongShort:
       {#('filter' nil #'required').
-      #('regex' nil #'none').
+      #('regex' $r #'none').
       #('pure' nil #'none')}.
   subOptions
     at: 'filter'
