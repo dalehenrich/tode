@@ -6,7 +6,7 @@ todeDefineTodeHomeMenuItemOn: aBuilder
 		order: 10.0;
 		action: [ 
 					| path |
-					path := UIManager request: 'Enter todeHome path' initialAnswer: self todeHome.
+					path := UIManager default request: 'Enter todeHome path' initialAnswer: self todeHome.
 					path isEmptyOrNil
 						ifFalse: [ self todeHome: path ] ];
 		withSeparatorAfter
