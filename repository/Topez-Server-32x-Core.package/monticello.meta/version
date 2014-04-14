@@ -1,0 +1,1 @@
+(name 'Topez-Server-32x-Core-dkh.1' message 'ClassOrganizer class>>new included so that we can use GsSession currentSession symbolList ... split off package since new method different for 3.1 ...  ' id '728f6450-42c7-48f3-b2ab-5058a13b08aa' date '04/14/2014' time '13:12:49' author 'dkh' ancestors () stepChildren ())

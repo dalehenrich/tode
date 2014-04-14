@@ -139,19 +139,28 @@ baseline: spec
     for: #'gs3.1.x'
     do: [ 
       spec
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-31x-Core' ];
+        package: 'Topez-Server-31x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Tode-Server-31x-GsProcess-Patch' ];
         package: 'Tode-Server-31x-GsProcess-Patch'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
         yourself ].
   spec
-    for: #(#'gs3.1.x' #'gs3.2.x')
+    for: #'gs3.2.x'
     do: [ 
       spec
         package: 'Topez-Server-Core'
-          with: [ spec includes: 'Topez-Server-31x-Core' ];
-        package: 'Topez-Server-31x-Core'
+          with: [ spec includes: 'Topez-Server-32x-Core' ];
+        package: 'Topez-Server-32x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
+        yourself ].
+  spec
+    for: #(#'gs3.1.x' #'gs3.2.x')
+    do: [ 
+      spec
         package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
         package: 'Topez-Server-31x-DebugTools'
