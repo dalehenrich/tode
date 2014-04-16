@@ -4,14 +4,17 @@ browseclass
   browse class [--hier] <class-name-pattern>...
   browse class [--hier] --exact <class-name>...
   browse class -full <class-name>
+  browse class [--hier] [--user=<user-name>] --symbolDict <symbol-dictionary-name>
 "
 
   | list label pattern |
   self
     getSubcommandOptsMixedLongShort:
-      {#('full' nil #'none').
+      {#('exact' nil #'none').
+      #('symbolDict' nil #'none').
+      #('full' nil #'none').
       #('hier' nil #'none').
-      #('exact' nil #'none')}.
+      #('user' nil #'required')}.
   list := Set new.
   pattern := ''.
   subOptions
@@ -30,7 +33,16 @@ browseclass
       subOptions
         at: 'exact'
         ifPresent: [ :ignored | list addAll: (self findClassExact: clsNamePattern) ]
-        ifAbsent: [ list addAll: (self findClass: clsNamePattern) ].
+        ifAbsent: [ 
+          subOptions
+            at: 'symbolDict'
+            ifPresent: [ :ignored | 
+              | username |
+              subOptions at: 'user' ifPresent: [ :user | username := user ].
+              list
+                addAll:
+                  (self findClassDefsInSymbolDictionary: clsNamePattern username: username) ]
+            ifAbsent: [ list addAll: (self findClass: clsNamePattern) ] ].
       pattern := pattern , ' ' , clsNamePattern ].
   label := 'Classes matching' , pattern.
   subOptions

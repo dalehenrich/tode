@@ -32,8 +32,6 @@ SYNOPSIS
   find package <package-name>
   find project <project-name>
   find [--scriptPath=<tode-path>] references <variableOrGlobalNameOrPathRef>
-  find symbolList <regex-pattern>
-  find symbolLists
   find versions <method-spec>
 
 DESCRIPTION

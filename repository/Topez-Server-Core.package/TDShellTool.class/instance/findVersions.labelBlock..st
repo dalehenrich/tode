@@ -18,8 +18,4 @@ findVersions: methodSpecTokens labelBlock: labelBlock
             ifFalse: [ self error: 'expecting a <method spec>' ] ]
         ifFalse: [ self error: 'expecting a <method spec>' ] ].
   labelBlock value: methodSpec.
-  method := self parseMethodSpec: methodSpec.
-  ^ (MethodVersionHistory uniqueInstance
-    versionsOfMethod: method selector
-    in: method inClass)
-    collect: [ :methodVersionRecord | TDMethodVersionDefinition new methodVersionRecord: methodVersionRecord ]
+  ^ self findVersions: methodSpec

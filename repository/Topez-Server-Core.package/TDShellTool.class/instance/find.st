@@ -17,8 +17,6 @@ find
   find rsender <regex-pattern>
   find sender [#]<selector>
   find source <regex-pattern>
-  find symbolList <regex-pattern>
-  find symbolLists
   find versions <method-spec>
 "
 
@@ -50,12 +48,8 @@ find
     ifTrue: [ ^ self findPackageDefinitions: (findTokens at: 2) ].
   command = 'categories'
     ifTrue: [ ^ self findCategoryDefinitions ].
-  command = 'symbolLists'
-    ifTrue: [ ^ self findSymbolListDefinitions: (findTokens at: 2) ].
   command = 'category'
     ifTrue: [ ^ self findCategoryClassDefinitions: (findTokens at: 2) ].
-  command = 'symbolList'
-    ifTrue: [ ^ self findSymbolListClassDefinitions: (findTokens at: 2) ].
   command = 'project'
     ifTrue: [ ^ self findProjectDefinitions: (findTokens at: 2) ].
   command = 'hierarchy'
