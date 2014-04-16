@@ -75,7 +75,7 @@ EXAMPLES
   browse method at:put: nextPutAll:
   browse method --spec Dictionary>>at:put: `Dictionary class>>new:`
   browse method --regex at\:put\:|nextPutAll\:
-  browse method --filter=@filter at:put: 
+  browse method --filter=./filter at:put: 
 
   browse package topez-server tode
   browse package --exact Topez-Server-Core
@@ -85,7 +85,7 @@ EXAMPLES
 
   browse references GsNMethod
   browse --scriptPath references GsNMethod
-  browse references --filter=@filter GsNMethod
+  browse references --filter=./filter GsNMethod
   browse references --literal=String `not yet implemented`
   browse references --literal=Symbol nextPut:
   browse references --literal=Number 1.0
@@ -98,9 +98,9 @@ EXAMPLES
   browse sender --pure at:put:
   browse sender --regex at\:put\: 
   browse --scriptPath sender at:put: 
-  browse sender --filter=@filter at:put: 
+  browse sender --filter=./filter at:put: 
 
-  browse source --filter=@filter `hello world`
+  browse source --filter=./filter `hello world`
   browse source --exact `hello world`
 
   browse versions `Dictionary class>>new:`

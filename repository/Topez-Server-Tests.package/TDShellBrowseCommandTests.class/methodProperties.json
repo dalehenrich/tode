@@ -2,10 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
+		"createDefinitionListNode" : "dkh 04/16/2014 07:22",
+		"createFilterBlockNode" : "dkh 04/16/2014 07:22",
+		"createTempNodeNode" : "dkh 04/16/2014 07:24",
 		"testBrowseClass" : "dkh 04/15/2014 20:49",
 		"testBrowseDiff" : "dkh 04/15/2014 20:58",
-		"testBrowseList" : "dkh 04/15/2014 21:14",
-		"testBrowseMethod" : "dkh 04/15/2014 20:42",
+		"testBrowseList" : "dkh 04/16/2014 07:18",
+		"testBrowseMethod" : "dkh 04/16/2014 07:26",
 		"testBrowsePackage" : "dkh 04/15/2014 20:42",
 		"testBrowseProject" : "dkh 04/15/2014 20:42",
 		"testBrowseReferences" : "dkh 04/15/2014 20:42",

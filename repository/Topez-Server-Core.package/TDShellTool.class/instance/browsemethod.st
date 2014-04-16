@@ -1,9 +1,9 @@
 browse
 browsemethod
   "
-  browse method [--filter=@filter-block-path] <selector>...
-  browse method [--filter=@filter-block-path] --regex <method-pattern>...
-  browse method [--filter=@filter-block-path] --spec <method-spec>...
+  browse method [--filter=filter-block-path] <selector>...
+  browse method [--filter=filter-block-path] --regex <method-pattern>...
+  browse method [--filter=filter-block-path] --spec <method-spec>...
 "
 
   | selectBlock list label filteredLabel pattern |
@@ -16,7 +16,7 @@ browsemethod
     at: 'filter'
     ifPresent: [ :filterPath | 
       filteredLabel := ' (filtered)'.
-      selectBlock := self resolveAtPathReference: filterPath ]
+      selectBlock := (self topez lookup: filterPath) dotSelfObject ]
     ifAbsent: [ 
       filteredLabel := ''.
       selectBlock := [ :each | true ] ].
