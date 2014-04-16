@@ -6,5 +6,6 @@ topez
         displayOops: false;
         characterLimit: 160;
         listLimit: 120;
+        topezClientForwarder: TDTestClientForwarder new;
         yourself ].
   ^ topez

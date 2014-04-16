@@ -5,6 +5,7 @@ browselist
 "
 
   | list label |
+  self getSubcommandOptsMixedLongShort: {}.
   list := Set new.
   label := ''.
   subArguments

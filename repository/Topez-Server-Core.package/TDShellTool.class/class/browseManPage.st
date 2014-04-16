@@ -4,13 +4,12 @@ browseManPage
   browse - view class and method search results (see find)
 
 SYNOPSIS
-  browse category <regex-pattern>...
-  browse category --exact <category-name>...
-
   browse class [--hier] <class-name-pattern>...
   browse class [--hier] --exact <class-name>...
   browse class --full <class-name>
   browse class [--hier] [--user=<user-name>] --symbolDict <symbol-dictionary-name>...
+  browse class [--hier] --category <category-name-pattern>...
+  browse class [--hier] --exact --category <category-name>...
 
   browse diff <method-spec-1> <method-spec-2>
 
@@ -61,18 +60,17 @@ DESCRIPTION
     @<path> 
 
 EXAMPLES
-  browse category topez-server tode
-  browse category --exact Topez-Server-Core
-
   browse class method stream
   browse class --exact GsNMethod
   browse class --hier method|stream
   browse class --full GsNMethod
   browse class --user=SystemUser --symbolDict UserGlobals
+  browse class --category topez-server tode
+  browse class --category --exact Topez-Server-Core
 
   browse diff TDShellTool>>findMethods: `TDShellTool class>>browse`
 
-  browse list @methodDefinitions
+  browse list /tmp/sessionTemps/methodDefinitions
 
   browse method at:put: nextPutAll:
   browse method --spec Dictionary>>at:put: `Dictionary class>>new:`
