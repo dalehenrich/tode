@@ -5,6 +5,7 @@
 		"basicMenuActionSpec" : "dkh 02/23/2014 09:32",
 		"browseFullClassMenuAction:class:" : "dkh 03/30/2014 15:08",
 		"browseReferencesMenuAction:className:" : "dkh 03/29/2014 20:46",
+		"browseReferencesMenuAction:to:inClass:" : "dkh 04/16/2014 07:02",
 		"browseTool:" : "dkh 03/30/2014 12:16",
 		"buildClientElementUsing:editorAspect:" : "dkh 04/11/2013 14:35",
 		"cloneWindowMenuAction:" : "dkh 02/23/2014 18:05",
