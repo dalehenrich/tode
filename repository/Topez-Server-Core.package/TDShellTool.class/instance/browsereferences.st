@@ -1,9 +1,9 @@
 browse
 browsereferences
   "
-  browse [--scriptPath=<tode-path>] references [--filter=@filter-block-path] [--global] <global-name>...
-  browse references [--filter=@filter-block-path] [--class=<class-name>] --literal=String|Symbol|Number|Array|ByteArray <literal>... 
-  browse references [--filter=@filter-block-path] --class=<class-name> <variableName>
+  browse [--scriptPath=<tode-path>] references [--filter=<filter-spec>] [--global] <global-name>...
+  browse references [--filter=<filter-spec>] [--class=<class-name>] --literal <literal>... 
+  browse references [--filter=<filter-spec>] --class=<class-name> <variableName>
 "
 
   | selectBlock list label filteredLabel path pattern |
@@ -16,9 +16,9 @@ browsereferences
       #('literal' nil #'required')}.
   subOptions
     at: 'filter'
-    ifPresent: [ :filterPath | 
+    ifPresent: [ :filterSpec | 
       filteredLabel := ' (filtered)'.
-      selectBlock := self resolveAtPathReference: filterPath ]
+      selectBlock := self resolveFilterSpec: filterSpec ]
     ifAbsent: [ 
       filteredLabel := ''.
       selectBlock := [ :each | true ] ].
@@ -37,7 +37,7 @@ browsereferences
         at: 'literal'
         ifPresent: [ :literalType | 
           | literal |
-          literal := self createLiteral: literalType asSymbol from: arg.
+          literal := arg evaluate.
           subOptions
             at: 'class'
             ifPresent: [ :className | 

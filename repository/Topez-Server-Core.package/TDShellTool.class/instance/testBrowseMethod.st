@@ -11,6 +11,5 @@ testBrowseMethod
     evaluateCommandString: 'browse method --regex at\:put\:|nextPutAll\:';
     evaluateCommandString: 'browse method -r at\:put\:|nextPutAll\:';
     evaluateCommandString:
-        'browse method --filter=@' , node printString , ' at:put: ';
-    evaluateCommandString: 'browse method --filter=`[:def | true ]` at:put: ';
+        'browse method --filter=' , node printString , ' at:put: ';
     yourself

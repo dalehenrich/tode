@@ -22,9 +22,9 @@ parseArgToken: tokenBlock
       stream next.
       atEndBlock value.
       peek := stream peek.
-      (escaped and: [ peek == $` ])
+      peek == $`
         ifTrue: [ 
-          escaped := false.
+          escaped := escaped not.
           stream next.
           atEndBlock value.
           peek := stream peek ] ].

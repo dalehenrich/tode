@@ -1,25 +1,17 @@
 browse
 browsemethod
   "
-  browse method [--filter=filter-block-path] <selector>...
-  browse method [--filter=filter-block-path] --regex <method-pattern>...
-  browse method [--filter=filter-block-path] --spec <method-spec>...
+  browse method [--filter=<filter-spec>] <selector>...
+  browse method [--filter=<filter-spec>] --regex <method-pattern>...
+  browse method [--filter=<filter-spec>] --spec <method-spec>...
 "
 
-  | selectBlock list label filteredLabel pattern |
+  | list label pattern |
   self
     getSubcommandOptsMixedLongShort:
       {#('filter' nil #'required').
       #('regex' $r #'none').
       #('spec' nil #'none')}.
-  subOptions
-    at: 'filter'
-    ifPresent: [ :filterPath | 
-      filteredLabel := ' (filtered)'.
-      selectBlock := (self topez lookup: filterPath) dotSelfObject ]
-    ifAbsent: [ 
-      filteredLabel := ''.
-      selectBlock := [ :each | true ] ].
   list := Set new.
   pattern := ''.
   subOptions
@@ -29,8 +21,8 @@ browsemethod
         do: [ :arg | 
           list addAll: (self findMethodSpec: arg).
           pattern := pattern , ' ' , arg ].
-      label := 'Implementors of' , pattern , filteredLabel.
-      list := list select: selectBlock.
+      label := 'Implementors of' , pattern.
+      list := self filterBrowseList: list.
       ^ self browseMethods: list label: label ].
   subOptions
     at: 'regex'
@@ -39,12 +31,12 @@ browsemethod
         do: [ :arg | 
           list addAll: (self findRegexMethod: arg).
           pattern := pattern , ' ' , arg ].
-      label := 'Implementors of' , pattern , ' (regex)' , filteredLabel ]
+      label := 'Implementors of' , pattern , ' (regex)' ]
     ifAbsent: [ 
       subArguments
         do: [ :arg | 
           list addAll: (self findMethod: arg).
           pattern := pattern , ' ' , arg ].
-      label := 'Implementors of' , pattern , filteredLabel ].
-  list := list select: selectBlock.
+      label := 'Implementors of' , pattern ].
+  list := self filterBrowseList: list.
   ^ self browseMethods: list label: label

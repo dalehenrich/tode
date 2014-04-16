@@ -1,8 +1,8 @@
 browse
 browsesource
   "
-  browse [--scriptPath=<tode-path>] source [--filter=@filter-block-path] <regex-pattern>
-  browse [--scriptPath=<tode-path>] source [--filter=@filter-block-path] --exact <source-string>
+  browse [--scriptPath=<tode-path>] source [--filter=<filter-spec>] <regex-pattern>
+  browse [--scriptPath=<tode-path>] source [--filter=<filter-spec>] --exact <source-string>
 "
 
   | list pattern filteredLabel selectBlock path label |
@@ -13,9 +13,9 @@ browsesource
       #('filter' nil #'required')}.
   subOptions
     at: 'filter'
-    ifPresent: [ :filterPath | 
+    ifPresent: [ :filterSpec | 
       filteredLabel := ' (filtered)'.
-      selectBlock := self resolveAtPathReference: filterPath ]
+      selectBlock := self resolveFilterSpec: filterSpec ]
     ifAbsent: [ 
       filteredLabel := ''.
       selectBlock := [ :each | true ] ].

@@ -1,12 +1,12 @@
 browse
 browseclass
   "
-  browse class [--hier] <class-name-pattern>...
-  browse class [--hier] --exact <class-name>...
-  browse class -full <class-name>
-  browse class [--hier] [--user=<user-name>] --symbolDict <symbol-dictionary-name>
-  browse class [--hier] --category <category-name-pattern>...
-  browse class [--hier] --exact --category <category-name>...
+  browse class [--filter=<filter-spec>] [--hier] <class-name-pattern>...
+  browse class [--filter=<filter-spec>] [--hier] --exact <class-name>...
+  browse class [--filter=<filter-spec>] -full <class-name>
+  browse class [--filter=<filter-spec>] [--hier] [--user=<user-name>] --symbolDict <symbol-dictionary-name>
+  browse class [--filter=<filter-spec>] [--hier] --category <category-name-pattern>...
+  browse class [--filter=<filter-spec>] [--hier] --exact --category <category-name>...
 "
 
   | list label pattern baseLabel |
@@ -14,6 +14,7 @@ browseclass
     getSubcommandOptsMixedLongShort:
       {#('category' nil #'none').
       #('exact' nil #'none').
+      #('filter' nil #'required').
       #('symbolDict' nil #'none').
       #('full' nil #'none').
       #('hier' nil #'none').
@@ -66,4 +67,5 @@ browseclass
       classNames := list collect: [ :cls | cls className asString ].
       list := self findClassHierarchy: classNames.
       label := label , ' (hierarchy)' ].
+  list := self filterBrowseList: list.
   ^ self browseClasses: list label: label

@@ -1,9 +1,9 @@
 browse
 browsesender
   "
-  browse [--scriptPath[=<tode-path>]] sender [--filter=@filter-block-path] <selector>...
-  browse [--scriptPath[=<tode-path>]] sender [--filter=@filter-block-path][--pure] <selector>...
-  browse [--scriptPath[=<tode-path>]] sender [--filter=@filter-block-path][--regex]] <selector-pattern>...
+  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>] <selector>...
+  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>][--pure] <selector>...
+  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>][--regex]] <selector-pattern>...
 "
 
   | selectBlock list label filteredLabel path pattern |
@@ -15,9 +15,9 @@ browsesender
       #('pure' nil #'none')}.
   subOptions
     at: 'filter'
-    ifPresent: [ :filterPath | 
+    ifPresent: [ :filterSpec | 
       filteredLabel := ' (filtered)'.
-      selectBlock := self resolveAtPathReference: filterPath ]
+      selectBlock := self resolveFilterSpec: filterSpec ]
     ifAbsent: [ 
       filteredLabel := ''.
       selectBlock := [ :each | true ] ].
