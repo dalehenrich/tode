@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 04/17/2014 08:25",
+	"instvars" : [
+		 ],
+	"name" : "TDDevToolCommandTests",
+	"pools" : [
+		 ],
+	"super" : "TDShellToolTests",
+	"type" : "normal" }
