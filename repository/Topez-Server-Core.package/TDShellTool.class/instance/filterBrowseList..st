@@ -1,7 +1,7 @@
 browse
 filterBrowseList: list
-  subOptions
-    at: 'filter'
+  options
+    at: 'select'
     ifPresent: [ :filterSpec | 
       | selectBlock |
       selectBlock := self resolveFilterSpec: filterSpec.

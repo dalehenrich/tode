@@ -9,5 +9,6 @@ browse
     objIn: objIn
     commandOptions:
       {#('help' $h #'optional').
-      #('scriptPath' nil #'optional')}
+      #('scriptPath' nil #'optional').
+      #('select' nil #'required')}
     todeCommand: command ]

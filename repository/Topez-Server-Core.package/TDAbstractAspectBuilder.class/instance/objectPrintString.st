@@ -1,5 +1,5 @@
 as yet unclassified
 objectPrintString
   ^ [ self object printString ]
-    on: Error
+    on: Error , AlmostOutOfStack
     do: [ :ex | 'error printing' ]

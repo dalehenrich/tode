@@ -3,7 +3,7 @@ testBrowseMethod
   "run without errors ... to keep me honest"
 
   | node defList |
-  node := self createFilterBlockNode.
+  node := self createSelectBlockNode.
   self topez
     evaluateCommandString: 'browse method at:put: nextPutAll:';
     evaluateCommandString:

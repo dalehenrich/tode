@@ -1,3 +1,3 @@
-accessing
+obsolete
 hasSubCommand: aBool
   hasSubCommand := aBool

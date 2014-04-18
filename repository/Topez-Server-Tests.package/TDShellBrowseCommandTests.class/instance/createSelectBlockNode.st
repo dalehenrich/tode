@@ -1,9 +1,9 @@
 as yet unclassified
-createFilterBlockNode
+createSelectBlockNode
   | tmpNode node |
   tmpNode := self createTempNodeNode.
   node := TDSmalltalkLeafNode new
-    name: 'FILTER_BLOCK';
+    name: 'SELECT_BLOCK';
     contents: '[:definition | true ]';
     yourself.
   tmpNode addChildNode: node.

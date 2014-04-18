@@ -1,6 +1,9 @@
 accessing
 subCommandToken
-  | cmd subCommandArgPtrIndex |
+  | cmd subCommandArgPtrIndex rawSize |
   cmd := self todeCommand.
-  subCommandArgPtrIndex := cmd rawTokens size - arguments size.
+  rawSize := cmd rawTokens size.
+  subCommandArgPtrIndex := rawSize - arguments size.
+  subCommandArgPtrIndex >= rawSize
+    ifTrue: [ ^ nil ].
   ^ cmd rawTokens at: subCommandArgPtrIndex + 1

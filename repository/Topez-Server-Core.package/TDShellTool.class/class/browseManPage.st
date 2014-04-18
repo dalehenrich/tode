@@ -1,76 +1,90 @@
 as yet unclassified
 browseManPage
-  ^ 'NAME
-  browse - view class and method search results (see find)
+  | manPage |
+  manPage := TDManPage
+    fromString:
+      'NAME
+  browse - Find and view classes and methods
 
 SYNOPSIS
-  browse class [--filter=<filter-spec>] [--hier] <class-name-pattern>...
-  browse class [--filter=<filter-spec>] [--hier] --exact <class-name>...
-  browse class --full <class-name>
-  browse class [--filter=<filter-spec>] [--hier] [--user=<user-name>] --symbolDict <symbol-dictionary-name>...
-  browse class [--filter=<filter-spec>] [--hier] --category <category-name-pattern>...
-  browse class [--filter=<filter-spec>] [--hier] --exact --category <category-name>...
+  browse [--scriptPath=<node-path>] [--help] --select=<select-block> <command> [<args>]
 
-  browse diff <method-spec-1> <method-spec-2>
-
-  browse list <definitionList-path>...
-
-  browse method [--filter=<filter-spec>] <selector>...
-  browse method [--filter=<filter-spec>] --regex|-r <method-pattern>...
-  browse method [--filter=<filter-spec>] --spec <method-spec>...
-
-  browse package <regex-pattern>
-  browse package --exact <package-name>
-
-  browse project <regex-pattern>
-  browse project --exact <project-name>
-
-  browse [--scriptPath=<tode-path>] references [--filter=<filter-spec>] [--global] <global-name>...
-  browse [--scriptPath=<tode-path>] references [--filter=<filter-spec>] [--class=<class-name>] --literal  <literal>... 
-  browse [--scriptPath=<tode-path>] references [--filter=<filter-spec>] --class=<class-name> <variableName>
-
-  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>] <selector>...
-  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>][--pure] <selector>...
-  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>][--regex]] <selector-pattern>...
-
-  browse [--scriptPath=<tode-path>] source [--filter=<filter-spec>] <regex-pattern>
-  browse [--scriptPath=<tode-path>] source [--filter=<filter-spec>] --exact <source-string>
-
-  browse versions <method-spec>
 DESCRIPTION
-  <definitionList-path> :: path to collection of TDDefinitions
-    .
-    ../implementors
-    /home/impelementors
+  Browse is the primary command for finding a viewing classes 
+  and methods.  	
 
-  <filter-spec> :: filter specification
-    @/home/tode/filter
-    `[:definition | true ]`
+  The <command> is the name of a Browse command that invokes a 
+  specific development tool.
 
-  <method-spec> :: method specification
-    methodSelector
-    className>>methodSelector
-    className class>>methodSelector
+  commands:
+    category   Find and view lists of classes in a category
+    class      Find and view lists of classes 
+    diff       View differences between two methods
+    list       View saved definitions 
+    method     Find and view lists of methods matching patterns
+    package    Find a vew lists of class in a package
+    project    Find a vew lists of class in a project
+    references Find and view lists of methods referencing certain artifacts
+    sender     Find and view lists of methods sending particular messages
+    source     Find and view method source referencing 
+    symbolDict Find and view a list of classes in a symbol dictionary
+    versions   Find and view versions of a method
 
-  <regex-pattern> :: regular expression pattern
+  Use `browse --help <command>` to read about a specific subcommand.
 
-  <selector> :: method selector (use `#` in front of selector to disambiguate from shell operator (`>`)).
-    yourself
-    at:put:
-    #>
+  In general the Browse commands are available in popup menus under the `Browse` 
+  submenu.
 
-  <variableOrGlobalNameOrPathRef> :: global name
-    <identifier>
-    @<path> 
+OPTIONS
+  --help
+    Bring up this man page.
+
+  --scriptPath=<node-path>
+    Start the search for sender, references, and source at the given node-path. 
+    All nodes reachable from the given node will be searched. 
+    TDScriptLeafNodes and TDSmalltalkLeafNodes will be searched for sender 
+    and references. The contents for all nodes will be searched for source.
+
+  --select=<select-block>
+    The select-block is applied agains the list of classes before opening the 
+    window. The select-block may be an in-line definition of a select block:
+
+      --select=`[:def | ''Tool'' asRegex search: def label ]`
+
+    or it may refer to a block defined in a TDSmalltalkNode. For example the 
+    following code may be save in a smalltalk node (for example, 
+    /tmp/sessionTemps/selectBlock):
+
+      [ :def | 
+        def configurationOf
+        ifNil: [ false ]
+        ifNotNil: [ :configurationDef | 
+          configurationDef configurationName = ''Tode'' ] ]
+
+    and referenced from the command line as:
+
+      --select=@/tmp/sessionTemps/selectBlock
+
+    If the --scriptPath option is used the argument to the select block will 
+    be an instance of a TDNode, otherwise the argument will be an instance of
+    TDDefinition.
 
 EXAMPLES
+  browse --help references
+  browse --scriptPath references --literal `1.0`
+  browse --scriptPath=~/tode references --literal `1.0`
+  browse --scriptPath= --select=`[:node | ''Tool'' asRegex search: node name ]` references --literal `1.0`
+  browse --select=@filter method at:put: 
+  browse --select=`[:def | ''Tool'' asRegex search: def label ]` category tode
+
+  browse category topez-server tode
+  browse category --exact Topez-Server-Core
+  browse category --hier --exact Topez-Server-Core
+
   browse class method stream
   browse class --exact GsNMethod
   browse class --hier method|stream
   browse class --full GsNMethod
-  browse class --user=SystemUser --symbolDict UserGlobals
-  browse class --category topez-server tode
-  browse class --category --exact Topez-Server-Core
 
   browse diff TDShellTool>>findMethods: `TDShellTool class>>browse`
 
@@ -79,17 +93,13 @@ EXAMPLES
   browse method at:put: nextPutAll:
   browse method --spec Dictionary>>at:put: `Dictionary class>>new:`
   browse method --regex at\:put\:|nextPutAll\:
-  browse method --filter=./filter at:put: 
 
   browse package topez-server tode
   browse package --exact Topez-Server-Core
-
   browse project tode rb
   browse project --exact Tode
 
   browse references GsNMethod
-  browse --scriptPath references GsNMethod
-  browse references --filter=./filter GsNMethod
   browse references --literal `''not yet implemented''`
   browse references --literal `#at:put:`
   browse references --literal `1.0`
@@ -101,11 +111,19 @@ EXAMPLES
   browse sender at:put: 
   browse sender --pure at:put:
   browse sender --regex at\:put\: 
-  browse --scriptPath sender at:put: 
-  browse sender --filter=./filter at:put: 
 
-  browse source --filter=./filter `hello world`
   browse source --exact `hello world`
 
+  browse symbolDict --user=SystemUser UserGlobals
+  browse symbolDict --list --user=SystemUser
+  browse symbolDict --user=SystemUser
+  browse symbolDict --globals --user=SystemUser Globals
+
   browse versions `Dictionary class>>new:`
-'
+'.
+  manPage subCommands
+    at: 'class' put: self browseclassManPage;
+    at: 'category' put: self browsecategoryManPage;
+    at: 'symbolDict' put: self browsesymbolDictManPage;
+    yourself.
+  ^ manPage

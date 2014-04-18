@@ -26,7 +26,7 @@ displayOnPolicy: displayPolicy
   limit > 0
     ifTrue: [ self printString truncate: limit ]
     ifFalse: [ self printString ] ]
-    on: Error
+    on: Error , AlmostOutOfStack
     do: [ :ignored | 'error printing' ].
   compacted
     ifTrue: [ string := string withSeparatorsCompacted ].
