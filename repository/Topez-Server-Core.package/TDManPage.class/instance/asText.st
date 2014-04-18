@@ -21,6 +21,12 @@ asText
     nextPutAll: self description;
     cr;
     cr;
+    nextPutAll: 'OPTIONS' asText allBold;
+    cr;
+    nextPutAll: '  ';
+    nextPutAll: self options;
+    cr;
+    cr;
     nextPutAll: 'EXAMPLES' asText allBold;
     cr;
     nextPutAll: '  ';

@@ -22,6 +22,12 @@ writeMdOn: aStream
     nextPutAll: (self description copyReplaceAll: String lf with: lflf);
     lf;
     lf;
+    nextPutAll: '##OPTIONS';
+    lf;
+    nextPutAll: '  ';
+    nextPutAll: (self options copyReplaceAll: String lf with: lflf);
+    lf;
+    lf;
     nextPutAll: '##SEE ALSO';
     lf;
     nextPutAll: '  ';

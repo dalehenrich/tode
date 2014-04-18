@@ -1,16 +1,18 @@
 {
 	"class" : {
-		"fromString:" : "dkh 04/17/2014 16:04",
+		"fromString:" : "dkh 04/17/2014 19:37",
 		"fromString:commandPath:sourceMethod:" : "dkh 04/17/2014 16:05",
-		"viewManPage:topez:" : "dkh 11/12/2013 12:47" },
+		"viewManPage:topez:" : "dkh 04/17/2014 21:00" },
 	"instance" : {
-		"asText" : "dkh 11/12/2013 12:47",
+		"asText" : "dkh 04/17/2014 19:38",
 		"commandPath" : "dkh 06/05/2013 11:06",
 		"commandPath:" : "dkh 05/16/2013 13:05",
 		"description" : "dkh 04/06/2013 09:25",
 		"description:" : "dkh 04/06/2013 09:05",
 		"examples" : "dkh 11/11/2013 16:08",
 		"examples:" : "dkh 11/11/2013 16:08",
+		"options" : "dkh 04/17/2014 19:37",
+		"options:" : "dkh 04/17/2014 19:37",
 		"printOn:" : "dkh 11/11/2013 16:12",
 		"sourceMethod" : "dkh 06/05/2013 11:07",
 		"sourceMethod:" : "dkh 05/16/2013 13:08",
@@ -19,4 +21,5 @@
 		"summary:" : "dkh 04/06/2013 09:06",
 		"synopsis" : "dkh 04/06/2013 09:25",
 		"synopsis:" : "dkh 04/06/2013 09:06",
-		"writeMdOn:" : "dkh 05/16/2013 13:10" } }
+		"view:" : "dkh 04/17/2014 21:00",
+		"writeMdOn:" : "dkh 04/17/2014 19:38" } }

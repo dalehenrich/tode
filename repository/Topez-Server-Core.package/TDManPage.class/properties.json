@@ -9,6 +9,7 @@
 		"summary",
 		"synopsis",
 		"description",
+		"options",
 		"examples",
 		"commandPath",
 		"sourceMethod",
