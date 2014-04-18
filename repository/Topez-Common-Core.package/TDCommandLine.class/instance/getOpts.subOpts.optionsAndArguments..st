@@ -16,9 +16,9 @@ getOpts: optionSpecs subOpts: subOptionSpecs optionsAndArguments: optsAndArgsBlo
       subCommand := aCommand.
       subCommand
         getOptsMixedLongShort: subOptionSpecs
-        optionsAndArguments: [ :optionDictionary :arguments | 
+        optionsAndArguments: [ :optionDictionary :argsIn | 
           subOptions := optionDictionary.
-          subArguments := arguments ] ].
+          subArguments := argsIn ] ].
   ^ optsAndArgsBlock
     value: options
     value: arguments
