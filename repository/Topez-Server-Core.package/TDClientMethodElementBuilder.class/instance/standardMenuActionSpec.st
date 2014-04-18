@@ -6,7 +6,7 @@ standardMenuActionSpec
 
   ^ self smalltalkMenuActionSpec , {#('-')}
     , {{('Method' -> self methodMenuActionSpec)}} , {#('-')}
-    , {{('Search' -> self searchMenuActionSpec)}} , {#('-')}
+    , {{('Browse' -> self searchMenuActionSpec)}} , {#('-')}
     , self editMenuActionSpec , {#('-')}
     , {{('Text' -> self textMenuActionSpec)}} , {#('-')}
     , {{('Window' -> self windowMenuActionSpec)}} , {#('-')}

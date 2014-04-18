@@ -20,18 +20,24 @@ asText
     nextPutAll: '  ';
     nextPutAll: self description;
     cr;
-    cr;
-    nextPutAll: 'OPTIONS' asText allBold;
-    cr;
-    nextPutAll: '  ';
-    nextPutAll: self options;
-    cr;
-    cr;
-    nextPutAll: 'EXAMPLES' asText allBold;
-    cr;
-    nextPutAll: '  ';
-    nextPutAll: self examples;
     cr.
+  self options isEmpty
+    ifFalse: [ 
+      aStream
+        nextPutAll: 'OPTIONS' asText allBold;
+        cr;
+        nextPutAll: '  ';
+        nextPutAll: self options;
+        cr;
+        cr ].
+  self examples isEmpty
+    ifFalse: [ 
+      aStream
+        nextPutAll: 'EXAMPLES' asText allBold;
+        cr;
+        nextPutAll: '  ';
+        nextPutAll: self examples;
+        cr ].
   (commandPath notNil or: [ sourceMethod notNil ])
     ifTrue: [ 
       aStream

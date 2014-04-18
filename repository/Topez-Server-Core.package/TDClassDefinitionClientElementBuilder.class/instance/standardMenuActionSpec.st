@@ -5,7 +5,7 @@ standardMenuActionSpec
   "works in concert with menuActionBlock"
 
   ^ self smalltalkMenuActionSpec , {#('-')}
-    , {{('Search' -> self searchMenuActionSpec)}} , {#('-')}
+    , {{('Browse' -> self searchMenuActionSpec)}} , {#('-')}
     , self editMenuActionSpec , {#('-')}
     , {{('Text' -> self textMenuActionSpec)}} , {#('-')}
     , {{('Window' -> self windowMenuActionSpec)}} , {#('-')}

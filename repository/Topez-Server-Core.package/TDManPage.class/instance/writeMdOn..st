@@ -21,13 +21,26 @@ writeMdOn: aStream
     nextPutAll: '  ';
     nextPutAll: (self description copyReplaceAll: String lf with: lflf);
     lf;
-    lf;
-    nextPutAll: '##OPTIONS';
-    lf;
-    nextPutAll: '  ';
-    nextPutAll: (self options copyReplaceAll: String lf with: lflf);
-    lf;
-    lf;
+    lf.
+  self options isEmpty
+    ifFalse: [ 
+      aStream
+        nextPutAll: '##OPTIONS';
+        lf;
+        nextPutAll: '  ';
+        nextPutAll: (self options copyReplaceAll: String lf with: lflf);
+        lf;
+        lf ].
+  self examples isEmpty
+    ifFalse: [ 
+      aStream
+        nextPutAll: '##EXAMPLES';
+        lf;
+        nextPutAll: '  ';
+        nextPutAll: (self examples copyReplaceAll: String lf with: lflf);
+        lf;
+        lf ].
+  aStream
     nextPutAll: '##SEE ALSO';
     lf;
     nextPutAll: '  ';

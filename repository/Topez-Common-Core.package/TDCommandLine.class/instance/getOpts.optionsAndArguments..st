@@ -14,4 +14,4 @@ getOpts: optionSpec optionsAndArguments: optsAndArgsBlock
         getCommandOpts: optionSpec
         do: [ :option :optionArg | options at: option asString put: optionArg ]
         argsDo: [ :arg | args add: arg ] ].
-  optsAndArgsBlock value: options value: args
+  ^ optsAndArgsBlock value: options value: args
