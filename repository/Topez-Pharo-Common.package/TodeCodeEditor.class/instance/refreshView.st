@@ -1,3 +1,4 @@
 accessing
 refreshView
-	self cancel
+	self cancel.
+	^ true

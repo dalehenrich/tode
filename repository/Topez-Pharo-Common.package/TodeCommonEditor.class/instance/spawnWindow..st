@@ -14,4 +14,5 @@ spawnWindow: aClientElement
 		windowId: windowId;
 		label: label.
 	win extent: self editor topView extent.
+	mod refreshView.
 	^true
