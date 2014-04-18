@@ -2,7 +2,7 @@ as yet unclassified
 testBrowseMethod
   "run without errors ... to keep me honest"
 
-  | node |
+  | node defList |
   node := self createFilterBlockNode.
   self topez
     evaluateCommandString: 'browse method at:put: nextPutAll:';
@@ -13,4 +13,10 @@ testBrowseMethod
     evaluateCommandString:
         'browse method --filter=@' , node printString , ' at:put: ';
     evaluateCommandString: 'browse method --filter=`[:def | true ]` at:put: ';
-    yourself
+    yourself.
+  defList := self topez
+    evaluateCommandString: 'browse method --filter=`[:def | true ]` at:put: '.
+  self deny: defList isEmpty.
+  defList := self topez
+    evaluateCommandString: 'browse method --filter=`[:def | false ]` at:put: '.
+  self assert: defList isEmpty

@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"fromString:commandPath:sourceMethod:" : "dkh 11/12/2013 12:49",
+		"fromString:" : "dkh 04/17/2014 16:04",
+		"fromString:commandPath:sourceMethod:" : "dkh 04/17/2014 16:05",
 		"viewManPage:topez:" : "dkh 11/12/2013 12:47" },
 	"instance" : {
 		"asText" : "dkh 11/12/2013 12:47",
@@ -13,6 +14,7 @@
 		"printOn:" : "dkh 11/11/2013 16:12",
 		"sourceMethod" : "dkh 06/05/2013 11:07",
 		"sourceMethod:" : "dkh 05/16/2013 13:08",
+		"subCommands" : "dkh 04/17/2014 16:02",
 		"summary" : "dkh 04/06/2013 09:25",
 		"summary:" : "dkh 04/06/2013 09:06",
 		"synopsis" : "dkh 04/06/2013 09:25",
