@@ -6,7 +6,7 @@ browsesender
   browse sender [--regex|-r]] <selector-pattern>...
 "
 
-  | label path pattern block |
+  | label path block |
   self
     getSubcommandOptsMixedLongShort:
       {#('regex' $r #'none').
@@ -15,13 +15,13 @@ browsesender
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]
     ifAbsent: [ path := nil ].
+  label := 'Senders of'.
+  subArguments do: [ :arg | label := label , ' ' , arg ].
   block := [ 
   | list |
   list := Set new.
-  pattern := ''.
   subArguments
     do: [ :arg | 
-      pattern := pattern , ' ' , arg.
       subOptions
         at: 'pure'
         ifPresent: [ :ignored | list addAll: (self findPureSender: arg searchScriptRoot: path) ]
@@ -33,4 +33,4 @@ browsesender
   list := self filterBrowseList: list ].
   path
     ifNil: [ ^ self browseMethodsBlock: block label: label ]
-    ifNotNil: [ ^ self browseLeafNodes: block pattern: pattern label: label ]
+    ifNotNil: [ ^ self browseLeafNodes: block pattern: '' label: label ]

@@ -6,13 +6,11 @@ browselist
 
   | block label |
   self getSubcommandOptsMixedLongShort: {}.
+  label := 'List: '.
+  subArguments do: [ :arg | label := label , ' ' , arg ].
   block := [ 
   | list |
   list := Set new.
-  label := ''.
-  subArguments
-    do: [ :arg | 
-      list addAll: (topez lookup: arg) dotSelfObject.
-      label := label , ' ' , arg ].
+  subArguments do: [ :arg | list addAll: (topez lookup: arg) dotSelfObject ].
   list := self filterBrowseList: list ].
-  ^ self browseMethodsBlock: block label: 'List: ' , label
+  ^ self browseMethodsBlock: block label: label

@@ -2,7 +2,6 @@ as yet unclassified
 testBrowseCategory
   "run without errors ... to keep me honest"
 
-  [ 
   | node |
   node := self createSelectBlockNode.
   self topez
@@ -14,13 +13,4 @@ testBrowseCategory
         'browse --select=@' , node printString , ' category tode ';
     evaluateCommandString:
         'browse --select=`[:def | ''Tool'' asRegex search: def label ]` category tode';
-    yourself ]
-    on: Error
-    do: [ :ex | 
-      Transcript
-        cr;
-        show: ex description.
-      Transcript
-        cr;
-        show: (GsProcess stackReportToLevel: 100).
-      ex pass ]
+    yourself
