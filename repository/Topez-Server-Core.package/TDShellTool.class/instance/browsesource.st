@@ -38,4 +38,8 @@ browsesource
     at: 'exact'
     ifPresent: [ :ignored | label := 'Source matches' , pattern , ' (exact)' , filteredLabel ]
     ifAbsent: [ label := 'Source matches' , pattern , filteredLabel ].
-  ^ self browseMethods: list label: label
+  path
+    ifNil: [ ^ self browseMethods: list label: label ]
+    ifNotNil: [ 
+      self browseLeafNodes: [ list asArray ] pattern: pattern label: label.
+      ^ list ]

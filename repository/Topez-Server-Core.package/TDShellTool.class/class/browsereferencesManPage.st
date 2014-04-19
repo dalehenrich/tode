@@ -40,5 +40,8 @@ EXAMPLES
   browse references --literal `#[ 1 2 3]`
   browse references --class=ClassOrganizer --literal `#at:put:`
   browse references --class=ClassOrganizer SortedCollection
+  browse --scriptPath references --literal `1.0`
+  browse --scriptPath=~/tode references --literal `1.0`
+  browse --scriptPath --select=`[:node | ''Tool'' asRegex search: node name ]` references --literal `1.0`
 '.
   ^ manPage

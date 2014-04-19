@@ -1,30 +1,19 @@
 browse
 browsesender
   "
-  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>] <selector>...
-  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>][--pure] <selector>...
-  browse [--scriptPath[=<tode-path>]] sender [--filter=<filter-spec>][--regex]] <selector-pattern>...
+  browse sender <selector>...
+  browse sender [--pure] <selector>...
+  browse sender [--regex|-r]] <selector-pattern>...
 "
 
-  | selectBlock list label filteredLabel path pattern |
+  | list label path pattern |
   self
     getSubcommandOptsMixedLongShort:
-      {#('filter' nil #'required').
-      #('regex' $r #'none').
+      {#('regex' $r #'none').
       #('pure' nil #'none')}.
-  subOptions
-    at: 'filter'
-    ifPresent: [ :filterSpec | 
-      filteredLabel := ' (filtered)'.
-      selectBlock := self resolveFilterSpec: filterSpec ]
-    ifAbsent: [ 
-      filteredLabel := ''.
-      selectBlock := [ :each | true ] ].
   options
     at: 'scriptPath'
-    ifPresent: [ :scriptPath | 
-      path := scriptPath.
-      filteredLabel := filteredLabel , ' (' , scriptPath , ')' ]
+    ifPresent: [ :scriptPath | path := scriptPath ]
     ifAbsent: [ path := nil ].
   list := Set new.
   pattern := ''.
@@ -39,13 +28,9 @@ browsesender
             at: 'regex'
             ifPresent: [ :ignored | list addAll: (self findRegexSender: arg searchScriptRoot: path) ]
             ifAbsent: [ list addAll: (self findSender: arg searchScriptRoot: path) ] ] ].
-  subOptions
-    at: 'pure'
-    ifPresent: [ :ignored | label := 'Senders of' , pattern , ' (pure)' , filteredLabel ]
-    ifAbsent: [ 
-      subOptions
-        at: 'regex'
-        ifPresent: [ :ignored | label := 'Senders of' , pattern , ' (regex)' , filteredLabel ]
-        ifAbsent: [ label := 'Senders of' , pattern , filteredLabel ] ].
-  list := list select: selectBlock.
-  ^ self browseMethods: list label: label
+  list := self filterBrowseList: list.
+  path
+    ifNil: [ ^ self browseMethods: list label: label ]
+    ifNotNil: [ 
+      self browseLeafNodes: [ list asArray ] pattern: pattern label: label.
+      ^ list ]

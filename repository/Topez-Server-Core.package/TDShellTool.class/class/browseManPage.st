@@ -73,9 +73,13 @@ OPTIONS
 
 EXAMPLES
   browse --help references
+
   browse --scriptPath references --literal `1.0`
   browse --scriptPath=~/tode references --literal `1.0`
-  browse --scriptPath= --select=`[:node | ''Tool'' asRegex search: node name ]` references --literal `1.0`
+  browse --scriptPath --select=`[:node | ''Tool'' asRegex search: node name ]` references --literal `1.0`
+  browse --scriptPath sender at:put:
+  browse --scriptPath source `for help`
+
   browse --select=@filter method at:put: 
   browse --select=`[:def | ''Tool'' asRegex search: def label ]` category tode
 
@@ -139,5 +143,6 @@ EXAMPLES
     at: 'list' put: self browselistManPage;
     at: 'project' put: self browseprojectManPage;
     at: 'references' put: self browsereferencesManPage;
+    at: 'sender' put: self browsesenderManPage;
     yourself.
   ^ manPage

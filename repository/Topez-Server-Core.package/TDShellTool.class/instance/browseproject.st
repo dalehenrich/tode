@@ -16,4 +16,5 @@ browseproject
         ifPresent: [ :ignored | list addAll: (self findProjectDefinitionsExact: arg) ]
         ifAbsent: [ list addAll: (self findProjectDefinitions: arg) ].
       pattern := pattern , ' ' , arg ].
+  list := self filterBrowseList: list.
   ^ self browseClasses: list label: 'Defs in project' , pattern

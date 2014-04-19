@@ -2,6 +2,8 @@ as yet unclassified
 testBrowseReferences
   "run without errors ... to keep me honest"
 
+  | node defs |
+  node := self createSelectBlockNode.
   self topez
     evaluateCommandString: 'browse references GsNMethod';
     evaluateCommandString:
@@ -14,4 +16,8 @@ testBrowseReferences
         'browse references --class=ClassOrganizer --literal `#at:put:`';
     evaluateCommandString:
         'browse references --class=ClassOrganizer SortedCollection';
-    yourself
+    yourself.
+  defs := self topez
+    evaluateCommandString:
+      'browse --scriptPath=' , node printString , ' references --literal `true`'.
+  self deny: defs isEmpty

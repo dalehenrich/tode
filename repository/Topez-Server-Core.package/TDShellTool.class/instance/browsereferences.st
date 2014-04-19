@@ -33,4 +33,8 @@ browsereferences
         ifAbsent: [ list addAll: (self findReferences: arg inClass: cls searchScriptRoot: path) ] ].
   label := 'References to' , pattern.
   list := self filterBrowseList: list.
-  ^ self browseMethods: list label: label
+  path
+    ifNil: [ ^ self browseMethods: list label: label ]
+    ifNotNil: [ 
+      self browseLeafNodes: [ list asArray ] pattern: pattern label: label.
+      ^ list ]
