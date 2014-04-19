@@ -3,7 +3,6 @@ findsource
   "find [--scriptPath=<tode-path>] source [--exact] <selector>"
 
   | selector path |
-  self primeScriptPathOption.
   self getSubcommandOptsMixedLongShort: {#('exact' nil #'none')}.
   selector := subArguments at: 1.
   options

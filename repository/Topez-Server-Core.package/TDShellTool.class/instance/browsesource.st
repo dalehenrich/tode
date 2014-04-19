@@ -6,7 +6,6 @@ browsesource
 "
 
   | list pattern filteredLabel selectBlock path label |
-  self primeScriptPathOption.
   self
     getSubcommandOptsMixedLongShort:
       {#('exact' nil #'none').

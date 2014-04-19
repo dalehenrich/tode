@@ -1,6 +1,7 @@
 command-options
 getSubcommandOptsMixedLongShort: mixedOptionSpecs
   | cmd subCommandArgPtrIndex subCommandLine |
+  self primeScriptPathOption.
   cmd := self todeCommand.
   subCommandArgPtrIndex := cmd rawTokens size - arguments size.
   subCommandLine := cmd commandLine

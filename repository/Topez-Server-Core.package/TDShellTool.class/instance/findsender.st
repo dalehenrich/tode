@@ -3,7 +3,6 @@ findsender
   "find [--scriptPath=<tode-path>] sender [--pure|[--regex|-r]] <selector>"
 
   | selector path |
-  self primeScriptPathOption.
   self
     getSubcommandOptsMixedLongShort:
       {#('regex' $r #'none').

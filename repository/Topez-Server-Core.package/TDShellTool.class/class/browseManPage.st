@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browseManPage
   | manPage |
   manPage := TDManPage
@@ -20,14 +20,16 @@ DESCRIPTION
     category   Find and view lists of classes in a category
     class      Find and view lists of classes 
     diff       View differences between two methods
-    list       View saved definitions 
+    list       View method definitions loaded from nodes
     method     Find and view lists of methods matching patterns
-    package    Find a vew lists of class in a package
-    project    Find a vew lists of class in a project
+    package    Find and vew lists of classes in a package
+    project    Find and vew lists of classes in a project
     references Find and view lists of methods referencing certain artifacts
     sender     Find and view lists of methods sending particular messages
     source     Find and view method source referencing 
     symbolDict Find and view a list of classes in a symbol dictionary
+    undeclared View references to undeclared symbols
+    variables  Find and view references to instance, class instance and class variables
     versions   Find and view versions of a method
 
   Use `browse --help <command>` to read about a specific subcommand.
@@ -36,8 +38,8 @@ DESCRIPTION
   submenu.
 
 OPTIONS
-  --help
-    Bring up this man page.
+  --help [<subCommand>]
+    Bring up this man page or a man page for a subCommand.
 
   --scriptPath=<node-path>
     Start the search for sender, references, and source at the given node-path. 
@@ -96,6 +98,7 @@ EXAMPLES
 
   browse package topez-server tode
   browse package --exact Topez-Server-Core
+
   browse project tode rb
   browse project --exact Tode
 
@@ -119,11 +122,22 @@ EXAMPLES
   browse symbolDict --user=SystemUser
   browse symbolDict --globals --user=SystemUser Globals
 
+  browse undeclared --list
+  browse undeclared <undeclared-variable>
+
+  browse variables
+
   browse versions `Dictionary class>>new:`
 '.
   manPage subCommands
     at: 'class' put: self browseclassManPage;
     at: 'category' put: self browsecategoryManPage;
     at: 'symbolDict' put: self browsesymbolDictManPage;
+    at: 'diff' put: self browsediffManPage;
+    at: 'method' put: self browsemethodManPage;
+    at: 'package' put: self browsepackageManPage;
+    at: 'list' put: self browselistManPage;
+    at: 'project' put: self browseprojectManPage;
+    at: 'references' put: self browsereferencesManPage;
     yourself.
   ^ manPage

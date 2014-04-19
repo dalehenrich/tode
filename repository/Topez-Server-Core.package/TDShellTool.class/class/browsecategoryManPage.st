@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browsecategoryManPage
   | manPage |
   manPage := TDManPage
@@ -29,5 +29,6 @@ EXAMPLES
   browse category --exact Topez-Server-Core
   browse category --hier --exact Topez-Server-Core
   browse --select=`[:def | ''Tool'' asRegex search: def label ]` category tode
+  browse --select=@filter category tode
 '.
   ^ manPage

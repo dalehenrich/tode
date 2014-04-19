@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browseclassManPage
   | manPage |
   manPage := TDManPage
@@ -34,5 +34,6 @@ EXAMPLES
   browse class --exact --hier GsNMethod
   browse class --hier method|stream
   browse class --full GsNMethod
+  browse --select=`[:def | (''^OB'' asRegex search: def label) not ]` class --hier method|stream
 '.
   ^ manPage

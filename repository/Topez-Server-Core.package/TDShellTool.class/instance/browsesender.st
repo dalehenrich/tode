@@ -7,7 +7,6 @@ browsesender
 "
 
   | selectBlock list label filteredLabel path pattern |
-  self primeScriptPathOption.
   self
     getSubcommandOptsMixedLongShort:
       {#('filter' nil #'required').

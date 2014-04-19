@@ -12,4 +12,5 @@ browselist
     do: [ :arg | 
       list addAll: (topez lookup: arg) dotSelfObject.
       label := label , ' ' , arg ].
+  list := self filterBrowseList: list.
   ^ self browseMethods: list label: 'List: ' , label

@@ -16,4 +16,5 @@ browsepackage
         ifPresent: [ :ignored | list addAll: (self findPackageDefinitionsExact: arg) ]
         ifAbsent: [ list addAll: (self findPackageDefinitions: arg) ].
       pattern := pattern , ' ' , arg ].
+  list := self filterBrowseList: list.
   ^ self browseClasses: list label: 'Defs in package' , pattern

@@ -1,6 +1,6 @@
 as yet unclassified
 rawReferencesTo: aVariableOrClassName isMeta: isMeta in: aClassOrNil
-  | aCollection env ref symbol special byte literal |
+  | aCollection env ref symbol special byte literal classSet |
   aCollection := OrderedCollection new.
   env := aClassOrNil ifNil: [ Smalltalk globals ].
   env isBehavior
@@ -31,11 +31,15 @@ rawReferencesTo: aVariableOrClassName isMeta: isMeta in: aClassOrNil
               aCollection
                 add:
                   (MethodReference class: method inClass selector: method selector) ].
-          ^ aCollection ] ].
+          ^ aCollection ].
+      classSet := ClassSet with: env ].
   (Smalltalk at: aVariableOrClassName asSymbol)
     ifNotNil: [ :aGlobal | 
-      "globals"
-      (Smalltalk classOrganizer referencesToObject: aGlobal)
+      | ans |
+      classSet
+        ifNil: [ ans := Smalltalk classOrganizer referencesToObject: aGlobal ]
+        ifNotNil: [ ans := Smalltalk classOrganizer referencesToObject: aGlobal in: classSet ].
+      ans
         do: [ :method | 
           aCollection
             add:

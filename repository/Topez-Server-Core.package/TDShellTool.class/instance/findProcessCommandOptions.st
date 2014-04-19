@@ -6,5 +6,4 @@ findProcessCommandOptions
 
   "browse [--scriptPath=<tode-path>] browse-command [<browse-arguments>]"
 
-  self getOptsMixedLongShort: {#('scriptPath' nil #'optional')}.
-  self primeScriptPathOption
+  self getOptsMixedLongShort: {#('scriptPath' nil #'optional')}

@@ -37,6 +37,13 @@ asText
         cr;
         nextPutAll: '  ';
         nextPutAll: self examples;
+        cr;
+        cr;
+        nextPutAll:
+            (Text
+                string:
+                  '  NOTE - use the `tode it` menu item to run the examples directly.'
+                attribute: TextEmphasis italic);
         cr ].
   (commandPath notNil or: [ sourceMethod notNil ])
     ifTrue: [ 

@@ -1,22 +1,16 @@
 browse
 browseclass
   "
-  browse class [--filter=<filter-spec>] [--hier] <class-name-pattern>...
-  browse class [--filter=<filter-spec>] [--hier] --exact <class-name>...
-  browse class [--filter=<filter-spec>] -full <class-name>
-  browse class [--filter=<filter-spec>] [--hier] [--user=<user-name>] --symbolDict <symbol-dictionary-name>
+  browse class [--exact] [--hier] <class-name-pattern>...
+  browse class --full <class-name>
 "
 
   | list label pattern baseLabel |
   self
     getSubcommandOptsMixedLongShort:
-      {#('category' nil #'none').
-      #('exact' nil #'none').
-      #('filter' nil #'required').
-      #('symbolDict' nil #'none').
+      {#('exact' nil #'none').
       #('full' nil #'none').
-      #('hier' nil #'none').
-      #('user' nil #'required')}.
+      #('hier' nil #'none')}.
   list := Set new.
   pattern := ''.
   subOptions
@@ -30,32 +24,13 @@ browseclass
         at: clsNamePattern
         ifAbsent: [ ^ self browseClasses: {} label: 'No class matching ' , clsNamePattern ].
       ^ self browseClassHierarchy: cls label: 'Hierarchy for ' , clsNamePattern ].
+  baseLabel := 'Classes matching'.
   subArguments
     do: [ :clsNamePattern | 
       subOptions
-        at: 'symbolDict'
-        ifPresent: [ :ignored | 
-          | username |
-          baseLabel := 'Classes in symbol dictionary'.
-          subOptions at: 'user' ifPresent: [ :user | username := user ].
-          list
-            addAll:
-              (self findClassDefsInSymbolDictionary: clsNamePattern username: username) ]
-        ifAbsent: [ 
-          subOptions
-            at: 'category'
-            ifPresent: [ :ignored | 
-              baseLabel := 'Classes in category'.
-              subOptions
-                at: 'exact'
-                ifPresent: [ :ignored | list addAll: (self findCategoryClassDefinitionsExact: clsNamePattern) ]
-                ifAbsent: [ list addAll: (self findCategoryClassDefinitions: clsNamePattern) ] ]
-            ifAbsent: [ 
-              baseLabel := 'Classes matching'.
-              subOptions
-                at: 'exact'
-                ifPresent: [ :ignored | list addAll: (self findClassExact: clsNamePattern) ]
-                ifAbsent: [ list addAll: (self findClass: clsNamePattern) ] ] ].
+        at: 'exact'
+        ifPresent: [ :ignored | list addAll: (self findClassExact: clsNamePattern) ]
+        ifAbsent: [ list addAll: (self findClass: clsNamePattern) ].
       pattern := pattern , ' ' , clsNamePattern ].
   label := baseLabel , pattern.
   subOptions
@@ -63,7 +38,6 @@ browseclass
     ifPresent: [ :ignored | 
       | classNames |
       classNames := list collect: [ :cls | cls className asString ].
-      list := self findClassHierarchy: classNames.
-      label := label , ' (hierarchy)' ].
+      list := self findClassHierarchy: classNames ].
   list := self filterBrowseList: list.
   ^ self browseClasses: list label: label

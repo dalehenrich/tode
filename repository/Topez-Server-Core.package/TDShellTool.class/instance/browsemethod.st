@@ -1,9 +1,11 @@
 browse
 browsemethod
   "
-  browse method [--filter=<filter-spec>] <selector>...
-  browse method [--filter=<filter-spec>] --regex <method-pattern>...
-  browse method [--filter=<filter-spec>] --spec <method-spec>...
+  browse method at:put: nextPutAll:
+  browse method --spec Dictionary>>at:put: `Dictionary class>>new:`
+  browse method --regex at\:put\:|nextPutAll\:
+  browse --select=@filter method at:put: 
+  browse --select=`[:def | true ]` method at:put: 
 "
 
   | list label pattern |

@@ -11,12 +11,11 @@ testBrowseMethod
     evaluateCommandString: 'browse method --regex at\:put\:|nextPutAll\:';
     evaluateCommandString: 'browse method -r at\:put\:|nextPutAll\:';
     evaluateCommandString:
-        'browse method --filter=@' , node printString , ' at:put: ';
-    evaluateCommandString: 'browse method --filter=`[:def | true ]` at:put: ';
+        'browse --select=@' , node printString , ' method  at:put: ';
     yourself.
   defList := self topez
-    evaluateCommandString: 'browse method --filter=`[:def | true ]` at:put: '.
+    evaluateCommandString: 'browse --select=`[:def | true ]` method at:put: '.
   self deny: defList isEmpty.
   defList := self topez
-    evaluateCommandString: 'browse method --filter=`[:def | false ]` at:put: '.
+    evaluateCommandString: 'browse --select=`[:def | false ]` method at:put: '.
   self assert: defList isEmpty
