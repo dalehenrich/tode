@@ -1,4 +1,5 @@
 tools
 clientList: miniTool listElement: listElement
   theMiniTool := miniTool.
-  ^ (self leafNodes collect: [ :leafNode | leafNode printString ]) -> nil
+  leafNodes := self leafNodesBlock value.
+  ^ (leafNodes collect: [ :leafNode | leafNode printString ]) -> nil

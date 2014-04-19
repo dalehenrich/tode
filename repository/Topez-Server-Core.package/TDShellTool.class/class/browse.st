@@ -8,7 +8,8 @@ browse
     performSubCommand: topez
     objIn: objIn
     commandOptions:
-      {#('help' $h #'optional').
+      {#('help' $h #'none').
       #('scriptPath' nil #'optional').
-      #('select' nil #'required')}
+      #('select' nil #'required').
+      #('staticList' nil #'none')}
     todeCommand: command ]

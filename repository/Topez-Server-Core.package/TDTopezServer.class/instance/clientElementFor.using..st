@@ -5,6 +5,7 @@ clientElementFor: anObject using: aTDEditorSpec
     editorNodeFor: anObject
     aspect: aTDEditorSpec editorAspect
     do: [ :windowBuilder :finalEditorAspect | 
+      windowBuilder objectBlock: aTDEditorSpec objectBlock.
       element := windowBuilder
         buildClientElementUsing: aTDEditorSpec
         editorAspect: finalEditorAspect ].

@@ -5,7 +5,7 @@ browsereferences
   browse references [--class=<class-name>] --literal <literal>... 
 "
 
-  | list label path pattern cls |
+  | block label path pattern cls |
   self
     getSubcommandOptsMixedLongShort:
       {#('class' nil #'required').
@@ -14,6 +14,8 @@ browsereferences
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]
     ifAbsent: [ path := nil ].
+  block := [ 
+  | list |
   list := Set new.
   pattern := ''.
   subOptions
@@ -32,9 +34,7 @@ browsereferences
               (self findReferencesToLiteral: literal inClass: cls pattern: arg) ]
         ifAbsent: [ list addAll: (self findReferences: arg inClass: cls searchScriptRoot: path) ] ].
   label := 'References to' , pattern.
-  list := self filterBrowseList: list.
+  list := self filterBrowseList: list ].
   path
-    ifNil: [ ^ self browseMethods: list label: label ]
-    ifNotNil: [ 
-      self browseLeafNodes: [ list asArray ] pattern: pattern label: label.
-      ^ list ]
+    ifNil: [ ^ self browseMethodsBlock: block label: label ]
+    ifNotNil: [ ^ self browseLeafNodes: block pattern: pattern label: label ]

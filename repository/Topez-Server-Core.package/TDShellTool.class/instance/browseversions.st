@@ -4,8 +4,10 @@ browseversions
   browse versions <method-spec>
 "
 
-  | list methodSpec |
+  | block methodSpec |
   self getSubcommandOptsMixedLongShort: {}.
   methodSpec := subArguments at: 1.
-  list := self findVersions: methodSpec.
-  ^ self browseMethods: list label: 'Versions of ' , methodSpec
+  block := [ 
+  | list |
+  list := self findVersions: methodSpec ].
+  ^ self browseMethodsBlock: block label: 'Versions of ' , methodSpec

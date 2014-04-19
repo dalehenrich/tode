@@ -1,6 +1,6 @@
 as yet unclassified
 elementSource: classDefinition clientSourceElement: clientSourceElement
-  classDefinition evaluate.
+  GsDeployer bulkMigrate: [ classDefinition evaluate ].
   clientSourceElement topez
     commitTransaction;
     resetAllGlobalNames

@@ -1,7 +1,7 @@
 as yet unclassified
 reportCompileErrors: compilerErrorOoptype
   | block |
-  block := TZGsBlockSend new
+  block := (Smalltalk at: #'TZGsBlockSend') new
     topez: self topez;
     blockSource:
         '[:ex |"return an array with errorNote and errorStart" 

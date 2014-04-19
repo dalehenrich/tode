@@ -1,10 +1,8 @@
 browse
 browsecategory
   "
-  browse category topez-server tode
-  browse category --exact Topez-Server-Core
-  browse category --hier --exact Topez-Server-Core
-  browse --select=`[:def | ''Tool'' asRegex search: def label ]` category tode
+  browse category [--hier] <category-name-pattern>...
+  browse category [--hier] --exact <category-name>...
 "
 
   | list label pattern baseLabel |

@@ -7,7 +7,8 @@ browseManPage
   browse - Find and view classes and methods
 
 SYNOPSIS
-  browse [--scriptPath=<node-path>] [--help] --select=<select-block> <command> [<args>]
+  browse [--scriptPath=<node-path>] [--help] --select=<select-block> 
+         [--staticList] <command> [<args>]
 
 DESCRIPTION
   Browse is the primary command for finding a viewing classes 
@@ -70,6 +71,11 @@ OPTIONS
     If the --scriptPath option is used the argument to the select block will 
     be an instance of a TDNode, otherwise the argument will be an instance of
     TDDefinition.
+
+  --staticList
+    By default, all searches performed by browse commands are re-calculated
+    whenever the window is refreshed (CMD-L or CMD-C, etc.). However, when the
+    --staticList option is present, the search is performed only once.
 
 EXAMPLES
   browse --help references

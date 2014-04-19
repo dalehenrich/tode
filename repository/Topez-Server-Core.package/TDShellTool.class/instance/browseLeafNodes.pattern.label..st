@@ -1,8 +1,11 @@
 browse
 browseLeafNodes: leafNodeBlock pattern: pattern label: label
-  (TDLeafNodeBrowser new
+  | browser |
+  browser := TDLeafNodeBrowser new
     topez: topez;
     messagePattern: pattern;
     windowLabel: label;
     leafNodesBlock: leafNodeBlock;
-    yourself) open
+    yourself.
+  browser open.
+  ^ browser leafNodes

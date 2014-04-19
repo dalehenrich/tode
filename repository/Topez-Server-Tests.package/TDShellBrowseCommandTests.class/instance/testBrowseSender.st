@@ -8,7 +8,7 @@ testBrowseSender
     evaluateCommandString: 'browse --help sender';
     evaluateCommandString: 'browse sender at:put:';
     evaluateCommandString: 'browse sender --pure at:put:';
-    evaluateCommandString: 'browse sender --regex at\:put\:';
+    evaluateCommandString: 'browse --staticList sender --regex at\:put\:';
     yourself.
   defs := self topez
     evaluateCommandString:

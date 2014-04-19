@@ -4,8 +4,10 @@ browsevariables
   browse variables --class=<class-name> <variable-name>...
 "
 
-  | list cls pattern |
+  | block cls pattern |
   self getSubcommandOptsMixedLongShort: {#('class' nil #'required')}.
+  block := [ 
+  | list |
   list := Set new.
   pattern := ''.
   subOptions
@@ -15,5 +17,5 @@ browsevariables
     do: [ :arg | 
       list addAll: (self findReferences: arg asSymbol inClass: cls).
       pattern := pattern , ' ' , arg ].
-  list := self filterBrowseList: list.
-  ^ self browseMethods: list label: 'Variable references to:' , pattern
+  list := self filterBrowseList: list ].
+  ^ self browseMethodsBlock: block label: 'Variable references to:' , pattern

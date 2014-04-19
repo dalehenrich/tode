@@ -6,10 +6,14 @@ source: aStringOrText
   txt := aStringOrText asText.
   txt
     removeAttributesThat: [ :attrib | 
-      (attrib isKindOf: TextFontChange)
+      (attrib isKindOf: (Smalltalk at: #'TextFontChange'))
         or: [ 
-          (attrib isKindOf: TextAction)
-            or: [ (attrib isKindOf: TextAlignment) or: [ (attrib isKindOf: TextIndent) or: [ attrib isKindOf: TextKern ] ] ] ] ]
+          (attrib isKindOf: (Smalltalk at: #'TextAction'))
+            or: [ 
+              (attrib isKindOf: (Smalltalk at: #'TextAlignment'))
+                or: [ 
+                  (attrib isKindOf: (Smalltalk at: #'TextIndent'))
+                    or: [ attrib isKindOf: (Smalltalk at: #'TextKern') ] ] ] ] ]
     replaceAttributesThat: [ :attrib | false ]
     by: [ :ignored |  ].
   stonString := STON toString: txt.

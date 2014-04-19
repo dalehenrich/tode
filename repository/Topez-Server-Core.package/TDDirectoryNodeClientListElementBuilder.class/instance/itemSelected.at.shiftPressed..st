@@ -1,6 +1,7 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
   | editorAspect parent obj itemAttribute windowName highlightIndex parentList objName |
+  index ifNil: [ ^ nil ].
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
   parent := itemAttribute parent.

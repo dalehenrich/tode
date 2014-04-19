@@ -4,8 +4,10 @@ browseundeclared
   browse undeclared
 "
 
-  | map list |
-  self getSubcommandOptsMixedLongShort: {#('list' nil #'none')}.
+  | block |
+  self getSubcommandOptsMixedLongShort: {}.
+  block := [ 
+  | list |
   list := self undefinedSymbolMethodDefinitions.
-  list := self filterBrowseList: list.
-  ^ self browseMethods: list label: 'Undeclared symbol references'
+  list := self filterBrowseList: list ].
+  ^ self browseMethodsBlock: block label: 'Undeclared symbol references'

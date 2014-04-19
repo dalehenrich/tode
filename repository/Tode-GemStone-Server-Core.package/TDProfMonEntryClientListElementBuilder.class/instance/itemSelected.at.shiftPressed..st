@@ -1,6 +1,7 @@
 as yet unclassified
 itemSelected: listElement at: listIndex shiftPressed: shiftPressed
   | index entry offset highlightIndex |
+  index ifNil: [ ^ nil ].
   listIndex <= 4
     ifTrue: [ ^ nil ].
   index := listIndex - 4.

@@ -5,7 +5,7 @@ browsesource
   browse source --exact <source-string>
 "
 
-  | list pattern path label |
+  | block pattern path label |
   self
     getSubcommandOptsMixedLongShort:
       {#('exact' nil #'none').
@@ -14,6 +14,8 @@ browsesource
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]
     ifAbsent: [ path := nil ].
+  block := [ 
+  | list |
   list := Set new.
   pattern := ''.
   subArguments
@@ -23,9 +25,7 @@ browsesource
         ifPresent: [ :ignored | list addAll: (self findSourceExact: arg searchScriptRoot: path) ]
         ifAbsent: [ list addAll: (self findSource: arg searchScriptRoot: path) ].
       pattern := pattern , ' ' , arg ].
-  list := self filterBrowseList: list.
+  list := self filterBrowseList: list ].
   path
-    ifNil: [ ^ self browseMethods: list label: label ]
-    ifNotNil: [ 
-      self browseLeafNodes: [ list asArray ] pattern: pattern label: label.
-      ^ list ]
+    ifNil: [ ^ self browseMethodsBlock: block label: label ]
+    ifNotNil: [ ^ self browseLeafNodes: block pattern: pattern label: label ]

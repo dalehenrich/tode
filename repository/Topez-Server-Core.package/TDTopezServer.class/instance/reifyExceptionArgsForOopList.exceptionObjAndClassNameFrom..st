@@ -10,8 +10,9 @@ reifyExceptionArgsForOopList: oopList exceptionObjAndClassNameFrom: errNum
       each isClass
         ifTrue: [ each name ]
         ifFalse: [ each ] ].
-  exception := ExceptionA gsNumber: errNum arguments: args.
-  exceptionInfo := { exception asOop. exception class name}.
+  exception := (Smalltalk at: #'ExceptionA') gsNumber: errNum arguments: args.
+  exceptionInfo := {(exception asOop).
+  (exception class name)}.
   result := STON
     toString:
       {objects.
