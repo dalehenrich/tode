@@ -2,6 +2,7 @@ as yet unclassified
 testBrowseReferences
   "run without errors ... to keep me honest"
 
+  [ 
   | node defs |
   node := self createSelectBlockNode.
   self topez
@@ -21,4 +22,13 @@ testBrowseReferences
   defs := self topez
     evaluateCommandString:
       'browse --scriptPath=' , node printString , ' references --literal `true`'.
-  self deny: defs isEmpty
+  self deny: defs isEmpty ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: ex description.
+      Transcript
+        cr;
+        show: (GsProcess stackReportToLevel: 100).
+      ex pass ]
