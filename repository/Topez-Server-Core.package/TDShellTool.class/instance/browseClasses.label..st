@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browseClasses: classDefs label: windowLabel
   classDefs
     editUsing:

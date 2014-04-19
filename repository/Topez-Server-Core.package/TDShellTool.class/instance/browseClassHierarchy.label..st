@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browseClassHierarchy: aClass label: windowLabel
   ^ aClass asTDClassDefinition
     editUsing:

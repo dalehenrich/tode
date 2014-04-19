@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browseDiff: methodDefinitions
   | source1 source2 method1Source method2Source diff patch windowLabel def1 def2 |
   def1 := methodDefinitions at: 1.

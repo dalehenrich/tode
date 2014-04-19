@@ -1,4 +1,4 @@
-as yet unclassified
+browse
 browseMethods: methodDefinitions label: windowLabel
   methodDefinitions
     editUsing:
