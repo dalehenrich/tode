@@ -5,5 +5,6 @@ testBrowseList
   | node |
   node := self createDefinitionListNode.
   self topez
+    evaluateCommandString: 'browse --help list';
     evaluateCommandString: 'browse list ' , node printString;
     yourself

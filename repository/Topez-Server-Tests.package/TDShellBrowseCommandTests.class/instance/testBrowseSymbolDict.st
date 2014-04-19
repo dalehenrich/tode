@@ -3,6 +3,7 @@ testBrowseSymbolDict
   "run without errors ... to keep me honest"
 
   self topez
+    evaluateCommandString: 'browse --help symbolDict';
     evaluateCommandString: 'browse symbolDict --user=SystemUser UserGlobals';
     evaluateCommandString:
         'browse --select=`[:def | ''Tool'' asRegex search: def label ]` symbolDict UserGlobals';

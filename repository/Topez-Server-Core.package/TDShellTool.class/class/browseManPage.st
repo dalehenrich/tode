@@ -26,7 +26,7 @@ DESCRIPTION
     project    Find and vew lists of classes in a project
     references Find and view lists of methods referencing certain artifacts
     sender     Find and view lists of methods sending particular messages
-    source     Find and view method source referencing 
+    source     Find and view strings in method source 
     symbolDict Find and view a list of classes in a symbol dictionary
     undeclared View references to undeclared symbols
     variables  Find and view references to instance, class instance and class variables
@@ -74,15 +74,6 @@ OPTIONS
 EXAMPLES
   browse --help references
 
-  browse --scriptPath references --literal `1.0`
-  browse --scriptPath=~/tode references --literal `1.0`
-  browse --scriptPath --select=`[:node | ''Tool'' asRegex search: node name ]` references --literal `1.0`
-  browse --scriptPath sender at:put:
-  browse --scriptPath source `for help`
-
-  browse --select=@filter method at:put: 
-  browse --select=`[:def | ''Tool'' asRegex search: def label ]` category tode
-
   browse category topez-server tode
   browse category --exact Topez-Server-Core
   browse category --hier --exact Topez-Server-Core
@@ -126,12 +117,20 @@ EXAMPLES
   browse symbolDict --user=SystemUser
   browse symbolDict --globals --user=SystemUser Globals
 
-  browse undeclared --list
-  browse undeclared <undeclared-variable>
+  browse undeclared 
 
-  browse variables
+  browse variables --class=TDShellTool listLimit
 
   browse versions `Dictionary class>>new:`
+
+  browse --scriptPath references --literal `1.0`
+  browse --scriptPath=~/tode references --literal `1.0`
+  browse --scriptPath --select=`[:node | ''Tool'' asRegex search: node name ]` references --literal `1.0`
+  browse --scriptPath sender at:put:
+  browse --scriptPath source `for help`
+
+  browse --select=@filter method at:put: 
+  browse --select=`[:def | ''Tool'' asRegex search: def label ]` category tode
 '.
   manPage subCommands
     at: 'class' put: self browseclassManPage;
@@ -144,5 +143,9 @@ EXAMPLES
     at: 'project' put: self browseprojectManPage;
     at: 'references' put: self browsereferencesManPage;
     at: 'sender' put: self browsesenderManPage;
+    at: 'source' put: self browsesourceManPage;
+    at: 'undeclared' put: self browseundeclaredManPage;
+    at: 'variables' put: self browsevariablesManPage;
+    at: 'versions' put: self browseversionsManPage;
     yourself.
   ^ manPage

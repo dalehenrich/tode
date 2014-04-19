@@ -5,6 +5,7 @@ testBrowseMethod
   | node defList |
   node := self createSelectBlockNode.
   self topez
+    evaluateCommandString: 'browse --help method';
     evaluateCommandString: 'browse method at:put: nextPutAll:';
     evaluateCommandString:
         'browse method --spec Dictionary>>at:put: `Dictionary class>>new:`';

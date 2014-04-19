@@ -5,6 +5,7 @@ testBrowseReferences
   | node defs |
   node := self createSelectBlockNode.
   self topez
+    evaluateCommandString: 'browse --help references';
     evaluateCommandString: 'browse references GsNMethod';
     evaluateCommandString:
         'browse references --literal `''not yet implemented''`';

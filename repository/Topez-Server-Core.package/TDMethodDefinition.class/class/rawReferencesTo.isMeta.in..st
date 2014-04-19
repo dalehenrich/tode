@@ -5,15 +5,24 @@ rawReferencesTo: aVariableOrClassName isMeta: isMeta in: aClassOrNil
   env := aClassOrNil ifNil: [ Smalltalk globals ].
   env isBehavior
     ifTrue: [ 
+      | variable |
       "instance vars and class instance vars"
       isMeta
         ifTrue: [ env := env class ].
-      (env allInstVarNames includes: aVariableOrClassName asSymbol)
+      variable := aVariableOrClassName asSymbol.
+      (env allInstVarNames includes: variable)
         ifTrue: [ 
           env
             withAllSubAndSuperclassesDo: [ :cl | 
-              (cl whichSelectorsAccess: aVariableOrClassName)
+              (cl whichSelectorsAccess: variable)
                 do: [ :sel | aCollection add: (MethodReference class: cl selector: sel) ] ].
+          ^ aCollection ].
+      (env isMeta not and: [ env class allInstVarNames includes: variable ])
+        ifTrue: [ 
+          env
+            withAllSubAndSuperclassesDo: [ :cl | 
+              (cl class whichSelectorsAccess: variable)
+                do: [ :sel | aCollection add: (MethodReference class: cl class selector: sel) ] ].
           ^ aCollection ].
       literal := (env withAllSuperclasses
         gather: [ :ea | ea classPool associations ])
