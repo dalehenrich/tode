@@ -34,8 +34,8 @@ man
       arguments do: [ :arg | pattern := pattern , ' ' , arg ].
       block := [ 
       | manPages results |
-      results := {}.
-      manPages := self topez commands values collect: [ :cmd | cmd manPages ].
+      results := Set new.
+      manPages := self topez commands values collect: [ :cmd | cmd manPage ].
       arguments
         do: [ :arg | 
           options
@@ -47,7 +47,7 @@ man
               results
                 addAll:
                   (manPages select: [ :manPage | manPage regexSearch: regex ]) ] ].
-      results ].
+      results asArray ].
       browser := TDManPageBrowser new
         topez: topez;
         windowLabel: 'Man pages matching' , pattern;
