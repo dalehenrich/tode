@@ -2,6 +2,7 @@ browse
 browsesourceManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'source'
     fromString:
       'NAME
   browse source - Find and view strings in method source

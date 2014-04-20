@@ -2,6 +2,7 @@ browse
 browseversionsManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'versions'
     fromString:
       'NAME
   browse versions - Find and view versions of a method

@@ -2,6 +2,7 @@ browse
 browsemethodManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'method'
     fromString:
       'NAME
   browse method - Find and view lists of methods matching patterns

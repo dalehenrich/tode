@@ -2,6 +2,7 @@ browse
 browselistManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'list'
     fromString:
       'NAME
   browse list - View method definitions loaded from nodes

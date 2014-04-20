@@ -2,6 +2,7 @@ browse
 browsesymbolDictManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'symbolDict'
     fromString:
       'NAME
   browse symbolDict - Find and view a list of classes in a symbol dictionary

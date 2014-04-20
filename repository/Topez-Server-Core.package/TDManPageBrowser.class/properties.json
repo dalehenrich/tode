@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"manPages",
+		"manPagesBlock" ],
+	"name" : "TDManPageBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDStandardToolBuilder",
+	"type" : "normal" }

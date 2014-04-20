@@ -2,6 +2,7 @@ browse
 browseundeclaredManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'undeclared'
     fromString:
       'NAME
   browse undeclared - View references to undeclared symbols

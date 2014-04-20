@@ -2,6 +2,7 @@ browse
 browsecategoryManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'category'
     fromString:
       'NAME
   browse category - Find and view lists of classes in a category

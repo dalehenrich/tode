@@ -2,6 +2,7 @@ browse
 browsereferencesManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'references'
     fromString:
       'NAME
   browse references - Find and view lists of methods referencing certain artifacts

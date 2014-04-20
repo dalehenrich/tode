@@ -2,6 +2,7 @@ browse
 browsediffManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'diff'
     fromString:
       'NAME
   browse diff - View differences between two methods

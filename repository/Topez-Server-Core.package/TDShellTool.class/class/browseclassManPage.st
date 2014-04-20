@@ -2,6 +2,7 @@ browse
 browseclassManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'class'
     fromString:
       'NAME
   browse class - Find and view lists of classes

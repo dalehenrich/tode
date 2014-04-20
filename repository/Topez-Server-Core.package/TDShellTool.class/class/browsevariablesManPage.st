@@ -2,6 +2,7 @@ browse
 browsevariablesManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'variables'
     fromString:
       'NAME
   browse variables - Find and view references to instance, class instance and class variables

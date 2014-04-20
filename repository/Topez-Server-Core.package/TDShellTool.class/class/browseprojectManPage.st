@@ -2,6 +2,7 @@ browse
 browseprojectManPage
   | manPage |
   manPage := TDManPage
+    commandName: 'project'
     fromString:
       'NAME
   browse project - Find and vew lists of classes in a project
