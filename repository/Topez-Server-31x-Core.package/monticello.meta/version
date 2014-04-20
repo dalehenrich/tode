@@ -1,1 +1,1 @@
-(name 'Topez-Server-31x-Core-dkh.1' message 'initial version' id 'fc2d0104-d2de-493e-9e9a-7abfa8bd967c' date '01/20/2014' time '16:59:45' author 'dkh' ancestors () stepChildren ())
+(name 'Topez-Server-31x-Core-dkh.2' message '- support for `browse references` command' id 'fb9f4d20-ed50-4dbf-9ead-158e63ae8280' date '04/19/2014' time '17:21:07' author 'dkh' ancestors ((name 'Topez-Server-31x-Core-dkh.1' message 'initial version' id 'fc2d0104-d2de-493e-9e9a-7abfa8bd967c' date '01/20/2014' time '16:59:45' author 'dkh' ancestors () stepChildren ())) stepChildren ())
