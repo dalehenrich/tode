@@ -5,16 +5,18 @@ browseproject
   browse project --exact <project-name>
 "
 
-  | list pattern |
+  | block pattern |
   self getSubcommandOptsMixedLongShort: {#('exact' nil #'none')}.
-  list := Set new.
   pattern := ''.
+  subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
+  block := [ 
+  | list |
+  list := Set new.
   subArguments
     do: [ :arg | 
       subOptions
         at: 'exact'
         ifPresent: [ :ignored | list addAll: (self findProjectDefinitionsExact: arg) ]
-        ifAbsent: [ list addAll: (self findProjectDefinitions: arg) ].
-      pattern := pattern , ' ' , arg ].
-  list := self filterBrowseList: list.
-  ^ self browseClasses: list label: 'Defs in project' , pattern
+        ifAbsent: [ list addAll: (self findProjectDefinitions: arg) ] ].
+  list := self filterBrowseList: list ].
+  ^ self browseClassesBlock: block label: 'Defs in project' , pattern

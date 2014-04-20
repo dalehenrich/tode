@@ -5,16 +5,18 @@ browsepackage
   browse package --exact <package-name>
 "
 
-  | list pattern |
+  | block pattern |
   self getSubcommandOptsMixedLongShort: {#('exact' nil #'none')}.
-  list := Set new.
   pattern := ''.
+  subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
+  block := [ 
+  | list |
+  list := Set new.
   subArguments
     do: [ :arg | 
       subOptions
         at: 'exact'
         ifPresent: [ :ignored | list addAll: (self findPackageDefinitionsExact: arg) ]
-        ifAbsent: [ list addAll: (self findPackageDefinitions: arg) ].
-      pattern := pattern , ' ' , arg ].
-  list := self filterBrowseList: list.
-  ^ self browseClasses: list label: 'Defs in package' , pattern
+        ifAbsent: [ list addAll: (self findPackageDefinitions: arg) ] ].
+  list := self filterBrowseList: list ].
+  ^ self browseClassesBlock: block label: 'Defs in package' , pattern

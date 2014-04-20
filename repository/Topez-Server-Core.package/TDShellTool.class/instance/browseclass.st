@@ -5,14 +5,12 @@ browseclass
   browse class --full <class-name>
 "
 
-  | list label pattern baseLabel |
+  | block label pattern |
   self
     getSubcommandOptsMixedLongShort:
       {#('exact' nil #'none').
       #('full' nil #'none').
       #('hier' nil #'none')}.
-  list := Set new.
-  pattern := ''.
   subOptions
     at: 'full'
     ifPresent: [ :ignored | 
@@ -24,7 +22,12 @@ browseclass
         at: clsNamePattern
         ifAbsent: [ ^ self browseClasses: {} label: 'No class matching ' , clsNamePattern ].
       ^ self browseClassHierarchy: cls label: 'Hierarchy for ' , clsNamePattern ].
-  baseLabel := 'Classes matching'.
+  pattern := ''.
+  subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
+  label := 'Classes matching' , pattern.
+  block := [ 
+  | list |
+  list := Set new.
   subArguments
     do: [ :clsNamePattern | 
       subOptions
@@ -32,12 +35,11 @@ browseclass
         ifPresent: [ :ignored | list addAll: (self findClassExact: clsNamePattern) ]
         ifAbsent: [ list addAll: (self findClass: clsNamePattern) ].
       pattern := pattern , ' ' , clsNamePattern ].
-  label := baseLabel , pattern.
   subOptions
     at: 'hier'
     ifPresent: [ :ignored | 
       | classNames |
       classNames := list collect: [ :cls | cls className asString ].
       list := self findClassHierarchy: classNames ].
-  list := self filterBrowseList: list.
-  ^ self browseClasses: list label: label
+  list := self filterBrowseList: list ].
+  ^ self browseClassesBlock: block label: label

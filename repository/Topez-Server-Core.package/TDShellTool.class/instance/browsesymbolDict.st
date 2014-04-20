@@ -7,64 +7,52 @@ browsesymbolDict
   browse symbolDict --globals [--user=<user-id>] <symbol-dictionary-name>
 "
 
-  | list label pattern baseLabel username symbolList |
+  | block label pattern username symbolList |
   self
     getSubcommandOptsMixedLongShort:
       {#('hier' nil #'none').
       #('list' nil #'none').
       #('globals' nil #'none').
       #('user' nil #'required')}.
-  list := Set new.
-  pattern := ''.
-  baseLabel := 'Classes in symbol dictionary'.
   subOptions
     at: 'user'
     ifPresent: [ :user | 
       username := user.
       symbolList := (AllUsers userWithId: username) symbolList ]
-    ifAbsent: [ symbolList := GsCurrentSession currentSession symbolList ].
+    ifAbsent: [ 
+      | session |
+      session := GsCurrentSession currentSession.
+      username := session userProfile userId.
+      symbolList := session symbolList ].
+  subOptions
+    at: 'list'
+    ifPresent: [ :ignored | ^ self inspectSymbolDictList: symbolList ].
+  subOptions
+    at: 'globals'
+    ifPresent: [ :ignored | ^ self inspectSymbolListGlobals: symbolList ].
+  pattern := ''.
+  label := 'Classes in symbol dictionary'.
+  subArguments isEmpty
+    ifTrue: [ label := 'Classes for user ' , username ].
+  subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
+  block := [ 
+  | list |
+  list := Set new.
   subArguments isEmpty
     ifTrue: [ 
-      subOptions
-        at: 'list'
-        ifPresent: [ :ignored | 
-          list := self filterBrowseList: symbolList.
-          ^ list asArray inspect ]
-        ifAbsent: [ 
-          baseLabel := 'Classes for user ' , username.
-          symbolList
-            do: [ :dict | 
-              dict
-                associationsDo: [ :assoc | 
-                  assoc value isBehavior
-                    ifTrue: [ list add: assoc value asTDClassDefinition ] ] ] ] ].
+      symbolList
+        do: [ :dict | 
+          dict
+            associationsDo: [ :assoc | 
+              assoc value isBehavior
+                ifTrue: [ list add: assoc value asTDClassDefinition ] ] ] ].
   subArguments
-    do: [ :clsNamePattern | 
-      subOptions
-        at: 'globals'
-        ifPresent: [ :ignored | 
-          | symDict |
-          symDict := symbolList
-            detect: [ :dict | dict name asString = clsNamePattern ]
-            ifNone: [ ^ #() inspect ].
-          symDict associations
-            do: [ :assoc | 
-              (assoc value isBehavior not and: [ assoc value ~~ symDict ])
-                ifTrue: [ list add: assoc ] ].
-          list := self filterBrowseList: list.
-          list := list asArray sorted: [ :a :b | a key <= b key ].
-          ^ list inspect ]
-        ifAbsent: [ 
-          list
-            addAll:
-              (self findClassDefsInSymbolDictionary: clsNamePattern username: username) ].
-      pattern := pattern , ' ' , clsNamePattern ].
-  label := baseLabel , pattern.
+    do: [ :arg | list addAll: (self findClassDefsInSymbolDictionary: arg username: username) ].
   subOptions
     at: 'hier'
     ifPresent: [ :ignored | 
       | classNames |
       classNames := list collect: [ :cls | cls className asString ].
       list := self findClassHierarchy: classNames ].
-  list := self filterBrowseList: list.
-  ^ self browseClasses: list label: label
+  list := self filterBrowseList: list ].
+  ^ self browseClassesBlock: block label: label , pattern

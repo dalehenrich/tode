@@ -5,27 +5,28 @@ browsecategory
   browse category [--hier] --exact <category-name>...
 "
 
-  | list label pattern baseLabel |
+  | block label pattern |
   self
     getSubcommandOptsMixedLongShort:
       {#('exact' nil #'none').
       #('hier' nil #'none')}.
-  list := Set new.
   pattern := ''.
-  baseLabel := 'Classes in category'.
+  subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
+  label := 'Classes in category' , pattern.
+  block := [ 
+  | list |
+  list := Set new.
   subArguments
     do: [ :clsNamePattern | 
       subOptions
         at: 'exact'
         ifPresent: [ :ignored | list addAll: (self findCategoryClassDefinitionsExact: clsNamePattern) ]
-        ifAbsent: [ list addAll: (self findCategoryClassDefinitions: clsNamePattern) ].
-      pattern := pattern , ' ' , clsNamePattern ].
-  label := baseLabel , pattern.
+        ifAbsent: [ list addAll: (self findCategoryClassDefinitions: clsNamePattern) ] ].
   subOptions
     at: 'hier'
     ifPresent: [ :ignored | 
       | classNames |
       classNames := list collect: [ :cls | cls className asString ].
       list := self findClassHierarchy: classNames ].
-  list := self filterBrowseList: list.
-  ^ self browseClasses: list label: label
+  list := self filterBrowseList: list ].
+  ^ self browseClassesBlock: block label: label
