@@ -11,8 +11,10 @@ testBrowseReferences
         'browse references --literal `''not yet implemented''`';
     evaluateCommandString: 'browse references --literal `#at:put:`';
     evaluateCommandString: 'browse references --literal `1.0`';
-    evaluateCommandString: 'browse references --literal `#( 1 2 3)`';
-    evaluateCommandString: 'browse references --literal `#[ 1 2 3]`';
+    evaluateCommandString: 'browse references --literal `#( 1 2 3)`'.
+  ((System stoneVersionAt: 'gsVersion') beginsWith: '3.')
+    ifTrue: [ self topez evaluateCommandString: 'browse references --literal `#[ 1 2 3]`' ].
+  self topez
     evaluateCommandString:
         'browse references --class=ClassOrganizer --literal `#at:put:`';
     evaluateCommandString:

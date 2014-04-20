@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"newSendersOf:" : "dkh 03/31/2013 08:02" } }
+		"newSendersOf:" : "dkh 03/31/2013 08:02",
+		"regexSendersOf:" : "dkh 04/19/2014 20:21",
+		"regexSendersOf:in:" : "dkh 04/19/2014 20:24" } }

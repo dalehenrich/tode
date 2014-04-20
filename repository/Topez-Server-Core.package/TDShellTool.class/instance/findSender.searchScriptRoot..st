@@ -23,7 +23,7 @@ findSender: selectorToken searchScriptRoot: path
             ifFalse: [ 
               (gsMethod literals asArray refersToLiteral: selector)
                 ifTrue: [ leafNodes add: leafNode ] ] ] ]
-        on: CompileError
+        on: self compilerExceptionSet
         do: [ :ex | 
           Transcript
             cr;
