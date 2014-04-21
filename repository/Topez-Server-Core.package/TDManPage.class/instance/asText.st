@@ -45,16 +45,19 @@ asText
                   '  NOTE - use the `tode it` menu item to run the examples directly.'
                 attribute: TextEmphasis italic);
         cr ].
-  (commandPath notNil or: [ sourceMethod notNil ])
-    ifTrue: [ 
+  self seeAlso isEmpty
+    ifFalse: [ 
       aStream
-        cr;
         nextPutAll: 'SEE ALSO' asText allBold;
         cr;
         nextPutAll: '  ';
-        nextPutAll: self commandPath;
+        nextPutAll: self seeAlso;
         cr;
-        nextPutAll: '  ';
-        nextPutAll: self sourceMethod;
+        cr;
+        nextPutAll:
+            (Text
+                string:
+                  '  NOTE - use the `tode it` menu item to run commands directly.'
+                attribute: TextEmphasis italic);
         cr ].
   ^ aStream contents

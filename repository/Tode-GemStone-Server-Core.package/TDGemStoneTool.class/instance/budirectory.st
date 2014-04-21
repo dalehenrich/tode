@@ -1,7 +1,9 @@
-as yet unclassified
+bu
 budirectory
-  "bu directory [<server-directory-path>]"
+  "
+  bu directory [<backup-file>]
+"
 
-  tokens size > 1
-    ifTrue: [ self class backupDirectoryName: (tokens at: 2) ].
+  arguments size > 0
+    ifTrue: [ self class backupDirectoryName: (arguments at: 1) ].
   ^ self class backupDirectoryName

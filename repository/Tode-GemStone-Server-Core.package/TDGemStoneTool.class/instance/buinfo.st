@@ -1,11 +1,11 @@
-as yet unclassified
+bu
 buinfo
-  "bu info <backup-name>
-      info @<backup-name-path>
   "
+  bu [--dir=<backup-directory>] info <backup-file>
+"
 
-  | backupPath copyDbfCommand |
-  backupPath := (self resolveBackupPath: (tokens at: 2)) asString.
+  | backupFilePath copyDbfCommand |
+  backupFilePath := self resolveBackupFilePath.
   copyDbfCommand := (GsFile _expandEnvVariable: 'GEMSTONE' isClient: false)
-    , '/bin/copyDbf -i ' , backupPath.
+    , '/bin/copydbf -i ' , backupFilePath.
   ^ System performOnServer: copyDbfCommand

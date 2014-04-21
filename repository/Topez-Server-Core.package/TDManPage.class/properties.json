@@ -14,7 +14,8 @@
 		"examples",
 		"commandPath",
 		"sourceMethod",
-		"subCommands" ],
+		"subCommands",
+		"seeAlso" ],
 	"name" : "TDManPage",
 	"pools" : [
 		 ],

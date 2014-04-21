@@ -8,8 +8,11 @@ fromString: manPageString
   descriptIndex := manPageString indexOfSubCollection: 'DESCRIPTION'.
   optionsIndex := manPageString indexOfSubCollection: 'OPTIONS'.
   exampleIndex := manPageString indexOfSubCollection: 'EXAMPLES'.
+  seeAlsoIndex := manPageString indexOfSubCollection: 'SEE ALSO'.
+  seeAlsoIndex == 0
+    ifTrue: [ seeAlsoIndex := manPageString size ].
   exampleIndex == 0
-    ifTrue: [ exampleIndex := manPageString size ].
+    ifTrue: [ exampleIndex := seeAlsoIndex ].
   optionsIndex == 0
     ifTrue: [ optionsIndex := exampleIndex ].
   descriptIndex == 0
@@ -30,6 +33,9 @@ fromString: manPageString
             trimBoth;
     examples:
         (manPageString copyFrom: exampleIndex + 'EXAMPLES' size to: manPageString size)
+            trimBoth;
+    seeAlso:
+        (manPageString copyFrom: seeAlsoIndex + 'SEE ALSO' size to: manPageString size)
             trimBoth;
     yourself.
   ^ manPage

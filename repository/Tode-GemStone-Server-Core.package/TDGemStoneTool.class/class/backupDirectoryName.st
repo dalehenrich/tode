@@ -1,8 +1,5 @@
-as yet unclassified
+bu
 backupDirectoryName
   BackupDirectoryName
-    ifNil: [ 
-      self
-        backupDirectoryName:
-          (GsFile _expandEnvVariable: 'GEMSTONE_DATADIR' isClient: false) , '/backups' ].
+    ifNil: [ self backupDirectoryName: self defaulBackupDirectoryName ].
   ^ BackupDirectoryName
