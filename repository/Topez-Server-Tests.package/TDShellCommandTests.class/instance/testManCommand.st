@@ -4,7 +4,7 @@ testManCommand
 
   self topez
     evaluateCommandString: 'man --help ';
-    evaluateCommandString: 'browse --all';
+    evaluateCommandString: 'man --all';
     evaluateCommandString: 'man browse';
     evaluateCommandString: 'man browse class';
     evaluateCommandString: 'man --find --exact browse class';
