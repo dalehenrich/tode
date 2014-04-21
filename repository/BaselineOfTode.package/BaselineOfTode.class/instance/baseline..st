@@ -97,6 +97,8 @@ baseline: spec
                 requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Tests'
           with: [ spec requires: #('Topez-Server-Core') ];
+        package: 'Tode-GemStone-Server-Tests'
+          with: [ spec requires: #('Topez-Server-Tests') ];
         package: 'Topez-Server-CypressTools'
           with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-TestTools'
