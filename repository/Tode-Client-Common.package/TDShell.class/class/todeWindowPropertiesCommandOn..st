@@ -1,7 +1,6 @@
 system menu
 todeWindowPropertiesCommandOn: aBuilder
 	<worldMenu>
-
 	| windowLayoutDir |
 	windowLayoutDir := self windowLayoutHome asFileReference.
 	windowLayoutDir exists
@@ -11,7 +10,7 @@ todeWindowPropertiesCommandOn: aBuilder
 				order: 5.0;
 				target: self;
 				withSeparatorAfter.
-			windowLayoutDir files
+			(windowLayoutDir files sorted: [ :a :b | a fullName <= b fullName ])
 				do: [ :file | 
 					(aBuilder item: file basename asSymbol)
 						parent: #'tODE Window Layout';

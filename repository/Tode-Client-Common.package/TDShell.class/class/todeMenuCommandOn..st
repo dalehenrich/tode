@@ -23,7 +23,7 @@ todeMenuCommandOn: aBuilder
 				order: 4.0;
 				target: self;
 				withSeparatorAfter.
-			sessionDescriptionDir files
+			(sessionDescriptionDir files sorted: [ :a :b | a fullName <= b fullName ])
 				do: [ :file | 
 					| sessionDescription |
 					sessionDescription := OGCustomSessionDescription importFrom: file fullName.

@@ -9,7 +9,7 @@ todeImageWorkspacesOn: aBuilder
 				parent: #tODE;
 				order: 4.5;
 				target: self.
-			workspaceDir files
+			(workspaceDir files sorted: [ :a :b | a fullName <= b fullName ])
 				do: [ :file | 
 					(aBuilder item: file basename asSymbol)
 						parent: #'tODE Workspaces';
