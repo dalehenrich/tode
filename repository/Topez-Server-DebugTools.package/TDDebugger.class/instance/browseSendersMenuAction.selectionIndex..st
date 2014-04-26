@@ -1,11 +1,11 @@
 menu actions
 browseSendersMenuAction: listElement selectionIndex: selectionIndex
-  | stack selector defs findTool browseTool |
+  | stack selector block findTool browseTool |
   stack := self theStack.
   stack navigateFrame: selectionIndex.
   selector := stack currentFrame selector asString.
   findTool := self findTool: listElement.
-  defs := findTool findSender: selector.
+  block := [ findTool findSender: selector ].
   browseTool := self browseTool: listElement.
-  browseTool browseMethods: defs label: 'Senders of ' , selector.
+  browseTool browseMethodsBlock: block label: 'Senders of ' , selector.
   ^ true

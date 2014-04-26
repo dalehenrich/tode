@@ -6,7 +6,7 @@ browseMethodsBlock: methodDefinitionBlock label: windowLabel
     windowLocation: #'implementors';
     windowLabel: windowLabel;
     yourself.
-  options
+  self options
     at: 'staticList'
     ifPresent: [ :ignored | methodDefinitions editUsing: spec ]
     ifAbsent: [ methodDefinitions editUsing: spec objectBlock: methodDefinitionBlock ].

@@ -1,13 +1,13 @@
 menu actions
 browseImplementorsMenuAction: listElement selectionIndex: selectionIndex
-  | itemAttribute def methodDefs selector findTool browseTool |
+  | itemAttribute def block selector findTool browseTool |
   selectionIndex == 0
     ifTrue: [ ^ false ].
   itemAttribute := listElement itemCache at: selectionIndex.
   def := itemAttribute object.
-  selector := def selector.
+  selector := def selector asString.
   findTool := self findTool: listElement.
-  methodDefs := findTool findMethod: selector asString.
+  block := [ findTool findMethod: selector ].
   browseTool := self browseTool: listElement.
-  browseTool browseMethods: methodDefs label: 'Implementors of ' , selector.
+  browseTool browseMethodsBlock: block label: 'Implementors of ' , selector.
   ^ true

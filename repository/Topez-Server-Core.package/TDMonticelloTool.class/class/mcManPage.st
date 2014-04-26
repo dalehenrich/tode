@@ -39,8 +39,6 @@ SYNOPSIS
   mc dirty 
   mc fileout <directory-path> <package-name> [<package-name>]...
      fileout <directory-path> @<workingCopy-path> [@<workingCopy-path>]...
-  mc halo <name> <regex-pkg-pattern> 
-  mc halorm <name> 
   mc list [<regex-pkg-pattern>]
   mc load <version-name> <repository-spec>
      load <version-name> @<repository-path>

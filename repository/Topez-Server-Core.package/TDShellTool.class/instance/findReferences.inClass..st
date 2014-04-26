@@ -1,12 +1,6 @@
 as yet unclassified
 findReferences: variableOrGlobalNameOrPathRef inClass: clsOrNil
   | methodRefs pattern |
-  self options
-    at: 'scriptPath'
-    ifPresent: [ :scriptPath | 
-      ^ self
-        findReferences: variableOrGlobalNameOrPathRef
-        searchScriptRoot: scriptPath ].
   methodRefs := (variableOrGlobalNameOrPathRef beginsWith: '@')
     ifTrue: [ 
       | literal |

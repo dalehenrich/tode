@@ -1,11 +1,11 @@
 menu actions
 browseImplementorsMenuAction: listElement selectionIndex: selectionIndex
-  | stack selector defs findTool methodDefs browseTool |
+  | stack selector defs findTool block browseTool |
   stack := self theStack.
   stack navigateFrame: selectionIndex.
-  selector := stack currentFrame selector.
+  selector := stack currentFrame selector asString.
   findTool := self findTool: listElement.
-  methodDefs := findTool findMethod: selector asString.
+  block := [ findTool findMethod: selector ].
   browseTool := self browseTool: listElement.
-  browseTool browseMethods: methodDefs label: 'Implementors of ' , selector.
+  browseTool browseMethodsBlock: block label: 'Implementors of ' , selector.
   ^ true
