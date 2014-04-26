@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Deploy-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCFileTreeTodeTool",
+	"pools" : [
+		 ],
+	"super" : "MCTodeDeployTool",
+	"type" : "normal" }

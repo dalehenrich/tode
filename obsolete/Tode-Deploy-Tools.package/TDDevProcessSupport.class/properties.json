@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Deploy-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDDevProcessSupport",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractDevTool",
+	"type" : "normal" }

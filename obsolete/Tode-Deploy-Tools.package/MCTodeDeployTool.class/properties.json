@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Deploy-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCTodeDeployTool",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractDevTool",
+	"type" : "normal" }
