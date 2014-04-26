@@ -9,13 +9,6 @@ initialize
 	 #navigate - structural access via navigator
 	 CUSTOM    - custom names for specialized window access"
 
-  false
-    ifTrue: [ 
-      "don't think this puppy needed anymore ... "
-      TDTopezServer
-        registerBuilderClass: TDStackFrameNodeBuilder
-        for: TDStackFrame
-        aspect: #'view' ].
   TDTopezServer
     registerEditorClass: TDStackFrameContentsClientListElementBuilder
       for: TDStackFrame
