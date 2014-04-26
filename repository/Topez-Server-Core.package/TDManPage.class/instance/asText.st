@@ -40,10 +40,8 @@ asText
         cr;
         cr;
         nextPutAll:
-            (Text
-                string:
-                  '  NOTE - use the `tode it` menu item to run the examples directly.'
-                attribute: TextEmphasis italic);
+            (Text string: self todeItNote attribute: TextEmphasis italic);
+        cr;
         cr ].
   self seeAlso isEmpty
     ifFalse: [ 
@@ -55,9 +53,7 @@ asText
         cr;
         cr;
         nextPutAll:
-            (Text
-                string:
-                  '  NOTE - use the `tode it` menu item to run commands directly.'
-                attribute: TextEmphasis italic);
+            (Text string: self todeItNote attribute: TextEmphasis italic);
+        cr;
         cr ].
   ^ aStream contents
