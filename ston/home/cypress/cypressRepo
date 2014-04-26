@@ -1,8 +1,0 @@
-TDObjectGatewayNode{#name:'cypressRepo',#contents:'| repo |
-repo := CypressFileSystemRepository
-  onUrl:
-    \'cypressft:/export/galbadia1/users/dhenrich/CypressReferenceImplementation/\'
-      asUrl
-  alias: \'Cypress\'.
-repo gemStoneFileoutsEnabled: true.
-repo'}

@@ -1,6 +1,0 @@
-TDSmalltalkLeafNode{#name:'xx',#contents:'| blk |
-UUIDGenerator initialize.
-blk := [ 1000 timesRepeat: [ UUID new ] ].
-true
-  ifTrue: [ blk timeToRun ]
-  ifFalse: [ ProfMonitor monitorBlock: blk ]',#creationTime:nil,#modificationTime:nil}

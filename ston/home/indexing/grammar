@@ -1,4 +1,0 @@
-TDTxtLeafNode{#name:'grammar',#contents:Text{#string:'primary /
-primary, relop, primary /
-(primary, relop, primary)
-',#runs:RunArray{#runs:[36,1,25],#values:[[],[TextEmphasis{#emphasisCode:1,#setMode:true}],@6],#lastIndex:38,#lastRun:3,#lastOffset:0}},#creationTime:nil,#modificationTime:nil}

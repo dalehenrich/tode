@@ -1,3 +1,0 @@
-TDObjectGatewayNode{#name:'gitRepo',#contents:'| repo |
-repo := (self topez lookup: \'repo\') dotSelfObject.
-repo directory containingDirectory'}

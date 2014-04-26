@@ -1,6 +1,0 @@
-TDTxtLeafNode{#name:'status',#contents:'commit bd6c63114c64a4e689eea4db581e06adc8b08c42
-Author: Dale Henrichs <dhenrich@vmware.com>
-Date:   Sat Jul 20 04:50:09 2013 -0700
-
-    lose the logging...gain the latest Metacello
-',#creationTime:nil,#modificationTime:nil}

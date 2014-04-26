@@ -1,5 +1,0 @@
-TDSmalltalkLeafNode{#name:'seeded',#contents:'| random coll |
-random := Lag25000CmwcRandom new.
-coll := {}.
-10 timesRepeat: [ coll add: random integer ].
-coll',#creationTime:nil,#modificationTime:nil}

@@ -1,6 +1,0 @@
-TDTxtLeafNode{#name:'analysis',#contents:Text{#string:'Johan\'s build failes with a RETRY on loading BaselineOfZinc[1] on his gemstone2.4 branch. 
-
-A fresh run of the 2.4 branch code on travis[2] that predates Johan\'s changes runs clean ... so it isn\'t a problem with a recent builderCI version for GemStone.
-
-[1] https://travis-ci.org/jbrichau/zinc/jobs/14140232#L692
-[2] https://travis-ci.org/glassdb/zinc/builds/14157994',#runs:RunArray{#runs:[367],#values:[[TextColor{#color:Color{#rgb:0}}]],#lastIndex:nil,#lastRun:nil,#lastOffset:nil}},#creationTime:DateAndTime['2013-11-18T11:56:46.2455689907074-08:00'],#modificationTime:DateAndTime['2013-11-18T12:00:01.69899201393127-08:00']}

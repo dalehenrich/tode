@@ -1,6 +1,0 @@
-TDScriptLeafNode{#name:'interact',#contents:'[ :topez :objIn :tokens :windowId | 
-TDChoiceRequest labels: #(\'one\' \'two\').
-TDConfirmRequest prompt: \'Well?\' confirm: \'Yes?\' cancel: \'No?\'.
-TDInformRequest message: \'Informing you\'.
-TDMultiLineTextRequest prompt: \'Multiple lines\' template: \'template\'.
-\tTDTextRequest prompt: \'single line\' template: \'template\' ]',#creationTime:nil,#modificationTime:DateAndTime['2013-12-06T14:59:34.67842507362366-08:00']}

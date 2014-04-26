@@ -1,8 +1,0 @@
-TDScriptLeafNode{#name:'sort',#contents:'[ :topez :objIn :tokens :command | | mcTool methodRefs wc packageInfo|
-\tmcTool := topez toolInstanceFor: \'mc\'.
-\twc := mcTool resolveWorkingCopyReference: \'GemStone-Interactions\'.
-\tpackageInfo :=  MetacelloPlatform current packageInfoFor: wc.
-\t      methodRefs := packageInfo extensionMethods.
-      methodRefs := methodRefs asArray
-        sorted: [ :a :b | a classSymbol <= b classSymbol and: [ a selector <= b selector ] ].
-]',#creationTime:DateAndTime['2013-11-11T14:13:40.27829909324646-08:00'],#modificationTime:DateAndTime['2013-11-11T14:15:54.40843796730042-08:00']}

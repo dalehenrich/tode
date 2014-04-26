@@ -1,7 +1,0 @@
-TDScriptLeafNode{#name:'distribute',#contents:'\"This is source for a block.  \" 
- ^ [ :topez :objIn :tokens :windowId | 
-  (MCMetacelloTodeTool
-    topez: topez
-    objIn: objIn
-    tokens: tokens
-    windowId: windowId) distribute ]',#creationTime:nil,#modificationTime:nil}

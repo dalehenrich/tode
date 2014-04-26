@@ -1,6 +1,0 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 08f39160061cc9dc3ad7d50398d7058014e3d789
-Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Fri Dec 6 14:52:47 2013 -0800
-
-    Issue #37: preparing to implement gateway node schism ... if treated as a source node (directory or leaf) we copy the contents (maybe?), have to be able to tell when to use gateway as a link and when not to ... might have to declare explicitly ... current tests are passing ...
-',#creationTime:nil,#modificationTime:DateAndTime['2013-12-06T14:52:49.79409909248352-08:00']}

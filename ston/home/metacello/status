@@ -1,6 +1,0 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 4e8b9cd0fd22bf44c015a4d295ce66c65b8590ec
-Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sun Nov 24 21:04:59 2013 -0800
-
-    Issue #215: add tests cases and fix a minor bug (which is why tests cases are important)
-',#creationTime:nil,#modificationTime:DateAndTime['2013-11-26T10:02:17.39189291000366-08:00']}

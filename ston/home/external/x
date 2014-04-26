@@ -1,3 +1,0 @@
-TDSmalltalkLeafNode{#name:'x',#contents:'| tmp |
-tmp := 3 +4.
-^tmp',#creationTime:nil,#modificationTime:nil}

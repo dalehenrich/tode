@@ -1,8 +1,0 @@
-TDScriptLeafNode{#name:'cmds',#contents:'[ :topez :objIn :tokens :windowId | 
-| parser options nonOptions|
-\toptions := {}.
-\tnonOptions := {}.
-parser := TDCommandLineParser parse: (ReadStream on: \'testopt -a -b\').
-\tparser parseOptions: \'ab\' do: [:opt :optArg |
-\t\toptions add: opt-> optArg] nonOptionsDo: [:nonOption |nonOptions add: nonOption].
-\t{options. nonOptions} ]',#creationTime:nil,#modificationTime:DateAndTime['2013-12-06T14:56:50.02941799163818-08:00']}
