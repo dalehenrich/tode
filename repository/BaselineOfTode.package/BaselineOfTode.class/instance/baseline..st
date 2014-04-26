@@ -90,6 +90,8 @@ baseline: spec
           with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
       spec
         package: 'Topez-Server-Core' with: [ spec requires: #('RB') ];
+        package: 'Tode-BatchEdit-Tool'
+          with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
           with: [ 
               spec
@@ -123,6 +125,7 @@ baseline: spec
           with:
             #('Common Tests' 'Topez-Server-Tests' 'Topez-Server-TestDebugTools');
         group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
+        group: 'Rewrite' with: #('Tode-BatchEdit-Tool');
         yourself ].
   spec
     for: #'gs2.4.x'

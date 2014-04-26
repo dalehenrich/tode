@@ -1,4 +1,4 @@
-as yet unclassified
+*tode-batchedit-tool
 asBatchEditorDefinitionFor: aBatchEditor
   ^ (TDBatchEditMethodDefinition
     className: self className

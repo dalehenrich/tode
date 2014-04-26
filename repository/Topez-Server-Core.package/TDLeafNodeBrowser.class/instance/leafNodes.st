@@ -1,4 +1,4 @@
 accessing
 leafNodes
-  leafNodes ifNil: [ leafNodes := leafNodesBlock value ].
+  leafNodes ifNil: [ leafNodes := leafNodesBlock value asArray ].
   ^ leafNodes

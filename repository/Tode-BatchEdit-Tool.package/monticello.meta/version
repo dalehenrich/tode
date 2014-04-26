@@ -1,0 +1,1 @@
+(name 'Tode-BatchEdit-Tool-dkh.1' message '- split TDBatchEditTool and friends into separate package ... this is a useful tool, but it needs to be re-written a bit before it becomes part of standard tool set ...' id '14340a92-64e6-47e7-b3ee-ba4e7ff1b2fb' date '04/26/2014' time '08:26:35' author 'dkh' ancestors () stepChildren ())
