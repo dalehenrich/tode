@@ -20,8 +20,7 @@ DESCRIPTION
     accessors  Define instance variable getter and setter methods for the class
     comment    View and define the class comment
     copy       Make a copy of a class
-    create
-    definition 
+    definition View and define the class
     history
     protocol
     rename
@@ -42,10 +41,15 @@ EXAMPLES
 
   cls copy ClassA ClassB
   cls copy @/home/tode/classA ClassB
+
+  cls --help definition
+  cls definition ClassA ClassB
+  cls definition @/home/tode/classA ClassB
 '.
   manPage subCommands
     at: 'accessors' put: self clsaccessorsManPage;
     at: 'comment' put: self clscommentManPage;
     at: 'copy' put: self clscopyManPage;
+    at: 'definition' put: self clsdefinitionManPage;
     yourself.
   ^ manPage

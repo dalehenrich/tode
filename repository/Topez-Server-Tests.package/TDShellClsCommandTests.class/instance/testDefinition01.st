@@ -1,5 +1,5 @@
 as yet unclassified
-testDefinition
+testDefinition01
   | clsTool definition x |
   clsTool := self tool.
   definition := clsTool clsdefinition: self mockClass.
