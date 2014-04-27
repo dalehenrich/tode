@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"workspace" ],
+	"name" : "TDWorkspaceClientElementBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDClientCodeElementBuilder",
+	"type" : "normal" }

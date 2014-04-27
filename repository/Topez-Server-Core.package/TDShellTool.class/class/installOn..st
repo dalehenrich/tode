@@ -38,6 +38,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDClientSourceElementBuilder
       for: stringClass
       aspect: #'edit';
+    registerEditorClass: TDWorkspaceClientElementBuilder
+      for: stringClass
+      aspect: #'workspace';
     yourself.
   Smalltalk
     at: #'TDObjectLog'
