@@ -17,25 +17,25 @@ clsaccessors
       #('protocol' nil #'required').
       #('setters' nil #'none')}.
   setters := getters := false.
-  self options
+  subOptions
     at: 'setters'
     ifPresent: [ :x | 
       setters := true.
-      options at: 'getters' ifPresent: [ :y | getters := true ] ]
+      subOptions at: 'getters' ifPresent: [ :y | getters := true ] ]
     ifAbsent: [ 
-      options
+      subOptions
         at: 'getters'
         ifPresent: [ :y | 
           getters := true.
-          options at: 'setters' ifPresent: [ :y | setters := true ] ]
+          subOptions at: 'setters' ifPresent: [ :y | setters := true ] ]
         ifAbsent: [ 
           "neither specified, then both true by default"
           setters := getters := true ] ].
-  protocol := options
+  protocol := subOptions
     at: 'protocol'
     ifPresent: [ :value | value ]
     ifAbsent: [ 'accessing' ].
-  argName := options
+  argName := subOptions
     at: 'arg'
     ifPresent: [ :value | value ]
     ifAbsent: [ 'anObject' ].
@@ -49,14 +49,14 @@ clsaccessors
         getters: getters
         argName: argName
         protocol: protocol
-        force: (options includesKey: 'force')) ].
+        force: (subOptions includesKey: 'force')) ].
   subArguments
     do: [ :clsRef | 
       theClass := self resolveClassReference: clsRef.
-      options
+      subOptions
         at: 'class'
         ifPresent: [ :classIgnored | 
-          self options at: 'instance' ifPresent: [ :ignored | block value: theClass ].
+          subOptions at: 'instance' ifPresent: [ :ignored | block value: theClass ].
           block value: theClass class ]
         ifAbsent: [ block value: theClass ] ].
   ^ results

@@ -18,7 +18,6 @@ testAccessors02
   ('cls accessors --setters --class --arg=xxx ' , self mockSubClassName).
   ('cls accessors --setters --class --protocol=yyy ' , self mockSubClassName)}
     do: [ :commandString | 
-      [ 
       self createMockSubClass.
-      self topez evaluateCommandString: commandString ]
-        ensure: [ self mockSubClass ifNotNil: [ :cls | cls removeFromSystem ] ] ]
+      self topez evaluateCommandString: commandString.
+      self mockSubClass ifNotNil: [ :cls | cls removeFromSystem ] ]

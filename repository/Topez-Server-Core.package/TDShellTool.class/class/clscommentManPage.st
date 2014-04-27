@@ -14,6 +14,7 @@ DESCRIPTION
   The `cls comment` brings up an editor window on the class comment.
 
 EXAMPLES
+  cls --help comment
   cls comment ClassA ClassB
   cls comment @/home/tode/classA
 '.

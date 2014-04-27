@@ -26,5 +26,5 @@ clsaccessors: theBehavior setters: setters getters: getters argName: theArgName 
                   var , ': ' , argName , newLine , newLine , '   ' , var , ' := ' , argName
                     , newLine
                 classified: protocol.
-              methods add: (theBehavior compiledMethodAt: var) ] ] ].
+              methods add: (theBehavior compiledMethodAt: var , $:) ] ] ].
   ^ methods

@@ -67,6 +67,7 @@ OPTIONS
     Define only the missing setter methods.
 
 EXAMPLES
+  cls --help accessors
   cls accessors ClassA ClassB ClassC
   cls accessors --class --instance ClassA
   cls accessors --class --force ClassA
