@@ -5,6 +5,7 @@ burestore
 "
 
   | backupFilePath status count |
+  self getSubcommandOptsMixedLongShort: {}.
   backupFilePath := self resolveBackupFilePath.
   status := SystemRepository restoreStatus.
   status = 'Restore is not active.'

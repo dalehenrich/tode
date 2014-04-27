@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clsrename
   "
   cls rename <old-name> <new-name>

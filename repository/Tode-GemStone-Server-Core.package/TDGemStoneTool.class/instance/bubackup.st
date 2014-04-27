@@ -5,5 +5,6 @@ bubackup
 "
 
   | backupFilePath |
+  self getSubcommandOptsMixedLongShort: {}.
   backupFilePath := self resolveBackupFilePath.
   ^ self buBackup: backupFilePath

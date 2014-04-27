@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clscomment
   <manPage: 'cls' sub: 'comment' synopsis: '
   cls comment <class-name>

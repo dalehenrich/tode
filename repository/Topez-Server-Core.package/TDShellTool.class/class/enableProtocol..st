@@ -1,3 +1,3 @@
-as yet unclassified
+options
 enableProtocol: aBool
   enableProtocol := aBool

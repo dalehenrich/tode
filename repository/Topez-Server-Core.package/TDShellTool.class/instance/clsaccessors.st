@@ -1,20 +1,60 @@
-as yet unclassified
+cls
 clsaccessors
-  <manPage: 'cls' sub: 'accessors' synopsis: '
-  cls accessors <class-name> [ instance|class ]
-      accessors @<class-path> [ instance|class ]
-' description:
-    'Create instance variable accessor methods for <class-name>. Default Specify `class` to create class instance variable accessor methods.'>
-  | clsName theBehavior comment |
-  clsName := tokens at: 2.
+  "
+  cls accessors [--instance][--class][--force][--getters][--setters]
+                [--arg=<setter-arg-name>][--protocol=<protocol-name>] <class-name>
+"
+
+  | clsName theBehavior setters getters results argName protocol block |
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('arg' nil #'required').
+      #('class' nil #'none').
+      #('force' nil #'none').
+      #('getters' nil #'none').
+      #('instance' nil #'none').
+      #('protocol' nil #'required').
+      #('setters' nil #'none')}.
+  clsName := subArguments at: 1.
   theBehavior := self resolveClassReference: clsName.
-  tokens size > 2
-    ifTrue: [ 
-      (tokens at: 3) = 'class'
-        ifTrue: [ theBehavior := theBehavior class ] ].
-  ^ self
-    clsaccessors: theBehavior
-    setters: true
-    getters: true
-    argName: 'anObject'
-    protocol: 'accessing'
+  setters := getters := false.
+  self options
+    at: 'setters'
+    ifPresent: [ :x | 
+      setters := true.
+      options at: 'getters' ifPresent: [ :y | getters := true ] ]
+    ifAbsent: [ 
+      options
+        at: 'getters'
+        ifPresent: [ :y | 
+          getters := true.
+          options at: 'setters' ifPresent: [ :y | setters := true ] ]
+        ifAbsent: [ 
+          "neither specified, then both true by default"
+          setters := getters := true ] ].
+  protocol := options
+    at: 'protocol'
+    ifPresent: [ :value | value ]
+    ifAbsent: [ 'accessing' ].
+  argName := options
+    at: 'arg'
+    ifPresent: [ :value | value ]
+    ifAbsent: [ 'anObject' ].
+  results := Set new.
+  block := [ :aBehavior | 
+  results
+    addAll:
+      (self
+        clsaccessors: aBehavior
+        setters: setters
+        getters: getters
+        argName: argName
+        protocol: protocol
+        force: (options includesKey: 'force')) ].
+  options
+    at: 'class'
+    ifPresent: [ :classIgnored | 
+      self options at: 'instance' ifPresent: [ :ignored | block value: theBehavior ].
+      block value: theBehavior class ]
+    ifAbsent: [ block value: theBehavior ].
+  ^ results

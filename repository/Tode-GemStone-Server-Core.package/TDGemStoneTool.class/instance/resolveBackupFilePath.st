@@ -1,3 +1,3 @@
 bu
 resolveBackupFilePath
-  ^ self resolveBackupPath: (arguments at: 1)
+  ^ self resolveBackupPath: (subArguments at: 1)

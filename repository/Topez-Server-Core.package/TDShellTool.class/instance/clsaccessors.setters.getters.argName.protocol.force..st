@@ -1,5 +1,5 @@
 cls
-clsaccessors: theBehavior setters: setters getters: getters argName: theArgName protocol: protocol
+clsaccessors: theBehavior setters: setters getters: getters argName: theArgName protocol: protocol force: force
   | argName newLine allVarNames varNames methods |
   argName := theArgName.
   allVarNames := theBehavior allInstVarNames collect: [ :each | each asString ].
@@ -11,23 +11,19 @@ clsaccessors: theBehavior setters: setters getters: getters argName: theArgName 
     do: [ :var | 
       getters
         ifTrue: [ 
-          (theBehavior includesSelector: var)
-            ifFalse: [ 
+          (force or: [ (theBehavior includesSelector: var) not ])
+            ifTrue: [ 
               theBehavior
-                compile:
-                  var , newLine , newLine , '   "Return the value of the instance variable '''
-                    , var , '''."' , newLine , '   ^' , var , newLine
+                compile: var , newLine , newLine , '   ^' , var , newLine
                 classified: protocol.
               methods add: (theBehavior compiledMethodAt: var) ] ].
       setters
         ifTrue: [ 
-          (theBehavior includesSelector: var , $:)
-            ifFalse: [ 
+          (force or: [ (theBehavior includesSelector: var , $:) not ])
+            ifTrue: [ 
               theBehavior
                 compile:
-                  var , ': ' , argName , newLine , newLine
-                    , '   "Modify the value of the instance variable ''' , var
-                    , '''."' , newLine , '   ' , var , ' := ' , argName
+                  var , ': ' , argName , newLine , newLine , '   ' , var , ' := ' , argName
                     , newLine
                 classified: protocol.
               methods add: (theBehavior compiledMethodAt: var) ] ] ].

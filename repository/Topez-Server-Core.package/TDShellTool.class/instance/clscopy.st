@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clscopy
   "
   cls copy <class-name> <new-name>

@@ -18,7 +18,7 @@ DESCRIPTION
   The <command> is the name of a Browse command that invokes a 
   specific development tool.
 
-  commands:
+  Commands:
     category   Find and view lists of classes in a category
     class      Find and view lists of classes 
     diff       View differences between two methods

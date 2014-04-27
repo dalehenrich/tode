@@ -1,3 +1,3 @@
-as yet unclassified
+options
 displayOops: aBool
   displayOops := aBool

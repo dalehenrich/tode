@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 cd
   ^ tokens size = 1
     ifTrue: [ topez setCurrentNode: topez homeNode ]

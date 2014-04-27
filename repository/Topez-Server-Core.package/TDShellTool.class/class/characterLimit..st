@@ -1,3 +1,3 @@
-as yet unclassified
+options
 characterLimit: anInteger
   characterLimit := anInteger

@@ -5,6 +5,7 @@ bulist
 "
 
   | backupDirPath entries stream |
+  self getSubcommandOptsMixedLongShort: {}.
   backupDirPath := self resolveBackupPath: ''.
   entries := ((ServerFileDirectory on: backupDirPath) entries
     select: [ :entry | entry isDirectory not ])
