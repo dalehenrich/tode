@@ -105,7 +105,9 @@
 		"touch" : "dkh 11/10/2013 10:21",
 		"touchManPage" : "dkh 05/17/2013 08:01",
 		"view" : "dkh 11/10/2013 10:22",
-		"viewManPage" : "dkh 04/04/2013 16:08" },
+		"viewManPage" : "dkh 04/04/2013 16:08",
+		"ws" : "dkh 04/27/2014 12:19",
+		"wsManPage" : "dkh 04/27/2014 12:23" },
 	"instance" : {
 		"abort" : "dkh 12/21/2012 11:23",
 		"browseClassHierarchy:label:" : "dkh 03/30/2014 15:15",
@@ -251,4 +253,5 @@
 		"touch" : "dkh 05/17/2013 07:05",
 		"undefinedSymbolMethodDefinitions" : "dkh 04/19/2014 08:00",
 		"undefinedSymbolsMap" : "dkh 04/19/2014 07:36",
-		"view" : "dkh 06/03/2013 07:49" } }
+		"view" : "dkh 06/03/2013 07:49",
+		"ws" : "dkh 04/27/2014 12:26" } }
