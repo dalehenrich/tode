@@ -1,4 +1,6 @@
 initialize-release
 welcomeMessage
-	^ 'Welcome to tODE. Enter `help` for more information.' asText allBold, '
+	^ 'Welcome to tODE. 
+- Enter `help` for information on logging into GemStone. 
+- Enter `man --all` for information on tODE commands.' asText allBold, '
 ' asText
