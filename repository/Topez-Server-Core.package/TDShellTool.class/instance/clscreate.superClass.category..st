@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clscreate: clsName superClass: superClass category: category
   ((System stoneVersionAt: 'gsVersion') beginsWith: '2.')
     ifTrue: [ 

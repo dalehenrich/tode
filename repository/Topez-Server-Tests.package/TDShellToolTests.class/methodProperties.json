@@ -3,7 +3,8 @@
 		"isAbstract" : "dkh 12/03/2013 11:53" },
 	"instance" : {
 		"createMockClass" : "dkh 03/22/2014 22:02",
-		"createMockClassVersion" : "dkh 03/22/2014 22:00",
+		"createMockClassVersion" : "dkh 04/27/2014 07:27",
+		"createMockSubClass" : "dkh 04/27/2014 07:27",
 		"createSenderNode" : "dkh 04/26/2014 20:57",
 		"createTempNodeNode" : "dkh 04/26/2014 20:59",
 		"mockAlternateClass" : "dkh 09/22/2013 06:59",
@@ -13,5 +14,7 @@
 		"mockClassComment" : "dkh 09/22/2013 06:59",
 		"mockClassDefinition" : "dkh 04/13/2014 19:19",
 		"mockClassName" : "dkh 09/22/2013 06:59",
+		"mockSubClass" : "dkh 04/27/2014 07:26",
+		"mockSubClassName" : "dkh 04/27/2014 07:24",
 		"setUpMocks" : "dkh 03/23/2014 17:52",
-		"tearDownMocks" : "dkh 09/22/2013 07:04" } }
+		"tearDownMocks" : "dkh 04/27/2014 07:29" } }

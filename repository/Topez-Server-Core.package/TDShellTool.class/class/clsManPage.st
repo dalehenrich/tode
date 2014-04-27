@@ -8,11 +8,13 @@ clsManPage
   cls - class manipulation support
 
 SYNOPSIS
-  cls [--help] <command> <class-name> [<args>]
+  cls [--help] <command> <class-name>|@<class-path> [<args>]
 
 DESCRIPTION
 
-  Cls performs commands on the specified class.
+  Cls performs commands on the specified class. The class may be spedified by
+  supplying the class name or path to a node representing the class preceded by 
+  the `@` character.
 
   Commands:
     accessors  Define instance variable getter and setter methods for the class
@@ -33,5 +35,6 @@ EXAMPLES
 '.
   manPage subCommands
     at: 'accessors' put: self clsaccessorsManPage;
+    at: 'comment' put: self clscommentManPage;
     yourself.
   ^ manPage

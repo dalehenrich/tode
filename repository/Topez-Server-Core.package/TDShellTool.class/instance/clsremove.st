@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clsremove
   "
   cls remove <old-name>

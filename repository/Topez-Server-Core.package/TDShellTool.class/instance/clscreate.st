@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clscreate
   "
   cls create <class-name> [ <superclass-name> [ <category> ] ]

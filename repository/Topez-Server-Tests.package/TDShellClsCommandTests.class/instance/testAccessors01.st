@@ -1,14 +1,9 @@
 as yet unclassified
-testAccessors
+testAccessors01
   | clsTool cls methods |
   clsTool := self tool.
   cls := self createMockClassVersion.
-  methods := clsTool
-    clsaccessors: cls
-    setters: true
-    getters: true
-    argName: 'instanceVariable'
-    protocol: 'accessing'.
+  methods := clsTool clsaccessors: cls.
   self assert: methods size = 2.
   methods
     do: [ :method | 

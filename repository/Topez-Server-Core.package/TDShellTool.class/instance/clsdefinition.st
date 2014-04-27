@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clsdefinition
   "
   cls definition <class-name>

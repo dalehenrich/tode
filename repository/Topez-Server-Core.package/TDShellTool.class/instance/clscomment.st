@@ -1,12 +1,21 @@
 cls
 clscomment
-  <manPage: 'cls' sub: 'comment' synopsis: '
-  cls comment <class-name>
-      comment @<class-path>
-' description: 'Bring up class comment editor'>
-  | clsName theClass comment |
-  clsName := tokens at: 2.
-  theClass := self resolveClassReference: clsName.
-  comment := self clscomment: theClass.
-  theClass editUsing: (TDEditorSpec topez: topez editorAspect: #'classComment').
-  ^ comment
+  "
+  cls comment ( <class-name> | @<class-path> )...
+"
+
+  | comments |
+  self getSubcommandOptsMixedLongShort: {}.
+  comments := Set new.
+  subArguments
+    do: [ :clsRef | 
+      | theClass comment |
+      theClass := self resolveClassReference: clsRef.
+      comment := self clscomment: theClass.
+      comments add: comment.
+      theClass
+        editUsing:
+          ((TDEditorSpec topez: topez editorAspect: #'classComment')
+            windowLabel: 'Class Comment for ' , theClass name asString;
+            yourself) ].
+  ^ comments

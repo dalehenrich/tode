@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clscopy: theClass to: newName
   | definition newClass |
   (Smalltalk hasClassNamed: newName)

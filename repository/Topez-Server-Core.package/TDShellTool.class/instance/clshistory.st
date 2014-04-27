@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clshistory
   "
   cls history <class-name>

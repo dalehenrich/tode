@@ -1,5 +1,5 @@
 as yet unclassified
-testComment
+testComment01
   | clsTool cls comment |
   clsTool := self tool.
   cls := self mockClass.

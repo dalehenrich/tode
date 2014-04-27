@@ -9,10 +9,11 @@ clsaccessorsManPage
 
 SYNOPSIS
   cls accessors [--instance][--class][--force][--getters][--setters]
-                [--arg=<setter-arg-name>][--protocol=<protocol-name>] <class-name>
+                [--arg=<setter-arg-name>][--protocol=<protocol-name>] 
+                ( <class-name> | @<class-path> )...
 
 DESCRIPTION
-  The `cls accessors` command defines getter and setter methods for the given class.
+  The `cls accessors` command defines getter and setter methods for the given classes.
 
   If no options are specified, the getter and setter methods will be defined for the
   instance variables of the class.
@@ -66,9 +67,9 @@ OPTIONS
     Define only the missing setter methods.
 
 EXAMPLES
-  cls accessors TDShellTool
-  cls accessors --class --instance TDShellTool
-  cls accessors --class --force TDShellTool
-  cls accessors --arg=aBool --protocol=Updating --setters TDShellTool
+  cls accessors ClassA ClassB ClassC
+  cls accessors --class --instance ClassA
+  cls accessors --class --force ClassA
+  cls accessors --arg=aBool --protocol=Updating --setters ClassA
 '.
   ^ manPage

@@ -2,10 +2,11 @@ cls
 clsaccessors
   "
   cls accessors [--instance][--class][--force][--getters][--setters]
-                [--arg=<setter-arg-name>][--protocol=<protocol-name>] <class-name>
+                [--arg=<setter-arg-name>][--protocol=<protocol-name>] 
+                ( <class-name> | @<class-path> )...
 "
 
-  | clsName theBehavior setters getters results argName protocol block |
+  | theClass setters getters results argName protocol block |
   self
     getSubcommandOptsMixedLongShort:
       {#('arg' nil #'required').
@@ -15,8 +16,6 @@ clsaccessors
       #('instance' nil #'none').
       #('protocol' nil #'required').
       #('setters' nil #'none')}.
-  clsName := subArguments at: 1.
-  theBehavior := self resolveClassReference: clsName.
   setters := getters := false.
   self options
     at: 'setters'
@@ -41,20 +40,23 @@ clsaccessors
     ifPresent: [ :value | value ]
     ifAbsent: [ 'anObject' ].
   results := Set new.
-  block := [ :aBehavior | 
+  block := [ :aClass | 
   results
     addAll:
       (self
-        clsaccessors: aBehavior
+        clsaccessors: aClass
         setters: setters
         getters: getters
         argName: argName
         protocol: protocol
         force: (options includesKey: 'force')) ].
-  options
-    at: 'class'
-    ifPresent: [ :classIgnored | 
-      self options at: 'instance' ifPresent: [ :ignored | block value: theBehavior ].
-      block value: theBehavior class ]
-    ifAbsent: [ block value: theBehavior ].
+  subArguments
+    do: [ :clsRef | 
+      theClass := self resolveClassReference: clsRef.
+      options
+        at: 'class'
+        ifPresent: [ :classIgnored | 
+          self options at: 'instance' ifPresent: [ :ignored | block value: theClass ].
+          block value: theClass class ]
+        ifAbsent: [ block value: theClass ] ].
   ^ results

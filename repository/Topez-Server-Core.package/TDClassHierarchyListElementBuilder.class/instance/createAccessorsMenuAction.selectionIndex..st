@@ -7,10 +7,5 @@ createAccessorsMenuAction: listElement selectionIndex: selectionIndex
   def := itemAttribute object.
   beh := def theBehavior.
   clsTool := listElement topez toolInstanceFor: 'cls'.
-  clsTool
-    clsaccessors: beh
-    setters: true
-    getters: true
-    argName: 'anObject'
-    protocol: 'accessing'.
+  clsTool clsaccessors: beh.
   ^ true
