@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 protocol: theBehavior rename: protoName to: newProtoName
   <manPageApi: 'protocol' description:
     'rename method protocol for given behavior'>

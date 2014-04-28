@@ -22,7 +22,7 @@ DESCRIPTION
     copy       Make a copy of a class
     definition View and define the class
     history    View class history
-    protocol
+    protocol   Define and modify class protocol
     rename
     remove
 
@@ -52,5 +52,6 @@ EXAMPLES
     at: 'copy' put: self clscopyManPage;
     at: 'definition' put: self clsdefinitionManPage;
     at: 'history' put: self clshistoryManPage;
+    at: 'protocol' put: self clsprotocolManPage;
     yourself.
   ^ manPage

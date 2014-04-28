@@ -6,7 +6,7 @@ clscopy
 "
 
   | theClass clsName newName category |
-  self getSubcommandOptsMixedLongShort: {#('category' nil #'reguired')}.
+  self getSubcommandOptsMixedLongShort: {#('category' nil #'required')}.
   clsName := subArguments at: 1.
   theClass := self resolveClassReference: clsName.
   newName := subArguments at: 2.
