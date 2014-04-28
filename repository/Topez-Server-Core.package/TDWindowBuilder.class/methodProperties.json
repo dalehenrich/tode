@@ -31,6 +31,7 @@
 		"objectClipboard" : "DataCurator 02/05/2013 22:39",
 		"objectClipboard:" : "DataCurator 02/05/2013 22:40",
 		"objectMenuActionSpec" : "dkh 02/23/2014 18:17",
+		"openWorkspaceMenuAction:selectionIndex:" : "dkh 04/27/2014 20:11",
 		"printClientListMenuAction:" : "dkh 03/26/2014 10:08",
 		"refreshListMenuAction:" : "dkh 03/26/2014 10:11",
 		"refreshListMenuAction:selectionIndex:" : "dkh 02/23/2014 18:08",
@@ -43,4 +44,4 @@
 		"theWindowLocation:" : "DataCurator 01/27/2013 20:51",
 		"theWindowName:" : "DataCurator 01/24/2013 13:40",
 		"windowIsClosingBlock" : "dkh 10/20/2013 09:58",
-		"windowMenuActionSpec" : "dkh 02/23/2014 18:04" } }
+		"windowMenuActionSpec" : "dkh 04/27/2014 20:07" } }

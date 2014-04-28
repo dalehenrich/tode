@@ -6,4 +6,4 @@ windowMenuActionSpec
   #('list windows' $L #'listWindowsMenuAction:').
   #('print window' $P #'printClientListMenuAction:').
   #('refresh window' $l #'refreshListMenuAction:').
-  #('spawn shell' 'esc' #'spawnShellMenuAction:')}
+  #('open workspace' 'esc' #'openWorkspaceMenuAction:selectionIndex:')}
