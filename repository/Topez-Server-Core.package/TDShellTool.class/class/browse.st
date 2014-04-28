@@ -1,4 +1,4 @@
-browse
+commands
 browse
   "self install"
 

@@ -1,7 +1,7 @@
-commands
+manPages
 abortManPage
   ^ 'NAME
-  abort - abort transaction
+  abort - Abort transaction
 
 SYNOPSIS
   abort [--help]

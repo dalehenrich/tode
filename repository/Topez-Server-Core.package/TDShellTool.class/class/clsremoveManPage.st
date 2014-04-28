@@ -1,4 +1,4 @@
-cls
+manPages
 clsremoveManPage
   | manPage |
   manPage := TDManPage

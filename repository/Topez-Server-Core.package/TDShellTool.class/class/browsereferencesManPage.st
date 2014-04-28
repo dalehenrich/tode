@@ -1,4 +1,4 @@
-browse
+manPages
 browsereferencesManPage
   | manPage |
   manPage := TDManPage

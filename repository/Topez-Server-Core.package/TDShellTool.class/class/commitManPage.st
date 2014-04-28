@@ -1,12 +1,16 @@
-as yet unclassified
+manPages
 commitManPage
   ^ 'NAME
-  commit - commit transaction
+  commit - Commit transaction
 
 SYNOPSIS
-  commit
+  commit [--help]
 
 DESCRIPTION
   Call `System commitTransaction` and return true if the commit
   succeeds. Returns false otherwise.
+
+OPTIONS
+  --help
+    Bring up this man page.
 '

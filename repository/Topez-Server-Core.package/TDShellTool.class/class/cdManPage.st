@@ -1,7 +1,7 @@
-commands
+manPages
 cdManPage
   ^ 'NAME
-  cd - change node
+  cd - Change node
 
 SYNOPSIS
   cd  [--help] [<path>]

@@ -1,4 +1,9 @@
-as yet unclassified
+commands
 commit
   <topezCommand: 'commit' manPage: #'commitManPage'>
-  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) commit ]
+  ^ [ :topez :objIn :tokens :command | 
+  self
+    performCommand: topez
+    objIn: objIn
+    commandOptions: {#('help' $h #'none')}
+    todeCommand: command ]

@@ -1,4 +1,4 @@
-cls
+manPages
 clsrenameManPage
   | manPage |
   manPage := TDManPage

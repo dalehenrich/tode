@@ -1,7 +1,7 @@
-commands
+manPages
 wsManPage
   ^ 'NAME
-  ws - open workspace on an object
+  ws - Open workspace on an object
 
 SYNOPSIS
   ws [--help] [@<object-path>]

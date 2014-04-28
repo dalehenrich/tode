@@ -1,7 +1,7 @@
-commands
+manPages
 catManPage
   ^ 'NAME
-  cat - display contents of node
+  cat - Display contents of node
 
 SYNOPSIS
   cat  [--help] <path>

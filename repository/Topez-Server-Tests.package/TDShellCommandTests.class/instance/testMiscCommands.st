@@ -8,6 +8,8 @@ testMiscCommands
     evaluateCommandString: 'abort';
     evaluateCommandString: 'cd --help ';
     evaluateCommandString: 'cd';
+    evaluateCommandString: 'commit --help ';
+    evaluateCommandString: 'commit';
     yourself.
   node := self createSenderNode.
   self topez

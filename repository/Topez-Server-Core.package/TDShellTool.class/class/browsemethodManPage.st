@@ -1,4 +1,4 @@
-browse
+manPages
 browsemethodManPage
   | manPage |
   manPage := TDManPage

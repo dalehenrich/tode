@@ -1,4 +1,4 @@
-browse
+manPages
 browsesymbolDictManPage
   | manPage |
   manPage := TDManPage

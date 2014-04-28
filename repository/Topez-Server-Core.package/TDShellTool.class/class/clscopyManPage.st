@@ -1,4 +1,4 @@
-cls
+manPages
 clscopyManPage
   | manPage |
   manPage := TDManPage

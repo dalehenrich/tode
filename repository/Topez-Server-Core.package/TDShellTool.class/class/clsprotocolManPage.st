@@ -1,4 +1,4 @@
-cls
+manPages
 clsprotocolManPage
   | manPage |
   manPage := TDManPage

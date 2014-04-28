@@ -1,4 +1,4 @@
-cls
+commands
 cls
   <topezCommand: 'cls' manPage: #'clsManPage'>
   ^ [ :topez :objIn :tokens :command | 
