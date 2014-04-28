@@ -6,6 +6,7 @@
 		"tearDown" : "dkh 09/22/2013 07:05",
 		"testAccessors01" : "dkh 04/27/2014 09:19",
 		"testAccessors02" : "dkh 04/27/2014 08:58",
+		"testCategory" : "dkh 04/28/2014 13:01",
 		"testComment01" : "dkh 04/27/2014 07:55",
 		"testComment02" : "dkh 04/27/2014 07:59",
 		"testCopy" : "dkh 04/27/2014 08:46",
@@ -16,5 +17,5 @@
 		"testProtocolRemove" : "dkh 04/27/2014 22:09",
 		"testProtocolRename" : "dkh 04/27/2014 22:10",
 		"testRemove" : "dkh 09/22/2013 06:19",
-		"testRename" : "dkh 09/22/2013 06:22",
+		"testRename" : "dkh 04/28/2014 13:05",
 		"toolName" : "dkh 09/21/2013 08:59" } }

@@ -18,12 +18,13 @@ DESCRIPTION
 
   Commands:
     accessors  Define instance variable getter and setter methods for the class
+    category   Move class to a new category
     comment    View and define the class comment
     copy       Make a copy of a class
     definition View and define the class
     history    View class history
     protocol   Define and modify class protocol
-    rename
+    rename     Rename classes
     remove
 
 OPTIONS
@@ -36,6 +37,9 @@ EXAMPLES
   cls accessors --class --force ClassA
   cls accessors --arg=aBool --protocol=Updating --setters ClassA
 
+  cls category Topez-Server-Core TDShellTool TDStandardTool
+  cls category Topez-Server-Core @/home/tode/shellToolClass TDStandardTool
+
   cls comment ClassA ClassB
   cls comment @/home/tode/classA
 
@@ -45,6 +49,17 @@ EXAMPLES
   cls --help definition
   cls definition ClassA ClassB
   cls definition @/home/tode/classA ClassB
+
+  cls history ClassA 
+  cls history @/home/tode/classA 
+
+  cls protocol --add=TDShellTool accessing updating
+  cls protocol --class --add=TDShellTool `instance creation`
+  cls protocol --remove=TDShellTool `initialize-release` initialize
+  cls protocol --rename=@/home/tode/shellToolClass `initialize-release` initialize
+
+  cls rename TDShellTool TDShellTools
+  cls rename @/home/tode/shellToolClass TDShellTools
 '.
   manPage subCommands
     at: 'accessors' put: self clsaccessorsManPage;
@@ -53,5 +68,7 @@ EXAMPLES
     at: 'definition' put: self clsdefinitionManPage;
     at: 'history' put: self clshistoryManPage;
     at: 'protocol' put: self clsprotocolManPage;
+    at: 'rename' put: self clsrenameManPage;
+    at: 'category' put: self clscategoryManPage;
     yourself.
   ^ manPage

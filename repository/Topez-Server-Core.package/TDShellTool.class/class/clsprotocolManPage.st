@@ -8,13 +8,16 @@ clsprotocolManPage
   cls protocol - Define and modify class protocol
 
 SYNOPSIS
-  cls protocol [--class] --add=<class-name> <protocol>...
-  cls protocol [--class] --remove=<class-name> <protocol>...
-  cls protocol [--class] --rename=<class-name> (<old=protocol> <new=protocol>)... 
+  cls protocol [--class] --add=<class-ref> <protocol>...
+  cls protocol [--class] --remove=<class-ref> <protocol>...
+  cls protocol [--class] --rename=<class-ref> (<old=protocol> <new=protocol>)... 
 
 DESCRIPTION
   The `cls protocol` command provides options for creating, removing and renaming
   the method protocol.
+
+  The class-ref may be the name of a class or the path to a node returning a class
+  preceded by the `@` character.
 
   With the --add option, the listed protocols will be added to the specified class.
 
@@ -26,5 +29,9 @@ DESCRIPTION
 
 EXAMPLES
   cls --help protocol
+  cls protocol --add=TDShellTool accessing updating
+  cls protocol --class --add=TDShellTool `instance creation`
+  cls protocol --remove=TDShellTool `initialize-release` initialize
+  cls protocol --rename=@/home/tode/shellToolClass `initialize-release` initialize
 '.
   ^ manPage

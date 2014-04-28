@@ -1,14 +1,17 @@
 cls
 clsrename
   "
-  cls rename <old-name> <new-name>
-      rename @<class-path> <new-name>
+  cls rename ( ( <class-name> | @<class-path> ) <new-class-name> )...
 "
 
-  | clsName theClass newName beditTool |
-  clsName := tokens at: 2.
-  theClass := self resolveClassReference: clsName.
-  newName := tokens at: 3.
-  beditTool := self topez toolInstanceFor: 'bedit'.
-  beditTool beditReferences: clsName regex: clsName replacementString: newName.
-  ^ self clsrename: theClass to: newName
+  | classes |
+  self getSubcommandOptsMixedLongShort: {}.
+  classes := Set new.
+  1 to: subArguments size by: 2 do: [ :index | 
+    | clsRef oldClass newName newClass comment |
+    clsRef := subArguments at: index.
+    oldClass := self resolveClassReference: clsRef.
+    newName := subArguments at: index + 1.
+    newClass := self clsrename: oldClass to: newName.
+    classes add: newClass ].
+  ^ classes
