@@ -24,8 +24,8 @@ DESCRIPTION
     definition View and define the class
     history    View class history
     protocol   Define and modify class protocol
+    remove     Remove classes
     rename     Rename classes
-    remove
 
 OPTIONS
   --help [<subCommand>]
@@ -58,6 +58,9 @@ EXAMPLES
   cls protocol --remove=TDShellTool `initialize-release` initialize
   cls protocol --rename=@/home/tode/shellToolClass `initialize-release` initialize
 
+  cls remove TDShellTool TDTestTool
+  cls remove @/home/tode/shellToolClass TDTestTool
+
   cls rename TDShellTool TDShellTools
   cls rename @/home/tode/shellToolClass TDShellTools
 '.
@@ -70,5 +73,6 @@ EXAMPLES
     at: 'protocol' put: self clsprotocolManPage;
     at: 'rename' put: self clsrenameManPage;
     at: 'category' put: self clscategoryManPage;
+    at: 'remove' put: self clsremoveManPage;
     yourself.
   ^ manPage
