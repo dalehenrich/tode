@@ -2,6 +2,7 @@
 	"class" : {
 		"isAbstract" : "dkh 12/03/2013 11:53" },
 	"instance" : {
+		"createClassRefNode" : "dkh 04/27/2014 20:48",
 		"createMockClass" : "dkh 03/22/2014 22:02",
 		"createMockClassVersion" : "dkh 04/27/2014 07:27",
 		"createMockSubClass" : "dkh 04/27/2014 07:27",

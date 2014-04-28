@@ -6,6 +6,7 @@ testDefinition02
   node := self createClassRefNode.
   self topez
     evaluateCommandString: 'cls --help definition';
+    evaluateCommandString: 'cls definition';
     evaluateCommandString: 'cls definition ' , self mockClassName;
     evaluateCommandString:
         'cls definition TDShellClsCommandTests ' , self mockClassName;

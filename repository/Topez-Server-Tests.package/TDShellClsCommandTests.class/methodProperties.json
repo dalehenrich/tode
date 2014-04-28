@@ -2,7 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createClassRefNode" : "dkh 04/27/2014 07:58",
 		"setUp" : "dkh 09/22/2013 07:05",
 		"tearDown" : "dkh 09/22/2013 07:05",
 		"testAccessors01" : "dkh 04/27/2014 09:19",
@@ -11,7 +10,7 @@
 		"testComment02" : "dkh 04/27/2014 07:59",
 		"testCopy" : "dkh 04/27/2014 08:46",
 		"testDefinition01" : "dkh 04/27/2014 11:02",
-		"testDefinition02" : "dkh 04/27/2014 11:04",
+		"testDefinition02" : "dkh 04/27/2014 20:56",
 		"testHistory" : "dkh 04/27/2014 07:27",
 		"testRemove" : "dkh 09/22/2013 06:19",
 		"testRename" : "dkh 09/22/2013 06:22",
