@@ -21,7 +21,7 @@ DESCRIPTION
     comment    View and define the class comment
     copy       Make a copy of a class
     definition View and define the class
-    history
+    history    View class history
     protocol
     rename
     remove
@@ -51,5 +51,6 @@ EXAMPLES
     at: 'comment' put: self clscommentManPage;
     at: 'copy' put: self clscopyManPage;
     at: 'definition' put: self clsdefinitionManPage;
+    at: 'history' put: self clshistoryManPage;
     yourself.
   ^ manPage
