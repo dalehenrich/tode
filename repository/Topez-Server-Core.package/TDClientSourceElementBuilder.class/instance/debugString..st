@@ -1,5 +1,3 @@
 as yet unclassified
 debugString: aString
-  | doItContext |
-  doItContext := self doItContext.
-  ^ aString debugItIn: doItContext
+  ^ aString debugItIn: self doItContext literalVars: self doItLiteralArray

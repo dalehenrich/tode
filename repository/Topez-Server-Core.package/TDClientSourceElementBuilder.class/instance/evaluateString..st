@@ -5,5 +5,5 @@ evaluateString: aString
   ^ (aString
     _compileInContext: doItContext
     symbolList: self doItSymbolList
-    oldLitVars: self doItLiteralDict
+    oldLitVars: self doItLiteralArray
     environmentId: 0) _executeInContext: doItContext

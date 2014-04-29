@@ -1,3 +1,3 @@
 doit support
-doItLiteralDict
+doItLiteralArray
   ^ nil
