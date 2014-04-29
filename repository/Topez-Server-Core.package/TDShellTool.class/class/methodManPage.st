@@ -37,6 +37,8 @@ EXAMPLES
 
   method remove Dictionary>>at:put: 
   method remove Dictionary class>>new:
+
+  method versions Dictionary>>at:put: 
 '.
   manPage subCommands
     at: 'browse' put: self methodbrowseManPage;
@@ -44,5 +46,6 @@ EXAMPLES
     at: 'copy' put: self methodcopyManPage;
     at: 'move' put: self methodmoveManPage;
     at: 'remove' put: self methodremoveManPage;
+    at: 'versions' put: self methodversionsManPage;
     yourself.
   ^ manPage
