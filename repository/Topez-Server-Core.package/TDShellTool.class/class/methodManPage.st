@@ -34,11 +34,15 @@ EXAMPLES
   method move --class Dictionary>>at:put: XXDictionary
 
   method protocol accessing Dictionary>>at:put: Dictionary>>at:
+
+  method remove Dictionary>>at:put: 
+  method remove Dictionary class>>new:
 '.
   manPage subCommands
     at: 'browse' put: self methodbrowseManPage;
     at: 'protocol' put: self methodprotocolManPage;
     at: 'copy' put: self methodcopyManPage;
     at: 'move' put: self methodmoveManPage;
+    at: 'remove' put: self methodremoveManPage;
     yourself.
   ^ manPage
