@@ -16,7 +16,7 @@ DESCRIPTION
     browse   Browse method source
     copy     Copy method to another class
     move     Move method to another class
-    protocol Move method to a protocol
+    protocol Move method to another protocol
     remove   Remove method
     versions Open window on method versions 
 
@@ -32,5 +32,6 @@ EXAMPLES
   manPage subCommands
     at: 'browse' put: self methodbrowseManPage;
     at: 'protocol' put: self methodprotocolManPage;
+    at: 'copy' put: self methodcopyManPage;
     yourself.
   ^ manPage

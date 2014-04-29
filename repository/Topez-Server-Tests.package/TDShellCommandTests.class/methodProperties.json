@@ -2,10 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createMockMethods" : "dkh 04/28/2014 16:51",
+		"createMockMethods" : "dkh 04/28/2014 18:21",
 		"tearDown" : "dkh 04/28/2014 16:59",
 		"testManCommand" : "dkh 04/20/2014 21:18",
 		"testMethodBrowseCommand" : "dkh 04/28/2014 16:30",
-		"testMethodProtocolCommand" : "dkh 04/28/2014 17:52",
+		"testMethodCopyCommand" : "dkh 04/28/2014 18:29",
+		"testMethodProtocolCommand" : "dkh 04/28/2014 18:21",
 		"testMiscCommands" : "dkh 04/28/2014 15:58",
 		"testWsCommand" : "dkh 04/27/2014 20:50" } }

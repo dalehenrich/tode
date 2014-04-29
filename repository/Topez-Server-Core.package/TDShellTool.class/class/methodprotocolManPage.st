@@ -5,7 +5,7 @@ methodprotocolManPage
     commandName: 'protocol'
     fromString:
       'NAME
-  method protocol - View methods
+  method protocol - Move method to another protocol
 
 SYNOPSIS
   method protocol <method-protocol> <method-spec>...

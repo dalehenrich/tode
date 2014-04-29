@@ -7,6 +7,6 @@ createMockMethods
     compileMethod: 'testB ^self' category: 'test';
     yourself.
   cls class
-    compileMethod: 'testA ^self' category: 'test';
-    compileMethod: 'testB ^self' category: 'test';
+    compileMethod: 'testC ^self' category: 'test';
+    compileMethod: 'testD ^self' category: 'test';
     yourself
