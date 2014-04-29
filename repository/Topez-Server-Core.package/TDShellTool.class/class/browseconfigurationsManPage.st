@@ -5,7 +5,7 @@ browseconfigurationsManPage
     commandName: 'configurations'
     fromString:
       'NAME
-  browse onfigurations - List configurations
+  browse configurations - List configurations
 
 SYNOPSIS
   browse configurations
