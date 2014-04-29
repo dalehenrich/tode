@@ -2,7 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createMockMethods" : "dkh 04/28/2014 18:21",
 		"tearDown" : "dkh 04/28/2014 16:59",
 		"testManCommand" : "dkh 04/20/2014 21:18",
 		"testMethodBrowseCommand" : "dkh 04/28/2014 16:30",
