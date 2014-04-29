@@ -13,7 +13,7 @@ SYNOPSIS
 DESCRIPTION
   The `method copy` copies the specified method to the specified classes.
 
-  The class may be spedified by supplying the class name or path to a node 
+  The class may be specified by supplying the class name or path to a node 
   representing the class preceded by the `@` character.
 
   If the --class option is specified, the method is copied to the class-side of

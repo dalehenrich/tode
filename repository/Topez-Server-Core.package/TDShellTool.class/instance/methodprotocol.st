@@ -14,5 +14,5 @@ methodprotocol
     methodDefs := self findMethodSpec: methodSpec.
     list addAll: methodDefs.
     methodDefs
-      do: [ :methodDef | methodDef theBehavior classify: methodDef selector under: protocol ] ].
+      do: [ :methodDef | self methodprotocol: methodDef under: protocol ] ].
   ^ list

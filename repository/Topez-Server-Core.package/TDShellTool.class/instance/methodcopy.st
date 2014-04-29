@@ -17,6 +17,5 @@ methodcopy
     isMeta
       ifTrue: [ theBehavior := theBehavior class ].
     list addAll: methodDefs.
-    methodDefs
-      do: [ :methodDef | theBehavior compileMethod: methodDef source category: methodDef methodProtocol ] ].
+    methodDefs do: [ :methodDef | self methodcopy: methodDef to: theBehavior ] ].
   ^ list

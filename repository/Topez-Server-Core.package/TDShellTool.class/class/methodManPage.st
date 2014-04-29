@@ -27,11 +27,18 @@ OPTIONS
 EXAMPLES
   method browse Dictionary>>at:put: `Dictionary class>>new:`
 
+  method copy Dictionary>>at:put: @/home/xxDictionary
+  method copy --class Dictionary>>at:put: XXDictionary
+
+  method move Dictionary>>at:put: XXDictionary
+  method move --class Dictionary>>at:put: XXDictionary
+
   method protocol accessing Dictionary>>at:put: Dictionary>>at:
 '.
   manPage subCommands
     at: 'browse' put: self methodbrowseManPage;
     at: 'protocol' put: self methodprotocolManPage;
     at: 'copy' put: self methodcopyManPage;
+    at: 'move' put: self methodmoveManPage;
     yourself.
   ^ manPage
