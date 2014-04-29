@@ -40,7 +40,7 @@ asText
         cr;
         cr;
         nextPutAll:
-            (Text string: self todeItNote attribute: TextEmphasis italic);
+            (Text string: (self todeItNote: 'examples') attribute: TextEmphasis italic);
         cr;
         cr ].
   self seeAlso isEmpty
@@ -53,7 +53,7 @@ asText
         cr;
         cr;
         nextPutAll:
-            (Text string: self todeItNote attribute: TextEmphasis italic);
+            (Text string: (self todeItNote: 'commands') attribute: TextEmphasis italic);
         cr;
         cr ].
   ^ aStream contents
