@@ -19,20 +19,23 @@ DESCRIPTION
   specific development tool.
 
   Commands:
-    category   Find and view lists of classes in a category
-    class      Find and view lists of classes 
-    diff       View differences between two methods
-    list       View method definitions loaded from nodes
-    method     Find and view lists of methods matching patterns
-    package    Find and vew lists of classes in a package
-    project    Find and vew lists of classes in a project
-    references Find and view lists of methods referencing certain artifacts
-    sender     Find and view lists of methods sending particular messages
-    source     Find and view strings in method source 
-    symbolDict Find and view a list of classes in a symbol dictionary
-    undeclared View references to undeclared symbols
-    variables  Find and view references to instance, class instance and class variables
-    versions   Find and view versions of a method
+    categories     List class categories
+    category       Find and view lists of classes in a category
+    configurations List configurations
+    class          Find and view lists of classes 
+    diff           View differences between two methods
+    list           View method definitions loaded from nodes
+    method         Find and view lists of methods matching patterns
+    package        Find and vew lists of classes in a package
+    packages       List packages
+    project        Find and vew lists of classes in a project
+    references     Find and view lists of methods referencing certain artifacts
+    sender         Find and view lists of methods sending particular messages
+    source         Find and view strings in method source 
+    symbolDict     Find and view a list of classes in a symbol dictionary
+    undeclared     View references to undeclared symbols
+    variables      Find and view references to instance, class instance and class variables
+    versions       Find and view versions of a method
 
   Use `browse --help <command>` to read about a specific subcommand.
 
@@ -81,6 +84,8 @@ OPTIONS
 EXAMPLES
   browse --help references
 
+  browse categories
+
   browse category topez-server tode
   browse category --exact Topez-Server-Core
   browse category --hier --exact Topez-Server-Core
@@ -89,6 +94,8 @@ EXAMPLES
   browse class --exact GsNMethod
   browse class --hier method|stream
   browse class --full GsNMethod
+
+  browse configurations
 
   browse diff TDShellTool>>findMethods: `TDShellTool class>>browse`
 
@@ -100,6 +107,8 @@ EXAMPLES
 
   browse package topez-server tode
   browse package --exact Topez-Server-Core
+
+  browse packages
 
   browse project tode rb
   browse project --exact Tode
@@ -154,5 +163,8 @@ EXAMPLES
     at: 'undeclared' put: self browseundeclaredManPage;
     at: 'variables' put: self browsevariablesManPage;
     at: 'versions' put: self browseversionsManPage;
+    at: 'categories' put: self browsecategoriesManPage;
+    at: 'packages' put: self browsepackagesManPage;
+    at: 'configurations' put: self browseconfigurationsManPage;
     yourself.
   ^ manPage

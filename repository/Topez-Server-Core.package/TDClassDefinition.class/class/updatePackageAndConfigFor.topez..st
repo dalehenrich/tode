@@ -8,16 +8,18 @@ updatePackageAndConfigFor: packageName topez: topez
   selectedIndex := pkgs definitionList indexOf: pkgDef.
   selectedIndex == pkgs selectedIndex
     ifFalse: [ 
-      | configs configDef |
-      pkgs selectedIndex: selectedIndex.
-      pkgs
-        editUsing: (TDEditorSpec topez: topez editorAspect: #'definitionList').
+      | configs configDef browseTool |
+      browseTool := topez toolInstanceFor: 'browse'.
+      browseTool
+        browseDefinitionListBlock: [ pkgs ]
+        selectedIndex: selectedIndex
+        label: 'Packages'.
       configs := TDConfigurationList current.
       configDef := self _configurationGivenPackageDefinition: pkgDef.
       selectedIndex := configs definitionList indexOf: configDef.
       selectedIndex == configs selectedIndex
         ifFalse: [ 
-          configs selectedIndex: selectedIndex.
-          configs
-            editUsing:
-              (TDEditorSpec topez: topez editorAspect: #'definitionList') ] ]
+          browseTool
+            browseDefinitionListBlock: [ configs ]
+            selectedIndex: selectedIndex
+            label: 'Configurations' ] ]

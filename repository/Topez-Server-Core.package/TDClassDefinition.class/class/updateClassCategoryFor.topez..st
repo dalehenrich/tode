@@ -10,7 +10,7 @@ updateClassCategoryFor: classCat topez: topez
     ifNotNil: [ selectedIndex := cats definitionList indexOf: categoryDef ].
   selectedIndex == cats selectedIndex
     ifFalse: [ 
-      | configs configDef |
-      cats selectedIndex: selectedIndex.
-      cats
-        editUsing: (TDEditorSpec topez: topez editorAspect: #'definitionList') ]
+      (topez toolInstanceFor: 'browse')
+        browseDefinitionListBlock: [ cats ]
+        selectedIndex: selectedIndex
+        label: 'Configurations' ]
