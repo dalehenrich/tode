@@ -1,3 +1,3 @@
 home
 windowLayoutHome
-	^ self todeHome , 'client/windowLayout/'
+	^ self todeHome , 'dev/client/windowLayout/'

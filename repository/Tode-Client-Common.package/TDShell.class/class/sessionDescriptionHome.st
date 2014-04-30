@@ -1,3 +1,3 @@
 home
 sessionDescriptionHome
-	^ self todeHome , 'client/descriptions/'
+	^ self todeHome , 'dev/client/descriptions/'
