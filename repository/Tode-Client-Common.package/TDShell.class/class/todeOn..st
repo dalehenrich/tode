@@ -1,6 +1,6 @@
 system menu
 todeOn: aBuilder
-	<worldMenu>
+	<worldMenu> 
 	(aBuilder item: #tODE)
 		order: 0.1;
 		target: self;
