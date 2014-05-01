@@ -108,7 +108,7 @@ baseline: spec
         package: 'Topez-Server-DebugTools'
           with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-TestDebugTools'
-          with: [ spec requires: #('Topez-Server-DebugTools' 'Topez-Server-TestTools') ];
+          with: [ spec requires: #('Topez-Server-DebugTools' 'Topez-Server-Tests') ];
         package: 'Topez-Server-ProcessTools'
           with: [ spec requires: #('Topez-Server-Core' 'Topez-Server-DebugTools') ];
         package: 'Topez-Server-TestProcessTools'
@@ -139,6 +139,10 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-24x-DebugTools' ];
         package: 'Topez-Server-24x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
+        package: 'Topez-Server-Tests'
+          with: [ spec includes: 'Topez-Server-24x-Tests' ];
+        package: 'Topez-Server-24x-Tests'
+          with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
   spec
     for: #'gs3.1.x'
