@@ -3,6 +3,7 @@ testBreakEnableCommand
   "run without errors ... to keep me honest"
 
   self evaluateCommandString: 'break --help enable'.
+  self evaluateCommandString: 'break clear'.
   self evaluateCommandString: 'break enable'.
   self evaluateCommandString: 'break set TDDebugToolTests>>breakpointMethod 1 2'.
   self evaluateCommandString: 'break disable'.
