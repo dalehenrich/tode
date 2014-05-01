@@ -4,14 +4,14 @@ testProtocolAdd
 
   | x |
   self createMockSubClass.
-  self topez evaluateCommandString: 'cls --help protocol'.
-  self topez
+  self evaluateCommandString: 'cls --help protocol'.
+  self
     evaluateCommandString:
       'cls protocol --add=' , self mockSubClassName , ' sample bubble'.
   self
     assert:
       (x := self mockSubClass categoryNames sorted) = #(#'bubble' #'sample').
-  self topez
+  self
     evaluateCommandString:
       'cls protocol --class --add=' , self mockSubClassName , ' sample bubble'.
   self

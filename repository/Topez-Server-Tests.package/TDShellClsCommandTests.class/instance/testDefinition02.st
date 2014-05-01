@@ -4,7 +4,7 @@ testDefinition02
 
   | node |
   node := self createClassRefNode.
-  self topez
+  self
     evaluateCommandString: 'cls --help definition';
     evaluateCommandString: 'cls definition';
     evaluateCommandString: 'cls definition ' , self mockClassName;

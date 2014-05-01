@@ -1,12 +1,12 @@
 as yet unclassified
 testMethodCopyCommand
   | node |
-  self topez evaluateCommandString: 'method --help copy'.
+  self evaluateCommandString: 'method --help copy'.
   self
     createMockClass;
     createMockSubClass;
     createMockMethods.
-  self topez
+  self
     evaluateCommandString:
         'method copy ' , self mockClassName , '>>testA ' , self mockSubClassName;
     evaluateCommandString:
@@ -17,7 +17,7 @@ testMethodCopyCommand
   self assert: self mockSubClass selectors sorted = #(#'testA' #'testC').
   self assert: self mockSubClass class selectors sorted = #(#'testA').
   node := self createClassRefNode.
-  self topez
+  self
     evaluateCommandString:
       'method copy --class ' , self mockClassName , '>>testB @' , node printString.
   self

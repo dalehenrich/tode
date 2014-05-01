@@ -2,7 +2,7 @@ as yet unclassified
 testManCommand
   "run without errors ... to keep me honest"
 
-  self topez
+  self
     evaluateCommandString: 'man --help ';
     evaluateCommandString: 'man --all';
     evaluateCommandString: 'man browse';

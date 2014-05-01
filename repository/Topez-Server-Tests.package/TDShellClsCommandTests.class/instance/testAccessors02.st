@@ -2,7 +2,7 @@ as yet unclassified
 testAccessors02
   "run without errors ... to keep me honest"
 
-  self topez
+  self
     evaluateCommandString: 'cls --help ';
     evaluateCommandString: 'cls --help accessors';
     yourself.
@@ -19,5 +19,5 @@ testAccessors02
   ('cls accessors --setters --class --protocol=yyy ' , self mockSubClassName)}
     do: [ :commandString | 
       self createMockSubClass.
-      self topez evaluateCommandString: commandString.
+      self evaluateCommandString: commandString.
       self mockSubClass ifNotNil: [ :cls | cls removeFromSystem ] ]

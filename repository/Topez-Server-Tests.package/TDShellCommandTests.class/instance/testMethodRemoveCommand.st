@@ -1,10 +1,10 @@
 as yet unclassified
 testMethodRemoveCommand
-  self topez evaluateCommandString: 'method --help remove'.
+  self evaluateCommandString: 'method --help remove'.
   self
     createMockClass;
     createMockMethods.
-  self topez
+  self
     evaluateCommandString: 'method remove ' , self mockClassName , '>>testA ';
     evaluateCommandString:
         'method remove `' , self mockClassName , ' class>>testC` ';

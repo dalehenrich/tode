@@ -9,7 +9,7 @@ testLeafNodeCpNoDestParent
       srcNode addChildNode: childNode.
       self
         should: [ 
-          self topez
+          self
             evaluateCommandString:
               'cp ' , srcNode printString , childNode name , ' ' , destNode printString
                 , 'xxx/yyy' ]

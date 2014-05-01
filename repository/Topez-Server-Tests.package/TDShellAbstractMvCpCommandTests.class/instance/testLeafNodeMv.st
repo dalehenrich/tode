@@ -11,7 +11,7 @@ testLeafNodeMv
     do: [ :childNode | 
       | mvNode node noSrcChild |
       srcNode addChildNode: childNode.
-      mvNode := self topez
+      mvNode := self
         evaluateCommandString:
           'mv ' , srcNode printString , childNode name , ' ' , destNode printString.
       compareBlock value: childNode value: mvNode.

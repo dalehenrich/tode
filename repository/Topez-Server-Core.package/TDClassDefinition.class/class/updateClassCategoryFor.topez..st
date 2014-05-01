@@ -13,4 +13,4 @@ updateClassCategoryFor: classCat topez: topez
       (topez toolInstanceFor: 'browse')
         browseDefinitionListBlock: [ cats ]
         selectedIndex: selectedIndex
-        label: 'Configurations' ]
+        label: 'Categories' ]

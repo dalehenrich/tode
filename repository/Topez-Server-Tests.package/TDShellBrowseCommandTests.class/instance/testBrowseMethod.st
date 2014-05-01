@@ -4,7 +4,7 @@ testBrowseMethod
 
   | node defList |
   node := self createSelectBlockNode.
-  self topez
+  self
     evaluateCommandString: 'browse --help method';
     evaluateCommandString: 'browse method at:put: nextPutAll:';
     evaluateCommandString:
@@ -14,9 +14,9 @@ testBrowseMethod
     evaluateCommandString:
         'browse --select=@' , node printString , ' method  at:put: ';
     yourself.
-  defList := self topez
+  defList := self
     evaluateCommandString: 'browse --select=`[:def | true ]` method at:put: '.
   self deny: defList isEmpty.
-  defList := self topez
+  defList := self
     evaluateCommandString: 'browse --select=`[:def | false ]` method at:put: '.
   self assert: defList isEmpty

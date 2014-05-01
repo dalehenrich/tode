@@ -8,7 +8,7 @@ browseManPage
   browse - Find and view classes and methods
 
 SYNOPSIS
-  browse [--scriptPath=<node-path>] [--help] --select=<select-block> 
+  browse [--scriptPath=<node-path>] [--help] [--select=<select-block>]
          [--staticList] <command> [<args>]
 
 DESCRIPTION

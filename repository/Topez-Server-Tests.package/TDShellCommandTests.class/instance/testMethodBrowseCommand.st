@@ -2,7 +2,7 @@ as yet unclassified
 testMethodBrowseCommand
   "run without errors ... to keep me honest"
 
-  self topez
+  self
     evaluateCommandString: 'method --help ';
     evaluateCommandString: 'method --help browse';
     evaluateCommandString:

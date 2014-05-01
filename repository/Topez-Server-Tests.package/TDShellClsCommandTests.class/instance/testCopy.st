@@ -4,19 +4,19 @@ testCopy
 
   | node newClass newCategory actualCategory |
   node := self createClassRefNode.
-  self topez evaluateCommandString: 'cls --help copy'.
-  newClass := self topez
+  self evaluateCommandString: 'cls --help copy'.
+  newClass := self
     evaluateCommandString:
       'cls copy ' , self mockClassName , ' ' , self mockAlternateClassName.
   newClass removeFromSystem.
   newCategory := 'TDShellClsCommandMockClass-Other-Category'.
-  newClass := self topez
+  newClass := self
     evaluateCommandString:
       'cls copy --category=' , newCategory , ' ' , self mockClassName , ' '
         , self mockAlternateClassName.
   self assert: (actualCategory := newClass category) = newCategory.
   newClass removeFromSystem.
-  newClass := self topez
+  newClass := self
     evaluateCommandString:
       'cls copy @' , node printString , ' ' , self mockAlternateClassName.
   newClass removeFromSystem

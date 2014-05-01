@@ -4,7 +4,7 @@ testBrowseReferences
 
   | node defs |
   node := self createSelectBlockNode.
-  self topez
+  self
     evaluateCommandString: 'browse --help references';
     evaluateCommandString: 'browse references GsNMethod';
     evaluateCommandString:
@@ -13,14 +13,14 @@ testBrowseReferences
     evaluateCommandString: 'browse references --literal `1.0`';
     evaluateCommandString: 'browse references --literal `#( 1 2 3)`'.
   ((System stoneVersionAt: 'gsVersion') beginsWith: '3.')
-    ifTrue: [ self topez evaluateCommandString: 'browse references --literal `#[ 1 2 3]`' ].
-  self topez
+    ifTrue: [ self evaluateCommandString: 'browse references --literal `#[ 1 2 3]`' ].
+  self
     evaluateCommandString:
         'browse references --class=ClassOrganizer --literal `#at:put:`';
     evaluateCommandString:
         'browse references --class=ClassOrganizer SortedCollection';
     yourself.
-  defs := self topez
+  defs := self
     evaluateCommandString:
       'browse --scriptPath=' , node printString , ' references --literal `true`'.
   self deny: defs isEmpty

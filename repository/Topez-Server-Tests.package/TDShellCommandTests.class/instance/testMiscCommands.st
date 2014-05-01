@@ -3,7 +3,7 @@ testMiscCommands
   "run without errors ... to keep me honest"
 
   | node |
-  self topez
+  self
     evaluateCommandString: 'abort --help ';
     evaluateCommandString: 'abort';
     evaluateCommandString: 'cd --help ';
@@ -12,7 +12,7 @@ testMiscCommands
     evaluateCommandString: 'commit';
     yourself.
   node := self createSenderNode.
-  self topez
+  self
     evaluateCommandString: 'cat --help ';
     evaluateCommandString: 'cat ' , node printString;
     yourself

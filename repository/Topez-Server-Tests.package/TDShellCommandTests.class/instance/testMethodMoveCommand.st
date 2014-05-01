@@ -1,12 +1,12 @@
 as yet unclassified
 testMethodMoveCommand
   | node |
-  self topez evaluateCommandString: 'method --help move'.
+  self evaluateCommandString: 'method --help move'.
   self
     createMockClass;
     createMockSubClass;
     createMockMethods.
-  self topez
+  self
     evaluateCommandString:
         'method move ' , self mockClassName , '>>testA ' , self mockSubClassName;
     evaluateCommandString:
@@ -17,7 +17,7 @@ testMethodMoveCommand
   self assert: self mockSubClass selectors sorted = #(#'testA' #'testC').
   self assert: self mockSubClass class selectors sorted = #(#'testB').
   node := self createClassRefNode.
-  self topez
+  self
     evaluateCommandString:
       'method move `' , self mockClassName , ' class>>testD` @' , node printString.
   self assert: self mockClass class selectors sorted = #().

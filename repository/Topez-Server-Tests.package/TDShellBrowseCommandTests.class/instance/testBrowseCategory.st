@@ -4,7 +4,7 @@ testBrowseCategory
 
   | node |
   node := self createSelectBlockNode.
-  self topez
+  self
     evaluateCommandString: 'browse --help category';
     evaluateCommandString: 'browse category topez-server tode';
     evaluateCommandString: 'browse category --exact Topez-Server-Core';

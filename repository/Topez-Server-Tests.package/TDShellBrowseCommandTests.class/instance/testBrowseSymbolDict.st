@@ -2,7 +2,7 @@ as yet unclassified
 testBrowseSymbolDict
   "run without errors ... to keep me honest"
 
-  self topez
+  self
     evaluateCommandString: 'browse --help symbolDict';
     evaluateCommandString: 'browse symbolDict --user=SystemUser UserGlobals';
     evaluateCommandString:
@@ -10,7 +10,7 @@ testBrowseSymbolDict
     evaluateCommandString: 'browse symbolDict --user=SystemUser';
     yourself.
   [ 
-  self topez
+  self
     evaluateCommandString: 'browse symbolDict --list --user=SystemUser';
     evaluateCommandString: 'browse symbolDict --list ';
     evaluateCommandString:

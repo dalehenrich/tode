@@ -4,7 +4,7 @@ testComment02
 
   | node |
   node := self createClassRefNode.
-  self topez
+  self
     evaluateCommandString: 'cls --help comment';
     evaluateCommandString: 'cls comment ' , self mockClassName;
     evaluateCommandString:

@@ -8,7 +8,7 @@ testLeafNodeMvOverSelf
       srcNode addChildNode: childNode.
       self
         should: [ 
-          self topez
+          self
             evaluateCommandString:
               'mv ' , srcNode printString , childNode name , ' ' , srcNode printString
                 , childNode name ]

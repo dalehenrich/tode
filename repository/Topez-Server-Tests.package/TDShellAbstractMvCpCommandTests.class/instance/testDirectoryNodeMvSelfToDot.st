@@ -5,7 +5,7 @@ testDirectoryNodeMvSelfToDot
   srcNode := self lookupSrcNode: rootPath , 'src'.
   self
     should: [ 
-      self topez
+      self
         evaluateCommandString:
           'cd ' , srcNode printString , '; mv ' , srcNode printString , ' .' ]
     raise: Error

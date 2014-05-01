@@ -2,7 +2,7 @@ as yet unclassified
 testBrowseClass
   "run without errors ... to keep me honest"
 
-  self topez
+  self
     evaluateCommandString: 'browse --help class';
     evaluateCommandString: 'browse class method stream';
     evaluateCommandString: 'browse class --exact GsNMethod';

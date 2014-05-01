@@ -11,7 +11,7 @@ testLeafNodeCp
     do: [ :childNode | 
       | copyNode node |
       srcNode addChildNode: childNode.
-      copyNode := self topez
+      copyNode := self
         evaluateCommandString:
           'cp ' , srcNode printString , childNode name , ' ' , destNode printString.
       compareBlock value: childNode value: copyNode.

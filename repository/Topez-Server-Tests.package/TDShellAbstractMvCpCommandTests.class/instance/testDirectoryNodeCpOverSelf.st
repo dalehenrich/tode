@@ -5,7 +5,7 @@ testDirectoryNodeCpOverSelf
   srcNode := self lookupSrcNode: rootPath , 'src'.
   self
     should: [ 
-      self topez
+      self
         evaluateCommandString:
           'cp ' , srcNode printString , ' ' , srcNode printString ]
     raise: Error

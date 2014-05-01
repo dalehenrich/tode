@@ -1,7 +1,5 @@
 as yet unclassified
-breakList: breakTokens
-  "list"
-
+breakList
   | report |
   report := self class breakpointReport.
   report editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').

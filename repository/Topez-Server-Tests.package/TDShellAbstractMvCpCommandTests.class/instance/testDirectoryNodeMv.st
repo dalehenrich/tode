@@ -7,7 +7,7 @@ testDirectoryNodeMv
   destNode := self lookupDestNode: rootPath , 'dest'.
   originalNodes := self standardLeafNodes
     collect: [ :childNode | srcNode addChildNode: childNode ].
-  copyDirNode := self topez
+  copyDirNode := self
     evaluateCommandString:
       'mv ' , srcNode printString , ' ' , destNode printString.
   compareBlock := [ :aNode :bNode | 

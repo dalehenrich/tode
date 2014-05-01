@@ -4,21 +4,21 @@ testProtocolRemove
 
   | x |
   self createMockSubClass.
-  self topez evaluateCommandString: 'cls --help protocol'.
-  self topez
+  self evaluateCommandString: 'cls --help protocol'.
+  self
     evaluateCommandString:
         'cls protocol --add=' , self mockSubClassName , ' sample bubble';
     evaluateCommandString:
         'cls protocol --remove=' , self mockSubClassName , ' sample bubble'.
   self assert: (x := self mockSubClass categoryNames sorted) isEmpty.
-  self topez
+  self
     evaluateCommandString:
         'cls protocol --class --add=' , self mockSubClassName , ' sample bubble';
     evaluateCommandString:
         'cls protocol --class --remove=' , self mockSubClassName , ' sample bubble'.
   self assert: (x := self mockSubClass class categoryNames sorted) isEmpty.
   self createMockMethods.
-  self topez
+  self
     evaluateCommandString:
         'cls protocol --remove=' , self mockClassName , ' test';
     evaluateCommandString:

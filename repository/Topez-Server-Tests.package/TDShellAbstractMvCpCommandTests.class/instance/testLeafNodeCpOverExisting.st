@@ -17,7 +17,7 @@ testLeafNodeCpOverExisting
         yourself.
       targetNode := destNode addChildNode: targetNode.
       srcNode addChildNode: childNode.
-      copyNode := self topez
+      copyNode := self
         evaluateCommandString:
           'cp ' , srcNode printString , childNode name , ' ' , targetNode printString.
       compareBlock value: childNode value: copyNode.

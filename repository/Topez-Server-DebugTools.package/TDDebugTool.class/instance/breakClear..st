@@ -1,12 +1,15 @@
 as yet unclassified
 breakClear: breakTokens
-  "clear [break-list-index]"
-
-  | breakReport breakListIndex stepPoint meth |
-  breakTokens size = 1
+  | breakReport stepArs |
+  breakTokens isEmpty
     ifTrue: [ ^ self breakClearBreakpoints ].
-  breakListIndex := (breakTokens at: 2) asNumber.
   breakReport := (self gsMethodClass _breakReport: false) at: 2.
-  stepPoint := (breakReport at: breakListIndex) at: 4.
-  meth := (breakReport at: breakListIndex) at: 5.
-  ^ meth clearBreakAtStepPoint: stepPoint
+  stepArs := breakTokens
+    collect: [ :breakIndex | 
+      | breakListIndex stepPoint meth |
+      breakListIndex := breakIndex asNumber.
+      stepPoint := (breakReport at: breakListIndex) at: 4.
+      meth := (breakReport at: breakListIndex) at: 5.
+      {meth.
+      stepPoint} ].
+  stepArs do: [ :ar | (ar at: 1) clearBreakAtStepPoint: (ar at: 2) ]

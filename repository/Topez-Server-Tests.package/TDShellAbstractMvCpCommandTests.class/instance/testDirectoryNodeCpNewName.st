@@ -6,7 +6,7 @@ testDirectoryNodeCpNewName
   destNode := self lookupDestNode: rootPath , 'dest'.
   newName := 'src_NEW'.
   self standardLeafNodes do: [ :childNode | srcNode addChildNode: childNode ].
-  self topez
+  self
     evaluateCommandString:
       'cp ' , srcNode printString , ' ' , destNode printString , newName.
   compareBlock := [ :aNode :bNode | 

@@ -5,7 +5,7 @@ testDirectoryNodeCp
   srcNode := self lookupSrcNode: rootPath , 'src'.
   destNode := self lookupDestNode: rootPath , 'dest'.
   self standardLeafNodes do: [ :childNode | srcNode addChildNode: childNode ].
-  copyDirNode := self topez
+  copyDirNode := self
     evaluateCommandString:
       'cp ' , srcNode printString , ' ' , destNode printString.
   compareBlock := [ :aNode :bNode | 

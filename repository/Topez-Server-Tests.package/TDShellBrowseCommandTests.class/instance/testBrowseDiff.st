@@ -2,7 +2,7 @@ as yet unclassified
 testBrowseDiff
   "run without errors ... to keep me honest"
 
-  self topez
+  self
     evaluateCommandString: 'browse --help diff';
     evaluateCommandString:
         'browse diff TDShellBrowseCommandTests>>testBrowseDiff  TDShellBrowseCommandTests>>testBrowseDiff';
