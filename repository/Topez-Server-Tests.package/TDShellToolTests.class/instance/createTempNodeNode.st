@@ -1,5 +1,6 @@
 as yet unclassified
 createTempNodeNode
-  | tmpNode |
+  | tmpNode tempNodeName |
   tmpNode := self topez sessionTempsNode.
-  ^ tmpNode addChild: 'ShellTestTemps'
+  tempNodeName := 'ShellTestTemps'.
+  ^ tmpNode addChildIfAbsent: tempNodeName

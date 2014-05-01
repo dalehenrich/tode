@@ -1,30 +1,30 @@
-as yet unclassified
+manPages
 cpManPage
   ^ 'NAME
-  cp - copy node
+  cp - Copy node
 
 SYNOPSIS
-  cp <source-leaf-path> <target-leaf-path>
-  cp <source-leaf-path> <target-directory-path>
-  cp <source-directory-path> <target-leaf-path>
-  cp <source-directory-path> <target-directory-path>
+  cp [--help] <source-node> <target-node
 
 DESCRIPTION
-  In the first form, the contents of the leaf node designated
-  by the <source-leaf-path> is copied to the contents of the
-  leaf node designated by the <target-leaf-path>.
+  Copy the contents of the source node to the target node.
 
-  In the second form, a copy of the leaf node designated
-  by the <source-leaf-path> is installed as a child node of
-  the directory node designated by the <target-directory-path>.
+  If both nodes are leaf nodes, the target node is replace by the source node.
 
-  In the third form, a recursive copy of the directory node 
-  designated by the <source-directory-path> is installed as a 
-  child node of the parent of the leaf node designated by the 
-  <target-leaf-path>, replacing the designated leaf node.
+  If the target node is a directory node then the source node is copied into
+  the directory. If the source node is directory, a recursive copy is made
 
-  In the fourth form, a recursive copy of the directory node 
-  designated by the <source-directory-path> is installed as a 
-  child node of the directory node designated by the 
-  <target-directory-path>.
+  If the target node is a directory node and the source node is a leaf node, then 
+  the leaf node is replaced by a recursive copy of the target node.
+
+  If the target node is a directory node and the source node is a directory node,
+  then a recursive copy of the source node is made into a child node of the target
+  node.
+
+OPTIONS
+  --help
+    Bring up this man page.
+
+EXAMPLES
+  cp node1 node2
 '

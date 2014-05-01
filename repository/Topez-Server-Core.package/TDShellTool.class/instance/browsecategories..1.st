@@ -1,8 +1,7 @@
 browse
-browsecategories
-  "
-  browse categories
-"
-
-  self getSubcommandOptsMixedLongShort: {}.
-  ^ self browseCategories
+browseCategories
+  TDClassCategoryList reset.
+  ^ self
+    browseDefinitionListBlock: [ TDClassCategoryList current ]
+    selectedIndex: 0
+    label: 'Categories'

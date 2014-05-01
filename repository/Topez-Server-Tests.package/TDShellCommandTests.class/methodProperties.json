@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"tearDown" : "dkh 04/28/2014 16:59",
+		"testCpCommand" : "dkh 04/30/2014 20:36",
 		"testManCommand" : "dkh 04/20/2014 21:18",
 		"testMethodBrowseCommand" : "dkh 04/28/2014 16:30",
 		"testMethodCopyCommand" : "dkh 04/28/2014 18:29",
