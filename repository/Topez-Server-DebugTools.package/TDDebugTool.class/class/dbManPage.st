@@ -10,15 +10,6 @@ SYNOPSIS
   db break disable [break-list-index]
   db break list 
   db break steps <method-ref>
-  db continue 
-  db down 
-  db frame <frame-index>
-  db into 
-  db over 
-  db restart 
-  db stack 
-  db thru 
-  db up
 
 DESCRIPTION
 
