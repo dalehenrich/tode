@@ -3,7 +3,7 @@ breakClear: breakTokens
   | breakReport stepArs |
   breakTokens isEmpty
     ifTrue: [ ^ self breakClearBreakpoints ].
-  breakReport := (self gsMethodClass _breakReport: false) at: 2.
+  breakReport := self class _breakReport.
   stepArs := breakTokens
     collect: [ :breakIndex | 
       | breakListIndex stepPoint meth |
