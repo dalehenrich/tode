@@ -44,8 +44,6 @@
 		"cpManPage" : "dkh 04/30/2014 19:46",
 		"displayOops" : "DataCurator 01/16/2013 09:33",
 		"displayOops:" : "DataCurator 01/16/2013 09:34",
-		"doit" : "dkh 11/10/2013 10:18",
-		"doitManPage" : "dkh 06/05/2013 13:13",
 		"ds" : "dkh 11/10/2013 10:18",
 		"dsManPage" : "dkh 04/04/2013 16:01",
 		"edit" : "dkh 11/10/2013 10:18",
@@ -96,8 +94,6 @@
 		"rmManPage" : "dkh 06/04/2013 19:44",
 		"rsync" : "dkh 12/07/2013 09:40",
 		"rsyncManPage" : "dkh 12/06/2013 17:38",
-		"run" : "dkh 11/10/2013 10:20",
-		"runManPage" : "dkh 06/05/2013 12:41",
 		"sh" : "dkh 11/10/2013 10:21",
 		"shManPage" : "dkh 06/05/2013 05:10",
 		"shellInspect" : "dkh 11/10/2013 10:21",
@@ -116,7 +112,7 @@
 		"view" : "dkh 11/10/2013 10:22",
 		"viewManPage" : "dkh 04/04/2013 16:08",
 		"ws" : "dkh 04/27/2014 12:19",
-		"wsManPage" : "dkh 04/28/2014 16:00" },
+		"wsManPage" : "dkh 05/04/2014 14:21" },
 	"instance" : {
 		"abort" : "dkh 12/21/2012 11:23",
 		"browseCategories" : "dkh 04/29/2014 07:39",
@@ -170,7 +166,6 @@
 		"commit" : "dkh 04/28/2014 15:56",
 		"cp" : "dkh 12/21/2012 11:23",
 		"displayOops" : "DataCurator 01/16/2013 10:22",
-		"doit" : "dkh 07/25/2013 10:30",
 		"ds" : "dkh 11/10/2013 10:51",
 		"ds:level:" : "dkh 11/10/2013 10:46",
 		"dsChildren:indent:level:on:" : "dkh 05/30/2013 06:35",
@@ -259,7 +254,6 @@
 		"rsync" : "dkh 12/06/2013 17:39",
 		"rsync:to:options:" : "dkh 12/06/2013 17:39",
 		"rsyncProcessCommandOptions" : "dkh 12/06/2013 17:40",
-		"run" : "dkh 07/25/2013 10:29",
 		"sh" : "dkh 06/05/2013 05:23",
 		"shellInspect" : "dkh 11/10/2013 08:27",
 		"shellPrint" : "dkh 11/10/2013 08:27",
@@ -273,4 +267,4 @@
 		"undefinedSymbolMethodDefinitions" : "dkh 04/19/2014 08:00",
 		"undefinedSymbolsMap" : "dkh 04/19/2014 07:36",
 		"view" : "dkh 06/03/2013 07:49",
-		"ws" : "dkh 04/27/2014 20:10" } }
+		"ws" : "dkh 05/04/2014 14:28" } }

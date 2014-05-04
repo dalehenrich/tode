@@ -4,7 +4,7 @@ wsManPage
   ws - Open workspace on an object
 
 SYNOPSIS
-  ws [--help] [@<object-path>]
+  ws [--help] [<object-path>]
 
 DESCRIPTION
   The ws command opens a workspace on an object. 
@@ -18,5 +18,5 @@ OPTIONS
 EXAMPLES
   ws --help
   browse class Object; ws
-  ws @/home
+  ws /home
 '

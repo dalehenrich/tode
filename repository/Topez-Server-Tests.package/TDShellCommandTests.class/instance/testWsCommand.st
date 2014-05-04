@@ -9,5 +9,5 @@ testWsCommand
     yourself.
   node := self createClassRefNode.
   self
-    evaluateCommandString: 'ws @' , node printString;
+    evaluateCommandString: 'ws ' , node printString;
     yourself

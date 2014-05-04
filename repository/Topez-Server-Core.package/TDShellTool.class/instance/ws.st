@@ -1,11 +1,13 @@
-as yet unclassified
+commands
 ws
   "
-  ws [--help] [@<object-path>]
+  ws [--help] [<object-path>]
 "
 
   | contextObject |
-  contextObject := objIn.
+  contextObject := arguments isEmpty
+    ifTrue: [ objIn ]
+    ifFalse: [ (topez lookup: (arguments at: 1)) dotSelfObject ].
   ''
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'workspace')

@@ -1,8 +1,7 @@
 browse
-browseconfigurations
-  "
-  browse configurations
-"
-
-  self getSubcommandOptsMixedLongShort: {}.
-  ^ self browseConfigurations
+browseConfigurations
+  TDConfigurationList reset.
+  ^ self
+    browseDefinitionListBlock: [ TDConfigurationList current ]
+    selectedIndex: 0
+    label: 'Configurations'
