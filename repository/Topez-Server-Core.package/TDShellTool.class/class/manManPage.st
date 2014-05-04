@@ -1,4 +1,4 @@
-as yet unclassified
+manPages
 manManPage
   ^ 'NAME
   man - produce man page for a command

@@ -4,6 +4,7 @@
 	"instance" : {
 		"tearDown" : "dkh 04/28/2014 16:59",
 		"testCpCommand" : "dkh 05/01/2014 04:17",
+		"testDsCommand" : "dkh 05/04/2014 14:50",
 		"testManCommand" : "dkh 05/01/2014 04:17",
 		"testMethodBrowseCommand" : "dkh 05/01/2014 04:17",
 		"testMethodCopyCommand" : "dkh 05/01/2014 04:18",
@@ -12,4 +13,4 @@
 		"testMethodRemoveCommand" : "dkh 05/01/2014 04:18",
 		"testMethodVersionsCommand" : "dkh 05/01/2014 04:18",
 		"testMiscCommands" : "dkh 05/01/2014 04:18",
-		"testWsCommand" : "dkh 05/04/2014 14:27" } }
+		"testWsCommand" : "dkh 05/04/2014 14:42" } }

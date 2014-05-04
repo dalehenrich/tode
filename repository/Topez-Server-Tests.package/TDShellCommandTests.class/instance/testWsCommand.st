@@ -7,7 +7,7 @@ testWsCommand
     evaluateCommandString: 'ws --help ';
     evaluateCommandString: 'pwd; ws';
     yourself.
-  node := self createClassRefNode.
+  node := self createSenderNode.
   self
     evaluateCommandString: 'ws ' , node printString;
     yourself

@@ -8,13 +8,6 @@ man
   "
 
   | command commandNode page |
-  self
-    getOptsMixedLongShort:
-      {#('all' nil #'none').
-      #('exact' nil #'none').
-      #('find' nil #'none').
-      #('help' $h #'none')}.
-  options at: 'help' ifPresent: [ :ignored | ^ self man: 'man' ].
   options
     at: 'all'
     ifPresent: [ :ignored | 
