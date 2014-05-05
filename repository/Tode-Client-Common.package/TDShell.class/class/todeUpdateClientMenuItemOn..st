@@ -1,7 +1,7 @@
 system menu
 todeUpdateClientMenuItemOn: aBuilder
 	<worldMenu>
-	(aBuilder item: #'Update client')
+	(aBuilder item: #'Update tODE client')
 		parent: #tODE;
 		order: 9.0;
 		action: [ 
