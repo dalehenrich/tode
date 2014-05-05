@@ -1,38 +1,43 @@
-as yet unclassified
+commands
 edit
-  "edit [ windowId | windowName ] [ path ]"
+  "
+  edit [--help]
+  edit [--print|-p] [<path>]...
 
-  | contextObject theWindowId |
-  theWindowId := nil.
-  contextObject := objIn.
-  tokens size > 1
-    ifTrue: [ 
-      | theTokens |
-      theTokens := tokens copyWithoutIndex: 1.
-      (tokens at: 2) isAllDigits
-        ifTrue: [ 
-          theWindowId := (tokens at: 2) asNumber.
-          theTokens := tokens copyWithoutIndex: 2 ]
-        ifFalse: [ 
-          ((tokens at: 2) beginsWith: '#')
-            ifTrue: [ 
-              theWindowId := topez windowIdNamed: ((tokens at: 2) copyWithout: $#) asSymbol.
-              theTokens := tokens copyWithoutIndex: 2 ] ].
-      theTokens size > 0
-        ifTrue: [ 
-          | contextNode |
-          contextNode := topez lookup: (theTokens at: 1).
-          ^ contextNode
-            editUsing:
-              ((TDEditorSpec topez: topez editorAspect: #'edit')
-                builderAspect: #'view';
-                parentObject: contextNode parent;
-                windowId: theWindowId;
-                yourself) ] ].
-  contextObject
-    editUsing:
-      ((TDEditorSpec topez: topez editorAspect: #'edit')
-        builderAspect: #'view';
-        windowId: theWindowId;
-        yourself).
-  ^ contextObject
+  edit [--inspect|-i] [<path>]...
+  edit [--navigate|-n] [<path>]...
+  edit [--editorAspect=<aspect>] [--builderAspect=<aspect>] [<path>]...
+"
+
+  | contextObjects builderAspect editorAspect |
+  contextObjects := arguments isEmpty
+    ifTrue: [ {objIn} ]
+    ifFalse: [ arguments collect: [ :each | topez lookup: each ] ].
+  options
+    at: 'print'
+    ifPresent: [ :ignored | 
+      contextObjects
+        do: [ :contextObject | contextObject printUsing: (TDEditorSpec topez: topez editorAspect: #'edit') ].
+      ^ contextObjects ].
+  builderAspect := #'view'.
+  editorAspect := #'edit'.
+  options
+    at: 'inspect'
+    ifPresent: [ :aspect | 
+      editorAspect := #'navigate'.
+      builderAspect := #'inspect' ].
+  options at: 'navigate' ifPresent: [ :aspect | editorAspect := #'navigate' ].
+  options
+    at: 'builderAspect'
+    ifPresent: [ :aspect | builderAspect := aspect asSymbol ].
+  options
+    at: 'editorAspect'
+    ifPresent: [ :aspect | editorAspect := aspect asSymbol ].
+  contextObjects
+    do: [ :contextObject | 
+      contextObject
+        editUsing:
+          ((TDEditorSpec topez: topez editorAspect: editorAspect)
+            builderAspect: builderAspect;
+            yourself) ].
+  ^ contextObjects

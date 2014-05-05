@@ -17,6 +17,6 @@ OPTIONS
 
 EXAMPLES
   ws --help
-  browse class Object; ws
+  eval `3+4`; ws
   ws /home
 '

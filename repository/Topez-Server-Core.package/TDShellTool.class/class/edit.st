@@ -7,8 +7,9 @@ edit
     objIn: objIn
     commandOptions:
       {#('help' $h #'none').
-      #('aspect' nil #'required').
+      #('builderAspect' nil #'required').
+      #('editorAspect' nil #'required').
       #('inspect' $i #'none').
-      #('view' $v #'none').
+      #('navigate' $n #'none').
       #('print' $p #'none')}
     todeCommand: command ]

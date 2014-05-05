@@ -5,6 +5,8 @@
 		"tearDown" : "dkh 04/28/2014 16:59",
 		"testCpCommand" : "dkh 05/01/2014 04:17",
 		"testDsCommand" : "dkh 05/04/2014 14:50",
+		"testEditCommand" : "dkh 05/05/2014 10:29",
+		"testEvalCommand" : "dkh 05/05/2014 10:31",
 		"testManCommand" : "dkh 05/01/2014 04:17",
 		"testMethodBrowseCommand" : "dkh 05/01/2014 04:17",
 		"testMethodCopyCommand" : "dkh 05/01/2014 04:18",

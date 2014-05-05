@@ -5,30 +5,19 @@ editManPage
 
 SYNOPSIS
   edit [--help]
-  edit [--aspect=<aspect>] [<path>]...
+  edit [--editorAspect=<aspect>] [--builderAspect=<aspect>] [<path>]...
+
   edit [--inspect|-i] [<path>]...
-  edit [--view|-v] [<path>]...
+  edit [--navigate|-n] [<path>]...
+
   edit [--print|-p] [<path>]...
 
 DESCRIPTION
-  The Edit command opens a window on the object specified by the path. The exact
-  window that is opened depends upon the type of window associated with the 
-  specified aspect. 
+  The `edit` command opens a window on the object specified by the path. If no path
+  is specified, the window is opened on objIn.
 
-  The aspect #view and #inspect are defined for all objects. In general the #view
-  and #inspect aspects bring up a navigation windoow for the specified object and only
-  in special cases is there a difference between the #view and @inspect windows. 
-
-  Instances of CharacterCollection and AbstractDictionary are two examples where the
-  #view and #inspect views are different. 
-
-  The #view for a CharacterCollection instance brings up a text window, while
-  the #inspect view brings up a navigation window on the characters of the 
-  CharacterCollection.
-
-  The #view for an AbstractDictionary instance brings up a window on a collection
-  of the Associations in the dictionary, while the #inspect view brings up a 
-  navigation window on the implementation details of dictionary.
+  There are two aspects that control what you see with the `edit` command: 
+  builderAspect and editorAspect.
 
   If no apect is specified (--aspect, --view, or --inspect options), the #view
   aspect is used.
@@ -42,10 +31,47 @@ DESCRIPTION
   If the --print (or -p) option is specified, the printString of the specified object
   is dipslayed in a text window.
 
+  BuilderAspect
+  -------------
+  The builderAspect controls how the object is prepared for display. There are two
+  pre-defined builderAspects: #view and #inspect. #view is the default builderAspect.
+
+  For most objects the #view and #inspect builderAspects provide the same structural 
+  display. Take dictionaries for example, in most instances it is best to view
+  a dictionary as a collection of associations (#view builderAspect), unless, you 
+  are interested in peering into the inner workings of the dictionary (#inspect
+  builderAspect). 
+
+  EditorAspect
+  ------------
+  The editorAspect determines which type of window is used to display the 
+  builderAspect of the object. There two pre-defined editAspects: #edit and 
+  #navigate. #edit is the default editorAspect.
+
+  The #edit editorAspect indicates that the object will be displayed in a text window 
+  and the #navigate editorAspect indicates that the object will be displayed in 
+  a navigation window (inspector). If no #edit editorAspect is defined for a class,
+  then the #navigate editorAspect will be used.
+
+  Summary
+  -------
+  builder aspect:
+	 #view		- normal view (i.e., collection of associations for Dictionary)
+	 #inspect - raw object/implementation view
+
+   editor aspect:
+	 #edit		 - text code editor (falls back to #navigate)
+	 #navigate - structural access via navigator
+	 CUSTOM    - custom names for specialized window display
+
 EXAMPLES
   edit --help
-  edit --aspect=custom /home/node1 /home/node1
   edit --inspect /home/node
   edit --view /home/node
   edit --print /home/node
+
+  edit --buildAspect=view --editorAspect=navigate /home/node1 /home/node1
+
+  eval `Object`; edit --editorAspect=classDefinition 
+  eval `Object`; edit --editorAspect=classComment
 '
