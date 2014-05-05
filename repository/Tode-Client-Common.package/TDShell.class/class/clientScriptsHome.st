@@ -1,3 +1,3 @@
 home
 clientScriptsHome
-	^ self todeHome , 'dev/client/scripts/'
+	^ self todeHome , 'dev/tode/client/scripts/'

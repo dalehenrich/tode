@@ -1,3 +1,3 @@
 home
 imageWorkspaceHome
-	^ self todeHome , 'dev/image/'
+	^ self todeHome , 'dev/tode/image/'
