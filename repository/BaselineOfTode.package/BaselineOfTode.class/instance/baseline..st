@@ -169,7 +169,7 @@ baseline: spec
   spec
     for: #(#'gs3.1.x' #'gs3.2.x')
     do: [ 
-      spec spec
+      spec
         package: 'Topez-Server-Core'
           with: [ spec includes: 'Topez-Server-3x-Core' ];
         package: 'Topez-Server-3x-Core'
