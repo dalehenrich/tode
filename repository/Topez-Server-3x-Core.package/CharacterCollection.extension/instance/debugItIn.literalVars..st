@@ -1,4 +1,4 @@
-*tode-gemstone-server-core
+*topez-server-3x-core
 debugItIn: aContext literalVars: litVarArray
   " If litVarArray is not nil, it must be an Array of Symbol,SymbolAssociation pairs
  and this Array will be searched prior to searching aSymbolList to

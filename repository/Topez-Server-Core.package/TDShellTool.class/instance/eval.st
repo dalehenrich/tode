@@ -10,9 +10,8 @@ eval
     do: [ :expression | 
       | litArray |
       litArray := self doItLiteralArrayFor: contextObject.
-      result := (expression
-        _compileInContext: contextObject
+      result := expression
+        evaluateIn: contextObject
         symbolList: GsSession currentSession symbolList
-        oldLitVars: litArray
-        environmentId: 0) _executeInContext: contextObject ].
+        literalVars: litArray ].
   ^ result
