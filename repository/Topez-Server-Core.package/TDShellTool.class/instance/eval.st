@@ -8,7 +8,11 @@ eval
   contextObject := objIn.
   arguments
     do: [ :expression | 
-      result := expression
-        evaluateInContext: contextObject
-        symbolList: GsSession currentSession symbolList ].
+      | litArray |
+      litArray := self doItLiteralArrayFor: contextObject.
+      result := (expression
+        _compileInContext: contextObject
+        symbolList: GsSession currentSession symbolList
+        oldLitVars: litArray
+        environmentId: 0) _executeInContext: contextObject ].
   ^ result

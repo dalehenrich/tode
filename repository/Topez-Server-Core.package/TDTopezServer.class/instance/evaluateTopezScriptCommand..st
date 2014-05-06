@@ -8,5 +8,6 @@ evaluateTopezScriptCommand: command
         ifFalse: [ 
           | commandResult |
           commandResult := self evaluateCommand: command objIn: objIn value.
-          result := commandResult resultObject ] ].
+          result := commandResult resultObject.
+          self objIn: result ] ].
   ^ result
