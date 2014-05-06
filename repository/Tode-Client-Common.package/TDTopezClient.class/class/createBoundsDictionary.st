@@ -1,4 +1,4 @@
-as yet unclassified
+window bounds
 createBoundsDictionary
 	"self initializeBounds"
 
