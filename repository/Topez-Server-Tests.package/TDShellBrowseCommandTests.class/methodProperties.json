@@ -2,8 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createDefinitionListNode" : "dkh 04/16/2014 07:22",
-		"createSelectBlockNode" : "dkh 04/18/2014 11:34",
 		"testBrowseCategories" : "dkh 05/01/2014 04:13",
 		"testBrowseCategory" : "dkh 05/01/2014 04:13",
 		"testBrowseClass" : "dkh 05/01/2014 04:13",

@@ -15,18 +15,6 @@ browsecategory
   label := 'Classes in category' , pattern.
   block := [ 
   | list |
-  list := Set new.
-  subArguments
-    do: [ :clsNamePattern | 
-      subOptions
-        at: 'exact'
-        ifPresent: [ :ignored | list addAll: (self findCategoryClassDefinitionsExact: clsNamePattern) ]
-        ifAbsent: [ list addAll: (self findCategoryClassDefinitions: clsNamePattern) ] ].
-  subOptions
-    at: 'hier'
-    ifPresent: [ :ignored | 
-      | classNames |
-      classNames := list collect: [ :cls | cls className asString ].
-      list := self findClassHierarchy: classNames ].
+  list := self findcategory: subArguments options: options.
   list := self filterBrowseList: list ].
   ^ self browseClassesBlock: block label: label
