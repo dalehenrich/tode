@@ -9,7 +9,7 @@ findmethod
   | list |
   self
     getSubcommandOptsMixedLongShort:
-      {#('regex' nil #'none').
+      {#('regex' $r #'none').
       #('spec' nil #'none')}.
   list := Set new.
   subArguments

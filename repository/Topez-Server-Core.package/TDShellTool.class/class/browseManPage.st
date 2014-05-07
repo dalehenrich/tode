@@ -12,7 +12,7 @@ SYNOPSIS
          [--staticList] <command> [<args>]
 
 DESCRIPTION
-  Browse is the primary command for finding a viewing classes 
+  Browse is the primary command for finding and viewing classes 
   and methods.  	
 
   The <command> is the name of a Browse command that invokes a 
