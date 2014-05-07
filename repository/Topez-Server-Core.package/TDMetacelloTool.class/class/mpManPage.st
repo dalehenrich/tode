@@ -11,9 +11,15 @@ SYNOPSIS
 DESCRIPTION
 
   Commands:
+    changes  (~/tode/diff)
+    commit   (~/bin/commit)
     list
     prime
-    status Display status of projects (out-of-date, up-to-date, dirty)
+    registry
+    rehome   (~/bin/mapRepos)
+    reload   (~/bin/load)
+    status
+    validate
 
   Use `mp --help <command>` to read about a specific subcommand.
 
@@ -23,11 +29,8 @@ OPTIONS
 
 
 EXAMPLES
-  mp --help references
+  mp --help
 
-  mp list
-  mp prime
-  mp status
 '.
   manPage subCommands
     at: 'list' put: self mplistManPage;
