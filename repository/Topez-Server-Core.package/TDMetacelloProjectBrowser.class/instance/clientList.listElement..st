@@ -1,19 +1,26 @@
 tools
 clientList: miniTool listElement: listElement
-  | max |
+  | max maxVersion |
   theMiniTool := miniTool.
   projects := projectBlock value.
-  max := 0.
-  projects do: [ :configDef | max := max max: configDef configurationName size ].
-  max := max + 1.
+  maxVersion := max := 0.
+  projects
+    do: [ :registrationDef | 
+      max := max max: registrationDef projectName size.
+      maxVersion := maxVersion max: registrationDef versionString size ].
+  max := max + 2.
+  maxVersion := maxVersion + 2.
   ^ (projects
-    collect: [ :configDef | 
-      | stream nm |
+    collect: [ :registrationDef | 
+      | stream nm vs |
       stream := WriteStream on: String new.
-      nm := configDef configurationName.
+      nm := registrationDef projectName.
+      vs := registrationDef versionString.
       stream
         nextPutAll: nm;
-        space: max - nm size + 1;
-        nextPutAll: configDef configurationVersionString.
+        space: max - nm size;
+        nextPutAll: vs;
+        space: maxVersion - vs size;
+        nextPutAll: registrationDef repositoryDescription.
       stream contents ])
     -> nil

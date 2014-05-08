@@ -8,8 +8,8 @@ projectlist
   self getSubcommandOptsMixedLongShort: {#('inspect' $i #'none')}.
   shellTool := self topez toolInstanceFor: 'find'.
   block := [ 
-  list := (shellTool findProjectDefinitions: '.') asArray
-    sort: [ :a :b | a configurationName <= b configurationName ] ].
+  list := (shellTool findProjectRegistrationDefinitions: '') asArray
+    sort: [ :a :b | a projectName <= b projectName ] ].
   subOptions
     at: 'inspect'
     ifPresent: [ :ignored | ^ (block value collect: [ :def | def projectSpec ]) inspect ]
