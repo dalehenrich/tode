@@ -2,7 +2,7 @@ doit support
 doItLiteralArray
   | litVarArray instVars |
   litVarArray := {}.
-  instVars := self object class allInstVarNames.
+  instVars := self doItContext class allInstVarNames.
   1 to: instVars size do: [ :index | 
     | tempVar |
     tempVar := instVars at: index.

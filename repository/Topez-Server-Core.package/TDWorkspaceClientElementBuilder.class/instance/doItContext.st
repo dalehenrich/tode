@@ -1,3 +1,3 @@
 doit support
 doItContext
-  ^ self object
+  ^ self object dotSelfObject
