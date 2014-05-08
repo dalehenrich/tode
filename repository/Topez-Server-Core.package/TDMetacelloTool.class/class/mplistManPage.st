@@ -8,7 +8,7 @@ mplistManPage
   mp list - List Metacello projects
 
 SYNOPSIS
-  mp list
+  mp list [--inspect|-i] [<project-pattern>]...
 
 DESCRIPTION
   The `mp list` command brings up a window on the list of Metacello projects. 
