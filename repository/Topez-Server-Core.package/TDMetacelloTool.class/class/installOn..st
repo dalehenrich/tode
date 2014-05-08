@@ -3,6 +3,6 @@ installOn: aTDTopezServer
   "self install"
 
   aTDTopezServer
-    ensureChildrenExistIn: '/mp';
+    ensureChildrenExistIn: '/metacello';
     ensureChildrenExistIn: self commandPath.
   super installOn: aTDTopezServer

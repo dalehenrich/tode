@@ -1,18 +1,18 @@
-commands
-mpvalidateManPage
+project
+projectvalidateManPage
   | manPage |
   manPage := TDManPage
     commandName: 'validate'
     fromString:
       'NAME
-  mp validate - Validate the project registrations
+  project validate - Validate the project registrations
 
 SYNOPSIS
-  mp validate 
+  project validate 
 
 DESCRIPTION
 
 EXAMPLES
-  mp validate
+  project validate
 '.
   ^ manPage

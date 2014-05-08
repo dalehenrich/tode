@@ -1,18 +1,18 @@
-commands
-mpworkdirManPage
+project
+projectworkdirManPage
   | manPage |
   manPage := TDManPage
     commandName: 'workdir'
     fromString:
       'NAME
-  mp workdir - Create working directory for project
+  project workdir - Create working directory for project
 
 SYNOPSIS
-  mp workdir 
+  project workdir 
 
 DESCRIPTION
 
 EXAMPLES
-  mp workdir
+  project workdir
 '.
   ^ manPage

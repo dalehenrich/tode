@@ -1,18 +1,18 @@
-commands
-mpregistryManPage
+project
+projectregistryManPage
   | manPage |
   manPage := TDManPage
     commandName: 'registry'
     fromString:
       'NAME
-  mp registry - Inspect the project registry
+  project registry - Inspect the project registry
 
 SYNOPSIS
-  mp registry 
+  project registry 
 
 DESCRIPTION
 
 EXAMPLES
-  mp registry
+  project registry
 '.
   ^ manPage

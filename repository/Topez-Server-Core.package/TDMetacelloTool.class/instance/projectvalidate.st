@@ -1,7 +1,7 @@
-commands
-mpvalidate
+project
+projectvalidate
   "
-  mp validate
+  project validate
 "
 
   | invalid |

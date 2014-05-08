@@ -1,3 +1,3 @@
 tool support
 toolName
-  ^ 'mp'
+  ^ 'metacello'

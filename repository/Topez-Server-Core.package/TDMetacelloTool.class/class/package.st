@@ -1,6 +1,6 @@
-commands
-mp
-  <topezCommand: 'mp' manPage: #'mpManPage'>
+package
+package
+  <topezCommand: 'package' manPage: #'packageManPage'>
   ^ [ :topez :objIn :tokens :command | 
   self
     performSubCommand: topez

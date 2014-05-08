@@ -1,7 +1,7 @@
-commands
-mpprime
+project
+projectprime
   "
-  mp prime [--force]
+  project prime [--force]
 "
 
   self getSubcommandOptsMixedLongShort: {#('force' nil #'none')}.

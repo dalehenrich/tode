@@ -1,7 +1,7 @@
-commands
-mplist
+project
+projectlist
   "
-  mp list [--inspect|-i] [<project-pattern>]...
+  project list [--inspect|-i] [<project-pattern>]...
 "
 
   | shellTool block list |

@@ -1,7 +1,7 @@
-commands
-mpregistry
+project
+projectregistry
   "
-  mp registry 
+  project registry 
 "
 
   self getSubcommandOptsMixedLongShort: {}.
