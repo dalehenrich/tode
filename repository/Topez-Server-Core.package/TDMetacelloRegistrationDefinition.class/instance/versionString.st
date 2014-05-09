@@ -1,3 +1,3 @@
 accessing
 versionString
-  ^ self registration versionInfo versionString
+  ^ self versionInfo versionString
