@@ -2,10 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addToPackage:selectedIndex:" : "dkh 05/09/2014 10:48",
 		"browseRepositoryPackages:selectedIndex:" : "dkh 10/20/2013 11:59",
 		"clientList:listElement:" : "dkh 03/20/2014 20:39",
 		"definitionForSelection:" : "dkh 10/13/2013 08:12",
-		"menuActionSpec:" : "dkh 11/09/2013 12:16",
+		"menuActionSpec:" : "dkh 05/09/2014 10:37",
 		"removeRepository:selectedIndex:" : "dkh 11/08/2013 06:00",
 		"repositories" : "dkh 10/19/2013 11:30",
 		"repositoryBlock" : "dkh 10/19/2013 11:29",
