@@ -13,8 +13,8 @@ SYNOPSIS
 DESCRIPTION
 
   Commands:
-    changes  (~/tode/diff)
     commit   (~/bin/commit)
+    diff     (~/tode/diff)
     list
     load     (~/bin/load)
     lock
@@ -22,6 +22,7 @@ DESCRIPTION
     registry
     rehome   (~/bin/mapRepos)
     status
+    test
     validate
     workdir
 
