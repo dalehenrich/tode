@@ -18,7 +18,7 @@ clientList: miniTool listElement: listElement
         ifFalse: [ branch := ' [' , branch , ']' ].
       cvs = vs
         ifTrue: [ vs := vs , branch ]
-        ifFalse: [ vs := vs , branch , ' ^ ' , cvs ].
+        ifFalse: [ vs := vs , ' ^ ' , cvs , branch ].
       rd := registrationDef repositoryDescription.
       labels
         add:

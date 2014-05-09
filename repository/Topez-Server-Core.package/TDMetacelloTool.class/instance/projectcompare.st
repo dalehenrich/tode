@@ -5,7 +5,7 @@ projectcompare
 "
 
   | shellTool projectName registration commitish1 commitish2 gitTool gitRepoDirectory |
-  self getSubcommandOptsMixedLongShort: {}.
+  self getSubcommandOptsMixedLongShort: {#('commit' nil #'required')}.
   shellTool := self topez toolInstanceFor: 'find'.
   projectName := subArguments at: 1.
   registration := shellTool findProjectRegistrationExact: projectName.
