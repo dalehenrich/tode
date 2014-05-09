@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sourceWindowId" ],
+	"name" : "TDAbstractMergeBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDStandardToolBuilder",
+	"type" : "normal" }

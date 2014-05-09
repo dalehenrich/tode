@@ -2,10 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
+		"browseImplementersOf:listElement:" : "dkh 05/09/2014 15:17",
+		"browseSendersOf:listElement:" : "dkh 05/09/2014 15:19",
+		"browseTool:" : "dkh 05/09/2014 15:16",
 		"builder" : "dkh 01/09/2014 18:10",
 		"childIsClosing:" : "dkh 01/09/2014 18:09",
 		"clientList:listElement:" : "dkh 03/20/2014 20:38",
 		"clientListBlock" : "dkh 01/09/2014 18:09",
+		"findTool:" : "dkh 05/09/2014 15:15",
 		"highlightIndex" : "dkh 01/09/2014 18:09",
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 01/09/2014 18:09",
 		"itemSelectedBlock" : "dkh 01/09/2014 18:09",

@@ -4,8 +4,5 @@ browseImplementorsMenuAction: listElement selectionIndex: selectionIndex
   stack := self theStack.
   stack navigateFrame: selectionIndex.
   selector := stack currentFrame selector asString.
-  findTool := self findTool: listElement.
-  block := [ findTool findMethod: selector ].
-  browseTool := self browseTool: listElement.
-  browseTool browseMethodsBlock: block label: 'Implementors of ' , selector.
+  self browseImplementersOf: selector listElement: listElement.
   ^ true

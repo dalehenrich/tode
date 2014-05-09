@@ -4,7 +4,7 @@ projectcompare
   project compare [--commit=<commitish>] <project-name>
 "
 
-  | shellTool projectName registration commitish1 commitish2 gitTool gitRepoDirectory |
+  | shellTool projectName registration commitish1 commitish2 gitTool gitRepoDirectory diffs |
   self getSubcommandOptsMixedLongShort: {#('commit' nil #'required')}.
   shellTool := self topez toolInstanceFor: 'find'.
   projectName := subArguments at: 1.
@@ -16,7 +16,15 @@ projectcompare
     ifTrue: [ ^ 'Nothing to compare ... commits are the same' ].
   gitRepoDirectory := self gitRepoDirForRegistration: registration.
   gitTool := self topez toolInstanceFor: 'git'.
-  ^ gitTool
+  diffs := gitTool
     gitdifftool: commitish1
     commitish2: commitish2
     gitRepoDirectory: gitRepoDirectory
+    diffClass: TDFileTreeDiff.
+  (TDFileTreeDiffBrowser new
+    operations: diffs;
+    topez: topez;
+    windowLabel:
+        'Compare ' , commitish1 printString , ' to ' , commitish2 printString;
+    yourself) open.
+  ^ diffs
