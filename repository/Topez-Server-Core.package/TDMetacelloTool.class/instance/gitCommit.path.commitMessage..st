@@ -7,7 +7,7 @@ gitCommit: projectRegistration path: gitPath commitMessage: messageString
   gitTool
     gitaddIn: gitRepoDir with: '.';
     gitcommitIn: gitRepoDir with: '-a --file=' , commitMessageFileName.
-  (MetacelloPlatform gitCommitShaFor: gitRepoDir)
+  (MetacelloPlatform current gitCommitShaFor: gitRepoDir)
     ifNotNil: [ :sha | projectRegistration versionInfo versionString: sha ].
   status := gitTool gitlogIn: gitRepoDir with: '-1'.
   Transcript
