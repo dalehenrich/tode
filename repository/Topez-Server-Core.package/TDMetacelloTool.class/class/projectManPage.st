@@ -13,12 +13,14 @@ SYNOPSIS
 DESCRIPTION
 
   Commands:
-    commit   (~/bin/commit)
-    diff     (~/tode/diff)
+    commit   Commit the Metacello project
+    compare  View differences between repository versions (git only)
+    diff     View code differences between image and repository
     list
     load     (~/bin/load)
     lock
     log
+    merge    (git only?)
     prime
     registry
     rehome   (~/bin/mapRepos)
@@ -46,5 +48,7 @@ EXAMPLES
     at: 'commit' put: self projectcommitManPage;
     at: 'load' put: self projectloadManPage;
     at: 'workdir' put: self projectworkdirManPage;
+    at: 'diff' put: self projectdiffManPage;
+    at: 'compare' put: self projectcompareManPage;
     yourself.
   ^ manPage

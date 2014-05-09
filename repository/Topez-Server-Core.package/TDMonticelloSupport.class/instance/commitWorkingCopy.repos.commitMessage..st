@@ -1,4 +1,4 @@
-support
+commit
 commitWorkingCopy: aWorkingCopy repos: targetRepos commitMessage: commitMessage
   | newVersion |
   newVersion := [ aWorkingCopy newVersion ]

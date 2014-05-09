@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"commitWorkingCopies:repos:commitMessage:" : "dkh 05/09/2014 06:59",
+		"commitWorkingCopy:repos:commitMessage:" : "dkh 05/09/2014 06:59",
+		"diffForWorkingCopies:on:" : "dkh 05/09/2014 07:05",
+		"diffForWorkingCopy:on:" : "dkh 05/09/2014 07:01",
+		"diffPatch:forWorkingCopy:on:" : "dkh 05/09/2014 07:12",
+		"gitCommit:commitMessage:" : "dkh 05/09/2014 08:17",
+		"gitRepoDirForRegistration:" : "dkh 05/09/2014 08:34",
+		"patchForWorkingCopy:" : "dkh 05/09/2014 07:02",
+		"patchForWorkingCopy:and:" : "dkh 05/09/2014 07:02",
+		"primeVersionString:gitRepoDirectory:" : "dkh 05/09/2014 08:22",
+		"resolveMessageArg:" : "dkh 05/09/2014 06:59" } }

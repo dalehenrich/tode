@@ -10,5 +10,5 @@
 	"name" : "TDMetacelloTool",
 	"pools" : [
 		 ],
-	"super" : "TDStandardTool",
+	"super" : "TDMonticelloSupport",
 	"type" : "normal" }

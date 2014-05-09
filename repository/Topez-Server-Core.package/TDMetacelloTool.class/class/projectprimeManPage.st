@@ -8,7 +8,8 @@ projectprimeManPage
   project prime - Prime the project registry
 
 SYNOPSIS
-  project prime [--force] [<project-pattern>]...
+  project prime [--force]
+  project prime <project-pattern>...
 
 DESCRIPTION
 

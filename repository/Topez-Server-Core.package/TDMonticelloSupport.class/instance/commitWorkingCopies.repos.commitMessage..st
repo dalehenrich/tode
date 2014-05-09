@@ -1,4 +1,4 @@
-support
+commit
 commitWorkingCopies: workingCopies repos: targetRepos commitMessage: commitMessage
   | committedVersions |
   committedVersions := OrderedCollection new.

@@ -1,4 +1,4 @@
-support
+commit
 resolveMessageArg: messageArg
   ^ (messageArg beginsWith: '@')
     ifTrue: [ (self resolveAtPathReference: messageArg) asString ]

@@ -8,13 +8,13 @@ projectcommitManPage
   project commit - Commit the Metacello project
 
 SYNOPSIS
-  project commit [--git=<relative-repo-path>] --message=<message-ref> <project-name>
+  project commit [--git] --message=<message-ref> <project-name>
 
 DESCRIPTION
 
 EXAMPLES
   project commit --message=@commitMessage Tode
   project commit --message=`initial commit` Tode
-  project commit --git=.. --message=@commitMessage Tode
+  project commit --git --message=@commitMessage Tode
 '.
   ^ manPage

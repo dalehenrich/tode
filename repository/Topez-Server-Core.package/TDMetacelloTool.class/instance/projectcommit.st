@@ -1,14 +1,14 @@
 project
 projectcommit
   "
-  project commit [--git=<relative-repo-path>] --message=<message-ref> <project-name>
+  project commit [--git] --message=<message-ref> <project-name>
 "
 
   | messageString projectName shellTool registration modified committedVersions |
   shellTool := self topez toolInstanceFor: 'find'.
   self
     getSubcommandOptsMixedLongShort:
-      {#('git' nil #'required').
+      {#('git' nil #'none').
       #('message' nil #'required')}.
   subOptions
     at: 'message'
@@ -26,9 +26,5 @@ projectcommit
   subOptions
     at: 'git'
     ifAbsent: [ ^ committedVersions ]
-    ifPresent: [ :arg | 
-      | gitPath |
-      gitPath := registration repositorySpec createRepository directory fullName
-        , '/' , arg.
-      self gitCommit: registration path: gitPath commitMessage: messageString ].
+    ifPresent: [ :ignored | self gitCommit: registration commitMessage: messageString ].
   ^ committedVersions

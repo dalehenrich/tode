@@ -1,7 +1,7 @@
-support
-gitCommit: projectRegistration path: gitPath commitMessage: messageString
+git
+gitCommit: projectRegistration commitMessage: messageString
   | status gitRepoDir gitTool commitMessageFileName |
-  gitRepoDir := ServerFileDirectory on: gitPath.
+  gitRepoDir := self gitRepoDirForRegistration: projectRegistration.
   gitTool := topez toolInstanceFor: 'git'.
   commitMessageFileName := gitTool createTmpFileWith: messageString.
   gitTool

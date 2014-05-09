@@ -6,13 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"commit",
-		"commitPrefix",
-		"committer",
-		"commitDate",
-		"subject",
-		"body" ],
-	"name" : "TDGitCommitReport",
+		 ],
+	"name" : "TDMonticelloSupport",
 	"pools" : [
 		 ],
 	"super" : "TDStandardTool",
