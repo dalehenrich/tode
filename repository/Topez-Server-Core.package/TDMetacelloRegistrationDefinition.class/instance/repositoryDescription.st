@@ -1,7 +1,7 @@
 accessing
 repositoryDescription
   | repositorySpec |
-  self repositorySpecs do: [ :spec | repositorySpec := spec ].
+  repositorySpec := self repositorySpec.
   (repositorySpec type = 'cache' or: [ repositorySpec description = 'cache' ])
     ifTrue: [ ^ '' ].
   ^ repositorySpec description

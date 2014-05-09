@@ -4,12 +4,15 @@
 	"instance" : {
 		"=" : "dkh 05/08/2014 14:51",
 		"currentVersionString" : "dkh 05/08/2014 18:25",
-		"isDirty" : "dkh 05/08/2014 16:57",
+		"isDirty" : "dkh 05/08/2014 19:06",
 		"label" : "dkh 05/08/2014 14:54",
 		"projectName" : "dkh 05/08/2014 14:52",
 		"projectSpec" : "dkh 05/08/2014 14:53",
 		"registration" : "dkh 05/08/2014 14:52",
 		"registration:" : "dkh 05/08/2014 14:52",
-		"repositoryDescription" : "dkh 05/08/2014 15:46",
+		"repositories" : "dkh 05/08/2014 19:39",
+		"repositoryDescription" : "dkh 05/08/2014 19:37",
+		"repositorySpec" : "dkh 05/08/2014 19:36",
 		"repositorySpecs" : "dkh 05/08/2014 15:38",
-		"versionString" : "dkh 05/08/2014 14:54" } }
+		"versionString" : "dkh 05/08/2014 14:54",
+		"workingCopies" : "dkh 05/08/2014 19:05" } }

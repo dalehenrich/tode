@@ -6,7 +6,7 @@
 		"packageManPage" : "dkh 05/08/2014 10:26",
 		"project" : "dkh 05/08/2014 10:21",
 		"projectManPage" : "dkh 05/08/2014 18:30",
-		"projectcommitManPage" : "dkh 05/08/2014 10:22",
+		"projectcommitManPage" : "dkh 05/08/2014 20:00",
 		"projectlistManPage" : "dkh 05/08/2014 10:23",
 		"projectloadManPage" : "dkh 05/08/2014 10:23",
 		"projectprimeManPage" : "dkh 05/08/2014 16:31",
@@ -18,7 +18,12 @@
 		"toolName" : "dkh 05/08/2014 10:27",
 		"toolReadMe" : "dkh 05/08/2014 10:27" },
 	"instance" : {
+		"commitWorkingCopies:repos:commitMessage:" : "dkh 05/08/2014 18:58",
+		"commitWorkingCopy:repos:commitMessage:" : "dkh 05/08/2014 18:57",
+		"gitCommit:path:commitMessage:" : "dkh 05/08/2014 19:56",
+		"projectcommit" : "dkh 05/08/2014 20:11",
 		"projectlist" : "dkh 05/08/2014 15:01",
 		"projectprime" : "dkh 05/08/2014 10:27",
 		"projectregistry" : "dkh 05/08/2014 10:28",
-		"projectvalidate" : "dkh 05/08/2014 10:28" } }
+		"projectvalidate" : "dkh 05/08/2014 10:28",
+		"resolveMessageArg:" : "dkh 05/08/2014 18:42" } }
