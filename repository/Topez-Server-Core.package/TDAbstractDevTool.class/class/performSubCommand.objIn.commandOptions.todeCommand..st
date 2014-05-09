@@ -15,4 +15,9 @@ performSubCommand: topez objIn: objIn commandOptions: commandOptions todeCommand
         ifNil: [ ^ shTool man: cmd ]
         ifNotNil: [ ^ shTool man: cmd subCommand: subCmd ] ].
   selector := (cmd , subCmd) asSymbol.
+  (shTool respondsTo: selector)
+    ifFalse: [ 
+      shTool
+        error:
+          'Unknown sub command ' , subCmd printString , ' for command ' , cmd printString ].
   ^ shTool perform: selector
