@@ -18,6 +18,7 @@ DESCRIPTION
     list
     load     (~/bin/load)
     lock
+    log
     prime
     registry
     rehome   (~/bin/mapRepos)

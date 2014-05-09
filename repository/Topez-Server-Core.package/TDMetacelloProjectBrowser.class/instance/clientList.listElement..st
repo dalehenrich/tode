@@ -1,35 +1,42 @@
 tools
 clientList: miniTool listElement: listElement
-  | max maxVersion |
+  | max maxVersion labels |
   theMiniTool := miniTool.
   projects := projectBlock value.
   maxVersion := max := 0.
+  labels := {}.
   projects
     do: [ :registrationDef | 
-      | offset |
-      offset := 0.
+      | nm vs rd cvs |
+      nm := registrationDef projectName.
       registrationDef isDirty
-        ifTrue: [ offset := 2 ].
-      max := max max: registrationDef projectName size + offset.
-      maxVersion := maxVersion max: registrationDef versionString size ].
+        ifTrue: [ nm := '* ' , nm ].
+      vs := registrationDef versionString.
+      cvs := registrationDef currentVersionString.
+      cvs = vs
+        ifFalse: [ vs := vs , ' ^ ' , cvs ].
+      rd := registrationDef repositoryDescription.
+      labels
+        add:
+          {nm.
+          vs.
+          rd}.
+      max := max max: nm size.
+      maxVersion := maxVersion max: vs size ].
   max := max + 2.
   maxVersion := maxVersion + 2.
-  ^ (projects
-    collect: [ :registrationDef | 
-      | stream nm vs offset |
+  ^ (labels
+    collect: [ :ar | 
+      | stream nm vs rd |
       stream := WriteStream on: String new.
-      nm := registrationDef projectName.
-      vs := registrationDef versionString.
-      offset := 0.
-      registrationDef isDirty
-        ifTrue: [ 
-          stream nextPutAll: '* '.
-          offset := 2 ].
+      nm := ar at: 1.
+      vs := ar at: 2.
+      rd := ar at: 3.
       stream
         nextPutAll: nm;
-        space: max - (nm size + offset);
+        space: max - nm size;
         nextPutAll: vs;
         space: maxVersion - vs size;
-        nextPutAll: registrationDef repositoryDescription.
+        nextPutAll: rd.
       stream contents ])
     -> nil
