@@ -1,3 +1,4 @@
 menu action specs
 objectMenuActionSpec
-  ^ {#('print' $p #'printObjectMenuAction:selectionIndex:')}
+  ^ {#('inspect' nil #'inspectObjectMenuAction:selectionIndex:').
+  #('print' $p #'printObjectMenuAction:selectionIndex:')}

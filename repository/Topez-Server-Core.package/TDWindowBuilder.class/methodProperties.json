@@ -21,6 +21,7 @@
 		"handleMenuActions:listElement:actionArg:" : "dkh 03/26/2014 09:57",
 		"inspectBuilderMenuAction:" : "dkh 02/23/2014 18:06",
 		"inspectBuilderMenuAction:selectionIndex:" : "dkh 02/23/2014 18:06",
+		"inspectObjectMenuAction:selectionIndex:" : "dkh 05/09/2014 12:29",
 		"inspectWindowModelMenuAction:" : "dkh 02/23/2014 18:07",
 		"inspectWindowModelMenuAction:selectionIndex:" : "dkh 02/23/2014 18:06",
 		"keyboardEventBlock" : "DataCurator 01/27/2013 09:31",
