@@ -16,18 +16,19 @@ DESCRIPTION
     commit   Commit the Metacello project
     compare  View differences between repository versions (git only)
     diff     View code differences between image and repository
-    list
+    list     List Metacello projects
     load     (~/bin/load)
     lock
     log
     merge    (git only?)
-    prime
-    registry
+    prime    Prime the project registry
+    push     (git only)
+    registry Inspect the project registry
     rehome   (~/bin/mapRepos)
     status
     test
-    validate
-    workdir
+    validate Validate the project registrations
+    workdir  Create working directory for project
 
   Use `project --help <command>` to read about a specific subcommand.
 

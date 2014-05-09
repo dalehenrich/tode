@@ -7,14 +7,18 @@ clientList: miniTool listElement: listElement
   labels := {}.
   projects
     do: [ :registrationDef | 
-      | nm vs rd cvs |
+      | nm vs rd cvs branch |
       nm := registrationDef projectName.
       registrationDef isDirty
         ifTrue: [ nm := '* ' , nm ].
       vs := registrationDef versionString.
       cvs := registrationDef currentVersionString.
+      branch := registrationDef currentBranchName.
+      branch isEmpty
+        ifFalse: [ branch := ' [' , branch , ']' ].
       cvs = vs
-        ifFalse: [ vs := vs , ' ^ ' , cvs ].
+        ifTrue: [ vs := vs , branch ]
+        ifFalse: [ vs := vs , branch , ' ^ ' , cvs ].
       rd := registrationDef repositoryDescription.
       labels
         add:
