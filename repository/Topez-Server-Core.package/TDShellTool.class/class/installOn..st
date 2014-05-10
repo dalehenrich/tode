@@ -165,4 +165,7 @@ installOn: aTDTopezServer
     registerEditorClass: TDClientTextElementBuilder
       for: TDTxtLeafNode
       aspect: #'edit';
+    registerEditorClass: TDClientMergeOperationSourceElementBuilder
+      for: TDMergeOperation
+      aspect: #'edit';
     yourself

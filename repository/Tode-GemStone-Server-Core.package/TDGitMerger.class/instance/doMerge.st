@@ -6,16 +6,18 @@ doMerge
       Transcript
         cr;
         show: 'Merger already performed'.
-      ^ self ].
+      ^ false ].
   unresolved := self operations select: [ :each | each resolved not ].
   unresolved isEmpty
     ifFalse: [ 
-      ^ self
+      self
         inform:
-          'Cannot perform merger: unresolved conflicts: ' , unresolved asArray printString ].
+          'Cannot perform merger: unresolved conflicts: ' , unresolved asArray printString.
+      ^ false ].
   self operations do: [ :ea | ea applyTo: self ].
   self mergerCompletionBlock value.
   self merged: true.
   Transcript
     cr;
-    show: 'Merger complete'
+    show: 'Merger complete'.
+  ^ true

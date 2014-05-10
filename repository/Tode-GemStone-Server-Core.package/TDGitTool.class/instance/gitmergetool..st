@@ -26,9 +26,8 @@ gitmergetool: gitRepoDirectory
             yourself.
           conflicts add: conflict ] ].
   merger := TDGitMerger new conflicts: conflicts.
-  mergeTool := topez toolInstanceFor: 'mg'.
-  mergeTool
-    gitmerge: merger
-    gitTool: self
-    mergerCompletionBlock: [  ]
-    mergerAbortBlock: [  ]
+  (TDMergeDiffBrowser new
+    merger: merger;
+    topez: topez;
+    windowLabel: 'Merge ' , gitRepoDirectory fullName;
+    yourself) open

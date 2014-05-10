@@ -1,4 +1,3 @@
-accessing
-merger: anObject
-
-   merger := anObject
+initialization
+merger: aTDMerger
+  self merger: aTDMerger mergerCompletionBlock: [  ] mergerAbortBlock: [  ]

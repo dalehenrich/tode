@@ -6,13 +6,14 @@ doMerge
       Transcript
         cr;
         show: 'Merger already merged'.
-      ^ self ].
+      ^ false ].
   unresolved := self operations select: [ :each | each resolved not ].
   unresolved isEmpty
     ifFalse: [ 
-      ^ self
+      self
         inform:
-          'Cannot perform merger: unresolved conflicts: ' , unresolved asArray printString ].
+          'Cannot perform merger: unresolved conflicts: ' , unresolved asArray printString.
+      ^ false ].
   loader := MCPackageLoader new.
   loader provisions addAll: self provisions.
   self applyTo: loader.
@@ -21,4 +22,5 @@ doMerge
   self merged: true.
   Transcript
     cr;
-    show: 'Merger complete'
+    show: 'Merger complete'.
+  ^ true

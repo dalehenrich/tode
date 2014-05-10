@@ -2,9 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"doMergeMenuAction:selectionIndex:" : "dkh 05/09/2014 14:50",
+		"doMergeMenuAction:selectionIndex:" : "dkh 05/10/2014 07:42",
 		"merger" : "dkh 05/09/2014 14:54",
-		"merger:" : "dkh 05/09/2014 14:54",
+		"merger:" : "dkh 05/10/2014 07:36",
+		"merger:mergerCompletionBlock:mergerAbortBlock:" : "dkh 05/10/2014 07:31",
 		"operations" : "dkh 05/09/2014 14:55",
 		"operationsMenuActionSpec" : "dkh 05/09/2014 14:45",
 		"selectEditDefinitionMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09" } }
