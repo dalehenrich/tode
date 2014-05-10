@@ -3,8 +3,13 @@ method
   | currentNode |
   currentNode := self topez currentNode.
   [ 
+  | compileBlock |
   topez currentNode: self parent.
-  ^ self contents
+  compileBlock := [ :aSymbolList | 
+  self contents
     _compileInContext: self sourceCompilationContext
-    symbolList: GsSession currentSession symbolList ]
+    symbolList: aSymbolList ].
+  ^ self
+    compileHandlingUndeclaredSymbols: compileBlock
+    with: GsSession currentSession symbolList ]
     ensure: [ topez currentNode: currentNode ]

@@ -6,6 +6,9 @@ gitdifftool: commitish1 commitish2: commitish2 gitRepoDirectory: gitRepoDirector
     commitish2: commitish2
     gitRepoDirectory: gitRepoDirectory
     diffClass: TDGitDiff.
-  differ := TDGitDiffer new diffs: diffs.
-  diffTool := topez toolInstanceFor: 'mg'.
-  diffTool gitdiff: differ gitTool: self
+  (TDGitDiffBrowser new
+    operations: diffs;
+    topez: topez;
+    windowLabel:
+        'Diff ' , commitish1 printString , ' to ' , commitish2 printString;
+    yourself) open

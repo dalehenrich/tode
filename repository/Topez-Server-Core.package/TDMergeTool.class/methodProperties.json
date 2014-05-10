@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"installOn:" : "dkh 10/06/2013 12:29",
+		"installOn:" : "dkh 05/09/2014 16:06",
 		"mg" : "dkh 11/10/2013 10:30",
 		"mgManPage" : "09/02/2013 07:47",
 		"priority" : "09/02/2013 07:36",
@@ -8,7 +8,6 @@
 		"toolReadMe" : "09/02/2013 07:36" },
 	"instance" : {
 		"createMergerNode" : "dkh 12/16/2013 18:43",
-		"gitdiff:gitTool:" : "dkh 10/06/2013 11:23",
 		"gitmerge:gitTool:mergerCompletionBlock:mergerAbortBlock:" : "dkh 09/17/2013 12:14",
 		"merger" : "09/02/2013 07:55",
 		"merger:" : "09/02/2013 07:55",

@@ -12,7 +12,9 @@ findRegexSender: regexPattern searchScriptRoot: path
     topez: self topez
     visitNode: rootSearchNode
     andDo: [ :leafNode | 
+      [ 
       | gsMethod res |
+      gsMethod := leafNode method.
       res := gsMethod _selectorPool
         detect: [ :sel | regex search: sel asString ]
         ifNone: [ nil ].
@@ -28,7 +30,7 @@ findRegexSender: regexPattern searchScriptRoot: path
                     ifFalse: [ false ] ] ]
             ifNone: [ nil ] ].
       res ~~ nil
-        ifTrue: [ leafNodes add: leafNode ]
+        ifTrue: [ leafNodes add: leafNode ] ]
         on: CompileError
         do: [ :ex | 
           Transcript
