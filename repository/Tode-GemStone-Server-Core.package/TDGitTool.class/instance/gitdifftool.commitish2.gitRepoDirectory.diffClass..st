@@ -13,7 +13,9 @@ gitdifftool: commitish1 commitish2: commitish2 gitRepoDirectory: gitRepoDirector
     collect: [ :ar | 
       | diff operations path |
       operations := ar at: 5.
-      path := operations at: 2.
+      operations size < 2
+        ifTrue: [ path := operations at: 1 ]
+        ifFalse: [ path := operations at: 2 ].
       diff := diffClass new
         baseDirectory: gitRepoDirectory;
         filePath: path;
