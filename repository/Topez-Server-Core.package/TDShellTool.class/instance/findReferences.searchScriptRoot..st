@@ -18,7 +18,7 @@ findReferences: variableOrGlobalNameOrPathRef searchScriptRoot: path
       gsMethod := leafNode method.
       (gsMethod _literalsIncludesValue: literal)
         ifTrue: [ leafNodes add: leafNode ] ]
-        on: CompileError
+        on: self compilerExceptionSet
         do: [ :ex | 
           Transcript
             cr;

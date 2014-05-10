@@ -31,7 +31,7 @@ findRegexSender: regexPattern searchScriptRoot: path
             ifNone: [ nil ] ].
       res ~~ nil
         ifTrue: [ leafNodes add: leafNode ] ]
-        on: CompileError
+        on: self compilerExceptionSet
         do: [ :ex | 
           Transcript
             cr;

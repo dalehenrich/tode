@@ -16,7 +16,7 @@ findPureSender: selectorToken searchScriptRoot: path
       gsMethod := leafNode method.
       srcOffset := gsMethod _sourceOffsetOfFirstSendOf: selector.
       srcOffset ifNotNil: [ leafNodes add: leafNode ] ]
-        on: CompileError
+        on: self compilerExceptionSet
         do: [ :ex | 
           Transcript
             cr;

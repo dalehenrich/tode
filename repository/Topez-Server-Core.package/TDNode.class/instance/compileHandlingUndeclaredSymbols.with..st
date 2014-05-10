@@ -2,7 +2,7 @@ as yet unclassified
 compileHandlingUndeclaredSymbols: compileBlock with: aSymbolList
   [ 
   [ ^ compileBlock value: aSymbolList ]
-    on: CompileError
+    on: self compilerExceptionSet
     do: [ :ex | 
       | undefSymbol symbols undefinedSymbols undefinedSymbolList |
       undefSymbol := true.
@@ -31,10 +31,10 @@ compileHandlingUndeclaredSymbols: compileBlock with: aSymbolList
                   undefinedSymbolList := aSymbolList
                     objectNamed: #'UndefinedSymbolList'.
                   [ ^ compileBlock value: aSymbolList , undefinedSymbolList ]
-                    onException: CompileError
+                    on: self compilerExceptionSet
                     do: [ :exb | undefSymbol := false ] ] ]
             ifFalse: [ undefSymbol := false ] ].
       undefSymbol
         ifFalse: [ ex outer ] ] ]
-    on: CompileWarning
+    on: self compilerWarningSet
     do: [ :warning | warning resume ]
