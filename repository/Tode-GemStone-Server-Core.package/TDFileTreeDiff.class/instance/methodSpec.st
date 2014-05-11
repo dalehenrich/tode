@@ -1,6 +1,6 @@
 as yet unclassified
 methodSpec
-  | tokens sz meta class |
+  | tokens sz meta class ext |
   self hasFileTreeSmalltalkSource
     ifFalse: [ ^ self filePath ].
   tokens := self filePath findTokens: '/'.
@@ -9,5 +9,8 @@ methodSpec
   (tokens at: sz - 1) = 'class'
     ifTrue: [ meta := ' class' ].
   class := tokens at: sz - 2.
-  class := class copyFrom: 1 to: class size - '.class' size.
+  (class endsWith: '.class')
+    ifTrue: [ ext := '.class' ]
+    ifFalse: [ ext := '.extension' ].
+  class := class copyFrom: 1 to: class size - ext size.
   ^ ' ' , class , meta , ' >> ' , self methodSelector asString , ' '

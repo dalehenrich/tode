@@ -5,5 +5,9 @@
 		"browseFullClassMenuAction:selectionIndex:" : "dkh 05/10/2014 20:31",
 		"browseImplementorsMenuAction:selectionIndex:" : "dkh 05/09/2014 15:21",
 		"browseSendersMenuAction:selectionIndex:" : "dkh 05/09/2014 15:21",
-		"menuActionSpec:" : "dkh 05/09/2014 15:06",
-		"methodMenuActionSpec" : "dkh 05/10/2014 20:27" } }
+		"menuActionSpec:" : "dkh 05/10/2014 20:58",
+		"methodMenuActionSpec" : "dkh 05/10/2014 20:27",
+		"operations" : "dkh 05/10/2014 21:01",
+		"toggleViewStOnly:selectionIndex:" : "dkh 05/10/2014 20:58",
+		"viewStOnly" : "dkh 05/10/2014 20:54",
+		"viewStOnly:" : "dkh 05/10/2014 20:53" } }
