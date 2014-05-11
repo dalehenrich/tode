@@ -2,8 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"formatSource:" : "dkh 05/09/2014 15:32",
+		"formatSource:" : "dkh 05/10/2014 19:48",
 		"hasFileTreeSmalltalkSource" : "dkh 05/09/2014 12:39",
+		"label" : "dkh 05/10/2014 20:11",
+		"methodClass" : "dkh 05/10/2014 20:32",
 		"methodSelector" : "dkh 05/09/2014 15:33",
-		"stSource" : "dkh 05/09/2014 15:29",
+		"methodSpec" : "dkh 05/10/2014 20:22",
+		"stSource" : "dkh 05/10/2014 20:23",
 		"stSource:" : "dkh 05/09/2014 15:29" } }

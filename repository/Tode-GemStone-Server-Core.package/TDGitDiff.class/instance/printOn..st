@@ -1,3 +1,7 @@
 as yet unclassified
 printOn: aStream
-  aStream nextPutAll: self filePath , '(' , self selection asString , ')'
+  | op |
+  op := ' c '.
+  self editOp = 'M'
+    ifFalse: [ op := '[' , self editOp , ']' ].
+  aStream nextPutAll: op , self label , '(' , self selection asString , ')'

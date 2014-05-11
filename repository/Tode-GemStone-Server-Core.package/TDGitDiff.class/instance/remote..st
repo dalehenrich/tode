@@ -1,5 +1,5 @@
 accessing
-remote: anObject
-
-   "Modify the value of the instance variable 'remote'."
-   remote := anObject
+remote: aString
+  (aString beginsWith: 'fatal')
+    ifTrue: [ self halt ].
+  remote := aString

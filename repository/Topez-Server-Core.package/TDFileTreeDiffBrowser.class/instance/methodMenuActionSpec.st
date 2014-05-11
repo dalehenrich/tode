@@ -1,4 +1,6 @@
 menu action specs
 methodMenuActionSpec
-  ^ {#('senders' $n #'browseSendersMenuAction:selectionIndex:').
+  ^ {#('browse class' $n #'browseFullClassMenuAction:selectionIndex:').
+  #('-').
+  #('senders' $n #'browseSendersMenuAction:selectionIndex:').
   #('implementors' $m #'browseImplementorsMenuAction:selectionIndex:')}
