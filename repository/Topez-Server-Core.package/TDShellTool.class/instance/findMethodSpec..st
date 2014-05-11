@@ -1,7 +1,7 @@
 as yet unclassified
 findMethodSpec: methodSpec
   | method methodRefs |
-  method := self parseMethodSpec: methodSpec.
+  method := self parseMethodSpec: methodSpec trimBoth.
   methodRefs := {(MethodReference
     class: method inClass
     selector: method selector)}.

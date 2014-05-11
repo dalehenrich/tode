@@ -3,8 +3,7 @@ menuActionSpec: miniTool
   theMiniTool := miniTool.
   ^ self operationsMenuActionSpec
     ,
-      {#('-').
-      #('toggle view st only' nil #'toggleViewStOnly:selectionIndex:').
+      {#('toggle view st only' nil #'toggleViewStOnly:selectionIndex:').
       #('-')}
     , {{('Method' -> self methodMenuActionSpec)}} , {#('-')}
     , self standardMenuActionSpec
