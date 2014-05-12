@@ -41,7 +41,7 @@ apply: menuSpec to: aMenu for: menuTarget
 													sel := (spec at: 4) asSymbol.
 													aMenu
 														addWithLabel: label
-														enablementSelector: [ (self menuCategoryStatusDict at: menuCategory) == #on ]
+														enablementSelector: [ (self menuCategoryStatusDict at: menuCategory ifAbsent: [ #on ]) == #on ]
 														target: menuTarget
 														selector: sel
 														argumentList: {(spec at: 3)} ] ]
