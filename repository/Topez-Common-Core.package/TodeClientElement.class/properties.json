@@ -24,8 +24,7 @@
 		"cmdKeyCodePoints",
 		"windowIsClosingBlock",
 		"windowIsClosingBlockOop",
-		"windowBuilder",
-		"menuCategoryStatusDict" ],
+		"windowBuilder" ],
 	"name" : "TodeClientElement",
 	"pools" : [
 		 ],

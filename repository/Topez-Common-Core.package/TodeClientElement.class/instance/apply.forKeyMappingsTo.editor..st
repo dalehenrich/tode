@@ -15,7 +15,7 @@ apply: menuSpec forKeyMappingsTo: aTextEditor editor: aTodeCodeEditor
 										ifTrue: [ 
 											| selector |
 											selector := spec at: 3.
-											spec size == 3
+											(spec size == 3 or: [(spec at: 4) isNil])
 												ifTrue: [ 
 													aTextEditor
 														bindCharacter: char

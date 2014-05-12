@@ -31,20 +31,20 @@ apply: menuSpec to: aMenu for: menuTarget
 								ifFalse: [ 
 									spec size == 6
 										ifTrue: [ 
-											| sel menuCategory initialStatus |
+											| sel menuCategory unselectedStatus |
 											sel := #executeMenuAction:.
 											menuCategory := spec at: 5.
-											initialStatus := spec at: 6.	"#on #off"
-											self menuCategoryStatusDict at: menuCategory put: initialStatus.
-											(spec at: 4)
-												ifNotNil: [ 
-													sel := (spec at: 4) asSymbol.
-													aMenu
-														addWithLabel: label
-														enablementSelector: [ (self menuCategoryStatusDict at: menuCategory ifAbsent: [ #on ]) == #on ]
-														target: menuTarget
-														selector: sel
-														argumentList: {(spec at: 3)} ] ]
+											unselectedStatus := spec at: 6.
+											(spec at: 4) ifNotNil: [ sel := (spec at: 4) asSymbol ].
+											aMenu
+												addWithLabel: label
+												enablementSelector: [ 
+													menuTarget listIndex = 0
+														ifTrue: [ unselectedStatus ]
+														ifFalse: [ menuTarget enabledMenuCategories includes: menuCategory ] ]
+												target: menuTarget
+												selector: sel
+												argumentList: {(spec at: 3)} ]
 										ifFalse: [ 
 											aMenu
 												add: label
