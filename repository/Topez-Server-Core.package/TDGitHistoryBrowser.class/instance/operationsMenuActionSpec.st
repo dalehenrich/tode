@@ -6,4 +6,5 @@ operationsMenuActionSpec
   #('toggle diff' $t #'toggleDiffMenuAction:selectionIndex:').
   #('-').
   #('full commit log entry' nil #'fullLogMenuAction:selectionIndex:').
-  #('diff from here' nil #'diffFromHereMenuAction:selectionIndex:')}
+  #('diff from here' nil #'diffFromHereMenuAction:selectionIndex:').
+  #('diff to here' nil #'diffToHereMenuAction:selectionIndex:')}
