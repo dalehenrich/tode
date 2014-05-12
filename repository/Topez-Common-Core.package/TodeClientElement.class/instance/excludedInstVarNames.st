@@ -1,3 +1,3 @@
 as yet unclassified
 excludedInstVarNames
-  ^ #(#'blockCache' #'theObject' #'topez' #'windowBuilder' #'keyboardEventBlock' #'menuActionBlock' #'windowIsClosingBlock')
+  ^ #(#'blockCache' #'theObject' #'topez' #'windowBuilder' #'keyboardEventBlock' #'menuActionBlock' #'windowIsClosingBlock' #menuCategoryStatusDict)
