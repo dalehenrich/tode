@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"changesForCommitMenuAction:selectionIndex:" : "dkh 05/12/2014 15:42",
+		"clientList:listElement:" : "dkh 05/12/2014 15:43",
+		"diffFromHereMenuAction:selectionIndex:" : "dkh 05/12/2014 15:43",
+		"diffToHereMenuAction:selectionIndex:" : "dkh 05/12/2014 15:43",
+		"history" : "dkh 05/12/2014 15:39",
+		"history:" : "dkh 05/12/2014 15:40",
+		"menuActionSpec:" : "dkh 05/12/2014 15:46",
+		"operationsMenuActionSpec" : "dkh 05/12/2014 15:49",
+		"rawCommitLog:gitRepoDirectory:" : "dkh 05/12/2014 15:40",
+		"windowLocation" : "dkh 05/12/2014 15:40" } }

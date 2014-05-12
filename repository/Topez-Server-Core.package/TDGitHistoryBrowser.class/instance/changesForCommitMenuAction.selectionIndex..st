@@ -1,5 +1,5 @@
 tools
-diffFromHereMenuAction: listElement selectionIndex: index
+changesForCommitMenuAction: listElement selectionIndex: index
   | oneline sha offset gitTool |
   oneline := (self history at: index) labelString.
   offset := oneline indexOf: Character space.
@@ -7,9 +7,6 @@ diffFromHereMenuAction: listElement selectionIndex: index
   gitTool := self gitTool.
   'No diffs'
     =
-      (gitTool
-        gitfiletreetool: sha
-        commitish2: self commitish2
-        gitRepoDirectory: self gitRepoDirectory)
+      (gitTool gitfiletreeChangestool: sha gitRepoDirectory: self gitRepoDirectory)
     ifTrue: [ self inform: 'No diffs' ].
   ^ true

@@ -5,8 +5,11 @@ diffToHereMenuAction: listElement selectionIndex: index
   offset := oneline indexOf: Character space.
   sha := oneline copyFrom: 1 to: offset - 1.
   gitTool := self gitTool.
-  gitTool
-    gitfiletreetool: self commitish1
-    commitish2: sha
-    gitRepoDirectory: self gitRepoDirectory.
+  'No diffs'
+    =
+      (gitTool
+        gitfiletreetool: self commitish1
+        commitish2: sha
+        gitRepoDirectory: self gitRepoDirectory)
+    ifTrue: [ self inform: 'No diffs' ].
   ^ true

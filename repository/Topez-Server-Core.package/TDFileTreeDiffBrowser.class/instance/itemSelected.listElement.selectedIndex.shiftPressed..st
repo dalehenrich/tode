@@ -5,13 +5,15 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     itemSelected: miniTool
     listElement: listElement
     selectedIndex: index
-    shiftPressed: shiftPressed)
-    ifFalse: [ ^ false ].
+    shiftPressed: shiftPressed) == false
+    ifTrue: [ ^ false ].
   operation := self operations at: index.
   selector := #'clearMenuCategory:'.
   operation hasFileTreeSmalltalkSource
     ifTrue: [ selector := #'setMenuCategory:' ].
   ^ STON
     toString:
-      {selector.
+      {#'setMenuCategory:'.
+      #'operationSelected'.
+      selector.
       #'stMenuItem'}

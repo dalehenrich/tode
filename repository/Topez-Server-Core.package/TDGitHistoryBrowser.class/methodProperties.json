@@ -2,9 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
+		"changesForCommitMenuAction:selectionIndex:" : "dkh 05/12/2014 15:13",
 		"clientList:listElement:" : "dkh 05/11/2014 19:55",
-		"diffFromHereMenuAction:selectionIndex:" : "dkh 05/11/2014 20:08",
-		"diffToHereMenuAction:selectionIndex:" : "dkh 05/12/2014 14:35",
+		"diffFromHereMenuAction:selectionIndex:" : "dkh 05/12/2014 15:18",
+		"diffToHereMenuAction:selectionIndex:" : "dkh 05/12/2014 15:19",
 		"filePath" : "dkh 05/11/2014 18:39",
 		"fullLogMenuAction:selectionIndex:" : "dkh 05/11/2014 19:57",
 		"history" : "dkh 05/11/2014 17:11",
@@ -12,7 +13,7 @@
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/11/2014 19:56",
 		"operationFrom:" : "dkh 05/11/2014 19:47",
 		"operations" : "dkh 05/11/2014 20:00",
-		"operationsMenuActionSpec" : "dkh 05/12/2014 14:35",
+		"operationsMenuActionSpec" : "dkh 05/12/2014 15:04",
 		"theOperation" : "dkh 05/11/2014 18:37",
 		"theOperation:" : "dkh 05/11/2014 18:37",
 		"theOperation:rawCommitLog:gitRepoDirectory:" : "dkh 05/11/2014 19:54",

@@ -21,6 +21,8 @@ projectcompare
     commitish2: commitish2
     gitRepoDirectory: gitRepoDirectory
     diffClass: TDFileTreeDiff.
+  diffs isEmpty
+    ifTrue: [ ^ 'No diffs' ].
   (TDFileTreeDiffBrowser new
     operations: diffs;
     commitish1: commitish1;

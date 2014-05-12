@@ -10,7 +10,7 @@ gitdifftool: commitish1 commitish2: commitish2 gitRepoDirectory: gitRepoDirector
     ifTrue: [ self error: 'Error performing diff: ' , result printString ].
   records := self parseRawDiffFiles: result.
   records isEmpty
-    ifTrue: [ ^ 'No diffs' ].
+    ifTrue: [ ^ #() ].
   diffs := records
     collect: [ :ar | 
       | diff operations path op |
