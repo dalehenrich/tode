@@ -23,6 +23,8 @@ projectcompare
     diffClass: TDFileTreeDiff.
   (TDFileTreeDiffBrowser new
     operations: diffs;
+    commitish1: commitish1;
+    commitish2: commitish2;
     topez: topez;
     windowLabel:
         'Compare ' , commitish1 printString , ' to ' , commitish2 printString;

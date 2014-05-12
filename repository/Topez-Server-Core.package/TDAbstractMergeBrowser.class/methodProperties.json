@@ -3,17 +3,13 @@
 		 },
 	"instance" : {
 		"clientList:listElement:" : "dkh 05/10/2014 19:42",
-		"editOperation:listElement:" : "dkh 05/09/2014 14:41",
+		"commitFileHistory:selectionIndex:" : "dkh 05/11/2014 20:05",
+		"editOperation:listElement:" : "dkh 05/11/2014 17:55",
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/09/2014 14:41",
 		"menuActionSpec:" : "dkh 05/09/2014 16:03",
 		"operations" : "dkh 05/09/2014 14:54",
 		"operationsMenuActionSpec" : "dkh 05/09/2014 14:45",
 		"selectLocalDefinitionMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09",
 		"selectRemoteDefinitionMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09",
-		"sourceWindowId" : "dkh 05/09/2014 14:28",
-		"sourceWindowId:" : "dkh 05/09/2014 14:28",
-		"sourceWindowIdIsClosing" : "dkh 05/09/2014 14:37",
 		"toggleDiffMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09",
-		"windowIsClosing:" : "dkh 05/09/2014 14:29",
-		"windowLocation" : "dkh 05/09/2014 14:19",
-		"windowName" : "dkh 05/09/2014 14:19" } }
+		"windowLocation" : "dkh 05/11/2014 17:22" } }

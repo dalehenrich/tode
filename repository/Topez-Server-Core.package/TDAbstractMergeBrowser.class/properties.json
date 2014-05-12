@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"sourceWindowId" ],
+		 ],
 	"name" : "TDAbstractMergeBrowser",
 	"pools" : [
 		 ],
-	"super" : "TDStandardToolBuilder",
+	"super" : "TDAbstractGitBrowser",
 	"type" : "normal" }

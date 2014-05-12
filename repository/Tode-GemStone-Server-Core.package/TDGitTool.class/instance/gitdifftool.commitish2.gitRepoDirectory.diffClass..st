@@ -28,33 +28,21 @@ gitdifftool: commitish1 commitish2: commitish2 gitRepoDirectory: gitRepoDirector
         ifTrue: [ 
           diff
             local:
-                (self
-                    gitFileContents: path
-                    commitish: (ar at: 3)
-                    gitRepoDirectory: gitRepoDirectory);
+                (self gitFileContents: (ar at: 3) gitRepoDirectory: gitRepoDirectory);
             remote:
-                (self
-                    gitFileContents: path
-                    commitish: (ar at: 4)
-                    gitRepoDirectory: gitRepoDirectory);
+                (self gitFileContents: (ar at: 4) gitRepoDirectory: gitRepoDirectory);
             yourself ]
         ifFalse: [ 
           op = 'D'
             ifTrue: [ 
               diff
                 local:
-                  (self
-                    gitFileContents: path
-                    commitish: (ar at: 3)
-                    gitRepoDirectory: gitRepoDirectory) ]
+                  (self gitFileContents: (ar at: 3) gitRepoDirectory: gitRepoDirectory) ]
             ifFalse: [ 
               op = 'A'
                 ifTrue: [ 
                   diff
                     remote:
-                      (self
-                        gitFileContents: path
-                        commitish: (ar at: 4)
-                        gitRepoDirectory: gitRepoDirectory) ]
+                      (self gitFileContents: (ar at: 4) gitRepoDirectory: gitRepoDirectory) ]
                 ifFalse: [ Error signal: 'Unknown diff op: ' , op printString ] ] ] ].
   ^ diffs

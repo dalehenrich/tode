@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"gitRepoDirectory",
+		"sourceWindowId",
+		"commitish1",
+		"commitish2" ],
+	"name" : "TDAbstractGitBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDStandardToolBuilder",
+	"type" : "normal" }

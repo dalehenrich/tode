@@ -13,4 +13,4 @@ methodSpec
     ifTrue: [ ext := '.class' ]
     ifFalse: [ ext := '.extension' ].
   class := class copyFrom: 1 to: class size - ext size.
-  ^ ' ' , class , meta , '>>' , self methodSelector asString , ' '
+  ^ class , meta , '>>' , self methodSelector asString
