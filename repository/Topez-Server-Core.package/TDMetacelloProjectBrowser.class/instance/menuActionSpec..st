@@ -5,4 +5,5 @@ menuActionSpec: miniTool
   #('commit' nil #'commitProjectMenuAction:selectionIndex:' nil #'projectSelected' false).
   #('-').
   #('current commit log entry' nil #'lastCommitLogEntryMenuAction:selectionIndex:' nil #'gitProjectSelected' false).
-  #('commit log' nil #'gitCommitLogMenuAction:selectionIndex:' nil #'gitProjectSelected' false)}
+  #('commit log' nil #'gitCommitLogMenuAction:selectionIndex:' nil #'gitProjectSelected' false).
+  #('-')} , self standardMenuActionSpec

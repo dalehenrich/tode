@@ -10,8 +10,8 @@ commitFileHistory: listElement selectionIndex: selectionIndex
   commitLog := gitTool
     gitlogIn: self gitRepoDirectory
     with:
-      '--oneline ' , self commitish1 , '..' , self commitish2 , ' -- '
-        , mergeOperation filePath.
+      '--date=relative --format="%h %cd %s" ' , self commitish1 , '..'
+        , self commitish2 , ' -- ' , mergeOperation filePath.
   (TDGitHistoryBrowser new
     topez: listElement topez;
     commitish1: self commitish1;

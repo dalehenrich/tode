@@ -6,7 +6,9 @@ commitHistory: listElement selectionIndex: selectionIndex
   gitTool := self gitTool.
   commitLog := gitTool
     gitlogIn: self gitRepoDirectory
-    with: '--oneline ' , self commitish1 , '..' , self commitish2 , ' -- '.
+    with:
+      '--date=relative --format="%h %cd %s" ' , self commitish1 , '..'
+        , self commitish2 , ' -- '.
   (TDGitFullHistoryBrowser new
     topez: listElement topez;
     commitish1: self commitish1;

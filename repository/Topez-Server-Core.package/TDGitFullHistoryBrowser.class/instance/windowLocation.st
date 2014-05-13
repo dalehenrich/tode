@@ -1,3 +1,3 @@
 accessing
 windowLocation
-  ^ #'inspector'
+  ^ #'app2'

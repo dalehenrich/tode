@@ -45,6 +45,15 @@ createBoundsDictionary
 			put:
 				((classListsOrigin + codeWidth + appWidth) @ (top + thirdHeight + codeWindowExtent y)
 						extent: appWidth @ (self shellWindowHeight * height));
+		at: #app3
+			put:
+				((classListsOrigin + codeWidth) @ (top + thirdHeight + codeWindowExtent y - (self shellWindowHeight * height))
+						extent: appWidth @ (self shellWindowHeight * height));
+		at: #app4
+			put:
+				((classListsOrigin + codeWidth + appWidth)
+						@ (top + thirdHeight + codeWindowExtent y - (self shellWindowHeight * height))
+						extent: appWidth @ (self shellWindowHeight * height));
 		at: #context
 			put:
 				((hierarcyOrigin + codeWidth) @ (top + thirdHeight + codeWindowExtent y)

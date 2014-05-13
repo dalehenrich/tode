@@ -3,7 +3,8 @@ gitlogtool: commitish limit: limit gitRepoDirectory: gitRepoDirectory label: lab
   | commitLog |
   commitLog := self
     gitlogIn: gitRepoDirectory
-    with: '--oneline -' , limit printString , ' ' , commitish.
+    with:
+      '--date=relative --format="%h %cd %s" -' , limit printString , ' ' , commitish.
   (TDGitFullHistoryBrowser new
     topez: self topez;
     commitish1: commitish;

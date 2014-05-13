@@ -1,3 +1,3 @@
 accessing
 windowLocation
-  ^ #'app1'
+  ^ #'app3'
