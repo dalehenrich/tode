@@ -26,4 +26,5 @@ commitWorkingCopyPrompting: aWorkingCopy repos: targetRepos
             cr;
             show:
                 'Committed: ' , newVersion printString , ' -- ' , repository printString ] ].
+  self topez commitTransaction.
   ^ newVersion

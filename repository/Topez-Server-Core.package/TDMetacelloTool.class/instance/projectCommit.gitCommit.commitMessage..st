@@ -8,4 +8,5 @@ projectCommit: registration gitCommit: gitCommit commitMessage: messageString
     commitMessage: messageString.
   gitCommit
     ifTrue: [ self gitCommit: registration commitMessage: messageString ].
+  self topez commitTransaction.
   ^ committedVersions

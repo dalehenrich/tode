@@ -1,9 +1,11 @@
 as yet unclassified
 commitProject: projectSpec repos: targetRepos commitMessage: commitMessage
-  | workingCopies |
+  | workingCopies committed |
   workingCopies := (self modifiedPackagesForProjectSpec: projectSpec)
     collect: [ :packageSpec | packageSpec workingCopy ].
-  ^ self
+  committed := self
     commitWorkingCopies: workingCopies
     repos: targetRepos
-    commitMessage: commitMessage
+    commitMessage: commitMessage.
+  self topez commitTransaction.
+  ^ committed
