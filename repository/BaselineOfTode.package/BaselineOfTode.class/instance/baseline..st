@@ -105,7 +105,10 @@ baseline: spec
                 postLoadDoIt: #'initializeTools';
                 requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Tests'
-          with: [ spec requires: #('Topez-Server-Core') ];
+          with: [ 
+              spec
+                includes: #('Tode-GemStone-Server-Tests');
+                requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Tests'
           with: [ spec requires: #('Topez-Server-Tests') ];
         package: 'Topez-Server-CypressTools'

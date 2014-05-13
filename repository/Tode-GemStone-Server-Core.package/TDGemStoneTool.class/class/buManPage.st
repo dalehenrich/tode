@@ -17,7 +17,7 @@ DESCRIPTION
     directory Define default backup directory
     info      Display info about a particular backup
     list      Display info about all backup files
-    remove*   Remove backup file from backup directory
+    remove    Remove backup file from backup directory
     restore   Restore from a GemStone backup
 
 OPTIONS
@@ -29,6 +29,7 @@ EXAMPLES
   bu directory /opt/gemstone/backups
   bu info --dir=/opt/gemstone/backups seaside.dbf; print
   bu list
+  bu remove seaside.dbf
   bu restore seaside.dbf
 '.
   manPage subCommands
@@ -37,5 +38,6 @@ EXAMPLES
     at: 'info' put: self buinfoManPage;
     at: 'list' put: self bulistManPage;
     at: 'restore' put: self burestoreManPage;
+    at: 'remove' put: self buremoveManPage;
     yourself.
   ^ manPage
