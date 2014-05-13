@@ -8,4 +8,8 @@ projectCommitLog: registration logLimit: logLimit
           'Project must be using a FileTree repo and git to obtain a commit log' ].
   gitRepoDirectory := self gitRepoDirForRegistration: registration.
   gitTool := self topez toolInstanceFor: 'git'.
-  gitTool gitlogtool: 'HEAD' limit: logLimit gitRepoDirectory: gitRepoDirectory
+  gitTool
+    gitlogtool: 'HEAD'
+    limit: logLimit
+    gitRepoDirectory: gitRepoDirectory
+    label: 'Commit log for ' , registration projectName printString

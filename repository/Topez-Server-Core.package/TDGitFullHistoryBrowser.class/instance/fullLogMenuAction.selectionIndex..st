@@ -1,6 +1,8 @@
 tools
 fullLogMenuAction: listElement selectionIndex: index
   | commitLog oneline sha offset gitTool |
+  index = 0
+    ifTrue: [ ^ false ].
   oneline := self history at: index.
   offset := oneline indexOf: Character space.
   sha := oneline copyFrom: 1 to: offset - 1.
