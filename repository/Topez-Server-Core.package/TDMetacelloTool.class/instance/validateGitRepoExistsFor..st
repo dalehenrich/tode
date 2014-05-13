@@ -1,4 +1,4 @@
-project api
+private
 validateGitRepoExistsFor: registration
   registration hasFileTreeRepo
     ifFalse: [ 

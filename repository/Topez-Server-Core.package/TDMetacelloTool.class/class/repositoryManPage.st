@@ -13,6 +13,7 @@ SYNOPSIS
 DESCRIPTION
 
   Commands:
+    flush
 
   Use `repository --help <command>` to read about a specific subcommand.
 

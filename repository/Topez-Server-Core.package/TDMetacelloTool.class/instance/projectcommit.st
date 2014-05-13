@@ -4,8 +4,7 @@ projectcommit
   project commit [--git] --message=<message-ref> <project-name>
 "
 
-  | messageString projectName shellTool registration gitCommit committedVersions |
-  shellTool := self topez toolInstanceFor: 'find'.
+  | messageString projectName registration gitCommit committedVersions |
   self
     getSubcommandOptsMixedLongShort:
       {#('git' nil #'none').
@@ -15,7 +14,7 @@ projectcommit
     ifPresent: [ :arg | messageString := self resolveMessageArg: arg ]
     ifAbsent: [ self error: 'Must supply commit message (--message)' ].
   projectName := subArguments at: 1.
-  registration := shellTool findProjectRegistrationExact: projectName.
+  registration := self projectRegistrationFor: projectName.
   subOptions
     at: 'git'
     ifAbsent: [ gitCommit := false ]

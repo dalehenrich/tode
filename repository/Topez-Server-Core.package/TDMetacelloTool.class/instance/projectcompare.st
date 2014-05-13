@@ -4,11 +4,10 @@ projectcompare
   project compare [--commit=<commitish>] <project-name>
 "
 
-  | shellTool projectName registration commitish1 commitish2 gitTool gitRepoDirectory diffs |
+  | projectName registration commitish1 commitish2 gitTool gitRepoDirectory diffs |
   self getSubcommandOptsMixedLongShort: {#('commit' nil #'required')}.
-  shellTool := self topez toolInstanceFor: 'find'.
   projectName := subArguments at: 1.
-  registration := shellTool findProjectRegistrationExact: projectName.
+  registration := self projectRegistrationFor: projectName.
   commitish2 := registration currentVersionString.
   subOptions at: 'commit' ifPresent: [ :arg | commitish2 := arg ].
   commitish1 := registration versionString.

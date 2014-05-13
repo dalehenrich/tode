@@ -4,11 +4,10 @@ projectdiff
   project diff  [--all] <project-name>
 "
 
-  | shellTool projectName registration workingCopies stream patches |
+  | projectName registration workingCopies stream patches |
   self getSubcommandOptsMixedLongShort: {#('all' nil #'none')}.
-  shellTool := self topez toolInstanceFor: 'find'.
   projectName := subArguments at: 1.
-  registration := shellTool findProjectRegistrationExact: projectName.
+  registration := self projectRegistrationFor: projectName.
   workingCopies := registration workingCopies.
   subOptions
     at: 'all'
