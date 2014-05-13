@@ -9,4 +9,5 @@ commitProjectMenuAction: listElement selectionIndex: selectionIndex
       'Please enter a commit message for project: ' , registration projectName)
     signal.
   commitMessage ifNil: [ ^ false ].
-  self projectTool projectCommit: registration commitMessage: commitMessage
+  self projectTool projectCommit: registration commitMessage: commitMessage.
+  ^ #'refreshList'
