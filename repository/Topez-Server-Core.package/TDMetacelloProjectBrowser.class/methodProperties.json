@@ -3,8 +3,16 @@
 		 },
 	"instance" : {
 		"clientList:listElement:" : "dkh 05/09/2014 10:19",
+		"commitProjectMenuAction:selectionIndex:" : "dkh 05/12/2014 17:29",
+		"gitCommitLogMenuAction:selectionIndex:" : "dkh 05/12/2014 17:12",
+		"hasGitRepository:" : "dkh 05/12/2014 17:05",
+		"imageDiffMenuAction:selectionIndex:" : "dkh 05/12/2014 17:15",
+		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/12/2014 16:59",
+		"menuActionSpec:" : "dkh 05/12/2014 17:21",
 		"projectBlock" : "dkh 05/07/2014 11:19",
 		"projectBlock:" : "dkh 05/07/2014 11:19",
+		"projectTool" : "dkh 05/12/2014 17:02",
+		"projectTool:" : "dkh 05/12/2014 17:02",
 		"projects" : "dkh 05/07/2014 11:20",
 		"projects:" : "dkh 05/07/2014 11:19",
 		"windowName" : "dkh 05/07/2014 11:37" } }

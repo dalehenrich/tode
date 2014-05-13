@@ -16,7 +16,7 @@ projectlist
     ifAbsent: [ 
       ^ (TDMetacelloProjectBrowser new
         topez: topez;
-        mpTool: self;
+        projectTool: self;
         projectBlock: block;
         windowLabel: 'Projects';
         yourself) open ]

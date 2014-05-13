@@ -19,7 +19,7 @@ DESCRIPTION
     list     List Metacello projects
     load     (~/bin/load)
     lock
-    log
+    log      Browse commit log for the Metacello project (git only)
     merge    (git only?)
     prime    Prime the project registry
     push     (git only)
@@ -51,5 +51,6 @@ EXAMPLES
     at: 'workdir' put: self projectworkdirManPage;
     at: 'diff' put: self projectdiffManPage;
     at: 'compare' put: self projectcompareManPage;
+    at: 'log' put: self projectlogManPage;
     yourself.
   ^ manPage
