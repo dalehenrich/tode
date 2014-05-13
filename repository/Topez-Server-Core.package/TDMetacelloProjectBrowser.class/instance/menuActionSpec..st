@@ -1,7 +1,8 @@
 menu action specs
 menuActionSpec: miniTool
   theMiniTool := miniTool.
-  ^ {#('commit' nil #'commitProjectMenuAction:selectionIndex:' nil #'projectSelected' false).
+  ^ {#('image changes' nil #'imageDiffMenuAction:selectionIndex:' nil #'projectSelected' false).
+  #('commit' nil #'commitProjectMenuAction:selectionIndex:' nil #'projectSelected' false).
   #('-').
-  #('commit log' nil #'gitCommitLogMenuAction:selectionIndex:' nil #'gitProjectSelected' false).
-  #('image changes' nil #'imageDiffMenuAction:selectionIndex:' nil #'projectSelected' false)}
+  #('current commit log entry' nil #'lastCommitLogEntryMenuAction:selectionIndex:' nil #'gitProjectSelected' false).
+  #('commit log' nil #'gitCommitLogMenuAction:selectionIndex:' nil #'gitProjectSelected' false)}
