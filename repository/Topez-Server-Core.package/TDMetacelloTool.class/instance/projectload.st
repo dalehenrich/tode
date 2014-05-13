@@ -77,7 +77,10 @@ projectload
   subOptions
     at: 'loads'
     ifPresent: [ :arg | loads := arg evaluate ]
-    ifAbsent: [ loads := 'default' ].
+    ifAbsent: [ 
+      registration loads
+        ifNotNil: [ :loadList | loads := loadList ]
+        ifNil: [ loads := 'default' ] ].
   subOptions
     at: 'no-get'
     ifAbsent: [ 

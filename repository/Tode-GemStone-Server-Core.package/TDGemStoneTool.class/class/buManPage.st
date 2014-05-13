@@ -17,6 +17,7 @@ DESCRIPTION
     directory Define default backup directory
     info      Display info about a particular backup
     list      Display info about all backup files
+    remove*   Remove backup file from backup directory
     restore   Restore from a GemStone backup
 
 OPTIONS
