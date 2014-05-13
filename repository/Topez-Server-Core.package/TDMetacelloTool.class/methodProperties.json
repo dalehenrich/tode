@@ -24,9 +24,10 @@
 	"instance" : {
 		"projectCommit:commitMessage:" : "dkh 05/12/2014 17:26",
 		"projectCommit:gitCommit:commitMessage:" : "dkh 05/13/2014 11:48",
-		"projectCommitLog:logLimit:" : "dkh 05/12/2014 17:44",
-		"projectCommitLogEntries:commitish:logLimit:" : "dkh 05/12/2014 19:48",
+		"projectCommitLog:logLimit:" : "dkh 05/13/2014 12:00",
+		"projectCommitLogEntries:commitish:logLimit:" : "dkh 05/13/2014 12:01",
 		"projectDiff:" : "dkh 05/12/2014 17:13",
+		"projectStatus:" : "dkh 05/13/2014 12:04",
 		"projectcommit" : "dkh 05/12/2014 17:28",
 		"projectcompare" : "dkh 05/12/2014 15:11",
 		"projectdiff" : "dkh 05/09/2014 07:14",
@@ -34,4 +35,5 @@
 		"projectlog" : "dkh 05/12/2014 16:49",
 		"projectprime" : "dkh 05/09/2014 08:22",
 		"projectregistry" : "dkh 05/08/2014 10:28",
-		"projectvalidate" : "dkh 05/08/2014 10:28" } }
+		"projectvalidate" : "dkh 05/08/2014 10:28",
+		"validateGitRepoExistsFor:" : "dkh 05/13/2014 12:00" } }
