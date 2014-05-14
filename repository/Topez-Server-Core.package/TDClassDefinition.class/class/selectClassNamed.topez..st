@@ -1,6 +1,6 @@
 as yet unclassified
 selectClassNamed: className topez: topez
-  true
+  false
     ifTrue: [ 
       (Smalltalk classNamed: className)
         ifNil: [ 
