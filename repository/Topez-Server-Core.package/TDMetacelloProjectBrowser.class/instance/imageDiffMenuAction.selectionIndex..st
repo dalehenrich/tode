@@ -1,7 +1,10 @@
 menu actions
 imageDiffMenuAction: listElement selectionIndex: selectionIndex
-  | registration |
+  | registration patches |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  ^ self projectTool projectDiff: registration
+  patches := self projectTool projectDiff: registration.
+  patches isEmpty
+    ifTrue: [ self inform: 'No dirty packages' ].
+  ^ #'refreshList'

@@ -13,7 +13,7 @@ projectDiff: registration
     cr.
   patches := self diffForWorkingCopies: workingCopies on: stream.
   patches isEmpty
-    ifTrue: [ ^ 'No dirty packages' asText allBold ].
+    ifTrue: [ ^ patches ].
   (TDTxtLeafNode new contents: stream contents)
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
