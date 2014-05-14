@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"history" ],
+		"history",
+		"rawLogBlock" ],
 	"name" : "TDGitFullHistoryBrowser",
 	"pools" : [
 		 ],
