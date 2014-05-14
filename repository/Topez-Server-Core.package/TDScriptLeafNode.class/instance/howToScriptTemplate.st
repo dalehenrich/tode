@@ -1,6 +1,6 @@
 as yet unclassified
 howToScriptTemplate
-  ^ '[ :topez :objIn :tokens :command | 
+  ^ '[ :topez :objIn :tokens :command :commandNode | 
 | opts args result |
 "for help: ./'
     , self name

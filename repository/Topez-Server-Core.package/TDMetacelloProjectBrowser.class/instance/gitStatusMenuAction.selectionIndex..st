@@ -1,4 +1,4 @@
-menu actions
+menu actions (git)
 gitStatusMenuAction: listElement selectionIndex: selectionIndex
   | registration status commitLog |
   selectionIndex = 0

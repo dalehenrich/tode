@@ -1,18 +1,19 @@
 menu actions
 commitProjectMenuAction: listElement selectionIndex: selectionIndex
-  | registration commitMessage |
+  | registration commitMessage commitTemplate |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
+  commitTemplate := registration commitMessageUsing: self projectTool.
   commitMessage := (GsMultiLineTextInteraction
     prompt:
-      'Please enter a commit message for project: ' , registration projectName)
-    signal.
+      'Please enter a commit message for project: ' , registration projectName
+    template: commitTemplate) signal.
   commitMessage
     ifNil: [ 
       Transcript
         cr;
         show: 'Project save aborted...'.
       ^ false ].
-  self projectTool projectCommit: registration commitMessage: commitMessage.
+  registration saveProjectUsing: self projectTool commitMessage: commitMessage.
   ^ #'refreshList'

@@ -3,13 +3,12 @@
 		 },
 	"instance" : {
 		"clientList:listElement:" : "dkh 05/09/2014 10:19",
-		"commitProjectMenuAction:selectionIndex:" : "dkh 05/14/2014 11:23",
+		"commitProjectMenuAction:selectionIndex:" : "dkh 05/14/2014 16:44",
 		"gitCommitLogMenuAction:selectionIndex:" : "dkh 05/12/2014 17:12",
 		"gitStatusMenuAction:selectionIndex:" : "dkh 05/14/2014 07:35",
 		"hasGitRepository:" : "dkh 05/12/2014 17:05",
-		"imageDiffMenuAction:selectionIndex:" : "dkh 05/13/2014 21:01",
+		"imageDiffMenuAction:selectionIndex:" : "dkh 05/14/2014 14:49",
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/12/2014 16:59",
-		"lastCommitLogEntryMenuAction:selectionIndex:" : "dkh 05/12/2014 19:49",
 		"loadProjectMenuAction:selectionIndex:" : "dkh 05/14/2014 10:32",
 		"menuActionSpec:" : "dkh 05/14/2014 10:32",
 		"projectBlock" : "dkh 05/07/2014 11:19",
@@ -18,6 +17,6 @@
 		"projectTool:" : "dkh 05/12/2014 17:02",
 		"projects" : "dkh 05/07/2014 11:20",
 		"projects:" : "dkh 05/07/2014 11:19",
-		"revertProjectMenuAction:selectionIndex:" : "dkh 05/14/2014 11:20",
+		"revertProjectMenuAction:selectionIndex:" : "dkh 05/14/2014 15:06",
 		"windowLocation" : "dkh 05/13/2014 10:37",
 		"windowName" : "dkh 05/07/2014 11:37" } }

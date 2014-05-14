@@ -1,6 +1,6 @@
 as yet unclassified
 minimalScriptTemplate
-  ^ '[ :topez :objIn :tokens :command | 
+  ^ '[ :topez :objIn :tokens :command :commandNode | 
 | opts args |
 "for help: ./'
     , self name

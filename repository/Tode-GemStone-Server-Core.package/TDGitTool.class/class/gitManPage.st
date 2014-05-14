@@ -6,6 +6,7 @@ gitManPage
 SYNOPSIS
   git add [ `git-command-args` [ <git-repo-path> ]]
       add [ `git-command-args` [ @<git-repo-directory> ]]
+  git amend*
   git checkout `git-command-args` [ <git-repo-path> ]
       checkout `git-command-args` [ @<git-repo-directory> ]
   git commit `git-command-args` [ <git-repo-path> ]

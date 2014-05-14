@@ -1,6 +1,6 @@
 accessing
 evaluateCommand: command objIn: anObject
-  | commandNode commandOrPath commandResult |
+  | commandNode commandOrPath commandResult block |
   commandOrPath := command command.
   commandNode := (commandOrPath includes: $/)
     ifTrue: [ self lookup: commandOrPath ]
@@ -8,10 +8,21 @@ evaluateCommand: command objIn: anObject
       self commands
         at: commandOrPath
         ifAbsent: [ ^ (TDUnknownCommandError signal: commandOrPath) asTDCommandResult ] ].
-  commandResult := commandNode block
-    value: self
-    value: anObject
-    value: command tokens
-    value: command.
+  block := commandNode block.
+  commandResult := block numArgs = 5
+    ifTrue: [ 
+      block
+        valueWithArguments:
+          {self.
+          anObject.
+          (command tokens).
+          command.
+          commandNode} ]
+    ifFalse: [ 
+      block
+        cull: self
+        cull: anObject
+        cull: command tokens
+        cull: command ].
   self commitTransaction.
   ^ commandResult asTDCommandResult

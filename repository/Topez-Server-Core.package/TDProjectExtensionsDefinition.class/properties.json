@@ -6,10 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"registration",
-		"extension" ],
-	"name" : "TDMetacelloRegistrationDefinition",
+		"projectName",
+		"projectPath",
+		"commandMap" ],
+	"name" : "TDProjectExtensionsDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDPackageBasedDefinition",
+	"super" : "TDDefinition",
 	"type" : "normal" }
