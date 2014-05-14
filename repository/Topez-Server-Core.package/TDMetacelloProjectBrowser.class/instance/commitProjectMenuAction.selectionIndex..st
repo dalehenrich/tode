@@ -8,6 +8,11 @@ commitProjectMenuAction: listElement selectionIndex: selectionIndex
     prompt:
       'Please enter a commit message for project: ' , registration projectName)
     signal.
-  commitMessage ifNil: [ ^ false ].
+  commitMessage
+    ifNil: [ 
+      Transcript
+        cr;
+        show: 'Project save aborted...'.
+      ^ false ].
   self projectTool projectCommit: registration commitMessage: commitMessage.
   ^ #'refreshList'
