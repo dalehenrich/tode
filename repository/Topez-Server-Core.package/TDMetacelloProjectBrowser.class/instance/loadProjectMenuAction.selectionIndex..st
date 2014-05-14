@@ -1,5 +1,5 @@
 menu actions
-reloadProjectMenuAction: listElement selectionIndex: selectionIndex
+loadProjectMenuAction: listElement selectionIndex: selectionIndex
   | registration loads |
   selectionIndex = 0
     ifTrue: [ ^ false ].

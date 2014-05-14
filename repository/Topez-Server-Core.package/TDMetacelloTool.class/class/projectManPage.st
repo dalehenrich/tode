@@ -25,6 +25,7 @@ DESCRIPTION
     push     (git only)
     registry Inspect the project registry
     rehome   (~/bin/mapRepos)
+    revert   (see revert in project tool ... just dirty or reload ALL as options)
     status
     test
     validate Validate the project registrations
