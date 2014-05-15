@@ -1,3 +1,3 @@
 accessing
 versionString
-  ^ ''
+  ^ self subclassResponsibility
