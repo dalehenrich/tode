@@ -5,5 +5,7 @@ bu
   self
     performSubCommand: topez
     objIn: objIn
-    commandOptions: {#('help' $h #'none')}
+    commandOptions:
+      {#('help' $h #'none').
+      #('dir' nil #'required')}
     todeCommand: command ]
