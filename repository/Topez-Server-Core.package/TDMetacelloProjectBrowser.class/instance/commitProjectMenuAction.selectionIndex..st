@@ -1,7 +1,5 @@
 menu actions
 commitProjectMenuAction: listElement selectionIndex: selectionIndex
-  ""
-
   | registration commitMessage commitTemplate |
   selectionIndex = 0
     ifTrue: [ ^ false ].
