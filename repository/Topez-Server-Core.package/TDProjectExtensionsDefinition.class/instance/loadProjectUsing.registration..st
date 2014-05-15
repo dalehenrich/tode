@@ -7,6 +7,9 @@ loadProjectUsing: aProjectTool registration: aProjectRegistration
       aProjectRegistration loads
         ifNotNil: [ :loadList | loads := loadList ]
         ifNil: [ loads := 'default' ].
+      Transcript
+        cr;
+        show: 'load ' , self projectName.
       ^ aProjectTool
         projectLoad: self projectName
         selector: aProjectRegistration projectSelector

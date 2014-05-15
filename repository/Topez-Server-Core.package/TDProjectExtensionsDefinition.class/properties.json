@@ -8,7 +8,9 @@
 	"instvars" : [
 		"projectName",
 		"projectPath",
-		"commandMap" ],
+		"commandMap",
+		"projectSpec",
+		"status" ],
 	"name" : "TDProjectExtensionsDefinition",
 	"pools" : [
 		 ],

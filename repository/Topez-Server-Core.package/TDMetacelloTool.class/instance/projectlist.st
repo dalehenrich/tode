@@ -4,7 +4,7 @@ projectlist
   project list [--inspect|-i] [<project-pattern>]...
 "
 
-  | shellTool block list |
+  | shellTool block |
   self getSubcommandOptsMixedLongShort: {#('inspect' $i #'none')}.
   shellTool := self topez toolInstanceFor: 'find'.
   block := [ 
@@ -18,7 +18,7 @@ projectlist
       (map at: extension projectName ifAbsent: [  ])
         ifNil: [ map at: extension projectName put: extension createProjectRegistration ]
         ifNotNil: [ :registration | registration extension: extension ] ].
-  list := map values asArray sort: [ :a :b | a projectName <= b projectName ] ].
+  self sortRegistrationList: map values asArray ].
   subOptions
     at: 'inspect'
     ifPresent: [ :ignored | ^ (block value collect: [ :def | def projectSpec ]) inspect ]

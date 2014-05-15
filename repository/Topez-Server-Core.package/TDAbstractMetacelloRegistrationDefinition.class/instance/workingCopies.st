@@ -1,7 +1,7 @@
 accessing
 workingCopies
   | version workingCopies |
-  version := self registration projectSpec version.
+  version := self projectSpec version.
   workingCopies := version packages collect: [ :pkg | pkg workingCopy ].
-  workingCopies add: self registration projectSpec projectPackage workingCopy.
+  workingCopies add: self projectSpec projectPackage workingCopy.
   ^ workingCopies reject: [ :each | each isNil ]

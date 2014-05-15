@@ -2,16 +2,23 @@
 	"class" : {
 		 },
 	"instance" : {
+		"baseline:repository:loads:" : "dkh 05/15/2014 10:21",
 		"commandMap" : "dkh 05/14/2014 14:03",
 		"commandMap:" : "dkh 05/14/2014 14:03",
 		"commitMessage:registration:" : "dkh 05/14/2014 14:18",
+		"configuration:version:repository:loads:" : "dkh 05/15/2014 10:23",
 		"createProjectRegistration" : "dkh 05/14/2014 21:03",
 		"diffProject:registration:" : "dkh 05/14/2014 14:50",
+		"getProjectUsing:registration:" : "dkh 05/15/2014 14:40",
 		"label" : "dkh 05/14/2014 21:21",
-		"loadProjectUsing:registration:" : "dkh 05/14/2014 14:42",
+		"loadProjectUsing:registration:" : "dkh 05/15/2014 14:41",
 		"projectName" : "dkh 05/14/2014 14:01",
-		"projectName:" : "dkh 05/14/2014 14:01",
+		"projectName:" : "dkh 05/15/2014 11:57",
 		"projectPath" : "dkh 05/14/2014 14:01",
 		"projectPath:" : "dkh 05/14/2014 14:01",
-		"revertProjectUsing:registration:" : "dkh 05/14/2014 15:05",
-		"saveProject:registration:commitMessage:" : "dkh 05/14/2014 15:22" } }
+		"projectSpec" : "dkh 05/15/2014 10:13",
+		"projectSpec:" : "dkh 05/15/2014 10:15",
+		"revertProjectUsing:registration:" : "dkh 05/15/2014 14:41",
+		"saveProject:registration:commitMessage:" : "dkh 05/14/2014 15:22",
+		"status" : "dkh 05/15/2014 12:00",
+		"status:" : "dkh 05/15/2014 11:57" } }

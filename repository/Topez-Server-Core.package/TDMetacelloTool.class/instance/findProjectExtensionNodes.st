@@ -1,7 +1,7 @@
 private
 findProjectExtensionNodes
   | homeNode extensions |
-  true
+  false
     ifTrue: [ ^ #() ].
   homeNode := self topez lookup: '/home'.
   extensions := {}.

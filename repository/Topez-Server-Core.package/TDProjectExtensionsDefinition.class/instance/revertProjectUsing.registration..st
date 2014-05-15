@@ -4,7 +4,12 @@ revertProjectUsing: aProjectTool registration: aProjectRegistration
   nodeName := self commandMap
     at: 'revert'
     ifAbsent: [ 
-      [ ^ self loadProjectUsing: aProjectTool registration: aProjectRegistration ]
+      [ 
+      Transcript
+        cr;
+        show: 'revert ' , self projectName.
+      self getProjectUsing: aProjectTool registration: aProjectRegistration.
+      ^ self loadProjectUsing: aProjectTool registration: aProjectRegistration ]
         on:
           MetacelloIgnorePackageLoaded , MetacelloSkipDirtyPackageLoad , Warning
         do: [ :ex | 

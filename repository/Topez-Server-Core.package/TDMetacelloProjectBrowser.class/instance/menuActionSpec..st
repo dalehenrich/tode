@@ -1,13 +1,14 @@
 menu action specs
 menuActionSpec: miniTool
   theMiniTool := miniTool.
-  ^ {#('changes' nil #'imageDiffMenuAction:selectionIndex:' nil #'projectSelected' false).
-  #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'projectSelected' false).
+  ^ {#('changes' nil #'imageDiffMenuAction:selectionIndex:' nil #'loadedProject' false).
+  #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'loadedProject' false).
   #('-').
-  #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'projectSelected' false).
-  #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'projectSelected' false).
+  #('get' nil #'getProjectMenuAction:selectionIndex:' nil #'project' false).
+  #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).
+  #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'loadedProject' false).
   #('-').
-  #('commit log' nil #'gitCommitLogMenuAction:selectionIndex:' nil #'gitProjectSelected' false).
-  #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProjectSelected' false).
-  #('version skew' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
+  #('commit log' nil #'gitCommitLogMenuAction:selectionIndex:' nil #'gitProject' false).
+  #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false).
+  #('version skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
   #('-')} , self standardMenuActionSpec

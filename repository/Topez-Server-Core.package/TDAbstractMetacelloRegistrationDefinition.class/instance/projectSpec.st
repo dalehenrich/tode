@@ -1,3 +1,3 @@
 accessing
 projectSpec
-  self halt
+  self subclassResponsibility
