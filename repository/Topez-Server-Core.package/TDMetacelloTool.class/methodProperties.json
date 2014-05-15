@@ -22,6 +22,7 @@
 		"toolName" : "dkh 05/08/2014 10:27",
 		"toolReadMe" : "dkh 05/08/2014 10:27" },
 	"instance" : {
+		"findProjectExtensionNodes" : "dkh 05/14/2014 21:27",
 		"projectCommit:commitMessage:" : "dkh 05/12/2014 17:26",
 		"projectCommit:gitCommit:commitMessage:" : "dkh 05/13/2014 11:48",
 		"projectCommitLog:logLimit:" : "dkh 05/13/2014 12:00",
@@ -38,7 +39,7 @@
 		"projectcommit" : "dkh 05/13/2014 13:31",
 		"projectcompare" : "dkh 05/13/2014 13:31",
 		"projectdiff" : "dkh 05/13/2014 13:31",
-		"projectlist" : "dkh 05/12/2014 17:05",
+		"projectlist" : "dkh 05/14/2014 20:54",
 		"projectload" : "dkh 05/13/2014 16:06",
 		"projectlog" : "dkh 05/13/2014 13:32",
 		"projectprime" : "dkh 05/09/2014 08:22",

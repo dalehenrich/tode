@@ -1,4 +1,4 @@
-accessing
+comparing
 = aTDMetacelloRegistrationDefinition
   aTDMetacelloRegistrationDefinition species = self species
     ifFalse: [ ^ false ].

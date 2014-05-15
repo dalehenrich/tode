@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"registration" ],
-	"name" : "TDMetacelloRegistrationDefinition",
+		"extension" ],
+	"name" : "TDAbstractMetacelloRegistrationDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractMetacelloRegistrationDefinition",
+	"super" : "TDPackageBasedDefinition",
 	"type" : "normal" }
