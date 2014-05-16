@@ -6,5 +6,5 @@ diffMenuAction: listElement selectionIndex: selectionIndex
   registration := self projects at: selectionIndex.
   patches := registration diffProjectUsing: self projectTool.
   patches isEmpty
-    ifTrue: [ self inform: 'No dirty packages' ].
+    ifTrue: [ self inform: 'No diffs' ].
   ^ #'refreshList'

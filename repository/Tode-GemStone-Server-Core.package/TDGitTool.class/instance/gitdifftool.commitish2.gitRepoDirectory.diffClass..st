@@ -26,12 +26,19 @@ gitdifftool: commitish1 commitish2: commitish2 gitRepoDirectory: gitRepoDirector
         yourself.
       op = 'M'
         ifTrue: [ 
+          | sha |
           diff
             local:
-                (self gitFileContents: (ar at: 3) gitRepoDirectory: gitRepoDirectory);
-            remote:
-                (self gitFileContents: (ar at: 4) gitRepoDirectory: gitRepoDirectory);
-            yourself ]
+              (self gitFileContents: (ar at: 3) gitRepoDirectory: gitRepoDirectory).
+          sha := ar at: 4.
+          sha = '0000000...'
+            ifTrue: [ 
+              diff
+                remote:
+                  (self
+                    gitFileContentsFromDisk: (operations at: 2)
+                    gitRepoDirectory: gitRepoDirectory) ]
+            ifFalse: [ diff remote: (self gitFileContents: sha gitRepoDirectory: gitRepoDirectory) ] ]
         ifFalse: [ 
           op = 'D'
             ifTrue: [ 

@@ -5,5 +5,5 @@ operationsMenuActionSpec
   #('-').
   #('toggle diff' $t #'toggleDiffMenuAction:selectionIndex:').
   #('-').
-  #('file history' nil #'commitFileHistory:selectionIndex:' nil #'operationSelected' false).
-  #('full history' nil #'commitHistory:selectionIndex:')}
+  #('file history' nil #'commitFileHistory:selectionIndex:' nil #'fileHistory' false).
+  #('full history' nil #'commitHistory:selectionIndex:' nil #'fullHistory' false)}
