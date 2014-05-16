@@ -4,9 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 05/15/2014 17:54",
+	"commentStamp" : "",
 	"instvars" : [
-		"entry" ],
+		"entry",
+		"isDirty",
+		"isActive" ],
 	"name" : "TDAbstractProjectRegistrationDefinition",
 	"pools" : [
 		 ],

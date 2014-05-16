@@ -1,4 +1,9 @@
 testing
 isDirty
-  self workingCopies detect: [ :wc | wc modified ] ifNone: [ ^ false ].
-  ^ true
+  isDirty
+    ifNil: [ 
+      isDirty := true.
+      self workingCopies
+        detect: [ :wc | wc modified ]
+        ifNone: [ isDirty := false ] ].
+  ^ isDirty

@@ -1,5 +1,8 @@
 testing
 isActive
-  self entry
-    ifNil: [ ^ false ]
-    ifNotNil: [ ^ self entry status includes: #'active' ]
+  isActive
+    ifNil: [ 
+      self entry
+        ifNil: [ isActive := false ]
+        ifNotNil: [ isActive := self entry status includes: #'active' ] ].
+  ^ isActive
