@@ -5,8 +5,13 @@ browseProjectClassesMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
   block := [ 
-  (TDConfigurationDefinition new projectSpec: registration projectSpec)
-    classDefinitions ].
+  | defs |
+  defs := {(TDClassDefinition className: registration projectSpec className)}.
+  defs
+    addAll:
+      (TDConfigurationDefinition new projectSpec: registration projectSpec)
+        classDefinitions.
+  defs ].
   self browseTool
     browseClassesBlock: block
     label: 'Classes in ' , registration projectName.

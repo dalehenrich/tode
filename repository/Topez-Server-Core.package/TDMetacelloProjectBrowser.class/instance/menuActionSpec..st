@@ -13,4 +13,7 @@ menuActionSpec: miniTool
   #('commit log' nil #'gitCommitLogMenuAction:selectionIndex:' nil #'gitProject' false).
   #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false).
   #('version skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
+  #('-').
+  {('Baseline' -> self baselineMenuActionSpec)}.
+  {('Configuration' -> self configurationMenuActionSpec)}.
   #('-')} , self standardMenuActionSpec

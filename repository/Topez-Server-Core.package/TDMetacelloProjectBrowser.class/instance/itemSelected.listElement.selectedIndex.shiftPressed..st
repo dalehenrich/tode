@@ -1,41 +1,41 @@
 tools
 itemSelected: miniTool listElement: listElement selectedIndex: index shiftPressed: shiftPressed
-  | gitSelector registration skewSelector loadedSelector projectSelector repoSelector writableRepoSelector dirtyProjectSelector |
+  | registration enabled disabled enable |
   index == 0
     ifTrue: [ ^ false ].
-  dirtyProjectSelector := writableRepoSelector := repoSelector := projectSelector := loadedSelector := skewSelector := gitSelector := #'clearMenuCategory:'.
   registration := self projects at: index.
+  enabled := {}.
+  disabled := {#'dirtyProject'.
+  #'versionSkew'.
+  #'loadedProject'.
+  #'repoBasedProject'.
+  #'writableRepoBasedProject'.
+  #'gitProject'.
+  #'project'}.
+  enable := [ :symbol | 
+  enabled add: symbol.
+  disabled remove: symbol ].
   registration hasVersionSkew
-    ifTrue: [ skewSelector := #'setMenuCategory:' ].
+    ifTrue: [ enable value: #'versionSkew' ].
   (registration isLoadedInImage or: [ registration isExternalGitProject ])
     ifTrue: [ 
       registration isLoadedInImage
         ifTrue: [ 
           registration isDirty
-            ifTrue: [ dirtyProjectSelector := #'setMenuCategory:' ].
-          loadedSelector := #'setMenuCategory:' ].
+            ifTrue: [ enable value: #'dirtyProject' ].
+          enable value: #'loadedProject' ].
       (registration isMetacelloProject or: [ registration hasGitRepository ])
         ifTrue: [ 
-          repoSelector := #'setMenuCategory:'.
+          enable value: #'repoBasedProject'.
           registration hasGithubRepo
-            ifFalse: [ writableRepoSelector := #'setMenuCategory:' ] ] ].
+            ifFalse: [ enable value: #'writableRepoBasedProject' ] ] ].
   registration hasGitRepository
-    ifTrue: [ gitSelector := #'setMenuCategory:' ].
+    ifTrue: [ enable value: #'gitProject' ].
   registration isMetacelloProject
-    ifTrue: [ projectSelector := #'setMenuCategory:' ].
+    ifTrue: [ enable value: #'project' ].
   ^ STON
     toString:
-      {dirtyProjectSelector.
-      #'dirtyProject'.
-      writableRepoSelector.
-      #'writableRepoBasedProject'.
-      repoSelector.
-      #'repoBasedProject'.
-      gitSelector.
-      #'gitProject'.
-      loadedSelector.
-      #'loadedProject'.
-      skewSelector.
-      #'versionSkew'.
-      projectSelector.
-      #'project'}
+      {#'setMenuCategories:'.
+      enabled.
+      #'clearMenuCategories:'.
+      disabled}
