@@ -7,17 +7,19 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   registration := self projects at: index.
   registration hasVersionSkew
     ifTrue: [ skewSelector := #'setMenuCategory:' ].
-  registration isLoadedInImage
-    ifTrue: [ loadedSelector := #'setMenuCategory:' ].
+  (registration isLoadedInImage or: [ registration isExternalGitProject ])
+    ifTrue: [ 
+      registration isLoadedInImage
+        ifTrue: [ loadedSelector := #'setMenuCategory:' ].
+      (registration isMetacelloProject or: [ registration hasGitRepository ])
+        ifTrue: [ 
+          repoSelector := #'setMenuCategory:'.
+          registration hasGithubRepo
+            ifFalse: [ writableRepoSelector := #'setMenuCategory:' ] ] ].
   registration hasGitRepository
     ifTrue: [ gitSelector := #'setMenuCategory:' ].
   registration isMetacelloProject
     ifTrue: [ projectSelector := #'setMenuCategory:' ].
-  (registration isMetacelloProject or: [ registration hasGitRepository ])
-    ifTrue: [ 
-      repoSelector := #'setMenuCategory:'.
-      registration hasGithubRepo
-        ifFalse: [ writableRepoSelector := #'setMenuCategory:' ] ].
   ^ STON
     toString:
       {writableRepoSelector.
