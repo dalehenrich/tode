@@ -1,3 +1,3 @@
 actions
 revertProjectUsing: aProjectTool
-  ^ self extension revertProjectUsing: aProjectTool registration: self
+  ^ self entry revertProjectUsing: aProjectTool registration: self

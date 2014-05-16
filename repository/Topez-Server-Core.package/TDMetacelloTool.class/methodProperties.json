@@ -22,7 +22,6 @@
 		"toolName" : "dkh 05/08/2014 10:27",
 		"toolReadMe" : "dkh 05/08/2014 10:27" },
 	"instance" : {
-		"findProjectExtensionNodes" : "dkh 05/15/2014 10:29",
 		"projectCommit:commitMessage:" : "dkh 05/12/2014 17:26",
 		"projectCommit:gitCommit:commitMessage:" : "dkh 05/13/2014 11:48",
 		"projectCommitLog:logLimit:" : "dkh 05/13/2014 12:00",
@@ -39,7 +38,7 @@
 		"projectcommit" : "dkh 05/13/2014 13:31",
 		"projectcompare" : "dkh 05/13/2014 13:31",
 		"projectdiff" : "dkh 05/13/2014 13:31",
-		"projectlist" : "dkh 05/15/2014 12:09",
+		"projectlist" : "dkh 05/15/2014 18:15",
 		"projectload" : "dkh 05/13/2014 16:06",
 		"projectlog" : "dkh 05/13/2014 13:32",
 		"projectprime" : "dkh 05/09/2014 08:22",
@@ -47,5 +46,6 @@
 		"projectvalidate" : "dkh 05/08/2014 10:28",
 		"repositoryFlush" : "dkh 05/13/2014 13:40",
 		"repositoryflush" : "dkh 05/13/2014 13:40",
-		"sortRegistrationList:" : "dkh 05/15/2014 12:59",
-		"validateGitRepoExistsFor:" : "dkh 05/13/2014 13:37" } }
+		"scanHomeDirForProjects:" : "dkh 05/15/2014 17:32",
+		"sortRegistrationList:" : "dkh 05/15/2014 18:23",
+		"validateGitRepoExistsFor:" : "dkh 05/15/2014 18:39" } }

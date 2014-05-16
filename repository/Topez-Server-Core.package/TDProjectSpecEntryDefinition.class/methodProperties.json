@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baseline:repository:loads:" : "dkh 05/15/2014 17:14",
+		"concreteGetProjectUsing:registration:" : "dkh 05/15/2014 17:17",
+		"concreteLoadProjectUsing:registration:" : "dkh 05/15/2014 17:18",
+		"concreteRevertProjectUsing:registration:" : "dkh 05/15/2014 17:18",
+		"configuration:version:repository:loads:" : "dkh 05/15/2014 17:14",
+		"createProjectListRegistration" : "dkh 05/15/2014 18:15",
+		"getProjectUsing:registration:" : "dkh 05/15/2014 17:17",
+		"loadProjectUsing:registration:" : "dkh 05/15/2014 17:18",
+		"projectSpec" : "dkh 05/15/2014 17:14",
+		"projectSpec:" : "dkh 05/15/2014 17:14",
+		"revertProjectUsing:registration:" : "dkh 05/15/2014 17:18" } }

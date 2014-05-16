@@ -7,27 +7,15 @@ clientList: miniTool listElement: listElement
   labels := {}.
   projects
     do: [ :registrationDef | 
-      | nm vs rd cvs branch |
-      nm := registrationDef projectName.
-      registrationDef isDirty
-        ifTrue: [ nm := '* ' , nm ].
-      vs := registrationDef versionString.
-      cvs := registrationDef currentVersionString.
-      branch := registrationDef currentBranchName.
-      branch isEmpty
-        ifFalse: [ branch := ' [' , branch , ']' ].
-      cvs = vs
-        ifTrue: [ vs := vs , branch ]
-        ifFalse: [ vs := vs , ' ^ ' , cvs , branch ].
-      rd := registrationDef repositoryDescription.
+      | one two |
       labels
         add:
-          {nm.
-          vs.
-          rd.
+          {(one := registrationDef fieldOne).
+          (two := registrationDef fieldTwo).
+          (registrationDef fieldThree).
           (registrationDef emphasis)}.
-      max := max max: nm size.
-      maxVersion := maxVersion max: vs size ].
+      max := max max: one size.
+      maxVersion := maxVersion max: two size ].
   max := max + 2.
   maxVersion := maxVersion + 2.
   ^ (labels

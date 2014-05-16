@@ -1,8 +1,8 @@
 menu action specs
 menuActionSpec: miniTool
   theMiniTool := miniTool.
-  ^ {#('changes' nil #'imageDiffMenuAction:selectionIndex:' nil #'loadedProject' false).
-  #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'loadedProject' false).
+  ^ {#('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
+  #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('-').
   #('get' nil #'getProjectMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).

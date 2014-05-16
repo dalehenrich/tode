@@ -15,7 +15,7 @@ sortRegistrationList: list
             and: [ a isActive and: [ b isActive not ] ])
         |
           ((a isDirty not and: [ b isDirty not ])
-            and: [ (a isActive and: [ b isActive not ]) and: [ a projectName <= b projectName ] ])
+            and: [ (a isActive and: [ b isActive ]) and: [ a projectName <= b projectName ] ])
         |
           ((a isDirty not and: [ b isDirty not ])
             and: [ 

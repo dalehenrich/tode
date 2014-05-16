@@ -1,3 +1,3 @@
 actions
 getProjectUsing: aProjectTool
-  ^ self extension getProjectUsing: aProjectTool registration: self
+  ^ self entry getProjectUsing: aProjectTool registration: self

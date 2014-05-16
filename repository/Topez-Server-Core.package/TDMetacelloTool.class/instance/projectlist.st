@@ -12,12 +12,12 @@ projectlist
   map := Dictionary new.
   (shellTool findProjectRegistrationDefinitions: '')
     do: [ :reg | map at: reg projectName put: reg ].
-  self findProjectExtensionNodes
-    do: [ :extension | 
+  self
+    scanHomeDirForProjects: [ :projectEntry | 
       | registration |
-      (map at: extension projectName ifAbsent: [  ])
-        ifNil: [ map at: extension projectName put: extension createProjectRegistration ]
-        ifNotNil: [ :registration | registration extension: extension ] ].
+      (map at: projectEntry projectName ifAbsent: [  ])
+        ifNil: [ map at: projectEntry projectName put: projectEntry createProjectListRegistration ]
+        ifNotNil: [ :registration | registration entry: projectEntry ] ].
   self sortRegistrationList: map values asArray ].
   subOptions
     at: 'inspect'

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 05/15/2014 17:54",
+	"instvars" : [
+		"entry" ],
+	"name" : "TDAbstractProjectRegistrationDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDPackageBasedDefinition",
+	"type" : "normal" }

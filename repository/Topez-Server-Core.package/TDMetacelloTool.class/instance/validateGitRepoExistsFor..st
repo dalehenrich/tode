@@ -1,6 +1,6 @@
 private
 validateGitRepoExistsFor: registration
-  registration hasFileTreeRepo
+  registration hasGitRepository
     ifFalse: [ 
       self
         error:

@@ -10,5 +10,5 @@
 	"name" : "TDMetacelloRegistrationDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractMetacelloRegistrationDefinition",
+	"super" : "TDMetacelloProjectRegistrationDefinition",
 	"type" : "normal" }

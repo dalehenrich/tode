@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"gitRepoDirectoryPath" ],
+	"name" : "TDGitRepositoryEntryDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDProjectEntryDefinition",
+	"type" : "normal" }

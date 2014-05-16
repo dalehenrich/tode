@@ -1,3 +1,3 @@
 actions
 loadProjectUsing: aProjectTool
-  ^ self extension loadProjectUsing: aProjectTool registration: self
+  ^ self entry loadProjectUsing: aProjectTool registration: self
