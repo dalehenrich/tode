@@ -33,11 +33,7 @@ edit
   options
     at: 'editorAspect'
     ifPresent: [ :aspect | editorAspect := aspect asSymbol ].
-  contextObjects
-    do: [ :contextObject | 
-      contextObject
-        editUsing:
-          ((TDEditorSpec topez: topez editorAspect: editorAspect)
-            builderAspect: builderAspect;
-            yourself) ].
-  ^ contextObjects
+  ^ self
+    editObjects: contextObjects
+    builderAspect: builderAspect
+    editorAspect: editorAspect

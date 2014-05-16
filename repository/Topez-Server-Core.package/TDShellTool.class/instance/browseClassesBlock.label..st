@@ -5,7 +5,7 @@ browseClassesBlock: classDefsBlock label: windowLabel
   spec := (TDEditorSpec topez: topez editorAspect: #'definitionList')
     windowLabel: windowLabel;
     yourself.
-  options
+  self options
     at: 'staticList'
     ifPresent: [ :ignored | classDefs editUsing: spec ]
     ifAbsent: [ classDefs editUsing: spec objectBlock: classDefsBlock ].

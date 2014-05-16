@@ -1,7 +1,9 @@
 menu action specs
 menuActionSpec: miniTool
   theMiniTool := miniTool.
-  ^ {#('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
+  ^ {#('browse classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'project' false).
+  #('-').
+  #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('-').
   #('get' nil #'getProjectMenuAction:selectionIndex:' nil #'project' false).
