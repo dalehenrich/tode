@@ -2,6 +2,7 @@ as yet unclassified
 testBuInfoCommand
   "run without errors ... to keep me honest"
 
+  [ 
   | backupDirectoryPath |
   backupDirectoryPath := TDGemStoneTool defaulBackupDirectoryName.
   self topez
@@ -9,4 +10,9 @@ testBuInfoCommand
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' backup seaside.dbf';
     evaluateCommandString: 'bu info seaside.dbf';
-    yourself
+    yourself ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: (GsProcess stackReportToLevel: 100) ]
