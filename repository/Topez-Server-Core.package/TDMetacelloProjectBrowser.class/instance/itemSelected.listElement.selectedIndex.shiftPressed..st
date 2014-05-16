@@ -1,16 +1,19 @@
 tools
 itemSelected: miniTool listElement: listElement selectedIndex: index shiftPressed: shiftPressed
-  | gitSelector registration skewSelector loadedSelector projectSelector repoSelector writableRepoSelector |
+  | gitSelector registration skewSelector loadedSelector projectSelector repoSelector writableRepoSelector dirtyProjectSelector |
   index == 0
     ifTrue: [ ^ false ].
-  writableRepoSelector := repoSelector := projectSelector := loadedSelector := skewSelector := gitSelector := #'clearMenuCategory:'.
+  dirtyProjectSelector := writableRepoSelector := repoSelector := projectSelector := loadedSelector := skewSelector := gitSelector := #'clearMenuCategory:'.
   registration := self projects at: index.
   registration hasVersionSkew
     ifTrue: [ skewSelector := #'setMenuCategory:' ].
   (registration isLoadedInImage or: [ registration isExternalGitProject ])
     ifTrue: [ 
       registration isLoadedInImage
-        ifTrue: [ loadedSelector := #'setMenuCategory:' ].
+        ifTrue: [ 
+          registration isDirty
+            ifTrue: [ dirtyProjectSelector := #'setMenuCategory:' ].
+          loadedSelector := #'setMenuCategory:' ].
       (registration isMetacelloProject or: [ registration hasGitRepository ])
         ifTrue: [ 
           repoSelector := #'setMenuCategory:'.
@@ -22,7 +25,9 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifTrue: [ projectSelector := #'setMenuCategory:' ].
   ^ STON
     toString:
-      {writableRepoSelector.
+      {dirtyProjectSelector.
+      #'dirtyProject'.
+      writableRepoSelector.
       #'writableRepoBasedProject'.
       repoSelector.
       #'repoBasedProject'.
