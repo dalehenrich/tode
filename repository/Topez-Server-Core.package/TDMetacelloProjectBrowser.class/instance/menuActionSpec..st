@@ -14,6 +14,7 @@ menuActionSpec: miniTool
   #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false).
   #('version skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
   #('-').
+  #('edit project node' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   {('Baseline' -> self baselineMenuActionSpec)}.
   {('Configuration' -> self configurationMenuActionSpec)}.
   #('-')} , self standardMenuActionSpec

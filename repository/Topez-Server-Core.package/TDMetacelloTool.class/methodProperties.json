@@ -26,6 +26,7 @@
 		"projectCommit:configCommit:gitCommit:commitMessage:" : "dkh 05/16/2014 07:47",
 		"projectCommitLog:logLimit:" : "dkh 05/13/2014 12:00",
 		"projectCommitLogEntries:commitish:logLimit:" : "dkh 05/13/2014 12:01",
+		"projectCreateDevelopmentVersion:spec:version:from:" : "dkh 05/16/2014 16:26",
 		"projectDiff:" : "dkh 05/13/2014 20:59",
 		"projectGet:selector:repositoryDescription:" : "dkh 05/13/2014 15:14",
 		"projectLoad:selector:repositoryDescription:loads:" : "dkh 05/13/2014 15:52",

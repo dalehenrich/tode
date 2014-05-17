@@ -4,4 +4,5 @@ gitCommitLogMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  ^ self projectTool projectCommitLog: registration logLimit: 100
+  self projectTool projectCommitLog: registration logLimit: 100.
+  ^ true

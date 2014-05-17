@@ -11,12 +11,16 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   #'repoBasedProject'.
   #'writableRepoBasedProject'.
   #'gitProject'.
-  #'project'}.
+  #'project'.
+  #'configurationProject'.
+  #'githubProject'}.
   enable := [ :symbol | 
   enabled add: symbol.
   disabled remove: symbol ].
   registration hasVersionSkew
     ifTrue: [ enable value: #'versionSkew' ].
+  registration hasGithubRepo
+    ifTrue: [ enable value: #'githubProject' ].
   (registration isLoadedInImage or: [ registration isExternalGitProject ])
     ifTrue: [ 
       registration isLoadedInImage
@@ -28,7 +32,9 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
         ifTrue: [ 
           enable value: #'repoBasedProject'.
           registration hasGithubRepo
-            ifFalse: [ enable value: #'writableRepoBasedProject' ] ] ].
+            ifFalse: [ enable value: #'writableRepoBasedProject' ].
+          registration isConfigurationBased
+            ifTrue: [ enable value: #'configurationProject' ] ] ].
   registration hasGitRepository
     ifTrue: [ enable value: #'gitProject' ].
   registration isMetacelloProject
