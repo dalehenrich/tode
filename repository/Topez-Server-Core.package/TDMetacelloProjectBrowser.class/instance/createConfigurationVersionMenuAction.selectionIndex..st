@@ -15,7 +15,7 @@ createConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
     template: template) signal.
   newVersionString ifNil: [ ^ false ].
   self projectTool
-    projectCreateDevelopmentVersion: registration
+    projectCreateConfigurationDevelopmentVersion: registration
     spec: configSpec
     version: newVersionString
     from: currentVersion.

@@ -12,9 +12,7 @@ switchConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
     labels: labelArray
     values: nil) signal.
   selectedIndex ifNil: [ ^ false ].
-  Metacello new
-    configuration: registration projectName;
-    version: (labelArray at: selectedIndex);
-    repository: registration repositoryDescription;
-    register.
+  self
+    projectRegisterConfiguration: registration
+    version: (labelArray at: selectedIndex).
   ^ #'refreshList'

@@ -1,5 +1,5 @@
-as yet unclassified
-projectCreateDevelopmentVersion: registration spec: configSpec version: newVersionString from: sourceVersion
+project api
+projectCreateConfigurationDevelopmentVersion: registration spec: configSpec version: newVersionString from: sourceVersion
   MetacelloToolBox
     createDevelopment: newVersionString
     for: configSpec className
