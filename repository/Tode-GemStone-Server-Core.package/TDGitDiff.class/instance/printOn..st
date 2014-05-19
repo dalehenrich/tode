@@ -7,5 +7,8 @@ printOn: aStream
       ^ self ].
   op := ' c '.
   self editOp = 'M'
+    ifTrue: [ 
+      self remote trimBoth = self local trimBoth
+        ifTrue: [ op := ' - ' ] ]
     ifFalse: [ op := '[' , self editOp , ']' ].
   aStream nextPutAll: op , self label , ' (' , self selection asString , ')'

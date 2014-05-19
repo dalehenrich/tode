@@ -7,7 +7,7 @@ formatSource: methodSource
     ifTrue: [ ^ methodSource ].
   ar := self stSource: methodSource.
   firstLine := ar at: 1.
-  stSource := ar at: 2.
+  stSource := (ar at: 2) trimBoth.
   firstLine
     add: String cr;
     add: (super formatSource: stSource).
