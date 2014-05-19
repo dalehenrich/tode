@@ -21,7 +21,7 @@ clientListCategories: listElement
             aspect: listElement aspect).
       (beh selectorsIn: category) sorted
         do: [ :selector | 
-          ar add: ('  ' , selector asString) asText.
+          ar add: ('' , selector asString) asText.
           items
             add:
               (TDClientListItemAttributes

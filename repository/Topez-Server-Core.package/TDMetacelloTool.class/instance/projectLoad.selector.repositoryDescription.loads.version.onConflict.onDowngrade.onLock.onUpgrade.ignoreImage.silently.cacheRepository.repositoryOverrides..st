@@ -5,8 +5,10 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
   metacello perform: projectSelector with: projectName.
   metacello repository: repositoryDescription.
   configurationVersion ifNotNil: [ metacello version: configurationVersion ].
-  ignoreImage ifNotNil: [ metacello ignoreImage: ignoreImage ].
-  silently ifNotNil: [ metacello silently: silently ].
+  ignoreImage == true
+    ifTrue: [ metacello ignoreImage ].
+  silently == true
+    ifTrue: [ metacello silently ].
   cacheRepository ifNotNil: [ metacello cacheRepository: cacheRepository ].
   repositoryOverrides
     ifNotNil: [ metacello repositoryOverrides: repositoryOverrides ].
