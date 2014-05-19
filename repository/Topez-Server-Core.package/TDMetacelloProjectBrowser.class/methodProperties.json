@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"baselineMenuActionSpec" : "dkh 05/16/2014 15:03",
+		"browseProjectCategoriesMenuAction:selectionIndex:" : "dkh 05/19/2014 12:31",
 		"browseProjectClassesMenuAction:selectionIndex:" : "dkh 05/16/2014 14:51",
 		"clientList:listElement:" : "dkh 05/15/2014 17:50",
 		"cloneProjectMenuAction:selectionIndex:" : "dkh 05/16/2014 16:12",
@@ -23,7 +24,7 @@
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/16/2014 15:58",
 		"loadConfigurationVersionMenuAction:selectionIndex:" : "dkh 05/16/2014 16:50",
 		"loadProjectMenuAction:selectionIndex:" : "dkh 05/14/2014 10:32",
-		"menuActionSpec:" : "dkh 05/18/2014 19:45",
+		"menuActionSpec:" : "dkh 05/19/2014 12:27",
 		"projectBlock" : "dkh 05/07/2014 11:19",
 		"projectBlock:" : "dkh 05/07/2014 11:19",
 		"projectTool" : "dkh 05/12/2014 17:02",

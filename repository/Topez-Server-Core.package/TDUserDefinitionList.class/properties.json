@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"windowLabel",
+		"windowLocation",
+		"windowName" ],
+	"name" : "TDUserDefinitionList",
+	"pools" : [
+		 ],
+	"super" : "TDDefinitionList",
+	"type" : "normal" }
