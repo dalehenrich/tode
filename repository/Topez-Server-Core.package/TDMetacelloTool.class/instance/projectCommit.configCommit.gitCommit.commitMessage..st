@@ -12,10 +12,17 @@ projectCommit: registration configCommit: configCommit gitCommit: gitCommit comm
         ifNotNil: [ :configSpec | 
           committedVersions
             addAll:
-              (self
-                projectUpdateAndCommit: registration
-                configuration: configSpec
-                commitMessage: messageString) ] ].
+              (committedVersions isEmpty
+                ifTrue: [ 
+                  self
+                    projectCommitConfiguration: registration
+                    configuration: configSpec
+                    commitMessage: messageString ]
+                ifFalse: [ 
+                  self
+                    projectUpdateAndCommit: registration
+                    configuration: configSpec
+                    commitMessage: messageString ]) ] ].
   (gitCommit and: [ self hasGitRepository: registration ])
     ifTrue: [ self gitCommit: registration commitMessage: messageString ].
   self topez commitTransaction.

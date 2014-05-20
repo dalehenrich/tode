@@ -4,4 +4,7 @@ createReleaseConfigurationVersionMenuAction: listElement selectionIndex: selecti
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  ^ true
+  MetacelloToolBox
+    releaseVersion: registration versionString
+    for: registration projectName.
+  ^ #'refreshList'

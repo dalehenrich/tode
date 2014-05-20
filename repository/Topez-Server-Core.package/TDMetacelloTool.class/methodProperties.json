@@ -23,7 +23,8 @@
 		"toolReadMe" : "dkh 05/08/2014 10:27" },
 	"instance" : {
 		"projectCommit:commitMessage:" : "dkh 05/16/2014 07:49",
-		"projectCommit:configCommit:gitCommit:commitMessage:" : "dkh 05/16/2014 07:47",
+		"projectCommit:configCommit:gitCommit:commitMessage:" : "dkh 05/20/2014 11:32",
+		"projectCommitConfiguration:configuration:commitMessage:" : "dkh 05/20/2014 11:30",
 		"projectCommitLog:logLimit:" : "dkh 05/13/2014 12:00",
 		"projectCommitLogEntries:commitish:logLimit:" : "dkh 05/13/2014 12:01",
 		"projectCreateConfigurationDevelopmentVersion:spec:version:from:" : "dkh 05/16/2014 17:15",
@@ -38,7 +39,7 @@
 		"projectRegistrationFor:" : "dkh 05/13/2014 13:37",
 		"projectStatus:" : "dkh 05/16/2014 08:14",
 		"projectStatus:args:" : "dkh 05/16/2014 08:13",
-		"projectUpdateAndCommit:configuration:commitMessage:" : "dkh 05/16/2014 14:09",
+		"projectUpdateAndCommit:configuration:commitMessage:" : "dkh 05/20/2014 11:30",
 		"projectcommit" : "dkh 05/16/2014 07:48",
 		"projectcompare" : "dkh 05/13/2014 13:31",
 		"projectdiff" : "dkh 05/13/2014 13:31",
