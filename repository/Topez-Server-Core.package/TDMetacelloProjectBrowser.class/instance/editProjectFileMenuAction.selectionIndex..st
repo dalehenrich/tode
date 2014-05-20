@@ -5,9 +5,9 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
   entry := registration entry.
-  entry
-    ifNil: [ 
-      self inform: 'No project file exists'.
+  (entry isNil or: [ entry projectPath isNil ])
+    ifTrue: [ 
+      self inform: 'No project file exists for ' , registration projectName.
       ^ false ].
   node := self topez lookup: entry projectPath , '/project'.
   self editTool editObjects: {node}.
