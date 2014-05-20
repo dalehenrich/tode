@@ -10,7 +10,7 @@ gitVersionSkewDiffMenuAction: listElement selectionIndex: selectionIndex
     =
       (gitTool
         gitfiletreetool: registration versionString
-        commitish2: registration versionString
+        commitish2: registration currentVersionString
         gitRepoDirectory: gitRepoDirectory)
     ifTrue: [ self inform: 'No diffs' ].
   ^ true
