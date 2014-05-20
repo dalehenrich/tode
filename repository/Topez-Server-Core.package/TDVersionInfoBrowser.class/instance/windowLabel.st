@@ -1,3 +1,4 @@
 accessing
 windowLabel
-  ^ 'Version History'
+  windowLabel ifNil: [ ^ 'Version History' ].
+  ^ windowLabel

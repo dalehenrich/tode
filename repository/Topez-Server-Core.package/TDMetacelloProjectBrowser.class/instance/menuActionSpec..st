@@ -7,7 +7,7 @@ menuActionSpec: miniTool
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('-').
-  #('commit log' nil #'gitCommitLogMenuAction:selectionIndex:' nil #'gitProject' false).
+  #('commit log' nil #'commitLogMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false).
   #('version skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
   #('-').
