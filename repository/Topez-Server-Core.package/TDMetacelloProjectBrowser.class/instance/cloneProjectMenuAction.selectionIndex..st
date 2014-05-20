@@ -1,7 +1,41 @@
 menu actions (baseline)
 cloneProjectMenuAction: listElement selectionIndex: selectionIndex
-  | registration |
+  | registration gitTool entry gitRootPath gitRootDir githubRepo response repositoryDirPath projectDirPath githubPath projectDir pathElements versionElement versionComponents githubSha |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  ^ true
+  entry := registration entry.
+  gitRootPath := entry gitRootPath.
+  gitRootDir := ServerFileDirectory on: gitRootPath.
+  githubRepo := registration projectSpec repository createRepository.
+  repositoryDirPath := githubRepo directory fullName.
+  projectDir := MCGitHubRepository cacheDirectoryFor: githubRepo projectPath.
+  projectDirPath := (projectDir directoryNamed: githubRepo projectVersion)
+    fullName.
+  (repositoryDirPath beginsWith: projectDirPath)
+    ifFalse: [ self error: 'repository path does not match project path ... cannot continue' ].
+  githubPath := repositoryDirPath
+    copyFrom: projectDirPath size + 2
+    to: repositoryDirPath size.
+  pathElements := githubPath findTokens: '/'.
+  versionElement := pathElements at: 1.
+  versionComponents := versionElement findTokens: '-'.
+  githubSha := versionComponents last.
+  gitTool := self gitTool.
+  response := gitTool
+    gitcloneIn: gitRootDir
+    with:
+      '--branch ' , githubRepo projectVersion , ' git@github.com:'
+        , githubRepo projectPath , '.git'.
+  response
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowName: #'gitStatus';
+        yourself).
+  Metacello new
+    baseline: registration projectName;
+    repository: entry repositoryDescription;
+    register.
+  self projectTool projectMap: registration toRepository: entry repository.
+  registration versionInfo versionString: githubSha.
+  ^ #'refreshList'

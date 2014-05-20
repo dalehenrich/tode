@@ -3,13 +3,14 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
-	"commentStamp" : "dkh 05/15/2014 17:13",
+		"DefaultGitRootPath" ],
+	"commentStamp" : "",
 	"instvars" : [
 		"projectName",
 		"projectPath",
 		"commandMap",
-		"status" ],
+		"status",
+		"gitRootPath" ],
 	"name" : "TDProjectEntryDefinition",
 	"pools" : [
 		 ],

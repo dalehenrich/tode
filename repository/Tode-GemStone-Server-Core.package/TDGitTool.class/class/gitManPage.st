@@ -9,6 +9,8 @@ SYNOPSIS
   git amend*
   git checkout `git-command-args` [ <git-repo-path> ]
       checkout `git-command-args` [ @<git-repo-directory> ]
+  git clone `git-command-args`  <git-root-path> 
+      clone `git-command-args` @<git-root-directory>
   git commit `git-command-args` [ <git-repo-path> ]
       commit `git-command-args` [ @<git-repo-directory> ]
   git difftool <commitish-1> <commitish-2> [ <git-repo-path> ]

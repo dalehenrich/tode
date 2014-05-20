@@ -1,3 +1,3 @@
 accessing
 gitRepoDirectoryPath
-  ^ self repositorySpec createRepository directory fullName
+  ^ self gitRepoDirectory fullName
