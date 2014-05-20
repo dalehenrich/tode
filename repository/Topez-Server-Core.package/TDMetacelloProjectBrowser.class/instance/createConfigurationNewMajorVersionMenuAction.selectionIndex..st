@@ -4,4 +4,4 @@ createConfigurationNewMajorVersionMenuAction: listElement selectionIndex: select
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  ^ self configuration: registration newVersion: #'incrementMajorVersionNumber'
+  ^ self configuration: registration newVersion: #'incrementMajorVersion'

@@ -4,4 +4,4 @@ createConfigurationNewMinorVersionMenuAction: listElement selectionIndex: select
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  ^ self configuration: registration newVersion: #'incrementMinorVersionNumber'
+  ^ self configuration: registration newVersion: #'incrementMinorVersion'
