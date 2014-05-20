@@ -5,11 +5,15 @@ browseProjectCategoriesMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
   block := [ 
-  | version defs |
-  version := registration projectSpec version.
-  defs := version packages
-    collect: [ :pkg | TDClassCategoryDefinition new categoryName: pkg name ].
-  defs := defs reject: [ :def | def classDefinitions isEmpty ].
+  | version defs classDefs categories |
+  classDefs := {(TDClassDefinition className: registration projectSpec className)}.
+  classDefs
+    addAll:
+      (TDConfigurationDefinition new projectSpec: registration projectSpec)
+        classDefinitions.
+  defs := (classDefs
+    collect: [ :each | TDClassCategoryDefinition new categoryName: each classCategory ])
+    asSet.
   defs := defs asArray sort: [ :a :b | a label <= b label ].
   TDUserDefinitionList new
     definitionList: defs;
