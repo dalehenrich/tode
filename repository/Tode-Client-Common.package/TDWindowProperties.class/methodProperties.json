@@ -3,6 +3,7 @@
 		"import:" : "dkh 3/23/2014 09:31",
 		"importFrom:" : "dkh 3/22/2014 11:07",
 		"install:" : "dkh 3/23/2014 15:51",
+		"installAlternate:" : "dkh 5/19/2014 20:24",
 		"windowOrigin:listWindowWidth:codeWindowHeight:codeWindowWidth:shellWindowHeight:debuggerWindowWidth:" : "dkh 3/22/2014 11:06" },
 	"instance" : {
 		"codeWindowHeight" : "dkh 3/22/2014 11:02",
@@ -13,6 +14,7 @@
 		"debuggerWindowWidth:" : "dkh 3/22/2014 11:03",
 		"exportTo:" : "dkh 3/22/2014 11:07",
 		"exportTo:extension:" : "dkh 3/23/2014 10:11",
+		"installAlternateOn:" : "dkh 5/19/2014 20:23",
 		"installOn:" : "dkh 3/23/2014 07:52",
 		"listWindowWidth" : "dkh 3/22/2014 11:03",
 		"listWindowWidth:" : "dkh 3/22/2014 11:03",
