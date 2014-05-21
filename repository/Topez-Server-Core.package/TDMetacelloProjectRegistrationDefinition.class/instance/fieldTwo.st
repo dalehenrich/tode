@@ -8,5 +8,5 @@ fieldTwo
     ifFalse: [ branch := ' [' , branch , ']' ].
   cvs = vs
     ifTrue: [ vs := vs , branch ]
-    ifFalse: [ vs := vs , ' ^ ' , cvs , branch ].
+    ifFalse: [ vs := '(((( ' , vs , ' ^ ' , cvs , ' )))) ' , branch ].
   ^ vs

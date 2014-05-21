@@ -7,7 +7,11 @@ sortRegistrationList: list
 
   ^ list
     sort: [ :a :b | 
-      (a isDirty and: [ b isDirty not ])
+      (a hasVersionSkew and: [ b hasVersionSkew not ])
+        |
+          ((a hasVersionSkew and: [ b hasVersionSkew ])
+            and: [ a projectName <= b projectName ])
+        | (a isDirty and: [ b isDirty not ])
         |
           ((a isDirty and: [ b isDirty ]) and: [ a projectName <= b projectName ])
         |
