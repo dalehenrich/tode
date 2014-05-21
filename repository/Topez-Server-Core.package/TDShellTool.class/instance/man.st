@@ -5,7 +5,8 @@ man
   man --all 
   man (<command-name> | @<command-path>) [<subcommand-name>]
   man --find [--exact] <pattern>...
-  "
+  man --class <class-name>...
+"
 
   | command commandNode page |
   options
@@ -20,6 +21,23 @@ man
         yourself.
       browser open.
       ^ browser manPages ].
+  options
+    at: 'class'
+    ifPresent: [ :ignored | 
+      | comments |
+      comments := {}.
+      arguments
+        do: [ :className | 
+          | cls |
+          (Smalltalk at: className)
+            ifNotNil: [ :cls | 
+              comments add: (self clscomment: cls).
+              cls
+                editUsing:
+                  ((TDEditorSpec topez: topez editorAspect: #'classComment')
+                    windowLabel: 'Class Comment for ' , cls name asString;
+                    yourself) ] ].
+      ^ comments ].
   options
     at: 'find'
     ifPresent: [ :ignored | 

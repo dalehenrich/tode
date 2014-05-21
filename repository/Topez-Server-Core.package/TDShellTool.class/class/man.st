@@ -7,6 +7,7 @@ man
     objIn: objIn
     commandOptions:
       {#('all' nil #'none').
+      #('class' nil #'none').
       #('exact' nil #'none').
       #('find' nil #'none').
       #('help' $h #'none')}

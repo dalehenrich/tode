@@ -8,6 +8,7 @@ SYNOPSIS
   man --all 
   man (<command-name> | @<command-path>) [<subcommand-name>]
   man --find [--exact] <pattern>...
+  man --class <class-name>...
 
 DESCRIPTION
   The Man command opens a window containing the man page for the specified
@@ -16,6 +17,9 @@ DESCRIPTION
 OPTIONS
   --all
     List man pages for all commands
+
+  --class
+    Bring up editor on class comment for list class names
 
   --exact
     See the --find option.
