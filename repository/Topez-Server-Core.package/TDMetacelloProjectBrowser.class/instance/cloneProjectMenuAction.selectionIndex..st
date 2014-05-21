@@ -42,5 +42,6 @@ cloneProjectMenuAction: listElement selectionIndex: selectionIndex
             , githubRepo repoPath;
     register.
   self projectTool projectMap: registration toRepository: entry repository.
-  registration versionInfo versionString: githubSha.
+  registration isLoadedInImage
+    ifTrue: [ registration versionInfo versionString: githubSha ].
   ^ #'refreshList'
