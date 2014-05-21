@@ -27,6 +27,8 @@ cloneProjectMenuAction: listElement selectionIndex: selectionIndex
     with:
       '--branch ' , githubRepo projectVersion , ' git@github.com:'
         , githubRepo projectPath , '.git'.
+  (response beginsWith: 'fatal:')
+    ifTrue: [ self error: response ].
   response
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')

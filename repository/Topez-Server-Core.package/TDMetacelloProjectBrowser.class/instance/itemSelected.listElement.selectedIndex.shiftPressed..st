@@ -13,7 +13,8 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   #'gitProject'.
   #'project'.
   #'configurationProject'.
-  #'githubProject'}.
+  #'githubProject'.
+  #'baselineProject'}.
   enable := [ :symbol | 
   enabled add: symbol.
   disabled remove: symbol ].
@@ -39,6 +40,8 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifTrue: [ enable value: #'gitProject' ].
   registration isMetacelloProject
     ifTrue: [ enable value: #'project' ].
+  registration isBaselineBased
+    ifTrue: [ enable value: #'baselineProject' ].
   ^ STON
     toString:
       {#'setMenuCategories:'.

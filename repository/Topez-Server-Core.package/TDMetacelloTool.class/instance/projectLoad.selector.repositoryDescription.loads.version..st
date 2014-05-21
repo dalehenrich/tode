@@ -8,7 +8,7 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
     version: version
     onConflict: #'useIncoming'
     onDowngrade: nil
-    onLock: nil
+    onLock: #'honor'
     onUpgrade: nil
     ignoreImage: nil
     silently: nil

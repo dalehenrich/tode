@@ -1,3 +1,3 @@
 testing
 isLoadedInImage
-  ^ true
+  ^ self registration loadedInImage

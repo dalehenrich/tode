@@ -13,7 +13,9 @@ menuActionSpec: miniTool
   #('-').
   #('get' nil #'getProjectMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).
+  #('lock' nil #'lockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
   #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'dirtyProject' false).
+  #('unlock' nil #'unlockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
   #('-').
   #('edit project node' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   {('Baseline' -> self baselineMenuActionSpec)}.

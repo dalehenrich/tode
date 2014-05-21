@@ -3,9 +3,7 @@ findProjectRegistrationDefinitions: regexPattern
   | regex |
   regex := self findRegex: regexPattern.
   regex ifNil: [ ^ #() ].
-  ^ ((Metacello image
-    project: [ :projectSpec | regex search: projectSpec name ];
-    list)
+  ^ (MetacelloProjectRegistration registry projectSpecs
     collect: [ :projectSpec | 
       MetacelloProjectRegistration
         registrationForProjectSpec: projectSpec
