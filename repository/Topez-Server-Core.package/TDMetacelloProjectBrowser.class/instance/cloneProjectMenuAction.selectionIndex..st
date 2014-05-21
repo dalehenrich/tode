@@ -1,6 +1,6 @@
 menu actions (baseline)
 cloneProjectMenuAction: listElement selectionIndex: selectionIndex
-  | registration gitTool entry gitRootPath gitRootDir githubRepo response repositoryDirPath projectDirPath githubPath projectDir pathElements versionElement versionComponents githubSha |
+  | registration gitTool entry gitRootPath gitRootDir githubRepo response repositoryDirPath projectDirPath githubPath projectDir pathElements versionElement versionComponents githubSha projectPathElements |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
@@ -34,9 +34,12 @@ cloneProjectMenuAction: listElement selectionIndex: selectionIndex
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'gitStatus';
         yourself).
+  projectPathElements := githubRepo projectPath findTokens: '/'.
   Metacello new
     baseline: registration projectName;
-    repository: entry repositoryDescription;
+    repository:
+        'filetree://' , gitRootPath , '/' , (projectPathElements at: 2) , '/'
+            , githubRepo repoPath;
     register.
   self projectTool projectMap: registration toRepository: entry repository.
   registration versionInfo versionString: githubSha.
