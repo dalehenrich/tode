@@ -12,7 +12,7 @@ menuActionSpec: miniTool
   #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false).
   #('version skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
   #('-').
-  {('Metacello'
+  {('Project'
     ->
       {#('get' nil #'getProjectMenuAction:selectionIndex:' nil #'project' false).
       #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).
