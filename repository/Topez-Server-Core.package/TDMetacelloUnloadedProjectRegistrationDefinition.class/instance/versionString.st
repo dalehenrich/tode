@@ -1,3 +1,5 @@
 accessing
 versionString
-  ^ self projectSpec versionString ifNil: [ ^ '' ]
+  ^ self projectSpec isBaselineOfProjectSpec
+    ifTrue: [ '' ]
+    ifFalse: [ self projectSpec versionString ]
