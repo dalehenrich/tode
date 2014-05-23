@@ -1,3 +1,4 @@
 accessing
 windowLocation
-  ^ #'debugger'
+  windowLocation ifNil: [ windowLocation := #'debugger' ].
+  ^ windowLocation

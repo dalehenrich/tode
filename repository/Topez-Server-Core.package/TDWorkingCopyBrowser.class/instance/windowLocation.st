@@ -1,3 +1,4 @@
 accessing
 windowLocation
-  ^ #'app1'
+  windowLocation ifNil: [ windowLocation := #'app1' ].
+  ^ windowLocation

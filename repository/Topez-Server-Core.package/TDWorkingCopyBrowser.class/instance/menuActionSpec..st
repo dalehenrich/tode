@@ -1,8 +1,12 @@
-tools
+menu action specs
 menuActionSpec: miniTool
   theMiniTool := miniTool.
   ^ {#('browse' nil #'workingCopyBrowse:selectedIndex:').
-  #('history' nil #'workingCopyHistory:selectedIndex:').
+  #('-').
+  {('History'
+    ->
+      {#('git' nil #'gitPackageHistory:selectedIndex:').
+      #('monticello' nil #'workingCopyHistory:selectedIndex:')})}.
   #('-').
   #('repository group' nil #'workingCopyRepositoryGroup:selectedIndex:').
   #('repositories' nil #'defaultRepositoryGroup:selectedIndex:').

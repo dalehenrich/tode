@@ -45,7 +45,7 @@ browseGitMethodVersionsMenuAction: listElement selectionIndex: selectionIndex
             diffClass: TDFileTreeDiff.
           diffs size > 1
             ifTrue: [ self error: 'Unexpected diffs size: ' , diffs size printString ].
-          self
+          rawHistoryBrowser
             displayObject: (diffs at: 1)
             listElement: listEl
             label: 'Changes for [' , sha , '] ' , methodDef label ];

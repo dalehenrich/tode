@@ -1,3 +1,4 @@
 accessing
 windowLocation
-  ^ #'implementors'
+  windowLocation ifNil: [ windowLocation := #'implementors' ].
+  ^ windowLocation

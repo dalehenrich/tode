@@ -5,6 +5,7 @@
 		"baselineMenuActionSpec" : "dkh 05/16/2014 15:03",
 		"browseProjectCategoriesMenuAction:selectionIndex:" : "dkh 05/20/2014 07:47",
 		"browseProjectClassesMenuAction:selectionIndex:" : "dkh 05/16/2014 14:51",
+		"browseProjectPackagesMenuAction:selectionIndex:" : "dkh 05/23/2014 10:21",
 		"clientList:listElement:" : "dkh 05/15/2014 17:50",
 		"cloneProjectMenuAction:selectionIndex:" : "dkh 05/21/2014 14:23",
 		"commitLogMenuAction:selectionIndex:" : "dkh 05/20/2014 10:21",
@@ -27,7 +28,7 @@
 		"loadConfigurationVersionMenuAction:selectionIndex:" : "dkh 05/16/2014 16:50",
 		"loadProjectMenuAction:selectionIndex:" : "dkh 05/14/2014 10:32",
 		"lockProjectMenuAction:selectionIndex:" : "dkh 05/20/2014 18:15",
-		"menuActionSpec:" : "dkh 05/22/2014 12:53",
+		"menuActionSpec:" : "dkh 05/23/2014 10:22",
 		"projectBlock" : "dkh 05/07/2014 11:19",
 		"projectBlock:" : "dkh 05/07/2014 11:19",
 		"projectTool" : "dkh 05/12/2014 17:02",
@@ -38,5 +39,5 @@
 		"switchConfigurationVersionMenuAction:selectionIndex:" : "dkh 05/17/2014 08:16",
 		"unlockProjectMenuAction:selectionIndex:" : "dkh 05/20/2014 18:35",
 		"unregisterProjectMenuAction:selectionIndex:" : "dkh 05/21/2014 07:24",
-		"windowLocation" : "dkh 05/13/2014 10:37",
+		"windowLocation" : "dkh 05/23/2014 10:16",
 		"windowName" : "dkh 05/07/2014 11:37" } }
