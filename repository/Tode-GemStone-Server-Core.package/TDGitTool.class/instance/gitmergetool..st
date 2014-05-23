@@ -25,7 +25,10 @@ gitmergetool: gitRepoDirectory
             remote: (triplet at: 3);
             yourself.
           conflicts add: conflict ] ].
-  merger := TDGitMerger new conflicts: conflicts.
+  merger := TDGitMerger new
+    conflicts: conflicts;
+    gitTool: self;
+    yourself.
   (TDMergeDiffBrowser new
     merger: merger;
     topez: topez;
