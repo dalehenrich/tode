@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"logItemSelectedBlock",
+		"commitLogList" ],
+	"name" : "TDGitRawHistoryBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractMergeBrowser",
+	"type" : "normal" }

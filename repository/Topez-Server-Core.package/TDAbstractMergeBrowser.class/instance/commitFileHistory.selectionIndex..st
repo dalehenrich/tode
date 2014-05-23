@@ -2,23 +2,15 @@ menu actions
 commitFileHistory: listElement selectionIndex: selectionIndex
   "browse commit history for selected element"
 
-  | mergeOperation gitTool commitLog |
+  | mergeOperation gitTool |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   mergeOperation := self operations at: selectionIndex.
   gitTool := self gitTool.
-  commitLog := gitTool
-    gitlogIn: self gitRepoDirectory
-    with:
-      '--date=relative --format="%h %cd %s" ' , self commitish1 , '..'
-        , self commitish2 , ' -- ' , mergeOperation filePath.
-  (TDGitHistoryBrowser new
-    topez: listElement topez;
-    commitish1: self commitish1;
-    commitish2: self commitish2;
-    theOperation: mergeOperation
-      rawCommitLog: commitLog
-      gitRepoDirectory: self gitRepoDirectory;
-    windowLabel: 'commit Log: ' , mergeOperation label;
-    yourself) open.
+  gitTool
+    browseCommitLogForMergeOp: mergeOperation
+    commitish1: self commitish1
+    commitish2: self commitish2
+    gitRepoDirectory: self gitRepoDirectory
+    windowLabel: 'Commit Log: ' , mergeOperation label.
   ^ true

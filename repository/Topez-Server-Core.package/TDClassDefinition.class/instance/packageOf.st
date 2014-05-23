@@ -1,3 +1,3 @@
-as yet unclassified
+reflection
 packageOf
   ^ self class packageOfClassDefinition: self

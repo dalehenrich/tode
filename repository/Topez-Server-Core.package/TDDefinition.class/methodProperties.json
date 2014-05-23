@@ -4,7 +4,9 @@
 		"selectedDefinition:" : "DataCurator 02/05/2013 09:28" },
 	"instance" : {
 		"addToSystem:" : "dkh 10/13/2013 09:32",
+		"configurationOf" : "dkh 05/22/2014 11:52",
 		"label" : "DataCurator 02/05/2013 09:38",
+		"packageOf" : "dkh 05/22/2014 11:52",
 		"pasteIntoBehavior:" : "DataCurator 02/05/2013 23:22",
 		"pasteIntoBehaviorDefinition:" : "dkh 02/09/2013 10:58",
 		"pasteIntoClassDefinition:" : "DataCurator 02/05/2013 23:44",
