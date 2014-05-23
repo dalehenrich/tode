@@ -1,3 +1,3 @@
-tools
+menu action specs
 menuActionSpec: miniTool
   ^ {}

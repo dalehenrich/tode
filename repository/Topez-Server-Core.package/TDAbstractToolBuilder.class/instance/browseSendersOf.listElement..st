@@ -1,4 +1,4 @@
-tools
+menu actions
 browseSendersOf: selector listElement: listElement
   | findTool block browseTool |
   findTool := self findTool.

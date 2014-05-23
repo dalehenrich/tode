@@ -7,4 +7,4 @@ diffMenuAction: listElement selectionIndex: selectionIndex
   patches := registration diffProjectUsing: self projectTool.
   patches isEmpty
     ifTrue: [ self inform: 'No diffs' ].
-  ^ #'refreshList'
+  ^ #'refreshView'

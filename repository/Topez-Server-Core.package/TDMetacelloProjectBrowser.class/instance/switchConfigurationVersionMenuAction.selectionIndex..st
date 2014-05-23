@@ -15,4 +15,4 @@ switchConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
   self projectTool
     projectRegisterConfiguration: registration
     version: (labelArray at: selectedIndex).
-  ^ #'refreshList'
+  ^ #'refreshView'

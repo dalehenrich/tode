@@ -1,4 +1,4 @@
-tools
+menu action specs
 standardMenuActionSpec
   "label, shortcut character, actionSymbol"
 

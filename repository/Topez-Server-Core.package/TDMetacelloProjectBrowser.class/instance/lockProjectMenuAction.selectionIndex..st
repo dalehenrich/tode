@@ -8,4 +8,4 @@ lockProjectMenuAction: listElement selectionIndex: selectionIndex
     baseline: registration projectName;
     repository: registration repositoryDescription;
     lock.
-  ^ #'refreshList'
+  ^ #'refreshView'

@@ -17,4 +17,4 @@ configuration: registration newVersion: versionSelector
       version: newVersionString
       from: currentVersion;
     projectRegisterConfiguration: registration version: newVersionString.
-  ^ #'refreshList'
+  ^ #'refreshView'

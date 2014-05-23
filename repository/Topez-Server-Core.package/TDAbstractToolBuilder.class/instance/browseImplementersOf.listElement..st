@@ -1,4 +1,4 @@
-tools
+menu actions
 browseImplementersOf: selector listElement: listElement
   | findTool block browseTool |
   findTool := self findTool.
