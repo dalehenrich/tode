@@ -1,13 +1,18 @@
 tools
 clientList: miniTool listElement: listElement
-  | max maxVersion labels |
+  | max maxVersion labels selectedProjectIndex projectList count |
   theMiniTool := miniTool.
   projects := projectBlock value.
   maxVersion := max := 0.
   labels := {}.
+  selectedProjectIndex := nil.
+  count := 1.
   projects
     do: [ :registrationDef | 
       | one two |
+      selectedProjectName = registrationDef projectName
+        ifTrue: [ selectedProjectIndex := count ].
+      count := count + 1.
       labels
         add:
           {(one := registrationDef fieldOne).
@@ -18,7 +23,7 @@ clientList: miniTool listElement: listElement
       maxVersion := maxVersion max: two size ].
   max := max + 2.
   maxVersion := maxVersion + 2.
-  ^ (labels
+  projectList := labels
     collect: [ :ar | 
       | stream nm vs rd textAttributes |
       stream := WriteStream on: String new.
@@ -32,5 +37,5 @@ clientList: miniTool listElement: listElement
         nextPutAll: vs;
         space: maxVersion - vs size;
         nextPutAll: rd.
-      Text string: stream contents attributes: textAttributes ])
-    -> nil
+      Text string: stream contents attributes: textAttributes ].
+  ^ projectList -> selectedProjectIndex

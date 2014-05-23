@@ -8,7 +8,8 @@
 	"instvars" : [
 		"projects",
 		"projectTool",
-		"projectBlock" ],
+		"projectBlock",
+		"selectedProjectName" ],
 	"name" : "TDMetacelloProjectBrowser",
 	"pools" : [
 		 ],

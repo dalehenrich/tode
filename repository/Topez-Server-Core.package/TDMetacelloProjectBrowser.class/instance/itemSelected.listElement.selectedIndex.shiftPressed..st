@@ -1,9 +1,11 @@
 tools
 itemSelected: miniTool listElement: listElement selectedIndex: index shiftPressed: shiftPressed
   | registration enabled disabled enable |
+  selectedProjectName := nil.
   index == 0
     ifTrue: [ ^ false ].
   registration := self projects at: index.
+  selectedProjectName := registration projectName.
   enabled := {}.
   disabled := {#'dirtyProject'.
   #'versionSkew'.
