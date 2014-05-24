@@ -177,7 +177,7 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec
-    for: #(#'gs3.1.x' #'gs3.2.x')
+    for: #(#'gs3.0.x' #'gs3.1.x' #'gs3.2.x')
     do: [ 
       spec
         package: 'Topez-Server-Core'
