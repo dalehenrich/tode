@@ -1,0 +1,1 @@
+(name 'Topez-Server-3x-DebugTools-dkh.1' message 'add Topez-Server-3x-DebugTools and Topez-Server-30x-DebugTools packages to properly handle the different methods needed for debugging in the different versions of GemStone 3.x' id '0dee217e-d165-48a3-a815-f84273df002c' date '05/24/2014' time '10:20:31' author 'dkh' ancestors () stepChildren ())
