@@ -155,14 +155,23 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
   spec
-    for: #'gs3.0.x'
+    for: #'gs3.x'
     do: [ 
       spec
         package: 'Topez-Server-Core'
-          with: [ spec includes: 'Topez-Server-31x-Core' ];
-        package: 'Topez-Server-31x-Core'
+          with: [ spec includes: 'Topez-Server-3x-Core' ];
+        package: 'Topez-Server-3x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
+        package: 'Topez-Server-DebugTools'
+          with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
+        package: 'Topez-Server-31x-DebugTools'
+          with: [ spec requires: 'Topez-Server-DebugTools' ];
+        package: 'Topez-Server-Tests'
+          with: [ spec includes: 'Topez-Server-31x-Tests' ];
+        package: 'Topez-Server-31x-Tests'
+          with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
+  spec for: #'gs3.0.x' do: [  ].
   spec
     for: #'gs3.1.x'
     do: [ 
@@ -184,23 +193,6 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-32x-Core' ];
         package: 'Topez-Server-32x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
-        yourself ].
-  spec
-    for: #(#'gs3.0.x' #'gs3.1.x' #'gs3.2.x')
-    do: [ 
-      spec
-        package: 'Topez-Server-Core'
-          with: [ spec includes: 'Topez-Server-3x-Core' ];
-        package: 'Topez-Server-3x-Core'
-          with: [ spec requires: 'Topez-Server-Core' ];
-        package: 'Topez-Server-DebugTools'
-          with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
-        package: 'Topez-Server-31x-DebugTools'
-          with: [ spec requires: 'Topez-Server-DebugTools' ];
-        package: 'Topez-Server-Tests'
-          with: [ spec includes: 'Topez-Server-31x-Tests' ];
-        package: 'Topez-Server-31x-Tests'
-          with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
   spec
     for: #'maglev'

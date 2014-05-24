@@ -1,3 +1,3 @@
 cls
 clscomment: theClass
-  ^ theClass comment
+  ^ theClass classComment
