@@ -9,6 +9,8 @@
 		"topez",
 		"miniToolSpec",
 		"windowLabel",
+		"windowName",
+		"windowLocation",
 		"parentBuilder",
 		"windowId",
 		"theMiniTool" ],

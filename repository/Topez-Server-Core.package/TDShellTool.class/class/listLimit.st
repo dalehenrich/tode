@@ -1,4 +1,4 @@
-as yet unclassified
+options
 listLimit
   listLimit ifNil: [ listLimit := 140 ].
   ^ listLimit

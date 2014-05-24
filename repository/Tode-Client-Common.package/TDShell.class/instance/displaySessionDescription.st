@@ -1,4 +1,4 @@
-session description builtin
+built-ins
 displaySessionDescription
 	| description stream |
 	description := self topezClient sessionDescription.
@@ -8,11 +8,4 @@ displaySessionDescription
 		cr;
 		nextPutAll: 'description := '.
 	description editTemplateOn: stream.
-	stream
-		cr;
-		nextPutAll:
-				'TDTopezGemStoneClient sessionMap 
-  at: description name
-  put: description.';
-		cr.
 	^ stream contents

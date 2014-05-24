@@ -1,21 +1,10 @@
 as yet unclassified
 findReferences: variableOrGlobalNameOrPathRef
-  "find references <variableOrGlobalNameOrPathRef>"
+  "find [--scriptPath=<tode-path>] references <variableOrGlobalNameOrPathRef>"
 
-  | methodRefs pattern |
-  methodRefs := (variableOrGlobalNameOrPathRef beginsWith: '@')
-    ifTrue: [ 
-      | literal |
-      literal := self resolveAtPathReference: variableOrGlobalNameOrPathRef.
-      pattern := nil.
-      TDMethodDefinition rawLiteralReference: literal in: nil ]
-    ifFalse: [ 
-      pattern := variableOrGlobalNameOrPathRef.
-      TDMethodDefinition
-        rawReferencesTo: variableOrGlobalNameOrPathRef
-        isMeta: false
-        in: nil ].
+  | path |
+  self options at: 'scriptPath' ifPresent: [ :scriptPath | path := scriptPath ].
   ^ self
-    methodDefinitionsFor: methodRefs asArray
-    messagePattern: pattern
-    isRegex: false
+    findReferences: variableOrGlobalNameOrPathRef
+    inClass: nil
+    searchScriptRoot: path

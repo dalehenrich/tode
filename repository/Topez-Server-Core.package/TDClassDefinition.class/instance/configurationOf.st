@@ -1,3 +1,3 @@
-as yet unclassified
+reflection
 configurationOf
-  ^ self class configurationOfDefinition: self
+  ^ self packageOf configurationOf

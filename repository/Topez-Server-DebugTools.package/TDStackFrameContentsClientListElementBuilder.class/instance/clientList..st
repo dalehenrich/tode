@@ -3,7 +3,7 @@ clientList: listElement
   | max ar items elementNames specialNames displayPolicy |
   items := OrderedCollection new.
   max := 0.
-  specialNames := #('.' '..').
+  specialNames := #('.').
   elementNames := specialNames , self object elementNodeNames.
   elementNames do: [ :elementName | max := max max: elementName size ].
   ar := OrderedCollection new.
@@ -11,7 +11,7 @@ clientList: listElement
   displayPolicy := listElement displayPolicy.
   elementNames
     do: [ :elementName | 
-      | object parentObject itemObject stream |
+      | object parentObject itemObject stream label |
       stream := TextStream on: Text new.
       stream
         nextPutAll: elementName;
@@ -19,13 +19,9 @@ clientList: listElement
         nextPutAll: '-> '.
       (specialNames includes: elementName)
         ifTrue: [ 
-          itemObject := object := elementName = '.'
-            ifTrue: [ 
-              parentObject := self object stack.
-              self object ]
-            ifFalse: [ 
-              parentObject := nil.
-              self object stack ] ]
+          label := elementName.
+          parentObject := nil.
+          itemObject := object := self object ]
         ifFalse: [ 
           parentObject := self object.
           object := self object
@@ -37,13 +33,15 @@ clientList: listElement
             aspect: #'view' ].
       items
         add:
-          (TDClientListItemAttributes
+          ((TDClientListItemAttributes
             object: itemObject
             parent: parentObject
-            aspect: listElement aspect).
+            aspect: listElement aspect)
+            label: label;
+            yourself).
       displayPolicy stream: stream.
       object displayOnPolicy: displayPolicy.
       ar add: stream contents asString ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].
-  ^ ar
+  ^ ar -> nil

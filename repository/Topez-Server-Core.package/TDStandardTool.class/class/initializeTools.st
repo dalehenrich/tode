@@ -4,6 +4,10 @@ initializeTools
 
   | topez initializationOrder |
   topez := TDTopezServer for: 0.
+  topez
+    ifNil: [ 
+      "this can happen during the initial install and is cool ..."
+      ^ nil ].
   initializationOrder := OrderedCollection new.
   self allSubclasses
     do: [ :cl | 

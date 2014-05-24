@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createFrames" : "dkh 01/08/2014 10:52",
+		"createFrames" : "dkh 03/20/2014 14:41",
 		"currentFrame" : "DataCurator 01/23/2013 15:50",
 		"debugTool" : "dkh 07/14/2013 15:40",
 		"debugTool:" : "dkh 07/14/2013 15:41",
@@ -20,4 +20,6 @@
 		"signallerFrame:" : "dkh 01/05/2014 18:02",
 		"stack" : "DataCurator 12/16/2012 14:04",
 		"terminateProcess" : "dkh 01/06/2014 20:17",
-		"trimStackTo:" : "dkh 01/10/2014 12:14" } }
+		"trimStackTo:" : "dkh 03/20/2014 14:40",
+		"trimmed" : "dkh 03/20/2014 14:39",
+		"trimmed:" : "dkh 03/20/2014 14:39" } }

@@ -4,6 +4,8 @@
 	"instance" : {
 		"buildClientElementUsing:editorAspect:" : "dkh 04/11/2013 14:36",
 		"differentMethodCreated:" : "DataCurator 02/09/2013 10:11",
+		"doItContext" : "dkh 03/30/2014 07:58",
+		"doItLiteralArray" : "dkh 04/28/2014 17:42",
 		"elementSource" : "DataCurator 02/09/2013 10:32",
 		"inClass" : "DataCurator 02/09/2013 10:29",
 		"method" : "DataCurator 02/07/2013 12:24",

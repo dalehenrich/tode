@@ -1,5 +1,6 @@
-as yet unclassified
+bu
 resolveBackupPath: backupName
-  ^ (backupName beginsWith: '@')
-    ifTrue: [ self resolveAtPathReference: backupName ]
-    ifFalse: [ self class backupDirectoryName , '/' , backupName ]
+  ^ options
+    at: 'dir'
+    ifPresent: [ :dirPath | dirPath , '/' , backupName ]
+    ifAbsent: [ self class backupDirectoryName , '/' , backupName ]

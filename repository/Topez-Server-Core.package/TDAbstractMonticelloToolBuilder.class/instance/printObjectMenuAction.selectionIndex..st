@@ -2,7 +2,7 @@ actions
 printObjectMenuAction: listElement selectionIndex: selectionIndex
   | target |
   target := selectionIndex = 0
-    ifTrue: [ ^ self theList ]
+    ifTrue: [ self theList ]
     ifFalse: [ self theList at: selectionIndex ].
   target
     printUsing:

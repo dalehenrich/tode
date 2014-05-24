@@ -1,3 +1,6 @@
 source element builder
 elementSource
-  ^ self contents
+  | s |
+  s := self contents.
+  s ifNil: [ ^ '' ].
+  ^ s

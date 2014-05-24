@@ -1,4 +1,9 @@
-as yet unclassified
+commands
 cat
   <topezCommand: 'cat' manPage: #'catManPage'>
-  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) cat ]
+  ^ [ :topez :objIn :tokens :command | 
+  self
+    performCommand: topez
+    objIn: objIn
+    commandOptions: {#('help' $h #'none')}
+    todeCommand: command ]

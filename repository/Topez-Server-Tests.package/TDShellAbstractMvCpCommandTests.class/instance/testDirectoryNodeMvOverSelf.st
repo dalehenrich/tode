@@ -5,7 +5,7 @@ testDirectoryNodeMvOverSelf
   srcNode := self lookupSrcNode: rootPath , 'src'.
   self
     should: [ 
-      self topez
+      self
         evaluateCommandString:
           'mv ' , srcNode printString , ' ' , srcNode printString ]
     raise: Error

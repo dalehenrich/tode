@@ -2,5 +2,7 @@ client forwarder
 deleteWindowAt: aWindowId
   "close the window with <aWindowId>"
 
-  self topezClientForwarder
-    ifNotNil: [ :forwarder | forwarder deleteWindowAt: aWindowId ]
+  | forwarder |
+  forwarder := self topezClientForwarder.
+  (Reflection classOf: forwarder) ~~ UndefinedObject
+    ifTrue: [ forwarder deleteWindowAt: aWindowId ]

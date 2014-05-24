@@ -1,6 +1,0 @@
-TDScriptLeafNode{#name:'oldExport',#contents:'[ :topez :objIn :tokens :windowId | 
-| stonTool |
-stonTool := topez toolInstanceFor: \'ston\'.
-stonTool
-  stonExportNode: (topez lookup: \'/home\') to: \'/opt/git/tode/ston/home.ston\';
-  stonExportNode: (topez lookup: \'/home/bin\') to: \'/opt/git/tode/ston/bin.ston\' ]',#creationTime:nil,#modificationTime:nil}

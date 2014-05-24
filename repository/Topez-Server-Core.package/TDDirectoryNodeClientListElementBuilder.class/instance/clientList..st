@@ -11,25 +11,29 @@ clientList: listElement
       (self object dotSelfObject displayWith: displayPolicy)}.
   items
     add:
-      (TDClientListItemAttributes
+      ((TDClientListItemAttributes
         object: self object
         parent: nil
         aspect: listElement aspect
-        list: listElement parentList).
+        list: listElement parentList)
+        label: '.';
+        yourself).
   self object parent ~~ nil
     ifTrue: [ 
       displayPolicy stream: nil.
       components
         add:
           {'..'.
-          (self object parent displayWith: displayPolicy)}.
+          (self object parent dotSelfObject displayWith: displayPolicy)}.
       items
         add:
-          (TDClientListItemAttributes
+          ((TDClientListItemAttributes
             object: self object parent
             parent: nil
             aspect: listElement aspect
-            list: listElement parentList) ].
+            list: listElement parentList)
+            label: '..';
+            yourself) ].
   self object
     childrenAndNamesDo: [ :child :nameText | 
       max := max max: nameText size.
@@ -58,4 +62,4 @@ clientList: listElement
         nextPutAll: (compAr at: 2).
       ar add: stream contents asString ].
   listElement ifNotNil: [ listElement itemCache: items ].
-  ^ ar
+  ^ ar -> nil

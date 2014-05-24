@@ -42,6 +42,7 @@ installExampleOn: aTDTopezServer
             blockVendor: self;
             manPage:
                 (TDManPage
+                    commandName: 'script'
                     fromString:
                       'NAME
   script - simple demo of a topez script

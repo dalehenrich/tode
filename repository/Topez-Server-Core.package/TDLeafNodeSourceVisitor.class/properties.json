@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sourceLeafNodeBlock" ],
+	"name" : "TDLeafNodeSourceVisitor",
+	"pools" : [
+		 ],
+	"super" : "TDLeafNodeVisitor",
+	"type" : "normal" }

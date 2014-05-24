@@ -5,4 +5,6 @@ menuActionSpec
   "works in concert with menuActionBlock"
 
   ^ {#('create accessors' nil #'createAccessorsMenuAction:selectionIndex:').
+  #('-').
+  #('git history' nil #'browseGitClassHistoryMenuAction:selectionIndex:').
   #('-')} , self standardMenuActionSpec

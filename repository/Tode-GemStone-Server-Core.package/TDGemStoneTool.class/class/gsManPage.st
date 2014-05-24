@@ -16,6 +16,7 @@ SYNOPSIS
   gs objectFor <object-oop>
   gs references @<object-path>
   gs sessionDescription
+  gs version
 
 DESCRIPTION
 

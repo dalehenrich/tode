@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"projects",
+		"projectTool",
+		"projectBlock",
+		"selectedProjectName" ],
+	"name" : "TDMetacelloProjectBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractMetacelloToolBuilder",
+	"type" : "normal" }

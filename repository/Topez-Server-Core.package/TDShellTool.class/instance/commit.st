@@ -1,3 +1,7 @@
-as yet unclassified
+commands
 commit
-    ^ System commitTransaction
+  "
+  commit [--help]
+"
+
+  ^ System commitTransaction

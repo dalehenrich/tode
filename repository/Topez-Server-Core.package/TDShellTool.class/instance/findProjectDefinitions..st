@@ -1,9 +1,10 @@
 as yet unclassified
-findProjectDefinitions: projectName
-  "find project <project-name>"
-
-  | spec |
-  spec := Metacello image
-    project: projectName;
-    list.
-  ^ (TDConfigurationDefinition new projectSpec: spec) classDefinitions
+findProjectDefinitions: regexPattern
+  | regex |
+  regex := self findRegex: regexPattern.
+  regex ifNil: [ ^ #() ].
+  ^ ((Metacello image
+    project: [ :projectSpec | regex search: projectSpec name ];
+    list)
+    collect: [ :projectSpec | TDConfigurationDefinition new projectSpec: projectSpec ])
+    reject: [ :def | self excludedProjectNames includes: def configurationName ]

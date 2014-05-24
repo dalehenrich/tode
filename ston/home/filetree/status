@@ -1,6 +1,0 @@
-TDTxtLeafNode{#name:'status',#contents:'commit 2bd9ad5a6e284910ec383b8e605658020c7fe4be
-Author: Dale Henrichs <dale.henrichs@gemtalksystems.com>
-Date:   Sun Sep 8 07:16:36 2013 -0700
-
-    ensure ss3 version is in ancestry for release: \'1.0.6\'
-',#creationTime:nil,#modificationTime:nil}

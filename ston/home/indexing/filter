@@ -1,4 +1,0 @@
-TDSmalltalkLeafNode{#name:'filter',#contents:'[ :definition | 
-definition configurationOf
-  ifNil: [ false ]
-  ifNotNil: [ :configurationDef | configurationDef configurationName = \'Indexing\' ] ]',#creationTime:nil,#modificationTime:nil}

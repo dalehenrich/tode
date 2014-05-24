@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"registration" ],
+	"name" : "TDMetacelloRegistrationDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDMetacelloProjectRegistrationDefinition",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+activateModel: aModel
+	self subclassResponsibility

@@ -1,0 +1,18 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"DefaultGitRootPath" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"projectName",
+		"projectPath",
+		"commandMap",
+		"status",
+		"gitRootPath" ],
+	"name" : "TDProjectEntryDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDDefinition",
+	"type" : "normal" }

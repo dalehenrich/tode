@@ -12,7 +12,7 @@ testLeafNodeCpNewName
       | copyNode node newName |
       srcNode addChildNode: childNode.
       newName := childNode name , '_NEW'.
-      copyNode := self topez
+      copyNode := self
         evaluateCommandString:
           'cp ' , srcNode printString , childNode name , ' ' , destNode printString
             , newName.

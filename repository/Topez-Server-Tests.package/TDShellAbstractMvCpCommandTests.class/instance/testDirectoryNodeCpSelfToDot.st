@@ -5,7 +5,7 @@ testDirectoryNodeCpSelfToDot
   srcNode := self lookupSrcNode: rootPath , 'src'.
   self
     should: [ 
-      self topez
+      self
         evaluateCommandString:
           'cd ' , srcNode printString , '; cp ' , srcNode printString , ' .' ]
     raise: Error

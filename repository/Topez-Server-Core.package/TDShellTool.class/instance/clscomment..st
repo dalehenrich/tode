@@ -1,3 +1,3 @@
-as yet unclassified
+cls
 clscomment: theClass
-  ^ theClass comment
+  ^ theClass classComment

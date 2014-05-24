@@ -1,4 +1,4 @@
-as yet unclassified
+options
 displayOops
   displayOops ifNil: [ displayOops := true ].
   ^ displayOops

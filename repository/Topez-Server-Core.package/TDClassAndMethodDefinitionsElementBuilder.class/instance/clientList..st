@@ -1,6 +1,10 @@
 as yet unclassified
 clientList: listElement
   | items ar selectedIndex |
+  objectBlock
+    ifNotNil: [ 
+      "force recalculation of list using the objectBlock"
+      object := self objectBlock value ].
   items := OrderedCollection new.
   ar := OrderedCollection new.
   self
@@ -13,4 +17,4 @@ clientList: listElement
         aspect: listElement aspect ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].
-  ^ ar
+  ^ ar -> nil

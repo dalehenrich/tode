@@ -1,11 +1,12 @@
-as yet unclassified
+bu
 burestore
-  "bu restore <backup-name>
-      restore @<backup-name-path>
   "
+  bu [--dir=<backup-directory>] restore <backup-file>
+"
 
-  | backupPath status count |
-  backupPath := self resolveBackupPath: (tokens at: 2).
+  | backupFilePath status count |
+  self getSubcommandOptsMixedLongShort: {}.
+  backupFilePath := self resolveBackupFilePath.
   status := SystemRepository restoreStatus.
   status = 'Restore is not active.'
     ifFalse: [ ^ self error: 'System is already in restore mode: ' , status ].
@@ -30,4 +31,4 @@ burestore
       ^ self
         error:
           'Could not restore from backup because there are still sessions logged in.' ].
-  topez restoreFromBackup: backupPath	"normally terminates session"
+  topez restoreFromBackup: backupFilePath	"normally terminates session"

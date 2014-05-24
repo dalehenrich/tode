@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clientList:listElement:" : "dkh 05/10/2014 19:42",
+		"commitFileHistory:selectionIndex:" : "dkh 05/22/2014 10:28",
+		"commitHistory:selectionIndex:" : "dkh 05/15/2014 19:56",
+		"editOperation:listElement:" : "dkh 05/11/2014 17:55",
+		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/09/2014 14:41",
+		"menuActionSpec:" : "dkh 05/09/2014 16:03",
+		"operations" : "dkh 05/09/2014 14:54",
+		"operationsMenuActionSpec" : "dkh 05/09/2014 14:45",
+		"selectLocalDefinitionMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09",
+		"selectRemoteDefinitionMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09",
+		"toggleDiffMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09",
+		"windowLocation" : "dkh 05/23/2014 10:15" } }

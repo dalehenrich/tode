@@ -1,4 +1,5 @@
-accessing
+built-ins
 expand
-    windowStatus ifNil: [ ^ self ].
-    windowStatus expand
+    windowStatus ifNil: [ ^ nil ].
+    windowStatus expand.
+	^ nil

@@ -1,0 +1,3 @@
+menu actions
+printClientListMenuAction: listElement
+  self subclassResponsibility

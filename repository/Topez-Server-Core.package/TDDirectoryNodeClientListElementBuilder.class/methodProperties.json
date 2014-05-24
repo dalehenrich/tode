@@ -3,9 +3,14 @@
 		 },
 	"instance" : {
 		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 10/01/2013 07:43",
-		"clientList:" : "dkh 06/01/2013 11:07",
+		"clientList:" : "dkh 03/20/2014 20:37",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 21:11",
 		"defaultEditorWindowName" : "DataCurator 01/24/2013 13:44",
-		"itemSelected:at:shiftPressed:" : "dkh 06/05/2013 23:30",
-		"objectMenuActionSpec" : "dkh 09/30/2013 21:11",
+		"itemSelected:at:shiftPressed:" : "dkh 04/19/2014 09:35",
+		"menuActionBlock" : "dkh 02/23/2014 18:01",
+		"menuActionSpec" : "dkh 02/19/2014 18:26",
+		"objectMenuActionSpec" : "dkh 05/09/2014 12:25",
+		"objectParents" : "dkh 02/19/2014 18:25",
+		"setInspectBuilderAspectMenuAction:selectionIndex:" : "dkh 02/18/2014 11:18",
+		"setViewBuilderAspectMenuAction:selectionIndex:" : "dkh 02/18/2014 11:18",
 		"theBehavior" : "DataCurator 02/07/2013 14:14" } }

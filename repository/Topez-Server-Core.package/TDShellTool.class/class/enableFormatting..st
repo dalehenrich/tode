@@ -1,3 +1,3 @@
-as yet unclassified
+options
 enableFormatting: aBool
   enableFormatting := aBool

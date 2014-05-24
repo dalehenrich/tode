@@ -1,9 +1,10 @@
-as yet unclassified
+bu
 bubackup
-  "bu backup <backup-name>
-      backup @<backup-name-path>
   "
+  bu [--dir=<backup-directory>] backup <backup-file>
+"
 
-  | backupPath |
-  backupPath := (self resolveBackupPath: (tokens at: 2)) asString.
-  ^ self buBackup: backupPath
+  | backupFilePath |
+  self getSubcommandOptsMixedLongShort: {}.
+  backupFilePath := self resolveBackupFilePath.
+  ^ self buBackup: backupFilePath

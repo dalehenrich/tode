@@ -3,20 +3,22 @@ installOn: aTDTopezServer
   aTDTopezServer removeChildrenAt: self commandPath.
   (Pragma allNamed: #'topezCommand:manPage:' in: self class)
     do: [ :pragma | 
-      | block node |
+      | block node pragmaResult manPage commandName |
       block := self perform: pragma selector.
+      commandName := pragma argumentAt: 1.
       node := aTDTopezServer
-        installCommand: (pragma argumentAt: 1)
+        installCommand: commandName
         block: block
         vendor: self
         at: self commandPath.
-      node
-        manPage:
-          (TDManPage
-            fromString: (self perform: (pragma argumentAt: 2))
-            commandPath: self commandPath , '/bin/' , (pragma argumentAt: 1)
-            sourceMethod:
-              self name asString , ' class>>' , pragma selector asString) ].
+      pragmaResult := self perform: (pragma argumentAt: 2).
+      pragmaResult isString
+        ifTrue: [ manPage := TDManPage commandName: commandName fromString: pragmaResult ]
+        ifFalse: [ manPage := pragmaResult ].
+      manPage
+        commandPath: self commandPath , '/bin/' , commandName;
+        sourceMethod: self name asString , ' class>>' , pragma selector asString.
+      node manPage: manPage ].
   (Pragma allNamed: #'topezNode:' in: self class)
     do: [ :pragma | self perform: pragma selector with: aTDTopezServer ].
   (aTDTopezServer lookup: self commandPath)

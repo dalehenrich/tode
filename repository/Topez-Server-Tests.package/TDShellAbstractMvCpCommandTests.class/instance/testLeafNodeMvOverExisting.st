@@ -17,7 +17,7 @@ testLeafNodeMvOverExisting
         yourself.
       targetNode := destNode addChildNode: targetNode.
       srcNode addChildNode: childNode.
-      mvNode := self topez
+      mvNode := self
         evaluateCommandString:
           'mv ' , srcNode printString , childNode name , ' ' , targetNode printString.
       compareBlock value: childNode value: mvNode.

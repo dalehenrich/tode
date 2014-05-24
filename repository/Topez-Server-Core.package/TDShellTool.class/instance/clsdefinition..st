@@ -1,3 +1,3 @@
-as yet unclassified
+cls
 clsdefinition: theClass
   ^ theClass ogDefinition

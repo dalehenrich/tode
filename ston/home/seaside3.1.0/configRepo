@@ -1,4 +1,0 @@
-TDObjectGatewayNode{#name:'configRepo',#contents:'(TDMonticelloRepository
-  fromDescription:
-    \'http://www.smalltalkhub.com/mc/Seaside/MetacelloConfigurations/main\')
-  repository'}

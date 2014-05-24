@@ -9,7 +9,8 @@
 		"baseDirectory",
 		"filePath",
 		"local",
-		"remote" ],
+		"remote",
+		"editOp" ],
 	"name" : "TDGitDiff",
 	"pools" : [
 		 ],

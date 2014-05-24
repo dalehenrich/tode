@@ -7,7 +7,7 @@ testDirectoryNodeMvNewName
   newName := 'src_NEW'.
   originalNodes := self standardLeafNodes
     collect: [ :childNode | srcNode addChildNode: childNode ].
-  self topez
+  self
     evaluateCommandString:
       'mv ' , srcNode printString , ' ' , destNode printString , newName.
   compareBlock := [ :aNode :bNode | 

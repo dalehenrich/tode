@@ -1,4 +1,5 @@
 accessing
 refreshView
 	self refreshList.
-	self listIndex: self clientElement selectedIndex
+	self listIndex: self clientElement selectedIndex.
+	^ true

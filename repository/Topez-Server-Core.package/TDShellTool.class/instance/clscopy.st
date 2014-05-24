@@ -1,12 +1,17 @@
-as yet unclassified
+cls
 clscopy
   "
-  cls copy <class-name> <new-name>
-      copy @<class-path> <new-name>
+  cls copy [--category=<class-category>] ( <class-name> | @<class-path> ) 
+           <new-class-name>
 "
 
-  | theClass clsName newName |
-  clsName := tokens at: 2.
-  newName := tokens at: 3.
+  | theClass clsName newName category |
+  self getSubcommandOptsMixedLongShort: {#('category' nil #'required')}.
+  clsName := subArguments at: 1.
   theClass := self resolveClassReference: clsName.
-  ^ self clscopy: theClass to: newName
+  newName := subArguments at: 2.
+  subOptions
+    at: 'category'
+    ifPresent: [ :cat | category := cat ]
+    ifAbsent: [ category := theClass category ].
+  ^ self clscopy: theClass to: newName category: category

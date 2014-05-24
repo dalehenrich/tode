@@ -16,4 +16,4 @@ getOptsLong: longOptionSpec short: shortOptionAliases optionsAndArguments: optsA
         short: shortOptionAliases
         do: [ :option :optionArg | options at: option asString put: optionArg ]
         argsDo: [ :arg | args add: arg ] ].
-  optsAndArgsBlock value: options value: args
+  ^ optsAndArgsBlock value: options value: args

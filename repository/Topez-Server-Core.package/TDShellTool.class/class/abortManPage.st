@@ -1,13 +1,17 @@
-as yet unclassified
+manPages
 abortManPage
   ^ 'NAME
-  abort - abort transaction
+  abort - Abort transaction
 
 SYNOPSIS
-  abort
+  abort [--help]
 
 DESCRIPTION
   The abort command calls `System abortTransaction`.
 
   The abort command returns `true`.
+
+OPTIONS
+  --help
+    Bring up this man page.
 '

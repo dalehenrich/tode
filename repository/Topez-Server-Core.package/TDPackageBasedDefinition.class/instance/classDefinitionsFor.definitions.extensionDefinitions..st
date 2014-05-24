@@ -1,6 +1,7 @@
 as yet unclassified
 classDefinitionsFor: packageInfo definitions: defs extensionDefinitions: extensionDefinitions
-  packageInfo classes do: [ :cl | defs add: (TDClassDefinition className: cl name) ].
+  packageInfo classes
+    do: [ :cl | defs add: (TDClassDefinition className: cl name) ].
   packageInfo extensionMethods
     do: [ :methodRef | 
       | extensionClassName classDef methodDef mDefs |
@@ -9,7 +10,6 @@ classDefinitionsFor: packageInfo definitions: defs extensionDefinitions: extensi
         at: extensionClassName
         ifAbsent: [ 
           classDef := TDExtensionClassDefinition className: extensionClassName.
-          defs add: classDef.
           extensionDefinitions at: extensionClassName put: classDef ].
       methodDef := TDMethodDefinition
         className: extensionClassName

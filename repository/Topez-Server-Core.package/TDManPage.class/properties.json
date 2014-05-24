@@ -6,12 +6,16 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"commandName",
 		"summary",
 		"synopsis",
 		"description",
+		"options",
 		"examples",
 		"commandPath",
-		"sourceMethod" ],
+		"sourceMethod",
+		"subCommands",
+		"seeAlso" ],
 	"name" : "TDManPage",
 	"pools" : [
 		 ],

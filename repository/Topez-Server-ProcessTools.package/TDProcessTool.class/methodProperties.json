@@ -1,16 +1,13 @@
 {
 	"class" : {
-		"haloDebugProcessesBlock:" : "dkh 11/10/2013 10:23",
-		"haloProcessesBlock:" : "dkh 11/10/2013 10:24",
 		"initialize" : "dkh 03/31/2013 10:21",
 		"installExampleOn:" : "dkh 08/14/2013 11:19",
-		"installHalosOn:" : "DataCurator 12/22/2012 17:54",
-		"installOn:" : "dkh 03/10/2013 09:30",
+		"installOn:" : "dkh 04/26/2014 09:21",
 		"priority" : "DataCurator 12/20/2012 14:11",
 		"ps" : "dkh 11/10/2013 10:31",
 		"psManPage" : "dkh 01/10/2014 10:14",
 		"readMeProcesses" : "DataCurator 12/20/2012 14:07",
-		"testSuiteClasses" : "DataCurator 01/23/2013 18:04",
+		"testSuiteClasses" : "dkh 04/19/2014 12:04",
 		"toolName" : "DataCurator 12/20/2012 14:10",
 		"toolReadMe" : "DataCurator 12/20/2012 14:10" },
 	"instance" : {

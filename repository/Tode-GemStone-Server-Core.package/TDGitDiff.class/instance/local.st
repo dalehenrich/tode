@@ -1,5 +1,6 @@
 accessing
 local
+  "Return the value of the instance variable 'local'."
 
-   "Return the value of the instance variable 'local'."
-   ^local
+  local ifNil: [ ^ '' ].
+  ^ local

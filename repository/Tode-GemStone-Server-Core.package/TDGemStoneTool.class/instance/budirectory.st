@@ -1,7 +1,10 @@
-as yet unclassified
+bu
 budirectory
-  "bu directory [<server-directory-path>]"
+  "
+  bu directory [<backup-file>]
+"
 
-  tokens size > 1
-    ifTrue: [ self class backupDirectoryName: (tokens at: 2) ].
+  self getSubcommandOptsMixedLongShort: {}.
+  subArguments size > 0
+    ifTrue: [ self class backupDirectoryName: (subArguments at: 1) ].
   ^ self class backupDirectoryName

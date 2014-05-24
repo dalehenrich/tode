@@ -1,5 +1,5 @@
 accessing
-local: anObject
-
-   "Modify the value of the instance variable 'local'."
-   local := anObject
+local: aString
+  (aString beginsWith: 'fatal')
+    ifTrue: [ self halt ].
+  local := aString

@@ -20,22 +20,40 @@ asText
     nextPutAll: '  ';
     nextPutAll: self description;
     cr;
-    cr;
-    nextPutAll: 'EXAMPLES' asText allBold;
-    cr;
-    nextPutAll: '  ';
-    nextPutAll: self examples;
     cr.
-  (commandPath notNil or: [ sourceMethod notNil ])
-    ifTrue: [ 
+  self options isEmpty
+    ifFalse: [ 
       aStream
+        nextPutAll: 'OPTIONS' asText allBold;
         cr;
+        nextPutAll: '  ';
+        nextPutAll: self options;
+        cr;
+        cr ].
+  self examples isEmpty
+    ifFalse: [ 
+      aStream
+        nextPutAll: 'EXAMPLES' asText allBold;
+        cr;
+        nextPutAll: '  ';
+        nextPutAll: self examples;
+        cr;
+        cr;
+        nextPutAll:
+            (Text string: (self todeItNote: 'examples') attribute: TextEmphasis italic);
+        cr;
+        cr ].
+  self seeAlso isEmpty
+    ifFalse: [ 
+      aStream
         nextPutAll: 'SEE ALSO' asText allBold;
         cr;
         nextPutAll: '  ';
-        nextPutAll: self commandPath;
+        nextPutAll: self seeAlso;
         cr;
-        nextPutAll: '  ';
-        nextPutAll: self sourceMethod;
+        cr;
+        nextPutAll:
+            (Text string: (self todeItNote: 'commands') attribute: TextEmphasis italic);
+        cr;
         cr ].
   ^ aStream contents

@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-BatchEdit-Tool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"batchEditor",
+		"matchingRanges",
+		"matchIndex" ],
+	"name" : "TDBatchEditMethodDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDMethodDefinition",
+	"type" : "normal" }

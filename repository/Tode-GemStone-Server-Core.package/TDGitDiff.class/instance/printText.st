@@ -1,5 +1,5 @@
 as yet unclassified
 printText
-  ^ Text
-    string: self printString
-    attribute: (TextEmphasis perform: self selectionAttribute)
+  | attributes |
+  attributes := {(TextEmphasis perform: self selectionAttribute)}.
+  ^ Text string: self printString attributes: attributes

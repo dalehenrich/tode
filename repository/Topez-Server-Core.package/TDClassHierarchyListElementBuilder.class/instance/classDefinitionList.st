@@ -6,19 +6,21 @@ classDefinitionList
     do: [ :classDef | 
       | cl |
       cl := classDef theClass.
-      classDefs
-        addAll:
-          (cl allSuperclasses
-            collect: [ :each | 
-              (TDClassDefinition className: each name)
-                username: classDef username;
-                yourself ]).
-      classDefs add: classDef.
-      classDefs
-        addAll:
-          (cl allSubclasses
-            collect: [ :each | 
-              (TDClassDefinition className: each name)
-                username: classDef username;
-                yourself ]) ].
+      cl
+        ifNotNil: [ 
+          classDefs
+            addAll:
+              (cl allSuperclasses
+                collect: [ :each | 
+                  (TDClassDefinition className: each name)
+                    username: classDef username;
+                    yourself ]).
+          classDefs add: classDef.
+          classDefs
+            addAll:
+              (cl allSubclasses
+                collect: [ :each | 
+                  (TDClassDefinition className: each name)
+                    username: classDef username;
+                    yourself ]) ] ].
   ^ classDefs

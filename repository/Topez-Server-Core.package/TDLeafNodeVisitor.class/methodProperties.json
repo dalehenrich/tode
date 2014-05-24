@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptFileSystemLeafNode:" : "dkh 01/30/2014 17:10",
+		"acceptLeafNode:" : "dkh 01/30/2014 17:08",
+		"acceptObjectNode:" : "dkh 01/30/2014 17:15",
+		"acceptScriptLeafNode:" : "dkh 01/30/2014 17:08",
+		"acceptSessionTempNode:" : "dkh 01/30/2014 17:15",
+		"acceptSmalltalkLeafNode:" : "dkh 01/30/2014 17:08",
+		"acceptStringLeafNode:" : "dkh 01/30/2014 17:08",
+		"acceptTopezLeafNode:" : "dkh 01/30/2014 17:11",
+		"acceptTxtLeafNode:" : "dkh 01/30/2014 17:11" } }

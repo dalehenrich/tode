@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 cp
     | destinationPath |
     destinationPath := tokens at: 3.

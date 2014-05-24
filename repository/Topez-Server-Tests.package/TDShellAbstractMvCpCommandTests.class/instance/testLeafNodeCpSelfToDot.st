@@ -8,7 +8,7 @@ testLeafNodeCpSelfToDot
       srcNode addChildNode: childNode.
       self
         should: [ 
-          self topez
+          self
             evaluateCommandString:
               'cd ' , srcNode printString , '; cp ' , srcNode printString , childNode name
                 , ' .' ]

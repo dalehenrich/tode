@@ -1,4 +1,11 @@
-as yet unclassified
+commands
 find
   <topezCommand: 'find' manPage: #'findManPage'>
-  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) find ]
+  ^ [ :topez :objIn :tokens :command | 
+  self
+    performSubCommand: topez
+    objIn: objIn
+    commandOptions:
+      {#('help' $h #'none').
+      #('scriptPath' nil #'optional')}
+    todeCommand: command ]

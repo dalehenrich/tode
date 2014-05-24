@@ -1,4 +1,4 @@
-as yet unclassified
+menu support
 apply: menuSpec to: aMenu for: menuTarget
 	| maxLength |
 	maxLength := 0.
@@ -21,14 +21,39 @@ apply: menuSpec to: aMenu for: menuTarget
 						ifTrue: [ aMenu addLine ]
 						ifFalse: [ 
 							(spec at: 2) ifNotNil: [ :char | label := (label padRightTo: maxLength) , ' (' , char asString , ')' ].
-							aMenu
-								add: label
-								target: menuTarget
-								selector: #executeMenuAction:
-								argument: (spec at: 3) ] ]
+							spec size == 3
+								ifTrue: [ 
+									aMenu
+										add: label
+										target: menuTarget
+										selector: #executeMenuAction:
+										argument: (spec at: 3) ]
+								ifFalse: [ 
+									spec size == 6
+										ifTrue: [ 
+											| sel menuCategory unselectedStatus |
+											sel := #executeMenuAction:.
+											menuCategory := spec at: 5.
+											unselectedStatus := spec at: 6.
+											(spec at: 4) ifNotNil: [ sel := (spec at: 4) asSymbol ].
+											aMenu
+												addWithLabel: label
+												enablementSelector: [ 
+													menuTarget listIndex = 0
+														ifTrue: [ unselectedStatus ]
+														ifFalse: [ menuTarget enabledMenuCategories includes: menuCategory ] ]
+												target: menuTarget
+												selector: sel
+												argumentList: {(spec at: 3)} ]
+										ifFalse: [ 
+											aMenu
+												add: label
+												target: menuTarget
+												selector: (spec at: 4) asSymbol
+												argument: (spec at: 3)	"presumably #executeLocalMenuAction:, but not required" ] ] ] ]
 				ifFalse: [ 
 					| assoc subMenu |
-					subMenu := MenuMorph new.
+					subMenu := (Smalltalk at: #MenuMorph) new.
 					assoc := label.
 					label := assoc key.
 					self apply: assoc value to: subMenu for: menuTarget.

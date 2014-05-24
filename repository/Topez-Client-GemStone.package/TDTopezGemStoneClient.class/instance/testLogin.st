@@ -9,7 +9,7 @@ testLogin
 			| message |
 			message := 'tODE is not supported on ' , gemstoneVersion printString
 				, '. You should use GemStone version ''3.1.0'' or later.'.
-			(self confirm: message, ' Continue anyway?')
+			(self confirm: message , ' Continue anyway?')
 				ifFalse: [ ^ message ] ].
 	testSession := self loginUsing: TodeInstallSession.
 	[ ^ self testLogin: testSession ]
@@ -18,10 +18,10 @@ testLogin
 		do: [ :ex | 
 			(ex description endsWith: 'External module not found')
 				ifTrue: [ ^ self testLoginExternalModuleNotFound ].
-			(ex description includesSubString: 'Client version is')
+			(MetacelloPlatform current string: ex description includesSubstring: 'Client version is')
 				ifTrue: [ ^ self testLoginGciVersionMismatch: ex ].
-			(ex description includesSubString: 'Stone Repository monitor cannot be reached')
+			(MetacelloPlatform current string: ex description includesSubstring: 'Stone Repository monitor cannot be reached')
 				ifTrue: [ ^ self testLoginStoneNotFound: ex ].
-			(ex description includesSubString: 'NetLDI service')
+			(MetacelloPlatform current string: ex description includesSubstring: 'NetLDI service')
 				ifTrue: [ ^ self testLoginNetLDIServiceNotFound: ex ].
 			^ self testLoginGenericError: ex ]

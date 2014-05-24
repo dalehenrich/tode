@@ -11,6 +11,7 @@ menuActionSpec: miniTool
   ^ workingCopyMenuSpec
     ,
       {#('set user/password' nil #'setUserPassword:selectedIndex:').
+      #('add to package' nil #'addToPackage:selectedIndex:').
       #('packages' nil #'browseRepositoryPackages:selectedIndex:').
       #('remove repository' nil #'removeRepository:selectedIndex:').
       #('flush' nil #'flushRepositoryCache:selectedIndex:').

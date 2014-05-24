@@ -1,11 +1,15 @@
-as yet unclassified
+manPages
 catManPage
   ^ 'NAME
-  cat - display contents of node
+  cat - Display contents of node
 
 SYNOPSIS
-  cat path
+  cat  [--help] <path>
 
 DESCRIPTION
-  Resolve `path` and return result of #cat message.
+  Resolve path and print contents of node.
+
+OPTIONS
+  --help
+    Bring up this man page.
 '

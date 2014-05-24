@@ -53,7 +53,10 @@ baseline: spec
                 postLoadDoIt: #'initializeTools';
                 requires: #('Topez-Server-Core') ];
         package: 'Tode-Client-Common'
-          with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
+          with: [ 
+              spec
+                postLoadDoIt: #'initializeBounds';
+                requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
           with: [ spec requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];
         package: 'Tode-Client-Pharo'
@@ -89,14 +92,25 @@ baseline: spec
         baseline: 'Ston'
           with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
       spec
-        package: 'Topez-Server-Core' with: [ spec requires: #('RB') ];
+        package: 'Topez-Server-Core'
+          with: [ 
+              spec
+                postLoadDoIt: #'initializeTools';
+                requires: #('RB') ];
+        package: 'Tode-BatchEdit-Tool'
+          with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
           with: [ 
               spec
                 postLoadDoIt: #'initializeTools';
                 requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Tests'
-          with: [ spec requires: #('Topez-Server-Core') ];
+          with: [ 
+              spec
+                includes: #('Tode-GemStone-Server-Tests');
+                requires: #('Topez-Server-Core') ];
+        package: 'Tode-GemStone-Server-Tests'
+          with: [ spec requires: #('Topez-Server-Tests') ];
         package: 'Topez-Server-CypressTools'
           with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-TestTools'
@@ -104,7 +118,7 @@ baseline: spec
         package: 'Topez-Server-DebugTools'
           with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-TestDebugTools'
-          with: [ spec requires: #('Topez-Server-DebugTools' 'Topez-Server-TestTools') ];
+          with: [ spec requires: #('Topez-Server-DebugTools' 'Topez-Server-Tests') ];
         package: 'Topez-Server-ProcessTools'
           with: [ spec requires: #('Topez-Server-Core' 'Topez-Server-DebugTools') ];
         package: 'Topez-Server-TestProcessTools'
@@ -121,6 +135,7 @@ baseline: spec
           with:
             #('Common Tests' 'Topez-Server-Tests' 'Topez-Server-TestDebugTools');
         group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
+        group: 'Rewrite' with: #('Tode-BatchEdit-Tool');
         yourself ].
   spec
     for: #'gs2.4.x'
@@ -134,18 +149,43 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-24x-DebugTools' ];
         package: 'Topez-Server-24x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
+        package: 'Topez-Server-Tests'
+          with: [ spec includes: 'Topez-Server-24x-Tests' ];
+        package: 'Topez-Server-24x-Tests'
+          with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
   spec
-    for: #'gs3.1.x'
+    for: #'gs3.x'
     do: [ 
       spec
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-3x-Core' ];
+        package: 'Topez-Server-3x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-DebugTools'
-          with: [ spec includes: 'Tode-Server-31x-GsProcess-Patch' ];
-        package: 'Tode-Server-31x-GsProcess-Patch'
+          with: [ spec includes: 'Topez-Server-3x-DebugTools' ];
+        package: 'Topez-Server-3x-DebugTools'
+          with: [ spec requires: 'Topez-Server-DebugTools' ];
+        package: 'Topez-Server-Tests'
+          with: [ spec includes: 'Topez-Server-31x-Tests' ];
+        package: 'Topez-Server-31x-Tests'
+          with: [ spec requires: 'Topez-Server-Tests' ];
+        yourself ].
+  spec
+    for: #'gs3.0.x'
+    do: [ 
+      spec
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-30x-Core' ];
+        package: 'Topez-Server-30x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
+        package: 'Topez-Server-DebugTools'
+          with: [ spec includes: 'Topez-Server-30x-DebugTools' ];
+        package: 'Topez-Server-30x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
         yourself ].
   spec
-    for: #(#'gs3.1.x' #'gs3.2.x')
+    for: #'gs3.1.x'
     do: [ 
       spec
         package: 'Topez-Server-Core'
@@ -153,13 +193,27 @@ baseline: spec
         package: 'Topez-Server-31x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-DebugTools'
+          with: [ spec includes: 'Tode-Server-31x-GsProcess-Patch' ];
+        package: 'Tode-Server-31x-GsProcess-Patch'
+          with: [ spec requires: 'Topez-Server-DebugTools' ];
+        yourself ].
+  spec
+    for: #'gs3.2.x'
+    do: [ 
+      spec
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-32x-Core' ];
+        package: 'Topez-Server-32x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
+        yourself ].
+  spec
+    for: #(#'gs3.1.x' #'gs3.2.x')
+    do: [ 
+      spec
+        package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
         package: 'Topez-Server-31x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
-        package: 'Topez-Server-Tests'
-          with: [ spec includes: 'Topez-Server-31x-Tests' ];
-        package: 'Topez-Server-31x-Tests'
-          with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
   spec
     for: #'maglev'

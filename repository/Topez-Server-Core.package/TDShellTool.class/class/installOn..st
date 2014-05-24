@@ -1,5 +1,7 @@
 as yet unclassified
 installOn: aTDTopezServer
+  "self install"
+
   "builder:
 	 #view		- normal view (i.e., collection of associations for Dictionary)
 	 #inspect - raw object/implementation view
@@ -36,6 +38,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDClientSourceElementBuilder
       for: stringClass
       aspect: #'edit';
+    registerEditorClass: TDWorkspaceClientElementBuilder
+      for: stringClass
+      aspect: #'workspace';
     yourself.
   Smalltalk
     at: #'TDObjectLog'
@@ -62,6 +67,12 @@ installOn: aTDTopezServer
     registerBuilderClass: TDCharacterNodeBuilder for: Character aspect: #'view';
     registerBuilderClass: TDCharacterNodeBuilder
       for: Character
+      aspect: #'inspect';
+    registerBuilderClass: TDCharacterCollectionNodeBuilder
+      for: stringClass
+      aspect: #'view';
+    registerBuilderClass: TDCharacterCollectionNodeBuilder
+      for: stringClass
       aspect: #'inspect';
     registerBuilderClass: TDCollectionNodeBuilder
       for: Collection
@@ -90,9 +101,6 @@ installOn: aTDTopezServer
     registerEditorClass: TDMethodDefinitionsElementBuilder
       for: Collection
       aspect: #'methodDefinitionList';
-    registerEditorClass: TDRoassalListElementBuilder
-      for: Collection
-      aspect: #'roassal';
     registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder
       for: TDDefinitionList
       aspect: #'definitionList';
@@ -156,5 +164,8 @@ installOn: aTDTopezServer
       aspect: #'edit';
     registerEditorClass: TDClientTextElementBuilder
       for: TDTxtLeafNode
+      aspect: #'edit';
+    registerEditorClass: TDClientMergeOperationSourceElementBuilder
+      for: TDMergeOperation
       aspect: #'edit';
     yourself

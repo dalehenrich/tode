@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Index-Development-Tool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nodes" ],
+	"name" : "TDIndexDevTool",
+	"pools" : [
+		 ],
+	"super" : "TDStandardTool",
+	"type" : "normal" }

@@ -7,9 +7,7 @@ browseClassHierarchy: clientSourceElement selectionInterval: selectionInterval
   | gsMethod cls |
   gsMethod := self method.
   cls := gsMethod inClass.
-  cls asTDClassDefinition
-    editUsing:
-      ((TDEditorSpec topez: clientSourceElement topez editorAspect: #'hierarchyList')
-        windowName: #'hierarchy';
-        yourself).
+  (self browseTool: clientSourceElement)
+    browseClassHierarchy: cls
+    label: 'Hierarchy of ' , cls name asString.
   ^ true

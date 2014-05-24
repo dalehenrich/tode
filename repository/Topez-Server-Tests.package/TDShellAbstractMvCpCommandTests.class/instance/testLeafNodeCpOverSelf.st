@@ -8,7 +8,7 @@ testLeafNodeCpOverSelf
       srcNode addChildNode: childNode.
       self
         should: [ 
-          self topez
+          self
             evaluateCommandString:
               'cp ' , srcNode printString , childNode name , ' ' , srcNode printString
                 , childNode name ]

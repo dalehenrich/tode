@@ -1,7 +1,6 @@
 {
 	"category" : "Topez-Server-Core",
 	"classinstvars" : [
-		"halos",
 		"commands",
 		"rootNode",
 		"nodeBuilders",

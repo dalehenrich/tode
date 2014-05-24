@@ -9,7 +9,8 @@
 		"merger",
 		"selection",
 		"editDefinition",
-		"displayDiffs" ],
+		"displayDiffs",
+		"labelString" ],
 	"name" : "TDMergeOperation",
 	"pools" : [
 		 ],

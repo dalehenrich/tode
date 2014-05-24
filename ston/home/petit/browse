@@ -1,7 +1,0 @@
-TDScriptLeafNode{#name:'browse',#contents:'[ :topez :objIn :tokens :windowId | 
-| findTool defs |
-findTool := topez toolInstanceFor: \'find\'.
-defs := OrderedCollection new.
-#(\'PetitParser-cypress\' \'PetitTests\' \'PetitSmalltalk\')
-  do: [ :packageName | defs addAll: (findTool findPackageDefinitions: packageName) ].
-(topez toolInstanceFor: \'browse\') browseClasses: defs ]',#creationTime:nil,#modificationTime:nil}

@@ -1,11 +1,8 @@
 as yet unclassified
 gateway
-  | aTopez currentNode |
-  aTopez := self topez.
-  currentNode := aTopez currentNode.
+  | currentNode |
+  currentNode := self topez currentNode.
   [ 
-  aTopez currentNode: self parent.
-  ^ aTopez
-    evaluateString: self contents
-    inContext: self sourceCompilationContext ]
-    ensure: [ aTopez currentNode: currentNode ]
+  topez currentNode: self parent.
+  ^ topez evaluateString: self contents inContext: self sourceCompilationContext ]
+    ensure: [ topez currentNode: currentNode ]

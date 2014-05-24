@@ -10,7 +10,8 @@
 		"exception",
 		"frames",
 		"currentFrame",
-		"debugTool" ],
+		"debugTool",
+		"trimmed" ],
 	"name" : "TDStack",
 	"pools" : [
 		 ],

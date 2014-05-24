@@ -1,0 +1,19 @@
+{
+	"category" : "Tode-Deploy-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"version",
+		"configRepo",
+		"ss3Repo",
+		"tmpRepo",
+		"commitMessage",
+		"updateRepo" ],
+	"name" : "MCNewFileTreeTodeTool",
+	"pools" : [
+		 ],
+	"super" : "MCTodeDeployTool",
+	"type" : "normal" }

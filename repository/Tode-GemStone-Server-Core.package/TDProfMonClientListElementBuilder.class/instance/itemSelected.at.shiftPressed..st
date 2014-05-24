@@ -1,6 +1,7 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
   | entry |
+  index ifNil: [ ^ nil ].
   index <= 3
     ifTrue: [ ^ nil ].
   entry := self object profMonResults at: index - 3.

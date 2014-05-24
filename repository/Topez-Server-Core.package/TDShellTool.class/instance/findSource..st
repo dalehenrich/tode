@@ -1,6 +1,6 @@
 as yet unclassified
 findSource: regexPattern
-  "find source <regex-pattern>"
+  "find [--scriptPath=<tode-path>] source <regex-pattern>"
 
   | regex methodRefs |
   regex := self findRegex: regexPattern.

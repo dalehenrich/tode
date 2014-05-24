@@ -7,7 +7,7 @@ testDirectoryNodeCpIntoExisting
   targetNodeMaster := self differentLeafNodes at: 1.
   targetNodeMaster name: 'targetMaster'.
   self standardLeafNodes do: [ :childNode | srcNode addChildNode: childNode ].
-  self topez
+  self
     evaluateCommandString:
       'cp ' , srcNode printString , ' ' , destNode printString.
   compareBlock := [ :aNode :bNode | 

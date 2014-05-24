@@ -1,4 +1,4 @@
 accessing
 escapeKeyStroke
-  self topez spawnShellFor: self activeEditor clientElement.
+  self topez openWorkspaceFor: self activeEditor clientElement.
   ^ true

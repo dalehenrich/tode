@@ -6,10 +6,12 @@
 		"_extractPackageDefinitions" : "dkh 10/13/2013 07:59",
 		"classDefinitions" : "dkh 05/28/2013 14:01",
 		"configurationName" : "DataCurator 02/05/2013 13:00",
+		"configurationVersionString" : "dkh 05/07/2014 11:27",
 		"hash" : "dkh 05/28/2013 17:02",
 		"label" : "DataCurator 02/05/2013 09:39",
 		"packageDefinitions" : "dkh 02/24/2013 15:12",
 		"packageNamed:ifAbsent:" : "dkh 02/24/2013 15:21",
 		"pasteTDDefinition:" : "DataCurator 02/06/2013 02:05",
-		"projectSpec" : "DataCurator 02/05/2013 13:00",
+		"projectRegistrationDef" : "dkh 05/22/2014 12:37",
+		"projectSpec" : "dkh 05/08/2014 14:53",
 		"projectSpec:" : "DataCurator 02/05/2013 13:00" } }

@@ -1,10 +1,22 @@
 as yet unclassified
 testCopy
-  | clsTool clsName newName |
-  clsTool := self tool.
-  clsName := self mockClassName.
-  newName := self mockAlternateClassName.
-  Smalltalk at: clsName asSymbol ifAbsent: [ self assert: false ].
-  clsTool clscopy: self mockClass to: newName.
-  Smalltalk at: clsName asSymbol ifAbsent: [ self assert: false ].
-  Smalltalk at: newName asSymbol ifAbsent: [ self assert: false ]
+  "run mostly without errors ... to keep me honest"
+
+  | node newClass newCategory actualCategory |
+  node := self createClassRefNode.
+  self evaluateCommandString: 'cls --help copy'.
+  newClass := self
+    evaluateCommandString:
+      'cls copy ' , self mockClassName , ' ' , self mockAlternateClassName.
+  newClass removeFromSystem.
+  newCategory := 'TDShellClsCommandMockClass-Other-Category'.
+  newClass := self
+    evaluateCommandString:
+      'cls copy --category=' , newCategory , ' ' , self mockClassName , ' '
+        , self mockAlternateClassName.
+  self assert: (actualCategory := newClass category) = newCategory.
+  newClass removeFromSystem.
+  newClass := self
+    evaluateCommandString:
+      'cls copy @' , node printString , ' ' , self mockAlternateClassName.
+  newClass removeFromSystem

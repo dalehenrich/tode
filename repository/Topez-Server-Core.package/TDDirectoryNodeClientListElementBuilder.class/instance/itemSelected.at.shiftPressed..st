@@ -1,6 +1,7 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | editorAspect parent obj itemAttribute windowName highlightIndex parentList toggled builderAspect objName |
+  | editorAspect parent obj itemAttribute windowName highlightIndex parentList objName |
+  index ifNil: [ ^ nil ].
   itemAttribute := listElement itemCache at: index.
   obj := itemAttribute object.
   parent := itemAttribute parent.
@@ -10,28 +11,18 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
       "navigator window always navigates"
       editorAspect := #'navigate' ].
   parentList := itemAttribute list copy.
-  toggled := false.
-  index == 1
+  itemAttribute label = '.'
     ifTrue: [ 
-      "."
-      "toggle between view and inspect on subject of list"
-      toggled := true.
-      (obj respondsTo: #'builderAspect')
-        ifTrue: [ 
-          builderAspect := obj builderAspect.
-          builderAspect == #'inspect'
-            ifTrue: [ builderAspect := #'view' ]
-            ifFalse: [ builderAspect := #'inspect' ] ].
+      "place holder"
       obj := obj dotSelfObject
         asTDObjectNode: obj
         topez: listElement topez
-        aspect: builderAspect.
+        aspect: nil.
       objName := self object displayWith: listElement displayPolicy.
       obj name: objName ]
     ifFalse: [ 
-      index == 2
+      itemAttribute label = '..'
         ifTrue: [ 
-          ".."
           "lets highlight ourselves in the .. list ..."
           parentList isEmpty not
             ifTrue: [ 
@@ -45,14 +36,9 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
               {index.
               (itemAttribute aspect)	"use original aspect"} ] ].
   windowName := listElement editorWindowName.
-  toggled
-    ifTrue: [ 
-      "when we're browsing there is a diversity of windows involvled, so don't try to reuse the same window ... #view and #inspect reuse window as navigator"
-      windowName := nil ].
   obj
     editUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: editorAspect)
-        builderAspect: builderAspect;
         parentObject: parent;
         highlightIndex: highlightIndex;
         parentList: parentList;

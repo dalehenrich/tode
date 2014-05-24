@@ -1,3 +1,3 @@
 accessing
 windowLocation
-  ^ nil
+  ^ windowLocation

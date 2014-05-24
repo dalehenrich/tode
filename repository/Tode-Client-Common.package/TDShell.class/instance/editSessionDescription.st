@@ -1,13 +1,12 @@
-session description builtin
+built-ins
 editSessionDescription
-	| description sessionExpression |
-	description := self topezClient sessionDescription.
+	|  sessionExpression |
 	sessionExpression := (TDMultiLineText new
 		prompt: 'Session Description';
-		template: description editTemplate) interact.
+		template: sessionDescription editTemplate) interact.
 	sessionExpression
 		ifNotNil: [ 
-			description := Compiler evaluate: sessionExpression.
-			self topezClient sessionDescription: description.
-			TDTopezGemStoneClient sessionMap at: description name put: description ].
-	^ description editTemplate
+			sessionDescription := Compiler evaluate: sessionExpression.
+			self topezClient  sessionDescription: sessionDescription.
+			shellWindow setLabel: self windowLabel ].
+	^ sessionDescription editTemplate

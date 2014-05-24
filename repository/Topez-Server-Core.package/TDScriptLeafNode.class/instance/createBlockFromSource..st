@@ -1,3 +1,3 @@
 as yet unclassified
-createBlockFromSource: aString
-    ^ self topez createBlockFromSource: aString
+createBlockFromSource: blockSource
+  ^ self createBlockFromSource: blockSource silently: false

@@ -9,8 +9,8 @@ testLeafNodeMvNoDestParent
       srcNode addChildNode: childNode.
       self
         should: [ 
-          self topez
+          self
             evaluateCommandString:
               'mv ' , srcNode printString , childNode name , ' ' , destNode printString
-                , 'xxx/yyy' s ]
+                , 'xxx/yyy' ]
         raise: Error ]

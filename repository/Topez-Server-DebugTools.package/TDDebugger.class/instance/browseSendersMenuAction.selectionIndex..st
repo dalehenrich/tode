@@ -1,13 +1,8 @@
 menu actions
 browseSendersMenuAction: listElement selectionIndex: selectionIndex
-  | stack selector defs |
+  | stack selector block findTool browseTool |
   stack := self theStack.
   stack navigateFrame: selectionIndex.
-  selector := stack currentFrame selector.
-  defs := TDMethodDefinition sendersOf: selector.
-  defs
-    editUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')
-        windowLocation: #'implementors';
-        yourself).
+  selector := stack currentFrame selector asString.
+  self browseSendersOf: selector listElement: listElement.
   ^ true

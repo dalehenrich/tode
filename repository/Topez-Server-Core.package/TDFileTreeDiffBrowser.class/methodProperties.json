@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"browseFullClassMenuAction:selectionIndex:" : "dkh 05/10/2014 20:31",
+		"browseFullMethodMenuAction:selectionIndex:" : "dkh 05/11/2014 19:50",
+		"browseImplementorsMenuAction:selectionIndex:" : "dkh 05/09/2014 15:21",
+		"browseSendersMenuAction:selectionIndex:" : "dkh 05/09/2014 15:21",
+		"installLocalMenuAction:selectionIndex:" : "dkh 05/12/2014 19:07",
+		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/15/2014 20:02",
+		"menuActionSpec:" : "dkh 05/21/2014 10:36",
+		"methodMenuActionSpec" : "dkh 05/12/2014 18:59",
+		"operations" : "dkh 05/21/2014 10:59",
+		"selectClassOperations:selectionIndex:" : "dkh 05/12/2014 14:58",
+		"stFilterBlock" : "dkh 05/12/2014 14:52",
+		"stFilterBlock:" : "dkh 05/12/2014 14:52",
+		"toggleViewSameSource:selectionIndex:" : "dkh 05/21/2014 10:59",
+		"toggleViewStOnly:selectionIndex:" : "dkh 05/10/2014 20:58",
+		"viewSameSource" : "dkh 05/21/2014 10:38",
+		"viewSameSource:" : "dkh 05/21/2014 10:37",
+		"viewStOnly" : "dkh 05/10/2014 20:54",
+		"viewStOnly:" : "dkh 05/10/2014 20:53" } }

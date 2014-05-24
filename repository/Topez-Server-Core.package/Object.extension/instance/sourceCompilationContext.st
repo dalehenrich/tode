@@ -1,3 +1,3 @@
 *topez-server-core
 sourceCompilationContext
-  ^ nil
+  ^ self

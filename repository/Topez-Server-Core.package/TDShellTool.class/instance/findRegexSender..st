@@ -1,8 +1,11 @@
 as yet unclassified
 findRegexSender: regexPattern
-  "find rsender <regex-pattern>"
+  "find [--scriptPath=<tode-path>] rsender <regex-pattern>"
 
   | regex methodRefs |
+  self options
+    at: 'scriptPath'
+    ifPresent: [ :scriptPath | ^ self findRegexSender: regexPattern searchScriptRoot: scriptPath ].
   regex := self findRegex: regexPattern.
   regex ifNil: [ ^ #() ].
   methodRefs := (Smalltalk systemNavigation regexSendersOf: regex)

@@ -1,9 +1,13 @@
-as yet unclassified
+bu
 bulist
-  "bu list"
+  "
+  bu [--dir=<backup-directory>] list
+"
 
-  | entries stream |
-  entries := ((ServerFileDirectory on: self class backupDirectoryName) entries
+  | backupDirPath entries stream |
+  self getSubcommandOptsMixedLongShort: {}.
+  backupDirPath := self resolveBackupPath: ''.
+  entries := ((ServerFileDirectory on: backupDirPath) entries
     select: [ :entry | entry isDirectory not ])
     sorted: [ :a :b | a modificationTime <= b modificationTime ].
   stream := WriteStream on: String new.

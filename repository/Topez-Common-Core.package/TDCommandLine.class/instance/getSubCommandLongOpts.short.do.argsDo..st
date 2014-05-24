@@ -1,4 +1,4 @@
-private
+obsolete
 getSubCommandLongOpts: optionSpec short: shortOptionAliases do: optionBlock argsDo: argBlock
   | optionStream optionString |
   optionString := commandLine

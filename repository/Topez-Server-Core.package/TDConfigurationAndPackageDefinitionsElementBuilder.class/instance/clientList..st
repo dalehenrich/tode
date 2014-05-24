@@ -13,7 +13,5 @@ clientList: listElement
             parent: nil
             aspect: listElement aspect) ].
   listElement ~~ nil
-    ifTrue: [ 
-      listElement itemCache: items.
-      listElement selectedIndex: self object selectedIndex ].
-  ^ ar
+    ifTrue: [ listElement itemCache: items ].
+  ^ ar -> self object selectedIndex

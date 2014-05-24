@@ -1,0 +1,1 @@
+This class implements the `project`, `package` and `repository` commands.

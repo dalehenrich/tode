@@ -4,6 +4,7 @@ mclist
 
   | pattern label block |
   label := 'Working Copies'.
+  pattern := ''.
   tokens size > 1
     ifTrue: [ 
       pattern := tokens at: 2.

@@ -26,4 +26,4 @@ clientList: listElement
             aspect: listElement aspect ] ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].
-  ^ ar
+  ^ ar -> nil

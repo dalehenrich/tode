@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clsrename: theClass to: newName
   [ Smalltalk renameClassNamed: theClass name asString as: newName ]
     on: Warning

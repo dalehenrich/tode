@@ -1,1 +1,0 @@
-TDTxtLeafNode{#name:'commitMessage',#contents:Text{#string:'Issue #215: fix a bug in MetacelloMCVersionSpec>>packageSpecsInLoadOrderForMap:',#runs:RunArray{#runs:[25,54],#values:[[TextColor{#color:Color{#rgb:0}}],[]],#lastIndex:26,#lastRun:2,#lastOffset:0}},#creationTime:nil,#modificationTime:DateAndTime['2013-11-18T08:34:09.5626380443573-08:00']}

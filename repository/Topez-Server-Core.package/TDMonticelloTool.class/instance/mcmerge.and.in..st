@@ -20,14 +20,18 @@ mcmerge: wc and: version in: repo
     base: imageSnapshot
     target: versionSnapshot
     ancestor: commonAncestorSnapshot.
-  mergeTool := topez toolInstanceFor: 'mg'.
-  mergeTool
-    mgmerge: merger
-    mergerCompletionBlock: [ 
-      | imagePatch |
-      imagePatch := version workingCopy package snapshot
-        patchRelativeToBase: commonAncestorSnapshot.
-      imagePatch isEmpty
-        ifTrue: [ version workingCopy loaded: version ]
-        ifFalse: [ version workingCopy merged: version ] ]
-    mergerAbortBlock: [  ]
+  merger := TDMerger new merger: merger.
+  (TDMergeDiffBrowser new
+    merger: merger
+      mergerCompletionBlock: [ 
+          | imagePatch |
+          imagePatch := version workingCopy package snapshot
+            patchRelativeToBase: commonAncestorSnapshot.
+          imagePatch isEmpty
+            ifTrue: [ version workingCopy loaded: version ]
+            ifFalse: [ version workingCopy merged: version ] ]
+      mergerAbortBlock: [  ];
+    topez: topez;
+    windowLabel:
+        'Merge ' , version info name printString , ' into ' , packageName printString;
+    yourself) open

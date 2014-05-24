@@ -1,6 +1,7 @@
 as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
   | objectLogEntry |
+  index ifNil: [ ^ nil ].
   objectLogEntry := self object objectLog at: index.
   objectLogEntry
     editUsing:

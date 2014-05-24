@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-GemStone-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDGemStoneCommandTests",
+	"pools" : [
+		 ],
+	"super" : "TDShellToolTests",
+	"type" : "normal" }

@@ -6,7 +6,7 @@ testDirectoryNodeMvNoDestParent
   destNode := self lookupDestNode: rootPath , 'dest'.
   self
     should: [ 
-      self topez
+      self
         evaluateCommandString:
           'mv ' , srcNode printString , ' ' , destNode printString , 'xxx/yyy' ]
     raise: Error

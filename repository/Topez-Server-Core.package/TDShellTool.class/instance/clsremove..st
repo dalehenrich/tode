@@ -1,4 +1,4 @@
-as yet unclassified
+cls
 clsremove: theClass
   theClass removeFromSystem.
   self topez resetAllGlobalNames

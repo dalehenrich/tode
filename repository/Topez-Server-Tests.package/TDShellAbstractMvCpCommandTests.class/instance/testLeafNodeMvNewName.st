@@ -12,7 +12,7 @@ testLeafNodeMvNewName
       | mvNode node newName noSrcChild |
       srcNode addChildNode: childNode.
       newName := childNode name , '_NEW'.
-      mvNode := self topez
+      mvNode := self
         evaluateCommandString:
           'mv ' , srcNode printString , childNode name , ' ' , destNode printString
             , newName.

@@ -1,10 +1,14 @@
 as yet unclassified
 mmCommit: projectName commitMessage: commitMessage
-  | registration projectSpec workingCopies |
+  | registration projectSpec workingCopies committed |
   registration := self getRegistrationFor: projectName.
   projectSpec := registration lookupBaselineSpec.
   workingCopies := (self modifiedPackagesForProjectSpec: projectSpec)
     collect: [ :packageSpec | packageSpec workingCopy ].
   workingCopies isEmpty
     ifTrue: [ ^ #() ].
-  ^ self commitWorkingCopies: workingCopies commitMessage: commitMessage
+  committed := self
+    commitWorkingCopies: workingCopies
+    commitMessage: commitMessage.
+  self topez commitTransaction.
+  ^ committed

@@ -1,6 +1,7 @@
-as yet unclassified
+find
 find
   "
+  find [--scriptPath=<tode-path>] find-command [<find-arguments>]
   find amethod <method-spec> 
   find categories
   find category <regex-pattern>
@@ -16,13 +17,12 @@ find
   find rsender <regex-pattern>
   find sender [#]<selector>
   find source <regex-pattern>
-  find symbolList <regex-pattern>
-  find symbolLists
   find versions <method-spec>
 "
 
   | findTokens command |
-  findTokens := tokens copyFrom: 2 to: tokens size.
+  self findProcessCommandOptions.
+  findTokens := self arguments.
   command := findTokens at: 1.
   command = 'method'
     ifTrue: [ ^ self findMethod: (findTokens at: 2) ].
@@ -33,7 +33,7 @@ find
   command = 'sender'
     ifTrue: [ ^ self findSender: (findTokens at: 2) ].
   command = 'versions'
-    ifTrue: [ ^ self findVersions: findTokens ].
+    ifTrue: [ ^ self findVersions: findTokens labelBlock: [ :ignored |  ] ].
   command = 'references'
     ifTrue: [ ^ self findReferences: (findTokens at: 2) ].
   command = 'rmethod'
@@ -48,13 +48,9 @@ find
     ifTrue: [ ^ self findPackageDefinitions: (findTokens at: 2) ].
   command = 'categories'
     ifTrue: [ ^ self findCategoryDefinitions ].
-  command = 'symbolLists'
-    ifTrue: [ ^ self findSymbolListDefinitions: (findTokens at: 2) ].
   command = 'category'
     ifTrue: [ ^ self findCategoryClassDefinitions: (findTokens at: 2) ].
-  command = 'symbolList'
-    ifTrue: [ ^ self findSymbolListClassDefinitions: (findTokens at: 2) ].
   command = 'project'
-    ifTrue: [ ^ self findProjectDefinitions: (findTokens at: 2) ].
+    ifTrue: [ ^ self findProjectClassDefinitions: (findTokens at: 2) ].
   command = 'hierarchy'
-    ifTrue: [ ^ self findClassHierarchy: (findTokens at: 2) ]
+    ifTrue: [ ^ self findClassHierarchy: {(findTokens at: 2)} ]

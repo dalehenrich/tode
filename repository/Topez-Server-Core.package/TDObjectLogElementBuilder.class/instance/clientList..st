@@ -1,3 +1,4 @@
 as yet unclassified
 clientList: listElement
-  ^ self object objectLog collect: [ :objectLogEntry | objectLogEntry label ]
+  ^ (self object objectLog collect: [ :objectLogEntry | objectLogEntry label ])
+    -> nil

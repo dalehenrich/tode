@@ -10,7 +10,7 @@ parseLongOptions: optionSpecs shortOptions: shortOptionAliases do: optionBlock n
   stream next.
   stream atEnd
     ifTrue: [ 
-      nonOptionBlock value: peek asString.
+      nonOptionBlock cull: peek asString.
       ^ self ].
   peek := stream peek.
   peek == $-

@@ -1,13 +1,8 @@
 menu actions
 browseImplementorsMenuAction: listElement selectionIndex: selectionIndex
-  | stack selector defs |
+  | stack selector defs findTool block browseTool |
   stack := self theStack.
   stack navigateFrame: selectionIndex.
-  selector := stack currentFrame selector.
-  defs := TDMethodDefinition implementorsOf: selector.
-  defs
-    editUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')
-        windowLocation: #'implementors';
-        yourself).
+  selector := stack currentFrame selector asString.
+  self browseImplementersOf: selector listElement: listElement.
   ^ true

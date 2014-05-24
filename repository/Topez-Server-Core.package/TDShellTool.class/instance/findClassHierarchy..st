@@ -1,10 +1,13 @@
 as yet unclassified
-findClassHierarchy: className
+findClassHierarchy: classNameList
   "find hierarchy <class-name>"
 
-  | cls classes defs |
+  | classes defs |
   classes := Set new.
-  cls := Smalltalk at: className.
-  classes addAll: (TDClassDefinition fullHierarchyOf: cls).
+  classNameList
+    do: [ :className | 
+      | cls |
+      cls := Smalltalk at: className.
+      classes addAll: (TDClassDefinition fullHierarchyOf: cls) ].
   defs := classes collect: [ :each | TDClassDefinition className: each name ].
   ^ TDClassDefinition classHierarchyOrder: defs

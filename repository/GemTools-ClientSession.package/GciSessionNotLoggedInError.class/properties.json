@@ -1,0 +1,14 @@
+{
+	"category" : "GemTools-ClientSession",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GciSessionNotLoggedInError",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

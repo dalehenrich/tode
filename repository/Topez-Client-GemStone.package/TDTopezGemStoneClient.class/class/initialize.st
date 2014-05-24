@@ -1,5 +1,5 @@
 class initialization
 initialize
-  "self initialize"
+	"self initialize"
 
-  super initialize
+	super initialize

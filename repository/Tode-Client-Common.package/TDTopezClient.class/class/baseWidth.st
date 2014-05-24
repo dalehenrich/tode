@@ -1,4 +1,4 @@
-as yet unclassified
+window bounds
 baseWidth
   | font string |
   font := TextStyle defaultFont.

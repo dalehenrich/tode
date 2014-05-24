@@ -1,8 +1,6 @@
 as yet unclassified
 itemSelected: topez
-  self asTDClassDefinition
-    editUsing:
-      ((TDEditorSpec topez: topez editorAspect: #'hierarchyList')
-        windowName: #'hierarchy';
-        yourself).
+  (topez toolInstanceFor: 'browse')
+    browseClassHierarchy: self asTDClassDefinition
+    label: 'Hierarchy of ' , self className asString.
   ^ nil

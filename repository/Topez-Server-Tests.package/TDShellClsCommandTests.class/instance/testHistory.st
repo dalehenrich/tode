@@ -1,11 +1,11 @@
 as yet unclassified
 testHistory
-  | clsTool history newClassVersion oldClassVersion |
-  clsTool := self tool.
-  history := clsTool clshistory: self mockClass.
+  | history newClassVersion oldClassVersion |
+  self evaluateCommandString: 'cls --help history '.
+  history := self evaluateCommandString: 'cls history ' , self mockClassName.
   self assert: history size = 1.
   self createMockClassVersion.
-  history := clsTool clshistory: self mockClass.
+  history := self evaluateCommandString: 'cls history ' , self mockClassName.
   self assert: history size = 2.
   newClassVersion := history first theClass.
   self assert: newClassVersion allInstVarNames = #(#'instanceVariable').

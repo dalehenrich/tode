@@ -1,3 +1,4 @@
 accessing
 refreshView
-	self activeEditor refreshView
+	self activeEditor refreshView.
+	^ true

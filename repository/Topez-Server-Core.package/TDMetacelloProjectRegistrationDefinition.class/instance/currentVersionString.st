@@ -1,0 +1,3 @@
+accessing
+currentVersionString
+  ^ self versionString

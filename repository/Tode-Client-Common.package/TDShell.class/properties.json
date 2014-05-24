@@ -6,7 +6,8 @@
 		"rootNode" ],
 	"classvars" : [
 		"DebugMode",
-		"EnableDebugger" ],
+		"EnableDebugger",
+		"TodeHome" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"windowStatus",
@@ -21,6 +22,7 @@
 		"autoCommit",
 		"adornmentColor",
 		"sessionName",
+		"sessionDescription",
 		"history",
 		"historyIndex" ],
 	"name" : "TDShell",

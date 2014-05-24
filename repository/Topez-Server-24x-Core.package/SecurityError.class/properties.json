@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-24x-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SecurityError",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

@@ -17,6 +17,8 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     firstSource: self firstSource;
     getBlock: self getBlock;
     setBlock: self setBlock;
+    menuActionSpec: self menuActionSpec;
+    menuActionBlock: self menuActionBlock;
     cmdKeyBlock: self cmdKeyBlock;
     editorWindowLabel: theWindowLabel;
     editorWindowId: aTDEditorSpec windowId;

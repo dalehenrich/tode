@@ -2,8 +2,11 @@
 	"class" : {
 		"typeSignature" : "DataCurator 11/30/2012 08:00" },
 	"instance" : {
+		"acceptVisitor:" : "dkh 01/30/2014 12:34",
+		"acceptVisitor:proxiedBy:" : "dkh 01/31/2014 10:51",
 		"block" : "dkh 11/10/2013 10:57",
 		"contents" : "DataCurator 12/01/2012 08:18",
 		"dotSelfObject" : "dkh 06/05/2013 13:11",
-		"evaluateInContext:" : "DataCurator 12/01/2012 08:17",
+		"evaluateInContext:" : "dkh 03/20/2014 14:41",
+		"method" : "dkh 05/09/2014 16:34",
 		"renderNameTextAttributes" : "dkh 11/29/2012 20:13" } }

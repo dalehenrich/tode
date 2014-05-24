@@ -13,7 +13,10 @@
 		"windowId",
 		"todeCommand",
 		"options",
-		"arguments" ],
+		"arguments",
+		"subCommand",
+		"subOptions",
+		"subArguments" ],
 	"name" : "TDAbstractDevTool",
 	"pools" : [
 		 ],

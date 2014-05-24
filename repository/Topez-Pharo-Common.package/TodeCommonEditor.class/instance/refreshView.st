@@ -1,2 +1,3 @@
 accessing
 refreshView
+	self subclassResponsibility

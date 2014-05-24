@@ -1,4 +1,9 @@
-as yet unclassified
+commands
 cd
   <topezCommand: 'cd' manPage: #'cdManPage'>
-  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) cd ]
+  ^ [ :topez :objIn :tokens :command | 
+  self
+    performCommand: topez
+    objIn: objIn
+    commandOptions: {#('help' $h #'none')}
+    todeCommand: command ]

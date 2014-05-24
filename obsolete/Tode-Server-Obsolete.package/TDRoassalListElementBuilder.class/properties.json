@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Server-Obsolete",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDRoassalListElementBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDClientListElementBuilder",
+	"type" : "normal" }

@@ -8,7 +8,7 @@ testDirectoryNodeMvIntoExisting
   targetNodeMaster name: 'targetMaster'.
   originalNodes := self standardLeafNodes
     collect: [ :childNode | srcNode addChildNode: childNode ].
-  self topez
+  self
     evaluateCommandString:
       'mv ' , srcNode printString , ' ' , destNode printString.
   compareBlock := [ :aNode :bNode | 

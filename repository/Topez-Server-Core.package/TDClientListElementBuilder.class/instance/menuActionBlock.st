@@ -1,5 +1,9 @@
-menu actions
+accessing
 menuActionBlock
   "works in concert with #menuActionSpec"
 
-  ^ [ :actionSymbol :listElement :index | self perform: actionSymbol with: listElement with: index ]
+  ^ [ :actionSymbol :listElement :actionArg | 
+  self
+    handleMenuActions: actionSymbol
+    listElement: listElement
+    actionArg: actionArg ]

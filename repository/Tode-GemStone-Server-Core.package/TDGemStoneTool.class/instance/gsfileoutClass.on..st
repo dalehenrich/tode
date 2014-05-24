@@ -8,7 +8,9 @@ gsfileoutClass: aClass on: aStream
     nextPut: Character lf;
     nextPut: $(;
     nextPutAll:
-        (aClass _definitionInContext: System myUserProfile withConstraints: false);
+        (aClass
+            _definitionInContext: GsSession currentSession symbolList
+            withConstraints: false);
     nextPutAll: ') definition.';
     nextPut: Character lf;
     nextPut: $%;

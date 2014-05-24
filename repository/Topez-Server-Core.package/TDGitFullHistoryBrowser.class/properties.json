@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"history",
+		"rawLogBlock" ],
+	"name" : "TDGitFullHistoryBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractGitBrowser",
+	"type" : "normal" }
