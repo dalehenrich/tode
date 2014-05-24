@@ -171,7 +171,15 @@ baseline: spec
         package: 'Topez-Server-31x-Tests'
           with: [ spec requires: 'Topez-Server-Tests' ];
         yourself ].
-  spec for: #'gs3.0.x' do: [  ].
+  spec
+    for: #'gs3.0.x'
+    do: [ 
+      spec
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-30x-Core' ];
+        package: 'Topez-Server-30x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
+        yourself ].
   spec
     for: #'gs3.1.x'
     do: [ 
