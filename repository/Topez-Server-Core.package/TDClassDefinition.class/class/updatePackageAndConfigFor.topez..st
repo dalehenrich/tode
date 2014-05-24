@@ -15,7 +15,7 @@ updatePackageAndConfigFor: packageName topez: topez
         selectedIndex: selectedIndex
         label: 'Packages'.
       configs := TDConfigurationList current.
-      configDef := self _configurationGivenPackageDefinition: pkgDef.
+      configDef := pkgDef configurationOf.
       selectedIndex := configs definitionList indexOf: configDef.
       selectedIndex == configs selectedIndex
         ifFalse: [ 

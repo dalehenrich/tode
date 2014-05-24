@@ -12,5 +12,5 @@ testLeafNodeMvNoDestParent
           self
             evaluateCommandString:
               'mv ' , srcNode printString , childNode name , ' ' , destNode printString
-                , 'xxx/yyy' s ]
+                , 'xxx/yyy' ]
         raise: Error ]
