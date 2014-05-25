@@ -7,20 +7,7 @@ platformInitialize
   objIn := TransientValue new.
   (Warning respondsTo: #'addDefaultHandler:')
     ifTrue: [ 
-      "3.0 only"
-      false
-        ifTrue: [ 
-          Warning defaultHandlers isEmpty
-            ifTrue: [ 
-              Warning
-                addDefaultHandler: [ :ex | 
-                  | action |
-                  action := self topezClientForwarder
-                    informWarning: ex description.
-                  action == #'resume'
-                    ifTrue: [ ex resume ].
-                  action == #'debug'
-                    ifTrue: [ self error: 'Debug Warning: ' , ex description ] ] ] ].
+      "3.x only"
       GsInteractionRequest defaultHandlers isEmpty
         ifTrue: [ 
           "signalled from GemStone base interactions"
@@ -42,3 +29,4 @@ platformInitialize
                       ex response: interaction theObject ];
                 yourself.
               ex interaction interactWith: handler ] ] ]
+    ifFalse: [ self platformInitialize2x ]
