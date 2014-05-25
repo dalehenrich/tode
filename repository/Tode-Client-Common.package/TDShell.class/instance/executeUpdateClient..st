@@ -11,7 +11,8 @@ executeUpdateClient: command
 		ifAbsent: [ 
 			options
 				at: 'clientRepo'
-				ifPresent: [ :todeRepository | | result|
+				ifPresent: [ :todeRepository | 
+					| result |
 					[ 
 					Metacello new
 						baseline: 'Tode';
@@ -27,8 +28,9 @@ executeUpdateClient: command
 							Transcript
 								cr;
 								show: 'WARNING: ' , ex description.
-							ex pass ] .
-						^result printString].
+							ex pass ].
+					self class resetWorldMenu.
+					^ result printString ].
 			^ 'Must specify options:
   updateClient --help
   updateClient --clientRepo=github://dalehenrich/tode:master
@@ -53,4 +55,5 @@ EXAMPLES
   updateClient --help
   updateClient --clientRepo=github://dalehenrich/tode:master
   updateClient --clientRepo=filetree:///opt/git/tode/repository
-') interact ]
+')
+				interact ]
