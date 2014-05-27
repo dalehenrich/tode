@@ -8,6 +8,7 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
     ifNil: [ loads := 'default' ].
   ^ aProjectTool
     projectLoad: self projectName
+    doGet: true
     selector: aProjectRegistration projectSelector
     repositoryDescription: aProjectRegistration repositoryDescription
     loads: loads

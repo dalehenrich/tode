@@ -1,5 +1,5 @@
 project api
-projectLoad: projectName selector: projectSelector repositoryDescription: repositoryDescription loads: loads version: configurationVersion onConflict: onConflict onDowngrade: onDowngrade onLock: onLock onUpgrade: onUpgrade ignoreImage: ignoreImage silently: silently cacheRepository: cacheRepository repositoryOverrides: repositoryOverrides
+projectLoad: projectName doGet: doGet selector: projectSelector repositoryDescription: repositoryDescription loads: loads version: configurationVersion onConflict: onConflict onDowngrade: onDowngrade onLock: onLock onUpgrade: onUpgrade ignoreImage: ignoreImage silently: silently cacheRepository: cacheRepository repositoryOverrides: repositoryOverrides
   | metacello onBlock |
   metacello := Metacello new.
   metacello perform: projectSelector with: projectName.
@@ -35,4 +35,6 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
               onLock == #'honor'
                 ifTrue: [ ex honor ]
                 ifFalse: [ ex pass ] ] ] ].
+  doGet
+    ifTrue: [ metacello copy get ].
   ^ metacello load: loads
