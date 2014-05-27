@@ -10,4 +10,4 @@ evaluateCommand: command
 			'(' , self todeServerAccessString , ' for: ' , self shell shellId asString , ') evaluateSTONCommand:'
 				, stonString printString
 		envId: self environmentId ]
-		ensure: [ self session clientForwarderCache at: transcriptOop put: Transcript ]
+		ensure: [ session ifNotNil: [ self session clientForwarderCache at: transcriptOop put: Transcript] ]

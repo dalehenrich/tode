@@ -1,3 +1,7 @@
 as yet unclassified
 argAndTempNamesAt: index
-    ^ self frameContents at: 10 + index
+  | frame |
+  frame := self frameContents.
+  frame size < (10 + index)
+    ifTrue: [ ^ nil ].
+  ^ frame at: 10 + index

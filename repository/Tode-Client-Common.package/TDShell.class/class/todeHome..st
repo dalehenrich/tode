@@ -1,3 +1,4 @@
 home
 todeHome: aString
-	TodeHome := aString
+	TodeHome := aString.
+	self resetWorldMenu 
