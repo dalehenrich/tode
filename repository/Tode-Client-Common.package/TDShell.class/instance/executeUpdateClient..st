@@ -14,7 +14,6 @@ executeUpdateClient: command
 				ifPresent: [ :todeRepository | 
 					| result |
 					[ 
-					todeRepository flushCache.	"make sure we pick up the freshest version of the baseline"
 					Metacello new
 						baseline: 'Tode';
 						repository: todeRepository;
