@@ -1,3 +1,5 @@
 visiting
 acceptVisitor: aTDNodeVisitor proxiedBy: aLeafNodeProxy
-  aTDNodeVisitor acceptGatewayNode: aLeafNodeProxy
+  self visitAsLeafNode
+    ifTrue: [ aTDNodeVisitor acceptLeafNode: aLeafNodeProxy ]
+    ifFalse: [ aTDNodeVisitor acceptGatewayNode: aLeafNodeProxy ]

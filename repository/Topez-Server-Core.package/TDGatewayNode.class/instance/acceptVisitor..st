@@ -1,3 +1,5 @@
 visiting
 acceptVisitor: aTDNodeVisitor
-  aTDNodeVisitor acceptGatewayNode: self
+  self visitAsLeafNode
+    ifTrue: [ aTDNodeVisitor acceptLeafNode: self ]
+    ifFalse: [ aTDNodeVisitor acceptGatewayNode: self ]

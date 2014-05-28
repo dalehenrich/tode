@@ -22,7 +22,7 @@
 		"gciLibraryName",
 		"adornmentColor",
 		"serverGitRoot",
-		"serverTodeHome" ],
+		"serverTodeRoot" ],
 	"name" : "TDSessionDescription",
 	"pools" : [
 		 ],

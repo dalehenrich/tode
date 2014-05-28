@@ -1,9 +1,10 @@
-as yet unclassified
-mount: directoryPath at: objectPath as: nodeName
+mount
+mount: directoryPath at: objectPath as: nodeName visitAsLeafNode: visitAsLeafNode
   | gatewayNode root |
   gatewayNode := TDObjectGatewayNode new
     name: nodeName;
     contents: 'ServerFileDirectory on: ' , directoryPath printString;
+    visitAsLeafNode: visitAsLeafNode;
     yourself.
   self topez ensureChildrenExistIn: objectPath.
   root := self topez lookup: objectPath.

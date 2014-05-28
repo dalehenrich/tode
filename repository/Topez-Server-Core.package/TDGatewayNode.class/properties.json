@@ -8,7 +8,8 @@
 	"instvars" : [
 		"creationTime",
 		"modificationTime",
-		"readMe" ],
+		"readMe",
+		"visitAsLeafNode" ],
 	"name" : "TDGatewayNode",
 	"pools" : [
 		 ],

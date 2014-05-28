@@ -2,8 +2,8 @@
 	"class" : {
 		"typeSignature" : "dkh 05/17/2013 07:02" },
 	"instance" : {
-		"acceptVisitor:" : "dkh 01/30/2014 17:57",
-		"acceptVisitor:proxiedBy:" : "dkh 01/31/2014 10:58",
+		"acceptVisitor:" : "dkh 05/28/2014 10:48",
+		"acceptVisitor:proxiedBy:" : "dkh 05/28/2014 10:48",
 		"addChild:" : "dkh 05/17/2013 07:17",
 		"addChildIfAbsent:" : "dkh 12/05/2013 07:40",
 		"addChildNode:" : "dkh 12/05/2013 07:35",
@@ -34,6 +34,7 @@
 		"moveLeafNode:as:" : "dkh 12/23/2013 12:35",
 		"moveProxyLeafNode:as:" : "dkh 12/23/2013 12:38",
 		"moveTo:as:" : "dkh 12/23/2013 09:44",
+		"readMe" : "dkh 05/28/2014 10:43",
 		"readMe:" : "dkh 12/06/2013 17:55",
 		"renderNameTextAttributes" : "dkh 05/17/2013 07:23",
 		"rsyncChildNamed:ifAbsent:" : "dkh 12/06/2013 14:41",
@@ -48,4 +49,6 @@
 		"siblingObjectNamed:ifAbsent:" : "dkh 05/31/2013 10:11",
 		"stonExportUsing:to:" : "dkh 09/14/2013 23:11",
 		"stonOn:" : "dkh 05/17/2013 07:40",
-		"stonProcessSubObjects:" : "dkh 12/05/2013 21:54" } }
+		"stonProcessSubObjects:" : "dkh 12/05/2013 21:54",
+		"visitAsLeafNode" : "dkh 05/28/2014 10:46",
+		"visitAsLeafNode:" : "dkh 05/28/2014 10:43" } }

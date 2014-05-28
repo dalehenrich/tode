@@ -2,7 +2,6 @@
 	"class" : {
 		"topez:visitNode:andDo:" : "dkh 03/30/2014 21:07" },
 	"instance" : {
-		"acceptGatewayNode:" : "dkh 03/30/2014 21:08",
 		"acceptLeafNode:" : "dkh 03/30/2014 21:06",
 		"sourceLeafNodeBlock" : "dkh 03/30/2014 21:05",
 		"sourceLeafNodeBlock:" : "dkh 03/30/2014 21:05" } }
