@@ -9,5 +9,6 @@ mount: directoryPath at: objectPath as: nodeName visitAsLeafNode: visitAsLeafNod
   self topez ensureChildrenExistIn: objectPath.
   root := self topez lookup: objectPath.
   root addChildNode: gatewayNode.
-  self topez homeNodeReset.	"just in case"
+  gatewayNode printString = '/home'
+    ifTrue: [ self topez homeNodeReset ].
   ^ gatewayNode
