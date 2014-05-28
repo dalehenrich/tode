@@ -17,12 +17,16 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   #'project'.
   #'configurationProject'.
   #'githubProject'.
-  #'baselineProject'}.
+  #'baselineProject'.
+  #'versionConflict'}.
   enable := [ :symbol | 
   enabled add: symbol.
   disabled remove: symbol ].
   registration hasVersionSkew
-    ifTrue: [ enable value: #'versionSkew' ].
+    ifTrue: [ 
+      enable
+        value: #'versionSkew';
+        value: #'versionConflict' ].
   registration hasGithubRepo
     ifTrue: [ enable value: #'githubProject' ].
   (registration isLoadedInImage or: [ registration isExternalGitProject ])
