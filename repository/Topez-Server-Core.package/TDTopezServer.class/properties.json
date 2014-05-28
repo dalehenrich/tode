@@ -19,7 +19,8 @@
 		"evaluatingScript",
 		"accumulateScriptText",
 		"scriptInputStream",
-		"scriptActionStack" ],
+		"scriptActionStack",
+		"sessionDescription" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],
