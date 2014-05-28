@@ -10,7 +10,7 @@ mount
   directoryPath := self arguments at: 1.
   options
     at: 'todeRoot'
-    ifPresent: [ :ignored | directoryPath := self topaz serverTodeRoot , '/' , directoryPath ].
+    ifPresent: [ :ignored | directoryPath := self topez serverTodeRoot , '/' , directoryPath ].
   options
     at: 'asLeafNode'
     ifAbsent: [ asLeafNode := false ]

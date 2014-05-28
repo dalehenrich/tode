@@ -7,6 +7,6 @@ mount
     objIn: objIn
     commandOptions:
       {#('help' $h #'none').
-      #('todeHome' nil #'none').
+      #('todeRoot' nil #'none').
       #('asLeafNode' nil #'none')}
     todeCommand: command ]
