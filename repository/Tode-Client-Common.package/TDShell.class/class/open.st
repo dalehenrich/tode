@@ -1,5 +1,5 @@
 instance creation
 open
 	| sessionDescription |
-	sessionDescription := OGCustomSessionDescription seaside.
+	sessionDescription := TDSessionDescription seaside.
 	^ self new openOnSessionDescription: sessionDescription

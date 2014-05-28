@@ -15,7 +15,7 @@ executeSessionDescription: command
 			options
 				at: 'import'
 				ifPresent: [ :importPath | 
-					sessionDescription := OGCustomSessionDescription importFrom: importPath.
+					sessionDescription := TDSessionDescription importFrom: importPath.
 					shellWindow setLabel: self windowLabel.
 					self topezClient sessionDescription: sessionDescription ].
 			options at: 'edit' ifPresent: [ :ignored | self editSessionDescription ].
