@@ -1,14 +1,25 @@
 as yet unclassified
-gitdifftool: commitish1 commitish2: commitish2 filePath: filePath gitRepoDirectory: gitRepoDirectory diffClass: diffClass
-  | result records diffs |
+gitdifftool: commitish1 commitish2: commitish2 cached: cached filePath: filePath gitRepoDirectory: gitRepoDirectory diffClass: diffClass
+  | result records diffs cachedArg |
+  cachedArg := ''.
+  cached
+    ifTrue: [ cachedArg := '--cached ' ].
   result := self
     performGitCommand: 'diff'
     in: gitRepoDirectory
-    with: '--raw ' , commitish1 , ' ' , commitish2 , ' -- ' , filePath
+    with:
+      cachedArg , '--raw ' , commitish1 , ' ' , commitish2 , ' -- ' , filePath
     logging: false.
   (result beginsWith: 'fatal:')
     ifTrue: [ self error: 'Error performing diff: ' , result printString ].
   records := self parseRawDiffFiles: result.
+  records := records
+    reject: [ :ar | 
+      | operations op |
+      "ignore unmerged records for diff"
+      operations := ar at: 5.
+      op := operations at: 1.
+      op = 'U' ].
   records isEmpty
     ifTrue: [ ^ #() ].
   diffs := records

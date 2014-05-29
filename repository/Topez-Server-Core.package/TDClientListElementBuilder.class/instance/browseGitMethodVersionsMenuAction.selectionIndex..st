@@ -40,6 +40,7 @@ browseGitMethodVersionsMenuAction: listElement selectionIndex: selectionIndex
           diffs := (listEl topez toolInstanceFor: 'git')
             gitdifftool: sha , '^'
             commitish2: sha
+            cached: false
             filePath: filePath
             gitRepoDirectory: gitDirectory
             diffClass: TDFileTreeDiff.

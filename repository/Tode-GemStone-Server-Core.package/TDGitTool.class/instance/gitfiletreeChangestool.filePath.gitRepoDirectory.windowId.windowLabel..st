@@ -4,6 +4,7 @@ gitfiletreeChangestool: commitish1 filePath: filePath gitRepoDirectory: gitRepoD
   diffs := self
     gitdifftool: commitish1 , '^'
     commitish2: commitish1
+    cached: false
     filePath: filePath
     gitRepoDirectory: gitRepoDirectory
     diffClass: TDFileTreeDiff.

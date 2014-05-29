@@ -55,6 +55,6 @@ gitVersionSkewSaveProjectMenuAction: listElement selectionIndex: selectionIndex
             template: commitTemplate) signal.
           commitMessage ifNil: [ commitMessage := '' ].
           self projectTool gitCommit: registration commitMessage: commitMessage.
-          registration revertProjectUsing: self projectTool ]
+          registration loadProjectUsing: self projectTool ]
         mergerAbortBlock: [  ] ].
   ^ #'refreshView'
