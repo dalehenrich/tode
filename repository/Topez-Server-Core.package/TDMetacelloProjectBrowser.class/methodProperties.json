@@ -4,7 +4,9 @@
 	"instance" : {
 		"browseProjectCategoriesMenuAction:selectionIndex:" : "dkh 05/20/2014 07:47",
 		"browseProjectClassesMenuAction:selectionIndex:" : "dkh 05/16/2014 14:51",
+		"browseProjectDirtyPackagesMenuAction:selectionIndex:" : "dkh 05/29/2014 15:20",
 		"browseProjectPackagesMenuAction:selectionIndex:" : "dkh 05/23/2014 10:21",
+		"browseProjectRepositoriesMenuAction:selectionIndex:" : "dkh 05/29/2014 15:50",
 		"clientList:listElement:" : "dkh 05/23/2014 12:00",
 		"cloneProjectMenuAction:selectionIndex:" : "dkh 05/23/2014 12:17",
 		"commitLogMenuAction:selectionIndex:" : "dkh 05/20/2014 10:21",
@@ -35,7 +37,7 @@
 		"loadConfigurationVersionMenuAction:selectionIndex:" : "dkh 05/16/2014 16:50",
 		"loadProjectMenuAction:selectionIndex:" : "dkh 05/23/2014 12:17",
 		"lockProjectMenuAction:selectionIndex:" : "dkh 05/23/2014 12:17",
-		"menuActionSpec:" : "dkh 05/29/2014 11:08",
+		"menuActionSpec:" : "dkh 05/29/2014 15:19",
 		"projectBlock" : "dkh 05/07/2014 11:19",
 		"projectBlock:" : "dkh 05/07/2014 11:19",
 		"projectTool" : "dkh 05/12/2014 17:02",

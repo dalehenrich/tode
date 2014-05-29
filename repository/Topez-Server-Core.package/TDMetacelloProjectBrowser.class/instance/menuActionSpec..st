@@ -5,7 +5,9 @@ menuActionSpec: miniTool
     ->
       {#('browse categories' nil #'browseProjectCategoriesMenuAction:selectionIndex:' nil #'loadedProject' false).
       #('browse classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'loadedProject' false).
-      #('browse packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'project' false)})}.
+      #('browse dirty packages' nil #'browseProjectDirtyPackagesMenuAction:selectionIndex:' nil #'project' false).
+      #('browse packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'project' false).
+      #('browse repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'project' false)})}.
   #('-').
   {('Git'
     ->
@@ -18,13 +20,6 @@ menuActionSpec: miniTool
       #('pull' nil #'gitPullProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
       #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false)})}.
   #('-').
-  {('Project'
-    ->
-      {#('get' nil #'getProjectMenuAction:selectionIndex:' nil #'project' false).
-      #('lock' nil #'lockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
-      #('unlock' nil #'unlockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
-      #('unregister' nil #'unregisterProjectMenuAction:selectionIndex:' nil #'project' false)})}.
-  #('-').
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).
@@ -34,6 +29,13 @@ menuActionSpec: miniTool
   #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
   #('skew save' nil #'gitVersionSkewSaveProjectMenuAction:selectionIndex:' nil #'versionSkew' false).
+  #('-').
+  {('Project'
+    ->
+      {#('get' nil #'getProjectMenuAction:selectionIndex:' nil #'project' false).
+      #('lock' nil #'lockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
+      #('unlock' nil #'unlockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
+      #('unregister' nil #'unregisterProjectMenuAction:selectionIndex:' nil #'project' false)})}.
   #('-').
   {('Configuration' -> self configurationMenuActionSpec)}.
   #('-')} , self standardMenuActionSpec
