@@ -7,8 +7,8 @@ menuActionSpec: miniTool
       #('browse classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'loadedProject' false).
       #('browse packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'project' false)})}.
   #('-').
+  #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
-  #('image changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).
   #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('push' nil #'gitPushProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
