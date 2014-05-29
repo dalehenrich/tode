@@ -31,6 +31,8 @@ SYNOPSIS
       pull `git-command-args` [ @<git-repo-directory> ]
   git push `git-command-args` [ <git-repo-path> ]
       push `git-command-args` [ @<git-repo-directory> ]
+  git reset `git-command-args` [ <git-repo-path> ]
+      reset `git-command-args` [ @<git-repo-directory> ]
   git status [ `git-command-args` [ <git-repo-path> ]]
       status [ `git-command-args` [ @<git-repo-directory> ]]
 

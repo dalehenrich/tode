@@ -18,12 +18,13 @@ menuActionSpec: miniTool
   {('Git'
     ->
       {#('branches' nil #'gitBranchesMenuAction:selectionIndex:' nil #'gitProject' false).
-      #('checkout' nil #'gitCheckoutMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
+      #('checkout' nil #'gitCheckoutMenuAction:selectionIndex:' nil #'gitProject' false).
       #('clone' nil #'cloneProjectMenuAction:selectionIndex:' nil #'githubProject' false).
-      #('diff' nil #'gitDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
+      #('diff' nil #'gitDiffMenuAction:selectionIndex:' nil #'gitProject' false).
       #('fetch' nil #'gitFetchMenuAction:selectionIndex:' nil #'gitProject' false).
       #('pull' nil #'gitPullProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
-      #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'versionConflict' false).
+      #('skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
+      #('skew save' nil #'gitVersionSkewSaveProjectMenuAction:selectionIndex:' nil #'versionSkew' false).
       #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false)})}.
   #('-').
   {('Project'
