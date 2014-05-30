@@ -1,3 +1,3 @@
 accessing
 methodClass
-  ^ self localDefinition actualClass
+  ^ self localDefinition actualClass theNonMetaClass

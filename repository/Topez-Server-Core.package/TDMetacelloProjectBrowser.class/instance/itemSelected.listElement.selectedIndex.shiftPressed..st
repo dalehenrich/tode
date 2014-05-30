@@ -37,9 +37,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
         ifTrue: [ 
           enable value: #'repoBasedProject'.
           registration hasGithubRepo
-            ifFalse: [ 
-              registration hasVersionSkew
-                ifFalse: [ enable value: #'writableRepoBasedProject' ] ].
+            ifFalse: [ enable value: #'writableRepoBasedProject' ].
           registration isConfigurationBased
             ifTrue: [ enable value: #'configurationProject' ] ] ]
     ifFalse: [ 

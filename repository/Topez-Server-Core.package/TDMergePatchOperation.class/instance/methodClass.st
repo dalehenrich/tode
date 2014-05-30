@@ -1,3 +1,3 @@
 accessing
 methodClass
-  ^ self definition actualClass
+  ^ self definition actualClass theNonMetaClass

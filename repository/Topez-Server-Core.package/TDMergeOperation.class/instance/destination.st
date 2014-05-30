@@ -1,0 +1,3 @@
+accessing
+destination
+  self subclassResponsibility
