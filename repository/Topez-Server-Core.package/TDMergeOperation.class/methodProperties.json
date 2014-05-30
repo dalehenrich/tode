@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"applyTo:" : "dkh 09/03/2013 16:02",
+		"destination" : "dkh 05/30/2014 14:48",
 		"displayDiffs" : "09/03/2013 07:57",
 		"displayDiffs:" : "dkh 09/03/2013 09:24",
 		"editDefinition" : "09/03/2013 07:45",
@@ -18,6 +19,7 @@
 		"mergeSource:" : "dkh 09/02/2013 16:17",
 		"merger" : "dkh 09/02/2013 17:30",
 		"merger:" : "dkh 09/02/2013 17:30",
+		"methodBehavior" : "dkh 05/30/2014 14:41",
 		"methodClass" : "dkh 05/30/2014 11:21",
 		"methodSelector" : "dkh 05/30/2014 11:53",
 		"methodSpec" : "dkh 05/30/2014 11:46",
@@ -30,6 +32,7 @@
 		"selection" : "dkh 05/29/2014 21:14",
 		"selection:" : "09/03/2013 06:04",
 		"selectionAttribute" : "dkh 05/29/2014 21:11",
+		"source" : "dkh 05/30/2014 14:47",
 		"stonContents" : "dkh 09/02/2013 16:14",
 		"stonContents:" : "dkh 09/02/2013 16:17",
 		"toggleDisplayDiffs" : "09/03/2013 07:58",
