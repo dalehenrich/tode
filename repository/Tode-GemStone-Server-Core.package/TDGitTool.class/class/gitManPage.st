@@ -6,6 +6,8 @@ gitManPage
 SYNOPSIS
   git add [ `git-command-args` [ <git-repo-path> ]]
       add [ `git-command-args` [ @<git-repo-directory> ]]
+  git branch `git-command-args` [ <git-repo-path> ]
+      branch `git-command-args` [ @<git-repo-directory> ]
   git amend*
   git checkout `git-command-args` [ <git-repo-path> ]
       checkout `git-command-args` [ @<git-repo-directory> ]
@@ -29,6 +31,8 @@ SYNOPSIS
       pull `git-command-args` [ @<git-repo-directory> ]
   git push `git-command-args` [ <git-repo-path> ]
       push `git-command-args` [ @<git-repo-directory> ]
+  git reset `git-command-args` [ <git-repo-path> ]
+      reset `git-command-args` [ @<git-repo-directory> ]
   git status [ `git-command-args` [ <git-repo-path> ]]
       status [ `git-command-args` [ @<git-repo-directory> ]]
 

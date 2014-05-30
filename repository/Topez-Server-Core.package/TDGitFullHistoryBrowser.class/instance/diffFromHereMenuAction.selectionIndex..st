@@ -9,7 +9,7 @@ diffFromHereMenuAction: listElement selectionIndex: index
     =
       (gitTool
         gitfiletreetool: sha
-        commitish2: self commitish2
+        destination: self destination
         gitRepoDirectory: self gitRepoDirectory)
     ifTrue: [ self inform: 'No diffs' ].
   ^ true

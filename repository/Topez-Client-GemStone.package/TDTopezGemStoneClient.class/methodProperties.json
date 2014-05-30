@@ -11,6 +11,7 @@
 		"filetreeUtilityClass" : "dkh 12/8/2013 17:42",
 		"getEdgeDictionaryForClientListElement:" : "dkh 6/12/2013 06:48",
 		"getListForClientListElement:" : "dkh 5/28/2013 14:53",
+		"getSessionDescription" : "dkh 5/28/2014 07:07",
 		"getSourceForClientSourceElement:" : "dkh 5/28/2013 14:53",
 		"handleKeyboardEventForClientListElement:codePoint:selectionIndex:" : "dkh 5/28/2013 14:37",
 		"installGLASS" : "dkh 12/8/2013 17:01",

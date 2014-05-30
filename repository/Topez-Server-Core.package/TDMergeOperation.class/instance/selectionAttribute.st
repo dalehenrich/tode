@@ -2,10 +2,10 @@ as yet unclassified
 selectionAttribute
   ^ self resolved
     ifTrue: [ 
-      self selection == #'remote'
+      self selection == #'destination'
         ifTrue: [ #'underlined' ]
         ifFalse: [ 
-          self selection == #'local'
+          self selection == #'source'
             ifTrue: [ #'normal' ]
             ifFalse: [ #'italic' ] ] ]
     ifFalse: [ #'bold' ]

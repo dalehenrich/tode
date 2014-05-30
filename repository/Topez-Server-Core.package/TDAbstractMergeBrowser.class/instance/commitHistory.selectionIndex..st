@@ -1,6 +1,6 @@
 menu actions
 commitHistory: listElement selectionIndex: selectionIndex
-  "browse full commit history between comittish1 and commitish2"
+  "browse full commit history between source and destination"
 
   | gitTool block |
   gitTool := self gitTool.
@@ -8,13 +8,13 @@ commitHistory: listElement selectionIndex: selectionIndex
   gitTool
     gitlogIn: self gitRepoDirectory
     with:
-      '--date=relative --format="%h %cd %s" ' , self commitish1 , '..'
-        , self commitish2 , ' -- ' ].
+      '--date=relative --format="%h %cd %s" ' , self source , '..' , self destination
+        , ' -- ' ].
   (TDGitFullHistoryBrowser new
     topez: listElement topez;
-    commitish1: self commitish1;
-    commitish2: self commitish2;
+    source: self source;
+    destination: self destination;
     rawCommitLogBlock: block gitRepoDirectory: self gitRepoDirectory;
-    windowLabel: 'commit Log ' , self commitish1 , ' to ' , self commitish2;
+    windowLabel: 'commit Log ' , self source , ' to ' , self destination;
     yourself) open.
   ^ true

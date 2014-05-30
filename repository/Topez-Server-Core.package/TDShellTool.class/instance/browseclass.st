@@ -33,8 +33,7 @@ browseclass
       subOptions
         at: 'exact'
         ifPresent: [ :ignored | list addAll: (self findClassExact: clsNamePattern) ]
-        ifAbsent: [ list addAll: (self findClass: clsNamePattern) ].
-      pattern := pattern , ' ' , clsNamePattern ].
+        ifAbsent: [ list addAll: (self findClass: clsNamePattern) ] ].
   subOptions
     at: 'hier'
     ifPresent: [ :ignored | 

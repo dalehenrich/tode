@@ -1,8 +1,8 @@
 as yet unclassified
 selectedDefinition
-  ^ self selection == #'local'
+  ^ self selection == #'source'
     ifTrue: [ self conflict localDefinition ]
     ifFalse: [ 
-      self selection == #'remote'
+      self selection == #'destination'
         ifTrue: [ self conflict remoteDefinition ]
         ifFalse: [ self editDefinition ] ]

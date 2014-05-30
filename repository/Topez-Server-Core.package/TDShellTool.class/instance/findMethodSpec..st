@@ -1,11 +1,11 @@
 as yet unclassified
 findMethodSpec: methodSpec
-  | method methodRefs |
-  method := self parseMethodSpec: methodSpec trimBoth.
-  methodRefs := {(MethodReference
-    class: method inClass
-    selector: method selector)}.
-  ^ self
-    methodDefinitionsFor: methodRefs
-    messagePattern: method selector
-    isRegex: false
+  | specArray selector |
+  specArray := self parseMethodSpec: methodSpec trimBoth.
+  selector := specArray at: 2.
+  ^ {(TDMethodDefinition
+    className: (specArray at: 1)
+    isMeta: (specArray at: 3)
+    selector: selector
+    messagePattern: selector
+    messagePatternIsRegex: false)}

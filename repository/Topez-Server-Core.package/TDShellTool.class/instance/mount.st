@@ -1,15 +1,23 @@
-as yet unclassified
+mount
 mount
   "
-  mount [-h|--help] <directory-path> <object-path> [<link-name>]
+  mount [-h|--help]
+  mount [--asLeafNode] <directory-path> <object-path> [<link-name>]
+  mount [--asLeafNode] --todeRoot <directory-path> <object-path> [<link-name>]
   "
 
-  | directoryPath |
-  self getOptsMixedLongShort: {#('help' $h #'none')}.
-  self options at: 'help' ifPresent: [ :optionArg | ^ self man: 'mount' ].
+  | directoryPath asLeafNode |
   directoryPath := self arguments at: 1.
+  options
+    at: 'todeRoot'
+    ifPresent: [ :ignored | directoryPath := self topez serverTodeRoot , '/' , directoryPath ].
+  options
+    at: 'asLeafNode'
+    ifAbsent: [ asLeafNode := false ]
+    ifPresent: [ :ignored | asLeafNode := true ].
   ^ self
     mount: directoryPath
     at: (self arguments at: 2)
     as:
       (self arguments at: 3 ifAbsent: [ (directoryPath findTokens: '/') last ])
+    visitAsLeafNode: asLeafNode

@@ -26,7 +26,7 @@ todeMenuCommandOn: aBuilder
 			(sessionDescriptionDir files sorted: [ :a :b | a fullName <= b fullName ])
 				do: [ :file | 
 					| sessionDescription |
-					sessionDescription := OGCustomSessionDescription importFrom: file fullName.
+					sessionDescription := TDSessionDescription importFrom: file fullName.
 					(aBuilder item: sessionDescription name asSymbol)
 						parent: #'tODE Shell';
 						action: [ TDShell openOnSessionDescription: sessionDescription ].

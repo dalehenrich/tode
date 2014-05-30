@@ -1,0 +1,4 @@
+defaults
+defaultStoneHost
+
+	^'glass'

@@ -1,9 +1,10 @@
 as yet unclassified
-gitfiletreeChangestool: commitish1 filePath: filePath gitRepoDirectory: gitRepoDirectory windowId: aWindowId windowLabel: windowLabel
+gitfiletreeChangestool: commitish filePath: filePath gitRepoDirectory: gitRepoDirectory windowId: aWindowId windowLabel: windowLabel
   | diffs differ diffTool |
   diffs := self
-    gitdifftool: commitish1 , '^'
-    commitish2: commitish1
+    gitdifftool: commitish , '^'
+    destination: commitish
+    cached: false
     filePath: filePath
     gitRepoDirectory: gitRepoDirectory
     diffClass: TDFileTreeDiff.
@@ -11,8 +12,8 @@ gitfiletreeChangestool: commitish1 filePath: filePath gitRepoDirectory: gitRepoD
     ifTrue: [ ^ 'No diffs' ].
   ^ (TDFileTreeDiffBrowser new
     operations: diffs;
-    commitish1: commitish1;
-    commitish2: commitish1;
+    source: commitish;
+    destination: commitish;
     gitRepoDirectory: gitRepoDirectory;
     topez: topez;
     windowId: aWindowId;

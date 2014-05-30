@@ -1,3 +1,3 @@
 testing
 hasSameSource
-  ^ self editOp = 'M' and: [ self remote trimBoth = self local trimBoth ]
+  ^ self editOp = 'M' and: [ self source trimBoth = self destination trimBoth ]

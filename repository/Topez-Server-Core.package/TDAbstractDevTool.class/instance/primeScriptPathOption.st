@@ -8,4 +8,4 @@ primeScriptPathOption
 
   self options
     at: 'scriptPath'
-    ifPresent: [ :scriptPath | scriptPath ifNil: [ self options at: 'scriptPath' put: '/home/.' ] ]
+    ifPresent: [ :scriptPath | scriptPath ifNil: [ self options at: 'scriptPath' put: '/home' ] ]

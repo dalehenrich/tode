@@ -3,9 +3,16 @@
 		 },
 	"instance" : {
 		"doMergeMenuAction:selectionIndex:" : "dkh 05/23/2014 13:40",
+		"enableDisableMenuItems:" : "dkh 05/30/2014 11:25",
+		"installDestinationMenuAction:selectionIndex:" : "dkh 05/30/2014 10:44",
+		"installSourceMenuAction:selectionIndex:" : "dkh 05/30/2014 10:39",
+		"menuActionSpec:" : "dkh 05/30/2014 11:18",
 		"merger" : "dkh 05/09/2014 14:54",
-		"merger:" : "dkh 05/23/2014 13:45",
-		"merger:mergerCompletionBlock:mergerAbortBlock:" : "dkh 05/10/2014 07:31",
+		"merger:" : "dkh 05/28/2014 21:07",
+		"merger:mergerCompletionBlock:mergerAbortBlock:" : "dkh 05/28/2014 21:07",
+		"methodMenuActionSpec" : "dkh 05/30/2014 10:19",
 		"operations" : "dkh 05/09/2014 14:55",
-		"operationsMenuActionSpec" : "dkh 05/09/2014 14:45",
-		"selectEditDefinitionMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09" } }
+		"operationsMenuActionSpec" : "dkh 05/30/2014 10:53",
+		"selectClassOperations:selectionIndex:" : "dkh 05/30/2014 10:54",
+		"selectEditDefinitionMenuAction:selectionIndex:" : "dkh 05/09/2014 15:09",
+		"toggleViewSameSource:selectionIndex:" : "dkh 05/30/2014 10:53" } }

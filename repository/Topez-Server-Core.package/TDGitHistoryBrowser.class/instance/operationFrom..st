@@ -9,6 +9,6 @@ operationFrom: oneline
     commitish: sha
     gitRepoDirectory: self gitRepoDirectory.
   (methodSource beginsWith: 'fatal:')
-    ifTrue: [ newOperation local: '[DELETED]' ]
-    ifFalse: [ newOperation local: methodSource ].
+    ifTrue: [ newOperation source: '[DELETED]' ]
+    ifFalse: [ newOperation source: methodSource ].
   ^ newOperation

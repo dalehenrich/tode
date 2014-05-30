@@ -38,5 +38,6 @@ mcdiff
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'mcDiff';
+        windowLabel: 'Diff package (-) --> image (+)';
         yourself).
   ^ patches

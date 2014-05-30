@@ -1,6 +1,6 @@
 as yet unclassified
 testSessionDescriptionFor: gemstoneVersion
-  ^ OGCustomSessionDescription new
+  ^ TDSessionDescription new
     name: 'testing';
     gemstoneVersion: gemstoneVersion;
     gciLibraryName: 'libgcirpc-' , gemstoneVersion , '-32.so';

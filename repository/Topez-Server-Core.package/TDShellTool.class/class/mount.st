@@ -1,4 +1,12 @@
-as yet unclassified
+commands
 mount
   <topezCommand: 'mount' manPage: #'mountManPage'>
-  ^ [ :topez :objIn :tokens :command | (self topez: topez objIn: objIn todeCommand: command) mount ]
+  ^ [ :topez :objIn :tokens :command | 
+  self
+    performCommand: topez
+    objIn: objIn
+    commandOptions:
+      {#('help' $h #'none').
+      #('todeRoot' nil #'none').
+      #('asLeafNode' nil #'none')}
+    todeCommand: command ]

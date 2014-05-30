@@ -15,7 +15,7 @@ projectload
                <project-name>
 "
 
-  | projectName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides |
+  | projectName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet |
   self
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
@@ -83,13 +83,11 @@ projectload
         ifNil: [ loads := 'default' ] ].
   subOptions
     at: 'no-get'
-    ifAbsent: [ 
-      self
-        projectGet: projectName
-        selector: projectSelector
-        repositoryDescription: description ].
+    ifPresent: [ :ignored | doGet := false ]
+    ifAbsent: [ doGet := true ].
   ^ self
     projectLoad: projectName
+    doGet: doGet
     selector: projectSelector
     repositoryDescription: description
     loads: loads

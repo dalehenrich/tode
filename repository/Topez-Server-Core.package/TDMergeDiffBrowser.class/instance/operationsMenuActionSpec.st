@@ -1,9 +1,12 @@
 menu action specs
 operationsMenuActionSpec
-  ^ {#('local def' $d #'selectLocalDefinitionMenuAction:selectionIndex:').
+  ^ {#('source def' $d #'selectSourceDefinitionMenuAction:selectionIndex:').
   #('edit def' $e #'selectEditDefinitionMenuAction:selectionIndex:').
-  #('remote def' $r #'selectRemoteDefinitionMenuAction:selectionIndex:').
+  #('destination def' $r #'selectDestinationDefinitionMenuAction:selectionIndex:').
   #('-').
   #('do merge' $j #'doMergeMenuAction:selectionIndex:').
   #('-').
-  #('toggle diff' $t #'toggleDiffMenuAction:selectionIndex:')}
+  #('toggle diff' $t #'toggleDiffMenuAction:selectionIndex:').
+  #('toggle view same source' nil #'toggleViewSameSource:selectionIndex:').
+  #('-').
+  #('set (clear) class filter' nil #'selectClassOperations:selectionIndex:')}

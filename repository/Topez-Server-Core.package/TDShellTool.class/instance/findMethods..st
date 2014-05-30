@@ -7,8 +7,8 @@ findMethods: findTokens
   methodSpecTokens size = 2
     ifTrue: [ 
       "class>>selector class>>selector"
-      method1 := self parseMethodSpec: (methodSpecTokens at: 1).
-      method2 := self parseMethodSpec: (methodSpecTokens at: 2) ]
+      method1 := self methodFromMethodSpec: (methodSpecTokens at: 1).
+      method2 := self methodFromMethodSpec: (methodSpecTokens at: 2) ]
     ifFalse: [ 
       methodSpecTokens size = 3
         ifTrue: [ 
@@ -16,17 +16,17 @@ findMethods: findTokens
             ifTrue: [ 
               "class class>>selector class>>selector"
               method1 := self
-                parseMethodSpec:
+                methodFromMethodSpec:
                   (methodSpecTokens at: 1) , ' ' , (methodSpecTokens at: 2).
-              method2 := self parseMethodSpec: (methodSpecTokens at: 3) ]
+              method2 := self methodFromMethodSpec: (methodSpecTokens at: 3) ]
             ifFalse: [ 
               ((methodSpecTokens at: 3) beginsWith: 'class')
                 ifTrue: [ 
                   "class>>selector class class>>selector"
                   method2 := self
-                    parseMethodSpec:
+                    methodFromMethodSpec:
                       (methodSpecTokens at: 2) , ' ' , (methodSpecTokens at: 3).
-                  method1 := self parseMethodSpec: (methodSpecTokens at: 1) ]
+                  method1 := self methodFromMethodSpec: (methodSpecTokens at: 1) ]
                 ifFalse: [ self error: 'expecting a <method spec>' ] ] ]
         ifFalse: [ 
           methodSpecTokens size = 4
@@ -36,10 +36,10 @@ findMethods: findTokens
                 ifTrue: [ 
                   "class class>>selector class class>>selector"
                   method1 := self
-                    parseMethodSpec:
+                    methodFromMethodSpec:
                       (methodSpecTokens at: 1) , ' ' , (methodSpecTokens at: 2).
                   method2 := self
-                    parseMethodSpec:
+                    methodFromMethodSpec:
                       (methodSpecTokens at: 3) , ' ' , (methodSpecTokens at: 4) ]
                 ifFalse: [ self error: 'expecting a <method spec>' ] ]
             ifFalse: [ self error: 'expecting a <method spec>' ] ] ].

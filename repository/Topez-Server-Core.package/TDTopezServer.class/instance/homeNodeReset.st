@@ -1,0 +1,3 @@
+accessing
+homeNodeReset
+  homeNode := nil

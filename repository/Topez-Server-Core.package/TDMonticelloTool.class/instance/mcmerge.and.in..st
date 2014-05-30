@@ -2,6 +2,7 @@ as yet unclassified
 mcmerge: wc and: version in: repo
   | packageName package imageSnapshot versionSnapshot commonAncestorSnapshot merger commonAncestorInfo repoGroup repoSpec mergeTool |
   package := wc package.
+  packageName := wc packageName.
   imageSnapshot := package snapshot.
   (wc ancestry hasAncestor: version info)
     ifTrue: [ 
@@ -33,5 +34,6 @@ mcmerge: wc and: version in: repo
       mergerAbortBlock: [  ];
     topez: topez;
     windowLabel:
-        'Merge ' , version info name printString , ' into ' , packageName printString;
+        'Merge ' , version info name printString , ' (-) --> ' , packageName printString
+            , ' (+)';
     yourself) open

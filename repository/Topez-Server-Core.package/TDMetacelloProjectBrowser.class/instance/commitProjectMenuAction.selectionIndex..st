@@ -1,6 +1,6 @@
 menu actions
 commitProjectMenuAction: listElement selectionIndex: selectionIndex
-  | registration commitMessage commitTemplate |
+  | registration commitTemplate commitMessage |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.

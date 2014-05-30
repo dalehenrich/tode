@@ -1,5 +1,5 @@
 instance creation
 openFrom: filepath
 	| sessionDescription |
-	sessionDescription := OGCustomSessionDescription importFrom: filepath.
+	sessionDescription := TDSessionDescription importFrom: filepath.
 	^ self openOnSessionDescription: sessionDescription

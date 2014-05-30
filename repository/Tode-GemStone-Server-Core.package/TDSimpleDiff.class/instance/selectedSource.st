@@ -1,8 +1,8 @@
 as yet unclassified
 selectedSource
-  ^ self selection == #'local'
-    ifTrue: [ self local ]
+  ^ self selection == #'source'
+    ifTrue: [ self source ]
     ifFalse: [ 
-      self selection == #'remote'
-        ifTrue: [ self remote ]
+      self selection == #'destination'
+        ifTrue: [ self destination ]
         ifFalse: [ self editDefinition ] ]

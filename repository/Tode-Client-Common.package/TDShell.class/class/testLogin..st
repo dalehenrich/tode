@@ -1,5 +1,5 @@
 testing
 testLogin: aSessionName
 	| sessionDescription |
-	sessionDescription := OGCustomSessionDescription importFrom: self sessionDescriptionHome , aSessionName.
+	sessionDescription := TDSessionDescription importFrom: self sessionDescriptionHome , aSessionName.
 	^ self testLoginForSessionDescription: sessionDescription

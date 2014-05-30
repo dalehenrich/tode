@@ -1,9 +1,9 @@
 as yet unclassified
 selectedOperation
-  ^ self selection == #'local'
+  ^ self selection == #'source'
     ifTrue: [ self operation inverse ]
     ifFalse: [ 
-      self selection == #'remote'
+      self selection == #'destination'
         ifTrue: [ self operation ]
         ifFalse: [ 
           (self operation isRemoval or: [ self operation isAddition ])
