@@ -24,6 +24,7 @@ menuActionSpec: miniTool
   #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).
   #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'repoBasedProject' false).
+  #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('push' nil #'gitPushProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'dirtyProject' false).
   #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).

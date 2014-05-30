@@ -6,7 +6,7 @@ gitCheckoutMenuAction: listElement selectionIndex: selectionIndex
   registration := self projects at: selectionIndex.
   gitRepoDirectory := self projectTool gitRepoDirForRegistration: registration.
   checkoutArgs := (GsTextInteraction
-    prompt: 'Enter checkout args'
+    prompt: 'Enter checkout commit or branch'
     template: 'branch | -b newBranch commitish | -b newBranch | args') signal.
   checkoutArgs ifNil: [ ^ false ].
   gitTool := self gitTool.
