@@ -2,11 +2,15 @@ project list
 fieldOne
   | nm |
   nm := self projectName.
-  self isImageDirty
-    ifTrue: [ nm := '* ' , nm ]
-    ifFalse: [ 
+  self isDirty
+    ifTrue: [ 
+      | dirtyBit |
+      self isImageDirty
+        ifTrue: [ dirtyBit := '*' ]
+        ifFalse: [ dirtyBit := '' ].
       self isGitDirty
-        ifTrue: [ nm := '+ ' , nm ] ].
+        ifTrue: [ dirtyBit := dirtyBit , '+' ].
+      nm := dirtyBit , ' ' , nm ].
   self isLocked
     ifTrue: [ nm := '|' , nm , '|' ].
   ^ nm
