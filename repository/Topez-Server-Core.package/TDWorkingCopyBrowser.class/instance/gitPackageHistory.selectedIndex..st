@@ -23,8 +23,8 @@ gitPackageHistory: listElement selectedIndex: index
   commitish := registration versionString.
   (TDGitRawHistoryBrowser new
     topez: listElement topez;
-    commitish1: commitish;
-    commitish2: commitish;
+    source: commitish;
+    destination: commitish;
     rawCommitLog: commitLog gitRepoDirectory: gitDirectory;
     logItemSelectedBlock: [ :listEl :rawHistoryBrowser :sha | 
           | operation |

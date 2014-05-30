@@ -6,8 +6,8 @@ mcDiffForWorkingCopy: workingCopy and: versionInfo on: stream
     ifTrue: [ ^ patch ].
   stream
     nextPutAll:
-        ('==================== ' , workingCopy packageName , ' vs ' , versionInfo name
-            , ' ====================') asText allBold;
+        ('==================== ' , workingCopy packageName , '(-) --> '
+            , versionInfo name , ' (+) ====================') asText allBold;
     cr.
   self diffPatch: patch on: stream.
   stream cr.

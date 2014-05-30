@@ -1,5 +1,5 @@
 accessing
-remote: aString
+source: aString
   (aString beginsWith: 'fatal')
     ifTrue: [ self halt ].
-  remote := aString
+  source := aString

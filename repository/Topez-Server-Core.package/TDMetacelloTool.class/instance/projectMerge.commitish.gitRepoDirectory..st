@@ -30,5 +30,6 @@ projectMerge: registration commitish: commitish gitRepoDirectory: gitRepoDirecto
       gitTool
         gitmergetool: gitRepoDirectory
         mergerCompletionBlock: doMergeBlock
-        mergerAbortBlock: [  ] ].
+        mergerAbortBlock: [  ]
+        windowLabel: 'Merge ' , commitish , ' for ' , registration projectName ].
   ^ true

@@ -18,5 +18,7 @@ projectDiff: registration
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'mcDiff';
+        windowLabel:
+            'Diff for ' , registration projectName , ' :: package (-) --> image (+)';
         yourself).
   ^ patches

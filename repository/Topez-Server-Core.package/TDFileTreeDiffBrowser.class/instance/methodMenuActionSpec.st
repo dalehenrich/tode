@@ -6,5 +6,5 @@ methodMenuActionSpec
   #('senders' $n #'browseSendersMenuAction:selectionIndex:' nil #'stMenuItem' false).
   #('implementors' $m #'browseImplementorsMenuAction:selectionIndex:' nil #'stMenuItem' false).
   #('-').
-  #('install local' nil #'installLocalMenuAction:selectionIndex:' nil #'stMenuItem' false).
-  #('install remote' nil #'installRemoteMenuAction:selectionIndex:' nil #'stMenuItem' false)}
+  #('install source' nil #'installSourceMenuAction:selectionIndex:' nil #'stMenuItem' false).
+  #('install destination' nil #'installDestinationMenuAction:selectionIndex:' nil #'stMenuItem' false)}

@@ -1,8 +1,8 @@
 menu action specs
 operationsMenuActionSpec
-  ^ {#('local def' $d #'selectLocalDefinitionMenuAction:selectionIndex:').
+  ^ {#('source def' $d #'selectSourceDefinitionMenuAction:selectionIndex:').
   #('edit def' $e #'selectEditDefinitionMenuAction:selectionIndex:').
-  #('remote def' $r #'selectRemoteDefinitionMenuAction:selectionIndex:').
+  #('destination def' $r #'selectDestinationDefinitionMenuAction:selectionIndex:').
   #('-').
   #('do merge' $j #'doMergeMenuAction:selectionIndex:').
   #('-').

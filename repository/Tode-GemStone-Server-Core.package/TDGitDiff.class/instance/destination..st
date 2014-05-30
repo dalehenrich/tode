@@ -1,5 +1,5 @@
 accessing
-local: aString
+destination: aString
   (aString beginsWith: 'fatal')
     ifTrue: [ self halt ].
-  local := aString
+  destination := aString

@@ -6,8 +6,8 @@ diffForWorkingCopy: workingCopy on: stream
     ifTrue: [ ^ patch ].
   stream
     nextPutAll:
-        ('==================== ' , workingCopy packageName , ' ====================')
-            asText allBold;
+        ('==================== ' , workingCopy packageName
+            , ' (-) --> image (+)  ====================') asText allBold;
     cr.
   self diffPatch: patch forWorkingCopy: workingCopy on: stream.
   stream cr.

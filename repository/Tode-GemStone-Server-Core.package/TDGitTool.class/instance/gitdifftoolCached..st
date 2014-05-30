@@ -3,7 +3,7 @@ gitdifftoolCached: gitRepoDirectory
   | diffs differ diffTool |
   diffs := self
     gitdifftool: ''
-    commitish2: ''
+    destination: ''
     cached: true
     filePath: ''
     gitRepoDirectory: gitRepoDirectory
@@ -14,6 +14,7 @@ gitdifftoolCached: gitRepoDirectory
     operations: diffs;
     gitRepoDirectory: gitRepoDirectory;
     topez: topez;
-    windowLabel: 'Diff for ' , gitRepoDirectory fullName;
+    windowLabel:
+        'Diff for ' , gitRepoDirectory fullName , ' repos (-) --> index (+)';
     yourself) open.
   ^ diffs

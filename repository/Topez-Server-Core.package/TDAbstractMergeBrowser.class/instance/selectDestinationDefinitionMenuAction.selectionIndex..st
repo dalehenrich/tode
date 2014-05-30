@@ -1,11 +1,11 @@
 menu actions
-selectRemoteDefinitionMenuAction: listElement selectionIndex: selectionIndex
-  "select remote definition"
+selectDestinationDefinitionMenuAction: listElement selectionIndex: selectionIndex
+  "select right definition"
 
   | mergeOperation |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   mergeOperation := self operations at: selectionIndex.
-  mergeOperation selectRemote.
+  mergeOperation selectDestination.
   self editOperation: mergeOperation listElement: listElement.
   ^ #'refreshList'

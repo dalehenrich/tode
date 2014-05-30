@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"commitish1" : "dkh 05/11/2014 20:03",
-		"commitish1:" : "dkh 05/11/2014 20:03",
-		"commitish2" : "dkh 05/11/2014 20:03",
-		"commitish2:" : "dkh 05/11/2014 20:03",
+		"destination" : "dkh 05/29/2014 20:48",
+		"destination:" : "dkh 05/29/2014 20:48",
 		"displayObject:listElement:label:" : "dkh 05/11/2014 17:55",
 		"gitRepoDirectory" : "dkh 05/11/2014 17:14",
 		"gitRepoDirectory:" : "dkh 05/11/2014 17:16",
 		"parseRawOneLineCommitLog:" : "dkh 05/11/2014 17:29",
+		"source" : "dkh 05/29/2014 20:48",
+		"source:" : "dkh 05/29/2014 20:48",
 		"sourceWindowId" : "dkh 05/11/2014 17:14",
 		"sourceWindowId:" : "dkh 05/11/2014 17:14",
 		"sourceWindowIdIsClosing" : "dkh 05/11/2014 17:15",

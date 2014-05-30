@@ -8,10 +8,10 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     shiftPressed: shiftPressed) == false
     ifTrue: [ ^ false ].
   fullHistorySelector := fileHistorySelector := #'setMenuCategory:'.
-  commitish1
+  source
     ifNil: [ 
       fullHistorySelector := #'clearMenuCategory:'.
-      commitish2 ifNil: [ fileHistorySelector := #'clearMenuCategory:' ] ].
+      destination ifNil: [ fileHistorySelector := #'clearMenuCategory:' ] ].
   operation := self operations at: index.
   selector := #'clearMenuCategory:'.
   operation hasFileTreeSmalltalkSource

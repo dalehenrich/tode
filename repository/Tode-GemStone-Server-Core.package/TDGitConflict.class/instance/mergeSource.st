@@ -5,6 +5,6 @@ mergeSource
   self displayDiffs
     ifFalse: [ ^ selectedSource ].
   diff := TextDiffBuilder
-    from: (self formatSource: self local) withSqueakLineEndings
+    from: (self formatSource: self source) withSqueakLineEndings
     to: (self formatSource: selectedSource) withSqueakLineEndings.
   ^ diff buildTextPatch

@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
+		"destinationMethodSource" : "dkh 05/29/2014 21:17",
 		"formatSource:" : "dkh 05/19/2014 11:59",
 		"hasFileTreeSmalltalkSource" : "dkh 05/09/2014 12:39",
 		"label" : "dkh 05/10/2014 20:11",
-		"localMethodSource" : "dkh 05/12/2014 19:02",
 		"methodBehavior" : "dkh 05/12/2014 19:35",
 		"methodClass" : "dkh 05/10/2014 20:50",
 		"methodSelector" : "dkh 05/09/2014 15:33",
 		"methodSpec" : "dkh 05/22/2014 10:15",
-		"remoteMethodSource" : "dkh 05/12/2014 19:02",
-		"stSource" : "dkh 05/10/2014 20:23",
+		"sourceMethodSource" : "dkh 05/29/2014 21:16",
+		"stSource" : "dkh 05/30/2014 07:03",
 		"stSource:" : "dkh 05/09/2014 15:29" } }

@@ -1,4 +1,4 @@
 as yet unclassified
 selection
-  selection ifNil: [ selection := #'remote' ].
+  selection ifNil: [ selection := #'destination' ].
   ^ selection

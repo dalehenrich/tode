@@ -8,9 +8,11 @@
 	"instvars" : [
 		"baseDirectory",
 		"filePath",
-		"local",
-		"remote",
-		"editOp" ],
+		"editOp",
+		"source",
+		"destination",
+		"left",
+		"right" ],
 	"name" : "TDGitDiff",
 	"pools" : [
 		 ],

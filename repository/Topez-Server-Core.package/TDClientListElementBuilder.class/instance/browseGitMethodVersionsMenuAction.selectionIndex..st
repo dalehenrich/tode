@@ -32,14 +32,14 @@ browseGitMethodVersionsMenuAction: listElement selectionIndex: selectionIndex
   commitish := registration versionString.
   (TDGitRawHistoryBrowser new
     topez: listElement topez;
-    commitish1: commitish;
-    commitish2: commitish;
+    source: commitish;
+    destination: commitish;
     rawCommitLog: commitLog gitRepoDirectory: gitDirectory;
     logItemSelectedBlock: [ :listEl :rawHistoryBrowser :sha | 
           | diffs |
           diffs := (listEl topez toolInstanceFor: 'git')
             gitdifftool: sha , '^'
-            commitish2: sha
+            destination: sha
             cached: false
             filePath: filePath
             gitRepoDirectory: gitDirectory

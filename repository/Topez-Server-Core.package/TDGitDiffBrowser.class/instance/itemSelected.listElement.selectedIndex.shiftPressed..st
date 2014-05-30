@@ -8,10 +8,10 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     shiftPressed: shiftPressed)
     ifFalse: [ ^ false ].
   fullHistorySelector := fileHistorySelector := #'setMenuCategory:'.
-  commitish1
+  source
     ifNil: [ 
       fullHistorySelector := #'clearMenuCategory:'.
-      commitish2 ifNil: [ fileHistorySelector := #'clearMenuCategory:' ] ].
+      destination ifNil: [ fileHistorySelector := #'clearMenuCategory:' ] ].
   ^ STON
     toString:
       {fileHistorySelector.

@@ -1,7 +1,7 @@
 menu action specs
 operationsMenuActionSpec
-  ^ {#('local def' $d #'selectLocalDefinitionMenuAction:selectionIndex:').
-  #('remote def' $r #'selectRemoteDefinitionMenuAction:selectionIndex:').
+  ^ {#('source def' $d #'selectSourceDefinitionMenuAction:selectionIndex:').
+  #('destination def' $r #'selectDestinationDefinitionMenuAction:selectionIndex:').
   #('-').
   #('toggle diff' $t #'toggleDiffMenuAction:selectionIndex:').
   #('-').

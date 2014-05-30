@@ -8,9 +8,9 @@
 	"instvars" : [
 		"baseDirectory",
 		"filePath",
-		"local",
+		"source",
 		"common",
-		"remote",
+		"destination",
 		"resolved" ],
 	"name" : "TDGitConflict",
 	"pools" : [

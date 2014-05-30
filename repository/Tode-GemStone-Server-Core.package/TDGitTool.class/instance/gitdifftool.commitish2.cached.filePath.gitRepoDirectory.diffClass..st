@@ -1,5 +1,7 @@
 as yet unclassified
 gitdifftool: commitish1 commitish2: commitish2 cached: cached filePath: filePath gitRepoDirectory: gitRepoDirectory diffClass: diffClass
+  "commitish1 is the source. commitish2 is the destination"
+
   | result records diffs cachedArg |
   cachedArg := ''.
   cached
@@ -39,28 +41,28 @@ gitdifftool: commitish1 commitish2: commitish2 cached: cached filePath: filePath
         ifTrue: [ 
           | sha |
           diff
-            local:
+            source:
               (self gitFileContents: (ar at: 3) gitRepoDirectory: gitRepoDirectory).
           sha := ar at: 4.
           sha = '0000000...'
             ifTrue: [ 
               diff
-                remote:
+                destination:
                   (self
                     gitFileContentsFromDisk: (operations at: 2)
                     gitRepoDirectory: gitRepoDirectory) ]
-            ifFalse: [ diff remote: (self gitFileContents: sha gitRepoDirectory: gitRepoDirectory) ] ]
+            ifFalse: [ diff destination: (self gitFileContents: sha gitRepoDirectory: gitRepoDirectory) ] ]
         ifFalse: [ 
           op = 'D'
             ifTrue: [ 
               diff
-                local:
+                source:
                   (self gitFileContents: (ar at: 3) gitRepoDirectory: gitRepoDirectory) ]
             ifFalse: [ 
               op = 'A'
                 ifTrue: [ 
                   diff
-                    remote:
+                    destination:
                       (self gitFileContents: (ar at: 4) gitRepoDirectory: gitRepoDirectory) ]
                 ifFalse: [ Error signal: 'Unknown diff op: ' , op printString ] ] ] ].
   ^ diffs

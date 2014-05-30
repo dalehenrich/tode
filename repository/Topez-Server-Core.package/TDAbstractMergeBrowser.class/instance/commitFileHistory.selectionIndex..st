@@ -9,8 +9,8 @@ commitFileHistory: listElement selectionIndex: selectionIndex
   gitTool := self gitTool.
   gitTool
     browseCommitLogForMergeOp: mergeOperation
-    commitish1: self commitish1
-    commitish2: self commitish2
+    source: self source
+    destination: self destination
     gitRepoDirectory: self gitRepoDirectory
     windowLabel: 'Commit Log: ' , mergeOperation label.
   ^ true

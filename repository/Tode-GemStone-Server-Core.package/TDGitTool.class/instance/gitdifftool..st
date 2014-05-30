@@ -3,7 +3,7 @@ gitdifftool: gitRepoDirectory
   | diffs differ diffTool |
   diffs := self
     gitdifftool: ''
-    commitish2: ''
+    destination: ''
     gitRepoDirectory: gitRepoDirectory
     diffClass: TDGitDiff.
   diffs isEmpty
@@ -12,6 +12,7 @@ gitdifftool: gitRepoDirectory
     operations: diffs;
     gitRepoDirectory: gitRepoDirectory;
     topez: topez;
-    windowLabel: 'Diff for ' , gitRepoDirectory fullName;
+    windowLabel:
+        'Diff for ' , gitRepoDirectory fullName , ' index (-) --> working (+)';
     yourself) open.
   ^ diffs

@@ -8,8 +8,8 @@
 	"instvars" : [
 		"gitRepoDirectory",
 		"sourceWindowId",
-		"commitish1",
-		"commitish2" ],
+		"source",
+		"destination" ],
 	"name" : "TDAbstractGitBrowser",
 	"pools" : [
 		 ],
