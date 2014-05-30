@@ -6,4 +6,4 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifTrue: [ ^ false ].
   operation := self operations at: index.
   self editOperation: operation listElement: listElement.
-  ^ true
+  ^ self enableDisableMenuItems: operation

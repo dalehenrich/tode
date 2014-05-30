@@ -1,7 +1,7 @@
 as yet unclassified
 findVersions: methodSpec
   | method |
-  method := self parseMethodSpec: methodSpec.
+  method := self methodFromMethodSpec: methodSpec.
   ^ (MethodVersionHistory uniqueInstance
     versionsOfMethod: method selector
     in: method inClass)

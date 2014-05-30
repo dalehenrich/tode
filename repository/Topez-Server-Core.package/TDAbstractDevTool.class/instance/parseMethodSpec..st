@@ -1,15 +1,19 @@
 as yet unclassified
 parseMethodSpec: methodSpecString
-  "class>>selector or class class>>selector"
+  "class>>selector or class class>>selector answer array:
+    { className. selector. isMeta. }"
 
-  | selector behavior methodSpec classSpec |
+  | className selector isMeta methodSpec classSpec |
   methodSpec := methodSpecString findTokens: '>>'.
   classSpec := (methodSpec at: 1) findTokens: ' '.
-  behavior := Smalltalk at: (classSpec at: 1) asSymbol.
+  isMeta := false.
+  className := (classSpec at: 1) asSymbol.
   classSpec size > 1
     ifTrue: [ 
       (classSpec at: 2) = 'class'
         ifFalse: [ self error: 'invalid methodSpec' ].
-      behavior := behavior class ].
+      isMeta := true ].
   selector := (methodSpec at: 2) asSymbol.
-  ^ behavior compiledMethodAt: selector
+  ^ {className.
+  selector.
+  isMeta}

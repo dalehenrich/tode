@@ -9,7 +9,7 @@ breakset
   methodRef := subArguments at: 1.
   meth := (methodRef beginsWith: '@')
     ifTrue: [ self resolveAtPathReference: methodRef ]
-    ifFalse: [ self parseMethodSpec: methodRef ].
+    ifFalse: [ self methodFromMethodSpec: methodRef ].
   2 to: subArguments size do: [ :index | 
     | stepPoint |
     stepPoint := (subArguments at: index) asNumber.

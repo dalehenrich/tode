@@ -10,5 +10,5 @@ breaksteps
       | meth |
       meth := (methodRef beginsWith: '@')
         ifTrue: [ self resolveAtPathReference: methodRef ]
-        ifFalse: [ self parseMethodSpec: methodRef ].
+        ifFalse: [ self methodFromMethodSpec: methodRef ].
       self browseStepPoints: meth ]

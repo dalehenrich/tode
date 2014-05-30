@@ -6,4 +6,7 @@ operationsMenuActionSpec
   #('-').
   #('do merge' $j #'doMergeMenuAction:selectionIndex:').
   #('-').
-  #('toggle diff' $t #'toggleDiffMenuAction:selectionIndex:')}
+  #('toggle diff' $t #'toggleDiffMenuAction:selectionIndex:').
+  #('toggle view same source' nil #'toggleViewSameSource:selectionIndex:').
+  #('-').
+  #('set (clear) class filter' nil #'selectClassOperations:selectionIndex:')}

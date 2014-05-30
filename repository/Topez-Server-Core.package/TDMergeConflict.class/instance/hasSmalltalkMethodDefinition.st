@@ -1,0 +1,3 @@
+testing
+hasSmalltalkMethodDefinition
+  ^ self conflict localDefinition isMethodDefinition

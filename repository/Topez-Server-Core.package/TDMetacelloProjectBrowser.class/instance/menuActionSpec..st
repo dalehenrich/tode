@@ -3,11 +3,11 @@ menuActionSpec: miniTool
   theMiniTool := miniTool.
   ^ {{('Browse'
     ->
-      {#('browse categories' nil #'browseProjectCategoriesMenuAction:selectionIndex:' nil #'loadedProject' false).
-      #('browse classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'loadedProject' false).
-      #('browse dirty packages' nil #'browseProjectDirtyPackagesMenuAction:selectionIndex:' nil #'project' false).
-      #('browse packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'project' false).
-      #('browse repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'project' false)})}.
+      {#('categories' nil #'browseProjectCategoriesMenuAction:selectionIndex:' nil #'loadedProject' false).
+      #('classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'loadedProject' false).
+      #('dirty packages' nil #'browseProjectDirtyPackagesMenuAction:selectionIndex:' nil #'project' false).
+      #('packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'project' false).
+      #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'project' false)})}.
   #('-').
   {('Git'
     ->

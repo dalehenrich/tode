@@ -2,12 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"browseFullClassMenuAction:selectionIndex:" : "dkh 05/10/2014 20:31",
-		"browseFullMethodMenuAction:selectionIndex:" : "dkh 05/11/2014 19:50",
-		"browseImplementorsMenuAction:selectionIndex:" : "dkh 05/09/2014 15:21",
-		"browseSendersMenuAction:selectionIndex:" : "dkh 05/09/2014 15:21",
+		"enableDisableMenuItems:" : "dkh 05/30/2014 11:15",
+		"installDestinationMenuAction:selectionIndex:" : "dkh 05/30/2014 10:43",
 		"installSourceMenuAction:selectionIndex:" : "dkh 05/29/2014 21:18",
-		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/29/2014 20:49",
 		"menuActionSpec:" : "dkh 05/21/2014 10:36",
 		"methodMenuActionSpec" : "dkh 05/29/2014 21:19",
 		"operations" : "dkh 05/21/2014 10:59",
