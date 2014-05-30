@@ -1,3 +1,5 @@
 actions-concrete
 concreteDiffProject: aProjectTool registration: aProjectRegistration
-  ^ aProjectTool gitDiff: aProjectRegistration
+  ^ aProjectTool
+    gitDiff: aProjectRegistration;
+    gitDiffCached: aProjectRegistration
