@@ -16,4 +16,4 @@ todeImageWorkspacesOn: aBuilder
 						action: [ 
 									| contents |
 									FileStream readOnlyFileNamed: file fullName do: [ :fileStream | contents := fileStream contents ].
-									self new openWorkspace: contents label: file basename ] ] ]
+									self new openWorkspace: contents styling: true label: file basename ] ] ]

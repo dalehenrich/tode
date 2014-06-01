@@ -1,3 +1,3 @@
 home
 updateServerHome
-	^ self todeHome , 'server/'
+	^ self webEditionRoot , 'server/'
