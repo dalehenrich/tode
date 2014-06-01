@@ -3,5 +3,5 @@ fieldOne
   | nm |
   nm := self projectName.
   self isDirty
-    ifTrue: [ nm := '* ' , nm ].
+    ifTrue: [ nm := '+ ' , nm ].
   ^ nm
