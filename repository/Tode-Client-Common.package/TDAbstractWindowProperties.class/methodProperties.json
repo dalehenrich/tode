@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"import:" : "dkh 5/31/2014 17:11",
+		"importFrom:" : "dkh 5/31/2014 17:12",
+		"install:" : "dkh 5/31/2014 17:11" },
+	"instance" : {
+		"caculateWindowBounds" : "dkh 5/31/2014 17:01",
+		"exportTo:" : "dkh 5/31/2014 16:55",
+		"exportTo:extension:" : "dkh 5/31/2014 16:55",
+		"installOn:" : "dkh 5/31/2014 17:16" } }

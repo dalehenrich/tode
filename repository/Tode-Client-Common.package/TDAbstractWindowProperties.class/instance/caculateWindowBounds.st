@@ -1,0 +1,3 @@
+window bounds
+caculateWindowBounds
+	self subclassResponsibility
