@@ -5,7 +5,7 @@ caculateWindowBounds
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
 	dict := Dictionary new.
-	debuggerWidth := codeWidth := (layoutExtent x * codeWidthFactor) truncated.
+	debuggerWidth := codeWidth := (layoutExtent x * codeWidthFactor) .
 	lcw := lw := layoutExtent x // (5.5 + extraLists).
 	debuggerWidth := layoutExtent x - (lw + codeWidth).
 	(diff := codeWidth - debuggerWidth) > 0
@@ -14,31 +14,31 @@ caculateWindowBounds
 			lcw := lw - diff.
 			lw := lw + (diff // (4.5 + extraLists)).
 			debuggerWidth := codeWidth := (layoutExtent x - lcw) // 2 ].
-	shellHeight := (layoutExtent y * shellHeightFactor) truncated.
-	browserHeight := (layoutExtent y - shellHeight) truncated.
-	topHeight := (browserHeight * topHeightFactor) truncated.
-	codeHeight := browserHeight - topHeight.
+	shellHeight := (layoutExtent y * shellHeightFactor) .
+	browserHeight := (layoutExtent y - shellHeight) .
+	topHeight := (browserHeight * topHeightFactor) .
 	lh := browserHeight // 2.
+	codeHeight := browserHeight - topHeight.
 	lce := lcw @ lh.
 	shellExtent := codeWidth @ shellHeight.
-	appExtent := ((layoutExtent x - codeWidth) // 2) @ lh.
+	appExtent := ((layoutExtent x - codeWidth) // 2) @ shellHeight.
 	classCategories := lo extent: lce.
 	classes := classCategories bottomLeft extent: lce.
 	evaluator := classes bottomLeft extent: shellExtent.
 	superclasses := classCategories topRight extent: lw @ topHeight.
-	classDef := superclasses topRight extent: (1.5 * lw) asInteger @ topHeight.
+	classDef := superclasses topRight extent: (1.5 * lw)  @ topHeight.
 	instanceSelectors := classDef topRight extent: lw @ topHeight.
 	classSelectors := instanceSelectors topRight extent: lw @ topHeight.
 	configurations := lo extent: lw @ (lh // 2).
 	packages := configurations bottomLeft extent: lw @ (lh // 2).
-	method := classes topRight x @ topHeight extent: codeWidth @ codeHeight.
+	method := superclasses bottomLeft extent: codeWidth @ codeHeight.
 	implementors := method topRight extent: (2 * lw) @ (codeHeight //2).
 	inspector := evaluator topRight extent: shellExtent.
 	debugger := method topRight extent: debuggerWidth @ codeHeight.
 	context := debugger bottomLeft extent: debuggerWidth @ shellExtent y.
 	app1 := evaluator topRight extent: appExtent.
 	app2 := app1 topRight extent: appExtent.
-	app3 := evaluator topRight - (0 @ lh) extent: appExtent.
+	app3 := evaluator topRight - (0 @ appExtent y) extent: appExtent.
 	app4 := app3 topRight extent: appExtent.
 	dict
 		at: #classCategories put: classCategories;
