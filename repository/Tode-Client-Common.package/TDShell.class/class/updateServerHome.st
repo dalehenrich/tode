@@ -1,3 +1,3 @@
 home
 updateServerHome
-	^ self webEditionRoot , 'server/'
+	^ self webEditionRoot , '/dev/tode/server/'

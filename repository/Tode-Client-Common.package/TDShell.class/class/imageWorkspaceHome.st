@@ -1,3 +1,3 @@
 home
 imageWorkspaceHome
-	^ self webEditionRoot , 'dev/tode/image/'
+	^ self webEditionRoot , '/dev/tode/client/image/'
