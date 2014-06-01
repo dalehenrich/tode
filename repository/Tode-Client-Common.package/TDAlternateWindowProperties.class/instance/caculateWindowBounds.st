@@ -13,7 +13,7 @@ caculateWindowBounds
 			diff := diff / (5.5 + extraLists).
 			lcw := lw - diff.
 			lw := lw + (diff // (4.5 + extraLists)).
-			debuggerWidth := codeWidth := (layoutExtent x - lcw) // 2 ].
+			debuggerWidth := layoutExtent x - (lcw + codeWidth). ].
 	shellHeight := (layoutExtent y * shellHeightFactor) .
 	browserHeight := (layoutExtent y - shellHeight) .
 	topHeight := (browserHeight * topHeightFactor) .
