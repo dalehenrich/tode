@@ -1,5 +1,8 @@
 actions-concrete
 concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
+  | projectPackageNames |
+  projectPackageNames := aProjectRegistration workingCopies
+    collect: [ :wc | wc packageName ].
   [ 
   | loads |
   self concreteGetProjectUsing: aProjectTool registration: aProjectRegistration.
@@ -27,5 +30,11 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
       (ex isKindOf: Warning)
         ifTrue: [ ex resume ].
       (ex isKindOf: MetacelloSkipDirtyPackageLoad)
-        ifTrue: [ ex resume: false ].
-      ex resume: ex packageSpec workingCopy modified ]
+        ifTrue: [ 
+          | skipDirtyPackageLoad |
+          skipDirtyPackageLoad := (projectPackageNames
+            includes: ex packageSpec name) not.
+          ex resume: skipDirtyPackageLoad ].
+      (projectPackageNames includes: ex packageSpec name)
+        ifTrue: [ ex resume: ex packageSpec workingCopy modified ]
+        ifFalse: [ ex resume: false ] ]
