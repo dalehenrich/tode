@@ -13,4 +13,6 @@ cleanForDeploy
 	MCRepositoryGroup default repositoriesDo: [ :rep | rep flushCache ].
 	MCDirectoryRepository defaultDirectoryName: nil.
 	MCGitHubRepository flushDownloadCache.
-	WebEditionRoot := nil
+	self resetWorldMenu.
+	WebEditionRoot := nil.
+	
