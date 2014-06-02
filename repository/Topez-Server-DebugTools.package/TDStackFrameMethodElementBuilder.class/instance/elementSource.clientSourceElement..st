@@ -1,11 +1,12 @@
 as yet unclassified
 elementSource: methodSource clientSourceElement: clientSourceElement
-  | newSelector |
+  | newSelector theFormattedSource |
   self inClass == nil
-    ifTrue: [ self error: 'Cannot edit Executable Code' ].
-  newSelector := super
-    elementSource: methodSource
-    clientSourceElement: clientSourceElement.
+    ifTrue: [ 
+      self inform: 'Cannot edit Executable Code'.
+      ^ false ].
+  theFormattedSource := self formattedElementSource: methodSource.
+  newSelector := self compileSource: theFormattedSource.
   self selector asSymbol == newSelector
     ifTrue: [ self object trimToHomeFrame ].
-  ^ newSelector
+  ^ true
