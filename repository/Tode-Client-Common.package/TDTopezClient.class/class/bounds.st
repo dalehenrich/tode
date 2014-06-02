@@ -1,3 +1,3 @@
-accessing
+window bounds
 bounds
     ^ bounds

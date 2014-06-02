@@ -1,4 +1,4 @@
-accessing
+window bounds
 windowOffset: aPoint
   "self windowOffset: 1700@0"
 

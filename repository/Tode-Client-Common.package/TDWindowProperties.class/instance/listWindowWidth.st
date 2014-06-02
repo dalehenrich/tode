@@ -1,3 +1,0 @@
-accessing
-listWindowWidth
-	^ listWindowWidth
