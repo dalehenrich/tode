@@ -18,7 +18,8 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   #'configurationProject'.
   #'githubProject'.
   #'baselineProject'.
-  #'nonDirtyGitProject'}.
+  #'nonDirtyGitProject'.
+  #'loadableConfigurationProject'}.
   enable := [ :symbol | 
   enabled add: symbol.
   disabled remove: symbol ].
@@ -39,10 +40,15 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
           registration hasGithubRepo
             ifFalse: [ enable value: #'writableRepoBasedProject' ].
           registration isConfigurationBased
-            ifTrue: [ enable value: #'configurationProject' ] ] ]
+            ifTrue: [ 
+              enable
+                value: #'configurationProject';
+                value: #'loadableConfigurationProject' ] ] ]
     ifFalse: [ 
       registration isExternalGitProject
-        ifFalse: [ enable value: #'unloadedProject' ] ].
+        ifFalse: [ enable value: #'unloadedProject' ].
+      registration isConfigurationBased
+        ifTrue: [ enable value: #'loadableConfigurationProject' ] ].
   registration hasGitRepository
     ifTrue: [ 
       enable value: #'gitProject'.

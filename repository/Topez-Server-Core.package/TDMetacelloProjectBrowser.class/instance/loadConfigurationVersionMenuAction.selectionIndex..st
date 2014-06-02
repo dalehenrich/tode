@@ -6,6 +6,12 @@ loadConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
   registration := self projects at: selectionIndex.
   currentVersionString := registration versionString.
   project := registration projectClassProject.
+  project
+    ifNil: [ 
+      projectTool
+        projectGetConfiguration: registration projectName
+        repositoryDescription: registration repositoryDescription.
+      project := registration projectClassProject ].
   currentVersion := project version: currentVersionString.
   versions := project versions reversed
     select: [ :vrsn | currentVersion == nil or: [ vrsn >= currentVersion ] ].
