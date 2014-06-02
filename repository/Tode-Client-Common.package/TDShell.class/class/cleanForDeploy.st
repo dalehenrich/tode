@@ -3,7 +3,7 @@ cleanForDeploy
 	"self cleanForDeploy"
 
 	| utils block |
-	utils := MCFileTreeFileDirectoryUtils current.
+	utils := MCFileTreeFileUtils current.
 	block := [ :dir | 
 	(utils directoryExists: dir)
 		ifTrue: [ utils deleteAll: dir ] ].

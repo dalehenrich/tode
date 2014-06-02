@@ -3,15 +3,9 @@
 	"classinstvars" : [
 		"bounds",
 		"windowOffset",
-		"codeWindowHeight",
-		"codeWindowWidth",
-		"listWindowWidth",
-		"windowOrigin",
-		"shellWindowHeight",
-		"debuggerWindowWidth" ],
+		"windowProperties" ],
 	"classvars" : [
-		"Bounds",
-		"SessionMap" ],
+		"Bounds" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"shell",

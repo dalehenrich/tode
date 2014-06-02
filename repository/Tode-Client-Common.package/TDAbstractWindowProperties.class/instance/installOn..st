@@ -1,3 +1,3 @@
 installation
 installOn: aTDTopezClientClass
-	aTDTopezClientClass initializeWindowBounds: self caculateWindowBounds
+	aTDTopezClientClass windowProperties: self
