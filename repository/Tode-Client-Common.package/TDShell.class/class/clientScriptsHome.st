@@ -1,3 +1,3 @@
 home
 clientScriptsHome
-	^ self todeHome , 'dev/tode/client/scripts/'
+	^ self webEditionRoot , '/dev/tode/client/scripts/'

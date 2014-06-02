@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Client-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDAbstractWindowProperties",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
