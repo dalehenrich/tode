@@ -8,4 +8,5 @@ unlockProjectMenuAction: listElement selectionIndex: selectionIndex
     baseline: registration projectName;
     repository: registration repositoryDescription;
     unlock.
+  listElement topez commitTransaction.
   ^ #'refreshView'

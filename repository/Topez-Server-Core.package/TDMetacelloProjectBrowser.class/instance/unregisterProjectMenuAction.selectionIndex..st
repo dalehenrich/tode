@@ -5,4 +5,5 @@ unregisterProjectMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
   registration unregister.
+  listElement topez commitTransaction.
   ^ #'refreshView'

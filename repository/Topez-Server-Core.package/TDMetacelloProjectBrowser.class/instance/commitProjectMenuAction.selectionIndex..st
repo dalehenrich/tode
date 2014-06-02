@@ -16,4 +16,5 @@ commitProjectMenuAction: listElement selectionIndex: selectionIndex
         show: 'Project save aborted...'.
       ^ false ].
   registration saveProjectUsing: self projectTool commitMessage: commitMessage.
+  listElement topez commitTransaction.
   ^ #'refreshView'
