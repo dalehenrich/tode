@@ -14,4 +14,4 @@ gitPullProjectMenuAction: listElement selectionIndex: selectionIndex
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'gitStatus';
         yourself).
-  ^ true
+  ^ #'refreshView'

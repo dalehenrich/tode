@@ -18,12 +18,13 @@ menuActionSpec: miniTool
       #('diff (cached)' nil #'gitDiffCachedMenuAction:selectionIndex:' nil #'gitProject' false).
       #('fetch' nil #'gitFetchMenuAction:selectionIndex:' nil #'gitProject' false).
       #('pull' nil #'gitPullProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
+      #('reset' nil #'gitResetProjectMenuAction:selectionIndex:' nil #'gitProject' false).
       #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false)})}.
   #('-').
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).
-  #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'repoBasedProject' false).
+  #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('push' nil #'gitPushProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'dirtyProject' false).
