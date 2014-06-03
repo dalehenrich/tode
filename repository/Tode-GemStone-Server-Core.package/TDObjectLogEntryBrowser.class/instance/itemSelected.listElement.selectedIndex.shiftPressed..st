@@ -10,4 +10,4 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
       ((TDEditorSpec topez: listElement topez editorAspect: #'logEntries')
         windowName: #'inspector';
         yourself).
-  ^ true
+  ^ self enableMenuItemsFor: objectLogEntry
