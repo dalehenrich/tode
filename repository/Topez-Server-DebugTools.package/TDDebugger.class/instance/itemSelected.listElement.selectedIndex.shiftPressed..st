@@ -1,6 +1,6 @@
 tools
 itemSelected: miniTool listElement: listElement selectedIndex: index shiftPressed: shiftPressed
-  | currentFrame sourceEditorSpec contextEditorSpec sourceClientElement contextClientElement |
+  | currentFrame sourceEditorSpec contextEditorSpec sourceClientElement contextClientElement enabled disabled |
   theMiniTool := miniTool.
   index = 0
     ifTrue: [ ^ false ].
@@ -17,17 +17,32 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     parentObject: listElement parent;
     windowId: contextWindowId;
     yourself.
+  enabled := disabled := {#'debuggingProcess'}.
+  debuggingProcess
+    ifTrue: [ disabled := {} ]
+    ifFalse: [ enabled := {} ].
   ^ sourceWindowId
     ifNil: [ 
       sourceWindowId := currentFrame editUsing: sourceEditorSpec.
       contextWindowId := currentFrame editUsing: contextEditorSpec.
-      #'refreshList' ]
+      STON
+        toString:
+          {#'setMenuCategories:'.
+          enabled.
+          #'clearMenuCategories:'.
+          disabled.
+          #'refreshList'.
+          nil} ]
     ifNotNil: [ 
       sourceClientElement := currentFrame clientElementUsing: sourceEditorSpec.
       contextClientElement := currentFrame clientElementUsing: contextEditorSpec.
       STON
         toString:
-          {#'editStonElement:'.
+          {#'setMenuCategories:'.
+          enabled.
+          #'clearMenuCategories:'.
+          disabled.
+          #'editStonElement:'.
           sourceClientElement.
           #'editStonElement:'.
           contextClientElement.
