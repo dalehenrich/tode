@@ -1,3 +1,3 @@
 accessing
 priorityLabels
-  ^ #('fatal' 'error' 'warn' 'info' 'debug' 'trace' 'transcript')
+  ^ #('fatal' 'error' 'warn' 'info' 'debug' 'trace' 'transcript' 'interaction')

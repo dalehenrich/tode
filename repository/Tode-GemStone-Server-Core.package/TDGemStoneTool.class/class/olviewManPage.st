@@ -21,6 +21,7 @@ DESCRIPTION
     error
     fatal
     info
+    interaction
     trace
     transcript
     warn

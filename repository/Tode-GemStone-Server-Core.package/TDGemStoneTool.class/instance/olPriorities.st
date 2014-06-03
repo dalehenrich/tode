@@ -1,3 +1,3 @@
 ol
 olPriorities
-  ^ #(#'debug' #'error' #'fatal' #'info' #'trace' #'transcript' #'warn')
+  ^ #(#'debug' #'error' #'fatal' #'info' #'interaction' #'trace' #'transcript' #'warn')
