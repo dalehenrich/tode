@@ -1,6 +1,6 @@
 actions
 gitPackageHistory: listElement selectedIndex: index
-  | wc packageDef configDef registration gitTool gitRepo packageName filePath gitDirectory commitLog commitish |
+  | wc packageDef configDef registration gitTool gitRepo packageName filePath gitDirectory commitLog commitish repoDirName |
   index = 0
     ifTrue: [ ^ false ].
   wc := self workingCopies at: index.
@@ -14,7 +14,8 @@ gitPackageHistory: listElement selectedIndex: index
     ifFalse: [ ^ false ].
   gitTool := listElement topez toolInstanceFor: 'git'.
   gitRepo := registration repository.
-  filePath := 'repository/' , packageName , '.package'.
+  repoDirName := wc metacelloPackageNameWithBranch at: 2.
+  filePath := 'repository/' , repoDirName , '.package'.
   gitDirectory := registration gitRootDirectory.
   commitLog := gitTool
     gitlogFilePath: filePath
@@ -35,7 +36,7 @@ gitPackageHistory: listElement selectedIndex: index
                 filePath: filePath
                 gitRepoDirectory: gitDirectory
                 windowId: rawHistoryBrowser sourceWindowId
-                windowLabel: 'Changes for [' , sha , '] ' , packageName) ];
-    windowLabel: 'History for ' , packageName;
+                windowLabel: 'Changes for [' , sha , '] ' , repoDirName) ];
+    windowLabel: 'History for ' , repoDirName;
     yourself) open.
   ^ true
