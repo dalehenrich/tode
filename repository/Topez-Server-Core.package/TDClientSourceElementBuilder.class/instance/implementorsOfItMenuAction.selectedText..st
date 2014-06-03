@@ -1,9 +1,9 @@
 menu actions - Search
 implementorsOfItMenuAction: clientSourceElement selectedText: selectedString
-  | selector methodDefs findTool browseTool |
+  | selector block findTool browseTool |
   selector := selectedString findSelector.
   findTool := self findTool: clientSourceElement.
-  methodDefs := findTool findMethod: selector asString.
+  block := [ findTool findMethod: selector asString ].
   browseTool := self browseTool: clientSourceElement.
-  browseTool browseMethods: methodDefs label: 'Implementors of ' , selector.
+  browseTool browseMethodsBlock: block label: 'Implementors of ' , selector.
   ^ true

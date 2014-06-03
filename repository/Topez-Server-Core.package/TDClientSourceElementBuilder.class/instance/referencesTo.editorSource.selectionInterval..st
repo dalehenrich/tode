@@ -2,19 +2,21 @@ menu actions - keyboard only
 referencesTo: clientSourceElement editorSource: editorSource selectionInterval: selectionInterval
   "CMD-N - references to"
 
-  | aVariableOrClassName defs |
+  | aVariableOrClassName block |
   aVariableOrClassName := editorSource
     copyFrom: selectionInterval _from
     to: selectionInterval _to.
-  defs := TDMethodDefinition
+  block := [ 
+  TDMethodDefinition
     referencesTo: aVariableOrClassName
     isMeta: false
-    in: self theClass.
-  defs
+    in: self theClass ].
+  block value
     editUsing:
       ((TDEditorSpec
         topez: clientSourceElement topez
         editorAspect: #'methodDefinitionList')
+        objectBlock: block;
         windowLocation: #'implementors';
         yourself).
   ^ true

@@ -1,10 +1,12 @@
 as yet unclassified
-mcbrowseSnapshot: snapshot
+mcbrowseSnapshot: snapshot label: label
   | mcDefinitions definitions |
   mcDefinitions := snapshot definitions
     select: [ :def | def isOrganizationDefinition not ].
   definitions := mcDefinitions collect: [ :def | def asTDDefinition ].
   definitions
     editUsing:
-      (TDEditorSpec topez: self topez editorAspect: #'externalDefinitionList').
+      ((TDEditorSpec topez: self topez editorAspect: #'externalDefinitionList')
+        windowLabel: label;
+        yourself).
   ^ definitions
