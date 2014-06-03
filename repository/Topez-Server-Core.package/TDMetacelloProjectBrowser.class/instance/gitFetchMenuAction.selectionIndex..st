@@ -16,4 +16,4 @@ gitFetchMenuAction: listElement selectionIndex: selectionIndex
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'gitStatus';
         yourself).
-  ^ #'refreshView'
+  ^ true

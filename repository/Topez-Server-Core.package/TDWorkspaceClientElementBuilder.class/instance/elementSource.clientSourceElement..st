@@ -1,3 +1,4 @@
 as yet unclassified
 elementSource: aString clientSourceElement: clientSourceElement
-  self workspace: aString
+  self workspace: aString.
+  ^ true

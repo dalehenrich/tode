@@ -1,6 +1,6 @@
 stash
 spawn: aString adornmentColor: aColorOrNil
-	aColorOrNil ifNil: [ adornmentColor := self adornmentColorFor: aString ] ifNotNil: [ :color | adornmentColor := color ].
+	adornmentColor := aColorOrNil.
 	sessionName := aString.
 	console := TodeConsole todeConsole: self.
 	shellWindow := console openAsMorphLabel: self shellId asString , ': ' , self label welcome: false.

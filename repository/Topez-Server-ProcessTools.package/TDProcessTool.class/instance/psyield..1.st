@@ -1,3 +1,6 @@
 as yet unclassified
-psYield
-  ^ Processor yield
+psyield
+  "ps yield"
+
+  self psYield.
+  ^ true

@@ -15,5 +15,5 @@ browseProjectDirtyPackagesMenuAction: listElement selectionIndex: selectionIndex
     parentBuilder: nil
     windowLocation: #'app3'
     windowId: nil
-    label: 'Packages for ' , registration projectName.
+    label: 'Dirty Packages for ' , registration projectName.
   ^ true

@@ -5,4 +5,5 @@ loadProjectMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
   registration loadProjectUsing: projectTool.
+  listElement topez commitTransaction.
   ^ #'refreshView'

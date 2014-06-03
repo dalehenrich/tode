@@ -30,6 +30,7 @@
 		"projectCreateConfigurationDevelopmentVersion:spec:version:from:" : "dkh 05/16/2014 17:15",
 		"projectDiff:" : "dkh 05/29/2014 19:31",
 		"projectGet:selector:repositoryDescription:" : "dkh 05/13/2014 15:14",
+		"projectGetConfiguration:repositoryDescription:" : "dkh 06/02/2014 16:43",
 		"projectLoad:doGet:selector:repositoryDescription:loads:version:onConflict:onDowngrade:onLock:onUpgrade:ignoreImage:silently:cacheRepository:repositoryOverrides:" : "dkh 05/27/2014 11:02",
 		"projectLoad:selector:repositoryDescription:loads:" : "dkh 05/13/2014 15:52",
 		"projectLoad:selector:repositoryDescription:loads:version:" : "dkh 05/27/2014 11:05",

@@ -1,16 +1,39 @@
-as yet unclassified
+ol
 olclear
-  "ol clear [ <priority-list> ]"
+  "
+  ol clear  [--inverse]  [--age=<duration>] [ <priority>... ]
+"
 
-  | priorities tdObjectLog theObjectLog |
-  tdObjectLog := TDObjectLog new.
-  tokens size > 1
-    ifTrue: [ 2 to: tokens size do: [ :index | priorities priority: (ObjectLogEntry perform: (tokens at: index) asSymbol) ] ].
-  tdObjectLog priorities isEmpty
+  | args priorities age objectLog |
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('age' nil #'required').
+      #('inverse' nil #'none')}.
+  args := subArguments collect: [ :priorityName | priorityName asSymbol ].
+  subOptions
+    at: 'inverse'
+    ifPresent: [ :ignored | 
+      priorities := self olPriorities copy.
+      priorities removeAll: args ]
+    ifAbsent: [ priorities := args ].
+  subOptions
+    at: 'age'
+    ifPresent: [ :durationExpression | age := DateAndTime now - durationExpression evaluate ].
+  priorities := args
+    collect: [ :priorityName | ObjectLogEntry perform: priorityName ].
+  priorities isEmpty
     ifTrue: [ 
       "clear all - most efficient to simply reset the collections"
       ObjectLogEntry initialize.
       ^ true ].
-  theObjectLog := ObjectLogEntry objectLog.
-  tdObjectLog objectLog do: [ :entry | theObjectLog remove: entry ].
+  objectLog := ObjectLogEntry objectLog.
+  objectLog copy
+    do: [ :entry | 
+      (priorities includes: entry priority)
+        ifTrue: [ 
+          age
+            ifNil: [ objectLog remove: entry ]
+            ifNotNil: [ 
+              objectLog stamp < age
+                ifTrue: [ objectLog remove: entry ] ] ] ].
   ^ true

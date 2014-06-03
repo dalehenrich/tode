@@ -1,4 +1,6 @@
 as yet unclassified
 elementSource: source clientSourceElement: clientSourceElement
-  self object elementSource: source.
-  clientSourceElement topez commitTransaction
+  | bool |
+  bool := self object elementSource: source.
+  clientSourceElement topez commitTransaction.
+  ^ bool

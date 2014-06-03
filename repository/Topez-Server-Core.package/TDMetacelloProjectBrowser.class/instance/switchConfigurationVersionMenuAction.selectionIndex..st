@@ -15,4 +15,5 @@ switchConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
   self projectTool
     projectRegisterConfiguration: registration
     version: (labelArray at: selectedIndex).
+  listElement topez commitTransaction.
   ^ #'refreshView'

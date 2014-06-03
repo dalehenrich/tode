@@ -1,4 +1,4 @@
-class initialization
+window bounds
 offsetBounds: aPoint
     | newBounds |
     newBounds := Dictionary new.

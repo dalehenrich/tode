@@ -1,4 +1,4 @@
 initialization
 debugProcess: aGsProcess exception: anException
-  terminateProcessOnClose := true.
+  terminateProcessOnClose := debuggingProcess := true.
   stackNode := self createStackNodeFor: aGsProcess exception: anException

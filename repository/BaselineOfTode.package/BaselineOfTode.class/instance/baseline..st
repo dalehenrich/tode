@@ -55,7 +55,6 @@ baseline: spec
         package: 'Tode-Client-Common'
           with: [ 
               spec
-                postLoadDoIt: #'initializeBounds';
                 requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
           with: [ spec requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];

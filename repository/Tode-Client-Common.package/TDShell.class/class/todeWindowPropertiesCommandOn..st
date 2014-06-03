@@ -16,5 +16,5 @@ todeWindowPropertiesCommandOn: aBuilder
 						parent: #'tODE Window Layout';
 						action: [ 
 									| windowProperties |
-									windowProperties := TDWindowProperties importFrom: file fullName.
+									windowProperties := TDAbstractWindowProperties importFrom: file fullName.
 									windowProperties installOn: TDTopezGemStoneClient ] ] ]

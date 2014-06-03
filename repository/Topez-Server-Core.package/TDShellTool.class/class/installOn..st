@@ -42,13 +42,6 @@ installOn: aTDTopezServer
       for: stringClass
       aspect: #'workspace';
     yourself.
-  Smalltalk
-    at: #'TDObjectLog'
-    ifPresent: [ :cl | 
-      TDTopezServer
-        registerEditorClass: TDObjectLogElementBuilder
-        for: cl
-        aspect: #'logEntries' ].
   TDTopezServer
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'view';
     registerBuilderClass: TDObjectNodeBuilder for: Object aspect: #'inspect';

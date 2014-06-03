@@ -1,3 +1,4 @@
 source element builder
 elementSource: source
-  self stonContents: source
+  self stonContents: source.
+  ^ true

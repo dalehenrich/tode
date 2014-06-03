@@ -5,4 +5,5 @@ revertProjectMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
   registration revertProjectUsing: projectTool.
+  listElement topez commitTransaction.
   ^ #'refreshView'

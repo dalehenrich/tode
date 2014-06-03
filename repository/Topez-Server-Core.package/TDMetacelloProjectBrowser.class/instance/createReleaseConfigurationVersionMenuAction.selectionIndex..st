@@ -7,4 +7,5 @@ createReleaseConfigurationVersionMenuAction: listElement selectionIndex: selecti
   MetacelloToolBox
     releaseVersion: registration versionString
     for: registration projectName.
+  listElement topez commitTransaction.
   ^ #'refreshView'

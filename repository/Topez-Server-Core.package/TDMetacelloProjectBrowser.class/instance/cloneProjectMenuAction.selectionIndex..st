@@ -44,4 +44,5 @@ cloneProjectMenuAction: listElement selectionIndex: selectionIndex
   self projectTool projectMap: registration toRepository: entry repository.
   registration isLoadedInImage
     ifTrue: [ registration versionInfo versionString: githubSha ].
+  listElement topez commitTransaction.
   ^ #'refreshView'

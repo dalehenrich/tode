@@ -13,7 +13,8 @@
 		"contextWindowId",
 		"terminateProcessOnClose",
 		"processTerminated",
-		"processResult" ],
+		"processResult",
+		"debuggingProcess" ],
 	"name" : "TDDebugger",
 	"pools" : [
 		 ],

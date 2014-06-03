@@ -4,4 +4,7 @@ createConfigurationNewMajorVersionMenuAction: listElement selectionIndex: select
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  ^ self configuration: registration newVersion: #'incrementMajorVersion'
+  (self configuration: registration newVersion: #'incrementMajorVersion')
+    ifFalse: [ ^ false ].
+  listElement topez commitTransaction.
+  ^ #'refreshView'
