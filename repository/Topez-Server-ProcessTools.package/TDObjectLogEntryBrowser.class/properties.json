@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Server-ProcessTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"objectLogBlock",
+		"reversed",
+		"objectLogEntries" ],
+	"name" : "TDObjectLogEntryBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDStandardToolBuilder",
+	"type" : "normal" }

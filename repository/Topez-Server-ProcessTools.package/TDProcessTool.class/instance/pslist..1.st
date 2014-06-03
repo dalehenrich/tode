@@ -1,3 +1,9 @@
 as yet unclassified
-psList
-  ^ ProcessorScheduler scheduler allProcesses asArray
+pslist
+  "ps list"
+
+  ^ (TDProcessBrowser new
+    topez: topez;
+    processTool: self;
+    windowLabel: 'Process Browser';
+    yourself) open
