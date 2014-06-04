@@ -5,9 +5,9 @@ menuActionSpec: miniTool
     ->
       {#('categories' nil #'browseProjectCategoriesMenuAction:selectionIndex:' nil #'loadedProject' false).
       #('classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'loadedProject' false).
-      #('dirty packages' nil #'browseProjectDirtyPackagesMenuAction:selectionIndex:' nil #'project' false).
-      #('packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'project' false).
-      #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'project' false)})}.
+      #('dirty packages' nil #'browseProjectDirtyPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
+      #('packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
+      #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'metacelloProject' false)})}.
   #('-').
   {('Git'
     ->
@@ -23,7 +23,7 @@ menuActionSpec: miniTool
   #('-').
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
-  #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'project' false).
+  #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
   #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('push' nil #'gitPushProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
@@ -34,10 +34,10 @@ menuActionSpec: miniTool
   #('-').
   {('Project'
     ->
-      {#('get' nil #'getProjectMenuAction:selectionIndex:' nil #'project' false).
+      {#('get' nil #'getProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
       #('lock' nil #'lockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
       #('unlock' nil #'unlockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
-      #('unregister' nil #'unregisterProjectMenuAction:selectionIndex:' nil #'project' false)})}.
+      #('unregister' nil #'unregisterProjectMenuAction:selectionIndex:' nil #'metacelloProject' false)})}.
   #('-').
   {('Configuration' -> self configurationMenuActionSpec)}.
   #('-')} , self standardMenuActionSpec

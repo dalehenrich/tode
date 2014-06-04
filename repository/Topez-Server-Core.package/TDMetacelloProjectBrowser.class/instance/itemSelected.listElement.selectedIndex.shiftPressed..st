@@ -15,6 +15,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   #'writableRepoBasedProject'.
   #'gitProject'.
   #'project'.
+  #'metacelloProject'.
   #'configurationProject'.
   #'githubProject'.
   #'baselineProject'.
@@ -55,9 +56,10 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
       registration isDirty
         ifFalse: [ enable value: #'nonDirtyGitProject' ] ].
   registration isMetacelloProject
-    ifTrue: [ enable value: #'project' ].
+    ifTrue: [ enable value: #'metacelloProject' ].
   registration isBaselineBased
     ifTrue: [ enable value: #'baselineProject' ].
+  enable value: #'project'.
   ^ STON
     toString:
       {#'setMenuCategories:'.
