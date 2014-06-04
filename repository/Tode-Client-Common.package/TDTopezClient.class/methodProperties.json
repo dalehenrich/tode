@@ -1,8 +1,10 @@
 {
 	"class" : {
 		"bounds" : "dkh 2/5/2013 07:56",
+		"initialize" : "dkh 6/3/2014 19:45",
 		"initializeWindowBounds:" : "dkh 5/31/2014 16:58",
 		"offsetBounds:" : "dkh 2/5/2013 07:56",
+		"startUp:" : "dkh 6/3/2014 20:01",
 		"windowOffset" : "dkh 2/5/2013 07:56",
 		"windowOffset:" : "dkh 2/5/2013 09:22",
 		"windowProperties" : "dkh 6/2/2014 07:13",
@@ -44,6 +46,7 @@
 		"shell" : "dkh 11/19/2012 15:30",
 		"shell:" : "dkh 11/19/2012 15:30",
 		"shellHistory" : "dkh 3/28/2013 19:58",
+		"shutdown" : "dkh 6/3/2014 20:04",
 		"spawnWindow" : "dkh 5/28/2013 14:20",
 		"spawnWindowFromServer" : "dkh 6/5/2013 05:21",
 		"status" : "dkh 11/26/2012 15:49",
