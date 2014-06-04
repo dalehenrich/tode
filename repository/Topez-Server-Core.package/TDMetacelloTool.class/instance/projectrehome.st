@@ -17,7 +17,7 @@ projectrehome
     at: 'no-Config'
     ifPresent: [ :ignored | skipConfig := true ]
     ifAbsent: [ skipConfig := false ].
-  newRepo := description createRepository.
+  newRepo := self repositoryFromDescription: description.
   ^ registration workingCopies
     do: [ :wc | 
       | rg |
