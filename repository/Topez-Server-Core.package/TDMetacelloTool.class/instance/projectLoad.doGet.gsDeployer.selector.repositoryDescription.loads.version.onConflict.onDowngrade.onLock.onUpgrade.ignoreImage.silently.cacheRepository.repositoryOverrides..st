@@ -1,6 +1,8 @@
 project api
-projectLoad: projectName doGet: doGet selector: projectSelector repositoryDescription: repositoryDescription loads: loads version: configurationVersion onConflict: onConflict onDowngrade: onDowngrade onLock: onLock onUpgrade: onUpgrade ignoreImage: ignoreImage silently: silently cacheRepository: cacheRepository repositoryOverrides: repositoryOverrides
-  | metacello onBlock |
+projectLoad: projectName doGet: doGet gsDeployer: gsDeployerOption selector: projectSelector repositoryDescription: repositoryDescription loads: loads version: configurationVersion onConflict: onConflict onDowngrade: onDowngrade onLock: onLock onUpgrade: onUpgrade ignoreImage: ignoreImage silently: silently cacheRepository: cacheRepository repositoryOverrides: repositoryOverrides
+  "gsDeployerOption: #bulk, #auto, #none"
+
+  | metacello onBlock loadBlock |
   metacello := Metacello new.
   metacello perform: projectSelector with: projectName.
   metacello repository: repositoryDescription.
@@ -37,4 +39,13 @@ projectLoad: projectName doGet: doGet selector: projectSelector repositoryDescri
                 ifFalse: [ ex pass ] ] ] ].
   doGet
     ifTrue: [ metacello copy get ].
-  ^ metacello load: loads
+  loadBlock := [ ^ metacello load: loads ].
+  gsDeployerOption == #'none'
+    ifTrue: [ loadBlock value ]
+    ifFalse: [ 
+      gsDeployerOption == #'auto'
+        ifTrue: [ GsDeployer autoMigrate: loadBlock ]
+        ifFalse: [ 
+          gsDeployerOption == #'bulk'
+            ifFalse: [ TodeCommandError error: 'Unknown deploy option: ' , gsDeployerOption asString ].
+          GsDeployer bulkMigrate: loadBlock ] ]
