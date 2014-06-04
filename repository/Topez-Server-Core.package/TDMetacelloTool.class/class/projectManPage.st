@@ -24,7 +24,7 @@ DESCRIPTION
     prime    Prime the project registry
     push     (git only)
     registry Inspect the project registry
-    rehome   (~/bin/mapRepos)
+    rehome   Point package repository groups for project to new repository
     revert   (see revert in project tool ... just dirty or reload ALL as options)
     status
     test
@@ -53,5 +53,6 @@ EXAMPLES
     at: 'diff' put: self projectdiffManPage;
     at: 'compare' put: self projectcompareManPage;
     at: 'log' put: self projectlogManPage;
+    at: 'rehome' put: self projectrehomeManPage;
     yourself.
   ^ manPage
