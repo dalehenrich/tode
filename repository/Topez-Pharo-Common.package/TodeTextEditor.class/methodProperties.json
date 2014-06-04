@@ -1,6 +1,5 @@
 {
 	"class" : {
-		"cmdKeysInText" : "dkh 6/4/2014 08:15",
 		"initialize" : "dkh 3/25/2014 21:04" },
 	"instance" : {
 		"bindBasicCmdKeyShortcuts:" : "dkh 3/26/2014 16:23",
