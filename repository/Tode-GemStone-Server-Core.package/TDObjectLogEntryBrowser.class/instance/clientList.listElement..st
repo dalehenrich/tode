@@ -19,7 +19,12 @@ clientList: miniTool listElement: listElement
           (two := ole labelString).
           (ole stampString).
           ((bold includes: ole priority)
-            ifTrue: [ {(TextEmphasis bold)} ]
+            ifTrue: [ 
+              ole hasContinuation
+                ifTrue: [ 
+                  {(TextEmphasis bold).
+                  (TextEmphasis underlined)} ]
+                ifFalse: [ {(TextEmphasis bold)} ] ]
             ifFalse: [ {(TextEmphasis normal)} ])}.
       maxOne := maxOne max: one size.
       maxTwo := maxTwo max: two size ].

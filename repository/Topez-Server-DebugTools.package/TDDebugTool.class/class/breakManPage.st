@@ -17,6 +17,7 @@ DESCRIPTION
     enable  Enable breakpoints
     disable Disable breakpoints
     list    List breakpoints
+    remote  Enable/disable remote breakpoints
     set     Set breakpoints
     steps   List step points for a method
 
@@ -34,5 +35,6 @@ EXAMPLES
     at: 'list' put: self breaklistManPage;
     at: 'set' put: self breaksetManPage;
     at: 'steps' put: self breakstepsManPage;
+    at: 'remote' put: self breakremoteManPage;
     yourself.
   ^ manPage

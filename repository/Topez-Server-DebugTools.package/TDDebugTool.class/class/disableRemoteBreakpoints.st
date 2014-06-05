@@ -1,0 +1,3 @@
+initialization
+disableRemoteBreakpoints
+  ^ EnableRemoteBreakpoints := false

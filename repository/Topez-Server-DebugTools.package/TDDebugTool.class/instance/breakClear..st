@@ -12,4 +12,7 @@ breakClear: breakTokens
       meth := (breakReport at: breakListIndex) at: 5.
       {meth.
       stepPoint} ].
-  stepArs do: [ :ar | (ar at: 1) clearBreakAtStepPoint: (ar at: 2) ]
+  stepArs
+    do: [ :ar | 
+      self clearRemoteBreakpoint: (ar at: 1) step: (ar at: 2).
+      (ar at: 1) clearBreakAtStepPoint: (ar at: 2) ]

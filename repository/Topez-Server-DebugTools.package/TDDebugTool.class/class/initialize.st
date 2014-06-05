@@ -1,3 +1,6 @@
-as yet unclassified
+initialization
 initialize
-  self install
+	"self initialize"
+
+	SystemLoginNotification subscribe: self name.
+	self sessionStart
