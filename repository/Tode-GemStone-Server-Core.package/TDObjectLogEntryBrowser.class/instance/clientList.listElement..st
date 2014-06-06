@@ -13,10 +13,13 @@ clientList: miniTool listElement: listElement
   objectLogEntries
     do: [ :ole | 
       | one two |
+      two := ole labelString.
+      two size > 35
+        ifTrue: [ two := (two copyFrom: 1 to: 35) , '...' ].
       labels
         add:
           {(one := priorityLabels at: ole priority).
-          (two := ole labelString).
+          two.
           (ole stampString).
           ((bold includes: ole priority)
             ifTrue: [ 
