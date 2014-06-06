@@ -4,7 +4,8 @@ setRemoteBreakpoint: meth step: stepPoint
   self remoteBreakpointsEnabled
     ifFalse: [ ^ self ].
   cls := meth inClass.
-  sel := meth selector self class
+  sel := meth selector.
+  self class
     sendSetOrClearBreakPointSignal:
       cls name , ' _setMethodBreak: ' , sel printString , ' stepPoint: '
         , stepPoint asString
