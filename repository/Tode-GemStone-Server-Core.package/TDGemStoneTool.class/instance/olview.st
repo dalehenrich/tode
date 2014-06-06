@@ -31,6 +31,7 @@ olview
     reversed: reversed;
     objectLogBlock: [ 
           | objectLog |
+          System abortTransaction.
           objectLog := objectLog := ObjectLogEntry objectLog.
           age
             ifNotNil: [ objectLog := objectLog select: [ :each | each stamp >= age ] ].

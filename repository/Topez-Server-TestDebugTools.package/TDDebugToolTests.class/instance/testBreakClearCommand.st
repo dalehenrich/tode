@@ -2,6 +2,7 @@ as yet unclassified
 testBreakClearCommand
   "run without errors ... to keep me honest"
 
+  [ 
   | breakpoints |
   self
     evaluateCommandString: 'break --help ';
@@ -14,4 +15,10 @@ testBreakClearCommand
   self assert: breakpoints size = 2.
   self evaluateCommandString: 'break clear 1 2'.
   breakpoints := self evaluateCommandString: 'break list'.
-  self assert: breakpoints size = 0
+  self assert: breakpoints size = 0 ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: ex description;
+        show: (GsProcess stackReportToLevel: 100) ]
