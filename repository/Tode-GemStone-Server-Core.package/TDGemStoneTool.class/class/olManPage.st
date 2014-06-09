@@ -17,6 +17,7 @@ DESCRIPTION
     debug
     error
     fatal
+    interaction
     info
     trace
     transcript

@@ -53,9 +53,7 @@ baseline: spec
                 postLoadDoIt: #'initializeTools';
                 requires: #('Topez-Server-Core') ];
         package: 'Tode-Client-Common'
-          with: [ 
-              spec
-                requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
+          with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
           with: [ spec requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];
         package: 'Tode-Client-Pharo'
@@ -129,7 +127,7 @@ baseline: spec
         group: 'default' with: #('GemStone');
         group: 'GemStone'
           with:
-            #('Tode-GemStone-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-ProcessTools' 'Topez-Server-TestTools');
+            #('Tode-GemStone-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-ProcessTools' 'Topez-Server-TestTools' 'Rewrite');
         group: 'GemStone Tests'
           with:
             #('Common Tests' 'Topez-Server-Tests' 'Topez-Server-TestDebugTools');

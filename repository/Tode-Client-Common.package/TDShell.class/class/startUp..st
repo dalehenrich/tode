@@ -3,4 +3,4 @@ startUp: resuming
 	resuming
 		ifTrue: [ 
 			self resetWorldMenu.
-			MCGitHubRepository resetCacheDirectoryIfInvalid ]
+			[MCGitHubRepository resetCacheDirectoryIfInvalid] on: Error do: [:ignored | ] ]

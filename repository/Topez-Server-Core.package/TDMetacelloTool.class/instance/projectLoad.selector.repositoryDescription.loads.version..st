@@ -3,6 +3,7 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
   ^ self
     projectLoad: projectName
     doGet: true
+    gsDeployer: #'bulk'
     selector: projectSelector
     repositoryDescription: repositoryDescription
     loads: loads

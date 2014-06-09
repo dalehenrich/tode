@@ -22,9 +22,12 @@ validate: cpOrMv for: destinationPath in: baseNode andDo: aBlock
       destinationDirectoryNode := destinationNode ]
     ifFalse: [ 
       path := path copyFrom: 1 to: path size - 1.
-      destinationDirectoryNode := baseNode
-        lookupPath: path
-        ifAbsent: [ ^ self error: 'Node does not exist: ' , destinationPath ] ].
+      path isEmpty
+        ifTrue: [ destinationDirectoryNode := baseNode ]
+        ifFalse: [ 
+          destinationDirectoryNode := baseNode
+            lookupPath: path
+            ifAbsent: [ ^ self error: 'Node does not exist: ' , destinationPath ] ] ].
   destinationDirectoryNode canEnter
     ifFalse: [ 
       ^ self

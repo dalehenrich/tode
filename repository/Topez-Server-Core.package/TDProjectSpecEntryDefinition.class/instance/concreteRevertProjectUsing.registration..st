@@ -19,6 +19,7 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
   ^ aProjectTool
     projectLoad: self projectName
     doGet: true
+    gsDeployer: #'bulk'
     selector: aProjectRegistration projectSelector
     repositoryDescription: aProjectRegistration repositoryDescription
     loads: loads

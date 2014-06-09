@@ -6,5 +6,7 @@ browseVersion: listElement selectedIndex: index
   resolvedVersion := self versions at: index.
   version := resolvedVersion version.
   snapshot := version snapshot.
-  self mcTool mcbrowseSnapshot: snapshot.
+  self mcTool
+    mcbrowseSnapshot: snapshot
+    label: resolvedVersion name , ' definitions'.
   ^ true

@@ -1,10 +1,10 @@
 menu actions - Search
 regexImplementorsMenuAction: sourceElement selectedText: regex
-  | findTool browseTool methodDefs |
+  | findTool browseTool block |
   findTool := self browseTool: sourceElement.
-  methodDefs := findTool findRegexMethod: regex.
+  block := [ findTool findRegexMethod: regex ].
   browseTool := self browseTool: sourceElement.
   browseTool
-    browseMethods: methodDefs
+    browseMethodsBlock: block
     label: 'Implementors of ' , regex , ' (regex)'.
   ^ true

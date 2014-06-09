@@ -1,0 +1,4 @@
+initialization
+sessionStart
+
+	self registerForRemoteBreakpoints

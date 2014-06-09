@@ -2,10 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
+		"changesForCommitMenuAction:selectionIndex:" : "dkh 06/08/2014 13:21",
 		"clientList:listElement:" : "dkh 05/22/2014 15:15",
 		"commitLogList" : "dkh 05/22/2014 15:12",
 		"commitLogList:" : "dkh 05/22/2014 15:12",
+		"fullLogMenuAction:selectionIndex:" : "dkh 06/08/2014 13:23",
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 05/22/2014 17:18",
 		"logItemSelectedBlock" : "dkh 05/22/2014 15:37",
 		"logItemSelectedBlock:" : "dkh 05/22/2014 15:35",
+		"operationsMenuActionSpec" : "dkh 06/08/2014 13:22",
 		"rawCommitLog:gitRepoDirectory:" : "dkh 05/22/2014 15:33" } }

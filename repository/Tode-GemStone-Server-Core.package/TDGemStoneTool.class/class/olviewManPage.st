@@ -8,7 +8,8 @@ olviewManPage
   old view - View object log entries
 
 SYNOPSIS
-  ol view  [--inverse] [--reverse|-r] [--age=<duration>] [ <priority>... ]
+  ol view  [--inverse] [--reverse|-r] [--age=<duration>] [--pid=<pid>] 
+           [ <priority>... ]
 
 DESCRIPTION
   The `ol view` command brings up a window on the object log entries that match the
@@ -21,6 +22,7 @@ DESCRIPTION
     error
     fatal
     info
+    interaction
     trace
     transcript
     warn
@@ -32,6 +34,9 @@ OPTIONS
   --inverse
     The <command> applies to the list of all priorities, except the listed priorities.
 
+  --pid=<pid>
+    Only object log entries from the specified <pid> are displayed.
+
   --reverse
     The list is displayed in reverse order.
 
@@ -39,5 +44,6 @@ EXAMPLES
   ol view error
   ol view --inverse transcript
   ol view --age=`1 day` -r transcript
+  ol view --age=`1 day` -r --pid=15292 transcript
 '.
   ^ manPage

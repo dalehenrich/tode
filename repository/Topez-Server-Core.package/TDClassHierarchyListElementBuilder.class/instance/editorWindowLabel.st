@@ -1,3 +1,3 @@
 as yet unclassified
 editorWindowLabel
-  ^ 'Hierarchy'
+  ^ 'Hierarchy of ' , self object className

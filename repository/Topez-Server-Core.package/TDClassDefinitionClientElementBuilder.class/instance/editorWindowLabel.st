@@ -1,3 +1,3 @@
 as yet unclassified
 editorWindowLabel
-  ^ 'Class'
+  ^ self theClass name asString

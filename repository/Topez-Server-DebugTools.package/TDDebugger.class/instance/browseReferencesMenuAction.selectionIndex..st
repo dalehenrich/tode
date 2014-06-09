@@ -1,17 +1,15 @@
 actions
 browseReferencesMenuAction: listElement selectionIndex: selectionIndex
-  | cls aVariableOrClassName defs |
+  | beh aVariableOrClassName block |
   selectionIndex == 0
     ifTrue: [ ^ false ].
-  cls := self theBehavior.
-  aVariableOrClassName := cls name asString.
-  defs := TDMethodDefinition
-    referencesTo: aVariableOrClassName
-    isMeta: false isMeta
-    in: nil.
-  defs
+  beh := self theBehavior.
+  aVariableOrClassName := beh theNonMetaClass name asString.
+  block := [ TDMethodDefinition referencesTo: aVariableOrClassName isMeta: beh isMeta in: nil ].
+  block value
     editUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'methodDefinitionList')
         windowLocation: #'implementors';
+        objectBlock: block;
         yourself).
   ^ true

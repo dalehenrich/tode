@@ -1,26 +1,28 @@
 project
 projectload
   "
-  project load [--loads=<load-expression>] \
-               [--no-flush] [--no-get] \
-               [ (--baseline | --configuration --version=<version> ) ] \
-               [--repository=<repository-reference>] \
-               [--onConflict=useIncoming|useExisting] \
-               [--onDowngrade=useIncoming|useExisting] \
-               [--onLock=break|honor] \
-               [--onUpgrade=useIncoming|useExisting] \
-               [--ignoreImage] [--silently] \
-               [--cacheRepository=@<repository-reference>] \
-               [--repositoryOverrides=@<repository-reference>] \
+  project load [--loads=<load-expression>]
+               [--no-flush] [--no-get]
+               [ (--baseline | --configuration --version=<version> ) ]
+               [--repository=<repository-reference>]
+               [--onConflict=useIncoming|useExisting]
+               [--onDowngrade=useIncoming|useExisting]
+               [--onLock=break|honor]
+               [--onUpgrade=useIncoming|useExisting]
+               [--ignoreImage] [--silently]
+               [--cacheRepository=@<repository-reference>]
+               [--repositoryOverrides=@<repository-reference>]
+               [--deploy=auto|bulk|none]
                <project-name>
 "
 
-  | projectName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet |
+  | projectName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption |
   self
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
       #('cacheRepository' nil #'required').
       #('configuration' nil #'none').
+      #('deploy' nil #'required').
       #('ignoreImage' nil #'none').
       #('loads' nil #'required').
       #('no-flush' nil #'none').
@@ -85,9 +87,14 @@ projectload
     at: 'no-get'
     ifPresent: [ :ignored | doGet := false ]
     ifAbsent: [ doGet := true ].
+  subOptions
+    at: 'deploy'
+    ifPresent: [ :arg | gsDeployerOption := arg asSymbol ]
+    ifAbsent: [ gsDeployerOption := #'bulk' ].
   ^ self
     projectLoad: projectName
     doGet: doGet
+    gsDeployer: gsDeployerOption
     selector: projectSelector
     repositoryDescription: description
     loads: loads

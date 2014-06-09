@@ -19,6 +19,7 @@ mcbrowse
     ifFalse: [ 
       | packageName workingCopy |
       packageName := tokens at: 2.
+      versionName := packageName.
       workingCopy := self resolveWorkingCopyReference: packageName.
       snapshot := workingCopy package snapshot ].
-  ^ self mcbrowseSnapshot: snapshot
+  ^ self mcbrowseSnapshot: snapshot label: versionName , ' definitions'

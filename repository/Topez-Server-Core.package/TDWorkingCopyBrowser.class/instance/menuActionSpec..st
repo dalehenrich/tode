@@ -3,6 +3,8 @@ menuActionSpec: miniTool
   theMiniTool := miniTool.
   ^ {#('browse' nil #'workingCopyBrowse:selectedIndex:').
   #('-').
+  #('create new package' nil #'createNewPackage:selectedIndex:').
+  #('-').
   {('History'
     ->
       {#('git' nil #'gitPackageHistory:selectedIndex:').

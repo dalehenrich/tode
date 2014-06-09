@@ -5,5 +5,5 @@ workingCopyBrowse: listElement selectedIndex: index
     ifTrue: [ ^ false ].
   wc := self workingCopies at: index.
   snapshot := wc package snapshot.
-  self mcTool mcbrowseSnapshot: snapshot.
+  self mcTool mcbrowseSnapshot: snapshot label: wc packageName , ' definitions'.
   ^ true

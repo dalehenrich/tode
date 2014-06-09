@@ -2,5 +2,5 @@ menu actions
 setBreakpointMenuAction: sourceElement selectionInterval: selectionInterval dirty: dirty
   dirty
     ifTrue: [ ^ #'flash' ].
-  self setBreakPoint: selectionInterval.
+  self setBreakPoint: sourceElement selectionInterval: selectionInterval.
   ^ true

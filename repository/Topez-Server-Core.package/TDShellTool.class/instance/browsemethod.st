@@ -17,11 +17,12 @@ browsemethod
   subOptions
     at: 'spec'
     ifPresent: [ :ignored | 
+      block := [ 
       | list |
       list := Set new.
       subArguments do: [ :arg | list addAll: (self findMethodSpec: arg) ].
-      list := self filterBrowseList: list.
-      ^ self browseMethods: list label: label ].
+      self filterBrowseList: list ].
+      ^ self browseMethodsBlock: block label: label ].
   block := [ 
   | list |
   list := Set new.

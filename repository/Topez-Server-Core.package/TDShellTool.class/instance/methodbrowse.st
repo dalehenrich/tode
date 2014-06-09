@@ -4,10 +4,13 @@ methodbrowse
   method browse <method-spec>...
 "
 
-  | list label |
+  | block label |
   self getSubcommandOptsMixedLongShort: {}.
-  list := Set new.
   label := 'Implementors of'.
   subArguments do: [ :arg | label := label , ' ' , arg ].
+  block := [ 
+  | list |
+  list := Set new.
   subArguments do: [ :arg | list addAll: (self findMethodSpec: arg) ].
-  ^ self browseMethods: list label: label
+  list ].
+  ^ self browseMethodsBlock: block label: label
