@@ -14,7 +14,9 @@ installTode: forceGLASSInstall scriptDirectory: scriptDirectory
 			true
 				ifTrue: [ 
 					"for now we will not attempt to install GLASS over GCI"
-					^ 'GLASS must be pre-installed. Shut down your stone and restart after copying  $GEMSTONE/bin/extent0.seaside.dbf to $GEMSTONE/seaside/data/extent0.dbf.' ].
+					self
+						error:
+							'GLASS must be pre-installed. Shut down your stone and restart after copying  $GEMSTONE/bin/extent0.seaside.dbf to $GEMSTONE/seaside/data/extent0.dbf.' ].
 			forceGLASSInstall
 				ifFalse: [ ^ 'GLASS not installed. If you want to force GLASS to be installed, use the `--force` option.' ].
 			self installGLASS ].
@@ -35,4 +37,7 @@ installTode: forceGLASSInstall scriptDirectory: scriptDirectory
 		on: GsErrorNotification
 		do: [ :ex | self error: 'Unable to log into server:' , ex description ] ]
 		on: Error
-		do: [ :ex | self halt ]
+		do: [ :ex | 
+			self shell class debugMode
+				ifTrue: [ self halt ]
+				ifFalse: [ ex pass ] ]
