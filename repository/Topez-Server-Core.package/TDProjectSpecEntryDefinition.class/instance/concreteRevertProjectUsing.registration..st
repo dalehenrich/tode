@@ -24,10 +24,10 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
     repositoryDescription: aProjectRegistration repositoryDescription
     loads: loads
     version: aProjectRegistration configurationVersionString
-    onConflict: #'useIncoming'
-    onDowngrade: #'useIncoming'
+    onConflict: #'useNew'
+    onDowngrade: #'useNew'
     onLock: #'honor'
-    onUpgrade: #'useIncoming'
+    onUpgrade: #'useNew'
     ignoreImage: false
     silently: false
     cacheRepository: nil
