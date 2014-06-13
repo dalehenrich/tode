@@ -25,7 +25,7 @@
 		"toolName" : "dkh 05/08/2014 10:27",
 		"toolReadMe" : "dkh 05/08/2014 10:27" },
 	"instance" : {
-		"projectClone:" : "dkh 06/13/2014 01:10",
+		"projectClone:" : "dkh 06/13/2014 01:57",
 		"projectCommit:commitMessage:" : "dkh 05/16/2014 07:49",
 		"projectCommit:configCommit:gitCommit:commitMessage:" : "dkh 05/20/2014 11:32",
 		"projectCommitConfiguration:configuration:commitMessage:" : "dkh 05/20/2014 11:30",
@@ -56,7 +56,7 @@
 		"projectcompare" : "dkh 05/29/2014 20:59",
 		"projectdiff" : "dkh 05/13/2014 13:31",
 		"projectlist" : "dkh 05/22/2014 07:27",
-		"projectload" : "dkh 06/13/2014 00:56",
+		"projectload" : "dkh 06/13/2014 01:19",
 		"projectlock" : "dkh 06/13/2014 01:02",
 		"projectlog" : "dkh 05/13/2014 13:32",
 		"projectprime" : "dkh 05/09/2014 08:22",
@@ -65,7 +65,7 @@
 		"projectvalidate" : "dkh 05/08/2014 10:28",
 		"repositoryFlush" : "dkh 05/13/2014 13:40",
 		"repositoryflush" : "dkh 05/13/2014 13:40",
-		"resolveProjectRegistrationReference:" : "dkh 06/13/2014 00:56",
+		"resolveProjectRegistrationReference:" : "dkh 06/13/2014 01:56",
 		"scanHomeDirForProjects:" : "dkh 05/15/2014 17:32",
 		"sortRegistrationList:" : "dkh 05/21/2014 15:25",
 		"validateGitRepoExistsFor:" : "dkh 05/15/2014 18:39" } }

@@ -92,7 +92,7 @@ projectload
     ifPresent: [ :arg | gsDeployerOption := arg asSymbol ]
     ifAbsent: [ gsDeployerOption := #'bulk' ].
   ^ self
-    projectLoad: projectName
+    projectLoad: registration projectName
     doGet: doGet
     gsDeployer: gsDeployerOption
     selector: projectSelector
