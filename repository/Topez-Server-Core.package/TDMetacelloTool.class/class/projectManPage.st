@@ -13,12 +13,13 @@ SYNOPSIS
 DESCRIPTION
 
   Commands:
+    clone    Clone repository (github only)
     commit   Commit the Metacello project
     compare  View differences between repository versions (git only)
     diff     View code differences between image and repository
     list     List Metacello projects
     load     (~/bin/load)
-    lock
+    lock     Lock project registration
     log      Browse commit log for the Metacello project (git only)
     merge    (git only?)
     prime    Prime the project registry
@@ -54,5 +55,7 @@ EXAMPLES
     at: 'compare' put: self projectcompareManPage;
     at: 'log' put: self projectlogManPage;
     at: 'rehome' put: self projectrehomeManPage;
+    at: 'lock' put: self projectlockManPage;
+    at: 'clone' put: self projectcloneManPage;
     yourself.
   ^ manPage

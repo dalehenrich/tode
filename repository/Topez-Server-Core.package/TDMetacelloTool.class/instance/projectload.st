@@ -13,7 +13,7 @@ projectload
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
-               <project-name>
+               ( <project-name> | @<project-reference> )
 "
 
   | projectName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption |
@@ -36,7 +36,7 @@ projectload
       #('silently' nil #'none').
       #('version' nil #'required')}.
   projectName := subArguments at: 1.
-  registration := self projectRegistrationFor: projectName.
+  registration := self resolveProjectRegistrationReference: projectName.
   description := registration repositorySpec description.
   projectSelector := #'baseline:'.
   subOptions

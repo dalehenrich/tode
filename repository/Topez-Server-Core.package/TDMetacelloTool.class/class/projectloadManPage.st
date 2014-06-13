@@ -20,7 +20,7 @@ SYNOPSIS
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
-               <project-name>
+               ( <project-name> | @<project-reference> )
 
 DESCRIPTION
 
