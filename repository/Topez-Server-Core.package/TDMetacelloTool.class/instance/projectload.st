@@ -5,15 +5,15 @@ projectload
                [--no-flush] [--no-get]
                [ (--baseline | --configuration --version=<version> ) ]
                [--repository=<repository-reference>]
-               [--onConflict=useIncoming|useExisting]
-               [--onDowngrade=useIncoming|useExisting]
+               [--onConflict=useNew|useExisting]
+               [--onDowngrade=useNew|useExisting]
                [--onLock=break|honor]
-               [--onUpgrade=useIncoming|useExisting]
+               [--onUpgrade=useNew|useExisting]
                [--ignoreImage] [--silently]
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
-               <project-name>
+               ( <project-name> | @<project-reference> )
 "
 
   | projectName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption |
@@ -36,7 +36,7 @@ projectload
       #('silently' nil #'none').
       #('version' nil #'required')}.
   projectName := subArguments at: 1.
-  registration := self projectRegistrationFor: projectName.
+  registration := self resolveProjectRegistrationReference: projectName.
   description := registration repositorySpec description.
   projectSelector := #'baseline:'.
   subOptions
@@ -92,7 +92,7 @@ projectload
     ifPresent: [ :arg | gsDeployerOption := arg asSymbol ]
     ifAbsent: [ gsDeployerOption := #'bulk' ].
   ^ self
-    projectLoad: projectName
+    projectLoad: registration projectName
     doGet: doGet
     gsDeployer: gsDeployerOption
     selector: projectSelector

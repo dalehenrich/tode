@@ -12,15 +12,15 @@ SYNOPSIS
                [--no-flush] [--no-get]
                [ (--baseline | --configuration --version=<version> ) ]
                [--repository=<repository-reference>]
-               [--onConflict=useIncoming|useExisting]
-               [--onDowngrade=useIncoming|useExisting]
+               [--onConflict=useNew|useExisting]
+               [--onDowngrade=useNew|useExisting]
                [--onLock=break|honor]
-               [--onUpgrade=useIncoming|useExisting]
+               [--onUpgrade=useNew|useExisting]
                [--ignoreImage] [--silently]
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
-               <project-name>
+               ( <project-name> | @<project-reference> )
 
 DESCRIPTION
 
