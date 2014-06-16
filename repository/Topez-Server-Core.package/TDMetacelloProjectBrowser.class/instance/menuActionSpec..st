@@ -22,6 +22,7 @@ menuActionSpec: miniTool
       #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false)})}.
   #('-').
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
+  #('configuration' nil #'editProjectConfigurationMenuAction:selectionIndex:' nil #'project' false).
   #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
   #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
