@@ -1,4 +1,4 @@
-menu actions (baseline)
+menu actions
 lockProjectMenuAction: listElement selectionIndex: selectionIndex
   | registration |
   selectionIndex = 0
