@@ -9,6 +9,7 @@ projectloadManPage
 
 SYNOPSIS
   project load [--loads=<load-expression>]
+               [--className=<project-class-name]
                [--no-flush] [--no-get]
                [ (--baseline | --configuration --version=<version> ) ]
                [--repository=<repository-reference>]
