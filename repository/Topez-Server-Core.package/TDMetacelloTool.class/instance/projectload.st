@@ -2,6 +2,7 @@ project
 projectload
   "
   project load [--loads=<load-expression>]
+               [--className=<project-class-name]
                [--no-flush] [--no-get]
                [ (--baseline | --configuration --version=<version> ) ]
                [--repository=<repository-reference>]
@@ -16,11 +17,12 @@ projectload
                ( <project-name> | @<project-reference> )
 "
 
-  | projectName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption |
+  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption |
   self
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
       #('cacheRepository' nil #'required').
+      #('className' nil #'required').
       #('configuration' nil #'none').
       #('deploy' nil #'required').
       #('ignoreImage' nil #'none').
@@ -77,6 +79,10 @@ projectload
     at: ' repositoryOverrides'
     ifPresent: [ :arg | repositoryOverrides := self resolveRepositoryReference: arg ].
   subOptions
+    at: 'className'
+    ifPresent: [ :arg | projectClassName := arg ]
+    ifAbsent: [ projectClassName := nil ].
+  subOptions
     at: 'loads'
     ifPresent: [ :arg | loads := arg evaluate ]
     ifAbsent: [ 
@@ -97,6 +103,7 @@ projectload
     gsDeployer: gsDeployerOption
     selector: projectSelector
     repositoryDescription: description
+    className: projectClassName
     loads: loads
     version: configurationVersion
     onConflict: onConflict

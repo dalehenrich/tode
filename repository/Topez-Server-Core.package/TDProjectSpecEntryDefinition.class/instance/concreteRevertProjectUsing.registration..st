@@ -1,6 +1,6 @@
 actions-concrete
 concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
-  | dirtyPackageVersions packageNames |
+  | dirtyPackageVersions packageNames projectClassName |
   dirtyPackageVersions := Set new.
   packageNames := Set new.
   aProjectRegistration workingCopies
@@ -16,12 +16,16 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
   aProjectRegistration loads
     ifNotNil: [ :loadList | loads := loadList ]
     ifNil: [ loads := 'default' ].
+  self projectSpec hasClassName
+    ifTrue: [ projectClassName := self projectSpec className ]
+    ifFalse: [ projectClassName := nil ].
   ^ aProjectTool
     projectLoad: self projectName
     doGet: true
     gsDeployer: #'bulk'
     selector: aProjectRegistration projectSelector
     repositoryDescription: aProjectRegistration repositoryDescription
+    className: projectClassName
     loads: loads
     version: aProjectRegistration configurationVersionString
     onConflict: #'useNew'
