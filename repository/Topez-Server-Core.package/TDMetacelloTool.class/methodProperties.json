@@ -33,6 +33,7 @@
 		"projectCommitLogEntries:commitish:logLimit:" : "dkh 05/13/2014 12:01",
 		"projectCreateConfigurationDevelopmentVersion:spec:version:from:" : "dkh 05/16/2014 17:15",
 		"projectDiff:" : "dkh 05/29/2014 19:31",
+		"projectGet:className:selector:repositoryDescription:" : "dkh 06/16/2014 17:19",
 		"projectGet:selector:repositoryDescription:" : "dkh 05/13/2014 15:14",
 		"projectGetConfiguration:repositoryDescription:" : "dkh 06/02/2014 16:43",
 		"projectLoad:doGet:gsDeployer:selector:repositoryDescription:loads:version:onConflict:onDowngrade:onLock:onUpgrade:ignoreImage:silently:cacheRepository:repositoryOverrides:" : "dkh 06/11/2014 17:15",
