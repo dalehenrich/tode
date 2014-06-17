@@ -36,8 +36,8 @@ menuActionSpec: miniTool
   {('Project'
     ->
       {#('get' nil #'getProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
-      #('lock' nil #'lockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
-      #('unlock' nil #'unlockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
+      #('lock' nil #'lockProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
+      #('unlock' nil #'unlockProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
       #('unregister' nil #'unregisterProjectMenuAction:selectionIndex:' nil #'metacelloProject' false)})}.
   #('-').
   {('Configuration' -> self configurationMenuActionSpec)}.
