@@ -1,6 +1,6 @@
 actions-concrete
 concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
-  | dirtyPackageVersions packageNames |
+  | dirtyPackageVersions packageNames projectClassName |
   dirtyPackageVersions := Set new.
   packageNames := Set new.
   aProjectRegistration workingCopies
@@ -12,16 +12,25 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
             addAll: (wc ancestry ancestors collect: [ :each | each name ]) ] ].
   [ 
   | loads |
-  self concreteGetProjectUsing: aProjectTool registration: aProjectRegistration.
+  [ self concreteGetProjectUsing: aProjectTool registration: aProjectRegistration ]
+    on: MetacelloSkipDirtyPackageLoad
+    do: [ :ex | 
+      "get ends up with different form of projectSpec ... baseline unconditional 
+       fetch and load"
+      ex resume: false ].
   aProjectRegistration loads
     ifNotNil: [ :loadList | loads := loadList ]
     ifNil: [ loads := 'default' ].
+  self projectSpec hasClassName
+    ifTrue: [ projectClassName := self projectSpec className ]
+    ifFalse: [ projectClassName := nil ].
   ^ aProjectTool
     projectLoad: self projectName
     doGet: true
     gsDeployer: #'bulk'
     selector: aProjectRegistration projectSelector
     repositoryDescription: aProjectRegistration repositoryDescription
+    className: projectClassName
     loads: loads
     version: aProjectRegistration configurationVersionString
     onConflict: #'useNew'

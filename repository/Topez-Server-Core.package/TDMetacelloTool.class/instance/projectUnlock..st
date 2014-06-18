@@ -1,5 +1,5 @@
 project api
-projectLock: registration
+projectUnlock: registration
   | selector metacello |
   selector := registration projectSelector.
   metacello := Metacello new.
@@ -9,4 +9,4 @@ projectLock: registration
     ifTrue: [ metacello className: registration projectSpec className ].
   registration isConfigurationBased
     ifTrue: [ metacello version: registration versionString ].
-  ^ metacello lock
+  ^ metacello unlock

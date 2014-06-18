@@ -19,7 +19,7 @@ testLoginGciVersionMismatch: ex
 		nextPutAll: 'Unable to connect to netLDI ' , netLDI printString , ' on host ' , stoneHost printString , '.';
 		cr;
 		tab;
-		nextPutAll: 'The gci library ' , gciLibraryName printString , ' you are using is not compatable';
+		nextPutAll: 'The gci library ' , gciLibraryName printString , ' you are using may not be compatable with';
 		cr;
 		tab;
 		nextPutAll:

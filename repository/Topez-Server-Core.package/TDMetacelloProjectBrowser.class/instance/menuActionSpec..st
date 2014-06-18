@@ -22,6 +22,7 @@ menuActionSpec: miniTool
       #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false)})}.
   #('-').
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
+  #('configuration' nil #'editProjectConfigurationMenuAction:selectionIndex:' nil #'project' false).
   #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
   #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
@@ -35,8 +36,8 @@ menuActionSpec: miniTool
   {('Project'
     ->
       {#('get' nil #'getProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
-      #('lock' nil #'lockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
-      #('unlock' nil #'unlockProjectMenuAction:selectionIndex:' nil #'baselineProject' false).
+      #('lock' nil #'lockProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
+      #('unlock' nil #'unlockProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
       #('unregister' nil #'unregisterProjectMenuAction:selectionIndex:' nil #'metacelloProject' false)})}.
   #('-').
   {('Configuration' -> self configurationMenuActionSpec)}.
