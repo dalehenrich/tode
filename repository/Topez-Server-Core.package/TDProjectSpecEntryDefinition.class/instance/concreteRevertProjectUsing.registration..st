@@ -10,11 +10,11 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
           packageNames add: wc packageName.
           dirtyPackageVersions
             addAll: (wc ancestry ancestors collect: [ :each | each name ]) ] ].
+  [ 
+  | loads |
   [ self concreteGetProjectUsing: aProjectTool registration: aProjectRegistration ]
     on: MetacelloSkipDirtyPackageLoad
     do: [ :ex | ex resume: false ].
-  [ 
-  | loads |
   aProjectRegistration loads
     ifNotNil: [ :loadList | loads := loadList ]
     ifNil: [ loads := 'default' ].
