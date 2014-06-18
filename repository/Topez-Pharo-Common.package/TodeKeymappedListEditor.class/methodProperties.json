@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"bindBasicCmdKeyShortcuts" : "dkh 6/18/2014 15:55",
+		"bindCharacter:to:with:for:" : "dkh 6/18/2014 15:14",
+		"defaultCmdMap" : "dkh 6/18/2014 15:54",
+		"initializeCmdMaps" : "dkh 6/18/2014 15:55",
+		"listKeystroke:" : "dkh 6/18/2014 15:32",
+		"localCmdMap" : "dkh 6/18/2014 15:13",
+		"localCmdMap:" : "dkh 6/18/2014 15:13",
+		"localShiftCmdMap" : "dkh 6/18/2014 15:13",
+		"localShiftCmdMap:" : "dkh 6/18/2014 15:13",
+		"performCmdActionsWith:shifted:" : "dkh 6/18/2014 15:29" } }

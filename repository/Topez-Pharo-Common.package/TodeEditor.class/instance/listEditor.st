@@ -2,7 +2,7 @@ accessing
 listEditor
   listEditor
     ifNil: [ 
-      listEditor := TodeListEditor new.
+      listEditor := TodeKeymappedListEditor new.
       listEditor
         editor: self;
         addDependent: self ].
