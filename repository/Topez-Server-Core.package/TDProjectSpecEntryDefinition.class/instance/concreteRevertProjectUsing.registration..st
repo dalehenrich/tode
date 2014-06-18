@@ -14,7 +14,10 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
   | loads |
   [ self concreteGetProjectUsing: aProjectTool registration: aProjectRegistration ]
     on: MetacelloSkipDirtyPackageLoad
-    do: [ :ex | ex resume: false ].
+    do: [ :ex | 
+      "get ends up with different form of projectSpec ... baseline unconditional 
+       fetch and load"
+      ex resume: false ].
   aProjectRegistration loads
     ifNotNil: [ :loadList | loads := loadList ]
     ifNil: [ loads := 'default' ].
