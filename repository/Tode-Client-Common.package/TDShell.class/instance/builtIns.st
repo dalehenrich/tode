@@ -42,6 +42,10 @@ DESCRIPTION
   ----
     tODE help.
 
+  installServer
+  -----------
+    Install tODE on the server. See `installServer -h` for more information.
+
   logout
   ------
     Close all windows associated with the session and logout of remote session. 
@@ -88,7 +92,7 @@ DESCRIPTION
 
   updateServer
   -----------
-    Install/update tODE on the server. See `updateServer -h` for more information.
+    Update tODE on the server. See `updateServer -h` for more information.
 
   whatsNew
   --------

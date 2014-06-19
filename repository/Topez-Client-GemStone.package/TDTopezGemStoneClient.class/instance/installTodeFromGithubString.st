@@ -1,4 +1,4 @@
-builtins
+tode installation
 installTodeFromGithubString
 ^'Transcript cr; show: ''-----Upgrading tODE to latest master version on github''.
 Metacello new

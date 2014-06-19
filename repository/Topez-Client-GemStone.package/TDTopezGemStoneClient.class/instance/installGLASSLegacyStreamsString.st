@@ -1,4 +1,4 @@
-builtins
+tode installation
 installGLASSLegacyStreamsString
 	^'Stream installLegacyStreamImplementation.
 (Globals at: #''PositionableStream_position'') == #''ANSI''

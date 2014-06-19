@@ -1,4 +1,4 @@
-builtins
+tode installation
 installTranscriptClientForwarder
 	^ '| transcriptClientForwarder |
 transcriptClientForwarder := ClientForwarder new.

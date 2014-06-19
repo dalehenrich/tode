@@ -2,21 +2,24 @@ built-ins
 executeBuiltIn: command
 	| cmd |
 	cmd := command command.
-	^ cmd = 'updateServer'
-		ifTrue: [ self executeUpdateServer: command ]
+	^ cmd = 'installServer'
+		ifTrue: [ self executeInstallServer: command ]
 		ifFalse: [ 
-			cmd = 'restoreBackup'
-				ifTrue: [ self executeRestoreBackup: command ]
+			cmd = 'upateServer'
+				ifTrue: [ self executeUpdateServer: command ]
 				ifFalse: [ 
-					cmd = 'script'
-						ifTrue: [ self executeScript: command ]
+					cmd = 'restoreBackup'
+						ifTrue: [ self executeRestoreBackup: command ]
 						ifFalse: [ 
-							cmd = 'sessionDescription'
-								ifTrue: [ self executeSessionDescription: command ]
+							cmd = 'script'
+								ifTrue: [ self executeScript: command ]
 								ifFalse: [ 
-									cmd = 'updateClient'
-										ifTrue: [ self executeUpdateClient: command ]
+									cmd = 'sessionDescription'
+										ifTrue: [ self executeSessionDescription: command ]
 										ifFalse: [ 
-											cmd = 'debugMode'
-												ifTrue: [ self executeDebugMode: command ]
-												ifFalse: [ self perform: cmd asSymbol ] ] ] ] ] ]
+											cmd = 'updateClient'
+												ifTrue: [ self executeUpdateClient: command ]
+												ifFalse: [ 
+													cmd = 'debugMode'
+														ifTrue: [ self executeDebugMode: command ]
+														ifFalse: [ self perform: cmd asSymbol ] ] ] ] ] ] ]
