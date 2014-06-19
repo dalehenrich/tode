@@ -14,24 +14,7 @@ executeInstallServer: command
 		ifAbsent: [ 
 			| forceGLASSInstall scriptDirectory |
 			options at: 'force' ifPresent: [ :ignored | forceGLASSInstall := true ] ifAbsent: [ forceGLASSInstall := false ].
-			options
-				at: 'clientScriptPath'
-				ifPresent: [ :dirname | 
-					| path |
-					path := dirname.
-					(dirname beginsWith: '/')
-						ifFalse: [ path := TDShell updateServerHome , dirname ].
-					scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
-				ifAbsent: [ 
-					options
-						at: 'serverScriptPath'
-						ifPresent: [ :dirname | 
-							| path |
-							path := dirname.
-							(dirname beginsWith: '/')
-								ifFalse: [ path := TDShell updateServerHome , dirname ].
-							scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
-						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
+			scriptDirectory := self scriptDirectoryFrom: options.
 			options
 				at: 'topaz'
 				ifPresent: [ ^ self topezClient installTodeTopazScript: forceGLASSInstall scriptDirectory: scriptDirectory ].
