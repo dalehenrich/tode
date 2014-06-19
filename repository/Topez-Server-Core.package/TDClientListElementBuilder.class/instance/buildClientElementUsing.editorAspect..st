@@ -22,10 +22,8 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     aspect: editorAspect;
     parent: aTDEditorSpec parentObject;
     windowIsClosingBlock: theWindowIsClosingBlock;
-    keyboardEventBlock: self keyboardEventBlock;
     menuActionSpec: self menuActionSpec;
     menuActionBlock: self menuActionBlock;
-    cmdKeyCodePoints: self cmdKeyCodePoints;
     editorWindowLabel: theWindowLabel;
     editorWindowId: aTDEditorSpec windowId;
     editorWindowName: self editorWindowName;
