@@ -5,9 +5,8 @@ executeUpdateServer: command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
 			#('clientScriptPath' nil #required).
-			#('force' $f #none).
 			#('serverScriptPath' nil #required).
-			#('topaz' $t #none)}
+			}
 		optionsAndArguments: [ :opts :args | options := opts ].
 	options
 		at: 'help'
@@ -32,9 +31,6 @@ executeUpdateServer: command
 								ifFalse: [ path := TDShell updateServerHome , dirname ].
 							scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
 						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
-			options
-				at: 'topaz'
-				ifPresent: [ ^ self topezClient installTodeTopazScript: forceGLASSInstall scriptDirectory: scriptDirectory ].
 			^ self topezClient installTode: forceGLASSInstall scriptDirectory: scriptDirectory ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
@@ -45,20 +41,14 @@ executeUpdateServer: command
 
 SYNOPSIS
   updateServer [-h|--help]
-  updateServer [-t|--topaz] --serverScriptPath=<server-script-directory> 
-  updateServer [-t|--topaz] --clientScriptPath=<client-script-directory>
+  updateServer --serverScriptPath=<server-script-directory> 
+  updateServer -clientScriptPath=<client-script-directory>
   updateServer 
 
 DESCRIPTION
-  With no arguments, install tODE into a "seaside extent" (an extent with GLASS already installed).
-  The standard installation involves the following steps:
-    1. upgrade GLASS to 1.0-beta9.1
-    2. install Metacello from github://dalehenrich/metacello-work:master/repository
-    3. install GLASS1 from github://glassdb/glass:master/repository
-    4. install Tode from github://dalehenrich/tode:master/repository
-  If tODE has already been installed, step 1 is skipped and the remaining steps are performed.
+  With no arguments, update an already installed tODE to the latest version.
 
-  For each of the steps, updateServer executes a Smalltalk script that is loaded from a directory
+  updateServer executes a Smalltalk script that is loaded from a directory
   on disk. If neither --clientScriptPath nor --serverScriptPath is specified then updateServer expects
   to find a directory called `updateServer` as a sibling to the `repository` directory from which the
   BaselineOfTode has been installed on the client system.
@@ -71,8 +61,6 @@ DESCRIPTION
   the server system - where the stone and gems are executing. If <server-script-directory> is a 
   relative path, the path will be appended to TDShell class>>serverScriptsHome.
 
-  If --topaz is present, instead of executing the install script, it is returned as a topaz script.
-
 EXAMPLES
   updateServer -h
   updateServer
@@ -80,7 +68,6 @@ EXAMPLES
   updateServer --clientScriptPath=/opt/git/tode/installTode
   updateServer --serverScriptPath=install
   updateServer --serverScriptPath=/opt/git/todeHome/install
-  updateServer --topaz --clientScriptPath=/opt/git/tode/installTode
 
 ')
 				interact ]
