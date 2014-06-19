@@ -5,7 +5,7 @@ executeBuiltIn: command
 	^ cmd = 'installServer'
 		ifTrue: [ self executeInstallServer: command ]
 		ifFalse: [ 
-			cmd = 'upateServer'
+			cmd = 'updateServer'
 				ifTrue: [ self executeUpdateServer: command ]
 				ifFalse: [ 
 					cmd = 'restoreBackup'
