@@ -1,4 +1,4 @@
-builtins
+tode installation
 installTodeTopazScript: forceGLASSInstall scriptDirectory: scriptDirectory
 	| stream desc |
 	stream := WriteStream on: String new.

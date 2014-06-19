@@ -1,4 +1,4 @@
-builtins
+tode installation
 installImportScriptString
 ^'| stonTool topez |
 topez := TDTopezServer for: 0.

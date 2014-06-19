@@ -1,4 +1,4 @@
-builtins
+tode installation
 installGLASS
 	"GLASS install involves running a topaz script and at the moment there is no support
      for running a topaz script from within a Smalltalk session"
