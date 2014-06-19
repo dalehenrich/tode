@@ -4,5 +4,4 @@ browseReferencesToItMenuAction: sourceElement selectedText: aVariableOrClassName
 
   ^ self
     browseReferencesMenuAction: sourceElement
-    to: aVariableOrClassName
-    inClass: self theClass
+    className: aVariableOrClassName
