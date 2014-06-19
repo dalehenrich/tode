@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Obsolete-Console",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TodeDebugConsole",
+	"pools" : [
+		 ],
+	"super" : "TodeConsole",
+	"type" : "normal" }

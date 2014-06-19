@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Obsolete",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TodeDebuggerEditor",
+	"pools" : [
+		 ],
+	"super" : "TextEditor",
+	"type" : "normal" }

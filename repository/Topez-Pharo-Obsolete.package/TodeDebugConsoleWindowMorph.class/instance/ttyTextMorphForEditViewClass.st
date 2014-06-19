@@ -1,0 +1,3 @@
+model access
+ttyTextMorphForEditViewClass
+  ^ TodeDebugTextMorphForEditView

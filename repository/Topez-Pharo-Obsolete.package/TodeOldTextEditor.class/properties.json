@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Pharo-Obsolete",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"localShiftCmdMap",
+		"localCmdMap" ],
+	"name" : "TodeOldTextEditor",
+	"pools" : [
+		 ],
+	"super" : "TZSmalltalkEditor",
+	"type" : "normal" }

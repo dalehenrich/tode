@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"initialize" : "dkh 3/25/2014 21:04" },
+	"instance" : {
+		"bindBasicCmdKeyShortcuts:" : "dkh 3/26/2014 16:23",
+		"bindCharacter:to:with:for:" : "dkh 3/26/2014 10:39",
+		"defaultCmdMap" : "dkh 3/26/2014 14:42",
+		"dispatchCommandOn:return:" : "dkh 3/26/2014 17:01",
+		"dispatchOn:" : "dkh 3/26/2014 17:01",
+		"initializeCmdMaps" : "dkh 3/25/2014 21:51",
+		"localCmdMap" : "dkh 3/25/2014 16:49",
+		"localCmdMap:" : "dkh 3/25/2014 21:26",
+		"localShiftCmdMap" : "dkh 3/25/2014 16:49",
+		"localShiftCmdMap:" : "dkh 3/25/2014 21:26",
+		"performCmdActionsWith:shifted:return:" : "dkh 3/26/2014 15:06" } }

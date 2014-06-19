@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Obsolete-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDIndirectShell",
+	"pools" : [
+		 ],
+	"super" : "TDShell",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Obsolete",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 10/24/2012 17:09",
+	"instvars" : [
+		 ],
+	"name" : "TZSmalltalkEditor",
+	"pools" : [
+		 ],
+	"super" : "SmalltalkEditor",
+	"type" : "normal" }
