@@ -11,5 +11,5 @@
 	"name" : "TodeTextEditor",
 	"pools" : [
 		 ],
-	"super" : "TZSmalltalkEditor",
+	"super" : "TextEditor",
 	"type" : "normal" }
