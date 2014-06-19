@@ -5,33 +5,15 @@ executeUpdateServer: command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
 			#('clientScriptPath' nil #required).
-			#('serverScriptPath' nil #required).
-			}
+			#('serverScriptPath' nil #required)}
 		optionsAndArguments: [ :opts :args | options := opts ].
 	options
 		at: 'help'
 		ifAbsent: [ 
 			| forceGLASSInstall scriptDirectory |
 			options at: 'force' ifPresent: [ :ignored | forceGLASSInstall := true ] ifAbsent: [ forceGLASSInstall := false ].
-			options
-				at: 'clientScriptPath'
-				ifPresent: [ :dirname | 
-					| path |
-					path := dirname.
-					(dirname beginsWith: '/')
-						ifFalse: [ path := TDShell updateServerHome , dirname ].
-					scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
-				ifAbsent: [ 
-					options
-						at: 'serverScriptPath'
-						ifPresent: [ :dirname | 
-							| path |
-							path := dirname.
-							(dirname beginsWith: '/')
-								ifFalse: [ path := TDShell updateServerHome , dirname ].
-							scriptDirectory := self filetreeUtilityClass directoryFromPath: path ]
-						ifAbsent: [ scriptDirectory := self scriptDirectoryFromBaselineOfTode ] ].
-			^ self topezClient installTode: forceGLASSInstall scriptDirectory: scriptDirectory ]
+			scriptDirectory := self scriptDirectoryFrom: options.
+			^ self topezClient installUpdateTode: forceGLASSInstall scriptDirectory: scriptDirectory ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
 				prompt: 'Help for ' , command command;
@@ -69,5 +51,4 @@ EXAMPLES
   updateServer --serverScriptPath=install
   updateServer --serverScriptPath=/opt/git/todeHome/install
 
-')
-				interact ]
+') interact ]
