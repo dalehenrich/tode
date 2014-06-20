@@ -1,12 +1,12 @@
 actions-concrete
 concreteLoadProjectUsing: aProjectTool registration: aProjectRegistration
-  | loads entryLoads |
+  | loads  |
   aProjectRegistration loads
     ifNotNil: [ :loadList | loads := loadList ]
     ifNil: [ loads := 'default' ].
-  entryLoads := self loads.
+  self loads ifNotNil: [:entryLoads |
   entryLoads = loads
-    ifFalse: [ loads := entryLoads ].
+    ifFalse: [ loads := entryLoads ]].
   ^ aProjectTool
     projectLoad: self projectName
     selector: aProjectRegistration projectSelector
