@@ -3,7 +3,7 @@ projectGet: projectName className: className selector: projectSelector repositor
   | metacello |
   metacello := Metacello new.
   metacello perform: projectSelector with: projectName.
+  className ifNotNil: [ metacello className: className ].
   ^ metacello
-    className: className;
     repository: repositoryDescription;
     get

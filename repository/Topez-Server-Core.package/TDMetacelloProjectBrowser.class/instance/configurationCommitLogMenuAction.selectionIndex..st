@@ -4,7 +4,7 @@ configurationCommitLogMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  wc := registration projectSpec projectPackage workingCopy.
+  wc := registration projectPackage workingCopy.
   self mcTool
     mcBrowseVersionInfoFor: wc
     parentBuilder: nil
