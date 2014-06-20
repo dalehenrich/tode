@@ -8,6 +8,6 @@ isHybridRegistration: aMetacelloProjectRegistration
       | ref |
       ref := project projectReference.
       isHybrid := ref isBaselineOfProjectSpec ]
-    packageDo: [ :pkg | ^ false ]
-    groupDo: [ :group | ^ false ].
+    packageDo: [ :pkg |  ]
+    groupDo: [ :group |  ].
   ^ isHybrid
