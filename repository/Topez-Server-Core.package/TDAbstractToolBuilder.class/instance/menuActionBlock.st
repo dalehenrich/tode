@@ -1,8 +1,11 @@
 accessing
 menuActionBlock
   ^ [ :miniTool :actionSymbol :listElement :index | 
-  self
+  | menuActionResult |
+  menuActionResult := self
     menuAction: miniTool
     actionSymbol: actionSymbol
     listElement: listElement
-    selectedIndex: index ]
+    selectedIndex: index.
+  listElement topez commitTransaction.
+  menuActionResult ]

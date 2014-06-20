@@ -5,7 +5,6 @@ cutObjectMenuAction: listElement selectionIndex: selectionIndex
   def := itemAttribute object.
   self objectClipboard: def.
   def removeFromSystem.
-  listElement topez commitTransaction.
   ^ STON
     toString:
       {#'refreshList'.

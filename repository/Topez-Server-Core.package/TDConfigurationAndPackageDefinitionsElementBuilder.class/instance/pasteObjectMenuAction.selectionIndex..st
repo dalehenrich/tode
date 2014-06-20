@@ -5,5 +5,4 @@ pasteObjectMenuAction: listElement selectionIndex: selectionIndex
   targetDef := itemAttribute object.
   def := self objectClipboard.
   result := targetDef pasteTDDefinition: def.
-  listElement topez commitTransaction.
   ^ result

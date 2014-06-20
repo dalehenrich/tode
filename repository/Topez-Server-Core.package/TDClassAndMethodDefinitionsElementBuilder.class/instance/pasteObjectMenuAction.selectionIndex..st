@@ -1,9 +1,7 @@
 menu actions
 pasteObjectMenuAction: listElement selectionIndex: selectionIndex
-  | itemAttribute targetDef def result |
+  | itemAttribute targetDef def |
   itemAttribute := listElement itemCache at: selectionIndex.
   targetDef := itemAttribute object.
   def := self objectClipboard.
-  result := targetDef pasteTDDefinition: def.
-  listElement topez commitTransaction.
-  ^ result
+  ^ targetDef pasteTDDefinition: def
