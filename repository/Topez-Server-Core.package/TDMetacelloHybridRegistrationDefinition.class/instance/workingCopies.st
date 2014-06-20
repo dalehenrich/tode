@@ -2,11 +2,15 @@ accessing
 workingCopies
   "should get the workingCopies from the baseline and include the configurationOf"
 
-  | version workingCopies |
-  self halt.
+  | workingCopies |
   self isLoadedInImage
     ifFalse: [ ^ #() ].
-  version := self projectSpec version.
-  workingCopies := version packages collect: [ :pkg | pkg workingCopy ].
-  workingCopies add: self projectSpec projectPackage workingCopy.
+  workingCopies := {}.
+  {(self baselineProjectSpec).
+  (self projectSpec)}
+    do: [ :projectSpec | 
+      | version |
+      version := projectSpec version.
+      version packages do: [ :pkg | workingCopies add: pkg workingCopy ].
+      workingCopies add: projectSpec projectPackage workingCopy ].
   ^ workingCopies reject: [ :each | each isNil ]

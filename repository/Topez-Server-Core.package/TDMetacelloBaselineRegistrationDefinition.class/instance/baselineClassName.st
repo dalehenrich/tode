@@ -1,4 +1,4 @@
 accessing
-projectClassProject
+baselineClassName
   self projectSpec projectClass ifNil: [ ^ nil ].
-  ^ self projectSpec projectClassProject
+  ^ self projectSpec className

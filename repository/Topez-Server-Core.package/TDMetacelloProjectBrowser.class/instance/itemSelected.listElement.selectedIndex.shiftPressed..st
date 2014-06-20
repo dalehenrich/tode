@@ -40,7 +40,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
           enable value: #'repoBasedProject'.
           registration hasGithubRepo
             ifFalse: [ enable value: #'writableRepoBasedProject' ].
-          registration isConfigurationBased
+          (registration isConfigurationBased or: [ registration isHybridBased ])
             ifTrue: [ 
               enable
                 value: #'configurationProject';
@@ -48,7 +48,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifFalse: [ 
       registration isExternalGitProject
         ifFalse: [ enable value: #'unloadedProject' ].
-      registration isConfigurationBased
+      (registration isConfigurationBased or: [ registration isHybridBased ])
         ifTrue: [ enable value: #'loadableConfigurationProject' ] ].
   registration hasGitRepository
     ifTrue: [ 
@@ -57,7 +57,8 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
         ifFalse: [ enable value: #'nonDirtyGitProject' ] ].
   registration isMetacelloProject
     ifTrue: [ enable value: #'metacelloProject' ].
-  registration isBaselineBased
+  (registration isBaselineBased
+    or: [ registration isHybridBased and: [ registration isLoadedInImage ] ])
     ifTrue: [ enable value: #'baselineProject' ].
   enable value: #'project'.
   ^ STON

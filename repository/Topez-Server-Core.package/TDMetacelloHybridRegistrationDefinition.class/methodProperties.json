@@ -2,13 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"applyVersionStringToMetacello:" : "dkh 06/19/2014 17:49",
-		"classDefinitions" : "dkh 06/20/2014 07:01",
-		"currentVersionString" : "dkh 06/19/2014 17:50",
+		"applyVersionStringToMetacello:" : "dkh 06/20/2014 10:28",
+		"baselineClassName" : "dkh 06/20/2014 10:23",
+		"baselineProjectSpec" : "dkh 06/20/2014 10:30",
+		"classDefinitions" : "dkh 06/20/2014 10:32",
+		"configurationClassName" : "dkh 06/20/2014 10:14",
+		"currentVersionString" : "dkh 06/20/2014 09:20",
 		"isHybridBased" : "dkh 06/19/2014 17:41",
-		"projectClass" : "dkh 06/19/2014 18:05",
-		"projectClassProject" : "dkh 06/19/2014 18:05",
-		"projectSelector" : "dkh 06/19/2014 18:06",
-		"repositorySpecs" : "dkh 06/19/2014 18:01",
-		"workingCopies" : "dkh 06/19/2014 18:02",
-		"workingCopiesForCommit" : "dkh 06/19/2014 18:03" } }
+		"projectSelector" : "dkh 06/20/2014 10:21",
+		"repositorySpecs" : "dkh 06/20/2014 10:24",
+		"workingCopies" : "dkh 06/20/2014 10:27",
+		"workingCopiesForCommit" : "dkh 06/20/2014 10:28" } }
