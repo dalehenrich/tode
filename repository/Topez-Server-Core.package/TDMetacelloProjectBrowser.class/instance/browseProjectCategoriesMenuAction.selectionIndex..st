@@ -5,12 +5,8 @@ browseProjectCategoriesMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
   block := [ 
-  | version defs classDefs categories |
-  classDefs := {(TDClassDefinition className: registration projectSpec className)}.
-  classDefs
-    addAll:
-      (TDConfigurationDefinition new projectSpec: registration projectSpec)
-        classDefinitions.
+  | defs classDefs |
+  classDefs := registration classDefinitions.
   defs := (classDefs
     collect: [ :each | TDClassCategoryDefinition new categoryName: each classCategory ])
     asSet.

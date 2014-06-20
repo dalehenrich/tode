@@ -9,6 +9,12 @@ menuActionSpec: miniTool
       #('packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
       #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'metacelloProject' false)})}.
   #('-').
+  {('Edit'
+    ->
+      {#('baseline' nil #'editProjectBaselineMenuAction:selectionIndex:' nil #'baselineProject' false).
+      #('configuration' nil #'editProjectConfigurationMenuAction:selectionIndex:' nil #'configurationProject' false).
+      #('project entry' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false)})}.
+  #('-').
   {('Git'
     ->
       {#('branches' nil #'gitBranchesMenuAction:selectionIndex:' nil #'gitProject' false).
@@ -22,8 +28,6 @@ menuActionSpec: miniTool
       #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false)})}.
   #('-').
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
-  #('configuration' nil #'editProjectConfigurationMenuAction:selectionIndex:' nil #'project' false).
-  #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
   #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).

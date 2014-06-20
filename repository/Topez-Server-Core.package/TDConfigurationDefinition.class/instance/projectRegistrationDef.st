@@ -7,4 +7,4 @@ projectRegistrationDef
   ^ MetacelloProjectRegistration
     registrationForProjectSpec: spec
     ifAbsent: [ nil ]
-    ifPresent: [ :registration :ignored | TDMetacelloRegistrationDefinition new registration: registration ]
+    ifPresent: [ :registration :ignored | TDMetacelloRegistrationDefinition registration: registration ]

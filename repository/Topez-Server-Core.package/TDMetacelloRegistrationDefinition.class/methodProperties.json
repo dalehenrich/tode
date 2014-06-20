@@ -1,12 +1,16 @@
 {
 	"class" : {
-		 },
+		"isHybridRegistration:" : "dkh 06/20/2014 08:12",
+		"registration:" : "dkh 06/20/2014 10:29" },
 	"instance" : {
+		"baselineClassName" : "dkh 06/20/2014 10:17",
+		"classDefinitions" : "dkh 06/20/2014 06:59",
 		"commitMessageUsing:" : "dkh 05/15/2014 17:41",
+		"configurationClassName" : "dkh 06/20/2014 10:17",
 		"configurationProjectSpec" : "dkh 05/16/2014 07:28",
 		"configurationVersionString" : "dkh 05/16/2014 07:04",
 		"currentBranchName" : "dkh 05/20/2014 18:54",
-		"currentVersionString" : "dkh 05/20/2014 18:52",
+		"currentVersionString" : "dkh 06/20/2014 10:19",
 		"diffProjectUsing:" : "dkh 05/15/2014 17:41",
 		"emphasis" : "dkh 05/20/2014 18:49",
 		"entry" : "dkh 05/19/2014 11:52",
