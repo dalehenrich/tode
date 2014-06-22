@@ -13,6 +13,6 @@ searchMenuActionSpec
   #('-').
   #('senders of it (pure)' nil #'pureSendersMenuAction:selectedText:').
   #('-').
-  #('browse category' nil #'browseCategoryMenuAction:selectedText:').
-  #('browse package' nil #'browsePackageMenuAction:selectedText:').
-  #('browse project' nil #'browseProjectMenuAction:selectedText:')}
+  #('browse category of it' nil #'browseCategoryMenuAction:selectedText:').
+  #('browse package of it' nil #'browsePackageMenuAction:selectedText:').
+  #('browse project of it' nil #'browseProjectMenuAction:selectedText:')}
