@@ -1,17 +1,15 @@
 as yet unclassified
 classDefinitions
-  | defs version extensionDefinitions |
+  | defs registrationDef extensionDefinitions |
   defs := OrderedCollection new.
-  version := self projectSpec version.
+  registrationDef := self projectRegistrationDef.
   extensionDefinitions := Dictionary new.
-  version packages
-    do: [ :pkg | 
-      pkg workingCopy
-        ifNotNil: [ :wc | 
-          | packageInfo |
-          packageInfo := wc packageInfo.
-          self
-            classDefinitionsFor: packageInfo
-            definitions: defs
-            extensionDefinitions: extensionDefinitions ] ].
+  registrationDef workingCopies
+    do: [ :wc | 
+      | packageInfo |
+      packageInfo := wc packageInfo.
+      self
+        classDefinitionsFor: packageInfo
+        definitions: defs
+        extensionDefinitions: extensionDefinitions ].
   ^ defs

@@ -3,8 +3,8 @@
 		 },
 	"instance" : {
 		"=" : "dkh 05/28/2013 17:02",
-		"_extractPackageDefinitions" : "dkh 10/13/2013 07:59",
-		"classDefinitions" : "dkh 05/28/2013 14:01",
+		"_extractPackageDefinitions" : "dkh 06/22/2014 11:31",
+		"classDefinitions" : "dkh 06/22/2014 11:31",
 		"configurationName" : "DataCurator 02/05/2013 13:00",
 		"configurationVersionString" : "dkh 05/07/2014 11:27",
 		"hash" : "dkh 05/28/2013 17:02",
@@ -12,6 +12,6 @@
 		"packageDefinitions" : "dkh 02/24/2013 15:12",
 		"packageNamed:ifAbsent:" : "dkh 02/24/2013 15:21",
 		"pasteTDDefinition:" : "DataCurator 02/06/2013 02:05",
-		"projectRegistrationDef" : "dkh 06/20/2014 07:52",
+		"projectRegistrationDef" : "dkh 06/22/2014 11:29",
 		"projectSpec" : "dkh 05/08/2014 14:53",
 		"projectSpec:" : "DataCurator 02/05/2013 13:00" } }
