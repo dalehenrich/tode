@@ -7,6 +7,21 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
   ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
+"Install master Metacello"
+[
+  Metacello new
+	baseline: 'Metacello';
+  repository: 'github://dalehenrich/metacello-work:master/repository';
+  onConflict: [:ex | 
+    "allow new version of Metacello to be loaded"
+    ex existingProjectRegistration baseName = 'Metacello'
+      ifTrue: [ ex allow ].
+    ex disallow ];
+  load: (Smalltalk at: #'TRAVIS_LOAD_LIST').
+] on: Warning do: [:ex | 
+  Transcript cr; show: 'WARNING: ', ex description.
+  ex resume: true ].
+
 Smalltalk at: #ConfigurationOfGLASS ifPresent: [:cl |
   "Load GLASS1"
   Metacello new
