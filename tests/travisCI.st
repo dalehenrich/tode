@@ -17,7 +17,7 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
     ex existingProjectRegistration baseName = 'Metacello'
       ifTrue: [ ex allow ].
     ex disallow ];
-  load: (Smalltalk at: #'TRAVIS_LOAD_LIST').
+  load. 
 ] on: Warning do: [:ex | 
   Transcript cr; show: 'WARNING: ', ex description.
   ex resume: true ].
