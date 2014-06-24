@@ -5,6 +5,8 @@
 	"instance" : {
 		"addToSystem:" : "dkh 10/13/2013 09:32",
 		"configurationOf" : "dkh 05/22/2014 11:52",
+		"hasClassInImage" : "dkh 06/24/2014 07:54",
+		"isClassInImage" : "dkh 06/24/2014 07:54",
 		"label" : "DataCurator 02/05/2013 09:38",
 		"packageOf" : "dkh 05/22/2014 11:52",
 		"pasteIntoBehavior:" : "DataCurator 02/05/2013 23:22",
