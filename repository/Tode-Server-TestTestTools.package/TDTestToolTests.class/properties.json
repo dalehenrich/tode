@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"EnableTests" ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
