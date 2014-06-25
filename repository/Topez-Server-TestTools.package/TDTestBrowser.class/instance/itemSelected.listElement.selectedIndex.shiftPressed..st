@@ -20,5 +20,17 @@ itemSelected: miniTool listElement: listElement selectedIndex: selectionIndex sh
             selector: testCase selector
             messagePattern: testCase selector asString
             messagePatternIsRegex: false) itemSelected: listElement topez.
-          ^ true ] ].
-  ^ #'refresh'
+          ^ STON
+            toString:
+              {#'setMenuCategories:'.
+              #(#'testMethod').
+              #'clearMenuCategories:'.
+              #()} ] ].
+  ^ STON
+    toString:
+      {#'setMenuCategories:'.
+      #().
+      #'clearMenuCategories:'.
+      #(#'testMethod').
+      #'refreshView'.
+      nil}

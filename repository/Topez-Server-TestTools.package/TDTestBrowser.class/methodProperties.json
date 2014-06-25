@@ -2,10 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
+		"browseFullClassMenuAction:selectionIndex:" : "dkh 06/25/2014 16:39",
 		"clientList:listElement:" : "dkh 06/25/2014 15:47",
 		"currentTestCase" : "dkh 06/25/2014 14:30",
-		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 06/25/2014 15:24",
-		"menuActionSpec:" : "dkh 06/25/2014 13:13",
+		"debugTestsMenuAction:selectionIndex:" : "dkh 06/25/2014 16:31",
+		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 06/25/2014 16:29",
+		"menuActionSpec:" : "dkh 06/25/2014 16:37",
 		"resultSlot" : "dkh 06/25/2014 13:32",
 		"runTestsMenuAction:selectionIndex:" : "dkh 06/25/2014 15:25",
 		"testResults" : "dkh 06/25/2014 13:02",
