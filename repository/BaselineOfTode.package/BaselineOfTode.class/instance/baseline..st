@@ -120,6 +120,8 @@ baseline: spec
           with: [ spec requires: #('Topez-Server-Core' 'Topez-Server-DebugTools') ];
         package: 'Topez-Server-TestProcessTools'
           with: [ spec requires: #('Topez-Server-ProcessTools' 'Topez-Server-TestTools') ];
+        package: 'Tode-Server-TestTestTools'
+          with: [ spec requires: 'Topez-Server-TestTools' ];
         package: 'Topez-Server-Obsolete'
           with: [ spec requires: #('Topez-Server-Core') ];
         yourself.
@@ -130,7 +132,7 @@ baseline: spec
             #('Tode-GemStone-Server-Core' 'Topez-Server-DebugTools' 'Topez-Server-ProcessTools' 'Topez-Server-TestTools' 'Rewrite');
         group: 'GemStone Tests'
           with:
-            #('Common Tests' 'Topez-Server-Tests' 'Topez-Server-TestDebugTools');
+            #('Common Tests' 'Topez-Server-Tests' 'Topez-Server-TestDebugTools' 'Tode-Server-TestTestTools');
         group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
         group: 'Rewrite' with: #('Tode-BatchEdit-Tool');
         yourself ].

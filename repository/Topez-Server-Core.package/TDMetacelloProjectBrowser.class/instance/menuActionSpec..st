@@ -36,6 +36,7 @@ menuActionSpec: miniTool
   #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
   #('skew save' nil #'gitVersionSkewSaveProjectMenuAction:selectionIndex:' nil #'versionSkew' false).
+  #('test' nil #'testProjectMenuAction:selectionIndex:' nil #'loadedProject' false).
   #('-').
   {('Project'
     ->

@@ -11,6 +11,8 @@
 		"ts" : "dkh 11/10/2013 10:33",
 		"tsManPage" : "dkh 09/24/2013 10:13" },
 	"instance" : {
+		"browseRegistrationTests:" : "dkh 06/25/2014 15:41",
+		"browseTestSuite:" : "dkh 06/25/2014 15:41",
 		"defaultHomeResultsPath" : "DataCurator 12/23/2012 13:28",
 		"defaultHomeTestPath" : "dkh 12/06/2013 18:11",
 		"resultsNode:results:" : "DataCurator 01/25/2013 10:21",
@@ -19,6 +21,7 @@
 		"runTestSet:" : "07/09/2013 14:39",
 		"runTestSetErrors" : "07/09/2013 14:39",
 		"suiteNode:suite:" : "DataCurator 01/25/2013 10:21",
+		"testRegistration:" : "dkh 06/25/2014 15:39",
 		"testSuiteFor:" : "dkh 06/04/2014 15:51",
 		"testSummary" : "dkh 09/27/2013 11:11",
 		"testSummary:" : "dkh 03/10/2013 12:40",
