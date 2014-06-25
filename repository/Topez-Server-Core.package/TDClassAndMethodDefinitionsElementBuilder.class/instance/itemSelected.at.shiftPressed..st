@@ -6,4 +6,5 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   index ifNil: [ ^ nil ].
   itemAttribute := listElement itemCache at: index.
   def := itemAttribute object.
-  ^ def itemSelected: listElement topez
+  def itemSelected: listElement topez.
+  ^ STON toString: (self enableDisableMenuItems: def)

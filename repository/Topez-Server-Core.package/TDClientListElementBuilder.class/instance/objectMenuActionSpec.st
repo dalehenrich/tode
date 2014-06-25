@@ -1,7 +1,7 @@
 menu action specs
 objectMenuActionSpec
-  ^ {#('browse code' $B #'browseFullClassMenuAction:selectionIndex:').
-  #('browse class' $b #'browseClassDefinitionMenuAction:selectionIndex:').
+  ^ {#('browse class' $b #'browseClassDefinitionMenuAction:selectionIndex:').
+  #('browse full' $B #'browseFullClassMenuAction:selectionIndex:').
   #('class references' $N #'browseReferencesMenuAction:selectionIndex:').
   #('-').
   #('inspect' nil #'inspectObjectMenuAction:selectionIndex:').

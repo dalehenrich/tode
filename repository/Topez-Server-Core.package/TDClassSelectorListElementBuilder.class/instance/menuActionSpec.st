@@ -6,7 +6,7 @@ menuActionSpec
 
   | toggleLabel |
   toggleLabel := 'toggle protocol'.
-  ^ self methodMenuActionSpec
+  ^ self classMenuActionSpec , {#('-')} , self methodMenuActionSpec
     ,
       {#('-').
       #('new method' $o #'newMethodTemplateMenuAction:selectionIndex:').

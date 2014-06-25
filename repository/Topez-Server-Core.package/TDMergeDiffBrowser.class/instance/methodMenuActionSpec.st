@@ -1,6 +1,6 @@
 menu action specs
 methodMenuActionSpec
-  ^ {#('browse class' $B #'browseFullClassMenuAction:selectionIndex:' nil #'stOperation' false).
+  ^ {#('browse full' $B #'browseFullClassMenuAction:selectionIndex:' nil #'stOperation' false).
   #('browse method' nil #'browseFullMethodMenuAction:selectionIndex:' nil #'stOperation' false).
   #('-').
   #('senders' $n #'browseSendersMenuAction:selectionIndex:' nil #'stMethodOperation' false).
