@@ -14,10 +14,12 @@ clientList: miniTool listElement: listElement
       (spacer , (expectedDefects size printString , ' expected defects')).
       (spacer , (unexpectedFailures size printString , ' failures')).
       (spacer , (unexpectedErrors size printString , ' errors')).
-      (spacer , (unexpectedPasses size printString , ' unexpected passes'))} ]
+      (spacer , (unexpectedPasses size printString , ' unexpected passes'))}
+        -> nil ]
     ifFalse: [ 
       | testCases |
       testCases := self testCasesAtResultSlot.
-      ^ {(self testResultsPrintString).
+      ^ ({(self testResultsPrintString).
       (spacer , (tests size printString , ' tests'))}
-        , (testCases collect: [ :each | each printString ]) asArray sorted ]
+        , (testCases collect: [ :each | each printString ]) asArray sorted)
+        -> nil ]
