@@ -8,9 +8,15 @@
 	"instvars" : [
 		"testSuite",
 		"testResults",
-		"resultArray",
 		"resultSlot",
-		"testProcess" ],
+		"testProcess",
+		"tests",
+		"run",
+		"expectedPasses",
+		"expectedDefects",
+		"unexpectedFailures",
+		"unexpectedErrors",
+		"unexpectedPasses" ],
 	"name" : "TDTestBrowser",
 	"pools" : [
 		 ],

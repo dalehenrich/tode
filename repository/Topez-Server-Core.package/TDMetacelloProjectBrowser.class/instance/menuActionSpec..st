@@ -3,17 +3,18 @@ menuActionSpec: miniTool
   theMiniTool := miniTool.
   ^ {{('Browse'
     ->
-      {#('categories' nil #'browseProjectCategoriesMenuAction:selectionIndex:' nil #'loadedProject' false).
-      #('classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'loadedProject' false).
-      #('dirty packages' nil #'browseProjectDirtyPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
-      #('packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
-      #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'metacelloProject' false)})}.
-  #('-').
-  {('Edit'
-    ->
       {#('baseline' nil #'editProjectBaselineMenuAction:selectionIndex:' nil #'baselineProject' false).
       #('configuration' nil #'editProjectConfigurationMenuAction:selectionIndex:' nil #'configurationProject' false).
-      #('project entry' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false)})}.
+      #('project entry' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
+      #('-').
+      #('categories' nil #'browseProjectCategoriesMenuAction:selectionIndex:' nil #'loadedProject' false).
+      #('classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'loadedProject' false).
+      #('-').
+      #('dirty packages' nil #'browseProjectDirtyPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
+      #('packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
+      #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'metacelloProject' false).
+      #('-').
+      #('tests' nil #'testProjectMenuAction:selectionIndex:' nil #'loadedProject' false)})}.
   #('-').
   {('Git'
     ->
@@ -36,7 +37,6 @@ menuActionSpec: miniTool
   #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
   #('skew save' nil #'gitVersionSkewSaveProjectMenuAction:selectionIndex:' nil #'versionSkew' false).
-  #('test' nil #'testProjectMenuAction:selectionIndex:' nil #'loadedProject' false).
   #('-').
   {('Project'
     ->

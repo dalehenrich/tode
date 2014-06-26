@@ -1,4 +1,5 @@
 initialization
 testSuite: anObject
-
-   testSuite := anObject
+  self initResults.
+  testSuite := anObject.
+  tests := testSuite tests

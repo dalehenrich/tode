@@ -4,7 +4,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: selectionIndex sh
     ifTrue: [ ^ false ].
   self resultSlot == 1
     ifTrue: [ 
-      (selectionIndex > 2 and: [ self testResults runCount <= 0 ])
+      (selectionIndex > 2 and: [ run size <= 0 ])
         ifTrue: [ ^ false ].
       selectionIndex > 1
         ifTrue: [ resultSlot := selectionIndex ] ]
@@ -13,7 +13,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: selectionIndex sh
         ifTrue: [ resultSlot := selectionIndex ]
         ifFalse: [ 
           | testCase |
-          testCase := (resultArray at: resultSlot) at: selectionIndex - 2.
+          testCase := self testCasesAtResultSlot at: selectionIndex - 2.
           (TDMethodDefinition
             className: testCase class name
             isMeta: false
