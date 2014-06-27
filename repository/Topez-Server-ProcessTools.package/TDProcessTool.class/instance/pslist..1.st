@@ -6,4 +6,5 @@ pslist
     topez: topez;
     processTool: self;
     windowLabel: 'Process Browser';
+    windowName: #'processList';
     yourself) open
