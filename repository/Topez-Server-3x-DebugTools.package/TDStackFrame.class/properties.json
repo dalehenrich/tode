@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "DataCurator 05/23/2014 17:39",
+	"commentStamp" : "",
 	"instvars" : [
 		"stack",
 		"frameIndex",

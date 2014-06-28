@@ -1,5 +1,5 @@
 as yet unclassified
 formatSource: expression
   ^ (RBParser
-    parseExpression: expression asString
+    parseWorkspace: expression asString
     onError: [ :err :pos | ^ expression ]) formattedCode

@@ -12,7 +12,8 @@ baseNodeMap
           map
             add: '(receiver)' -> #'receiver';
             add: '(self)' -> #'frameSelf';
-            yourself ].
+            yourself ]
+        ifFalse: [ map add: '(self)' -> #'frameSelf' ].
       map
         add: '(home)' -> #'homeMethod';
         yourself ]

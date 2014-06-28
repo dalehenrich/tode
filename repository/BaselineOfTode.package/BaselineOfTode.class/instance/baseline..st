@@ -89,11 +89,12 @@ baseline: spec
         baseline: 'Ston'
           with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
       spec
+        package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
         package: 'Topez-Server-Core'
           with: [ 
               spec
                 postLoadDoIt: #'initializeTools';
-                requires: #('RB') ];
+                requires: #('Tode-AST-Extensions') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'

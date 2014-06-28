@@ -1,0 +1,15 @@
+{
+	"category" : "Tode-AST-Extensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"body",
+		"source" ],
+	"name" : "RBWorkspaceNode",
+	"pools" : [
+		 ],
+	"super" : "RBProgramNode",
+	"type" : "normal" }
