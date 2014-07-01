@@ -3,7 +3,7 @@ projectClone: registration
   | gitRootPath gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements |
   gitRootPath := registration gitRootPath.
   gitRootDir := ServerFileDirectory on: gitRootPath.
-  githubRepo := registration projectSpec repository createRepository.
+  githubRepo := registration cloneProjectSpec repository createRepository.
   repositoryDirPath := githubRepo directory fullName.
   projectDir := MCGitHubRepository cacheDirectoryFor: githubRepo projectPath.
   projectDirPath := (projectDir directoryNamed: githubRepo projectVersion)

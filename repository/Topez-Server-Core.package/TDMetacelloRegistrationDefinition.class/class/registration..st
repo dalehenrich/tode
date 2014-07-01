@@ -1,6 +1,11 @@
 instance creation
 registration: aMetacelloProjectRegistration
   | definitionClass |
+  aMetacelloProjectRegistration loadedInImage
+    ifFalse: [ 
+      ^ TDMetacelloUnloadedProjectRegistrationDefinition new
+        registration: aMetacelloProjectRegistration;
+        yourself ].
   aMetacelloProjectRegistration projectSpec isBaselineOfProjectSpec
     ifTrue: [ definitionClass := TDMetacelloBaselineRegistrationDefinition ]
     ifFalse: [ 

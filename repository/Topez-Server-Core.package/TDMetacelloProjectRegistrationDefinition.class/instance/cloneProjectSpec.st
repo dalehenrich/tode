@@ -1,0 +1,3 @@
+accessing
+cloneProjectSpec
+  ^ self projectSpec

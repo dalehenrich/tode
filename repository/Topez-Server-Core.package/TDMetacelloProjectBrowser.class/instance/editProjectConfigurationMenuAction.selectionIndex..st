@@ -4,13 +4,13 @@ editProjectConfigurationMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  cls := Smalltalk at: registration configurationClassName.
   ans := true.
-  cls
-    ifNil: [ 
+  cls := Smalltalk
+    at: registration configurationClassName
+    ifAbsent: [ 
       self getProjectMenuAction: listElement selectionIndex: selectionIndex.
       ans := #'refreshView'.
-      cls := Smalltalk at: registration configurationClassName ].
+      Smalltalk at: registration configurationClassName ].
   self browseTool
     browseClassHierarchy: cls
     label: 'Hierarchy of ' , cls name asString.
