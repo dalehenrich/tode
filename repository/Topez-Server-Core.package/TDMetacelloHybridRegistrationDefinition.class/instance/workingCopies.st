@@ -3,8 +3,6 @@ workingCopies
   "should get the workingCopies from the baseline and include the configurationOf"
 
   | workingCopies |
-  self isLoadedInImage
-    ifFalse: [ ^ #() ].
   workingCopies := {}.
   {(self baselineProjectSpec).
   (self projectSpec)}
