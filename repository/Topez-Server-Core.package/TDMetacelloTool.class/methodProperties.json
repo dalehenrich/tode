@@ -25,7 +25,7 @@
 		"toolName" : "dkh 05/08/2014 10:27",
 		"toolReadMe" : "dkh 05/08/2014 10:27" },
 	"instance" : {
-		"projectClone:" : "dkh 06/30/2014 20:58",
+		"projectClone:" : "dkh 07/01/2014 10:08",
 		"projectCommit:commitMessage:" : "dkh 05/16/2014 07:49",
 		"projectCommit:configCommit:gitCommit:commitMessage:" : "dkh 05/20/2014 11:32",
 		"projectCommitConfiguration:configuration:commitMessage:" : "dkh 05/20/2014 11:30",
@@ -44,7 +44,7 @@
 		"projectLoadBaseline:repositoryDescription:loads:" : "dkh 05/13/2014 15:48",
 		"projectLoadConfiguration:version:repositoryDescription:className:loads:" : "dkh 06/17/2014 12:16",
 		"projectLock:" : "dkh 06/20/2014 07:13",
-		"projectMap:toRepository:" : "dkh 05/20/2014 15:55",
+		"projectMap:from:toRepository:" : "dkh 07/01/2014 11:23",
 		"projectMerge:commitish:gitRepoDirectory:" : "dkh 05/30/2014 06:57",
 		"projectRegisterConfiguration:version:" : "dkh 05/16/2014 17:14",
 		"projectRegistrationDefinitionList" : "dkh 05/22/2014 07:27",

@@ -1,6 +1,6 @@
 project api
 projectClone: registration
-  | gitRootPath gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements |
+  | gitRootPath gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration |
   gitRootPath := registration gitRootPath.
   gitRootDir := ServerFileDirectory on: gitRootPath.
   githubRepo := registration cloneProjectSpec repository createRepository.
@@ -37,8 +37,10 @@ projectClone: registration
         'filetree://' , gitRootPath , '/' , (projectPathElements at: 2) , '/'
             , githubRepo repoPath;
     register.
+  newRegistration := self projectRegistrationFor: registration projectName.
   (self topez toolInstanceFor: 'project')
     projectMap: registration
-    toRepository: registration repository.
+    from: githubRepo
+    toRepository: newRegistration repository.
   registration isLoadedInImage
     ifTrue: [ registration versionInfo versionString: githubSha ]
