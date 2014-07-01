@@ -19,8 +19,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   #'configurationProject'.
   #'githubProject'.
   #'baselineProject'.
-  #'nonDirtyGitProject'.
-  #'loadableConfigurationProject'}.
+  #'nonDirtyGitProject'}.
   enable := [ :symbol | 
   enabled add: symbol.
   disabled remove: symbol ].
@@ -39,17 +38,10 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
         ifTrue: [ 
           enable value: #'repoBasedProject'.
           registration hasGithubRepo
-            ifFalse: [ enable value: #'writableRepoBasedProject' ].
-          (registration isConfigurationBased or: [ registration isHybridBased ])
-            ifTrue: [ 
-              enable
-                value: #'configurationProject';
-                value: #'loadableConfigurationProject' ] ] ]
+            ifFalse: [ enable value: #'writableRepoBasedProject' ] ] ]
     ifFalse: [ 
       registration isExternalGitProject
-        ifFalse: [ enable value: #'unloadedProject' ].
-      (registration isConfigurationBased or: [ registration isHybridBased ])
-        ifTrue: [ enable value: #'loadableConfigurationProject' ] ].
+        ifFalse: [ enable value: #'unloadedProject' ] ].
   registration hasGitRepository
     ifTrue: [ 
       enable value: #'gitProject'.
@@ -57,9 +49,10 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
         ifFalse: [ enable value: #'nonDirtyGitProject' ] ].
   registration isMetacelloProject
     ifTrue: [ enable value: #'metacelloProject' ].
-  (registration isBaselineBased
-    or: [ registration isHybridBased and: [ registration isLoadedInImage ] ])
+  (registration isBaselineBased or: [ registration isHybridBased ])
     ifTrue: [ enable value: #'baselineProject' ].
+  (registration isConfigurationBased or: [ registration isHybridBased ])
+    ifTrue: [ enable value: #'configurationProject' ].
   enable value: #'project'.
   ^ STON
     toString:
