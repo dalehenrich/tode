@@ -10,5 +10,4 @@ projectMap: registration from: oldRepository toRepository: newRepository
       (rg includes: oldRepository)
         ifTrue: [ 
           rg repositories do: [ :repo | rg removeRepository: repo ].
-          rg addRepository: newRepository ]
-        ifFalse: [ self halt ] ]
+          rg addRepository: newRepository ] ]
