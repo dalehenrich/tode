@@ -10,6 +10,7 @@ loadConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
     ifNil: [ 
       projectTool
         projectGetConfiguration: registration projectName
+        version: currentVersionString
         repositoryDescription: registration repositoryDescription.
       project := registration projectClassProject ].
   currentVersion := project version: currentVersionString.
