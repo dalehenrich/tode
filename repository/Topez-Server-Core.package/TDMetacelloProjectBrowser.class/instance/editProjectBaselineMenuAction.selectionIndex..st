@@ -4,17 +4,17 @@ editProjectBaselineMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  cls := Smalltalk at: registration baselineClassName.
   ans := true.
-  cls
-    ifNil: [ 
+  cls := Smalltalk
+    at: registration baselineClassName
+    ifAbsent: [ 
       registration isHybridBased
         ifTrue: [ 
           | baselineSpec repositorySpec |
           cls := Smalltalk at: registration configurationClassName.
           cls
             ifNil: [ self getProjectMenuAction: listElement selectionIndex: selectionIndex ].
-          baselineSpec := registration baselineProjectSpec.
+          baselineSpec := registration hybridBaselineProjectSpec.
           baselineSpec repositorySpecs do: [ :spec | repositorySpec := spec ].
           Transcript
             cr;
