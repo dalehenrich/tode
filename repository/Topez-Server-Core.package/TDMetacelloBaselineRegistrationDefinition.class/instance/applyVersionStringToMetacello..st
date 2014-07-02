@@ -1,4 +1,3 @@
 actions
 applyVersionStringToMetacello: aMetacello
   "noop"
-

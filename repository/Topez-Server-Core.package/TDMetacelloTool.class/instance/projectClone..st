@@ -20,7 +20,7 @@ projectClone: registration
   gitTool := topez toolInstanceFor: 'git'.
   response := gitTool
     gitcloneIn: gitRootDir
-    with: '--no-cache git@github.com:' , githubRepo projectPath , '.git'.
+    with: '--no-checkout git@github.com:' , githubRepo projectPath , '.git'.
   (response beginsWith: 'fatal:')
     ifTrue: [ self error: response ].
   response
