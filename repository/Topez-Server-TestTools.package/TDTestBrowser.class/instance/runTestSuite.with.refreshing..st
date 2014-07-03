@@ -10,7 +10,10 @@ runTestSuite: aTestSuite with: aTestResult refreshing: refreshBlock
     ensure: [ 
       notDone := false.
       testProcess := nil.
-      delay ifNotNil: [ delay signal ] ] ]
+      delay
+        ifNotNil: [ 
+          delay inProgress
+            ifTrue: [ delay signal ] ] ] ]
     fork.
   [ testProcess notNil and: [ notDone ] ]
     whileTrue: [ 
