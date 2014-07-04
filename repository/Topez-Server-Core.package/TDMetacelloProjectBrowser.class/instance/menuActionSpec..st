@@ -30,7 +30,7 @@ menuActionSpec: miniTool
   #('-').
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
-  #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
+  #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'loggableProject' false).
   #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('push' nil #'gitPushProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'dirtyProject' false).

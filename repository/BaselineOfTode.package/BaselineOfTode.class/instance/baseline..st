@@ -87,14 +87,17 @@ baseline: spec
                 loads: #('AST-Core');
                 repository: 'github://dalehenrich/rb:dev/repository' ];
         baseline: 'Ston'
-          with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ].
+          with: [ spec repository: 'github://dalehenrich/ston:gemstone/repository' ];
+        baseline: 'FileTree'
+          with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4_dev/repository' ];
+        yourself.
       spec
         package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
         package: 'Topez-Server-Core'
           with: [ 
               spec
                 postLoadDoIt: #'initializeTools';
-                requires: #('Tode-AST-Extensions') ];
+                requires: #('Tode-AST-Extensions' 'FileTree') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'

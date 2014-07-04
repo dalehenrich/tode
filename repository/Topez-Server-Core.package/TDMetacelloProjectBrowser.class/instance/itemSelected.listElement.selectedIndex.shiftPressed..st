@@ -13,6 +13,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   #'unloadedProject'.
   #'repoBasedProject'.
   #'writableRepoBasedProject'.
+  #'loggableProject'.
   #'gitProject'.
   #'project'.
   #'metacelloProject'.
@@ -22,7 +23,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   #'nonDirtyGitProject'}.
   enable := [ :symbol | 
   enabled add: symbol.
-  disabled remove: symbol ].
+  disabled remove: symbol ifAbsent: [  ] ].
   registration hasVersionSkew
     ifTrue: [ enable value: #'versionSkew' ].
   registration hasGithubRepo
@@ -38,13 +39,18 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
         ifTrue: [ 
           enable value: #'repoBasedProject'.
           registration hasGithubRepo
-            ifFalse: [ enable value: #'writableRepoBasedProject' ] ] ]
+            ifFalse: [ 
+              enable
+                value: #'writableRepoBasedProject';
+                value: #'loggableProject' ] ] ]
     ifFalse: [ 
       registration isExternalGitProject
         ifFalse: [ enable value: #'unloadedProject' ] ].
   registration hasGitRepository
     ifTrue: [ 
-      enable value: #'gitProject'.
+      enable
+        value: #'gitProject';
+        value: #'loggableProject'.
       registration isDirty
         ifFalse: [ enable value: #'nonDirtyGitProject' ] ].
   registration isMetacelloProject
