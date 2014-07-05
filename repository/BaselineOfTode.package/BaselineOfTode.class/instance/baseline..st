@@ -81,6 +81,11 @@ baseline: spec
     for: #'gemstone'
     do: [ 
       spec
+        baseline: 'GLASS1'
+          with: [ 
+              spec
+                loads: #('Base');
+                repository: 'github://glassdb/glass:master/repository' ];
         baseline: 'RB'
           with: [ 
               spec
@@ -97,7 +102,7 @@ baseline: spec
           with: [ 
               spec
                 postLoadDoIt: #'initializeTools';
-                requires: #('Tode-AST-Extensions' 'FileTree') ];
+                requires: #('Tode-AST-Extensions' 'FileTree' 'GLASS1') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
