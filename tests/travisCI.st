@@ -7,33 +7,16 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
   ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
-"Install master Metacello"
-[
-  Metacello new
-	baseline: 'Metacello';
-  repository: 'github://dalehenrich/metacello-work:master/repository';
-  onConflict: [:ex | 
-    "allow new version of Metacello to be loaded"
-    ex existingProjectRegistration baseName = 'Metacello'
-      ifTrue: [ ex allow ].
-    ex disallow ];
-  load. 
-] on: Warning do: [:ex | 
-  Transcript cr; show: 'WARNING: ', ex description.
-  ex resume: true ].
-
-Smalltalk at: #ConfigurationOfGLASS ifPresent: [:cl |
-  "Load GLASS1"
-  Metacello new
-    baseline: 'GLASS1';
-    repository: 'github://glassdb/glass:master/repository';
-    onConflict: [ :ex | ex allow ];
-    onWarning: [ :ex |
-        Transcript
-          cr;
-          show: ex description.
-        ex resume ];
-    load: 'default' ].
+"Upgrade to GLASS 1.0-beta.9.3"
+GsDeployer deploy: [
+  Gofer new
+    package: 'ConfigurationOfGLASS';
+    url: 'http://seaside.gemtalksystems.com/ss/MetacelloRepository';
+    load.
+  (((System stoneVersionAt: 'gsVersion') beginsWith: '2.') and: [glassVersion versionNumber < '1.0-beta.9.2' asMetacelloVersionNumber])
+    ifTrue: [
+      ((Smalltalk at: #ConfigurationOfGLASS) project version: '1.0-beta.9.2') load ].
+  ((Smalltalk at: #ConfigurationOfGLASS) project version: '1.0-beta.9.3') load ].
 
 "Load Tode ... "
 Metacello new
