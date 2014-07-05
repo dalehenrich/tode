@@ -86,6 +86,8 @@ baseline: spec
               spec
                 loads: #('Base');
                 repository: 'github://glassdb/glass:master/repository' ];
+        baseline: 'Metacello'
+          with: [ spec repository: 'github://dalehenrich/metacello-work:master/repository' ];
         baseline: 'RB'
           with: [ 
               spec
@@ -102,7 +104,8 @@ baseline: spec
           with: [ 
               spec
                 postLoadDoIt: #'initializeTools';
-                requires: #('Tode-AST-Extensions' 'FileTree' 'GLASS1') ];
+                requires:
+                    #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
