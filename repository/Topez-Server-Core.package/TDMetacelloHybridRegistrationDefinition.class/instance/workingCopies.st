@@ -8,7 +8,7 @@ workingCopies
   (self projectSpec)}
     do: [ :projectSpec | 
       | version |
-      version := projectSpec version.
+      version := projectSpec versionOrNil.
       version
         ifNotNil: [ 
           version packages do: [ :pkg | workingCopies add: pkg workingCopy ].

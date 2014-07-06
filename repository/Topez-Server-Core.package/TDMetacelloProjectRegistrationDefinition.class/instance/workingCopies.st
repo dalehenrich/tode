@@ -3,7 +3,11 @@ workingCopies
   | version workingCopies |
   self isLoadedInImage
     ifTrue: [ 
-      version := self projectSpec version.
+      version := self projectSpec versionOrNil.
+      version
+        ifNil: [ 
+          "project has been unloaded from image"
+          ^ #() ].
       workingCopies := version packages collect: [ :pkg | pkg workingCopy ] ]
     ifFalse: [ workingCopies := {} ].
   workingCopies add: self projectSpec projectPackage workingCopy.

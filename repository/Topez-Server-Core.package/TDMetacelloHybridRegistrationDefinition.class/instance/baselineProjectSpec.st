@@ -2,6 +2,7 @@ accessing
 baselineProjectSpec
   | projectSpec |
   projectSpec := self projectSpec.
+  projectSpec versionOrNil ifNil: [ ^ nil ].
   projectSpec version spec
     projectDo: [ :project | 
       | ref |
