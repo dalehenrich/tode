@@ -9,6 +9,8 @@ workingCopies
     do: [ :projectSpec | 
       | version |
       version := projectSpec version.
-      version packages do: [ :pkg | workingCopies add: pkg workingCopy ].
-      workingCopies add: projectSpec projectPackage workingCopy ].
+      version
+        ifNotNil: [ 
+          version packages do: [ :pkg | workingCopies add: pkg workingCopy ].
+          workingCopies add: projectSpec projectPackage workingCopy ] ].
   ^ workingCopies reject: [ :each | each isNil ]
