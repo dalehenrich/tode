@@ -2,7 +2,7 @@ accessing
 customDefaultAction
   | answer process |
   answer := UIManager default
-    confirm: self description
+    confirm: (self description withNoLineLongerThan: 80)
     trueChoice: 'Proceed'
     falseChoice: 'Abort'
     cancelChoice: 'Debug'
