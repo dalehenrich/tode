@@ -106,6 +106,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDClassSelectorListElementBuilder
       for: TDClassDefinition
       aspect: #'instanceSelectors';
+    registerEditorClass: TDClassProtocolListElementBuilder
+      for: TDClassDefinition
+      aspect: #'protocolList';
     registerEditorClass: TDClassDefinitionClientElementBuilder
       for: Class
       aspect: #'classDefinition';

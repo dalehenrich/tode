@@ -1,0 +1,3 @@
+testing
+isProtocolInImage
+  ^ false

@@ -7,4 +7,7 @@ methodMenuActionSpec
   #('enable all breakpoints' nil #'enableAllBreakpointMenuAction:').
   #('disable all breakpoints' nil #'disableAllBreakpointMenuAction:').
   #('-').
-  #('versions' nil #'methodVersionsMenuAction:')}
+  {('Versions'
+    ->
+      {#('image' nil #'methodVersionsMenuAction:').
+      #('git' nil #'gitMethodVersionsMenuAction:')})}}

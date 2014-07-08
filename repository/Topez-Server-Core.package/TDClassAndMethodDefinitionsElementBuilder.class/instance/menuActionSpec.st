@@ -4,5 +4,6 @@ menuActionSpec
 
   "works in concert with menuActionBlock"
 
-  ^ self classMenuActionSpec , {#('-')} , self methodMenuActionSpec , {#('-')}
+  ^ self classMenuActionSpec , {#('-')}
+    , {{('Method' -> self methodMenuActionSpec)}} , {#('-')}
     , self standardMenuActionSpec

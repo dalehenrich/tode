@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 clientListElement
   ^ TodeClientListElement new
     theObject: self object;

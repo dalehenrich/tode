@@ -1,4 +1,4 @@
-as yet unclassified
+tools
 buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
   | clientListElement theWindowLabel theWindowIsClosingBlock |
   self
