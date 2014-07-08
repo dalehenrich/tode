@@ -1,5 +1,5 @@
 as yet unclassified
-removeFromSystem
+removeFromSystem: topez
   (self theBehavior includesCategory: self categoryName)
     ifTrue: [ self theBehavior removeCategory: self categoryName ].
   ^ true

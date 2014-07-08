@@ -12,10 +12,12 @@ itemSelected: miniTool listElement: listElement selectedIndex: selectionIndex sh
       selectionIndex < 3
         ifTrue: [ resultSlot := selectionIndex ]
         ifFalse: [ 
-          | testCase |
+          | testCase testMethodClass |
           testCase := self testCasesAtResultSlot at: selectionIndex - 2.
+          testMethodClass := testCase class
+            whichClassIncludesSelector: testCase selector asString.
           (TDMethodDefinition
-            className: testCase class name
+            className: testMethodClass name
             isMeta: false
             selector: testCase selector
             messagePattern: testCase selector asString

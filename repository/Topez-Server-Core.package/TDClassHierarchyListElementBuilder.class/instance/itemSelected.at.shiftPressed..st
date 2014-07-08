@@ -2,6 +2,8 @@ as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
   | aspect classDef itemAttribute classDefClientElement instanceSelClientElement classSelClientElement stonArray |
   index ifNil: [ ^ nil ].
+  index > listElement itemCache size
+    ifTrue: [ ^ nil ].
   itemAttribute := listElement itemCache at: index.
   classDef := itemAttribute object.
   aspect := itemAttribute aspect.

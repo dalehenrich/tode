@@ -1,3 +1,5 @@
 cut/copy/paste
-removeFromSystem: aTDMonticelloTool
-  aTDMonticelloTool mrremoveRepository: self repository
+removeFromSystem: topez
+  | mrTool |
+  mrTool := topez toolInstanceFor: 'mr'.
+  mrTool mrremoveRepository: self repository

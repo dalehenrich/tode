@@ -1,3 +1,5 @@
 cut/copy/paste
-removeFromSystem: aTDMonticelloTool
-  aTDMonticelloTool mcdeleteWorkingCopy: self workingCopy
+removeFromSystem: topez
+  | mcTool |
+  mcTool := topez toolInstanceFor: 'mc'.
+  mcTool mcdeleteWorkingCopy: self workingCopy
