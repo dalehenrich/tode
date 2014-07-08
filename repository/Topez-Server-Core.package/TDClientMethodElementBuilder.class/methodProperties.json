@@ -10,6 +10,7 @@
 		"browseMyProjectMenuAction:" : "dkh 06/22/2014 13:23",
 		"browseReferencesToItInMyClassMenuAction:selectedText:" : "dkh 06/22/2014 13:09",
 		"browseReferencesToItMenuAction:selectedText:" : "dkh 06/18/2014 20:49",
+		"buildClientElementUsing:editorAspect:" : "dkh 07/07/2014 18:32",
 		"clearAllBreakpointMenuAction:" : "dkh 03/26/2014 21:32",
 		"clearBreakpointMenuAction:" : "dkh 03/26/2014 21:30",
 		"clientSourceElement" : "DataCurator 01/11/2013 15:50",
@@ -34,8 +35,9 @@
 		"referencesTo:editorSource:selectionInterval:" : "dkh 06/03/2014 14:07",
 		"searchMenuActionSpec" : "dkh 06/22/2014 13:16",
 		"setBreakPoint:selectionInterval:" : "dkh 06/05/2014 14:49",
-		"setBreakpointMenuAction:selectionInterval:dirty:" : "dkh 07/07/2014 16:46",
+		"setBreakpointMenuAction:selectionInterval:dirty:" : "dkh 07/07/2014 19:31",
 		"sourceRange" : "DataCurator 01/11/2013 15:48",
+		"spawnCopyBlock" : "dkh 07/07/2014 19:32",
 		"standardMenuActionSpec" : "dkh 04/18/2014 07:19",
 		"theBehavior" : "dkh 06/22/2014 11:19",
 		"theClass" : "dkh 06/22/2014 11:19" } }

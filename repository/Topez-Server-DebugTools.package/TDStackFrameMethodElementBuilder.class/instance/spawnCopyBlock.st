@@ -1,5 +1,7 @@
 as yet unclassified
 spawnCopyBlock
+  "explicit direct reference to formatOnDisplay and formatOnAccept - nil should stay nil"
+
   self inClass ifNil: [ ^ nil ].
   ^ [ 
   | newObject |
@@ -9,4 +11,6 @@ spawnCopyBlock
     selector: self selector.
   (TDMethodDefinitionElementBuilder new
     object: newObject;
+    formatOnDisplay: formatOnDisplay;
+    formatOnAccept: formatOnAccept;
     yourself) buildClientElementUsing: self theEditorSpec editorAspect: nil ]

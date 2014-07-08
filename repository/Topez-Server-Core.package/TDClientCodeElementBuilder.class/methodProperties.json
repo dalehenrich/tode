@@ -4,8 +4,10 @@
 	"instance" : {
 		"clientSourceElementClass" : "DataCurator 01/11/2013 15:42",
 		"elementSource:clientSourceElement:" : "dkh 05/17/2013 10:13",
-		"formatOnAccept" : "dkh 09/15/2013 21:54",
-		"formatOnDisplay" : "dkh 09/15/2013 21:54",
+		"formatOnAccept" : "dkh 07/07/2014 18:19",
+		"formatOnAccept:" : "dkh 07/07/2014 18:20",
+		"formatOnDisplay" : "dkh 07/07/2014 18:19",
+		"formatOnDisplay:" : "dkh 07/07/2014 18:20",
 		"formatSource:" : "dkh 06/28/2014 22:25",
 		"formattedElementSource" : "dkh 02/16/2013 13:06",
 		"formattedElementSource:" : "dkh 02/16/2013 13:04" } }
