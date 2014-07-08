@@ -10,6 +10,11 @@ todeMenuCommandOn: aBuilder
 				order: 1.0;
 				target: self;
 				withSeparatorAfter.
+			(aBuilder item: #'tODE Edit')
+				parent: #tODE;
+				order: 1.5;
+				target: self;
+				withSeparatorAfter.
 			(aBuilder item: #'tODE Test Login')
 				parent: #tODE;
 				order: 2.0;

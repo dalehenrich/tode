@@ -12,6 +12,9 @@ importSessionDescriptionFrom: file for: aBuilder
 		parent: #'tODE Shell';
 		action: [ TDShell openOnSessionDescription: sessionDescription ].
 	(aBuilder item: sessionDescription name asSymbol)
+		parent: #'tODE Edit';
+		action: [ self new openWorkspace: sessionDescription editTemplate styling: true label: sessionDescription name ].
+	(aBuilder item: sessionDescription name asSymbol)
 		parent: #'tODE Test Login';
 		action: [ 
 					| answer |

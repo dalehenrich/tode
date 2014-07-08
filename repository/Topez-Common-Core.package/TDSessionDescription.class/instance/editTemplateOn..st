@@ -75,4 +75,4 @@ editTemplateOn: stream
     nextPut: $;;
     cr;
     tab;
-    nextPutAll: 'yourself.'
+    nextPutAll: 'yourself'
