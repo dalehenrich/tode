@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"enableTests" : "dkh 06/25/2014 16:44",
+		"enableTests:" : "dkh 06/25/2014 16:44" },
+	"instance" : {
+		"enableTests" : "dkh 06/25/2014 16:45",
+		"expectedFailures" : "dkh 06/25/2014 16:46",
+		"testError" : "dkh 06/25/2014 16:46",
+		"testError2" : "dkh 06/25/2014 16:46",
+		"testExpectedDefect" : "dkh 06/25/2014 16:46",
+		"testFailure" : "dkh 06/25/2014 16:46",
+		"testFailure2" : "dkh 06/25/2014 16:46",
+		"testLongRunnerPass" : "dkh 06/25/2014 16:47",
+		"testPass" : "dkh 06/25/2014 16:47",
+		"testPass2" : "dkh 06/25/2014 16:47",
+		"testUnexpectedPass" : "dkh 06/25/2014 16:47" } }

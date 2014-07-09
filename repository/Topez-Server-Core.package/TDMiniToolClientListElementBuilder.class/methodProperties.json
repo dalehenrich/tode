@@ -3,10 +3,9 @@
 		 },
 	"instance" : {
 		"clientList:" : "10/07/2013 10:50",
-		"codePointMap" : "dkh 10/13/2013 10:02",
 		"defaultEditorWindowLocation" : "10/07/2013 10:55",
+		"inspectBuilderMenuAction:selectionIndex:" : "dkh 06/24/2014 12:09",
 		"itemSelected:at:shiftPressed:" : "dkh 04/19/2014 09:36",
-		"menuActionBlock" : "dkh 02/23/2014 18:01",
+		"menuActionBlock" : "dkh 06/20/2014 12:08",
 		"menuActionSpec" : "10/07/2013 10:12",
-		"objectMenuActionSpec" : "dkh 05/09/2014 12:24",
 		"windowIsClosingBlock" : "dkh 10/20/2013 10:39" } }

@@ -5,8 +5,7 @@ projectUnlock: registration
   metacello := Metacello new.
   metacello perform: selector with: registration projectName.
   metacello repository: registration repositoryDescription.
-  registration projectSpec hasClassName
-    ifTrue: [ metacello className: registration projectSpec className ].
-  registration isConfigurationBased
-    ifTrue: [ metacello version: registration versionString ].
+  registration projectSpecClassName
+    ifNotNil: [ :className | metacello className: className ].
+  registration applyVersionStringToMetacello: metacello.
   ^ metacello unlock

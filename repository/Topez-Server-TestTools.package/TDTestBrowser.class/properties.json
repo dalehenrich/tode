@@ -1,0 +1,24 @@
+{
+	"category" : "Topez-Server-TestTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"testSuite",
+		"testResults",
+		"resultSlot",
+		"testProcess",
+		"tests",
+		"run",
+		"expectedPasses",
+		"expectedDefects",
+		"unexpectedFailures",
+		"unexpectedErrors",
+		"unexpectedPasses" ],
+	"name" : "TDTestBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDStandardToolBuilder",
+	"type" : "normal" }

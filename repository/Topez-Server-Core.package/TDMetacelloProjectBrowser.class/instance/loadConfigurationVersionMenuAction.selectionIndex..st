@@ -10,6 +10,7 @@ loadConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
     ifNil: [ 
       projectTool
         projectGetConfiguration: registration projectName
+        version: currentVersionString
         repositoryDescription: registration repositoryDescription.
       project := registration projectClassProject ].
   currentVersion := project version: currentVersionString.
@@ -22,9 +23,7 @@ loadConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
     values: nil) signal.
   selectedVersionIndex ifNil: [ ^ false ].
   selectedVersion := versions at: selectedVersionIndex.
-  registration projectSpec hasClassName
-    ifTrue: [ projectClassName := registration projectSpec className ]
-    ifFalse: [ projectClassName := nil ].
+  projectClassName := registration projectSpecClassName.
   projectTool
     projectLoadConfiguration: registration projectName
     version: selectedVersion versionString

@@ -6,5 +6,4 @@ topez: aTDTopezServer clientListBlock: clientListBlock menuActionSpecBlock: menu
     menuActionSpecBlock: menuActionSpecBlock
     menuActionBlock: menuActionBlock
     itemSelectedBlock: itemSelectedBlock
-    keyboardActionBlock: nil
     windowIsClosingBlock: nil

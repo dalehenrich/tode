@@ -11,4 +11,4 @@ testproject: baseName
         ifTrue: [ 
           cl isAbstract
             ifFalse: [ suite addTests: cl suite tests ] ] ].
-  ^ self testsuite: suite
+  ^ self browseTestSuite: suite

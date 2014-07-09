@@ -7,7 +7,6 @@ pasteObjectMenuAction: listElement selectionIndex: selectionIndex
       itemAttribute := listElement itemCache at: selectionIndex.
       def := itemAttribute object ].
   result := def pasteTDDefinition: self objectClipboard.
-  listElement topez commitTransaction.
   ^ result
     ifTrue: [ #'refreshList' ]
     ifFalse: [ false ]

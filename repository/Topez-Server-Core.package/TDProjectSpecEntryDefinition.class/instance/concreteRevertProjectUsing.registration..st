@@ -21,9 +21,7 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
   aProjectRegistration loads
     ifNotNil: [ :loadList | loads := loadList ]
     ifNil: [ loads := 'default' ].
-  self projectSpec hasClassName
-    ifTrue: [ projectClassName := self projectSpec className ]
-    ifFalse: [ projectClassName := nil ].
+  projectClassName := aProjectRegistration projectSpecClassName.
   ^ aProjectTool
     projectLoad: self projectName
     doGet: true

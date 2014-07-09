@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 theBehavior
   ^ self object isBehavior
     ifTrue: [ self object ]

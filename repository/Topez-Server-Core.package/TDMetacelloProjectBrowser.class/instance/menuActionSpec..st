@@ -3,11 +3,18 @@ menuActionSpec: miniTool
   theMiniTool := miniTool.
   ^ {{('Browse'
     ->
-      {#('categories' nil #'browseProjectCategoriesMenuAction:selectionIndex:' nil #'loadedProject' false).
+      {#('baseline' nil #'editProjectBaselineMenuAction:selectionIndex:' nil #'baselineProject' false).
+      #('configuration' nil #'editProjectConfigurationMenuAction:selectionIndex:' nil #'configurationProject' false).
+      #('project entry' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
+      #('-').
+      #('categories' nil #'browseProjectCategoriesMenuAction:selectionIndex:' nil #'loadedProject' false).
       #('classes' nil #'browseProjectClassesMenuAction:selectionIndex:' nil #'loadedProject' false).
+      #('-').
       #('dirty packages' nil #'browseProjectDirtyPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
       #('packages' nil #'browseProjectPackagesMenuAction:selectionIndex:' nil #'metacelloProject' false).
-      #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'metacelloProject' false)})}.
+      #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'metacelloProject' false).
+      #('-').
+      #('tests' nil #'testProjectMenuAction:selectionIndex:' nil #'loadedProject' false)})}.
   #('-').
   {('Git'
     ->
@@ -22,10 +29,8 @@ menuActionSpec: miniTool
       #('status' nil #'gitStatusMenuAction:selectionIndex:' nil #'gitProject' false)})}.
   #('-').
   #('changes' nil #'diffMenuAction:selectionIndex:' nil #'repoBasedProject' false).
-  #('configuration' nil #'editProjectConfigurationMenuAction:selectionIndex:' nil #'project' false).
-  #('edit' nil #'editProjectFileMenuAction:selectionIndex:' nil #'project' false).
   #('load' nil #'loadProjectMenuAction:selectionIndex:' nil #'metacelloProject' false).
-  #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
+  #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'loggableProject' false).
   #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('push' nil #'gitPushProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'dirtyProject' false).

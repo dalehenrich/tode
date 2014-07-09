@@ -32,4 +32,5 @@ menuActionBlock
             parentList: parentList;
             windowName: listElement editorWindowName;
             yourself) ].
+  listElement topez commitTransaction.
   result ]

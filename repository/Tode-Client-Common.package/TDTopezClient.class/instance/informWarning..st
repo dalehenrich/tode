@@ -2,7 +2,7 @@ as yet unclassified
 informWarning: aDescription
   | answer process |
   answer := UIManager default
-    confirm: aDescription
+    confirm: (aDescription withNoLineLongerThan: 80)
     trueChoice: 'Proceed'
     falseChoice: 'Abort'
     cancelChoice: 'Debug'

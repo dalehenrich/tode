@@ -2,8 +2,17 @@
 	"class" : {
 		 },
 	"instance" : {
+		"baselineClassName" : "dkh 07/01/2014 14:42",
+		"cloneProjectSpec" : "dkh 06/30/2014 21:01",
+		"configurationClassName" : "dkh 06/30/2014 19:55",
 		"configurationVersionString" : "dkh 05/23/2014 11:53",
 		"emphasis" : "dkh 05/15/2014 17:57",
+		"hasGithubRepo" : "dkh 06/30/2014 20:50",
+		"hybridBaselineProjectSpec" : "dkh 07/02/2014 14:41",
+		"hybridRepositorySpec" : "dkh 06/30/2014 20:56",
 		"isDirty" : "dkh 05/31/2014 15:25",
-		"projectSpec" : "dkh 05/15/2014 17:57",
+		"isHybridBased" : "dkh 06/30/2014 20:55",
+		"projectSpec" : "dkh 06/30/2014 21:18",
+		"registration" : "dkh 06/30/2014 21:12",
+		"registration:" : "dkh 06/30/2014 21:13",
 		"versionString" : "dkh 05/23/2014 11:52" } }

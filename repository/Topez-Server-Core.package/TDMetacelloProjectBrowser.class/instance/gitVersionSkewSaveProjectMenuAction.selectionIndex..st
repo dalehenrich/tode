@@ -31,7 +31,7 @@ gitVersionSkewSaveProjectMenuAction: listElement selectionIndex: selectionIndex
   result := gitTool gitcheckoutIn: gitRepoDirectory with: targetBranch.
   (result beginsWith: 'fatal:')
     ifTrue: [ ^ false ].
-  self self projectTool
+  self projectTool
     projectMerge: registration
     commitish: mergeBranchName
     gitRepoDirectory: gitRepoDirectory.

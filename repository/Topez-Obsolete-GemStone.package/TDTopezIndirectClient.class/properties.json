@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Obsolete-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDTopezIndirectClient",
+	"pools" : [
+		 ],
+	"super" : "TDTopezGemStoneClient",
+	"type" : "normal" }

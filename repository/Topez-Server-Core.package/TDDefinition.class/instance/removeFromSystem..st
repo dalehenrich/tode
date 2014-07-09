@@ -1,5 +1,5 @@
 cut/copy/paste
-removeFromSystem: aTool
+removeFromSystem: topez
   "noop"
 
   ^ false

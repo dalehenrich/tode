@@ -14,7 +14,8 @@
 		"allClassVarNames",
 		"allSharedPoolNames",
 		"messagePattern",
-		"messagePatternIsRegex" ],
+		"messagePatternIsRegex",
+		"spawnCopyBlock" ],
 	"name" : "TodeClientMethodElement",
 	"pools" : [
 		 ],

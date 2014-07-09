@@ -3,8 +3,11 @@ menuActionBlock
   "works in concert with #menuActionSpec"
 
   ^ [ :actionSymbol :listElement :actionArg | 
-  self theEditorSpec
+  | menuActionResult |
+  menuActionResult := self theEditorSpec
     menuAction: self
     actionSymbol: actionSymbol
     listElement: listElement
-    selectedIndex: actionArg ]
+    selectedIndex: actionArg.
+  listElement topez commitTransaction.
+  menuActionResult ]

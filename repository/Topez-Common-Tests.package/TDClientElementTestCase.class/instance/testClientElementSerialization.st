@@ -13,10 +13,8 @@ testClientElementSerialization
     editorWindowId: #'editorWindowId';
     editorWindowLocation: #'editorWindowLocation';
     editorWindowName: #'editorWindowName';
-    keyboardEventBlockOop: #'keyboardEventBlockOop';
     menuActionBlockOop: #'menuActionBlockOop';
     menuActionSpec: #'menuActionSpec';
-    cmdKeyCodePoints: #'cmdKeyCodePoints';
     windowIsClosingBlockOop: #'windowIsClosingBlockOop';
     windowBuilder: #'windowBuilder';
     yourself.

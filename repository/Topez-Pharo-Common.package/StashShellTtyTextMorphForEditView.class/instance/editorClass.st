@@ -1,5 +1,5 @@
 private
 editorClass
-    "Answer the class used to create the receiver's editor"
-
-    ^ TZSmalltalkEditor
+	"Answer the class used to create the receiver's editor"
+	
+	^TodeConsoleTextEditor

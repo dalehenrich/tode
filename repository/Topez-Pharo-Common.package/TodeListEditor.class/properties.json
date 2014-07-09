@@ -7,7 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"listIndex",
-		"list" ],
+		"list",
+		"localShiftCmdMap",
+		"localCmdMap" ],
 	"name" : "TodeListEditor",
 	"pools" : [
 		 ],

@@ -1,8 +1,13 @@
 menu action specs
 methodMenuActionSpec
-  ^ {#('senders' $n #'browseSendersMenuAction:selectionIndex:').
-  #('implementors' $m #'browseImplementorsMenuAction:selectionIndex:').
+  ^ {#('implementors in hierarchy' nil #'browseHierarchyImplementorsMenuAction:selectionIndex:' nil #'forMethod' false).
+  #('implementors' $m #'browseImplementorsMenuAction:selectionIndex:' nil #'forMethod' false).
+  #('senders' $n #'browseSendersMenuAction:selectionIndex:' nil #'forMethod' false).
+  #('-').
+  #('move to package' nil #'moveMethodToPackageMenuAction:selectionIndex:' nil #'forMethod' false).
+  #('move to protocol' $M #'moveMethodToProtocolMenuAction:selectionIndex:' nil #'forMethod' false).
+  #('-').
   {('Versions'
     ->
-      {#('image' nil #'browseMethodVersionsMenuAction:selectionIndex:').
-      #('git' nil #'browseGitMethodVersionsMenuAction:selectionIndex:')})}}
+      {#('image' nil #'browseMethodVersionsMenuAction:selectionIndex:' nil #'forMethod' false).
+      #('git' nil #'browseGitMethodVersionsMenuAction:selectionIndex:' nil #'forMethod' false)})}}

@@ -10,9 +10,7 @@
 		"getBlock",
 		"getBlockOop",
 		"setBlock",
-		"setBlockOop",
-		"cmdKeyBlock",
-		"cmdKeyBlockOop" ],
+		"setBlockOop" ],
 	"name" : "TodeClientSourceElement",
 	"pools" : [
 		 ],

@@ -1,0 +1,3 @@
+accessing
+configurationClassName
+  self subclassResponsibility

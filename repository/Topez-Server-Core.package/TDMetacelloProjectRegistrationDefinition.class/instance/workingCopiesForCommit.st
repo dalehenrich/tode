@@ -1,7 +1,11 @@
 accessing
 workingCopiesForCommit
   | version workingCopies |
-  version := self projectSpec version.
+  version := self projectSpec versionOrNil.
+  version
+    ifNil: [ 
+      "project has been unloaded from image"
+      ^ #() ].
   workingCopies := version packages collect: [ :pkg | pkg workingCopy ].
   self projectSpec isBaselineOfProjectSpec
     ifTrue: [ 

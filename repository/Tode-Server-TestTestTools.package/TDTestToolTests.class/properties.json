@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Server-TestTestTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"EnableTests" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDTestToolTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
