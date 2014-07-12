@@ -52,7 +52,7 @@ projectnew
     nextPutAll: 'projectPath: self parent printString;';
     cr;
     space: 2;
-    nextPutAll: 'status: #(#inactive);';
+    nextPutAll: 'status: #(#active);';
     cr;
     space: 2;
     nextPutAll: 'yourself'.
