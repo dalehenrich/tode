@@ -22,6 +22,7 @@ DESCRIPTION
     lock     Lock project registration
     log      Browse commit log for the Metacello project (git only)
     merge    (git only?)
+    new      (create a new project entry)
     prime    Prime the project registry
     push     (git only)
     registry Inspect the project registry
@@ -57,5 +58,6 @@ EXAMPLES
     at: 'rehome' put: self projectrehomeManPage;
     at: 'lock' put: self projectlockManPage;
     at: 'clone' put: self projectcloneManPage;
+    at: 'new' put: self projectnewManPage;
     yourself.
   ^ manPage
