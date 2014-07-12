@@ -6,7 +6,7 @@ projectnew
           new --baseline=<project-name> [--repo=<project-repo>] <project-path>
 "
 
-  | projectName repo version stream projectNode |
+  | projectName repo version stream projectNode projectPath parentNode |
   version := #'stable'.
   repo := ''.
   stream := WriteStream on: String new.
@@ -17,6 +17,7 @@ projectnew
       #('version' nil #'required').
       #('repo' nil #'required').
       #('baseline' nil #'required')}.
+  projectPath := subArguments at: 1.
   subOptions at: 'repo' ifPresent: [ :arg | repo := arg ].
   subOptions
     at: 'config'
@@ -60,4 +61,5 @@ projectnew
     name: 'project';
     contents: stream contents;
     yourself.
-  ^ self topez currentNode addChildLeafNode: projectNode
+  parentNode := self topez ensureChildrenExistIn: projectPath.
+  ^ parentNode addChildLeafNode: projectNode
