@@ -1,7 +1,7 @@
 private
 scanHomeDirForProjects: projectBlock
   | homeNode |
-  homeNode := self topez lookup: '/home'.
+  homeNode := self topez lookup: '/home' ifAbsent: [ ^ self ].
   homeNode
     childrenAndNamesDo: [ :node :nodeName | 
       node isLeaf
