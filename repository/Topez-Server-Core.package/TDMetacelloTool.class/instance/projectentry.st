@@ -1,14 +1,16 @@
 project
-projectnew
+projectentry
   "
-  project new --config=<project-name> [--version=<project-version>] 
-              [--repo=<project-repo>] <project-path>
-          new --baseline=<project-name> [--repo=<project-repo>] <project-path>
+  project entry --baseline=<project-name> [--repo=<project-repo>] <project-path>
+          entry --config=<project-name> [--version=<project-version>] 
+                [--repo=<project-repo>] <project-path>
+          entry --git=<project-name> [--repo=<git-repo-path>] <project-path>
 "
 
-  | projectName repo version stream projectNode projectPath parentNode |
+  | projectName repo version stream projectNode projectPath parentNode mcProject |
   version := #'stable'.
   repo := ''.
+  mcProject := true.
   stream := WriteStream on: String new.
   stream nextPutAll: '^TDProjectSpecEntryDefinition new'.
   self
@@ -34,19 +36,34 @@ projectnew
     ifAbsent: [ 
       subOptions
         at: 'baseline'
-        ifPresent: [ :arg | projectName := arg ]
-        ifAbsent: [ self error: 'one of --config or --baseline required' ].
+        ifPresent: [ :arg | 
+          projectName := arg.
+          stream
+            cr;
+            space: 2;
+            nextPutAll: 'baseline: ' , projectName printString ]
+        ifAbsent: [ 
+          subOptions
+            at: 'git'
+            ifPresent: [ :arg | 
+              projectName := arg.
+              mcProject := false.
+              stream := WriteStream on: String new.
+              stream nextPutAll: '^TDGitRepositoryEntryDefinition new'.
+              stream
+                cr;
+                space: 2;
+                nextPutAll: 'projectName: ' , projectName printString ]
+            ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ].
+  mcProject
+    ifTrue: [ 
       stream
         cr;
         space: 2;
-        nextPutAll: 'baseline: ' , projectName printString ].
-  stream
-    cr;
-    space: 2;
-    nextPutAll: 'repository: ' , repo printString;
-    cr;
-    space: 2;
-    nextPutAll: 'loads: ' , '''default'';'.
+        nextPutAll: 'repository: ' , repo printString;
+        cr;
+        space: 2;
+        nextPutAll: 'loads: ' , '''default'';' ].
   stream
     cr;
     space: 2;

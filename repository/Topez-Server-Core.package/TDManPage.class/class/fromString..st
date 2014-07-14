@@ -2,7 +2,7 @@ as yet unclassified
 fromString: manPageString
   "see http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap12.html for tips on documenting command syntax"
 
-  | summaryIndex synopsisIndex descriptIndex optionsIndex exampleIndex manPage |
+  | summaryIndex synopsisIndex descriptIndex optionsIndex exampleIndex manPage seeAlsoIndex |
   summaryIndex := 'NAME' size.
   synopsisIndex := manPageString indexOfSubCollection: 'SYNOPSIS'.
   descriptIndex := manPageString indexOfSubCollection: 'DESCRIPTION'.
@@ -32,7 +32,7 @@ fromString: manPageString
         (manPageString copyFrom: optionsIndex + 'OPTIONS' size to: exampleIndex - 1)
             trimBoth;
     examples:
-        (manPageString copyFrom: exampleIndex + 'EXAMPLES' size to: manPageString size)
+        (manPageString copyFrom: exampleIndex + 'EXAMPLES' size to: seeAlsoIndex - 1)
             trimBoth;
     seeAlso:
         (manPageString copyFrom: seeAlsoIndex + 'SEE ALSO' size to: manPageString size)

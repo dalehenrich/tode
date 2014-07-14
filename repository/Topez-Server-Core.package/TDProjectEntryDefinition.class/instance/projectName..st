@@ -1,4 +1,4 @@
-accessing
+initialization
 projectName: anObject
 
    projectName := anObject
