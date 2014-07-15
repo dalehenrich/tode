@@ -51,7 +51,6 @@ asText
         nextPutAll: '  ';
         nextPutAll: self seeAlso;
         cr;
-        cr;
         nextPutAll:
             (Text string: (self todeItNote: 'commands') attribute: TextEmphasis italic);
         cr;

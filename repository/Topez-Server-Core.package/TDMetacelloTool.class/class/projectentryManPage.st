@@ -26,7 +26,7 @@ DESCRIPTION
   For Git project entries you define the name of the project and the location on 
   disk where the git repository is located. For example:
 
-    project entry --git=Home --repo=$GS_HOME /home/external
+    project entry --git=projectHome --repo=$GS_HOME /home/external
 
   For Metacello project entries you define the name of the project, the type of
   the project (baseline or configuration), the repository where the baseline or
@@ -80,7 +80,7 @@ EXAMPLES
 
   project entry --baseline=External --repo=github://dalehenrich/external:master/repository /home/external
 
-  project entry --git=Home --repo=$GS_HOME /home/external
+  project entry --git=projectHome --repo=$GS_HOME /home/external
 
 SEE ALSO
   browse class --exact --hier TDProjectEntryDefinition
