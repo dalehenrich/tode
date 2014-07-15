@@ -60,7 +60,7 @@
 		"projectcommit" : "dkh 05/16/2014 07:48",
 		"projectcompare" : "dkh 05/29/2014 20:59",
 		"projectdiff" : "dkh 05/13/2014 13:31",
-		"projectentry" : "dkh 07/14/2014 09:29",
+		"projectentry" : "dkh 07/15/2014 08:06",
 		"projectlist" : "dkh 05/22/2014 07:27",
 		"projectload" : "dkh 06/17/2014 12:14",
 		"projectlock" : "dkh 06/13/2014 01:02",
@@ -72,6 +72,6 @@
 		"repositoryFlush" : "dkh 05/13/2014 13:40",
 		"repositoryflush" : "dkh 05/13/2014 13:40",
 		"resolveProjectRegistrationReference:" : "dkh 06/13/2014 01:56",
-		"scanHomeDirForProjects:" : "dkh 07/11/2014 18:18",
+		"scanHomeDirForProjects:" : "dkh 07/15/2014 08:04",
 		"sortRegistrationList:" : "dkh 05/21/2014 15:25",
 		"validateGitRepoExistsFor:" : "dkh 05/15/2014 18:39" } }

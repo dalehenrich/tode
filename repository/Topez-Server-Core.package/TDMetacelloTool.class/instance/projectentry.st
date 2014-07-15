@@ -67,9 +67,6 @@ projectentry
   stream
     cr;
     space: 2;
-    nextPutAll: 'projectPath: self parent printString;';
-    cr;
-    space: 2;
     nextPutAll: 'status: #(#active);';
     cr;
     space: 2;
