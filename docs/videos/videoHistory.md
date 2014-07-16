@@ -27,7 +27,7 @@ alt="topez: A Stepping Stone to tODE" width="240" height="180" border="10" /></a
 ## tODE: A New Development Environment for GLASS - STIC 2013
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=N2HyBW8pxgU
-" target="_blank"><img src="http://img.youtube.com/vi/N2HyBW8pxgU_I/0.jpg" 
+" target="_blank"><img src="http://img.youtube.com/vi/N2HyBW8pxgU/0.jpg" 
 alt="tODE: A New Development Environment for GLASS" width="240" height="180" border="10" /></a>
 
 ## tODE; And Now for Something Completely Different - ESUG 2013
