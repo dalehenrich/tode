@@ -17,6 +17,7 @@ DESCRIPTION
     commit   Commit the Metacello project
     compare  View differences between repository versions (git only)
     diff     View code differences between image and repository
+    entry    Create a new project entry
     list     List Metacello projects
     load     (~/bin/load)
     lock     Lock project registration
@@ -57,5 +58,6 @@ EXAMPLES
     at: 'rehome' put: self projectrehomeManPage;
     at: 'lock' put: self projectlockManPage;
     at: 'clone' put: self projectcloneManPage;
+    at: 'entry' put: self projectentryManPage;
     yourself.
   ^ manPage

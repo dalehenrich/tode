@@ -9,6 +9,14 @@ projectRegistrationDefinitionMap
     scanHomeDirForProjects: [ :projectEntry | 
       | registration |
       (map at: projectEntry projectName ifAbsent: [  ])
-        ifNil: [ map at: projectEntry projectName put: projectEntry createProjectListRegistration ]
-        ifNotNil: [ :registration | registration entry: projectEntry ] ].
+        ifNil: [ 
+          | registration |
+          registration := projectEntry createProjectListRegistration.
+          (projectEntry isLocked and: [ registration isLocked not ])
+            ifTrue: [ self projectLock: registration ].
+          map at: projectEntry projectName put: registration ]
+        ifNotNil: [ :registration | 
+          registration entry: projectEntry.
+          (projectEntry isLocked and: [ registration isLocked not ])
+            ifTrue: [ self projectLock: registration ] ] ].
   ^ map

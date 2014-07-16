@@ -40,7 +40,11 @@ projectLoad: projectName doGet: doGet gsDeployer: gsDeployerOption selector: pro
                 ifFalse: [ ex pass ] ] ] ].
   doGet
     ifTrue: [ metacello copy get ].
-  loadBlock := [ ^ metacello load: loads ].
+  loadBlock := [ 
+  | loadResult |
+  loadResult := metacello load: loads.
+  self topez resetAllGlobalNames.
+  ^ loadResult ].
   gsDeployerOption == #'none'
     ifTrue: [ loadBlock value ]
     ifFalse: [ 

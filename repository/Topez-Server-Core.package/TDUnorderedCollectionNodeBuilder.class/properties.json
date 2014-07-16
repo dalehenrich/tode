@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"collectionElements" ],
 	"name" : "TDUnorderedCollectionNodeBuilder",
 	"pools" : [
 		 ],

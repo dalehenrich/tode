@@ -2,12 +2,12 @@
 	"class" : {
 		"commandName:fromString:" : "dkh 04/20/2014 11:48",
 		"commandName:fromString:commandPath:sourceMethod:" : "dkh 04/20/2014 11:47",
-		"fromString:" : "dkh 04/20/2014 16:12",
+		"fromString:" : "dkh 07/14/2014 10:41",
 		"fromString:commandPath:sourceMethod:" : "dkh 04/17/2014 16:05",
 		"viewManPage:topez:" : "dkh 04/17/2014 21:00" },
 	"instance" : {
 		"=" : "dkh 04/20/2014 22:40",
-		"asText" : "dkh 04/28/2014 20:38",
+		"asText" : "dkh 07/15/2014 11:09",
 		"commandName" : "dkh 04/20/2014 11:42",
 		"commandName:" : "dkh 04/20/2014 11:44",
 		"commandPath" : "dkh 06/05/2013 11:06",
@@ -23,7 +23,7 @@
 		"options:" : "dkh 04/17/2014 19:37",
 		"printOn:" : "dkh 11/11/2013 16:12",
 		"regexSearch:" : "dkh 04/20/2014 13:38",
-		"seeAlso" : "dkh 04/20/2014 16:13",
+		"seeAlso" : "dkh 07/15/2014 11:08",
 		"seeAlso:" : "dkh 04/20/2014 16:06",
 		"sourceMethod" : "dkh 06/05/2013 11:07",
 		"sourceMethod:" : "dkh 04/28/2014 20:33",
@@ -32,6 +32,6 @@
 		"summary:" : "dkh 04/06/2013 09:06",
 		"synopsis" : "dkh 04/06/2013 09:25",
 		"synopsis:" : "dkh 04/06/2013 09:06",
-		"todeItNote:" : "dkh 04/28/2014 20:36",
+		"todeItNote:" : "dkh 07/14/2014 10:42",
 		"view:" : "dkh 04/17/2014 21:00",
 		"writeMdOn:" : "dkh 04/18/2014 08:02" } }
