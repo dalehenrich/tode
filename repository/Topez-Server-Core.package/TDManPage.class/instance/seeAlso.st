@@ -1,8 +1,9 @@
 as yet unclassified
 seeAlso
+  | result |
   (seeAlso == nil or: [ seeAlso isEmpty ])
-    ifTrue: [ 
-      seeAlso := ''.
-      (commandPath notNil or: [ sourceMethod notNil ])
-        ifTrue: [ seeAlso := seeAlso , self commandPath , String lf , '  ' , self sourceMethod ] ].
-  ^ seeAlso
+    ifTrue: [ seeAlso := '' ].
+  result := seeAlso.
+  commandPath ifNotNil: [ result := result , self commandPath , String lf ].
+  sourceMethod ifNotNil: [ result := result , self sourceMethod , String lf ].
+  ^ result
