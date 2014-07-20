@@ -1,3 +1,3 @@
 home
 sessionDescriptionHome
-	^ self webEditionRoot , '/dev/tode/client/descriptions/'
+	^ self todeRoot ,  '/client/descriptions/'

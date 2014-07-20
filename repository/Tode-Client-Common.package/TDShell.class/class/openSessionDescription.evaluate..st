@@ -1,4 +1,4 @@
-system menu
+instance creation
 openSessionDescription: sessionDescription evaluate: aCommand
 	| shell console |
 	shell := self new.
