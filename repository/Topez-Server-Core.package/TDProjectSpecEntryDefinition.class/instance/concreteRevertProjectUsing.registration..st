@@ -27,7 +27,7 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
     doGet: true
     gsDeployer: #'bulk'
     selector: aProjectRegistration projectSelector
-    repositoryDescription: aProjectRegistration repositoryDescription
+    description: aProjectRegistration repositoryDescription
     className: projectClassName
     loads: loads
     version: aProjectRegistration configurationVersionString
@@ -38,7 +38,7 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
     ignoreImage: false
     silently: false
     cacheRepository: nil
-    repositoryOverrides: nil ]
+    overrides: nil ]
     on: MetacelloIgnorePackageLoaded , MetacelloSkipDirtyPackageLoad , Warning
     do: [ :ex | 
       | spec dirtyVersion dirtyPackage file |

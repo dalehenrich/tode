@@ -5,7 +5,7 @@ projectLoad: projectName doGet: doGet gsDeployer: gsDeployerOption selector: pro
     doGet: doGet
     gsDeployer: gsDeployerOption
     selector: projectSelector
-    repositoryDescription: repositoryDescription
+    description: repositoryDescription
     className: nil
     loads: loads
     version: configurationVersion
@@ -16,4 +16,4 @@ projectLoad: projectName doGet: doGet gsDeployer: gsDeployerOption selector: pro
     ignoreImage: ignoreImage
     silently: silently
     cacheRepository: cacheRepository
-    repositoryOverrides: repositoryOverrides
+    overrides: repositoryOverrides

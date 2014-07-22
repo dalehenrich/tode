@@ -102,7 +102,7 @@ projectload
     doGet: doGet
     gsDeployer: gsDeployerOption
     selector: projectSelector
-    repositoryDescription: description
+    description: description
     className: projectClassName
     loads: loads
     version: configurationVersion
@@ -113,4 +113,4 @@ projectload
     ignoreImage: ignoreImage
     silently: silently
     cacheRepository: cacheRepository
-    repositoryOverrides: repositoryOverrides
+    overrides: repositoryOverrides

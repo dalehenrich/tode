@@ -7,7 +7,7 @@ projectLoadConfiguration: projectName version: version repositoryDescription: re
     doGet: true
     gsDeployer: #'bulk'
     selector: #'configuration:'
-    repositoryDescription: repositoryDescription
+    description: repositoryDescription
     className: className
     loads: loads
     version: version
@@ -18,4 +18,4 @@ projectLoadConfiguration: projectName version: version repositoryDescription: re
     ignoreImage: nil
     silently: nil
     cacheRepository: nil
-    repositoryOverrides: nil
+    overrides: nil
