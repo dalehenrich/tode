@@ -4,7 +4,8 @@ executeUpdateClient: command
 	command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
-			#('clientRepo' nil #required)}
+			#('clientRepo' nil #required).
+			#('lock' nil #none)}
 		optionsAndArguments: [ :opts :args | options := opts ].
 	options
 		at: 'help'
@@ -18,6 +19,13 @@ executeUpdateClient: command
 						baseline: 'Tode';
 						repository: todeRepository;
 						get.
+					options
+						at: 'lock'
+						ifPresent: [ :ignored | 
+							Metacello new
+								baseline: 'Tode';
+								repository: todeRepository;
+								lock ].
 					result := Metacello new
 						baseline: 'Tode';
 						repository: todeRepository;
@@ -55,5 +63,4 @@ EXAMPLES
   updateClient --help
   updateClient --clientRepo=github://dalehenrich/tode:master
   updateClient --clientRepo=filetree:///opt/git/tode/repository
-')
-				interact ]
+') interact ]
