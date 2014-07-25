@@ -26,7 +26,8 @@
 		"sessionName",
 		"sessionDescription",
 		"history",
-		"historyIndex" ],
+		"historyIndex",
+		"debugMode" ],
 	"name" : "TDShell",
 	"pools" : [
 		 ],
