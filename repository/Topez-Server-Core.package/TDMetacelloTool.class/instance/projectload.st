@@ -17,7 +17,7 @@ projectload
                ( <project-name> | @<project-reference> )
 "
 
-  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption |
+  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption repository |
   self
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
@@ -39,10 +39,9 @@ projectload
       #('version' nil #'required')}.
   projectName := subArguments at: 1.
   registration := self resolveProjectRegistrationReference: projectName.
-  description := registration repositorySpec description.
-  projectSelector := #'baseline:'.
   subOptions
     at: 'baseline'
+    ifPresent: [ projectSelector := #'baseline:' ]
     ifAbsent: [ 
       subOptions
         at: 'configuration'
@@ -61,11 +60,17 @@ projectload
                         copyFrom: 2
                         to: configurationVersion size - 1 ].
                   configurationVersion := configurationVersion asSymbol ]
-                ifFalse: [ configurationVersion := arg ] ] ] ].
-  subOptions at: 'no-flush' ifAbsent: [ self repositoryFlush ].
+                ifFalse: [ configurationVersion := arg ] ]
+            ifAbsent: [ configurationVersion := registration configurationVersionString ] ]
+        ifAbsent: [ 
+          projectSelector := registration projectSelector.
+          configurationVersion := registration configurationVersionString ] ].
   subOptions
     at: 'repository'
-    ifPresent: [ :arg | description := (self resolveRepositoryReference: arg) description ].
+    ifPresent: [ :arg | repository := self resolveRepositoryReference: arg ]
+    ifAbsent: [ repository := registration repository ].
+  description := repository description.
+  subOptions at: 'no-flush' ifAbsent: [ repository flushCache ].
   subOptions at: 'onConflict' ifPresent: [ :arg | onConflict := arg asSymbol ].
   subOptions at: 'onDowngrade' ifPresent: [ :arg | onConflict := arg asSymbol ].
   subOptions at: 'onLock' ifPresent: [ :arg | onConflict := arg asSymbol ].
