@@ -13,10 +13,20 @@ projectRegistrationDefinitionMap
           | registration |
           registration := projectEntry createProjectListRegistration.
           (projectEntry isLocked and: [ registration isLocked not ])
-            ifTrue: [ self projectLock: registration ].
+            ifTrue: [ 
+              self projectLock: registration.
+              registration := findTool
+                findProjectRegistrationExact: projectEntry projectName.
+              registration entry: projectEntry ].
           map at: projectEntry projectName put: registration ]
         ifNotNil: [ :registration | 
-          registration entry: projectEntry.
           (projectEntry isLocked and: [ registration isLocked not ])
-            ifTrue: [ self projectLock: registration ] ] ].
+            ifTrue: [ 
+              | lockedRegistration |
+              self projectLock: registration.
+              lockedRegistration := findTool
+                findProjectRegistrationExact: projectEntry projectName.
+              lockedRegistration entry: projectEntry.
+              map at: projectEntry projectName put: lockedRegistration ]
+            ifFalse: [ registration entry: projectEntry ] ] ].
   ^ map
