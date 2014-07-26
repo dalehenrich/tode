@@ -5,5 +5,5 @@ createProjectEntryNode: nodePath topez: topez
     name: 'project';
     contents: self printString;
     yourself.
-  parentNode := topez ensureChildrenExistIn: '/home/${projectDirectoryName}'.
+  parentNode := topez ensureChildrenExistIn: nodePath.
   ^ parentNode addChildLeafNode: projectNode

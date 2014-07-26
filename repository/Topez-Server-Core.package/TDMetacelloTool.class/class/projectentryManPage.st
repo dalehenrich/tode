@@ -10,9 +10,9 @@ projectentryManPage
   project entry - Create a new project entry
 
 SYNOPSIS
-  project entry --baseline=<project-name> [--repo=<project-repo>] <project-path>
+  project entry --baseline=<project-name> --repo=<project-repo> <project-path>
           entry --config=<project-name> [--version=<project-version>] 
-                [--repo=<project-repo>] <project-path>
+                --repo=<project-repo> <project-path>
           entry --git=<project-name> [--repo=<git-repo-path>] <project-path>
 
 DESCRIPTION

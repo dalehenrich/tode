@@ -2,7 +2,7 @@ tools
 itemSelected: miniTool listElement: listElement selectedIndex: index shiftPressed: shiftPressed
   | registration enabled disabled enable |
   selectedProjectName := nil.
-  index == 0
+  (index == 0 or: [ index > self projects size ])
     ifTrue: [ ^ false ].
   registration := self projects at: index.
   selectedProjectName := registration projectName.
