@@ -1,17 +1,17 @@
 as yet unclassified
-evaluateCommand: command batchMode: batchBool
-	| stonString transcriptOop |
-	stonString := STON toString: command.
+evaluateServerSmalltalk: smalltalkString batchMode: batchBool
+	| transcriptOop result |
 	batchBool
 		ifFalse: [ transcriptOop := self session clientForwarderCache keyAtValue: Transcript ].
 	[ 
 	batchBool
 		ifFalse: [ self session clientForwarderCache at: transcriptOop put: self shell console ].
-	^ self session
-		executeStringExpectingStringNB:
-			'(' , self todeServerAccessString , ' for: ' , self shell shellId asString , ') evaluateSTONCommand:'
-				, stonString printString
-		envId: self environmentId ]
+	result := self session executeStringNB: smalltalkString envId: self environmentId.
+	^ result isString
+		ifTrue: [ result ]
+		ifFalse: [ 
+			"we're interested in side effects of Smalltalk code, not result"
+			nil ] ]
 		ensure: [ 
 			(session notNil and: [ batchBool not ])
 				ifTrue: [ self session clientForwarderCache at: transcriptOop put: Transcript ] ]
