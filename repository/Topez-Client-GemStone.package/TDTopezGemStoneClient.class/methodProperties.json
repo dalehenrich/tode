@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:45",
-		"evaluateCommand:" : "dkh 5/26/2014 09:19",
+		"evaluateCommand:batchMode:" : "dkh 7/25/2014 16:51",
 		"evaluateTokens:redirectTarget:" : "dkh 5/26/2013 20:51",
 		"executeMenuActionForClientListElement:action:selectionIndex:" : "dkh 2/19/2014 18:02",
 		"executeMenuActionForClientSourceElement:action:selectedText:" : "dkh 3/25/2014 11:52",

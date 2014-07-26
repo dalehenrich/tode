@@ -1,7 +1,6 @@
 instance creation
 sessionDescription: sessionDescription evaluate: script debugMode: aBool
 	| shell |
-	shell := self new.
-	shell sessionDescription: sessionDescription.
-	shell debugMode: aBool.
-	^shell evaluate: script
+	shell := self sessionDescription: sessionDescription debugMode: aBool.
+	shell batchMode: true.
+	^ shell evaluate: script
