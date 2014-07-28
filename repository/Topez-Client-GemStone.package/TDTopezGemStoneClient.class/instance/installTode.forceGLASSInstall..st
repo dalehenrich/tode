@@ -28,6 +28,6 @@ installTode: installBlock forceGLASSInstall: forceGLASSInstall
 		do: [ :ex | self error: 'Error while installing tODE' , ex description ] ]
 		on: Error
 		do: [ :ex | 
-			self shell class debugMode
-				ifTrue: [ self halt ]
-				ifFalse: [ ex pass ] ]
+			self shell debugMode
+				ifTrue: [ ex pass ]
+				ifFalse: [ self halt  ] ]

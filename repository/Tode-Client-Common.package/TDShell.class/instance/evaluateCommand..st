@@ -6,4 +6,4 @@ evaluateCommand: command
 		ifTrue: [ ^ '' ].
 	(self builtInCommands includes: command command)
 		ifTrue: [ ^ self executeBuiltIn: command ].
-	^ (self topezClient evaluateCommand: command) convertTDEvaluateTokenResponseToText
+	^ (self topezClient evaluateCommand: command batchMode: self batchMode) convertTDEvaluateTokenResponseToText

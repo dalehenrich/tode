@@ -1,5 +1,5 @@
 project api
-projectLoad: projectName doGet: doGet gsDeployer: gsDeployerOption selector: projectSelector repositoryDescription: repositoryDescription className: projectClassName loads: loads version: configurationVersion onConflict: onConflict onDowngrade: onDowngrade onLock: onLock onUpgrade: onUpgrade ignoreImage: ignoreImage silently: silently cacheRepository: cacheRepository repositoryOverrides: repositoryOverrides
+projectLoad: projectName doGet: doGet gsDeployer: gsDeployerOption selector: projectSelector description: repositoryDescription className: projectClassName loads: loads version: configurationVersion onConflict: onConflict onDowngrade: onDowngrade onLock: onLock onUpgrade: onUpgrade ignoreImage: ignoreImage silently: silently cacheRepository: cacheRepository overrides: repositoryOverrides
   "gsDeployerOption: #bulk, #auto, #none"
 
   | metacello onBlock loadBlock |

@@ -1,18 +1,13 @@
 project
 projectentry
   "
-  project entry --baseline=<project-name> [--repo=<project-repo>] <project-path>
+  project entry --baseline=<project-name> --repo=<project-repo> <project-path>
           entry --config=<project-name> [--version=<project-version>] 
-                [--repo=<project-repo>] <project-path>
+                --repo=<project-repo> <project-path>
           entry --git=<project-name> [--repo=<git-repo-path>] <project-path>
 "
 
-  | projectName repo version stream projectNode projectPath parentNode mcProject |
-  version := #'stable'.
-  repo := ''.
-  mcProject := true.
-  stream := WriteStream on: String new.
-  stream nextPutAll: '^TDProjectSpecEntryDefinition new'.
+  | repo projectEntry projectNode projectPath |
   self
     getSubcommandOptsMixedLongShort:
       {#('config' nil #'required').
@@ -24,56 +19,31 @@ projectentry
   subOptions
     at: 'config'
     ifPresent: [ :arg | 
-      projectName := arg.
-      subOptions at: 'version' ifPresent: [ :arg | version := arg ].
-      stream
-        cr;
-        space: 2;
-        nextPutAll: 'configuration: ' , projectName printString;
-        cr;
-        space: 2;
-        nextPutAll: 'version: ' , version printString ]
+      | version |
+      projectEntry := TDProjectSpecEntryDefinition new.
+      subOptions
+        at: 'version'
+        ifPresent: [ :versionString | version := versionString ]
+        ifAbsent: [ version := #'stable' ].
+      repo ifNil: [ self error: '--repo required' ].
+      projectEntry
+        configuration: arg
+        version: version
+        repository: repo printString
+        loads: 'default' ]
     ifAbsent: [ 
       subOptions
         at: 'baseline'
-        ifPresent: [ :arg | 
-          projectName := arg.
-          stream
-            cr;
-            space: 2;
-            nextPutAll: 'baseline: ' , projectName printString ]
+        ifPresent: [ :baselineName | 
+          projectEntry := TDProjectSpecEntryDefinition new.
+          repo ifNil: [ self error: '--repo required' ].
+          projectEntry baseline: baselineName repository: repo loads: 'default' ]
         ifAbsent: [ 
           subOptions
             at: 'git'
             ifPresent: [ :arg | 
-              projectName := arg.
-              mcProject := false.
-              stream := WriteStream on: String new.
-              stream nextPutAll: '^TDGitRepositoryEntryDefinition new'.
-              stream
-                cr;
-                space: 2;
-                nextPutAll: 'projectName: ' , projectName printString ]
+              projectEntry := TDGitRepositoryEntryDefinition new.
+              projectEntry projectName: arg ]
             ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ].
-  mcProject
-    ifTrue: [ 
-      stream
-        cr;
-        space: 2;
-        nextPutAll: 'repository: ' , repo printString;
-        cr;
-        space: 2;
-        nextPutAll: 'loads: ' , '''default'';' ].
-  stream
-    cr;
-    space: 2;
-    nextPutAll: 'status: #(#active);';
-    cr;
-    space: 2;
-    nextPutAll: 'yourself'.
-  projectNode := TDObjectGatewayNode new
-    name: 'project';
-    contents: stream contents;
-    yourself.
-  parentNode := self topez ensureChildrenExistIn: projectPath.
-  ^ parentNode addChildLeafNode: projectNode
+  projectEntry status: #(#'active').
+  ^ projectEntry createProjectEntryNode: projectPath topez: self topez

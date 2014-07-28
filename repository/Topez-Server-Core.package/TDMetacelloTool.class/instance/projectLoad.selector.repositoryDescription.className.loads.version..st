@@ -5,7 +5,7 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
     doGet: true
     gsDeployer: #'bulk'
     selector: projectSelector
-    repositoryDescription: repositoryDescription
+    description: repositoryDescription
     className: className
     loads: loads
     version: version
@@ -16,4 +16,4 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
     ignoreImage: nil
     silently: nil
     cacheRepository: nil
-    repositoryOverrides: nil
+    overrides: nil

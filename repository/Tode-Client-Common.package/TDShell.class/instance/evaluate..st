@@ -18,7 +18,7 @@ evaluate: aString
 			((ex isKindOf: GsTopezCommandErrorNotification) or: [ ex isKindOf: Error ])
 				ifTrue: [ 
 					| errorMessage |
-					self class debugMode
+					self debugMode
 						ifTrue: [ ex pass ].
 					errorMessage := 'Topez ERROR: ' asText
 						,

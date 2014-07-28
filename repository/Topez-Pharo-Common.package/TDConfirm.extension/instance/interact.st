@@ -1,6 +1,8 @@
 *topez-pharo-common
 interact
 	| choice |
+	self isHeadless
+		ifTrue: [ ^ self interactHeadless ].
 	choice := UIManager default
 		confirm: self prompt
 		trueChoice: self confirm

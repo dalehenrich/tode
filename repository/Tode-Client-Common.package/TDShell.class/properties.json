@@ -6,7 +6,9 @@
 		"rootNode" ],
 	"classvars" : [
 		"DebugMode",
+		"DevKitRoot",
 		"EnableDebugger",
+		"TodePath",
 		"WebEditionRoot" ],
 	"commentStamp" : "",
 	"instvars" : [
@@ -24,7 +26,9 @@
 		"sessionName",
 		"sessionDescription",
 		"history",
-		"historyIndex" ],
+		"historyIndex",
+		"debugMode",
+		"batchMode" ],
 	"name" : "TDShell",
 	"pools" : [
 		 ],
