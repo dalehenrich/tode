@@ -29,5 +29,5 @@ installTode: installBlock forceGLASSInstall: forceGLASSInstall
 		on: Error
 		do: [ :ex | 
 			self shell debugMode
-				ifTrue: [ self halt ]
-				ifFalse: [ ex pass ] ]
+				ifTrue: [ ex pass ]
+				ifFalse: [ self halt  ] ]
