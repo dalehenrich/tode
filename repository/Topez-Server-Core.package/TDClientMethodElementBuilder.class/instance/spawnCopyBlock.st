@@ -5,7 +5,7 @@ spawnCopyBlock
   (formatOnDisplay isNil and: [ formatOnAccept isNil ])
     ifTrue: [ ^ nil ].
   ^ [ 
-  ((TDMethodDefinitionElementBuilder new
+  ((self class new
     object: self object;
     formatOnDisplay: false;
     formatOnAccept: false;
