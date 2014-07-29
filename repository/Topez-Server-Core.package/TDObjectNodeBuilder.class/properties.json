@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"indexableStartIndex",
+		"indexableEndIndex",
+		"indexableWindowSize" ],
 	"name" : "TDObjectNodeBuilder",
 	"pools" : [
 		 ],

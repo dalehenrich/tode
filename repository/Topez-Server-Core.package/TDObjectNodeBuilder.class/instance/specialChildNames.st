@@ -1,3 +1,3 @@
 as yet unclassified
 specialChildNames
-  ^ #('(class)' '(invariant)' '(oop)' '(value)' '(dependents)')
+  ^ #('(class)' '(invariant)' '(oop)' '(value)' '(dependents)' '<<more>>')
