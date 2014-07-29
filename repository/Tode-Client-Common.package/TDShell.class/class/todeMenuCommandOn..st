@@ -29,4 +29,6 @@ todeMenuCommandOn: aBuilder
 				target: self;
 				withSeparatorAfter.
 			(sessionDescriptionDir files sorted: [ :a :b | a fullName <= b fullName ])
-				do: [ :file | self importSessionDescriptionFrom: file for: aBuilder ] ]
+				do: [ :file | 
+					file basename = 'README.md'
+						ifFalse: [ self importSessionDescriptionFrom: file for: aBuilder ] ] ]
