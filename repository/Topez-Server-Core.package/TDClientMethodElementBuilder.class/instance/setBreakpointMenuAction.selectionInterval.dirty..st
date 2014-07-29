@@ -2,7 +2,9 @@ menu actions
 setBreakpointMenuAction: sourceElement selectionInterval: selectionInterval dirty: dirty
   dirty
     ifTrue: [ ^ #'flash' ].
-  sourceElement getBlock value = self method sourceString
+  (self
+    compareElementSource: sourceElement getBlock value
+    toMethod: self method sourceString)
     ifFalse: [ 
       | spawnedElement |
       "breakpoint may not match sourceInterval"
