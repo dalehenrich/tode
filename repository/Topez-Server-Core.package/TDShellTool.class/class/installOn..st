@@ -11,7 +11,7 @@ installOn: aTDTopezServer
 	 #navigate - structural access via navigator
 	 CUSTOM    - custom names for specialized window access"
 
-  | optionsNode compiledMethodClass dictionaryClass stringClass |
+  | optionsNode compiledMethodClass dictionaryClass stringClass execBlockClass |
   (aTDTopezServer ensureChildrenExistIn: '/home')
     readMe: self homeReadMe;
     yourself.
@@ -25,6 +25,9 @@ installOn: aTDTopezServer
   dictionaryClass := Smalltalk
     at: #'AbstractDictionary'
     ifAbsent: [ Smalltalk at: #'Dictionary' ].
+  execBlockClass := Smalltalk
+    at: #'ExecBlock'
+    ifAbsent: [ Smalltalk at: #'ExecutableBlock' ].
   stringClass := Smalltalk
     at: #'CharacterCollection'
     ifAbsent: [ Smalltalk at: #'String' ].
@@ -34,6 +37,9 @@ installOn: aTDTopezServer
       aspect: #'method';
     registerBuilderClass: TDDictionaryNodeBuilder
       for: dictionaryClass
+      aspect: #'view';
+    registerBuilderClass: TDExecBlockNodeBuilder
+      for: execBlockClass
       aspect: #'view';
     registerEditorClass: TDClientSourceElementBuilder
       for: stringClass
