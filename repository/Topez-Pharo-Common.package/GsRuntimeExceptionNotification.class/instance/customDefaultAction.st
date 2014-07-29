@@ -2,12 +2,7 @@ accessing
 customDefaultAction
 	| answer |
 	Smalltalk isHeadless
-		ifTrue: [ 
-			Transcript
-				cr;
-				show: (self description withNoLineLongerThan: 80).
-			^ {#abort.
-			(STON toString: 'Aborted...')} ].
+		ifTrue: [ Error signal: 'GemStone Server error: ' , self description ].
 	answer := UIManager default
 		confirm: (self description withNoLineLongerThan: 80)
 		trueChoice: 'Proceed'
