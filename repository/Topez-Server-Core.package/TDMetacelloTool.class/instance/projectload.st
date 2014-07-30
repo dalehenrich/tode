@@ -71,10 +71,16 @@ projectload
     ifAbsent: [ repository := registration repository ].
   description := repository description.
   subOptions at: 'no-flush' ifAbsent: [ repository flushCache ].
-  subOptions at: 'onConflict' ifPresent: [ :arg | onConflict := arg asSymbol ].
-  subOptions at: 'onDowngrade' ifPresent: [ :arg | onConflict := arg asSymbol ].
-  subOptions at: 'onLock' ifPresent: [ :arg | onConflict := arg asSymbol ].
-  subOptions at: 'onUpgrade' ifPresent: [ :arg | onConflict := arg asSymbol ].
+  subOptions
+    at: 'onConflict'
+    ifPresent: [ :arg | onConflict := arg asSymbol ]
+    ifAbsent: [ onConflict := #'useNew' ].
+  subOptions at: 'onDowngrade' ifPresent: [ :arg | onDowngrade := arg asSymbol ].
+  subOptions
+    at: 'onLock'
+    ifPresent: [ :arg | onLock := arg asSymbol ]
+    ifAbsent: [ onLock := #'honor' ].
+  subOptions at: 'onUpgrade' ifPresent: [ :arg | onUpgrade := arg asSymbol ].
   subOptions at: 'ignoreImage' ifPresent: [ :arg | ignoreImage := true ].
   subOptions at: 'silently' ifPresent: [ :arg | silently := true ].
   subOptions
