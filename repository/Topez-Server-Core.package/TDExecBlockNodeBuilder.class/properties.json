@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"indexableStartIndex",
-		"indexableEndIndex",
-		"indexableWindowSize" ],
-	"name" : "TDObjectNodeBuilder",
+		 ],
+	"name" : "TDExecBlockNodeBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDNodeBuilder",
+	"super" : "TDObjectNodeBuilder",
 	"type" : "normal" }

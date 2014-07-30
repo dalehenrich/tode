@@ -1,13 +1,24 @@
 as yet unclassified
 childNodeNameList: parentNode
-  | parentObj indexedSize coll specialElements ivs dvs |
+  | parentObj coll specialElements ivs dvs indexableSize moreElements |
   parentObj := parentNode basicContents.
   ivs := parentObj class allInstVarNames.
   dvs := (parentObj respondsTo: #'dynamicInstanceVariables')
     ifTrue: [ parentObj dynamicInstanceVariables ]
     ifFalse: [ #() ].
-  coll := (ivs , dvs) sorted collect: [ :each | each asString ].
-  indexedSize := (Reflection sizeOf: parentObj) - coll size.
+  moreElements := #().
+  indexableSize := Reflection sizeOf: parentObj.
+  indexableSize > self indexableWindowSize
+    ifTrue: [ 
+      indexableEndIndex := self indexableStartIndex + self indexableWindowSize - 1
+        min: indexableSize.
+      indexableEndIndex < indexableSize
+        ifTrue: [ moreElements := #('<<more>>') ] ]
+    ifFalse: [ indexableEndIndex := indexableSize - ivs size ].
   specialElements := self specialChildNodeNameList: parentNode.
+  coll := (ivs , dvs) sorted collect: [ :each | each asString ].
   ^ specialElements , coll
-    , ((1 to: indexedSize) collect: [ :each | each asString ])
+    ,
+      ((self indexableStartIndex to: indexableEndIndex)
+        collect: [ :each | each asString ])
+    , moreElements

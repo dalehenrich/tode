@@ -25,8 +25,15 @@ SYNOPSIS
 
 DESCRIPTION
 
+  Defaults:
+    deploy      - bulk
+    onConflict  - useNew
+    onLock      - honor
+    onDowngrade - useNew
+    onUpgrade   - useNew
+
 EXAMPLES
-  project load 
+  project load Seaside3
 
 '.
   ^ manPage

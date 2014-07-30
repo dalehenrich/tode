@@ -1,6 +1,18 @@
 as yet unclassified
 childNodeNameList: parentNode
-  | specialElements |
+  | specialElements collectionSize moreElements |
   specialElements := self specialChildNodeNameList: parentNode.
-  ^ specialElements , (1 to: self collectionElements size)
-    collect: [ :each | each asString ]
+  collectionSize := self collectionElements size.
+  moreElements := #().
+  collectionSize > self indexableWindowSize
+    ifTrue: [ 
+      indexableEndIndex := self indexableStartIndex + self indexableWindowSize - 1
+        min: collectionSize.
+      indexableEndIndex < collectionSize
+        ifTrue: [ moreElements := #('<<more>>') ] ]
+    ifFalse: [ indexableEndIndex := collectionSize ].
+  ^ specialElements
+    ,
+      ((self indexableStartIndex to: indexableEndIndex)
+        collect: [ :each | each asString ])
+    , moreElements
