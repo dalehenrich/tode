@@ -4,12 +4,13 @@
 		"initializeCmdKeyShortcuts" : "dkh 6/18/2014 20:11",
 		"initializeShiftCmdKeyShortcuts" : "dkh 6/18/2014 20:09" },
 	"instance" : {
-		"browse" : "dkh 7/30/2014 19:52",
+		"browse" : "dkh 7/31/2014 06:57",
 		"browseIt:" : "dkh 7/30/2014 19:52",
-		"implementors" : "dkh 7/30/2014 19:52",
+		"findSelectorFrom:" : "dkh 7/31/2014 07:00",
+		"implementors" : "dkh 7/31/2014 07:02",
 		"implementorsOfIt:" : "dkh 7/30/2014 19:52",
 		"paste:" : "dkh 7/30/2014 20:13",
 		"pasteRecent" : "dkh 7/30/2014 20:16",
-		"selectedSelector" : "dkh 6/18/2014 20:22",
-		"senders" : "dkh 7/30/2014 19:52",
+		"selectedSelector" : "dkh 7/31/2014 07:01",
+		"senders" : "dkh 7/31/2014 06:56",
 		"sendersOfIt:" : "dkh 7/30/2014 19:53" } }
