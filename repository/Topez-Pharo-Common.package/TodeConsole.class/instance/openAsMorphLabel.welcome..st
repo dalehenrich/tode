@@ -2,14 +2,14 @@ initialize-release
 openAsMorphLabel: labelString welcome: welcome
 	"Build a morph viewing this stream"
 
-	| window textMorph |
+	| window  |
 	window := (TZSystemWindow labelled: labelString) model: self.
 	textMorph := self consoleWindowMorphClass
 		on: self
 		text: nil
 		accept: nil
 		readSelection: nil
-		menu: nil.
+		menu: #consoleMenu:shifted:.
 	textMorph acceptOnCR: true.
 	window addMorph: textMorph frame: (0 @ 0 corner: 1 @ 1).
 	welcome

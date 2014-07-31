@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"consoleMenuOn:" : "dkh 7/30/2014 19:45",
 		"defaultWindowName" : "dkh 3/27/2013 09:58",
 		"new" : "dkh 3/27/2013 11:19",
 		"open" : "dkh 3/27/2013 09:56",
@@ -17,7 +18,7 @@
 		"cliShell" : "dkh 3/27/2013 10:00",
 		"cliShell:" : "dkh 3/27/2013 09:56",
 		"close" : "dkh 3/27/2013 10:04",
-		"codePaneMenu:shifted:" : "dkh 3/27/2013 09:56",
+		"consoleMenu:shifted:" : "dkh 7/30/2014 19:51",
 		"consoleWindowMorphClass" : "dkh 3/27/2013 15:13",
 		"controlShiftLKeyStroke" : "dkh 3/27/2013 10:44",
 		"controlShiftSKeyStroke" : "dkh 3/27/2013 10:44",
@@ -43,7 +44,7 @@
 		"nextPut:" : "dkh 3/27/2013 14:00",
 		"nextPutAll:" : "dkh 3/27/2013 14:00",
 		"open" : "dkh 3/27/2013 09:56",
-		"openAsMorphLabel:welcome:" : "dkh 3/24/2014 18:18",
+		"openAsMorphLabel:welcome:" : "dkh 7/30/2014 19:36",
 		"pastEndPut:" : "dkh 3/27/2013 09:56",
 		"perform:orSendTo:" : "dkh 3/27/2013 09:56",
 		"previousHistory" : "dkh 3/27/2013 15:44",

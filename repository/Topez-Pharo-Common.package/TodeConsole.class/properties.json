@@ -9,7 +9,8 @@
 		"cliShell",
 		"lastPromptString",
 		"activeController",
-		"labelStringBlock" ],
+		"labelStringBlock",
+		"textMorph" ],
 	"name" : "TodeConsole",
 	"pools" : [
 		 ],
