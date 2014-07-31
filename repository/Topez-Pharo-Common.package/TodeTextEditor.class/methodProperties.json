@@ -5,7 +5,7 @@
 		"bindBasicCmdKeyShortcuts:" : "dkh 6/18/2014 18:33",
 		"bindCharacter:to:with:for:" : "dkh 6/18/2014 18:33",
 		"defaultCmdMap" : "dkh 6/18/2014 18:33",
-		"dispatchCommandOn:return:" : "dkh 7/30/2014 17:50",
+		"dispatchCommandOn:return:" : "dkh 7/31/2014 13:31",
 		"dispatchOn:" : "dkh 6/18/2014 18:33",
 		"handleKeystrokeAction:" : "dkh 6/22/2014 09:19",
 		"initializeCmdMaps" : "dkh 6/18/2014 18:33",
@@ -15,4 +15,4 @@
 		"localShiftCmdMap:" : "dkh 6/18/2014 18:33",
 		"notify:at:in:" : "dkh 6/22/2014 09:10",
 		"pasteInitials:" : "dkh 6/23/2014 14:18",
-		"performCmdActionsWith:shifted:return:" : "dkh 6/18/2014 18:33" } }
+		"performCmdActionsWith:shifted:return:" : "dkh 7/31/2014 13:29" } }
