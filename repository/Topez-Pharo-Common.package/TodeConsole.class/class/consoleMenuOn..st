@@ -34,5 +34,5 @@ consoleMenuOn: aBuilder
 		selector: #cut.
 	(aBuilder item: #Paste translated)
 		keyText: 'v';
-		selector: #paste.
+		selector: #pasteAtEnd.
 	(aBuilder item: #'Paste...' translated) selector: #pasteRecent
