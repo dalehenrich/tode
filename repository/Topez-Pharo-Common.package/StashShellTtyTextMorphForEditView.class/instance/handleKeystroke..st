@@ -1,12 +1,11 @@
 editing
-handleKeystroke: anEvent 
+handleKeystroke: anEvent
 	"System level event handling."
-	self halt.
+
 	anEvent wasHandled
-		ifTrue: [^ self].
-	
+		ifTrue: [ ^ self ].
 	(self handlesKeyStroke: anEvent)
-		ifFalse: [^ self].
+		ifFalse: [ ^ self ].
 	anEvent wasHandled: true.
 	self keyStroke: anEvent.
-	^ self eventHandler ifNotNil: [:handler | handler keyStroke: anEvent fromMorph: self ].
+	^ self eventHandler ifNotNil: [ :handler | handler keyStroke: anEvent fromMorph: self ]
