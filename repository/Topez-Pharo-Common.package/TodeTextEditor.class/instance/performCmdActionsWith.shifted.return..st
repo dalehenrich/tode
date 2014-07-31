@@ -2,7 +2,7 @@ typing support
 performCmdActionsWith: aKeyboardEvent shifted: aBoolean return: return
 	| asciiValue actions assoc receiver actionArray selector arg numArgs result |
 	self initializeCmdMaps.
-	asciiValue := aKeyboardEvent keyValue.
+	asciiValue := aKeyboardEvent keyCharacter asciiValue.
 	actions := aBoolean
 		ifTrue: [ self localShiftCmdMap ]
 		ifFalse: [ self localCmdMap ].
