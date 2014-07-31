@@ -1,5 +1,6 @@
 as yet unclassified
 testAccessors01
+  [ 
   | clsTool cls methods |
   clsTool := self tool.
   cls := self createMockClassVersion.
@@ -39,4 +40,12 @@ testAccessors01
   self assert: methods size = 2.
   methods
     do: [ :method | self assert: (#(#'iv1' #'iv2') includes: method selector) ].
-  self mockSubClass ifNotNil: [ :cls | cls removeFromSystem ]
+  self mockSubClass ifNotNil: [ :cls | cls removeFromSystem ] ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testAccessors01';
+        cr;
+        show: (GsProcess stackReportToLevel: 100).
+      ex pass ]
