@@ -29,9 +29,6 @@ consoleMenuOn: aBuilder
 	(aBuilder item: #Copy translated)
 		keyText: 'c';
 		selector: #copySelection.
-	(aBuilder item: #Cut translated)
-		keyText: 'x';
-		selector: #cut.
 	(aBuilder item: #Paste translated)
 		keyText: 'v';
 		selector: #pasteAtEnd.
