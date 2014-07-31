@@ -1,7 +1,7 @@
 as yet unclassified
 keyStroke: evt
   | interval |
-  evt altKeyPressed
+  evt commandKeyPressed
     ifTrue: [ ^ super keyStroke: evt ].
   interval := self textMorph editor selectionInterval.
   (interval first > self inputMark and: [ interval first <= self text size ])
