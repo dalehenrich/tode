@@ -2,8 +2,8 @@
 
 ## Installation and Setup
 
-See [Getting Started with tODE](https://github.com/glassdb/webEditionHome/blob/master/docs/install/gettingStartedWithTode.md#getting-started-with-tode)
-for installation and setup instructions.
+See the [gsDevKitHome project](https://github.com/GsDevKit/gsDevKitHome#open-source-development-kit-for-gemstones-64-bit-)
+for tODE installation instructions.
 
 ### Additional Information
 
