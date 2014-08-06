@@ -1,4 +1,4 @@
 accessing
 debugMode
-	debugMode ifNil: [ debugMode := self class debugMode ].
+	debugMode ifNil: [ ^ self class debugMode ].
 	^ debugMode
