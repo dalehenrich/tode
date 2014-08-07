@@ -1,6 +1,6 @@
 window bounds
 caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth  lcw lce |
+	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth lcw lce |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
@@ -14,21 +14,21 @@ caculateWindowBounds
 	codeHeight := browserHeight - topHeight.
 	lce := lcw @ lh.
 	shellExtent := codeWidth @ shellHeight.
-	appExtent := ((layoutExtent x - codeWidth) // 2) @ shellHeight.
+	appExtent := (layoutExtent x - codeWidth) @ shellHeight.
 	superclasses := lo extent: lw @ topHeight.
 	method := superclasses bottomLeft extent: codeWidth @ codeHeight.
 	evaluator := method bottomLeft extent: shellExtent.
 	classDef := superclasses topRight extent: (1.5 * lw) @ topHeight.
 	instanceSelectors := classDef topRight extent: lw @ topHeight.
 	classSelectors := instanceSelectors topRight extent: lw @ topHeight.
-	implementors := method topRight extent: (2 * lw) @ (codeHeight // 2).
+	implementors := method topRight extent: shellExtent x @ codeHeight.
 	inspector := evaluator topRight extent: shellExtent.
 	debugger := method topRight extent: debuggerWidth @ codeHeight.
 	context := debugger bottomLeft extent: debuggerWidth @ shellExtent y.
 	app1 := evaluator topRight extent: appExtent.
-	app2 := app1 topRight extent: appExtent.
-	app3 := evaluator topRight - (0 @ appExtent y) extent: appExtent.
-	app4 := app3 topRight extent: appExtent.
+	app2 := evaluator topRight - (0 @ appExtent y) extent: appExtent.
+	app3 := evaluator topRight extent: appExtent.
+	app4 := evaluator topRight - (0 @ appExtent y) extent: appExtent.
 	dict
 		at: #evaluator put: evaluator;
 		at: #superclasses put: superclasses;
