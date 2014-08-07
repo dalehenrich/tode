@@ -17,7 +17,6 @@ runTestSuite: aTestSuite with: aTestResult refreshing: refreshBlock
     fork.
   [ testProcess notNil and: [ notDone ] ]
     whileTrue: [ 
-      Transcript show: '.'.
       refreshBlock value.
       delay := Delay forSeconds: 5.
       delay wait.
