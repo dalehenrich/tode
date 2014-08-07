@@ -1,19 +1,11 @@
 window bounds
-caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lcw lce |
+onfigurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth  lcw lce |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
 	dict := Dictionary new.
 	debuggerWidth := codeWidth := layoutExtent x * codeWidthFactor.
-	lcw := lw := layoutExtent x // (5.5 + extraLists).
-	debuggerWidth := layoutExtent x - (lw + codeWidth).
-	(diff := codeWidth - debuggerWidth) > 0
-		ifTrue: [ 
-			diff := diff / (5.5 + extraLists).
-			lcw := lw - diff.
-			lw := lw + (diff // (4.5 + extraLists)).
-			debuggerWidth := layoutExtent x - (lcw + codeWidth) ].
+	lcw := lw := layoutExtent x // (4.5 + extraLists).
 	shellHeight := layoutExtent y * shellHeightFactor.
 	browserHeight := layoutExtent y - shellHeight.
 	topHeight := browserHeight * topHeightFactor.
