@@ -1,0 +1,3 @@
+initialization
+listMorphClass
+	^TZLazyListMorph
