@@ -1,4 +1,4 @@
 accessing
 indexableWindowSize
-  indexableWindowSize ifNil: [ indexableWindowSize := 100 ].
+  indexableWindowSize ifNil: [ ^ self class defaultIndexableWindowSize ].
   ^ indexableWindowSize

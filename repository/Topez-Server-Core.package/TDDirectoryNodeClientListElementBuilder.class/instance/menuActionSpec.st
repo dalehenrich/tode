@@ -4,11 +4,13 @@ menuActionSpec
 
   "works in concert with menuActionBlock"
 
-  | builderAspect menuSpec parents parentMenuSpec displayPolicy |
+  | builderAspect menuSpec parents parentMenuSpec displayPolicy indexableWindowMenu |
   builderAspect := self theEditorSpec builderAspect.
   menuSpec := (builderAspect isNil or: [ builderAspect == #'view' ])
     ifTrue: [ #('inspect' nil #'setInspectBuilderAspectMenuAction:selectionIndex:') ]
     ifFalse: [ #('view' nil #'setViewBuilderAspectMenuAction:selectionIndex:') ].
+  indexableWindowMenu := {#('-').
+  #('set window size' nil #'setIndexableWindowMenuAction:')}.
   parents := self objectParents.
   parentMenuSpec := parents isEmpty
     ifTrue: [ #(#('-')) ]
@@ -34,4 +36,4 @@ menuActionSpec
           pad := pad , ' ' ].
       {{('Parents' -> parentsSpec)}.
       #('-')} ].
-  ^ {menuSpec} , parentMenuSpec , self basicMenuActionSpec
+  ^ {menuSpec} , indexableWindowMenu , parentMenuSpec , self basicMenuActionSpec
