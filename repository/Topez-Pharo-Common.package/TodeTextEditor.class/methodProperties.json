@@ -7,6 +7,7 @@
 		"defaultCmdMap" : "dkh 6/18/2014 18:33",
 		"dispatchCommandOn:return:" : "dkh 7/31/2014 13:31",
 		"dispatchOn:" : "dkh 6/18/2014 18:33",
+		"encompassParagraph:" : "dkh 8/9/2014 10:55",
 		"handleKeystrokeAction:" : "dkh 6/22/2014 09:19",
 		"initializeCmdMaps" : "dkh 6/18/2014 18:33",
 		"localCmdMap" : "dkh 6/18/2014 18:33",
@@ -16,4 +17,5 @@
 		"notify:at:in:" : "dkh 6/22/2014 09:10",
 		"pasteInitials:" : "dkh 6/23/2014 14:18",
 		"performCmdActionsWith:shifted:return:" : "dkh 7/31/2014 13:29",
+		"selectLine" : "dkh 8/9/2014 10:56",
 		"selectWord" : "dkh 8/7/2014 18:24" } }
