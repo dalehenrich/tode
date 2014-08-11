@@ -44,8 +44,8 @@ projectLoad: projectName doGet: doGet gsDeployer: gsDeployerOption selector: pro
   | loadResult |
   loadResult := metacello load: loads.
   self topez resetAllGlobalNames.
-  ^ loadResult ].
-  gsDeployerOption == #'none'
+  loadResult ].
+  ^ gsDeployerOption == #'none'
     ifTrue: [ loadBlock value ]
     ifFalse: [ 
       gsDeployerOption == #'auto'
