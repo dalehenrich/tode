@@ -3,7 +3,7 @@ workingCopies
   | version workingCopies |
   self isLoadedInImage
     ifTrue: [ 
-      version := self projectSpec versionOrNil.
+      version := self registration projectVersion.
       version
         ifNil: [ 
           "project has been unloaded from image"

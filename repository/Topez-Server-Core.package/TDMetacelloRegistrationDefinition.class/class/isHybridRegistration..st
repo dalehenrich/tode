@@ -1,14 +1,14 @@
 instance creation
 isHybridRegistration: aMetacelloProjectRegistration
-  | isHybrid projectSpec version |
-  isHybrid := false.
+  | projectSpec version |
   projectSpec := aMetacelloProjectRegistration projectSpec.
-  projectSpec versionOrNil ifNil: [ ^ false ].
-  projectSpec version spec
+  version := aMetacelloProjectRegistration projectVersion ifNil: [ ^ false ].
+  version spec
     projectDo: [ :project | 
       | ref |
       ref := project projectReference.
-      isHybrid := ref isBaselineOfProjectSpec ]
+      ref isBaselineOfProjectSpec
+        ifTrue: [ ^ true ] ]
     packageDo: [ :pkg |  ]
     groupDo: [ :group |  ].
-  ^ isHybrid
+  ^ false

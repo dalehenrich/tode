@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"isHybridRegistration:" : "dkh 06/30/2014 21:04",
+		"isHybridRegistration:" : "dkh 08/10/2014 17:49",
 		"projectSpec:" : "dkh 06/22/2014 11:17",
 		"registration:" : "dkh 06/30/2014 21:16" },
 	"instance" : {
@@ -10,8 +10,8 @@
 		"configurationClassName" : "dkh 06/20/2014 10:17",
 		"configurationProjectSpec" : "dkh 05/16/2014 07:28",
 		"configurationVersionString" : "dkh 05/16/2014 07:04",
-		"currentBranchName" : "dkh 05/20/2014 18:54",
-		"currentVersionString" : "dkh 06/20/2014 10:19",
+		"currentBranchName" : "dkh 08/10/2014 16:54",
+		"currentVersionString" : "dkh 08/10/2014 16:37",
 		"diffProjectUsing:" : "dkh 05/15/2014 17:41",
 		"emphasis" : "dkh 05/20/2014 18:49",
 		"entry" : "dkh 05/19/2014 11:52",
@@ -28,4 +28,4 @@
 		"unregister" : "dkh 07/24/2014 16:46",
 		"updateRegistrationVersionInfo:" : "dkh 05/15/2014 21:08",
 		"versionInfo" : "dkh 05/14/2014 21:14",
-		"versionString" : "dkh 05/20/2014 19:33" } }
+		"versionString" : "dkh 08/10/2014 16:46" } }
