@@ -28,12 +28,11 @@ loadBlock := [
       load: 'GemStone Dev' ].
 
 [  
-  Smalltalk 
-    at: #GsDeployer 
-    ifPresent: [:cls | 
+  (Smalltalk at: #GsDeployer ifAbsent: [])
+    ifNil: [ loadBlock value]
+    ifNotNil: [:cls |
       "GemStone, use GsDeployer to load"
-      GsDeployer deploy: loadBlock ] 
-    ifAbsent:[ loadBlock value ].
+      cls deploy: loadBlock ] .
   ] on: Warning 
     do: [:ex |
       Transcript cr; show: ex description.
