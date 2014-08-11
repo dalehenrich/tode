@@ -22,14 +22,15 @@ Smalltalk at: #ConfigurationOfGLASS ifPresent: [:cls |
 
 "Load Tode ... "
 [
-  Metacello new
-    baseline: 'Tode';
-    repository: 'filetree://', gitPath, '/tode/repository';
-    load: 'GemStone Dev' ] 
-      on: Warning 
-      do: [:ex |
-        Transcript cr; show: ex description.
-        ex resume ].
+  GsDeployer deploy: [
+    Metacello new
+      baseline: 'Tode';
+      repository: 'filetree://', gitPath, '/tode/repository';
+      load: 'GemStone Dev' ] 
+  ] on: Warning 
+    do: [:ex |
+      Transcript cr; show: ex description.
+      ex resume ].
 
 "Run the Tode tests"
 TravisCIHarness
