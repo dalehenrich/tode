@@ -1,5 +1,5 @@
 "Load and run tests to be performed by TravisCI"
-| gitCache gitPath |
+| gitCache gitPath loadBlock |
 Transcript cr; show: 'travis---->travisCI.st'.
 
 gitCache := 'git_cache'.
@@ -21,15 +21,22 @@ Smalltalk at: #ConfigurationOfGLASS ifPresent: [:cls |
     (cls project version: '1.0-beta.9.3') load ] ].
 
 "Load Tode ... "
-[
-  Metacello new
-    baseline: 'Tode';
-    repository: 'filetree://', gitPath, '/tode/repository';
-    load: 'GemStone Dev' ] 
-      on: Warning 
-      do: [:ex |
-        Transcript cr; show: ex description.
-        ex resume ].
+loadBlock := [
+    Metacello new
+      baseline: 'Tode';
+      repository: 'filetree://', gitPath, '/tode/repository';
+      load: 'GemStone Dev' ].
+
+[  
+  (Smalltalk at: #GsDeployer ifAbsent: [])
+    ifNil: [ loadBlock value]
+    ifNotNil: [:cls |
+      "GemStone, use GsDeployer to load"
+      cls deploy: loadBlock ] .
+  ] on: Warning 
+    do: [:ex |
+      Transcript cr; show: ex description.
+      ex resume ].
 
 "Run the Tode tests"
 TravisCIHarness
