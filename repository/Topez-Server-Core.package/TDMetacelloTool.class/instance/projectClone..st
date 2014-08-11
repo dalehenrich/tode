@@ -1,6 +1,6 @@
 project api
 projectClone: registration
-  | gitRootPath gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName |
+  | gitRootPath gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName metacello |
   gitRootPath := registration gitRootPath.
   gitRootDir := ServerFileDirectory on: gitRootPath.
   githubRepo := registration cloneProjectSpec repository createRepository.
@@ -54,11 +54,12 @@ If you cancel, a branch name can be specified at a later date.'
           response := gitTool gitcheckoutIn: gitRepoDirectory with: '-b ' , newBranchName.
           (response beginsWith: 'fatal:')
             ifTrue: [ self error: response ] ] ].
-  Metacello new
+  metacello := Metacello new
     baseline: registration projectName;
     repository:
-        'filetree://' , gitRootPath , '/' , gitRepoDirName , '/' , githubRepo repoPath;
-    register.
+        'filetree://' , gitRootPath , '/' , gitRepoDirName , '/' , githubRepo repoPath.
+  metacello copy register.
+  metacello lock.
   newRegistration := self projectRegistrationFor: registration projectName.
   (self topez toolInstanceFor: 'project')
     projectMap: registration
