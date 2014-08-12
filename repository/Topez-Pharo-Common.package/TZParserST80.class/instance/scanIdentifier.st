@@ -10,7 +10,7 @@ scanIdentifier
 				and: [ 
 					| peek |
 					peek := self peekChar.
-					peek isAlphaNumeric or: [ pathTermChars includes: c ] ] ] ] whileTrue.
+					peek isAlphaNumeric or: [ pathTermChars includes: peek ] ] ] ] whileTrue.
 	(c == $: and: [ (self isSelectorCharacter: self peekChar) not ])
 		ifTrue: [ self nextChar ].
 	currentToken := source copyFrom: start to: sourcePosition - 1.
