@@ -1,13 +1,15 @@
 parse
 scanIdentifier
   | c start |
-  start := sourcePosition.
+  start    := sourcePosition.
   [ 
-  ((c := self nextChar) isAlphaNumeric or: [ c == $_ ])
+  ((((c := self nextChar) isAlphaNumeric or: [c ==$*]) or: [ c == $_ ])
     or: [ 
       c == $.
-        and: [ 
-          self peekChar isAlphaNumeric ] ] ] whileTrue.
+        and: [ |peek|
+          peek := self peekChar.
+			
+			peek isAlphaNumeric or: [peek == $*] ]])   ] whileTrue.
   (c == $: and: [ (self isSelectorCharacter: self peekChar) not ])
     ifTrue: [ self nextChar ].
   currentToken := source copyFrom: start to: sourcePosition - 1.
