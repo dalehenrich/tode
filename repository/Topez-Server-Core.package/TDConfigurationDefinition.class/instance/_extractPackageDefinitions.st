@@ -3,6 +3,7 @@ _extractPackageDefinitions
   | registrationDef defs |
   defs := Dictionary new.
   registrationDef := self projectRegistrationDef.
+  registrationDef ifNil: [ ^ defs ].
   registrationDef workingCopies
     do: [ :wc | 
       defs

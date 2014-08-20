@@ -4,5 +4,5 @@ concreteGetProjectUsing: aProjectTool registration: aProjectRegistration
     projectGet: projectName
     className: aProjectRegistration projectSpecClassName
     selector: aProjectRegistration projectSelector
-    version: aProjectRegistration projectVersion
+    version: aProjectRegistration projectVersionString
     repositoryDescription: aProjectRegistration repositoryDescription

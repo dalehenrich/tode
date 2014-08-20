@@ -1,5 +1,5 @@
 accessing
-projectVersion
+projectVersionString
   ^ self projectSpec isBaselineOfProjectSpec
     ifTrue: [ nil ]
-    ifFalse: [ self projectSpec versionOrNil ]
+    ifFalse: [ self projectSpec versionString ]
