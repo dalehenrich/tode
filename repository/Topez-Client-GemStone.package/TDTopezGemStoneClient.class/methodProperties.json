@@ -1,9 +1,10 @@
 {
 	"class" : {
-		 },
+		"slowConnection" : "dkh 8/19/2014 18:07",
+		"slowConnection:" : "dkh 8/19/2014 11:23" },
 	"instance" : {
 		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:45",
-		"evaluateCommand:batchMode:" : "dkh 7/26/2014 11:10",
+		"evaluateCommand:batchMode:" : "dkh 8/19/2014 16:04",
 		"evaluateServerSmalltalk:batchMode:" : "dkh 7/26/2014 11:16",
 		"evaluateTokens:redirectTarget:" : "dkh 5/26/2013 20:51",
 		"executeMenuActionForClientListElement:action:selectionIndex:" : "dkh 2/19/2014 18:02",
@@ -51,8 +52,8 @@
 		"testLoginNetLDIServiceNotFound:" : "dkh 12/8/2013 14:24",
 		"testLoginStoneNotFound:" : "dkh 12/8/2013 14:06",
 		"todeServerAccessString" : "dkh 5/26/2013 21:00",
-		"todeServerCreationString" : "dkh 5/26/2013 21:00",
+		"todeServerCreationString" : "dkh 8/19/2014 14:31",
 		"todeSessionClass" : "dkh 5/26/2013 21:00",
 		"topezServerOop" : "dkh 5/26/2013 21:00",
-		"topezServerProxy" : "dkh 1/1/2014 11:44",
+		"topezServerProxy" : "dkh 8/20/2014 06:30",
 		"windowIsClosingFor:" : "dkh 5/7/2014 07:28" } }
