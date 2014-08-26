@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		"bounds",
 		"windowOffset",
-		"windowProperties" ],
+		"windowProperties",
+		"notifier" ],
 	"classvars" : [
 		"Bounds" ],
 	"commentStamp" : "",
