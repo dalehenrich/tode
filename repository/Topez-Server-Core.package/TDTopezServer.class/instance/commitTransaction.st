@@ -2,11 +2,14 @@ accessing
 commitTransaction
   self serverStatus autoCommit
     ifFalse: [ ^ self ].
-  [( System respondsTo: #commit) 
-	ifTrue: [ System commit] 
-	ifFalse: [
-		System commitTransaction 
-			ifFalse: [ self error: 'Attempt to commit transaction failed' ].] ]
+  [ 
+  System commitTransaction
+    ifFalse: [ 
+      | conflicts |
+      conflicts := System transactionConflicts.
+      self
+        error:
+          'Attempt to commit transaction failed. debug to see transaction conflicts.' ] ]
     on: Error
     do: [ :ex | 
       "if an error occurs during commit, disable autoCommit and pass"
