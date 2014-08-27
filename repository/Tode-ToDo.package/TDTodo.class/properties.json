@@ -8,8 +8,9 @@
 	"instvars" : [
 		"projectName",
 		"priority",
-		"events",
-		"lineItems" ],
+		"lineItems",
+		"start",
+		"end" ],
 	"name" : "TDTodo",
 	"pools" : [
 		 ],
