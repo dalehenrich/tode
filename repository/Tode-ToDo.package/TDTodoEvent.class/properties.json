@@ -1,0 +1,17 @@
+{
+	"category" : "Tode-ToDo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stamp",
+		"event",
+		"comment",
+		"item" ],
+	"name" : "TDTodoEvent",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

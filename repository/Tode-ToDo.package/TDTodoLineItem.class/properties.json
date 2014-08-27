@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-ToDo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDTodoLineItem",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractTodo",
+	"type" : "normal" }

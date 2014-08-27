@@ -1,0 +1,17 @@
+{
+	"category" : "Tode-ToDo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"projectName",
+		"priority",
+		"events",
+		"lineItems" ],
+	"name" : "TDTodo",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractTodo",
+	"type" : "normal" }
