@@ -5,7 +5,14 @@ topezServerProxy
 			| stonString transcriptOopType resultArray topezServerOop topezClientOopType |
 			[ stonString := self session executeStringExpectingStringNB: self todeServerCreationString envId: self environmentId ]
 				on: GsErrorNotification
-				do: [ :ex | self error: 'Unable to log into server:' , ex description ].
+				do: [ :firstEx | 
+					"try again with no options, in case using old version of tode ... eventually get rid of this"
+					[ 
+					stonString := self session
+						executeStringExpectingStringNB: (self todeServerCreationStringWithOptions: false)
+						envId: self environmentId ]
+						on: GsErrorNotification
+						do: [ :ex | self error: 'Unable to log into server:' , ex description ] ].
 			resultArray := STON fromString: stonString.
 			topezServerOop := resultArray at: 1.
 			topezClientOopType := self session asOopType: (resultArray at: 3).

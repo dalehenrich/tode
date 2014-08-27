@@ -1,6 +1,7 @@
 as yet unclassified
 logout
 	| sess |
+	self class removeDependent: self.
 	session ifNil: [ ^ self ].
 	sess := session.
 	session := nil.
