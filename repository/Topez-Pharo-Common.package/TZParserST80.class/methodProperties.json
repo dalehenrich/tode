@@ -2,12 +2,18 @@
 	"class" : {
 		 },
 	"instance" : {
+		"isBlockArgName:" : "dkh 8/7/2014 07:59",
+		"isBlockTempName:" : "dkh 8/7/2014 07:58",
+		"isInstVarName:" : "dkh 8/7/2014 08:04",
+		"isMethodArgName:" : "dkh 8/7/2014 08:02",
+		"isMethodTempName:" : "dkh 8/7/2014 08:03",
 		"parseBinary" : "dkh 10/18/2012 16:40",
 		"parseKeyword" : "dkh 10/18/2012 16:40",
-		"parseSelectBlock" : "dkh 2/12/2013 09:59",
+		"parseSelectBlock" : "dkh 8/7/2014 08:26",
 		"parseTerm" : "dkh 2/12/2013 09:58",
 		"parseUnary" : "dkh 10/18/2012 16:41",
-		"resolve:" : "dkh 11/14/2012 11:06",
+		"peek2Char" : "dkh 8/12/2014 17:58",
+		"resolve:" : "dkh 8/7/2014 08:05",
 		"resolvePragmaArgument:" : "dkh 2/18/2013 15:45",
 		"scanBinary" : "dkh 2/13/2013 06:53",
-		"scanIdentifier" : "dkh 2/13/2013 08:45" } }
+		"scanIdentifier" : "dkh 8/12/2014 17:59" } }

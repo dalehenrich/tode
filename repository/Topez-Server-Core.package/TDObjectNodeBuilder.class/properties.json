@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"DefaultIndexableWindowSize" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"indexableStartIndex",

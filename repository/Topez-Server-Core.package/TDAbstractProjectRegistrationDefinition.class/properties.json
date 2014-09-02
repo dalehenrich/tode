@@ -8,7 +8,11 @@
 	"instvars" : [
 		"entry",
 		"isDirty",
-		"isActive" ],
+		"isImageDirty",
+		"isActive",
+		"versionString",
+		"currentBranchName",
+		"gitRepoDirectoryPath" ],
 	"name" : "TDAbstractProjectRegistrationDefinition",
 	"pools" : [
 		 ],

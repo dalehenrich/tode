@@ -5,17 +5,21 @@ clientList: miniTool listElement: listElement
   spacer := '  '.
   self resultSlot == 1
     ifTrue: [ 
-      ^ {(self testResultsPrintString).
+      | summary text attributes |
+      summary := {(self testResultsPrintString).
       (spacer , (tests size printString , ' tests')).
       (spacer
         ,
           (run size printString , ' run [' , self currentTestCase printString , ']')).
       (spacer , (expectedPasses size printString , ' passes')).
       (spacer , (expectedDefects size printString , ' expected defects')).
-      (spacer , (unexpectedFailures size printString , ' failures')).
-      (spacer , (unexpectedErrors size printString , ' errors')).
-      (spacer , (unexpectedPasses size printString , ' unexpected passes'))}
-        -> nil ]
+      (self resultsTextFor: unexpectedFailures spacer: spacer label: 'failures').
+      (self resultsTextFor: unexpectedErrors spacer: spacer label: 'errors').
+      (self
+        resultsTextFor: unexpectedPasses
+        spacer: spacer
+        label: 'unexpected passes')}.
+      ^ summary -> nil ]
     ifFalse: [ 
       | testCases |
       testCases := self testCasesAtResultSlot.

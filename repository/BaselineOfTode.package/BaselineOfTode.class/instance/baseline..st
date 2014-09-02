@@ -136,6 +136,7 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-TestTools' ];
         package: 'Topez-Server-Obsolete'
           with: [ spec requires: #('Topez-Server-Core') ];
+        package: 'Tode-ToDo' with: [ spec requires: #('Topez-Server-Core') ];
         yourself.
       spec
         group: 'default' with: #('GemStone');

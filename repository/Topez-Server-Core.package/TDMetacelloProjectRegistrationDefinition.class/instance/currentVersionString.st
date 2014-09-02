@@ -1,3 +1,4 @@
 accessing
 currentVersionString
-  ^ self versionString
+  currentVersionString ifNil: [ currentVersionString := self versionString ].
+  ^ currentVersionString

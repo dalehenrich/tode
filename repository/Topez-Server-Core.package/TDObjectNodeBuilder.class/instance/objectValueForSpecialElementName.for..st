@@ -14,5 +14,5 @@ objectValueForSpecialElementName: elementName for: anObject
     ifTrue: [ 
       ^ 'You can only see the first ' , self indexableWindowSize printString
         ,
-          ' elements. Open Workspace (esc) and write an expression to view the segment of the collection that you are interested in.' ].
+          ' elements. Use the ''set window size'' menu item to change the default window size or open Workspace (esc) and write an expression to view the segment of the collection that you are interested in.' ].
   ^ nil

@@ -1,3 +1,7 @@
 accessing
 currentBranchName
-  ^ MetacelloPlatform current gitBranchNameFor: self gitRepoDirectoryPath
+  currentBranchName
+    ifNil: [ 
+      currentBranchName := MetacelloPlatform current
+        gitBranchNameFor: self gitRepoDirectoryPath ].
+  ^ currentBranchName

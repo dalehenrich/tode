@@ -1,6 +1,7 @@
 {
 	"class" : {
-		 },
+		"defaultIndexableWindowSize" : "dkh 08/07/2014 21:56",
+		"defaultIndexableWindowSize:" : "dkh 08/07/2014 21:56" },
 	"instance" : {
 		"addBlock" : "DataCurator 01/11/2013 15:30",
 		"basicContents" : "DataCurator 01/11/2013 15:25",
@@ -16,10 +17,10 @@
 		"indexableEndIndex:" : "dkh 07/29/2014 14:22",
 		"indexableStartIndex" : "dkh 07/29/2014 14:47",
 		"indexableStartIndex:" : "dkh 07/29/2014 14:22",
-		"indexableWindowSize" : "dkh 07/29/2014 14:23",
+		"indexableWindowSize" : "dkh 08/07/2014 22:15",
 		"indexableWindowSize:" : "dkh 07/29/2014 14:22",
 		"listBlock" : "DataCurator 01/11/2013 15:24",
-		"objectValueForSpecialElementName:for:" : "dkh 07/29/2014 15:12",
+		"objectValueForSpecialElementName:for:" : "dkh 08/07/2014 22:17",
 		"readmeString" : "dkh 01/11/2013 14:01",
 		"removeBlock" : "DataCurator 01/11/2013 15:30",
 		"renderAttributeBlock" : "DataCurator 01/11/2013 15:31",

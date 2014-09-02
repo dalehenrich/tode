@@ -1,6 +1,6 @@
 private
 testResultsPrintString
-  | aStream |
+  | aStream attributes |
   aStream := WriteStream on: String new.
   aStream
     nextPutAll: run size printString;
@@ -15,4 +15,14 @@ testResultsPrintString
     nextPutAll: ' errors, ';
     nextPutAll: unexpectedPasses size printString;
     nextPutAll: ' unexpected passes'.
-  ^ aStream contents
+  attributes := {}.
+  self currentTestCase = 'done'
+    ifTrue: [ 
+      self hasPassed
+        ifTrue: [ attributes add: TextColor green ]
+        ifFalse: [ attributes add: TextColor red ] ]
+    ifFalse: [ 
+      run size > 0
+        ifTrue: [ attributes add: TextColor blue ]
+        ifFalse: [ attributes add: TextColor gray ] ].
+  ^ Text string: aStream contents attributes: attributes

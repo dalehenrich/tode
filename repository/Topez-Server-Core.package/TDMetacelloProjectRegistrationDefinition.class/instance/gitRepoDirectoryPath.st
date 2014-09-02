@@ -1,3 +1,5 @@
 accessing
 gitRepoDirectoryPath
-  ^ self gitRepoDirectory fullName
+  gitRepoDirectoryPath
+    ifNil: [ gitRepoDirectoryPath := self gitRepoDirectory fullName ].
+  ^ gitRepoDirectoryPath

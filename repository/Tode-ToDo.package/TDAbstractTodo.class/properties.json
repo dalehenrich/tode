@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-ToDo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"status",
+		"label",
+		"comment" ],
+	"name" : "TDAbstractTodo",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

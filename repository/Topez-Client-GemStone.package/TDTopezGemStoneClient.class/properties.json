@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"SlowConnection" ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],

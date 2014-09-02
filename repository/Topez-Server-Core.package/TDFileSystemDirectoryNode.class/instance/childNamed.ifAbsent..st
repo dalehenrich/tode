@@ -6,7 +6,9 @@ childNamed: childName ifAbsent: absentBlock
       (self directoryEntries
         detect: [ :entry | 
           (entry name endsWith: self stonFileExtension)
-            ifTrue: [ entry asTDFileSystemNode name = childName ]
+            ifTrue: [ 
+              (entry name copyFrom: 1 to: entry name size - self stonFileExtension size)
+                = childName ]
             ifFalse: [ entry name = childName ] ]
         ifNone: [ ^ absentBlock value ]) asTDFileSystemNode
         parent: self;

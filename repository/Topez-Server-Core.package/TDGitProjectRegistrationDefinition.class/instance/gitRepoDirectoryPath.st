@@ -1,3 +1,5 @@
 accessing
 gitRepoDirectoryPath
-  ^ self entry gitRepoDirectoryPath
+  gitRepoDirectoryPath
+    ifNil: [ gitRepoDirectoryPath := self entry gitRepoDirectoryPath ].
+  ^ gitRepoDirectoryPath

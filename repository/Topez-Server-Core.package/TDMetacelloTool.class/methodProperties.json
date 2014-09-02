@@ -26,7 +26,7 @@
 		"toolName" : "dkh 05/08/2014 10:27",
 		"toolReadMe" : "dkh 05/08/2014 10:27" },
 	"instance" : {
-		"projectClone:" : "dkh 07/02/2014 13:29",
+		"projectClone:" : "dkh 08/11/2014 07:54",
 		"projectCommit:commitMessage:" : "dkh 05/16/2014 07:49",
 		"projectCommit:configCommit:gitCommit:commitMessage:" : "dkh 05/20/2014 11:32",
 		"projectCommitConfiguration:configuration:commitMessage:" : "dkh 05/20/2014 11:30",
@@ -37,7 +37,7 @@
 		"projectGet:className:selector:repositoryDescription:" : "dkh 07/01/2014 15:47",
 		"projectGet:className:selector:version:repositoryDescription:" : "dkh 07/01/2014 15:31",
 		"projectGetConfiguration:version:repositoryDescription:" : "dkh 07/01/2014 15:50",
-		"projectLoad:doGet:gsDeployer:selector:description:className:loads:version:onConflict:onDowngrade:onLock:onUpgrade:ignoreImage:silently:cacheRepository:overrides:" : "dkh 08/10/2014 22:01",
+		"projectLoad:doGet:gsDeployer:selector:description:className:loads:version:onConflict:onDowngrade:onLock:onUpgrade:ignoreImage:silently:cacheRepository:overrides:" : "dkh 08/10/2014 21:29",
 		"projectLoad:doGet:gsDeployer:selector:repositoryDescription:loads:version:onConflict:onDowngrade:onLock:onUpgrade:ignoreImage:silently:cacheRepository:repositoryOverrides:" : "dkh 07/22/2014 15:47",
 		"projectLoad:selector:repositoryDescription:className:loads:version:" : "dkh 07/22/2014 15:47",
 		"projectLoad:selector:repositoryDescription:loads:" : "dkh 05/13/2014 15:52",
@@ -72,6 +72,7 @@
 		"repositoryFlush" : "dkh 05/13/2014 13:40",
 		"repositoryflush" : "dkh 05/13/2014 13:40",
 		"resolveProjectRegistrationReference:" : "dkh 06/13/2014 01:56",
-		"scanHomeDirForProjects:" : "dkh 07/15/2014 08:04",
+		"scanHomeDirForProjects:" : "dkh 08/07/2014 16:00",
+		"scanNode:forProjects:" : "dkh 08/07/2014 15:58",
 		"sortRegistrationList:" : "dkh 05/21/2014 15:25",
 		"validateGitRepoExistsFor:" : "dkh 05/15/2014 18:39" } }
