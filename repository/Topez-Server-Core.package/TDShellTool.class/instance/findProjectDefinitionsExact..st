@@ -3,7 +3,7 @@ findProjectDefinitionsExact: projectName
   "find project <project-name>"
 
   | spec |
-  spec := Metacello image
+  spec := (Metacello image
     project: projectName;
-    list.
+    list) first.
   ^ (TDConfigurationDefinition new projectSpec: spec) classDefinitions

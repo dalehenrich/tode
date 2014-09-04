@@ -2,9 +2,9 @@ as yet unclassified
 testproject: baseName
   | suite projectSpec |
   suite := TestSuite named: baseName , ' tests'.
-  projectSpec := Metacello image
+  projectSpec := (Metacello image
     project: baseName;
-    list.
+    list) first.
   projectSpec version currentlyLoadedClassesInVersion
     do: [ :cl | 
       (cl inheritsFrom: TestCase)
