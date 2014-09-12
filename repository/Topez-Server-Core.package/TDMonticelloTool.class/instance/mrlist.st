@@ -8,10 +8,6 @@ mrlist
     ifTrue: [ 
       pattern := tokens at: 2.
       label := 'Repositories matching: ' , pattern printString ].
-  repositoryBlock := [ 
-  | list repos |
-  list := self findMatchingRepositories: pattern topez: topez.
-  repos := list collect: [ :each | each repository ].
-  repos sort: [ :a :b | a description < b description ] ].
+  repositoryBlock := [ self mrlist: pattern ].
   self mrBrowseRepositories: repositoryBlock label: label.
   ^ repositoryBlock value

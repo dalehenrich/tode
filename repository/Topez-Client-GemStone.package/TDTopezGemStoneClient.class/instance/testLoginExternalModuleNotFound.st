@@ -4,18 +4,13 @@ testLoginExternalModuleNotFound
 	description := self sessionDescription.
 	gciLibraryName := description gciLibraryName.
 	gemstoneVersion := description gemstoneVersion.
+	expectedLocation := SmalltalkImage current vm path.
 	GciLibrary isOnLinux
-		ifTrue: [ 
-			platformName := 'Linux'.
-			expectedLocation := 'tODE_3.1.app/Contents/Linux/' ]
+		ifTrue: [ platformName := 'Linux' ]
 		ifFalse: [ 
 			GciLibrary isOnMacintosh
-				ifTrue: [ 
-					platformName := 'Macintosh'.
-					expectedLocation := 'tODE_3.1.app/Contents/MacOS/Plugins/' ]
-				ifFalse: [ 
-					platformName := 'Windows'.
-					expectedLocation := 'tODE_3.1.app/' ] ].
+				ifTrue: [ platformName := 'Macintosh' ]
+				ifFalse: [ platformName := 'Windows' ] ].
 	stream := WriteStream on: String new.
 	stream
 		nextPutAll: 'Error running testLogin:';

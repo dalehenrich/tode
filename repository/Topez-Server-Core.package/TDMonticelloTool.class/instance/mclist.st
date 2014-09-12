@@ -9,9 +9,6 @@ mclist
     ifTrue: [ 
       pattern := tokens at: 2.
       label := 'Packages matching: ' , pattern printString ].
-  block := [ 
-  | wcList |
-  wcList := self findMatchingPackages: pattern topez: topez.
-  wcList := wcList sort: [ :a :b | a packageName < b packageName ] ].
+  block := [ self mclist: pattern ].
   self mcBrowseWorkingCopies: block label: label.
   ^ block value
