@@ -20,7 +20,7 @@ menuActionSpec: miniTool
     ->
       {#('branches' nil #'gitBranchesMenuAction:selectionIndex:' nil #'gitProject' false).
       #('checkout' nil #'gitCheckoutMenuAction:selectionIndex:' nil #'gitProject' false).
-      #('clone' nil #'cloneProjectMenuAction:selectionIndex:' nil #'githubProject' false).
+      #('clone' nil #'cloneProjectMenuAction:selectionIndex:' nil #'gitBasedProject' false).
       #('diff' nil #'gitDiffMenuAction:selectionIndex:' nil #'gitProject' false).
       #('diff (cached)' nil #'gitDiffCachedMenuAction:selectionIndex:' nil #'gitProject' false).
       #('fetch' nil #'gitFetchMenuAction:selectionIndex:' nil #'gitProject' false).

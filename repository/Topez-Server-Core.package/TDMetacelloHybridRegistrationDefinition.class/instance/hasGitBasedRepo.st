@@ -1,5 +1,5 @@
 testing
-hasGithubRepo
-  self repositorySpec type = 'github'
+hasGitBasedRepo
+  super hasGitBasedRepo
     ifTrue: [ ^ true ].
   ^ self hybridRepositorySpec notNil
