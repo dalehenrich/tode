@@ -29,7 +29,7 @@ projectentry
       projectEntry
         configuration: arg
         version: version
-        repository: repo printString
+        repository: repo
         loads: 'default' ]
     ifAbsent: [ 
       subOptions
