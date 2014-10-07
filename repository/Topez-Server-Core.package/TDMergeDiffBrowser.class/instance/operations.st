@@ -1,3 +1,4 @@
 accessing
 operations
-  ^ self merger operations
+  stFilterBlock ifNil: [ ^ self merger operations ].
+  ^ self merger operations select: stFilterBlock
