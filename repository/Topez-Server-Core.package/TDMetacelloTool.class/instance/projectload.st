@@ -6,10 +6,10 @@ projectload
                [--no-flush] [--no-get]
                [ (--baseline | --configuration --version=<version> ) ]
                [--repository=<repository-reference>]
-               [--onConflict=useNew|useExisting]
-               [--onDowngrade=useNew|useExisting]
+               [--onConflict=useIncoming|useLoaded]
+               [--onDowngrade=useIncoming|useLoaded]
                [--onLock=break|honor]
-               [--onUpgrade=useNew|useExisting]
+               [--onUpgrade=useIncoming|useLoaded]
                [--ignoreImage] [--silently]
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
@@ -74,7 +74,7 @@ projectload
   subOptions
     at: 'onConflict'
     ifPresent: [ :arg | onConflict := arg asSymbol ]
-    ifAbsent: [ onConflict := #'useNew' ].
+    ifAbsent: [ onConflict := #'useIncoming' ].
   subOptions at: 'onDowngrade' ifPresent: [ :arg | onDowngrade := arg asSymbol ].
   subOptions
     at: 'onLock'

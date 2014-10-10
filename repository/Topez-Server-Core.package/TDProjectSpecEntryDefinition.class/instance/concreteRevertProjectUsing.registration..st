@@ -31,10 +31,10 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
     className: projectClassName
     loads: loads
     version: aProjectRegistration configurationVersionString
-    onConflict: #'useNew'
-    onDowngrade: #'useNew'
+    onConflict: #'useIncoming'
+    onDowngrade: #'useIncoming'
     onLock: #'honor'
-    onUpgrade: #'useNew'
+    onUpgrade: #'useIncoming'
     ignoreImage: false
     silently: false
     cacheRepository: nil

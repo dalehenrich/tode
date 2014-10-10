@@ -16,11 +16,11 @@ projectLoad: projectName doGet: doGet gsDeployer: gsDeployerOption selector: pro
   repositoryOverrides
     ifNotNil: [ metacello repositoryOverrides: repositoryOverrides ].
   onBlock := [ :ex :aspect | 
-  aspect == #'useNew'
-    ifTrue: [ ex useNew ]
+  aspect == #'useIncoming'
+    ifTrue: [ ex useIncoming ]
     ifFalse: [ 
-      aspect == #'useExisting'
-        ifTrue: [ ex useExisting ]
+      aspect == #'useLoaded'
+        ifTrue: [ ex useLoaded ]
         ifFalse: [ ex pass ] ] ].
   onConflict
     ifNotNil: [ metacello onConflict: [ :ex | onBlock value: ex value: onConflict ] ].
