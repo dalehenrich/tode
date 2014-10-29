@@ -11,7 +11,7 @@ projectLoadConfiguration: projectName version: version repositoryDescription: re
     className: className
     loads: loads
     version: version
-    onConflict: #'useNew'
+    onConflict: #'useIncoming'
     onDowngrade: nil
     onLock: #'honor'
     onUpgrade: nil

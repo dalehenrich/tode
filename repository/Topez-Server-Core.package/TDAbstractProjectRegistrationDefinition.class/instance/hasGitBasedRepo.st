@@ -1,3 +1,3 @@
 testing
-hasGithubRepo
+hasGitBasedRepo
   ^ false

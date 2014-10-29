@@ -9,7 +9,7 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
     className: className
     loads: loads
     version: version
-    onConflict: #'useNew'
+    onConflict: #'useIncoming'
     onDowngrade: nil
     onLock: #'honor'
     onUpgrade: nil
