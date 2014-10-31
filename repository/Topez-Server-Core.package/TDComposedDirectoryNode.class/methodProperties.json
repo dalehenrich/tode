@@ -1,7 +1,7 @@
 {
 	"class" : {
-		"link:asChildOf:named:" : "dkh 10/30/2014 15:36",
-		"linkNodePath:asChildOfPath:named:topez:" : "dkh 10/30/2014 15:31" },
+		"link:topez:" : "dkh 10/30/2014 17:23",
+		"linkPath:topez:" : "dkh 10/30/2014 17:22" },
 	"instance" : {
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 10/30/2014 15:46",
 		"contents:" : "dkh 10/30/2014 15:40" } }

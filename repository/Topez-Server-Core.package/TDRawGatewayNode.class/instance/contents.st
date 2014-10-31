@@ -1,5 +1,5 @@
 as yet unclassified
 contents
   contents
-    ifNil: [ ^ 'TDComposedDirectoryNode linkNodePath: ''/tmp'' asChildOfPath: ''/home'' named: ''temp'' topez: self topez' ].
+    ifNil: [ ^ 'TDComposedDirectoryNode linkPath: ''/tmp'' topez: self topez' ].
   ^ contents value
