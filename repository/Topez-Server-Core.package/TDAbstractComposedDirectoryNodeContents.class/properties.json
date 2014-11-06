@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 11/05/2014 11:59",
 	"instvars" : [
 		 ],
-	"name" : "TDAbstractDirectoryNodeContents",
+	"name" : "TDAbstractComposedDirectoryNodeContents",
 	"pools" : [
 		 ],
 	"super" : "Object",

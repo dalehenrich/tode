@@ -9,11 +9,12 @@
 		"lookupGwNode:" : "dkh 12/21/2013 11:58",
 		"lookupNode:" : "dkh 12/21/2013 11:58",
 		"lookupObjNode:" : "dkh 12/21/2013 11:58",
+		"lookupSimpleComposedFsNode:" : "dkh 11/05/2014 17:38",
 		"lookupSrcNode:" : "dkh 12/21/2013 12:00",
 		"removeTestRootNode" : "dkh 12/21/2013 12:00",
 		"rootNodePath" : "dkh 12/21/2013 11:59",
 		"setUp" : "dkh 12/21/2013 12:00",
-		"smallSetLeafNodes" : "dkh 12/21/2013 11:59",
+		"smallSetLeafNodes" : "dkh 11/05/2014 14:47",
 		"standardLeafNodes" : "dkh 12/21/2013 11:59",
 		"subtlyDifferentLeafNodes" : "dkh 12/21/2013 11:59",
 		"tearDown" : "dkh 12/21/2013 12:00" } }

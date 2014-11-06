@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"node",
+		"topez" ],
+	"name" : "TDSimpleComposedDirectoryNodeContents",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractComposedDirectoryNodeContents",
+	"type" : "normal" }

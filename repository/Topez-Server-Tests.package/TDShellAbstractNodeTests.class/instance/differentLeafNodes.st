@@ -1,4 +1,4 @@
-private
+private-node sets
 differentLeafNodes
   ^ {(TDSmalltalkLeafNode new
     name: 'smalltalkLeafNode';

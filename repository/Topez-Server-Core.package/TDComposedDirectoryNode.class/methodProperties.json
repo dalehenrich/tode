@@ -1,7 +1,12 @@
 {
 	"class" : {
-		"link:topez:" : "dkh 10/30/2014 17:23",
-		"linkPath:topez:" : "dkh 10/30/2014 17:22" },
+		"link:topez:" : "dkh 11/05/2014 17:43",
+		"linkPath:topez:" : "dkh 10/30/2014 17:22",
+		"serverDiskPath:topez:" : "dkh 11/05/2014 17:44" },
 	"instance" : {
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 10/30/2014 15:46",
-		"contents:" : "dkh 10/30/2014 15:40" } }
+		"addChild:" : "dkh 11/05/2014 13:54",
+		"contents:" : "dkh 10/30/2014 15:40",
+		"parent:" : "dkh 11/06/2014 14:17",
+		"stonSetChildParents" : "dkh 11/05/2014 17:18",
+		"topez:" : "dkh 11/05/2014 16:48" } }

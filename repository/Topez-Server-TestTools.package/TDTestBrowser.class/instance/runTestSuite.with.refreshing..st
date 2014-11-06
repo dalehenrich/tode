@@ -14,7 +14,7 @@ runTestSuite: aTestSuite with: aTestResult refreshing: refreshBlock
         ifNotNil: [ 
           delay inProgress
             ifTrue: [ delay signal ] ] ] ]
-    fork.
+    forkAt: Processor activePriority - 1.
   [ testProcess notNil and: [ notDone ] ]
     whileTrue: [ 
       refreshBlock value.

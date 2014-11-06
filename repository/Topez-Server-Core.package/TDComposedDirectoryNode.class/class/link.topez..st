@@ -1,8 +1,9 @@
 instance creation
 link: aNode topez: topez
   ^ self new
+    name: aNode name;
     contents:
-        (TDNodeBasedContents new
+        (TDSimpleComposedDirectoryNodeContents new
             node: aNode;
             yourself);
     topez: topez;
