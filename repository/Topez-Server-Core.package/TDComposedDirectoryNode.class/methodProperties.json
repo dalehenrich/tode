@@ -1,7 +1,9 @@
 {
 	"class" : {
+		"gatewayServerDiskPath:topez:" : "dkh 11/06/2014 14:44",
 		"link:topez:" : "dkh 11/05/2014 17:43",
 		"linkPath:topez:" : "dkh 10/30/2014 17:22",
+		"objPath:topez:" : "dkh 11/06/2014 14:57",
 		"serverDiskPath:topez:" : "dkh 11/05/2014 17:44" },
 	"instance" : {
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 10/30/2014 15:46",
