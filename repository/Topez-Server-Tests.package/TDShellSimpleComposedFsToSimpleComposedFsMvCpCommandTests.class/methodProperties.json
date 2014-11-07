@@ -3,8 +3,4 @@
 		 },
 	"instance" : {
 		"lookupDestNode:" : "dkh 11/05/2014 13:34",
-		"lookupSrcNode:" : "dkh 11/05/2014 13:34",
-		"testLeafNodeCpOverSelf" : "dkh 11/05/2014 15:08",
-		"testLeafNodeCpSelfToDot" : "dkh 11/05/2014 15:08",
-		"testLeafNodeMvOverSelf" : "dkh 11/05/2014 15:08",
-		"testLeafNodeMvSelfToDot" : "dkh 11/05/2014 15:09" } }
+		"lookupSrcNode:" : "dkh 11/05/2014 13:34" } }
