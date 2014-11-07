@@ -29,6 +29,7 @@
 		"moveLeafNode:as:" : "dkh 12/23/2013 09:31",
 		"moveProxyLeafNode:as:" : "dkh 06/06/2014 15:15",
 		"moveSelfDirectoryNodeTo:as:" : "dkh 11/07/2014 11:54",
+		"moveSelfFileSystemDirectoryNodeTo:as:" : "dkh 11/07/2014 12:35",
 		"moveTo:as:" : "dkh 12/22/2013 15:34",
 		"objectNamed:" : "dkh 06/05/2013 11:41",
 		"postCopy" : "dkh 09/25/2013 17:11",
