@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 11/07/2014 12:08",
+	"instvars" : [
+		 ],
+	"name" : "TDShellSimpleComposedFsToFsMvCpCommandTests",
+	"pools" : [
+		 ],
+	"super" : "TDShellAbstractMvCpCommandTests",
+	"type" : "normal" }
