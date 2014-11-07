@@ -20,4 +20,5 @@ runTestSuite: aTestSuite with: aTestResult refreshing: refreshBlock
       refreshBlock value.
       delay := Delay forSeconds: 5.
       delay wait.
-      delay := nil ]
+      delay := nil ].
+  self inform: 'finished with tests'
