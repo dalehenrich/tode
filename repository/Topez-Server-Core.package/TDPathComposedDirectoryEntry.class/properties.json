@@ -6,8 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"path",
+		"includes",
+		"excludes",
+		"selectBlock",
 		"topez" ],
-	"name" : "TDAbstractComposedDirectoryNodeContents",
+	"name" : "TDPathComposedDirectoryEntry",
 	"pools" : [
 		 ],
 	"super" : "Object",

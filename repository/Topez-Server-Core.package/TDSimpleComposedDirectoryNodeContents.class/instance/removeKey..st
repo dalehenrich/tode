@@ -1,3 +1,3 @@
 dictionary compat
 removeKey: aNodeName
-  ^ self removeChildNamed: aNodeName
+  ^ self node removeChildNamed: aNodeName

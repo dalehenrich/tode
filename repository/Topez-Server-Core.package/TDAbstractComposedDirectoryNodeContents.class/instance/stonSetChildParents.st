@@ -1,3 +1,0 @@
-ston
-stonSetChildParents
-  self subclassResponsibility

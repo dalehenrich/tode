@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"topez" ],
-	"name" : "TDAbstractComposedDirectoryNodeContents",
+		"entryList",
+		"parent" ],
+	"name" : "TDPathComposedDirectoryNodeContents",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TDAbstractComposedDirectoryNodeContents",
 	"type" : "normal" }

@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"node:" : "dkh 11/05/2014 12:07" },
+		 },
 	"instance" : {
 		"addChild:" : "dkh 11/05/2014 13:55",
 		"at:ifAbsent:" : "dkh 11/05/2014 12:07",
@@ -10,8 +10,5 @@
 		"node" : "dkh 11/05/2014 16:49",
 		"node:" : "dkh 11/05/2014 12:07",
 		"parent:" : "dkh 11/06/2014 14:18",
-		"removeKey:" : "dkh 11/05/2014 12:07",
-		"stonSetChildParents" : "dkh 11/06/2014 14:22",
-		"topez" : "dkh 11/05/2014 16:49",
-		"topez:" : "dkh 11/05/2014 16:49",
+		"removeKey:" : "dkh 11/07/2014 14:29",
 		"values" : "dkh 11/05/2014 12:07" } }
