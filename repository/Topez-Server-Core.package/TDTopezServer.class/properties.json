@@ -20,7 +20,8 @@
 		"accumulateScriptText",
 		"scriptInputStream",
 		"scriptActionStack",
-		"sessionDescription" ],
+		"sessionDescription",
+		"serverTodeRoot" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

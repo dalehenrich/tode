@@ -2,22 +2,22 @@ mount
 mount
   "
   mount [-h|--help]
-  mount [--asLeafNode] <directory-path> <object-path> [<link-name>]
-  mount [--asLeafNode] --todeRoot <directory-path> <object-path> [<link-name>]
+  mount [--asLeafNode] <directory-or-file-path> <object-path> [<link-name>]
+  mount [--asLeafNode] --todeRoot <directory-or-file-path> <object-path> [<link-name>]
   "
 
-  | directoryPath asLeafNode |
-  directoryPath := self arguments at: 1.
+  | directoryOrFilePath asLeafNode |
+  directoryOrFilePath := self arguments at: 1.
   options
     at: 'todeRoot'
-    ifPresent: [ :ignored | directoryPath := self topez serverTodeRoot , '/' , directoryPath ].
+    ifPresent: [ :ignored | directoryOrFilePath := self topez serverTodeRoot , '/' , directoryOrFilePath ].
   options
     at: 'asLeafNode'
     ifAbsent: [ asLeafNode := false ]
     ifPresent: [ :ignored | asLeafNode := true ].
   ^ self
-    mount: directoryPath
+    mount: directoryOrFilePath
     at: (self arguments at: 2)
     as:
-      (self arguments at: 3 ifAbsent: [ (directoryPath findTokens: '/') last ])
+      (self arguments at: 3 ifAbsent: [ (directoryOrFilePath findTokens: '/') last ])
     visitAsLeafNode: asLeafNode

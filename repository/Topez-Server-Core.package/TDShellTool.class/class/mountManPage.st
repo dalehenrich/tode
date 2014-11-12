@@ -5,14 +5,14 @@ mountManPage
 
 SYNOPSIS
   mount [-h|--help]
-  mount [--asLeafNode] <directory-path> <object-path> [<link-name>]
-  mount [--asLeafNode] --todeRoot <directory-path> <object-path> [<link-name>]
+  mount [--asLeafNode] <directory-or-file-path> <object-path> [<link-name>]
+  mount [--asLeafNode] --todeRoot <directory-or-file-path> <object-path> [<link-name>]
 
 DESCRIPTION
   The `mount` command makes it possible to create a link between the server
   file system and the tODE object structure.
 
-  Once a file system directory has been mounted, you can navigate the file system
+  Once a file system directory or file has been mounted, you can navigate the file system
   as if it were part of the tODE object structure.
 
   Files with a `.ston` extension are expected to contain object references 
@@ -44,6 +44,7 @@ EXAMPLES
 
   mount /opt/git/todeHome/home /
   mount /opt/git/todeHome/home / todeHome
+  mount /opt/git/todeHome/home.ston / todeHome
 
   mount --todeRoot home / 
 '

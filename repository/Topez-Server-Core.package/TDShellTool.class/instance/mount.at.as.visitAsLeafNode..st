@@ -1,14 +1,24 @@
 mount
-mount: directoryPath at: objectPath as: nodeName visitAsLeafNode: visitAsLeafNode
-  | gatewayNode root |
-  gatewayNode := TDObjectGatewayNode new
-    name: nodeName;
-    contents: 'ServerFileDirectory on: ' , directoryPath printString;
-    visitAsLeafNode: visitAsLeafNode;
-    yourself.
-  self topez ensureChildrenExistIn: objectPath.
-  root := self topez lookup: objectPath.
-  root addChildNode: gatewayNode.
-  gatewayNode printString = self topez homeNode printString
-    ifTrue: [ self topez homeNodeReset ].
-  ^ gatewayNode
+mount: directoryOrFilePath at: objectPath as: nodeName visitAsLeafNode: visitAsLeafNode
+  | parentDir localPath fileOrDirName entry |
+  ServerFileDirectory
+    splitName: directoryOrFilePath
+    to: [ :dirPath :localName | 
+      parentDir := ServerFileDirectory on: dirPath.
+      fileOrDirName := localName ].
+  entry := parentDir directoryEntryFor: fileOrDirName.
+  entry
+    ifNil: [ ^ self error: 'File or directory not found: ' , directoryOrFilePath printString ].
+  ^ entry isDirectory
+    ifTrue: [ 
+      self
+        mountDirectory: directoryOrFilePath
+        at: objectPath
+        as: nodeName
+        visitAsLeafNode: visitAsLeafNode ]
+    ifFalse: [ 
+      self
+        mountFile: directoryOrFilePath
+        at: objectPath
+        as: nodeName
+        visitAsLeafNode: visitAsLeafNode ]
