@@ -6,7 +6,7 @@ mountManPage
 SYNOPSIS
   mount [-h|--help]
   mount [--asLeafNode] <directory-or-file-path> <object-path> [<link-name>]
-  mount [--asLeafNode] --todeRoot <directory-or-file-path> <object-path> [<link-name>]
+  mount [--asLeafNode] [--todeRoot | --stoneRoot] <directory-or-file-path> <object-path> [<link-name>]
 
 DESCRIPTION
   The `mount` command makes it possible to create a link between the server
@@ -35,9 +35,15 @@ OPTIONS
     --asLeafNode will terminate visiting at the gateway node and the gateway node
     itself will be searched for references. 
 
+  --stoneRoot
+    The <directory-path> is interpreted as a directory path relative to 
+    `<todeRoot>/sys/stones/<stone-name>/root`, where <todeRoot> is defined by the 
+    `serverTodeRoot` field of the current sessionDescription (instance of TDSessionDescription).
+
   --todeRoot
     The <directory-path> is interpreted as a path relative to `todeRoot` which 
-    is specified by the `serverTodeRoot` field of the class TDSessionDescription.
+    is specified by the `serverTodeRoot` field of the current sessionDescription (instance 
+    of TDSessionDescription).
 
 EXAMPLES
   mount -h
@@ -47,4 +53,5 @@ EXAMPLES
   mount /opt/git/todeHome/home.ston / todeHome
 
   mount --todeRoot home / 
+  mount --stoneRoot root /sys stone
 '
