@@ -1,3 +1,3 @@
 home
 sessionDescriptionHome
-	^ self todeRoot ,  '/client/descriptions/'
+	^ self getPath: '/client/descriptions/'

@@ -1,4 +1,4 @@
 home
 todePath
-	TodePath ifNil: [ TodePath := '/dev/tode/' ].
+	TodePath ifNil: [ TodePath := '/tode/' ].
 	^ TodePath

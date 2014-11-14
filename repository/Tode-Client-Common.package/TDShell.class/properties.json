@@ -9,7 +9,7 @@
 		"DevKitRoot",
 		"EnableDebugger",
 		"TodePath",
-		"WebEditionRoot" ],
+		"UseTodeSys" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"windowStatus",

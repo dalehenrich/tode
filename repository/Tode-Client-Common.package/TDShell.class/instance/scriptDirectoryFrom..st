@@ -6,7 +6,7 @@ scriptDirectoryFrom: options
 			| path |
 			path := dirname.
 			(dirname beginsWith: '/')
-				ifFalse: [ path := TDShell updateServerHome , dirname ].
+				ifFalse: [ path := TDShell updateServerHome: self stoneName scriptDir: dirname ].
 			^ self filetreeUtilityClass directoryFromPath: path ]
 		ifAbsent: [ 
 			options
@@ -15,6 +15,6 @@ scriptDirectoryFrom: options
 					| path |
 					path := dirname.
 					(dirname beginsWith: '/')
-						ifFalse: [ path := TDShell updateServerHome , dirname ].
-					^ self filetreeUtilityClass directoryFromPath: path ] 
-				ifAbsent: [ ^self scriptDirectoryFromBaselineOfTode ]]
+						ifFalse: [ path := TDShell updateServerHome: self stoneName scriptDir: dirname ].
+					^ self filetreeUtilityClass directoryFromPath: path ]
+				ifAbsent: [ ^ self scriptDirectoryFromBaselineOfTode ] ]

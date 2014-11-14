@@ -16,7 +16,7 @@ executeScript: command
 					| commands filepath |
 					filepath := filename.
 					(filename beginsWith: '/')
-						ifFalse: [ filepath := TDShell clientScriptsHome , filename ].
+						ifFalse: [ filepath := (TDShell clientScriptsHome: self stoneName) , filename ].
 					FileStream readOnlyFileNamed: filepath do: [ :fileStream | commands := fileStream contents ].
 					^ self evaluate: commands ].
 			options
@@ -24,7 +24,7 @@ executeScript: command
 				ifPresent: [ :dirname | 
 					| dir fileNames dirPath |
 					dirPath := dirname.
-					dirPath ifNil: [ dirPath := TDShell clientScriptsHome ].
+					dirPath ifNil: [ dirPath := (TDShell clientScriptsHome: self stoneName) ].
 					dir := MCFileTreeFileUtils current directoryFromPath: dirPath.
 					fileNames := WriteStream on: String new.
 					dir entries
