@@ -1,3 +1,3 @@
 home
 windowLayoutHome
-	^ self getPath: '/client/windowLayout/'
+	^ self chooseSysPathFor: '/client/windowLayout/'

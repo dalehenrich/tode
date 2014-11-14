@@ -1,3 +1,3 @@
 home
 clientScriptsHome: stoneName
-	^ self getPath: '/client/scripts/' stoneName: stoneName
+	^ self chooseSysPathFor: '/client/scripts/' stoneName: stoneName

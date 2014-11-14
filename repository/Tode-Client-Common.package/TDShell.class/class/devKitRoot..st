@@ -1,4 +1,4 @@
-home
+home-private
 devKitRoot: aString
 	DevKitRoot := aString.
 	TodePath := '/tode/'.

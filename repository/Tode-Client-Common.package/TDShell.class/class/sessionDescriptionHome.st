@@ -1,3 +1,3 @@
 home
 sessionDescriptionHome
-	^ self getPath: '/client/descriptions/'
+	^ self chooseSysPathFor: '/client/descriptions/'
