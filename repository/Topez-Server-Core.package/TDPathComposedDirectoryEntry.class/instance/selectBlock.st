@@ -8,7 +8,7 @@ selectBlock
             ifTrue: [ [ :node | true ] ]
             ifFalse: [ 
               "excludes  defined"
-              [ :node | self excludes includes: node name ] ] ]
+              [ :node | (self excludes includes: node name) not ] ] ]
         ifFalse: [ 
           self excludes isEmpty
             ifTrue: [ 
