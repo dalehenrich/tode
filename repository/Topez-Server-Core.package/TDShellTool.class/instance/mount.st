@@ -8,6 +8,8 @@ mount
 
   | directoryOrFilePath asLeafNode |
   directoryOrFilePath := self arguments at: 1.
+  directoryOrFilePath = '/'
+    ifTrue: [ directoryOrFilePath := '' ].
   options
     at: 'todeRoot'
     ifPresent: [ :ignored | directoryOrFilePath := self topez serverTodeRoot , '/' , directoryOrFilePath ]
