@@ -1,4 +1,4 @@
-instance creation
+instance creation-simple
 serverDiskPath: diskPath topez: topez
   | dir |
   dir := ServerFileDirectory on: diskPath.

@@ -1,10 +1,5 @@
-instance creation
+instance creation-simple
 link: aNode topez: topez
-  ^ self new
-    name: aNode name;
-    contents:
-        (TDSimpleComposedDirectoryNodeContents new
-            node: aNode;
-            yourself);
-    topez: topez;
+  ^ (self simpleComposedDirectoryNodeNamed: aNode name topez: topez)
+    addSimpleNode: aNode;
     yourself

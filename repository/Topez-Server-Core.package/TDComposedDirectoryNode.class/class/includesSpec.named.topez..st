@@ -1,4 +1,4 @@
-instance creation
+instance creation-compound
 includesSpec: entrySpecList named: nodeName topez: topez
   "
     {
@@ -8,22 +8,8 @@ includesSpec: entrySpecList named: nodeName topez: topez
     }
 "
 
-  | entryList |
-  entryList := OrderedCollection new.
+  | composedNode |
+  composedNode := self pathComposedDirectoryNodeNamed: nodeName topez: topez.
   entrySpecList
-    do: [ :assoc | 
-      | entry |
-      entry := TDPathComposedDirectoryEntry new
-        path: assoc key;
-        includes: assoc value;
-        topez: topez;
-        yourself.
-      entryList add: entry ].
-  ^ self new
-    name: nodeName;
-    contents:
-        (TDPathComposedDirectoryNodeContents new
-            entryList: entryList;
-            yourself);
-    topez: topez;
-    yourself
+    do: [ :assoc | composedNode addPathNode: assoc key includes: assoc value ].
+  ^ composedNode

@@ -1,4 +1,4 @@
-instance creation
+instance creation-simple
 gatewayServerDiskPath: diskPath topez: topez
   | path |
   path := diskPath findTokens: '/'.
