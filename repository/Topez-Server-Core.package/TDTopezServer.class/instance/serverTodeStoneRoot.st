@@ -1,3 +1,3 @@
 accessing
 serverTodeStoneRoot
-  ^ self serverTodeStoneRoot: self serverStoneName
+  ^ self serverTodeStoneRootFor: self serverStoneName
