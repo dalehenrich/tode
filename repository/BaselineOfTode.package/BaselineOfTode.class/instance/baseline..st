@@ -165,6 +165,10 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-24x-Tests' ];
         package: 'Topez-Server-24x-Tests'
           with: [ spec requires: 'Topez-Server-Tests' ];
+        package: 'Tode-GemStone-Server-Core'
+          with: [ spec includes: #('Tode-GemStone-Core2x') ];
+        package: 'Tode-GemStone-Core2x'
+          with: [ spec requires: #('Tode-GemStone-Server-Core') ];
         yourself ].
   spec
     for: #'gs3.x'
@@ -182,6 +186,10 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-31x-Tests' ];
         package: 'Topez-Server-31x-Tests'
           with: [ spec requires: 'Topez-Server-Tests' ];
+        package: 'Tode-GemStone-Server-Core'
+          with: [ spec includes: #('Tode-GemStone-Core3x') ];
+        package: 'Tode-GemStone-Core3x'
+          with: [ spec requires: #('Tode-GemStone-Server-Core') ];
         yourself ].
   spec
     for: #'gs3.0.x'
