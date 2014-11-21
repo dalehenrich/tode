@@ -7,8 +7,10 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
   entry := registration entry.
   (entry isNil or: [ entry projectPath isNil ])
     ifTrue: [ 
-      self inform: 'No project file exists for ' , registration projectName.
-      ^ false ].
-  node := self topez lookup: entry projectPath , entry projectNodeName.
+      entry := registration createTemplateProjectEntry.
+      node := entry
+        createProjectEntryNode: '/sys/stone/projects'
+        topez: self topez ]
+    ifFalse: [ node := self topez lookup: entry projectPath , entry projectNodeName ].
   self editTool editObjects: {node}.
   ^ true
