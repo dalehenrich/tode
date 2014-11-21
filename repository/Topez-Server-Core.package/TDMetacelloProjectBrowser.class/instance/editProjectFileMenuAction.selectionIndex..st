@@ -9,8 +9,9 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ 
       entry := registration createTemplateProjectEntry.
       node := entry
-        createProjectEntryNode: '/sys/stone/projects'
-        topez: self topez ]
+        createProjectEntryNode: '/sys/stone/projects/'
+        topez: self topez.
+      entry projectPath: '/sys/stone/projects/' ]
     ifFalse: [ node := self topez lookup: entry projectPath , entry projectNodeName ].
   node
     editUsing:
