@@ -8,6 +8,7 @@
 	"instvars" : [
 		"projectName",
 		"projectPath",
+		"baseProjectPath",
 		"projectNodeName",
 		"commandMap",
 		"status",

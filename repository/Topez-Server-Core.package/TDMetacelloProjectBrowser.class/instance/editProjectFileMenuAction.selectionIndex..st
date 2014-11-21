@@ -12,5 +12,10 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
         createProjectEntryNode: '/sys/stone/projects'
         topez: self topez ]
     ifFalse: [ node := self topez lookup: entry projectPath , entry projectNodeName ].
-  self editTool editObjects: {node}.
+  node
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowLabel:
+            node printString , ' (' , entry baseProjectPath , node name , ')';
+        yourself).
   ^ true

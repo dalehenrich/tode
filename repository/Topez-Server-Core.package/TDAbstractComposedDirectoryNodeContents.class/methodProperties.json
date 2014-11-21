@@ -5,6 +5,7 @@
 		"addChild:" : "dkh 11/05/2014 13:55",
 		"at:ifAbsent:" : "dkh 11/05/2014 11:59",
 		"at:put:" : "dkh 11/05/2014 11:59",
+		"composedChildrenDo:" : "dkh 11/21/2014 14:55",
 		"keys" : "dkh 11/05/2014 11:59",
 		"moveDirectoryNode:as:" : "dkh 11/07/2014 13:34",
 		"removeKey:" : "dkh 11/05/2014 11:59",
