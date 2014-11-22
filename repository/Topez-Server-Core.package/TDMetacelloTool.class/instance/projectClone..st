@@ -65,5 +65,8 @@ If you cancel, a branch name can be specified at a later date.'
     projectMap: registration
     from: githubRepo
     toRepository: newRegistration repository.
+  newRegistration
+    entry: nil;
+    entryNode: self topez.	"force creation of a /sys/stone/projects project entry with cloned information"
   registration isLoadedInImage
     ifTrue: [ registration versionInfo versionString: githubSha ]

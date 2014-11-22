@@ -1,6 +1,6 @@
 project list
 createTemplateProjectEntry
-  ^ TDProjectSpecEntryDefinition new
+  ^ entry := TDProjectSpecEntryDefinition new
     configuration: self projectName
       className: self configurationClassName
       version: self currentVersionString

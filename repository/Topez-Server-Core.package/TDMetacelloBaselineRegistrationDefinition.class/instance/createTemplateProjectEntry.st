@@ -1,6 +1,6 @@
 project list
 createTemplateProjectEntry
-  ^ TDProjectSpecEntryDefinition new
+  ^ entry := TDProjectSpecEntryDefinition new
     baseline: self projectName
       repository: self repositoryDescription
       loads: 'default';
