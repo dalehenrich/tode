@@ -13,7 +13,9 @@ clientList: miniTool listElement: listElement
   objectLogEntries
     do: [ :ole | 
       | one two three |
-      two := ole labelString.
+      two := ole label.
+      ole hasContinuation
+        ifTrue: [ two := ole labelString , ' (' , two , ')' ].
       two size > 35
         ifTrue: [ two := (two copyFrom: 1 to: 35) , '...' ].
       labels

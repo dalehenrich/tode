@@ -34,7 +34,7 @@ olview
     reversed: reversed;
     objectLogBlock: [ 
           | objectLog |
-          System abortTransaction.
+          System commitTransaction.
           objectLog := objectLog := ObjectLogEntry objectLog.
           pid
             ifNotNil: [ objectLog := objectLog select: [ :each | each pid = pid ] ].
