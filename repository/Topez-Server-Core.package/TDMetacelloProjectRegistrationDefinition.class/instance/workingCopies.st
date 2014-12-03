@@ -2,6 +2,7 @@ accessing
 workingCopies
   | configWorkingCopy workingCopies |
   configWorkingCopy := self projectSpec projectPackage workingCopy.
+  configWorkingCopy ifNil: [ ^ #() ].
   self isLoadedInImage
     ifTrue: [ 
       | version |
