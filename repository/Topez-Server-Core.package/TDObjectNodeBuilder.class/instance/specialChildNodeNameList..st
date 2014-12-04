@@ -6,6 +6,8 @@ specialChildNodeNameList: parentNode
     ifFalse: [ #('(class)') ].
   parentNode basicContents isInvariant
     ifTrue: [ specialList := specialList , #('(invariant)') ].
+  parentNode basicContents isCommitted
+    ifTrue: [ specialList := specialList , #('(committed)') ].
   (DependencyList for: parentNode basicContents)
     ifNotNil: [ specialList := specialList , #('(dependents)') ].
   ^ specialList

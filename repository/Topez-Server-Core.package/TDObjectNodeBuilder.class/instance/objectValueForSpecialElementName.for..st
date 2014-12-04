@@ -8,6 +8,8 @@ objectValueForSpecialElementName: elementName for: anObject
     ifTrue: [ ^ anObject asString ].
   elementName = '(invariant)'
     ifTrue: [ ^ anObject isInvariant ].
+  elementName = '(committed)'
+    ifTrue: [ ^ anObject isCommitted ].
   elementName = '(dependents)'
     ifTrue: [ ^ DependencyList for: anObject ].
   elementName = '<<more>>'
