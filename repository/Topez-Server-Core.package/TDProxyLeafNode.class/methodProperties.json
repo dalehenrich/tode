@@ -42,6 +42,7 @@
 		"parent" : "dkh 12/06/2013 15:43",
 		"parent:" : "dkh 12/06/2013 15:27",
 		"removeAsChildOfFileSystemDirectoryNode:" : "dkh 12/06/2013 11:56",
+		"removeChildNamed:" : "dkh 12/13/2014 10:24",
 		"renderNameText" : "dkh 12/06/2013 15:10",
 		"renderNameTextAttributes" : "dkh 11/30/2013 14:53",
 		"rsyncCopyNodeUsing:" : "dkh 11/30/2013 14:54",
