@@ -1,5 +1,7 @@
 # tODE: the Object-centric Development Environment [![Build Status](https://travis-ci.org/dalehenrich/tode.png?branch=master)](https://travis-ci.org/dalehenrich/tode)
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/tode?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Installation and Setup
 
 See the [gsDevKitHome project](https://github.com/GsDevKit/gsDevKitHome#open-source-development-kit-for-gemstones-64-bit-)
