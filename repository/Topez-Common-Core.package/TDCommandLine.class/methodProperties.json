@@ -1,8 +1,9 @@
 {
 	"class" : {
 		"commandLine:redirectTarget:" : "dkh 5/16/2013 18:15",
-		"isolate:" : "dkh 05/20/2013 22:17",
-		"line:forEachCommand:" : "dkh 5/16/2013 19:43",
+		"fromStream:forEachCommand:" : "dkh 12/17/2014 15:52",
+		"isolate:" : "dkh 12/17/2014 15:27",
+		"line:forEachCommand:" : "dkh 12/17/2014 15:32",
 		"scan:delim:" : "dkh 05/20/2013 22:22" },
 	"instance" : {
 		"argPtrs" : "dkh 11/10/2013 06:57",

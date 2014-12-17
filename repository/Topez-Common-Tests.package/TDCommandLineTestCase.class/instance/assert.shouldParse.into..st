@@ -4,7 +4,7 @@ assert: commandLine shouldParse: shouldParse into: expectedCommands
   parsed := false.
   count := 1.
   TDCommandLine
-    line: commandLine
+    fromStream: commandLine readStream
     forEachCommand: [ :command | 
       | tokens expectedTokens expectedCommand |
       parsed := true.
