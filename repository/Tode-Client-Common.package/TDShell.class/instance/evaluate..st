@@ -1,17 +1,18 @@
 evaluator engine
 evaluate: aString
 	[ 
-	| line stream result |
-	stream := aString readStream.
-	[ 
-	line := stream nextLine.
-	line ~~ nil ]
-		whileTrue: [ 
+	| result |
+	TDCommandLine
+		fromStream: aString readStream
+		selectLine: [ :line | 
 			self actionStack notEmpty
-				ifTrue: [ result := self accumulateText: line ]
+				ifTrue: [ 
+					result := self accumulateText: line.
+					false	"do not create or evaluate command for this line" ]
 				ifFalse: [ 
 					self addToHistory: line.
-					TDCommandLine line: line forEachCommand: [ :command | result := self evaluateCommand: command ] ] ].
+					true	"create and evaluate the command for this line" ] ]
+		forEachCommand: [ :command | result := self evaluateCommand: command ].
 	^ result ]
 		on: Error , TDRestoreFromBackupComplete , GsTopezCommandErrorNotification
 		do: [ :ex | 
