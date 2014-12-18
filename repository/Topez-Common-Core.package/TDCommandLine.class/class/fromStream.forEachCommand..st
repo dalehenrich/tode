@@ -8,7 +8,7 @@ fromStream: aStream forEachCommand: aBlock
   lastLine := ''.
   [ 
   line := aStream nextLine.
-  line isEmpty ]
+  (line isNil or: [line isEmpty ]) ]
     whileFalse: [ 
       (line isEmpty not and: [ line last == $\ ])
         ifTrue: [ 

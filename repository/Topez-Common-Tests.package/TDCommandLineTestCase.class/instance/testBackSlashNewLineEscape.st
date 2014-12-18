@@ -21,5 +21,5 @@ cd \
     parsesInto:
       {(TDCommandLine new
         tokens:
-            #('./gemServer' #',' '--register=seaside' #',' '--type=zinc' #',' '--port=1750' #',' '--log=all' #',' '--logTo=transcript');
+            #('./gemServer' '--register=seaside'  '--type=zinc'  '--port=1750' '--log=all'  '--logTo=transcript');
         yourself)}
