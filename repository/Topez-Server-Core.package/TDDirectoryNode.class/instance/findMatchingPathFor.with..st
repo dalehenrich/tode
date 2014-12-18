@@ -14,6 +14,4 @@ findMatchingPathFor: aPath with: aTopez
     childrenDo: [ :child | 
       (child name beginsWith: elementName)
         ifTrue: [ matches add: child ] ].
-  matches size ~~ 1
-    ifTrue: [ ^ aPath ].
-  ^ matches first printName
+  ^ matches

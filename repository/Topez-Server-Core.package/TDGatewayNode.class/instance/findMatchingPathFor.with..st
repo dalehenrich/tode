@@ -1,3 +1,3 @@
 as yet unclassified
 findMatchingPathFor: aPath with: aTopez
-  ^ {aPath}
+  ^ self gatewayNode findMatchingPathFor: aPath with: aTopez
