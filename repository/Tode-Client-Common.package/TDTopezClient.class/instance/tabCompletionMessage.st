@@ -7,5 +7,5 @@ tabCompletionMessage
         receiver: (self session asOopType: self topezServerOop);
         selector: 'tabCompletion:';
         arguments: #();
-        transform: #'native' -> nil ].
+        transform: #'ston' -> nil ].
   ^ tabCompletionMessage
