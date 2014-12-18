@@ -22,6 +22,7 @@ filterAndForwardEvent: event
 				do: [ :match | 
 					strm
 						nextPutAll: match;
+						space;
 						tab ].
 			strm lf.
 			textMorph replaceSelectionWith: strm contents.
@@ -29,16 +30,6 @@ filterAndForwardEvent: event
 			self model
 				prompt;
 				show: cmdLine.
-			self selectFrom: self text size + 1 to: self text size.
-			^ nil ].
-	(event keyValue = 30 or: [ event keyValue = 11 ])
-		ifTrue: [ 
-			self model previousHistory.
-			self selectFrom: self text size + 1 to: self text size.
-			^ nil ].
-	(event keyValue = 31 or: [ event keyValue = 12 ])
-		ifTrue: [ 
-			self model nextHistory.
 			self selectFrom: self text size + 1 to: self text size.
 			^ nil ].
 	^ ans
