@@ -7,7 +7,11 @@ tabCompletion: commandLine
     ifFalse: [ 
       token := tokens last.
       tabCompletion := (tokens size > 1
-        or: [ commandLine last isSeparator or: [ token first = $. or: [ token first = $/ ] ] ])
+        or: [ 
+          | first |
+          first := token first.
+          commandLine last isSeparator
+            or: [ first = $. or: [ first = $/ or: [ first = $~ ] ] ] ])
         ifTrue: [ 
           commandLine last isSeparator
             ifTrue: [ token := '' ].
@@ -20,6 +24,5 @@ tabCompletion: commandLine
   longestMatch := tabCompletion at: 4.
   cmdLine := ''.
   1 to: tokens size - 1 do: [ :index | cmdLine := cmdLine , (tokens at: index) , ' ' ].
-  tabCompletion at: 4 put: cmdLine , prefix , longestMatch , postfix.
   ^ {matches.
   (cmdLine , prefix , longestMatch , postfix)}
