@@ -1,5 +1,13 @@
 accessing
 findMatchingCommandFor: token
+  | matches longestMatch |
+  longestMatch := ''.
   token isEmpty
-    ifTrue: [ ^ self commands keys ].
-  ^ self commands keys select: [ :each | each beginsWith: token ]
+    ifTrue: [ matches := self commands keys ]
+    ifFalse: [ 
+      matches := self commands keys select: [ :each | each beginsWith: token ].
+      longestMatch := self shortestMatchFor: token from: matches ].
+  ^ {''.
+  matches.
+  ' '.
+  longestMatch}
