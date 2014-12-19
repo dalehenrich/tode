@@ -1,0 +1,2 @@
+test
+testB ^self

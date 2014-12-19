@@ -8,5 +8,6 @@ printOn: aStream
         ifFalse: [ aStream nextPut: $/ ].
       ^ self ].
   self parent printOn: aStream.
+  aStream nextPutAll: self name.
   self isLeaf
-    ifFalse: [ aStream nextPutAll: self name , '/' ]
+    ifFalse: [ aStream nextPut: $/ ]
