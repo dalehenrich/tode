@@ -16,9 +16,10 @@ tabCompletion: commandLine
   prefix := tabCompletion at: 1.
   matches := tabCompletion at: 2.
   postfix := tabCompletion at: 3.
-  tabCompletion at: 2 put: (matches asArray sorted: [ :a :b | a <= b ]).
+  matches := matches asArray sorted: [ :a :b | a <= b ].
   longestMatch := tabCompletion at: 4.
   cmdLine := ''.
   1 to: tokens size - 1 do: [ :index | cmdLine := cmdLine , (tokens at: index) , ' ' ].
   tabCompletion at: 4 put: cmdLine , prefix , longestMatch , postfix.
-  ^ tabCompletion
+  ^ {matches.
+  (cmdLine , prefix , longestMatch , postfix)}

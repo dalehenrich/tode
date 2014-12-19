@@ -4,13 +4,11 @@ filterAndForwardEvent: event
 	(ans := self model filterAndForwardEvent: event) ifNil: [ ^ nil ].
 	event keyCharacter = Character tab
 		ifTrue: [ 
-			| matches strm cmdLine tabCompletion prefix postfix longestMatch |
+			| matches strm cmdLine tabCompletion longestMatch |
 			cmdLine := self commandLineInput.
 			tabCompletion := self model tabCompletion: cmdLine.
-			prefix := tabCompletion at: 1.
-			matches := tabCompletion at: 2.
-			postfix := tabCompletion at: 3.
-			longestMatch := tabCompletion at: 4.
+			matches := tabCompletion at: 1.
+			longestMatch := tabCompletion at: 2.
 			matches size = 0
 				ifTrue: [ ^ nil ].
 			matches size = 1
