@@ -1,7 +1,7 @@
 private
 scanNode: dirNode forProjects: projectBlock
   dirNode
-    childrenAndNamesDo: [ :node :nodeName | 
+    childrenDo: [ :node | 
       node isLeaf
         ifFalse: [ 
           (node childNamed: 'project' ifAbsent: [  ])

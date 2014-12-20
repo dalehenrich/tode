@@ -71,4 +71,9 @@ DESCRIPTION
   <version-name> - fully qualified name, e.g., ''Topez-Server-Core-dkh.100'' 
   <version-path> - path to an MCVersion instance
   <workingCopy-path> - path to an MCWorkingCopy or TDMonticelloWorkingCopy instance
+
+EXAMPLES
+  mc ancestors @/sys/stone/packages/Utf8Encoding
+  mc browse @/sys/stone/packages/Topez-Server-Core
+  mc compare image BaselineOfSton @/sys/stone/repos/Ston/BaselineOfSton/BaselineOfSton-dkh.2
 '

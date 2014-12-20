@@ -5,7 +5,7 @@ findMatchingPathFor: aPathString with: aTopez
   matches := OrderedCollection new.
   longestMatch := prefix := postfix := ''.
   aPathString isEmpty
-    ifTrue: [ self childrenAndNamesDo: [ :child :childName | matches add: childName asString ] ]
+    ifTrue: [ self childrenDo: [ :child | matches add: child name asString ] ]
     ifFalse: [ 
       | node elementName path |
       path := aPathString findTokens: '/'.
@@ -36,8 +36,9 @@ findMatchingPathFor: aPathString with: aTopez
         ifFalse: [ 
           (aPathString endsWith: '/')
             ifTrue: [ 
-              node childrenAndNamesDo: [ :child :childName | matches add: childName asString ].
-              postfix := '' ]
+              node childrenDo: [ :child | matches add: child name asString ].
+              postfix := ''.
+              longestMatch := aTopez shortestMatchFor: '' from: matches ]
             ifFalse: [ 
               elementName := path last.
               node

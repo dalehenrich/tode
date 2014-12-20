@@ -2,16 +2,16 @@ accessing
 tabCompletion: commandLine
   | tokens token tabCompletion matches longestMatch cmdLine prefix postfix |
   tokens := commandLine findTokens: ' '.
-  tokens isEmpty
+  tabCompletion := tokens isEmpty
     ifTrue: [ self findMatchingCommandFor: '' ]
     ifFalse: [ 
       token := tokens last.
-      tabCompletion := (tokens size > 1
+      (tokens size > 1
         or: [ 
           | first |
           first := token first.
           commandLine last isSeparator
-            or: [ first = $. or: [ first = $/ or: [ first = $~ ] ] ] ])
+            or: [ first = $. or: [ first = $/ or: [ first = $~ or: [ first = $@ ] ] ] ] ])
         ifTrue: [ 
           commandLine last isSeparator
             ifTrue: [ token := '' ].

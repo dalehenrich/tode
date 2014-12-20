@@ -12,7 +12,7 @@ shortestMatchFor: subString from: arrayOfStrings
           shortest := each.
           shortestLength := each size ] ].
   max := subString size.
-  shortestMatch := subString.
+  shortestMatch := subString copy.
   subString size + 1 to: shortest size do: [ :index | 
     | char |
     char := shortest at: index.

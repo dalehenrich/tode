@@ -5,5 +5,5 @@ symbolListForNode: aNode
   tempSymbolDictionary := SymbolDictionary new.
   tempSymbolList add: tempSymbolDictionary.
   aNode
-    childrenAndNamesDo: [ :child :childName | tempSymbolDictionary at: child name asString asSymbol put: child dotSelfObject ].
+    childrenDo: [ :child | tempSymbolDictionary at: child name asString asSymbol put: child dotSelfObject ].
   ^ tempSymbolList

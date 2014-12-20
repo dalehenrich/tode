@@ -25,7 +25,6 @@ SYNOPSIS
      versions [-g|--git][-m--monticello] @<repository-path> <package-name>
 
 DESCRIPTION
-
   <package-name> - package base name, e.g., ''Topez-Server-Core''
   <repository-path> path to an MCRepository instance
   <repository-spec>
@@ -33,4 +32,7 @@ DESCRIPTION
     filetree:///opt/git/topez/packages
     github://dalehenrich/rb:dev/packages
   <workingCopy-path> - path to an MCWorkingCopy or TDMonticelloWorkingCopy instance
+
+EXAMPLES
+  mr packages @/sys/stone/repos/Tode
 '
