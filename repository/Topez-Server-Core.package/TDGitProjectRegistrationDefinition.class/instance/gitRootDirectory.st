@@ -1,0 +1,3 @@
+accessing
+gitRootDirectory
+  ^ self gitRepoDirectory
