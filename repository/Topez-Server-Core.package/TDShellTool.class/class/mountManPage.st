@@ -5,7 +5,8 @@ mountManPage
 
 SYNOPSIS
   mount [-h|--help]
-  mount [--asLeafNode] <relative-directory-or-file-path> <object-path> [<link-name>]
+  mount [--asLeafNode] <directory-or-file-path> <object-path> [<link-name>]
+  mount [--asLeafNode] @<directory-instance-path> <object-path> [<link-name>]
   mount [--asLeafNode] [--todeRoot | --stoneRoot] <relative-directory-or-file-path> <object-path> [<link-name>]
 
 DESCRIPTION
