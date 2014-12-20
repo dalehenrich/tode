@@ -58,4 +58,6 @@ EXAMPLES
 
   mount --todeRoot / / home
   mount --stoneRoot / /sys stone
+
+  mount @/sys/stone/dirs/GsApplicationTools/tode /home gemServer
 '
