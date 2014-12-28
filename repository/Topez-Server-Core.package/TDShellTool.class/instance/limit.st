@@ -1,16 +1,19 @@
 as yet unclassified
 limit
   "
+  limit autoCommit [true|false]
   limit chars [<item-count>]
   limit format [true|false]
   limit list [<item-count>]
-  limit oops [<item-count>]
+  limit oops [true|false]
   limit protocol [true|false]
 "
 
   | cmd cmdTokens |
   cmd := tokens at: 1.
   cmdTokens := tokens copyFrom: 2 to: tokens size.
+  (cmdTokens at: 1) = 'autoCommit'
+    ifTrue: [ ^ self limitAutoCommit: cmdTokens ].
   (cmdTokens at: 1) = 'chars'
     ifTrue: [ ^ self limitChars: cmdTokens ].
   (cmdTokens at: 1) = 'format'

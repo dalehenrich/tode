@@ -7,6 +7,7 @@ SYNOPSIS
   limit <command> [command-options]
 
 DESCRIPTION
+  limit autoCommit [true|false]
   limit chars [<item-count>]
   limit format [true|false]
   limit list [<item-count>]
