@@ -3,6 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
+		"Armed",
 		"Interrupted" ],
 	"commentStamp" : "",
 	"instvars" : [

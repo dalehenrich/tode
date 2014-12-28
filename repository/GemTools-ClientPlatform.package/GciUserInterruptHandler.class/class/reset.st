@@ -1,3 +1,6 @@
 as yet unclassified
 reset
-  Interrupted := false
+	"self reset"
+
+	Interrupted := false.
+	Armed := false
