@@ -23,7 +23,10 @@ nbPollForResult: hardBreakSent
 							Transcript
 								cr;
 								show: 'interrupted: ' , hardBreakSent printString.
-							GciUserInterrupt signal ] ] ].
+							GciUserInterrupt signal.
+							GciUserInterruptHandler
+								reset;
+								arm ] ] ].
 	^ assoc value ]
 		on: GciUserInterrupt
 		do: [ :ex | 
