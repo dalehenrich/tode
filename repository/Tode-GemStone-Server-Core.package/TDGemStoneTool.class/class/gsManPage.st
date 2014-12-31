@@ -8,6 +8,7 @@ SYNOPSIS
   gs fileout -d<filesystem-path>|--directory=<filesystem-path> 
              [--class|--package|--category] <fileout-pair>...
   gs halt -m|--almostOutOfMemory=<percent>
+  gs fileSizeReport
   gs instances <className>
      instances @<class-path>
   gs mfc [<maxThreads>]
