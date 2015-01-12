@@ -6,7 +6,9 @@ projectrehome
 "
 
   | projectName registration description newRepo skipConfig |
-  self getSubcommandOptsMixedLongShort: {#('repo' $i #'none')}.
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('repo' nil #'required' #'.' 'no-config' nil #'none')}.
   projectName := subArguments at: 1.
   registration := self projectRegistrationFor: projectName.
   subOptions
@@ -14,7 +16,7 @@ projectrehome
     ifPresent: [ :arg | description := arg ]
     ifAbsent: [ description := registration repositoryDescription ].
   subOptions
-    at: 'no-Config'
+    at: 'no-config'
     ifPresent: [ :ignored | skipConfig := true ]
     ifAbsent: [ skipConfig := false ].
   newRepo := self repositoryFromDescription: description.
