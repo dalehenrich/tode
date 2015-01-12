@@ -10,6 +10,8 @@ menuActionSpec: miniTool
       #('errors' nil #'runErrorsTestsMenuAction:selectionIndex:').
       #('unexpected passes' nil #'runUnexpectedPassesTestsMenuAction:selectionIndex:')})}.
   #('-').
+  {('Debug' -> {#('all' nil #'debugAllTestsMenuAction:selectionIndex:')})}.
+  #('-').
   #('run' $r #'runTestMenuAction:selectionIndex:' nil #'testMethod' false).
   #('debug' $d #'debugTestMenuAction:selectionIndex:' nil #'testMethod' false).
   #('-').
