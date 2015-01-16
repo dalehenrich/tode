@@ -2,8 +2,7 @@ as yet unclassified
 portsentButNotImplemented
   "port sentButNotImplemented"
 
-  | sbni sentNotImplemented |
+  | sbni sentNotImplementedMap |
   sbni := SentButNotImplementedTest new.
-  (sentNotImplemented := sbni sentButNotImplemented)
-    removeAllPresent: sbni specialCases.
-  ^ sentNotImplemented
+  sentNotImplementedMap := sbni sentButNotImplemented.
+  ^ sentNotImplementedMap
