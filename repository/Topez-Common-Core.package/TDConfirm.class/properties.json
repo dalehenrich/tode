@@ -8,7 +8,8 @@
 	"instvars" : [
 		"prompt",
 		"confirm",
-		"cancel" ],
+		"cancel",
+		"abort" ],
 	"name" : "TDConfirm",
 	"pools" : [
 		 ],

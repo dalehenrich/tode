@@ -3,4 +3,5 @@ copyAsTodeInteraction
   ^ TDConfirm new
     prompt: prompt;
     confirm: confirm;
-    cancel: cancel
+    cancel: cancel;
+    abort: abort
