@@ -1,6 +1,9 @@
 as yet unclassified
 gitmergetool: gitRepoDirectory mergerCompletionBlock: aMergerCompletionBlock mergerAbortBlock: aMergerAbortBlock windowLabel: label
   | dictionary conflicts merger mergeTool |
+  self
+    halt:
+      'merge in results from git diff --cached ... which are the non-conflict changes ... for complete picture of the merge'.
   dictionary := self gitlsfiles: gitRepoDirectory.
   dictionary isEmpty
     ifTrue: [ ^ 'No conflicts' ].

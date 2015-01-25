@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"copyOperationToMenuAction:selectionIndex:" : "dkh 01/25/2015 10:33",
 		"doMergeMenuAction:selectionIndex:" : "dkh 05/23/2014 13:40",
 		"enableDisableMenuItems:" : "dkh 05/30/2014 11:25",
 		"menuActionSpec:" : "dkh 05/30/2014 11:18",
@@ -10,7 +11,7 @@
 		"merger:mergerCompletionBlock:mergerAbortBlock:" : "dkh 05/28/2014 21:07",
 		"methodMenuActionSpec" : "dkh 07/08/2014 11:03",
 		"operations" : "dkh 10/07/2014 14:56",
-		"operationsMenuActionSpec" : "dkh 01/25/2015 08:51",
+		"operationsMenuActionSpec" : "dkh 01/25/2015 10:23",
 		"selectAncestorMenuAction:selectionIndex:" : "dkh 01/25/2015 07:56",
 		"selectClassOperations:selectionIndex:" : "dkh 05/30/2014 10:54",
 		"selectCustomMenuAction:selectionIndex:" : "dkh 01/25/2015 07:56",

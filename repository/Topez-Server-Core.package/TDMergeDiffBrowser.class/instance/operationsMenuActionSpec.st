@@ -1,6 +1,8 @@
 menu action specs
 operationsMenuActionSpec
-  ^ {#('view default' nil #'viewDefaultMenuAction:selectionIndex:').
+  ^ {#('copy to' nil #'copyOperationToMenuAction:selectionIndex:').
+  #('-').
+  #('view default' nil #'viewDefaultMenuAction:selectionIndex:').
   #('-').
   #('view ancestor' nil #'viewAncestorMenuAction:selectionIndex:').
   #('view us' nil #'viewUsMenuAction:selectionIndex:').
