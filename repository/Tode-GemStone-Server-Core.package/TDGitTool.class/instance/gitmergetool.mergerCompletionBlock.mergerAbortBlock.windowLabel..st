@@ -5,21 +5,29 @@ gitmergetool: gitRepoDirectory mergerCompletionBlock: aMergerCompletionBlock mer
   dictionary isEmpty
     ifTrue: [ ^ 'No conflicts' ].
   conflicts := OrderedCollection new.
-  dictionary keys
-    do: [ :path | 
-      gitRepoDirectory
-        readOnlyFileNamed: path
-        do: [ :fileStream | 
-          | triplet conflict |
-          triplet := self parseSourceConflictsOn: fileStream.
-          conflict := TDGitConflict new
-            baseDirectory: gitRepoDirectory;
-            filePath: path;
-            source: (triplet at: 1);
-            common: (triplet at: 2);
-            destination: (triplet at: 3);
-            yourself.
-          conflicts add: conflict ] ].
+  dictionary
+    keysAndValuesDo: [ :path :stages | 
+      | conflict us them ancestor labelString |
+      "stages at: 1 - common ancestor
+       stages at: 2 - us
+       stages at: 3 - them"
+      labelString := us := them := ancestor := nil.
+      (stages at: 1)
+        ifNotNil: [ :oc | ancestor := self gitcatfile: gitRepoDirectory gitObjectId: (oc at: 2) ].
+      (stages at: 2)
+        ifNotNil: [ :oc | us := self gitcatfile: gitRepoDirectory gitObjectId: (oc at: 2) ].
+      (stages at: 3)
+        ifNotNil: [ :oc | them := self gitcatfile: gitRepoDirectory gitObjectId: (oc at: 2) ].
+      conflict := TDGitMergeOperation new
+        baseDirectory: gitRepoDirectory;
+        filePath: path;
+        us: us;
+        ancestor: ancestor;
+        them: them;
+        labelString: labelString;
+        yourself.
+      conflicts add: conflict ].
+  conflicts := conflicts sorted: [ :a :b | a filePath <= b filePath ].
   merger := TDGitMerger new
     conflicts: conflicts;
     gitTool: self;

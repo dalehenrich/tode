@@ -1,7 +1,5 @@
 menu actions
 selectEditDefinitionMenuAction: listElement selectionIndex: selectionIndex
-  "select edit definition"
-
   | mergeOperation |
   selectionIndex = 0
     ifTrue: [ ^ false ].
