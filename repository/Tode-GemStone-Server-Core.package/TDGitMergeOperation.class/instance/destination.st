@@ -1,3 +1,0 @@
-accessing
-destination
-  ^ self them

@@ -1,17 +1,23 @@
 as yet unclassified
 defaultSelection
   self stage == #'adddedByThem'
-    ifTrue: [ ^ #'them' ].	"them vs ancestor"
+    ifTrue: [ ^ #'them' ].
   stage == #'addedByUs'
-    ifTrue: [ ^ #'us' ].	"us vs ancestor"
+    ifTrue: [ ^ #'us' ].
   stage == #'addedByBoth'
-    ifTrue: [ ^ #'us' ].	"us vs them diff"
+    ifTrue: [ ^ #'us' ].
   stage == #'deletedByBoth'
-    ifTrue: [ ^ #'us' ].	"us vs ancestor"
+    ifTrue: [ ^ #'us' ].
   stage == #'deletedByUs'
-    ifTrue: [ ^ #'us' ].	"us vs ancestor"
+    ifTrue: [ ^ #'us' ].
   stage == #'deletedByThem'
-    ifTrue: [ ^ #'us' ].	"us vs ancestor"
+    ifTrue: [ ^ #'us' ].
   stage == #'modifiedByBoth'
-    ifTrue: [ ^ #'us' ].	"us vs them diff"
+    ifTrue: [ ^ #'us' ].
+  stage == #'added'
+    ifTrue: [ ^ #'us' ].
+  stage == #'deleted'
+    ifTrue: [ ^ #'us' ].
+  stage == #'modified'
+    ifTrue: [ ^ #'us' ].
   self error: 'unknown stage'

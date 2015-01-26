@@ -9,7 +9,8 @@ copyOperationToMenuAction: listElement selectionIndex: selectionIndex
     prompt: 'Enter new file path'
     template: copiedOperation filePath) signal.
   copiedOperation filePath: filePath.
-  copiedOperation resolved: false.
+  (#(#'added' #'modified' #'deleted') includes: copiedOperation stage)
+    ifFalse: [ copiedOperation resolved: false ].
   self merger conflicts add: copiedOperation.
   self merger
     conflicts:

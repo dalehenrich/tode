@@ -1,9 +1,6 @@
 as yet unclassified
 gitmergetool: gitRepoDirectory mergerCompletionBlock: aMergerCompletionBlock mergerAbortBlock: aMergerAbortBlock windowLabel: label
-  | dictionary conflicts merger mergeTool |
-  self
-    halt:
-      'merge in results from git diff --cached ... which are the non-conflict changes ... for complete picture of the merge'.
+  | dictionary conflicts merger mergeTool diffs |
   dictionary := self gitlsfiles: gitRepoDirectory.
   dictionary isEmpty
     ifTrue: [ ^ 'No conflicts' ].
@@ -30,6 +27,14 @@ gitmergetool: gitRepoDirectory mergerCompletionBlock: aMergerCompletionBlock mer
         labelString: labelString;
         yourself.
       conflicts add: conflict ].
+  diffs := (self
+    gitdifftool: ''
+    destination: ''
+    cached: true
+    filePath: ''
+    gitRepoDirectory: gitRepoDirectory
+    diffClass: TDGitDiff) collect: [ :diff | diff asMergeOperation ].
+  conflicts addAll: diffs.
   conflicts := conflicts sorted: [ :a :b | a filePath <= b filePath ].
   merger := TDGitMerger new
     conflicts: conflicts;

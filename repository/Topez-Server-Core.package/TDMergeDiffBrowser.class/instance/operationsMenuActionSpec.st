@@ -1,6 +1,9 @@
 menu action specs
 operationsMenuActionSpec
-  ^ {#('copy to' nil #'copyOperationToMenuAction:selectionIndex:').
+  ^ {#('show unresolved' nil #'showUnresolvedMenuAction:selectionIndex:').
+  #('show all' nil #'showAllMenuAction:selectionIndex:').
+  #('-').
+  #('copy to' nil #'copyOperationToMenuAction:selectionIndex:').
   #('-').
   #('view default' nil #'viewDefaultMenuAction:selectionIndex:').
   #('-').
@@ -24,8 +27,4 @@ operationsMenuActionSpec
   #('choose them' $t #'selectThemMenuAction:selectionIndex:').
   #('choose custom' $c #'selectCustomMenuAction:selectionIndex:').
   #('-').
-  #('do merge' $j #'doMergeMenuAction:selectionIndex:').
-  #('-').
-  #('toggle view same source' nil #'toggleViewSameSource:selectionIndex:').
-  #('-').
-  #('set (clear) class filter' nil #'selectClassOperations:selectionIndex:')}
+  #('do merge' $j #'doMergeMenuAction:selectionIndex:')}
