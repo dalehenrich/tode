@@ -15,9 +15,9 @@ defaultSelection
   stage == #'modifiedByBoth'
     ifTrue: [ ^ #'us' ].
   stage == #'added'
-    ifTrue: [ ^ #'us' ].
+    ifTrue: [ ^ #'them' ].
   stage == #'deleted'
-    ifTrue: [ ^ #'us' ].
+    ifTrue: [ ^ #'them' ].
   stage == #'modified'
-    ifTrue: [ ^ #'us' ].
+    ifTrue: [ ^ #'them' ].
   self error: 'unknown stage'

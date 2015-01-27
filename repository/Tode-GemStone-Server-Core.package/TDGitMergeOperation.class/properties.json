@@ -16,7 +16,8 @@
 		"us",
 		"them",
 		"stage",
-		"view" ],
+		"view",
+		"tag" ],
 	"name" : "TDGitMergeOperation",
 	"pools" : [
 		 ],

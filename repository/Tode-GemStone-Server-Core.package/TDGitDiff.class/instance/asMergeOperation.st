@@ -1,9 +1,9 @@
 converting
 asMergeOperation
-  | us ancestor stage view |
-  ancestor := source.
-  us := destination.
-  view := #'ancestorVsUs'.
+  | them us stage view |
+  us := source.
+  them := destination.
+  view := #'usVsThem'.
   editOp = 'A'
     ifTrue: [ stage := #'added' ]
     ifFalse: [ 
@@ -22,8 +22,8 @@ asMergeOperation
     baseDirectory: self baseDirectory;
     filePath: self filePath;
     us: us;
-    ancestor: ancestor;
-    them: nil;
+    ancestor: nil;
+    them: them;
     stage: stage;
     view: view;
     resolved: true;

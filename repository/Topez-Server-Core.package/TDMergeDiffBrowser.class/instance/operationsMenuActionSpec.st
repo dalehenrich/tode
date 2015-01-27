@@ -1,9 +1,6 @@
 menu action specs
 operationsMenuActionSpec
-  ^ {#('show unresolved' nil #'showUnresolvedMenuAction:selectionIndex:').
-  #('show all' nil #'showAllMenuAction:selectionIndex:').
-  #('-').
-  #('copy to' nil #'copyOperationToMenuAction:selectionIndex:').
+  ^ {#('copy to' nil #'copyOperationToMenuAction:selectionIndex:').
   #('-').
   #('view default' nil #'viewDefaultMenuAction:selectionIndex:').
   #('-').
@@ -21,6 +18,14 @@ operationsMenuActionSpec
   #('-').
   #('view them vs us' nil #'viewThemVsUsMenuAction:selectionIndex:').
   #('view them vs custom' nil #'viewThemVsCustomMenuAction:selectionIndex:').
+  #('-').
+  #('show unresolved' nil #'showUnresolvedMenuAction:selectionIndex:').
+  #('show all' nil #'showAllMenuAction:selectionIndex:').
+  #('show raw' nil #'showRawMenuAction:selectionIndex:').
+  #('-').
+  #('tag' nil #'tagMenuAction:selectionIndex:').
+  #('untag' nil #'untagMenuAction:selectionIndex:').
+  #('show tagged' nil #'showTagsMenuAction:selectionIndex:').
   #('-').
   #('choose ancestor' $a #'selectAncestorMenuAction:selectionIndex:').
   #('choose us' $u #'selectUsMenuAction:selectionIndex:').
