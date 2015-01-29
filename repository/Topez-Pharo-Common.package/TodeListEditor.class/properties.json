@@ -8,6 +8,7 @@
 	"instvars" : [
 		"listIndex",
 		"list",
+		"listSelections",
 		"localShiftCmdMap",
 		"localCmdMap" ],
 	"name" : "TodeListEditor",

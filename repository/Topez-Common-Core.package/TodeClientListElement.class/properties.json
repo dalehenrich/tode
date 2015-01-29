@@ -15,7 +15,8 @@
 		"selectedIndex",
 		"parent",
 		"highlightedIndex",
-		"parentList" ],
+		"parentList",
+		"beMultipleSelection" ],
 	"name" : "TodeClientListElement",
 	"pools" : [
 		 ],
