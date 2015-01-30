@@ -1,10 +1,10 @@
 menu actions
 tagMenuAction: listElement selectionIndex: selectionIndex
-  | mergeOperation theTag oldTag |
+  | theTag aMergeOperation oldTag |
   selectionIndex = 0
     ifTrue: [ ^ false ].
-  mergeOperation := self operations at: selectionIndex.
-  oldTag := mergeOperation tag ifNotNil: [ :aTag | aTag ] ifNil: [ '' ].
+  aMergeOperation := self operations at: selectionIndex.
+  oldTag := aMergeOperation tag ifNotNil: [ :aTag | aTag ] ifNil: [ '' ].
   theTag := (GsTextInteraction prompt: 'Enter tag' template: oldTag) signal.
-  mergeOperation tag: theTag.
+  self selectedOperations do: [ :mergeOperation | mergeOperation tag: theTag ].
   ^ #'refreshList'

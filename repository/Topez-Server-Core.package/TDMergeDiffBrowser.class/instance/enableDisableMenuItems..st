@@ -4,14 +4,16 @@ enableDisableMenuItems: mergeOperation
   enabled := {}.
   disabled := {#'stOperation'.
   #'stMethodOperation'}.
-  enable := [ :symbol | 
-  enabled add: symbol.
-  disabled remove: symbol ].
-  mergeOperation hasSmalltalkDefinition
+  self selectedOperations size <= 0
     ifTrue: [ 
-      enable value: #'stOperation'.
-      mergeOperation hasSmalltalkMethodDefinition
-        ifTrue: [ enable value: #'stMethodOperation' ] ].
+      enable := [ :symbol | 
+      enabled add: symbol.
+      disabled remove: symbol ].
+      mergeOperation hasSmalltalkDefinition
+        ifTrue: [ 
+          enable value: #'stOperation'.
+          mergeOperation hasSmalltalkMethodDefinition
+            ifTrue: [ enable value: #'stMethodOperation' ] ] ].
   ^ STON
     toString:
       {#'setMenuCategories:'.
