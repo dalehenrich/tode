@@ -3,7 +3,8 @@
 		 },
 	"instance" : {
 		"beMultipleSelection" : "dkh 01/29/2015 15:59",
-		"copyOperationToMenuAction:selectionIndex:" : "dkh 01/30/2015 14:45",
+		"copyMergeOperation:" : "dkh 01/30/2015 20:54",
+		"copyOperationToMenuAction:selectionIndex:" : "dkh 01/30/2015 20:54",
 		"doMergeMenuAction:selectionIndex:" : "dkh 05/23/2014 13:40",
 		"enableDisableMenuItems:" : "dkh 01/29/2015 07:23",
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 01/29/2015 07:21",
@@ -13,7 +14,7 @@
 		"merger:" : "dkh 05/28/2014 21:07",
 		"merger:mergerCompletionBlock:mergerAbortBlock:" : "dkh 01/29/2015 07:20",
 		"methodMenuActionSpec" : "dkh 07/08/2014 11:03",
-		"moveOperationToMenuAction:selectionIndex:" : "dkh 01/30/2015 14:46",
+		"moveOperationToMenuAction:selectionIndex:" : "dkh 01/30/2015 20:55",
 		"operations" : "dkh 01/26/2015 16:55",
 		"operationsMenuActionSpec" : "dkh 01/30/2015 14:32",
 		"selectAncestorMenuAction:selectionIndex:" : "dkh 01/29/2015 16:52",
