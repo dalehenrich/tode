@@ -1,5 +1,5 @@
 menu actions
-copyOperationToMenuAction: listElement selectionIndex: selectionIndex
+moveOperationToMenuAction: listElement selectionIndex: selectionIndex
   | mergeOperation copiedOperation filePath |
   self selectedOperations
     do: [ :mergeOperation | 
@@ -14,8 +14,11 @@ copyOperationToMenuAction: listElement selectionIndex: selectionIndex
       copiedOperation filePath: filePath.
       (#(#'added' #'modified' #'deleted') includes: copiedOperation stage)
         ifFalse: [ copiedOperation resolved: false ].
-      copiedOperation tag: 'copied'.
-      self merger conflicts add: copiedOperation ].
+      copiedOperation tag: 'moved'.
+      self merger conflicts add: copiedOperation.
+      mergeOperation
+        selectDeletion;
+        tag: 'deleted by move' ].
   self merger
     conflicts:
       (self merger conflicts sorted: [ :a :b | a filePath <= b filePath ]).

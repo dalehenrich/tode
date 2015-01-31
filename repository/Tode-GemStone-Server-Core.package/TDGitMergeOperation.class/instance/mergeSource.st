@@ -43,7 +43,22 @@ mergeSource
                             ifTrue: [ 
                               from := self them.
                               to := self editDefinition ]
-                            ifFalse: [ self error: 'Unknown view: ' , view printString ] ] ] ] ] ] ].
+                            ifFalse: [ 
+                              view == #'imageVsCustom'
+                                ifTrue: [ 
+                                  from := self imageMethodSource.
+                                  to := self editDefinition ]
+                                ifFalse: [ 
+                                  view == #'imageVsThem'
+                                    ifTrue: [ 
+                                      from := self imageMethodSource.
+                                      to := self them ]
+                                    ifFalse: [ 
+                                      view == #'imageVsUs'
+                                        ifTrue: [ 
+                                          from := self imageMethodSource.
+                                          to := self us ]
+                                        ifFalse: [ self error: 'Unknown view: ' , view printString ] ] ] ] ] ] ] ] ] ].
   diff := TextDiffBuilder
     from: (self formatSource: from) withSqueakLineEndings
     to: (self formatSource: to) withSqueakLineEndings.

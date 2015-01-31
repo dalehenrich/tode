@@ -1,6 +1,7 @@
 menu action specs
 operationsMenuActionSpec
   ^ {#('copy to' nil #'copyOperationToMenuAction:selectionIndex:').
+  #('move to' nil #'moveOperationToMenuAction:selectionIndex:').
   #('-').
   #('view default' nil #'viewDefaultMenuAction:selectionIndex:').
   #('-').
@@ -19,6 +20,10 @@ operationsMenuActionSpec
   #('view them vs us' nil #'viewThemVsUsMenuAction:selectionIndex:').
   #('view them vs custom' nil #'viewThemVsCustomMenuAction:selectionIndex:').
   #('-').
+  #('view image vs us' nil #'viewImageVsUsMenuAction:selectionIndex:').
+  #('view image vs them' nil #'viewImageVsThemMenuAction:selectionIndex:').
+  #('view image vs custom' nil #'viewImageVsCustomMenuAction:selectionIndex:').
+  #('-').
   #('show unresolved' nil #'showUnresolvedMenuAction:selectionIndex:').
   #('show all' nil #'showAllMenuAction:selectionIndex:').
   #('show raw' nil #'showRawMenuAction:selectionIndex:').
@@ -31,5 +36,6 @@ operationsMenuActionSpec
   #('choose us' $u #'selectUsMenuAction:selectionIndex:').
   #('choose them' $t #'selectThemMenuAction:selectionIndex:').
   #('choose custom' $c #'selectCustomMenuAction:selectionIndex:').
+  #('choose delete' $d #'selectDeleteMenuAction:selectionIndex:').
   #('-').
   #('do merge' $j #'doMergeMenuAction:selectionIndex:')}

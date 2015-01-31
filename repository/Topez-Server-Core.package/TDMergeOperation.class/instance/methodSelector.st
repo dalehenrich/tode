@@ -1,5 +1,3 @@
-accessing
+smalltalk source
 methodSelector
-  "return method selector or nil"
-
-  ^ nil
+  self subclassResponsibility

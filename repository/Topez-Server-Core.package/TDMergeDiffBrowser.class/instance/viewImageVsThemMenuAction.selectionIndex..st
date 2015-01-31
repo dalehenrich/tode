@@ -1,8 +1,7 @@
 menu actions
-selectCustomMenuAction: listElement selectionIndex: selectionIndex
+viewImageVsThemMenuAction: listElement selectionIndex: selectionIndex
   self selectedOperations
     do: [ :mergeOperation | 
-      mergeOperation initEditDefinition.
-      mergeOperation selectCustom.
+      mergeOperation viewImageVsThem.
       self editOperation: mergeOperation listElement: listElement ].
   ^ #'refreshList'

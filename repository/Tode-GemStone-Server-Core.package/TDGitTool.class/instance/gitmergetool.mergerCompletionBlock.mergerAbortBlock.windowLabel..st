@@ -26,6 +26,7 @@ gitmergetool: gitRepoDirectory mergerCompletionBlock: aMergerCompletionBlock mer
         them: them;
         labelString: labelString;
         yourself.
+      conflict resolveSafely.
       conflicts add: conflict ].
   diffs := (self
     gitdifftool: ''

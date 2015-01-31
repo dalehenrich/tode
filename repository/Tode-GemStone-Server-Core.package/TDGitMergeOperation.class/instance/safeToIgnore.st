@@ -1,5 +1,5 @@
 testing
 safeToIgnore
-  self stage == #'deletedByBoth'
+  (self resolved and: [ self stage == #'deletedByBoth' ])
     ifTrue: [ ^ us = them ].
   ^ false

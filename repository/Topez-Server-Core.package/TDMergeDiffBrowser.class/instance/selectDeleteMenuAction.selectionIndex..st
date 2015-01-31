@@ -1,8 +1,7 @@
 menu actions
-selectCustomMenuAction: listElement selectionIndex: selectionIndex
+selectDeleteMenuAction: listElement selectionIndex: selectionIndex
   self selectedOperations
     do: [ :mergeOperation | 
-      mergeOperation initEditDefinition.
-      mergeOperation selectCustom.
+      mergeOperation selectDeletion.
       self editOperation: mergeOperation listElement: listElement ].
   ^ #'refreshList'

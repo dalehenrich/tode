@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 editDefinition
-  editDefinition ifNil: [ editDefinition := self selectedSource copy ].
+  editDefinition ifNil: [ ^ '' ].
   ^ editDefinition

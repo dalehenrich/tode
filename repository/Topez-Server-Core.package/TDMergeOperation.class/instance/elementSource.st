@@ -1,3 +1,3 @@
 as yet unclassified
 elementSource
-  ^ STON toString: self mergeSource
+  ^ STON toString: self mergeSource asText
