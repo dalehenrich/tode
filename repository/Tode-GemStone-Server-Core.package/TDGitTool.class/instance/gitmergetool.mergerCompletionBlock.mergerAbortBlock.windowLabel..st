@@ -2,8 +2,6 @@ as yet unclassified
 gitmergetool: gitRepoDirectory mergerCompletionBlock: aMergerCompletionBlock mergerAbortBlock: aMergerAbortBlock windowLabel: label
   | dictionary conflicts merger mergeTool diffs |
   dictionary := self gitlsfiles: gitRepoDirectory.
-  dictionary isEmpty
-    ifTrue: [ ^ 'No conflicts' ].
   conflicts := OrderedCollection new.
   dictionary
     keysAndValuesDo: [ :path :stages | 
@@ -37,6 +35,10 @@ gitmergetool: gitRepoDirectory mergerCompletionBlock: aMergerCompletionBlock mer
     diffClass: TDGitDiff) collect: [ :diff | diff asMergeOperation ].
   conflicts addAll: diffs.
   conflicts := conflicts sorted: [ :a :b | a filePath <= b filePath ].
+  conflicts isEmpty
+    ifTrue: [ 
+      self inform: 'No conflicts or diffs'.
+      ^ 'No conflicts' ].
   merger := TDGitMerger new
     conflicts: conflicts;
     gitTool: self;
