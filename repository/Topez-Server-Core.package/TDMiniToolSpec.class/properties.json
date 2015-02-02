@@ -10,7 +10,8 @@
 		"clientListBlock",
 		"itemSelectedBlock",
 		"menuActionBlock",
-		"menuActionSpecBlock" ],
+		"menuActionSpecBlock",
+		"beMultipleSelection" ],
 	"name" : "TDMiniToolSpec",
 	"pools" : [
 		 ],

@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"beMultipleSelection" : "dkh 1/28/2015 16:40",
+		"beMultipleSelection:" : "dkh 1/28/2015 16:48",
 		"excludedInstVarNames" : "dkh 10/20/2013 09:56",
 		"executeMenuAction:listIndex:" : "dkh 2/23/2014 09:49",
 		"first" : "DataCurator 01/22/2013 10:15",
@@ -11,7 +13,7 @@
 		"highlightedIndex:" : "dkh 2/17/2013 12:17",
 		"itemCache" : "DataCurator 12/31/2012 08:10",
 		"itemCache:" : "DataCurator 12/31/2012 08:10",
-		"itemSelected:" : "dkh 1/6/2014 07:10",
+		"itemSelected:listSelections:" : "dkh 1/28/2015 16:58",
 		"itemSelectedBlock" : "dkh 05/28/2013 09:29",
 		"itemSelectedBlock:" : "dkh 05/28/2013 11:47",
 		"itemSelectedBlockOop" : "dkh 12/30/2012 09:17",

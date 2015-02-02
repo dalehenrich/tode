@@ -1,4 +1,4 @@
 as yet unclassified
 selection
-  selection ifNil: [ selection := #'destination' ].
+  selection ifNil: [ selection := self defaultSelection ].
   ^ selection

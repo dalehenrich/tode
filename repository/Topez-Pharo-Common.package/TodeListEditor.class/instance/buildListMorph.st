@@ -13,4 +13,7 @@ buildListMorph
 		handleBasicKeys: true;
 		autoDeselect: true;
 		disallowKeyMapping;
+		resetListSelector: #resetMultiListSelection;
+		getSelectionListSelector: #multiSelectionAt:;
+		setSelectionListSelector: #multiSelectionAt:put:;
 		yourself

@@ -1,0 +1,25 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"baseDirectory",
+		"filePath",
+		"source",
+		"common",
+		"destination",
+		"resolved",
+		"ancestor",
+		"us",
+		"them",
+		"stage",
+		"view",
+		"tag" ],
+	"name" : "TDGitMergeOperation",
+	"pools" : [
+		 ],
+	"super" : "TDMergeOperation",
+	"type" : "normal" }
