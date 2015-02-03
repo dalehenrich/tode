@@ -1,0 +1,8 @@
+TDRawGatewayNode{#name:'projectComposition',#contents:'TDComposedDirectoryNode
+    includesSpec:
+     {(\'/sys/stone/projects\' -> #()).
+      (\'/sys/local/projects\' -> #()).
+      (\'/sys/default/projects\'
+        -> #( \'grease\' \'gsDevKitHome\' \'GsDevKit\' \'magritte\' \'metacello\' \'seaside\' \'tode\' \'zinc\' ))}
+    named: \'project\'
+    topez: self topez'}

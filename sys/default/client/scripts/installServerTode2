@@ -1,0 +1,12 @@
+bu backup tode.dbf
+# Set up /sys node structure
+mount --todeRoot sys/default /sys default
+mount --todeRoot sys/local /sys local
+mount --todeRoot sys/stones /sys stones
+mount --stoneRoot root /sys stone
+# Define /home and /projects based on a composition of the /sys nodes
+mount --stoneRoot root/homeComposition.ston / home
+mount --stoneRoot root/projectComposition.ston / projects
+bu backup home.dbf
+commit
+cd 

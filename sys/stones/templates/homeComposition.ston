@@ -1,0 +1,8 @@
+TDRawGatewayNode{#name:'homeComposition',#contents:'TDComposedDirectoryNode
+    includesSpec:
+      {(\'/sys/stone/home\' -> #()).
+      (\'/sys/local/home\' -> #()).
+      (\'/sys/default/home\'
+        -> #( \'metacello\' \'seaside\' \'tode\' ))}
+    named: \'home\'
+    topez: self topez'}
