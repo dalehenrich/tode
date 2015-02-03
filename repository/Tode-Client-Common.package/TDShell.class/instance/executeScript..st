@@ -5,7 +5,7 @@ executeScript: command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
 			#('script' nil #required).
-			#('list' nil #required)}
+			#('list' nil #optional)}
 		optionsAndArguments: [ :opts :args | options := opts ].
 	options
 		at: 'help'
