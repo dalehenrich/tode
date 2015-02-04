@@ -1,0 +1,15 @@
+TDRawGatewayNode{#name:'packages',#contents:'| dirNode monticelloTool |
+  dirNode := TDDirectoryNode new
+    name: \'packages\';
+    readMe: \'I have a listing of the packages loaded into this stone.\';
+    yourself.
+  monticelloTool := self topez toolInstanceFor: \'mc\'.
+  (monticelloTool mclist: \'\')
+    collect: [ :each | 
+      dirNode
+        addChildNode:
+          (TDObjectNode new
+            name: each packageName;
+            basicContents: each;
+            yourself) ].
+  ^ dirNode'}

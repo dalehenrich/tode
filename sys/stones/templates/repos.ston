@@ -1,0 +1,38 @@
+TDRawGatewayNode{#name:'repos',#contents:'| dirNode projectTool monticelloTool |
+  dirNode := TDDirectoryNode new
+    name: \'repos\';
+    yourself.
+  projectTool := self topez toolInstanceFor: \'project\'.
+  monticelloTool := self topez toolInstanceFor: \'mc\'.
+  (projectTool projectRegistrationDefinitionList
+    select: [ :registration | registration hasGitBasedRepo or: [ registration hasFileTreeRepo ] ])
+    collect: [ :each | 
+      dirNode
+        addChildNode:
+          (TDObjectNode new
+            name: each projectName;
+            basicContents: each repository;
+            listBlock: [ :theNode | ((monticelloTool mrpackageNamesIn: theNode basicContents) at: 1) sorted ];
+            elementBlock: [ :theNode :elementName :absentBlock | 
+                  | resolvedDict versionReferences info |
+                  info := monticelloTool mrpackageNamesIn: theNode basicContents.
+                  resolvedDict := info at: 3.
+                  versionReferences := resolvedDict
+                    at: elementName
+                    ifAbsent: [ absentBlock value ].
+                  TDObjectNode new
+                    name: elementName;
+                    basicContents: versionReferences asArray;
+                    listBlock: [ :theNode | (theNode basicContents collect: [ :each | each name ]) sorted ];
+                    elementBlock: [ :theNode :elementName :absentBlock | 
+                          | versionReference |
+                          versionReference := theNode basicContents
+                            detect: [ :each | each name = elementName ]
+                            ifNone: absentBlock.
+                          TDObjectNode new
+                            name: versionReference name;
+                            basicContents: versionReference version;
+                            yourself ];
+                    yourself ];
+            yourself) ].
+  ^ dirNode'}

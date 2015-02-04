@@ -1,0 +1,25 @@
+TDRawGatewayNode{#name:'dirs',#contents:'| dirNode projectTool |
+  dirNode := TDDirectoryNode new
+    name: \'dirs\';
+    yourself.
+  projectTool := self topez toolInstanceFor: \'project\'.
+  (projectTool projectRegistrationDefinitionList
+    select: [ :registration | registration hasGitBasedRepo or: [ registration hasGitRepository ] ])
+    collect: [ :registration | 
+      | diskPath |
+      diskPath := registration hasGitRepository
+        ifTrue: [ registration gitRootDirectory pathName ]
+        ifFalse: [ 
+          | githubRepo |
+          githubRepo := registration repository.
+          (githubRepo class
+            projectDirectoryFrom: githubRepo projectPath
+            version: githubRepo projectVersion) pathName ].
+      dirNode
+        addChildNode:
+          (TDObjectGatewayNode new
+            name: registration projectName;
+            contents: \'ServerFileDirectory on: \' , diskPath printString;
+            visitAsLeafNode: true;
+            yourself) ].
+  ^ dirNode'}
