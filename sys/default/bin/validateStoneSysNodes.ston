@@ -38,7 +38,7 @@ TDScriptLeafNode{#name:'validateStoneSysNodes',#contents:'[ :topez :objIn :token
             ifTrue: [ 
               cpTool
                 cp: \'/sys/stones/templates/\' , nodename
-                to: \'/sys/stones/stones/\' , stoneName  ]
+                to: \'/sys/stones/stones/\' , stoneName ]
             ifFalse: [ 
               nil
                 error:
@@ -60,7 +60,16 @@ TDScriptLeafNode{#name:'validateStoneSysNodes',#contents:'[ :topez :objIn :token
           validateFileBlock
             value: stoneRootDir
             value: \'projectComposition.ston\'
-            value: \'projectComposition\' ].
+            value: \'projectComposition\'.
+          validateFileBlock value: stoneRootDir value: \'dirs.ston\' value: \'dirs\'.
+          validateFileBlock
+            value: stoneRootDir
+            value: \'packages.ston\'
+            value: \'packages\'.
+          validateFileBlock
+            value: stoneRootDir
+            value: \'repos.ston\'
+            value: \'repos\' ].
       true ]
     ifPresent: [ :ignored | 
       TDManPage
@@ -113,4 +122,4 @@ EXAMPLES
   /sys/default/bin/validateStoneSysNodes --stone=gsDevKit --repair
   /sys/default/bin/validateStoneSysNodes --stone=gsDevKit --files --repair
 \'
-        topez: topez ] ]',#creationTime:DateAndTime['2014-11-14T16:19:26.4569790363311-08:00'],#modificationTime:DateAndTime['2014-11-17T15:16:44.3325328826904-08:00']}
+        topez: topez ] ]',#creationTime:DateAndTime['2014-11-14T16:19:26.4569790363311-08:00'],#modificationTime:DateAndTime['2015-02-03T16:39:19.3684349060058-08:00']}
