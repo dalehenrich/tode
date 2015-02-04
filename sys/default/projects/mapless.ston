@@ -1,0 +1,8 @@
+TDObjectGatewayNode{#name:'mapless',#contents:'^ TDProjectSpecEntryDefinition new
+    baseline: \'Mapless\'
+      repository:
+        \'filetree:///export/foos1/users/dhenrich/git/Mapless/repository\'
+      loads: #(\'Core\');
+    status: #(#\'active\');
+    locked: true;
+    yourself'}

@@ -1,0 +1,7 @@
+TDObjectGatewayNode{#name:'serviceVM',#contents:'^ TDProjectSpecEntryDefinition new
+    baseline: \'ServiceVM\'
+      repository: \'github://GsDevKit/ServiceVM:master/repository\'
+      loads: #(\'Core\' \'Example\' \'Tests\');
+    status: #(#\'inactive\');
+    locked: false;
+    yourself'}
