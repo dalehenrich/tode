@@ -1,7 +1,7 @@
-# Upgrading tODE
+# Upgrade tODE to v0.0.1
 
 ```
-    updateClient 
-    updateServer --project=Tode
-    script --script=setUpSys
+    updateClient             # update client-side tODE
+    project load Tode        # update server-side tODE
+    script --script=setUpSys # build tODE /sys structure
 ```
