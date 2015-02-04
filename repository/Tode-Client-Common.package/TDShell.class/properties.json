@@ -9,6 +9,7 @@
 		"DevKitRoot",
 		"EnableDebugger",
 		"TodePath",
+		"TodeRoot",
 		"UseTodeSys" ],
 	"commentStamp" : "",
 	"instvars" : [

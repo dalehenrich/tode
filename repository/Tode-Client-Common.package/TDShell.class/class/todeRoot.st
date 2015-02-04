@@ -1,3 +1,4 @@
 home
 todeRoot
-	^self devKitRoot , self todePath
+	TodeRoot ifNil: [ TodeRoot := self devKitRoot , self todePath ].
+	^ TodeRoot

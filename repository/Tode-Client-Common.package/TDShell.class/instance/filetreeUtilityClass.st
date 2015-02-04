@@ -1,3 +1,3 @@
 evaluator engine
 filetreeUtilityClass
-	^ MCFileTreeFileUtils current
+	^ self class filetreeUtilityClass
