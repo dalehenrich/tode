@@ -3,4 +3,5 @@ TDObjectGatewayNode{#name:'gsApplicationTools',#contents:'^ TDProjectSpecEntryDe
       repository: \'github://GsDevKit/gsApplicationTools:master/repository\'
       loads: #(\'default\');
     status: #(#\'inactive\');
+    locked: false;
     yourself'}

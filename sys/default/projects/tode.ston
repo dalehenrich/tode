@@ -4,5 +4,6 @@ project := TDProjectSpecEntryDefinition new
     repository: \'github://dalehenrich/tode:master/repository\'
     loads: \'GemStone Dev\';
   status: #(#\'inactive\');
+  locked: false;
   yourself.
 ^ project'}

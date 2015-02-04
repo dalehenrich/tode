@@ -4,5 +4,6 @@ project := TDProjectSpecEntryDefinition new
     repository: \'github://glassdb/SIXX:master/repository\'
     loads: \'Core\';
   status: #(#\'inactive\');
+  locked: false;
   yourself.
 ^ project'}

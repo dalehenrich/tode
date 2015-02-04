@@ -3,5 +3,5 @@ TDObjectGatewayNode{#name:'zinc',#contents:'^ TDProjectSpecEntryDefinition new
       repository: \'github://GsDevKit/zinc:2.?/repository\'
       loads: #(\'Core\' \'Tests\');
     status: #(#\'active\');
-    locked: true;
+    locked: false;
     yourself '}

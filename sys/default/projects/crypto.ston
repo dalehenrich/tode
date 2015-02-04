@@ -3,4 +3,5 @@ TDObjectGatewayNode{#name:'crypto',#contents:'^ TDProjectSpecEntryDefinition new
       repository: \'github://GsDevKit/Cryptography:master/repository\'
       loads: #(\'Cryptography\');
     status: #(#\'inactive\');
+    locked: false;
     yourself'}
