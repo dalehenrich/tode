@@ -1,6 +1,10 @@
 as yet unclassified
 psManPage
-  ^ 'NAME
+  | manPage |
+  manPage := TDManPage
+    commandName: 'ps'
+    fromString:
+      'NAME
   ps - execute process commands
 
 SYNOPSIS
@@ -10,4 +14,8 @@ SYNOPSIS
   ps yield
 
 DESCRIPTION
-'
+'.
+  manPage subCommands
+    at: 'list' put: self pslistManPage;
+    yourself.
+  ^ manPage

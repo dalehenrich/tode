@@ -59,4 +59,43 @@ menuCommandMap
         {'browse'.
           '--case|--exact'.
           'source'};
+    at: 'System Browser'
+      put:
+        {'browse'.
+          '--full'.
+          'class'};
+    at: 'Open Workspaces'
+      put:
+        {'ws'.
+          ''.
+          ''};
+    at: 'File Browser'
+      put:
+        {''.
+          ''};
+    at: 'Process Browser'
+      put:
+        {'ps'.
+          'ps list'.
+          'list'};
+    at: 'Inspect UndefinedSymbols'
+      put:
+        {'port'.
+          'port undefinedSymbols'.
+          ''};
+    at: 'Inspect Sent But Not Implemented'
+      put:
+        {'port'.
+          'port sentButNotImplemented'.
+          ''};
+    at: 'Test Runner'
+      put:
+        {'test'.
+          'test'.
+          ''};
+    at: 'Monticello'
+      put:
+        {'mc'.
+          'mc list'.
+          ''};
     yourself

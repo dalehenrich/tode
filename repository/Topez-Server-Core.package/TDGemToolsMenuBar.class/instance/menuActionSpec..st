@@ -25,14 +25,14 @@ menuActionSpec: miniTool
       #('Case Sensitive String...' nil #'findStringCaseSensitive:selectedIndex:')})}.
   {('Tools'
     ->
-      {#('System Browser' nil #'attachContinuation:selectedIndex:').
-      #('Open Workspaces' nil #'attachContinuation:selectedIndex:').
-      #('File Browser' nil #'attachContinuation:selectedIndex:').
-      #('Process Browser' nil #'attachContinuation:selectedIndex:').
-      #('Inspect UndefinedSymbols' nil #'attachContinuation:selectedIndex:').
-      #('Inspect Sent But Not Implemented' nil #'attachContinuation:selectedIndex:').
-      #('Test Runner' nil #'attachContinuation:selectedIndex:').
-      #('Monticello' nil #'attachContinuation:selectedIndex:')})}.
+      {#('System Browser' nil #'toolSystemBrowser:selectedIndex:').
+      #('Open Workspaces' nil #'toolOpenWorkspaces:selectedIndex:').
+      #('File Browser' nil #'notAvailable:selectedIndex:' nil #'neverMind' false).
+      #('Process Browser' nil #'toolProcessBrowser:selectedIndex:').
+      #('Inspect UndefinedSymbols' nil #'toolUndefinedSymbols:selectedIndex:').
+      #('Inspect Sent But Not Implemented' nil #'toolSentButNotImplemented:selectedIndex:').
+      #('Test Runner' nil #'toolTestClass:selectedIndex:').
+      #('Monticello' nil #'toolMonticelloBrowser:selectedIndex:')})}.
   {('Admin'
     ->
       {#('Repository' nil #'attachContinuation:selectedIndex:').
