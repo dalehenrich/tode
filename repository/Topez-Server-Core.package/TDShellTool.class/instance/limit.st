@@ -2,6 +2,7 @@ as yet unclassified
 limit
   "
   limit autoCommit [true|false]
+  limit autoMigrate [true|false]
   limit chars [<item-count>]
   limit format [true|false]
   limit list [<item-count>]
@@ -13,7 +14,15 @@ limit
   cmd := tokens at: 1.
   cmdTokens := tokens copyFrom: 2 to: tokens size.
   (cmdTokens at: 1) = 'autoCommit'
-    ifTrue: [ ^ self limitAutoCommit: cmdTokens ].
+    ifTrue: [ 
+      ^ cmdTokens size = 1
+        ifTrue: [ self limitAutoCommit ]
+        ifFalse: [ self limitAutoCommit: (cmdTokens at: 1) = 'true' ] ].
+  (cmdTokens at: 1) = 'autoMigrate'
+    ifTrue: [ 
+      ^ cmdTokens size = 1
+        ifTrue: [ self limitAutoMigrate ]
+        ifFalse: [ self limitAutoMigrate: (cmdTokens at: 1) = 'true' ] ].
   (cmdTokens at: 1) = 'chars'
     ifTrue: [ ^ self limitChars: cmdTokens ].
   (cmdTokens at: 1) = 'format'

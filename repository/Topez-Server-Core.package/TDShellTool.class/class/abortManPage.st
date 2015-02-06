@@ -14,4 +14,8 @@ DESCRIPTION
 OPTIONS
   --help
     Bring up this man page.
+
+EXAMPLES
+  abort -h
+  abort
 '

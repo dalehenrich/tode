@@ -9,6 +9,7 @@ SYNOPSIS
              [--class|--package|--category] <fileout-pair>...
   gs halt -m|--almostOutOfMemory=<percent>
   gs fileSizeReport
+  gs gemtools
   gs instances <className>
      instances @<class-path>
   gs mfc [<maxThreads>]

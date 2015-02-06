@@ -13,4 +13,8 @@ DESCRIPTION
 OPTIONS
   --help
     Bring up this man page.
+
+EXAMPLES
+  commit -h
+  commit
 '

@@ -26,11 +26,11 @@ DESCRIPTION
   If the --hier option is present, the superclass list for each of the matching 
   classes is included in the list.
 
-  If the --full option is present, a full class browser is drectly opened on the
+  If the --full option is present, a full class browser is directly opened on the
   given class.
  
 EXAMPLES
-  browse class method stream
+  browse class Method Stream
   browse class --exact GsNMethod
   browse class --exact --hier GsNMethod
   browse class --hier method|stream
