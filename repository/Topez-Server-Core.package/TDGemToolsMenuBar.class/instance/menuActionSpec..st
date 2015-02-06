@@ -19,10 +19,10 @@ menuActionSpec: miniTool
       {#('Class...' nil #'findClass:selectedIndex:').
       #('Hierarchy Browser...' nil #'findClassHierarchy:selectedIndex:').
       #('Class References...' nil #'findClassReferences:selectedIndex:').
-      #('Method...' nil #'attachContinuation:selectedIndex:').
-      #('String...' nil #'attachContinuation:selectedIndex:').
-      #('Senders...' nil #'attachContinuation:selectedIndex:').
-      #('Case Sensitive String...' nil #'attachContinuation:selectedIndex:')})}.
+      #('Method...' nil #'findMethodImplementors:selectedIndex:').
+      #('String...' nil #'findStringNoCase:selectedIndex:').
+      #('Senders...' nil #'findMethodSenders:selectedIndex:').
+      #('Case Sensitive String...' nil #'findStringCaseSensitive:selectedIndex:')})}.
   {('Tools'
     ->
       {#('System Browser' nil #'attachContinuation:selectedIndex:').

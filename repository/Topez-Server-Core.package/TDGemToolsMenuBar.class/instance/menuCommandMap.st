@@ -41,18 +41,22 @@ menuCommandMap
           'references'};
     at: 'Method...'
       put:
-        {''.
-          ''};
+        {'browse'.
+          'browse method'.
+          'method'};
     at: 'String...'
       put:
-        {''.
-          ''};
+        {'browse'.
+          'browse source'.
+          'source'};
     at: 'Senders...'
       put:
-        {''.
-          ''};
+        {'browse'.
+          'browse sender'.
+          'sender'};
     at: 'Case Sensitive String...'
       put:
-        {''.
-          ''};
+        {'browse'.
+          '--case|--exact'.
+          'source'};
     yourself

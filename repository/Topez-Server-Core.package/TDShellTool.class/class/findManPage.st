@@ -92,7 +92,10 @@ EXAMPLES
   find sender --pure at:put:
   find sender --regex at\:put\: 
 
-  find source --exact `hello world`
+  find source --exact `Hello World`
+  find source --exact --noCase `hello world`
+  find source `hello world`
+  find source --case `Hello wWrld`
 
   find symbolDict --user=SystemUser UserGlobals
   find symbolDict --list --user=SystemUser

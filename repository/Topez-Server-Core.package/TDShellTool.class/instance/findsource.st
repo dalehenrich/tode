@@ -1,9 +1,12 @@
 find
 findsource
-  "find [--scriptPath=<tode-path>] source [--exact] <selector>"
+  "find [--scriptPath=<tode-path>] source [--exact|--case] <selector>"
 
   | selector path |
-  self getSubcommandOptsMixedLongShort: {#('exact' nil #'none')}.
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('exact' nil #'none').
+      #('case' nil #'none')}.
   selector := subArguments at: 1.
   options
     at: 'scriptPath'
@@ -11,5 +14,20 @@ findsource
     ifAbsent: [ path := nil ].
   subOptions
     at: 'exact'
-    ifPresent: [ :ignored | ^ self findSourceExact: selector searchScriptRoot: path ]
-    ifAbsent: [ ^ self findSource: selector searchScriptRoot: path ]
+    ifPresent: [ :ignored | 
+      | ignoreCase |
+      subOptions
+        at: 'noCase'
+        ifPresent: [ :ignored | ignoreCase := true ]
+        ifAbsent: [ ignoreCase := false ].
+      ^ self
+        findSourceExact: selector
+        searchScriptRoot: path
+        ignoreCase: ignoreCase ]
+    ifAbsent: [ 
+      | ignoreCase |
+      subOptions
+        at: 'case'
+        ifPresent: [ :ignored | ignoreCase := false ]
+        ifAbsent: [ ignoreCase := true ].
+      ^ self findSource: selector searchScriptRoot: path ignoreCase: ignoreCase ]

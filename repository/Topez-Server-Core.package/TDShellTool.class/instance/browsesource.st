@@ -1,14 +1,16 @@
 browse
 browsesource
   "
-  browse source <regex-pattern>
-  browse source --exact <source-string>
+  browse source [--case] <regex-pattern>...
+  browse source --exact [--noCase] <source-string>...
 "
 
   | block path label |
   self
     getSubcommandOptsMixedLongShort:
       {#('exact' nil #'none').
+      #('case' nil #'none').
+      #('noCase' nil #'none').
       #('filter' nil #'required')}.
   options
     at: 'scriptPath'
@@ -21,10 +23,25 @@ browsesource
   list := Set new.
   subArguments
     do: [ :arg | 
+      | ignoreCase |
       subOptions
         at: 'exact'
-        ifPresent: [ :ignored | list addAll: (self findSourceExact: arg searchScriptRoot: path) ]
-        ifAbsent: [ list addAll: (self findSource: arg searchScriptRoot: path) ] ].
+        ifPresent: [ :ignored | 
+          subOptions
+            at: 'noCase'
+            ifPresent: [ :ignored | ignoreCase := true ]
+            ifAbsent: [ ignoreCase := false ].
+          list
+            addAll:
+              (self findSourceExact: arg searchScriptRoot: path ignoreCase: ignoreCase) ]
+        ifAbsent: [ 
+          subOptions
+            at: 'case'
+            ifPresent: [ :ignored | ignoreCase := false ]
+            ifAbsent: [ ignoreCase := true ].
+          list
+            addAll:
+              (self findSource: arg searchScriptRoot: path ignoreCase: ignoreCase) ] ].
   list := self filterBrowseList: list ].
   path
     ifNil: [ ^ self browseMethodsBlock: block label: label ]
