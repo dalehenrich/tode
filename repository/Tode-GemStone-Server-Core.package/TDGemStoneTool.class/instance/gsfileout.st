@@ -1,14 +1,13 @@
 as yet unclassified
 gsfileout
   "
-  gs fileout -dfilesystem-path>|--directory=<filesystem-path> 
-             [--class|--package|--category] <fileout-pair>...
+  gs fileout --directory=<filesystem-path> [--class|--package|--category] <fileout-pair>...
 "
 
   | directoryPath fileoutPairs |
   self
     getOptsMixedLongShort:
-      {#('directory' $d #'required').
+      {#('directory' nil #'required').
       #('class' nil #'none').
       #('package' nil #'none').
       #('category' nil #'none')}.
