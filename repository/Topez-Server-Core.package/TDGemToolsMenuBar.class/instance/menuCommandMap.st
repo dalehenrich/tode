@@ -168,4 +168,34 @@ menuCommandMap
         {'gs'.
           'gs version'.
           ''};
+    at: 'Browser Preferences'
+      put:
+        {'limit'.
+          'limit'.
+          ''};
+    at: 'Commit on Almost Out of Memory'
+      put:
+        {'gs'.
+          'gs halt'.
+          ''};
+    at: 'Help'
+      put:
+        {'man'.
+          '--all'.
+          ''};
+    at: 'Remove Continuations from Object Log'
+      put:
+        {'ol'.
+          '--continuation'.
+          'clear'};
+    at: 'Clear Object Log'
+      put:
+        {'ol'.
+          'ol clear'.
+          'clear'};
+    at: 'Debug Continuations'
+      put:
+        {'ol'.
+          '--continuation'.
+          'view'};
     yourself

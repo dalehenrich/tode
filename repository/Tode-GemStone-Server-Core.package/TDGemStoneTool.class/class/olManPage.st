@@ -39,10 +39,14 @@ EXAMPLES
   ol view error
   ol view --inverse transcript
   ol view --age=`1 day` -r transcript
+  ol view --continuation
+  ol view --continuation --age=`1 month` error
 
   ol clear debug error trace
   ol clear --inverse transcript
   ol clear --age=`1 month`
+  ol clear --continuation
+  ol clear --continuation --age=`1 month` error
 '.
   manPage subCommands
     at: 'view' put: self olviewManPage;

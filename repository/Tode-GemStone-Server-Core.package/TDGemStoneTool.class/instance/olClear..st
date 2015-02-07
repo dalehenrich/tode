@@ -11,4 +11,4 @@ olClear: priorities
     warn
 "
 
-  ^ self olClear: priorities age: nil
+  ^ self olClear: priorities age: nil continuations: false

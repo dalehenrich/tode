@@ -1,14 +1,15 @@
 ol
 olview
   "
-  ol view  [--inverse] [--reverse|-r] [--age=<duration>] [--pid=<pid>] 
+  ol view  [--inverse] [--reverse|-r] [--age=<duration>] [--pid=<pid>] [--continuation] \
            [ <priority>... ]
 "
 
-  | args priorities reversed age pid |
+  | args priorities reversed age pid continuations |
   self
     getSubcommandOptsMixedLongShort:
       {#('age' nil #'required').
+      #('continuation' nil #'none').
       #('inverse' nil #'none').
       #('pid' nil #'required').
       #('reverse' $r #'none')}.
@@ -23,6 +24,10 @@ olview
     at: 'reverse'
     ifPresent: [ :ignored | reversed := true ]
     ifAbsent: [ reversed := false ].
+  subOptions
+    at: 'continuation'
+    ifPresent: [ :ignored | continuations := true ]
+    ifAbsent: [ continuations := false ].
   priorities := priorities
     collect: [ :priorityName | ObjectLogEntry perform: priorityName ].
   subOptions
@@ -40,6 +45,8 @@ olview
         ifNotNil: [ objectLog := objectLog select: [ :each | each stamp >= age ] ].
       priorities isEmpty
         ifFalse: [ objectLog := objectLog select: [ :each | priorities includes: each priority ] ].
+      continuations
+        ifTrue: [ objectLog := objectLog select: [ :each | each hasContinuation ] ].
       objectLog ]
     reversed: reversed
     label: 'Object log ' , subCommand commandLine printString

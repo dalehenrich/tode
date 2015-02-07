@@ -42,4 +42,13 @@ menuMapList
   ('   Version Report' asText allBold).
   '    Client Version Report'.
   '    Gem Version Report'.
-  '    Stone Version Report'}
+  '    Stone Version Report'.
+  '  Browser Preferences'.
+  '  Commit on Almost Out of Memory'.
+  '  Popup on debug'.
+  '  Send Bug Report'.
+  ' Help'.
+  (' Debug...' asText allBold).
+  '  Remove Continuations from Object Log'.
+  '  Clear Object Log'.
+  '  Debug Continuations'}

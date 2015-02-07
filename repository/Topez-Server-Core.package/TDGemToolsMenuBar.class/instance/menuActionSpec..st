@@ -60,15 +60,18 @@ menuActionSpec: miniTool
               #('Gem Version Report' nil #'doitGemVersionReport:selectedIndex:').
               #('Stone Version Report' nil #'doitStoneVersionReport:selectedIndex:')})}})}.
       #('-').
-      {('Browser Preferences'
-        -> {#('=' nil #'attachContinuation:selectedIndex:')})}.
+      #('Browser Preferences' nil #'notAvailable:selectedIndex:' nil #'neverMind' false).
       #('-').
-      #('Commit on Almost Out of Memory' nil #'attachContinuation:selectedIndex:').
-      #('Popup on debug' nil #'attachContinuation:selectedIndex:').
+      #('Commit on Almost Out of Memory' nil #'notAvailable:selectedIndex:' nil #'neverMind' false).
+      #('Popup on debug' nil #'notAvailable:selectedIndex:' nil #'neverMind' false).
       #('-').
-      #('Send Bug Report' nil #'attachContinuation:selectedIndex:')})}.
-  #('Help' nil #'attachContinuation:selectedIndex:').
-  #('Debug' nil #'attachContinuation:selectedIndex:').
+      #('Send Bug Report' nil #'notAvailable:selectedIndex:' nil #'neverMind' false)})}.
+  #('Help' nil #'help:selectedIndex:').
+  {('Debug...'
+    ->
+      {#('Remove Continuations from Object Log' nil #'debugRemoveObjectLogContinuations:selectedIndex:').
+      #('Clear Object Log' nil #'doitClearObjectLog:selectedIndex:').
+      #('Debug Continuations' nil #'debugViewObjectLogContinuations:selectedIndex:')})}.
   {('Update'
     ->
       {#('Update GemTools Launcher' nil #'attachContinuation:selectedIndex:').
