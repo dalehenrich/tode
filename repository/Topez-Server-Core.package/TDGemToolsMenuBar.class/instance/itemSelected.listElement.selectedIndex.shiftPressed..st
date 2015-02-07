@@ -4,7 +4,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   index == 0
     ifTrue: [ ^ true ].
   item := self menuMapList at: index.
-  (self menuCommandMap at: item trimBoth ifAbsent: [  ])
+  (self menuCommandMap at: item asString trimBoth ifAbsent: [  ])
     ifNotNil: [ :ar | 
       | command |
       command := ar at: 1.

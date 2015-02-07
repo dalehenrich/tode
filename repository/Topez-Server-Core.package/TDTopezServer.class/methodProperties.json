@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"batchInstance" : "dkh 02/07/2015 15:03",
 		"commands" : "DataCurator 11/20/2012 09:01",
 		"concreteClass" : "dkh 05/27/2013 20:03",
 		"concreteClassName" : "dkh 06/06/2013 10:19",
@@ -7,6 +8,7 @@
 		"createFor:" : "dkh 08/19/2014 14:24",
 		"createFor:options:" : "dkh 08/19/2014 14:24",
 		"editorAspects" : "dkh 05/28/2013 06:13",
+		"evaluateCommandString:" : "dkh 02/07/2015 15:04",
 		"for:" : "dkh 05/13/2014 18:45",
 		"globalNamed:" : "dkh 05/28/2013 07:35",
 		"indirectAccess" : "dkh 02/23/2013 17:29",

@@ -74,6 +74,6 @@ menuActionSpec: miniTool
       #('Debug Continuations' nil #'debugViewObjectLogContinuations:selectedIndex:')})}.
   {('Update'
     ->
-      {#('Update GemTools Launcher' nil #'attachContinuation:selectedIndex:').
-      #('Update GLASS' nil #'attachContinuation:selectedIndex:')})}.
+      {#('Update GemTools Launcher' nil #'notAvailable:selectedIndex:' nil #'neverMind' false).
+      #('Update GLASS' nil #'notAvailable:selectedIndex:' nil #'neverMind' false)})}.
   #('-')} , self standardMenuActionSpec

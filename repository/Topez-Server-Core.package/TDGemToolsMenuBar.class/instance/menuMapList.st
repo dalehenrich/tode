@@ -51,4 +51,7 @@ menuMapList
   (' Debug...' asText allBold).
   '  Remove Continuations from Object Log'.
   '  Clear Object Log'.
-  '  Debug Continuations'}
+  '  Debug Continuations'.
+  (' Update...' asText allBold).
+  '  Update GemTools Launcher'.
+  '  Update GLASS'}

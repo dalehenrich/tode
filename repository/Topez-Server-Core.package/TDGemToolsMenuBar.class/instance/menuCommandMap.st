@@ -198,4 +198,12 @@ menuCommandMap
         {'ol'.
           '--continuation'.
           'view'};
+    at: 'Update GemTools Launcher'
+      put:
+        {''.
+          ''};
+    at: 'Update GLASS'
+      put:
+        {''.
+          ''};
     yourself
