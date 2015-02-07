@@ -43,9 +43,22 @@ menuActionSpec: miniTool
           #('-').
           #('Mark for Collection' nil #'repositoryMFC:selectedIndex:')})}.
       #('-').
-      {('Seaside Gems' -> {#('=' nil #'attachContinuation:selectedIndex:')})}.
-      #('-').
-      {('DoIt' -> {#('=' nil #'attachContinuation:selectedIndex:')})}.
+      {('DoIt'
+        ->
+          {#('Changed packages & methods' nil #'doitChangedPackagesAndMethods:selectedIndex:').
+          {('Configuration Reports'
+            ->
+              {#('Gem Configuration Report' nil #'doitGemConfigReport:selectedIndex:').
+              #('Stone Configuration Report' nil #'doitStoneConfigReport:selectedIndex:')})}.
+          #('Empty Object Log' nil #'doitClearObjectLog:selectedIndex:').
+          #('File Size Report' nil #'doitFileSizeReport:selectedIndex:').
+          #('Object Log' nil #'doitViewObjectLog:selectedIndex:').
+          #('User Session Report' nil #'doitSessionReport:selectedIndex:').
+          {('Version Reports'
+            ->
+              {#('Client Version Report' nil #'doitClientVersionReport:selectedIndex:').
+              #('Gem Version Report' nil #'doitGemVersionReport:selectedIndex:').
+              #('Stone Version Report' nil #'doitStoneVersionReport:selectedIndex:')})}})}.
       #('-').
       {('Browser Preferences'
         -> {#('=' nil #'attachContinuation:selectedIndex:')})}.

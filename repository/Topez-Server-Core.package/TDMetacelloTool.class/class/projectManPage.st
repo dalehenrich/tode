@@ -29,6 +29,7 @@ DESCRIPTION
     rehome   Point package repository groups for project to new repository
     revert   (see revert in project tool ... just dirty or reload ALL as options)
     status
+    summary  View report of changed packages and methods
     test
     validate Validate the project registrations
     workdir  Create working directory for project
@@ -59,5 +60,6 @@ EXAMPLES
     at: 'lock' put: self projectlockManPage;
     at: 'clone' put: self projectcloneManPage;
     at: 'entry' put: self projectentryManPage;
+    at: 'summary' put: self projectsummaryManPage;
     yourself.
   ^ manPage

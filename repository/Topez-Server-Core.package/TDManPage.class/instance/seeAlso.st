@@ -5,5 +5,6 @@ seeAlso
     ifTrue: [ seeAlso := '' ].
   result := seeAlso.
   commandPath ifNotNil: [ result := result , self commandPath , String lf ].
-  sourceMethod ifNotNil: [ result := result , self sourceMethod , String lf ].
+  sourceMethod
+    ifNotNil: [ result := result , '  ' , self sourceMethod , String lf ].
   ^ result

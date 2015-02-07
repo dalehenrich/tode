@@ -29,4 +29,17 @@ menuMapList
   '   List backup files'.
   '   Backup'.
   '   Restore from Backup'.
-  '   Mark for Collection'}
+  '   Mark for Collection'.
+  ('  DoIt' asText allBold).
+  '   Changed packages & methods'.
+  ('   Configuration Reports' asText allBold).
+  '    Gem Configuration Report'.
+  '    Stone Configuration Report'.
+  '   Empty Object Log'.
+  '   File Size Report'.
+  '   Object Log'.
+  '   User Session Report'.
+  ('   Version Report' asText allBold).
+  '    Client Version Report'.
+  '    Gem Version Report'.
+  '    Stone Version Report'}

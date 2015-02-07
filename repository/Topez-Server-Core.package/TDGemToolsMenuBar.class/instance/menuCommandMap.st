@@ -118,4 +118,54 @@ menuCommandMap
         {'gs'.
           'gs mfc'.
           ''};
+    at: 'Changed packages & methods'
+      put:
+        {'project'.
+          'project summary'.
+          'summary'};
+    at: 'Gem Configuration Report'
+      put:
+        {'gs'.
+          'gs configuration'.
+          ''};
+    at: 'Stone Configuration Report'
+      put:
+        {'gs'.
+          'gs configuration'.
+          ''};
+    at: 'Empty Object Log'
+      put:
+        {'ol'.
+          'ol clear'.
+          'clear'};
+    at: 'File Size Report'
+      put:
+        {'gs'.
+          'gs fileSizeReport'.
+          'fileSizeReport'};
+    at: 'Object Log'
+      put:
+        {'ol'.
+          'ol view'.
+          'view'};
+    at: 'User Session Report'
+      put:
+        {'gs'.
+          'gs sessionReport'.
+          ''};
+    at: 'Client Version Report'
+      put:
+        {'gs'.
+          'gs version'.
+          ''};
+    at: 'Gem Version Report'
+      put:
+        {'gs'.
+          'gs version'.
+          ''};
+    at: 'Stone Version Report'
+      put:
+        {'gs'.
+          'gs version'.
+          ''};
     yourself

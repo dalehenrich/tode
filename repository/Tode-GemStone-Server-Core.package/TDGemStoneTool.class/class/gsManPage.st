@@ -5,6 +5,7 @@ gsManPage
 
 SYNOPSIS
 #  gs dataDir
+  gs configuration [--gem|--stone]
   gs fileout -d<filesystem-path>|--directory=<filesystem-path> 
              [--class|--package|--category] <fileout-pair>...
   gs halt -m|--almostOutOfMemory=<percent>
@@ -18,7 +19,8 @@ SYNOPSIS
   gs objectFor <object-oop>
   gs references @<object-path>
   gs sessionDescription
-  gs version
+  gs sessionReport
+  gs version [--client|--gem|--stone]
 
 DESCRIPTION
 
