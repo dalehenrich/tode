@@ -4,23 +4,11 @@ bulist
   bu [--dir=<backup-directory>] list
 "
 
-  | backupDirPath entries stream |
+  | entries stream |
   self getSubcommandOptsMixedLongShort: {}.
-  backupDirPath := self resolveBackupPath: ''.
-  entries := ((ServerFileDirectory on: backupDirPath) entries
-    select: [ :entry | entry isDirectory not ])
-    sorted: [ :a :b | a modificationTime <= b modificationTime ].
+  entries := self buEntries.
   stream := WriteStream on: String new.
-  stream
-    nextPutAll: 'Last Restore: ' , LastRestore asString;
-    cr;
-    nextPutAll: 'Last Backup:  ' , LastBackup asString;
-    cr.
-  entries
-    do: [ :entry | 
-      stream
-        nextPutAll: entry modificationTime printString , ' -- ' , entry name;
-        cr ].
+  self buReport: entries on: stream.
   ^ TDCommandResult new
     displayText: stream contents asText;
     resultObject: entries;

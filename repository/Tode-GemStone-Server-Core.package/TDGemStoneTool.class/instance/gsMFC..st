@@ -1,11 +1,5 @@
 as yet unclassified
-gsmfc
-  "gs mfc [<maxThreads>]"
-
-  | maxThreads |
-  maxThreads := 2.
-  tokens size > 1
-    ifTrue: [ maxThreads := (tokens at: 2) asNumber ].
+gsMFC: maxThreads
   Transcript
     cr;
     show: '---Starting mark for collect. (';

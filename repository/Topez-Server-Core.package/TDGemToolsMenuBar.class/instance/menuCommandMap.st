@@ -98,4 +98,24 @@ menuCommandMap
         {'mc'.
           'mc list'.
           ''};
+    at: 'List backup files'
+      put:
+        {'bu'.
+          'bu list'.
+          'list'};
+    at: 'Backup'
+      put:
+        {'bu'.
+          'bu backup'.
+          'backup'};
+    at: 'Restore from Backup'
+      put:
+        {'bu'.
+          'bu restore'.
+          'restore'};
+    at: 'Mark for Collection'
+      put:
+        {'gs'.
+          'gs mfc'.
+          ''};
     yourself

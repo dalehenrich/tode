@@ -1,13 +1,13 @@
 accessing
 menuMapList
-  ^ {'GemTools Launcher Menu'.
-  ' Transactions'.
+  ^ {('GemTools Launcher Menu' asText allBold).
+  (' Transactions' asText allBold).
   '  Commit'.
   '  Abort'.
   '  Auto Abort'.
   '  Auto Commit'.
   '  Auto Migrate'.
-  ' Find'.
+  (' Find' asText allBold).
   '  Class...'.
   '  Hierarchy Browser...'.
   '  Class References...'.
@@ -15,7 +15,7 @@ menuMapList
   '  String...'.
   '  Senders...'.
   '  Case Sensitive String...'.
-  ' Tools'.
+  (' Tools' asText allBold).
   '  System Browser'.
   '  Open Workspaces'.
   '  File Browser'.
@@ -23,4 +23,10 @@ menuMapList
   '  Inspect UndefinedSymbols'.
   '  Inspect Sent But Not Implemented'.
   '  Test Runner'.
-  '  Monticello'}
+  '  Monticello'.
+  (' Admin' asText allBold).
+  ('  Repository' asText allBold).
+  '   List backup files'.
+  '   Backup'.
+  '   Restore from Backup'.
+  '   Mark for Collection'}

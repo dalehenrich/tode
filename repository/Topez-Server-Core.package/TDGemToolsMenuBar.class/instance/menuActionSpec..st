@@ -35,12 +35,24 @@ menuActionSpec: miniTool
       #('Monticello' nil #'toolMonticelloBrowser:selectedIndex:')})}.
   {('Admin'
     ->
-      {#('Repository' nil #'attachContinuation:selectedIndex:').
-      #('Seaside Gems' nil #'attachContinuation:selectedIndex:').
-      #('DoIt' nil #'attachContinuation:selectedIndex:').
-      #('Browser Preferences' nil #'attachContinuation:selectedIndex:').
+      {{('Repository'
+        ->
+          {#('List backup files' nil #'repositoryListBackup:selectedIndex:').
+          #('Backup' nil #'repositoryMakeBackup:selectedIndex:').
+          #('Restore from Backup' nil #'repositoryRestoreFromBackup:selectedIndex:').
+          #('-').
+          #('Mark for Collection' nil #'repositoryMFC:selectedIndex:')})}.
+      #('-').
+      {('Seaside Gems' -> {#('=' nil #'attachContinuation:selectedIndex:')})}.
+      #('-').
+      {('DoIt' -> {#('=' nil #'attachContinuation:selectedIndex:')})}.
+      #('-').
+      {('Browser Preferences'
+        -> {#('=' nil #'attachContinuation:selectedIndex:')})}.
+      #('-').
       #('Commit on Almost Out of Memory' nil #'attachContinuation:selectedIndex:').
       #('Popup on debug' nil #'attachContinuation:selectedIndex:').
+      #('-').
       #('Send Bug Report' nil #'attachContinuation:selectedIndex:')})}.
   #('Help' nil #'attachContinuation:selectedIndex:').
   #('Debug' nil #'attachContinuation:selectedIndex:').
