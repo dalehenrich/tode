@@ -1,0 +1,8 @@
+TDObjectGatewayNode{#name:'flow',#contents:'^ TDProjectSpecEntryDefinition new
+    baseline: \'Flow\'
+      repository:
+        \'github://GsDevKit/flow/backend/repository\'
+      loads: #(\'default\');
+    status: #(#\'inactive\');
+    locked: false;
+    yourself'}
