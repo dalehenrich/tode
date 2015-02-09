@@ -4,7 +4,7 @@ burestoreManPage
     commandName: 'restore'
     fromString:
       'NAME
-  restore - Restore from a GemStone backup
+  bu restore - Restore from a GemStone backup
 
 SYNOPSIS
   bu [--dir=<backup-directory>] restore <backup-file>

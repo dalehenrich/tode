@@ -117,7 +117,7 @@ menuCommandMap
       put:
         {'gs'.
           'gs mfc'.
-          ''};
+          'mfc'};
     at: 'Changed packages & methods'
       put:
         {'project'.
@@ -126,13 +126,13 @@ menuCommandMap
     at: 'Gem Configuration Report'
       put:
         {'gs'.
-          'gs configuration'.
-          ''};
+          '--gem'.
+          'configuration'};
     at: 'Stone Configuration Report'
       put:
         {'gs'.
-          'gs configuration'.
-          ''};
+          '--stone'.
+          'configuration'};
     at: 'Empty Object Log'
       put:
         {'ol'.
@@ -141,7 +141,7 @@ menuCommandMap
     at: 'File Size Report'
       put:
         {'gs'.
-          'gs fileSizeReport'.
+          'fileSizeReport'.
           'fileSizeReport'};
     at: 'Object Log'
       put:
@@ -151,23 +151,23 @@ menuCommandMap
     at: 'User Session Report'
       put:
         {'gs'.
-          'gs sessionReport'.
-          ''};
+          'sessionDescription'.
+          'sessionDescription'};
     at: 'Client Version Report'
       put:
         {'gs'.
-          'gs version'.
-          ''};
+          '--client'.
+          'version'};
     at: 'Gem Version Report'
       put:
         {'gs'.
-          'gs version'.
-          ''};
+          '--gem'.
+          'version'};
     at: 'Stone Version Report'
       put:
         {'gs'.
-          'gs version'.
-          ''};
+          '--stone'.
+          'version'};
     at: 'Browser Preferences'
       put:
         {'limit'.
@@ -177,7 +177,7 @@ menuCommandMap
       put:
         {'gs'.
           'gs halt'.
-          ''};
+          'halt'};
     at: 'Help'
       put:
         {'man'.

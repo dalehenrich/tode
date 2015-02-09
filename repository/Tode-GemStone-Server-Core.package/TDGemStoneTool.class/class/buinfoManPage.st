@@ -4,7 +4,7 @@ buinfoManPage
     commandName: 'info'
     fromString:
       'NAME
-  info - Display info about a particular backup
+  bu info - Display info about a particular backup
 
 SYNOPSIS
   bu [--dir=<backup-directory>] info <backup-file>

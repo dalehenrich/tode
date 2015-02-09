@@ -4,7 +4,7 @@ bubackupManPage
     commandName: 'backup'
     fromString:
       'NAME
-  backup - Make a GemStone backup
+  bu backup - Make a GemStone backup
 
 SYNOPSIS
   bu [--dir=<backup-directory>] backup <backup-file>

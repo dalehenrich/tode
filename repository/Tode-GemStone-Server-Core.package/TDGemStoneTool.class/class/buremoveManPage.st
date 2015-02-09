@@ -4,7 +4,7 @@ buremoveManPage
     commandName: 'remove'
     fromString:
       'NAME
-  remove - Remove backup file from backup directory
+  bu remove - Remove backup file from backup directory
 
 SYNOPSIS
   bu [--dir=<backup-directory>] remove <backup-file>

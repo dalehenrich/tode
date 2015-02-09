@@ -4,7 +4,7 @@ bulistManPage
     commandName: 'list'
     fromString:
       'NAME
-  list - Display info about all backup files
+  bu list - Display info about all backup files
 
 SYNOPSIS
   bu [--dir=<backup-directory>] list

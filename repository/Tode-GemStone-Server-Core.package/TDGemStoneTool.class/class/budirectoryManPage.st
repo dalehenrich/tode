@@ -4,7 +4,7 @@ budirectoryManPage
     commandName: 'directory'
     fromString:
       'NAME
-  directory - Define default backup directory
+  bu directory - Define default backup directory
 
 SYNOPSIS
   bu directory [<backup-file>]
