@@ -1,9 +1,15 @@
 as yet unclassified
 gsmfc
-  "gs mfc [<maxThreads>]"
+  "
+  gs mfc [--noCommit] [--threads=<maxThreads>] [--wait=<wait-seconds>] 
+         [--buffer=<page-buffer-size>] [--cpu=<percent-cpu-active-limit>]
+"
 
-  | maxThreads |
-  maxThreads := self gsMFCDefaultMaxThreads.
-  tokens size > 1
-    ifTrue: [ maxThreads := (tokens at: 2) asNumber ].
-  self gsMFC: maxThreads
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('noCommit' nil #'none').
+      #('threads' nil #'required').
+      #('wait' nil #'required').
+      #('buffer' nil #'required').
+      #('cpu' nil #'required')}.
+  self gsMfc

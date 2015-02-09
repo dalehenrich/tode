@@ -6,19 +6,19 @@ gsversion
 
   | reportDict reportType |
   self
-    getOptsMixedLongShort:
+    getSubcommandOptsMixedLongShort:
       {#('client' nil #'none').
       #('gem' nil #'none').
       #('stone' nil #'none')}.
-  self options
+  self subOptions
     at: 'client'
     ifPresent: [ :ignored | reportType := #'client' ]
     ifAbsent: [ 
-      self options
+      self subOptions
         at: 'gem'
         ifPresent: [ :ignored | reportType := #'gem' ]
         ifAbsent: [ 
-          self options
+          self subOptions
             at: 'stone'
             ifPresent: [ :ignored | reportType := #'stone' ]
             ifAbsent: [ reportType := #'stone' ] ] ].

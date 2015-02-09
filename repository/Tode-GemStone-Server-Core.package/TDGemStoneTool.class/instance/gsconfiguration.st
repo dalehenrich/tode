@@ -6,10 +6,10 @@ gsconfiguration
 
   | reportDict reportType |
   self
-    getOptsMixedLongShort:
+    getSubcommandOptsMixedLongShort:
       {#('gem' nil #'none').
       #('stone' nil #'none')}.
-  self options
+  self subOptions
     at: 'gem'
     ifPresent: [ :ignored | reportType := #'gem' ]
     ifAbsent: [ 

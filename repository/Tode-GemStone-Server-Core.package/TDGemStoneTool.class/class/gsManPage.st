@@ -19,18 +19,17 @@ DESCRIPTION
   Commands:
     configuration      Gem and Stone configuration reports
     fileout            Fileout Classes, Categories or Packages
-    halt               Halt on AlmostOutOfMemory exception
-    fileSizeReport
+    fileSizeReport     Report on repository size and amount of free space
     gemtools           Emulate GemTools Launcher Menus
+    halt               Halt on AlmostOutOfMemory exception
     instances
-    mfc 
+    mfc                Perform a Mark for Collection
     mreferences 
     objectAudit
-    objectFor
+    objectFor          Resolve an object from given objectId
     references
-    sessionDescription
-    sessionReport
-    version
+    sessionDescription Session information report
+    version            OS, hardware and GemStone version attributes for Client, Gem, or Stone
 
   Use `gs --help <command>` to read about a specific subcommand.
 
@@ -42,8 +41,6 @@ EXAMPLES
   gs --help 
   gs --help mfc
 
-  gs gemtools
-
   gs configuration --gem
   gs configuration --stone
 
@@ -51,13 +48,38 @@ EXAMPLES
   gs fileout --directory=/tmp/fileouts --class TDGemStoneTool gstool.gs
   gs fileout --directory=/tmp/fileouts --package Tode-GemStone-Server-Tests tests.gs
 
+  gs fileSizeReport
+
+  gs gemtools
+
   gs halt -m=65
   gs halt -almostOutOfMemory=65
+
+  gs mfc
+  gs mfc --noCommit
+  gs mfc --threads=3 --wait=120 --cpu=40
+  gs mfc --buffer=256
+
+  gs objectFor
+
+  gs sessionDescription
+  gs sessionDescription 5
+  gs sessionDescription --all
+
+  gs version
+  gs version --client
+  gs version --gem
+  gs version --stone
 '.
   manPage subCommands
     at: 'gemtools' put: self gsgemtoolsManPage;
     at: 'configuration' put: self gsconfigurationManPage;
     at: 'fileout' put: self gsfileoutManPage;
     at: 'halt' put: self gshaltManPage;
+    at: 'fileSizeReport' put: self gsfileSizeReportManPage;
+    at: 'mfc' put: self gsmfcManPage;
+    at: 'objectFor' put: self gsobjectForManPage;
+    at: 'sessionDescription' put: self gssessionDescriptionManPage;
+    at: 'version' put: self gsversionManPage;
     yourself.
   ^ manPage

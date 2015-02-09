@@ -6,36 +6,36 @@ gsfileout
 
   | directoryPath fileoutPairs |
   self
-    getOptsMixedLongShort:
+    getSubcommandOptsMixedLongShort:
       {#('directory' nil #'required').
       #('class' nil #'none').
       #('package' nil #'none').
       #('category' nil #'none')}.
-  directoryPath := options at: 'directory'.
+  directoryPath := subOptions at: 'directory'.
   fileoutPairs := {}.
-  1 to: arguments size by: 2 do: [ :index | 
+  1 to: subArguments size by: 2 do: [ :index | 
     | itemName filename |
-    itemName := arguments at: index.
-    filename := arguments at: index + 1.
+    itemName := subArguments at: index.
+    filename := subArguments at: index + 1.
     fileoutPairs
       add:
         {itemName.
         filename} ].
-  options
+  subOptions
     at: 'class'
     ifPresent: [ :ignored | 
       self
         gsfileout: directoryPath
         classnameFilenamePairs: fileoutPairs
         defaultHeader: '' ].
-  options
+  subOptions
     at: 'package'
     ifPresent: [ :ignored | 
       self
         gsfileout: directoryPath
         packageFilenamePairs: fileoutPairs
         defaultHeader: '' ].
-  options
+  subOptions
     at: 'category'
     ifPresent: [ :ignored | 
       self
