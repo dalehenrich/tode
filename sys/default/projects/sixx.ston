@@ -1,9 +1,0 @@
-TDObjectGatewayNode{#name:'sixx',#contents:'| project |
-project := TDProjectSpecEntryDefinition new
-  baseline: \'SIXX\'
-    repository: \'github://glassdb/SIXX:master/repository\'
-    loads: \'Core\';
-  status: #(#\'inactive\');
-  locked: false;
-  yourself.
-^ project'}

@@ -1,3 +1,0 @@
-bu backup tode.dbf
-script --script=setUpSys
-bu backup home.dbf

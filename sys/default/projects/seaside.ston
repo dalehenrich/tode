@@ -1,7 +1,0 @@
-TDObjectGatewayNode{#name:'seaside',#contents:'^ TDProjectSpecEntryDefinition new
-    baseline: \'Seaside3\'
-      repository: \'github://GsDevKit/Seaside31:3.1.?/repository\'
-      loads: #(\'Development\' \'Zinc\' \'FastCGI\' \'Examples\' \'Tests\');
-    status: #(#\'inactive\');
-    locked: false;
-    yourself'}

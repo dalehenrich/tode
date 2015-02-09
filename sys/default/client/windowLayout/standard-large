@@ -1,7 +1,0 @@
-TDStandardWindowProperties {
-	#margin : Point [ 3, 3 ],
-	#codeWidthFactor : 0.45,
-	#extraLists : 2,
-	#shellHeightFactor : 0.33,
-	#topHeightFactor : 0.25
-}

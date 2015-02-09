@@ -1,7 +1,0 @@
-TDAlternateWindowProperties {
-	#margin : Point [ 3, 3 ],
-	#codeWidthFactor : 0.5,
-	#extraLists : 1,
-	#shellHeightFactor : 0.33,
-	#topHeightFactor : 0.25
-}

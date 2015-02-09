@@ -1,3 +1,0 @@
-updateClient --clientRepo=github://dalehenrich/tode:master/repository
-script --script=installServerTode
-script --script=installServerTode2

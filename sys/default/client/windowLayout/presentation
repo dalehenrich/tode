@@ -1,7 +1,0 @@
-TDSmallWindowProperties {
-	#margin : Point [ 3, 3 ],
-	#codeWidthFactor : 0.5,
-	#extraLists : 0,
-	#shellHeightFactor : 0.39,
-	#topHeightFactor : 0.36
-}

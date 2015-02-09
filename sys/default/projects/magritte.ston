@@ -1,8 +1,0 @@
-TDObjectGatewayNode{#name:'magritte',#contents:'^ TDProjectSpecEntryDefinition new
-    configuration: \'Magritte3\'
-      version: #\'release3.2\'
-      repository: \'http://smalltalkhub.com/mc/Magritte/Magritte3/main\'
-      loads: #(\'Seaside\');
-    status: #(#\'inactive\');
-    locked: false;
-    yourself'}
