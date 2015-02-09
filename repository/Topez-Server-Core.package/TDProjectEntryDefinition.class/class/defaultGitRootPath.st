@@ -1,4 +1,5 @@
 accessing
 defaultGitRootPath
-  DefaultGitRootPath ifNil: [ DefaultGitRootPath := '/opt/git' ].
-  ^ DefaultGitRootPath
+  ^ SessionTemps current
+    at: #'TDProjectEntry_DEFAULT_GitRootPath'
+    ifAbsent: [ DefaultGitRootPath ifNil: [ '/opt/git' ] ]

@@ -1,7 +1,7 @@
 login
 postLogin
   "Message sent by client when login process is completed on the client, server
-   can no perform any post login initialization.
+   can now perform any post login initialization.
    Should eventually have a post login announcement ... "
 
   | gitRootPath |

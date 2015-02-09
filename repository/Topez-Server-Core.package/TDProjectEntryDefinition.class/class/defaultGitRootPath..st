@@ -1,3 +1,3 @@
 accessing
 defaultGitRootPath: aString
-  DefaultGitRootPath := aString
+  SessionTemps current at: #'TDProjectEntry_DEFAULT_GitRootPath' put: aString
