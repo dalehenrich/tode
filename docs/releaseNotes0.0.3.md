@@ -1,11 +1,30 @@
 # Release Notes 0.0.3
 
 - [Bug Fixes](#bug-fixes)
-- [Project Entries](#project-entries-circa-tode-v002)
+- [Pull Requests](#pull-requests)
+- [Project Entries circa tODE v0.0.2](#project-entries-circa-tode-v002)
   - [Project Entry registration](#project-entry-registration)
   - [Project Entry sharing](#project-entry-sharing)
 
 ##Bug Fixes
+1. [Issue #5: Add command / file completion][12]
+2. [Issue #100: TDProjectEntryDefinition class>>defaultGitRootPath should be in session temps][17]
+1. [Issue #106: projects dir with projectEntries?][7]
+1. [Issue #110: probably should have stone specific home dir in gsdevkit][6]
+2. [Issue #123: adapt tode client to new tode/sys structure][8]
+3. [Issue #124: `project load` may not use proper version of project entry][10]
+3. [Issue #125: potential difficulty when updating live tode in 3.1.0.6 and earlier: `a OffsetError occurred (error 2003), reason:objErrBadOffsetIncomplete, max:0 actual:1`][9]
+4. [Issue #129: add `\` escape to tODE command-line processing (mainly to escape newlines)][11]
+5. [Issue #130: implement TDTopezServer>>evaluateCommandStream: for multi-line scripts and `tode its`][13]
+6. [Issue #135: cheat sheet for GemTools users][15]
+6. [Issue #143: add `/sys` structure to tODE checkout][14]
+7. [Issue #147: finish `gs` command docs][16]
+8. [Issue #148: write `project` command man pages #148][18]
+9. [Issue #149: v0.0.3 release notes][19]
+
+##Pull Requests
+1. [Pull Request #150][20]
+
 ##Project Entries circa tODE v0.0.2
 The *project entry* is used by tODE to specify how a project is to by handled by the `project` family of commands (use the tODE command `man project` for more information about the `project` family of commands).
 
@@ -98,3 +117,19 @@ mount --todeRoot home /      # use `man mount` for more information
 [3]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#loading
 [4]: images/projectList.png
 [5]: https://github.com/GsDevKit/gsDevKitHome/blob/master/tode/sys/default/projects/seaside.ston
+[6]: https://github.com/dalehenrich/tode/issues/110
+[7]: https://github.com/dalehenrich/tode/issues/106
+[8]: https://github.com/dalehenrich/tode/issues/123
+[9]: https://github.com/dalehenrich/tode/issues/125
+[10]:  https://github.com/dalehenrich/tode/issues/124
+[11]:  https://github.com/dalehenrich/tode/issues/129
+[12]:  https://github.com/dalehenrich/tode/issues/5
+[13]:  https://github.com/dalehenrich/tode/issues/130
+[14]:  https://github.com/dalehenrich/tode/issues/143
+[15]:  https://github.com/dalehenrich/tode/issues/135
+[16]:  https://github.com/dalehenrich/tode/issues/147
+[17]:  https://github.com/dalehenrich/tode/issues/100
+[18]:  https://github.com/dalehenrich/tode/issues/148
+[19]:  https://github.com/dalehenrich/tode/issues/149
+[20]:  https://github.com/dalehenrich/tode/pull/150
+
