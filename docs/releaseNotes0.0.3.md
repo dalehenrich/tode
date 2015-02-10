@@ -6,6 +6,9 @@
   - [Project Entry registration](#project-entry-registration)
   - [Project Entry sharing](#project-entry-sharing)
 - [Project Entries tODE v0.0.3](#project-entries-tode-v003)
+  - [Project Entry registration (v0.0.3)](#project-entry-registration-v003)
+  - [Project Entry sharing (v0.0.3)](#project-entry-sharing-v003)
+- [Converting v0.0.2 project structure to v0.0.3](#converting=v002-project-structure-to-v003)
 
 ##Bug Fixes
 1. [Issue #5: Add command / file completion][12]
@@ -74,13 +77,17 @@ In [tODE v0.0.2][1], there was a fairly simplistic model for registering a *proj
 Each `project` node is expected to return an instance of **TDProjectEntryDefinition**.
 
 ###Project Entry sharing
-Project entries were shared between stones, by mounting a common directory on disk, typically`$GS_HOME/tode/home`:
+Project entries were shared between stones, by mounting a common directory on disk, typically `$GS_HOME/tode/home` using the following tODE shell command:
 
 ```
 mount --todeRoot home /      # see `man mount` for more information
 ```
 
 ##Project Entries tODE v0.0.3
+In [tODE v0.0.3][22], *project entries* retain their functionality from [v0.0.2][1], but the structures for registration and sharing having been improved.
+
+###Project Entry registration (v0.0.3)
+###Project Entry sharing (v0.0.3)
 
 ```
 +-home\
@@ -107,6 +114,8 @@ mount --todeRoot home /      # see `man mount` for more information
     script --script=setUpSys # build tODE /sys structure
 ```
 
+##Converting v0.0.2 project structure to v0.0.3
+
 [1]: https://github.com/dalehenrich/tode/releases/tag/v0.0.2
 [2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/LockCommandReference.md#lock-command-reference
 [3]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#loading
@@ -128,4 +137,5 @@ mount --todeRoot home /      # see `man mount` for more information
 [19]:  https://github.com/dalehenrich/tode/issues/149
 [20]:  https://github.com/dalehenrich/tode/pull/150
 [21]:  https://github.com/dalehenrich/tode/pull/140
+[22]: https://github.com/dalehenrich/tode/releases/tag/v0.0.3
 
