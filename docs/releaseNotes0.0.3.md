@@ -5,6 +5,7 @@
 - [Project Entries circa tODE v0.0.2](#project-entries-circa-tode-v002)
   - [Project Entry registration](#project-entry-registration)
   - [Project Entry sharing](#project-entry-sharing)
+- [Project Entries tODE v0.0.3](#project-entries-tode-v003)
 
 ##Bug Fixes
 1. [Issue #5: Add command / file completion][12]
@@ -23,7 +24,8 @@
 9. [Issue #149: v0.0.3 release notes][19]
 
 ##Pull Requests
-1. [Pull Request #150][20]
+1. [Pull Request #140: Greatly Improved Git merge tool][21]
+1. [Pull Request #150: v0.0.3][20]
 
 ##Project Entries circa tODE v0.0.2
 The *project entry* is used by tODE to specify how a project is to by handled by the `project` family of commands (use the tODE command `man project` for more information about the `project` family of commands).
@@ -72,20 +74,13 @@ In [tODE v0.0.2][1], there was a fairly simplistic model for registering a *proj
 Each `project` node is expected to return an instance of **TDProjectEntryDefinition**.
 
 ###Project Entry sharing
-Project entries were shared between stones, by mounting a standard directory on disk (`$GS_HOME/tode/home`):
+Project entries were shared between stones, by mounting a common directory on disk, typically`$GS_HOME/tode/home`:
 
 ```
 mount --todeRoot home /      # see `man mount` for more information
 ```
 
-
-
-
-defining shared object structure. `$GS_HOME/tode/home` was *mounted* into the the tODE directory node structure as `/home` using the `mount` command:
-
-```
-mount --todeRoot home /      # use `man mount` for more information
-```
+##Project Entries tODE v0.0.3
 
 ```
 +-home\
@@ -132,4 +127,5 @@ mount --todeRoot home /      # use `man mount` for more information
 [18]:  https://github.com/dalehenrich/tode/issues/148
 [19]:  https://github.com/dalehenrich/tode/issues/149
 [20]:  https://github.com/dalehenrich/tode/pull/150
+[21]:  https://github.com/dalehenrich/tode/pull/140
 
