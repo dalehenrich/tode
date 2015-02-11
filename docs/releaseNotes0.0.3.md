@@ -3,7 +3,7 @@
 - [Bug Fixes](#bug-fixes)
 - [Pull Requests](#pull-requests)
 - [Project Entries for tODE](#project-entries-for-tode)
-  - [Project Entries for tODE v0.0.2](#project-entries-for-tode-v002)
+  - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
   - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
     - [Project Entry registration (v0.0.3)](#project-entry-registration)
     - [Project Entry sharing (v0.0.3)](#project-entry-sharing)
@@ -68,7 +68,7 @@ Unloaded projects are *underlined*:
 
 ![project list][4]
 
-###Project Entries for tODE v0.0.2
+###Project Entry registration and sharing for tODE v0.0.2
 In [tODE v0.0.2][1], there was a fairly simplistic model for registering a *project entry*:
 
 > The subdirectories of the `/home` directory node in tODE are scanned for a node named `project`. 
