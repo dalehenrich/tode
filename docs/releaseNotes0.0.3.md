@@ -7,7 +7,7 @@
   - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
     - [Project Entry registration (v0.0.3)](#project-entry-registration)
     - [Project Entry sharing (v0.0.3)](#project-entry-sharing)
-- [Converting v0.0.2 project structure to v0.0.3](#converting=v002-project-structure-to-v003)
+- [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
 1. [Issue #5: Add command / file completion][12]
