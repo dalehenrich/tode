@@ -3,15 +3,17 @@
 - [Bug Fixes](#bug-fixes)
 - [Pull Requests](#pull-requests)
 - [Project Loading with tODE](#project-loading-with-tode)
-  - [Project Entries for tODE](#project-entries-for-tode)
-    - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
-    - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
-      - [/sys](#sys)
-      - [/sys/default](#sysdefault)
-      - [/sys/local](#syslocal)
-      - [/sys/stone](#sysstone)
-      - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name)
+  - [Project Entries](#project-entries)
+  - [Project Entry and Script Sharing](#project-entry-and-script-sharing)
+    - [/home](#home)
+    - [/project](#projects)
+    - [/sys](#sys)
+    - [/sys/default](#sysdefault)
+    - [/sys/local](#syslocal)
+    - [/sys/stone](#sysstone)
+    - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
+  - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
 
 ##Bug Fixes
 1. [Issue #5: Add command / file completion][12]
@@ -38,6 +40,10 @@ One of the basic principles for tODE is that the same code should be run whether
 This priniciple is especially important when it comes to project load scripts.
 Developers must be able to count of the fact that whether or not they build a stone from scratch or update a stone from a menu pick, that they end up with the same code in their image.
 
+For the loading projects, the class **TDMetacelloTool** is the workhorse.
+**TDMetacelloTool** implements a comprehensive Smalltalk API for managing most phases of project management.
+**TDMetacelloTool** also implements the `project` command which provides tODE shell access to the project management API:
+
 ```
 NAME
   project - Metacello project management support.
@@ -53,24 +59,38 @@ DESCRIPTION
     diff     View code differences between image and repository
     entry    Create a new project entry
     list     List Metacello projects
-    load     (~/bin/load)
+    load     Load a Metacello project
     lock     Lock project registration
     log      Browse commit log for the Metacello project (git only)
-    merge    (git only?)
     prime    Prime the project registry
-    push     (git only)
     registry Inspect the project registry
     rehome   Point package repository groups for project to new repository
-    revert   (see revert in project tool ... just dirty or reload ALL as options)
-    status
     summary  View report of changed packages and methods
-    test
     validate Validate the project registrations
-    workdir  Create working directory for project
 
   Use `project --help <command>` to read about a specific subcommand.
 ```
-###Project Entries for tODE
+
+For example, to load the `Seaside3` project one can use the following Smalltalk expression:
+
+```Smalltalk
+  (TDTopezServer batchInstance toolInstanceFor: 'project')
+    projectLoad: 'Seaside3'
+```
+
+tODE shell command:
+
+```
+project load Seaside3
+```
+
+or `project list` menu item:
+
+![project list menu][27]
+
+
+
+###Project Entries
 
 The *project entry* is used by tODE to specify how a project is to by handled by the `project` family of commands (use the tODE command `man project` for more information about the `project` family of commands).
 
@@ -110,19 +130,7 @@ Unloaded projects are *underlined*:
 
 ![project list][4]
 
-####Project Entry registration and sharing for tODE v0.0.2
-In [tODE v0.0.2][1], there is a fairly simplistic model for registering a *project entry*:
-
-> The subdirectories of the `/home` directory node in tODE are scanned for a node named `project`. 
-Each `project` node is expected to return an instance of **TDProjectEntryDefinition**.
-
-Project entries are shared between stones, by mounting a common directory on disk (typically `$GS_HOME/tode/home`) and using the following tODE shell command:
-
-```
-mount --todeRoot home /      # see `man mount` for more information
-```
-
-####Project Entries for tODE v0.0.3
+###Project Entry and Script Sharing
 In [tODE v0.0.3][22], the mechanisms for registration and sharing has been changed.
 
 At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
@@ -132,12 +140,13 @@ At the top-level of the tODE directory node structure, the `/home` directory nod
 +-projects\
 +-sys\
 ```
-
+####/home
 The `/home` directory node houses the scripts and directory nodes.
-There may still be project-specific directory node in `/home` that contain project-specific scripts, but the registration of *project entries* has been moved to the `/projects` directory node.
-All of the nodes in the `/projects` directory node are expected to return an instance of **TDProjectEntryDefinition**.
 
-#####/sys
+####/projects
+The nodes in the `/projects` directory node are expected to return an instance of **TDProjectEntryDefinition**.
+
+####/sys
 In a mutli-person production installation. it is very easy to to imagine that multiple stones will be used for production, development and testing.
 In such an environment it is desirable to provide site-wide *project entries* and scripts that are shared by all stones.
 Additionally it is desirable to be able to customize *project entries* and scripts on a stone by stone basis.
@@ -153,7 +162,7 @@ The top-level of the `/sys` directory node looks like the following:
    +-stones\
 ```
 
-#####/sys/default
+####/sys/default
 `/sys/default/home` is the location where the common tODE scripts are located.
 The scripts in this directory node are included in the initial checkout of [gsDevKitHome][23].
 Over time, I expect folks to contribute their own utility scripts here.
@@ -162,7 +171,7 @@ Over time, I expect folks to contribute their own utility scripts here.
 The *project entries* in this directory node should represent the full range of projects that have been ported to [GsDevKit][25].
 Over time, I expect that the list will be expanded as folks port more projects to [GsDevKit][25].
 
-#####/sys/local
+####/sys/local
 `/sys/local/home` is the location where the installation-wide tODE scripts are located.
 You should add scripts to this directory node that you want all stones in your installation to share.
 
@@ -171,11 +180,11 @@ You should add *project entries* to this directory node that you want all the st
 If you have clones of projects that are present in `/sys/default/projects`, you should copy the *project entry* from `/sys/default/projects` to `/sys/local/projects` and save your installation-specific modifications there.
 By default, the *project entries* in `/sys/local/projects` have precedence over those in `/sys/default/projects`.
 
-#####/sys/stone
+####/sys/stone
 `/sys/stone`, is always mounted pointing to the `/sys/stones/stones/<stone-name>` directory node.
 In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
 
-#####/sys/stones/stones/\<stone-name\>
+####/sys/stones/stones/\<stone-name\>
 `/sys/stones/stones/<stone-name>/home` (or `/sys/stone/home`) is the location where the stone-specific tODE scripts are located.
 By default, all new scripts and directory nodes that you create in `/home`, will be saved in this location
 
@@ -449,6 +458,19 @@ cd
     script --script=setUpSys # build tODE /sys structure
 ```
 
+####Project Entry registration and sharing for tODE v0.0.2
+In [tODE v0.0.2][1], there is a fairly simplistic model for registering a *project entry*:
+
+> The subdirectories of the `/home` directory node in tODE are scanned for a node named `project`. 
+Each `project` node is expected to return an instance of **TDProjectEntryDefinition**.
+
+Project entries are shared between stones, by mounting a common directory on disk (typically `$GS_HOME/tode/home`) and using the following tODE shell command:
+
+```
+mount --todeRoot home /      # see `man mount` for more information
+```
+
+
 [1]: https://github.com/dalehenrich/tode/releases/tag/v0.0.2
 [2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/LockCommandReference.md#lock-command-reference
 [3]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#loading
@@ -475,3 +497,4 @@ cd
 [24]: https://github.com/GsDevKit/gsDevKitHome/blob/master/docs/releaseNotes/releaseNotes1.0.0.md
 [25]: https://github.com/GsDevKit
 [26]: http://downloads.gemtalksystems.com/docs/GemStone64/3.2.x/GS64-Topaz-3.2.pdf
+[27]: ../images/projectListMenu.png
