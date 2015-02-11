@@ -5,7 +5,10 @@
 - [Project Entries for tODE](#project-entries-for-tode)
   - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
   - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
-    - [/home, /projects, /sys](#home-projects-sys)
+    - [Directory Node Composition](#directory-node-composition)
+    - [/home](#home)
+    - [/projects](#projects)
+    - [/sys](#sys)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -86,9 +89,9 @@ In a mutli-person production installation. it is very easy to to imagine that mu
 In such an environment it is desirable to provide site-wide *project entries* and scripts that are shared by all stones.
 Additionally it is desirable to be able to customize *project entries* and scripts on a stone by stone basis.
 
-The common share point through `$GS_HOME/tode/home` proves to be too simplistic.
-
+####Directory Node Composition
 For [tODE v0.0.3][22], script and project registration is accomplished by composing the contents of three different disk directories:
+
 1. `$GS_HOME/tode/sys/default`
 2. `$GS_HOME/tode/sys/local`
 3. `$GS_HOME/tode/sys/stones/stones/<stone-name>`
@@ -102,8 +105,27 @@ New content may also be added.
 
 Each stone that is added to the system is allocated a directory (`$GS_HOME/tode/sys/stones/stones/<stone-name>`) and as with the  `$GS_HOME/tode/sys/local` directory, stone-speicifice exclusions, overrides and additions may be made.
 
-The exact composition of a directory node in tODE is specified by a *composition node*. 
-Here is an example *composition node* for the '/home' directory node:
+The exact composition of a directory node in tODE is specified by a *composition node*.
+The order of *path nodes* in the compostion defines override order. 
+One may add *path nodes* that `excludes` specific entries, `includes` specific entries or uses a custom `selectBlock` using the following protocol in **TDComposedDirectoryNode**:
+
+- addPathNode:
+- addPathNode:excludes:
+- addPathNode:excludes:includes:
+- addPathNode:includes:
+- addPathNode:selectBlock:
+
+At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
+
+```
++-home\
++-projects\
++-sys\
+```
+
+
+####/home
+Here is the *composition node* for the '/home' directory node:
 
 ```Smalltalk
 (TDComposedDirectoryNode
@@ -115,26 +137,21 @@ Here is an example *composition node* for the '/home' directory node:
     yourself
 ```
 
-The order of *path nodes* in the compostion defines override order. 
-One may add *path nodes* that `excludes` specific entries, `includes` specific entries or uses a custom `selectBlock` using the following protocol in **TDComposedDirectoryNode**:
+####/projects
+As with the `/home` directory node, the `/projects` directory node is specified by a *composition node*:
 
-- addPathNode:
-- addPathNode:excludes:
-- addPathNode:excludes:includes:
-- addPathNode:includes:
-- addPathNode:selectBlock:
-
-
-
-####/home, /projects, /sys
-
-At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
-
+```Smalltalk
+(TDComposedDirectoryNode
+    pathComposedDirectoryNodeNamed: 'home'
+    topez: self topez)
+    addPathNode: '/sys/stone/projects';
+    addPathNode: '/sys/local/projects';
+    addPathNode: '/sys/default/projects';
+    yourself
 ```
-+-home\
-+-projects\
-+-sys\
-```
+
+####/sys
+
 
 As in [tODE v0.0.2][1], the `/home` directory node is the root of the shared script structure, however, project registrations have been moved from subdirectories of the `/home` directory node to a separate `/project` directory node. 
 The `/project` directory node contains only nodes that define *project entries*.
