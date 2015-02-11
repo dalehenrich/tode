@@ -2,12 +2,11 @@
 
 - [Bug Fixes](#bug-fixes)
 - [Pull Requests](#pull-requests)
-- [Project Entries circa tODE v0.0.2](#project-entries-circa-tode-v002)
-  - [Project Entry registration](#project-entry-registration)
-  - [Project Entry sharing](#project-entry-sharing)
-- [Project Entries tODE v0.0.3](#project-entries-tode-v003)
-  - [Project Entry registration (v0.0.3)](#project-entry-registration-v003)
-  - [Project Entry sharing (v0.0.3)](#project-entry-sharing-v003)
+- [Project Entries for tODE](#project-entries-tode)
+  - [Project Entries for tODE v0.0.2](#project-entries-tode-v002)
+  - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
+    - [Project Entry registration (v0.0.3)](#project-entry-registration)
+    - [Project Entry sharing (v0.0.3)](#project-entry-sharing)
 - [Converting v0.0.2 project structure to v0.0.3](#converting=v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -30,7 +29,7 @@
 1. [Pull Request #140: Greatly Improved Git merge tool][21]
 1. [Pull Request #150: v0.0.3][20]
 
-##Project Entries circa tODE v0.0.2
+##Project Entries for tODE
 The *project entry* is used by tODE to specify how a project is to by handled by the `project` family of commands (use the tODE command `man project` for more information about the `project` family of commands).
 
 A *project entry* has attributes that match up with arguments you would use in a [**Metacello** load command][3].
@@ -69,25 +68,22 @@ Unloaded projects are *underlined*:
 
 ![project list][4]
 
-###Project Entry registration
-
+###Project Entries for tODE v0.0.2
 In [tODE v0.0.2][1], there was a fairly simplistic model for registering a *project entry*:
 
 > The subdirectories of the `/home` directory node in tODE are scanned for a node named `project`. 
 Each `project` node is expected to return an instance of **TDProjectEntryDefinition**.
 
-###Project Entry sharing
 Project entries were shared between stones, by mounting a common directory on disk, typically `$GS_HOME/tode/home` using the following tODE shell command:
 
 ```
 mount --todeRoot home /      # see `man mount` for more information
 ```
 
-##Project Entries tODE v0.0.3
-In [tODE v0.0.3][22], *project entries* retain their functionality from [v0.0.2][1], but the structures for registration and sharing having been improved.
+###Project Entries for tODE v0.0.3
 
-###Project Entry registration (v0.0.3)
-###Project Entry sharing (v0.0.3)
+####Project Entry registration (v0.0.3)
+####Project Entry sharing (v0.0.3)
 
 ```
 +-home\
