@@ -74,7 +74,9 @@ DESCRIPTION
 For example, to load the `Seaside3` project one can use 
 
 1. The `project list` menu item for loading:
-    ![project list menu][27]
+
+   ![project list menu][27]
+
 2. The 'project load` tODE shell command:
 
    ```
