@@ -5,12 +5,11 @@
 - [Project Entries for tODE](#project-entries-for-tode)
   - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
   - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
-    - [Directory Node Composition](#directory-node-composition)
-    - [/home](#home)
-    - [/projects](#projects)
     - [/sys](#sys)
-    - [/sys/stone](#sysstone)
-      - [/sys/stone/home](#sysstonehome)
+      - [/sys/default](#sysdefault)
+      - [/sys/local](#syslocal)
+      - [/sys/stone](#sysstone)
+      - [/sys/stones/stones/<stone-name>](#sysstonesstonesstonename)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -99,6 +98,7 @@ The `/home` directory node houses the scripts and directory nodes.
 There may still be project-specific directory node in `/home` that contain project-specific scripts, but the registration of *project entries* has been moved to the `/projects` directory node.
 All of the nodes in the `/projects` directory node are expected to return an instance of **TDProjectEntryDefinition**.
 
+####/sys
 In a mutli-person production installation. it is very easy to to imagine that multiple stones will be used for production, development and testing.
 In such an environment it is desirable to provide site-wide *project entries* and scripts that are shared by all stones.
 Additionally it is desirable to be able to customize *project entries* and scripts on a stone by stone basis.
@@ -114,6 +114,40 @@ The top-level of the `/sys` directory node looks like the following:
    +-stones\
 ```
 
+#####/sys/default
+`/sys/default/home` is the location where the common tODE scripts are located.
+The scripts in this directory node are included in the initial checkout of [gsDevKitHome][23].
+Over time, I expect folks to contribute their own utility scripts here.
+
+`/sys/default/projects` is the location where the common tODE *project entries* are located.
+The *project entries* in this directory node should represent the full range of projects that have been ported to [GsDevKit][25].
+Over time, I expect that the list will be expanded as folks port more projects to [GsDevKit][25].
+
+#####/sys/local
+`/sys/local/home` is the location where the installation-wide tODE scripts are located.
+You should add scripts to this directory node that you want all stones in your installation to share.
+
+`/sys/local/projects` is the location where the installation-wide tODE *project entries* are located.
+You should add *project entries* to this directory node that you want all the stones in your installation to share.
+If you have clones of projects that are present in `/sys/default/projects`, you should copy the *project entry* from `/sys/default/projects` to `/sys/local/projects` and save your installation-specific modifications there.
+By default, the *project entries* in `/sys/local/projects` have precedence over those in `/sys/default/projects`.
+
+#####/sys/stone
+`/sys/stone/home` is the location where the stone-specific tODE scripts are located.
+By default, all new scripts and directory nodes that you create in `/home`, will be saved in this location
+
+`/sys/stone/projects` is the location where the stone-specific tODE *project entries* are located.
+If you want to customize a *project entry* for the current stone, then you should copy the *project entry* here and make your changes.
+
+#####/sys/stones/stones/<stone-name>
+
+```
++-sys\
+   +-stones\
+     +-stones\
+     +-templates\
+```
+
 and is created by the following tODE shell commands:
 
 ```
@@ -127,7 +161,7 @@ The `--stoneRoot` option refers to the `/sys/stones/stones/<current-stone-name>`
 
 The `--todeRoot` option refers to the disk path defined in the `serverTodeRoot` field of a session description and is `$GS_HOME/tode` by default.
 
-The `/sys/default`, `/sys/local` and `/sys/stones/stones/<stone-name` directory nodes are the locations where:
+The `/sys/default`, `/sys/local` and `/sys/stones/stones/<stone-name>` directory nodes are the locations where:
 - system-wide default scripts and *project entries* are defined (`/sys/default`).
 - local scripts and *project entries*  are defined (`/sys/local`). 
 - stone-specific scripts and *project entries* are defined ('/sys/stones/stones/<stone-name>').
@@ -395,3 +429,4 @@ cd
 [22]: https://github.com/dalehenrich/tode/releases/tag/v0.0.3
 [23]: https://github.com/GsDevKit/gsDevKitHome
 [24]: https://github.com/GsDevKit/gsDevKitHome/blob/master/docs/releaseNotes/releaseNotes1.0.0.md
+[25]: https://github.com/GsDevKit
