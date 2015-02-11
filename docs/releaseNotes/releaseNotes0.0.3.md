@@ -9,6 +9,7 @@
     - [/home](#home)
     - [/projects](#projects)
     - [/sys](#sys)
+    - [/sys/stone](#sys-stone)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -175,15 +176,13 @@ and these form a directory node structure under `/sys` that looks like the follo
 
 Each of the entries: `default`, `local`, `stones` is a simple mapping to the corresponding directories in `$GS_HOME/tode/sys/` (See the [GsDevKit Release Notes 1.0.0][24] for details of the `S_HOME/tode/sys/` directory structure).
 
+####/sys/stone
+
 A fourth entry in the `/sys` directory node, `/sys/stone`, is always mounted on the `$GS_HOME/tode/sys/stones/stones/<stone-name>` directory.
 Therefore the node path `/sys/stone` can be used in tODE commands to refer to the current stone's directory structure.
 
 ```
-+-home\
-+-projects\
 +-sys\
-   +-default\
-   +-local\
    +-stone@\
       +-dirs@\
       +-home\
@@ -192,9 +191,6 @@ Therefore the node path `/sys/stone` can be used in tODE commands to refer to th
       +-projectComposition@
       +-projects\
       +-repos@\
-   +-stones\
-     +-stones\
-     +-templates\
 ```
 
 ```
