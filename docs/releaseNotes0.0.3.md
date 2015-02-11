@@ -2,8 +2,8 @@
 
 - [Bug Fixes](#bug-fixes)
 - [Pull Requests](#pull-requests)
-- [Project Entries for tODE](#project-entries-tode)
-  - [Project Entries for tODE v0.0.2](#project-entries-tode-v002)
+- [Project Entries for tODE](#project-entries-for-tode)
+  - [Project Entries for tODE v0.0.2](#project-entries-for-tode-v002)
   - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
     - [Project Entry registration (v0.0.3)](#project-entry-registration)
     - [Project Entry sharing (v0.0.3)](#project-entry-sharing)
