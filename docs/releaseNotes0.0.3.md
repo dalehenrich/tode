@@ -5,8 +5,7 @@
 - [Project Entries for tODE](#project-entries-for-tode)
   - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
   - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
-    - [Project Entry registration (v0.0.3)](#project-entry-registration)
-    - [Project Entry sharing (v0.0.3)](#project-entry-sharing)
+    - [/home, /projects, /sys](#home-projects-sys)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -69,21 +68,77 @@ Unloaded projects are *underlined*:
 ![project list][4]
 
 ###Project Entry registration and sharing for tODE v0.0.2
-In [tODE v0.0.2][1], there was a fairly simplistic model for registering a *project entry*:
+In [tODE v0.0.2][1], there is a fairly simplistic model for registering a *project entry*:
 
 > The subdirectories of the `/home` directory node in tODE are scanned for a node named `project`. 
 Each `project` node is expected to return an instance of **TDProjectEntryDefinition**.
 
-Project entries were shared between stones, by mounting a common directory on disk, typically `$GS_HOME/tode/home` using the following tODE shell command:
+Project entries are shared between stones, by mounting a common directory on disk (typically `$GS_HOME/tode/home`) and using the following tODE shell command:
 
 ```
 mount --todeRoot home /      # see `man mount` for more information
 ```
 
 ###Project Entries for tODE v0.0.3
+In [tODE v0.0.3][22], the mechanisms for registration and sharing has been changed.
 
-####Project Entry registration (v0.0.3)
-####Project Entry sharing (v0.0.3)
+In a mutli-person production installation. it is very easy to to imagine that multiple stones will be used for production, development and testing.
+In such an environment it is desirable to provide site-wide *project entries* and scripts that are shared by all stones.
+Additionally it is desirable to be able to customize *project entries* and scripts on a stone by stone basis.
+
+The common share point through `$GS_HOME/tode/home` proves to be too simplistic.
+
+For [tODE v0.0.3][22], script and project registration is accomplished by composing the contents of three different disk directories:
+1. `$GS_HOME/tode/sys/default`
+2. `$GS_HOME/tode/sys/local`
+3. `$GS_HOME/tode/sys/stones/stones/<stone-name>`
+
+The contents of the `$GS_HOME/tode/sys/default` directory is defined in the [gsDevKitHome project][23] and contains content that is generally available for use with the **GsDevKit**.
+
+The contents of the `$GS_HOME/tode/sys/local` directory is expected to be defined on a development group by development group basis.
+It is possible to exclude and override the content from the `$GS_HOME/tode/sys/default` in `$GS_HOME/tode/sys/local`
+ directory. 
+New content may also be added.
+
+Each stone that is added to the system is allocated a directory (`$GS_HOME/tode/sys/stones/stones/<stone-name>`) and as with the  `$GS_HOME/tode/sys/local` directory, stone-speicifice exclusions, overrides and additions may be made.
+
+The exact composition of a directory node in tODE is specified by a *composition node*. 
+Here is an example *composition node* for the '/home' directory node:
+
+```Smalltalk
+(TDComposedDirectoryNode
+    pathComposedDirectoryNodeNamed: 'home'
+    topez: self topez)
+    addPathNode: '/sys/stone/home';
+    addPathNode: '/sys/local/home';
+    addPathNode: '/sys/default/home';
+    yourself
+```
+
+The order of *path nodes* in the compostion defines override order. 
+One may add *path nodes* that `excludes` specific entries, `includes` specific entries or uses a custom `selectBlock` using the following protocol in **TDComposedDirectoryNode**:
+
+- addPathNode:
+- addPathNode:excludes:
+- addPathNode:excludes:includes:
+- addPathNode:includes:
+- addPathNode:selectBlock:
+
+
+
+####/home, /projects, /sys
+
+At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
+
+```
++-home\
++-projects\
++-sys\
+```
+
+As in [tODE v0.0.2][1], the `/home` directory node is the root of the shared script structure, however, project registrations have been moved from subdirectories of the `/home` directory node to a separate `/project` directory node. 
+The `/project` directory node contains only nodes that define *project entries*.
+All project entries found in `/project` are registered with the `project list`.
 
 ```
 +-home\
@@ -134,4 +189,4 @@ mount --todeRoot home /      # see `man mount` for more information
 [20]:  https://github.com/dalehenrich/tode/pull/150
 [21]:  https://github.com/dalehenrich/tode/pull/140
 [22]: https://github.com/dalehenrich/tode/releases/tag/v0.0.3
-
+[23]: https://github.com/GsDevKit/gsDevKitHome
