@@ -125,7 +125,7 @@ One may add *path nodes* that `excludes` specific entries, `includes` specific e
 - addPathNode:includes:
 - addPathNode:selectBlock:
 
-
+I NEED TO TALK ABOUT /SYS/DEFAULTS/HOME, /SYS/LOCAL/HOME, AND /SYS/STONE/HOME .... AND ../../PROJECTS ... MAYBE AN EXAMPLE OR TWO ... SINCE THESE ARE AS IS IS IMPORTANT TO IMPRINT THAT YOU COPY PROJECTS AND SCRIPTS TO THE VARIOUS DIRS TO CONTROL AVAILABILITY
 
 ####/home
 As in [tODE v0.0.2][1], the `/home` directory node is the root of the shared script structure.
