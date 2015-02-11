@@ -85,6 +85,14 @@ mount --todeRoot home /      # see `man mount` for more information
 ###Project Entries for tODE v0.0.3
 In [tODE v0.0.3][22], the mechanisms for registration and sharing has been changed.
 
+At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
+
+```
++-home\
++-projects\
++-sys\
+```
+
 In a mutli-person production installation. it is very easy to to imagine that multiple stones will be used for production, development and testing.
 In such an environment it is desirable to provide site-wide *project entries* and scripts that are shared by all stones.
 Additionally it is desirable to be able to customize *project entries* and scripts on a stone by stone basis.
@@ -103,7 +111,7 @@ It is possible to exclude and override the content from the `$GS_HOME/tode/sys/d
  directory. 
 New content may also be added.
 
-Each stone that is added to the system is allocated a directory (`$GS_HOME/tode/sys/stones/stones/<stone-name>`) and as with the  `$GS_HOME/tode/sys/local` directory, stone-speicifice exclusions, overrides and additions may be made.
+Each stone that is added to the system is allocated a directory (`$GS_HOME/tode/sys/stones/stones/<stone-name>`) and as with the  `$GS_HOME/tode/sys/local` directory, stone-specific exclusions, overrides and additions may be made.
 
 The exact composition of a directory node in tODE is specified by a *composition node*.
 The order of *path nodes* in the compostion defines override order. 
@@ -115,16 +123,10 @@ One may add *path nodes* that `excludes` specific entries, `includes` specific e
 - addPathNode:includes:
 - addPathNode:selectBlock:
 
-At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
-
-```
-+-home\
-+-projects\
-+-sys\
-```
 
 
 ####/home
+As in [tODE v0.0.2][1], the `/home` directory node is the root of the shared script structure.
 Here is the *composition node* for the '/home' directory node:
 
 ```Smalltalk
@@ -138,7 +140,8 @@ Here is the *composition node* for the '/home' directory node:
 ```
 
 ####/projects
-As with the `/home` directory node, the `/projects` directory node is specified by a *composition node*:
+For [tODE v0.0.3][22], project registrations have been moved from subdirectories of the `/home` directory node to a separate `/project` directory node. 
+Here is the *composition node* for the '/projects' directory node:
 
 ```Smalltalk
 (TDComposedDirectoryNode
@@ -150,12 +153,30 @@ As with the `/home` directory node, the `/projects` directory node is specified 
     yourself
 ```
 
-####/sys
-
-
-As in [tODE v0.0.2][1], the `/home` directory node is the root of the shared script structure, however, project registrations have been moved from subdirectories of the `/home` directory node to a separate `/project` directory node. 
 The `/project` directory node contains only nodes that define *project entries*.
 All project entries found in `/project` are registered with the `project list`.
+
+####/sys
+You may have noticed that the *composition nodes* for the `/home` and `/projects` directory nodes are specificed in terms of the `/sys` directory node.
+The `/sys` directory node has mount points for to the the three standard disk directories:
+
+1. `$GS_HOME/tode/sys/default`
+2. `$GS_HOME/tode/sys/local`
+3. `$GS_HOME/tode/sys/stones/`
+
+and these form a directory node structure under `/sys` that looks like the following:
+
+```
++-sys\
+   +-default\
+   +-local\
+   +-stones\
+```
+
+Each of the entries: `default`, `local`, `stones` is a simple mapping to the corresponding directories in `$GS_HOME/tode/sys/` (See the [GsDevKit Release Notes 1.0.0][24] for details of the `S_HOME/tode/sys/` directory structure).
+
+A fourth entry in the `/sys` directory node, `/sys/stone`, is always mounted on the `$GS_HOME/tode/sys/stones/stones/<stone-name>` directory.
+Therefore the node path `/sys/stone` can be used in tODE commands to refer to the current stone's directory structure.
 
 ```
 +-home\
@@ -177,12 +198,27 @@ All project entries found in `/project` are registered with the `project list`.
 ```
 
 ```
+# Set up /sys node structure
+mount --todeRoot sys/default /sys default
+mount --todeRoot sys/local /sys local
+mount --todeRoot sys/stones /sys stones
+# ensure that --stoneRoot directory structure is present
+/sys/default/bin/validateStoneSysNodes --files --repair
+mount --stoneRoot / /sys stone
+# Define /home and /projects based on a composition of the /sys nodes
+mount --stoneRoot homeComposition.ston / home
+mount --stoneRoot projectComposition.ston / projects
+commit
+cd 
+```
+
+##Converting v0.0.2 project structure to v0.0.3
+
+```
     updateClient             # update client-side tODE
     project load Tode        # update server-side tODE
     script --script=setUpSys # build tODE /sys structure
 ```
-
-##Converting v0.0.2 project structure to v0.0.3
 
 [1]: https://github.com/dalehenrich/tode/releases/tag/v0.0.2
 [2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/LockCommandReference.md#lock-command-reference
@@ -207,3 +243,4 @@ All project entries found in `/project` are registered with the `project list`.
 [21]:  https://github.com/dalehenrich/tode/pull/140
 [22]: https://github.com/dalehenrich/tode/releases/tag/v0.0.3
 [23]: https://github.com/GsDevKit/gsDevKitHome
+[24]: https://github.com/GsDevKit/gsDevKitHome/blob/master/docs/releaseNotes/releaseNotes1.0.0.md
