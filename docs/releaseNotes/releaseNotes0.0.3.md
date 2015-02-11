@@ -9,7 +9,8 @@
     - [/home](#home)
     - [/projects](#projects)
     - [/sys](#sys)
-    - [/sys/stone](#sys-stone)
+    - [/sys/stone](#sysstone)
+      - [/sys/stone/home](#sysstonehome)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -146,7 +147,7 @@ Here is the *composition node* for the '/projects' directory node:
 
 ```Smalltalk
 (TDComposedDirectoryNode
-    pathComposedDirectoryNodeNamed: 'home'
+    pathComposedDirectoryNodeNamed: 'projects'
     topez: self topez)
     addPathNode: '/sys/stone/projects';
     addPathNode: '/sys/local/projects';
@@ -174,12 +175,14 @@ and these form a directory node structure under `/sys` that looks like the follo
    +-stones\
 ```
 
-Each of the entries: `default`, `local`, `stones` is a simple mapping to the corresponding directories in `$GS_HOME/tode/sys/` (See the [GsDevKit Release Notes 1.0.0][24] for details of the `S_HOME/tode/sys/` directory structure).
+Each of the entries: `default`, `local`, `stones` is a simple mapping to the corresponding directories in `$GS_HOME/tode/sys/` (See the [GsDevKit Release Notes 1.0.0][24] for details of the `$GS_HOME/tode/sys/` directory structure).
 
 ####/sys/stone
 
 A fourth entry in the `/sys` directory node, `/sys/stone`, is always mounted on the `$GS_HOME/tode/sys/stones/stones/<stone-name>` directory.
-Therefore the node path `/sys/stone` can be used in tODE commands to refer to the current stone's directory structure.
+Therefore the node path `/sys/stone` can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
+
+Here's a diagram of the `/sys/stone/` directory node structure:
 
 ```
 +-sys\
@@ -191,6 +194,118 @@ Therefore the node path `/sys/stone` can be used in tODE commands to refer to th
       +-projectComposition@
       +-projects\
       +-repos@\
+```
+
+#####/sys/stone/home
+Stone-specific scripts.
+Default location where new script or directory nodes are created. 
+#####/sys/stone/projects
+Stone-specific project entries.
+#####/sys/stone/homeComposition
+Location of [home composition](#home) node.
+#####/sys/stone/projectComposition
+Location of [project composition](#projects) node.
+#####/sys/stone/dirs
+List of git-based project directories.
+A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
+
+Here's the Smalltalk code used to define the contents of `/sys/stone/dirs`:
+
+```Smalltalk
+| dirNode projectTool |
+  dirNode := TDDirectoryNode new
+    name: 'dirs';
+    yourself.
+  projectTool := self topez toolInstanceFor: 'project'.
+  (projectTool projectRegistrationDefinitionList
+    select: [ :registration | registration hasGitBasedRepo or: [ registration hasGitRepository ] ])
+    collect: [ :registration | 
+      | diskPath |
+      diskPath := registration hasGitRepository
+        ifTrue: [ registration gitRootDirectory pathName ]
+        ifFalse: [ 
+          | githubRepo |
+          githubRepo := registration repository.
+          (githubRepo class
+            projectDirectoryFrom: githubRepo projectPath
+            version: githubRepo projectVersion) pathName ].
+      dirNode
+        addChildNode:
+          (TDObjectGatewayNode new
+            name: registration projectName;
+            contents: 'ServerFileDirectory on: ' , diskPath printString;
+            visitAsLeafNode: true;
+            yourself) ].
+  ^ dirNode
+```
+
+#####/sys/stone/packages
+List of packages loaded in the stone.
+
+Here's the Smalltalk used to define the contents of `/sys/stone/projects`:
+
+```Smalltalk
+| dirNode monticelloTool |
+  dirNode := TDDirectoryNode new
+    name: 'packages';
+    readMe: 'I have a listing of the packages loaded into this stone.';
+    yourself.
+  monticelloTool := self topez toolInstanceFor: 'mc'.
+  (monticelloTool mclist: '')
+    collect: [ :each | 
+      dirNode
+        addChildNode:
+          (TDObjectNode new
+            name: each packageName;
+            basicContents: each;
+            yourself) ].
+  ^ dirNode
+```
+
+#####/sys/stone/repos
+List of git-based or filetree-based repositories associated with the loaded project entries in the stone.
+
+Here's the Smalltalk code used to define the contents of `/sys/stone/repos`:
+
+```Smalltalk
+| dirNode projectTool monticelloTool |
+  dirNode := TDDirectoryNode new
+    name: 'repos';
+    yourself.
+  projectTool := self topez toolInstanceFor: 'project'.
+  monticelloTool := self topez toolInstanceFor: 'mc'.
+  (projectTool projectRegistrationDefinitionList
+    select: [ :registration | registration hasGitBasedRepo or: [ registration hasFileTreeRepo ] ])
+    collect: [ :each | 
+      dirNode
+        addChildNode:
+          (TDObjectNode new
+            name: each projectName;
+            basicContents: each repository;
+            listBlock: [ :theNode | ((monticelloTool mrpackageNamesIn: theNode basicContents) at: 1) sorted ];
+            elementBlock: [ :theNode :elementName :absentBlock | 
+                  | resolvedDict versionReferences info |
+                  info := monticelloTool mrpackageNamesIn: theNode basicContents.
+                  resolvedDict := info at: 3.
+                  versionReferences := resolvedDict
+                    at: elementName
+                    ifAbsent: [ absentBlock value ].
+                  TDObjectNode new
+                    name: elementName;
+                    basicContents: versionReferences asArray;
+                    listBlock: [ :theNode | (theNode basicContents collect: [ :each | each name ]) sorted ];
+                    elementBlock: [ :theNode :elementName :absentBlock | 
+                          | versionReference |
+                          versionReference := theNode basicContents
+                            detect: [ :each | each name = elementName ]
+                            ifNone: absentBlock.
+                          TDObjectNode new
+                            name: versionReference name;
+                            basicContents: versionReference version;
+                            yourself ];
+                    yourself ];
+            yourself) ].
+  ^ dirNode
 ```
 
 ```
@@ -219,7 +334,7 @@ cd
 [1]: https://github.com/dalehenrich/tode/releases/tag/v0.0.2
 [2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/LockCommandReference.md#lock-command-reference
 [3]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#loading
-[4]: images/projectList.png
+[4]: ../images/projectList.png
 [5]: https://github.com/GsDevKit/gsDevKitHome/blob/master/tode/sys/default/projects/seaside.ston
 [6]: https://github.com/dalehenrich/tode/issues/110
 [7]: https://github.com/dalehenrich/tode/issues/106
