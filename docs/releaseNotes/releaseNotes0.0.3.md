@@ -9,7 +9,7 @@
       - [/sys/default](#sysdefault)
       - [/sys/local](#syslocal)
       - [/sys/stone](#sysstone)
-      - [/sys/stones/stones/<stone-name>](#sysstonesstonesstonename)
+      - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstonename)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -139,7 +139,7 @@ By default, all new scripts and directory nodes that you create in `/home`, will
 `/sys/stone/projects` is the location where the stone-specific tODE *project entries* are located.
 If you want to customize a *project entry* for the current stone, then you should copy the *project entry* here and make your changes.
 
-#####/sys/stones/stones/<stone-name>
+#####/sys/stones/stones/\<stone-name\>
 
 ```
 +-sys\
