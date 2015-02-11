@@ -95,9 +95,49 @@ At the top-level of the tODE directory node structure, the `/home` directory nod
 +-sys\
 ```
 
+The `/home` directory node houses the scripts and directory nodes.
+There may still be project-specific directory node in `/home` that contain project-specific scripts, but the registration of *project entries* has been moved to the `/projects` directory node.
+All of the nodes in the `/projects` directory node are expected to return an instance of **TDProjectEntryDefinition**.
+
 In a mutli-person production installation. it is very easy to to imagine that multiple stones will be used for production, development and testing.
 In such an environment it is desirable to provide site-wide *project entries* and scripts that are shared by all stones.
 Additionally it is desirable to be able to customize *project entries* and scripts on a stone by stone basis.
+The `/sys` directory node houes the directory node structure that makes this possible.
+
+The top-level of the `/sys` directory node looks like the following:
+
+```
++-sys\
+   +-default\
+   +-local\
+   +-stone\
+   +-stones\
+```
+
+and is created by the following tODE shell commands:
+
+```
+mount --todeRoot sys/default /sys default
+mount --todeRoot sys/local /sys local
+mount --todeRoot sys/stones /sys stones
+mount --stoneRoot / /sys stone
+```
+
+The `--stoneRoot` option refers to the `/sys/stones/stones/<current-stone-name>` and provides a common node path for referring to the node structure for the current stone.
+
+The `--todeRoot` option refers to the disk path defined in the `serverTodeRoot` field of a session description and is `$GS_HOME/tode` by default.
+
+The `/sys/default`, `/sys/local` and `/sys/stones/stones/<stone-name` directory nodes are the locations where:
+- system-wide default scripts and *project entries* are defined (`/sys/default`).
+- local scripts and *project entries*  are defined (`/sys/local`). 
+- stone-specific scripts and *project entries* are defined ('/sys/stones/stones/<stone-name>').
+
+
+
+
+
+
+
 
 ####Directory Node Composition
 For [tODE v0.0.3][22], script and project registration is accomplished by composing the contents of three different disk directories:
