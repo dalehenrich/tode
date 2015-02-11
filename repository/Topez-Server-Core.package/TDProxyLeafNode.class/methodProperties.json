@@ -11,6 +11,7 @@
 		"block" : "dkh 11/30/2013 14:50",
 		"canMove" : "dkh 12/20/2013 13:38",
 		"cat" : "dkh 11/30/2013 14:50",
+		"childNamed:addIfAbsent:" : "dkh 02/11/2015 11:10",
 		"childNamed:ifAbsent:" : "dkh 06/12/2014 13:20",
 		"childrenAndNamesDo:" : "dkh 06/12/2014 13:16",
 		"childrenDo:" : "dkh 11/13/2014 14:04",
