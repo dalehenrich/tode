@@ -38,7 +38,7 @@
 ##Project Loading with tODE
 One of the basic principles for tODE is that the same code should be run whether you are executing an operation from a menu pick, the tODE shell, or a  [topaz][26] job.
 This priniciple is especially important when it comes to project load scripts.
-Developers must be able to count of the fact that whether or not they build a stone from scratch or update a stone from a menu pick, that they end up with the same code in their image.
+Developers must be able to count of the fact that whether or not they build a stone from scratch or update a stone from a menu pick, that they end up with the same code loaded into their image.
 
 For the loading projects, the class **TDMetacelloTool** is the workhorse.
 **TDMetacelloTool** implements a comprehensive Smalltalk API for managing most phases of project management.
@@ -71,22 +71,26 @@ DESCRIPTION
   Use `project --help <command>` to read about a specific subcommand.
 ```
 
-For example, to load the `Seaside3` project one can use the following Smalltalk expression:
+For example, to load the `Seaside3` project one can use 
+
+1. The `project list` menu item for loading:
+    ![project list menu][27]
+2. The 'project load` tODE shell command:
+
+   ```
+   project load Seaside3
+   ```
+
+3. A Smalltalk expression that first looks up the tool instance that implements the `project` command and then invokes the project load proper:
 
 ```Smalltalk
   (TDTopezServer batchInstance toolInstanceFor: 'project')
     projectLoad: 'Seaside3'
 ```
 
-tODE shell command:
+All three techniques are based on using `toolInstanceFor:` for look up.
+Ensuring that even if you happen to implement your own version of the `project` command, the same code will be executed in all three scenarios.
 
-```
-project load Seaside3
-```
-
-or `project list` menu item:
-
-![project list menu][27]
 
 
 
