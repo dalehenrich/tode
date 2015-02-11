@@ -9,7 +9,7 @@
       - [/sys/default](#sysdefault)
       - [/sys/local](#syslocal)
       - [/sys/stone](#sysstone)
-      - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstonename)
+      - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -133,20 +133,25 @@ If you have clones of projects that are present in `/sys/default/projects`, you 
 By default, the *project entries* in `/sys/local/projects` have precedence over those in `/sys/default/projects`.
 
 #####/sys/stone
-`/sys/stone/home` is the location where the stone-specific tODE scripts are located.
-By default, all new scripts and directory nodes that you create in `/home`, will be saved in this location
-
-`/sys/stone/projects` is the location where the stone-specific tODE *project entries* are located.
-If you want to customize a *project entry* for the current stone, then you should copy the *project entry* here and make your changes.
+`/sys/stone`, is always mounted pointing to the `/sys/stones/stones/<stone-name>` directory node.
+In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
 
 #####/sys/stones/stones/\<stone-name\>
+`/sys/stones/stones/<stone-name>/home` (or `/sys/stone/home`) is the location where the stone-specific tODE scripts are located.
+By default, all new scripts and directory nodes that you create in `/home`, will be saved in this location
 
-```
-+-sys\
-   +-stones\
-     +-stones\
-     +-templates\
-```
+`/sys/stones/stones/<stone-name>/projects` (or `/sys/stone/projects`) is the location where the stone-specific tODE *project entries* are located.
+If you want to customize a *project entry* for the current stone, then you should copy the *project entry* here and make your changes.
+
+If you want to copy a piece of information from another stone or perhaps copy information from your current stone to another stone use `/sys/stones/stones/<stone-name>` to navigate to the stone's directory node.
+
+
+
+
+
+
+
+
 
 and is created by the following tODE shell commands:
 
