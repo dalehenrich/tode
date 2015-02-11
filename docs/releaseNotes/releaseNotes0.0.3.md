@@ -2,10 +2,11 @@
 
 - [Bug Fixes](#bug-fixes)
 - [Pull Requests](#pull-requests)
-- [Project Entries for tODE](#project-entries-for-tode)
-  - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
-  - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
-    - [/sys](#sys)
+- [Project Loading with tODE](#project-loading-with-tode)
+  - [Project Entries for tODE](#project-entries-for-tode)
+    - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
+    - [Project Entries for tODE v0.0.3](#project-entries-for-tode-v003)
+      - [/sys](#sys)
       - [/sys/default](#sysdefault)
       - [/sys/local](#syslocal)
       - [/sys/stone](#sysstone)
@@ -32,7 +33,45 @@
 1. [Pull Request #140: Greatly Improved Git merge tool][21]
 1. [Pull Request #150: v0.0.3][20]
 
-##Project Entries for tODE
+##Project Loading with tODE
+One of the basic principles for tODE is that the same code should be run whether you are executing an operation from a menu pick, the tODE shell, or a  [topaz][26] job.
+This priniciple is especially important when it comes to project load scripts.
+Developers must be able to count of the fact that whether or not they build a stone from scratch or update a stone from a menu pick, that they end up with the same code in their image.
+
+```
+NAME
+  project - Metacello project management support.
+
+SYNOPSIS
+  project [--help] <command> [<args>]
+
+DESCRIPTION
+  Commands:
+    clone    Clone repository (github only)
+    commit   Commit the Metacello project
+    compare  View differences between repository versions (git only)
+    diff     View code differences between image and repository
+    entry    Create a new project entry
+    list     List Metacello projects
+    load     (~/bin/load)
+    lock     Lock project registration
+    log      Browse commit log for the Metacello project (git only)
+    merge    (git only?)
+    prime    Prime the project registry
+    push     (git only)
+    registry Inspect the project registry
+    rehome   Point package repository groups for project to new repository
+    revert   (see revert in project tool ... just dirty or reload ALL as options)
+    status
+    summary  View report of changed packages and methods
+    test
+    validate Validate the project registrations
+    workdir  Create working directory for project
+
+  Use `project --help <command>` to read about a specific subcommand.
+```
+###Project Entries for tODE
+
 The *project entry* is used by tODE to specify how a project is to by handled by the `project` family of commands (use the tODE command `man project` for more information about the `project` family of commands).
 
 A *project entry* has attributes that match up with arguments you would use in a [**Metacello** load command][3].
@@ -71,7 +110,7 @@ Unloaded projects are *underlined*:
 
 ![project list][4]
 
-###Project Entry registration and sharing for tODE v0.0.2
+####Project Entry registration and sharing for tODE v0.0.2
 In [tODE v0.0.2][1], there is a fairly simplistic model for registering a *project entry*:
 
 > The subdirectories of the `/home` directory node in tODE are scanned for a node named `project`. 
@@ -83,7 +122,7 @@ Project entries are shared between stones, by mounting a common directory on dis
 mount --todeRoot home /      # see `man mount` for more information
 ```
 
-###Project Entries for tODE v0.0.3
+####Project Entries for tODE v0.0.3
 In [tODE v0.0.3][22], the mechanisms for registration and sharing has been changed.
 
 At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
@@ -98,7 +137,7 @@ The `/home` directory node houses the scripts and directory nodes.
 There may still be project-specific directory node in `/home` that contain project-specific scripts, but the registration of *project entries* has been moved to the `/projects` directory node.
 All of the nodes in the `/projects` directory node are expected to return an instance of **TDProjectEntryDefinition**.
 
-####/sys
+#####/sys
 In a mutli-person production installation. it is very easy to to imagine that multiple stones will be used for production, development and testing.
 In such an environment it is desirable to provide site-wide *project entries* and scripts that are shared by all stones.
 Additionally it is desirable to be able to customize *project entries* and scripts on a stone by stone basis.
@@ -435,3 +474,4 @@ cd
 [23]: https://github.com/GsDevKit/gsDevKitHome
 [24]: https://github.com/GsDevKit/gsDevKitHome/blob/master/docs/releaseNotes/releaseNotes1.0.0.md
 [25]: https://github.com/GsDevKit
+[26]: http://downloads.gemtalksystems.com/docs/GemStone64/3.2.x/GS64-Topaz-3.2.pdf
