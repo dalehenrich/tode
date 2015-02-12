@@ -120,8 +120,16 @@ is specified like this in a *project entry*:
 
 Over time, the **TDProjectSpecEntryDefinition** will be expanded to include additional project meta data as needed.
 
+The *project entry* specification is stored on disk so that the specifications can be shared across multiple stones.
+
 ###Project Entry and Script Sharing
-In [tODE v0.0.3][22], the mechanisms for registration and sharing has been changed.
+In a [GsDevKitHome][25] installation, it is expected that multiple stones will be used for production, development and testing.
+In this environment it is necessary to be able to have:
+
+1. An initial, default set of *project entry* specifications, managed by the [GsDevKit team][28], that are shared by all stones. *Note that there are actually 7 team members on the GsDevKit team, but some of them have chosen to not make that fact public*.
+2. Installation-wide *project entries* and scripts where some *project entry* specifications have been customized for the local installation or additional *project entry* specifications have been added that are managed by the local development team.
+3. Stone-specific *project entry* specifications that are customized on a stone by stone basis.
+
 
 At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
 
@@ -137,9 +145,6 @@ The `/home` directory node houses the scripts and directory nodes.
 The nodes in the `/projects` directory node are expected to return an instance of **TDProjectEntryDefinition**.
 
 ####/sys
-In a mutli-person production installation. it is very easy to to imagine that multiple stones will be used for production, development and testing.
-In such an environment it is desirable to provide site-wide *project entries* and scripts that are shared by all stones.
-Additionally it is desirable to be able to customize *project entries* and scripts on a stone by stone basis.
 The `/sys` directory node houes the directory node structure that makes this possible.
 
 The top-level of the `/sys` directory node looks like the following:
@@ -488,3 +493,4 @@ mount --todeRoot home /      # see `man mount` for more information
 [25]: https://github.com/GsDevKit
 [26]: http://downloads.gemtalksystems.com/docs/GemStone64/3.2.x/GS64-Topaz-3.2.pdf
 [27]: ../images/projectListMenu.png
+[28]: https://github.com/orgs/GsDevKit/people
