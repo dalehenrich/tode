@@ -188,7 +188,7 @@ If you want to copy a piece of information from another stone or perhaps copy in
 In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
 
 
-
+---
 
 
 
