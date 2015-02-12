@@ -5,13 +5,14 @@
 - [Project Loading with tODE](#project-loading-with-tode)
   - [Project Entries](#project-entries)
   - [Project Entry and Script Sharing](#project-entry-and-script-sharing)
+  - [Project Entry and Script Sharing Structures](#project-entry-and-script-sharing-structures)
     - [/home](#home)
     - [/project](#projects)
     - [/sys](#sys)
     - [/sys/default](#sysdefault)
     - [/sys/local](#syslocal)
-    - [/sys/stone](#sysstone)
     - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name)
+    - [/sys/stone](#sysstone)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
   - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
 
@@ -126,12 +127,12 @@ The *project entry* specification is stored on disk so that the specifications c
 In a [GsDevKitHome][25] installation, it is expected that multiple stones will be used for production, development and testing.
 In this environment it is necessary to be able to have:
 
-1. An initial, default set of *project entry* specifications, managed by the [GsDevKit team][28], that are shared by all stones. *Note that there are actually 7 team members on the GsDevKit team, but some of them have chosen to not make that fact public*.
+1. An initial, default set of *project entry* specifications, managed by the [GsDevKit team][28], that are shared by all stones.
 2. Installation-wide *project entries* and scripts where some *project entry* specifications have been customized for the local installation or additional *project entry* specifications have been added that are managed by the local development team.
 3. Stone-specific *project entry* specifications that are customized on a stone by stone basis.
 
-
-At the top-level of the tODE directory node structure, the `/home` directory node has been retained and two new directory nodes have been added `/projects` and `/sys`:
+###Project Entry and Script Sharing Structures
+At the top-level of the tODE directory node structure in`/`, the are three directory nodes that are used to implement  *project entry* and script sharing:
 
 ```
 +-home\
@@ -139,15 +140,13 @@ At the top-level of the tODE directory node structure, the `/home` directory nod
 +-sys\
 ```
 ####/home
-The `/home` directory node houses the scripts and directory nodes.
+The `/home` directory node houses the shared scripts and directory nodes.
 
 ####/projects
-The nodes in the `/projects` directory node are expected to return an instance of **TDProjectEntryDefinition**.
+The nodes in the `/projects` directory node are *project entry* specifications.
 
 ####/sys
-The `/sys` directory node houes the directory node structure that makes this possible.
-
-The top-level of the `/sys` directory node looks like the following:
+Both the `/home` and `/projects` directory nodes are composed from three other directory node strucures under `/sys`: 
 
 ```
 +-sys\
@@ -175,10 +174,6 @@ You should add *project entries* to this directory node that you want all the st
 If you have clones of projects that are present in `/sys/default/projects`, you should copy the *project entry* from `/sys/default/projects` to `/sys/local/projects` and save your installation-specific modifications there.
 By default, the *project entries* in `/sys/local/projects` have precedence over those in `/sys/default/projects`.
 
-####/sys/stone
-`/sys/stone`, is always mounted pointing to the `/sys/stones/stones/<stone-name>` directory node.
-In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
-
 ####/sys/stones/stones/\<stone-name\>
 `/sys/stones/stones/<stone-name>/home` (or `/sys/stone/home`) is the location where the stone-specific tODE scripts are located.
 By default, all new scripts and directory nodes that you create in `/home`, will be saved in this location
@@ -188,6 +183,9 @@ If you want to customize a *project entry* for the current stone, then you shoul
 
 If you want to copy a piece of information from another stone or perhaps copy information from your current stone to another stone use `/sys/stones/stones/<stone-name>` to navigate to the stone's directory node.
 
+####/sys/stone
+`/sys/stone`, is always mounted pointing to the `/sys/stones/stones/<stone-name>` directory node.
+In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
 
 
 
