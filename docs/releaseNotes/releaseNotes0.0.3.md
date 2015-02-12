@@ -208,10 +208,11 @@ Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` direc
 A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
 Each of the nodes in `/sys/stones/stones/<stone-name>/dirs` resolves to an instance of **ServerFileDirectory**.
 
-By referencing the `dirs` node using `sys/stone/dirs`, you can form stone-independent disk path references for tODE shell commands like the following:
+By referencing the `dirs` node using `sys/stone/dirs`, you can form stone-independent disk path references for tODE shell commands.
+The following tODE shell script copies the contents of the `tode` directory located in the *Tode project repository* to `/sys/local/home` making it available in all stones in your [GsDevKitHome][23] installation:
  
 ```
-mount @/sys/stone/dirs/Tode/tode /home tode
+cp /sys/stone/dirs/Tode/tode /sys/local/home/tode 
 ```
 
 Use this tODE shell script to edit the Smalltalk code used to generate this list:
