@@ -215,7 +215,7 @@ The `/sys/default`, `/sys/local` and `/sys/stones/stones/<stone-name>` directory
 
 
 
-
+---
 
 
 
@@ -443,6 +443,7 @@ commit
 cd 
 ```
 
+--- 
 ##Converting v0.0.2 project structure to v0.0.3
 
 ```
