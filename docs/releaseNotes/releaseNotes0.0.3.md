@@ -7,7 +7,7 @@
   - [Project Entry and Script Sharing](#project-entry-and-script-sharing)
   - [Project Entry and Script Sharing Structures](#project-entry-and-script-sharing-structures)
     - [/home](#home)
-    - [/project](#projects)
+    - [/projects](#projects)
     - [/sys](#sys)
     - [/sys/default](#sysdefault)
     - [/sys/local](#syslocal)
@@ -20,6 +20,7 @@
     - [/sys/stones/stones/\<stone-name\>/projectComposition](#sysstonesstonesstone-nameprojectcomposition)
     - [/sys/stones/stones/\<stone-name\>/projects](#sysstonesstonesstone-nameprojects)
     - [/sys/stones/stones/\<stone-name\>/repos](#sysstonesstonesstone-namerepos)
+    - [Construction of Project Entry and Script Sharing Structures](#construction-of-project-entry-and-script-sharing-structures)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
 
 ##Bug Fixes
@@ -259,6 +260,9 @@ As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-named
 edit /sys/stone/packages
 edit /sys/stones/templates/packages
 ``` 
+
+####/sys/stones/stones/\<stone-name\>/projects
+`/sys/stones/stones/<stone-name>/projects` (or `/sys/stone/projects`) is the location where the stone-specific *project entry* specifications are located.
 
 ####/sys/stones/stones/\<stone-name\>/projectComposition
 The `/sys/stones/stones/<stone-name>/projectComposition` node defines the composition of the [`/projects` directory node](#projects).
