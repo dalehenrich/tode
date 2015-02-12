@@ -207,7 +207,7 @@ Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` direc
 `/sys/stones/stones/<stone-name>/dirs` is the location where you can find the list of git-based project directory nodes.
 A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
 
-EXAMPLE OF USING DIRS WITH A COMMAND
+EXAMPLE OF USING DIRS WITH A COMMAND: put the tODE scripts in a dir in the tODE repo and show the "standard" mount...command to get project scripts ... or do a copy to /home ....
 
 Use the following tODE shell script to view the Smalltalk code used to generate this list:
 
