@@ -206,6 +206,8 @@ Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` direc
 `/sys/stones/stones/<stone-name>/dirs` is the location where you can find the list of git-based project directory nodes.
 A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
 
+EXAMPLE OF USING DIRS WITH A COMMAND
+
 Use the following tODE shell script to view the Smalltalk code used to generate this list:
 
 ```
@@ -248,6 +250,9 @@ edit /sys/stones/templates/homeComposition
 ####/sys/stones/stones/\<stone-name\>/packages
 The `/sys/stones/stones/<stone-name>/packages` is the location where you can find the list of packages that are loaded into the stone.
 
+
+EXAMPLE OF USING PACKAGES WITH A COMMAND
+
 As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the code that generates the list using the following tODE shell scripts:
 
 ```
@@ -277,6 +282,8 @@ edit /sys/stones/templates/projectComposition
 
 ####/sys/stones/stones/\<stone-name\>/repos
 The `/sys/stones/stones/<stone-name>/repos` node is the location where you can find the list of  git-based or filetree-based repositories associated with the loaded project entries in the stone.
+
+EXAMPLE OF USING REPOS WITH A COMMAND
 
 As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the code that generates the list using the following tODE shell scripts:
 
