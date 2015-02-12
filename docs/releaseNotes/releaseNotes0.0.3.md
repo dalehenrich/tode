@@ -206,19 +206,22 @@ Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` direc
 ####/sys/stones/stones/\<stone-name\>/dirs
 `/sys/stones/stones/<stone-name>/dirs` is the location where you can find the list of git-based project directory nodes.
 A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
+Each of the nodes in `/sys/stones/stones/<stone-name>/dirs` resolves to an instance of **ServerFileDirectory**.
 
-EXAMPLE OF USING DIRS WITH A COMMAND: put the tODE scripts in a dir in the tODE repo and show the "standard" mount...command to get project scripts ... or do a copy to /home ....
+By referencing the `dirs` node using `sys/stone/dirs`, you can form stone-independent disk path references for tODE shell commands like the following:
+ 
+```
+mount @/sys/stone/dirs/Tode/tode /home tode
+```
 
-Use the following tODE shell script to view the Smalltalk code used to generate this list:
+Use this tODE shell script to edit the Smalltalk code used to generate this list:
 
 ```
 edit /sys/stone/dirs
 ```
 
 The `/sys/stones/stones/<stone-name>/dirs` node is copied on a per stone basis from `/sys/stones/stones/templates`. 
-You may edit the node in-place and any changes you make will take effect immediately.
-
-You can edit the `/sys/stones/stones/templates/dirs` node using the following tODE shell script:
+Editing the `/sys/stones/stones/templates/dirs` node will make changes impacting stones created in the future:
 
 ```
 edit /sys/stones/templates/dirs
@@ -253,6 +256,10 @@ The `/sys/stones/stones/<stone-name>/packages` is the location where you can fin
 
 
 EXAMPLE OF USING PACKAGES WITH A COMMAND
+
+```
+mc ancestors @/sys/stone/packages/Utf8Encoding
+```
 
 As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the code that generates the list using the following tODE shell scripts:
 
