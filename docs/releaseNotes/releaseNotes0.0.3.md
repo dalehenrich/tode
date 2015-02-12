@@ -11,10 +11,16 @@
     - [/sys](#sys)
     - [/sys/default](#sysdefault)
     - [/sys/local](#syslocal)
-    - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name)
     - [/sys/stone](#sysstone)
+    - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name)
+    - [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs)
+    - [/sys/stones/stones/\<stone-name\>/home](#sysstonesstonesstone-namehome)
+    - [/sys/stones/stones/\<stone-name\>/homeComposition](#sysstonesstonesstone-namehomecomposition)
+    - [/sys/stones/stones/\<stone-name\>/packages](#sysstonesstonesstone-namepackages)
+    - [/sys/stones/stones/\<stone-name\>/projectComposition](#sysstonesstonesstone-nameprojectcomposition)
+    - [/sys/stones/stones/\<stone-name\>/projects](#sysstonesstonesstone-nameprojects)
+    - [/sys/stones/stones/\<stone-name\>/repos](#sysstonesstonesstone-namerepos)
 - [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
-  - [Project Entry registration and sharing for tODE v0.0.2](#project-entry-registration-and-sharing-for-tode-v002)
 
 ##Bug Fixes
 1. [Issue #5: Add command / file completion][12]
@@ -141,9 +147,11 @@ At the top-level of the tODE directory node structure in`/`, the are three direc
 ```
 ####/home
 The `/home` directory node houses the shared scripts and directory nodes.
+See the [/sys/stones/stones/\<stone-name\>/homeComposition](#sysstonesstonesstone-namehomecomposition) section for information on how the contents of the `/home` directory node is composed.
 
 ####/projects
 The nodes in the `/projects` directory node are *project entry* specifications.
+See the [/sys/stones/stones/\<stone-name\>/projectComposition](#sysstonesstonesstone-nameprojectcomposition) section for information on how the contents of the `/projects` directory node is composed.
 
 ####/sys
 Both the `/home` and `/projects` directory nodes are composed from three other directory node strucures under `/sys`: 
@@ -174,82 +182,51 @@ You should add *project entries* to this directory node that you want all the st
 If you have clones of projects that are present in `/sys/default/projects`, you should copy the *project entry* from `/sys/default/projects` to `/sys/local/projects` and save your installation-specific modifications there.
 By default, the *project entries* in `/sys/local/projects` have precedence over those in `/sys/default/projects`.
 
-####/sys/stones/stones/\<stone-name\>
-`/sys/stones/stones/<stone-name>/home` (or `/sys/stone/home`) is the location where the stone-specific tODE scripts are located.
-By default, all new scripts and directory nodes that you create in `/home`, will be saved in this location
-
-`/sys/stones/stones/<stone-name>/projects` (or `/sys/stone/projects`) is the location where the stone-specific tODE *project entries* are located.
-If you want to customize a *project entry* for the current stone, then you should copy the *project entry* here and make your changes.
-
-If you want to copy a piece of information from another stone or perhaps copy information from your current stone to another stone use `/sys/stones/stones/<stone-name>` to navigate to the stone's directory node.
-
 ####/sys/stone
 `/sys/stone`, is always mounted pointing to the `/sys/stones/stones/<stone-name>` directory node.
 In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
 
-
----
-
-
-
-
-
-and is created by the following tODE shell commands:
+####/sys/stones/stones/\<stone-name\>
+Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` directory node:
 
 ```
-mount --todeRoot sys/default /sys default
-mount --todeRoot sys/local /sys local
-mount --todeRoot sys/stones /sys stones
-mount --stoneRoot / /sys stone
++-sys\
+   +-stones\
+     +-stones\
+       +-<stone-name\>\
+         +-dirs\
+         +-home\
+         +-homeComposition
+         +-packages\
+         +-projectComposition
+         +-projects\
+         +-repos\
+```
+####/sys/stones/stones/\<stone-name\>/dirs
+`/sys/stones/stones/<stone-name>/dirs` is the location where you can find the list of git-based project directory nodes.
+A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
+
+Use the following tODE shell script to view the Smalltalk code used to generate this list:
+
+```
+edit /sys/stone/dirs
 ```
 
-The `--stoneRoot` option refers to the `/sys/stones/stones/<current-stone-name>` and provides a common node path for referring to the node structure for the current stone.
+The `/sys/stones/stones/<stone-name>/dirs` node is copied on a per stone basis from `/sys/stones/stones/templates`. 
+You may edit the node in-place and any changes you make will take effect immediately.
 
-The `--todeRoot` option refers to the disk path defined in the `serverTodeRoot` field of a session description and is `$GS_HOME/tode` by default.
+You can edit the `/sys/stones/stones/templates/dirs` node using the following tODE shell script:
 
-The `/sys/default`, `/sys/local` and `/sys/stones/stones/<stone-name>` directory nodes are the locations where:
-- system-wide default scripts and *project entries* are defined (`/sys/default`).
-- local scripts and *project entries*  are defined (`/sys/local`). 
-- stone-specific scripts and *project entries* are defined ('/sys/stones/stones/<stone-name>').
+```
+edit /sys/stones/templates/dirs
+```
 
+####/sys/stones/stones/\<stone-name\>/home
+`/sys/stones/stones/<stone-name>/home` (or `/sys/stone/home`) is the location where the stone-specific tODE scripts are located.
+By default, all new scripts and directory nodes that you create in `/home`, will be saved in this location.
 
-
-
----
-
-
-
-####Directory Node Composition
-For [tODE v0.0.3][22], script and project registration is accomplished by composing the contents of three different disk directories:
-
-1. `$GS_HOME/tode/sys/default`
-2. `$GS_HOME/tode/sys/local`
-3. `$GS_HOME/tode/sys/stones/stones/<stone-name>`
-
-The contents of the `$GS_HOME/tode/sys/default` directory is defined in the [gsDevKitHome project][23] and contains content that is generally available for use with the **GsDevKit**.
-
-The contents of the `$GS_HOME/tode/sys/local` directory is expected to be defined on a development group by development group basis.
-It is possible to exclude and override the content from the `$GS_HOME/tode/sys/default` in `$GS_HOME/tode/sys/local`
- directory. 
-New content may also be added.
-
-Each stone that is added to the system is allocated a directory (`$GS_HOME/tode/sys/stones/stones/<stone-name>`) and as with the  `$GS_HOME/tode/sys/local` directory, stone-specific exclusions, overrides and additions may be made.
-
-The exact composition of a directory node in tODE is specified by a *composition node*.
-The order of *path nodes* in the compostion defines override order. 
-One may add *path nodes* that `excludes` specific entries, `includes` specific entries or uses a custom `selectBlock` using the following protocol in **TDComposedDirectoryNode**:
-
-- addPathNode:
-- addPathNode:excludes:
-- addPathNode:excludes:includes:
-- addPathNode:includes:
-- addPathNode:selectBlock:
-
-I NEED TO TALK ABOUT /SYS/DEFAULTS/HOME, /SYS/LOCAL/HOME, AND /SYS/STONE/HOME .... AND ../../PROJECTS ... MAYBE AN EXAMPLE OR TWO ... SINCE THESE ARE AS IS IS IMPORTANT TO IMPRINT THAT YOU COPY PROJECTS AND SCRIPTS TO THE VARIOUS DIRS TO CONTROL AVAILABILITY
-
-####/home
-As in [tODE v0.0.2][1], the `/home` directory node is the root of the shared script structure.
-Here is the *composition node* for the '/home' directory node:
+####/sys/stones/stones/\<stone-name\>/homeComposition
+The `/sys/stones/stones/<stone-name>/homeComposition` node defines the composition of the [`/home` directory node](#home).
 
 ```Smalltalk
 (TDComposedDirectoryNode
@@ -261,9 +238,25 @@ Here is the *composition node* for the '/home' directory node:
     yourself
 ```
 
-####/projects
-For [tODE v0.0.3][22], project registrations have been moved from subdirectories of the `/home` directory node to a separate `/project` directory node. 
-Here is the *composition node* for the '/projects' directory node:
+As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the composition using the following tODE shell scripts:
+
+```
+edit /sys/stone/homeComposition
+edit /sys/stones/templates/homeComposition
+``` 
+
+####/sys/stones/stones/\<stone-name\>/packages
+The `/sys/stones/stones/<stone-name>/packages` is the location where you can find the list of packages that are loaded into the stone.
+
+As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the code that generates the list using the following tODE shell scripts:
+
+```
+edit /sys/stone/packages
+edit /sys/stones/templates/packages
+``` 
+
+####/sys/stones/stones/\<stone-name\>/projectComposition
+The `/sys/stones/stones/<stone-name>/projectComposition` node defines the composition of the [`/projects` directory node](#projects).
 
 ```Smalltalk
 (TDComposedDirectoryNode
@@ -275,158 +268,25 @@ Here is the *composition node* for the '/projects' directory node:
     yourself
 ```
 
-The `/project` directory node contains only nodes that define *project entries*.
-All project entries found in `/project` are registered with the `project list`.
-
-####/sys
-You may have noticed that the *composition nodes* for the `/home` and `/projects` directory nodes are specificed in terms of the `/sys` directory node.
-The `/sys` directory node has mount points for to the the three standard disk directories:
-
-1. `$GS_HOME/tode/sys/default`
-2. `$GS_HOME/tode/sys/local`
-3. `$GS_HOME/tode/sys/stones/`
-
-and these form a directory node structure under `/sys` that looks like the following:
+As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the composition using the following tODE shell scripts:
 
 ```
-+-sys\
-   +-default\
-   +-local\
-   +-stones\
-```
+edit /sys/stone/projectComposition
+edit /sys/stones/templates/projectComposition
+``` 
 
-Each of the entries: `default`, `local`, `stones` is a simple mapping to the corresponding directories in `$GS_HOME/tode/sys/` (See the [GsDevKit Release Notes 1.0.0][24] for details of the `$GS_HOME/tode/sys/` directory structure).
+####/sys/stones/stones/\<stone-name\>/repos
+The `/sys/stones/stones/<stone-name>/repos` node is the location where you can find the list of  git-based or filetree-based repositories associated with the loaded project entries in the stone.
 
-####/sys/stone
-
-A fourth entry in the `/sys` directory node, `/sys/stone`, is always mounted on the `$GS_HOME/tode/sys/stones/stones/<stone-name>` directory.
-Therefore the node path `/sys/stone` can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
-
-Here's a diagram of the `/sys/stone/` directory node structure:
+As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the code that generates the list using the following tODE shell scripts:
 
 ```
-+-sys\
-   +-stone@\
-      +-dirs@\
-      +-home\
-      +-homeComposition@
-      +-packages@\
-      +-projectComposition@
-      +-projects\
-      +-repos@\
-```
+edit /sys/stone/repos
+edit /sys/stones/repos
+``` 
 
-#####/sys/stone/home
-Stone-specific scripts.
-Default location where new script or directory nodes are created. 
-#####/sys/stone/projects
-Stone-specific project entries.
-#####/sys/stone/homeComposition
-Location of [home composition](#home) node.
-#####/sys/stone/projectComposition
-Location of [project composition](#projects) node.
-#####/sys/stone/dirs
-List of git-based project directories.
-A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
-
-Here's the Smalltalk code used to define the contents of `/sys/stone/dirs`:
-
-```Smalltalk
-| dirNode projectTool |
-  dirNode := TDDirectoryNode new
-    name: 'dirs';
-    yourself.
-  projectTool := self topez toolInstanceFor: 'project'.
-  (projectTool projectRegistrationDefinitionList
-    select: [ :registration | registration hasGitBasedRepo or: [ registration hasGitRepository ] ])
-    collect: [ :registration | 
-      | diskPath |
-      diskPath := registration hasGitRepository
-        ifTrue: [ registration gitRootDirectory pathName ]
-        ifFalse: [ 
-          | githubRepo |
-          githubRepo := registration repository.
-          (githubRepo class
-            projectDirectoryFrom: githubRepo projectPath
-            version: githubRepo projectVersion) pathName ].
-      dirNode
-        addChildNode:
-          (TDObjectGatewayNode new
-            name: registration projectName;
-            contents: 'ServerFileDirectory on: ' , diskPath printString;
-            visitAsLeafNode: true;
-            yourself) ].
-  ^ dirNode
-```
-
-#####/sys/stone/packages
-List of packages loaded in the stone.
-
-Here's the Smalltalk used to define the contents of `/sys/stone/projects`:
-
-```Smalltalk
-| dirNode monticelloTool |
-  dirNode := TDDirectoryNode new
-    name: 'packages';
-    readMe: 'I have a listing of the packages loaded into this stone.';
-    yourself.
-  monticelloTool := self topez toolInstanceFor: 'mc'.
-  (monticelloTool mclist: '')
-    collect: [ :each | 
-      dirNode
-        addChildNode:
-          (TDObjectNode new
-            name: each packageName;
-            basicContents: each;
-            yourself) ].
-  ^ dirNode
-```
-
-#####/sys/stone/repos
-List of git-based or filetree-based repositories associated with the loaded project entries in the stone.
-
-Here's the Smalltalk code used to define the contents of `/sys/stone/repos`:
-
-```Smalltalk
-| dirNode projectTool monticelloTool |
-  dirNode := TDDirectoryNode new
-    name: 'repos';
-    yourself.
-  projectTool := self topez toolInstanceFor: 'project'.
-  monticelloTool := self topez toolInstanceFor: 'mc'.
-  (projectTool projectRegistrationDefinitionList
-    select: [ :registration | registration hasGitBasedRepo or: [ registration hasFileTreeRepo ] ])
-    collect: [ :each | 
-      dirNode
-        addChildNode:
-          (TDObjectNode new
-            name: each projectName;
-            basicContents: each repository;
-            listBlock: [ :theNode | ((monticelloTool mrpackageNamesIn: theNode basicContents) at: 1) sorted ];
-            elementBlock: [ :theNode :elementName :absentBlock | 
-                  | resolvedDict versionReferences info |
-                  info := monticelloTool mrpackageNamesIn: theNode basicContents.
-                  resolvedDict := info at: 3.
-                  versionReferences := resolvedDict
-                    at: elementName
-                    ifAbsent: [ absentBlock value ].
-                  TDObjectNode new
-                    name: elementName;
-                    basicContents: versionReferences asArray;
-                    listBlock: [ :theNode | (theNode basicContents collect: [ :each | each name ]) sorted ];
-                    elementBlock: [ :theNode :elementName :absentBlock | 
-                          | versionReference |
-                          versionReference := theNode basicContents
-                            detect: [ :each | each name = elementName ]
-                            ifNone: absentBlock.
-                          TDObjectNode new
-                            name: versionReference name;
-                            basicContents: versionReference version;
-                            yourself ];
-                    yourself ];
-            yourself) ].
-  ^ dirNode
-```
+###Construction of Project Entry and Script Sharing Structures
+The following tODE shell script is used to construct `/home`. `/projects`, and `/sys` directory nodes:
 
 ```
 # Set up /sys node structure
@@ -443,7 +303,25 @@ commit
 cd 
 ```
 
---- 
+This script is invoked whenever a new stone is created by the `$GS_HOME/bin/createTodeStone` bash shell script.
+
+
+This script is stored on disk at `$GS_HOME/tode/sys/default/client/scripts/setUpSys` and can be invoked using the following tODE shell command:
+
+```
+script --script=setUpSys
+```
+
+If you wish to override the script to create additional artifacts in your tODE image, you may copy `$GS_HOME/tode/sys/default/client/scripts/setUpSys` to `$GS_HOME/tode/sys/local/client/scripts/` where you can make your edits.
+
+
+
+
+
+
+---
+
+
 ##Converting v0.0.2 project structure to v0.0.3
 
 ```
@@ -452,40 +330,24 @@ cd
     script --script=setUpSys # build tODE /sys structure
 ```
 
-####Project Entry registration and sharing for tODE v0.0.2
-In [tODE v0.0.2][1], there is a fairly simplistic model for registering a *project entry*:
-
-> The subdirectories of the `/home` directory node in tODE are scanned for a node named `project`. 
-Each `project` node is expected to return an instance of **TDProjectEntryDefinition**.
-
-Project entries are shared between stones, by mounting a common directory on disk (typically `$GS_HOME/tode/home`) and using the following tODE shell command:
-
-```
-mount --todeRoot home /      # see `man mount` for more information
-```
-
-
 [1]: https://github.com/dalehenrich/tode/releases/tag/v0.0.2
-[2]: https://github.com/dalehenrich/metacello-work/blob/master/docs/LockCommandReference.md#lock-command-reference
 [3]: https://github.com/dalehenrich/metacello-work/blob/master/docs/MetacelloScriptingAPI.md#loading
-[4]: ../images/projectList.png
-[5]: https://github.com/GsDevKit/gsDevKitHome/blob/master/tode/sys/default/projects/seaside.ston
 [6]: https://github.com/dalehenrich/tode/issues/110
 [7]: https://github.com/dalehenrich/tode/issues/106
 [8]: https://github.com/dalehenrich/tode/issues/123
 [9]: https://github.com/dalehenrich/tode/issues/125
-[10]:  https://github.com/dalehenrich/tode/issues/124
-[11]:  https://github.com/dalehenrich/tode/issues/129
-[12]:  https://github.com/dalehenrich/tode/issues/5
-[13]:  https://github.com/dalehenrich/tode/issues/130
-[14]:  https://github.com/dalehenrich/tode/issues/143
-[15]:  https://github.com/dalehenrich/tode/issues/135
-[16]:  https://github.com/dalehenrich/tode/issues/147
-[17]:  https://github.com/dalehenrich/tode/issues/100
-[18]:  https://github.com/dalehenrich/tode/issues/148
-[19]:  https://github.com/dalehenrich/tode/issues/149
-[20]:  https://github.com/dalehenrich/tode/pull/150
-[21]:  https://github.com/dalehenrich/tode/pull/140
+[10]: https://github.com/dalehenrich/tode/issues/124
+[11]: https://github.com/dalehenrich/tode/issues/129
+[12]: https://github.com/dalehenrich/tode/issues/5
+[13]: https://github.com/dalehenrich/tode/issues/130
+[14]: https://github.com/dalehenrich/tode/issues/143
+[15]: https://github.com/dalehenrich/tode/issues/135
+[16]: https://github.com/dalehenrich/tode/issues/147
+[17]: https://github.com/dalehenrich/tode/issues/100
+[18]: https://github.com/dalehenrich/tode/issues/148
+[19]: https://github.com/dalehenrich/tode/issues/149
+[20]: https://github.com/dalehenrich/tode/pull/150
+[21]: https://github.com/dalehenrich/tode/pull/140
 [22]: https://github.com/dalehenrich/tode/releases/tag/v0.0.3
 [23]: https://github.com/GsDevKit/gsDevKitHome
 [24]: https://github.com/GsDevKit/gsDevKitHome/blob/master/docs/releaseNotes/releaseNotes1.0.0.md
