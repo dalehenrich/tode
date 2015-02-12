@@ -71,13 +71,13 @@ DESCRIPTION
   Use `project --help <command>` to read about a specific subcommand.
 ```
 
-For example, to load the `Seaside3` project one can use 
+For example, to load the `Seaside3` project one can use: 
 
-1. The `project list` menu item for loading:
+1. The `load`  menu item in the `project list`:
 
    ![project list menu][27]
 
-2. The 'project load` tODE shell command:
+2. The 'project load` command in the tODE shell:
 
    ```
    project load Seaside3
@@ -90,18 +90,23 @@ For example, to load the `Seaside3` project one can use
     projectLoad: 'Seaside3'
 ```
 
-All three techniques are based on using `toolInstanceFor:` for look up.
-Ensuring that even if you happen to implement your own version of the `project` command, the same code will be executed in all three scenarios.
-
-
-
+All three techniques are based on using `toolInstanceFor:` for look up and the same `load` code is executed in all three scenarios.
 
 ###Project Entries
 
-The *project entry* is used by tODE to specify how a project is to by handled by the `project` family of commands (use the tODE command `man project` for more information about the `project` family of commands).
+The *project entry* is used by tODE to specify the details needed to load a project. 
+A *project entry* has attributes that correspond to the arguments you would use in a [**Metacello** load command][3].
+For example the following Metacello load command for the Seaside3 project:
 
-A *project entry* has attributes that match up with arguments you would use in a [**Metacello** load command][3].
-For example the following [*project entry* for Seaside31][5]:
+```Smalltalk
+Metacello new
+  baseline: 'Seaside3';
+  repository: 'github://GsDevKit/Seaside31:3.1.?/repository'
+  lock;
+  load: #('Development' 'Zinc' 'FastCGI' 'Examples' 'Tests')
+```
+
+is specified like this in a *project entry*:
 
 ```Smalltalk
 ^ TDProjectSpecEntryDefinition new
@@ -113,28 +118,7 @@ For example the following [*project entry* for Seaside31][5]:
     yourself
 ```
 
-uses this **Metacello** expression for loading:
-
-```Smalltalk
-Metacello new
-  baseline: 'Seaside3';
-  repository: 'github://GsDevKit/Seaside31:3.1.?/repository'
-  load: #('Development' 'Zinc' 'FastCGI' 'Examples' 'Tests')
-```
-
-If the `lock` attribute is true, then the following is executed when the list of project entries is created:
-
-```Smalltalk
-Metacello new
-  baseline: 'Seaside3';
-  repository: 'github://GsDevKit/Seaside31:3.1.?/repository'
-  lock
-```
-
-If the `status` attribute includes `#active`, then in the `project list` the project is sorted to the top and displayed in *bold* if the project is loaded in the stone. 
-Unloaded projects are *underlined*:
-
-![project list][4]
+Over time, the **TDProjectSpecEntryDefinition** will be expanded to include additional project meta data as needed.
 
 ###Project Entry and Script Sharing
 In [tODE v0.0.3][22], the mechanisms for registration and sharing has been changed.
