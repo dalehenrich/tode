@@ -208,24 +208,11 @@ Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` direc
 A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
 Each of the nodes in `/sys/stones/stones/<stone-name>/dirs` resolves to an instance of **ServerFileDirectory**.
 
-By referencing the `dirs` node using `sys/stone/dirs`, you can form stone-independent disk path references for tODE shell commands.
+By referencing the `dirs` node, you can form disk path references for tODE shell commands.
 The following tODE shell script copies the contents of the `tode` directory located in the *Tode project repository* to `/sys/local/home` making it available in all stones in your [GsDevKitHome][23] installation:
  
 ```
 cp /sys/stone/dirs/Tode/tode /sys/local/home/tode 
-```
-
-Use this tODE shell script to edit the Smalltalk code used to generate this list:
-
-```
-edit /sys/stone/dirs
-```
-
-The `/sys/stones/stones/<stone-name>/dirs` node is copied on a per stone basis from `/sys/stones/stones/templates`. 
-Editing the `/sys/stones/stones/templates/dirs` node will make changes impacting stones created in the future:
-
-```
-edit /sys/stones/templates/dirs
 ```
 
 ####/sys/stones/stones/\<stone-name\>/home
@@ -245,29 +232,23 @@ The `/sys/stones/stones/<stone-name>/homeComposition` node defines the compositi
     yourself
 ```
 
-As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the composition using the following tODE shell scripts:
+To view or modify the composition specification use the following tODE shell commands:
 
 ```
-edit /sys/stone/homeComposition
-edit /sys/stones/templates/homeComposition
+edit /sys/stone/homeComposition            # view composition for current stone
+edit /sys/stones/templates/homeComposition # view composition used to create new stones
 ``` 
 
 ####/sys/stones/stones/\<stone-name\>/packages
 The `/sys/stones/stones/<stone-name>/packages` is the location where you can find the list of packages that are loaded into the stone.
+Each of the nodes in  `/sys/stones/stones/<stone-name>/packages` resolves to an instance of **MCWorkingCopy**.
 
-
-EXAMPLE OF USING PACKAGES WITH A COMMAND
+You can use the `packages` node in a node path in commands that call for a `<working-copy-path>`.
+The following command brings up a window on the list of version in the `Utf8Encoding` package:
 
 ```
 mc ancestors @/sys/stone/packages/Utf8Encoding
 ```
-
-As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the code that generates the list using the following tODE shell scripts:
-
-```
-edit /sys/stone/packages
-edit /sys/stones/templates/packages
-``` 
 
 ####/sys/stones/stones/\<stone-name\>/projects
 `/sys/stones/stones/<stone-name>/projects` (or `/sys/stone/projects`) is the location where the stone-specific *project entry* specifications are located.
@@ -285,7 +266,7 @@ The `/sys/stones/stones/<stone-name>/projectComposition` node defines the compos
     yourself
 ```
 
-As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the composition using the following tODE shell scripts:
+To view or modify the composition specification use the following tODE shell commands:
 
 ```
 edit /sys/stone/projectComposition
@@ -294,16 +275,22 @@ edit /sys/stones/templates/projectComposition
 
 ####/sys/stones/stones/\<stone-name\>/repos
 The `/sys/stones/stones/<stone-name>/repos` node is the location where you can find the list of  git-based or filetree-based repositories associated with the loaded project entries in the stone.
+Each of the nodes in  `/sys/stones/stones/<stone-name>/repos` is an instance of **MCRepository**.
 
-EXAMPLE OF USING REPOS WITH A COMMAND
-
-As with the [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs) node, you can view/change the code that generates the list using the following tODE shell scripts:
+You can use the `repos` node to reference a `<repository-path>` like the following:
 
 ```
-edit /sys/stone/repos
-edit /sys/stones/repos
-``` 
+mr packages @/sys/stone/repos/Tode
+```
 
+Each of the nodes in `/sys/stones/stones/<stone-name>/repos/<package-name>` resolves to an Array of **GoferResolvedReference** instances, that represent the list of versions for the named package in that repository.
+
+A specific version can be resolved by using the version name in the node path:
+
+```
+mc compare image BaselineOfSton @/sys/stone/repos/Ston/BaselineOfSton/BaselineOfSton-dkh.2
+```
+ 
 ###Construction of Project Entry and Script Sharing Structures
 The following tODE shell script is used to construct `/home`. `/projects`, and `/sys` directory nodes:
 
@@ -322,18 +309,14 @@ commit
 cd 
 ```
 
-This script is invoked whenever a new stone is created by the `$GS_HOME/bin/createTodeStone` bash shell script.
-
-
-This script is stored on disk at `$GS_HOME/tode/sys/default/client/scripts/setUpSys` and can be invoked using the following tODE shell command:
+The script is invoked whenever a new stone is created by the `$GS_HOME/bin/createTodeStone` bash shell script.
+The script is stored on disk at `$GS_HOME/tode/sys/default/client/scripts/setUpSys` and can be invoked at any time using the following tODE shell command:
 
 ```
 script --script=setUpSys
 ```
 
 If you wish to override the script to create additional artifacts in your tODE image, you may copy `$GS_HOME/tode/sys/default/client/scripts/setUpSys` to `$GS_HOME/tode/sys/local/client/scripts/` where you can make your edits.
-
-
 
 
 
