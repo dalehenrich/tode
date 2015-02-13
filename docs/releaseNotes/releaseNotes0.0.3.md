@@ -46,9 +46,9 @@
 ##Project Loading with tODE
 One of the basic principles for tODE is that the same code should be run whether you are executing an operation from a menu pick, the tODE shell, or a  [topaz][26] job.
 This priniciple is especially important when it comes to project load scripts.
-Developers must be able to count of the fact that whether or not they build a stone from scratch or update a stone from a menu pick, that they end up with the same code loaded into their image.
+Developers must be able to count on the fact that whether or not they build a stone from scratch or update a stone from a menu pick, that they end up with the same code loaded into their image.
 
-For the loading projects, the class **TDMetacelloTool** is the workhorse.
+For loading projects, the class **TDMetacelloTool** is the workhorse.
 **TDMetacelloTool** implements a comprehensive Smalltalk API for managing most phases of project management.
 **TDMetacelloTool** also implements the `project` command which provides tODE shell access to the project management API:
 
@@ -91,7 +91,7 @@ For example, to load the `Seaside3` project one can use:
    project load Seaside3
    ```
 
-3. A Smalltalk expression that first looks up the tool instance that implements the `project` command and then invokes the project load proper:
+3. A Smalltalk expression that can be run in a workspace or topaz:
 
 ```Smalltalk
   (TDTopezServer batchInstance toolInstanceFor: 'project')
@@ -102,7 +102,7 @@ All three techniques are based on using `toolInstanceFor:` for look up and the s
 
 ###Project Entries
 
-The *project entry* is used by tODE to specify the details needed to load a project. 
+The *project entry* is used by tODE to specify the details needed for loading a project. 
 A *project entry* has attributes that correspond to the arguments you would use in a [**Metacello** load command][3].
 For example the following Metacello load command for the Seaside3 project:
 
@@ -139,7 +139,7 @@ In this environment it is necessary to be able to have:
 3. Stone-specific *project entry* specifications that are customized on a stone by stone basis.
 
 ###Project Entry and Script Sharing Structures
-At the top-level of the tODE directory node structure in`/`, the are three directory nodes that are used to implement  *project entry* and script sharing:
+At the top-level of the tODE directory node structure in`/`, there are three directory nodes that are used to implement  *project entry* and script sharing:
 
 ```
 +-home\
@@ -148,14 +148,16 @@ At the top-level of the tODE directory node structure in`/`, the are three direc
 ```
 ####/home
 The `/home` directory node houses the shared scripts and directory nodes.
-See the [/sys/stones/stones/\<stone-name\>/homeComposition](#sysstonesstonesstone-namehomecomposition) section for information on how the contents of the `/home` directory node is composed.
+
+*See the [/sys/stones/stones/\<stone-name\>/homeComposition](#sysstonesstonesstone-namehomecomposition) section for information on how the contents of the `/home` directory node is composed.*
 
 ####/projects
 The nodes in the `/projects` directory node are *project entry* specifications.
-See the [/sys/stones/stones/\<stone-name\>/projectComposition](#sysstonesstonesstone-nameprojectcomposition) section for information on how the contents of the `/projects` directory node is composed.
+
+*See the [/sys/stones/stones/\<stone-name\>/projectComposition](#sysstonesstonesstone-nameprojectcomposition) section for information on how the contents of the `/projects` directory node is composed.*
 
 ####/sys
-Both the `/home` and `/projects` directory nodes are composed from three other directory node strucures under `/sys`: 
+Both the `/home` and `/projects` directory nodes are composed from three other directory node strucures under `/sys`: [/sys/default](#sysdefault); [/sys/local](#syslocal); and [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name):
 
 ```
 +-sys\
@@ -184,8 +186,8 @@ If you have clones of projects that are present in `/sys/default/projects`, you 
 By default, the *project entries* in `/sys/local/projects` have precedence over those in `/sys/default/projects`.
 
 ####/sys/stone
-`/sys/stone`, is always mounted pointing to the `/sys/stones/stones/<stone-name>` directory node.
-In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to know the name of the stone.
+`/sys/stone` is mounted to point at the `/sys/stones/stones/<stone-name>` directory node.
+In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to specify the name of the current stone.
 
 ####/sys/stones/stones/\<stone-name\>
 Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` directory node:
@@ -203,17 +205,24 @@ Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` direc
          +-projects\
          +-repos\
 ```
+
 ####/sys/stones/stones/\<stone-name\>/dirs
 `/sys/stones/stones/<stone-name>/dirs` is the location where you can find the list of git-based project directory nodes.
-A git-based project uses a baseline and the project repository is either a `filetree://` repository that is manged by git or the project repository is a `github://` repository.
+A git-based project uses a baseline and the project repository is either a `filetree://` repository that is managed by git or the project repository is a `github://` repository.
 Each of the nodes in `/sys/stones/stones/<stone-name>/dirs` resolves to an instance of **ServerFileDirectory**.
 
 By referencing the `dirs` node, you can form disk path references for tODE shell commands.
-The following tODE shell script copies the contents of the `tode` directory located in the *Tode project repository* to `/sys/local/home` making it available in all stones in your [GsDevKitHome][23] installation:
+The following tODE shell script copies the contents of the [`tode` directory located in the Tode project repository][29] to `/sys/local/home` making it available in all stones in your [GsDevKitHome][23] installation:
  
 ```
 cp /sys/stone/dirs/Tode/tode /sys/local/home/tode 
 ```
+
+If you have a local git clone of the [tODE repository][30], then you might prefer to directly mount the `/sys/stone/dirs/Tode/tode` so that the changes that you make to any script will be made to the files in the git clone itself:
+
+```
+mount @/sys/stone/dirs/Tode/tode /sys/local/home tode
+``` 
 
 ####/sys/stones/stones/\<stone-name\>/home
 `/sys/stones/stones/<stone-name>/home` (or `/sys/stone/home`) is the location where the stone-specific tODE scripts are located.
@@ -232,6 +241,10 @@ The `/sys/stones/stones/<stone-name>/homeComposition` node defines the compositi
     yourself
 ```
 
+The order of `addPathNode:` statements defines the precedence order with the first entry having precedence over subsequent entries. 
+There are variants of the `addPathNode:` method, that allow you to define a specific list of nodes to `exclude` or `include`.
+You also have the option of specifying a `select block`.
+
 To view or modify the composition specification use the following tODE shell commands:
 
 ```
@@ -244,7 +257,7 @@ The `/sys/stones/stones/<stone-name>/packages` is the location where you can fin
 Each of the nodes in  `/sys/stones/stones/<stone-name>/packages` resolves to an instance of **MCWorkingCopy**.
 
 You can use the `packages` node in a node path in commands that call for a `<working-copy-path>`.
-The following command brings up a window on the list of version in the `Utf8Encoding` package:
+The following command brings up a window on the list of ancestors in the `Utf8Encoding` package:
 
 ```
 mc ancestors @/sys/stone/packages/Utf8Encoding
@@ -266,11 +279,13 @@ The `/sys/stones/stones/<stone-name>/projectComposition` node defines the compos
     yourself
 ```
 
+*See the [/sys/stones/stones/\<stone-name\>/homeComposition](#sysstonesstonesstone-namehomecomposition) section for information about specifying precedence.*
+
 To view or modify the composition specification use the following tODE shell commands:
 
 ```
-edit /sys/stone/projectComposition
-edit /sys/stones/templates/projectComposition
+edit /sys/stone/projectComposition            # view composition for current stone
+edit /sys/stones/templates/projectComposition # view composition used to create new stones
 ``` 
 
 ####/sys/stones/stones/\<stone-name\>/repos
@@ -318,7 +333,12 @@ script --script=setUpSys
 
 If you wish to override the script to create additional artifacts in your tODE image, you may copy `$GS_HOME/tode/sys/default/client/scripts/setUpSys` to `$GS_HOME/tode/sys/local/client/scripts/` where you can make your edits.
 
+For additional documentation on the commands used in the script:
 
+```
+man mount
+/sys/default/bin/validateStoneSysNodes --help
+```
 
 
 ---
@@ -357,3 +377,5 @@ If you wish to override the script to create additional artifacts in your tODE i
 [26]: http://downloads.gemtalksystems.com/docs/GemStone64/3.2.x/GS64-Topaz-3.2.pdf
 [27]: ../images/projectListMenu.png
 [28]: https://github.com/orgs/GsDevKit/people
+[29]: ../../../tode
+[3]: https://github.com/dalehenrich/tode
