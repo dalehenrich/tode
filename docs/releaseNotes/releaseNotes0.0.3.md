@@ -346,6 +346,11 @@ man mount
 
 ##Converting v0.0.2 project structure to v0.0.3
 
+1. install current gsDevKitHome project
+2. pull `tode:dev`, pull `gsDevKitHome:dev` ... work out update instructions ...
+3. finalize the converting/upgrading section of tODE release notes
+4. pass through gsdevkithome scripts updating for new stone creation
+
 ```
     updateClient             # update client-side tODE
     project load Tode        # update server-side tODE
