@@ -8,4 +8,5 @@ runTestMenuAction: listElement selectionIndex: selectionIndex
   self resetResultsBeforeRun: {testCase}.
   testCase run: testResults.
   self finishedTestResults.
+  self inform: 'finished with test'.
   ^ #'refresh'
