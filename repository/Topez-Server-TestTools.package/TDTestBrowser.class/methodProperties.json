@@ -1,7 +1,9 @@
 {
 	"class" : {
 		"currentTestCase" : "dkh 06/25/2014 21:30",
-		"currentTestCase:" : "dkh 06/25/2014 21:30" },
+		"currentTestCase:" : "dkh 06/25/2014 21:30",
+		"useUpdateThread" : "dkh 02/14/2015 15:52",
+		"useUpdateThread:" : "dkh 02/14/2015 15:52" },
 	"instance" : {
 		"applyTestResults" : "dkh 06/25/2014 20:22",
 		"browseFullClassMenuAction:selectionIndex:" : "dkh 06/25/2014 20:39",
@@ -10,7 +12,7 @@
 		"currentTestCase:" : "dkh 06/25/2014 21:30",
 		"debugAllTestsMenuAction:selectionIndex:" : "dkh 01/12/2015 14:01",
 		"debugTestMenuAction:selectionIndex:" : "dkh 06/25/2014 20:40",
-		"debugTestSuite:with:refreshing:" : "dkh 01/12/2015 14:07",
+		"debugTestSuite:with:refreshing:" : "dkh 02/14/2015 15:56",
 		"finishedTestResults" : "dkh 06/25/2014 21:31",
 		"hasErrors" : "dkh 08/07/2014 11:47",
 		"hasFailures" : "dkh 08/07/2014 11:47",
@@ -29,8 +31,9 @@
 		"runPassesTestsMenuAction:selectionIndex:" : "dkh 06/29/2014 10:20",
 		"runTestCases:listElement:" : "dkh 06/29/2014 09:39",
 		"runTestMenuAction:selectionIndex:" : "dkh 06/29/2014 10:20",
-		"runTestSuite:with:refreshing:" : "dkh 11/06/2014 17:01",
+		"runTestSuite:with:refreshing:" : "dkh 02/14/2015 15:57",
 		"runUnexpectedPassesTestsMenuAction:selectionIndex:" : "dkh 06/29/2014 10:20",
+		"runUpdateThreadFor:refreshing:" : "dkh 02/14/2015 15:56",
 		"testCasesAtResultSlot" : "dkh 06/25/2014 20:55",
 		"testCasesAtSlot:" : "dkh 06/25/2014 20:37",
 		"testResults" : "dkh 06/25/2014 13:02",
