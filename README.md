@@ -32,4 +32,3 @@ Here are some posts from [Stephen Ramsay](http://stephenramsay.us/) that explain
 - [Life on the Command Line](http://stephenramsay.us/2011/04/09/life-on-the-command-line/)
 - [The Mythical Man-Finger](http://stephenramsay.us/2011/07/25/the-mythical-man-finger/)
 - [The Man-Finger Aftermath](http://stephenramsay.us/2011/08/05/the-man-finger-aftermath/)
-
