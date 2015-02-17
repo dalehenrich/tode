@@ -15,6 +15,14 @@ menuActionSpec: miniTool
       #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'metacelloProject' false).
       #('-').
       #('tests' nil #'testProjectMenuAction:selectionIndex:' nil #'loadedProject' false)})}.
+  {('Find'
+    ->
+      {#('Class...' nil #'findClass:selectedIndex:').
+      #('Hierarchy Browser...' nil #'findClassHierarchy:selectedIndex:').
+      #('Class References...' nil #'findClassReferences:selectedIndex:').
+      #('Method...' nil #'findMethodImplementors:selectedIndex:').
+      #('String...' nil #'findStringNoCase:selectedIndex:').
+      #('Senders...' nil #'findMethodSenders:selectedIndex:')})}.
   #('-').
   {('Git'
     ->
