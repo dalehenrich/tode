@@ -41,6 +41,7 @@ menuActionSpec: miniTool
   #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'loggableProject' false).
   #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('push' nil #'gitPushProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
+  #('refresh (unloaded)' nil #'refreshProjectEntriesMenuAction:selectionIndex:').
   #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'dirtyProject' false).
   #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).
