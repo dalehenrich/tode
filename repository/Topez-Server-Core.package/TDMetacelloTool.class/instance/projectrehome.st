@@ -8,7 +8,8 @@ projectrehome
   | projectName registration description newRepo skipConfig |
   self
     getSubcommandOptsMixedLongShort:
-      {#('repo' nil #'required' #'.' 'no-config' nil #'none')}.
+      {#('repo' nil #'required').
+      #('no-config' nil #'none')}.
   projectName := subArguments at: 1.
   registration := self projectRegistrationFor: projectName.
   subOptions

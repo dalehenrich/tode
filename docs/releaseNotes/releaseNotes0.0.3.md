@@ -342,6 +342,52 @@ man mount
 
 
 ---
+I might want to go into detaial about the files in the directories?
+
+```
++-$GS_HOME\
+  +-tode\
+    +-sys\
+      +-default\
+        +-bin\
+        +-client\
+          +-scripts\
+          +-windowLayout\
+        +-home\
+        +-projects\
+        +-server\
+          +-scripts\
+      +-local\
+        +-client\
+          +-descriptions\
+          +-scripts\
+          +-windowLayout\
+         +-home\
+        +-projects\
+        +-server\
+          +-scripts\
+      +-stones\
+        +-stones\
+          +-<stone-name>\
+            +-dirs.ston
+            +-home\
+            +-homeComposition.ston
+            +-packages.ston
+            +-projectComposition.ston
+            +-projects\
+            +-repos.ston
+        +-client\
+          +-scripts\
+          +-windowLayout\
+        +-server\
+          +-scripts\
+        +-templates\
+            +-dirs.ston
+            +-homeComposition.ston
+            +-packages.ston
+            +-projectComposition.ston
+            +-repos.ston
+```
 
 
 ##Converting v0.0.2 project structure to v0.0.3
