@@ -12,6 +12,7 @@
     - [/sys/default](#sysdefault)
     - [/sys/local](#syslocal)
     - [/sys/stone](#sysstone)
+    - [/sys/stones\<stone-name\>](#sysstones)
     - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name)
     - [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs)
     - [/sys/stones/stones/\<stone-name\>/home](#sysstonesstonesstone-namehome)
@@ -168,6 +169,8 @@ Both the `/home` and `/projects` directory nodes are composed from three other d
 ```
 
 ####/sys/default
+The `/sys/default/` directory node is a mount point for the disk directory `$GS_HOME/tode/sys/default`.
+
 `/sys/default/home` is the location where the common tODE scripts are located.
 The scripts in this directory node are included in the initial checkout of [gsDevKitHome][23].
 Over time, I expect folks to contribute their own utility scripts here.
@@ -177,6 +180,8 @@ The *project entries* in this directory node should represent the full range of 
 Over time, I expect that the list will be expanded as folks port more projects to [GsDevKit][25].
 
 ####/sys/local
+The `/sys/local/` directory node is a mount point for the disk directory `$GS_HOME/tode/sys/local`.
+
 `/sys/local/home` is the location where the installation-wide tODE scripts are located.
 You should add scripts to this directory node that you want all stones in your installation to share.
 
@@ -189,7 +194,11 @@ By default, the *project entries* in `/sys/local/projects` have precedence over 
 `/sys/stone` is mounted to point at the `/sys/stones/stones/<stone-name>` directory node.
 In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to specify the name of the current stone.
 
+####/sys/stones
+The `/sys/stones/` directory node is a mount point for the disk directory `$GS_HOME/tode/sys/stones`.
+
 ####/sys/stones/stones/\<stone-name\>
+
 Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` directory node:
 
 ```
@@ -307,6 +316,13 @@ mc compare image BaselineOfSton @/sys/stone/repos/Ston/BaselineOfSton/BaselineOf
 ```
  
 ###Construction of Project Entry and Script Sharing Structures
+The `/sys/default/`, `/sys/local/`, and`/sys/stones/` directory nodes are mount points for the disk directories rooted in `$GS_HOME/tode/sys`.
+All of the directories and files under `$GS_HOME/tode/sys` are shared by all stones.
+A change to a script in `/home` will immediately be available to all other stones. 
+
+The scripts and files in tODE are stored as objects on disk using STON.
+STON files have a `.ston` extension.
+
 The following tODE shell script is used to construct `/home`. `/projects`, and `/sys` directory nodes:
 
 ```
