@@ -1,6 +1,5 @@
 #Getting Started with tODE
 
-
 Use the [todeClient][35] script to start up a tODE client image:
 
 ```Shell

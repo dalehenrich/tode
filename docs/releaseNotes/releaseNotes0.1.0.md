@@ -1,4 +1,4 @@
-# Release Notes 0.0.3
+# Release Notes 0.1.0
 
 - [Bug Fixes](#bug-fixes)
 - [Pull Requests](#pull-requests)
@@ -21,7 +21,7 @@
     - [/sys/stones/stones/\<stone-name\>/projects](#sysstonesstonesstone-nameprojects)
     - [/sys/stones/stones/\<stone-name\>/repos](#sysstonesstonesstone-namerepos)
     - [Construction of Project Entry and Script Sharing Structures](#construction-of-project-entry-and-script-sharing-structures)
-- [Converting v0.0.2 project structure to v0.0.3](#converting-v002-project-structure-to-v003)
+- [Converting v0.0.2 project structure to v0.1.0](#converting-v002-project-structure-to-v010)
 
 ##Bug Fixes
 1. [Issue #5: Add command / file completion][12]
@@ -37,11 +37,11 @@
 6. [Issue #143: add `/sys` structure to tODE checkout][14]
 7. [Issue #147: finish `gs` command docs][16]
 8. [Issue #148: write `project` command man pages #148][18]
-9. [Issue #149: v0.0.3 release notes][19]
+9. [Issue #149: v0.1.0 release notes][19]
 
 ##Pull Requests
 1. [Pull Request #140: Greatly Improved Git merge tool][21]
-1. [Pull Request #150: v0.0.3][20]
+1. [Pull Request #150: v0.1.0][20]
 
 ##Project Loading with tODE
 One of the basic principles for tODE is that the same code should be run whether you are executing an operation from a menu pick, the tODE shell, or a  [topaz][26] job.
@@ -390,7 +390,7 @@ I might want to go into detaial about the files in the directories?
 ```
 
 
-##Converting v0.0.2 project structure to v0.0.3
+##Converting v0.0.2 project structure to v0.1.0
 
 1. install current gsDevKitHome project
 2. pull `tode:dev`, pull `gsDevKitHome:dev` ... work out update instructions ...
@@ -421,7 +421,7 @@ I might want to go into detaial about the files in the directories?
 [19]: https://github.com/dalehenrich/tode/issues/149
 [20]: https://github.com/dalehenrich/tode/pull/150
 [21]: https://github.com/dalehenrich/tode/pull/140
-[22]: https://github.com/dalehenrich/tode/releases/tag/v0.0.3
+[22]: https://github.com/dalehenrich/tode/releases/tag/v0.1.0
 [23]: https://github.com/GsDevKit/gsDevKitHome
 [24]: https://github.com/GsDevKit/gsDevKitHome/blob/master/docs/releaseNotes/releaseNotes1.0.0.md
 [25]: https://github.com/GsDevKit
