@@ -1,6 +1,9 @@
 built-ins
 executeScript: command
 	| options |
+	Transcript
+		cr;
+		show: 'TDShell>>executeScript [0]'.
 	command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
@@ -14,17 +17,30 @@ executeScript: command
 				at: 'script'
 				ifPresent: [ :filename | 
 					| commands filepath |
+					Transcript
+						cr;
+						show: 'executeScript [1]: ' , filename.
 					filepath := filename.
 					(filename beginsWith: '/')
-						ifFalse: [ filepath := (TDShell clientScriptsHome: self stoneName) , filename ].
+						ifFalse: [ 
+							Transcript
+								cr;
+								show: 'executeScript [2]: '.
+							filepath := (TDShell clientScriptsHome: self stoneName) , filename ].
+					Transcript
+						cr;
+						show: 'executeScript [3]: ' , filepath.
 					FileStream readOnlyFileNamed: filepath do: [ :fileStream | commands := fileStream contents ].
+					Transcript
+						cr;
+						show: 'executeScript [4]: ' , commands.
 					^ self evaluate: commands ].
 			options
 				at: 'list'
 				ifPresent: [ :dirname | 
 					| dir fileNames dirPath |
 					dirPath := dirname.
-					dirPath ifNil: [ dirPath := (TDShell clientScriptsHome: self stoneName) ].
+					dirPath ifNil: [ dirPath := TDShell clientScriptsHome: self stoneName ].
 					dir := MCFileTreeFileUtils current directoryFromPath: dirPath.
 					fileNames := WriteStream on: String new.
 					dir entries
