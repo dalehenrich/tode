@@ -39,6 +39,10 @@
 7. [Issue #147: finish `gs` command docs][16]
 8. [Issue #148: write `project` command man pages #148][18]
 9. [Issue #149: v0.1.0 release notes][19]
+10. [Issue #152: `project refresh` project entry command needed][31]		
+11. [Issue #154: `project load Tode --loads=`#('Tests')` option to append --loads to project entry][32]
+12. [Issue #155: rename v0.0.3 to v0.1.0][33]
+13. [Issue #157: `test --batch` option for supporting batch test runs][34]
 
 ##Pull Requests
 1. [Pull Request #140: Greatly Improved Git merge tool][21]
@@ -445,4 +449,9 @@ I might want to go into detaial about the files in the directories?
 [27]: ../images/projectListMenu.png
 [28]: https://github.com/orgs/GsDevKit/people
 [29]: ../../../tode
-[3]: https://github.com/dalehenrich/tode
+[30]: https://github.com/dalehenrich/tode
+[31]: https://github.com/dalehenrich/tode/pull/152
+[32]: https://github.com/dalehenrich/tode/pull/154
+[33]: https://github.com/dalehenrich/tode/pull/155
+[34]: https://github.com/dalehenrich/tode/pull/157
+
