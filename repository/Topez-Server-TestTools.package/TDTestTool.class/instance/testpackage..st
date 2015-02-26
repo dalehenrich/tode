@@ -12,4 +12,4 @@ testpackage: packageName
         ifTrue: [ 
           cl isAbstract
             ifFalse: [ suite addTests: cl suite tests ] ] ].
-  ^ self browseTestSuite: suite
+  ^ self doTestFor: suite

@@ -1,7 +1,6 @@
 as yet unclassified
 testpackage
-  "test package <package-name>"
+  "test [--batch] package <package-name>"
 
-  | packageName |
-  packageName := tokens at: 2.
-  ^ self testpackage: packageName
+  self getSubcommandOptsMixedLongShort: {}.
+  ^ self testpackage: (subArguments at: 1)
