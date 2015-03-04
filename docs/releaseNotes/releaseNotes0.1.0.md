@@ -2,6 +2,7 @@
 
 - [Bug Fixes](#bug-fixes)
 - [Pull Requests](#pull-requests)
+- [Git Credentials and tODE](#git-credentials-and-tode)
 - [Project Loading with tODE](#project-loading-with-tode)
   - [Project Entries](#project-entries)
   - [Project Entry and Script Sharing](#project-entry-and-script-sharing)
@@ -47,6 +48,18 @@
 ##Pull Requests
 1. [Pull Request #140: Greatly Improved Git merge tool][21]
 1. [Pull Request #150: v0.1.0][20]
+
+##Git Credentials and tODE
+When you clone a git repository, your remote repository credentials (i.e., GitHub username and password) are needed for doing commands like `push`.
+The [Github article: Which remote URL should I use?][35] describes the various choices you have.
+With tODE, the `git` commands are performed using `System class>>performOnServer:` and it is not convenient to prompt for your username and password everytime a git command is performed.
+
+I recommend that you use SSH and setup [an SSH keypair][36].
+With an SSH keypair, you are never prompted for a username and password.
+You can also use [SSH agent forwarding][37] to use your local SSH keys for server installations.
+
+If for some reason you decide that you want to use `https` to clone your repo, then you will need to set up [a `credential.helper` for git][38].
+To avoid having to periodically redefine your password, you should use [`git-credential-store][39], which stores credentials in a file on disk protected by filesystem permissions.
 
 ##Project Loading with tODE
 One of the basic principles for tODE is that the same code should be run whether you are executing an operation from a menu pick, the tODE shell, or a  [topaz][26] job.
@@ -454,4 +467,8 @@ I might want to go into detaial about the files in the directories?
 [32]: https://github.com/dalehenrich/tode/pull/154
 [33]: https://github.com/dalehenrich/tode/pull/155
 [34]: https://github.com/dalehenrich/tode/pull/157
-
+[35]: https://help.github.com/articles/which-remote-url-should-i-use/
+[36]: https://help.github.com/articles/generating-ssh-keys
+[37]: https://developer.github.com/guides/using-ssh-agent-forwarding/
+[38]: http://git-scm.com/docs/gitcredentials
+[39]: http://git-scm.com/docs/git-credential-store

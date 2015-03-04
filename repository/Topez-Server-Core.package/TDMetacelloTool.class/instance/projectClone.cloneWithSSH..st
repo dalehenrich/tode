@@ -1,6 +1,6 @@
 project api
-projectClone: registration
-  | gitRootPath gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName metacello |
+projectClone: registration cloneWithSSH: cloneWithSSH
+  | gitRootPath gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName metacello cloneUrl |
   gitRootPath := registration gitRootPath.
   gitRootDir := ServerFileDirectory on: gitRootPath.
   githubRepo := registration cloneProjectSpec repository createRepository.
@@ -18,9 +18,12 @@ projectClone: registration
   versionComponents := versionElement findTokens: '-'.
   githubSha := versionComponents last.
   gitTool := topez toolInstanceFor: 'git'.
+  cloneUrl := cloneWithSSH
+    ifTrue: [ 'git@github.com:' ]
+    ifFalse: [ 'https://github.com/' ].
   response := gitTool
     gitcloneIn: gitRootDir
-    with: '--no-checkout git@github.com:' , githubRepo projectPath , '.git'.
+    with: '--no-checkout ' , cloneUrl , githubRepo projectPath , '.git'.
   (response beginsWith: 'fatal:')
     ifTrue: [ self error: response ].
   response
