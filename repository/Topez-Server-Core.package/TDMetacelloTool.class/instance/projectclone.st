@@ -1,15 +1,25 @@
 project
 projectclone
   "
-  project clone [--https] ( <project-name> | @<project-reference> )
+  project clone [--https] [--gitRoot=<git-root-dir>] ( <project-name> | @<project-reference> )
 "
 
-  | registration projectName cloneWithSSH |
-  self getSubcommandOptsMixedLongShort: {#('https' nil #'none')}.
+  | registration projectName cloneWithSSH gitRootPath |
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('https' nil #'none').
+      #('gitRoot' nil #'required')}.
   options
     at: 'https'
     ifPresent: [ :ingored | cloneWithSSH := false ]
     ifAbsent: [ cloneWithSSH := true ].
   projectName := subArguments at: 1.
   registration := self resolveProjectRegistrationReference: projectName.
-  ^ self projectClone: registration cloneWithSSH: cloneWithSSH
+  options
+    at: 'gitRoot'
+    ifPresent: [ :dirPath | gitRootPath := dirPath ]
+    ifAbsent: [ gitRootPath := registration gitRootPath ].
+  ^ self
+    projectClone: registration
+    cloneWithSSH: cloneWithSSH
+    gitRootPath: gitRootPath
