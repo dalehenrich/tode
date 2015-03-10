@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"beMultipleSelection" : "dkh 03/10/2015 15:42",
+		"doMergeMenuAction:selectionIndex:" : "dkh 03/10/2015 15:32",
+		"enableDisableMenuItems:" : "dkh 03/10/2015 15:32",
+		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 03/10/2015 15:32",
+		"itemSelected:listElement:selectedIndex:shiftPressed:listSelectionsDictionary:" : "dkh 03/10/2015 15:32",
+		"menuActionSpec:" : "dkh 03/10/2015 15:32",
+		"merger" : "dkh 03/10/2015 15:32",
+		"merger:" : "dkh 03/10/2015 15:32",
+		"merger:mergerCompletionBlock:mergerAbortBlock:" : "dkh 03/10/2015 15:32",
+		"methodMenuActionSpec" : "dkh 03/10/2015 15:32",
+		"operations" : "dkh 03/10/2015 15:32",
+		"operationsMenuActionSpec" : "dkh 03/10/2015 15:32",
+		"selectClassOperations:selectionIndex:" : "dkh 03/10/2015 15:38",
+		"selectEditDefinitionMenuAction:selectionIndex:" : "dkh 03/10/2015 15:32",
+		"selectedOperations" : "dkh 03/10/2015 15:32",
+		"showAll" : "dkh 03/10/2015 15:32",
+		"showRaw" : "dkh 03/10/2015 15:32",
+		"showTagged" : "dkh 03/10/2015 15:32",
+		"showUnresolved" : "dkh 03/10/2015 15:32",
+		"stFilterBlock" : "dkh 03/10/2015 15:32",
+		"stFilterBlock:" : "dkh 03/10/2015 15:32",
+		"toggleViewSameSource:selectionIndex:" : "dkh 03/10/2015 15:38" } }

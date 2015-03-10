@@ -22,7 +22,7 @@ mcmerge: wc and: version in: repo
     target: versionSnapshot
     ancestor: commonAncestorSnapshot.
   merger := TDMerger new merger: merger.
-  (TDMergeDiffBrowser new
+  (TDMCMergeDiffBrowser new
     merger: merger
       mergerCompletionBlock: [ 
           | imagePatch |

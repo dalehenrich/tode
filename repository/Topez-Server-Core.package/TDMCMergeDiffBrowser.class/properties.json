@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 03/10/2015 15:32",
+	"instvars" : [
+		"merger",
+		"stFilterBlock",
+		"selectedOperations" ],
+	"name" : "TDMCMergeDiffBrowser",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractMergeBrowser",
+	"type" : "normal" }
