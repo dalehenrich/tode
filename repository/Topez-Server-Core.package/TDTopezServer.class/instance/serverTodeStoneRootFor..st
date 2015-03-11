@@ -1,3 +1,3 @@
 accessing
 serverTodeStoneRootFor: stoneName
-  ^ self serverTodeRoot , '/sys/stones/stones/' , stoneName
+  ^ self serverTodeRoot , '/sys/stones/' , stoneName
