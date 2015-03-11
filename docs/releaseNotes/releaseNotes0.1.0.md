@@ -13,15 +13,15 @@
     - [/sys/default](#sysdefault)
     - [/sys/local](#syslocal)
     - [/sys/stone](#sysstone)
-    - [/sys/stones\<stone-name\>](#sysstones)
-    - [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name)
-    - [/sys/stones/stones/\<stone-name\>/dirs](#sysstonesstonesstone-namedirs)
-    - [/sys/stones/stones/\<stone-name\>/home](#sysstonesstonesstone-namehome)
-    - [/sys/stones/stones/\<stone-name\>/homeComposition](#sysstonesstonesstone-namehomecomposition)
-    - [/sys/stones/stones/\<stone-name\>/packages](#sysstonesstonesstone-namepackages)
-    - [/sys/stones/stones/\<stone-name\>/projectComposition](#sysstonesstonesstone-nameprojectcomposition)
-    - [/sys/stones/stones/\<stone-name\>/projects](#sysstonesstonesstone-nameprojects)
-    - [/sys/stones/stones/\<stone-name\>/repos](#sysstonesstonesstone-namerepos)
+    - [/sys/stones>](#sysstones)
+    - [/sys/stones/\<stone-name\>](#sysstonesstone-name)
+    - [/sys/stones/\<stone-name\>/dirs](#sysstonesstone-namedirs)
+    - [/sys/stones/\<stone-name\>/home](#sysstonesstone-namehome)
+    - [/sys/stones/\<stone-name\>/homeComposition](#sysstonesstone-namehomecomposition)
+    - [/sys/stones/\<stone-name\>/packages](#sysstonesstone-namepackages)
+    - [/sys/stones/\<stone-name\>/projectComposition](#sysstonesstone-nameprojectcomposition)
+    - [/sys/stones/\<stone-name\>/projects](#sysstonesstone-nameprojects)
+    - [/sys/stones/\<stone-name\>/repos](#sysstonesstone-namerepos)
     - [Construction of Project Entry and Script Sharing Structures](#construction-of-project-entry-and-script-sharing-structures)
 - [Converting v0.0.2 project structure to v0.1.0](#converting-v002-project-structure-to-v010)
 
@@ -167,15 +167,15 @@ At the top-level of the tODE directory node structure in`/`, there are three dir
 ####/home
 The `/home` directory node houses the shared scripts and directory nodes.
 
-*See the [/sys/stones/stones/\<stone-name\>/homeComposition](#sysstonesstonesstone-namehomecomposition) section for information on how the contents of the `/home` directory node is composed.*
+*See the [/sys/stones/\<stone-name\>/homeComposition](#sysstonesstone-namehomecomposition) section for information on how the contents of the `/home` directory node is composed.*
 
 ####/projects
 The nodes in the `/projects` directory node are *project entry* specifications.
 
-*See the [/sys/stones/stones/\<stone-name\>/projectComposition](#sysstonesstonesstone-nameprojectcomposition) section for information on how the contents of the `/projects` directory node is composed.*
+*See the [/sys/stones/\<stone-name\>/projectComposition](#sysstonesstone-nameprojectcomposition) section for information on how the contents of the `/projects` directory node is composed.*
 
 ####/sys
-Both the `/home` and `/projects` directory nodes are composed from three other directory node strucures under `/sys`: [/sys/default](#sysdefault); [/sys/local](#syslocal); and [/sys/stones/stones/\<stone-name\>](#sysstonesstonesstone-name):
+Both the `/home` and `/projects` directory nodes are composed from three other directory node strucures under `/sys`: [/sys/default](#sysdefault); [/sys/local](#syslocal); and [/sys/stones/\<stone-name\>](#sysstonesstone-name):
 
 ```
 +-sys\
@@ -196,6 +196,8 @@ Over time, I expect folks to contribute their own utility scripts here.
 The *project entries* in this directory node should represent the full range of projects that have been ported to [GsDevKit][25].
 Over time, I expect that the list will be expanded as folks port more projects to [GsDevKit][25].
 
+`/sys/default/templates` is the location where the default templates for the nodes used in [constructing the per stone structure is defined](#sysstonesstone-name).
+
 ####/sys/local
 The `/sys/local/` directory node is a mount point for the disk directory `$GS_HOME/tode/sys/local`.
 
@@ -207,35 +209,33 @@ You should add *project entries* to this directory node that you want all the st
 If you have clones of projects that are present in `/sys/default/projects`, you should copy the *project entry* from `/sys/default/projects` to `/sys/local/projects` and save your installation-specific modifications there.
 By default, the *project entries* in `/sys/local/projects` have precedence over those in `/sys/default/projects`.
 
+`/sys/local/templates` is the location where the local templates for the nodes used in [constructing the per stone structure is defined](#sysstonesstone-name).
+
 ####/sys/stone
-`/sys/stone` is mounted to point at the `/sys/stones/stones/<stone-name>` directory node.
-In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to specify the name of the current stone.
+`/sys/stone` is mounted to point at the `/sys/stones/<stone-name>` directory node.
+In effect `/sys/stone/` is a *symbolic link* to `/sys/stones/<stone-name>` and can be used in tODE commands to refer to the current stone's directory structure without having to specify the name of the current stone.
 
-####/sys/stones
-The `/sys/stones/` directory node is a mount point for the disk directory `$GS_HOME/tode/sys/stones`.
+####/sys/stones/\<stone-name\>
 
-####/sys/stones/stones/\<stone-name\>
-
-Here's a diagram of the structure in the `/sys/stones/stones/<stone-name>` directory node:
+Here's a diagram of the structure in the `/sys/stones/<stone-name>` directory node:
 
 ```
 +-sys\
    +-stones\
-     +-stones\
-       +-<stone-name\>\
-         +-dirs\
-         +-home\
-         +-homeComposition
-         +-packages\
-         +-projectComposition
-         +-projects\
-         +-repos\
+     +-<stone-name\>\
+       +-dirs\
+       +-home\
+       +-homeComposition
+       +-packages\
+       +-projectComposition
+       +-projects\
+       +-repos\
 ```
 
-####/sys/stones/stones/\<stone-name\>/dirs
-`/sys/stones/stones/<stone-name>/dirs` is the location where you can find the list of git-based project directory nodes.
+####/sys/stones/\<stone-name\>/dirs
+`/sys/stones/<stone-name>/dirs` is the location where you can find the list of git-based project directory nodes.
 A git-based project uses a baseline and the project repository is either a `filetree://` repository that is managed by git or the project repository is a `github://` repository.
-Each of the nodes in `/sys/stones/stones/<stone-name>/dirs` resolves to an instance of **ServerFileDirectory**.
+Each of the nodes in `/sys/stones/<stone-name>/dirs` resolves to an instance of **ServerFileDirectory**.
 
 By referencing the `dirs` node, you can form disk path references for tODE shell commands.
 The following tODE shell script copies the contents of the [`tode` directory located in the Tode project repository][29] to `/sys/local/home` making it available in all stones in your [GsDevKitHome][23] installation:
@@ -250,12 +250,12 @@ If you have a local git clone of the [tODE repository][30], then you might prefe
 mount @/sys/stone/dirs/Tode/tode /sys/local/home tode
 ``` 
 
-####/sys/stones/stones/\<stone-name\>/home
-`/sys/stones/stones/<stone-name>/home` (or `/sys/stone/home`) is the location where the stone-specific tODE scripts are located.
+####/sys/stones/\<stone-name\>/home
+`/sys/stones/<stone-name>/home` (or `/sys/stone/home`) is the location where the stone-specific tODE scripts are located.
 By default, all new scripts and directory nodes that you create in `/home`, will be saved in this location.
 
-####/sys/stones/stones/\<stone-name\>/homeComposition
-The `/sys/stones/stones/<stone-name>/homeComposition` node defines the composition of the [`/home` directory node](#home).
+####/sys/stones/\<stone-name\>/homeComposition
+The `/sys/stones/<stone-name>/homeComposition` node defines the composition of the [`/home` directory node](#home).
 
 ```Smalltalk
 (TDComposedDirectoryNode
@@ -275,12 +275,11 @@ To view or modify the composition specification use the following tODE shell com
 
 ```
 edit /sys/stone/homeComposition            # view composition for current stone
-edit /sys/stones/templates/homeComposition # view composition used to create new stones
 ``` 
 
-####/sys/stones/stones/\<stone-name\>/packages
-The `/sys/stones/stones/<stone-name>/packages` is the location where you can find the list of packages that are loaded into the stone.
-Each of the nodes in  `/sys/stones/stones/<stone-name>/packages` resolves to an instance of **MCWorkingCopy**.
+####/sys/stones/\<stone-name\>/packages
+The `/sys/stones/<stone-name>/packages` is the location where you can find the list of packages that are loaded into the stone.
+Each of the nodes in  `/sys/stones/<stone-name>/packages` resolves to an instance of **MCWorkingCopy**.
 
 You can use the `packages` node in a node path in commands that call for a `<working-copy-path>`.
 The following command brings up a window on the list of ancestors in the `Utf8Encoding` package:
@@ -289,11 +288,11 @@ The following command brings up a window on the list of ancestors in the `Utf8En
 mc ancestors @/sys/stone/packages/Utf8Encoding
 ```
 
-####/sys/stones/stones/\<stone-name\>/projects
-`/sys/stones/stones/<stone-name>/projects` (or `/sys/stone/projects`) is the location where the stone-specific *project entry* specifications are located.
+####/sys/stones/\<stone-name\>/projects
+`/sys/stones/<stone-name>/projects` (or `/sys/stone/projects`) is the location where the stone-specific *project entry* specifications are located.
 
-####/sys/stones/stones/\<stone-name\>/projectComposition
-The `/sys/stones/stones/<stone-name>/projectComposition` node defines the composition of the [`/projects` directory node](#projects).
+####/sys/stones/\<stone-name\>/projectComposition
+The `/sys/stones/<stone-name>/projectComposition` node defines the composition of the [`/projects` directory node](#projects).
 
 ```Smalltalk
 (TDComposedDirectoryNode
@@ -305,18 +304,17 @@ The `/sys/stones/stones/<stone-name>/projectComposition` node defines the compos
     yourself
 ```
 
-*See the [/sys/stones/stones/\<stone-name\>/homeComposition](#sysstonesstonesstone-namehomecomposition) section for information about specifying precedence.*
+*See the [/sys/stones/\<stone-name\>/homeComposition](#sysstonesstone-namehomecomposition) section for information about specifying precedence.*
 
 To view or modify the composition specification use the following tODE shell commands:
 
 ```
 edit /sys/stone/projectComposition            # view composition for current stone
-edit /sys/stones/templates/projectComposition # view composition used to create new stones
 ``` 
 
-####/sys/stones/stones/\<stone-name\>/repos
-The `/sys/stones/stones/<stone-name>/repos` node is the location where you can find the list of  git-based or filetree-based repositories associated with the loaded project entries in the stone.
-Each of the nodes in  `/sys/stones/stones/<stone-name>/repos` is an instance of **MCRepository**.
+####/sys/stones/\<stone-name\>/repos
+The `/sys/stones/<stone-name>/repos` node is the location where you can find the list of  git-based or filetree-based repositories associated with the loaded project entries in the stone.
+Each of the nodes in  `/sys/stones/<stone-name>/repos` is an instance of **MCRepository**.
 
 You can use the `repos` node to reference a `<repository-path>` like the following:
 
@@ -324,7 +322,7 @@ You can use the `repos` node to reference a `<repository-path>` like the followi
 mr packages @/sys/stone/repos/Tode
 ```
 
-Each of the nodes in `/sys/stones/stones/<stone-name>/repos/<package-name>` resolves to an Array of **GoferResolvedReference** instances, that represent the list of versions for the named package in that repository.
+Each of the nodes in `/sys/stones/<stone-name>/repos/<package-name>` resolves to an Array of **GoferResolvedReference** instances, that represent the list of versions for the named package in that repository.
 
 A specific version can be resolved by using the version name in the node path:
 
@@ -390,6 +388,12 @@ I might want to go into detaial about the files in the directories?
         +-projects\
         +-server\
           +-scripts\
+        +-templates\
+            +-dirs.ston
+            +-homeComposition.ston
+            +-packages.ston
+            +-projectComposition.ston
+            +-repos.ston
       +-local\
         +-client\
           +-descriptions\
@@ -399,27 +403,16 @@ I might want to go into detaial about the files in the directories?
         +-projects\
         +-server\
           +-scripts\
-      +-stones\
-        +-stones\
-          +-<stone-name>\
-            +-dirs.ston
-            +-home\
-            +-homeComposition.ston
-            +-packages.ston
-            +-projectComposition.ston
-            +-projects\
-            +-repos.ston
-        +-client\
-          +-scripts\
-          +-windowLayout\
-        +-server\
-          +-scripts\
         +-templates\
-            +-dirs.ston
-            +-homeComposition.ston
-            +-packages.ston
-            +-projectComposition.ston
-            +-repos.ston
+      +-stones\
+        +-<stone-name>\
+          +-dirs.ston
+          +-home\
+          +-homeComposition.ston
+          +-packages.ston
+          +-projectComposition.ston
+          +-projects\
+          +-repos.ston
 ```
 
 
