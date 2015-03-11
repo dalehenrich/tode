@@ -2,7 +2,7 @@ system menu
 todeMenuCommandOn: aBuilder
 	<worldMenu>
 	| sessionDescriptionDir |
-	sessionDescriptionDir := self sessionDescriptionHome asFileReference.
+	sessionDescriptionDir := self todeSysLocalSessionDescriptionPath asFileReference.
 	sessionDescriptionDir exists
 		ifTrue: [ 
 			(aBuilder item: #'tODE Shell')
@@ -28,7 +28,7 @@ todeMenuCommandOn: aBuilder
 				order: 4.0;
 				target: self;
 				withSeparatorAfter.
-			(sessionDescriptionDir files sorted: [ :a :b | a fullName <= b fullName ])
+			(sessionDescriptionDir files sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
 					file basename = 'README.md'
 						ifFalse: [ self importSessionDescriptionFrom: file for: aBuilder ] ] ]

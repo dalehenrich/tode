@@ -1,3 +1,5 @@
 tode installation
-installTodeGLASS1String: aDirectory
-	self filetreeUtilityClass readStreamFor: 'installGLASS1.ws' in: aDirectory do: [ :fileStream | ^ fileStream contents ]
+installTodeGLASS1String: options
+	| filePath |
+	filePath := self filePath: 'installGLASS1.ws' fromScriptPathOptions: options.
+	filePath asFileReference readStreamDo: [ :fileStream | ^ fileStream contents ]

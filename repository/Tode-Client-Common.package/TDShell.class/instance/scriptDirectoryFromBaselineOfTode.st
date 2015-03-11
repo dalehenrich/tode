@@ -1,3 +1,0 @@
-evaluator engine
-scriptDirectoryFromBaselineOfTode
-	^self class scriptDirectoryFromBaselineOfTode

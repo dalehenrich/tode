@@ -1,3 +1,3 @@
 home
 todeSysStonePath: stoneName
-	^self todeSysPath , '/stones/stones/' , stoneName, '/'
+	^self todeSysPath , '/stones/' , stoneName, '/'

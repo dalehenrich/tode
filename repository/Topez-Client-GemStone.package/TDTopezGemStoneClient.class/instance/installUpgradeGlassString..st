@@ -1,3 +1,5 @@
 tode installation
-installUpgradeGlassString: aDirectory
-	self filetreeUtilityClass readStreamFor: 'upgradeGLASS.ws' in: aDirectory do: [ :fileStream | ^ fileStream contents ]
+installUpgradeGlassString: options
+	| filePath |
+	filePath := self filePath: 'upgradeGLASS.ws' fromScriptPathOptions: options.
+	filePath asFileReference readStreamDo: [ :fileStream | ^ fileStream contents ]

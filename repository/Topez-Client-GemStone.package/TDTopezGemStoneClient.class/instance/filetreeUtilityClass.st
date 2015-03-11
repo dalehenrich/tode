@@ -1,3 +1,0 @@
-builtins
-filetreeUtilityClass
-	^MCFileTreeFileUtils current 
