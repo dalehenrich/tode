@@ -8,5 +8,9 @@ lookupWindowLayout: windowLayoutFilename
 					| path |
 					path := rootPath , windowLayoutFilename.
 					path asFileReference exists
-						ifTrue: [ ^ path ] ] ].
+						ifTrue: [ ^ path ] ].
+			self
+				error:
+					'The window layout ' , windowLayoutFilename printString
+						, ' was not found in the local|default/client/windowLayout directories' ].
 	^ self todeRoot , '/' , self windowLayoutPath , windowLayoutFilename
