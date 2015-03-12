@@ -192,6 +192,8 @@ The `/sys/default/` directory node is a mount point for the disk directory `$GS_
 The scripts in this directory node are included in the initial checkout of [gsDevKitHome][23].
 Over time, I expect folks to contribute their own utility scripts here.
 
+`/sys/default/pharo` is the location of the `todeLoad.st` file that is used to bootstrap and update the todeClientImage.
+
 `/sys/default/projects` is the location where the common tODE *project entries* are located.
 The *project entries* in this directory node should represent the full range of projects that have been ported to [GsDevKit][25].
 Over time, I expect that the list will be expanded as folks port more projects to [GsDevKit][25].
@@ -203,6 +205,8 @@ The `/sys/local/` directory node is a mount point for the disk directory `$GS_HO
 
 `/sys/local/home` is the location where the installation-wide tODE scripts are located.
 You should add scripts to this directory node that you want all stones in your installation to share.
+
+`/sys/local/pharo` is the location of a local version `todeLoad.st` file that is used in place of `/sys/default/pharo/todeLoad.st` to bootstrap and update the todeClientImage.
 
 `/sys/local/projects` is the location where the installation-wide tODE *project entries* are located.
 You should add *project entries* to this directory node that you want all the stones in your installation to share.
