@@ -1,5 +1,7 @@
 *topez-pharo-common
 interact
+	self isHeadless
+		ifTrue: [ ^ self interactHeadless ].
 	^ UIManager default
 		multiLineRequest: self prompt
 		initialAnswer: self template
