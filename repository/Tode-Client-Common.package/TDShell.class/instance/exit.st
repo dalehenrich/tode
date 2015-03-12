@@ -1,4 +1,4 @@
 built-ins
 exit
-	shellWindow delete.
+	shellWindow ifNotNil: [ shellWindow delete ].
 	^ nil
