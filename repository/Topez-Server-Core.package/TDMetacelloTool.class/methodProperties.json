@@ -29,7 +29,7 @@
 		"toolReadMe" : "dkh 05/08/2014 10:27" },
 	"instance" : {
 		"projectClone:cloneWithSSH:" : "dkh 03/10/2015 06:33",
-		"projectClone:cloneWithSSH:gitRootPath:" : "dkh 03/10/2015 07:20",
+		"projectClone:cloneWithSSH:gitRootPath:" : "dkh 03/13/2015 10:41",
 		"projectCommit:commitMessage:" : "dkh 05/16/2014 07:49",
 		"projectCommit:configCommit:gitCommit:commitMessage:" : "dkh 05/20/2014 11:32",
 		"projectCommitConfiguration:configuration:commitMessage:" : "dkh 05/20/2014 11:30",
