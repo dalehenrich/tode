@@ -53,7 +53,7 @@ II. Define a session description
        osPassword: '''';
        backupDirectory: '''';
        dataDirectory: '''';
-       yourself) exportTo: TDShell sessionDescriptionHome.
+       yourself) exportTo: TDShell todeSysLocalSessionDescriptionPath.
      TDShell testLogin: ''glass''.
 
    Pay special attention to the `gemstoneVersion`, `stoneHost`, `gemHost`, 
