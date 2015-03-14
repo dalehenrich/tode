@@ -1,9 +1,9 @@
 accessing
-entryNode: topez
+entryNode: aTemplateProjectEntryOrNil topez: topez
   entry := self entry.
   (entry isNil or: [ entry projectPath isNil ])
     ifTrue: [ 
-      entry := self createTemplateProjectEntry.
+      entry := self createTemplateProjectEntry: aTemplateProjectEntryOrNil.
       entry createProjectEntryNode: '/sys/stone/projects/' topez: topez.
       entry
         projectPath: '/sys/stone/projects/';

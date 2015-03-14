@@ -1,6 +1,6 @@
 project api
 projectClone: registration cloneWithSSH: cloneWithSSH gitRootPath: gitRootPath
-  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName metacello cloneUrl newProjectEntry |
+  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName metacello cloneUrl |
   gitRootDir := ServerFileDirectory on: gitRootPath.
   githubRepo := registration cloneProjectSpec repository createRepository.
   repositoryDirPath := githubRepo directory fullName.
@@ -67,10 +67,8 @@ If you cancel, a branch name can be specified at a later date.'
     projectMap: registration
     from: githubRepo
     toRepository: newRegistration repository.
-  newProjectEntry := newRegistration
-    createTemplateProjectEntry;
-    createProjectEntryNode: '/sys/stone/projects/' topez: topez;
-    yourself.
-  newRegistration entry: newProjectEntry.
+  newRegistration
+    entry: nil;
+    entryNode: registration entry topez: self topez.	"force creation of a /sys/stone/projects project entry with cloned information"
   registration isLoadedInImage
     ifTrue: [ registration versionInfo versionString: githubSha ]

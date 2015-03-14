@@ -4,7 +4,7 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  entryNode := registration entryNode: topez.
+  entryNode := registration entryNode: nil topez: topez.
   entry := registration entry.
   entryNode
     editUsing:

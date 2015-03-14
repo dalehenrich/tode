@@ -1,0 +1,3 @@
+project list
+createTemplateProjectEntry: aTemplateProjectEntryOrNil
+  self subclassResponsibility

@@ -1,7 +1,7 @@
 project list
-createTemplateProjectEntry
+createTemplateProjectEntry: ignored
   ^ entry := TDProjectSpecEntryDefinition new
     baseline: self projectName
       repository: self repositoryDescription
-      loads: 'default';
+      loads: (self templateProjectEntryLoads: self projectSpec);
     yourself

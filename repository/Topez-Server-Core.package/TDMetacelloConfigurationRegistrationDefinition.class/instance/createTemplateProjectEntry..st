@@ -1,9 +1,9 @@
 project list
-createTemplateProjectEntry
+createTemplateProjectEntry: aTemplateProjectEntryOrNil
   ^ entry := TDProjectSpecEntryDefinition new
     configuration: self projectName
       className: self configurationClassName
       version: self currentVersionString
       repository: self repositoryDescription
-      loads: 'default';
+      loads: (self templateProjectEntryLoads: self projectSpec);
     yourself
