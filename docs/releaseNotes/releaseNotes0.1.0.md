@@ -188,6 +188,10 @@ Both the `/home` and `/projects` directory nodes are composed from three other d
 ####/sys/default
 The `/sys/default/` directory node is a mount point for the disk directory `$GS_HOME/tode/sys/default`.
 
+`/sys/default/bin` is the default location for utility scripts.
+
+`/sys/default/client` is the default location for client session descriptions, scripts, and windowLayouts. 
+
 `/sys/default/home` is the location where the common tODE scripts are located.
 The scripts in this directory node are included in the initial checkout of [gsDevKitHome][23].
 Over time, I expect folks to contribute their own utility scripts here.
@@ -198,10 +202,18 @@ Over time, I expect folks to contribute their own utility scripts here.
 The *project entries* in this directory node should represent the full range of projects that have been ported to [GsDevKit][25].
 Over time, I expect that the list will be expanded as folks port more projects to [GsDevKit][25].
 
+`/sys/default/server` is the default location for server bootstrap scripts.
+
 `/sys/default/templates` is the location where the default templates for the nodes used in [constructing the per stone structure is defined](#sysstonesstone-name).
 
 ####/sys/local
 The `/sys/local/` directory node is a mount point for the disk directory `$GS_HOME/tode/sys/local`.
+
+`/sys/local/client` is the location where installation-wide client session descriptions, scripts, and windowLayouts are stored. 
+The default location for scripts and windowLayouts is `/sys/default/client`.
+
+`/sys/local/git` is the location where installation-wide git clones may be shared.
+You may specify an alternate location in the session description for a stone.
 
 `/sys/local/home` is the location where the installation-wide tODE scripts are located.
 You should add scripts to this directory node that you want all stones in your installation to share.
@@ -212,6 +224,9 @@ You should add scripts to this directory node that you want all stones in your i
 You should add *project entries* to this directory node that you want all the stones in your installation to share.
 If you have clones of projects that are present in `/sys/default/projects`, you should copy the *project entry* from `/sys/default/projects` to `/sys/local/projects` and save your installation-specific modifications there.
 By default, the *project entries* in `/sys/local/projects` have precedence over those in `/sys/default/projects`.
+
+`/sys/local/server` is the location where installation-wide server bootstrap scripts are located.
+The default bootstrap scripts are located in `/sys/defaul/server/scripts`.
 
 `/sys/local/templates` is the location where the local templates for the nodes used in [constructing the per stone structure is defined](#sysstonesstone-name).
 
@@ -389,21 +404,24 @@ I might want to go into detaial about the files in the directories?
           +-scripts\
           +-windowLayout\
         +-home\
+        +-pharo\
         +-projects\
         +-server\
           +-scripts\
         +-templates\
-            +-dirs.ston
-            +-homeComposition.ston
-            +-packages.ston
-            +-projectComposition.ston
-            +-repos.ston
+          +-dirs.ston
+          +-homeComposition.ston
+          +-packages.ston
+          +-projectComposition.ston
+          +-repos.ston
       +-local\
         +-client\
           +-descriptions\
           +-scripts\
           +-windowLayout\
-         +-home\
+        +-git\
+        +-home\
+        +-pharo\
         +-projects\
         +-server\
           +-scripts\
