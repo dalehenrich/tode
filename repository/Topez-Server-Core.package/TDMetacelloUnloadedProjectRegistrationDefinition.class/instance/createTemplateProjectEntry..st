@@ -1,11 +1,12 @@
 project list
-createTemplateProjectEntry: aTemplateProjectEntryOrNil
+createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
   self registration
     baselineProjectSpecIfPresent: [ :baselineProjectSpec | 
       entry := TDProjectSpecEntryDefinition new
         baseline: self projectName
           repository: self repositoryDescription
-          loads: (self templateProjectEntryLoads: baselineProjectSpec);
+          loads:
+            (self templateProjectEntryLoads: nil projectSpec: baselineProjectSpec);
         yourself ]
     ifAbsent: [ 
       | configurationProjectSpec |
@@ -15,6 +16,7 @@ createTemplateProjectEntry: aTemplateProjectEntryOrNil
           className: configurationProjectSpec className
           version: configurationProjectSpec versionString
           repository: self repositoryDescription
-          loads: (self templateProjectEntryLoads: configurationProjectSpec);
+          loads:
+            (self templateProjectEntryLoads: nil projectSpec: configurationProjectSpec);
         yourself ].
   ^ entry

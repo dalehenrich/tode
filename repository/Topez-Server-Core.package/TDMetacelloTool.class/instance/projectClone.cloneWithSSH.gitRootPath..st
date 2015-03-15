@@ -1,6 +1,6 @@
 project api
 projectClone: registration cloneWithSSH: cloneWithSSH gitRootPath: gitRootPath
-  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName metacello cloneUrl |
+  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName cloneUrl |
   gitRootDir := ServerFileDirectory on: gitRootPath.
   githubRepo := registration cloneProjectSpec repository createRepository.
   repositoryDirPath := githubRepo directory fullName.
@@ -56,12 +56,12 @@ If you cancel, a branch name can be specified at a later date.'
           response := gitTool gitcheckoutIn: gitRepoDirectory with: '-b ' , newBranchName.
           (response beginsWith: 'fatal:')
             ifTrue: [ self error: response ] ] ].
-  metacello := Metacello new
+  Metacello new
     baseline: registration projectName;
     repository:
-        'filetree://' , gitRootPath , '/' , gitRepoDirName , '/' , githubRepo repoPath.
-  metacello copy register.
-  metacello lock.
+        'filetree://' , gitRootPath , '/' , gitRepoDirName , '/' , githubRepo repoPath;
+    register;
+    lock.
   newRegistration := self projectRegistrationFor: registration projectName.
   (self topez toolInstanceFor: 'project')
     projectMap: registration
@@ -69,6 +69,6 @@ If you cancel, a branch name can be specified at a later date.'
     toRepository: newRegistration repository.
   newRegistration
     entry: nil;
-    entryNode: registration entry topez: self topez.	"force creation of a /sys/stone/projects project entry with cloned information"
+    entryNode: registration topez: self topez.	"force creation of a /sys/stone/projects project entry with cloned information"
   registration isLoadedInImage
     ifTrue: [ registration versionInfo versionString: githubSha ]

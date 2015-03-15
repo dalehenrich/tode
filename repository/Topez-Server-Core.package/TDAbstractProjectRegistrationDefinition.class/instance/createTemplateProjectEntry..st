@@ -1,3 +1,3 @@
 project list
-createTemplateProjectEntry: aTemplateProjectEntryOrNil
+createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
   self subclassResponsibility

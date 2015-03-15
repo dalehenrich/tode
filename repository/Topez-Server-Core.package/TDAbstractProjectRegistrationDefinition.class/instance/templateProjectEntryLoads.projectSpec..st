@@ -1,10 +1,16 @@
 project list
-templateProjectEntryLoads: aTemplateProjectEntryOrNil projectSpec: aProjectSpec
+templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil projectSpec: aProjectSpecOrNil
   | loads |
-  loads := aProjectSpec loads copy.
   loads ifNil: [ loads := {} ].
-  aTemplateProjectEntryOrNil
+  aProjectSpecOrNil
+    ifNotNil: [ aProjectSpecOrNil loads ifNotNil: [ :list | loads addAll: list ] ].
+  anOldTDRegistrationDefinitionOrNil
     ifNotNil: [ 
-      loads addAll: aTemplateProjectEntryOrNil loads.
-      loads := loads asSet asArray ].
+      anOldTDRegistrationDefinitionOrNil projectSpec loads
+        ifNotNil: [ :list | loads addAll: list ].
+      anOldTDRegistrationDefinitionOrNil entry
+        ifNotNil: [ :oldEntry | loads addAll: oldEntry loads ] ].
+  loads isEmpty
+    ifTrue: [ ^ #('default') ].
+  loads := loads asSet asArray.
   ^ loads
