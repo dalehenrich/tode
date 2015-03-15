@@ -24,7 +24,8 @@ projectclone
       gitRootPath := '$GS_HOME/tode/sys/local/git' ]
     ifAbsent: [ 
       projectEntryPath := '/sys/stone/projects/'.
-      gitRootPath := '$GS_HOME/gemstone/stones/' , self topez serverStoneName ].
+      gitRootPath := '$GS_HOME/gemstone/stones/' , self topez serverStoneName
+        , '/git' ].
   options at: 'gitRoot' ifPresent: [ :dirPath | gitRootPath := dirPath ].
   ^ self
     projectClone: registration

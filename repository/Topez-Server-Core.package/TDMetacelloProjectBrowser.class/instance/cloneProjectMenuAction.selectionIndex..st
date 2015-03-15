@@ -9,7 +9,7 @@ cloneProjectMenuAction: listElement selectionIndex: selectionIndex
     confirm: '/sys/stone'
     cancel: '/sys/local') signal
     ifTrue: [ 
-      gitRootPath := '$GS_HOME/gemstone/stones/' , self topez serverStoneName.
+      gitRootPath := '$GS_HOME/gemstone/stones/' , self topez serverStoneName , '/git'.
       projectEntryPath := '/sys/stone/projects/' ]
     ifFalse: [ 
       gitRootPath := registration gitRootPath.
