@@ -1,11 +1,12 @@
 accessing
 entryNode: oldTDRegistrationDefinitionOrNil topez: topez
-  entry := self entry.
+  | newEntry |
   (entry isNil or: [ entry projectPath isNil ])
     ifTrue: [ 
-      entry := self createTemplateProjectEntry: oldTDRegistrationDefinitionOrNil.
-      entry createProjectEntryNode: '/sys/stone/projects/' topez: topez.
-      entry
+      newEntry := self createTemplateProjectEntry: oldTDRegistrationDefinitionOrNil.
+      newEntry createProjectEntryNode: '/sys/stone/projects/' topez: topez.
+      newEntry
         projectPath: '/sys/stone/projects/';
         projectNodeName: self projectName ].
+  entry := newEntry.
   ^ topez lookup: entry projectPath , entry projectNodeName
