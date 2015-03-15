@@ -6,7 +6,9 @@ createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
         baseline: self projectName
           repository: self repositoryDescription
           loads:
-            (self templateProjectEntryLoads: nil projectSpec: baselineProjectSpec);
+            (self
+                templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil
+                projectSpec: baselineProjectSpec);
         yourself ]
     ifAbsent: [ 
       | configurationProjectSpec |
@@ -17,6 +19,8 @@ createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
           version: configurationProjectSpec versionString
           repository: self repositoryDescription
           loads:
-            (self templateProjectEntryLoads: nil projectSpec: configurationProjectSpec);
+            (self
+              templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil
+              projectSpec: configurationProjectSpec);
         yourself ].
   ^ entry
