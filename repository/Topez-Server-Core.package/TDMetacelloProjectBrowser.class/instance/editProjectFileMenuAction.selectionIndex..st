@@ -4,7 +4,10 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  entryNode := registration entryNode: nil topez: topez.
+  entryNode := registration
+    entryNode: nil
+    projectPath: '/sys/stone/projects/'
+    topez: topez.
   entry := registration entry.
   entryNode
     editUsing:
