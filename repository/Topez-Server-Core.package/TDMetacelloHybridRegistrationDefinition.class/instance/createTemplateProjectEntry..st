@@ -11,6 +11,5 @@ createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
           templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil
           projectSpec: self projectSpec);
     yourself.
-  self halt.
   entry := newEntry.
   ^ entry

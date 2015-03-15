@@ -7,6 +7,6 @@ entryNode: oldTDRegistrationDefinitionOrNil topez: topez
       newEntry createProjectEntryNode: '/sys/stone/projects/' topez: topez.
       newEntry
         projectPath: '/sys/stone/projects/';
-        projectNodeName: self projectName ].
-  entry := newEntry.
+        projectNodeName: self projectName.
+      entry := newEntry ].
   ^ topez lookup: entry projectPath , entry projectNodeName
