@@ -17,6 +17,7 @@
 		"setExceptionMessage",
 		"resetObjInMessage",
 		"openDebuggerMessage",
+		"logStackMessage",
 		"tabCompletionMessage" ],
 	"name" : "TDTopezClient",
 	"pools" : [
