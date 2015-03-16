@@ -7,5 +7,5 @@ editTemplate
 		cr;
 		nextPutAll: '('.
 	self editTemplateOn: stream.
-	stream nextPutAll: ') exportTo: TDShell sessionDescriptionHome.'.
+	stream nextPutAll: ') exportTo: TDShell todeSysLocalSessionDescriptionPath.'.
 	^ stream contents
