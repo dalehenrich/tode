@@ -1,6 +1,5 @@
 tode installation
-installTodeBlock: installBlock 
-	[ 
+installTodeBlock: installBlock
 	[ 
 	| installSession glassNotInstalled |
 	installSession := self loginUsing: TodeInstallSession.
@@ -18,10 +17,10 @@ installTodeBlock: installBlock
 	installSession := self loginUsing: TodeInstallSession.
 	[ installBlock value: installSession ]
 		ensure: [ installSession logout ] ]
-		on: GsErrorNotification
-		do: [ :ex | self error: 'Error while installing tODE' , ex description ] ]
-		on: Error
+		on: GsRuntimeExceptionNotification
 		do: [ :ex | 
-			self shell debugMode
-				ifTrue: [ ex pass ]
-				ifFalse: [ self halt ] ]
+			((ex isKindOf: GsRuntimeExceptionNotification) and: [ topezServerProxy isNil ])
+				ifTrue: [ 
+					"without  topezServerProxy normal error processing will not proceed properly"
+					self error: 'while installing tODE on server: ' , ex description printString ].
+			ex pass ]
