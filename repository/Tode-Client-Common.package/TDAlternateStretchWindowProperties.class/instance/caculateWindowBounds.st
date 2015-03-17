@@ -27,14 +27,14 @@ caculateWindowBounds
 	evaluator := classes bottomLeft extent: shellExtent.
 	superclasses := classCategories topRight extent: lw @ topHeight.
 	classDef := superclasses topRight extent: (1.5 * lw) @ topHeight.
-	instanceSelectors := classDef topRight extent: lw @ topHeight.
-	classSelectors := instanceSelectors topRight extent: lw @ topHeight.
+	instanceSelectors := classDef topRight extent: lw @ (topHeight + codeHeight).
+	classSelectors := instanceSelectors topRight extent: lw @ (topHeight + codeHeight).
 	configurations := lo extent: lw @ (lh // 2).
 	packages := configurations bottomLeft extent: lw @ (lh // 2).
 	method := superclasses bottomLeft extent: codeWidth @ codeHeight.
 	implementors := method topRight extent: (2 * lw) @ (codeHeight // 2).
 	inspector := evaluator topRight extent: shellExtent.
-	debugger := method topRight extent: debuggerWidth @ codeHeight.
+	debugger := implementors bottomLeft extent: debuggerWidth @ (codeHeight // 2).
 	context := debugger bottomLeft extent: debuggerWidth @ shellExtent y.
 	app1 := evaluator topRight extent: appExtent.
 	app2 := app1 topRight extent: appExtent.
