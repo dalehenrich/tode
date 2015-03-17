@@ -1,32 +1,31 @@
 window bounds
 caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lcw lce |
+	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lce |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
 	dict := Dictionary new.
 	debuggerWidth := codeWidth := layoutExtent x * codeWidthFactor.
-	lcw := lw := layoutExtent x // (5.5 + extraLists).
+	lw := layoutExtent x // (5.5 + extraLists).
 	debuggerWidth := layoutExtent x - (lw + codeWidth).
 	(diff := codeWidth - debuggerWidth) > 0
 		ifTrue: [ 
 			diff := diff / (5.5 + extraLists).
-			lcw := lw - diff.
 			lw := lw + (diff // (4.5 + extraLists)).
-			debuggerWidth := layoutExtent x - (lcw + codeWidth) ].
+			debuggerWidth := layoutExtent x - (lw + codeWidth) ].
 	shellHeight := layoutExtent y * shellHeightFactor.
 	browserHeight := layoutExtent y - shellHeight.
 	topHeight := browserHeight * topHeightFactor.
 	lh := browserHeight // 2.
 	codeHeight := browserHeight - topHeight.
-	lce := lcw @ lh.
+	lce := lw @ lh.
 	shellExtent := codeWidth @ shellHeight.
 	appExtent := ((layoutExtent x - codeWidth) // 2) @ shellHeight.
 	classCategories := lo extent: lce.
 	classes := classCategories bottomLeft extent: lce.
 	evaluator := classes bottomLeft extent: shellExtent.
 	superclasses := classCategories topRight extent: lw @ topHeight.
-	classDef := superclasses topRight extent: (1.5 * lw) @ topHeight.
+	classDef := superclasses topRight extent: (1.35 * lw) @ topHeight.
 	instanceSelectors := classDef topRight extent: lw @ (topHeight + codeHeight).
 	classSelectors := instanceSelectors topRight extent: lw @ (topHeight + codeHeight).
 	configurations := lo extent: lw @ (lh // 2).
