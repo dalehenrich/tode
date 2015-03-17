@@ -7,12 +7,13 @@ caculateWindowBounds
 	dict := Dictionary new.
 	debuggerWidth := codeWidth := layoutExtent x * codeWidthFactor.
 	lw := layoutExtent x // (5.5 + extraLists).
-	debuggerWidth := layoutExtent x - (lw + codeWidth).
+	debuggerWidth := 2.75 * lw.
 	(diff := codeWidth - debuggerWidth) > 0
 		ifTrue: [ 
 			diff := diff / (5.5 + extraLists).
 			lw := lw + (diff // (4.5 + extraLists)).
-			debuggerWidth := layoutExtent x - (lw + codeWidth) ].
+			false
+				ifTrue: [ debuggerWidth := layoutExtent x - (lw + codeWidth) ] ].
 	shellHeight := layoutExtent y * shellHeightFactor.
 	browserHeight := layoutExtent y - shellHeight.
 	topHeight := browserHeight * topHeightFactor.
@@ -31,7 +32,7 @@ caculateWindowBounds
 	configurations := lo extent: lw @ (lh // 2).
 	packages := configurations bottomLeft extent: lw @ (lh // 2).
 	method := superclasses bottomLeft extent: codeWidth @ codeHeight.
-	implementors := method topRight extent: (2 * lw) @ (codeHeight // 2).
+	implementors := classDef bottomRight extent: debuggerWidth @ (codeHeight // 2).
 	inspector := evaluator topRight extent: shellExtent.
 	debugger := implementors bottomLeft extent: debuggerWidth @ (codeHeight // 2).
 	context := debugger bottomLeft extent: debuggerWidth @ shellExtent y.
