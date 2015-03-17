@@ -24,7 +24,7 @@ caculateWindowBounds
 	appExtent := ((layoutExtent x - codeWidth) // 2) @ shellHeight.
 	classCategories := lo extent: lce.
 	classes := classCategories bottomLeft extent: lce.
-	evaluator := classes bottomLeft extent: shellExtent.
+	evaluator := classes bottomLeft extent: (codeWidth * 0.80) @ shellHeight.
 	superclasses := classCategories topRight extent: lw @ topHeight.
 	classDef := superclasses topRight extent: (1.35 * lw) @ topHeight.
 	instanceSelectors := classDef topRight extent: lw @ (topHeight + codeHeight).
