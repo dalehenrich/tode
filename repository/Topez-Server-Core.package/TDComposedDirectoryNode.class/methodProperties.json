@@ -1,6 +1,11 @@
 {
 	"class" : {
+		"gatewayServerDiskPath:topez:" : "dkh 03/17/2015 14:36",
+		"link:topez:" : "dkh 03/17/2015 14:35",
+		"linkPath:topez:" : "dkh 03/17/2015 14:35",
+		"objPath:topez:" : "dkh 03/17/2015 14:36",
 		"pathComposedDirectoryNodeNamed:topez:" : "dkh 11/16/2014 15:40",
+		"serverDiskPath:topez:" : "dkh 03/17/2015 14:34",
 		"simpleComposedDirectoryNodeNamed:topez:" : "dkh 11/16/2014 15:40" },
 	"instance" : {
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 10/30/2014 15:46",
