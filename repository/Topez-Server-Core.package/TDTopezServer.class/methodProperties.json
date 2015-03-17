@@ -89,7 +89,7 @@
 		"installCommand:block:vendor:at:" : "dkh 05/18/2013 10:44",
 		"listLimit" : "DataCurator 01/16/2013 09:53",
 		"listLimit:" : "DataCurator 01/16/2013 10:10",
-		"logExceptionStack" : "dkh 03/16/2015 16:01",
+		"logExceptionStack" : "dkh 03/16/2015 17:16",
 		"lookup:" : "dkh 11/18/2012 15:30",
 		"lookup:ifAbsent:" : "08/04/2013 12:19",
 		"lookupClassNameFor:aspect:defaultAspect:in:do:" : "dkh 12/06/2013 10:35",

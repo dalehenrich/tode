@@ -16,6 +16,5 @@ logExceptionStack
       Transcript
         cr;
         show: frame asString ].
-  DebuggerLogEntry error: exception description continuation: process.
-  System commitTransaction.
+  Transcript cr.
   ^ nil
