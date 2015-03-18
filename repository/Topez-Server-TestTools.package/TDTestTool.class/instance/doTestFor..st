@@ -1,6 +1,6 @@
 as yet unclassified
 doTestFor: suite
-  ^ options
+  ^ self options
     at: 'batch'
     ifPresent: [ :ignored | self batchRunTestSuite: suite ]
     ifAbsent: [ self browseTestSuite: suite ]
