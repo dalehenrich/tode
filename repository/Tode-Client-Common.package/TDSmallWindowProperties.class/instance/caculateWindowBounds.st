@@ -45,6 +45,7 @@ caculateWindowBounds
 		at: #app3 put: app3;
 		at: #app4 put: app4;
 		at: #projectList put: app1;
+		at: #workspace put: method;
 		yourself.
 	classCategories := lo extent: lce.
 	classes := classCategories bottomLeft extent: lce.
