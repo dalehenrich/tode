@@ -1,0 +1,3 @@
+bu
+snapshotEntries
+  ^ self snapshotEntries: ''

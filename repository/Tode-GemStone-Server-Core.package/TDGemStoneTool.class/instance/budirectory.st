@@ -1,7 +1,7 @@
 bu
 budirectory
   "
-  bu directory [<backup-file>]
+  bu directory [<backup-directory>]
 "
 
   self getSubcommandOptsMixedLongShort: {}.

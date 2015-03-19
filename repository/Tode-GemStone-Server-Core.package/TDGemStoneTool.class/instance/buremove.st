@@ -1,10 +1,13 @@
 bu
 buremove
   "
-  bu [--dir=<backup-directory>] remove <backup-file>
+  bu [--dir=<backup-directory>] remove [--snapshot] <backup-file>
 "
 
   | backupFilePath |
-  self getSubcommandOptsMixedLongShort: {}.
-  backupFilePath := self resolveBackupFilePath.
+  self getSubcommandOptsMixedLongShort: {#('snapshot' nil #'none')}.
+  subOptions
+    at: 'snapshot'
+    ifPresent: [ :ignored | backupFilePath := self resolveSnapshotFilePath ]
+    ifAbsent: [ backupFilePath := self resolveBackupFilePath ].
   ^ self buRemove: backupFilePath

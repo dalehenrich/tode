@@ -6,7 +6,8 @@
 		"BackupDirectoryName",
 		"HomePath",
 		"LastBackup",
-		"LastRestore" ],
+		"LastRestore",
+		"SnapshotDirectoryName" ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],

@@ -4,7 +4,7 @@ testBuInfoCommand
 
   [ 
   | backupDirectoryPath |
-  backupDirectoryPath := TDGemStoneTool defaulBackupDirectoryName.
+  backupDirectoryPath := TDGemStoneTool defaultBackupDirectoryName.
   self topez
     evaluateCommandString: 'bu --help info';
     evaluateCommandString:

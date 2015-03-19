@@ -19,6 +19,7 @@ DESCRIPTION
     list      Display info about all backup files
     remove    Remove backup file from backup directory
     restore   Restore from a GemStone backup
+    snapshot  Make a snapshot of the extent0.dbf file
 
 OPTIONS
   --help
@@ -26,11 +27,12 @@ OPTIONS
 
 EXAMPLES
   bu backup seaside.dbf
-  bu directory /opt/gemstone/backups
+  bu directory $GS_HOME/gemstone/stones/dev/backups
   bu info --dir=/opt/gemstone/backups seaside.dbf; print
   bu list
   bu remove seaside.dbf
   bu restore seaside.dbf
+  bu snapshot seaside.dbf
 '.
   manPage subCommands
     at: 'backup' put: self bubackupManPage;
@@ -39,5 +41,6 @@ EXAMPLES
     at: 'list' put: self bulistManPage;
     at: 'restore' put: self burestoreManPage;
     at: 'remove' put: self buremoveManPage;
+    at: 'snapshot' put: self busnapshotManPage;
     yourself.
   ^ manPage

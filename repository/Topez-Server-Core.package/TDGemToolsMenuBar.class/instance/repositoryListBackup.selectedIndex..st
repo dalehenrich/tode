@@ -1,11 +1,11 @@
 menu actions
 repositoryListBackup: listElement selectedIndex: index
-  | buTool entries stream |
+  | buTool stream |
   buTool := self topez toolInstanceFor: 'bu'.
-  entries := buTool buEntries.
   stream := WriteStream on: String new.
-  buTool buReport: entries on: stream.
+  buTool buReportOn: stream.
   stream contents
     editUsing:
-      ((TDEditorSpec topez: topez editorAspect: #'edit') windowLabel: 'Backup list').
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowLabel: 'Backup/Snapshots list').
   ^ true

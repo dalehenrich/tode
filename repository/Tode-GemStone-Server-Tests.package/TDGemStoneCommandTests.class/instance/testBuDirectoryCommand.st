@@ -3,7 +3,7 @@ testBuDirectoryCommand
   "run without errors ... to keep me honest"
 
   | backupDirectoryPath |
-  backupDirectoryPath := TDGemStoneTool defaulBackupDirectoryName.
+  backupDirectoryPath := TDGemStoneTool defaultBackupDirectoryName.
   self topez
     evaluateCommandString: 'bu --help directory';
     evaluateCommandString: 'bu directory';
