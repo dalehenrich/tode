@@ -59,5 +59,6 @@ caculateWindowBounds
 		at: #app2 put: app2;
 		at: #app3 put: app3;
 		at: #app4 put: app4;
+		at: #projectList put: app1;
 		yourself.
 	^ dict

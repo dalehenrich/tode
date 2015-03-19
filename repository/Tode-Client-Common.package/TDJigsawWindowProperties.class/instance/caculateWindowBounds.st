@@ -1,6 +1,6 @@
 window bounds
 caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lce |
+	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lce projectList |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
@@ -21,26 +21,25 @@ caculateWindowBounds
 	codeHeight := browserHeight - topHeight.
 	lce := lw @ lh.
 	shellExtent := codeWidth @ shellHeight.
-	evaluator := ((margin x) @ (lh*2))  extent: (codeWidth * 0.80) @ shellHeight.
+	evaluator := margin x @ (lh * 2) extent: (codeWidth * 0.80) @ shellHeight.
 	superclasses := lo extent: lw @ topHeight.
 	classDef := superclasses topRight extent: (1.35 * lw) @ topHeight.
-	instanceSelectors := classDef topRight extent: lw @ (topHeight + codeHeight).
-	classSelectors := instanceSelectors topRight extent: lw @ (topHeight + codeHeight).
-	method := superclasses bottomLeft extent: (instanceSelectors topRight x - margin x) @ (codeHeight).
+	instanceSelectors := classDef topRight extent: lw @ (lh * 2).
+	classSelectors := instanceSelectors topRight extent: lw @ (lh * 2).
+	method := superclasses bottomLeft extent: (instanceSelectors topRight x - margin x) @ codeHeight.
 	implementors := classDef bottomRight extent: debuggerWidth @ (codeHeight // 2).
 	inspector := evaluator topRight extent: shellExtent.
-	debugger := ((instanceSelectors bottomRight x @ implementors bottomLeft y)) extent: debuggerWidth @ (codeHeight // 2).
+	debugger := instanceSelectors bottomRight x @ implementors bottomLeft y extent: debuggerWidth @ (codeHeight // 2).
 	context := debugger bottomLeft extent: debuggerWidth @ shellExtent y.
-
-	classCategories := classSelectors topRight extent: (lw @ topHeight).
-	classes := classCategories topRight extent: (lw @ topHeight).
-	configurations := classSelectors topRight extent: lw @ (topHeight).
-	packages := configurations bottomLeft extent: lw @ (topHeight).
-
+	classCategories := classSelectors topRight extent: lw @ topHeight.
+	classes := classCategories topRight extent: lw @ topHeight.
+	configurations := classSelectors topRight extent: lw @ topHeight.
+	packages := configurations bottomLeft extent: lw @ topHeight.
 	appExtent := ((layoutExtent x - method bottomRight x) // 2) @ shellHeight.
+	projectList := evaluator topRight corner: classSelectors bottomRight + (0 @shellHeight).
 	app1 := method bottomRight - (0 @ appExtent y) extent: appExtent.
 	app2 := app1 topRight extent: appExtent.
-	app3 := method bottomRight  extent: appExtent.
+	app3 := method bottomRight extent: appExtent.
 	app4 := app3 topRight extent: appExtent.
 	dict
 		at: #classCategories put: classCategories;
@@ -61,5 +60,6 @@ caculateWindowBounds
 		at: #app2 put: app2;
 		at: #app3 put: app3;
 		at: #app4 put: app4;
+		at: #projectList put: projectList;
 		yourself.
 	^ dict
