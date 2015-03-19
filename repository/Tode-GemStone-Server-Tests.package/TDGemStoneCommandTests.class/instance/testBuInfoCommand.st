@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testBuInfoCommand
   "run without errors ... to keep me honest"
 
@@ -8,8 +8,15 @@ testBuInfoCommand
   self topez
     evaluateCommandString: 'bu --help info';
     evaluateCommandString:
-        'bu --dir=' , backupDirectoryPath , ' backup seaside.dbf';
-    evaluateCommandString: 'bu info seaside.dbf';
+        'bu --dir=' , backupDirectoryPath , ' backup test.dbf';
+    evaluateCommandString:
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName
+            , ' snapshot extent0.test.dbf';
+    evaluateCommandString: 'bu info test.dbf';
+    evaluateCommandString: 'bu info --snapshot extent0.test.dbf';
+    evaluateCommandString:
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName
+            , ' info extent0.test.dbf';
     yourself ]
     on: Error
     do: [ :ex | 

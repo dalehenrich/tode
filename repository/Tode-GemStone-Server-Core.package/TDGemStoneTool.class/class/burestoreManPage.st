@@ -20,8 +20,8 @@ DESCRIPTION
   directory.
 
 EXAMPLES
-  bu restore seaside.dbf
-  bu --dir=/opt/gemstone/backups restore seaside.dbf
+  bu restore sample.dbf
+  bu --dir=/opt/gemstone/backups restore sample.dbf
 
 SEE ALSO
   bu --help backup

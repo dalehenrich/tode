@@ -39,6 +39,7 @@ DESCRIPTION
 EXAMPLES
   bu list
   bu --dir=/opt/gemstone/backups list
+  bu --dir=$GS_HOME/gemstone/snapshots list
 
 SEE ALSO
   bu --help backup

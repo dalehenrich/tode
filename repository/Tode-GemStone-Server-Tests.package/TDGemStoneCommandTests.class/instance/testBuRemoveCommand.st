@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testBuRemoveCommand
   "run without errors ... to keep me honest"
 
@@ -8,9 +8,19 @@ testBuRemoveCommand
   self topez
     evaluateCommandString: 'bu --help remove';
     evaluateCommandString:
-        'bu --dir=' , backupDirectoryPath , ' backup seaside.dbf';
+        'bu --dir=' , backupDirectoryPath , ' backup test.dbf';
     evaluateCommandString:
-        'bu --dir=' , backupDirectoryPath , ' remove seaside.dbf';
+        'bu --dir=' , backupDirectoryPath , ' remove test.dbf';
+    evaluateCommandString:
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName
+            , ' snapshot extent0.test.dbf';
+    evaluateCommandString:
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName
+            , ' remove extent0.test.dbf';
+    evaluateCommandString:
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName
+            , ' snapshot extent0.test.dbf';
+    evaluateCommandString: 'bu remove --snapshot extent0.test.dbf';
     yourself ]
     on: Error
     do: [ :ex | 

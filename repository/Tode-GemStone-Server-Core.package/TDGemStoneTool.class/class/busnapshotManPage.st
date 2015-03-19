@@ -35,8 +35,8 @@ DESCRIPTION
   
 EXAMPLES
   bu --help snapshot
-  bu snapshot seaside.dbf
-  bu --dir=$GS_HOME/tode/sys/local/extents snapshot seaside.dbf
+  bu snapshot sample.dbf
+  bu --dir=$GS_HOME/gemstone/snapshots snapshot sample.dbf
 
 SEE ALSO
   bu --help directory

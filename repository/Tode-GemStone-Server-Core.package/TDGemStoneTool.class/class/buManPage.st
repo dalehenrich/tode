@@ -26,13 +26,13 @@ OPTIONS
   --dir=<backup-directory>
 
 EXAMPLES
-  bu backup seaside.dbf
+  bu backup sample.dbf
   bu directory $GS_HOME/gemstone/stones/dev/backups
-  bu info --dir=/opt/gemstone/backups seaside.dbf; print
+  bu info --dir=/opt/gemstone/backups sample.dbf; edit
   bu list
-  bu remove seaside.dbf
-  bu restore seaside.dbf
-  bu snapshot seaside.dbf
+  bu remove sample.dbf
+  bu restore sample.dbf
+  bu snapshot sample.dbf
 '.
   manPage subCommands
     at: 'backup' put: self bubackupManPage;

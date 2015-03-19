@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testBuRestoreCommand
   "don't try to run the restore command...."
 

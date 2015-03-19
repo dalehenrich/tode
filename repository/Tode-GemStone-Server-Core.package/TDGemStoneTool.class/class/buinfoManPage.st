@@ -27,9 +27,10 @@ DESCRIPTION
   the snapshot directory/
 
 EXAMPLES
-  bu info seaside.dbf; edit
-  bu info --dir=/opt/gemstone/backups seaside.dbf; edit
-  bu info --snapshot seaside.dbf; edit
+  bu info extent0.sample.dbf; edit
+  bu --dir=/opt/gemstone/backups info sample.dbf; edit
+  bu info --snapshot extent0.sample.dbf; edit
+  bu --dir=$GS_HOME/gemstone/snapshots info extent0.sample.dbf; edit
 
 SEE ALSO
   bu --help backup

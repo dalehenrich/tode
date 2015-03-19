@@ -21,8 +21,8 @@ DESCRIPTION
 
 EXAMPLES
   bu --help backup
-  bu backup seaside.dbf
-  bu --dir=/opt/gemstone/backups backup seaside.dbf
+  bu backup sample.dbf
+  bu --dir=/opt/gemstone/backups backup sample.dbf
 
 SEE ALSO
   bu --help directory

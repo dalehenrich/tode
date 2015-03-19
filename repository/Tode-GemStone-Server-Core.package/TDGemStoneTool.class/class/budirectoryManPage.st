@@ -7,7 +7,7 @@ budirectoryManPage
   bu directory - Define default backup directory
 
 SYNOPSIS
-  bu directory [<backup-directory>]
+  bu directory [--snapshot] [<backup-directory>]
 
 DESCRIPTION
   Set the default backup directory.
@@ -20,10 +20,14 @@ DESCRIPTION
   The default backup directory is named ''backups'' and is located in the 
   $GEMSTONE_DATADIR.
 
+  If the --snapshot option is specified, then the snapshot directory is
+  set or displayed.
+
 EXAMPLES
   bu --help
   bu directory
-  bu directory $GS_HOME/gemstone/stones/dev/backups
+  bu directory /opt/gemstone/backups
+  bu directory --snapshot /opt/gemstone/snapshots
 
 SEE ALSO
   bu --help backup

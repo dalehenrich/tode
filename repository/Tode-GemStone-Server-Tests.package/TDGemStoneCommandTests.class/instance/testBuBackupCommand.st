@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testBuBackupCommand
   "run without errors ... to keep me honest"
 
