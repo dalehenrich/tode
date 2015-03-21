@@ -1,5 +1,5 @@
-menu actions
-repositoryMakeBackup: listElement selectedIndex: index
+bu
+gemtoolbuBackup
   | buTool entries fileNames newChoice fileName backupPath |
   buTool := self topez toolInstanceFor: 'bu'.
   entries := buTool buEntries.

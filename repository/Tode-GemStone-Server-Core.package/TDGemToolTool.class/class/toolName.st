@@ -1,3 +1,3 @@
 accessing
 toolName
-  ^ 'gs'
+  ^ 'gemtool'

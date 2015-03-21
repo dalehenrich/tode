@@ -1,11 +1,12 @@
-menu actions
-findMethodImplementors: listElement selectedIndex: index
+find
+gemtoolfindMethod
   | browseTool block methodPattern matches selectors selector |
   browseTool := self topez toolInstanceFor: 'browse'.
   methodPattern := (GsTextInteraction
     prompt: 'Method Name Fragment:'
     template: '') signal.
-  matches := self findMethodNamesMatching: methodPattern.
+  methodPattern ifNil: [ ^ false ].
+  matches := browseTool findMethodNamesMatching: methodPattern.
   selectors := (matches
     asSortedCollection: [ :match1 :match2 | match1 moreRelevantThan: match2 ])
     collect: [ :match | match name asString ].
