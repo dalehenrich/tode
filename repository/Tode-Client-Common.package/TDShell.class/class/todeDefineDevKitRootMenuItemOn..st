@@ -1,8 +1,8 @@
 system menu
 todeDefineDevKitRootMenuItemOn: aBuilder
-	<worldMenu>
+	<todeWorldMenu>
 	(aBuilder item: #'Define Dev Kit Root')
-		parent: #tODE;
+		parent: #System;
 		order: 10.1;
 		action: [ 
 					| path |

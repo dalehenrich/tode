@@ -1,30 +1,43 @@
 system menu
 todeMenuCommandOn: aBuilder
-	<worldMenu>
+	<todeWorldMenu>
 	| sessionDescriptionDir |
 	sessionDescriptionDir := self todeSysLocalSessionDescriptionPath asFileReference.
 	sessionDescriptionDir exists
 		ifTrue: [ 
-			(aBuilder item: #'tODE Shell')
-				parent: #tODE;
+			(aBuilder item: #'Open Shell')
 				order: 1.0;
 				target: self;
-				withSeparatorAfter.
-			(aBuilder item: #'tODE Edit')
-				parent: #tODE;
-				order: 1.5;
+				icon: Smalltalk ui icons scriptManagerIcon;
+				enabled: currentShell isNil.
+			(aBuilder item: #'Open Project List')
+				parent: #'Open Tool';
+				order: 1.0;
 				target: self;
-				withSeparatorAfter.
-			(aBuilder item: #'tODE Test Login')
-				parent: #tODE;
+				icon: Smalltalk ui icons configIcon;
+				enabled: currentShell isNil.
+			(aBuilder item: #'Open Workspace')
+				parent: #'Open Tool';
 				order: 2.0;
+				target: self;
+				icon: Smalltalk ui icons workspaceIcon;
+				enabled: currentShell isNil.
+			(aBuilder item: #'Test Login')
+				order: 1.07;
+				enabled: currentShell isNil;
+				target: self;
+				icon: Smalltalk ui icons smallOkIcon;
+				withSeparatorAfter.
+			(aBuilder item: #'Edit Description')
+				parent: #Client;
+				order: 1.2;
 				target: self.
-			(aBuilder item: #'tODE Install')
-				parent: #tODE;
+			(aBuilder item: #Install)
+				parent: #Client;
 				order: 3.0;
 				target: self.
-			(aBuilder item: #'tODE Update')
-				parent: #tODE;
+			(aBuilder item: #Update)
+				parent: #Client;
 				order: 4.0;
 				target: self;
 				withSeparatorAfter.

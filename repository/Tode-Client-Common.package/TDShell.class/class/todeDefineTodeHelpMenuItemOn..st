@@ -1,7 +1,9 @@
 system menu
 todeDefineTodeHelpMenuItemOn: aBuilder
-	<worldMenu>
+	<todeWorldMenu>
 	(aBuilder item: #'Help')
 		parent: #tODE;
 		order: 20.0;
-		action: [self new help]
+		icon: (Smalltalk ui icons helpIcon);
+		action: [self new help];
+		withSeparatorAfter

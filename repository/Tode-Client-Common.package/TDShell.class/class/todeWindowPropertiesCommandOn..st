@@ -1,29 +1,32 @@
 system menu
 todeWindowPropertiesCommandOn: aBuilder
-	<worldMenu>
+	<todeWorldMenu>
 	| windowLayoutFiles |
 	windowLayoutFiles := self windowLayoutFiles.
 	windowLayoutFiles notEmpty
 		ifTrue: [ 
-			(aBuilder item: #'tODE Window Layout')
-				parent: #tODE;
-				order: 5.0;
-				target: self.
-			(aBuilder item: #'tODE Window Edit')
-				parent: #tODE;
-				order: 5.5;
+			(aBuilder item: #'Window Layout')
+				order: 2.5;
+				withSeparatorAfter.
+			(aBuilder item: #'Edit Window Layout')
+				parent: #Client;
+				order: 1.7;
 				target: self;
 				withSeparatorAfter.
 			(windowLayoutFiles sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
 					(aBuilder item: file basename asSymbol)
-						parent: #'tODE Window Layout';
+						parent: #'Window Layout';
 						action: [ 
-									| windowProperties |
+									| windowProperties transcriptBounds |
 									windowProperties := TDAbstractWindowProperties importFrom: file fullName.
-									windowProperties installOn: TDTopezGemStoneClient ].
+									windowProperties installOn: TDTopezGemStoneClient.
+									transcriptBounds := windowProperties caculateWindowBounds at: #transcript.
+									(Transcript containingWindow ifNil: [ ThreadSafeTranscript open ])
+										extent: transcriptBounds extent;
+										position: transcriptBounds origin ].
 					(aBuilder item: file basename asSymbol)
-						parent: #'tODE Window Edit';
+						parent: #'Edit Window Layout';
 						action: [ 
 									| windowProperties |
 									windowProperties := TDAbstractWindowProperties importFrom: file fullName.

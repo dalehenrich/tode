@@ -1,9 +1,7 @@
 {
 	"category" : "Tode-Client-Common",
 	"classinstvars" : [
-		"commands",
-		"subCommands",
-		"rootNode" ],
+		"currentShell" ],
 	"classvars" : [
 		"DebugMode",
 		"DevKitRoot",

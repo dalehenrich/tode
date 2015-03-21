@@ -1,8 +1,8 @@
 system menu
 todeRefreshMenuMenuItemOn: aBuilder
-	<worldMenu>
+	<todeWorldMenu>
 	(aBuilder item: #'Refresh tODE menu')
-		parent: #tODE;
+		parent: #System;
 		order: 15.0;
 		action: [ self resetWorldMenu ];
 		withSeparatorAfter

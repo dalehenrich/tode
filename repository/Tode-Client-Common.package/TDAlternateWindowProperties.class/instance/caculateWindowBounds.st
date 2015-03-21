@@ -1,6 +1,6 @@
 window bounds
 caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lcw lce |
+	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lcw lce projectList transcript |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
@@ -40,6 +40,9 @@ caculateWindowBounds
 	app2 := app1 topRight extent: appExtent.
 	app3 := evaluator topRight - (0 @ appExtent y) extent: appExtent.
 	app4 := app3 topRight extent: appExtent.
+	projectList := app1.
+	transcript := projectList topRight + (0 @ (projectList height // 2))
+		extent: (layoutExtent x - projectList topRight x) @ (projectList height // 2).
 	dict
 		at: #classCategories put: classCategories;
 		at: #classes put: classes;
@@ -59,7 +62,8 @@ caculateWindowBounds
 		at: #app2 put: app2;
 		at: #app3 put: app3;
 		at: #app4 put: app4;
-		at: #projectList put: app1;
+		at: #projectList put: projectList;
 		at: #workspace put: method;
+		at: #transcript put: transcript;
 		yourself.
 	^ dict

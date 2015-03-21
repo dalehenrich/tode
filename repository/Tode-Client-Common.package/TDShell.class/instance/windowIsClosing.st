@@ -7,4 +7,4 @@ windowIsClosing
   windowStatus := nil.
   status windowIsClosing.
   status shellWindows isEmpty
-    ifTrue: [ self logout ]
+    ifTrue: [ self exit ]

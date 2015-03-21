@@ -1,8 +1,8 @@
 system menu
 todeDefineTodeRootMenuItemOn: aBuilder
-	<worldMenu>
+	<todeWorldMenu>
 	(aBuilder item: #'Define tODE Root')
-		parent: #tODE;
+		parent: #System;
 		order: 10.1;
 		action: [ 
 					| path |
