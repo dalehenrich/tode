@@ -21,6 +21,11 @@ todeOn: aBuilder
 		target: self;
 		icon: Smalltalk ui icons configurationIcon;
 		withSeparatorAfter.
+	(aBuilder item: #Settings)
+		parent: #System;
+		order: 1;
+		icon: Smalltalk ui icons smallConfigurationIcon;
+		action: [ SettingBrowser open ].
 	(aBuilder item: #Transcript)
 		order: 19.0;
 		icon: Smalltalk ui icons transcriptIcon;
