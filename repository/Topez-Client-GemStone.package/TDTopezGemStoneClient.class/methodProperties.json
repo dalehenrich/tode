@@ -1,7 +1,9 @@
 {
 	"class" : {
+		"initialize" : "dkh 3/21/2015 20:20",
 		"slowConnection" : "dkh 8/19/2014 18:07",
-		"slowConnection:" : "dkh 8/19/2014 11:23" },
+		"slowConnection:" : "dkh 8/19/2014 11:23",
+		"startUp:" : "dkh 3/21/2015 20:22" },
 	"instance" : {
 		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:45",
 		"evaluateCommand:batchMode:" : "dkh 8/19/2014 16:04",
