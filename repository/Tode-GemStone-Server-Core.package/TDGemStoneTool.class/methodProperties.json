@@ -53,7 +53,7 @@
 		"bulist" : "dkh 03/18/2015 20:34",
 		"buremove" : "dkh 03/18/2015 20:43",
 		"burestore" : "dkh 02/06/2015 16:18",
-		"busnapshot" : "dkh 03/22/2015 07:58",
+		"busnapshot" : "dkh 03/22/2015 08:15",
 		"checkpointsSuspended" : "dkh 03/19/2015 14:24",
 		"freeSpaceLogEntry:" : "dkh 05/14/2013 13:40",
 		"fullBackupTo:" : "dkh 03/22/2015 07:42",
@@ -102,5 +102,8 @@
 		"resolveBackupPath:" : "dkh 02/06/2015 15:57",
 		"resolveSnapshotFilePath" : "dkh 03/18/2015 20:26",
 		"resolveSnapshotPath:" : "dkh 03/18/2015 20:25",
+		"snapshot:to:" : "dkh 03/22/2015 08:16",
+		"snapshot:to:suspendInMinutes:" : "dkh 03/22/2015 08:15",
+		"snapshot:to:suspendInMinutes:safely:" : "dkh 03/22/2015 08:13",
 		"snapshotEntries" : "dkh 03/18/2015 20:33",
 		"snapshotEntries:" : "dkh 03/19/2015 11:54" } }
