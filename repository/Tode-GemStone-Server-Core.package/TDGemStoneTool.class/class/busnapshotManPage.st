@@ -7,7 +7,7 @@ busnapshotManPage
   bu snapshot - Make a snapshot of the extent files
 
 SYNOPSIS
-  bu [--dir=<snapshot-directory>] snapshot [--suspend=<minutes>] \
+  bu [--dir=<snapshot-directory>] snapshot [--safely] [--suspend=<minutes>] \
                                            <snapshot-file-extension>
 DESCRIPTION
   Make a snapshot copy of the extent files: 
@@ -33,9 +33,13 @@ DESCRIPTION
   installing tODE (see $GS_HOME/tode/sys/defaults/client/scripts/installServerTode2)
   and using the snapshot as the starting point for subsequent installations.
   
+  With the --safely option specified, the snapshot will (quietly) be skipped if
+  the target snapshot already exists.
+
 EXAMPLES
   bu --help snapshot
   bu snapshot sample.dbf
+  bu snapshot --safely sample.dbf
   bu --dir=$GS_HOME/gemstone/snapshots snapshot sample.dbf
 
 SEE ALSO

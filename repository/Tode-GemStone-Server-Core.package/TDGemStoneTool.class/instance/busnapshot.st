@@ -1,12 +1,15 @@
 bu
 busnapshot
   "
-  bu [--dir=<snapshot-directory>] snapshot [--suspend=<minutes>] \
+  bu [--dir=<snapshot-directory>] snapshot [--safely] [--suspend=<minutes>] \
                                            <snapshot-file-extension>
 "
 
-  | suspendInMinutes snapshotPath snapshotExtension |
-  self getSubcommandOptsMixedLongShort: {#('suspend' nil #'required')}.
+  | suspendInMinutes snapshotPath snapshotExtension snapshots |
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('suspend' nil #'required').
+      #('safely' nil #'none')}.
   subOptions
     at: 'suspend'
     ifPresent: [ :arg | suspendInMinutes := arg asNumber ]
@@ -17,21 +20,36 @@ busnapshot
   self checkpointsSuspended
     ifTrue: [ self error: 'Checkpoints currently suspended. Please wait and try again.' ].
   System suspendCheckpointsForMinutes: suspendInMinutes.
+  snapshots := {}.
   SystemRepository fileNames
     do: [ :extentPath | 
-      | extent extentName snapshotName |
+      | extent extentName snapshotName snapshotFilePath performCopy |
       extent := ServerFileDirectory on: extentPath.
       snapshotName := extentName := extent localName.
       (extentName endsWith: '.dbf')
         ifTrue: [ 
           snapshotName := (extentName copyFrom: 1 to: extentName size - 3)
             , snapshotExtension ].
-      System
-        performOnServer:
-          'cp ' , extentPath , ' ' , snapshotPath , '/' , snapshotName ].
+      snapshotFilePath := snapshotPath , '/' , snapshotName.
+      performCopy := subOptions
+        at: 'safely'
+        ifPresent: [ :ignored | 
+          "account for nil return value"
+          ((GsFile existsOnServer: snapshotFilePath) == true) not ]
+        ifAbsent: [ true ].
+      performCopy
+        ifTrue: [ 
+          System performOnServer: 'cp ' , extentPath , ' ' , snapshotFilePath.
+          snapshots add: snapshotFilePath ]
+        ifFalse: [ 
+          self
+            inform:
+              'The snapshot file exists, --safely present, copy skipped for: '
+                , snapshotFilePath printString ] ].
   self checkpointsSuspended
     ifFalse: [ 
       self
         error:
           'Checkpoints were resumed before the extent copies were completed. Extent copies have been deleted.' ] ]
-    ensure: [ System resumeCheckpoints ]
+    ensure: [ System resumeCheckpoints ].
+  ^ snapshots

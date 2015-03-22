@@ -10,6 +10,8 @@ testBuSnapshotCommand
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' snapshot extent0.test.dbf';
     evaluateCommandString:
+        'bu --dir=' , backupDirectoryPath , ' snapshot --safely extent0.test.dbf';
+    evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' snapshot --suspend=30 extent0.test.dbf';
     yourself ]
     on: Error
