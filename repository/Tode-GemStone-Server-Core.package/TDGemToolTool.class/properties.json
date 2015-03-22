@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 03/21/2015 11:37",
+	"instvars" : [
+		 ],
+	"name" : "TDGemToolTool",
+	"pools" : [
+		 ],
+	"super" : "TDStandardTool",
+	"type" : "normal" }

@@ -1,10 +1,11 @@
-menu actions
-findClassReferences: listElement selectedIndex: index
+find
+gemtoolfindReferences
   | browseTool block clsNamePattern list classNames className |
   browseTool := self topez toolInstanceFor: 'browse'.
   clsNamePattern := (GsTextInteraction
     prompt: 'Class Name Fragment:'
     template: 'Object') signal.
+  clsNamePattern ifNil: [ ^ false ].
   list := browseTool findClass: clsNamePattern.
   classNames := list collect: [ :cls | cls className asString ].
   className := (GsChoiceInteraction

@@ -1,5 +1,5 @@
-menu actions
-repositoryRestoreFromBackup: listElement selectedIndex: index
+bu
+gemtoolbuRestore
   | buTool entries fileNames fileName backupPath |
   buTool := self topez toolInstanceFor: 'bu'.
   entries := buTool buEntries.

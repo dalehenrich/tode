@@ -1,4 +1,4 @@
-as yet unclassified
+bu
 shapshotDirectoryName
   SnapshotDirectoryName
     ifNil: [ self snapshotDirectoryName: self defaultSnapshotDirectoryName ].

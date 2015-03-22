@@ -1,10 +1,11 @@
-menu actions
-findClassHierarchy: listElement selectedIndex: index
+find
+gemtoolfindHierarchy
   | browseTool block clsNamePattern |
   browseTool := self topez toolInstanceFor: 'browse'.
   clsNamePattern := (GsTextInteraction
     prompt: 'Class Name Fragment:'
     template: 'Object') signal.
+  clsNamePattern ifNil: [ ^ false ].
   block := [ 
   | list classNames |
   list := browseTool findClass: clsNamePattern.
