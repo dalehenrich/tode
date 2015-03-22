@@ -9,6 +9,8 @@ testBuBackupCommand
     evaluateCommandString: 'bu --help backup';
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' backup seaside.dbf';
+    evaluateCommandString:
+        'bu --dir=' , backupDirectoryPath , ' backup --safely seaside.dbf';
     yourself ]
     on: Error
     do: [ :ex | 

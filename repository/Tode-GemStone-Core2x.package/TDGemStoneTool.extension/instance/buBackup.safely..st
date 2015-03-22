@@ -1,5 +1,5 @@
 *tode-gemstone-core2x
-buBackup: backupPath
+buBackup: backupPath safely: safely
   | vs |
   vs := System voteState.
   Transcript
@@ -7,7 +7,7 @@ buBackup: backupPath
     show: '---Starting backup to ' , backupPath printString , ' (';
     show: TimeStamp now asString;
     show: ')'.
-  self fullBackupTo: backupPath.
+  self fullBackupTo: backupPath  safely: safely.
   self class lastBackup: backupPath.
   Transcript
     cr;

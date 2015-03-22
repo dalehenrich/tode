@@ -37,10 +37,20 @@ busnapshot
           "account for nil return value"
           ((GsFile existsOnServer: snapshotFilePath) == true) not ]
         ifAbsent: [ true ].
+      Transcript cr.
       performCopy
         ifTrue: [ 
+          Transcript
+            show:
+              '---Starting snapshot to ' , (extentPath , ' ' , snapshotFilePath) printString
+                , '(' , TimeStamp now asString , ')'.
           System performOnServer: 'cp ' , extentPath , ' ' , snapshotFilePath.
-          snapshots add: snapshotFilePath ]
+          snapshots add: snapshotFilePath.
+          Transcript
+            cr;
+            tab;
+            show:
+                '---Finishing snapshot ' , TimeStamp now asString , ' -- ' , snapshotFilePath ]
         ifFalse: [ 
           self
             inform:

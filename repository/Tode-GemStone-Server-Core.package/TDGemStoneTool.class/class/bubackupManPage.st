@@ -7,7 +7,7 @@ bubackupManPage
   bu backup - Make a GemStone backup
 
 SYNOPSIS
-  bu [--dir=<backup-directory>] backup <backup-file>
+  bu [--dir=<backup-directory>] backup [--safely] <backup-file>
 
 DESCRIPTION
   Make a GemStone backup in the specified backup file.
@@ -19,9 +19,13 @@ DESCRIPTION
   With the --dir option specified, the backup file will be stored in the named
   directory.
 
+  With the --safely option specified, the snapshot will (quietly) be skipped if
+  the target snapshot already exists.
+
 EXAMPLES
   bu --help backup
   bu backup sample.dbf
+  bu backup --safely sample.dbf
   bu --dir=/opt/gemstone/backups backup sample.dbf
 
 SEE ALSO

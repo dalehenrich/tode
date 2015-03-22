@@ -1,10 +1,14 @@
 bu
 bubackup
   "
-  bu [--dir=<backup-directory>] backup <backup-file>
+  bu [--dir=<backup-directory>] backup [--safely] <backup-file>
 "
 
-  | backupFilePath |
-  self getSubcommandOptsMixedLongShort: {}.
+  | backupFilePath safely |
+  self getSubcommandOptsMixedLongShort: {#('safely' nil #'none')}.
   backupFilePath := self resolveBackupFilePath.
-  ^ self buBackup: backupFilePath
+  subOptions
+    at: 'safely'
+    ifPresent: [ :ignored | safely := true ]
+    ifAbsent: [ safely := false ].
+  ^ self buBackup: backupFilePath safely: safely
