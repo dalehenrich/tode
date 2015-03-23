@@ -42,6 +42,7 @@ snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes 
                 , snapshotFilePath printString ] ].
   self checkpointsSuspended
     ifFalse: [ 
+      snapshots do: [ :snapshotFilePath | GsFile removeServerFile: snapshotFilePath ].
       self
         error:
           'Checkpoints were resumed before the extent copies were completed. Extent copies have been deleted.' ] ]
