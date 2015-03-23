@@ -32,6 +32,15 @@ topezServerProxy
 						withArgs: {(self sessionDescription backupDirectory)} ]
 						on: Error
 						do: [ :ignored |  ] ].
+			self sessionDescription snapshotDirectory isEmpty not
+				ifTrue: [ 
+					[ 
+					self session
+						rawReceiverNB: topezServerProxy
+						perform: #snapshotDirectory:
+						withArgs: {(self sessionDescription snapshotDirectory)} ]
+						on: Error
+						do: [ :ignored |  ] ].
 			TZGemStoneProxyBehavior new
 				topez: self;
 				allGlobalNames;

@@ -73,6 +73,10 @@ editTemplateOn: stream
 		cr;
 		tab;
 		nextPutAll: 'backupDirectory: ' , self backupDirectory printString;
+		nextPut: $;;
+		cr;
+		tab;
+		nextPutAll: 'snapshotDirectory: ' , self snapshotDirectory printString;
 		nextPut: $;.
 	(dataDirectory notNil and: [ dataDirectory isEmpty not ])
 		ifTrue: [ 
