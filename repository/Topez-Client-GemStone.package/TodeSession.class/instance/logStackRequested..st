@@ -4,7 +4,9 @@ logStackRequested: exceptionDescription
 		cr;
 		show: '========>Server Stack: ';
 		cr.
-	self topez logStack.
+	[ self topez logStack ]
+		on: GsRuntimeExceptionNotification
+		do: [ :ex | Transcript show: 'Error during logStack: ' , ex description ].
 	Transcript
 		cr;
 		show: '========>Client Stack: ';
