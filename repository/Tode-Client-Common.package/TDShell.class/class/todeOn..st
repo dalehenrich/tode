@@ -21,6 +21,12 @@ todeOn: aBuilder
 		target: self;
 		icon: Smalltalk ui icons configurationIcon;
 		withSeparatorAfter.
+	(aBuilder item: #'Save Image')
+		parent: #System;
+		order: 3.0;
+		icon: Smalltalk ui icons smallSaveIcon;
+		action: [ Smalltalk saveSession ];
+		withSeparatorAfter.
 	(aBuilder item: #Settings)
 		parent: #System;
 		order: 1;
