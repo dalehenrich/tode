@@ -23,7 +23,8 @@ todeMenuCommandOn: aBuilder
 				icon: Smalltalk ui icons workspaceIcon;
 				enabled: currentShell isNil.
 			(aBuilder item: #'Test Login')
-				order: 1.07;
+				parent: #DevKit;
+				order: 1;
 				enabled: currentShell isNil;
 				target: self;
 				icon: Smalltalk ui icons smallOkIcon;

@@ -5,7 +5,8 @@ todeOn: aBuilder
 		order: 1.05;
 		target: self;
 		icon: Smalltalk ui icons toolsIcon;
-		enabled: currentShell isNil.
+		enabled: currentShell isNil;
+		withSeparatorAfter.
 	(aBuilder item: #Tools)
 		order: 1.1;
 		target: self;
