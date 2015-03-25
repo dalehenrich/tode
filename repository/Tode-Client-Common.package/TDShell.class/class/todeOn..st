@@ -15,20 +15,38 @@ todeOn: aBuilder
 		order: 2.0;
 		target: self;
 		icon: Smalltalk ui icons toolsIcon.
-	(aBuilder item: #System)
-		parent: #Client;
-		order: 1.0;
+	(aBuilder item: #DevKit)
+		order: 2.1;
 		target: self;
-		icon: Smalltalk ui icons configurationIcon;
+		icon: Smalltalk ui icons homeIcon.
+	(aBuilder item: #Pharo)
+		order: 2.2;
+		target: self;
+		icon: (Smalltalk ui icons pharoIcon scaledToSize: 16 @ 16);
+		withSeparatorAfter.
+	(aBuilder item: #'Update tODE Client')
+		parent: #Client;
+		order: 2.2;
+		target: self;
+		icon: Smalltalk ui icons smallUpdateIcon;
+		action: [ 
+					| shell |
+					shell := self openSessionDescription: TDSessionDescription seaside evaluate: 'updateClient'.
+					shell exit ];
 		withSeparatorAfter.
 	(aBuilder item: #'Save Image')
-		parent: #System;
+		parent: #Client;
 		order: 3.0;
+		icon: Smalltalk ui icons smallSaveIcon;
+		action: [ Smalltalk saveSession ].
+	(aBuilder item: #'Save Image')
+		parent: #Pharo;
+		order: 0.5;
 		icon: Smalltalk ui icons smallSaveIcon;
 		action: [ Smalltalk saveSession ];
 		withSeparatorAfter.
 	(aBuilder item: #Settings)
-		parent: #System;
+		parent: #Pharo;
 		order: 1;
 		icon: Smalltalk ui icons smallConfigurationIcon;
 		action: [ SettingBrowser open ].

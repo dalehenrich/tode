@@ -2,7 +2,7 @@ system menu
 todeDefineTodeRootMenuItemOn: aBuilder
 	<todeWorldMenu>
 	(aBuilder item: #'Define tODE Root')
-		parent: #System;
+		parent: #DevKit;
 		order: 10.1;
 		action: [ 
 					| path |

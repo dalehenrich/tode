@@ -6,13 +6,13 @@ todeWindowPropertiesCommandOn: aBuilder
 	windowLayoutFiles notEmpty
 		ifTrue: [ 
 			(aBuilder item: #'Window Layout')
-				order: 2.5;
+				parent: #Client;
+				order: 1.8;
 				withSeparatorAfter.
 			(aBuilder item: #'Edit Window Layout')
 				parent: #Client;
 				order: 1.7;
-				target: self;
-				withSeparatorAfter.
+				target: self.
 			(windowLayoutFiles sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
 					(aBuilder item: file basename asSymbol)

@@ -1,15 +1,15 @@
 system menu
 todeSessionMenuOn: aBuilder
 	<todeWorldMenu>
-	(aBuilder item: #'Logout')
+	false ifTrue: [ (aBuilder item: #'Logout')
 		order: 1.21;
 		target: self;
 		icon: Smalltalk ui icons smallQuitIcon;
 		enabled: currentShell notNil;
 		action: [ 
 					currentShell ifNil: [ ^ self ].
-					currentShell logout ].
-	(aBuilder item: #'Exit Session')
+					currentShell logout ]].
+	(aBuilder item: #'Exit Shell')
 		order: 1.22;
 		target: self;
 		icon: Smalltalk ui icons smallQuitIcon;

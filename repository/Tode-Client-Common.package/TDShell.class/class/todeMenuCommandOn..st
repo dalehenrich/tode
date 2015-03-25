@@ -31,14 +31,6 @@ todeMenuCommandOn: aBuilder
 			(aBuilder item: #'Edit Description')
 				parent: #Client;
 				order: 1.2;
-				target: self.
-			(aBuilder item: #Install)
-				parent: #Client;
-				order: 3.0;
-				target: self.
-			(aBuilder item: #Update)
-				parent: #Client;
-				order: 4.0;
 				target: self;
 				withSeparatorAfter.
 			(sessionDescriptionDir files sorted: [ :a :b | a basename <= b basename ])

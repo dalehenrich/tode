@@ -38,10 +38,4 @@ importSessionDescriptionFrom: file for: aBuilder
 		action: [ 
 					| answer |
 					answer := TDShell testLoginForSessionDescription: sessionDescription.
-					self new openWorkspace: answer label: 'testLogin: ' , sessionDescription name ].
-	(aBuilder item: sessionDescription name asSymbol)
-		parent: #Install;
-		action: [ self openSessionDescription: sessionDescription evaluate: 'script --script=installTode' ].
-	(aBuilder item: sessionDescription name asSymbol)
-		parent: #Update;
-		action: [ self openSessionDescription: sessionDescription evaluate: 'script --script=updateTode' ]
+					self new openWorkspace: answer label: 'testLogin: ' , sessionDescription name ]
