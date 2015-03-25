@@ -13,7 +13,8 @@ executeUpdateClient: command
 				baseline: 'Tode';
 				get;
 				load.
-			self class resetWorldMenu ]
+			self class resetWorldMenu.
+			^'Client updated' ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
 				prompt: 'Help for ' , command command;

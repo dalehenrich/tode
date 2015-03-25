@@ -6,5 +6,5 @@ todeUpdateClientMenuItemOn: aBuilder
 		order: 9.0;
 		action: [ 
 					| shell |
-					shell := self openSessionDescription: TDSessionDescription seaside evaluate: 'script --script=updateClient'.
+					shell := self openSessionDescription: TDSessionDescription seaside evaluate: 'updateClient'.
 					shell exit ]
