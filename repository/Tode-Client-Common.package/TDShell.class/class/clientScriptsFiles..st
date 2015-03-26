@@ -4,9 +4,9 @@ clientScriptsFiles: stoneName
 		ifTrue: [ 
 			| map |
 			map := Dictionary new.
-			{(self todeSysDefaultWindowLayoutPath).
-			(self todeSysLocalWindowLayoutPath).
-			(self todeSysStonePath: stoneName)}
+			{(self todeSysStonePath: stoneName).
+			(self todeSysLocalClientScriptsPath).
+			(self todeSysDefaultClientScriptsPath)}
 				do: [ :rootPath | 
 					| reference |
 					reference := rootPath asFileReference.
