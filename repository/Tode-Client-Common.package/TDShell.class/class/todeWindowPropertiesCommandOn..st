@@ -23,10 +23,10 @@ todeWindowPropertiesCommandOn: aBuilder
 									windowProperties installOn: TDTopezGemStoneClient.
 									transcriptBounds := windowProperties caculateWindowBounds at: #transcript.
 									(World systemWindows
-										detect: [ :each | 
-											(each model isKindOf: Transcript class)]
-										ifNone: [
-									ThreadSafeTranscript open])
+										detect: [ :each | each model = Transcript ]
+										ifNone: [ 
+											ThreadSafeTranscript install.
+											Transcript open ])
 										extent: transcriptBounds extent;
 										position: transcriptBounds origin ].
 					(aBuilder item: file basename asSymbol)
