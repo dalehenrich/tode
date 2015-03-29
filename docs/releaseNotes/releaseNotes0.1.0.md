@@ -54,12 +54,14 @@ When you clone a git repository, your remote repository credentials (i.e., GitHu
 The [Github article: Which remote URL should I use?][35] describes the various choices you have.
 With tODE, the `git` commands are performed using `System class>>performOnServer:` and it is not convenient to prompt for your username and password everytime a git command is performed.
 
+###Cloning with SSH
 I recommend that you use SSH and setup [an SSH keypair][36].
-With an SSH keypair, you are never prompted for a username and password.
+With an SSH keypair, you are not prompted for a username and password, so git interactions via tODE are simplified.
 You can also use [SSH agent forwarding][37] to use your local SSH keys for server installations.
 
-If for some reason you decide that you want to use `https` to clone your repo, then you will need to set up [a `credential.helper` for git][38].
-To avoid having to periodically redefine your password, you should use [`git-credential-store][39], which stores credentials in a file on disk protected by filesystem permissions.
+###Cloning with HTTPS
+If for some reason you decide that you want to use `https` to clone your repo (i.e., your firewall prevents the use of SSH), then you will need to set up [a `credential.helper` for git][38].
+To avoid having to periodically redefine your password, you should probably use [`git-credential-store][39], which stores credentials in a file on disk protected by filesystem permissions.
 
 ##Project Loading with tODE
 One of the basic principles for tODE is that the same code should be run whether you are executing an operation from a menu pick, the tODE shell, or a  [topaz][26] job.
