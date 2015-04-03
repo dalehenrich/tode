@@ -8,9 +8,7 @@ mccommit
   packageName := tokens at: 2.
   workingCopy := self resolveWorkingCopyReference: packageName.
   topez
-    accumulateTextAndDo: [ :commitMessage :accumulateObjIn | 
-      self commitWorkingCopies: {workingCopy} commitMessage: commitMessage.
-      self topez commitTransaction ].
+    accumulateTextAndDo: [ :commitMessage :accumulateObjIn | self mccommit: {workingCopy} commitMessage: commitMessage ].
   ^ TDCommandResult new
     displayText: 'Please enter commit comment' asText allBold;
     resultObject: 'Please enter commit comment';
