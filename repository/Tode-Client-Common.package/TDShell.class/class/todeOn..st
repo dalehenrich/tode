@@ -16,10 +16,6 @@ todeOn: aBuilder
 		order: 2.0;
 		target: self;
 		icon: Smalltalk ui icons toolsIcon.
-	(aBuilder item: #DevKit)
-		order: 2.1;
-		target: self;
-		icon: Smalltalk ui icons homeIcon.
 	(aBuilder item: #Pharo)
 		order: 2.2;
 		target: self;

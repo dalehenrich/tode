@@ -7,12 +7,13 @@ todeWindowPropertiesCommandOn: aBuilder
 		ifTrue: [ 
 			(aBuilder item: #'Window Layout')
 				parent: #Client;
-				order: 1.8;
+				order: 1.1;
 				withSeparatorAfter.
 			(aBuilder item: #'Edit Window Layout')
 				parent: #Client;
 				order: 1.7;
-				target: self.
+				target: self;
+				withSeparatorAfter.
 			(windowLayoutFiles sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
 					(aBuilder item: file basename asSymbol)

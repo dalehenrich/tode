@@ -23,8 +23,8 @@ todeMenuCommandOn: aBuilder
 				icon: Smalltalk ui icons workspaceIcon;
 				enabled: currentShell isNil.
 			(aBuilder item: #'Test Login')
-				parent: #DevKit;
-				order: 1;
+				parent: #Client;
+				order: 2.3;
 				enabled: currentShell isNil;
 				target: self;
 				icon: Smalltalk ui icons smallOkIcon;
@@ -32,8 +32,7 @@ todeMenuCommandOn: aBuilder
 			(aBuilder item: #'Edit Description')
 				parent: #Client;
 				order: 1.2;
-				target: self;
-				withSeparatorAfter.
+				target: self.
 			(sessionDescriptionDir files sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
 					file basename = 'README.md'
