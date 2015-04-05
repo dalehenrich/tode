@@ -11,6 +11,7 @@ loginUsing: todeSessionClass
 			gciError := sess getAndClearLastError.
 			messageText := gciError message.
 			^ Error signal: messageText , ' For further information about login failures, check the gem log file' ].
+	self class addDependent: self.
 	false
 		ifTrue: [ sess enableGemTrace ].
 	^ sess

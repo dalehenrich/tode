@@ -57,9 +57,7 @@ todeOn: aBuilder
 		action: [ 
 					| bounds |
 					bounds := TDTopezGemStoneClient windowProperties caculateWindowBounds at: #transcript.
-					Smalltalk tools transcript open
-						extent: bounds extent;
-						position: bounds origin ].
+					self resizeTranscript: bounds ].
 	(aBuilder item: #'Exit tODE Client')
 		order: 100;
 		target: self;
