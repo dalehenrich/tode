@@ -14,6 +14,7 @@ baseline: spec
         yourself.
       spec
         group: 'Common Tests' with: #('Topez-Common-Tests');
+        group: 'Visualize' with: #();
         yourself ].
   spec
     for: #'squeakCommon'
@@ -76,6 +77,27 @@ baseline: spec
       spec
         package: 'Topez-Pharo-Common' with: [ spec includes: 'Tode-Pharo14' ];
         package: 'Tode-Pharo14' with: [ spec requires: 'Topez-Pharo-Common' ];
+        yourself ].
+  spec
+    for: #(#'pharo3.x' #'pharo4.x')
+    do: [ 
+      spec
+        project: 'Roassal2'
+          with: [ 
+              spec
+                versionString: '1.52';
+                repository:
+                    'http://smalltalkhub.com/mc/ObjectProfile/Roassal2/main';
+                loads: #('Trachel' 'Roassal2') ];
+        yourself.
+      spec
+        package: 'TPZ-Talk'
+          with: [ 
+              spec
+                requires: #('Ston' 'Roassal2');
+                repository:
+                    'http://smalltalkhub.com/mc/PierreChanson/TPZ-Talk/main' ];
+        group: 'Visualize' with: #('TPZ-Talk');
         yourself ].
   spec
     for: #'gemstone'
