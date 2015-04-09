@@ -4,11 +4,12 @@ env:
 #   - ST=Pharo-1.4 # I do not intend to continue supporting tODE on Pharo-1.4
 #   - ST=Pharo-2.0 # I do not intend to continue supporting tODE on Pharo-2.0
    - ST=Pharo-3.0
+   - ST=Pharo-4.0        # experimental
    - ST=GemStone-2.4.5.3
    - ST=GemStone-2.4.6
    - ST=GemStone-3.0.1
    - ST=GemStone-3.1.0.6
-   - ST=GemStone-3.2.4
+   - ST=GemStone-3.2.6
 
 notifications:
   webhooks:
