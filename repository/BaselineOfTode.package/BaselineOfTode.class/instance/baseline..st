@@ -82,7 +82,7 @@ baseline: spec
     for: #(#'pharo3.x' #'pharo4.x')
     do: [ 
       spec
-        project: 'Roassal2'
+        configuration: 'Roassal2'
           with: [ 
               spec
                 versionString: '1.52';
