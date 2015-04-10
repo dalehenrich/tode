@@ -1,4 +1,4 @@
-*Topez-Client-GemStone
+*tode-client-roassal2
 todeRoassalMenuOn: aBuilder
 	<todeWorldMenu>
 	| sessionDescriptionDir |
