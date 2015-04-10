@@ -1,3 +1,7 @@
 instance creation
 openOnSessionDescription: sessionDescription
-	^ self openOnSessionDescription: sessionDescription label: 'RoassalGs: ', sessionDescription name
+	^ self
+		openOnSessionDescription: sessionDescription
+		label:
+			'Roassal Workspace: ' , sessionDescription name , ' (' , sessionDescription stoneName , ':' , sessionDescription netLDI
+				, ')'

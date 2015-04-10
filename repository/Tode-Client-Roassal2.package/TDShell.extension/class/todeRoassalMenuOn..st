@@ -2,18 +2,14 @@
 todeRoassalMenuOn: aBuilder
 	<todeWorldMenu>
 	| sessionDescriptionDir |
-	(aBuilder item: #Roassal)
-		order: 10.0;
-		icon: RTIcon smallRoassal;
-		withSeparatorAfter.
 	sessionDescriptionDir := self todeSysLocalSessionDescriptionPath asFileReference.
 	sessionDescriptionDir exists
 		ifTrue: [ 
-			(aBuilder item: #'GS Workspace')
-				order: 1.0;
-				parent: #Roassal;
+			(aBuilder item: #Roassal)
+				order: 1.06;
 				target: self;
-				icon: Smalltalk ui icons workspaceIcon.
+				icon: RTIcon smallRoassal;
+				withSeparatorAfter.
 			(sessionDescriptionDir files sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
 					[ 
@@ -22,10 +18,10 @@ todeRoassalMenuOn: aBuilder
 							| sessionDescription |
 							sessionDescription := TDSessionDescription importFrom: file fullName.
 							(aBuilder item: sessionDescription name asSymbol)
-								parent: #'GS Workspace';
+								parent: #Roassal;
 								action: [ 
 											| bounds window |
-											bounds := TDTopezGemStoneClient windowProperties caculateWindowBounds at: #workspace.
+											bounds := TDTopezGemStoneClient windowProperties caculateWindowBounds at: #evaluator.
 											(window := TDRoassalGsWorkspace openOnSessionDescription: sessionDescription)
 												extent: bounds extent;
 												position: bounds origin.

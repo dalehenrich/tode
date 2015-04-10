@@ -1,5 +1,5 @@
 menu items
-doIt
+gsDoIt
 	| textMorph editor selection shell answer |
 	textMorph := self morph textMorph.
 	editor := textMorph editor.
