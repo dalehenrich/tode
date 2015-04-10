@@ -1,4 +1,4 @@
 styling
 stylingActive
 
-	^stylingActive ifNil:[stylingActive := true]
+	^stylingActive ifNil:[stylingActive := false]

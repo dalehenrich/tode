@@ -6,7 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"stylingActive" ],
+		"contents",
+		"sessionDescription",
+		"stylingActive",
+		"tdShell" ],
 	"name" : "TDRoassalGsWorkspace",
 	"pools" : [
 		 ],

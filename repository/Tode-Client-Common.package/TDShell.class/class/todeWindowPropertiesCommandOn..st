@@ -16,20 +16,22 @@ todeWindowPropertiesCommandOn: aBuilder
 				withSeparatorAfter.
 			(windowLayoutFiles sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
-					(aBuilder item: file basename asSymbol)
-						parent: #'Window Layout';
-						action: [ 
-									| windowProperties transcriptBounds |
-									windowProperties := TDAbstractWindowProperties importFrom: file fullName.
-									windowProperties installOn: TDTopezGemStoneClient.
-									transcriptBounds := windowProperties caculateWindowBounds at: #transcript.
-									self resizeTranscript: transcriptBounds ].
-					(aBuilder item: file basename asSymbol)
-						parent: #'Edit Window Layout';
-						action: [ 
-									| windowProperties |
-									windowProperties := TDAbstractWindowProperties importFrom: file fullName.
-									self new
-										openWorkspace: (TDShell windowLayoutWorkspaceNamed: file basename for: windowProperties)
-										styling: false
-										label: file basename ] ] ]
+					file basename = 'README.md'
+						ifFalse: [ 
+							(aBuilder item: file basename asSymbol)
+								parent: #'Window Layout';
+								action: [ 
+											| windowProperties transcriptBounds |
+											windowProperties := TDAbstractWindowProperties importFrom: file fullName.
+											windowProperties installOn: TDTopezGemStoneClient.
+											transcriptBounds := windowProperties caculateWindowBounds at: #transcript.
+											self resizeTranscript: transcriptBounds ].
+							(aBuilder item: file basename asSymbol)
+								parent: #'Edit Window Layout';
+								action: [ 
+											| windowProperties |
+											windowProperties := TDAbstractWindowProperties importFrom: file fullName.
+											self new
+												openWorkspace: (TDShell windowLayoutWorkspaceNamed: file basename for: windowProperties)
+												styling: false
+												label: file basename ] ] ] ]

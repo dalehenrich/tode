@@ -2,6 +2,10 @@
 todeRoassalMenuOn: aBuilder
 	<todeWorldMenu>
 	| sessionDescriptionDir |
+	(aBuilder item: #Roassal)
+		order: 10.0;
+		icon: RTIcon smallRoassal;
+		withSeparatorAfter.
 	sessionDescriptionDir := self todeSysLocalSessionDescriptionPath asFileReference.
 	sessionDescriptionDir exists
 		ifTrue: [ 
@@ -19,7 +23,12 @@ todeRoassalMenuOn: aBuilder
 							sessionDescription := TDSessionDescription importFrom: file fullName.
 							(aBuilder item: sessionDescription name asSymbol)
 								parent: #'GS Workspace';
-								action: [  ] ] ]
+								action: [ 
+											| bounds |
+											bounds := TDTopezGemStoneClient windowProperties caculateWindowBounds at: #workspace.
+											(TDRoassalGsWorkspace openOnSessionDescription: sessionDescription)
+												extent: bounds extent;
+												position: bounds origin ] ] ]
 						on: Error
 						do: [ :ex | 
 							Transcript
