@@ -6,7 +6,7 @@
 		"startUp:" : "dkh 3/21/2015 20:22" },
 	"instance" : {
 		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:45",
-		"evaluateCommand:batchMode:" : "dkh 4/4/2015 16:52",
+		"evaluateCommand:batchMode:" : "dkh 8/19/2014 16:04",
 		"evaluateServerSmalltalk:batchMode:" : "dkh 7/26/2014 11:16",
 		"evaluateTokens:redirectTarget:" : "dkh 5/26/2013 20:51",
 		"executeMenuActionForClientListElement:action:selectionIndex:" : "dkh 2/19/2014 18:02",

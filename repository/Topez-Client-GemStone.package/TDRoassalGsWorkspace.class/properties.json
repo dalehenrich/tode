@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Client-GemStone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stylingActive" ],
+	"name" : "TDRoassalGsWorkspace",
+	"pools" : [
+		 ],
+	"super" : "Model",
+	"type" : "normal" }

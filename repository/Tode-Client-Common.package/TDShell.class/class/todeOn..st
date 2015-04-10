@@ -54,6 +54,10 @@ todeOn: aBuilder
 					| bounds |
 					bounds := TDTopezGemStoneClient windowProperties caculateWindowBounds at: #transcript.
 					self resizeTranscript: bounds ].
+	(aBuilder item: #Roassal)
+		order: 10.0;
+		icon: Smalltalk ui icons smallObjectsIcon;
+		withSeparatorAfter.
 	(aBuilder item: #'Exit tODE Client')
 		order: 100;
 		target: self;
