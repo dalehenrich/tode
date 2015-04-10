@@ -3,6 +3,6 @@ tdShell
 	tdShell
 		ifNil: [ 
 			tdShell := TDShell new
-				openOnSessionDescription: sessionDescription;
+				sessionDescription: sessionDescription;
 				yourself ].
 	^ tdShell

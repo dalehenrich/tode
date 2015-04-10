@@ -24,11 +24,12 @@ todeRoassalMenuOn: aBuilder
 							(aBuilder item: sessionDescription name asSymbol)
 								parent: #'GS Workspace';
 								action: [ 
-											| bounds |
+											| bounds window |
 											bounds := TDTopezGemStoneClient windowProperties caculateWindowBounds at: #workspace.
-											(TDRoassalGsWorkspace openOnSessionDescription: sessionDescription)
+											(window := TDRoassalGsWorkspace openOnSessionDescription: sessionDescription)
 												extent: bounds extent;
-												position: bounds origin ] ] ]
+												position: bounds origin.
+											currentShell := window model tdShell ] ] ]
 						on: Error
 						do: [ :ex | 
 							Transcript

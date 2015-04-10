@@ -5,6 +5,7 @@
 		"roassalGsWorkspaceEditorMenuOn:" : "dkh 4/9/2015 19:21" },
 	"instance" : {
 		"buildTextMorph" : "dkh 4/9/2015 17:25",
+		"cliShell" : "dkh 4/10/2015 14:20",
 		"codePaneMenu:" : "dkh 4/9/2015 17:25",
 		"contents" : "dkh 4/9/2015 19:14",
 		"contents:" : "dkh 4/9/2015 19:14",
@@ -17,7 +18,7 @@
 		"findAgain" : "dkh 4/9/2015 19:24",
 		"inspectIt" : "dkh 4/9/2015 19:24",
 		"morph" : "dkh 4/9/2015 19:33",
-		"openLabel:" : "dkh 4/9/2015 17:24",
+		"openLabel:" : "dkh 4/10/2015 14:19",
 		"paste" : "dkh 4/9/2015 19:25",
 		"pasteRecent" : "dkh 4/9/2015 19:25",
 		"printIt" : "dkh 4/9/2015 19:24",
@@ -25,7 +26,7 @@
 		"sessionDescription:" : "dkh 4/9/2015 19:04",
 		"shoutAboutToStyle:" : "dkh 4/9/2015 17:29",
 		"stylingActive" : "dkh 4/9/2015 19:58",
-		"tdShell" : "dkh 4/9/2015 19:53",
+		"tdShell" : "dkh 4/10/2015 14:00",
 		"tdShell:" : "dkh 4/9/2015 19:51",
 		"windowIsClosing" : "dkh 4/9/2015 19:55",
 		"yellowButtonMenu" : "dkh 4/9/2015 19:08" } }
