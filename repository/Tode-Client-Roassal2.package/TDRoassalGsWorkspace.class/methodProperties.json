@@ -4,6 +4,7 @@
 		"openOnSessionDescription:label:" : "dkh 4/9/2015 19:18",
 		"roassalGsWorkspaceEditorMenuOn:" : "dkh 4/10/2015 14:53" },
 	"instance" : {
+		"acceptContents:" : "dkh 4/10/2015 15:36",
 		"buildTextMorph" : "dkh 4/9/2015 17:25",
 		"cliShell" : "dkh 4/10/2015 14:20",
 		"codePaneMenu:" : "dkh 4/9/2015 17:25",
@@ -12,9 +13,9 @@
 		"copySelection" : "dkh 4/9/2015 19:25",
 		"cut" : "dkh 4/9/2015 19:25",
 		"editor" : "dkh 4/9/2015 19:35",
-		"gsDoIt" : "dkh 4/10/2015 14:57",
+		"gsDoIt" : "dkh 4/10/2015 15:31",
 		"morph" : "dkh 4/9/2015 19:33",
-		"openLabel:" : "dkh 4/10/2015 15:00",
+		"openLabel:" : "dkh 4/10/2015 15:23",
 		"paste" : "dkh 4/9/2015 19:25",
 		"pasteRecent" : "dkh 4/9/2015 19:25",
 		"sessionDescription" : "dkh 4/9/2015 19:04",
@@ -23,5 +24,6 @@
 		"stylingActive" : "dkh 4/9/2015 19:58",
 		"tdShell" : "dkh 4/10/2015 14:00",
 		"tdShell:" : "dkh 4/9/2015 19:51",
+		"windowActive:" : "dkh 4/10/2015 15:25",
 		"windowIsClosing" : "dkh 4/9/2015 19:55",
 		"yellowButtonMenu" : "dkh 4/9/2015 19:08" } }
