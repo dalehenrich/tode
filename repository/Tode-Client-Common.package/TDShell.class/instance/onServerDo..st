@@ -12,12 +12,13 @@ onServerDo: aBlock
 	variableBindings := Dictionary new.
 	blockScope copiedVars
 		do: [ :copiedVar | 
+			(blockScope tempVars includes: copiedVar name) ifTrue: [ 
 			| val tempName |
 			copiedVar escaping ~~ #escapingRead
 				ifTrue: [ self error: 'cannot write to vars outside of server block scope' ].
 			tempName := copiedVar name.
 			val := outerContext tempNamed: tempName asString.
-			variableBindings at: tempName put: val ].
+			variableBindings at: tempName put: val ]].
 	serverSource := aBlock sourceNode body formattedCode.
 	stonString := self evaluateSTONSmalltalk: serverSource variableBindings: variableBindings.
 	^ STON fromString: stonString
