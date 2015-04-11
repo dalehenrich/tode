@@ -2,7 +2,7 @@ toolbuilder
 buildTextMorph 
 	| morph |
 	
-	morph := PluggableTextMorph 
+	morph := TDRoassalPluggableTextMorph 
 					on: self 
 					text: #contents 
 					accept: #acceptContents:

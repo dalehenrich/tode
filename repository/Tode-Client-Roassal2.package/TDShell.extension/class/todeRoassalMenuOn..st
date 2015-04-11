@@ -9,6 +9,7 @@ todeRoassalMenuOn: aBuilder
 				order: 1.06;
 				target: self;
 				icon: RTIcon smallRoassal;
+				enabled: currentShell isNil;
 				withSeparatorAfter.
 			(sessionDescriptionDir files sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
