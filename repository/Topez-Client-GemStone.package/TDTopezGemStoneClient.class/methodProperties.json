@@ -7,6 +7,7 @@
 	"instance" : {
 		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:45",
 		"evaluateCommand:batchMode:" : "dkh 8/19/2014 16:04",
+		"evaluateSTONSmalltalk:batchMode:" : "dkh 4/11/2015 07:05",
 		"evaluateServerSmalltalk:batchMode:" : "dkh 7/26/2014 11:16",
 		"evaluateTokens:redirectTarget:" : "dkh 5/26/2013 20:51",
 		"executeMenuActionForClientListElement:action:selectionIndex:" : "dkh 2/19/2014 18:02",
