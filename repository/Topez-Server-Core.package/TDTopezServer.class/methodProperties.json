@@ -70,6 +70,7 @@
 		"evaluateCommandStream:" : "dkh 12/19/2014 10:11",
 		"evaluateCommandString:" : "dkh 12/19/2014 10:12",
 		"evaluateSTONCommand:" : "dkh 11/10/2013 08:12",
+		"evaluateSTONSmalltalk:" : "dkh 04/11/2015 07:02",
 		"evaluateSTONTokens:redirectTarget:" : "dkh 06/04/2013 21:11",
 		"evaluateString:inContext:" : "dkh 03/20/2014 16:09",
 		"evaluateString:inContext:withTempSymbolList:" : "dkh 06/04/2013 14:10",
