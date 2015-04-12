@@ -10,13 +10,13 @@ todeMenuCommandOn: aBuilder
 				target: self;
 				icon: Smalltalk ui icons scriptManagerIcon;
 				enabled: currentShell isNil.
-			(aBuilder item: #'Open Project List')
+			(aBuilder item: #'Project List')
 				parent: #'Open Tool';
 				order: 1.0;
 				target: self;
 				icon: Smalltalk ui icons configIcon;
 				enabled: currentShell isNil.
-			(aBuilder item: #'Open Workspace')
+			(aBuilder item: #'Workspace')
 				parent: #'Open Tool';
 				order: 2.0;
 				target: self;

@@ -6,11 +6,11 @@ todeRoassalMenuOn: aBuilder
 	sessionDescriptionDir exists
 		ifTrue: [ 
 			(aBuilder item: #Roassal)
+				parent: #'Open Tool';
 				order: 1.06;
 				target: self;
 				icon: RTIcon smallRoassal;
-				enabled: currentShell isNil;
-				withSeparatorAfter.
+				enabled: currentShell isNil.
 			(sessionDescriptionDir files sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
 					[ 

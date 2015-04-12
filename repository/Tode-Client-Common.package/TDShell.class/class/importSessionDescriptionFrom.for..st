@@ -15,7 +15,7 @@ importSessionDescriptionFrom: file for: aBuilder
 					window := TDShell openOnSessionDescription: sessionDescription.
 					currentShell := window model cliShell ].
 	(aBuilder item: sessionDescription name asSymbol)
-		parent: #'Open Project List';
+		parent: #'Project List';
 		action: [ 
 					| window |
 					window := TDShell openOnSessionDescription: sessionDescription.
@@ -23,7 +23,7 @@ importSessionDescriptionFrom: file for: aBuilder
 					currentShell ifNil: [ ^ self ].
 					currentShell evaluate: 'project list' ].
 	(aBuilder item: sessionDescription name asSymbol)
-		parent: #'Open Workspace';
+		parent: #'Workspace';
 		action: [ 
 					| window |
 					window := TDShell openOnSessionDescription: sessionDescription.
