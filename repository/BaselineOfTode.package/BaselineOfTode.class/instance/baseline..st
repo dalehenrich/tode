@@ -91,15 +91,13 @@ baseline: spec
                 loads: #('Trachel' 'Roassal2') ];
         yourself.
       spec
-        package: 'Tode-Client-Roassal2'
-          with: [ spec requires: #('Topez-Client-GemStone' 'Roassal2') ];
         package: 'TPZ-Talk'
           with: [ 
               spec
                 requires: #('Ston' 'Roassal2');
                 repository:
                     'http://smalltalkhub.com/mc/PierreChanson/TPZ-Talk/main' ];
-        group: 'Visualize' with: #('TPZ-Talk' 'Tode-Client-Roassal2');
+        group: 'Visualize' with: #('TPZ-Talk' 'Roassal2');
         yourself ].
   spec
     for: #'gemstone'
