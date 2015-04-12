@@ -1,3 +1,0 @@
-accessing
-sessionDescription: aSessionDescription
-	sessionDescription := aSessionDescription
