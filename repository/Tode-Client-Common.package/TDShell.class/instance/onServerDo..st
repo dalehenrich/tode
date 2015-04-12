@@ -1,4 +1,4 @@
-server block support
+server blocks
 onServerDo: aBlock
 	| blockAst outerContext variableBindings blockScopes blockScope serverSource stonString |
 	aBlock numArgs > 0

@@ -1,17 +1,15 @@
 {
-	"category" : "Tode-Client-Roassal2",
+	"category" : "Tode-Client-ServerBlocks",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"contents",
 		"sessionDescription",
-		"stylingActive",
 		"tdShell" ],
-	"name" : "TDRoassalGsWorkspace",
+	"name" : "TDServerBlockWorkspace",
 	"pools" : [
 		 ],
-	"super" : "Model",
+	"super" : "Workspace",
 	"type" : "normal" }

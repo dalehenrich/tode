@@ -23,7 +23,7 @@ todeRoassalMenuOn: aBuilder
 								action: [ 
 											| bounds window |
 											bounds := TDTopezGemStoneClient windowProperties caculateWindowBounds at: #evaluator.
-											(window := TDRoassalGsWorkspace openOnSessionDescription: sessionDescription)
+											(window := TDServerBlockWorkspace openOnSessionDescription: sessionDescription label: 'Roassal Workspace')
 												extent: bounds extent;
 												position: bounds origin.
 											currentShell := window model tdShell ] ] ]

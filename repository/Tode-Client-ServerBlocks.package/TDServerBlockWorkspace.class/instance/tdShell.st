@@ -4,5 +4,7 @@ tdShell
 		ifNil: [ 
 			tdShell := TDShell new
 				sessionDescription: sessionDescription;
-				yourself ].
+				yourself.
+			bindings ifNil: [ self initializeBindings ].
+			bindings at: 'shell' put: tdShell ].
 	^ tdShell
