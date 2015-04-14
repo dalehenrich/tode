@@ -2,15 +2,16 @@ resize/collapse
 openAsIsIn: aWorld
 	"This msg and its callees result in the window being activeOnlyOnTop.
 	Play the open sound if the preference is enabled."
-	
+
 	self playOpenSound.
 	aWorld addMorph: self.
-	false ifTrue: [ self activate ].
+	false
+		ifTrue: [ self activate ]
+		ifFalse: [ self basicActivate ].
 	aWorld startSteppingSubmorphsOf: self.
-	
 	self announceOpened.
-	
-	World announcer 
-		announce: (WindowOpened new
-						window: self;
-						yourself).
+	World announcer
+		announce:
+			(WindowOpened new
+				window: self;
+				yourself)
