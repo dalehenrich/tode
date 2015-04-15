@@ -1,5 +1,5 @@
 instance creation
-newOn: aSessionName
+forSessionNamed: aSessionName
 	| sessionDescription |
 	sessionDescription := TDSessionDescription importFrom: self todeSysLocalSessionDescriptionPath , aSessionName.
 	^ self new sessionDescription: sessionDescription
