@@ -11,15 +11,26 @@ onServerDo: aBlock
 	blockScope := blockScopes at: 1.
 	variableBindings := Dictionary new.
 	blockScope copiedVars
-		do: [ :copiedVar | 
-			(outerContext tempNames includes: copiedVar name)
+		do: [ :tempVar | 
+			| val tempName index |
+			tempVar isStoringTempVector
 				ifTrue: [ 
-					| val tempName |
-					copiedVar escaping ~~ #escapingRead
-						ifTrue: [ self error: 'cannot write to vars outside of server block scope' ].
-					tempName := copiedVar name.
-					val := outerContext tempNamed: tempName asString.
-					variableBindings at: tempName put: val ] ].
+					tempVar tempVectorForTempStoringIt
+						do: [ :tempVectorVars | 
+							
+							tempName := tempVectorVars name.
+							index := aBlock asContext tempNames indexOf: tempName.
+							index > 0
+								ifTrue: [ 
+									val := aBlock asContext namedTempAt: index.
+									variableBindings at: tempName put: val ] ] ]
+				ifFalse: [ 
+					tempName := tempVar name.
+					index := outerContext tempNames indexOf: tempName.
+					index > 0
+						ifTrue: [ 
+							val := outerContext namedTempAt: index.
+							variableBindings at: tempName put: val ] ] ].
 	serverSource := aBlock sourceNode body formattedCode.
 	stonString := self evaluateSTONSmalltalk: serverSource variableBindings: variableBindings.
 	^ STON fromString: stonString

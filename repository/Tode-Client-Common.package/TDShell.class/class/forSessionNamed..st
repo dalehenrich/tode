@@ -2,4 +2,7 @@ instance creation
 forSessionNamed: aSessionName
 	| sessionDescription |
 	sessionDescription := TDSessionDescription importFrom: self todeSysLocalSessionDescriptionPath , aSessionName.
-	^ self new sessionDescription: sessionDescription
+	^ self new
+		sessionDescription: sessionDescription;
+		batchMode: true;
+		yourself
