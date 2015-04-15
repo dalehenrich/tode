@@ -8,16 +8,21 @@ exportClassToServer: clientClass
 			classDefinition evaluate.
 			nil	"don't try returning a class to client" ].
 	classComment := clientClass comment.
-	self onServerDo: [ (Smalltalk at: className) comment: classComment ].
+	self
+		onServerDo: [ 
+			(Smalltalk at: className) comment: classComment.
+			nil	"don't try returning a class to client" ].
 	clientClass
 		selectorsDo: [ :selector | 
-			| methodSource methodProtocol |
-			methodSource := clientClass sourceCodeAt: selector.
-			methodProtocol := clientClass organizer categoryOfElement: selector.
-			self onServerDo: [ (Smalltalk at: className) compile: methodSource in: methodProtocol ] ].
+			self
+				exportMethodToServer: clientClass
+				source: (clientClass sourceCodeAt: selector)
+				protocol: (clientClass organization categoryOfElement: selector)
+				isMeta: false ].
 	clientClass class
 		selectorsDo: [ :selector | 
-			| methodSource methodProtocol |
-			methodSource := clientClass sourceCodeAt: selector.
-			methodProtocol := clientClass organizer categoryOfElement: selector.
-			self onServerDo: [ (Smalltalk at: className) compile: methodSource in: methodProtocol ] ]
+			self
+				exportMethodToServer: clientClass class
+				source: (clientClass class sourceCodeAt: selector)
+				protocol: (clientClass class organization categoryOfElement: selector)
+				isMeta: true ]
