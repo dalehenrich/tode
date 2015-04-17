@@ -5,9 +5,11 @@ openAsIsIn: aWorld
 
 	self playOpenSound.
 	aWorld addMorph: self.
-	false
+	true
 		ifTrue: [ self activate ]
-		ifFalse: [ self basicActivate ].
+		ifFalse: [ 
+			"flakey keybooard activation"
+			self basicActivate ].
 	aWorld startSteppingSubmorphsOf: self.
 	self announceOpened.
 	World announcer
