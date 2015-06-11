@@ -10,13 +10,17 @@ printSenderOn: aStream
     nextPutAll: (self tally asString width: -5);
     nextPutAll: ' ';
     nextPutAll: (self total asString width: -5);
-    nextPutAll: ' ';
-    nextPutAll: (tallyPct asStringUsingFormat: #(-5 1 false));
-    nextPutAll: ' ';
-    nextPutAll: (totalPct asStringUsingFormat: #(-5 1 false));
-    nextPutAll: ' ';
-    nextPutAll: (methodMs asStringUsingFormat: #(-6 1 false));
-    nextPutAll: ' ';
-    nextPutAll: (elapsedPct asStringUsingFormat: #(-6 1 false));
+    nextPutAll: ' '.
+  self fullEntryReport
+    ifTrue: [ 
+      aStream
+        nextPutAll: (tallyPct asStringUsingFormat: #(-5 1 false));
+        nextPutAll: ' ';
+        nextPutAll: (totalPct asStringUsingFormat: #(-5 1 false));
+        nextPutAll: ' ';
+        nextPutAll: (methodMs asStringUsingFormat: #(-10 1 false));
+        nextPutAll: ' ' ].
+  aStream
+    nextPutAll: (elapsedPct asStringUsingFormat: #(-5 1 false));
     nextPutAll: ' ';
     nextPutAll: (self profMonEntry asStringWidth: 12)
