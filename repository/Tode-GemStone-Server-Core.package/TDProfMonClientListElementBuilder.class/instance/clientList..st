@@ -3,4 +3,5 @@ clientList: listElement
   | header |
   header := self object clientListHeading.
   headerSize := header size.
-  ^ (header , self object clientListEntries) -> nil
+  clientList := self object clientListEntries.
+  ^ (header , (clientList collect: [ :entry | entry printSampleString ])) -> nil

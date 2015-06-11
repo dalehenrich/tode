@@ -12,7 +12,7 @@ itemSelected: listElement at: listIndex shiftPressed: shiftPressed
       entry := self object parentEntry.
       highlightIndex := self object parentIndex ]
     ifFalse: [ 
-      entry := self clientArray at: index - offset.
+      entry := clientList at: index - offset.
       entry == self object
         ifFalse: [ 
           entry

@@ -4,7 +4,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   index ifNil: [ ^ nil ].
   index <= self headerSize
     ifTrue: [ ^ nil ].
-  entry := self object clientList at: index - self headerSize.
+  entry := clientList at: index - self headerSize.
   entry parentEntry: nil.
   entry
     editUsing:
