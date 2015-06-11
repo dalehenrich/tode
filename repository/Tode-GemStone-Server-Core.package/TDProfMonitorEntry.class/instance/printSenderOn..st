@@ -1,20 +1,19 @@
 as yet unclassified
 printSenderOn: aStream
-  | tallyPct totalPct methodMs elapsedPct tallyField |
+  | tallyPct totalPct methodMs elapsedPct |
   tallyPct := self tally asFloat * 100.0 / self overallTotalSamples.
   totalPct := self total asFloat * 100.0 / self overallTotalSamples.
   methodMs := self methodTotalMs.
   elapsedPct := self tally * self overallElapsedTime * 100.0
     / self overallTotalSamples / methodMs.
-  self profMon sortKey = 'tally'
-    ifTrue: [ tallyField := self tally ]
-    ifFalse: [ tallyField := self total ].
   aStream
-    nextPutAll: (tallyField asString width: -4);
+    nextPutAll: (self tally asString width: -5);
     nextPutAll: ' ';
-    nextPutAll: (tallyPct asStringUsingFormat: #(-6 2 false));
+    nextPutAll: (self total asString width: -5);
     nextPutAll: ' ';
-    nextPutAll: (totalPct asStringUsingFormat: #(-6 2 false));
+    nextPutAll: (tallyPct asStringUsingFormat: #(-5 1 false));
+    nextPutAll: ' ';
+    nextPutAll: (totalPct asStringUsingFormat: #(-5 1 false));
     nextPutAll: ' ';
     nextPutAll: (methodMs asStringUsingFormat: #(-6 1 false));
     nextPutAll: ' ';

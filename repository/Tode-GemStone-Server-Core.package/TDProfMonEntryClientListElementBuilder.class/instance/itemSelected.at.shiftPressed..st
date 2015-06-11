@@ -2,9 +2,9 @@ as yet unclassified
 itemSelected: listElement at: listIndex shiftPressed: shiftPressed
   | index entry offset highlightIndex |
   listIndex ifNil: [ ^ nil ].
-  listIndex <= 4
+  listIndex <= headerSize
     ifTrue: [ ^ nil ].
-  index := listIndex - 4.
+  index := listIndex - headerSize.
   offset := 0.
   self object parentEntry ifNotNil: [ offset := 1 ].
   index == offset

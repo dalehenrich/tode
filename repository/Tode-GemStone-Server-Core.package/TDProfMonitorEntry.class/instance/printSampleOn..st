@@ -1,11 +1,10 @@
 as yet unclassified
 printSampleOn: aStream
   | tallyPct totalPct sortKey |
-  tallyPct := self tally asFloat * 100.0 / self overallTotal.
-  totalPct := self total asFloat * 100.0 / self overallTotal.
   sortKey := self profMon sortKey.
   sortKey = 'tally'
     ifTrue: [ 
+      tallyPct := self tally asFloat * 100.0 / self overallTotal.
       aStream
         nextPutAll: (self tally asString width: -5);
         nextPutAll: ' ';
@@ -14,11 +13,12 @@ printSampleOn: aStream
         nextPutAll: (tallyPct asStringUsingFormat: #(-6 2 false));
         nextPutAll: ' ' ]
     ifFalse: [ 
+      totalPct := self total asFloat * 100.0 / self overallTotal.
       aStream
         nextPutAll: (self total asString width: -5);
         nextPutAll: ' ';
         nextPutAll: (self methodTotalMs asStringUsingFormat: #(-10 1 false));
         nextPutAll: ' ';
-        nextPutAll: (totalPct asStringUsingFormat: #(-6 2 false));
+        nextPutAll: (totalPct asStringUsingFormat: #(-5 1 false));
         nextPutAll: ' ' ].
   aStream nextPutAll: (self profMonEntry asStringWidth: 25)

@@ -7,7 +7,7 @@ printParentOn: aStream
   pMap := self master parentTallies.
   pt := pMap at: self profMonEntry otherwise: 0.
   aStream
-    nextPutAll: '                   ';
+    nextPutAll: '                        ';
     nextPutAll:
         (pt * elapsedTime asFloat / totalSamples asStringUsingFormat: #(-6 1 false));
     nextPutAll: ' ';
