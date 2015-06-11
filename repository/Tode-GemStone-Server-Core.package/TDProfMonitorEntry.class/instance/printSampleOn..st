@@ -6,7 +6,7 @@ printSampleOn: aStream
     ifTrue: [ 
       tallyPct := self tally asFloat * 100.0 / self overallTotal.
       aStream
-        nextPutAll: (self tally asString width: -5);
+        nextPutAll: (self tally asString width: -10);
         nextPutAll: ' ';
         nextPutAll: (self methodTallyMs asStringUsingFormat: #(-10 1 false));
         nextPutAll: ' ';
@@ -15,7 +15,7 @@ printSampleOn: aStream
     ifFalse: [ 
       totalPct := self total asFloat * 100.0 / self overallTotal.
       aStream
-        nextPutAll: (self total asString width: -5);
+        nextPutAll: (self total asString width: -10);
         nextPutAll: ' ';
         nextPutAll: (self methodTotalMs asStringUsingFormat: #(-10 1 false));
         nextPutAll: ' ';

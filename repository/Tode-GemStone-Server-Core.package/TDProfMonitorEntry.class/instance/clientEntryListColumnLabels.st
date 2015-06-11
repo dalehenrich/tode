@@ -11,8 +11,8 @@ clientEntryListColumnLabels
         add: '----- ----- ----- ----- ---------- ----- -----------' ]
     ifFalse: [ 
       list
-        add: '                      Parent';
-        add: '            total Method';
-        add: 'tally total   %       Child';
-        add: '----- ----- ----- -----------' ].
+        add: '                                Parent';
+        add: '                      total Method';
+        add: '     tally      total   %       Child';
+        add: '---------- ---------- ----- -----------' ].
   ^ list

@@ -2,7 +2,7 @@
 	"class" : {
 		"initialize" : "dkh 09/27/2013 17:00" },
 	"instance" : {
-		"clientListColumnLabels" : "dkh 06/11/2015 14:41",
+		"clientListColumnLabels" : "dkh 06/11/2015 16:32",
 		"clientListEntries" : "dkh 06/11/2015 14:53",
 		"clientListHeading" : "dkh 06/11/2015 14:01",
 		"elapsedTime" : "dkh 09/27/2013 20:50",
@@ -17,6 +17,6 @@
 		"sortKey:" : "dkh 06/11/2015 09:19",
 		"tallyLimit" : "dkh 06/11/2015 09:37",
 		"tallyLimit:" : "dkh 06/11/2015 09:35",
-		"tallying" : "dkh 06/11/2015 11:48",
+		"tallying" : "dkh 06/11/2015 16:42",
 		"totalSamples" : "dkh 09/27/2013 20:43",
 		"totalTally" : "dkh 09/27/2013 16:43" } }

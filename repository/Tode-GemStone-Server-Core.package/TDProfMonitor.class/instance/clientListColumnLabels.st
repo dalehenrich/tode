@@ -1,4 +1,4 @@
 as yet unclassified
 clientListColumnLabels
-  ^ {(sortKey , '         ms     % class and method name').
-  '----- ---------- ----- ---------------------'}
+  ^ {('     ' , sortKey , '         ms     % class and method name').
+  '---------- ---------- ----- ---------------------'}

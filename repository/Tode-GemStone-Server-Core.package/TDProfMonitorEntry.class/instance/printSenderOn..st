@@ -6,13 +6,13 @@ printSenderOn: aStream
   methodMs := self methodTotalMs.
   elapsedPct := self tally * self overallElapsedTime * 100.0
     / self overallTotalSamples / methodMs.
-  aStream
-    nextPutAll: (self tally asString width: -5);
-    nextPutAll: ' ';
-    nextPutAll: (self total asString width: -5);
-    nextPutAll: ' '.
   self fullEntryReport
     ifTrue: [ 
+      aStream
+        nextPutAll: (self tally asString width: -5);
+        nextPutAll: ' ';
+        nextPutAll: (self total asString width: -5);
+        nextPutAll: ' '.
       aStream
         nextPutAll: (tallyPct asStringUsingFormat: #(-5 1 false));
         nextPutAll: ' ';
@@ -22,6 +22,11 @@ printSenderOn: aStream
         nextPutAll: ' ';
         nextPutAll: (elapsedPct asStringUsingFormat: #(-5 1 false)) ]
     ifFalse: [ 
+      aStream
+        nextPutAll: (self tally asString width: -10);
+        nextPutAll: ' ';
+        nextPutAll: (self total asString width: -10);
+        nextPutAll: ' '.
       aStream
         nextPutAll:
           (self total asFloat * 100.0 / self overallTotal

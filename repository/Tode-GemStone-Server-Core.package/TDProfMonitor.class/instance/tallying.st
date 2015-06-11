@@ -1,6 +1,7 @@
 as yet unclassified
 tallying
   | iv |
+  traceObjCreation ifNil: [ ^ 'execTime' ].
   iv := traceObjCreation.	"following must agree with VM C code in profileStatsWord() and code in setOptions:
     16r4  for elapsed time sampling, tally object faults
     16r8  for elapsed time sampling, tally page faults
