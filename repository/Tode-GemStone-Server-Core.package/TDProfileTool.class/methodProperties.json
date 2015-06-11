@@ -2,7 +2,7 @@
 	"class" : {
 		"installExampleOn:" : "DataCurator 02/07/2013 19:07",
 		"pf" : "dkh 06/10/2015 14:49",
-		"pfManPage" : "dkh 06/10/2015 11:28",
+		"pfManPage" : "dkh 06/11/2015 10:08",
 		"pfcleanManPage" : "dkh 06/10/2015 11:26",
 		"pfgatherManPage" : "dkh 06/10/2015 11:26",
 		"pfreportManPage" : "dkh 06/10/2015 11:42",
@@ -18,7 +18,7 @@
 	"instance" : {
 		"defaultLabel" : "dkh 06/10/2015 11:45",
 		"defaultSortKey" : "dkh 06/11/2015 09:26",
-		"defaultTallyLimit" : "dkh 06/11/2015 09:45",
+		"defaultTallyLimit" : "dkh 06/11/2015 11:49",
 		"pfClean:" : "dkh 06/10/2015 16:00",
 		"pfGather:" : "dkh 06/10/2015 10:44",
 		"pfMonitor:block:" : "dkh 06/10/2015 10:45",
@@ -31,7 +31,7 @@
 		"pfclean" : "dkh 06/10/2015 10:40",
 		"pfgather" : "07/09/2013 15:45",
 		"pfmonitor:" : "dkh 06/10/2015 10:45",
-		"pfreport" : "dkh 06/11/2015 09:26",
+		"pfreport" : "dkh 06/11/2015 11:52",
 		"pfstart" : "dkh 06/10/2015 10:51",
 		"pfstatus" : "dkh 06/10/2015 10:53",
 		"pfstop" : "dkh 06/10/2015 10:43",

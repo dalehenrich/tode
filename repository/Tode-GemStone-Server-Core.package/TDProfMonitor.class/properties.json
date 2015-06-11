@@ -14,7 +14,8 @@
 		"sampling",
 		"sortKey",
 		"tallyLimit",
-		"clientList" ],
+		"clientList",
+		"traceObjCreation" ],
 	"name" : "TDProfMonitor",
 	"pools" : [
 		 ],

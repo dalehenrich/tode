@@ -4,7 +4,11 @@ profMon: aProfMon
   endTime := aProfMon endTime.
   startTime := aProfMon startTime.
   (aProfMon respondsTo: #'sampling')
-    ifTrue: [ sampling := aProfMon perform: #'sampling' ].
+    ifTrue: [ 
+      | x |
+      sampling := aProfMon perform: #'sampling'.
+      x := aProfMon _tallyInfo.
+      traceObjCreation := aProfMon instVarNamed: #'traceObjCreation' ].
   self profMonResults: aProfMon results.
   endTime >= startTime
     ifTrue: [ elapsedTime := endTime - startTime ]

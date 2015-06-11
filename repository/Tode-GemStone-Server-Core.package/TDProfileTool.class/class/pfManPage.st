@@ -25,6 +25,10 @@ DESCRIPTION
     view   Open prof monitor browser
 
 EXAMPLES
+
+  pf start
+  pf report
+  pf view
 '.
   manPage subCommands
     at: 'start' put: self pfstartManPage;

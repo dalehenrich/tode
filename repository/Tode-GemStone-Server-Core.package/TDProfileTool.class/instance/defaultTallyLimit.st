@@ -1,3 +1,3 @@
 private
 defaultTallyLimit
-  ^ 10
+  ^ 0
