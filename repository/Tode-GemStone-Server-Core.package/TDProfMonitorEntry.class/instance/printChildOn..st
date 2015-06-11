@@ -12,10 +12,11 @@ printChildOn: aStream
       aStream
         nextPutAll:
             (ct * elapsedTime asFloat / totalSamples asStringUsingFormat: #(-10 1 false));
-        nextPutAll: ' ' ].
+        nextPutAll: ' ';
+        nextPutAll:
+            (ct * elapsedTime * 100.0 / totalSamples / methodMs
+                asStringUsingFormat: #(-5 1 false)) ]
+    ifFalse: [ self printParentChildTallyPctOn: aStream ].
   aStream
-    nextPutAll:
-        (ct * elapsedTime * 100.0 / totalSamples / methodMs
-            asStringUsingFormat: #(-5 1 false));
-    nextPutAll: ' ';
+    nextPutAll: '    ';
     nextPutAll: (self profMonEntry asStringWidth: 12)

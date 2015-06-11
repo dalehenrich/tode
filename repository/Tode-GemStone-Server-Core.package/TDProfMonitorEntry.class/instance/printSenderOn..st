@@ -19,8 +19,13 @@ printSenderOn: aStream
         nextPutAll: (totalPct asStringUsingFormat: #(-5 1 false));
         nextPutAll: ' ';
         nextPutAll: (methodMs asStringUsingFormat: #(-10 1 false));
-        nextPutAll: ' ' ].
+        nextPutAll: ' ';
+        nextPutAll: (elapsedPct asStringUsingFormat: #(-5 1 false)) ]
+    ifFalse: [ 
+      aStream
+        nextPutAll:
+          (self total asFloat * 100.0 / self overallTotal
+            asStringUsingFormat: #(-5 1 false)) ].
   aStream
-    nextPutAll: (elapsedPct asStringUsingFormat: #(-5 1 false));
     nextPutAll: ' ';
     nextPutAll: (self profMonEntry asStringWidth: 12)
