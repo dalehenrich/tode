@@ -1,8 +1,10 @@
 as yet unclassified
 profMonResults: aProfMonResults
-  profMonResults := ((aProfMonResults at: 1) sortDescending: 'tally')
+  profMonResultAr := aProfMonResults.
+  profMonResults := (aProfMonResults at: 1)
     collect: [ :each | 
       TDProfMonitorEntry new
         profMonEntry: each;
         profMon: self;
-        yourself ]
+        yourself ].
+  self resortBy: self sortKey

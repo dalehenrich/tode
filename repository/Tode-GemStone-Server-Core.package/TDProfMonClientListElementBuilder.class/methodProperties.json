@@ -2,9 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"clientList:" : "dkh 03/20/2014 20:40",
+		"clientList:" : "dkh 06/11/2015 09:34",
 		"defaultEditorWindowLocation" : "dkh 09/27/2013 17:02",
-		"itemSelected:at:shiftPressed:" : "dkh 04/19/2014 09:36",
+		"headerSize" : "dkh 06/10/2015 16:08",
+		"itemSelected:at:shiftPressed:" : "dkh 06/11/2015 09:58",
 		"menuActionSpec" : "dkh 08/10/2014 18:17",
 		"sortByTallyMenuAction:" : "dkh 08/10/2014 18:16",
 		"sortByTotalMenuAction:" : "dkh 08/10/2014 18:16" } }

@@ -2,12 +2,20 @@
 	"class" : {
 		"initialize" : "dkh 09/27/2013 17:00" },
 	"instance" : {
+		"clientList" : "dkh 06/11/2015 09:57",
+		"clientListEntries" : "dkh 06/11/2015 09:58",
+		"clientListHeading" : "dkh 06/10/2015 16:03",
 		"elapsedTime" : "dkh 09/27/2013 20:50",
-		"profMon:" : "dkh 09/27/2013 20:49",
+		"profMon:" : "dkh 06/10/2015 15:54",
 		"profMonResults" : "dkh 09/27/2013 16:18",
-		"profMonResults:" : "dkh 09/27/2013 19:42",
-		"resortBy:" : "dkh 08/10/2014 18:24",
+		"profMonResults:" : "dkh 06/11/2015 09:54",
+		"resortBy:" : "dkh 06/10/2015 16:12",
 		"resortByTally" : "dkh 08/10/2014 18:19",
 		"resortByTotal" : "dkh 08/10/2014 18:19",
+		"sampling" : "dkh 06/10/2015 15:12",
+		"sortKey" : "dkh 06/11/2015 09:52",
+		"sortKey:" : "dkh 06/11/2015 09:19",
+		"tallyLimit" : "dkh 06/11/2015 09:37",
+		"tallyLimit:" : "dkh 06/11/2015 09:35",
 		"totalSamples" : "dkh 09/27/2013 20:43",
 		"totalTally" : "dkh 09/27/2013 16:43" } }

@@ -1,15 +1,15 @@
-as yet unclassified
-pfview: label
+smalltalk api
+pfView: aProfMon label: label limit: limit sortKey: sortKey
   "pf view"
 
-  | profMon profMonitorView |
-  self pfstop.
-  profMon := self profMonitor.
-  profMon results ifNil: [ profMon gatherResults ].
+  | profMonitorView |
+  self pfStop: aProfMon.
+  self pfGather: aProfMon.
   profMonitorView := TDProfMonitor new
-    profMon: profMon;
+    sortKey: sortKey;
+    tallyLimit: limit;
+    profMon: aProfMon;
     yourself.
-  profMon removeResults.
   profMonitorView
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'profMonResults')

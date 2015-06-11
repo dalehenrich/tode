@@ -1,7 +1,9 @@
 as yet unclassified
 clientList: listElement
-  ^ ({('elapsed CPU time: ' , self object elapsedTime asString , ' ms').
-  'tally     %  smpl%    ms class and method name'.
-  '----- -----  ----- ----- ---------------------'}
-    , (self object profMonResults collect: [ :entry | entry printSampleString ]))
-    -> nil
+  | header |
+  header := self object clientListHeading
+    ,
+      {(self object sortKey , '     %  smpl%    ms class and method name').
+      '----- -----  ----- ----- ---------------------'}.
+  headerSize := header size.
+  ^ (header , self object clientListEntries) -> nil

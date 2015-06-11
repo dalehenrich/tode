@@ -1,9 +1,5 @@
-as yet unclassified
+tode commands
 pfstop
   "pf stop"
 
-  | profMon |
-  profMon := self profMonitor.
-  profMon endTime ~~ nil
-    ifTrue: [ ^ self ].
-  profMon stopMonitoring
+  self pfStop: self profMonitor

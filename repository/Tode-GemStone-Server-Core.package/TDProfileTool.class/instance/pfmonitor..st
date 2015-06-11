@@ -1,5 +1,3 @@
-as yet unclassified
+tode commands
 pfmonitor: aBlock
-  self pfstart.
-  aBlock
-    ensure: [ self pfstop ]
+  self pfMonitor: self profMon block: aBlock

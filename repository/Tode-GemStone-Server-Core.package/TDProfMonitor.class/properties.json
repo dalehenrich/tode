@@ -6,10 +6,15 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"profMonResultAr",
 		"profMonResults",
 		"totalTally",
 		"totalSamples",
-		"elapsedTime" ],
+		"elapsedTime",
+		"sampling",
+		"sortKey",
+		"tallyLimit",
+		"clientList" ],
 	"name" : "TDProfMonitor",
 	"pools" : [
 		 ],

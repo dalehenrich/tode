@@ -1,3 +1,3 @@
-as yet unclassified
+initialization
 installExampleOn: aTDTopezServer
   "nothing for now"

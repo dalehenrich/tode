@@ -1,10 +1,13 @@
 as yet unclassified
-printSampleOn: aStream
-  | tallyPct totalPct |
+printSampleOn: aStream sortKey: sortKey
+  | tallyPct totalPct tallyField |
   tallyPct := self tally asFloat * 100.0 / self overallTotal.
   totalPct := self total asFloat * 100.0 / self overallTotal.
+  sortKey = 'tally'
+    ifTrue: [ tallyField := self tally ]
+    ifFalse: [ tallyField := self total ].
   aStream
-    nextPutAll: (self tally asString width: -4);
+    nextPutAll: (tallyField asString width: -4);
     nextPutAll: ' ';
     nextPutAll: (tallyPct asStringUsingFormat: #(-6 2 false));
     nextPutAll: ' ';

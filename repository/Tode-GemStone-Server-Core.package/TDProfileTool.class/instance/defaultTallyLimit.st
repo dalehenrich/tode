@@ -1,0 +1,3 @@
+private
+defaultTallyLimit
+  ^ 10

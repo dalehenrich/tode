@@ -2,9 +2,9 @@ as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
   | entry |
   index ifNil: [ ^ nil ].
-  index <= 3
+  index <= self headerSize
     ifTrue: [ ^ nil ].
-  entry := self object profMonResults at: index - 3.
+  entry := self object clientList at: index - self headerSize.
   entry parentEntry: nil.
   entry
     editUsing:
