@@ -1,15 +1,12 @@
 as yet unclassified
 clientListHeading
-  | elapsed |
-  elapsed := self sampling == #'cpu'
+  | heading line |
+  heading := {('TALLYING: ' , self tallying)}.
+  line := self sampling == #'cpu'
     ifTrue: [ 'elapsed CPU time: ' , self elapsedTime asString , ' ms' ]
     ifFalse: [ 'elapsed REAL time: ' , self elapsedTime asString , ' ms' ].
-  profMonResultAr size <= 2
-    ifTrue: [ ^ {elapsed} ].
-  self tallying ~= 'execTime'
-    ifTrue: [ 
-      ^ {elapsed.
-      ('tallying: ' , self tallying).
-      (profMonResultAr at: 4)} ].
-  ^ {elapsed.
-  (profMonResultAr at: 4)}
+  heading add: line.
+  profMonResultAr size > 2
+    ifTrue: [ heading add: (profMonResultAr at: 4) ].
+  heading add: ''.
+  ^ heading , self clientListColumnLabels

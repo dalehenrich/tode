@@ -1,7 +1,7 @@
 as yet unclassified
-printSampleString: sortKey
+printSampleString
   | ws str |
   str := String new.
   ws := PrintStream printingOn: str.
-  self printSampleOn: ws sortKey: sortKey.
+  self printSampleOn: ws.
   ^ ws _collection

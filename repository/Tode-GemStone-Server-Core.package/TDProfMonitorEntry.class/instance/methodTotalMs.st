@@ -1,3 +1,3 @@
 as yet unclassified
-methodMs
+methodTotalMs
   ^ self total * self overallElapsedTime asFloat / self overallTotalSamples
