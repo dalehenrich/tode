@@ -6,6 +6,7 @@ printSenderOn: aStream
   methodMs := self methodTotalMs.
   elapsedPct := self tally * self overallElapsedTime * 100.0
     / self overallTotalSamples / methodMs.
+  aStream nextPut: $=.
   self fullEntryReport
     ifTrue: [ 
       aStream
@@ -30,7 +31,7 @@ printSenderOn: aStream
       aStream
         nextPutAll:
           (self total asFloat * 100.0 / self overallTotal
-            asStringUsingFormat: #(-5 1 false)) ].
+            asStringUsingFormat: #(-6 1 false)) ].
   aStream
     nextPutAll: ' ';
     nextPutAll: (self profMonEntry asStringWidth: 12)

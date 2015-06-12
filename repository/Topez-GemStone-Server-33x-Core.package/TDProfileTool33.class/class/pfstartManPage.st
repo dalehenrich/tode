@@ -13,9 +13,13 @@ SYNOPSIS
   pf start [--sampling=cpu|real] [--tally=[execTime|objFaults|pageFaults|edenUsage|gcTime]
 
 DESCRIPTION
+  Note that profiling of page faults and object faults will detect
+  the change in the number of faults at start of a method.
+  Thus a sample at the start of a method will be seeing deltas
+  from execution of the previous method.
+  Total faults will be correctly attributed to the caller of the method being entered.
 
 OPTIONS
-
   --sampling=cpu|real
     elapsed time measured as cpu or real time. Default is cpu.
 

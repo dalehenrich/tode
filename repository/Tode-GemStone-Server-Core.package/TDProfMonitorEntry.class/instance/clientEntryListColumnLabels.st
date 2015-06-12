@@ -5,14 +5,14 @@ clientEntryListColumnLabels
   self fullEntryReport
     ifTrue: [ 
       list
-        add: '                %     %                   Parent';
-        add: '             self total      total local Method';
-        add: 'tally total  Time  Time         ms   %        Child';
-        add: '----- ----- ----- ----- ---------- ----- -----------' ]
+        add: '                 %     %                   Parent';
+        add: '              self total      total local Method';
+        add: ' tally total  Time  Time         ms   %        Child';
+        add: ' ----- ----- ----- ----- ---------- ----- -----------' ]
     ifFalse: [ 
       list
-        add: '                                Parent';
-        add: '                      total Method';
-        add: '     tally      total   %       Child';
-        add: '---------- ---------- ----- -----------' ].
+        add: '                                 Parent';
+        add: '                        total Method';
+        add: '      tally      total    %       Child';
+        add: ' ---------- ---------- ------ -----------' ].
   ^ list
