@@ -261,6 +261,10 @@ baseline: spec
           with: [ spec includes: 'Topez-GemStone-Server-33x-Core' ];
         package: 'Topez-GemStone-Server-33x-Core'
           with: [ spec requires: 'Tode-GemStone-Server-Core' ];
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-33x-Core' ];
+        package: 'Topez-Server-33x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec
     for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x')

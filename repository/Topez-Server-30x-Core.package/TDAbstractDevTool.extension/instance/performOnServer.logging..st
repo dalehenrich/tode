@@ -1,7 +1,7 @@
-as yet unclassified
+*topez-server-30x-core
 performOnServer: command logging: logging
   | result |
-  result := System performOnServer: command.
+  result := (System performOnServer: command) asUnicodeString.
   logging
     ifTrue: [ 
       Transcript
