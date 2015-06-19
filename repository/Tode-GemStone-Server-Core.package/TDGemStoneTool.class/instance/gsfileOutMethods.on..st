@@ -20,7 +20,7 @@ gsfileOutMethods: cls on: aStream
     sel := sels at: i.
     nativeStream := WriteStream on: String new.
     cls class fileOutMethod: sel on: nativeStream.
-    aStream nextPutAll: nativeStream contents encodeAsUTF8 asString ].
+    aStream nextPutAll: nativeStream contents encodeAsUTF8intoString ].
   aStream
     nextPutAll: '! ------------------- Instance methods for ';
     nextPutAll: nm;

@@ -34,7 +34,7 @@ gsfileout: directoryPath workingCopy: workingCopy filename: filename defaultHead
           methodRef actualClass
             fileOutMethod: methodRef selector
             on: nativeStream.
-          fileStream nextPutAll: nativeStream contents encodeAsUTF8 asString ].
+          fileStream nextPutAll: nativeStream contents encodeAsUTF8intoString ].
       fileStream
         nextPutAll: '! ------------------- Class initializers ';
         lf.
