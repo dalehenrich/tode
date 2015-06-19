@@ -103,6 +103,7 @@
 		"platformInitialize" : "dkh 05/25/2014 10:33",
 		"platformInitialize2x" : "dkh 05/25/2014 11:16",
 		"postLogin" : "dkh 02/08/2015 16:36",
+		"put:onStream:" : "DataCurator 06/19/2015 15:29",
 		"redirectObjIn:" : "dkh 05/15/2013 15:25",
 		"refreshViewFor:" : "dkh 01/11/2014 08:11",
 		"reifyExceptionArg:" : "DataCurator 01/06/2013 15:00",
@@ -136,7 +137,9 @@
 		"spawnDebugger:" : "dkh 02/18/2013 09:09",
 		"spawnWindow" : "dkh 06/05/2013 05:22",
 		"tabCompletion:" : "dkh 12/19/2014 15:30",
+		"toString:" : "dkh 03/29/2013 16:00",
 		"toolInstanceFor:" : "dkh 04/02/2014 10:23",
 		"topezClientForwarder" : "DataCurator 11/18/2012 15:35",
 		"topezClientForwarder:" : "DataCurator 11/18/2012 15:35",
-		"windowIdNamed:" : "DataCurator 11/26/2012 14:54" } }
+		"windowIdNamed:" : "DataCurator 11/26/2012 14:54",
+		"writer" : "dkh 06/19/2015 15:36" } }
