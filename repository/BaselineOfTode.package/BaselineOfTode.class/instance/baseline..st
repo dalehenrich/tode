@@ -121,7 +121,7 @@ baseline: spec
                 loads: #('AST-Core');
                 repository: 'github://dalehenrich/rb:dev/repository' ];
         baseline: 'Ston'
-          with: [ spec repository: 'github://GsDevKit/ston:gemstone_dev/repository' ];
+          with: [ spec repository: 'github://GsDevKit/ston:v0.9/repository' ];
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4_dev/repository' ];
         yourself.
