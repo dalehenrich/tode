@@ -7,15 +7,15 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
   ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
-Smalltalk at: #ConfigurationOfGLASS 
-  ifPresent: [:cls |
+Smalltalk at: #ConfigurationOfGLASS ifAbsent: [])
+  ifNotNil: [:cls |
     "Upgrade to GLASS1"
     Gofer new
       package: 'GsUpgrader-Core';
       url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
       load.
     (Smalltalk at: #GsUpgrader) upgradeGLASS1 ]
-  ifAbsent: [
+  ifNil: [
     "Upgrade to latest Metacello"
     Metacello new
       baseline: 'Metacello';
