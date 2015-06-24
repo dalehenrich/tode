@@ -7,7 +7,7 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
   ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
-Smalltalk at: #ConfigurationOfGLASS ifAbsent: [])
+(Smalltalk at: #ConfigurationOfGLASS ifAbsent: [])
   ifNotNil: [:cls |
     "Upgrade to GLASS1"
     Gofer new
