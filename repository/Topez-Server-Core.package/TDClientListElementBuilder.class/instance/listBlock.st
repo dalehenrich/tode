@@ -1,3 +1,3 @@
 accessing
 listBlock
-  ^ [ :listElement | STON toUTF8EncodedString: (self clientList: listElement) ]
+  ^ [ :listElement | listElement objectSerializer toString: (self clientList: listElement) ]

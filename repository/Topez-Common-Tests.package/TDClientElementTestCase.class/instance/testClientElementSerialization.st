@@ -2,7 +2,7 @@ as yet unclassified
 testClientElementSerialization
   "only certain instance variables should retain their value going across the wire. See #excludedInstVarNames"
 
-  | clientClientElement serverClientElement stonString |
+  | clientClientElement serverClientElement stonString serializer |
   serverClientElement := TodeClientElement new
     topez: #'topez';
     theObject: #'theObject';
@@ -19,8 +19,9 @@ testClientElementSerialization
     windowBuilder: #'windowBuilder';
     yourself.
   serverClientElement blockCache add: #'blockCacheEntry'.
-  stonString := STON toUTF8EncodedString: serverClientElement.
-  clientClientElement := STON fromUTF8EncodedString: stonString.
+  serializer := TodeObjectSerializer preferredSerializer.
+  stonString := serializer toString: serverClientElement.
+  clientClientElement := serializer fromString: stonString.
   TodeClientElement allInstVarNames
     do: [ :iv | 
       | ivName |

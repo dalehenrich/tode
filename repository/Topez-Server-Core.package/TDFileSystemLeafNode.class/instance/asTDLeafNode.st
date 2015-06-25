@@ -1,6 +1,6 @@
 as yet unclassified
 asTDLeafNode
-  ^ (STON fromUTF8EncodedString: self fileContents)
+  ^ (self objectSerializer fromString: self fileContents)
     parent: self parent;
     topez: self topez;
     yourself

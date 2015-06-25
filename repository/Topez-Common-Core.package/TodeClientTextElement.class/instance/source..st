@@ -16,5 +16,5 @@ source: aStringOrText
                     or: [ attrib isKindOf: (Smalltalk at: #'TextKern') ] ] ] ] ]
     replaceAttributesThat: [ :attrib | false ]
     by: [ :ignored |  ].
-  stonString := STON toUTF8EncodedString: txt.
+  stonString := self objectSerializer toString: txt.
   ^ super source: stonString

@@ -7,4 +7,4 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   itemAttribute := listElement itemCache at: index.
   def := itemAttribute object.
   def itemSelected: listElement topez.
-  ^ STON toUTF8EncodedString: (self enableDisableMenuItems: def)
+  ^ listElement objectSerializer toString: (self enableDisableMenuItems: def)

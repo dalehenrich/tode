@@ -25,8 +25,8 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifNil: [ 
       sourceWindowId := currentFrame editUsing: sourceEditorSpec.
       contextWindowId := currentFrame editUsing: contextEditorSpec.
-      STON
-        toUTF8EncodedString:
+      self objectSerializer
+        toString:
           {#'setMenuCategories:'.
           enabled.
           #'clearMenuCategories:'.
@@ -36,8 +36,8 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifNotNil: [ 
       sourceClientElement := currentFrame clientElementUsing: sourceEditorSpec.
       contextClientElement := currentFrame clientElementUsing: contextEditorSpec.
-      STON
-        toUTF8EncodedString:
+      self objectSerializer
+        toString:
           {#'setMenuCategories:'.
           enabled.
           #'clearMenuCategories:'.

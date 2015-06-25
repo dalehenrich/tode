@@ -9,4 +9,4 @@ itemSelectedBlock
         at: index
         shiftPressed: shiftPressed
         listSelectionsDictionary:
-          (STON fromUTF8EncodedString: listSelectionsDictionary) ] ]
+          (listElement objectSerializer fromString: listSelectionsDictionary) ] ]

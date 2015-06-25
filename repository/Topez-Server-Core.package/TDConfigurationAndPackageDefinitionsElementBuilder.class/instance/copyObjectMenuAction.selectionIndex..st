@@ -4,7 +4,7 @@ copyObjectMenuAction: listElement selectionIndex: selectionIndex
   itemAttribute := listElement itemCache at: selectionIndex.
   def := itemAttribute object.
   self objectClipboard: def.
-  ^ STON
-    toUTF8EncodedString:
+  ^ listElement objectSerializer
+    toString:
       {#'addToClipboard:'.
       (def label)}

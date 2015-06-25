@@ -1,4 +1,4 @@
-initialization
+instance creation
 serializeUsing: protocolSignatureArray
   | new |
   self checkCompatibilityWith: protocolSignatureArray.

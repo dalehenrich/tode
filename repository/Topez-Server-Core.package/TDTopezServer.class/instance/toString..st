@@ -1,3 +1,3 @@
 convenience
 toString: object
-  ^ STON toUTF8EncodedString: object
+  ^ self objectSerializer toString: object

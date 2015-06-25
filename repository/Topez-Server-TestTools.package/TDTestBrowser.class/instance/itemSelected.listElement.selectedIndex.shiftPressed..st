@@ -22,14 +22,14 @@ itemSelected: miniTool listElement: listElement selectedIndex: selectionIndex sh
             selector: testCase selector
             messagePattern: testCase selector asString
             messagePatternIsRegex: false) itemSelected: listElement topez.
-          ^ STON
-            toUTF8EncodedString:
+          ^ self objectSerializer
+            toString:
               {#'setMenuCategories:'.
               #(#'testMethod').
               #'clearMenuCategories:'.
               #()} ] ].
-  ^ STON
-    toUTF8EncodedString:
+  ^ self objectSerializer
+    toString:
       {#'setMenuCategories:'.
       #().
       #'clearMenuCategories:'.

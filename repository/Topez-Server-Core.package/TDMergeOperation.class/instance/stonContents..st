@@ -1,3 +1,3 @@
 as yet unclassified
 stonContents: aSTONString
-  self mergeSource: (STON fromUTF8EncodedString: aSTONString)
+  self mergeSource: (self objectSerializer fromString: aSTONString)

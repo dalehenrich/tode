@@ -1,4 +1,5 @@
 client callbacks
 serializeObjectsUsing: protocolSignatureArray
-  TodeObjectSerializer serializeUsing: protocolSignatureArray.
+  objectSerializer := TodeObjectSerializer
+    serializeUsing: protocolSignatureArray.
   ^ nil

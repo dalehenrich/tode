@@ -11,5 +11,5 @@ name: aString
         forceNewFileNamed: aNode name , self stonFileExtension
         do: [ :fileStream | 
           STONWriter
-            plainTextNewlinesDuring: [ fileStream nextPutAll: (STON toUTF8EncodedString: aNode) ] ] ]
+            plainTextNewlinesDuring: [ fileStream nextPutAll: (self objectSerializer toString: aNode) ] ] ]
     ifFalse: [ super name: aString ]

@@ -17,8 +17,8 @@ setBreakpointMenuAction: sourceElement selectionInterval: selectionInterval dirt
       sourceElement spawnCopyBlock: self spawnCopyBlock.
       spawnedElement := sourceElement copyForSpawn ]
         ensure: [ self formatOnDisplay: nil ].
-      ^ STON
-        toUTF8EncodedString:
+      ^ self objectSerializer
+        toString:
           {#'spawnWindow:'.
           spawnedElement} ].
   self setBreakPoint: sourceElement selectionInterval: selectionInterval.

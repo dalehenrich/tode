@@ -4,7 +4,7 @@ itemSelected: index listSelections: listSelectionsDictionary
   index = 0
     ifTrue: [ ^ self ].
   stonStringOrNil := listSelectionsDictionary
-    ifNotNil: [ stonStringOrNil := STON toUTF8EncodedString: listSelectionsDictionary ].
+    ifNotNil: [ stonStringOrNil := self objectSerializer toString: listSelectionsDictionary ].
   ^ self topez
     itemSelectedForClientListElement: self
     index: index

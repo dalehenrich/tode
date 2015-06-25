@@ -17,4 +17,4 @@ createFor: aShellId options: optionArray
   transcriptClientForwarderOop.
   (Reflection oopOf: topezClientClientForwarder).
   (TodeObjectSerializer protocolSignatureArray)}.
-  ^ STON toJsonString: resultArray
+  ^ TodeObjectSerializer preferredSerializer toJsonString: resultArray

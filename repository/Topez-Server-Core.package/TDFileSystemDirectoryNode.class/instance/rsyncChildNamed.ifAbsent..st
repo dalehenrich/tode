@@ -9,5 +9,5 @@ rsyncChildNamed: childName ifAbsent: absentBlock
     ifFalse: [ ^ absentBlock value ].
   dir
     readOnlyFileNamed: fileName
-    do: [ :fileStream | newNode := STON fromUTF8EncodedString: fileStream contents ].
+    do: [ :fileStream | newNode := self objectSerializer fromString: fileStream contents ].
   ^ newNode

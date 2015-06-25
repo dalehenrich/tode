@@ -19,8 +19,8 @@ browseProtocolMenuAction: listElement selectionIndex: selectionIndex
         windowLocation: #'classSelectors';
         windowLabel: 'class protocol for ' , self theClass printString;
         yourself).
-  ^ STON
-    toUTF8EncodedString:
+  ^ listElement objectSerializer
+    toString:
       {#'editStonElement:'.
       instanceProtocolClientElement.
       #'editStonElement:'.

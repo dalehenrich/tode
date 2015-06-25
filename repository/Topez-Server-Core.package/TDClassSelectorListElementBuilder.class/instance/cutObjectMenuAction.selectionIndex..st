@@ -5,8 +5,8 @@ cutObjectMenuAction: listElement selectionIndex: selectionIndex
   def := itemAttribute object.
   self objectClipboard: def.
   def removeFromSystem: listElement topez.
-  ^ STON
-    toUTF8EncodedString:
+  ^ listElement objectSerializer
+    toString:
       {#'refreshList'.
       nil.
       #'addToClipboard:'.

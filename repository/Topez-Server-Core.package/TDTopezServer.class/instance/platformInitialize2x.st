@@ -17,8 +17,8 @@ platformInitialize2x
               | result |
               result := self topezClientForwarder
                 interactWith:
-                  (STON toUTF8EncodedString: interaction copyAsTodeInteraction).
-              STON fromUTF8EncodedString: result ];
+                  (self objectSerializer toString: interaction copyAsTodeInteraction).
+              self objectSerializer fromString: result ];
         inspectBlock: [ :interaction | 
               interaction theObject
                 editUsing:

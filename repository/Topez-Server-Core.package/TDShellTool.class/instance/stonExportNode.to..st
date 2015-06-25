@@ -5,4 +5,4 @@ stonExportNode: node to: fileSystemPath
   fileName := ServerFileDirectory localNameFor: fileSystemPath.
   dir
     forceNewFileNamed: fileName
-    do: [ :fileStream | fileStream nextPutAll: (STON toUTF8EncodedString: node) ]
+    do: [ :fileStream | fileStream nextPutAll: (self objectSerializer toString: node) ]

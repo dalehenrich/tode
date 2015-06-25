@@ -1,3 +1,3 @@
 as yet unclassified
 stonContents: aSTONString
-  self contents: (STON fromUTF8EncodedString: aSTONString)
+  self contents: (self objectSerializer fromString: aSTONString)
