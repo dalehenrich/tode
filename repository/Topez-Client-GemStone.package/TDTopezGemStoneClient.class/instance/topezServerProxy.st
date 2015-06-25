@@ -22,6 +22,18 @@ topezServerProxy
 					transcriptOopType := self session asOopType: transcriptOop.
 					self session clientForwarderCache at: transcriptOopType put: Transcript ].
 			self session clientForwarderCache at: topezClientOopType put: self.
+			resultArray size > 3
+				ifTrue: [ 
+					| protocolSignature objSerializer |
+					protocolSignature := resultArray at: 3.
+					objSerializer := TodeObjectSerializer serializeUsing: protocolSignature.
+					false
+						ifTrue: [ 
+							self session
+								rawReceiverNB: topezServerProxy
+								perform: #serializeObjectsUsing:
+								withArgs: objSerializer protocolSignatureArray.
+							self objectSerializer: objSerializer ] ].
 			self session rawReceiverNB: topezServerProxy perform: #authorInitials: withArgs: {(Author fullName)}.
 			self sessionDescription backupDirectory isEmpty not
 				ifTrue: [ 
