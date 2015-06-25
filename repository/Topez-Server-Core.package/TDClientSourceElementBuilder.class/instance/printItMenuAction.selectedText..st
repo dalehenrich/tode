@@ -3,6 +3,6 @@ printItMenuAction: listElement selectedText: selectedString
   | result |
   result := self evaluateString: selectedString.
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'insertAfterSelection:'.
       (result printString)}

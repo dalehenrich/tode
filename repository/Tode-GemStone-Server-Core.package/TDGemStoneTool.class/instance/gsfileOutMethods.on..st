@@ -31,7 +31,7 @@ gsfileOutMethods: cls on: aStream
     sel := sels at: i.
     nativeStream := WriteStream on: String new.
     cls fileOutMethod: sel on: nativeStream.
-    aStream nextPutAll: nativeStream contents encodeAsUTF8 asString ].
+    aStream nextPutAll: nativeStream contents encodeAsUTF8intoString ].
   cat := cls _classCategory.	"File out the category name"
   cat ~~ nil
     ifTrue: [ 

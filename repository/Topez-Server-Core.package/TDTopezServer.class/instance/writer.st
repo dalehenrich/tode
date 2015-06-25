@@ -1,3 +1,0 @@
-convenience
-writer
-  ^ STONWriter new

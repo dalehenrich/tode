@@ -6,5 +6,5 @@ elementSource: aSTONString
         inform:
           'Disable diffs and try again. Diff introduces unwanted leading characters'.
       ^ false ].
-  self mergeSource: (STON fromString: aSTONString).
+  self mergeSource: (STON fromUTF8EncodedString: aSTONString).
   ^ true

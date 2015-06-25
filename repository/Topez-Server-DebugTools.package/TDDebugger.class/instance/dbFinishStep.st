@@ -11,6 +11,6 @@ dbFinishStep
       processTerminated == true ])
     ifTrue: [ ^ #'close' ].
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'listIndex:'.
       (currentFrame frameIndex)}

@@ -12,7 +12,7 @@ enableDisableMenuItems: selectedOperation
   (source notNil and: [ destination notNil ])
     ifTrue: [ enable value: #'fileHistory' ].
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'setMenuCategories:'.
       enabled.
       #'clearMenuCategories:'.

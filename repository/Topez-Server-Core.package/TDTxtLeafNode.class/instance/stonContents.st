@@ -1,3 +1,3 @@
 as yet unclassified
 stonContents
-    ^ STON toString: self contents
+  ^ STON toUTF8EncodedString: self contents

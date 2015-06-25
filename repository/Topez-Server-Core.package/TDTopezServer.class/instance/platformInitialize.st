@@ -18,8 +18,8 @@ platformInitialize
                 defaultBlock: [ :interaction | 
                       result := self topezClientForwarder
                         interactWith:
-                          (STON toString: interaction copyAsTodeInteraction).
-                      ex response: (STON fromString: result) ];
+                          (STON toUTF8EncodedString: interaction copyAsTodeInteraction).
+                      ex response: (STON fromUTF8EncodedString: result) ];
                 inspectBlock: [ :interaction | 
                       interaction theObject
                         editUsing:

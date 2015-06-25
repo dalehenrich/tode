@@ -23,13 +23,13 @@ itemSelected: miniTool listElement: listElement selectedIndex: selectionIndex sh
             messagePattern: testCase selector asString
             messagePatternIsRegex: false) itemSelected: listElement topez.
           ^ STON
-            toString:
+            toUTF8EncodedString:
               {#'setMenuCategories:'.
               #(#'testMethod').
               #'clearMenuCategories:'.
               #()} ] ].
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'setMenuCategories:'.
       #().
       #'clearMenuCategories:'.

@@ -20,7 +20,7 @@ browseProtocolMenuAction: listElement selectionIndex: selectionIndex
         windowLabel: 'class protocol for ' , self theClass printString;
         yourself).
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'editStonElement:'.
       instanceProtocolClientElement.
       #'editStonElement:'.

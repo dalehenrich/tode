@@ -7,6 +7,6 @@ copyObjectMenuAction: listElement selectionIndex: selectionIndex
   def := itemAttribute object.
   self objectClipboard: def.
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'addToClipboard:'.
       (def label)}

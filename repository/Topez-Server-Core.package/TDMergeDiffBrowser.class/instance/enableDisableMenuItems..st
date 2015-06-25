@@ -15,7 +15,7 @@ enableDisableMenuItems: mergeOperation
           mergeOperation hasSmalltalkMethodDefinition
             ifTrue: [ enable value: #'stMethodOperation' ] ] ].
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'setMenuCategories:'.
       enabled.
       #'clearMenuCategories:'.

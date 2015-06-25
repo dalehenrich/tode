@@ -26,7 +26,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
       sourceWindowId := currentFrame editUsing: sourceEditorSpec.
       contextWindowId := currentFrame editUsing: contextEditorSpec.
       STON
-        toString:
+        toUTF8EncodedString:
           {#'setMenuCategories:'.
           enabled.
           #'clearMenuCategories:'.
@@ -37,7 +37,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
       sourceClientElement := currentFrame clientElementUsing: sourceEditorSpec.
       contextClientElement := currentFrame clientElementUsing: contextEditorSpec.
       STON
-        toString:
+        toUTF8EncodedString:
           {#'setMenuCategories:'.
           enabled.
           #'clearMenuCategories:'.

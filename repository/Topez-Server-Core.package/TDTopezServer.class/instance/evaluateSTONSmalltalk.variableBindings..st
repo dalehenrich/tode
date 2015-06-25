@@ -1,7 +1,7 @@
 accessing
 evaluateSTONSmalltalk: smalltalkSource variableBindings: variableBindingsSTONString
   | result litVarArray variableBindings |
-  variableBindings := STON fromString: variableBindingsSTONString.
+  variableBindings := STON fromUTF8EncodedString: variableBindingsSTONString.
   litVarArray := {}.
   variableBindings
     keysAndValuesDo: [ :key :value | 
@@ -16,4 +16,4 @@ evaluateSTONSmalltalk: smalltalkSource variableBindings: variableBindingsSTONStr
     symbolList: GsSession currentSession symbolList
     literalVars: litVarArray.
   self ensureSessionMethodsEnabled.
-  ^ STON toString: result
+  ^ STON toUTF8EncodedString: result

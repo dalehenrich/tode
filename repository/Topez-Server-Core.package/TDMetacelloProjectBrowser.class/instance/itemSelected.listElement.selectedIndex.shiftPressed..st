@@ -61,7 +61,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifTrue: [ enable value: #'configurationProject' ].
   enable value: #'project'.
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'setMenuCategories:'.
       enabled.
       #'clearMenuCategories:'.

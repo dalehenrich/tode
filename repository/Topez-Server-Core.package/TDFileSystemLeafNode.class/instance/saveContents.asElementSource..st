@@ -10,7 +10,7 @@ saveContents: anObject asElementSource: asElementSource
         ifFalse: [ aNode contents: anObject ].
       filename := aNode name , self stonFileExtension.
       STONWriter
-        plainTextNewlinesDuring: [ fileContents := STON toString: aNode ] ]
+        plainTextNewlinesDuring: [ fileContents := STON toUTF8EncodedString: aNode ] ]
     ifFalse: [ 
       filename := self name.
       fileContents := anObject withGemstoneLineEndings ].

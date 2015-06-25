@@ -1,6 +1,6 @@
 menu actions
 spawnShellMenuAction: listElement selectionIndex: selectionIndex
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'spawnShell:'.
       listElement}

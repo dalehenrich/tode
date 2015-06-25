@@ -19,8 +19,8 @@ testClientElementSerialization
     windowBuilder: #'windowBuilder';
     yourself.
   serverClientElement blockCache add: #'blockCacheEntry'.
-  stonString := STON toString: serverClientElement.
-  clientClientElement := STON fromString: stonString.
+  stonString := STON toUTF8EncodedString: serverClientElement.
+  clientClientElement := STON fromUTF8EncodedString: stonString.
   TodeClientElement allInstVarNames
     do: [ :iv | 
       | ivName |

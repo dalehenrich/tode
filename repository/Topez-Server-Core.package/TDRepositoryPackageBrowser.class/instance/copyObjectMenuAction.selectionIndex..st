@@ -5,6 +5,6 @@ copyObjectMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   packageText := self packageTextList at: selectionIndex.
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'addToClipboard:'.
       (packageText asString)}

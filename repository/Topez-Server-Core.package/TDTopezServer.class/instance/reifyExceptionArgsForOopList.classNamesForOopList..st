@@ -15,7 +15,7 @@ reifyExceptionArgsForOopList: oopList classNamesForOopList: classNameOopList
         ifTrue: [ nil ]
         ifFalse: [ (Object _objectForOop: oop) class name ] ].
   result := STON
-    toString:
+    toUTF8EncodedString:
       {objects.
       classNames}.
   self disableSessionMethods.

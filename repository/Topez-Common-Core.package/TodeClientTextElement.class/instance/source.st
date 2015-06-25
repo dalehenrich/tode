@@ -2,4 +2,4 @@ as yet unclassified
 source
   | stonString |
   stonString := super source.
-  ^ STON fromString: stonString
+  ^ STON fromUTF8EncodedString: stonString

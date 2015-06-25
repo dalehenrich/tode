@@ -5,6 +5,6 @@ copyObjectMenuAction: listElement selectionIndex: selectionIndex
     ifTrue: [ ^ false ].
   versionInfo := self theList at: selectionIndex.
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'addToClipboard:'.
       (versionInfo name)}

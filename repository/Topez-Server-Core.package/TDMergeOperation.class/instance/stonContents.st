@@ -1,3 +1,3 @@
 as yet unclassified
 stonContents
-  ^ STON toString: self mergeSource asText
+  ^ STON toUTF8EncodedString: self mergeSource asText

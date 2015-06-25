@@ -14,7 +14,7 @@ reifyExceptionArgsForOopList: oopList exceptionObjAndClassNameFrom: errNum
   exceptionInfo := {(exception asOop).
   (exception class name)}.
   result := STON
-    toString:
+    toUTF8EncodedString:
       {objects.
       exceptionInfo}.
   self disableSessionMethods.

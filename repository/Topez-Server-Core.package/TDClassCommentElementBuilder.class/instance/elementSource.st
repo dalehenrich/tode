@@ -2,4 +2,4 @@ as yet unclassified
 elementSource
   "override as needed"
 
-  ^ STON toString: self object comment
+  ^ STON toUTF8EncodedString: self object comment

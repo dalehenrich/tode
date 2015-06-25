@@ -7,6 +7,6 @@ copyObjectMenuAction: listElement selectionIndex: selectionIndex
   self objectClipboard: def.
   self topez commitTransaction.
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'addToClipboard:'.
       (def label)}

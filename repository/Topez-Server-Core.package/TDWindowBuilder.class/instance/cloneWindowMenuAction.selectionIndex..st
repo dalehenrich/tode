@@ -1,6 +1,6 @@
 menu actions
 cloneWindowMenuAction: listElement selectionIndex: selectionIndex
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'spawnWindow:'.
       (listElement copyForSpawn)}

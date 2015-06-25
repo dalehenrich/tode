@@ -5,6 +5,6 @@ stonImportFrom: fileSystemPath to: parentNode
   fileName := ServerFileDirectory localNameFor: fileSystemPath.
   dir
     readOnlyFileNamed: fileName
-    do: [ :fileStream | node := STON fromStream: fileStream ].
+    do: [ :fileStream | node := STON fromUTF8EncodedString: fileStream contents ].
   parentNode addChildNode: node.
   ^ node

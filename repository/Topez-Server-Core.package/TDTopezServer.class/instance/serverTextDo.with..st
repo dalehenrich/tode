@@ -7,4 +7,4 @@ serverTextDo: accumulateBlock with: doitString
   self objIn: commandResult resultObject.
   text := commandResult renderAsTextFor: self.
   self commitTransaction.
-  ^ STON toString: text
+  ^ STON toUTF8EncodedString: text

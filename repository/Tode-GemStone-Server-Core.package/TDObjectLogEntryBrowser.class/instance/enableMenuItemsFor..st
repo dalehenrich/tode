@@ -9,7 +9,7 @@ enableMenuItemsFor: objectLogEntry
   objectLogEntry hasContinuation
     ifTrue: [ enable value: #'continuation' ].
   ^ STON
-    toString:
+    toUTF8EncodedString:
       {#'setMenuCategories:'.
       enabled.
       #'clearMenuCategories:'.

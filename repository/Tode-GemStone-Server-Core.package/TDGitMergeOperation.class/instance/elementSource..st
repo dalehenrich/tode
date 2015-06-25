@@ -1,4 +1,4 @@
 as yet unclassified
 elementSource: aSTONString
-  self editDefinition: (STON fromString: aSTONString) asString.
+  self editDefinition: (STON fromUTF8EncodedString: aSTONString) asString.
   ^ true

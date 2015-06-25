@@ -2,11 +2,11 @@ accessing
 evaluateSTONTokens: stonTokens redirectTarget: aRedirectTarget
   | tokens result text |
   self ensureSessionMethodsEnabled.
-  tokens := STON fromString: stonTokens.
+  tokens := STON fromUTF8EncodedString: stonTokens.
   redirectTarget := aRedirectTarget.
   result := self evaluateTokens: tokens objIn: objIn value.
   self objIn: result resultObject.
   self redirectObjIn: redirectTarget.
   self ensureSessionMethodsEnabled.
   text := result renderAsTextFor: self.
-  ^ STON toString: text
+  ^ STON toUTF8EncodedString: text

@@ -16,4 +16,4 @@ createFor: aShellId options: optionArray
   resultArray := {(topezServer asOop).
   transcriptClientForwarderOop.
   (Reflection oopOf: topezClientClientForwarder)}.
-  ^ STON toString: resultArray
+  ^ STON toUTF8EncodedString: resultArray

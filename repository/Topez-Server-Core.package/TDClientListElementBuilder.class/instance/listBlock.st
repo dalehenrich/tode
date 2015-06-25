@@ -1,3 +1,3 @@
 accessing
 listBlock
-  ^ [ :listElement | STON toString: (self clientList: listElement) ]
+  ^ [ :listElement | STON toUTF8EncodedString: (self clientList: listElement) ]
