@@ -16,5 +16,5 @@ createFor: aShellId options: optionArray
   resultArray := {(topezServer asOop).
   transcriptClientForwarderOop.
   (Reflection oopOf: topezClientClientForwarder).
-  (TodeCommunicationProtocol protocolSignatureArray)}.
+  (TodeObjectSerializer protocolSignatureArray)}.
   ^ STON toJsonString: resultArray

@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"checkCompatibilityWith:" : "dkh 06/25/2015 15:03",
+		"defaultProtocolSignatureArray" : "dkh 06/25/2015 15:03",
+		"defaultProtocolVersion" : "dkh 06/25/2015 15:03",
+		"defaultProtocolVersionString" : "dkh 06/25/2015 15:03",
+		"protocol" : "dkh 06/25/2015 15:03",
+		"protocolSignatureArray" : "dkh 06/25/2015 15:03",
+		"protocolVersion" : "dkh 06/25/2015 15:03",
+		"protocolVersionString" : "dkh 06/25/2015 15:03",
+		"serializeUsing:" : "dkh 06/25/2015 15:04" },
+	"instance" : {
+		"fromString:" : "dkh 06/25/2015 15:03",
+		"protocol" : "dkh 06/25/2015 15:03",
+		"protocolSignatureArray" : "dkh 06/25/2015 15:03",
+		"protocolVersionString" : "dkh 06/25/2015 15:03",
+		"toString:" : "dkh 06/25/2015 15:03" } }

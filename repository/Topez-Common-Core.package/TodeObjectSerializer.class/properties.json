@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 06/25/2015 15:03",
 	"instvars" : [
 		 ],
-	"name" : "TodeSTON051Protocol",
+	"name" : "TodeObjectSerializer",
 	"pools" : [
 		 ],
-	"super" : "TodeCommunicationProtocol",
+	"super" : "Object",
 	"type" : "normal" }
