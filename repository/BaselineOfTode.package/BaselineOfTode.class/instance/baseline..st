@@ -45,7 +45,7 @@ baseline: spec
     do: [ 
       spec
         baseline: 'Ston'
-        with: [ spec repository: 'github://dalehenrich/ston:pharo-0.9.?/repository' ].
+        with: [ spec repository: 'github://GsDevKit/ston:pharo-0.9.?/repository' ].
       spec
         package: 'Topez-Pharo-Common';
         package: 'Tode-Pharo-Server-Core'
