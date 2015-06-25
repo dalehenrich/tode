@@ -1,0 +1,3 @@
+accessing
+protocolVersionString
+  self subclassResponsibility
