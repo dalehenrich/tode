@@ -27,13 +27,11 @@ topezServerProxy
 					| protocolSignature objSerializer |
 					protocolSignature := resultArray at: 4.
 					objSerializer := TodeObjectSerializer serializeUsing: protocolSignature.
-					false
-						ifTrue: [ 
-							self session
-								rawReceiverNB: topezServerProxy
-								perform: #serializeObjectsUsing:
-								withArgs: objSerializer protocolSignatureArray.
-							self objectSerializer: objSerializer ] ].
+					self session
+						rawReceiverNB: topezServerProxy
+						perform: #serializeObjectsUsing:version:
+						withArgs: objSerializer protocolSignatureArray.
+					self objectSerializer: objSerializer ].
 			self session rawReceiverNB: topezServerProxy perform: #authorInitials: withArgs: {(Author fullName)}.
 			self sessionDescription backupDirectory isEmpty not
 				ifTrue: [ 
