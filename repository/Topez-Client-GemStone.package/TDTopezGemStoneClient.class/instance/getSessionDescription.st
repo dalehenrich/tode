@@ -1,3 +1,3 @@
 as yet unclassified
 getSessionDescription
-	^ STON toString: self sessionDescription
+	^ self objectSerializer toString: self sessionDescription

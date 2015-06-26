@@ -18,4 +18,4 @@ customDefaultAction
 	answer
 		ifTrue: [ ^ #resume ].
 	^ {#abort.
-	(STON toString: 'Aborted...')}
+	(self topez objectSerializer toString: 'Aborted...')}

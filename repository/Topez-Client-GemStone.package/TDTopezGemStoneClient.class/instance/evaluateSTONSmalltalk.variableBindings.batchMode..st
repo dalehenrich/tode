@@ -9,7 +9,7 @@ evaluateSTONSmalltalk: smalltalkSource variableBindings: variableBindings batchM
 	^ self session
 		executeStringExpectingStringNB:
 			'(' , self todeServerAccessString , ' for: ' , self shell shellId asString , ') evaluateSTONSmalltalk:'
-				, smalltalkSource printString , ' variableBindings: ' , (STON toString: variableBindings) printString
+				, smalltalkSource printString , ' variableBindings: ' , (self objectSerializer toString: variableBindings) printString
 		envId: self environmentId ]
 		ensure: [ 
 			(session notNil and: [ transcriptOop notNil and: [ batchBool not ] ])
