@@ -1,3 +1,3 @@
 serialization
 fromString: aString
-  ^ STON fromUTF8EncodedString: aString
+  ^ (STON091Reader on: aString decodeFromUTF8 readStream) next
