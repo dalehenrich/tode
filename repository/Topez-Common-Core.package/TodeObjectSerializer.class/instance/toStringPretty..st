@@ -1,3 +1,7 @@
 serialization
 toStringPretty: anObject
-  self subclassResponsibility
+  ^ String
+    streamContents: [ :stream | 
+      self prettyWriter
+        on: stream;
+        nextPut: anObject ]

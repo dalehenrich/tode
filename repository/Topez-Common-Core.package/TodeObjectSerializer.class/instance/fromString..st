@@ -1,3 +1,5 @@
 serialization
 fromString: aString
-  self subclassResponsibility
+  ^ self reader
+    on: aString readStream;
+    next

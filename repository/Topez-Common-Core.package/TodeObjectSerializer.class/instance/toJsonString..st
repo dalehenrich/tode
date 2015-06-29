@@ -1,3 +1,7 @@
 serialization
 toJsonString: anObject
-  ^ STON toJsonString: anObject
+  ^ String
+    streamContents: [ :stream | 
+      self jsonWriter
+        on: stream;
+        nextPut: anObject ]

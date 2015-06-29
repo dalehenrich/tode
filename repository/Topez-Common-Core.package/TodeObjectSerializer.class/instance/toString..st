@@ -1,3 +1,7 @@
 serialization
 toString: anObject
-  self subclassResponsibility
+  ^ String
+    streamContents: [ :stream | 
+      self writer
+        on: stream;
+        nextPut: anObject ]

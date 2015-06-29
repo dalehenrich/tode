@@ -1,3 +1,3 @@
 serialization
 toStringPretty: anObject
-  ^ STON toUTF8EncodedStringPretty: anObject
+  ^ (super toStringPretty: anObject) encodeAsUTF8intoString
