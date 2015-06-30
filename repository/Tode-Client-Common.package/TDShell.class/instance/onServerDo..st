@@ -33,4 +33,4 @@ onServerDo: aBlock
 							variableBindings at: tempName put: val ] ] ].
 	serverSource := aBlock sourceNode body formattedCode.
 	stonString := self evaluateSTONSmalltalk: serverSource variableBindings: variableBindings.
-	^ STON fromString: stonString
+	^ self objectSerializer fromString: stonString

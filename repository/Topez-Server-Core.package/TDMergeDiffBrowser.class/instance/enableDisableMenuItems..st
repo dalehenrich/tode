@@ -14,7 +14,7 @@ enableDisableMenuItems: mergeOperation
           enable value: #'stOperation'.
           mergeOperation hasSmalltalkMethodDefinition
             ifTrue: [ enable value: #'stMethodOperation' ] ] ].
-  ^ STON
+  ^ self objectSerializer
     toString:
       {#'setMenuCategories:'.
       enabled.

@@ -1,3 +1,3 @@
 as yet unclassified
 shellHistory
-  ^ STON toString: self shell history asArray
+  ^ self objectSerializer toString: self shell history asArray

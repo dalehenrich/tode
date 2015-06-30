@@ -45,4 +45,4 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
           {#'editStonElement:'.
           hierarchyClientElement} ].
   stonArray addAll: (self enableDisableMenuItems: classDef).
-  ^ STON toString: stonArray
+  ^ listElement objectSerializer toString: stonArray

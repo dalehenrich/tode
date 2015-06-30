@@ -25,7 +25,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifNil: [ 
       sourceWindowId := currentFrame editUsing: sourceEditorSpec.
       contextWindowId := currentFrame editUsing: contextEditorSpec.
-      STON
+      self objectSerializer
         toString:
           {#'setMenuCategories:'.
           enabled.
@@ -36,7 +36,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifNotNil: [ 
       sourceClientElement := currentFrame clientElementUsing: sourceEditorSpec.
       contextClientElement := currentFrame clientElementUsing: contextEditorSpec.
-      STON
+      self objectSerializer
         toString:
           {#'setMenuCategories:'.
           enabled.

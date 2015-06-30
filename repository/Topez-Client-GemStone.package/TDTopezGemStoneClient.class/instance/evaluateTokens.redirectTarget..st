@@ -1,7 +1,7 @@
 as yet unclassified
 evaluateTokens: tokens redirectTarget: redirectTarget
   | stonString transcriptOop |
-  stonString := STON toString: tokens.
+  stonString := self objectSerializer toString: tokens.
   transcriptOop := self session clientForwarderCache keyAtValue: Transcript.
   [ 
   self session clientForwarderCache at: transcriptOop put: self shell console.

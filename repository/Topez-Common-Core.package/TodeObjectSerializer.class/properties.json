@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 06/25/2015 15:03",
+	"instvars" : [
+		 ],
+	"name" : "TodeObjectSerializer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

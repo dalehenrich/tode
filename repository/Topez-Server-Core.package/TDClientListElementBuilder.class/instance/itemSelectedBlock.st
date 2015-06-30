@@ -8,4 +8,5 @@ itemSelectedBlock
         itemSelected: listElement
         at: index
         shiftPressed: shiftPressed
-        listSelectionsDictionary: (STON fromString: listSelectionsDictionary) ] ]
+        listSelectionsDictionary:
+          (listElement objectSerializer fromString: listSelectionsDictionary) ] ]

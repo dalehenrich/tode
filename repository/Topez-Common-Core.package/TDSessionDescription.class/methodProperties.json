@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"importFrom:" : "dkh 5/28/2014 06:39",
+		"importFrom:" : "dkh 06/25/2015 16:02",
 		"seaside" : "dkh 5/28/2014 06:37" },
 	"instance" : {
 		"adornmentColor" : "dkh 5/28/2014 06:35",
@@ -21,7 +21,7 @@
 		"editTemplate" : "dkh 3/16/2015 12:32",
 		"editTemplateOn:" : "dkh 3/22/2015 20:52",
 		"exportTo:" : "dkh 5/28/2014 06:35",
-		"exportTo:extension:" : "dkh 5/28/2014 06:35",
+		"exportTo:extension:" : "dkh 06/25/2015 16:01",
 		"gciLibrary" : "dkh 10/07/2014 14:51",
 		"gciLibraryExtension" : "dkh 5/28/2014 06:35",
 		"gciLibraryName" : "dkh 5/28/2014 06:35",

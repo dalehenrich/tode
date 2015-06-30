@@ -1,4 +1,4 @@
 accessing
 customDefaultAction
    ^ {#'gciMainTerminated'.
-  (STON toString: 'GCI main terminated...')}
+  (self topez objectSerializer toString: 'GCI main terminated...')}

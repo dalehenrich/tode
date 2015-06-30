@@ -1,6 +1,6 @@
 menu actions
 spawnShellMenuAction: listElement selectionIndex: selectionIndex
-  ^ STON
+  ^ listElement objectSerializer
     toString:
       {#'spawnShell:'.
       listElement}

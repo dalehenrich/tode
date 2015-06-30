@@ -21,7 +21,8 @@
 		"scriptInputStream",
 		"scriptActionStack",
 		"sessionDescription",
-		"serverTodeRoot" ],
+		"serverTodeRoot",
+		"objectSerializer" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

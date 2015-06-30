@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"objectStructure" : "dkh 06/29/2015 11:08",
+		"protocolSignatureFor051" : "dkh 06/29/2015 11:02",
+		"protocolSignatureFor091" : "dkh 06/29/2015 11:02",
+		"test051To051" : "dkh 06/29/2015 11:38",
+		"test051To091" : "dkh 06/29/2015 11:09",
+		"test091To091" : "dkh 06/29/2015 11:05",
+		"unicode16TestString" : "dkh 06/29/2015 10:59",
+		"unicode32TestString" : "dkh 06/29/2015 10:59" } }

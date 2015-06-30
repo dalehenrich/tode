@@ -9,4 +9,4 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   itemAttribute := listElement itemCache at: index.
   def := itemAttribute object.
   self editClassDefinitions: def listElement: listElement.
-  ^ STON toString: (self enableDisableMenuItems: def)
+  ^ listElement objectSerializer toString: (self enableDisableMenuItems: def)

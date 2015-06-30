@@ -4,4 +4,4 @@ evaluateSTONSmalltalk: smalltalkSource
   self ensureSessionMethodsEnabled.
   result := smalltalkSource evaluate.
   self ensureSessionMethodsEnabled.
-  ^ STON toString: result
+  ^ self objectSerializer toString: result

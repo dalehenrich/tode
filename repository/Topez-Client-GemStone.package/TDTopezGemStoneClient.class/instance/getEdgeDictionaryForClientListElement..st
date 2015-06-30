@@ -6,4 +6,4 @@ getEdgeDictionaryForClientListElement: aClientListElement
     perform: #'value:'
     withArgs: {(aClientListElement clientElementOopType)}.
   stonString := self session library localFor: oopType.
-  ^ STON fromString: stonString
+  ^ self objectSerializer fromString: stonString

@@ -1,4 +1,4 @@
-convenience
+client callbacks
 serverTextDo: accumulateBlock with: doitString
   | result text commandResult |
   self accumulateBlocks remove: accumulateBlock ifAbsent: [  ].
@@ -7,4 +7,4 @@ serverTextDo: accumulateBlock with: doitString
   self objIn: commandResult resultObject.
   text := commandResult renderAsTextFor: self.
   self commitTransaction.
-  ^ STON toString: text
+  ^ self objectSerializer toString: text

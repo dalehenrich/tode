@@ -5,4 +5,4 @@ stonExportNode: node to: fileSystemPath
   fileName := ServerFileDirectory localNameFor: fileSystemPath.
   dir
     forceNewFileNamed: fileName
-    do: [ :fileStream | STON put: node onStream: fileStream ]
+    do: [ :fileStream | fileStream nextPutAll: (self objectSerializer toString: node) ]

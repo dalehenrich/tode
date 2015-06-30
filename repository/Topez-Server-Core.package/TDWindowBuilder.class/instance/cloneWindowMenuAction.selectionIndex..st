@@ -1,6 +1,6 @@
 menu actions
 cloneWindowMenuAction: listElement selectionIndex: selectionIndex
-  ^ STON
+  ^ listElement objectSerializer
     toString:
       {#'spawnWindow:'.
       (listElement copyForSpawn)}

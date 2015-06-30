@@ -1,3 +1,5 @@
 STON
 importFrom: filepath
-	FileStream readOnlyFileNamed: filepath do: [ :fileStream | ^STON fromStream: fileStream ].
+	FileStream
+		readOnlyFileNamed: filepath
+		do: [ :fileStream | ^ TodeObjectSerializer preferredSerializer fromString: fileStream contents ]

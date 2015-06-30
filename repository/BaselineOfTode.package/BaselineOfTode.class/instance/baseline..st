@@ -4,7 +4,10 @@ baseline: spec
   spec
     for: #'common'
     do: [ 
-      spec baseline: 'Ston'.
+      spec
+        baseline: 'Ston'
+          with: [ spec repository: 'github://GsDevKit/ston:v0.9.?/repository' ];
+        yourself.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
         package: 'Topez-Server-Core'
@@ -43,9 +46,6 @@ baseline: spec
   spec
     for: #'pharo'
     do: [ 
-      spec
-        baseline: 'Ston'
-        with: [ spec repository: 'github://GsDevKit/ston:pharo-0.5.?/repository' ].
       spec
         package: 'Topez-Pharo-Common';
         package: 'Tode-Pharo-Server-Core'
@@ -120,8 +120,6 @@ baseline: spec
               spec
                 loads: #('AST-Core');
                 repository: 'github://dalehenrich/rb:dev/repository' ];
-        baseline: 'Ston'
-          with: [ spec repository: 'github://GsDevKit/ston:v0.5.?/repository' ];
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4_dev/repository' ];
         yourself.

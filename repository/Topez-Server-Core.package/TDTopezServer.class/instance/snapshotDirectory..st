@@ -1,4 +1,4 @@
-accessing
+client callbacks
 snapshotDirectory: aString
   Smalltalk
     at: #'TDGemStoneTool'

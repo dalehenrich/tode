@@ -18,7 +18,8 @@
 		"resetObjInMessage",
 		"openDebuggerMessage",
 		"logStackMessage",
-		"tabCompletionMessage" ],
+		"tabCompletionMessage",
+		"objectSerializer" ],
 	"name" : "TDTopezClient",
 	"pools" : [
 		 ],
