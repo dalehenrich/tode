@@ -1,7 +1,7 @@
 tode commands
 pfstart
   "
-  pf start [--sampling=cpu|real] [--tally=[execTime|objFaults|pageFaults|edenUsage|gcTime]
+  pf start [--sampling=cpu|real] [--tally=[execTime|objFaults|pageFaults|edenUsage|gcTime|objCreation]
 "
 
   | sampling tally |

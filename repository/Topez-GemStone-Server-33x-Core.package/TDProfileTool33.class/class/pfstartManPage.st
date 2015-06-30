@@ -10,7 +10,7 @@ pfstartManPage
   pf start - Begin sampling data
 
 SYNOPSIS
-  pf start [--sampling=cpu|real] [--tally=[execTime|objFaults|pageFaults|edenUsage|gcTime]
+  pf start [--sampling=cpu|real] [--tally=[execTime|objFaults|pageFaults|edenUsage|gcTime|objCreation]
 
 DESCRIPTION
   Note that profiling of page faults and object faults will detect
@@ -23,11 +23,12 @@ OPTIONS
   --sampling=cpu|real
     elapsed time measured as cpu or real time. Default is cpu.
 
-  --tally=execTime|objFaults|pageFaults|edenUsage|gcTime
+  --tally=execTime|objFaults|pageFaults|edenUsage|gcTime|objCreation
     edenUsage
     execTime   
     gcTime     
     objFaults
+    objCreation
     pageFaults
  
 EXAMPLES
@@ -35,6 +36,7 @@ EXAMPLES
   pf start --sampling=cpu
   pf start --sampling=real
   pf start --tally=execTime
+  pf start --tally=objCreation
   pf start --tally=objFaults
   pf start --tally=pageFaults
   pf start --tally=edenUsage

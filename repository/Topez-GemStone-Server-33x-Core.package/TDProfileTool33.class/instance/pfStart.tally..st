@@ -12,14 +12,14 @@ pfStart: sampling tally: tally
       optionsArray add: sampling ].
   tally
     ifNotNil: [ 
-      (#(#'objFaults' #'pageFaults' #'edenUsage' #'gcTime' #'execTime')
+      (#(#'objCreation' #'objFaults' #'pageFaults' #'edenUsage' #'gcTime' #'execTime')
         includes: tally asSymbol)
         ifFalse: [ 
           self
             error:
               'Invalid tally: ' , tally printString
                 ,
-                  '. Should be objFaults, pageFaults, edenUsage, gcTime, or execTime.' ].
+                  '. Should be objCreation, objFaults, pageFaults, edenUsage, gcTime, or execTime.' ].
       tally asSymbol ~= #'execTime'
         ifTrue: [ optionsArray add: tally ] ].
   ^ ProfMonitor new
