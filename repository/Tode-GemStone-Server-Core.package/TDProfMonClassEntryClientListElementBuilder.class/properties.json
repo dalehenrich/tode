@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"profMon",
-		"tallyClass",
-		"tallyClassName",
-		"tally",
-		"sortKey",
-		"clientListEntries" ],
-	"name" : "TDProfMonitorClassEntry",
+		 ],
+	"name" : "TDProfMonClassEntryClientListElementBuilder",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TDProfMonEntryClientListElementBuilder",
 	"type" : "normal" }

@@ -7,5 +7,5 @@ printSampleOn: aStream
     nextPutAll: ' ';
     nextPutAll: (tallyPct asStringUsingFormat: #(-6 2 false));
     nextPutAll: ' ';
-    nextPutAll: self tallyClass theNonMetaClass name asString;
+    nextPutAll: self tallyClassName;
     yourself

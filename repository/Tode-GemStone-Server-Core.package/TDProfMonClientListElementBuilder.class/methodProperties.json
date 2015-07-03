@@ -5,9 +5,10 @@
 		"clientList:" : "dkh 06/11/2015 14:53",
 		"defaultEditorWindowLocation" : "dkh 09/27/2013 17:02",
 		"headerSize" : "dkh 06/10/2015 16:08",
-		"itemSelected:at:shiftPressed:" : "dkh 06/11/2015 14:57",
+		"itemSelected:at:shiftPressed:" : "dkh 07/03/2015 13:30",
 		"menuActionSpec" : "dkh 07/02/2015 15:04",
-		"sortByClassMenuAction:" : "dkh 07/02/2015 15:05",
+		"sortByClassNameMenuAction:" : "dkh 07/03/2015 15:34",
+		"sortByClassTallyMenuAction:" : "dkh 07/03/2015 15:34",
 		"sortByTallyMenuAction:" : "dkh 08/10/2014 18:16",
 		"sortByTotalMenuAction:" : "dkh 08/10/2014 18:16",
-		"tallyMenuActionSpec" : "dkh 07/02/2015 15:03" } }
+		"tallyMenuActionSpec" : "dkh 07/03/2015 15:45" } }

@@ -1,5 +1,6 @@
 {
 	"class" : {
-		 },
+		"initialize" : "dkh 07/03/2015 13:25" },
 	"instance" : {
+		"classInstancesCreated" : "dkh 07/03/2015 14:02",
 		"printSampleOn:" : "dkh 07/02/2015 16:41" } }

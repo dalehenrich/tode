@@ -2,8 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
+		"classInstancesCreated" : "dkh 07/03/2015 15:02",
 		"fullEntryReport" : "dkh 07/02/2015 17:01",
 		"printChildOn:" : "dkh 07/02/2015 17:04",
 		"printParentOn:" : "dkh 07/02/2015 17:02",
 		"printSampleOn:" : "dkh 07/02/2015 14:43",
-		"printSenderOn:" : "dkh 07/02/2015 17:02" } }
+		"printSenderOn:" : "dkh 07/02/2015 17:02",
+		"tallyClass" : "dkh 07/03/2015 13:41",
+		"tallyClassName" : "dkh 07/03/2015 16:01",
+		"windowLabel" : "dkh 07/03/2015 15:54" } }

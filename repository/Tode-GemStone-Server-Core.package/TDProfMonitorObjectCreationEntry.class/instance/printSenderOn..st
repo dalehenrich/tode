@@ -1,4 +1,4 @@
-as yet unclassified
+reporting
 printSenderOn: aStream
   | tallyPct totalPct elapsdPct |
   tallyPct := self tally asFloat * 100.0 / self overallTotalSamples.

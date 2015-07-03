@@ -1,4 +1,4 @@
-as yet unclassified
+reporting
 printSampleOn: aStream
   | tallyPct totalPct sortKey |
   sortKey := self profMon sortKey.

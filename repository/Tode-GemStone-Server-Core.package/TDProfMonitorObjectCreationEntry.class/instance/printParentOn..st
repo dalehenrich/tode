@@ -1,4 +1,4 @@
-as yet unclassified
+reporting
 printParentOn: aStream
   | pMap pt totalSamples |
   totalSamples := self overallTotalSamples.
