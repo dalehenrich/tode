@@ -1,12 +1,20 @@
-as yet unclassified
+sorting
 resortBy: aString
-  "no optimal, but hey more work is planned"
+  "not optimal, but hey more work is planned"
 
   sortKey := aString.
-  profMonResults := ((profMonResults collect: [ :each | each profMonEntry ])
-    sortDescending: sortKey)
-    collect: [ :each | 
-      TDProfMonitorEntry new
-        profMonEntry: each;
-        profMon: self;
-        yourself ]
+  profMonitorEntries := self objectCreationTally
+    ifTrue: [ 
+      ((profMonitor results at: 1) sortDescending: sortKey)
+        collect: [ :each | 
+          TDProfMonitorClassTallyEntry new
+            profMonEntry: each;
+            profMon: self;
+            yourself ] ]
+    ifFalse: [ 
+      ((profMonitor results at: 1) sortDescending: sortKey)
+        collect: [ :each | 
+          TDProfMonitorEntry new
+            profMonEntry: each;
+            profMon: self;
+            yourself ] ]

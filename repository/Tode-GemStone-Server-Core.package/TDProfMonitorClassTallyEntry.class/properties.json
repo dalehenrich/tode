@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 07/02/2015 16:41",
+	"instvars" : [
+		 ],
+	"name" : "TDProfMonitorClassTallyEntry",
+	"pools" : [
+		 ],
+	"super" : "TDProfMonitorEntry",
+	"type" : "normal" }

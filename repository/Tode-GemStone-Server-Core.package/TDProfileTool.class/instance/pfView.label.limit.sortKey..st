@@ -8,7 +8,7 @@ pfView: aProfMon label: label limit: limit sortKey: sortKey
   profMonitorView := TDProfMonitor new
     sortKey: sortKey;
     tallyLimit: limit;
-    profMon: aProfMon;
+    profMonitor: aProfMon;
     yourself.
   profMonitorView
     editUsing:

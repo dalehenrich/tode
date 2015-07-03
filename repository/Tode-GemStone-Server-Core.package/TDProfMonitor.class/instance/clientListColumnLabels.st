@@ -1,4 +1,9 @@
-as yet unclassified
+client list
 clientListColumnLabels
-  ^ {('     ' , sortKey , '         ms     % class and method name').
-  '---------- ---------- ----- ---------------------'}
+  ^ self objectCreationTally
+    ifTrue: [ 
+      {('     ' , sortKey , '     % class name').
+      '---------- ----- ---------------------'} ]
+    ifFalse: [ 
+      {('     ' , sortKey , '         ms     % class and method name').
+      '---------- ---------- ----- ---------------------'} ]

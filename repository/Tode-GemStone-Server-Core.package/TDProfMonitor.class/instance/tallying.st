@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 tallying
   | iv |
   traceObjCreation ifNil: [ ^ 'execTime' ].
@@ -16,4 +16,6 @@ tallying
     ifTrue: [ ^ 'edenUsage' ].
   (iv bitAnd: 16r20) ~~ 0
     ifTrue: [ ^ 'gcTime' ].
+  (iv bitAnd: 16r1) ~~ 0
+    ifTrue: [ ^ 'objCreation' ].
   ^ 'execTime'	"assume just time sampling"
