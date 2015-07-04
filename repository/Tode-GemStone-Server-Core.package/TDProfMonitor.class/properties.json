@@ -17,6 +17,8 @@
 		"profMonitorEntries",
 		"clientListEntries",
 		"objCreationCounts",
+		"objectCreationClassToMethodMap",
+		"objectCreationMethodToClassMap",
 		"objCreationClasses",
 		"objCreationTallyTotal" ],
 	"name" : "TDProfMonitor",

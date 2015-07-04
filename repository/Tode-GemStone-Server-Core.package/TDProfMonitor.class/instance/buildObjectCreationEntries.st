@@ -2,21 +2,35 @@ private
 buildObjectCreationEntries
   self objectCreationTally
     ifFalse: [ ^ self ].
+  objectCreationMethodToClassMap := IdentityKeyValueDictionary new.
+  objectCreationClassToMethodMap := IdentityKeyValueDictionary new.
   objCreationCounts := IdentityKeyValueDictionary new.
   (profMonitor results at: 2)
     keysAndValuesDo: [ :k :d | 
       | cls tally |
       cls := k at: 1.
-      tally := objCreationCounts
-        at: cls
-        ifAbsent: [ objCreationCounts at: cls put: 0 ].
-      d
-        valuesDo: [ :d2 | 
-          d2
-            valuesDo: [ :e | 
-              e cclass isNil
-                ifFalse: [ tally := tally + e tally ] ] ].
-      objCreationCounts at: cls put: tally ].
+      cls
+        ifNotNil: [ 
+          tally := objCreationCounts
+            at: cls
+            ifAbsent: [ objCreationCounts at: cls put: 0 ].
+          d
+            valuesDo: [ :d2 | 
+              d2
+                valuesDo: [ :e | 
+                  e cclass isNil
+                    ifFalse: [ tally := tally + e tally ].
+                  (objectCreationMethodToClassMap
+                    at: e cmethod
+                    ifAbsent: [ objectCreationMethodToClassMap at: e cmethod put: IdentitySet new ])
+                    add: cls.
+                  false
+                    ifTrue: [ 
+                      (objectCreationClassToMethodMap
+                        at: cls
+                        ifAbsent: [ objectCreationClassToMethodMap at: cls put: IdentitySet new ])
+                        add: e cmethod ] ] ].
+          objCreationCounts at: cls put: tally ] ].
   objCreationTallyTotal := 0.
   objCreationClasses := Array new.
   objCreationCounts
