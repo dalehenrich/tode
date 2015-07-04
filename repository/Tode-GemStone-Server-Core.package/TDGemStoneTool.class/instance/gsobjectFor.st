@@ -1,8 +1,15 @@
 as yet unclassified
 gsobjectFor
-  "gs objectFor <object-oop>"
+  "
+  gs objectFor <object-oop>...
+"
 
-  | oop |
+  | oops |
   self getSubcommandOptsMixedLongShort: {}.
-  oop := (subArguments at: 1) asNumber.
-  ^ Object _objectForOop: oop
+  oops := {}.
+  subArguments
+    do: [ :oopArg | 
+      | oop |
+      oop := oopArg asNumber.
+      oops add: (Object _objectForOop: oop) ].
+  ^ oops
