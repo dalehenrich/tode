@@ -3,5 +3,6 @@ gsobjectFor
   "gs objectFor <object-oop>"
 
   | oop |
-  oop := (tokens at: 2) asNumber.
+  self getSubcommandOptsMixedLongShort: {}.
+  oop := (subArguments at: 1) asNumber.
   ^ Object _objectForOop: oop
