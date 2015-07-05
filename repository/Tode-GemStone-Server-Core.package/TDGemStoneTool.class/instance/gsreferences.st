@@ -18,6 +18,7 @@ gsreferences
     at: 'inMemory'
     ifPresent: [ :arg | inMemory := true ]
     ifAbsent: [ inMemory := false ].
+  objectArray := {}.
   subArguments
     do: [ :oopArg | 
       | oop |
