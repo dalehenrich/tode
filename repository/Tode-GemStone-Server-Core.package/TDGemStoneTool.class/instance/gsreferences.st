@@ -4,7 +4,7 @@ gsreferences
   gs references [--max=<max-reference-paths>] <object-id>...
 "
 
-  | referencePathsForOop max inMemory |
+  | referencePathsForOop max inMemory objectArray |
   self
     getSubcommandOptsMixedLongShort:
       {#('max' nil #'required').
@@ -24,12 +24,10 @@ gsreferences
       oop := oopArg asNumber.
       (Object _objectForOop: oop)
         ifNil: [ referencePathsForOop at: oop put: 'oop not resolved' ]
-        ifNotNil: [ :obj | 
-          | refs |
-          refs := inMemory
-            ifTrue: [ obj findReferencesInMemory ]
-            ifFalse: [ 
-              System abort.
-              SystemRepository findAllReferencePathsToObject: obj maxPaths: max ].
-          referencePathsForOop at: obj put: refs ] ].
+        ifNotNil: [ :obj | objectArray add: obj ] ].
+  self
+    gsReferencesTo: objectArray
+    into: referencePathsForOop
+    inMemory: inMemory
+    max: max.
   ^ referencePathsForOop
