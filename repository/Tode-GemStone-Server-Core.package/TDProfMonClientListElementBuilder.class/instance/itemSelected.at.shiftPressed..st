@@ -8,5 +8,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   entry parentEntry: nil.
   entry
     editUsing:
-      (TDEditorSpec topez: listElement topez editorAspect: #'profMonResults').
+      ((TDEditorSpec topez: listElement topez editorAspect: #'profMonResults')
+        windowLabel: entry windowLabel;
+        yourself).
   ^ nil

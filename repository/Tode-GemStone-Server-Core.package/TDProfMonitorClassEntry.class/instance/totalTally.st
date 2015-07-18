@@ -1,0 +1,3 @@
+TDProfMon compat
+totalTally
+  ^ tally

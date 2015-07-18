@@ -27,5 +27,6 @@ itemSelected: listElement at: listIndex shiftPressed: shiftPressed
     editUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'profMonResults')
         highlightIndex: highlightIndex;
+        windowLabel: entry windowLabel;
         yourself).
   ^ nil

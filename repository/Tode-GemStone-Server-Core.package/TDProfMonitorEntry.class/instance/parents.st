@@ -5,7 +5,7 @@ parents
   parents ifNil: [ ^ #() ].
   ^ parents
     collect: [ :each | 
-      TDProfMonitorEntry new
+      self class new
         profMon: profMon;
         profMonEntry: each;
         master: self;

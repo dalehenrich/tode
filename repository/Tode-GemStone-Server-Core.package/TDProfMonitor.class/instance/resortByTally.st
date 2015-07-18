@@ -1,3 +1,3 @@
-as yet unclassified
+sorting
 resortByTally
   self resortBy: 'tally'

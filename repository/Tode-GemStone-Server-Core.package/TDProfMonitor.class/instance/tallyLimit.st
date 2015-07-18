@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 tallyLimit
   tallyLimit ifNil: [ ^ 0 ].
   ^ tallyLimit

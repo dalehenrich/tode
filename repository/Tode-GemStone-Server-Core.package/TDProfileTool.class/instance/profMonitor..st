@@ -1,3 +1,3 @@
-tode commands
+accessing
 profMonitor: aProfMonitor
   self class profMonitor: aProfMonitor

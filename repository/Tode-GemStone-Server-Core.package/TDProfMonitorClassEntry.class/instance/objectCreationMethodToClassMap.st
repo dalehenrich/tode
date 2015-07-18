@@ -1,0 +1,3 @@
+TDProfMon compat
+objectCreationMethodToClassMap
+  ^ self profMon objectCreationMethodToClassMap

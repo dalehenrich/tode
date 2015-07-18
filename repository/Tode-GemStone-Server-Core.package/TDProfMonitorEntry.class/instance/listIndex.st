@@ -1,3 +1,3 @@
 as yet unclassified
 listIndex
-  ^ self profMon profMonResults indexOf: self
+  ^ self profMon clientListEntries indexOf: self

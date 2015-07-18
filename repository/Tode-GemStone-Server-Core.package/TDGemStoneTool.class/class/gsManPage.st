@@ -27,7 +27,7 @@ DESCRIPTION
     mreferences 
     objectAudit
     objectFor          Resolve an object from given objectId
-    references
+    references         Find reference paths to the given objects
     sessionDescription Session information report
     version            OS, hardware and GemStone version attributes for Client, Gem, or Stone
 
@@ -62,6 +62,8 @@ EXAMPLES
 
   gs objectFor
 
+  gs references --max=32
+
   gs sessionDescription
   gs sessionDescription 5
   gs sessionDescription --all
@@ -81,5 +83,6 @@ EXAMPLES
     at: 'objectFor' put: self gsobjectForManPage;
     at: 'sessionDescription' put: self gssessionDescriptionManPage;
     at: 'version' put: self gsversionManPage;
+    at: 'references' put: self gsreferencesManPage;
     yourself.
   ^ manPage

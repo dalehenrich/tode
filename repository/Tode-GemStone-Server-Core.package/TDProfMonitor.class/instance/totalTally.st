@@ -1,7 +1,8 @@
-as yet unclassified
+accessing
 totalTally
   totalTally
     ifNil: [ 
       totalTally := 0.
-      self profMonResults do: [ :each | totalTally := totalTally + each tally ] ].
+      self profMonitorEntries
+        do: [ :each | totalTally := totalTally + each tally ] ].
   ^ totalTally
