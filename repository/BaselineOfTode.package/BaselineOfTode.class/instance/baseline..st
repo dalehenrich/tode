@@ -88,7 +88,7 @@ baseline: spec
         configuration: 'Roassal2'
           with: [ 
               spec
-                versionString: '1.52';
+                versionString: '1.5.2';
                 repository:
                     'http://smalltalkhub.com/mc/ObjectProfile/Roassal2/main';
                 loads: #('Trachel' 'Roassal2') ];
