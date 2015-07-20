@@ -14,6 +14,7 @@ DESCRIPTION
   limit list [<item-count>]
   limit oops [true|false]
   limit protocol [true|false]
+  limit transactionMode [manualBegin|autoBegin]
 
 EXAMPLES
   limit autoCommit
@@ -42,4 +43,7 @@ EXAMPLES
   limit protocol true
   limit protocol false
 
+  limit transactionMode
+  limit transactionMode manualBegin
+  limit transactionMode autoBegin
 '
