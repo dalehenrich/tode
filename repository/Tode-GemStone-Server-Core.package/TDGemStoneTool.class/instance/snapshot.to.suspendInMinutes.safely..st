@@ -4,6 +4,11 @@ snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes 
   [ 
   self checkpointsSuspended
     ifTrue: [ self error: 'Checkpoints currently suspended. Please wait and try again.' ].
+  System startCheckpointSync
+    ifFalse: [ 
+      self
+        error:
+          'Could not start a checkpoint, See comment in System class>>startCheckpointSync for possible reasons for failure.' ].
   System suspendCheckpointsForMinutes: suspendInMinutes.
   snapshots := {}.
   SystemRepository fileNames
