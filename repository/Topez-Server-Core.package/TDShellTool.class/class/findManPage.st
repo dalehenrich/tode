@@ -119,5 +119,6 @@ EXAMPLES
 '.
   manPage subCommands
     at: 'category' put: self findcategoryManPage;
+    at: 'class' put: self findclassManPage;
     yourself.
   ^ manPage
