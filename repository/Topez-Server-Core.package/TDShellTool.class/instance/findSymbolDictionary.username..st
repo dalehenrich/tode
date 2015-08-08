@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findSymbolDictionary: symbolDictionaryName username: username
   "find symbolDictionary <dictionary-name>"
 

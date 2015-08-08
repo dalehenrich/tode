@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findSource: regexPattern searchScriptRoot: path ignoreCase: ignoreCase
   | regex rootSearchNode leafNodes |
   path ifNil: [ ^ self findSource: regexPattern ignoreCase: ignoreCase ].

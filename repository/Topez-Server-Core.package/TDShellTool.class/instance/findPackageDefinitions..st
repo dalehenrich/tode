@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findPackageDefinitions: regexPattern
   | regex defs |
   regex := self findRegex: regexPattern.

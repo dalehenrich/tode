@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findRegexMethod: regexPattern
   "find rmethod <regex-pattern>"
 

@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findProjectDefinitions: regexPattern
   | regex |
   regex := self findRegex: regexPattern.

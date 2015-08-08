@@ -1,22 +1,29 @@
 find
 findsender
-  "find [--scriptPath=<tode-path>] sender [--pure|[--regex|-r]] <selector>"
+  "
+  find sender <selector>...
+  find sender [--pure] <selector>...
+  find sender [--regex|-r]] <selector-pattern>...
+"
 
-  | selector path |
+  | path list |
   self
     getSubcommandOptsMixedLongShort:
       {#('regex' $r #'none').
       #('pure' nil #'none')}.
-  selector := subArguments at: 1.
   options
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]
     ifAbsent: [ path := nil ].
-  subOptions
-    at: 'pure'
-    ifPresent: [ :ignored | ^ self findPureSender: selector searchScriptRoot: path ]
-    ifAbsent: [ 
+  list := Set new.
+  subArguments
+    do: [ :arg | 
       subOptions
-        at: 'regex'
-        ifPresent: [ :ignored | ^ self findRegexSender: selector searchScriptRoot: path ]
-        ifAbsent: [ ^ self findSender: selector searchScriptRoot: path ] ]
+        at: 'pure'
+        ifPresent: [ :ignored | list addAll: (self findPureSender: arg searchScriptRoot: path) ]
+        ifAbsent: [ 
+          subOptions
+            at: 'regex'
+            ifPresent: [ :ignored | list addAll: (self findRegexSender: arg searchScriptRoot: path) ]
+            ifAbsent: [ list addAll: (self findSender: arg searchScriptRoot: path) ] ] ].
+  ^ list

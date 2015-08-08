@@ -1,3 +1,3 @@
-as yet unclassified
+find
 findSourceExact: sourceString
   ^ self findSourceExact: sourceString ignoreCase: false

@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findProjectClassDefinitionsExact: projectName
   "find project <project-name>"
 

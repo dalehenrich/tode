@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findCategoryClassDefinitionsExact: categoryName
   | defs |
   defs := OrderedCollection new.

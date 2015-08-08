@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findMethodSpec: methodSpec
   | specArray selector |
   specArray := self parseMethodSpec: methodSpec trimBoth.

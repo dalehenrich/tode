@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findClass: regexPattern
   "find class <regex-pattern>"
 

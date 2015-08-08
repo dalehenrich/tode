@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findCategoryClassDefinitions: regexPattern
   "find category <regex-pattern>"
 

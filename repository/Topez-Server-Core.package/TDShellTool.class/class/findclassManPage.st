@@ -5,30 +5,29 @@ findclassManPage
     commandName: 'class'
     fromString:
       'NAME
-  find class - Find and view lists of classes matching a pattern
+  find class - Find list of class definitions
 
 SYNOPSIS
-  find class [--hier | --full] [--exact] <class-name-pattern>...
+  find class [--exact] [--hier] <class-name-pattern>...
 
 DESCRIPTION
-  The `find class` command brings up a window on a list of classes
-  matching <class-name-pattern>.
+  The `find class` command returns a list of class definitions.
 
   With no options, the command arguments are interpreted as regex expressions. The
-  regex expression is used to match against the list of classes in the users symbol 
-  list (`GsCurrentSession currentSession symbolList`). 
+  regex expression is used to match against the full list of classes found
+  in the users symbol list (`GsCurrentSession currentSession symbolList`). 
 
   If the --exact option is present, the command arguments are interpreted as 
-  class names and no pattern matching is performed.
+  class names and only those listed class definitions are brought up in the list.
 
-  If the --hier option is present, the superclass list for each of the classes is 
-  included the list.
-
-  if the --full option is present
-
+  If the --hier option is present, the superclass list for each of the matching 
+  class definitions is included in the list.
+ 
 EXAMPLES
-  find category topez-server tode
-  find category --exact Topez-Server-Core
-  find category --hier --exact Topez-Server-Core
+  find class Method Stream
+  find class --exact GsNMethod
+  find class --exact --hier GsNMethod
+  find class --hier method|stream
+  find --select=`[:def | (''^OB'' asRegex search: def label) not ]` class --hier method|stream
 '.
   ^ manPage

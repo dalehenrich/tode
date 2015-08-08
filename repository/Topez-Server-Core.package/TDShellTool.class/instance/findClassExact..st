@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findClassExact: className
   (Smalltalk classNamed: className)
     ifNil: [ ^ #() ]

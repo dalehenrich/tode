@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findPackageDefinitionsExact: packageName
   "find package <package-name>"
 

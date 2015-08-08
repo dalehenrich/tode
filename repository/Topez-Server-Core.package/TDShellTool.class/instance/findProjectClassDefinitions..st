@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findProjectClassDefinitions: regexPattern
   | defs |
   defs := Set new.

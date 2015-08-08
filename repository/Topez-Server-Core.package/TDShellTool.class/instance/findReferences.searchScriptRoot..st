@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findReferences: variableOrGlobalNameOrPathRef searchScriptRoot: path
   "find [--scriptPath=<tode-path>] references <variableOrGlobalNameOrPathRef>"
 

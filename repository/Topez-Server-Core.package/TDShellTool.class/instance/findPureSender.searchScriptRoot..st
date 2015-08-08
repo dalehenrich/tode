@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findPureSender: selectorToken searchScriptRoot: path
   "find [--scriptPath=<tode-path>] psender [#]<selector>"
 

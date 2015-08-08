@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findMethod: selectorToken
   "find method [#]<selector>"
 
