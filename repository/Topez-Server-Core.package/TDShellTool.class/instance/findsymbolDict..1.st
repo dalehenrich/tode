@@ -9,4 +9,4 @@ findsymbolDict
     getSubcommandOptsMixedLongShort:
       {#('hier' nil #'none').
       #('user' nil #'required')}.
-  ^ self findsSymbolDict
+  ^ self findSymbolDict
