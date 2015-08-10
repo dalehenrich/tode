@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findSource: regexPattern ignoreCase: ignoreCase
   | regex methodRefs |
   regex := self findRegex: regexPattern ignoreCase: ignoreCase.

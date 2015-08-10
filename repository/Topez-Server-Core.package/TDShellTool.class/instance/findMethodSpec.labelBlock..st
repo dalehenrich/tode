@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findMethodSpec: findTokens labelBlock: labelBlock
   "find amethod <method-spec>"
 

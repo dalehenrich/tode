@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findClassHierarchy: classNameList
   "find hierarchy <class-name>"
 

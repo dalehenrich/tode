@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findReferencesToLiteral: literal inClass: cls pattern: pattern
   | methodRefs |
   methodRefs := TDMethodDefinition rawLiteralReference: literal in: cls.

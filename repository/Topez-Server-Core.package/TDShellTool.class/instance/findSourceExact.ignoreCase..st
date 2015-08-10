@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findSourceExact: searchString ignoreCase: ignoreCase
   | methodRefs |
   methodRefs := Smalltalk systemNavigation

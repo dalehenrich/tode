@@ -5,15 +5,15 @@ findcategoryManPage
     commandName: 'category'
     fromString:
       'NAME
-  find category - Find and view lists of classes in a category
+  find category - Find list of class definitions in a category
 
 SYNOPSIS
   find category [--hier] <category-name-pattern>...
   find category [--hier] --exact <category-name>...
 
 DESCRIPTION
-  The `find category` command brings up a window on a list of classes present in
-  the specified class categories.
+  The `find category` command returns a list of class definitions present in the 
+  specified class categories.
 
   With no options, the command arguments are interpreted as regex expressions. The
   regex expression is used to match against the list of categories found for

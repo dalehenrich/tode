@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findClassDefsInSymbolDictionary: symbolDictionaryName username: username
   ^ (TDSymbolDictionaryDefinition new
     symbolDictionaryName: symbolDictionaryName;

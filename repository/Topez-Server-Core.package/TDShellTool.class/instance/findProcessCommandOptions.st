@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findProcessCommandOptions
   "used by browse and find commands"
 

@@ -8,7 +8,7 @@ findManPage
   find - Find classes and methods
 
 SYNOPSIS
-  find [--scriptPath=<node-path>] [--help] <command> [<args>]
+  find [--scriptPath=<node-path>] [--select=<select-block>] [--help] <command> [<args>]
 
 DESCRIPTION
   Find is the primary command for finding classes and methods.  	
@@ -17,22 +17,20 @@ DESCRIPTION
   specific search.
 
   Commands:
-    category       Find lists of classes in a category
-    configurations List configurations
-    class          Find and view lists of classes 
-    diff           View differences between two methods
-    list           View method definitions loaded from nodes
-    method         Find and view lists of methods matching patterns
-    package        Find and vew lists of classes in a package
-    packages       List packages
-    project        Find and vew lists of classes in a project
-    references     Find and view lists of methods referencing certain artifacts
-    sender         Find and view lists of methods sending particular messages
-    source         Find and view strings in method source 
-    symbolDict     Find and view a list of classes in a symbol dictionary
-    undeclared     View references to undeclared symbols
-    variables      Find and view references to instance, class instance and class variables
-    versions       Find and view versions of a method
+    category       Find list of class definitions in a category
+    configurations Find list of configuration definitions
+    class          Find list of class definitions
+    method         Find list of method definitions matching patterns
+    package        Find list of class definitions in a package
+    packages       Find list of package definitions
+    project        Find list of class definitions in a project
+    references     Find list of method definitions referencing certain artifacts
+    sender         Find list of method definitions sending particular messages
+    source         Find strings in method source 
+    symbolDict     Find list of class definitions in a symbol dictionary
+    undeclared     Find list of method definitions referencing undeclared symbols
+    variables      Find references to instance, class instance and class variables
+    versions       Find versions of a method
 
   Use `find --help <command>` to read about a specific subcommand.
 
@@ -59,13 +57,8 @@ EXAMPLES
   find class method stream
   find class --exact GsNMethod
   find class --hier method|stream
-  find class --full GsNMethod
 
   find configurations
-
-  find diff TDShellTool>>findMethods: `TDShellTool class>>find`
-
-  find list /tmp/sessionTemps/methodDefinitions
 
   find method at:put: nextPutAll:
   find method --spec Dictionary>>at:put: `Dictionary class>>new:`
@@ -119,5 +112,18 @@ EXAMPLES
 '.
   manPage subCommands
     at: 'category' put: self findcategoryManPage;
+    at: 'class' put: self findclassManPage;
+    at: 'configurations' put: self findconfigurationsManPage;
+    at: 'method' put: self findmethodManPage;
+    at: 'package' put: self findpackageManPage;
+    at: 'packages' put: self findpackagesManPage;
+    at: 'project' put: self findprojectManPage;
+    at: 'references' put: self findreferencesManPage;
+    at: 'sender' put: self findsenderManPage;
+    at: 'source' put: self findsourceManPage;
+    at: 'symbolDict' put: self findsymbolDictManPage;
+    at: 'undeclared' put: self findundeclaredManPage;
+    at: 'variables' put: self findvariablesManPage;
+    at: 'versions' put: self findversionsManPage;
     yourself.
   ^ manPage

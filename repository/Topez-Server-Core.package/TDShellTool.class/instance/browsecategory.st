@@ -13,8 +13,5 @@ browsecategory
   pattern := ''.
   subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
   label := 'Classes in category' , pattern.
-  block := [ 
-  | list |
-  list := self findcategory: subArguments options: options.
-  list := self filterBrowseList: list ].
+  block := [ self findcategory: subArguments options: subOptions ].
   ^ self browseClassesBlock: block label: label

@@ -1,3 +1,3 @@
-as yet unclassified
+find
 findRegex: regexExpression
   ^ self findRegex: regexExpression ignoreCase: true

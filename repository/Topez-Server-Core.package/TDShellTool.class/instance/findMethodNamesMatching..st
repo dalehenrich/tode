@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findMethodNamesMatching: aString
   | organizer matches methodNames |
   organizer := ClassOrganizer cachedOrganizer.

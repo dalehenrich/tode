@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findVersions: methodSpecTokens labelBlock: labelBlock
   "find versions <method-spec>"
 

@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findProjectRegistrationExact: projectName
   | projectSpec |
   projectSpec := MetacelloProjectRegistration registry projectSpecs

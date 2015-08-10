@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findSourceExact: searchString searchScriptRoot: path ignoreCase: ignoreCase
   | rootSearchNode leafNodes |
   path ifNil: [ ^ self findSourceExact: searchString ].
