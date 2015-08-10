@@ -18,4 +18,17 @@
 		"testBrowseUndeclared" : "dkh 05/06/2014 08:16",
 		"testBrowseVariables" : "dkh 05/06/2014 08:16",
 		"testBrowseVersions" : "dkh 05/06/2014 08:16",
-		"testFindCategory" : "dkh 05/06/2014 08:17" } }
+		"testFindCategory" : "dkh 05/06/2014 08:17",
+		"testFindClass" : "dkh 08/10/2015 11:17",
+		"testFindConfigurations" : "dkh 08/10/2015 11:17",
+		"testFindMethod" : "dkh 08/10/2015 11:18",
+		"testFindPackage" : "dkh 08/10/2015 11:18",
+		"testFindPackages" : "dkh 08/10/2015 11:18",
+		"testFindProject" : "dkh 08/10/2015 11:19",
+		"testFindReferences" : "dkh 08/10/2015 11:19",
+		"testFindSender" : "dkh 08/10/2015 11:20",
+		"testFindSource" : "dkh 08/10/2015 11:20",
+		"testFindSymbolDict" : "dkh 08/10/2015 11:21",
+		"testFindUndeclared" : "dkh 08/10/2015 11:21",
+		"testFindVariables" : "dkh 08/10/2015 11:21",
+		"testFindVersions" : "dkh 08/10/2015 11:21" } }

@@ -26,11 +26,11 @@ DESCRIPTION
     project        Find list of class definitions in a project
     references     Find list of method definitions referencing certain artifacts
     sender         Find list of method definitions sending particular messages
-    source         Find and view strings in method source 
-    symbolDict     Find and view a list of classes in a symbol dictionary
-    undeclared     View references to undeclared symbols
-    variables      Find and view references to instance, class instance and class variables
-    versions       Find and view versions of a method
+    source         Find strings in method source 
+    symbolDict     Find list of class definitions in a symbol dictionary
+    undeclared     Find list of method definitions referencing undeclared symbols
+    variables      Find references to instance, class instance and class variables
+    versions       Find versions of a method
 
   Use `find --help <command>` to read about a specific subcommand.
 
@@ -120,5 +120,10 @@ EXAMPLES
     at: 'project' put: self findprojectManPage;
     at: 'references' put: self findreferencesManPage;
     at: 'sender' put: self findsenderManPage;
+    at: 'source' put: self findsourceManPage;
+    at: 'symbolDict' put: self findsymbolDictManPage;
+    at: 'undeclared' put: self findundeclaredManPage;
+    at: 'variables' put: self findvariablesManPage;
+    at: 'versions' put: self findversionsManPage;
     yourself.
   ^ manPage

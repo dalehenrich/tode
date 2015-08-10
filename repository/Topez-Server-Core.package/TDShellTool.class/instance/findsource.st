@@ -1,33 +1,41 @@
 find
 findsource
-  "find [--scriptPath=<tode-path>] source [--exact|--case] <selector>"
+  "
+  find source [--case] <regex-pattern>...
+  find source --exact [--noCase] <source-string>...
+"
 
-  | selector path |
+  | path list |
   self
     getSubcommandOptsMixedLongShort:
       {#('exact' nil #'none').
-      #('case' nil #'none')}.
-  selector := subArguments at: 1.
+      #('case' nil #'none').
+      #('noCase' nil #'none').
+      #('filter' nil #'required')}.
   options
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]
     ifAbsent: [ path := nil ].
-  subOptions
-    at: 'exact'
-    ifPresent: [ :ignored | 
+  list := Set new.
+  subArguments
+    do: [ :arg | 
       | ignoreCase |
       subOptions
-        at: 'noCase'
-        ifPresent: [ :ignored | ignoreCase := true ]
-        ifAbsent: [ ignoreCase := false ].
-      ^ self
-        findSourceExact: selector
-        searchScriptRoot: path
-        ignoreCase: ignoreCase ]
-    ifAbsent: [ 
-      | ignoreCase |
-      subOptions
-        at: 'case'
-        ifPresent: [ :ignored | ignoreCase := false ]
-        ifAbsent: [ ignoreCase := true ].
-      ^ self findSource: selector searchScriptRoot: path ignoreCase: ignoreCase ]
+        at: 'exact'
+        ifPresent: [ :ignored | 
+          subOptions
+            at: 'noCase'
+            ifPresent: [ :ignored | ignoreCase := true ]
+            ifAbsent: [ ignoreCase := false ].
+          list
+            addAll:
+              (self findSourceExact: arg searchScriptRoot: path ignoreCase: ignoreCase) ]
+        ifAbsent: [ 
+          subOptions
+            at: 'case'
+            ifPresent: [ :ignored | ignoreCase := false ]
+            ifAbsent: [ ignoreCase := true ].
+          list
+            addAll:
+              (self findSource: arg searchScriptRoot: path ignoreCase: ignoreCase) ] ].
+  ^ list
