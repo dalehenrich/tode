@@ -6,4 +6,4 @@ findpackage
 "
 
   self getSubcommandOptsMixedLongShort: {#('exact' nil #'none')}.
-  ^ self self findPackage
+  ^ self findPackage

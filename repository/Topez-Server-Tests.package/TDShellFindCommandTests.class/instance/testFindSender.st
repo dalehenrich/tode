@@ -8,7 +8,6 @@ testFindSender
     evaluateCommandString: 'find --help sender';
     evaluateCommandString: 'find sender at:put:';
     evaluateCommandString: 'find sender --pure at:put:';
-    evaluateCommandString: 'find --staticList sender --regex at\:put\:';
     yourself.
   defs := self
     evaluateCommandString:
