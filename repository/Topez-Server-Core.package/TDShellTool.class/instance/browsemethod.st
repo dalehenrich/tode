@@ -14,8 +14,5 @@ browsemethod
       #('spec' nil #'none')}.
   label := 'Implementors of'.
   subArguments do: [ :arg | label := label , ' ' , arg ].
-  block := [ 
-  | list |
-  list := self findMethod.
-  list := self filterBrowseList: list ].
+  block := [ self findMethod ].
   ^ self browseMethodsBlock: block label: label

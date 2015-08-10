@@ -25,4 +25,4 @@ findReferences
             addAll:
               (self findReferencesToLiteral: literal inClass: cls pattern: arg) ]
         ifAbsent: [ list addAll: (self findReferences: arg inClass: cls searchScriptRoot: path) ] ].
-  ^ list
+  ^ self filterSelectList: list

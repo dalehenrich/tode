@@ -17,10 +17,7 @@ browsesource
     ifAbsent: [ path := nil ].
   label := 'Source matches'.
   subArguments do: [ :arg | label := label , ' ' , arg ].
-  block := [ 
-  | list |
-  list := self findSource.
-  list := self filterBrowseList: list ].
+  block := [ self findSource ].
   path
     ifNil: [ ^ self browseMethodsBlock: block label: label ]
     ifNotNil: [ ^ self browseLeafNodes: block pattern: '' label: label ]

@@ -13,4 +13,4 @@ findPackage
         at: 'exact'
         ifPresent: [ :ignored | list addAll: (self findPackageDefinitionsExact: arg) ]
         ifAbsent: [ list addAll: (self findPackageDefinitions: arg) ] ].
-  ^ list
+  ^ self filterSelectList: list

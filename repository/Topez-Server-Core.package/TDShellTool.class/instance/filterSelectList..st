@@ -1,5 +1,5 @@
 browse
-filterBrowseList: list
+filterSelectList: list
   options
     at: 'select'
     ifPresent: [ :filterSpec | 

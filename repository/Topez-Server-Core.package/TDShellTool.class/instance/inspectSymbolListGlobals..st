@@ -16,6 +16,6 @@ inspectSymbolListGlobals: symbolList
         do: [ :assoc | 
           (assoc value isBehavior not and: [ assoc value ~~ symDict ])
             ifTrue: [ list add: assoc ] ] ].
-  list := self filterBrowseList: list.
+  list := self filterSelectList: list.
   list := list asArray sorted: [ :a :b | a key <= b key ].
   ^ list inspect

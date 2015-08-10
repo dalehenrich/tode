@@ -25,8 +25,5 @@ browseclass
   pattern := ''.
   subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
   label := 'Classes matching' , pattern.
-  block := [ 
-  | list |
-  list := self findClass.
-  list := self filterBrowseList: list ].
+  block := [ self findClass ].
   ^ self browseClassesBlock: block label: label

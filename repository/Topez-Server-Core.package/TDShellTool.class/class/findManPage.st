@@ -8,7 +8,7 @@ findManPage
   find - Find classes and methods
 
 SYNOPSIS
-  find [--scriptPath=<node-path>] [--help] <command> [<args>]
+  find [--scriptPath=<node-path>] [--select=<select-block>] [--help] <command> [<args>]
 
 DESCRIPTION
   Find is the primary command for finding classes and methods.  	

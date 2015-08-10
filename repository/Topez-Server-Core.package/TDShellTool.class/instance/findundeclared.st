@@ -5,4 +5,4 @@ findundeclared
 "
 
   self getSubcommandOptsMixedLongShort: {}.
-  ^ self undefinedSymbolMethodDefinitions
+  ^ self filterSelectList: self undefinedSymbolMethodDefinitions

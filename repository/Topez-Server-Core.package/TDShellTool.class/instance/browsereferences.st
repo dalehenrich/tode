@@ -16,10 +16,7 @@ browsereferences
     ifAbsent: [ path := nil ].
   label := 'References to'.
   subArguments do: [ :arg | label := label , ' ' , arg ].
-  block := [ 
-  | list |
-  list := self findReferences.
-  list := self filterBrowseList: list ].
+  block := [ self findReferences ].
   path
     ifNil: [ ^ self browseMethodsBlock: block label: label ]
     ifNotNil: [ ^ self browseLeafNodes: block pattern: '' label: label ]

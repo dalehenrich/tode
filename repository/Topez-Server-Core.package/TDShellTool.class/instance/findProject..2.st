@@ -13,4 +13,4 @@ findProject
         at: 'exact'
         ifPresent: [ :ignored | list addAll: (self findProjectClassDefinitionsExact: arg) ]
         ifAbsent: [ list addAll: (self findProjectClassDefinitions: arg) ] ].
-  ^ list
+  ^ self filterSelectList: list

@@ -2,6 +2,6 @@ browse
 browseConfigurations
   TDConfigurationList reset.
   ^ self
-    browseDefinitionListBlock: [ TDConfigurationList current ]
+    browseDefinitionListBlock: [ self findconfigurations ]
     selectedIndex: 0
     label: 'Configurations'

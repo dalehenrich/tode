@@ -6,8 +6,5 @@ browseundeclared
 
   | block |
   self getSubcommandOptsMixedLongShort: {}.
-  block := [ 
-  | list |
-  list := self undefinedSymbolMethodDefinitions.
-  list := self filterBrowseList: list ].
+  block := [ self filterSelectList: self undefinedSymbolMethodDefinitions ].
   ^ self browseMethodsBlock: block label: 'Undeclared symbol references'

@@ -35,8 +35,5 @@ browsesymbolDict
   subArguments isEmpty
     ifTrue: [ label := 'Classes for user ' , username ].
   subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
-  block := [ 
-  | list |
-  list := self findSymbolDict.
-  list := self filterBrowseList: list ].
+  block := [ self findSymbolDict ].
   ^ self browseClassesBlock: block label: label , pattern

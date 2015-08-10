@@ -11,4 +11,4 @@ findVariables
     ifPresent: [ :className | cls := self resolveClassReference: className ].
   subArguments
     do: [ :arg | list addAll: (self findReferences: arg asSymbol inClass: cls) ].
-  ^ list
+  ^ self filterSelectList: list

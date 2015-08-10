@@ -17,10 +17,7 @@ browsesender
     ifAbsent: [ path := nil ].
   label := 'Senders of'.
   subArguments do: [ :arg | label := label , ' ' , arg ].
-  block := [ 
-  | list |
-  list := self findSender.
-  list := self filterBrowseList: list ].
+  block := [ self findSender ].
   path
     ifNil: [ ^ self browseMethodsBlock: block label: label ]
     ifNotNil: [ ^ self browseLeafNodes: block pattern: '' label: label ]

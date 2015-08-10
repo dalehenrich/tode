@@ -9,8 +9,5 @@ browsepackage
   self getSubcommandOptsMixedLongShort: {#('exact' nil #'none')}.
   pattern := ''.
   subArguments do: [ :arg | pattern := pattern , ' ' , arg ].
-  block := [ 
-  | list |
-  list := self findPackage.
-  list := self filterBrowseList: list ].
+  block := [ self findPackage ].
   ^ self browseClassesBlock: block label: 'Classes in package' , pattern

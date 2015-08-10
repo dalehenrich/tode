@@ -18,4 +18,4 @@ findMethod
             at: 'regex'
             ifPresent: [ :ignored | list addAll: (self findRegexMethod: arg) ]
             ifAbsent: [ list addAll: (self findMethod: arg) ] ] ].
-  ^ list
+  ^ self filterSelectList: list

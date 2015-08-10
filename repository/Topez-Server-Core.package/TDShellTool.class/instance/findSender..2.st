@@ -22,4 +22,4 @@ findSender
             at: 'regex'
             ifPresent: [ :ignored | list addAll: (self findRegexSender: arg searchScriptRoot: path) ]
             ifAbsent: [ list addAll: (self findSender: arg searchScriptRoot: path) ] ] ].
-  ^ list
+  ^ self filterSelectList: list

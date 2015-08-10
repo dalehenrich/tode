@@ -32,4 +32,4 @@ findSource
           list
             addAll:
               (self findSource: arg searchScriptRoot: path ignoreCase: ignoreCase) ] ].
-  ^ list
+  ^ self filterSelectList: list

@@ -8,8 +8,5 @@ browsevariables
   self getSubcommandOptsMixedLongShort: {#('class' nil #'required')}.
   label := 'Variable references to:'.
   subArguments do: [ :arg | label := label , ' ' , arg ].
-  block := [ 
-  | list |
-  list := self findVariables.
-  list := self filterBrowseList: list ].
+  block := [ self findVariables ].
   ^ self browseMethodsBlock: block label: label
