@@ -10,8 +10,7 @@ browsesource
     getSubcommandOptsMixedLongShort:
       {#('exact' nil #'none').
       #('case' nil #'none').
-      #('noCase' nil #'none').
-      #('filter' nil #'required')}.
+      #('noCase' nil #'none')}.
   options
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]
@@ -20,28 +19,7 @@ browsesource
   subArguments do: [ :arg | label := label , ' ' , arg ].
   block := [ 
   | list |
-  list := Set new.
-  subArguments
-    do: [ :arg | 
-      | ignoreCase |
-      subOptions
-        at: 'exact'
-        ifPresent: [ :ignored | 
-          subOptions
-            at: 'noCase'
-            ifPresent: [ :ignored | ignoreCase := true ]
-            ifAbsent: [ ignoreCase := false ].
-          list
-            addAll:
-              (self findSourceExact: arg searchScriptRoot: path ignoreCase: ignoreCase) ]
-        ifAbsent: [ 
-          subOptions
-            at: 'case'
-            ifPresent: [ :ignored | ignoreCase := false ]
-            ifAbsent: [ ignoreCase := true ].
-          list
-            addAll:
-              (self findSource: arg searchScriptRoot: path ignoreCase: ignoreCase) ] ].
+  list := self findSource.
   list := self filterBrowseList: list ].
   path
     ifNil: [ ^ self browseMethodsBlock: block label: label ]

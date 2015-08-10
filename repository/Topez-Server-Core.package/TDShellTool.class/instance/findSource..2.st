@@ -1,17 +1,11 @@
 find
-findsource
+findSource
   "
-  find source [--case] <regex-pattern>...
-  find source --exact [--noCase] <source-string>...
+  browse|find source [--case] <regex-pattern>...
+  browse|find source --exact [--noCase] <source-string>...
 "
 
   | path list |
-  self
-    getSubcommandOptsMixedLongShort:
-      {#('exact' nil #'none').
-      #('case' nil #'none').
-      #('noCase' nil #'none').
-      #('filter' nil #'required')}.
   options
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]

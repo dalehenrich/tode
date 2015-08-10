@@ -10,8 +10,6 @@ findsymbolDictManPage
 SYNOPSIS
   find symbolDict [--hier] [--user=<user-id>] <symbol-dictionary-name>
   find symbolDict [--hier] --user=<user-id>
-  find symbolDict --list [--user=<user-id>] 
-  find symbolDict --globals [--user=<user-id>] <symbol-dictionary-name>
 
 DESCRIPTION
   The `find symbolDict` command returns a list of class definitions present in
@@ -34,32 +32,8 @@ DESCRIPTION
   If the --hier option is present, the superclass list for each of the classes is 
   included the list.
 
-  If the --list option is present, an inspector is opened on the symbol list for the 
-  specified user. 
-
-  If the --globals option is present, an inspector is opened on the non-behavior valued
-  associations in the named symbol dictionary.
-
-OPTIONS
-  --select=<select-block>
-    If the --list option is present, then the argument to the select block is a 
-    SymbolDictionary:
-
-      --select=`[:dict | (''Global'' asRegex search: dict name asString)  not ]`
-
-    If the --global option is present, then the argument to the select block is
-    an Association:
-
-      --select=`[:assoc | assoc value isString ]`
-
 EXAMPLES
   find symbolDict --user=SystemUser UserGlobals
-  find --select=`[:def | ''Tool'' asRegex search: def label ]` symbolDict UserGlobals
-  find symbolDict --list --user=SystemUser
-  find symbolDict --list 
-  find --select=`[:dict | (''Global'' asRegex search: dict name asString) ]` symbolDict --list 
   find symbolDict --user=SystemUser
-  find symbolDict --globals --user=SystemUser Globals
-  find --select=`[:assoc | assoc value isString ]` symbolDict --globals --user=SystemUser Globals
 '.
   ^ manPage

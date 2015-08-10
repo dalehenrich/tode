@@ -1,11 +1,10 @@
 find
-findvariables
+findVariables
   "
-  find variables --class=<class-name> <variable-name>...
+  browse|find variables --class=<class-name> <variable-name>...
 "
 
   | cls list |
-  self getSubcommandOptsMixedLongShort: {#('class' nil #'required')}.
   list := Set new.
   subOptions
     at: 'class'

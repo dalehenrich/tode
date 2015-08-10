@@ -6,6 +6,4 @@ findpackages
 
   self getSubcommandOptsMixedLongShort: {}.
   TDPackageList reset.
-  ^ TDPackageList current
-    definitionList;
-    yourself
+  ^ self findPackages

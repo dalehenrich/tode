@@ -14,21 +14,8 @@ browsemethod
       #('spec' nil #'none')}.
   label := 'Implementors of'.
   subArguments do: [ :arg | label := label , ' ' , arg ].
-  subOptions
-    at: 'spec'
-    ifPresent: [ :ignored | 
-      block := [ 
-      | list |
-      list := Set new.
-      subArguments do: [ :arg | list addAll: (self findMethodSpec: arg) ].
-      self filterBrowseList: list ].
-      ^ self browseMethodsBlock: block label: label ].
   block := [ 
   | list |
-  list := Set new.
-  subOptions
-    at: 'regex'
-    ifPresent: [ :ignored | subArguments do: [ :arg | list addAll: (self findRegexMethod: arg) ] ]
-    ifAbsent: [ subArguments do: [ :arg | list addAll: (self findMethod: arg) ] ].
+  list := self findMethod.
   list := self filterBrowseList: list ].
   ^ self browseMethodsBlock: block label: label

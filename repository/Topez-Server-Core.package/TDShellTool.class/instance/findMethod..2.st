@@ -1,16 +1,12 @@
 find
-findmethod
+findMethod
   "
-  find method <selector> 
-  find method --spec <method-spec> 
-  find method --regex <selector-pattern> 
+  browse|find method <selector> 
+  browse|find method --spec <method-spec> 
+  browse|find method --regex <selector-pattern> 
 "
 
   | list |
-  self
-    getSubcommandOptsMixedLongShort:
-      {#('regex' $r #'none').
-      #('spec' nil #'none')}.
   list := Set new.
   subArguments
     do: [ :arg | 

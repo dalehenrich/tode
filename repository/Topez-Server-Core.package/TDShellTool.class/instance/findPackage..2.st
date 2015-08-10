@@ -1,12 +1,11 @@
 find
-findpackage
+findPackage
   "
-  find package <regex-pattern>
-  find package --exact <package-name>
+  browse|find package <regex-pattern>
+  browse|find package --exact <package-name>
 "
 
   | list |
-  self getSubcommandOptsMixedLongShort: {#('exact' nil #'none')}.
   list := Set new.
   subArguments
     do: [ :arg | 

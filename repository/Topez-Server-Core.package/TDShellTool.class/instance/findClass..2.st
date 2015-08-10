@@ -1,14 +1,10 @@
 find
-findclass
+findClass
   "
-  find class [--exact] [--hier] <class-name-pattern>...
+  browse|find class [--exact] [--hier] <class-name-pattern>...
 "
 
   | list |
-  self
-    getSubcommandOptsMixedLongShort:
-      {#('exact' nil #'none').
-      #('hier' nil #'none')}.
   list := Set new.
   subArguments
     do: [ :clsNamePattern | 

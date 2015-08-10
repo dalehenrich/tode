@@ -6,8 +6,11 @@ testBrowseSymbolDict
     evaluateCommandString: 'browse --help symbolDict';
     evaluateCommandString: 'browse symbolDict --user=SystemUser UserGlobals';
     evaluateCommandString:
+        'browse symbolDict --hier --user=SystemUser UserGlobals';
+    evaluateCommandString:
         'browse --select=`[:def | ''Tool'' asRegex search: def label ]` symbolDict UserGlobals';
     evaluateCommandString: 'browse symbolDict --user=SystemUser';
+    evaluateCommandString: 'browse symbolDict --hier --user=SystemUser';
     yourself.
   [ 
   self

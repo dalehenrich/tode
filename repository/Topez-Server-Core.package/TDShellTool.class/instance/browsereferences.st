@@ -18,21 +18,7 @@ browsereferences
   subArguments do: [ :arg | label := label , ' ' , arg ].
   block := [ 
   | list |
-  list := Set new.
-  subOptions
-    at: 'class'
-    ifPresent: [ :className | cls := self resolveClassReference: className ].
-  subArguments
-    do: [ :arg | 
-      subOptions
-        at: 'literal'
-        ifPresent: [ :literalType | 
-          | literal |
-          literal := arg evaluate.
-          list
-            addAll:
-              (self findReferencesToLiteral: literal inClass: cls pattern: arg) ]
-        ifAbsent: [ list addAll: (self findReferences: arg inClass: cls searchScriptRoot: path) ] ].
+  list := self findReferences.
   list := self filterBrowseList: list ].
   path
     ifNil: [ ^ self browseMethodsBlock: block label: label ]

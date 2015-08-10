@@ -1,16 +1,12 @@
 find
-findsender
+findSender
   "
-  find sender <selector>...
-  find sender [--pure] <selector>...
-  find sender [--regex|-r]] <selector-pattern>...
+  browse|find sender <selector>...
+  browse|find sender [--pure] <selector>...
+  browse|find sender [--regex|-r]] <selector-pattern>...
 "
 
   | path list |
-  self
-    getSubcommandOptsMixedLongShort:
-      {#('regex' $r #'none').
-      #('pure' nil #'none')}.
   options
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]

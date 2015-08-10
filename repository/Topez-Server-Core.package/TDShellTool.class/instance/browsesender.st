@@ -19,17 +19,7 @@ browsesender
   subArguments do: [ :arg | label := label , ' ' , arg ].
   block := [ 
   | list |
-  list := Set new.
-  subArguments
-    do: [ :arg | 
-      subOptions
-        at: 'pure'
-        ifPresent: [ :ignored | list addAll: (self findPureSender: arg searchScriptRoot: path) ]
-        ifAbsent: [ 
-          subOptions
-            at: 'regex'
-            ifPresent: [ :ignored | list addAll: (self findRegexSender: arg searchScriptRoot: path) ]
-            ifAbsent: [ list addAll: (self findSender: arg searchScriptRoot: path) ] ] ].
+  list := self findSender.
   list := self filterBrowseList: list ].
   path
     ifNil: [ ^ self browseMethodsBlock: block label: label ]

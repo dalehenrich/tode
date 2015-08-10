@@ -1,12 +1,11 @@
 find
-findproject
+findProject
   "
-  find project <regex-pattern>
-  find project --exact <project-name>
+  browse|find project <regex-pattern>
+  browse|find project --exact <project-name>
 "
 
   | list |
-  self getSubcommandOptsMixedLongShort: {#('exact' nil #'none')}.
   list := Set new.
   subArguments
     do: [ :arg | 

@@ -1,15 +1,11 @@
 find
-findreferences
+findReferences
   "
-  find references [--class=<class-name>] <global-name>...
-  find references [--class=<class-name>] --literal <literal>... 
+  browse|find references [--class=<class-name>] <global-name>...
+  browse|find references [--class=<class-name>] --literal <literal>... 
 "
 
   | path list cls |
-  self
-    getSubcommandOptsMixedLongShort:
-      {#('class' nil #'required').
-      #('literal' nil #'none')}.
   options
     at: 'scriptPath'
     ifPresent: [ :scriptPath | path := scriptPath ]
