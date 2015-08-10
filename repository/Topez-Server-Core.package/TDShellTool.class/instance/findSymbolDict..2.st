@@ -1,5 +1,5 @@
 browse
-findsSymbolDict
+findSymbolDict
   "
   browse|find symbolDict [--hier] [--user=<user-id>] <symbol-dictionary-name>
   browse|find symbolDict [--hier] --user=<user-id>
