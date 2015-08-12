@@ -1,3 +1,3 @@
 client element caching
 retireClientElement: clientElement
-	self eventCache listAt: #clientElementMap add: clientElement clientElementOop
+	self eventCache listAt: #clientElementRetirees add: clientElement clientElementOop
