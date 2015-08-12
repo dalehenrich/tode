@@ -11,4 +11,5 @@
 		"mapAt:" : "dkh 8/11/2015 17:20",
 		"mapAt:at:put:" : "dkh 8/11/2015 17:18",
 		"mapAt:removeKey:" : "dkh 8/11/2015 17:18",
-		"mapAt:removeValue:" : "dkh 8/11/2015 17:18" } }
+		"mapAt:removeValue:" : "dkh 8/11/2015 17:18",
+		"reset" : "dkh 8/12/2015 11:58" } }
