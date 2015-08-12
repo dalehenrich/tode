@@ -19,7 +19,8 @@
 		"openDebuggerMessage",
 		"logStackMessage",
 		"tabCompletionMessage",
-		"objectSerializer" ],
+		"objectSerializer",
+		"eventCache" ],
 	"name" : "TDTopezClient",
 	"pools" : [
 		 ],

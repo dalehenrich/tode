@@ -7,7 +7,10 @@ editElement: aClientElement aspect: aspectSelector label: labelString inWindow: 
 	self currentWindowId: windowId.
 	label := labelString.
 	newWindow := (self windowStatus windowAt: windowId) isNil.
-	(win := self editorWindowAt: windowId) model
+	win := self editorWindowAt: windowId.
+	newWindow
+		ifFalse: [ self retireClientElement: win model clientElement ].
+	win model
 		perform: aspectSelector;
 		clientElement: aClientElement;
 		windowId: windowId;
