@@ -14,8 +14,11 @@ flushEventCache
 			^ self ].
 	eventCacheString := self objectSerializer toString: self eventCache.
 	self eventCache reset.
+	[ 
 	serverEventCacheString := self session
 		receiverNB: topezServerProxy
 		perform: #clientEventCache:
 		withArgs: {eventCacheString}.
-	 self serverEventCache: (self objectSerializer fromString: serverEventCacheString)
+	self serverEventCache: (self objectSerializer fromString: serverEventCacheString) ]
+		on: GciSessionNotLoggedInError
+		do: [ :ignored |  ]
