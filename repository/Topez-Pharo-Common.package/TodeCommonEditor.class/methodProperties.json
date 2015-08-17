@@ -8,6 +8,7 @@
 		"buildCmdActionMapFor:" : "dkh 6/18/2014 15:44",
 		"clearMenuCategories:" : "dkh 5/16/2014 15:05",
 		"clearMenuCategory:" : "dkh 5/12/2014 12:35",
+		"clearUserEditFlag" : "dkh 8/17/2015 15:55",
 		"clientElement" : "dkh 12/27/2012 08:52",
 		"clientElement:" : "dkh 1/27/2013 11:35",
 		"close" : "dkh 1/7/2014 07:48",
@@ -29,7 +30,7 @@
 		"refreshView" : "dkh 3/26/2014 10:12",
 		"setMenuCategories:" : "dkh 5/16/2014 15:05",
 		"setMenuCategory:" : "dkh 5/12/2014 12:36",
-		"spawnWindow:" : "dkh 8/11/2015 17:23",
+		"spawnWindow:" : "dkh 4/27/2014 20:44",
 		"topez" : "dkh 12/27/2012 08:10",
 		"windowId" : "dkh 12/27/2012 08:10",
 		"windowIsClosing" : "dkh 10/20/2013 10:59" } }
