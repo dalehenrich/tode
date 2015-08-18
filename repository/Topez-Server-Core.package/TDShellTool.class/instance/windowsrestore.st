@@ -24,5 +24,9 @@ windowsrestore
       cpy := ce copy.
       cpy topez: self topez.
       cpy ].
-  sortedClientElements do: [ :ce | self topez editElement: ce ].
+  sortedClientElements
+    do: [ :ce | 
+      self topez
+        cacheClientElement: ce;
+        editElement: ce ].
   ^ sortedClientElements
