@@ -15,8 +15,7 @@ editElement: aClientElement aspect: aspectSelector label: labelString inWindow: 
 			morph canDiscardEdits
 				ifFalse: [ 
 					morph promptForCancel
-						ifTrue: [ ^ self ] ].
-			self retireClientElement: win model clientElement ].
+						ifTrue: [ ^ self ] ] ].
 	win model
 		perform: aspectSelector;
 		clientElement: aClientElement;

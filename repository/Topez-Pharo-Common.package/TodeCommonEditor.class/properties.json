@@ -8,6 +8,7 @@
 	"instvars" : [
 		"editor",
 		"clientElement",
+		"clientElementStack",
 		"enabledMenuCategories" ],
 	"name" : "TodeCommonEditor",
 	"pools" : [
