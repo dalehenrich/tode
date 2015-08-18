@@ -1,7 +1,6 @@
 accessing
 evaluateSTONCommand: stonCommand
   | command result text |
-  self abortTransaction.
   self ensureSessionMethodsEnabled.
   command := self objectSerializer fromString: stonCommand.
   redirectTarget := command redirectTarget.

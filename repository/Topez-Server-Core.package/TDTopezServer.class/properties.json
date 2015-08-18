@@ -7,7 +7,8 @@
 		"nodeEditors",
 		"nodePrinters" ],
 	"classvars" : [
-		"ConcreteClassName" ],
+		"ConcreteClassName",
+		"PersistentElementCacheStack" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"topezClientForwarder",

@@ -3,4 +3,5 @@
 		 },
 	"instance" : {
 		"buildClientElementUsing:editorAspect:" : "dkh 06/05/2013 23:05",
-		"editorWindowLabel" : "dkh 06/18/2014 13:40" } }
+		"editorWindowLabel" : "dkh 06/18/2014 13:40",
+		"usePersistentClientElementCache" : "dkh 08/18/2015 13:46" } }

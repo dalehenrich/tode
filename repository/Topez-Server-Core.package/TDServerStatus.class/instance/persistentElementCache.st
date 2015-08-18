@@ -1,11 +1,7 @@
 as yet unclassified
 persistentElementCache
-  | sessionSerialNum |
-  sessionSerialNum := GsCurrentSession currentSession sessionSerialNum.
   persistentElementCache
     ifNil: [ 
-      "bootstrapping"
-      persistentElementCache := Dictionary new ].
+      "bootstrapping ... normally persistentElementCache is supplied by TDTopezServer at creation time"
+      persistentElementCache := IdentitySet new ].
   ^ persistentElementCache
-    at: sessionSerialNum
-    ifAbsent: [ persistentElementCache at: sessionSerialNum put: IdentitySet new ]
