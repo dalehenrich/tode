@@ -2,7 +2,7 @@
 	"class" : {
 		"reset" : "DataCurator 02/06/2013 01:52" },
 	"instance" : {
-		"basicMenuActionSpec" : "dkh 02/23/2014 09:32",
+		"basicMenuActionSpec" : "dkh 08/17/2015 17:25",
 		"browseCategoryMenuAction:class:" : "dkh 06/22/2014 09:41",
 		"browseFullClassMenuAction:class:" : "dkh 03/30/2014 15:08",
 		"browseGitMethodVersions:methodDefinition:" : "dkh 07/08/2014 11:12",
@@ -47,10 +47,10 @@
 		"spawnShellMenuAction:" : "dkh 02/23/2014 18:09",
 		"spawnShellMenuAction:selectionIndex:" : "dkh 06/25/2015 16:15",
 		"standardCmdKeyCodePoints" : "DataCurator 01/27/2013 10:36",
-		"standardMenuActionSpec" : "dkh 02/23/2014 09:34",
+		"standardMenuActionSpec" : "dkh 08/17/2015 17:25",
 		"theEditorSpec" : "dkh 10/05/2013 10:06",
 		"theEditorSpec:" : "dkh 09/15/2013 21:51",
 		"theWindowLocation:" : "DataCurator 01/27/2013 20:51",
 		"theWindowName:" : "DataCurator 01/24/2013 13:40",
 		"windowIsClosingBlock" : "dkh 10/20/2013 09:58",
-		"windowMenuActionSpec" : "dkh 08/17/2015 17:14" } }
+		"windowMenuActionSpec" : "dkh 08/17/2015 17:23" } }

@@ -5,7 +5,7 @@
 		"addClassMenuAction:selectionIndex:" : "dkh 07/08/2014 14:09",
 		"addProtocolMenuAction:selectionIndex:" : "dkh 07/08/2014 12:33",
 		"addSubClassMenuAction:selectionIndex:" : "dkh 07/07/2014 22:03",
-		"basicMenuActionSpec" : "dkh 09/29/2013 13:47",
+		"basicMenuActionSpec" : "dkh 08/17/2015 17:25",
 		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 06/24/2014 12:05",
 		"browseClassTestsMenuAction:selectionIndex:" : "dkh 07/08/2014 10:13",
 		"browseFullClassMenuAction:selectionIndex:" : "dkh 02/23/2014 18:36",
@@ -56,7 +56,7 @@
 		"renameProtocolMenuAction:selectionIndex:" : "dkh 07/08/2014 12:36",
 		"selectedClass:selectionIndex:" : "DataCurator 02/07/2013 14:28",
 		"selectedIndex" : "DataCurator 01/11/2013 14:26",
-		"standardMenuActionSpec" : "dkh 09/29/2013 13:47",
+		"standardMenuActionSpec" : "dkh 08/17/2015 17:25",
 		"theBehavior" : "DataCurator 02/07/2013 14:10",
 		"theClass" : "DataCurator 02/07/2013 14:11",
-		"windowMenuActionSpec" : "dkh 08/17/2015 17:15" } }
+		"windowMenuActionSpec" : "dkh 08/17/2015 17:22" } }
