@@ -14,6 +14,8 @@
 		"browseReferencesMenuAction:to:inClass:" : "dkh 04/26/2014 09:38",
 		"browseTool:" : "dkh 03/30/2014 12:16",
 		"buildClientElementUsing:editorAspect:" : "dkh 04/11/2013 14:35",
+		"clientElementHistoryWindowMenuAction:" : "dkh 08/17/2015 17:15",
+		"clientElementHistoryWindowMenuAction:selectionIndex:" : "dkh 08/17/2015 17:15",
 		"cloneWindowMenuAction:" : "dkh 02/23/2014 18:05",
 		"cloneWindowMenuAction:selectionIndex:" : "dkh 06/25/2015 16:15",
 		"defaultEditorWindowLocation" : "DataCurator 01/27/2013 20:52",
@@ -51,4 +53,4 @@
 		"theWindowLocation:" : "DataCurator 01/27/2013 20:51",
 		"theWindowName:" : "DataCurator 01/24/2013 13:40",
 		"windowIsClosingBlock" : "dkh 10/20/2013 09:58",
-		"windowMenuActionSpec" : "dkh 04/27/2014 20:07" } }
+		"windowMenuActionSpec" : "dkh 08/17/2015 17:14" } }

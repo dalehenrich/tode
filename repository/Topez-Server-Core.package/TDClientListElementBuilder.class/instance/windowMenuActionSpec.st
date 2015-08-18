@@ -1,6 +1,7 @@
 menu action specs
 windowMenuActionSpec
   ^ {#('clone window' $C #'cloneWindowMenuAction:selectionIndex:').
+  #('history' nil #'clientElementHistoryWindowMenuAction:').
   #('inspect builder' nil #'inspectBuilderMenuAction:selectionIndex:').
   #('inspect client element' nil #'inspectWindowModelMenuAction:selectionIndex:').
   #('list windows' $L #'listWindowsMenuAction:selectionIndex:').
