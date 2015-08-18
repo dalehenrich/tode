@@ -22,8 +22,8 @@ testClientElementSerialization
   serializer := TodeObjectSerializer preferredSerializer.
   stonString := serializer toString: serverClientElement.
   clientClientElement := serializer fromString: stonString.
-  ivs := TodeClientElement allInstVarNames.
-  ivs removeAll: #(#'usePersistentClientElementCache' #'timestamp').
+  ivs := TodeClientElement allInstVarNames asSet.
+  ivs removeAllFoundIn: #(#'usePersistentClientElementCache' #'timestamp').
   ivs
     do: [ :iv | 
       | ivName |
