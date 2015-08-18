@@ -17,5 +17,6 @@ miniToolSpec
         highlightIndex: self highlightIndex;
         parentList: self parentList;
         beMultipleSelection: self beMultipleSelection;
+        usePersistentClientElementCache: self usePersistentClientElementCache;
         yourself ].
   ^ miniToolSpec

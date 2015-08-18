@@ -22,7 +22,8 @@
 		"scriptActionStack",
 		"sessionDescription",
 		"serverTodeRoot",
-		"objectSerializer" ],
+		"objectSerializer",
+		"persistentElementCache" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

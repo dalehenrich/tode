@@ -24,6 +24,7 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     editorWindowName: self editorWindowName;
     editorWindowLocation: self editorWindowLocation;
     editorAspectSelector: #'activateCodeEditor';
+    usePersistentClientElementCache: self usePersistentClientElementCache;
     windowIsClosingBlock: theWindowIsClosingBlock;
     windowBuilder: self;
     yourself
