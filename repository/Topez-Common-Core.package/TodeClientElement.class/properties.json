@@ -22,7 +22,8 @@
 		"windowIsClosingBlock",
 		"windowIsClosingBlockOop",
 		"windowBuilder",
-		"usePersistentClientElementCache" ],
+		"usePersistentClientElementCache",
+		"timestamp" ],
 	"name" : "TodeClientElement",
 	"pools" : [
 		 ],

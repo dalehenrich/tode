@@ -7,4 +7,5 @@ clientListElement
     selectedIndex: self selectedIndex;
     usePersistentClientElementCache: self usePersistentClientElementCache;
     windowBuilder: self;
+    timestamp;
     yourself

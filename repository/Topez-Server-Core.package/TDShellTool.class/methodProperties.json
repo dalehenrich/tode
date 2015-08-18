@@ -127,9 +127,8 @@
 		"touch" : "dkh 11/10/2013 10:21",
 		"touchManPage" : "dkh 10/30/2014 14:22",
 		"windows" : "dkh 08/18/2015 14:09",
-		"windowsManPage" : "dkh 08/18/2015 14:14",
-		"windowslistManPage" : "dkh 08/18/2015 14:35",
-		"windowsrestoreManPage" : "dkh 08/18/2015 14:36",
+		"windowsManPage" : "dkh 08/18/2015 15:12",
+		"windowsrestoreManPage" : "dkh 08/18/2015 15:13",
 		"ws" : "dkh 04/27/2014 12:19",
 		"wsManPage" : "dkh 05/05/2014 08:14" },
 	"instance" : {
@@ -335,4 +334,5 @@
 		"touch" : "dkh 10/30/2014 13:38",
 		"undefinedSymbolMethodDefinitions" : "dkh 04/19/2014 08:00",
 		"undefinedSymbolsMap" : "dkh 04/19/2014 07:36",
+		"windowsrestore" : "dkh 08/18/2015 16:08",
 		"ws" : "dkh 05/04/2014 14:28" } }

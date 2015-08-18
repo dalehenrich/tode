@@ -1,17 +1,19 @@
-as yet unclassified
+manPages
 windowsManPage
   | manPage |
-  manPage := TDManPage commandName: 'windows' fromString: 'NAME
+  manPage := TDManPage
+    commandName: 'windows'
+    fromString:
+      'NAME
   windows - 
 
 SYNOPSIS
-  windows  <command> [<args>]
+  windows <command> [<args>]
 
 DESCRIPTION
 
   Commands:
-    list
-    restore
+    restore - Restore windows that were open when previous session ended
 
   Use `windows --help <command>` to read about a specific subcommand.
 
@@ -19,14 +21,12 @@ OPTIONS
 
 EXAMPLES
   windows --help 
-  windows --help references
-
-  windows list
+  windows --help restore
 
   windows restore
+  windows restore --age=`1 hour`
 '.
   manPage subCommands
-    at: 'list' put: self windowslistManPage;
     at: 'restore' put: self windowsrestoreManPage;
     yourself.
   ^ manPage

@@ -27,4 +27,5 @@ buildClientElementUsing: aTDEditorSpec editorAspect: editorAspect
     usePersistentClientElementCache: self usePersistentClientElementCache;
     windowIsClosingBlock: theWindowIsClosingBlock;
     windowBuilder: self;
+    timestamp;
     yourself
