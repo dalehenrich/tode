@@ -6,6 +6,7 @@ windowsrestore
 
   | sortedClientElements age |
   self getSubcommandOptsMixedLongShort: {#('age' nil #'required')}.
+  self topez persistentElementCache.	"make sure that persistentElementCacheStack is primed"
   sortedClientElements := (TDTopezServer persistentElementCacheStack at: 2)
     sorted: [ :a :b | a timestamp < b timestamp ].
   sortedClientElements isEmpty not
