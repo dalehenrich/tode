@@ -1,14 +1,14 @@
 {
-	"category" : "Topez-Common-Core",
+	"category" : "Topez-Pharo-Common",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"switchSpecs" ],
-	"name" : "TodeClientButtonBarElement",
+		 ],
+	"name" : "TodeButtonBarEditor",
 	"pools" : [
 		 ],
-	"super" : "TodeClientElement",
+	"super" : "TodeCommonEditor",
 	"type" : "normal" }

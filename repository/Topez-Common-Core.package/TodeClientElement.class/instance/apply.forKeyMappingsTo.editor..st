@@ -3,18 +3,18 @@ apply: menuSpec forKeyMappingsTo: aTextEditor editor: aTodeCodeEditor
 	menuSpec
 		do: [ :spec | 
 			| label |
-			label := spec at: 1.
+			label := spec at: 1. "label"
 			label isString
 				ifTrue: [ 
 					label = '-'
 						ifTrue: [  ]
 						ifFalse: [ 
-							(spec at: 2)
+							(spec at: 2) "shortcut character"
 								ifNotNil: [ :char | 
 									char isCharacter
 										ifTrue: [ 
 											| selector |
-											selector := spec at: 3.
+											selector := spec at: 3. "menu selector"
 											(spec size == 3 or: [(spec at: 4) isNil])
 												ifTrue: [ 
 													aTextEditor

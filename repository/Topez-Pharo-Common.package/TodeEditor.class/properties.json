@@ -8,6 +8,7 @@
 	"instvars" : [
 		"topez",
 		"listEditor",
+		"buttonBarEditor",
 		"codeEditor",
 		"roassalEditor",
 		"activeEditor",

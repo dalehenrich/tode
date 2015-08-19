@@ -1,3 +1,3 @@
 framework
 activateModel: aModel
-	self subclassResponsibility
+	aModel activateButtonBarEditor

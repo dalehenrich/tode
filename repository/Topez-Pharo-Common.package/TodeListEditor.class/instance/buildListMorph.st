@@ -1,4 +1,4 @@
-initialization
+framework
 buildListMorph
 	^ TZPluggableListMorph new
 		hResizing: #spaceFill;
