@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 elementSource: source clientSourceElement: clientSourceElement
   ^ self object elementSource: source

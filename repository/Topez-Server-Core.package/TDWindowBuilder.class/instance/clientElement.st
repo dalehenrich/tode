@@ -1,3 +1,3 @@
 accessing
-theBehavior
+clientElement
   self subclassResponsibility

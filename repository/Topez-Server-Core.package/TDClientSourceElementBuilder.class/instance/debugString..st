@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 debugString: aString
   ^ aString debugItIn: self doItContext literalVars: self doItLiteralArray

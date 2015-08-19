@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"switchSpecs" ],
+		"switchSpecs",
+		"switchActionBlock",
+		"switchActionBlockOop" ],
 	"name" : "TodeClientButtonBarElement",
 	"pools" : [
 		 ],

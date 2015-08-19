@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 source
   | stonString |
   stonString := super source.

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 evaluateString: aString
   ^ aString
     evaluateIn: self doItContext

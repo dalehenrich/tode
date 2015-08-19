@@ -1,3 +1,3 @@
-(as yet unclassified)
+ston
 excludedInstVarNames
   ^ super excludedInstVarNames , #(#'getBlock' #'setBlock' )

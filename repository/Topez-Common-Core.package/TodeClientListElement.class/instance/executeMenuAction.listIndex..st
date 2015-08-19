@@ -1,4 +1,4 @@
-as yet unclassified
+menu support
 executeMenuAction: aSymbol listIndex: selectionIndex
 
   ^ self topez
