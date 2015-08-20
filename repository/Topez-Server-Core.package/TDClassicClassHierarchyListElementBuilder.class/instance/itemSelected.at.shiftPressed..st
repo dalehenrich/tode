@@ -12,10 +12,9 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     topez: listElement topez.
   classDefClientElement := classDef
     clientElementUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'classicProtocolList')
-        windowName: #'classicProtocolList';
-        windowLocation: #'classicProtocol';
-        selectionIndex: 1;
+      ((TDEditorSpec topez: listElement topez editorAspect: #'classDefinition')
+        windowName: #'classicClassDef';
+        windowLocation: #'classicClassDef';
         yourself).
   buttonBarClientElement := {classDef.
   {{true.

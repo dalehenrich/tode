@@ -1,6 +1,6 @@
 browse
 browseClassHierarchy: aClass label: windowLabel
-  false
+  true
     ifTrue: [ 
       ^ aClass asTDClassDefinition
         editUsing:

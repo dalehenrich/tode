@@ -1,3 +1,3 @@
 accessing
 allProtocol
-  ^ TDBehaviorProtocolDefinition allSelectorsProtocol
+  ^ TDProtocolDefinition allSelectorsProtocol

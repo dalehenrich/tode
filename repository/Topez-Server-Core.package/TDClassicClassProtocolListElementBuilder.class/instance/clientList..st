@@ -1,11 +1,20 @@
 accessing
 clientList: listElement
-  | items ar classDef isMeta selectors |
-  items := {(self allProtocol)}
+  | items ar className isMeta selectors |
+  ar := {(self allProtocol)}
     ,
       (self object theBehavior categoryNames do: [ :each | each asString ]) sorted.
-  ar := items copy asArray.
-  classDef := self object asTDClassDefinition.
+  className := self object asTDClassDefinition className.
   isMeta := self object theBehavior isMeta.
+  items := ar
+    collect: [ :protocol | 
+      | def |
+      def := TDProtocolDefinition
+        className: className
+        isMeta: isMeta
+        protocol: protocol.
+      protocol = self allProtocol
+        ifTrue: [ def syntheticProtocol: true ].
+      def ].
   listElement ifNotNil: [ listElement itemCache: items ].
   ^ ar -> nil

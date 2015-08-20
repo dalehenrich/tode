@@ -2,7 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"allProtocol" : "dkh 08/20/2015 13:09",
-		"clientList:" : "dkh 08/20/2015 12:35",
+		"allProtocol" : "dkh 08/20/2015 16:13",
+		"clientList:" : "dkh 08/20/2015 16:45",
 		"defaultEditorWindowLocation" : "dkh 08/20/2015 12:41",
-		"itemSelected:at:shiftPressed:" : "dkh 08/20/2015 13:10" } }
+		"itemSelected:at:shiftPressed:" : "dkh 08/20/2015 16:42",
+		"menuActionSpec" : "dkh 08/20/2015 16:05",
+		"protocolMenuActionSpec" : "dkh 08/20/2015 16:49" } }

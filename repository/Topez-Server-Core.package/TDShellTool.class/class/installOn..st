@@ -113,10 +113,10 @@ installOn: aTDTopezServer
       for: TDClassDefinition
       aspect: #'classicHierarchyList';
     registerEditorClass: TDClassicClassSelectorListElementBuilder
-      for: TDBehaviorProtocolDefinition
+      for: TDProtocolDefinition
       aspect: #'classicClassSelectors';
     registerEditorClass: TDClassicClassSelectorListElementBuilder
-      for: TDBehaviorProtocolDefinition
+      for: TDProtocolDefinition
       aspect: #'classicInstanceSelectors';
     registerEditorClass: TDClassSelectorListElementBuilder
       for: TDClassDefinition

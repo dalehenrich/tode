@@ -5,8 +5,7 @@ clientList: listElement
   ar := OrderedCollection new.
   className := self theClass name.
   beh := self theBehavior.
-  selectors := self object protocol
-    = TDBehaviorProtocolDefinition allSelectorsProtocol
+  selectors := self object protocol = TDProtocolDefinition allSelectorsProtocol
     ifTrue: [ beh selectors ]
     ifFalse: [ beh selectorsIn: self object protocol ].
   selectors sorted

@@ -8,7 +8,8 @@
 	"instvars" : [
 		"categoryName",
 		"className",
-		"isMeta" ],
+		"isMeta",
+		"syntheticProtocol" ],
 	"name" : "TDProtocolDefinition",
 	"pools" : [
 		 ],

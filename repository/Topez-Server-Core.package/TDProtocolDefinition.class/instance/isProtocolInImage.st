@@ -1,3 +1,3 @@
 testing
 isProtocolInImage
-  ^ true
+  ^ self syntheticProtocol not

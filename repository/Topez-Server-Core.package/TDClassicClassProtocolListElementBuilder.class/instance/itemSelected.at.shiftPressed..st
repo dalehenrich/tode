@@ -1,12 +1,8 @@
 tools
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | classSelectorClientElement protocolDefinition selected |
+  | classSelectorClientElement protocolDefinition |
   index ifNil: [ ^ nil ].
-  selected := listElement itemCache at: index.
-  protocolDefinition := TDBehaviorProtocolDefinition
-    className: self object className
-    isMeta: self object isMeta
-    protocol: selected.
+  protocolDefinition := listElement itemCache at: index.
   classSelectorClientElement := protocolDefinition
     editUsing:
       ((TDEditorSpec
@@ -14,4 +10,5 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         editorAspect: #'classicInstanceSelectors')
         windowName: #'classicSelectors';
         yourself).
-  ^ nil
+  ^ listElement objectSerializer
+    toString: (self enableDisableMenuItems: protocolDefinition)
