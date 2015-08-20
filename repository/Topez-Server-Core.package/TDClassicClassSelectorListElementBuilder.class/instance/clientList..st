@@ -1,11 +1,15 @@
 accessing
-clientListAll: listElement
-  | items ar beh className |
+clientList: listElement
+  | items ar beh className selectors |
   items := OrderedCollection new.
   ar := OrderedCollection new.
   className := self theClass name.
   beh := self theBehavior.
-  beh selectors sorted
+  selectors := self object protocol
+    = TDBehaviorProtocolDefinition allSelectorsProtocol
+    ifTrue: [ beh selectors ]
+    ifFalse: [ beh selectorsIn: self object protocol ].
+  selectors sorted
     do: [ :selector | 
       ar add: selector asString.
       items
@@ -16,4 +20,4 @@ clientListAll: listElement
             aspect: listElement aspect) ].
   listElement ~~ nil
     ifTrue: [ listElement itemCache: items ].
-  ^ ar -> nil
+  ^ ar asArray -> nil

@@ -1,3 +1,3 @@
 as yet unclassified
 allProtocol
-  ^ '---all---'
+  ^ TDBehaviorProtocolDefinition allSelectorsProtocol

@@ -10,5 +10,5 @@
 	"name" : "TDClassicClassSelectorListElementBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDClassSelectorListElementBuilder",
+	"super" : "TDClientListElementBuilder",
 	"type" : "normal" }

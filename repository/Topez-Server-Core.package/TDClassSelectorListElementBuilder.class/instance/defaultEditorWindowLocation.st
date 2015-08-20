@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 defaultEditorWindowLocation
   ^ self isMeta
     ifTrue: [ 'classSelectors' ]

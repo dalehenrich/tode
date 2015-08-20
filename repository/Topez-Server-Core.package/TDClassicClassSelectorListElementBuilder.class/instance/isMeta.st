@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 isMeta
-  ^ self theEditorSpec editorAspect == #'classicClassSelectors'
+  ^ self object isMeta

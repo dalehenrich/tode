@@ -2,8 +2,21 @@
 	"class" : {
 		 },
 	"instance" : {
-		"defaultEditorWindowLocation" : "dkh 08/19/2015 21:20",
-		"enableProtocol" : "dkh 08/19/2015 20:49",
-		"enableProtocol:" : "dkh 08/19/2015 20:49",
-		"isMeta" : "dkh 08/19/2015 21:16",
-		"menuActionSpec" : "dkh 08/19/2015 20:51" } }
+		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"browseHierarchyImplementorsMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"browseImplementorsMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"browseSendersMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"clientList:" : "dkh 08/20/2015 13:09",
+		"copyObjectMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"cutObjectMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"defaultEditorWindowLocation" : "dkh 08/20/2015 12:53",
+		"editorWindowLabel" : "dkh 08/20/2015 13:05",
+		"isMeta" : "dkh 08/20/2015 12:54",
+		"itemSelected:at:shiftPressed:" : "dkh 08/20/2015 12:49",
+		"menuActionSpec" : "dkh 08/20/2015 12:49",
+		"methodDefinitionFor:" : "dkh 08/20/2015 12:49",
+		"newMethodTemplateMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"pasteObjectMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"theBehavior" : "dkh 08/20/2015 12:49",
+		"theClass" : "dkh 08/20/2015 12:49",
+		"toggleEnableProtocolMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49" } }

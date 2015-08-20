@@ -12,17 +12,18 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     topez: listElement topez.
   classDefClientElement := classDef
     clientElementUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'classDefinition')
-        windowName: #'classicClassDef';
-        windowLocation: #'classicClassDef';
+      ((TDEditorSpec topez: listElement topez editorAspect: #'classicProtocolList')
+        windowName: #'classicProtocolList';
+        windowLocation: #'classicProtocol';
+        selectionIndex: 1;
         yourself).
   buttonBarClientElement := {classDef.
   {{true.
-  #'browseInstanceProtocol'.
+  #'browseInstanceProtocol:'.
   'instance'.
   'view instance-side methods'}.
   {false.
-  #'browseClassProtocol'.
+  #'browseClassProtocol:'.
   'class'.
   'view class-side methods'}}}
     clientElementUsing:
@@ -34,7 +35,7 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
     clientElementUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'classicProtocolList')
         windowName: #'classicProtocolList';
-        windowLocation: #'instanceSelectors';
+        windowLocation: #'classicProtocol';
         selectionIndex: 1;
         yourself).
   stonArray := {#'editStonElement:'.

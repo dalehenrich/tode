@@ -1,9 +1,13 @@
-as yet unclassified
+tools
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | classSelectorClientElement |
+  | classSelectorClientElement protocolDefinition selected |
   index ifNil: [ ^ nil ].
-  selectedProtocol := listElement itemCache at: index.
-  classSelectorClientElement := self object
+  selected := listElement itemCache at: index.
+  protocolDefinition := TDBehaviorProtocolDefinition
+    className: self object className
+    isMeta: self object isMeta
+    protocol: selected.
+  classSelectorClientElement := protocolDefinition
     editUsing:
       ((TDEditorSpec
         topez: listElement topez

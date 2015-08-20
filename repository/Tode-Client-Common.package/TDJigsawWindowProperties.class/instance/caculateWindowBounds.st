@@ -1,6 +1,6 @@
 window bounds
 caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lce projectList workspace transcript classicClassDef classicClassButtonBar |
+	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lce projectList workspace transcript classicClassDef classicClassButtonBar classicProtocol |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
@@ -27,6 +27,7 @@ caculateWindowBounds
 	classicClassDef := superclasses topRight extent: (1.35 * lw) @ (topHeight * 0.65).
 	classicClassButtonBar := superclasses topRight + (0 @ (topHeight * 0.65)) extent: (1.35 * lw) @ (topHeight * 0.35).
 	instanceSelectors := classDef topRight extent: lw @ (lh * 2).
+	classicProtocol := classDef topRight extent: lw @ topHeight.
 	classSelectors := instanceSelectors topRight extent: lw @ (lh * 2).
 	method := superclasses bottomLeft extent: (instanceSelectors topRight x - margin x) @ codeHeight.
 	implementors := classDef bottomRight extent: debuggerWidth @ (codeHeight // 2).
@@ -54,6 +55,7 @@ caculateWindowBounds
 		at: #classDef put: classDef;
 		at: #classicClassDef put: classicClassDef;
 		at: #classicClassButtonBar put: classicClassButtonBar;
+		at: #classicProtocol put: classicProtocol;
 		at: #instanceSelectors put: instanceSelectors;
 		at: #classSelectors put: classSelectors;
 		at: #configurations put: configurations;

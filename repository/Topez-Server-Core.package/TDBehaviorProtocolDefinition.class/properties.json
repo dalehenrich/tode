@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TDClassicClassProtocolListElementBuilder",
+		"protocol" ],
+	"name" : "TDBehaviorProtocolDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDClientListElementBuilder",
+	"super" : "TDBehaviorDefinition",
 	"type" : "normal" }
