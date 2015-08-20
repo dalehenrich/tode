@@ -109,12 +109,24 @@ installOn: aTDTopezServer
     registerEditorClass: TDClassHierarchyListElementBuilder
       for: TDClassDefinition
       aspect: #'hierarchyList';
+    registerEditorClass: TDClassicClassHierarchyListElementBuilder
+      for: TDClassDefinition
+      aspect: #'classicHierarchyList';
+    registerEditorClass: TDClassicClassSelectorListElementBuilder
+      for: TDClassDefinition
+      aspect: #'classicClassSelectors';
+    registerEditorClass: TDClassicClassSelectorListElementBuilder
+      for: TDClassDefinition
+      aspect: #'classicInstanceSelectors';
     registerEditorClass: TDClassSelectorListElementBuilder
       for: TDClassDefinition
       aspect: #'classSelectors';
     registerEditorClass: TDClassSelectorListElementBuilder
       for: TDClassDefinition
       aspect: #'instanceSelectors';
+    registerEditorClass: TDClassicClassProtocolListElementBuilder
+      for: TDClassDefinition
+      aspect: #'classicProtocolList';
     registerEditorClass: TDClassProtocolListElementBuilder
       for: TDClassDefinition
       aspect: #'protocolList';

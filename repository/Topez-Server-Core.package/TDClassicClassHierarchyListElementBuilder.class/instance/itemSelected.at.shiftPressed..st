@@ -1,6 +1,6 @@
 tools
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | aspect classDef itemAttribute classDefClientElement instanceSelClientElement classSelClientElement stonArray |
+  | aspect classDef itemAttribute classDefClientElement stonArray buttonBarClientElement classProtocolClientElement |
   index ifNil: [ ^ nil ].
   index > listElement itemCache size
     ifTrue: [ ^ nil ].
@@ -13,30 +13,42 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   classDefClientElement := classDef
     clientElementUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'classDefinition')
-        windowName: #'classDefinition';
+        windowName: #'classicClassDef';
+        windowLocation: #'classicClassDef';
         yourself).
-  instanceSelClientElement := classDef
+  buttonBarClientElement := {classDef.
+  {{true.
+  #'browseInstanceProtocol'.
+  'instance'.
+  'view instance-side methods'}.
+  {false.
+  #'browseClassProtocol'.
+  'class'.
+  'view class-side methods'}}}
     clientElementUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'instanceSelectors')
-        windowName: #'instanceSelectors';
+      ((TDEditorSpec topez: listElement topez editorAspect: #'buttonBar')
+        windowName: #'classicClassButtonBar';
+        windowLocation: #'classicClassButtonBar';
         yourself).
-  classSelClientElement := classDef
+  classProtocolClientElement := classDef
     clientElementUsing:
-      ((TDEditorSpec topez: listElement topez editorAspect: #'classSelectors')
-        windowName: #'classSelectors';
+      ((TDEditorSpec topez: listElement topez editorAspect: #'classicProtocolList')
+        windowName: #'classicProtocolList';
+        windowLocation: #'instanceSelectors';
+        selectionIndex: 1;
         yourself).
   stonArray := {#'editStonElement:'.
   classDefClientElement.
   #'editStonElement:'.
-  instanceSelClientElement.
+  buttonBarClientElement.
   #'editStonElement:'.
-  classSelClientElement}.
+  classProtocolClientElement}.
   (theWindowName ~~ #'hierarchy' or: [ selectedClass ~~ classDef theClass ])
     ifTrue: [ 
       | hierarchyClientElement |
       hierarchyClientElement := classDef
         clientElementUsing:
-          ((TDEditorSpec topez: listElement topez editorAspect: #'hierarchyList')
+          ((TDEditorSpec topez: listElement topez editorAspect: #'classicHierarchyList')
             windowName: #'hierarchy';
             yourself).
       selectedClass := classDef theClass.
