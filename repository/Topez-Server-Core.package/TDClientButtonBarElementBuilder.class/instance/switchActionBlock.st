@@ -1,3 +1,3 @@
 switch actions
 switchActionBlock
-  ^ [ :selector | self object perform: selector ]
+  ^ [ :clientButtonBarElement :selector | self object perform: selector ]

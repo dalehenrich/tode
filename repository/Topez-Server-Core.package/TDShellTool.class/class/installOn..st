@@ -100,6 +100,9 @@ installOn: aTDTopezServer
     registerEditorClass: TDMethodDefinitionsElementBuilder
       for: Collection
       aspect: #'methodDefinitionList';
+    registerEditorClass: TDClientButtonBarElementBuilder
+      for: Array
+      aspect: #'buttonBar';
     registerEditorClass: TDConfigurationAndPackageDefinitionsElementBuilder
       for: TDDefinitionList
       aspect: #'definitionList';
