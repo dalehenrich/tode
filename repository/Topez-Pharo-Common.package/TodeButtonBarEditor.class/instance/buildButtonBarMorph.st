@@ -7,9 +7,10 @@ buildButtonBarMorph
 		switchSpec := self switchSpecs at: index.
 		switchLabel := switchSpec at: 3.
 		switchBalloonText := switchSpec at: 4.
-		switch := (TZPluggableButtonMorph on: self getState: #switchState: action: nil )
-			stateSelectorArgument: index;
-			actionBlock: [self switchAction: index];
+		switch := (TZPluggableButtonMorph on: self getState: nil action: nil)
+			stateSelectorArgument: {index};
+			getStateSelector: #switchState:;
+			actionBlock: [ self switchAction: index ];
 			label: switchLabel;
 			setBalloonText: switchBalloonText;
 			borderWidth: 1;
@@ -31,6 +32,7 @@ buildButtonBarMorph
 				color: Color transparent;
 				hResizing: #spaceFill;
 				vResizing: #spaceFill ].
-	^ OverflowRowMorph new
+	buttonBarMorph
 		baseMorph: row;
-		height: row minExtent y
+		height: row minExtent y.
+	^ buttonBarMorph

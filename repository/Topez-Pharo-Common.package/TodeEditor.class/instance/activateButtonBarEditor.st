@@ -1,3 +1,3 @@
 accessing
 activateButtonBarEditor
-    self activeEditor: self buttonBarEditor
+   self activeEditor: self buttonBarEditor

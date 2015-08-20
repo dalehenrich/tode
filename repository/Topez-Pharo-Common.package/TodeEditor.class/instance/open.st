@@ -1,6 +1,6 @@
 initialization
 open
-  | window listPane codePane roassalPane |
+  | window listPane codePane roassalPane buttonBarPane |
   label := ''.
   updating := false.
   window := TZSystemWindow new model: self.
@@ -10,6 +10,9 @@ open
   codePane := self codeEditor buildTextMorph.
   window addMorph: codePane frame: (0 @ 0 corner: 1 @ 1).
   codePane delete.
+  buttonBarPane := self buttonBarEditor buildOverflowMorph.
+  window addMorph: buttonBarPane frame: (0 @ 0 corner: 1 @ 1).
+  buttonBarPane delete.
   false
     ifTrue: [ 
       roassalPane := self roassalEditor buildRoassalMorph.

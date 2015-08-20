@@ -3,7 +3,11 @@
 		 },
 	"instance" : {
 		"activateModel:" : "dkh 8/19/2015 10:08",
-		"buildButtonBarMorph" : "dkh 8/19/2015 11:50",
-		"switchAction:" : "dkh 8/19/2015 11:48",
+		"buildButtonBarMorph" : "dkh 8/19/2015 16:09",
+		"buildOverflowMorph" : "dkh 8/19/2015 15:52",
+		"buttonBarMorph" : "dkh 8/19/2015 15:36",
+		"clientElement:" : "dkh 8/19/2015 15:52",
+		"morph" : "dkh 8/19/2015 15:14",
+		"switchAction:" : "dkh 8/19/2015 16:23",
 		"switchSpecs" : "dkh 8/19/2015 12:55",
 		"switchState:" : "dkh 8/19/2015 11:47" } }
