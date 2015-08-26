@@ -1,14 +1,8 @@
 tools
 itemSelected: listElement at: index shiftPressed: shiftPressed
-  | classSelectorClientElement protocolDefinition |
+  | protocolDefinition |
   index ifNil: [ ^ nil ].
   protocolDefinition := listElement itemCache at: index.
-  classSelectorClientElement := protocolDefinition
-    editUsing:
-      ((TDEditorSpec
-        topez: listElement topez
-        editorAspect: #'classicInstanceSelectors')
-        windowName: #'classicSelectors';
-        yourself).
+  self browseSelectorListFor: protocolDefinition topez: listElement topez.
   ^ listElement objectSerializer
     toString: (self enableDisableMenuItems: protocolDefinition)

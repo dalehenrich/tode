@@ -1,11 +1,9 @@
 menu actions
 pasteObjectMenuAction: listElement selectionIndex: selectionIndex
-  | def itemAttribute result |
-  selectionIndex == 0
+  | def result |
+  self object protocol = TDProtocolDefinition allSelectorsProtocol
     ifTrue: [ def := TDBehaviorDefinition className: self theClass name isMeta: self isMeta ]
-    ifFalse: [ 
-      itemAttribute := listElement itemCache at: selectionIndex.
-      def := itemAttribute object ].
+    ifFalse: [ def := self object ].
   result := def pasteTDDefinition: self objectClipboard.
   ^ result
     ifTrue: [ #'refreshList' ]
