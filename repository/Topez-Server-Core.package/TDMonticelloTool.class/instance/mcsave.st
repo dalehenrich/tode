@@ -17,5 +17,5 @@ mcsave
   newVersion := [ wc newVersion ]
     on: MCVersionNameAndMessageRequest
     do: [ :notification | notification resume: (Array with: versionName with: commitMessage) ].
-  repo storeVersion: newVersion.
+  self storeVersion: newVersion inRepository: repo.
   ^ newVersion

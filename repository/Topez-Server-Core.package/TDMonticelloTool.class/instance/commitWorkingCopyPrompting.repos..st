@@ -21,7 +21,7 @@ commitWorkingCopyPrompting: aWorkingCopy repos: targetRepos
     ifNotNil: [ 
       targetRepos
         do: [ :repository | 
-          repository storeVersion: newVersion.
+          self storeVersion: newVersion inRepository: repository.
           Transcript
             cr;
             show:

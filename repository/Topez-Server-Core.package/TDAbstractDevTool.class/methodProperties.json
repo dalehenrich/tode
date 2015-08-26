@@ -38,6 +38,7 @@
 		"resolveAtPathReference:" : "dkh 05/18/2013 07:55",
 		"resolveClassReference:" : "dkh 09/22/2013 06:14",
 		"resolveRepositoryReference:" : "dkh 08/09/2013 16:48",
+		"storeVersion:inRepository:" : "dkh 08/25/2015 17:08",
 		"subArguments" : "dkh 03/30/2014 10:34",
 		"subCommand" : "dkh 03/30/2014 10:33",
 		"subCommandToken" : "dkh 04/18/2014 10:02",
@@ -45,4 +46,5 @@
 		"todeCommand" : "dkh 11/10/2013 08:33",
 		"todeCommand:" : "dkh 11/10/2013 11:48",
 		"topez" : "DataCurator 11/20/2012 11:03",
-		"topez:" : "DataCurator 11/20/2012 11:03" } }
+		"topez:" : "DataCurator 11/20/2012 11:03",
+		"validateConsistencyOfMonticelloVersion:" : "dkh 08/25/2015 17:37" } }
