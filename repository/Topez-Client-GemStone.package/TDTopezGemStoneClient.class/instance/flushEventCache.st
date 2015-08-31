@@ -12,6 +12,10 @@ flushEventCache
 		ifTrue: [ 
 			"server does not support event cache"
 			^ self ].
+	TDShouldFlushEventCacheNotification signal
+		ifFalse: [ 
+			"defer flush til later event"
+			^ self ].
 	eventCacheString := self objectSerializer toString: self eventCache.
 	self eventCache reset.
 	[ 

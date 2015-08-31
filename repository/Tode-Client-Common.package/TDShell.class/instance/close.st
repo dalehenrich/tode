@@ -2,6 +2,14 @@ built-ins
 close
 	"close all windows"
 
+	| shouldFlushEventCache |
 	windowStatus ifNil: [ ^ nil ].
-	windowStatus close.
+	shouldFlushEventCache := false.
+	[ windowStatus close ]
+		on: TDShouldFlushEventCacheNotification
+		do: [ :ex | 
+			shouldFlushEventCache := true.
+			ex resume: false ].
+	shouldFlushEventCache
+		ifTrue: [ self topezClient flushEventCache ].
 	^ nil
