@@ -9,4 +9,4 @@ browseClassProtocol: buttonBarClientElement
         windowLocation: #'classicProtocol';
         selectionIndex: 1;
         yourself).
-  ^ nil
+  ^ true

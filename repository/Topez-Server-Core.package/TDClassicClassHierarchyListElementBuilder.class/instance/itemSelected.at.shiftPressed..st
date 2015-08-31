@@ -17,14 +17,16 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
         windowLocation: #'classicClassDef';
         yourself).
   buttonBarClientElement := {classDef.
-  {{true.
+  {{#'instance'.
   #'browseInstanceProtocol:'.
   'instance'.
-  'view instance-side methods'}.
-  {false.
+  'view instance-side methods'.
+  true}.
+  {#'class'.
   #'browseClassProtocol:'.
   'class'.
-  'view class-side methods'}}}
+  'view class-side methods'.
+  false}}}
     clientElementUsing:
       ((TDEditorSpec topez: listElement topez editorAspect: #'buttonBar')
         windowName: #'classicClassButtonBar';
