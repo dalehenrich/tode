@@ -5,6 +5,8 @@ buildButtonBarMorph
 	1 to: self switchSpecs size do: [ :index | 
 		| switch switchSpec switchLabel switchBalloonText |
 		switchSpec := self switchSpecs at: index.
+		(switchSpec at: 5)
+			ifTrue: [ self buttonBarState: (switchSpec at: 1) ].
 		switchLabel := switchSpec at: 3.
 		switchBalloonText := switchSpec at: 4.
 		switch := (TZPluggableButtonMorph on: self getState: nil action: nil)
