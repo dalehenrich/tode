@@ -7,7 +7,7 @@ newMethodTemplateMenuAction: listElement selectionIndex: selectionIndex
     ifFalse: [ protocol := listElement itemCache at: selectionIndex ].
   def := TDMethodTemplateDefinition
     className: self theClass name
-    protocol: protocol
+    protocol: protocol methodProtocol
     isMeta: self isMeta.
   ^ def
     editUsing:
