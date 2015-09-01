@@ -5,6 +5,7 @@ testDsCommand
   [ 
   | node |
   self
+    evaluateCommandString: 'cd';
     evaluateCommandString: 'ds --help ';
     evaluateCommandString: 'ds';
     yourself.

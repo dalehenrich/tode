@@ -25,5 +25,5 @@ OPTIONS
 EXAMPLES
   ds
   ds /home/tode
-  ds --leavl=2 .
+  ds --level=2 .
 '
