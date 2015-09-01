@@ -13,6 +13,7 @@ createFor: aShellId options: optionArray
           transcriptClientForwarderOop := Reflection
             oopOf: transcriptClientForwarder ] ].
   topezServer topezClientForwarder: topezClientClientForwarder.
+  topezServer platformInitialize.
   resultArray := {(topezServer asOop).
   transcriptClientForwarderOop.
   (Reflection oopOf: topezClientClientForwarder).
