@@ -26,8 +26,8 @@ caculateWindowBounds
 	classDef := superclasses topRight extent: (1.35 * lw) @ topHeight.
 	classicClassDef := superclasses topRight extent: (1.35 * lw) @ (topHeight * 0.65).
 	classicClassButtonBar := superclasses topRight + (0 @ (topHeight * 0.65)) extent: (1.35 * lw) @ (topHeight * 0.35).
-	instanceSelectors := classDef topRight extent: lw @ (lh * 2).
 	classicProtocol := classDef topRight extent: lw @ topHeight.
+	instanceSelectors := classDef topRight extent: lw @ (lh * 2).
 	classSelectors := instanceSelectors topRight extent: lw @ (lh * 2).
 	method := superclasses bottomLeft extent: (instanceSelectors topRight x - margin x) @ codeHeight.
 	implementors := classDef bottomRight extent: debuggerWidth @ (codeHeight // 2).

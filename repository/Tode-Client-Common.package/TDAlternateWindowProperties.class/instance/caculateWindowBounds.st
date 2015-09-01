@@ -1,6 +1,6 @@
 window bounds
 caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lcw lce projectList transcript |
+	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lcw lce projectList transcript classicClassDef classicClassButtonBar classicProtocol |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
@@ -27,7 +27,10 @@ caculateWindowBounds
 	evaluator := classes bottomLeft extent: shellExtent.
 	superclasses := classCategories topRight extent: lw @ topHeight.
 	classDef := superclasses topRight extent: (1.5 * lw) @ topHeight.
+	classicClassDef := superclasses topRight extent: (1.5 * lw) @ (topHeight * 0.65).
+	classicClassButtonBar := superclasses topRight + (0 @ (topHeight * 0.65)) extent: (1.5 * lw) @ (topHeight * 0.35).
 	instanceSelectors := classDef topRight extent: lw @ topHeight.
+	classicProtocol := instanceSelectors.
 	classSelectors := instanceSelectors topRight extent: lw @ topHeight.
 	configurations := lo extent: lw @ (lh // 2).
 	packages := configurations bottomLeft extent: lw @ (lh // 2).
@@ -49,6 +52,9 @@ caculateWindowBounds
 		at: #evaluator put: evaluator;
 		at: #superclasses put: superclasses;
 		at: #classDef put: classDef;
+		at: #classicClassDef put: classicClassDef;
+		at: #classicClassButtonBar put: classicClassButtonBar;
+		at: #classicProtocol put: classicProtocol;
 		at: #instanceSelectors put: instanceSelectors;
 		at: #classSelectors put: classSelectors;
 		at: #configurations put: configurations;
