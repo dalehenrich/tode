@@ -1,7 +1,7 @@
 windows
 windowsrestore
   "
-  windows restore
+  windows restore [--age=<duration>]
 "
 
   | sortedClientElements age |
