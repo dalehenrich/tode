@@ -9,5 +9,5 @@ clientElementFor: anObject using: aTDEditorSpec
       element := windowBuilder
         buildClientElementUsing: aTDEditorSpec
         editorAspect: finalEditorAspect ].
-  self serverStatus elementCache add: element.
+  self cacheClientElement: element.
   ^ element

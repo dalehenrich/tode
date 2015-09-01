@@ -1,0 +1,16 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"switchSpecs",
+		"switchActionBlock",
+		"switchActionBlockOop" ],
+	"name" : "TodeClientButtonBarElement",
+	"pools" : [
+		 ],
+	"super" : "TodeClientElement",
+	"type" : "normal" }

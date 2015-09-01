@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 editorWindowLabel
   ^ (self isMeta
     ifTrue: [ 'class for ' ]

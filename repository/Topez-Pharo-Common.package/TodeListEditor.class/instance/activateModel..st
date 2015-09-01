@@ -1,3 +1,3 @@
-accessing
+framework
 activateModel: aModel
 	aModel activateListEditor

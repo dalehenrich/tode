@@ -1,6 +1,6 @@
 window bounds
 caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lce projectList workspace transcript |
+	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth diff lce projectList workspace transcript classicClassDef classicClassButtonBar classicProtocol |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
@@ -24,6 +24,9 @@ caculateWindowBounds
 	evaluator := margin x @ (lh * 2) extent: (codeWidth * 0.80) @ shellHeight.
 	superclasses := lo extent: lw @ topHeight.
 	classDef := superclasses topRight extent: (1.35 * lw) @ topHeight.
+	classicClassDef := superclasses topRight extent: (1.35 * lw) @ (topHeight * 0.65).
+	classicClassButtonBar := superclasses topRight + (0 @ (topHeight * 0.65)) extent: (1.35 * lw) @ (topHeight * 0.35).
+	classicProtocol := classDef topRight extent: lw @ topHeight.
 	instanceSelectors := classDef topRight extent: lw @ (lh * 2).
 	classSelectors := instanceSelectors topRight extent: lw @ (lh * 2).
 	method := superclasses bottomLeft extent: (instanceSelectors topRight x - margin x) @ codeHeight.
@@ -50,6 +53,9 @@ caculateWindowBounds
 		at: #evaluator put: evaluator;
 		at: #superclasses put: superclasses;
 		at: #classDef put: classDef;
+		at: #classicClassDef put: classicClassDef;
+		at: #classicClassButtonBar put: classicClassButtonBar;
+		at: #classicProtocol put: classicProtocol;
 		at: #instanceSelectors put: instanceSelectors;
 		at: #classSelectors put: classSelectors;
 		at: #configurations put: configurations;

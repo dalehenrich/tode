@@ -1,4 +1,4 @@
-as yet unclassified
+tools
 itemSelected: listElement at: index shiftPressed: shiftPressed
   | aspect classDef itemAttribute classDefClientElement instanceSelClientElement classSelClientElement stonArray |
   index ifNil: [ ^ nil ].

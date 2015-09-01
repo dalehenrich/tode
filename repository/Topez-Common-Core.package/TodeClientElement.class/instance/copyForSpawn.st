@@ -2,5 +2,5 @@ as yet unclassified
 copyForSpawn
   | copy |
   copy := self copy.
-  self topez serverStatus elementCache add: copy.
+  self topez serverStatus cacheClientElement: copy.
   ^ copy postCopyForSpawn

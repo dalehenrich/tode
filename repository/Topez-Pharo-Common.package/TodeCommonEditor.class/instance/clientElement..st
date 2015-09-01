@@ -1,3 +1,4 @@
 accessing
 clientElement: aTDClientElement
-  clientElement := aTDClientElement
+	self pushClientElement: aTDClientElement.
+	clientElement := aTDClientElement.

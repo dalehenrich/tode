@@ -11,7 +11,8 @@
 		"itemSelectedBlock",
 		"menuActionBlock",
 		"menuActionSpecBlock",
-		"beMultipleSelection" ],
+		"beMultipleSelection",
+		"usePersistentClientElementCache" ],
 	"name" : "TDMiniToolSpec",
 	"pools" : [
 		 ],

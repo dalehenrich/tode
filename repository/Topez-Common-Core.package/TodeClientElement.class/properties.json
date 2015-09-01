@@ -21,7 +21,9 @@
 		"menuActionSpec",
 		"windowIsClosingBlock",
 		"windowIsClosingBlockOop",
-		"windowBuilder" ],
+		"windowBuilder",
+		"usePersistentClientElementCache",
+		"timestamp" ],
 	"name" : "TodeClientElement",
 	"pools" : [
 		 ],

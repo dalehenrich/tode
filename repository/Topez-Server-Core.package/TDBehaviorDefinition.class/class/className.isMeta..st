@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 className: className isMeta: isMeta 
   ^ self new
     className: className;

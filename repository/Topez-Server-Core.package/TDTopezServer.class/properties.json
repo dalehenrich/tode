@@ -7,7 +7,8 @@
 		"nodeEditors",
 		"nodePrinters" ],
 	"classvars" : [
-		"ConcreteClassName" ],
+		"ConcreteClassName",
+		"PersistentElementCacheStack" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"topezClientForwarder",
@@ -22,7 +23,8 @@
 		"scriptActionStack",
 		"sessionDescription",
 		"serverTodeRoot",
-		"objectSerializer" ],
+		"objectSerializer",
+		"persistentElementCache" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

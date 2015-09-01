@@ -1,6 +1,6 @@
 window bounds
 caculateWindowBounds
-	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth lcw lce projectList transcript |
+	| layoutExtent dict lw lo lh topHeight shellHeight browserHeight codeWidth shellExtent classCategories classes evaluator superclasses classDef instanceSelectors classSelectors configurations packages implementors app1 app2 app3 app4 context debugger inspector method codeHeight appExtent displayExtent debuggerWidth lcw lce projectList transcript classicClassDef classicClassButtonBar classicProtocol |
 	displayExtent := Display usableArea extent.
 	layoutExtent := displayExtent - (2 @ 2 * margin).
 	lo := margin.
@@ -19,7 +19,10 @@ caculateWindowBounds
 	method := superclasses bottomLeft extent: codeWidth @ codeHeight.
 	evaluator := method bottomLeft extent: shellExtent.
 	classDef := superclasses topRight extent: (1.5 * lw) @ topHeight.
+	classicClassDef := superclasses topRight extent: (1.5 * lw) @ (topHeight * 0.65).
+	classicClassButtonBar := superclasses topRight + (0 @ (topHeight * 0.65)) extent: (1.5 * lw) @ (topHeight * 0.35).
 	instanceSelectors := classDef topRight extent: lw @ topHeight.
+	classicProtocol := instanceSelectors.
 	classSelectors := instanceSelectors topRight extent: lw @ topHeight.
 	implementors := method topRight extent: shellExtent x @ codeHeight.
 	inspector := evaluator topRight extent: shellExtent.
@@ -36,6 +39,9 @@ caculateWindowBounds
 		at: #evaluator put: evaluator;
 		at: #superclasses put: superclasses;
 		at: #classDef put: classDef;
+		at: #classicClassDef put: classicClassDef;
+		at: #classicClassButtonBar put: classicClassButtonBar;
+		at: #classicProtocol put: classicProtocol;
 		at: #instanceSelectors put: instanceSelectors;
 		at: #classSelectors put: classSelectors;
 		at: #implementors put: implementors;

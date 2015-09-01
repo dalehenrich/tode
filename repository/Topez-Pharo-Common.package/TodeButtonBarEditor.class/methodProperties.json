@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"activateModel:" : "dkh 8/19/2015 10:08",
+		"buildButtonBarMorph" : "dkh 8/31/2015 08:23",
+		"buildOverflowMorph" : "dkh 8/19/2015 15:52",
+		"buttonBarMorph" : "dkh 8/19/2015 15:36",
+		"buttonBarState" : "dkh 8/31/2015 08:13",
+		"buttonBarState:" : "dkh 8/31/2015 12:50",
+		"clientElement:" : "dkh 8/31/2015 13:00",
+		"morph" : "dkh 8/19/2015 15:14",
+		"switchAction:" : "dkh 8/31/2015 08:25",
+		"switchSpecs" : "dkh 8/31/2015 13:09",
+		"switchState:" : "dkh 8/31/2015 08:14" } }

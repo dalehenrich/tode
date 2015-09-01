@@ -10,13 +10,12 @@ testBuListCommand
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' backup test.dbf';
     evaluateCommandString:
-        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName
-            , ' snapshot extent0.test.dbf';
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' snapshot test.dbf';
     evaluateCommandString: 'bu list';
     evaluateCommandString:
-        'bu --dir=' , TDGemStoneTool defaultBackupDirectoryName , 'list';
+        'bu --dir=' , TDGemStoneTool defaultBackupDirectoryName , ' list';
     evaluateCommandString:
-        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , 'list';
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' list';
     yourself ]
     on: Error
     do: [ :ex | 

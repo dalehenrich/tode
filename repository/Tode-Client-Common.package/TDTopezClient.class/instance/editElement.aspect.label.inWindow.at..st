@@ -7,7 +7,16 @@ editElement: aClientElement aspect: aspectSelector label: labelString inWindow: 
 	self currentWindowId: windowId.
 	label := labelString.
 	newWindow := (self windowStatus windowAt: windowId) isNil.
-	(win := self editorWindowAt: windowId) model
+	win := self editorWindowAt: windowId.
+	newWindow
+		ifFalse: [ 
+			| morph |
+			morph := win model activeEditor morph.
+			morph canDiscardEdits
+				ifFalse: [ 
+					morph promptForCancel
+						ifTrue: [ ^ self ] ] ].
+	win model
 		perform: aspectSelector;
 		clientElement: aClientElement;
 		windowId: windowId;

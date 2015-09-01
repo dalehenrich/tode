@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 theBehavior
   | cls |
   cls := self theClass.

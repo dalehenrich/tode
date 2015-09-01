@@ -5,10 +5,14 @@ testDsCommand
   [ 
   | node |
   self
+    evaluateCommandString: 'cd';
     evaluateCommandString: 'ds --help ';
     evaluateCommandString: 'ds';
     yourself.
   node := self createSenderNode.
+  Transcript
+    cr;
+    show: 'testDsCommand: ' , node printString.
   self
     evaluateCommandString: 'ds --level=2 ' , node printString;
     yourself ]
@@ -18,4 +22,5 @@ testDsCommand
         cr;
         show: 'testDsCommand: ' , ex description;
         cr;
-        show: (GsProcess stackReportToLevel: 100) ex pass ]
+        show: (GsProcess stackReportToLevel: 100).
+      ex pass ]

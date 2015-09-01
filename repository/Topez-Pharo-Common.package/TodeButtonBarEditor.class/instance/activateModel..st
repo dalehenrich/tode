@@ -1,0 +1,3 @@
+framework
+activateModel: aModel
+	aModel activateButtonBarEditor

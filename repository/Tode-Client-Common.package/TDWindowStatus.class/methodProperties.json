@@ -4,6 +4,7 @@
 	"instance" : {
 		"activeWindowIndex" : "dkh 11/27/2012 14:53",
 		"activeWindowModel" : "dkh 11/27/2012 15:47",
+		"clearUserEditFlagFor:" : "dkh 8/31/2015 17:02",
 		"close" : "dkh 12/27/2012 08:59",
 		"collapse" : "dkh 12/27/2012 08:59",
 		"deleteWindowAt:" : "dkh 10/19/2013 11:42",
@@ -23,5 +24,5 @@
 		"windowAt:" : "dkh 11/19/2012 14:54",
 		"windowAt:put:" : "dkh 11/27/2012 14:57",
 		"windowIdNamed:" : "dkh 11/19/2012 16:10",
-		"windowIsClosing" : "dkh 12/21/2012 10:16",
+		"windowIsClosing" : "dkh 9/1/2015 09:03",
 		"windowNamesAndIds" : "dkh 11/19/2012 14:54" } }

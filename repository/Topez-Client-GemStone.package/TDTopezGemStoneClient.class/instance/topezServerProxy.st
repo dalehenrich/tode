@@ -24,14 +24,18 @@ topezServerProxy
 			self session clientForwarderCache at: topezClientOopType put: self.
 			resultArray size > 3
 				ifTrue: [ 
-					| protocolSignature objSerializer |
+					| protocolSignature objSerializer serverApiVersionString |
 					protocolSignature := resultArray at: 4.
 					objSerializer := TodeObjectSerializer serializeUsing: protocolSignature.
 					self session
 						rawReceiverNB: topezServerProxy
 						perform: #serializeObjectsUsing:version:
 						withArgs: objSerializer protocolSignatureArray.
-					self objectSerializer: objSerializer ].
+					self objectSerializer: objSerializer.
+					serverApiVersionString := resultArray size > 4
+						ifTrue: [ resultArray at: 5 ]
+						ifFalse: [ '1.0.0' ].
+					self serverApiVersion: serverApiVersionString asMetacelloVersionNumber ].
 			self session rawReceiverNB: topezServerProxy perform: #authorInitials: withArgs: {(Author fullName)}.
 			self sessionDescription backupDirectory isEmpty not
 				ifTrue: [ 

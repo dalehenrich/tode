@@ -21,4 +21,4 @@ mcmove
   Transcript
     cr;
     show: 'Moved: ' , newVersionName printString , ' --' , repo description.
-  ^ repo storeVersion: newVersion
+  ^ self storeVersion: newVersion inRepository: repo

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stateSelectorArgument" ],
+	"name" : "TZPluggableButtonMorph",
+	"pools" : [
+		 ],
+	"super" : "PluggableButtonMorph",
+	"type" : "normal" }

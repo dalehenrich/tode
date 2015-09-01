@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 theClass
   ^ Smalltalk classNamed: self className

@@ -1,10 +1,14 @@
-accessing
+framework
 handleResponseActions: action
+	| result |
 	action isSymbol
-		ifTrue: [ ^ self perform: action ].
+		ifTrue: [ 
+			result := self perform: action.
+			self topez flushEventCache.
+			^ result ].
 	action isString
 		ifTrue: [ 
-			| ar result |
+			| ar |
 			ar := self objectSerializer fromString: action.
 			ar isArray
 				ifFalse: [ ^ ar ].
@@ -17,5 +21,6 @@ handleResponseActions: action
 						(arg isKindOf: TodeClientElement)
 							ifTrue: [ arg topez: self topez ].
 						result := self perform: sel with: arg ] ].
+			self topez flushEventCache.
 			^ result ].
 	^ action
