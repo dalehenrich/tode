@@ -1,7 +1,7 @@
 as yet unclassified
 childNamed: elementName parent: parentNode ifAbsent: absentBlock
   | obj |
-  (#('(class)' '(oop)' '(committed)') includes: elementName)
+  (#('(class)' '(oop)' '(committed)' '(notTranlogged)') includes: elementName)
     ifTrue: [ 
       obj := self
         objectValueForSpecialElementName: elementName
