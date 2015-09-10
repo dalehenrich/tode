@@ -1,16 +1,16 @@
 {
 	"class" : {
-		"theClass:" : "dkh 09/09/2015 18:17" },
+		"className:classHistoryIndex:" : "dkh 09/10/2015 00:20" },
 	"instance" : {
-		"=" : "dkh 09/09/2015 18:19",
-		"className" : "dkh 09/09/2015 18:20",
-		"className:" : "dkh 09/09/2015 18:20",
-		"hash" : "dkh 09/09/2015 18:21",
-		"methodDefinitionFor:isMeta:" : "dkh 09/09/2015 18:25",
+		"=" : "dkh 09/10/2015 00:21",
+		"asTDProtocolDefinition:" : "dkh 09/10/2015 01:03",
+		"browseClassProtocol:" : "dkh 09/10/2015 01:35",
+		"classHistoryIndex" : "dkh 09/10/2015 00:19",
+		"classHistoryIndex:" : "dkh 09/10/2015 00:19",
+		"methodDefinitionFor:isMeta:" : "dkh 09/10/2015 01:28",
 		"moveToPackageNamed:" : "dkh 09/09/2015 18:26",
 		"pasteIntoPackageDefinition:" : "dkh 09/09/2015 18:26",
 		"pasteTDDefinition:" : "dkh 09/09/2015 18:26",
 		"removeFromSystem:" : "dkh 09/09/2015 18:26",
-		"theClass" : "dkh 09/09/2015 18:16",
-		"theClass:" : "dkh 09/09/2015 18:16",
-		"theClassLabel" : "dkh 09/09/2015 18:19" } }
+		"theClass" : "dkh 09/10/2015 00:31",
+		"theClassLabel" : "dkh 09/10/2015 00:23" } }

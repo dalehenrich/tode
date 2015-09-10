@@ -1,6 +1,5 @@
-as yet unclassified
+accessing
 asTDClassDefinition
-  ^ TDClassHistoryDefinition new
-    theClass: self theClass;
-    username: self username;
-    yourself
+  ^ TDClassHistoryDefinition
+    className: self className
+    classHistoryIndex: self classHIstoryIndex

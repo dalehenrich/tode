@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 isMeta: aBool
   isMeta := aBool

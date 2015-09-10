@@ -1,4 +1,4 @@
 cls
 clshistory: theClass
   ^ theClass classHistory
-    collect: [ :cls | TDClassHistoryDefinition theClass: cls ]
+    withIndexCollect: [ :cls :index | TDClassHistoryDefinition className: cls name classHistoryIndex: index ]

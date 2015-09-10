@@ -1,5 +1,5 @@
 comparing
 = aTDDefinition
-  aTDDefinition species = self species
+  super = aTDDefinition
     ifFalse: [ ^ false ].
-  ^ self theClass == aTDDefinition theClass
+  ^ self classHistoryIndex = aTDDefinition classHistoryIndex

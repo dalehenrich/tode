@@ -1,9 +1,10 @@
 {
 	"class" : {
-		"theClass:isMeta:" : "dkh 09/09/2015 18:33" },
+		"className:isMeta:classHistoryIndex:" : "dkh 09/10/2015 01:39",
+		"theClass:isMeta:classHistoryIndex:" : "dkh 09/10/2015 01:38" },
 	"instance" : {
 		"=" : "dkh 09/09/2015 18:29",
-		"asTDClassDefinition" : "dkh 09/09/2015 18:31",
+		"asTDClassDefinition" : "dkh 09/10/2015 00:24",
 		"hash" : "dkh 09/09/2015 18:29",
 		"isMeta" : "dkh 09/09/2015 18:29",
 		"isMeta:" : "dkh 09/09/2015 18:29",

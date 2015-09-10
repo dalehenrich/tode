@@ -11,12 +11,7 @@ clientListCategories: listElement
       items
         add:
           (TDClientListItemAttributes
-            object:
-              (TDProtocolDefinition new
-                className: className;
-                isMeta: beh isMeta;
-                categoryName: category asString;
-                yourself)
+            object: (self object asTDProtocolDefinition: category asString)
             parent: nil
             aspect: listElement aspect).
       (beh selectorsIn: category) sorted

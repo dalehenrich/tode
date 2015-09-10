@@ -1,9 +1,8 @@
 accessing
 clientList: listElement
-  | items ar beh className selectors |
+  | items ar beh selectors |
   items := OrderedCollection new.
   ar := OrderedCollection new.
-  className := self theClass name.
   beh := self theBehavior.
   selectors := self object protocol = TDProtocolDefinition allSelectorsProtocol
     ifTrue: [ beh selectors ]

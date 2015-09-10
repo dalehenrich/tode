@@ -1,4 +1,4 @@
-as yet unclassified
+comparing
 = aTDDefinition
   super = aTDDefinition
     ifFalse: [ ^ false ].

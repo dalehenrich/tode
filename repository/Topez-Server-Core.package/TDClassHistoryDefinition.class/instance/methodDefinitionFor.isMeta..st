@@ -1,3 +1,9 @@
-accessing
+as yet unclassified
 methodDefinitionFor: selector isMeta: isMeta
-  self halt
+  ^ (TDClassHistoryMethodDefinition
+    className: self className
+    isMeta: isMeta
+    selector: selector
+    classHistoryIndex: self classHistoryIndex)
+    username: self username;
+    yourself

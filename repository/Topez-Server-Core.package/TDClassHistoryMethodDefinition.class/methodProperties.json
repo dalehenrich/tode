@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"className:isMeta:selector:classHistoryIndex:" : "dkh 09/10/2015 01:29" },
+	"instance" : {
+		"<=" : "dkh 09/10/2015 01:18",
+		"=" : "dkh 09/10/2015 01:17",
+		"classHistoryIndex" : "dkh 09/10/2015 01:16",
+		"classHistoryIndex:" : "dkh 09/10/2015 01:16",
+		"hash" : "dkh 09/10/2015 01:19",
+		"moveToPackageNamed:" : "dkh 09/10/2015 01:23",
+		"pasteIntoBehaviorDefinition:" : "dkh 09/10/2015 01:23",
+		"pasteIntoClassDefinition:" : "dkh 09/10/2015 01:23",
+		"pasteIntoMethodDefinition:" : "dkh 09/10/2015 01:23",
+		"pasteIntoPackageDefinition:" : "dkh 09/10/2015 01:24",
+		"pasteIntoProtocolDefinition:" : "dkh 09/10/2015 01:24",
+		"pasteTDDefinition:" : "dkh 09/10/2015 01:24",
+		"removeFromSystem:" : "dkh 09/10/2015 01:24",
+		"theClass" : "dkh 09/10/2015 01:20",
+		"theClassLabel" : "dkh 09/10/2015 01:21" } }
