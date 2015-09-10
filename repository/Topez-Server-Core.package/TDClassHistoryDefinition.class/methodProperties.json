@@ -1,14 +1,16 @@
 {
 	"class" : {
-		"theClass:className:" : "dkh 09/21/2013 15:32" },
+		"theClass:" : "dkh 09/09/2015 18:17" },
 	"instance" : {
-		"addToClientListFor:names:items:indents:aspect:" : "dkh 09/09/2015 16:28",
-		"asTDClassDefinition" : "dkh 10/12/2013 15:18",
-		"className" : "dkh 09/21/2013 15:30",
-		"className:" : "dkh 09/21/2013 15:30",
-		"itemSelected:" : "dkh 09/09/2015 17:27",
-		"label" : "dkh 09/09/2015 17:11",
-		"theClass" : "dkh 09/21/2013 15:28",
-		"theClass:" : "dkh 09/21/2013 15:27",
-		"theClassLabel" : "dkh 09/09/2015 17:10",
-		"theClassName" : "dkh 09/21/2013 15:30" } }
+		"=" : "dkh 09/09/2015 18:19",
+		"className" : "dkh 09/09/2015 18:20",
+		"className:" : "dkh 09/09/2015 18:20",
+		"hash" : "dkh 09/09/2015 18:21",
+		"methodDefinitionFor:isMeta:" : "dkh 09/09/2015 18:25",
+		"moveToPackageNamed:" : "dkh 09/09/2015 18:26",
+		"pasteIntoPackageDefinition:" : "dkh 09/09/2015 18:26",
+		"pasteTDDefinition:" : "dkh 09/09/2015 18:26",
+		"removeFromSystem:" : "dkh 09/09/2015 18:26",
+		"theClass" : "dkh 09/09/2015 18:16",
+		"theClass:" : "dkh 09/09/2015 18:16",
+		"theClassLabel" : "dkh 09/09/2015 18:19" } }

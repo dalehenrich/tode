@@ -1,0 +1,3 @@
+accessing
+pasteIntoPackageDefinition: aTDPackageDefinition
+  self halt

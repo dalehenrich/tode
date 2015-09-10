@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 className
-  ^ className
+  ^ self theClass name

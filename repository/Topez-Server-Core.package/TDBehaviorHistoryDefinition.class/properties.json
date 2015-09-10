@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"theClass" ],
-	"name" : "TDClassHistoryDefinition",
+		"isMeta" ],
+	"name" : "TDBehaviorHistoryDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDClassDefinition",
+	"super" : "TDClassHistoryDefinition",
 	"type" : "normal" }

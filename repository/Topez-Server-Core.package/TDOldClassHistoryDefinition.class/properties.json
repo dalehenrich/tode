@@ -4,11 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 09/09/2015 18:12",
 	"instvars" : [
+		"className",
 		"theClass" ],
-	"name" : "TDClassHistoryDefinition",
+	"name" : "TDOldClassHistoryDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDClassDefinition",
+	"super" : "TDDefinition",
 	"type" : "normal" }

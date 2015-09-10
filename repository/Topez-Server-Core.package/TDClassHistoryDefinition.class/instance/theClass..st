@@ -1,3 +1,4 @@
-as yet unclassified
-theClass: aClass
-  theClass := aClass
+accessing
+theClass: anObject
+
+   theClass := anObject

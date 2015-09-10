@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 className: aString
-  className := aString
+  self shouldNotImplement
