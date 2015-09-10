@@ -1,6 +1,8 @@
 {
 	"class" : {
-		"className:classHistoryIndex:" : "dkh 09/10/2015 00:20" },
+		"className:classHistoryIndex:" : "dkh 09/10/2015 00:20",
+		"fromBehavior:" : "dkh 09/10/2015 14:26",
+		"fromClass:" : "dkh 09/10/2015 14:23" },
 	"instance" : {
 		"=" : "dkh 09/10/2015 00:21",
 		"asTDBehaviorDefinition" : "dkh 09/10/2015 10:14",
@@ -9,5 +11,7 @@
 		"classHistoryIndex" : "dkh 09/10/2015 00:19",
 		"classHistoryIndex:" : "dkh 09/10/2015 00:19",
 		"methodDefinitionFor:isMeta:" : "dkh 09/10/2015 01:28",
+		"removeFromSystem:" : "dkh 09/10/2015 11:37",
+		"species" : "dkh 09/10/2015 14:43",
 		"theClass" : "dkh 09/10/2015 00:31",
 		"theClassLabel" : "dkh 09/10/2015 00:23" } }

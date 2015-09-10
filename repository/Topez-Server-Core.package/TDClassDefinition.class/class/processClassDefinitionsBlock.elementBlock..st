@@ -25,15 +25,18 @@ processClassDefinitionsBlock: classDefinitionsBlock elementBlock: elementBlock
       | supersChain |
       supersChain := {classDef}.
       classDef theClass
-        ifNotNil: [ :cl | 
-          supersChain := cl withAllSuperclasses reversed.
+        ifNotNil: [ :cls | 
+          supersChain := ({cls} , cls allSuperClasses) reversed.
           supersChain
             removeAllSuchThat: [ :class | (classes includes: class) not ].
           supersChain := supersChain
             collect: [ :cl | 
-              (TDClassDefinition className: cl name)
-                username: classDef username;
-                yourself ] ].
+              cls == cl
+                ifTrue: [ classDef ]
+                ifFalse: [ 
+                  (TDClassDefinition fromClassWithHistory: cl)
+                    username: classDef username;
+                    yourself ] ] ].
       order add: supersChain -> classDef ].
   indents := IdentityDictionary new.
   order do: [ :assoc | indents at: assoc value put: assoc key size - 1 ].

@@ -1,11 +1,14 @@
 cls
 clshistory
   "
-  cls history ( <class-name> | @<class-path> )
+  cls history [--hier] [( <class-name> | @<class-path> )...]
 "
 
   | clsRef theClass |
-  self getSubcommandOptsMixedLongShort: {}.
+  self getSubcommandOptsMixedLongShort: {#('hier' nil #'none')}.
   clsRef := subArguments at: 1.
   theClass := self resolveClassReference: clsRef.
-  ^ self clsBrowseClassHistoryFor: theClass
+  ^ subOptions
+    at: 'hier'
+    ifAbsent: [ self clsBrowseClassHistoryFor: theClass ]
+    ifPresent: [ :ignored |  ]
