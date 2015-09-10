@@ -14,7 +14,7 @@ clientList: listElement
       stream := WriteStream on: String new.
       stream
         space: (indents at: classDef);
-        nextPutAll: classDef className asString.
+        nextPutAll: classDef label.
       stream contents.
       ar add: stream contents asText allBold.
       selectedClass == cl

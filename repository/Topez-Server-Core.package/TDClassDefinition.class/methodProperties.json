@@ -11,7 +11,7 @@
 		"updatePackageAndConfigFor:topez:" : "dkh 05/24/2014 08:26" },
 	"instance" : {
 		"=" : "dkh 06/04/2013 11:14",
-		"addToClientListFor:names:items:indents:aspect:" : "dkh 10/05/2013 11:45",
+		"addToClientListFor:names:items:indents:aspect:" : "dkh 09/09/2015 16:23",
 		"asTDClassDefinition" : "dkh 10/05/2013 08:14",
 		"browseClassProtocol:" : "dkh 08/31/2015 08:15",
 		"browseInstanceProtocol:" : "dkh 08/31/2015 08:15",
@@ -23,7 +23,7 @@
 		"hash" : "dkh 06/04/2013 10:57",
 		"isClassInImage" : "dkh 06/24/2014 07:56",
 		"itemSelected:" : "dkh 03/30/2014 15:18",
-		"label" : "dkh 05/28/2013 07:48",
+		"label" : "dkh 09/09/2015 16:26",
 		"methodDefinitionFor:isMeta:" : "dkh 10/05/2013 10:31",
 		"methodProtocol" : "dkh 03/18/2015 05:48",
 		"moveToPackageNamed:" : "dkh 07/08/2014 12:15",
@@ -33,5 +33,6 @@
 		"removeFromSystem:" : "dkh 07/08/2014 09:33",
 		"theBehavior" : "dkh 02/24/2013 11:15",
 		"theClass" : "dkh 01/24/2014 11:05",
+		"theClassLabel" : "dkh 09/09/2015 16:26",
 		"theClassName" : "dkh 05/28/2013 07:46",
 		"theClassName:" : "dkh 05/28/2013 07:46" } }

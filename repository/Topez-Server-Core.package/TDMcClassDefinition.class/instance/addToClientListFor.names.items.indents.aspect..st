@@ -5,7 +5,6 @@ addToClientListFor: clsDef names: nameList items: items indents: indents aspect:
   (indents at: clsDef) timesRepeat: [ space := space , ' ' ].
   attributes := {(TextEmphasis italic)}.
   clsDef theClass ifNil: [ attributes add: TextEmphasis underlined ].
-  nameList
-    add: (Text string: space , clsDef className asString attributes: attributes).
+  nameList add: (Text string: space , clsDef label attributes: attributes).
   items
     add: (TDClientListItemAttributes object: self parent: nil aspect: aspect)
