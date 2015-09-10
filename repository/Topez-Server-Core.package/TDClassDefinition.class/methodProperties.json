@@ -12,6 +12,7 @@
 	"instance" : {
 		"=" : "dkh 06/04/2013 11:14",
 		"addToClientListFor:names:items:indents:aspect:" : "dkh 09/09/2015 16:23",
+		"asTDBehaviorDefinition" : "dkh 09/10/2015 10:12",
 		"asTDClassDefinition" : "dkh 10/05/2013 08:14",
 		"asTDProtocolDefinition:" : "dkh 09/10/2015 01:02",
 		"browseClassProtocol:" : "dkh 08/31/2015 08:15",

@@ -1,4 +1,4 @@
-as yet unclassified
+cut copy paste
 removeFromSystem: topez
   | clsTool |
   clsTool := topez toolInstanceFor: 'cls'.

@@ -8,4 +8,4 @@ clshistory
   self getSubcommandOptsMixedLongShort: {}.
   clsRef := subArguments at: 1.
   theClass := self resolveClassReference: clsRef.
-  ^ self browseClsHistory: theClass
+  ^ self clsBrowseClassHistoryFor: theClass

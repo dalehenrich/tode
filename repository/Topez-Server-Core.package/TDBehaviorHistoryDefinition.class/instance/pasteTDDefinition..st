@@ -1,3 +1,3 @@
 cut copy paste
 pasteTDDefinition: def
-  self halt
+  ^ def pasteIntoBehaviorDefinition: self

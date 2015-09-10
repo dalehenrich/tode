@@ -1,5 +1,5 @@
 cls
-browseClsHistoryFor: theClass
+clsBrowseClassHistoryFor: theClass
   | classDefs |
   classDefs := self clshistory: theClass.
   classDefs
