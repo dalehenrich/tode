@@ -1,11 +1,12 @@
 as yet unclassified
-batchRunTestSuite: suite
-  | result defects |
+batchRunTestSuiteBlock: suiteBlock
+  | result defects suite |
+  suite := suiteBlock value.
   result := suite run.
   Transcript
     cr;
     show:
-        '******************************************** ******************************************';
+        '**************************************************************************************';
     cr;
     tab;
     show: 'Results for ' , suite name;

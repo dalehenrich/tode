@@ -7,10 +7,14 @@ itemSelected: miniTool listElement: listElement selectedIndex: selectionIndex sh
       (selectionIndex > 2 and: [ run size <= 0 ])
         ifTrue: [ ^ false ].
       selectionIndex > 1
-        ifTrue: [ resultSlot := selectionIndex ] ]
+        ifTrue: [ resultSlot := selectionIndex ].
+      selectionIndex < 3
+        ifTrue: [ self testSuite	"force refresh of the test suite" ] ]
     ifFalse: [ 
       selectionIndex < 3
-        ifTrue: [ resultSlot := selectionIndex ]
+        ifTrue: [ 
+          self testSuite.	"force refresh of the test suite"
+          resultSlot := selectionIndex ]
         ifFalse: [ 
           | testCase testMethodClass |
           testCase := self testCasesAtResultSlot at: selectionIndex - 2.
