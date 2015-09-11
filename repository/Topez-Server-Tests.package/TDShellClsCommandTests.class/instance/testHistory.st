@@ -2,6 +2,10 @@ as yet unclassified
 testHistory
   | history newClassVersion oldClassVersion |
   self evaluateCommandString: 'cls --help history '.
+  self evaluateCommandString: 'cls history'.
+  self evaluateCommandString: 'cls history --hier'.
+  self evaluateCommandString: 'cls history --hier Symbol ' , self mockClassName.
+  self evaluateCommandString: 'cls history --hier ' , self mockClassName.
   history := self evaluateCommandString: 'cls history ' , self mockClassName.
   self assert: history size = 1.
   self createMockClassVersion.

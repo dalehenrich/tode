@@ -4,7 +4,7 @@ clsRemoveClassFromClassHistory: theClass
   history := theClass classHistory.
   history current == theClass
     ifTrue: [ 
-      | refs ar newVersion |
+      | refs ar |
       "removing the current version - replace current version in symbol list with new current version"
       refs := self findReferences: theClass name.
       (ar := System myUserProfile dictionaryAndSymbolOf: theClass)
@@ -16,8 +16,8 @@ clsRemoveClassFromClassHistory: theClass
                   ' is not reachable from your symbol list, so the removal has been aborted.' ].
       history removeVersion: theClass.
       (ar at: 1) removeKey: (ar at: 2).
-      newVersion := history current.
-      (ar at: 1) at: (ar at: 2) put: newVersion.
+      history currentVersion
+        ifNotNil: [ :newVersion | (ar at: 1) at: (ar at: 2) put: newVersion ].
       ClassOrganizer clearCachedOrganizer.
       self topez resetAllGlobalNames.
       refs isEmpty
