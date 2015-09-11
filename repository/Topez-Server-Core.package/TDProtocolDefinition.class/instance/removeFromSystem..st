@@ -1,5 +1,6 @@
 cut copy paste
 removeFromSystem: topez
-  (self theBehavior includesCategory: self categoryName)
-    ifTrue: [ self theBehavior removeCategory: self categoryName ].
+  | clsTool |
+  clsTool := topez toolInstanceFor: 'cls'.
+  clsTool protocol: self theBehavior remove: {(self categoryName)}.
   ^ true

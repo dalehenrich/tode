@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isMeta" ],
+	"name" : "TDBehaviorHistoryDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDClassHistoryDefinition",
+	"type" : "normal" }

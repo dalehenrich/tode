@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"className",
-		"theClass" ],
+		"classHistoryIndex" ],
 	"name" : "TDClassHistoryDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDDefinition",
+	"super" : "TDClassDefinition",
 	"type" : "normal" }

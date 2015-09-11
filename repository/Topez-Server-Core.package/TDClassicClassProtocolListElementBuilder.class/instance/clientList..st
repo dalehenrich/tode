@@ -4,15 +4,12 @@ clientList: listElement
   ar := {(self allProtocol)}
     ,
       (self object theBehavior categoryNames do: [ :each | each asString ]) sorted.
-  className := self object asTDClassDefinition className.
-  isMeta := self object theBehavior isMeta.
+  className := self object className.
+  isMeta := self object isMeta.
   items := ar
     collect: [ :protocol | 
       | def |
-      def := TDProtocolDefinition
-        className: className
-        isMeta: isMeta
-        protocol: protocol.
+      def := self object asTDProtocolDefinition: protocol.
       protocol = self allProtocol
         ifTrue: [ def syntheticProtocol: true ].
       def ].

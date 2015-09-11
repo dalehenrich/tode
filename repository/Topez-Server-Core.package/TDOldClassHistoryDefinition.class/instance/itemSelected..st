@@ -8,10 +8,12 @@ itemSelected: topez
     editUsing:
         ((TDEditorSpec topez: topez editorAspect: #'historyInstanceSelectors')
             windowName: #'instanceSelectors';
+            windowLocation: #'instanceSelectors';
             yourself).
   self theClass class
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'historyClassSelectors')
         windowName: #'classSelectors';
+        windowLocation: #'classSelectors';
         yourself).
   ^ nil

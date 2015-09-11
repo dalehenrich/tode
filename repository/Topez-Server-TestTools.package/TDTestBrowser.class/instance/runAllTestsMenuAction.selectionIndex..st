@@ -5,7 +5,7 @@ runAllTestsMenuAction: listElement selectionIndex: selectionIndex
   self currentTestCase: 'running...'.
   listElement topez refreshViewFor: self windowId.
   self
-    runTestSuite: testSuite
+    runTestSuite: self testSuite
     with: testResults
     refreshing: [ 
       self applyTestResults.

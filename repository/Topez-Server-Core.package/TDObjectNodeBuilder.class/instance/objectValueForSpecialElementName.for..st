@@ -8,6 +8,8 @@ objectValueForSpecialElementName: elementName for: anObject
     ifTrue: [ ^ anObject asString ].
   elementName = '(invariant)'
     ifTrue: [ ^ anObject isInvariant ].
+  elementName = '(notTranlogged)'
+    ifTrue: [ ^ (anObject perform: #'isTranlogged') not ].
   elementName = '(committed)'
     ifTrue: [ ^ anObject isCommitted ].
   elementName = '(dependents)'

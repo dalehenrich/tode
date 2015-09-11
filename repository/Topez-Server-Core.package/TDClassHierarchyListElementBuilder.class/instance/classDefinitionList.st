@@ -12,7 +12,7 @@ classDefinitionList
             addAll:
               (cl allSuperclasses
                 collect: [ :each | 
-                  (TDClassDefinition className: each name)
+                  (TDClassDefinition fromClassWithHistory: each)
                     username: classDef username;
                     yourself ]).
           classDefs add: classDef.
@@ -20,7 +20,7 @@ classDefinitionList
             addAll:
               (cl allSubclasses
                 collect: [ :each | 
-                  (TDClassDefinition className: each name)
+                  (TDClassDefinition fromClassWithHistory: each)
                     username: classDef username;
                     yourself ]) ] ].
   ^ classDefs

@@ -1,4 +1,4 @@
-as yet unclassified
+cut copy paste
 pasteIntoPackageDefinition: aTDPackageDefinition
   "add class to package"
 

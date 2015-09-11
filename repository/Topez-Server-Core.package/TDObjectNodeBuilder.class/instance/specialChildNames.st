@@ -1,3 +1,3 @@
 as yet unclassified
 specialChildNames
-  ^ #('(class)' '(committed)' '(invariant)' '(oop)' '(value)' '(dependents)' '<<more>>')
+  ^ #('(class)' '(committed)' '(notTranlogged)' '(invariant)' '(oop)' '(value)' '(dependents)' '<<more>>')

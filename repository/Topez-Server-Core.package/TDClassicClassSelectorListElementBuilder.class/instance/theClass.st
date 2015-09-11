@@ -1,3 +1,3 @@
 accessing
 theClass
-  ^ self object asTDClassDefinition theClass
+  ^ self object theClass

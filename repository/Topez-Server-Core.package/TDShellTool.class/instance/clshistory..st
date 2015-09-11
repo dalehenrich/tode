@@ -1,12 +1,14 @@
 cls
 clshistory: theClass
-  | count |
-  count := 0.
-  ^ theClass classHistory reversed
-    collect: [ :cls | 
-      | clsName |
-      clsName := count == 0
-        ifTrue: [ cls name asString ]
-        ifFalse: [ cls name asString , ' [' , count printString , ']' ].
-      count := count + 1.
-      TDClassHistoryDefinition theClass: cls className: clsName ]
+  | classes defs |
+  theClass
+    ifNotNil: [ classes := {theClass} ]
+    ifNil: [ classes := self clsClassesWithClassHistory ].
+  defs := OrderedCollection new.
+  classes
+    do: [ :cls | 
+      defs
+        addAll:
+          (cls classHistory
+            withIndexCollect: [ :cls :index | TDClassHistoryDefinition className: cls name classHistoryIndex: index ]) ].
+  ^ defs
