@@ -7,7 +7,9 @@ testHistory
   self createMockClassVersion.
   history := self evaluateCommandString: 'cls history ' , self mockClassName.
   self assert: history size = 2.
-  newClassVersion := history first theClass.
+  newClassVersion := (history detect: [ :each | each classHistoryIndex = 2 ])
+    theClass.
   self assert: newClassVersion allInstVarNames = #(#'instanceVariable').
-  oldClassVersion := history second theClass.
+  oldClassVersion := (history detect: [ :each | each classHistoryIndex = 1 ])
+    theClass.
   self assert: oldClassVersion allInstVarNames size = 0
