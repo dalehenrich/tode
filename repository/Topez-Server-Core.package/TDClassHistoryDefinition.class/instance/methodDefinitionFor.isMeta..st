@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 methodDefinitionFor: selector isMeta: isMeta
   ^ (TDClassHistoryMethodDefinition
     className: self className

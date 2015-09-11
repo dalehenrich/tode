@@ -1,3 +1,4 @@
 cls
 protocol: theBehavior remove: protoNames
-  ^ protoNames collect: [ :protoName | theBehavior removeCategory: protoName ]
+  ^ (protoNames select: [ :protoName | theBehavior includesCategory: protoName ])
+    collect: [ :protoName | theBehavior removeCategory: protoName ]
