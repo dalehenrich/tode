@@ -1,12 +1,9 @@
 cls
 clshistory: theClass
   | classes defs |
-  classes := {theClass}.
   theClass
-    ifNil: [ 
-      classes := GsDeployer new
-        excluding: #();
-        classesWithClassHistory ].
+    ifNotNil: [ classes := {theClass} ]
+    ifNil: [ classes := self clsClassesWithClassHistory ].
   defs := OrderedCollection new.
   classes
     do: [ :cls | 
