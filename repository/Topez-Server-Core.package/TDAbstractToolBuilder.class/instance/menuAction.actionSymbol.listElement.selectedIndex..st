@@ -7,8 +7,11 @@ menuAction: miniTool actionSymbol: actionSymbol listElement: listElement selecte
         withArguments:
           {listElement.
           index} ].
-  ^ miniTool builder
-    perform: actionSymbol
-    withArguments:
-      {listElement.
-      index}
+  ^ actionSymbol numArgs == 2
+    ifTrue: [ 
+      miniTool builder
+        perform: actionSymbol
+        withArguments:
+          {listElement.
+          index} ]
+    ifFalse: [ miniTool builder perform: actionSymbol withArguments: {listElement} ]
