@@ -9,5 +9,5 @@ findClassHierarchy: classNameList
       | cls |
       cls := Smalltalk at: className.
       classes addAll: (TDClassDefinition fullHierarchyOf: cls) ].
-  defs := classes collect: [ :each | TDClassDefinition className: each name ].
+  defs := classes collect: [ :each | each asTDClassDefinition ].
   ^ TDClassDefinition classHierarchyOrder: defs

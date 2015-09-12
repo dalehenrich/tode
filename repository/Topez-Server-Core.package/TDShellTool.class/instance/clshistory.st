@@ -29,7 +29,6 @@ clshistory
       subOptions
         at: 'hier'
         ifPresent: [ :ignored | classes addAll: (TDClassDefinition fullHierarchyOf: cl) ] ].
-  classDefs := classes
-    collect: [ :each | TDClassDefinition fromClassWithHistory: each ].
+  classDefs := classes collect: [ :each | each asTDClassDefinition ].
   TDClassDefinition classHierarchyOrder: classDefs ].
   ^ self browseClassesBlock: block label: label

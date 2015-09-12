@@ -1,3 +1,3 @@
 converting
 asTDClassDefinition
-  ^ (TDClassDefinition className: self className) yourself
+  ^ self theClass asTDClassDefinition

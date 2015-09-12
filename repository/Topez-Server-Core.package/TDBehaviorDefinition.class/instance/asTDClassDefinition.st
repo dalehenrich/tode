@@ -1,5 +1,5 @@
 as yet unclassified
 asTDClassDefinition
-  ^ (TDClassDefinition className: self theClassName)
+  ^ (TDBehaviorDefinition className: className isMeta: false)
     username: self username;
     yourself
