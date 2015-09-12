@@ -1,7 +1,7 @@
 *topez-server-24x-core
 performOnServer: command logging: logging
   | result |
-  result := (System performOnServer: command) asUnicodeString.
+  result := System performOnServer: command.
   logging
     ifTrue: [ 
       Transcript
