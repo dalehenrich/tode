@@ -9,7 +9,8 @@ menuActionSpec: miniTool
       theSpec := theSpec
         ,
           {#('adopt' nil #'adoptVersion:selectedIndex:').
-          #('changes' nil #'versionChanges:selectedIndex:').
+          #('> changes' nil #'versionChanges:selectedIndex:').
+          #('< changes' nil #'versionChangesReversed:selectedIndex:').
           #('merge' nil #'mergeVersion:selectedIndex:').
           #('-')} ].
   ^ theSpec
