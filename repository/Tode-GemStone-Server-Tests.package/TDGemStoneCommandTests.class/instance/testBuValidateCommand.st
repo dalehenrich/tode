@@ -11,5 +11,5 @@ testBuValidateCommand
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' snapshot test.dbf';
     evaluateCommandString:
-        'bu --dir=' , backupDirectoryPath , ' validate --snapshot test.dbf';
+        'bu --dir=' , backupDirectoryPath , ' validate --snapshot extent0.test.dbf';
     yourself

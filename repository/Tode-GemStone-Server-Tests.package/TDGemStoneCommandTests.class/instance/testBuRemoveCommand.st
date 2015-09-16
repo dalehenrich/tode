@@ -14,10 +14,11 @@ testBuRemoveCommand
     evaluateCommandString:
         'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' snapshot test.dbf';
     evaluateCommandString:
-        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' remove test.dbf';
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName
+            , ' remove extent0.test.dbf';
     evaluateCommandString:
         'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' snapshot test.dbf';
-    evaluateCommandString: 'bu remove --snapshot test.dbf';
+    evaluateCommandString: 'bu remove --snapshot extent0.test.dbf';
     yourself ]
     on: Error
     do: [ :ex | 

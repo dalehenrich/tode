@@ -24,8 +24,8 @@ DESCRIPTION
 
 EXAMPLES
   bu validate sample.dbf.gz
-  bu validate --snapshot sample.dbf
   bu --dir=/opt/gemstone/backups validate sample.dbf.gz
+  bu validate --snapshot extent0.sample.dbf
 
 SEE ALSO
   bu --help backup

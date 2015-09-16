@@ -12,9 +12,10 @@ testBuInfoCommand
     evaluateCommandString: 'bu info test.dbf.gz';
     evaluateCommandString:
         'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' snapshot test.dbf';
-    evaluateCommandString: 'bu info --snapshot test.dbf';
+    evaluateCommandString: 'bu info --snapshot extent0.test.dbf';
     evaluateCommandString:
-        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' info test.dbf';
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName
+            , ' info extent0.test.dbf';
     yourself ]
     on: Error
     do: [ :ex | 
