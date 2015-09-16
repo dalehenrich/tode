@@ -2,10 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testBuBackupCommand" : "dkh 03/22/2015 08:00",
+		"testBuBackupCommand" : "dkh 09/16/2015 15:27",
 		"testBuDirectoryCommand" : "dkh 03/19/2015 16:42",
-		"testBuInfoCommand" : "dkh 09/01/2015 09:50",
+		"testBuInfoCommand" : "dkh 09/16/2015 15:28",
 		"testBuListCommand" : "dkh 09/01/2015 09:54",
-		"testBuRemoveCommand" : "dkh 09/01/2015 09:51",
+		"testBuRemoveCommand" : "dkh 09/16/2015 15:43",
 		"testBuRestoreCommand" : "dkh 03/18/2015 21:01",
-		"testBuSnapshotCommand" : "dkh 09/01/2015 09:51" } }
+		"testBuSnapshotCommand" : "dkh 09/01/2015 09:51",
+		"testBuValidateCommand" : "dkh 09/16/2015 15:42" } }

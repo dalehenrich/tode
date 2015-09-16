@@ -20,6 +20,7 @@ DESCRIPTION
     remove    Remove backup file from backup directory
     restore   Restore from a GemStone backup
     snapshot  Make a snapshot of the extent0.dbf file
+    validate  Validate that backup file is readable
 
 OPTIONS
   --help
@@ -42,5 +43,6 @@ EXAMPLES
     at: 'restore' put: self burestoreManPage;
     at: 'remove' put: self buremoveManPage;
     at: 'snapshot' put: self busnapshotManPage;
+    at: 'validate' put: self buvalidateManPage;
     yourself.
   ^ manPage

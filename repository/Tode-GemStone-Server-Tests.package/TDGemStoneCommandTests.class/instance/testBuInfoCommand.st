@@ -9,9 +9,9 @@ testBuInfoCommand
     evaluateCommandString: 'bu --help info';
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' backup test.dbf';
+    evaluateCommandString: 'bu info test.dbf.gz';
     evaluateCommandString:
         'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' snapshot test.dbf';
-    evaluateCommandString: 'bu info test.dbf';
     evaluateCommandString: 'bu info --snapshot test.dbf';
     evaluateCommandString:
         'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' info test.dbf';

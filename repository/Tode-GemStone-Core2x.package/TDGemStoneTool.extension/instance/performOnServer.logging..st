@@ -1,4 +1,4 @@
-*topez-server-33x-core
+*tode-gemstone-core2x
 performOnServer: command logging: logging
   | result |
   result := System performOnServer: command.

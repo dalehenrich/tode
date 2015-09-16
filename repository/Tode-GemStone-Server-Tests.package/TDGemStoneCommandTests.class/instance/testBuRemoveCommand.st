@@ -10,7 +10,7 @@ testBuRemoveCommand
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' backup test.dbf';
     evaluateCommandString:
-        'bu --dir=' , backupDirectoryPath , ' remove test.dbf';
+        'bu --dir=' , backupDirectoryPath , ' remove test.dbf.gz';
     evaluateCommandString:
         'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' snapshot test.dbf';
     evaluateCommandString:
