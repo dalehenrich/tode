@@ -1,13 +1,13 @@
 bu
-buinfo
+buvalidate
   "
-  bu [--dir=<backup-directory>] info [--snapshot] <backup-file>
+  bu [--dir=<backup-directory>] validate [--snapshot] <backup-file>
 "
 
-  | filePath copyDbfCommand |
+  | filePath |
   self getSubcommandOptsMixedLongShort: {#('snapshot' nil #'none')}.
   filePath := subOptions
     at: 'snapshot'
     ifPresent: [ :ignored | self resolveSnapshotFilePath ]
     ifAbsent: [ self resolveBackupFilePath ].
-  ^ self copydbf: '-i' forFilePath: filePath
+  self buValidateReadableBackupFile: filePath

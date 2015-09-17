@@ -1,16 +1,16 @@
 bu
-burestoreManPage
+buvalidateManPage
   ^ TDManPage
-    commandName: 'restore'
+    commandName: 'validate'
     fromString:
       'NAME
-  bu restore - Restore from a GemStone backup
+  bu validate - Validate that backup file is readable
 
 SYNOPSIS
-  bu [--dir=<backup-directory>] restore <backup-file>
+  bu [--dir=<backup-directory>] validate [--snapshot] <backup-file>
 
 DESCRIPTION
-  Use the specified bacup file to restore GemStone to a previous state.
+  Verify the readability of the specified bacup file.
 
   With no options specified, the backup file will be read from the directory 
   specified by the `bu directory` command. The default backup directory is named
@@ -19,10 +19,13 @@ DESCRIPTION
   With the --dir option specified, the restore file will be read from the named
   directory.
 
+  With the --snapshot option specified the <backup-file> in the snapshot directory
+  will be validated.
+
 EXAMPLES
-  bu restore sample.dbf
-  bu restore sample.dbf.gz
-  bu --dir=/opt/gemstone/backups restore sample.dbf.gz
+  bu validate sample.dbf.gz
+  bu --dir=/opt/gemstone/backups validate sample.dbf.gz
+  bu validate --snapshot extent0.sample.dbf
 
 SEE ALSO
   bu --help backup

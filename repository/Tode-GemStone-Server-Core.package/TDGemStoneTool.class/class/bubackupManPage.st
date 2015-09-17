@@ -7,10 +7,12 @@ bubackupManPage
   bu backup - Make a GemStone backup
 
 SYNOPSIS
-  bu [--dir=<backup-directory>] backup [--safely] <backup-file>
+  bu [--dir=<backup-directory>] backup [--safely] [--uncompressed] <backup-file>
 
 DESCRIPTION
-  Make a GemStone backup in the specified backup file.
+  Make a GemStone backup in the specified backup file. By default a compressed 
+  backup is created and a `.gz` is tacked onto the end of the <backup-file> if 
+  not already present.
 
   With no options specified, the backup file will be located in the directory 
   specified by the `bu directory` command. The default backup directory is named
@@ -19,11 +21,15 @@ DESCRIPTION
   With the --dir option specified, the backup file will be stored in the named
   directory.
 
-  With the --safely option specified, the snapshot will (quietly) be skipped if
-  the target snapshot already exists.
+  With the --safely option specified, the backup will (quietly) be skipped if
+  the target backup file already exists.
+
+  With the --uncompressed option an uncompressed backup is created in the named
+  <backup-file>.
 
 EXAMPLES
   bu --help backup
+  bu backup --uncompressed sample.dbf
   bu backup sample.dbf
   bu backup --safely sample.dbf
   bu --dir=/opt/gemstone/backups backup sample.dbf
@@ -33,4 +39,5 @@ SEE ALSO
   bu --help info
   bu --help list
   bu --help restore
+  bu --help validate
 '

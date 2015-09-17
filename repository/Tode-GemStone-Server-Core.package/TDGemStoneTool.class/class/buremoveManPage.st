@@ -26,8 +26,8 @@ DESCRIPTION
 EXAMPLES
   bu --help remove
   bu remove sample.dbf
-  bu remove --snapshot extent0.sample.dbf
   bu --dir=/opt/gemstone/backups remove sample.dbf
+  bu remove --snapshot extent0.sample.dbf
   bu --dir=--dir=$GS_HOME/gemstone/snapshots remove extent0.sample.dbf
 
 SEE ALSO
