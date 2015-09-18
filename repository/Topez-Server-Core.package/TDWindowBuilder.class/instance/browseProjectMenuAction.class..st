@@ -1,7 +1,7 @@
 menu actions
 browseProjectMenuAction: clientElement class: cls
   | configurationDef |
-  configurationDef := (TDClassDefinition className: cls name) configurationOf.
+  configurationDef := cls asTDClassDefinition configurationOf.
   (self browseTool: clientElement)
     browseClassesInProject: configurationDef configurationName.
   ^ true

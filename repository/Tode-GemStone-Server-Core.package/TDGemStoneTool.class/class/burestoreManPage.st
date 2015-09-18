@@ -21,7 +21,8 @@ DESCRIPTION
 
 EXAMPLES
   bu restore sample.dbf
-  bu --dir=/opt/gemstone/backups restore sample.dbf
+  bu restore sample.dbf.gz
+  bu --dir=/opt/gemstone/backups restore sample.dbf.gz
 
 SEE ALSO
   bu --help backup

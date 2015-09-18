@@ -6,7 +6,7 @@ browseItMenuAction: sourceElement selectedText: selection
   regex := RxParser preferredMatcherClass for: parser ignoreCase: true.
   classes := Smalltalk systemNavigation allClasses asArray
     select: [ :cls | regex search: cls name asString ].
-  defs := classes collect: [ :cl | TDClassDefinition className: cl name ].
+  defs := classes collect: [ :cl | cl asTDClassDefinition ].
   defs
     editUsing:
       ((TDEditorSpec topez: sourceElement topez editorAspect: #'definitionList')

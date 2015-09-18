@@ -37,7 +37,7 @@ processClassDefinitionsBlock: classDefinitionsBlock elementBlock: elementBlock
               cls == cl
                 ifTrue: [ classDef ]
                 ifFalse: [ 
-                  (TDClassDefinition fromClassWithHistory: cl)
+                  cl asTDClassDefinition
                     username: classDef username;
                     yourself ] ] ].
       order add: supersChain -> classDef ].

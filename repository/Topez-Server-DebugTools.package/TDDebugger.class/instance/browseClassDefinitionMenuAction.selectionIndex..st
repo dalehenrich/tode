@@ -4,7 +4,7 @@ browseClassDefinitionMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex == 0
     ifTrue: [ ^ false ].
   cls := self theBehavior.
-  {(TDClassDefinition className: cls theNonMetaClass name)}
+  {(cls asTDClassDefinition)}
     editUsing:
       (TDEditorSpec topez: listElement topez editorAspect: #'definitionList').
   ^ true
