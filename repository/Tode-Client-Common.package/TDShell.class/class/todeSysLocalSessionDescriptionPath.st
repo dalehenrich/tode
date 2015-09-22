@@ -3,5 +3,5 @@ todeSysLocalSessionDescriptionPath
 	| clientDescriptionsPath |
 	clientDescriptionsPath := 'client/descriptions/'.
 	self useTodeSys
-		ifTrue: [ ^ self todeSysLocalPath , clientDescriptionsPath ].
+		ifTrue: [ ^ self todeClientSysLocalPath , clientDescriptionsPath ].
 	^ self todeRoot , '/' , clientDescriptionsPath

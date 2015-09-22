@@ -7,7 +7,7 @@ pharo30InstallTodeClient
 		raiseWarning: false.
 	(Smalltalk at: #World) closeAllWindowsDiscardingChanges.	"close all windows"
 	(Smalltalk at: #TDShell) perform: #devKitRoot: with: (Smalltalk os environment at: 'GS_HOME').
-	(Smalltalk os environment at: 'GS_TODE_CLIENT' ifAbsent: [  ])
+	(Smalltalk os environment at: 'GS_SHARED_TODE' ifAbsent: [  ])
 		ifNotNil: [ :gs_tode_client_path | 
 			"support for GsDevKit_home"
 			(Smalltalk at: #TDShell) perform: #todeClientRoot: with: gs_tode_client_path , '/tode'].
