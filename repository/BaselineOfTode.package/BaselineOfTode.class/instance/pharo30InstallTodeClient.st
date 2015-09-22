@@ -27,7 +27,7 @@ pharo30InstallTodeClient
 				ifTrue: [ monoFontName := 'Monaco' ] ].
 	(Smalltalk at: #StandardFonts) defaultFont: ((Smalltalk at: #LogicalFont) familyName: monoFontName pointSize: 8).
 	(Smalltalk at: #StandardFonts) setAllStandardFontsTo: (Smalltalk at: #StandardFonts) defaultFont.
-	windowProperties := (Smalltalk at: #TDAbstractWindowProperties) import: 'standard-small'.
+	windowProperties := (Smalltalk at: #TDAbstractWindowProperties) import: 'jigsaw-medium'.
 	windowProperties installOn: (Smalltalk at: #TDTopezGemStoneClient).
 	bounds := windowProperties caculateWindowBounds at: #transcript.
 	(Smalltalk at: #TDShell) resizeTranscript: bounds
