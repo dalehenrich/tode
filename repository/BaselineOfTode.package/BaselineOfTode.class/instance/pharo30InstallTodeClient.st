@@ -10,7 +10,7 @@ pharo30InstallTodeClient
 	(Smalltalk os environment at: 'GS_SHARED_TODE' ifAbsent: [  ])
 		ifNotNil: [ :gs_tode_client_path | 
 			"support for GsDevKit_home"
-			(Smalltalk at: #TDShell) perform: #todeClientRoot: with: gs_tode_client_path , '/tode'].
+			(Smalltalk at: #TDShell) perform: #todeClientRoot: with: gs_tode_client_path ].
 	(Smalltalk at: #PolymorphSystemSettings)
 		perform: #desktopLogoFileName:
 		with: ((Smalltalk at: #FileSystem) workingDirectory parent / 'pharo' / 'GemTalkSystemsLogo.png') pathString.
