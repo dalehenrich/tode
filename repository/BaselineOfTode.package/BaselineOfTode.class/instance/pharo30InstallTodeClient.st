@@ -13,7 +13,7 @@ pharo30InstallTodeClient
 			(Smalltalk at: #TDShell) perform: #todeClientRoot: with: gs_tode_client_path ].
 	(Smalltalk at: #PolymorphSystemSettings)
 		perform: #desktopLogoFileName:
-		with: ((Smalltalk at: #FileSystem) workingDirectory parent / 'pharo' / 'GemTalkSystemsLogo.png') pathString.
+		with: ((Smalltalk at: #FileSystem) workingDirectory / 'GemTalkSystemsLogo.png') pathString.
 	(Smalltalk at: #TaskbarMorph) perform: #showTaskbar: with: false.
 	(Smalltalk at: #NECPreferences) perform: #enabled: with: false.
 	Smalltalk at: #TODE_CLIENT_INSTALLED put: true.
