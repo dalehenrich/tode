@@ -6,6 +6,7 @@
 		"DebugMode",
 		"DevKitRoot",
 		"EnableDebugger",
+		"TodeClientRoot",
 		"TodePath",
 		"TodeRoot",
 		"UseTodeSys" ],

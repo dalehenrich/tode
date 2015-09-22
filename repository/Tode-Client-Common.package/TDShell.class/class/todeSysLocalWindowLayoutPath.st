@@ -1,3 +1,3 @@
 home
 todeSysLocalWindowLayoutPath
-	^self todeSysLocalPath , self windowLayoutPath
+	^self todeClientSysLocalPath , self windowLayoutPath
