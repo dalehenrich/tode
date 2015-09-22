@@ -84,6 +84,7 @@ baseline: spec
   spec
     for: #(#'pharo3.x' #'pharo4.x')
     do: [ 
+      spec postLoadDoIt: #'pharo30InstallTodeClient'.
       spec
         configuration: 'Roassal2'
           with: [ 
