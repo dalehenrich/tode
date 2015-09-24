@@ -72,6 +72,7 @@ baseline: spec
         group: 'GemStone Tests' with: #('Topez-ClientTravis-Tests');
         group: 'GemStone Dev'
           with: #('GemStone' 'Common Tests' 'GemStone Tests');
+        group: 'Common-Core' with: #('Topez-Common-Core');
         group: 'Pharo Dev' with: #('Pharo' 'Common Tests');
         yourself ].
   spec
@@ -97,13 +98,7 @@ baseline: spec
       spec
         package: 'Tode-Client-Roassal2'
           with: [ spec requires: #('Tode-Client-ServerBlocks') ];
-        package: 'TPZ-Talk'
-          with: [ 
-              spec
-                requires: #('Ston' 'Roassal2');
-                repository:
-                    'http://smalltalkhub.com/mc/PierreChanson/TPZ-Talk/main' ];
-        group: 'Visualize' with: #('TPZ-Talk' 'Tode-Client-Roassal2');
+        group: 'Visualize' with: #('Tode-Client-Roassal2' 'GemStone');
         yourself ].
   spec
     for: #'gemstone'
