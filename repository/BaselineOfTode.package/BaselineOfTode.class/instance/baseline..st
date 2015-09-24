@@ -54,7 +54,10 @@ baseline: spec
                 postLoadDoIt: #'initializeTools';
                 requires: #('Topez-Server-Core') ];
         package: 'Tode-Client-Common'
-          with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
+          with: [ 
+              spec
+                postLoadDoIt: #'pharo30InstallTodeClient';
+                requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
           with: [ spec requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];
         package: 'Tode-Client-Pharo'
@@ -85,7 +88,6 @@ baseline: spec
   spec
     for: #(#'pharo3.x' #'pharo4.x')
     do: [ 
-      spec postLoadDoIt: #'pharo30InstallTodeClient'.
       spec
         configuration: 'Roassal2'
           with: [ 
