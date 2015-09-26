@@ -19,7 +19,10 @@ pharo30InstallFullTodeClient
     ifTrue: [ monoFontName := 'DejaVu Sans Mono' ]
     ifFalse: [ 
       Smalltalk os isMacOSX
-        ifTrue: [ monoFontName := 'Monaco' ] ].
+        ifTrue: [ monoFontName := 'Monaco' ]
+        ifFalse: [ 
+          "Windows"
+          monoFontName := 'Consolas' ] ].
   (Smalltalk at: #'StandardFonts')
     defaultFont:
       ((Smalltalk at: #'LogicalFont') familyName: monoFontName pointSize: 8).
