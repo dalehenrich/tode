@@ -11,6 +11,8 @@
 		"stoneName",
 		"gemHost",
 		"netLDI",
+		"netLDIPort",
+		"netLDIPortRange",
 		"gemTask",
 		"userId",
 		"password",

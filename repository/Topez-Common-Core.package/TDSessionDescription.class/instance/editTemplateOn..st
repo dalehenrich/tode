@@ -39,6 +39,18 @@ editTemplateOn: stream
 		tab;
 		nextPutAll: 'netLDI: ' , self netLDI printString;
 		nextPut: $;.
+	stream
+		cr;
+		tab;
+		nextPutAll: 'netLDIPort: ' , self netLDIPort printString;
+		nextPut: $;.
+	(netLDIPortRange notNil and: [ netLDIPortRange isEmpty not ])
+		ifTrue: [ 
+			stream
+				cr;
+				tab;
+				nextPutAll: 'netLDIPortRange: ' , self netLDIPortRange printString;
+				nextPut: $; ].
 	(gemTask notNil and: [ gemTask isEmpty not ])
 		ifTrue: [ 
 			stream
