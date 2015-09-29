@@ -24,5 +24,5 @@ testBuRemoveCommand
     do: [ :ex | 
       Transcript
         cr;
-        show: ex description;
+        show: 'testBuRemoveCommand: ' , ex description;
         show: (GsProcess stackReportToLevel: 100) ]

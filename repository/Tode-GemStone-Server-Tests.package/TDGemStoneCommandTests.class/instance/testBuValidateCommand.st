@@ -1,5 +1,6 @@
 tests
 testBuValidateCommand
+  [ 
   | backupDirectoryPath |
   backupDirectoryPath := TDGemStoneTool defaultBackupDirectoryName.
   self topez
@@ -12,4 +13,11 @@ testBuValidateCommand
         'bu --dir=' , backupDirectoryPath , ' snapshot test.dbf';
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' validate --snapshot extent0.test.dbf';
-    yourself
+    yourself ]
+    on: Error
+    do: [ :ex | 
+      Transcript
+        cr;
+        show: 'testBuValidateCommand: ' , ex description;
+        cr;
+        show: (GsProcess stackReportToLevel: 100) ]
