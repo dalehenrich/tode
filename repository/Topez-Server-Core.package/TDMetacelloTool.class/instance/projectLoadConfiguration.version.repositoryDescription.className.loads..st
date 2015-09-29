@@ -4,10 +4,10 @@ projectLoadConfiguration: projectName version: version repositoryDescription: re
 
   | projectLoadSpec |
   projectLoadSpec := TDMetacelloToolProjectLoadSpec new
-    projectLoad: projectName;
+    projectName: projectName;
     projectSelector: #'configuration:';
-    description: repositoryDescription;
-    className: className;
+    repositoryDescription: repositoryDescription;
+    projectClassName: className;
     loads: loads;
     version: version;
     yourself.

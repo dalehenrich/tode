@@ -21,7 +21,8 @@
 		"ignoreImage",
 		"silently",
 		"cacheRepository",
-		"repositoryOverrides" ],
+		"repositoryOverrides",
+		"version" ],
 	"name" : "TDMetacelloToolProjectLoadSpec",
 	"pools" : [
 		 ],

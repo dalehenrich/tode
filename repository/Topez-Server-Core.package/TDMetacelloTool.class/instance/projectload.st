@@ -109,12 +109,12 @@ projectload
     ifPresent: [ :arg | gsDeployerOption := arg asSymbol ]
     ifAbsent: [ gsDeployerOption := #'bulk' ].
   projectLoadSpec := TDMetacelloToolProjectLoadSpec new
-    projectLoad: registration projectName;
+    projectName: registration projectName;
     doGet: doGet;
     gsDeployer: gsDeployerOption;
     projectSelector: projectSelector;
     repositoryDescription: description;
-    className: projectClassName;
+    projectClassName: projectClassName;
     loads: loads;
     version: configurationVersion;
     onConflict: onConflict;

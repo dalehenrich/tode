@@ -2,10 +2,10 @@ project api
 projectLoad: projectName selector: projectSelector repositoryDescription: repositoryDescription className: className loads: loads version: version
   | projectLoadSpec |
   projectLoadSpec := TDMetacelloToolProjectLoadSpec new
-    projectLoad: projectName;
+    projectName: projectName;
     projectSelector: projectSelector;
-    description: repositoryDescription;
-    className: className;
+    repositoryDescription: repositoryDescription;
+    projectClassName: className;
     loads: loads;
     version: version;
     yourself.

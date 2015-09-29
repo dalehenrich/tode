@@ -23,10 +23,10 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
     ifNil: [ loads := 'default' ].
   projectClassName := aProjectRegistration projectSpecClassName.
   projectLoadSpec := TDMetacelloToolProjectLoadSpec new
-    projectLoad: self projectName;
+    projectName: self projectName;
     projectSelector: aProjectRegistration projectSelector;
-    repositoryDescriptionescription: aProjectRegistration repositoryDescription;
-    className: projectClassName;
+    repositoryDescription: aProjectRegistration repositoryDescription;
+    projectClassName: projectClassName;
     loads: loads;
     version: aProjectRegistration configurationVersionString;
     onDowngrade: #'useIncoming';
