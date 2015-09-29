@@ -2,5 +2,5 @@ nrs
 gemNRS
 
 	^'!tcp@' , self gemHost, 
-		'#netldi:' , self netLDI, 
+		'#netldi:' , self netLDIOrNetLDIPort, 
 		'#task!' , self gemTask.
