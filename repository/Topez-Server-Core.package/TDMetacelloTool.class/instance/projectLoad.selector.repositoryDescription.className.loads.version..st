@@ -1,19 +1,12 @@
 project api
 projectLoad: projectName selector: projectSelector repositoryDescription: repositoryDescription className: className loads: loads version: version
-  ^ self
-    projectLoad: projectName
-    doGet: true
-    gsDeployer: #'bulk'
-    selector: projectSelector
-    description: repositoryDescription
-    className: className
-    loads: loads
-    version: version
-    onConflict: #'useIncoming'
-    onDowngrade: nil
-    onLock: #'honor'
-    onUpgrade: nil
-    ignoreImage: nil
-    silently: nil
-    cacheRepository: nil
-    overrides: nil
+  | projectLoadSpec |
+  projectLoadSpec := TDMetacelloToolProjectLoadSpec new
+    projectLoad: projectName;
+    projectSelector: projectSelector;
+    description: repositoryDescription;
+    className: className;
+    loads: loads;
+    version: version;
+    yourself.
+  ^ self projectLoadFromSpec: projectLoadSpec
