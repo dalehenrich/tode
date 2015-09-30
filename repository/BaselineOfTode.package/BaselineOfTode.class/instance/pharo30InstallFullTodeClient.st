@@ -2,6 +2,11 @@ initialization
 pharo30InstallFullTodeClient
   | monoFontName windowProperties bounds |
   Smalltalk at: #'TODE_CLIENT_INSTALLED' ifPresent: [ ^ self ].
+  Smalltalk os environment
+    at: 'GS_HOME'
+    ifAbsent: [ 
+      "Cannot initialize correctly if $GS_HOME is not defined correctly"
+      ^ self ].
   self pharo30InstallTodeClient.
   (Smalltalk at: #'World') closeAllWindowsDiscardingChanges.	"close all windows"
   (Smalltalk at: #'PolymorphSystemSettings')
