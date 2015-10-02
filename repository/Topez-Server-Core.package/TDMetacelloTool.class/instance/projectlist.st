@@ -1,12 +1,26 @@
 project
 projectlist
   "
-  project list [--inspect|-i] [<project-pattern>]...
+  project list [--inspect|-i] [--all] [<project-pattern>]...
 "
 
   | block |
-  self getSubcommandOptsMixedLongShort: {#('inspect' $i #'none')}.
-  block := [ self projectRegistrationDefinitionList ].
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('inspect' $i #'none').
+      #('all' nil #'none')}.
+  block := [ 
+  | list |
+  list := self projectRegistrationDefinitionList.
+  subOptions
+    at: 'all'
+    ifAbsent: [ 
+      "string out the GLASS configurations"
+      list := list
+        reject: [ :projectDef | 
+          #('GLASS' 'GsCore' 'GsMisc' 'GsMonticello' 'GsOB' 'GsSqueakCommon' 'MetacelloPreview' 'GoferProjectLoader')
+            includes: projectDef projectName ] ].
+  list ].
   subOptions
     at: 'inspect'
     ifPresent: [ :ignored | ^ (block value collect: [ :def | def projectSpec ]) inspect ]
