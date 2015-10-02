@@ -2,7 +2,7 @@ system menu
 todeMenuCommandOn: aBuilder
 	<todeWorldMenu>
 	| sessionDescriptionDir |
-	sessionDescriptionDir := self todeSysLocalSessionDescriptionPath asFileReference.
+	sessionDescriptionDir := self gsDevKitSessionDescriptionPath asFileReference.
 	sessionDescriptionDir exists
 		ifTrue: [ 
 			(aBuilder item: #'Open Shell')
