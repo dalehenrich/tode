@@ -16,7 +16,7 @@ todeMenuCommandOn: aBuilder
 				target: self;
 				icon: Smalltalk ui icons configIcon;
 				enabled: currentShell isNil.
-			(aBuilder item: #'Workspace')
+			(aBuilder item: #Workspace)
 				parent: #'Open Tool';
 				order: 2.0;
 				target: self;
@@ -35,5 +35,7 @@ todeMenuCommandOn: aBuilder
 				target: self.
 			(sessionDescriptionDir files sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
-					file basename = 'README.md'
+					| base |
+					base := file basename.
+					((base beginsWith: 'README') or: [ base beginsWith: '.' ])
 						ifFalse: [ self importSessionDescriptionFrom: file for: aBuilder ] ] ]
