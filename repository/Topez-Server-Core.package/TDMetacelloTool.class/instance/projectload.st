@@ -111,7 +111,7 @@ projectload
   projectLoadSpec := TDMetacelloToolProjectLoadSpec new
     projectName: registration projectName;
     doGet: doGet;
-    gsDeployer: gsDeployerOption;
+    gsDeployerOption: gsDeployerOption;
     projectSelector: projectSelector;
     repositoryDescription: description;
     projectClassName: projectClassName;
