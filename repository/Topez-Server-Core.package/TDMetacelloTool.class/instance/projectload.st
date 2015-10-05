@@ -124,6 +124,6 @@ projectload
     ignoreImage: ignoreImage;
     silently: silently;
     cacheRepository: cacheRepository;
-    overrides: repositoryOverrides;
+    repositoryOverrides: repositoryOverrides;
     yourself.
   ^ self projectLoadFromSpec: projectLoadSpec
