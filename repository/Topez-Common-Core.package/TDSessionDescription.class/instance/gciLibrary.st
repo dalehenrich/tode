@@ -1,7 +1,7 @@
 accessing
 gciLibrary
   | libraryClass library libName ext |
-  libraryClass := GciLibrary withAllSubclasses
+  libraryClass := (Smalltalk at: #'GciLibrary') withAllSubclasses
     detect: [ :each | each isClassForVersion: self gemstoneVersion ].
   (Smalltalk at: #'ExternalAddress') startUp: true.
   libName := self gciLibraryName.
