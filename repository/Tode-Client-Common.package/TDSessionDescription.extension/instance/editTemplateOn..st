@@ -44,7 +44,7 @@ editTemplateOn: stream
 		tab;
 		nextPutAll: 'netLDIPort: ' , self netLDIPort printString;
 		nextPut: $;.
-	(netLDIPortRange notNil and: [ netLDIPortRange isEmpty not ])
+	netLDIPortRange notNil
 		ifTrue: [ 
 			stream
 				cr;
