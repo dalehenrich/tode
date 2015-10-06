@@ -3,8 +3,8 @@ pharo30InstallTodeClient
   "setup paths"
 
   Deprecation
-    showWarning: false;
-    raiseWarning: false.
+    perform: #'showWarning:' with: false;
+    perform: #'raiseWarning:' with: false.
   (Smalltalk os environment
     at: 'GS_HOME'
     ifAbsent: [ 

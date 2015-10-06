@@ -2,4 +2,4 @@ accessing
 asTDClassDefinition
   ^ (TDClassHistoryDefinition
     className: self className
-    classHistoryIndex: self classHIstoryIndex) yourself
+    classHistoryIndex: self classHistoryIndex) yourself
