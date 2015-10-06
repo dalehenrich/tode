@@ -25,7 +25,8 @@
 		"gciLibraryName",
 		"adornmentColor",
 		"serverGitRoot",
-		"serverTodeRoot" ],
+		"serverTodeRoot",
+		"excludeNetLDIPort" ],
 	"name" : "TDSessionDescription",
 	"pools" : [
 		 ],
