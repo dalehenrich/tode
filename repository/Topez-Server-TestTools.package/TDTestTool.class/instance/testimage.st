@@ -7,6 +7,7 @@ testimage
   ^ self
     doTestForBlock: [ 
       | suite |
-      suite := TestCase suite.
-      suite name: label , suite ]
+      suite := TestSuite named: 'Image Test Suite'.
+      TestCase suite tests do: [ :s | suite addTests: s tests ].
+      suite ]
     label: label
