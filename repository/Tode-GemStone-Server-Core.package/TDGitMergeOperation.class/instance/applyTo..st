@@ -1,7 +1,9 @@
 merge
 applyTo: aTDGitMerger
   self selectedSourceRaw
-    ifNil: [ aTDGitMerger gitTool gitrmIn: self baseDirectory with: ' -rf ' , self filePath ]
+    ifNil: [ 
+      (self baseDirectory fileExists: self filePath)
+        ifTrue: [ aTDGitMerger gitTool gitrmIn: self baseDirectory with: ' -rf ' , self filePath ] ]
     ifNotNil: [ :src | 
       self baseDirectory
         forceNewFileNamed: self filePath
