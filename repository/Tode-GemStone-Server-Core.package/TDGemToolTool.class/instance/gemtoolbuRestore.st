@@ -11,5 +11,5 @@ gemtoolbuRestore
   fileName == nil
     ifTrue: [ ^ false ].
   backupPath := buTool resolveBackupPath: fileName.
-  buTool buBackup: backupPath.
+  buTool buRestore: backupPath.
   ^ true
