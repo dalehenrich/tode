@@ -9,4 +9,6 @@ clientApiVersion
 
 	"1.1.0 - introduce TDEventsCache"
 
-	^ '1.1.0' asMetacelloVersionNumber
+	"1.2.0 - add additional instance variables to TDSessionDescription"
+
+	^ '1.2.0' asMetacelloVersionNumber
