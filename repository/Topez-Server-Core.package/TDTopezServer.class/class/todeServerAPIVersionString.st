@@ -1,4 +1,4 @@
-accessing
+(as yet unclassified)
 todeServerAPIVersionString
   "Version changes whenever the api between client and server changes:
    Major version changes when incompatible API changes have been made.
@@ -11,4 +11,4 @@ todeServerAPIVersionString
 
   "1.2.0 - add additional instance variables to TDSessionDescription"
 
-  ^ '1.2.0' asMetacelloVersionNumber
+  ^ '1.2.0'
