@@ -40,5 +40,5 @@ pharo30InstallFullTodeClient
   windowProperties := (Smalltalk at: #'TDAbstractWindowProperties')
     import: 'jigsaw-medium'.
   windowProperties installOn: (Smalltalk at: #'TDTopezGemStoneClient').
-  bounds := windowProperties perform: #'caculateWindowBounds' at: #'transcript'.
+  bounds := (windowProperties perform: #'caculateWindowBounds') at: #'transcript'.
   (Smalltalk at: #'TDShell') perform: #'resizeTranscript:' with: bounds
