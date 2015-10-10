@@ -31,7 +31,7 @@ pharo30InstallFullTodeClient
   (Smalltalk at: #'StandardFonts')
     defaultFont:
       ((Smalltalk at: #'LogicalFont')
-        parform: #'familyName:pointSize:'
+        perform: #'familyName:pointSize:'
         with: monoFontName
         with: 8).
   (Smalltalk at: #'StandardFonts')
