@@ -1,3 +1,3 @@
-as yet unclassified
+home
 todeSysLocalPharoPath
 	^self todeClientSysLocalPath , self pharoPath

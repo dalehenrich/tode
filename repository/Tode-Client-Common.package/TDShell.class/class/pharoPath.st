@@ -1,3 +1,3 @@
-as yet unclassified
+home-private
 pharoPath
 	^ 'pharo/'
