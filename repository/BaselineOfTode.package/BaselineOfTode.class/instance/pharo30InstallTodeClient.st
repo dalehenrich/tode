@@ -12,8 +12,8 @@ pharo30InstallTodeClient
       ^ self ])
     ifNotNil: [ :gs_home | (Smalltalk at: #'TDShell') perform: #'devKitRoot:' with: gs_home ].
   (Smalltalk os environment at: 'GS_HOME' ifAbsent: [  ])
-    ifNotNil: [ :todeClientRoot | 
+    ifNotNil: [ :todeRoot | 
       "support for GsDevKit_home"
       (Smalltalk at: #'TDShell')
-        perform: #'todeClientRoot:'
-        with: todeClientRoot ]
+        perform: #'todeRoot:'
+        with: todeRoot ]
