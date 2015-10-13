@@ -11,6 +11,8 @@
 		"stoneName",
 		"gemHost",
 		"netLDI",
+		"netLDIPort",
+		"netLDIPortRange",
 		"gemTask",
 		"userId",
 		"password",
@@ -23,7 +25,8 @@
 		"gciLibraryName",
 		"adornmentColor",
 		"serverGitRoot",
-		"serverTodeRoot" ],
+		"serverTodeRoot",
+		"excludeNetLDIPort" ],
 	"name" : "TDSessionDescription",
 	"pools" : [
 		 ],

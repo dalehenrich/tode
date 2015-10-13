@@ -17,7 +17,7 @@ projectload
                ( <project-name> | @<project-reference> )
 "
 
-  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption repository |
+  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption repository projectLoadSpec |
   self
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
@@ -108,20 +108,22 @@ projectload
     at: 'deploy'
     ifPresent: [ :arg | gsDeployerOption := arg asSymbol ]
     ifAbsent: [ gsDeployerOption := #'bulk' ].
-  ^ self
-    projectLoad: registration projectName
-    doGet: doGet
-    gsDeployer: gsDeployerOption
-    selector: projectSelector
-    description: description
-    className: projectClassName
-    loads: loads
-    version: configurationVersion
-    onConflict: onConflict
-    onDowngrade: onDowngrade
-    onLock: onLock
-    onUpgrade: onUpgrade
-    ignoreImage: ignoreImage
-    silently: silently
-    cacheRepository: cacheRepository
-    overrides: repositoryOverrides
+  projectLoadSpec := TDMetacelloToolProjectLoadSpec new
+    projectName: registration projectName;
+    doGet: doGet;
+    gsDeployerOption: gsDeployerOption;
+    projectSelector: projectSelector;
+    repositoryDescription: description;
+    projectClassName: projectClassName;
+    loads: loads;
+    version: configurationVersion;
+    onConflict: onConflict;
+    onDowngrade: onDowngrade;
+    onLock: onLock;
+    onUpgrade: onUpgrade;
+    ignoreImage: ignoreImage;
+    silently: silently;
+    cacheRepository: cacheRepository;
+    repositoryOverrides: repositoryOverrides;
+    yourself.
+  ^ self projectLoadFromSpec: projectLoadSpec

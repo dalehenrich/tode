@@ -1,5 +1,5 @@
 accessing
 osUserId
-
-	osUserId == nil ifTrue: [ osUserId := '' ].
-	^osUserId
+  osUserId == nil
+    ifTrue: [ ^ (Smalltalk at: #'OSPlatform') current environment getEnv: 'USER' ].
+  ^ osUserId

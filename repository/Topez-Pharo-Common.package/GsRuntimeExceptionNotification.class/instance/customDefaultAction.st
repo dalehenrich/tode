@@ -5,6 +5,10 @@ customDefaultAction
 		ifTrue: [ 
 			^ {#logStack.
 			(self description)} ].
+	self topez shell debugMode
+		ifTrue: [ 
+			(UIManager default confirm:  (self description withNoLineLongerThan: 70) label: 'Debug GemStone Error on Client-side?')
+				ifTrue: [ self halt ] ].
 	answer := UIManager default
 		confirm: (self description withNoLineLongerThan: 80)
 		trueChoice: 'Proceed'

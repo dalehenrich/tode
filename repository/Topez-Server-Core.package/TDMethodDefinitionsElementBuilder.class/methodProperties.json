@@ -3,5 +3,7 @@
 		 },
 	"instance" : {
 		"baseClassDefinitionList" : "dkh 10/05/2013 11:28",
+		"batchEditMethodsMenuAction:selectionIndex:" : "dkh 09/26/2015 04:33",
 		"clientList:" : "dkh 04/19/2014 09:44",
-		"definitions" : "dkh 08/14/2013 17:42" } }
+		"definitions" : "dkh 08/14/2013 17:42",
+		"menuActionSpec" : "dkh 09/26/2015 04:33" } }

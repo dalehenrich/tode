@@ -1,4 +1,4 @@
 testing
 isGuest
 
-	^self osUserId isEmpty
+	^ osUserId isNil

@@ -21,5 +21,5 @@ testBuInfoCommand
     do: [ :ex | 
       Transcript
         cr;
-        show: ex description;
+        show: 'testBuInfoCommand: ' , ex description;
         show: (GsProcess stackReportToLevel: 100) ]

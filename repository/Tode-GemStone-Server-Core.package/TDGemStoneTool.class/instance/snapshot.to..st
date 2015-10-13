@@ -1,3 +1,3 @@
 bu
 snapshot: snapshotExtension to: snapshotPath
-  ^ self ssnapshot: snapshotExtension to: snapshotPath suspendInMinutes: 15
+  ^ self snapshot: snapshotExtension to: snapshotPath suspendInMinutes: 15

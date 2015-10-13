@@ -1,6 +1,6 @@
 actions-concrete
 concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
-  | dirtyPackageVersions packageNames projectClassName |
+  | dirtyPackageVersions packageNames projectClassName projectLoadSpec |
   dirtyPackageVersions := Set new.
   packageNames := Set new.
   aProjectRegistration workingCopies
@@ -22,23 +22,17 @@ concreteRevertProjectUsing: aProjectTool registration: aProjectRegistration
     ifNotNil: [ :loadList | loads := loadList ]
     ifNil: [ loads := 'default' ].
   projectClassName := aProjectRegistration projectSpecClassName.
-  ^ aProjectTool
-    projectLoad: self projectName
-    doGet: true
-    gsDeployer: #'bulk'
-    selector: aProjectRegistration projectSelector
-    description: aProjectRegistration repositoryDescription
-    className: projectClassName
-    loads: loads
-    version: aProjectRegistration configurationVersionString
-    onConflict: #'useIncoming'
-    onDowngrade: #'useIncoming'
-    onLock: #'honor'
-    onUpgrade: #'useIncoming'
-    ignoreImage: false
-    silently: false
-    cacheRepository: nil
-    overrides: nil ]
+  projectLoadSpec := TDMetacelloToolProjectLoadSpec new
+    projectName: self projectName;
+    projectSelector: aProjectRegistration projectSelector;
+    repositoryDescription: aProjectRegistration repositoryDescription;
+    projectClassName: projectClassName;
+    loads: loads;
+    version: aProjectRegistration configurationVersionString;
+    onDowngrade: #'useIncoming';
+    onUpgrade: #'useIncoming';
+    yourself.
+  ^ aProjectTool projectLoadFromSpec: projectLoadSpec ]
     on: MetacelloIgnorePackageLoaded , MetacelloSkipDirtyPackageLoad , Warning
     do: [ :ex | 
       | spec dirtyVersion dirtyPackage file |

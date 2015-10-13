@@ -1,4 +1,4 @@
-as yet unclassified
+home
 lookupPharoScript: scriptFilename
 	{(self todeSysLocalPharoPath).
 	(self todeSysDefaultPharoPath)}

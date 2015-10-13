@@ -1,3 +1,3 @@
 home
 todeSysLocalClientScriptsPath
-	^self todeSysLocalPath , self clientScriptsPath
+	^self todeClientSysLocalPath , self clientScriptsPath

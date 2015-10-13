@@ -1,0 +1,30 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"projectName",
+		"doGet",
+		"gsDeployerOption",
+		"projectSelector",
+		"repositoryDescription",
+		"projectClassName",
+		"loads",
+		"configurationVersion",
+		"onConflict",
+		"onDowngrade",
+		"onLock",
+		"onUpgrade",
+		"ignoreImage",
+		"silently",
+		"cacheRepository",
+		"repositoryOverrides",
+		"version" ],
+	"name" : "TDMetacelloToolProjectLoadSpec",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

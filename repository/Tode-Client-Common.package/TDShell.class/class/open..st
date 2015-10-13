@@ -1,3 +1,3 @@
 instance creation
 open: aSessionName
-  ^ self openFrom: self todeSysLocalSessionDescriptionPath, aSessionName
+  ^ self openFrom: self gsDevKitSessionDescriptionPath, aSessionName

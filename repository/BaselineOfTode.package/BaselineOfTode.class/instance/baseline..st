@@ -6,7 +6,7 @@ baseline: spec
     do: [ 
       spec
         baseline: 'Ston'
-          with: [ spec repository: 'github://GsDevKit/ston:v0.9.?/repository' ];
+          with: [ spec repository: 'github://GsDevKit/ston:v0.9.4/repository' ];
         yourself.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
@@ -54,9 +54,15 @@ baseline: spec
                 postLoadDoIt: #'initializeTools';
                 requires: #('Topez-Server-Core') ];
         package: 'Tode-Client-Common'
-          with: [ spec requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
+          with: [ 
+              spec
+                postLoadDoIt: #'pharo30InstallTodeClient';
+                requires: #('Topez-Common-Core' 'Topez-Pharo-Common') ];
         package: 'Topez-Client-GemStone'
-          with: [ spec requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];
+          with: [ 
+              spec
+                postLoadDoIt: #'pharo30InstallFullTodeClient';
+                requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];
         package: 'Tode-Client-Pharo'
           with: [ spec requires: #('Tode-Client-Common') ];
         package: 'Tode-Client-ServerBlocks'
@@ -72,6 +78,7 @@ baseline: spec
         group: 'GemStone Tests' with: #('Topez-ClientTravis-Tests');
         group: 'GemStone Dev'
           with: #('GemStone' 'Common Tests' 'GemStone Tests');
+        group: 'Common-Core' with: #('Topez-Common-Core');
         group: 'Pharo Dev' with: #('Pharo' 'Common Tests');
         yourself ].
   spec
@@ -96,13 +103,7 @@ baseline: spec
       spec
         package: 'Tode-Client-Roassal2'
           with: [ spec requires: #('Tode-Client-ServerBlocks') ];
-        package: 'TPZ-Talk'
-          with: [ 
-              spec
-                requires: #('Ston' 'Roassal2');
-                repository:
-                    'http://smalltalkhub.com/mc/PierreChanson/TPZ-Talk/main' ];
-        group: 'Visualize' with: #('TPZ-Talk' 'Tode-Client-Roassal2');
+        group: 'Visualize' with: #('Tode-Client-Roassal2' 'GemStone');
         yourself ].
   spec
     for: #'gemstone'
