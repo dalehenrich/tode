@@ -1,3 +1,3 @@
 reflection
 configurationOf
-  ^ self packageOf configurationOf
+  ^ self packageOf ifNotNil: [ :pkg | pkg configurationOf ]

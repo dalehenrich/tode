@@ -2,14 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
-		"accept" : "dkh 3/27/2013 13:35",
+		"accept" : "dkh 12/17/2014 17:06",
 		"adornmentColor" : "dkh 3/27/2013 10:41",
 		"appendEntry" : "dkh 3/27/2013 14:17",
 		"commandLineInput" : "dkh 3/28/2013 07:52",
 		"drawOn:" : "dkh 3/27/2013 10:42",
+		"filterAndForwardEvent:" : "dkh 12/18/2014 16:36",
 		"initialize" : "dkh 3/27/2013 13:43",
 		"inputMark" : "dkh 3/27/2013 13:36",
-		"keyStroke:" : "dkh 7/30/2014 17:02",
+		"keyStroke:" : "dkh 12/17/2014 21:19",
 		"markInput" : "dkh 3/27/2013 14:03",
 		"pasteAtEnd" : "dkh 7/30/2014 20:06",
 		"positionAfterPromptString" : "dkh 3/27/2013 13:45",

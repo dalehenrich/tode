@@ -1,34 +1,39 @@
 system menu
 todeMenuCommandOn: aBuilder
-	<worldMenu>
+	<todeWorldMenu>
 	| sessionDescriptionDir |
-	sessionDescriptionDir := self sessionDescriptionHome asFileReference.
+	sessionDescriptionDir := self todeSysLocalSessionDescriptionPath asFileReference.
 	sessionDescriptionDir exists
 		ifTrue: [ 
-			(aBuilder item: #'tODE Shell')
-				parent: #tODE;
+			(aBuilder item: #'Open Shell')
 				order: 1.0;
 				target: self;
-				withSeparatorAfter.
-			(aBuilder item: #'tODE Edit')
-				parent: #tODE;
-				order: 1.5;
+				icon: Smalltalk ui icons scriptManagerIcon;
+				enabled: currentShell isNil.
+			(aBuilder item: #'Project List')
+				parent: #'Open Tool';
+				order: 1.0;
 				target: self;
-				withSeparatorAfter.
-			(aBuilder item: #'tODE Test Login')
-				parent: #tODE;
+				icon: Smalltalk ui icons configIcon;
+				enabled: currentShell isNil.
+			(aBuilder item: #'Workspace')
+				parent: #'Open Tool';
 				order: 2.0;
-				target: self.
-			(aBuilder item: #'tODE Install')
-				parent: #tODE;
-				order: 3.0;
-				target: self.
-			(aBuilder item: #'tODE Update')
-				parent: #tODE;
-				order: 4.0;
 				target: self;
+				icon: Smalltalk ui icons workspaceIcon;
+				enabled: currentShell isNil.
+			(aBuilder item: #'Test Login')
+				parent: #Client;
+				order: 2.3;
+				enabled: currentShell isNil;
+				target: self;
+				icon: Smalltalk ui icons smallOkIcon;
 				withSeparatorAfter.
-			(sessionDescriptionDir files sorted: [ :a :b | a fullName <= b fullName ])
+			(aBuilder item: #'Edit Description')
+				parent: #Client;
+				order: 1.2;
+				target: self.
+			(sessionDescriptionDir files sorted: [ :a :b | a basename <= b basename ])
 				do: [ :file | 
 					file basename = 'README.md'
 						ifFalse: [ self importSessionDescriptionFrom: file for: aBuilder ] ] ]

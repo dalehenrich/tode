@@ -1,3 +1,3 @@
-as yet unclassified
+ston
 excludedInstVarNames
-  ^ #(#'blockCache' #'theObject' #'topez' #'windowBuilder' #'menuActionBlock' #'windowIsClosingBlock')
+  ^ #(#'blockCache' #'theObject' #'topez' #'windowBuilder' #'menuActionBlock' #'windowIsClosingBlock' #'usePersistentClientElementCache' #'timestamp')

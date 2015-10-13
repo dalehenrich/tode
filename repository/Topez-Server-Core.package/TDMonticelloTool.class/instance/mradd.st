@@ -10,5 +10,4 @@ mradd
   packageName := tokens at: 3.
   workingCopy := self resolveWorkingCopyReference: packageName.
   repo := self resolveRepositoryReference: (tokens at: 2).
-  workingCopy repositoryGroup addRepository: repo.
-  ^ workingCopy
+  ^ self mradd: repo to: workingCopy

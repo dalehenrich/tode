@@ -1,15 +1,14 @@
 {
 	"category" : "Tode-Client-Common",
 	"classinstvars" : [
-		"commands",
-		"subCommands",
-		"rootNode" ],
+		"currentShell" ],
 	"classvars" : [
 		"DebugMode",
 		"DevKitRoot",
 		"EnableDebugger",
 		"TodePath",
-		"WebEditionRoot" ],
+		"TodeRoot",
+		"UseTodeSys" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"windowStatus",

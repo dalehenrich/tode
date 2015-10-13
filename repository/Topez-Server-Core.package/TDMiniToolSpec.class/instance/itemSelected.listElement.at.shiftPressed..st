@@ -6,3 +6,4 @@ itemSelected: miniToolClientListElementBuilder listElement: listElement at: inde
     value: listElement
     value: index
     value: shiftPressed
+    value: nil

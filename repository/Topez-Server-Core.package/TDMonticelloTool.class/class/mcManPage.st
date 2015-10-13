@@ -16,8 +16,8 @@ SYNOPSIS
      browse <package-name>
      browse @<workingCopy-path>
   mc bump <package-name> <repository-spec> <commit-message>
-  mc commit <pkg-name>
-     commit @<workingCopy-path>
+  mc commit <pkg-name> <commit-message>
+     commit @<workingCopy-path> <commit-message>
   mc compare <version-name> <repository-spec> <version-name> <repository-spec>
      compare <version-name> @<repository-path> <version-name> @<repository-path>
      compare @<version-path> <version-name> <repository-spec>
@@ -71,4 +71,9 @@ DESCRIPTION
   <version-name> - fully qualified name, e.g., ''Topez-Server-Core-dkh.100'' 
   <version-path> - path to an MCVersion instance
   <workingCopy-path> - path to an MCWorkingCopy or TDMonticelloWorkingCopy instance
+
+EXAMPLES
+  mc ancestors @/sys/stone/packages/Utf8Encoding
+  mc browse @/sys/stone/packages/Topez-Server-Core
+  mc compare image BaselineOfSton @/sys/stone/repos/Ston/BaselineOfSton/BaselineOfSton-dkh.2
 '

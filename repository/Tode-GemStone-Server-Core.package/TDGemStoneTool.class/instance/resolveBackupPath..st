@@ -1,6 +1,6 @@
 bu
 resolveBackupPath: backupName
-  ^ options
+  ^ self options
     at: 'dir'
     ifPresent: [ :dirPath | dirPath , '/' , backupName ]
     ifAbsent: [ self class backupDirectoryName , '/' , backupName ]

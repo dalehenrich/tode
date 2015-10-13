@@ -1,12 +1,13 @@
 bu
 buinfo
   "
-  bu [--dir=<backup-directory>] info <backup-file>
+  bu [--dir=<backup-directory>] info [--snapshot] <backup-file>
 "
 
-  | backupFilePath copyDbfCommand |
-  self getSubcommandOptsMixedLongShort: {}.
-  backupFilePath := self resolveBackupFilePath.
-  copyDbfCommand := (GsFile _expandEnvVariable: 'GEMSTONE' isClient: false)
-    , '/bin/copydbf -i ' , backupFilePath.
-  ^ System performOnServer: copyDbfCommand
+  | filePath copyDbfCommand |
+  self getSubcommandOptsMixedLongShort: {#('snapshot' nil #'none')}.
+  filePath := subOptions
+    at: 'snapshot'
+    ifPresent: [ :ignored | self resolveSnapshotFilePath ]
+    ifAbsent: [ self resolveBackupFilePath ].
+  ^ self copydbf: '-i' forFilePath: filePath

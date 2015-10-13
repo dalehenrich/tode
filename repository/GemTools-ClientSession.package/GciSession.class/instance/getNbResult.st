@@ -30,6 +30,8 @@ getNbResult
     ifTrue: [ 
       (actionArgs at: 1) == #'debug'
         ifTrue: [ ^ self debuggerRequested: (actionArgs at: 2) ].
+      (actionArgs at: 1) == #'logStack'
+        ifTrue: [ ^ self logStackRequested: (actionArgs at: 2) ].
       (actionArgs at: 1) == #'gciMainTerminated'
         ifTrue: [
 	       ^ actionArgs at: 2 ].

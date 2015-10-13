@@ -1,3 +1,3 @@
 as yet unclassified
 defaultEditorWindowLocation
-  ^ #'method'
+  ^ #'workspace'

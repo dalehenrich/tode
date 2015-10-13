@@ -1,16 +1,18 @@
 as yet unclassified
 clientList: listElement
   | list |
-  list := Array new.
-  list
-    add: '          %      %                    Parent';
-    add: '       self  total  total  local Method';
-    add: 'tally  Time   Time     ms    %        Child';
-    add: '-----  ---- ------  -----  ----- -----------'.
+  list := self object clientEntryListColumnLabels.
+  headerSize := list size.
   self object parentEntry ifNotNil: [ list add: '<<<' ].
+  clientList := {}.
   (self object parents asArray sort: [ :a :b | a total >= b total ])
-    do: [ :entry | list add: entry printParentString ].
+    do: [ :entry | 
+      clientList add: entry.
+      list add: entry printParentString ].
+  clientList add: self object.
   list add: self object printSenderString.
   (self object children asArray sort: [ :a :b | a total >= b total ])
-    do: [ :entry | list add: entry printChildString ].
+    do: [ :entry | 
+      clientList add: entry.
+      list add: entry printChildString ].
   ^ list -> nil

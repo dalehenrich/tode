@@ -1,0 +1,3 @@
+converting
+asTDClassDefinition
+  ^ self asTDBehaviorDefinition

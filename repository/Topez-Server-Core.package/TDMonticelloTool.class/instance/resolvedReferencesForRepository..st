@@ -2,8 +2,12 @@ as yet unclassified
 resolvedReferencesForRepository: aRepository
   | allVersionNames references resolvedReferences |
   allVersionNames := aRepository allVersionNames.
-  references := allVersionNames
-    collect: [ :versionName | GoferResolvedReference name: versionName repository: aRepository ].
+  references := (allVersionNames
+    collect: [ :versionName | 
+      [ GoferResolvedReference name: versionName repository: aRepository ]
+        on: Error
+        do: [ :ex | nil ] ])
+    reject: [ :each | each == nil ].
   resolvedReferences := Dictionary new.
   references
     do: [ :reference | 

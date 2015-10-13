@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findReferences: variableOrGlobalNameOrPathRef inClass: clsOrNil
   | methodRefs pattern |
   methodRefs := (variableOrGlobalNameOrPathRef beginsWith: '@')

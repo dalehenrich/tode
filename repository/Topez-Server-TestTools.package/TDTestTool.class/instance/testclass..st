@@ -1,5 +1,5 @@
 as yet unclassified
 testclass: classNames
-  | suite cl |
-  suite := self testSuiteFor: classNames.
-  ^ self browseTestSuite: suite
+  ^ self
+    doTestForBlock: [ self testSuiteFor: classNames ]
+    label: classNames printString , ' tests'

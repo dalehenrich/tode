@@ -2,7 +2,7 @@ menu actions
 printItMenuAction: listElement selectedText: selectedString
   | result |
   result := self evaluateString: selectedString.
-  ^ STON
+  ^ listElement objectSerializer
     toString:
       {#'insertAfterSelection:'.
       (result printString)}

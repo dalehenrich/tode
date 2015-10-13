@@ -1,4 +1,4 @@
-accessing
+client callbacks
 reifyExceptionArgsForOopList: oopList classNamesForOopList: classNameOopList
   "sent by client on GemStone3.x stone"
 
@@ -14,7 +14,7 @@ reifyExceptionArgsForOopList: oopList classNamesForOopList: classNameOopList
       oop == nil
         ifTrue: [ nil ]
         ifFalse: [ (Object _objectForOop: oop) class name ] ].
-  result := STON
+  result := self objectSerializer
     toString:
       {objects.
       classNames}.

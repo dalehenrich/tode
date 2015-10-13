@@ -9,13 +9,7 @@ classDefinitions
       | glob |
       glob := symDict at: globalKey.
       glob isBehavior
-        ifTrue: [ 
-          defs
-            add:
-              (TDClassDefinition new
-                username: self username;
-                className: glob name;
-                yourself) ] ]
+        ifTrue: [ defs add: glob asTDClassDefinition ] ]
         on: SecurityError
         do: [ :ex | self halt ] ].
   ^ defs

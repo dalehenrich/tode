@@ -14,7 +14,7 @@ enableDisableMenuItems: selectedOperation
     ifTrue: [ enable value: #'fileHistory' ].
   selectedOperation hasFileTreeSmalltalkSource
     ifTrue: [ enable value: #'stMenuItem' ].
-  ^ STON
+  ^ self objectSerializer
     toString:
       {#'setMenuCategories:'.
       enabled.

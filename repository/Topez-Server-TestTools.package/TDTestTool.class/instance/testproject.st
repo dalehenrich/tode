@@ -1,7 +1,6 @@
 as yet unclassified
 testproject
-  "test project <configuration-base-name>"
+  "test [--batch] project <configuration-base-name>"
 
-  | baseName |
-  baseName := tokens at: 2.
-  ^ self testproject: baseName
+  self getSubcommandOptsMixedLongShort: {}.
+  ^ self testproject: (subArguments at: 1)

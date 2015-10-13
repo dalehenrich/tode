@@ -1,14 +1,13 @@
-as yet unclassified
+tode commands
 pfreport
   "pf report"
 
-  | profMon tally report |
-  self pfstop.
-  tally := 100.
-  tokens size > 1
-    ifTrue: [ tally := (tokens at: 2) asNumber ].
-  profMon := self profMonitor.
-  profMon results ifNil: [ profMon gatherResults ].
-  report := profMon reportDownTo: tally.
+  | limit report |
+  self getSubcommandOptsMixedLongShort: {#('limit' nil #'required')}.
+  subOptions
+    at: 'limit'
+    ifPresent: [ :arg | limit := arg asNumber ]
+    ifAbsent: [ limit := self defaultTallyLimit ].
+  report := self pfReport: self profMonitor tallyLimit: (limit max: 1).
   report editUsing: (TDEditorSpec topez: topez editorAspect: #'edit').
-  ^ profMon
+  ^ self profMonitor

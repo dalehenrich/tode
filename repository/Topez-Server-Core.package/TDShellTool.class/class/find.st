@@ -7,5 +7,6 @@ find
     objIn: objIn
     commandOptions:
       {#('help' $h #'none').
-      #('scriptPath' nil #'optional')}
+      #('scriptPath' nil #'optional').
+      #('select' nil #'required')}
     todeCommand: command ]

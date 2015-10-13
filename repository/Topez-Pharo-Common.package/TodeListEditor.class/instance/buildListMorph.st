@@ -1,4 +1,4 @@
-initialization
+framework
 buildListMorph
 	^ TZPluggableListMorph new
 		hResizing: #spaceFill;
@@ -13,4 +13,7 @@ buildListMorph
 		handleBasicKeys: true;
 		autoDeselect: true;
 		disallowKeyMapping;
+		resetListSelector: #resetMultiListSelection;
+		getSelectionListSelector: #multiSelectionAt:;
+		setSelectionListSelector: #multiSelectionAt:put:;
 		yourself

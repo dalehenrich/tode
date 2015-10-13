@@ -1,14 +1,18 @@
 menu actions
 editProjectFileMenuAction: listElement selectionIndex: selectionIndex
-  | registration entry node |
+  | registration entryNode entry |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
+  entryNode := registration
+    entryNode: nil
+    projectPath: '/sys/stone/projects/'
+    topez: topez.
   entry := registration entry.
-  (entry isNil or: [ entry projectPath isNil ])
-    ifTrue: [ 
-      self inform: 'No project file exists for ' , registration projectName.
-      ^ false ].
-  node := self topez lookup: entry projectPath , '/project'.
-  self editTool editObjects: {node}.
+  entryNode
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
+        windowLabel:
+            entryNode printString , ' (' , entry baseProjectPath , entryNode name , ')';
+        yourself).
   ^ true

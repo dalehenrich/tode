@@ -7,7 +7,5 @@ browseversions
   | block methodSpec |
   self getSubcommandOptsMixedLongShort: {}.
   methodSpec := subArguments at: 1.
-  block := [ 
-  | list |
-  list := self findVersions: methodSpec ].
+  block := [ self findVersions ].
   ^ self browseMethodsBlock: block label: 'Versions of ' , methodSpec

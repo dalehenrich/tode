@@ -1,0 +1,24 @@
+{
+	"class" : {
+		"behavior:" : "dkh 09/12/2015 08:04",
+		"className:" : "dkh 09/12/2015 08:04",
+		"className:isMeta:" : "dkh 09/12/2015 08:05" },
+	"instance" : {
+		"=" : "dkh 09/12/2015 07:48",
+		"asTDClassDefinition" : "dkh 09/12/2015 08:28",
+		"asTDProtocolDefinition:" : "dkh 09/12/2015 09:07",
+		"behavior:" : "dkh 09/12/2015 08:38",
+		"browseClassProtocol:" : "dkh 09/12/2015 07:52",
+		"browseInstanceProtocol:" : "dkh 09/12/2015 07:52",
+		"className" : "dkh 09/12/2015 07:55",
+		"className:" : "dkh 09/12/2015 07:55",
+		"hash" : "dkh 09/12/2015 07:55",
+		"isMeta" : "dkh 09/12/2015 07:56",
+		"isMeta:" : "dkh 09/12/2015 07:49",
+		"itemSelected:" : "dkh 09/12/2015 07:56",
+		"methodDefinitionFor:isMeta:" : "dkh 09/12/2015 08:02",
+		"removeFromSystem:" : "dkh 09/12/2015 07:58",
+		"theBehavior" : "dkh 09/12/2015 07:50",
+		"theClass" : "dkh 09/12/2015 07:54",
+		"theClassLabel" : "dkh 09/12/2015 08:00",
+		"theClassName:" : "dkh 09/12/2015 07:59" } }

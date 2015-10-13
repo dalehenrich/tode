@@ -21,4 +21,3 @@ cleanForDeploy
 	MCDirectoryRepository defaultDirectoryName: nil.
 	MCGitHubRepository flushDownloadCache.
 	self resetWorldMenu.
-	WebEditionRoot := nil

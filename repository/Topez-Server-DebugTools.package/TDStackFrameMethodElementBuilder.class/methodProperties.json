@@ -15,5 +15,6 @@
 		"selector" : "DataCurator 02/09/2013 09:12",
 		"sourceRange" : "dkh 04/01/2013 20:52",
 		"spawnCopyBlock" : "dkh 07/07/2014 18:37",
-		"theBehavior" : "DataCurator 02/09/2013 09:06",
-		"theClass" : "dkh 06/22/2014 11:20" } }
+		"theBehavior" : "dkh 03/16/2015 20:54",
+		"theClass" : "dkh 06/22/2014 11:20",
+		"usePersistentClientElementCache" : "dkh 08/18/2015 11:18" } }

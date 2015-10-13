@@ -3,7 +3,10 @@
 		"className:isMeta:" : "dkh 02/09/2013 10:55" },
 	"instance" : {
 		"=" : "dkh 06/04/2013 11:14",
-		"asTDClassDefinition" : "dkh 10/05/2013 08:15",
+		"asTDBehaviorDefinition" : "dkh 09/10/2015 10:13",
+		"asTDClassDefinition" : "dkh 09/12/2015 11:11",
+		"browseClassProtocol:" : "dkh 09/12/2015 07:53",
+		"browseInstanceProtocol:" : "dkh 09/12/2015 07:53",
 		"hash" : "dkh 06/04/2013 11:03",
 		"isMeta" : "dkh 02/09/2013 10:55",
 		"isMeta:" : "dkh 02/09/2013 10:55",

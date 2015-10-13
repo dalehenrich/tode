@@ -45,6 +45,7 @@ writeMdOn: aStream
     lf;
     nextPutAll: '  ';
     nextPutAll: self commandPath;
+    lf;
     nextPutAll: '  ';
     nextPutAll: self sourceMethod;
     lf

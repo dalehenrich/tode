@@ -8,7 +8,7 @@ projectload
                [--repository=<repository-reference>]
                [--onConflict=useIncoming|useLoaded]
                [--onDowngrade=useIncoming|useLoaded]
-               [--onLock=break|honor]
+               [--onLock=break|honor]	
                [--onUpgrade=useIncoming|useLoaded]
                [--ignoreImage] [--silently]
                [--cacheRepository=@<repository-reference>]
@@ -93,13 +93,13 @@ projectload
     at: 'className'
     ifPresent: [ :arg | projectClassName := arg ]
     ifAbsent: [ projectClassName := nil ].
-  subOptions
-    at: 'loads'
-    ifPresent: [ :arg | loads := arg evaluate ]
-    ifAbsent: [ 
-      registration loads
-        ifNotNil: [ :loadList | loads := loadList ]
-        ifNil: [ loads := 'default' ] ].
+  registration loads
+    ifNotNil: [ :loadList | 
+      loads := loadList.
+      loads isArray
+        ifFalse: [ loads := loads asArray ] ]
+    ifNil: [ loads := {'default'} ].
+  subOptions at: 'loads' ifPresent: [ :arg | loads := loads , arg evaluate ].
   subOptions
     at: 'no-get'
     ifPresent: [ :ignored | doGet := false ]

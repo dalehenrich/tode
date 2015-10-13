@@ -1,6 +1,3 @@
-as yet unclassified
+find
 findRegex: regexExpression
-  | parser |
-  parser := RxParser safelyParse: regexExpression.
-  parser ifNil: [ ^ nil ].
-  ^ RxParser preferredMatcherClass for: parser ignoreCase: true
+  ^ self findRegex: regexExpression ignoreCase: true

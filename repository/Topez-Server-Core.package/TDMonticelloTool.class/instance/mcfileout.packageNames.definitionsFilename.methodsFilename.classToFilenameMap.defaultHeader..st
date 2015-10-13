@@ -23,7 +23,7 @@ mcfileout: directoryPath packageNames: packageNames definitionsFilename: definit
         externalMethodMap: externalMethodMap
         classToFilenameMap: classToFilenameMap
         defaultHeader: defaultHeader ].
-  classDefs := classes collect: [ :cls | TDClassDefinition className: cls name ].
+  classDefs := classes collect: [ :cls | cls asTDClassDefinition ].
   classDefs := TDClassDefinition classHierarchyOrder: classDefs.
   classNameList := classDefs collect: [ :def | def className ].
   classNameList isEmpty not

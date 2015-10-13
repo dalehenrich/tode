@@ -1,5 +1,9 @@
 as yet unclassified
 install
-  "self install"
+	"self install"
 
-  self new registerIn: InputEventFetcher default
+	InputEventFetcher default eventHandlers copy
+		do: [ :handler | 
+			(handler isKindOf: UserInterruptHandler)
+				ifTrue: [ handler unregister ] ].
+	self new registerIn: InputEventFetcher default

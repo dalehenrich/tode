@@ -4,7 +4,7 @@ logout
 
 	| tpz |
 	self close.
-	tpz := self topezClient.
+	tpz := topezClient.
 	tpz ifNil: [ ^ nil ].
 	topezClient := nil.
 	tpz logout.

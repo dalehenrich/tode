@@ -42,7 +42,7 @@ DESCRIPTION
   ----
     tODE help.
 
-  installServer
+installServer
   -----------
     Install tODE on the server. See `installServer -h` for more information.
 
@@ -90,14 +90,6 @@ DESCRIPTION
   ------------
     Update the tODE client software. See `updateClient -h` for more information.
 
-  updateServer
-  -----------
-    Update tODE on the server. See `updateServer -h` for more information.
-
-  whatsNew
-  --------
-    Description of new features.
-
 EXAMPLES
   builtIns
   close
@@ -111,9 +103,6 @@ EXAMPLES
   sessionDescription -h
   testLogin
   updateClient -h
-  updateServer -h
-  whatsNew
-
 '
 		label: 'Help for tODE built-in commands'.
 	^ 'EXAMPLES
@@ -129,5 +118,4 @@ EXAMPLES
   sessionDescription -h
   testLogin
   updateClient -h
-  whatsNew
 '

@@ -2,8 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"browseChangesBetween:and:" : "dkh 10/20/2013 12:35",
-		"copyObjectMenuAction:selectionIndex:" : "dkh 10/13/2013 07:45",
+		"browseChangesBetween:and:" : "dkh 09/07/2015 14:00",
+		"copyObjectMenuAction:selectionIndex:" : "dkh 06/25/2015 15:45",
 		"cutObjectMenuAction:selectionIndex:" : "dkh 10/13/2013 09:41",
 		"definitionForSelection:" : "dkh 10/13/2013 07:41",
 		"editMenuActionSpec" : "dkh 10/13/2013 10:09",
@@ -12,5 +12,5 @@
 		"parentBuilder:" : "dkh 10/19/2013 11:50",
 		"pasteObjectMenuAction:selectionIndex:" : "dkh 10/13/2013 09:31",
 		"printObjectMenuAction:selectionIndex:" : "dkh 05/09/2014 12:26",
-		"standardMenuActionSpec" : "dkh 01/09/2014 21:03",
+		"standardMenuActionSpec" : "dkh 08/17/2015 17:25",
 		"theList" : "dkh 10/12/2013 15:45" } }

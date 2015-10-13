@@ -1,0 +1,3 @@
+multiple selection
+resetMultiListSelection
+	self listSelections removeAll

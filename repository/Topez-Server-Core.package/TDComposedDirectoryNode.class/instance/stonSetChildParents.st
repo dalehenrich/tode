@@ -1,0 +1,3 @@
+ston
+stonSetChildParents
+  self contents stonSetChildParents

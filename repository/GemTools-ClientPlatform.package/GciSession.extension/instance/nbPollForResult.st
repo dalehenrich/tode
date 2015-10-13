@@ -1,4 +1,7 @@
 *gemtools-clientplatform
 nbPollForResult
-	GciUserInterruptHandler reset.
-	^self nbPollForResult: false
+	GciUserInterruptHandler
+		reset;
+		arm.
+	[ ^ self nbPollForResult: false ]
+		ensure: [ GciUserInterruptHandler disarm ]

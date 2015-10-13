@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"fromString:" : "dkh 06/29/2015 10:50",
+		"protocolVersionString" : "dkh 06/25/2015 15:04",
+		"reader" : "dkh 06/29/2015 10:46",
+		"toJsonString:" : "dkh 06/29/2015 10:55",
+		"toString:" : "dkh 06/29/2015 10:52",
+		"toStringPretty:" : "dkh 06/29/2015 10:55",
+		"writer" : "dkh 06/29/2015 10:46" } }

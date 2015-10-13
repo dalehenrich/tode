@@ -35,7 +35,14 @@ gsfileout: directoryPath externalMethodMap: externalMethodMap classToFilenameMap
                       at: methodRef selector asSymbol
                       ifAbsent: [ 
                         lastFile
-                          ifTrue: [ #'append' ]
+                          ifTrue: [ 
+                            self halt: 'Needs an append at position marker'.
+                            (sourceMap at: beh name ifAbsent: [ Dictionary new ])
+                              at:
+                                (beh isMeta
+                                  ifTrue: [ '  lastInstanceMethod' ]
+                                  ifFalse: [ '  lastClassMethod' ])
+                              ifAbsent: [ #'append' ] ]
                           ifFalse: [ #'notFound' ] ].
                     ar ~~ #'notFound'
                       ifTrue: [ 

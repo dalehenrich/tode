@@ -1,5 +1,5 @@
-as yet unclassified
+accessing
 source
   | stonString |
   stonString := super source.
-  ^ STON fromString: stonString
+  ^ self objectSerializer fromString: stonString

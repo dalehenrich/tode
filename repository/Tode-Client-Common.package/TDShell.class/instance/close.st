@@ -3,5 +3,5 @@ close
 	"close all windows"
 
 	windowStatus ifNil: [ ^ nil ].
-	windowStatus close.
+	self deferFlushEventNotificationDuring: [ windowStatus close ].
 	^ nil

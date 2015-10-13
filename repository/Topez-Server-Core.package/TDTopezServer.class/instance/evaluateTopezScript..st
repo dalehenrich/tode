@@ -8,23 +8,21 @@ evaluateTopezScript: topezScript
   originalEvaluating := evaluatingScript.
   evaluatingScript := true.
   stream := topezScript readStream.
-  [ 
-  line := stream nextLine.
-  line notEmpty ]
-    whileTrue: [ 
+  TDCommandLine
+    fromStream: stream
+    selectLine: [ :line | 
       self accumulateScriptText
         ifTrue: [ 
           self
             accumulateText: line
             onEval: [ :res | 
               result := res.
-              self objIn: result ] ]
-        ifFalse: [ 
-          TDCommandLine
-            line: line
-            forEachCommand: [ :command | 
-              result := self evaluateTopezScriptCommand: command.
-              self objIn: result ] ] ].
+              self objIn: result ].
+          false	"do not create or evaluate command for this line" ]
+        ifFalse: [ true	"create and evaluate the command for this line" ] ]
+    forEachCommand: [ :command | 
+      result := self evaluateTopezScriptCommand: command.
+      self objIn: result ].
   evaluatingScript := originalEvaluating	"last one on the stack please turn out the lights" ]
     ifCurtailed: [ 
       | currentSize extra |

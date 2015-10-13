@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"allProtocol" : "dkh 08/20/2015 16:13",
+		"browseSelectorListFor:topez:" : "dkh 08/26/2015 10:43",
+		"clientList:" : "dkh 09/10/2015 01:05",
+		"copyObjectMenuAction:selectionIndex:" : "dkh 08/26/2015 10:55",
+		"cutObjectMenuAction:selectionIndex:" : "dkh 08/26/2015 10:24",
+		"defaultEditorWindowLocation" : "dkh 08/20/2015 12:41",
+		"isAllProtocolSelected:selection:" : "dkh 08/26/2015 10:51",
+		"isMeta" : "dkh 08/25/2015 14:36",
+		"itemSelected:at:shiftPressed:" : "dkh 08/26/2015 10:43",
+		"menuActionSpec" : "dkh 08/20/2015 16:05",
+		"newMethodTemplateMenuAction:selectionIndex:" : "dkh 08/31/2015 14:42",
+		"pasteObjectMenuAction:selectionIndex:" : "dkh 08/26/2015 16:09",
+		"protocolMenuActionSpec" : "dkh 08/20/2015 16:49",
+		"selectedProtocol:selection:" : "dkh 08/26/2015 10:53",
+		"theBehavior" : "dkh 08/25/2015 14:36",
+		"theClass" : "dkh 08/25/2015 14:36" } }

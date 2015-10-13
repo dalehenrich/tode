@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findVersions: methodSpec
   | method |
   method := self methodFromMethodSpec: methodSpec.

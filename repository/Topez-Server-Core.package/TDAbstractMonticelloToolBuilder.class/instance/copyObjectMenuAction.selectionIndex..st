@@ -6,7 +6,7 @@ copyObjectMenuAction: listElement selectionIndex: selectionIndex
   def := self definitionForSelection: (self theList at: selectionIndex).
   self objectClipboard: def.
   self topez commitTransaction.
-  ^ STON
+  ^ self objectSerializer
     toString:
       {#'addToClipboard:'.
       (def label)}

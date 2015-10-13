@@ -15,6 +15,14 @@ menuActionSpec: miniTool
       #('repositories' nil #'browseProjectRepositoriesMenuAction:selectionIndex:' nil #'metacelloProject' false).
       #('-').
       #('tests' nil #'testProjectMenuAction:selectionIndex:' nil #'loadedProject' false)})}.
+  {('Find'
+    ->
+      {#('Class...' nil #'findClass:selectedIndex:').
+      #('Hierarchy Browser...' nil #'findClassHierarchy:selectedIndex:').
+      #('Class References...' nil #'findClassReferences:selectedIndex:').
+      #('Method...' nil #'findMethodImplementors:selectedIndex:').
+      #('String...' nil #'findStringNoCase:selectedIndex:').
+      #('Senders...' nil #'findMethodSenders:selectedIndex:')})}.
   #('-').
   {('Git'
     ->
@@ -33,6 +41,7 @@ menuActionSpec: miniTool
   #('log' nil #'commitLogMenuAction:selectionIndex:' nil #'loggableProject' false).
   #('merge' nil #'gitMergeProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
   #('push' nil #'gitPushProjectMenuAction:selectionIndex:' nil #'nonDirtyGitProject' false).
+  #('refresh (unloaded)' nil #'refreshProjectEntriesMenuAction:selectionIndex:').
   #('revert' nil #'revertProjectMenuAction:selectionIndex:' nil #'dirtyProject' false).
   #('save' nil #'commitProjectMenuAction:selectionIndex:' nil #'writableRepoBasedProject' false).
   #('skew diff' nil #'gitVersionSkewDiffMenuAction:selectionIndex:' nil #'versionSkew' false).

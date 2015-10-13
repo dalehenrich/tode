@@ -1,4 +1,6 @@
 accessing
 initialize
-	super initialize.
-	self platformInitialize
+  super initialize.
+  MCPlatformSupport autoCommit: true.
+  MCPlatformSupport autoMigrate: true.
+  objIn := TransientValue new

@@ -1,7 +1,7 @@
 as yet unclassified
 evaluateCommand: command batchMode: batchBool
 	| stonString transcriptOop |
-	stonString := STON toString: command.
+	stonString := self objectSerializer toString: command.
 	batchBool
 		ifFalse: [ transcriptOop := self session clientForwarderCache keyAtValue: Transcript ifAbsent: [  ] ].
 	[ 

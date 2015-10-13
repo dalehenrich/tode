@@ -12,5 +12,5 @@ browselist
   | list |
   list := Set new.
   subArguments do: [ :arg | list addAll: (topez lookup: arg) dotSelfObject ].
-  list := self filterBrowseList: list ].
+  list := list := self filterSelectList: list ].
   ^ self browseMethodsBlock: block label: label

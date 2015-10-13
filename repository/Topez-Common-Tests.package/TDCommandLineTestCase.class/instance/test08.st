@@ -2,8 +2,4 @@ as yet unclassified
 test08
   self
     assert: 'browse method #> > xxx'
-    parsesInto:
-      {(TDCommandLine new
-        tokens: #('browse' 'method' '#>');
-        redirectTarget: 'xxx';
-        yourself)}
+    parsesInto: {(TDCommandLine new tokens: #('browse' 'method') yourself)}

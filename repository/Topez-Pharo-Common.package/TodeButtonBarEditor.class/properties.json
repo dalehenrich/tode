@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Pharo-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"buttonBarMorph",
+		"buttonBarState" ],
+	"name" : "TodeButtonBarEditor",
+	"pools" : [
+		 ],
+	"super" : "TodeCommonEditor",
+	"type" : "normal" }

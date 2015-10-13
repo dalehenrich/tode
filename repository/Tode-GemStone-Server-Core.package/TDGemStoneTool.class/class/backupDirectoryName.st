@@ -1,5 +1,5 @@
 bu
 backupDirectoryName
   BackupDirectoryName
-    ifNil: [ self backupDirectoryName: self defaulBackupDirectoryName ].
+    ifNil: [ self backupDirectoryName: self defaultBackupDirectoryName ].
   ^ BackupDirectoryName

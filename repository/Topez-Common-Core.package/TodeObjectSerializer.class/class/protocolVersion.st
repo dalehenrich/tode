@@ -1,0 +1,3 @@
+signatures
+protocolVersion
+  ^ self protocolVersionString asMetacelloVersionNumber

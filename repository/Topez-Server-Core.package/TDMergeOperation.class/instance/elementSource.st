@@ -1,3 +1,3 @@
 as yet unclassified
 elementSource
-  ^ STON toString: self mergeSource
+  ^ self objectSerializer toString: self mergeSource asText

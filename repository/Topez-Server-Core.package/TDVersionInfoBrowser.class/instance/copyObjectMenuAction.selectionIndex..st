@@ -4,7 +4,7 @@ copyObjectMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   versionInfo := self theList at: selectionIndex.
-  ^ STON
+  ^ self objectSerializer
     toString:
       {#'addToClipboard:'.
       (versionInfo name)}

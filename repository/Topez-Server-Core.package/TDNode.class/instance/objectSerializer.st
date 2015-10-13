@@ -1,0 +1,3 @@
+accessing
+objectSerializer
+  ^ TodeObjectSerializer preferredSerializer

@@ -17,13 +17,13 @@ DESCRIPTION
 '.
   (((TDLeafNode allSubclasses , TDGatewayNode allSubclasses
     select: [ :cl | cl theMetaClass selectors includes: #'typeSignature' ])
-    collect: [ :cl | cl typeSignature -> cl ]) asArray
+    collect: [ :cl | cl typeSignature -> cl name asString ]) asArray
     sort: [ :a :b | a key <= b key ])
     do: [ :assoc | 
       page
         nextPutAll: '    ';
         nextPutAll: '`' , assoc key , '` ';
         nextPutAll: ' to produce a ';
-        nextPutAll: assoc value name asString;
+        nextPutAll: assoc value;
         cr ].
   ^ page contents

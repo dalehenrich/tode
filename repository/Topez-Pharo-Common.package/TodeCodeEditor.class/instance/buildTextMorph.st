@@ -1,4 +1,4 @@
-initialize-release
+framework
 buildTextMorph
 	^ (TZPluggableTextMorph
 		on: self

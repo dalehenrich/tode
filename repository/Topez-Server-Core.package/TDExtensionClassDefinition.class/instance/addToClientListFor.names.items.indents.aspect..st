@@ -4,8 +4,7 @@ addToClientListFor: clsDef names: nameList items: items indents: indents aspect:
   space := ''.
   (indents at: clsDef) timesRepeat: [ space := space , ' ' ].
   nameList
-    add:
-      (Text string: space , clsDef className asString attribute: TextEmphasis italic).
+    add: (Text string: space , clsDef label attribute: TextEmphasis italic).
   items
     add: (TDClientListItemAttributes object: self parent: nil aspect: aspect).
   space := space , '  '.

@@ -1,12 +1,21 @@
 built-ins
 executeScript: command
-	| options |
+	| options arguments |
 	command
 		getOptsMixedLongShort:
 			{#('help' $h #none).
-			#('script' nil #required).
-			#('list' nil #required)}
-		optionsAndArguments: [ :opts :args | options := opts ].
+			#('edit' nil #none).
+			#('list' nil #optional).
+			#('script' nil #required)}
+		optionsAndArguments: [ :opts :args | 
+			options := opts.
+			arguments := args ].
+	options
+		at: 'script'
+		ifAbsent: [ 
+			"backwards compat for `script --script=<script-path>` form"
+			arguments size = 1
+				ifTrue: [ options at: 'script' put: (arguments at: 1) ] ].
 	options
 		at: 'help'
 		ifAbsent: [ 
@@ -16,26 +25,32 @@ executeScript: command
 					| commands filepath |
 					filepath := filename.
 					(filename beginsWith: '/')
-						ifFalse: [ filepath := TDShell clientScriptsHome , filename ].
+						ifFalse: [ filepath := TDShell lookupClientScripts: filename stoneName: self stoneName ].
 					FileStream readOnlyFileNamed: filepath do: [ :fileStream | commands := fileStream contents ].
-					^ self evaluate: commands ].
-			options
-				at: 'list'
-				ifPresent: [ :dirname | 
-					| dir fileNames dirPath |
-					dirPath := dirname.
-					dirPath ifNil: [ dirPath := TDShell clientScriptsHome ].
-					dir := MCFileTreeFileUtils current directoryFromPath: dirPath.
-					fileNames := WriteStream on: String new.
-					dir entries
-						do: [ :entry | 
-							fileNames
-								nextPutAll: entry name;
-								cr ].
-					^ fileNames contents ].
-			^ 'must specify an option:
+					options
+						at: 'edit'
+						ifPresent: [ :ignored | 
+							self openWorkspace: commands styling: false label: filepath.
+							^ '' ]
+						ifAbsent: [ ^ self evaluate: commands ] ]
+				ifAbsent: [ 
+					options
+						at: 'list'
+						ifPresent: [ :dirname | 
+							| files fileNames |
+							files := dirname
+								ifNotNil: [ dirname asFileReference files ]
+								ifNil: [ TDShell clientScriptsFiles: self stoneName ].
+							fileNames := WriteStream on: String new.
+							files
+								do: [ :fileRef | 
+									fileNames
+										nextPutAll: fileRef basename;
+										cr ].
+							^ fileNames contents ] ].
+			^ 'must specify an option or argument:
   script -h
-  script --script=installTode
+  script installTode
   script --list' ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
@@ -45,14 +60,17 @@ executeScript: command
   script - run sequence of commands from client
 
 SYNOPSIS
-  script [-h|--help] [--script=<script-path>] [--list[=<script-dir>]]
+  script [-h|--help] ( [--edit ] <script-path> | --list[=<script-dir>] )
 
 DESCRIPTION
   Executes scripts stored in a directory on the client. Useful for scripts involving
   installation of tODE or that may do one or more `logout` commands.
-																																					   With the --script option, the commands in the specified file are executed. If the 
-  <script-path> is a relative path, the path is appended to TDShell 
-  class>>clientScriptsHome
+																																					   With no options, the commands in the <script-path> file are executed. If the 
+  <<script-path> is a relative path, the path is appended to TDShell 
+  class>>clientScriptsHome.
+
+  With the --edit option, a workspace is brought up on the contents of the <script-path>.
+  file.
 
   With the --list option, the files in the specified directory are listed. If the
   <script-dir> is not specified, the files in TDShell class>>clientScriptsHome are
@@ -62,6 +80,7 @@ EXAMPLES
   script -h
   script --list
   script --list=/opt/git/todeHome/client/scripts
-  script --script=installTode
-  script --script=/opt/git/todeHome/client/scripts/installTode
+  script installTode
+  script --edit installTode
+  script /opt/git/todeHome/client/scripts/installTode
 ') interact ]

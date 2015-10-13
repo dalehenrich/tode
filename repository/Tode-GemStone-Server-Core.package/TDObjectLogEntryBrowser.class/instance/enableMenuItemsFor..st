@@ -8,7 +8,7 @@ enableMenuItemsFor: objectLogEntry
   disabled remove: symbol ].
   objectLogEntry hasContinuation
     ifTrue: [ enable value: #'continuation' ].
-  ^ STON
+  ^ self objectSerializer
     toString:
       {#'setMenuCategories:'.
       enabled.

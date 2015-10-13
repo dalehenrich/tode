@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"asMergeOperation" : "dkh 01/26/2015 13:14",
 		"baseDirectory" : "dkh 10/06/2013 10:38",
 		"baseDirectory:" : "dkh 05/10/2014 19:01",
 		"destination" : "dkh 05/30/2014 07:07",
@@ -11,7 +12,6 @@
 		"editOp:" : "dkh 05/10/2014 19:17",
 		"filePath" : "dkh 10/06/2013 10:38",
 		"filePath:" : "dkh 05/10/2014 19:01",
-		"hasFileTreeSmalltalkSource" : "dkh 05/21/2014 10:42",
 		"hasSameSource" : "dkh 05/29/2014 21:12",
 		"label" : "dkh 05/10/2014 20:11",
 		"mergeSource" : "dkh 05/29/2014 21:12",
@@ -20,5 +20,5 @@
 		"printText" : "dkh 05/10/2014 19:41",
 		"selectedSource" : "dkh 05/29/2014 21:12",
 		"source" : "dkh 05/30/2014 07:06",
-		"source:" : "dkh 05/29/2014 21:11",
+		"source:" : "dkh 09/07/2015 10:40",
 		"windowLabel" : "dkh 10/06/2013 10:39" } }

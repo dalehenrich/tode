@@ -7,18 +7,25 @@ gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
   ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
 
-Smalltalk at: #ConfigurationOfGLASS ifPresent: [:cls |
-  "Upgrade to GLASS 1.0-beta.9.3"
-  GsDeployer deploy: [
-    | glassVersion |
+(Smalltalk at: #ConfigurationOfGLASS ifAbsent: [])
+  ifNotNil: [:cls |
+    "Upgrade to GLASS1"
     Gofer new
-      package: 'ConfigurationOfGLASS';
-      url: 'http://seaside.gemtalksystems.com/ss/MetacelloRepository';
+      package: 'GsUpgrader-Core';
+      url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
       load.
-    glassVersion := cls project currentVersion.
-    ((((Smalltalk at: #System) stoneVersionAt: 'gsVersion') beginsWith: '2.') and: [glassVersion versionNumber < '1.0-beta.9.2' asMetacelloVersionNumber])
-      ifTrue: [ (cls project version: '1.0-beta.9.2') load ].
-    (cls project version: '1.0-beta.9.3') load ] ].
+    (Smalltalk at: #GsUpgrader) upgradeGLASS1 ]
+  ifNil: [
+    "Upgrade to latest Metacello"
+    Metacello new
+      baseline: 'Metacello';
+      repository: 'github://dalehenrich/metacello-work:master/repository';
+      get.
+    Metacello new
+      baseline: 'Metacello';
+      repository: 'github://dalehenrich/metacello-work:master/repository';
+      onConflict: [:ex | ex allow];
+      load ].
 
 "Load Tode ... "
 loadBlock := [

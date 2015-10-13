@@ -22,10 +22,10 @@ mccopy
                 cr;
                 show:
                     'Copied: ' , version info name printString , ' --' , repo description.
-              repo storeVersion: version ] ]
+              self storeVersion: version inRepository: repo ] ]
         ifFalse: [ 
           Transcript
             cr;
             show:
                 'Copied: ' , version info name printString , ' --' , repoOrList description.
-          repoOrList storeVersion: version ] ]
+          self storeVersion: version inRepository: repoOrList ] ]

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 clientListAll: listElement
   | items ar beh className |
   items := OrderedCollection new.

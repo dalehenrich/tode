@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDClassicClassProtocolListElementBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDClientListElementBuilder",
+	"type" : "normal" }

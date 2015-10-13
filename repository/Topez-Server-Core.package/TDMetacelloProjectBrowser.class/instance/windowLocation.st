@@ -1,4 +1,4 @@
 accessing
 windowLocation
-  windowLocation ifNil: [ windowLocation := #'app1' ].
+  windowLocation ifNil: [ windowLocation := #'projectList' ].
   ^ windowLocation

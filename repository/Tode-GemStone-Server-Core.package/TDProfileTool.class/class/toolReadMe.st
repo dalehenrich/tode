@@ -1,3 +1,3 @@
-as yet unclassified
+initialization
 toolReadMe
   ^ self commandPath , ' provides ProfMonitor suppport.'

@@ -1,4 +1,4 @@
 client forwarder
 editElement: aClientListElement
   ^ self topezClientForwarder
-    editStonElement: (STON toString: aClientListElement)
+    editStonElement: (self objectSerializer toString: aClientListElement)

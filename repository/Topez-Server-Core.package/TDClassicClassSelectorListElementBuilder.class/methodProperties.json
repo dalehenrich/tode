@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"browseHierarchyImplementorsMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"browseImplementorsMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"browseSendersMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"clientList:" : "dkh 09/10/2015 01:12",
+		"copyObjectMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"cutObjectMenuAction:selectionIndex:" : "dkh 08/20/2015 12:49",
+		"defaultEditorWindowLocation" : "dkh 08/20/2015 12:53",
+		"editorWindowLabel" : "dkh 08/20/2015 13:05",
+		"isMeta" : "dkh 08/20/2015 12:54",
+		"itemSelected:at:shiftPressed:" : "dkh 08/20/2015 12:49",
+		"menuActionSpec" : "dkh 08/20/2015 15:38",
+		"methodDefinitionFor:" : "dkh 09/10/2015 01:26",
+		"pasteObjectMenuAction:selectionIndex:" : "dkh 09/10/2015 10:17",
+		"theBehavior" : "dkh 08/20/2015 12:49",
+		"theClass" : "dkh 09/10/2015 01:12" } }

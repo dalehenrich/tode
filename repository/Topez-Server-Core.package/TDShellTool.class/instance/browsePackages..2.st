@@ -2,6 +2,6 @@ browse
 browsePackages
   TDPackageList reset.
   ^ self
-    browseDefinitionListBlock: [ TDPackageList current ]
+    browseDefinitionListBlock: [ self findPackages ]
     selectedIndex: 0
     label: 'Packages'

@@ -6,7 +6,7 @@ projectRegistrationDefinitionMap
   (findTool findProjectRegistrationDefinitions: '')
     do: [ :reg | map at: reg projectName put: reg ].
   self
-    scanHomeDirForProjects: [ :projectEntry | 
+    scanForProjects: [ :projectEntry | 
       | registration |
       (map at: projectEntry projectName ifAbsent: [  ])
         ifNil: [ 

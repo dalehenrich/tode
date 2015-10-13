@@ -2,11 +2,13 @@ as yet unclassified
 itemSelected: listElement at: index shiftPressed: shiftPressed
   | entry |
   index ifNil: [ ^ nil ].
-  index <= 3
+  index <= self headerSize
     ifTrue: [ ^ nil ].
-  entry := self object profMonResults at: index - 3.
+  entry := clientList at: index - self headerSize.
   entry parentEntry: nil.
   entry
     editUsing:
-      (TDEditorSpec topez: listElement topez editorAspect: #'profMonResults').
+      ((TDEditorSpec topez: listElement topez editorAspect: #'profMonResults')
+        windowLabel: entry windowLabel;
+        yourself).
   ^ nil

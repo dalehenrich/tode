@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 directoryEntry: aDirectoryEntry
   ^ self new
     name: aDirectoryEntry name;

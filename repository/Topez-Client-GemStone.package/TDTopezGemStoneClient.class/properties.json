@@ -6,7 +6,8 @@
 		"SlowConnection" ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"serverApiVersion",
+		"effectiveApiVersion" ],
 	"name" : "TDTopezGemStoneClient",
 	"pools" : [
 		 ],

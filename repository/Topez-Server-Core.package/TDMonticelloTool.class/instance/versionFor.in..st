@@ -1,6 +1,5 @@
 as yet unclassified
 versionFor: versionName in: repoSpecOrObjRef
-  | repo reference version |
+  | repo |
   repo := self resolveRepositoryReference: repoSpecOrObjRef.
-  reference := GoferResolvedReference name: versionName repository: repo.
-  ^ reference version
+  ^ self versionFor: versionName inRepository: repo

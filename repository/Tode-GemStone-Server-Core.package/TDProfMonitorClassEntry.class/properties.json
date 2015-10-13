@@ -1,0 +1,19 @@
+{
+	"category" : "Tode-GemStone-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"profMon",
+		"tallyClass",
+		"tallyClassName",
+		"tally",
+		"sortKey",
+		"clientListEntries" ],
+	"name" : "TDProfMonitorClassEntry",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

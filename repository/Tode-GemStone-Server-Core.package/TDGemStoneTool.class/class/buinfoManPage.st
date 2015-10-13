@@ -4,15 +4,15 @@ buinfoManPage
     commandName: 'info'
     fromString:
       'NAME
-  info - Display info about a particular backup
+  bu info - Display info about a particular backup
 
 SYNOPSIS
-  bu [--dir=<backup-directory>] info <backup-file>
+  bu [--dir=<backup-directory>] info [--snapshot] <backup-file>
 
 DESCRIPTION
   Display information from the GemStone copydbf command about the backup file:
 
-    Source file: /export/foos2/users/dhenrich/3.0/j_gss64bit/backups//wip.dbf
+    Source file: /export/foos2/users/dhenrich/3.0/j_gss64bit/backups/wip.dbf
        File type: backup  fileId: 0 
        ByteOrder: Intel (LSB first)  compatibilityLevel: 844 
        The file was created at: 04/20/2014 10:16:08 PDT.
@@ -23,11 +23,17 @@ DESCRIPTION
   With the --dir option specified, the restore file will be read from the named
   directory.
 
+  With the --snapshot options specified, the <backup-file> is looked up in
+  the snapshot directory/
+
 EXAMPLES
-  bu info seaside.dbf; print
-  bu info --dir=/opt/gemstone/backups seaside.dbf; print
+  bu info extent0.sample.dbf; edit
+  bu --dir=/opt/gemstone/backups info sample.dbf; edit
+  bu info --snapshot extent0.sample.dbf; edit
+  bu --dir=$GS_HOME/gemstone/snapshots info extent0.sample.dbf; edit
 
 SEE ALSO
   bu --help backup
   bu --help restore
+  bu --help snapshot
 '

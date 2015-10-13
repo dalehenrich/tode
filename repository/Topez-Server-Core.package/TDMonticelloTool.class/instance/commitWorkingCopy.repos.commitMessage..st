@@ -6,5 +6,6 @@ commitWorkingCopy: aWorkingCopy repos: targetRepos commitMessage: commitMessage
     do: [ :notification | 
       notification
         resume: (Array with: notification suggestedName with: commitMessage) ].
-  targetRepos do: [ :repository | repository storeVersion: newVersion ].
+  targetRepos
+    do: [ :repository | self storeVersion: newVersion inRepository: repository ].
   ^ newVersion

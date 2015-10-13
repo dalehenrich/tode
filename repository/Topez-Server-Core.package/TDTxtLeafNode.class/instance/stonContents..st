@@ -1,3 +1,3 @@
 as yet unclassified
 stonContents: aSTONString
-    self contents: (STON fromString: aSTONString)
+  self contents: (self objectSerializer fromString: aSTONString)

@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 06/28/2014 13:19",
+		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 09/12/2015 08:36",
 		"browseFullClassMenuAction:selectionIndex:" : "dkh 06/28/2014 13:19",
 		"clientList:" : "dkh 03/20/2014 20:37",
 		"defaultEditorWindowLocation" : "dkh 09/27/2013 18:28",
@@ -10,4 +10,5 @@
 		"menuActionSpec" : "dkh 02/19/2014 17:37",
 		"selectedClass:selectionIndex:" : "dkh 06/28/2014 13:19",
 		"theBehavior" : "dkh 06/28/2014 13:18",
-		"theClass" : "dkh 06/28/2014 13:18" } }
+		"theClass" : "dkh 06/28/2014 13:18",
+		"usePersistentClientElementCache" : "dkh 08/18/2015 11:18" } }

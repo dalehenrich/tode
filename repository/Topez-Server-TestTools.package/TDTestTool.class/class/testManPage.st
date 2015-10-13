@@ -4,10 +4,11 @@ testManPage
   test - execute sunit commands
 
 SYNOPSIS
-  test class <class-name> [ <class-name> ... ]
-  test package <package-name>
-  test project <configuration-base-name>
-  test suite <sunit-suite-file>
+  test [--batch] class <class-name> [ <class-name> ... ]
+  test [--batch] image
+  test [--batch] package <package-name>
+  test [--batch] project <configuration-base-name>
+  test [--batch] suite <sunit-suite-file>
        suite @<sunit-suite-path>
 
 DESCRIPTION
@@ -16,7 +17,5 @@ DESCRIPTION
   The TestSuite instance is derived from the results of evaluating
   <sunit-suite-file> using objIn as the smalltalk node context.
 
-  Examples:
-
-    test /home/sunit
+EXAMPLES
 '

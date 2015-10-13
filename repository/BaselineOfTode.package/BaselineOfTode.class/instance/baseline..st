@@ -4,7 +4,10 @@ baseline: spec
   spec
     for: #'common'
     do: [ 
-      spec baseline: 'Ston'.
+      spec
+        baseline: 'Ston'
+          with: [ spec repository: 'github://GsDevKit/ston:v0.9.?/repository' ];
+        yourself.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
         package: 'Topez-Server-Core'
@@ -14,6 +17,7 @@ baseline: spec
         yourself.
       spec
         group: 'Common Tests' with: #('Topez-Common-Tests');
+        group: 'Visualize' with: #();
         yourself ].
   spec
     for: #'squeakCommon'
@@ -43,9 +47,6 @@ baseline: spec
     for: #'pharo'
     do: [ 
       spec
-        baseline: 'Ston'
-        with: [ spec repository: 'github://dalehenrich/ston:pharo-0.5/repository' ].
-      spec
         package: 'Topez-Pharo-Common';
         package: 'Tode-Pharo-Server-Core'
           with: [ 
@@ -58,12 +59,15 @@ baseline: spec
           with: [ spec requires: #('GemTools-ClientGCI' 'Tode-Client-Common') ];
         package: 'Tode-Client-Pharo'
           with: [ spec requires: #('Tode-Client-Common') ];
+        package: 'Tode-Client-ServerBlocks'
+          with: [ spec requires: #('Tode-Client-Common') ];
         package: 'Topez-ClientTravis-Tests'
           with: [ spec requires: #('Topez-Client-GemStone') ];
         yourself.
       spec
         group: 'default' with: #('GemStone');
-        group: 'GemStone' with: #('Topez-Client-GemStone');
+        group: 'GemStone'
+          with: #('Topez-Client-GemStone' 'Tode-Client-ServerBlocks');
         group: 'Pharo' with: #('Tode-Pharo-Server-Core' 'Tode-Client-Pharo');
         group: 'GemStone Tests' with: #('Topez-ClientTravis-Tests');
         group: 'GemStone Dev'
@@ -76,6 +80,29 @@ baseline: spec
       spec
         package: 'Topez-Pharo-Common' with: [ spec includes: 'Tode-Pharo14' ];
         package: 'Tode-Pharo14' with: [ spec requires: 'Topez-Pharo-Common' ];
+        yourself ].
+  spec
+    for: #(#'pharo3.x' #'pharo4.x')
+    do: [ 
+      spec
+        configuration: 'Roassal2'
+          with: [ 
+              spec
+                versionString: '1.5.2';
+                repository:
+                    'http://smalltalkhub.com/mc/ObjectProfile/Roassal2/main';
+                loads: #('Trachel' 'Roassal2') ];
+        yourself.
+      spec
+        package: 'Tode-Client-Roassal2'
+          with: [ spec requires: #('Tode-Client-ServerBlocks') ];
+        package: 'TPZ-Talk'
+          with: [ 
+              spec
+                requires: #('Ston' 'Roassal2');
+                repository:
+                    'http://smalltalkhub.com/mc/PierreChanson/TPZ-Talk/main' ];
+        group: 'Visualize' with: #('TPZ-Talk' 'Tode-Client-Roassal2');
         yourself ].
   spec
     for: #'gemstone'
@@ -93,8 +120,6 @@ baseline: spec
               spec
                 loads: #('AST-Core');
                 repository: 'github://dalehenrich/rb:dev/repository' ];
-        baseline: 'Ston'
-          with: [ spec repository: 'github://dalehenrich/ston:v0.5/repository' ];
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4_dev/repository' ];
         yourself.
@@ -165,6 +190,10 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-24x-Tests' ];
         package: 'Topez-Server-24x-Tests'
           with: [ spec requires: 'Topez-Server-Tests' ];
+        package: 'Tode-GemStone-Server-Core'
+          with: [ spec includes: #('Tode-GemStone-Core2x') ];
+        package: 'Tode-GemStone-Core2x'
+          with: [ spec requires: #('Tode-GemStone-Server-Core') ];
         yourself ].
   spec
     for: #'gs3.x'
@@ -182,6 +211,10 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-31x-Tests' ];
         package: 'Topez-Server-31x-Tests'
           with: [ spec requires: 'Topez-Server-Tests' ];
+        package: 'Tode-GemStone-Server-Core'
+          with: [ spec includes: #('Tode-GemStone-Core3x') ];
+        package: 'Tode-GemStone-Core3x'
+          with: [ spec requires: #('Tode-GemStone-Server-Core') ];
         yourself ].
   spec
     for: #'gs3.0.x'
@@ -216,6 +249,19 @@ baseline: spec
         package: 'Topez-Server-Core'
           with: [ spec includes: 'Topez-Server-32x-Core' ];
         package: 'Topez-Server-32x-Core'
+          with: [ spec requires: 'Topez-Server-Core' ];
+        yourself ].
+  spec
+    for: #'gs3.3.x'
+    do: [ 
+      spec
+        package: 'Tode-GemStone-Server-Core'
+          with: [ spec includes: 'Topez-GemStone-Server-33x-Core' ];
+        package: 'Topez-GemStone-Server-33x-Core'
+          with: [ spec requires: 'Tode-GemStone-Server-Core' ];
+        package: 'Topez-Server-Core'
+          with: [ spec includes: 'Topez-Server-33x-Core' ];
+        package: 'Topez-Server-33x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec

@@ -1,3 +1,3 @@
 as yet unclassified
 stonContents
-  ^ STON toString: self mergeSource
+  ^ self objectSerializer toString: self mergeSource asText

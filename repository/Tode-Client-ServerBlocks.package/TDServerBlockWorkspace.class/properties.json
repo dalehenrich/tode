@@ -1,0 +1,15 @@
+{
+	"category" : "Tode-Client-ServerBlocks",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sessionDescription",
+		"tdShell" ],
+	"name" : "TDServerBlockWorkspace",
+	"pools" : [
+		 ],
+	"super" : "Workspace",
+	"type" : "normal" }

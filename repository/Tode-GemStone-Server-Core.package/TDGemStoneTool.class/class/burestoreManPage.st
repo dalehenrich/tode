@@ -4,7 +4,7 @@ burestoreManPage
     commandName: 'restore'
     fromString:
       'NAME
-  restore - Restore from a GemStone backup
+  bu restore - Restore from a GemStone backup
 
 SYNOPSIS
   bu [--dir=<backup-directory>] restore <backup-file>
@@ -20,8 +20,9 @@ DESCRIPTION
   directory.
 
 EXAMPLES
-  bu restore seaside.dbf
-  bu --dir=/opt/gemstone/backups restore seaside.dbf
+  bu restore sample.dbf
+  bu restore sample.dbf.gz
+  bu --dir=/opt/gemstone/backups restore sample.dbf.gz
 
 SEE ALSO
   bu --help backup

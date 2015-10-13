@@ -5,10 +5,10 @@ olviewManPage
     commandName: 'view'
     fromString:
       'NAME
-  old view - View object log entries
+  ol view - View object log entries
 
 SYNOPSIS
-  ol view  [--inverse] [--reverse|-r] [--age=<duration>] [--pid=<pid>] 
+  ol view  [--inverse] [--reverse|-r] [--age=<duration>] [--pid=<pid>] [--continuation] \
            [ <priority>... ]
 
 DESCRIPTION
@@ -31,6 +31,9 @@ OPTIONS
   --age=<duration>
     Only object log entries NEWER than are included in the list
   
+  --continuation
+    Only object log entries with continuations are displayed.
+
   --inverse
     The <command> applies to the list of all priorities, except the listed priorities.
 
@@ -45,5 +48,7 @@ EXAMPLES
   ol view --inverse transcript
   ol view --age=`1 day` -r transcript
   ol view --age=`1 day` -r --pid=15292 transcript
+  ol view --continuation
+  ol view --continuation --age=`1 month` error
 '.
   ^ manPage

@@ -1,4 +1,4 @@
-as yet unclassified
+smalltalk source
 methodSelector
   | methodSource methodNode |
   self hasFileTreeSmalltalkSource

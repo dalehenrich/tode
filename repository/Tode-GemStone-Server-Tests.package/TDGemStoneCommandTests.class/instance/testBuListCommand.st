@@ -1,15 +1,21 @@
-as yet unclassified
+tests
 testBuListCommand
   "run without errors ... to keep me honest"
 
   [ 
   | backupDirectoryPath |
-  backupDirectoryPath := TDGemStoneTool defaulBackupDirectoryName.
+  backupDirectoryPath := TDGemStoneTool defaultBackupDirectoryName.
   self topez
     evaluateCommandString: 'bu --help list';
     evaluateCommandString:
-        'bu --dir=' , backupDirectoryPath , ' backup seaside.dbf';
+        'bu --dir=' , backupDirectoryPath , ' backup test.dbf';
+    evaluateCommandString:
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' snapshot test.dbf';
     evaluateCommandString: 'bu list';
+    evaluateCommandString:
+        'bu --dir=' , TDGemStoneTool defaultBackupDirectoryName , ' list';
+    evaluateCommandString:
+        'bu --dir=' , TDGemStoneTool defaultSnapshotDirectoryName , ' list';
     yourself ]
     on: Error
     do: [ :ex | 

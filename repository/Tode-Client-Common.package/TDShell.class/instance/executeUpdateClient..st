@@ -1,48 +1,18 @@
 built-ins
 executeUpdateClient: command
 	| options |
-	command
-		getOptsMixedLongShort:
-			{#('help' $h #none).
-			#('clientRepo' nil #required).
-			#('lock' nil #none)}
-		optionsAndArguments: [ :opts :args | options := opts ].
+	command getOptsMixedLongShort: {#('help' $h #none)} optionsAndArguments: [ :opts :args | options := opts ].
 	options
 		at: 'help'
 		ifAbsent: [ 
-			options
-				at: 'clientRepo'
-				ifPresent: [ :todeRepository | 
-					| result |
-					[ 
-					Metacello new
-						baseline: 'Tode';
-						repository: todeRepository;
-						get.
-					options
-						at: 'lock'
-						ifPresent: [ :ignored | 
-							Metacello new
-								baseline: 'Tode';
-								repository: todeRepository;
-								lock ].
-					result := Metacello new
-						baseline: 'Tode';
-						repository: todeRepository;
-						onConflict: [ :ex | ex allow ];
-						load: 'GemStone Dev' ]
-						on: Warning
-						do: [ :ex | 
-							Transcript
-								cr;
-								show: 'WARNING: ' , ex description.
-							ex pass ].
-					self class resetWorldMenu.
-					^ result printString ].
-			^ 'Must specify options:
-  updateClient --help
-  updateClient --clientRepo=github://dalehenrich/tode:master
-  updateClient --clientRepo=filetree:///opt/git/tode/repository' ]
+			| filePath todeLoadSource |
+			filePath := self class lookupPharoScript: 'todeLoad.st'.
+			filePath asFileReference readStreamDo: [ :fileStream | todeLoadSource := fileStream contents ].
+			Compiler evaluate: todeLoadSource.
+			false
+				ifTrue: [ Smalltalk snapshot: true andQuit: false ].
+			self class resetWorldMenu.
+			^ 'Client updated' ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
 				prompt: 'Help for ' , command command;
@@ -52,15 +22,11 @@ executeUpdateClient: command
 
 SYNOPSIS
   updateClient --help
-  updateClient --clientRepo=<tode-repository-string> 
- 
-DESCRIPTION
-  Update the tODE software on the client.
 
-  --clientRepo option specifies the repository form which tODE will be loaded.
+DESCRIPTION
+  Update the Metacello and tODE software on the client, using the todeLoad.st file in $GS_HOME/tode/sys/default|local/pharo.
 
 EXAMPLES
   updateClient --help
-  updateClient --clientRepo=github://dalehenrich/tode:master
-  updateClient --clientRepo=filetree:///opt/git/tode/repository
+  updateClient 
 ') interact ]

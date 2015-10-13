@@ -1,0 +1,3 @@
+private
+reader
+  self subclassResponsibility

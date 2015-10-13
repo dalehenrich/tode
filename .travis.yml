@@ -1,13 +1,25 @@
 language: erlang
 
 env:
-   - ST=Pharo-1.4
-   - ST=Pharo-2.0
+#   - ST=Pharo-1.4 # I do not intend to continue supporting tODE on Pharo-1.4
+#   - ST=Pharo-2.0 # I do not intend to continue supporting tODE on Pharo-2.0
    - ST=Pharo-3.0
-   - ST=GemStone-2.4.5.2
-   - ST=GemStone-3.1.0.6
+   - ST=Pharo-4.0        # experimental
+#   - ST=Pharo-5.0        #  see https://github.com/dalehenrich/tode/issues/183
+   - ST=GemStone-2.4.5.3
+   - ST=GemStone-2.4.6
    - ST=GemStone-3.0.1
-   - ST=GemStone-3.2.2
+   - ST=GemStone-3.1.0.6
+   - ST=GemStone-3.2.8.1
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/47796c01bb932d6a0300 # dalehenrich/chat
+      - https://webhooks.gitter.im/e/f662b9bc952d22a2f11f # dalehenrich/tode
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: false     # default: false
 
 install:
    - export PROJECT_HOME="$(pwd)"

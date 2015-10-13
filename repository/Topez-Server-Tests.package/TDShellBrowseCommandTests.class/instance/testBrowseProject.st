@@ -14,4 +14,5 @@ testBrowseProject
         cr;
         show: ex description;
         cr;
-        show: (GsProcess stackReportToLevel: 100) ex pass ]
+        show: (GsProcess stackReportToLevel: 100).
+      ex pass ]

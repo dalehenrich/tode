@@ -1,0 +1,3 @@
+accessing
+usePersistentClientElementCache
+  ^ self theEditorSpec usePersistentClientElementCache

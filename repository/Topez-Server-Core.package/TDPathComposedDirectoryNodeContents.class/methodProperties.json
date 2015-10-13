@@ -1,0 +1,25 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addChild:" : "dkh 11/07/2014 14:34",
+		"addPathNode:" : "dkh 11/16/2014 15:46",
+		"addPathNode:excludes:" : "dkh 11/16/2014 15:48",
+		"addPathNode:excludes:includes:" : "dkh 11/16/2014 15:48",
+		"addPathNode:includes:" : "dkh 11/16/2014 15:48",
+		"addPathNode:selectBlock:" : "dkh 11/16/2014 15:48",
+		"at:ifAbsent:" : "dkh 11/07/2014 14:28",
+		"at:put:" : "dkh 11/07/2014 14:34",
+		"childMap" : "dkh 03/14/2015 15:40",
+		"childMapForComposition:" : "dkh 03/14/2015 15:39",
+		"composedChildrenDo:" : "dkh 03/14/2015 15:40",
+		"entryList" : "dkh 11/16/2014 15:55",
+		"entryList:" : "dkh 11/07/2014 15:58",
+		"keys" : "dkh 11/07/2014 14:32",
+		"moveDirectoryNode:as:" : "dkh 11/07/2014 14:34",
+		"parent" : "dkh 11/07/2014 14:22",
+		"parent:" : "dkh 11/07/2014 14:22",
+		"parentOf:ifAbsent:" : "dkh 11/07/2014 16:39",
+		"primaryNode" : "dkh 11/07/2014 15:58",
+		"removeKey:" : "dkh 11/07/2014 14:30",
+		"values" : "dkh 11/07/2014 14:32" } }

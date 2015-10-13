@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 profMonitor: aProfMonitor
   self class profMonitor: aProfMonitor

@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findClass: regexPattern
   "find class <regex-pattern>"
 
@@ -7,4 +7,4 @@ findClass: regexPattern
   regex ifNil: [ ^ #() ].
   ^ (Smalltalk systemNavigation allClasses asArray
     select: [ :cls | regex search: cls name asString ])
-    collect: [ :cls | TDClassDefinition className: cls theNonMetaClass name ]
+    collect: [ :cls | cls asTDClassDefinition ]

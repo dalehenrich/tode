@@ -9,4 +9,4 @@ findcategory
     getSubcommandOptsMixedLongShort:
       {#('exact' nil #'none').
       #('hier' nil #'none')}.
-  ^ self findcategory: subArguments options: options
+  ^ self findcategory: subArguments options: subOptions

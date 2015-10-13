@@ -13,7 +13,7 @@ restoreFromBackupFromClient: backupPath
 	^ restoreSession
 		executeStringExpectingStringNB: 'SystemRepository restoreFromBackup: ' , backupPath printString
 		envId: self environmentId ]
-		on: GsErrorNotification , Error
+		on: GsErrorNotification
 		do: [ :ex | 
 			ex errorNumber ~~ 4046
 				ifTrue: [ ^ ex pass ].

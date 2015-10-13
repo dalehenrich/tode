@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"PersistentElementCache" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"currentNode",
@@ -13,6 +13,7 @@
 		"exceptionProcess",
 		"autoCommit",
 		"elementCache",
+		"persistentElementCache",
 		"listLimit",
 		"displayOops",
 		"characterLimit",

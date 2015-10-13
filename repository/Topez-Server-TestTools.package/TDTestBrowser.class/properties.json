@@ -3,10 +3,11 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"UseUpdateThread" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"testSuite",
+		"testSuiteBlock",
 		"testResults",
 		"resultSlot",
 		"testProcess",

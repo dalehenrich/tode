@@ -60,7 +60,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   (registration isConfigurationBased or: [ registration isHybridBased ])
     ifTrue: [ enable value: #'configurationProject' ].
   enable value: #'project'.
-  ^ STON
+  ^ self objectSerializer
     toString:
       {#'setMenuCategories:'.
       enabled.

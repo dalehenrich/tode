@@ -1,4 +1,8 @@
 built-ins
 exit
-	shellWindow delete.
+	self logout.
+	self class currentShell: nil.
+	shellWindow ifNotNil: [ shellWindow delete ].
+	shellWindow := nil.
+	console := nil.
 	^ nil

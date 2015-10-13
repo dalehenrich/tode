@@ -15,5 +15,6 @@ commitVersion: version baseVersionNumber: baseVersionNumber branch: branch autho
     info: newInfo
     snapshot: version snapshot
     dependencies: version dependencies.
-  targetRepos do: [ :targetRepo | targetRepo storeVersion: newVersion ].
+  targetRepos
+    do: [ :targetRepo | self storeVersion: newVersion inRepository: targetRepo ].
   ^ newVersion

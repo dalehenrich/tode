@@ -1,10 +1,13 @@
 {
 	"class" : {
-		 },
+		"persistentElementCache:" : "dkh 08/18/2015 09:47" },
 	"instance" : {
 		"addResultToStack:" : "dkh 06/04/2013 21:29",
 		"autoCommit" : "DataCurator 12/21/2012 11:20",
 		"autoCommit:" : "DataCurator 12/21/2012 11:17",
+		"cacheClientElement:" : "dkh 08/18/2015 10:19",
+		"cacheClientElementPersistent:" : "dkh 08/18/2015 09:52",
+		"cacheClientElementTransient:" : "dkh 08/18/2015 10:18",
 		"characterLimit" : "DataCurator 01/16/2013 15:12",
 		"characterLimit:" : "DataCurator 01/16/2013 15:13",
 		"currentNode" : "DataCurator 12/01/2012 07:59",
@@ -25,7 +28,10 @@
 		"exceptionProcess" : "DataCurator 12/01/2012 18:18",
 		"listLimit" : "DataCurator 01/16/2013 09:51",
 		"listLimit:" : "DataCurator 01/16/2013 09:52",
+		"persistentElementCache" : "dkh 08/18/2015 14:06",
+		"persistentElementCache:" : "dkh 08/18/2015 09:48",
 		"reset" : "DataCurator 01/23/2013 19:39",
 		"resultFromStackAt:" : "dkh 06/04/2013 21:04",
 		"resultStack" : "dkh 06/04/2013 20:47",
-		"resultStackIndex" : "dkh 06/04/2013 20:49" } }
+		"resultStackIndex" : "dkh 06/04/2013 20:49",
+		"retireClientElement:" : "dkh 08/18/2015 09:53" } }

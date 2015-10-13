@@ -5,10 +5,10 @@ olclearManPage
     commandName: 'clear'
     fromString:
       'NAME
-  old clear - Remove object log entries
+  ol clear - Remove object log entries
 
 SYNOPSIS
-  ol clear  [--inverse]  [--age=<duration>] [ <priority>... ]
+  ol clear  [--inverse]  [--age=<duration>] [--continuation] [ <priority>... ]
 
 DESCRIPTION
   The `ol clear` command the object log entries that match the list of priorities. If 
@@ -29,6 +29,9 @@ OPTIONS
   --age=<duration>
     Only object log entries OLDER than age are removed.
 
+  --continuation
+    Only object log entries with continuations are removed.
+
   --inverse
     The <command> applies to the list of all priorities, except the listed 
     priorities.
@@ -37,5 +40,7 @@ EXAMPLES
   ol clear debug error trace
   ol clear --inverse transcript
   ol clear --age=`1 month`
+  ol clear --continuation
+  ol clear --continuation --age=`1 month` error
 '.
   ^ manPage

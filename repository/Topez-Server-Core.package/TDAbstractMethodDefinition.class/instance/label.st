@@ -1,5 +1,5 @@
 as yet unclassified
 label
   ^ self isMeta
-    ifTrue: [ self theClassName , ' class>>' , self selector ]
-    ifFalse: [ self theClassName , '>>' , self selector ]
+    ifTrue: [ self theClassLabel , ' class>>' , self selector ]
+    ifFalse: [ self theClassLabel , '>>' , self selector ]

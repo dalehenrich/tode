@@ -1,3 +1,3 @@
-accessing
+framework
 activateModel: aModel
 	self subclassResponsibility

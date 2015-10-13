@@ -6,7 +6,7 @@
 		"argAndTempNamesAt:" : "DataCurator 12/16/2012 08:28",
 		"baseNodeMap" : "dkh 06/28/2014 13:08",
 		"baseNodeNames" : "DataCurator 12/16/2012 08:10",
-		"calculateSelectionRange" : "DataCurator 12/17/2012 08:18",
+		"calculateSelectionRange" : "dkh 05/20/2015 16:54",
 		"calculateSourceRangeEnd:in:" : "DataCurator 12/17/2012 08:11",
 		"dotSelfLiteralArray" : "dkh 06/28/2014 09:53",
 		"dotSelfObject" : "dkh 06/28/2014 09:59",
@@ -29,11 +29,11 @@
 		"objectFor:ifAbsent:" : "DataCurator 01/01/2013 09:12",
 		"previous" : "DataCurator 12/16/2012 10:36",
 		"previous:" : "DataCurator 12/16/2012 10:36",
-		"printOn:" : "DataCurator 12/22/2012 17:35",
+		"printOn:" : "dkh 05/13/2015 15:54",
 		"process" : "DataCurator 12/16/2012 10:18",
 		"receiver" : "dkh 06/28/2014 12:45",
 		"selectionRange" : "DataCurator 12/19/2012 14:12",
 		"selector" : "DataCurator 12/16/2012 07:46",
 		"stack" : "DataCurator 12/16/2012 10:17",
 		"stack:" : "DataCurator 12/16/2012 10:17",
-		"trimToHomeFrame" : "DataCurator 02/09/2013 16:05" } }
+		"trimToHomeFrame" : "dkh 08/31/2015 16:57" } }

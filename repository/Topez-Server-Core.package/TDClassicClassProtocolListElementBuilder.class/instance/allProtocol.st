@@ -1,0 +1,3 @@
+accessing
+allProtocol
+  ^ TDProtocolDefinition allSelectorsProtocol

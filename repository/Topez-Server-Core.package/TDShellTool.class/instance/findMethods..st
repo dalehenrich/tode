@@ -1,4 +1,4 @@
-as yet unclassified
+find
 findMethods: findTokens
   "find methods <method-spec> <method-spec>"
 

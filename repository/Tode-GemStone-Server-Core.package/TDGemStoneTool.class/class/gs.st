@@ -1,4 +1,9 @@
-as yet unclassified
+gs
 gs
   <topezCommand: 'gs' manPage: #'gsManPage'>
-  ^ [ :topez :objIn :tokens :command | self performSubCommand: topez objIn: objIn todeCommand: command ]
+  ^ [ :topez :objIn :tokens :command | 
+  self
+    performSubCommand: topez
+    objIn: objIn
+    commandOptions: {#('help' $h #'none')}
+    todeCommand: command ]

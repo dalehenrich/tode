@@ -14,4 +14,4 @@ findcategory: args options: opts
       | classNames |
       classNames := list collect: [ :cls | cls className asString ].
       list := self findClassHierarchy: classNames ].
-  ^ list
+  ^ self filterSelectList: list

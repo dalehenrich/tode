@@ -19,7 +19,7 @@ browseProtocolMenuAction: listElement selectionIndex: selectionIndex
         windowLocation: #'classSelectors';
         windowLabel: 'class protocol for ' , self theClass printString;
         yourself).
-  ^ STON
+  ^ listElement objectSerializer
     toString:
       {#'editStonElement:'.
       instanceProtocolClientElement.

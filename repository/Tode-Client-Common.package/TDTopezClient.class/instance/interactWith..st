@@ -1,5 +1,5 @@
 as yet unclassified
 interactWith: aString
 	| interaction |
-	interaction := STON fromString: aString.
-	^STON toString: interaction interact
+	interaction := self objectSerializer fromString: aString.
+	^self objectSerializer toString: interaction interact

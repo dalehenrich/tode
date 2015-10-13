@@ -16,8 +16,9 @@ platformInitialize2x
         defaultBlock: [ :interaction | 
               | result |
               result := self topezClientForwarder
-                interactWith: (STON toString: interaction copyAsTodeInteraction).
-              STON fromString: result ];
+                interactWith:
+                  (self objectSerializer toString: interaction copyAsTodeInteraction).
+              self objectSerializer fromString: result ];
         inspectBlock: [ :interaction | 
               interaction theObject
                 editUsing:

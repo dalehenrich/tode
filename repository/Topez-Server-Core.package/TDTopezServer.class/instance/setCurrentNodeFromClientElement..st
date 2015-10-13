@@ -1,4 +1,4 @@
-accessing
+client callbacks
 setCurrentNodeFromClientElement: aClientElement
   | theObject theNode |
   theObject := aClientElement theObject.

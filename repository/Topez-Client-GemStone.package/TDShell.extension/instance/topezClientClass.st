@@ -1,3 +1,3 @@
 *topez-client-gemstone
 topezClientClass
-  ^ TDTopezGemStoneClient
+  ^ self class topezClientClass

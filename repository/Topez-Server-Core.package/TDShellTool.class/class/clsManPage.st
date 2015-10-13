@@ -21,6 +21,7 @@ DESCRIPTION
     category   Move class to a new category
     comment    View and define the class comment
     copy       Make a copy of a class
+    create     Create a new class
     definition View and define the class
     history    View class history
     protocol   Define and modify class protocol
@@ -46,6 +47,7 @@ EXAMPLES
   cls copy ClassA ClassB
   cls copy @/home/tode/classA ClassB
 
+  cls create ClassB Object ClassBCategory
   cls --help definition
   cls definition ClassA ClassB
   cls definition @/home/tode/classA ClassB
@@ -74,5 +76,6 @@ EXAMPLES
     at: 'rename' put: self clsrenameManPage;
     at: 'category' put: self clscategoryManPage;
     at: 'remove' put: self clsremoveManPage;
+    at: 'create' put: self clscreateManPage;
     yourself.
   ^ manPage

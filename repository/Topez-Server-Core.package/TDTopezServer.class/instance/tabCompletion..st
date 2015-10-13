@@ -1,19 +1,28 @@
 accessing
 tabCompletion: commandLine
-  | tokens token newToken newLine |
+  | tokens token tabCompletion matches longestMatch cmdLine prefix postfix |
   tokens := commandLine findTokens: ' '.
-  tokens isEmpty
-    ifTrue: [ ^ commandLine ].
-  token := tokens last.
-  newToken := tokens size > 1
-    ifTrue: [ self findMatchingPathFor: token ]
-    ifFalse: [ self findMatchingCommandFor: token ].
-  newToken = token
-    ifTrue: [ ^ commandLine ].
-  newLine := WriteStream on: String new.
-  1 to: tokens size - 1 do: [ :index | 
-    newLine
-      nextPutAll: (token at: index);
-      space ].
-  newLine nextPutAll: newToken.
-  ^ newLine contents
+  tabCompletion := tokens isEmpty
+    ifTrue: [ self findMatchingCommandFor: '' ]
+    ifFalse: [ 
+      token := tokens last.
+      (tokens size > 1
+        or: [ 
+          | first |
+          first := token first.
+          commandLine last isSeparator
+            or: [ first = $. or: [ first = $/ or: [ first = $~ or: [ first = $@ ] ] ] ] ])
+        ifTrue: [ 
+          commandLine last isSeparator
+            ifTrue: [ token := '' ].
+          self findMatchingPathFor: token ]
+        ifFalse: [ self findMatchingCommandFor: token ] ].
+  prefix := tabCompletion at: 1.
+  matches := tabCompletion at: 2.
+  postfix := tabCompletion at: 3.
+  matches := matches asArray sorted: [ :a :b | a <= b ].
+  longestMatch := tabCompletion at: 4.
+  cmdLine := ''.
+  1 to: tokens size - 1 do: [ :index | cmdLine := cmdLine , (tokens at: index) , ' ' ].
+  ^ {matches.
+  (cmdLine , prefix , longestMatch , postfix)}

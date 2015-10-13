@@ -10,9 +10,10 @@ projectentryManPage
   project entry - Create a new project entry
 
 SYNOPSIS
-  project entry --baseline=<project-name> --repo=<project-repo> <project-path>
-          entry --config=<project-name> [--version=<project-version>] 
-                --repo=<project-repo> <project-path>
+  project entry --baseline=<project-name> --repo=<project-repo> [--loads=<load-expression>] \ 
+                <project-path>
+          entry --config=<project-name> [--version=<project-version>] \
+                --repo=<project-repo> [--loads=<load-expression>] <project-path>
           entry --git=<project-name> [--repo=<git-repo-path>] <project-path>
 
 DESCRIPTION
@@ -30,20 +31,21 @@ DESCRIPTION
 
   For Metacello project entries you define the name of the project, the type of
   the project (baseline or configuration), the repository where the baseline or
-  configuration may be found. For configurations, you also specify the version of 
-  the project to be loaded. For example:
+  configuration may be found, and (optionally) the package/project/groups to be loaded.
+  For configurations, you also specify the version of the project to be loaded. For example:
 
-    project entry --config=External 
-                  --version=1.0.0
-                  --repo=http://ss3.gemstone.com/ss/external 
+    project entry --config=External                          \
+                  --version=1.0.0                            \
+                  --repo=http://ss3.gemstone.com/ss/external \
+                  --loads=`#(''Core'')`                      \
                   /home/external
 
-    project entry --baseline=External 
-                  --repo=github://dalehenrich/external:master/repository 
+    project entry --baseline=External                                    \
+                  --repo=github://dalehenrich/external:master/repository \
                   /home/external
 
-  Once you have created a project entry, you may change or add attributes. For 
-  example, you may want to change the list of packages/groups/projects loaded or
+  If you don''t specify a `--loads` option, the ''default'' group is loaded. Once you have 
+  created a project entry, you may change or add attributes. For example, you may want to 
   change the status to #inactive.
 
   Once a project is loaded, only changes to the loads specification, locked
@@ -76,9 +78,11 @@ Project Entry Attributes
 OPTIONS
 
 EXAMPLES
-  project entry --config=External --version=1.0.0 --repo=http://ss3.gemstone.com/ss/external /home/external
+  project entry --config=External --version=1.0.0 --repo=http://ss3.gemstone.com/ss/external \
+               --loads=`#(''Core'')` /home/external
 
-  project entry --baseline=External --repo=github://dalehenrich/external:master/repository /home/external
+  project entry --baseline=External --repo=github://dalehenrich/external:master/repository \
+               --loads=`#(''Core'')` /home/external
 
   project entry --git=projectHome --repo=$GS_HOME /home/external
 

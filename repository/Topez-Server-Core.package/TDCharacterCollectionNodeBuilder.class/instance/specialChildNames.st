@@ -1,3 +1,3 @@
 as yet unclassified
 specialChildNames
-  ^ super specialChildNames , #('(utf8)' '(size)')
+  ^ super specialChildNames , #('(bytes)' '(utf8)' '(size)')

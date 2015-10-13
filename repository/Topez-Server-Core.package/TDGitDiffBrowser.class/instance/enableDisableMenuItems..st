@@ -11,7 +11,7 @@ enableDisableMenuItems: selectedOperation
     ifTrue: [ enable value: #'fullHistory' ].
   (source notNil and: [ destination notNil ])
     ifTrue: [ enable value: #'fileHistory' ].
-  ^ STON
+  ^ self objectSerializer
     toString:
       {#'setMenuCategories:'.
       enabled.

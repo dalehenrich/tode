@@ -20,25 +20,45 @@ gsfileout: methodRef filename: filename range: ar in: directory
         ifFalse: [ 
           | src cat fileCat |
           src := methodRef sourceCode withGemstoneLineEndings.
-          (fileCat := ar at: 3)
-            = (cat := methodRef category asString printString)
-            ifTrue: [ fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 1)) ]
+          (ar at: 5) == #'replace'
+            ifTrue: [ 
+              "replace src"
+              (fileCat := ar at: 3)
+                = (cat := methodRef category asString printString)
+                ifTrue: [ fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 1)) ]
+                ifFalse: [ 
+                  fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 4)).
+                  fileStream
+                    nextPutAll: 'category: ' , cat;
+                    nextPut: lf.
+                  methodRef classIsMeta
+                    ifTrue: [ fileStream nextPutAll: 'classmethod: ' ]
+                    ifFalse: [ fileStream nextPutAll: 'method: ' ].
+                  fileStream
+                    nextPutAll:
+                        methodRef actualClass theNonMetaClass name asString;
+                    nextPut: lf ].
+              fileStream nextPutAll: src.
+              src last == lf
+                ifFalse: [ fileStream nextPut: lf ] ]
             ifFalse: [ 
-              fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 4)).
+              "append src after the last instance/class method for the class"
+              fileStream
+                nextPut: $%;
+                nextPut: lf.
+              fileStream nextPutAll: (originalSource copyFrom: 1 to: (ar at: 2)).
               fileStream
                 nextPutAll: 'category: ' , cat;
-                nextPut: lf;
-                nextPutAll: 'set compile_env: 0';
                 nextPut: lf.
               methodRef classIsMeta
                 ifTrue: [ fileStream nextPutAll: 'classmethod: ' ]
                 ifFalse: [ fileStream nextPutAll: 'method: ' ].
               fileStream
                 nextPutAll: methodRef actualClass theNonMetaClass name asString;
-                nextPut: lf ].
-          fileStream nextPutAll: src.
-          src last == lf
-            ifFalse: [ fileStream nextPut: lf ].
+                nextPut: lf.
+              fileStream nextPutAll: src.
+              src last == lf
+                ifFalse: [ fileStream nextPut: lf ] ].
           fileStream
             nextPutAll:
               (originalSource copyFrom: (ar at: 2) + 1 to: originalSource size) ] ]

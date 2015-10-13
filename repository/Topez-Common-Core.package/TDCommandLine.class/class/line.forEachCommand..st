@@ -1,6 +1,8 @@
 parsing
-line: aString forEachCommand: aBlock
-  (self isolate: aString)
+line: cmdLineString forEachCommand: aBlock
+  "single command line"
+
+  (self isolate: cmdLineString)
     do: [ :isolated | 
       | redirected commandLine redirectTarget command |
       redirected := self scan: isolated delim: $>.
