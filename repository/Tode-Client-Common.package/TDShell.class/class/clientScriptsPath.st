@@ -1,3 +1,3 @@
 home-private
 clientScriptsPath
-	^ 'client/scripts/'
+	^ 'client/tode-scripts/'

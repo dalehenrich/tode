@@ -1,3 +1,3 @@
 home
 todeSysStonePath: stoneName
-	^self todeSysPath , '/stones/' , stoneName, '/'
+	^ Smalltalk os environment at: 'GS_SYS_STONES' ifAbsent: [ self todeSysPath , '/stones/' , stoneName , '/' ]

@@ -1,3 +1,3 @@
 home
 todeSysDefaultServerScriptsPath
-	^ self todeClientSysDefaultPath , self serverScriptsPath
+	^ self todeClientSysDefaultPath , self clientServerBootstrapScriptsPath
