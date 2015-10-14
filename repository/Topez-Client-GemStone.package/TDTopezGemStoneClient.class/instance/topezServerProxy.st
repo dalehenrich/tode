@@ -2,17 +2,18 @@ as yet unclassified
 topezServerProxy
 	topezServerProxy
 		ifNil: [ 
-			| jsonString transcriptOopType resultArray topezServerOop topezClientOopType |
-			[ jsonString := self session executeStringExpectingStringNB: self todeServerCreationString envId: self environmentId ]
+			| jsonString transcriptOopType resultArray topezServerOop topezClientOopType todeServerCreationString |
+			[ 
+			todeServerCreationString := self todeServerCreationString.
+			jsonString := self session executeStringExpectingStringNB: todeServerCreationString envId: self environmentId ]
 				on: GsErrorNotification
 				do: [ :firstEx | 
 					"try again with no options, in case using old version of tode ... eventually get rid of this"
 					[ 
-					jsonString := self session
-						executeStringExpectingStringNB: (self todeServerCreationStringWithOptions: false)
-						envId: self environmentId ]
+					todeServerCreationString := self todeServerCreationStringWithOptions: false.
+					jsonString := self session executeStringExpectingStringNB: todeServerCreationString envId: self environmentId ]
 						on: GsErrorNotification
-						do: [ :ex | self error: 'Unable to log into server:' , ex description ] ].
+						do: [ :ex | self error: 'Unable to log into server:' , ex description , 'with: ' , todeServerCreationString printString ] ].
 			resultArray := self objectSerializer fromString: jsonString.
 			topezServerOop := resultArray at: 1.
 			topezClientOopType := self session asOopType: (resultArray at: 3).
