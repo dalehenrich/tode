@@ -9,7 +9,11 @@ snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes 
       self
         error:
           'Could not start a checkpoint, See comment in System class>>startCheckpointSync for possible reasons for failure.' ].
-  System suspendCheckpointsForMinutes: suspendInMinutes.
+  (System suspendCheckpointsForMinutes: suspendInMinutes)
+    ifFalse: [ 
+      self
+        error:
+          'Could not suspend checkpoints, See comment in System class>>suspendCheckpointsForMinutes: for possible reasons for failure.' ].
   snapshots := {}.
   SystemRepository fileNames
     do: [ :extentPath | 
