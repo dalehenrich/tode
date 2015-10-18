@@ -17,6 +17,12 @@ DESCRIPTION
   (git@github.com) into the $GS_HOME/gemstone/stones/<stone-name>/git directory. A
   new project entry is created in the /sys/stone/projects directory node.
 
+  The new project entry is `locked` in the image, to guarantee that the clone will
+  be used moving forward.
+
+  If the project was already loaded in the image (from github), the loaded packages 
+  are remapped to reference exclusively the new repository.
+
 OPTIONS
   --https
     With the `--https option, use an HTTPS url (https://github.com/) when cloning the 
