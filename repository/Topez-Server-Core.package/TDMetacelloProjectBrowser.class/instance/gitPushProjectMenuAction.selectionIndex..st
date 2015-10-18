@@ -4,11 +4,7 @@ gitPushProjectMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  gitRepoDirectory := self projectTool gitRepoDirForRegistration: registration.
-  gitTool := self gitTool.
-  response := gitTool
-    gitpushIn: gitRepoDirectory
-    with: 'origin ' , registration currentBranchName.
+  response := self projectTool projectPush: registration.
   response
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')

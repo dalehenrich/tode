@@ -8,7 +8,7 @@ projectcloneManPage
   project clone - Clone repository (github only)
 
 SYNOPSIS
-  project clone [--https] [--local|--stone] [--gitRoot=<git-root-dir>] ( <project-name> | @<project-reference> )
+  project clone [--https] [--shared|--stone] [--gitRoot=<git-root-dir>] ( <project-name> | @<project-reference> )
 DESCRIPTION
   With no options, the github project <project-name> is cloned using an SSH url 
   (git@github.com) into the $GS_HOME/gemstone/stones/<stone-name>/git directory. A
@@ -27,21 +27,21 @@ OPTIONS
     --local|--stone defaults). Project entry is still saved based on 
     --local|--stone option.
 
-  --local|--stone
-    The `--stone` option is the defaul. Clone the project into the
+  --stone|--shared
+    The `--stone` option is the default. Clone the project into the
     $GS_HOME/gemstone/stones/<stone-name>/git directory and save project entry in
     /sys/stone/projects directory node.
 
-    With the `--local` option set, save the project entry into the /sys/local/projects 
-    directory node. The repository is cloned into the $GS_HOME/tode/sys/local/git
-    directory by default, but the default can be changed on a stone by stone basis by 
+    With the `--shared` option set, save the project entry into the /sys/local/projects 
+    directory node. The repository is cloned into the $GS_HOME/shared/repos directory 
+    by default, but the system default can be changed on a stone by stone basis by 
     setting the `serverGitRoot` field in the stone session description.
 
 EXAMPLES
   project clone Seaside3
   project clone --https Seaside3
   project clone --gitRoot=/opt/git Seaside3
-  project clone --local Seaside3
+  project clone --shared Seaside3
   project clone --stone Seaside3
 '.
   ^ manPage
