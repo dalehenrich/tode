@@ -6,5 +6,5 @@ postLogin
 
   | gitRootPath |
   gitRootPath := self sessionDescription serverGitRoot.
-  gitRootPath isEmpty
-    ifFalse: [ TDProjectEntryDefinition defaultGitRootPath: gitRootPath ]
+  (gitRootPath notNil and: [ gitRootPath isEmpty not ])
+    ifTrue: [ TDProjectEntryDefinition defaultGitRootPath: gitRootPath ]
