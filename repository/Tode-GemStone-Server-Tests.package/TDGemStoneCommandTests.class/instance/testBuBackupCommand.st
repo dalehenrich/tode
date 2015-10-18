@@ -10,6 +10,8 @@ testBuBackupCommand
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' backup --uncompressed seaside.dbf';
     evaluateCommandString:
+        'bu --dir=' , backupDirectoryPath , ' backup --commit seaside.dbf';
+    evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' backup seaside.dbf';
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' backup --safely seaside.dbf';

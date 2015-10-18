@@ -2,6 +2,8 @@ bu
 snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes safely: safely
   | snapshots |
   [ 
+  System commitTransaction
+    ifFalse: [ self error: 'Commit conflicts: snapshot not taken' ].
   self checkpointsSuspended
     ifTrue: [ self error: 'Checkpoints currently suspended. Please wait and try again.' ].
   System startCheckpointSync

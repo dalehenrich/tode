@@ -7,7 +7,7 @@ busnapshotManPage
   bu snapshot - Make a snapshot of the extent files
 
 SYNOPSIS
-  bu [--dir=<snapshot-directory>] snapshot [--safely] [--suspend=<minutes>] \
+  bu [--dir=<snapshot-directory>] snapshot [--safely] [--commit] [--suspend=<minutes>] \
                                            <snapshot-file-extension>
 DESCRIPTION
   Make a snapshot copy of the extent files: 
@@ -36,9 +36,15 @@ DESCRIPTION
   With the --safely option specified, the snapshot will (quietly) be skipped if
   the target snapshot already exists.
 
+  With the --commit option specified a commit is made immediately before checkpoints
+  are suspended. The --commit option should be used when running in batch mode (i.e.,
+  a bash shell script) or when autoCommit has been disabled to ensure that the current
+  state of the gem is included in the snapshot.
+
 EXAMPLES
   bu --help snapshot
   bu snapshot sample.dbf
+  bu snapshot --commit sample.dbf
   bu snapshot --safely sample.dbf
   bu --dir=$GS_HOME/gemstone/snapshots snapshot sample.dbf
 
