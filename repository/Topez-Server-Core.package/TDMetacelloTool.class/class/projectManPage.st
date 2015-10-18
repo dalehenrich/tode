@@ -24,7 +24,8 @@ DESCRIPTION
     log      Browse commit log for the Metacello project (git only)
     merge    (git only?)
     prime    Prime the project registry
-    push     (git only)
+    pull     Execute a `git pull` for the project repository (github only)
+    push     Execute a `git push` for the project repository (git only)
     registry Inspect the project registry
     rehome   Point package repository groups for project to new repository
     refresh  Refresh project entries in project list
@@ -63,5 +64,7 @@ EXAMPLES
     at: 'clone' put: self projectcloneManPage;
     at: 'entry' put: self projectentryManPage;
     at: 'summary' put: self projectsummaryManPage;
+    at: 'pull' put: self projectpullManPage;
+    at: 'push' put: self projectpushManPage;
     yourself.
   ^ manPage
