@@ -23,7 +23,7 @@ projectclone
   subOptions
     at: 'shared'
     ifPresent: [ :ignored | 
-      projectEntryPath := '/sys/local/projects/'.
+      projectEntryPath := '/sys/local/server/projects/'.
       gitRootPath := TDProjectEntryDefinition defaultGitRootPath ]
     ifAbsent: [ 
       projectEntryPath := '/sys/stone/projects/'.
