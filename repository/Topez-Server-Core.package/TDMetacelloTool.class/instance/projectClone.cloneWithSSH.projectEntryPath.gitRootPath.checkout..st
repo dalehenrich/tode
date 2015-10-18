@@ -1,6 +1,6 @@
 project api
 projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectEntryPath gitRootPath: gitRootPath checkout: commitishOrNil
-  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName cloneUrl checkout gitRepoDir |
+  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements gitRepoDirectory gitRepoDirName cloneUrl checkout gitRepoDir |
   gitRootDir := ServerFileDirectory on: gitRootPath.
   gitTool := topez toolInstanceFor: 'git'.
   registration canBeCloned
@@ -13,6 +13,10 @@ projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectE
       self
         inform:
           'A git repo is already present at ' , gitRepoDir fullName printString.
+      self
+        reregisterClonedProject: registration
+        repositoryDescription: registration repositoryDescription
+        projectEntryPath: projectEntryPath.
       ^ self ]
         on: Error
         do: [ :ignored | 
@@ -69,19 +73,10 @@ If you cancel, a branch name can be specified at a later date.'
         ifNotNil: [ 
           newBranchName isEmpty
             ifFalse: [ gitTool gitcheckoutIn: gitRepoDirectory with: '-b ' , newBranchName ] ] ].
-  Metacello new
-    baseline: registration projectName;
-    repository:
-        'filetree://' , gitRootPath , '/' , gitRepoDirName , '/' , githubRepo repoPath;
-    register;
-    lock.
-  newRegistration := self projectRegistrationFor: registration projectName.
-  (self topez toolInstanceFor: 'project')
-    projectMap: registration
-    from: githubRepo
-    toRepository: newRegistration repository.
-  newRegistration
-    entry: nil;
-    entryNode: registration projectPath: projectEntryPath topez: self topez.	"force creation of a /sys/stone/projects project entry with cloned information"
+  self
+    reregisterClonedProject: registration
+    repositoryDescription:
+      'filetree://' , gitRootPath , '/' , gitRepoDirName , '/' , githubRepo repoPath
+    projectEntryPath: projectEntryPath.
   registration isLoadedInImage
     ifTrue: [ registration versionInfo versionString: githubSha ]
