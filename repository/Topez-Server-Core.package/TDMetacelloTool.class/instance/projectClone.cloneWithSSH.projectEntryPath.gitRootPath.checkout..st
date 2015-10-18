@@ -2,7 +2,18 @@ project api
 projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectEntryPath gitRootPath: gitRootPath checkout: commitishOrNil
   | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response projectPathElements newRegistration gitRepoDirectory gitRepoDirName cloneUrl checkout |
   gitRootDir := ServerFileDirectory on: gitRootPath.
+  gitTool := topez toolInstanceFor: 'git'.
   githubRepo := registration cloneProjectSpec repository createRepository.
+  githubRepo directory exists
+    ifTrue: [ 
+      [ 
+      gitTool gitrevparseShowTopLevelIn: githubRepo directory.	"if this command returns then a git repository is already present in gitRootDir"
+      self inform: 'A git repo is already present at ' , gitRootPath printString.
+      ^ self ]
+        on: Error
+        do: [ :ignored | 
+          "error means that the repository has not already been cloned ... proceed"
+          self halt ] ].
   repositoryDirPath := githubRepo directory fullName.
   projectDir := MCGitHubRepository cacheDirectoryFor: githubRepo projectPath.
   projectDirPath := (projectDir directoryNamed: githubRepo projectVersion)
@@ -16,7 +27,6 @@ projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectE
   versionElement := pathElements at: 1.
   versionComponents := versionElement findTokens: '-'.
   githubSha := versionComponents last.
-  gitTool := topez toolInstanceFor: 'git'.
   cloneUrl := cloneWithSSH
     ifTrue: [ 'git@github.com:' ]
     ifFalse: [ 'https://github.com/' ].
