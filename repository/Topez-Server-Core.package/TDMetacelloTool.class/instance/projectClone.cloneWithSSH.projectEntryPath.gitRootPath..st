@@ -23,8 +23,6 @@ projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectE
   response := gitTool
     gitcloneIn: gitRootDir
     with: '--no-checkout ' , cloneUrl , githubRepo projectPath , '.git'.
-  (response beginsWith: 'fatal:')
-    ifTrue: [ self error: response ].
   response
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
@@ -33,14 +31,10 @@ projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectE
   projectPathElements := githubRepo projectPath findTokens: '/'.
   gitRepoDirName := projectPathElements at: 2.
   gitRepoDirectory := gitRootDir directoryNamed: gitRepoDirName.
-  response := gitTool
-    gitcheckoutIn: gitRepoDirectory
-    with: githubRepo projectVersion.
-  (response beginsWith: 'fatal:')
-    ifTrue: [ self error: response ].
-  response := gitTool gitsymbolicrefIn: gitRepoDirectory with: 'HEAD'.
-  (response beginsWith: 'fatal:')
-    ifTrue: [ 
+  gitTool gitcheckoutIn: gitRepoDirectory with: githubRepo projectVersion.
+  [ gitTool gitsymbolicrefIn: gitRepoDirectory with: 'HEAD' ]
+    on: Error
+    do: [ :ex | 
       | newBranchName |
       "detached HEAD ... need to create new branch"
       newBranchName := (GsTextInteraction
@@ -53,9 +47,8 @@ If you cancel, a branch name can be specified at a later date.'
         template: 'my_' , githubRepo projectVersion) signal.
       newBranchName
         ifNotNil: [ 
-          response := gitTool gitcheckoutIn: gitRepoDirectory with: '-b ' , newBranchName.
-          (response beginsWith: 'fatal:')
-            ifTrue: [ self error: response ] ] ].
+          newBranchName isEmpty
+            ifFalse: [ gitTool gitcheckoutIn: gitRepoDirectory with: '-b ' , newBranchName ] ] ].
   Metacello new
     baseline: registration projectName;
     repository:
