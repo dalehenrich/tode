@@ -1,0 +1,3 @@
+testing
+canBeCloned
+  ^ self hasGitBasedRepo

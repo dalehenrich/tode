@@ -12,8 +12,6 @@ gitdifftool: commitish1 commitish2: commitish2 cached: cached filePath: filePath
     with:
       cachedArg , '--raw ' , commitish1 , ' ' , commitish2 , ' -- ' , filePath
     logging: false.
-  (result beginsWith: 'fatal:')
-    ifTrue: [ self error: 'Error performing diff: ' , result printString ].
   records := self parseRawDiffFiles: result.
   records := records
     reject: [ :ar | 

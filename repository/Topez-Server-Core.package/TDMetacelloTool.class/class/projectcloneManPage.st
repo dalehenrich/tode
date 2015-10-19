@@ -8,11 +8,20 @@ projectcloneManPage
   project clone - Clone repository (github only)
 
 SYNOPSIS
-  project clone [--https] [--shared|--stone] [--gitRoot=<git-root-dir>] ( <project-name> | @<project-reference> )
+  project clone [--https] [--shared|--stone] [--gitRoot=<git-root-dir>] \
+                [--checkout=<branch-tag-SHA>]
+                ( <project-name> | @<project-reference> )
+
 DESCRIPTION
   With no options, the github project <project-name> is cloned using an SSH url 
   (git@github.com) into the $GS_HOME/gemstone/stones/<stone-name>/git directory. A
   new project entry is created in the /sys/stone/projects directory node.
+
+  The new project entry is `locked` in the image, to guarantee that the clone will
+  be used moving forward.
+
+  If the project was already loaded in the image (from github), the loaded packages 
+  are remapped to reference exclusively the new repository.
 
 OPTIONS
   --https
@@ -37,11 +46,16 @@ OPTIONS
     by default, but the system default can be changed on a stone by stone basis by 
     setting the `serverGitRoot` field in the stone session description.
 
+  --checkout=<branch-tag-SHA>
+    With the `--checkout` option, the given <branch-tag-SHA> is checked out once the clone
+    is complete.
+
 EXAMPLES
   project clone Seaside3
   project clone --https Seaside3
   project clone --gitRoot=/opt/git Seaside3
   project clone --shared Seaside3
+  project clone --shared --checkout=gs_master Seaside3
   project clone --stone Seaside3
 '.
   ^ manPage

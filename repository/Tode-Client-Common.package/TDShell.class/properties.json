@@ -28,7 +28,8 @@
 		"history",
 		"historyIndex",
 		"debugMode",
-		"batchMode" ],
+		"batchMode",
+		"clientDebugMode" ],
 	"name" : "TDShell",
 	"pools" : [
 		 ],
