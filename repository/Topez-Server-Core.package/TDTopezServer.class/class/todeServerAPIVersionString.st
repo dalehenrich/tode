@@ -11,4 +11,6 @@ todeServerAPIVersionString
 
   "1.2.0 - add additional instance variables to TDSessionDescription"
 
-  ^ '1.2.0'
+  "1.2.1 - add authorId instance variable to TDSessionDescription"
+
+  ^ '1.2.1'
