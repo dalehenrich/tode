@@ -5,11 +5,11 @@ projectupgrade
 "
 
   | installCommand |
-  self getSubcommandOptsMixedLongShort: {#('script' nil #'required')}.
+  self getSubcommandOptsMixedLongShort: {#('install' nil #'required')}.
   subOptions
-    at: 'command'
+    at: 'install'
     ifPresent: [ :command | installCommand := command ]
-    ifAbsent: [ self error: 'Required --command option not specified' ].
+    ifAbsent: [ self error: 'Required --install option not specified' ].
   ^ self
     projectUpgradeWithInstallCommand: installCommand
     initializingClassesNamed: subArguments
