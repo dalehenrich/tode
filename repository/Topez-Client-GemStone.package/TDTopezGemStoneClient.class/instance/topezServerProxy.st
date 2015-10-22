@@ -2,7 +2,7 @@ as yet unclassified
 topezServerProxy
 	topezServerProxy
 		ifNil: [ 
-			| jsonString transcriptOopType resultArray topezServerOop topezClientOopType todeServerCreationString |
+			| jsonString transcriptOopType resultArray topezServerOop topezClientOopType todeServerCreationString authorId |
 			[ 
 			todeServerCreationString := self todeServerCreationString.
 			jsonString := self session executeStringExpectingStringNB: todeServerCreationString envId: self environmentId ]
@@ -37,7 +37,10 @@ topezServerProxy
 						ifTrue: [ resultArray at: 5 ]
 						ifFalse: [ '1.0.0' ].
 					self serverApiVersion: serverApiVersionString asMetacelloVersionNumber ].
-			self session rawReceiverNB: topezServerProxy perform: #authorInitials: withArgs: {(Author fullName)}.
+			authorId := self sessionDescription authorId.
+			authorId isEmpty
+				ifTrue: [ authorId := Author fullName ].
+			self session rawReceiverNB: topezServerProxy perform: #authorInitials: withArgs: {authorId}.
 			self sessionDescription backupDirectory isEmpty not
 				ifTrue: [ 
 					[ 

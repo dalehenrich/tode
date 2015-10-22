@@ -12,4 +12,13 @@ getSessionDescription
 				name: sessDescName;
 				netLDIPort: nil;
 				netLDIPortRange: nil ].
+	self effectiveApiVersion < '1.2.1' asMetacelloVersionNumber
+		ifTrue: [ 
+			| sessDescName |
+			"server cannot tolerate authorId instance variables"
+			sessDescName := sessDesc name.
+			sessDesc := sessDesc copy.
+			sessDesc
+				name: sessDescName;
+				authorId: nil ].
 	^ self objectSerializer toString: sessDesc

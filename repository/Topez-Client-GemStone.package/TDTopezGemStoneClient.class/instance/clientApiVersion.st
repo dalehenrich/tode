@@ -9,6 +9,8 @@ clientApiVersion
 
 	"1.1.0 - introduce TDEventsCache"
 
-	"1.2.0 - add additional instance variables to TDSessionDescription"
+	"1.2.0 - add additional instance variables (netLDIPort and netLDIPortRange) to TDSessionDescription"
 
-	^ '1.2.0' asMetacelloVersionNumber
+	"1.2.1 - add authorId instance variable to TDSessionDescription --- not used on the server so far"
+
+	^ '1.2.1' asMetacelloVersionNumber

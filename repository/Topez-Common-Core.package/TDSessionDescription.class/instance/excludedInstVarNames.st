@@ -1,8 +1,9 @@
 ston
 excludedInstVarNames
 	| excluded |
-	excluded := OrderedCollection new.
+	excluded := Set new.
 	excluded add: #excludeNetLDIPort.
+	self netLDIPortRange ifNil: [ excluded add: #netLDIPortRange ].
 	self excludeNetLDIPort
 		ifTrue: [ 
 			"when excludeNetLDIPort is true, avoid exporting netLDIPort and 
@@ -10,7 +11,12 @@ excludedInstVarNames
 			 to an older version of tode"
 			self netLDIPort isEmpty
 				ifTrue: [ excluded add: #netLDIPort ].
-			self netLDIPortRange ifNil: [ excluded add: #netLDIPortRange ] ].
+			self netLDIPortRange
+				ifNotNil: [ :range | 
+					range isEmpty
+						ifTrue: [ excluded add: #netLDIPortRange ] ].
+			self authorId isEmpty
+				ifTrue: [ excluded add: #authorId ] ].
 	self snapshotDirectory isEmpty
 		ifTrue: [ excluded add: #snapshotDirectory ].
 	^ excluded

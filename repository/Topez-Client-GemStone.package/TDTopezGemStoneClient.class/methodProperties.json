@@ -5,7 +5,7 @@
 		"slowConnection:" : "dkh 8/19/2014 11:23",
 		"startUp:" : "dkh 3/21/2015 20:22" },
 	"instance" : {
-		"clientApiVersion" : "dkh 10/9/2015 11:47",
+		"clientApiVersion" : "dkh 10/19/2015 20:15",
 		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:45",
 		"effectiveApiVersion" : "dkh 8/12/2015 12:21",
 		"effectiveApiVersion:" : "dkh 8/12/2015 11:14",
@@ -21,7 +21,7 @@
 		"flushEventCache" : "dkh 8/31/2015 14:21",
 		"getEdgeDictionaryForClientListElement:" : "dkh 6/25/2015 16:42",
 		"getListForClientListElement:" : "dkh 6/25/2015 16:42",
-		"getSessionDescription" : "dkh 10/9/2015 11:58",
+		"getSessionDescription" : "dkh 10/19/2015 20:10",
 		"getSourceForClientSourceElement:" : "dkh 5/28/2013 14:53",
 		"installMetacelloString:" : "dkh 3/11/2015 12:28",
 		"installTode:" : "dkh 3/11/2015 12:34",
@@ -60,5 +60,5 @@
 		"todeServerCreationStringWithOptions:" : "dkh 8/25/2014 14:24",
 		"todeSessionClass" : "dkh 5/26/2013 21:00",
 		"topezServerOop" : "dkh 5/26/2013 21:00",
-		"topezServerProxy" : "dkh 10/14/2015 15:59",
+		"topezServerProxy" : "dkh 10/19/2015 20:07",
 		"windowIsClosingFor:" : "dkh 5/7/2014 07:28" } }

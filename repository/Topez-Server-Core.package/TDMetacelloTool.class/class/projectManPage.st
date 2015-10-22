@@ -34,6 +34,7 @@ DESCRIPTION
     summary  View report of changed packages and methods
     test
     validate Validate the project registrations
+    upgrade  Perform a post GsDevKit upgrade installation
     workdir  Create working directory for project
 
   Use `project --help <command>` to read about a specific subcommand.
@@ -66,5 +67,6 @@ EXAMPLES
     at: 'summary' put: self projectsummaryManPage;
     at: 'pull' put: self projectpullManPage;
     at: 'push' put: self projectpushManPage;
+    at: 'upgrade' put: self projectupgradeManPage;
     yourself.
   ^ manPage
