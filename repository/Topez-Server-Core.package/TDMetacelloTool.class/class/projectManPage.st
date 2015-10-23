@@ -23,6 +23,7 @@ DESCRIPTION
     lock     Lock project registration
     log      Browse commit log for the Metacello project (git only)
     merge    (git only?)
+    new      Create a new project: BaselineOf, package, git repository
     prime    Prime the project registry
     pull     Execute a `git pull` for the project repository (github only)
     push     Execute a `git push` for the project repository (git only)
@@ -68,5 +69,6 @@ EXAMPLES
     at: 'pull' put: self projectpullManPage;
     at: 'push' put: self projectpushManPage;
     at: 'upgrade' put: self projectupgradeManPage;
+    at: 'new' put: self projectnewManPage;
     yourself.
   ^ manPage
