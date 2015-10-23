@@ -3,7 +3,7 @@ gsgemtoolsManPage
   | manPage |
   manPage := TDManPage
     commandName: 'gemtools'
-    sourceMethod: self name asString , ' class>>gsgemtoolsManPage'
+    sourceMethod: self name asString , '>>gsgemtools'
     fromString:
       'NAME
   gs gemtools - Emulate GemTools Launcher Menus

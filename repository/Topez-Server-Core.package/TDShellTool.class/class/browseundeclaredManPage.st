@@ -3,7 +3,7 @@ browseundeclaredManPage
   | manPage |
   manPage := TDManPage
     commandName: 'undeclared'
-    sourceMethod: self name asString , ' class>>browseundeclaredManPage'
+    sourceMethod: self name asString , '>>browseundeclared'
     fromString:
       'NAME
   browse undeclared - View references to undeclared symbols

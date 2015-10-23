@@ -3,7 +3,7 @@ browsecategoriesManPage
   | manPage |
   manPage := TDManPage
     commandName: 'categories'
-    sourceMethod: self name asString , ' class>>browsecategoriesManPage'
+    sourceMethod: self name asString , '>>browsecategories'
     fromString:
       'NAME
   browse categories - List class categories

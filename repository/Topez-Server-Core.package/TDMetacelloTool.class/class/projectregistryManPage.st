@@ -3,7 +3,7 @@ projectregistryManPage
   | manPage |
   manPage := TDManPage
     commandName: 'registry'
-    sourceMethod: self name asString , ' class>>projectregistryManPage'
+    sourceMethod: self name asString , '>>projectregistry'
     fromString:
       'NAME
   project registry - Inspect the project registry

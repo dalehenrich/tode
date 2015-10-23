@@ -3,7 +3,7 @@ clsrenameManPage
   | manPage |
   manPage := TDManPage
     commandName: 'rename'
-    sourceMethod: self name asString , ' class>>clsrenameManPage'
+    sourceMethod: self name asString , '>>clsrename'
     fromString:
       'NAME
   cls rename - Rename classes

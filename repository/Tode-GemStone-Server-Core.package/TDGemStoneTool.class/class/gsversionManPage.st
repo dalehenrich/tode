@@ -3,7 +3,7 @@ gsversionManPage
   | manPage |
   manPage := TDManPage
     commandName: 'version'
-    sourceMethod: self name asString , ' class>>gsversionManPage'
+    sourceMethod: self name asString , '>>gsversion'
     fromString:
       'NAME
   gs version - OS, hardware and GemStone version attributes for Client, Gem, or Stone

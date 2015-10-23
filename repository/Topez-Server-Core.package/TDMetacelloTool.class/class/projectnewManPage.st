@@ -3,7 +3,7 @@ projectnewManPage
   | manPage |
   manPage := TDManPage
     commandName: 'new'
-    sourceMethod: self name asString , ' class>>projectnewManPage'
+    sourceMethod: self name asString , '>>projectnew'
     fromString:
       'NAME
   project new - Create a new project: BaselineOf, package, git repository

@@ -3,7 +3,7 @@ breakstepsManPage
   | manPage |
   manPage := TDManPage
     commandName: 'steps'
-    sourceMethod: self name asString , ' class>>breakstepsManPage'
+    sourceMethod: self name asString , ' class>>breaksteps'
     fromString:
       'NAME
   break steps - List step points for a method
@@ -18,7 +18,7 @@ DESCRIPTION
   The method reference may be a method specification of the form:
 
     Dictionary>>at:put:
-    `Dicionary class>>new`
+    `Dicionary>>new`
 
   or a path to a node returning a method. The path should be preceded by the `@` 
   character.

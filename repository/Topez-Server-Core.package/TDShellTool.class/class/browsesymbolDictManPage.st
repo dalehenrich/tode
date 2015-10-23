@@ -3,7 +3,7 @@ browsesymbolDictManPage
   | manPage |
   manPage := TDManPage
     commandName: 'symbolDict'
-    sourceMethod: self name asString , ' class>>browsesymbolDictManPage'
+    sourceMethod: self name asString , '>>browsesymbolDict'
     fromString:
       'NAME
   browse symbolDict - Find and view a list of classes in a symbol dictionary

@@ -3,7 +3,7 @@ pfstartManPage
   | manPage |
   manPage := TDManPage
     commandName: 'start'
-    sourceMethod: self name asString , ' class>>pfstartManPage'
+    sourceMethod: self name asString , '>>pfstart'
     fromString:
       'NAME
   pf start - Begin sampling data

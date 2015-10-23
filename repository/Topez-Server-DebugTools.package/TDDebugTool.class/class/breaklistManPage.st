@@ -3,7 +3,7 @@ breaklistManPage
   | manPage |
   manPage := TDManPage
     commandName: 'list'
-    sourceMethod: self name asString , ' class>>breaklistManPage'
+    sourceMethod: self name asString , '>>breaklist'
     fromString:
       'NAME
   break list - List breakpoints

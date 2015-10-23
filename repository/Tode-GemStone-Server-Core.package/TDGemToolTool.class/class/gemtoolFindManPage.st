@@ -3,7 +3,7 @@ gemtoolFindManPage
   | manPage |
   manPage := TDManPage
     commandName: 'find'
-    sourceMethod: self name asString , ' class>>gemtoolFindManPage'
+    sourceMethod: self name asString , '>>gemtoolFind'
     fromString:
       'NAME
   gemtool find - Prompt-based variants of the `browse` family of commands

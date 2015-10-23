@@ -3,7 +3,7 @@ findpackageManPage
   | manPage |
   manPage := TDManPage
     commandName: 'package'
-    sourceMethod: self name asString , ' class>>findpackageManPage'
+    sourceMethod: self name asString , '>>findpackage'
     fromString:
       'NAME
   find package - Find list of class definitions in a package

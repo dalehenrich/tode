@@ -3,7 +3,7 @@ findconfigurationsManPage
   | manPage |
   manPage := TDManPage
     commandName: 'configurations'
-    sourceMethod: self name asString , ' class>>findconfigurationsManPage'
+    sourceMethod: self name asString , '>>findconfigurations'
     fromString:
       'NAME
   find configurations - Find list of configuration definitions

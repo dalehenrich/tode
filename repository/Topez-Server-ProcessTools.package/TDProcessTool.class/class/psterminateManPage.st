@@ -3,7 +3,7 @@ psterminateManPage
   | manPage |
   manPage := TDManPage
     commandName: 'terminate'
-    sourceMethod: self name asString , ' class>>psterminateManPage'
+    sourceMethod: self name asString , '>>psterminate'
     fromString:
       'NAME
   ps terminate - Terminate all active processes in image

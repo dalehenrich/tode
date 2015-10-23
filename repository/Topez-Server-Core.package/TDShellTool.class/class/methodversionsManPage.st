@@ -3,7 +3,7 @@ methodversionsManPage
   | manPage |
   manPage := TDManPage
     commandName: 'ersions'
-    sourceMethod: self name asString , ' class>>methodversionsManPage'
+    sourceMethod: self name asString , '>>methodversions'
     fromString:
       'NAME
   method versions - Open window on method versions 

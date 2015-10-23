@@ -3,7 +3,7 @@ projectlistManPage
   | manPage |
   manPage := TDManPage
     commandName: 'list'
-    sourceMethod: self name asString , ' class>>projectlistManPage'
+    sourceMethod: self name asString , '>>projectlist'
     fromString:
       'NAME
   project list - List Metacello projects

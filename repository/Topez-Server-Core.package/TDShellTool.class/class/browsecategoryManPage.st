@@ -3,7 +3,7 @@ browsecategoryManPage
   | manPage |
   manPage := TDManPage
     commandName: 'category'
-    sourceMethod: self name asString , ' class>>browsecategoryManPage'
+    sourceMethod: self name asString , '>>browsecategory'
     fromString:
       'NAME
   browse category - Find and view lists of classes in a category

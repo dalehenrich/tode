@@ -3,7 +3,7 @@ findsenderManPage
   | manPage |
   manPage := TDManPage
     commandName: 'sender'
-    sourceMethod: self name asString , ' class>>findsenderManPage'
+    sourceMethod: self name asString , '>>findsender'
     fromString:
       'NAME
   find sender - Find list of method definitions sending particular messages

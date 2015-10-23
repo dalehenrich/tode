@@ -3,7 +3,7 @@ pfcleanManPage
   | manPage |
   manPage := TDManPage
     commandName: 'clean'
-    sourceMethod: self name asString , ' class>>pfcleanManPage'
+    sourceMethod: self name asString , '>>pfclean'
     fromString:
       'NAME
   pf clean - Stop and clean up resources used by pf command

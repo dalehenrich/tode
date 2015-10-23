@@ -3,7 +3,7 @@ findundeclaredManPage
   | manPage |
   manPage := TDManPage
     commandName: 'undeclared'
-    sourceMethod: self name asString , ' class>>findundeclaredManPage'
+    sourceMethod: self name asString , '>>findundeclared'
     fromString:
       'NAME
   find undeclared - Find list of method definitions referencing undeclared symbols

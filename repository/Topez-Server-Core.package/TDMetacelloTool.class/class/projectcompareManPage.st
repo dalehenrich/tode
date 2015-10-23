@@ -3,7 +3,7 @@ projectcompareManPage
   | manPage |
   manPage := TDManPage
     commandName: 'compare'
-    sourceMethod: self name asString , ' class>>projectcompareManPage'
+    sourceMethod: self name asString , '>>projectcompare'
     fromString:
       'NAME
   project compare -  View differences between repository versions (git only)

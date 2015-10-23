@@ -3,7 +3,7 @@ projectrehomeManPage
   | manPage |
   manPage := TDManPage
     commandName: 'rehome'
-    sourceMethod: self name asString , ' class>>projectrehomeManPage'
+    sourceMethod: self name asString , '>>projectrehome'
     fromString:
       'NAME
   project rehome - Point package repository groups for project to new repository

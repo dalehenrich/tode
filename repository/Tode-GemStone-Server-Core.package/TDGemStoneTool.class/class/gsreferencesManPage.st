@@ -3,7 +3,7 @@ gsreferencesManPage
   | manPage |
   manPage := TDManPage
     commandName: 'references'
-    sourceMethod: self name asString , ' class>>gsreferencesManPage'
+    sourceMethod: self name asString , '>>gsreferences'
     fromString:
       'NAME
   gs references - Find reference paths to the given objects

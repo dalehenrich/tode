@@ -3,7 +3,7 @@ findclassManPage
   | manPage |
   manPage := TDManPage
     commandName: 'class'
-    sourceMethod: self name asString , ' class>>findclassManPage'
+    sourceMethod: self name asString , '>>findclass'
     fromString:
       'NAME
   find class - Find list of class definitions

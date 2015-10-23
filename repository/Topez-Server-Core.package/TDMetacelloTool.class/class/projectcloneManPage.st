@@ -3,7 +3,7 @@ projectcloneManPage
   | manPage |
   manPage := TDManPage
     commandName: 'clone'
-    sourceMethod: self name asString , ' class>>projectcloneManPage'
+    sourceMethod: self name asString , '>>projectclone'
     fromString:
       'NAME
   project clone - Clone repository (github only)

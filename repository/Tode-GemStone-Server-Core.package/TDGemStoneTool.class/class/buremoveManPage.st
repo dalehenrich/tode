@@ -2,7 +2,7 @@ bu
 buremoveManPage
   ^ TDManPage
     commandName: 'remove'
-    sourceMethod: self name asString , ' class>>buremoveManPage'
+    sourceMethod: self name asString , '>>buremove'
     fromString:
       'NAME
   bu remove - Remove backup file from backup directory

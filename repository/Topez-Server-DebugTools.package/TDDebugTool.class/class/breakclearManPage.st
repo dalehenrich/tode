@@ -3,7 +3,7 @@ breakclearManPage
   | manPage |
   manPage := TDManPage
     commandName: 'clear'
-    sourceMethod: self name asString , ' class>>breakclearManPage'
+    sourceMethod: self name asString , '>>breakclear'
     fromString:
       'NAME
   break clear - Clear breakpoints

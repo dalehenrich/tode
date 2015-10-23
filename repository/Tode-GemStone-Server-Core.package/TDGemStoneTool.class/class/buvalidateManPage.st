@@ -2,7 +2,7 @@ bu
 buvalidateManPage
   ^ TDManPage
     commandName: 'validate'
-    sourceMethod: self name asString , ' class>>buvalidateManPage'
+    sourceMethod: self name asString , '>>buvalidate'
     fromString:
       'NAME
   bu validate - Validate that backup file is readable

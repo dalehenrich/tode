@@ -3,7 +3,7 @@ gsfileSizeReportManPage
   | manPage |
   manPage := TDManPage
     commandName: 'fileSizeReport'
-    sourceMethod: self name asString , ' class>>gsfileSizeReportManPage'
+    sourceMethod: self name asString , '>>gsfileSizeReport'
     fromString:
       'NAME
   gs fileSizeReport - Report on repository size and amount of free space

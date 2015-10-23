@@ -3,7 +3,7 @@ gsobjectForManPage
   | manPage |
   manPage := TDManPage
     commandName: 'objectFor'
-    sourceMethod: self name asString , ' class>>gsobjectForManPage'
+    sourceMethod: self name asString , '>>gsobjectFor'
     fromString:
       'NAME
   gs objectFor - Resolve an object from given objectId

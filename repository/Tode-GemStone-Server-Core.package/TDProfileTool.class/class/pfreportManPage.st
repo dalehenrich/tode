@@ -3,7 +3,7 @@ pfreportManPage
   | manPage |
   manPage := TDManPage
     commandName: 'report'
-    sourceMethod: self name asString , ' class>>pfreportManPage'
+    sourceMethod: self name asString , '>>pfreport'
     fromString:
       'NAME
   pf report - Generate a string-based report from sampled data

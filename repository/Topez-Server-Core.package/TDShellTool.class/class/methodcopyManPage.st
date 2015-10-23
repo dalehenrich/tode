@@ -3,7 +3,7 @@ methodcopyManPage
   | manPage |
   manPage := TDManPage
     commandName: 'copy'
-    sourceMethod: self name asString , ' class>>methodcopyManPage'
+    sourceMethod: self name asString , '>>methodcopy'
     fromString:
       'NAME
   method copy - Copy method to another class

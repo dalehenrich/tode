@@ -3,7 +3,7 @@ pfstopManPage
   | manPage |
   manPage := TDManPage
     commandName: 'stop'
-    sourceMethod: self name asString , ' class>>pfstopManPage'
+    sourceMethod: self name asString , '>>pfstop'
     fromString:
       'NAME
   pf stop - Stop sampling

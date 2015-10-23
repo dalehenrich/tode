@@ -3,7 +3,7 @@ methodprotocolManPage
   | manPage |
   manPage := TDManPage
     commandName: 'protocol'
-    sourceMethod: self name asString , ' class>>methodprotocolManPage'
+    sourceMethod: self name asString , '>>methodprotocol'
     fromString:
       'NAME
   method protocol - Move method to another protocol
