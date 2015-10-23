@@ -5,7 +5,7 @@ projectlog
 "
 
   | logLimit registration projectName |
-  self getSubcommandOptsMixedLongShort: {#('limit' nil #'none')}.
+  self getSubcommandOptsMixedLongShort: {#('limit' nil #'required')}.
   subOptions
     at: 'limit'
     ifPresent: [ :limit | logLimit := limit asNumber ]
