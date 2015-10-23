@@ -13,6 +13,7 @@ projectentry
     getSubcommandOptsMixedLongShort:
       {#('config' nil #'required').
       #('loads' nil #'required').
+      #('git' nil #'required').
       #('version' nil #'required').
       #('repo' nil #'required').
       #('baseline' nil #'required')}.
@@ -48,8 +49,11 @@ projectentry
           subOptions
             at: 'git'
             ifPresent: [ :arg | 
-              projectEntry := TDGitRepositoryEntryDefinition new.
-              projectEntry projectName: arg ]
+              repo ifNil: [ self error: '--repo required' ].
+              projectEntry := TDGitRepositoryEntryDefinition new
+                projectName: arg;
+                gitRepoDirectoryPath: repo;
+                yourself ]
             ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ].
   projectEntry status: #(#'active').
   ^ projectEntry createProjectEntryNode: projectPath topez: self topez
