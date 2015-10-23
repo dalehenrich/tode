@@ -12,7 +12,8 @@ projectRegistrationDefinitionMap
         ifNil: [ 
           | registration |
           registration := projectEntry createProjectListRegistration.
-          (projectEntry isLocked and: [ registration isLocked not ])
+          (projectEntry isLocked
+            and: [ registration isLocked not and: [ registration isValid ] ])
             ifTrue: [ 
               self projectLock: registration.
               registration := findTool
