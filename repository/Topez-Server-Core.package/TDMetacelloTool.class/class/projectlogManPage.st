@@ -3,6 +3,7 @@ projectlogManPage
   | manPage |
   manPage := TDManPage
     commandName: 'log'
+    sourceMethod: self name asString , ' class>>projectlogManPage'
     fromString:
       'NAME
   project log - Browse commit log for the Metacello project (git only)

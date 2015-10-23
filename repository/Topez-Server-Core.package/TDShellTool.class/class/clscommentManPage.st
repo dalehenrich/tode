@@ -3,6 +3,7 @@ clscommentManPage
   | manPage |
   manPage := TDManPage
     commandName: 'comment'
+    sourceMethod: self name asString , ' class>>clscommentManPage'
     fromString:
       'NAME
   cls comment - View and define the class comment

@@ -3,6 +3,7 @@ methodmoveManPage
   | manPage |
   manPage := TDManPage
     commandName: 'move'
+    sourceMethod: self name asString , ' class>>methodmoveManPage'
     fromString:
       'NAME
   method move - Move method to another class

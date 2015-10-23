@@ -3,6 +3,7 @@ olviewManPage
   | manPage |
   manPage := TDManPage
     commandName: 'view'
+    sourceMethod: self name asString , ' class>>olviewManPage'
     fromString:
       'NAME
   ol view - View object log entries

@@ -2,6 +2,7 @@ bu
 buinfoManPage
   ^ TDManPage
     commandName: 'info'
+    sourceMethod: self name asString , ' class>>buinfoManPage'
     fromString:
       'NAME
   bu info - Display info about a particular backup

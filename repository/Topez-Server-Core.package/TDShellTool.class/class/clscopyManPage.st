@@ -3,6 +3,7 @@ clscopyManPage
   | manPage |
   manPage := TDManPage
     commandName: 'copy'
+    sourceMethod: self name asString , ' class>>clscopyManPage'
     fromString:
       'NAME
   cls copy - Make a copy of a class

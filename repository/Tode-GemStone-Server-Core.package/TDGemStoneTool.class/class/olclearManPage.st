@@ -3,6 +3,7 @@ olclearManPage
   | manPage |
   manPage := TDManPage
     commandName: 'clear'
+    sourceMethod: self name asString , ' class>>olclearManPage'
     fromString:
       'NAME
   ol clear - Remove object log entries

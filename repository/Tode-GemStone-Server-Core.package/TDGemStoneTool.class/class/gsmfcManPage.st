@@ -3,6 +3,7 @@ gsmfcManPage
   | manPage |
   manPage := TDManPage
     commandName: 'mfc'
+    sourceMethod: self name asString , ' class>>gsmfcManPage'
     fromString:
       'NAME
   gs mfc - Perform a Mark for Collection

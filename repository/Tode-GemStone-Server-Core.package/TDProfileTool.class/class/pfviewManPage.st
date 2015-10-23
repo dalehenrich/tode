@@ -3,6 +3,7 @@ pfviewManPage
   | manPage |
   manPage := TDManPage
     commandName: 'view'
+    sourceMethod: self name asString , ' class>>pfviewManPage'
     fromString:
       'NAME
   pf view - Open prof monitor browser

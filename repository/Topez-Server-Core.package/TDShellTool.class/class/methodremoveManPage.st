@@ -3,6 +3,7 @@ methodremoveManPage
   | manPage |
   manPage := TDManPage
     commandName: 'remove'
+    sourceMethod: self name asString , ' class>>methodremoveManPage'
     fromString:
       'NAME
   method remove - Remove method

@@ -3,6 +3,7 @@ findvariablesManPage
   | manPage |
   manPage := TDManPage
     commandName: 'variables'
+    sourceMethod: self name asString , ' class>>findvariablesManPage'
     fromString:
       'NAME
   find variables - Find references to instance, class instance and class variables

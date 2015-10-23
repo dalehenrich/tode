@@ -2,6 +2,7 @@ bu
 burestoreManPage
   ^ TDManPage
     commandName: 'restore'
+    sourceMethod: self name asString , ' class>>burestoreManPage'
     fromString:
       'NAME
   bu restore - Restore from a GemStone backup

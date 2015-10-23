@@ -3,6 +3,7 @@ browsereferencesManPage
   | manPage |
   manPage := TDManPage
     commandName: 'references'
+    sourceMethod: self name asString , ' class>>browsereferencesManPage'
     fromString:
       'NAME
   browse references - Find and view lists of methods referencing certain artifacts

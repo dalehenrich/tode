@@ -3,6 +3,7 @@ findprojectManPage
   | manPage |
   manPage := TDManPage
     commandName: 'project'
+    sourceMethod: self name asString , ' class>>findprojectManPage'
     fromString:
       'NAME
   find project - Find list of class definitions in a project

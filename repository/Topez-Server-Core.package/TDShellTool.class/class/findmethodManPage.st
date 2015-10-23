@@ -3,6 +3,7 @@ findmethodManPage
   | manPage |
   manPage := TDManPage
     commandName: 'method'
+    sourceMethod: self name asString , ' class>>findmethodManPage'
     fromString:
       'NAME
   find method - Find list of method definitions matching patterns

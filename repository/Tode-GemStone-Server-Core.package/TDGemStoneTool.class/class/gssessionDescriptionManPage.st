@@ -3,6 +3,7 @@ gssessionDescriptionManPage
   | manPage |
   manPage := TDManPage
     commandName: 'sessionDescription'
+    sourceMethod: self name asString , ' class>>gssessionDescriptionManPage'
     fromString:
       'NAME
   gs sessionDescription - Session information report

@@ -3,6 +3,7 @@ clsremoveManPage
   | manPage |
   manPage := TDManPage
     commandName: 'remove'
+    sourceMethod: self name asString , ' class>>clsremoveManPage'
     fromString:
       'NAME
   cls remove - Remove classes

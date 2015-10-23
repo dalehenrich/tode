@@ -3,6 +3,7 @@ projectcommitManPage
   | manPage |
   manPage := TDManPage
     commandName: 'commit'
+    sourceMethod: self name asString , ' class>>projectcommitManPage'
     fromString:
       'NAME
   project commit - Commit the Metacello project

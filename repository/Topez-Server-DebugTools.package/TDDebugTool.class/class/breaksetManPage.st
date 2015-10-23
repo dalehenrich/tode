@@ -3,6 +3,7 @@ breaksetManPage
   | manPage |
   manPage := TDManPage
     commandName: 'set'
+    sourceMethod: self name asString , ' class>>breaksetManPage'
     fromString:
       'NAME
   break set - Set breakpoints

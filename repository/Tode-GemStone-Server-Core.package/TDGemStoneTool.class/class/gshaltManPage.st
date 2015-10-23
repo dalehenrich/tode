@@ -3,6 +3,7 @@ gshaltManPage
   | manPage |
   manPage := TDManPage
     commandName: 'halt'
+    sourceMethod: self name asString , ' class>>gshaltManPage'
     fromString:
       'NAME
   gs halt - Halt on AlmostOutOfMemory exception

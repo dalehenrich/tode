@@ -3,6 +3,7 @@ gemtoolBackupManPage
   | manPage |
   manPage := TDManPage
     commandName: 'bu'
+    sourceMethod: self name asString , ' class>>gemtoolBackupManPage'
     fromString:
       'NAME
   gemtool bu - Open tODE equivalent of GemTools tools 

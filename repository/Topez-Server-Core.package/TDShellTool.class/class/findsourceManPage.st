@@ -1,7 +1,11 @@
 manPages
 findsourceManPage
   | manPage |
-  manPage := TDManPage commandName: 'source' fromString: 'NAME
+  manPage := TDManPage
+    commandName: 'source'
+    sourceMethod: self name asString , ' class>>findsourceManPage'
+    fromString:
+      'NAME
   find source - Find strings in method source
 
 SYNOPSIS

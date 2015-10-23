@@ -3,6 +3,7 @@ findcategoryManPage
   | manPage |
   manPage := TDManPage
     commandName: 'category'
+    sourceMethod: self name asString , ' class>>findcategoryManPage'
     fromString:
       'NAME
   find category - Find list of class definitions in a category

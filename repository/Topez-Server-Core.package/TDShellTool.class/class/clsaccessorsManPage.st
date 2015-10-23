@@ -3,6 +3,7 @@ clsaccessorsManPage
   | manPage |
   manPage := TDManPage
     commandName: 'accessors'
+    sourceMethod: self name asString , ' class>>clsaccessorsManPage'
     fromString:
       'NAME
   cls accessors - Define instance variable getter and setter methods for the class

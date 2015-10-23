@@ -3,6 +3,7 @@ clscreateManPage
   | manPage |
   manPage := TDManPage
     commandName: 'create'
+    sourceMethod: self name asString , ' class>>clscreateManPage'
     fromString:
       'NAME
   cls create - Create a new class

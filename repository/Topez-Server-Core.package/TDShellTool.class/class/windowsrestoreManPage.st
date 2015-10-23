@@ -3,6 +3,7 @@ windowsrestoreManPage
   | manPage |
   manPage := TDManPage
     commandName: 'restore'
+    sourceMethod: self name asString , ' class>>windowsrestoreManPage'
     fromString:
       'NAME
   windows restore - Restore windows that were open when previous session ended

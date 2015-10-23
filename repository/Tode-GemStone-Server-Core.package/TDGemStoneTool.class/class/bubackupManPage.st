@@ -2,6 +2,7 @@ bu
 bubackupManPage
   ^ TDManPage
     commandName: 'backup'
+    sourceMethod: self name asString , ' class>>bubackupManPage'
     fromString:
       'NAME
   bu backup - Make a GemStone backup

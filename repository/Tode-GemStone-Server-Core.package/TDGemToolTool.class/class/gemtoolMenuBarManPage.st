@@ -1,7 +1,11 @@
 man pages
 gemtoolMenuBarManPage
   | manPage |
-  manPage := TDManPage commandName: 'menuBar' fromString: 'NAME
+  manPage := TDManPage
+    commandName: 'menuBar'
+    sourceMethod: self name asString , ' class>>gemtoolMenuBarManPage'
+    fromString:
+      'NAME
   gemtool menuBar - Emulate GemTools Launcher Menus
 
 SYNOPSIS

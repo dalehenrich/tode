@@ -3,6 +3,7 @@ projectupgradeManPage
   | manPage |
   manPage := TDManPage
     commandName: 'clone'
+    sourceMethod: self name asString , ' class>>projectupgradeManPage'
     fromString:
       'NAME
   project upgrade - Perform a post GsDevKit upgrade installation

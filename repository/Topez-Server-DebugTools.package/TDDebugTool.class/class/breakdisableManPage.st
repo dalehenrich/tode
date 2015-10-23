@@ -3,6 +3,7 @@ breakdisableManPage
   | manPage |
   manPage := TDManPage
     commandName: 'disable'
+    sourceMethod: self name asString , ' class>>breakdisableManPage'
     fromString:
       'NAME
   break disable - Disable breakpoints

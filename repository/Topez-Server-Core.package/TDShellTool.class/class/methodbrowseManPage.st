@@ -3,6 +3,7 @@ methodbrowseManPage
   | manPage |
   manPage := TDManPage
     commandName: 'browse'
+    sourceMethod: self name asString , ' class>>methodbrowseManPage'
     fromString:
       'NAME
   method browse - View methods

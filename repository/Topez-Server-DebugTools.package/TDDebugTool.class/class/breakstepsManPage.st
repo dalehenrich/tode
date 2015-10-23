@@ -3,6 +3,7 @@ breakstepsManPage
   | manPage |
   manPage := TDManPage
     commandName: 'steps'
+    sourceMethod: self name asString , ' class>>breakstepsManPage'
     fromString:
       'NAME
   break steps - List step points for a method

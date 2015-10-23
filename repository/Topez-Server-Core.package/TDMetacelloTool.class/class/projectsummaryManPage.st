@@ -3,6 +3,7 @@ projectsummaryManPage
   | manPage |
   manPage := TDManPage
     commandName: 'summary'
+    sourceMethod: self name asString , ' class>>projectsummaryManPage'
     fromString:
       'NAME
   project summary - View report of changed packages and methods

@@ -3,6 +3,7 @@ clsdefinitionManPage
   | manPage |
   manPage := TDManPage
     commandName: 'definition'
+    sourceMethod: self name asString , ' class>>clsdefinitionManPage'
     fromString:
       'NAME
   cls definition - View and define the class

@@ -43,6 +43,9 @@ installExampleOn: aTDTopezServer
             manPage:
                 (TDManPage
                     commandName: 'script'
+                    commandPath: '/home/script'
+                    sourceMethod:
+                      self name asString , ' class>>installExampleOn:'
                     fromString:
                       'NAME
   script - simple demo of a topez script
@@ -55,11 +58,8 @@ DESCRIPTION
   behavior. To create another script try:
 
     touch sh <script-name>
-'
-                    commandPath: '/home/script'
-                    sourceMethod:
-                      self name asString , ' class>>installExampleOn:') yourself);
-    yourself.
+'))
+            yourself.
   (aTDTopezServer lookup: self commandPath)
     addChildNode:
       (examplesNode := TDDirectoryNode new

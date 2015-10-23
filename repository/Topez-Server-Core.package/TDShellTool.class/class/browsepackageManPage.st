@@ -3,6 +3,7 @@ browsepackageManPage
   | manPage |
   manPage := TDManPage
     commandName: 'package'
+    sourceMethod: self name asString , ' class>>browsepackageManPage'
     fromString:
       'NAME
   browse package - Find and vew lists of classes in a package

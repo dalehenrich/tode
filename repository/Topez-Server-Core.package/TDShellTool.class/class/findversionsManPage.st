@@ -3,6 +3,7 @@ findversionsManPage
   | manPage |
   manPage := TDManPage
     commandName: 'versions'
+    sourceMethod: self name asString , ' class>>findversionsManPage'
     fromString:
       'NAME
   find versions - Find versions of a method

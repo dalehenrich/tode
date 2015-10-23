@@ -3,6 +3,7 @@ clsprotocolManPage
   | manPage |
   manPage := TDManPage
     commandName: 'protocol'
+    sourceMethod: self name asString , ' class>>clsprotocolManPage'
     fromString:
       'NAME
   cls protocol - Define and modify class protocol

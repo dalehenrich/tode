@@ -2,6 +2,7 @@ bu
 busnapshotManPage
   ^ TDManPage
     commandName: 'snapshot'
+    sourceMethod: self name asString , ' class>>busnapshotManPage'
     fromString:
       'NAME
   bu snapshot - Make a snapshot of the extent files
