@@ -9,7 +9,7 @@ projectnewManPage
   project new - Create a new project: BaselineOf, package, git repository
 
 SYNOPSIS
-  project new [--shared | --stone | --gitRoot=<git-root-dir>] \
+  project new [--stone | --gitRoot=<git-root-dir>] \
               [--package=<package-name>] [--class] <project-name>
 
 DESCRIPTION

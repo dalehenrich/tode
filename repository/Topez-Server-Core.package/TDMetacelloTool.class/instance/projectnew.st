@@ -1,41 +1,53 @@
 project
 projectnew
   "
-  project new [--shared | --stone | --gitRoot=<git-root-dir>] \
+  project new [--stone | --gitRoot=<git-root-dir>] \
               [--package=<package-name>] [--class] <project-name>
 "
 
-  | projectName gitRootPath packageName classCreationBlock projectEntryPath |
+  | projectName gitRootPath packageName applicationClassCreationBlock projectEntryPath |
   self
     getSubcommandOptsMixedLongShort:
       {#('gitRoot' nil #'required').
       #('package' nil #'required').
       #('class' nil #'none').
-      #('shared' nil #'none').
       #('stone' nil #'none')}.
   projectName := subArguments at: 1.
   subOptions
-    at: 'shared'
+    at: 'stone'
     ifPresent: [ :ignored | 
-      projectEntryPath := '/sys/local/server/projects/'.
-      gitRootPath := TDProjectEntryDefinition defaultGitRootPath ]
-    ifAbsent: [ 
       projectEntryPath := '/sys/stone/projects/'.
-      gitRootPath := '$GS_SERVER_STONES/' , self topez serverStoneName , '/git' ].
+      gitRootPath := '$GS_SERVER_STONES/' , self topez serverStoneName , '/git' ]
+    ifAbsent: [ 
+      projectEntryPath := '/sys/local/server/projects/'.
+      gitRootPath := TDProjectEntryDefinition defaultGitRootPath ].
   subOptions at: 'gitRoot' ifPresent: [ :dirPath | gitRootPath := dirPath ].
   subOptions
     at: 'package'
     ifPresent: [ :name | packageName := name ]
     ifAbsent: [ packageName := projectName , '-Core' ].
-  classCreationBlock := subOptions
+  applicationClassCreationBlock := subOptions
     at: 'class'
     ifPresent: [ :ignored | 
       | clsTool |
       clsTool := topez toolInstanceFor: 'cls'.
-      [ :pName :superClassName | clsTool clsInteractiveCreateSubclassOf: superClassName category: pName ] ]
-    ifAbsent: [ [ :pName :superClassName |  ] ].
+      [ :superClassName :className :pName | 
+      | template |
+      template := superClassName , ' subclass: ' , className printString
+        ,
+          '
+	instVarNames: #()
+	classVars: #()
+	classInstVars: #()
+	poolDictionaries: #()
+	inDictionary: ''''
+	category: '
+        , pName printString.
+      clsTool clsInteractiveCreateSubclassWithTemplate: template ] ]
+    ifAbsent: [ [ :superClassName :className :pName |  ] ].
   ^ self
     projectNew: projectName
     projectEntryPath: projectEntryPath
+    packageName: packageName
     gitRootPath: gitRootPath
-    classCreationBlock: classCreationBlock
+    applicationClassCreationBlock: applicationClassCreationBlock
