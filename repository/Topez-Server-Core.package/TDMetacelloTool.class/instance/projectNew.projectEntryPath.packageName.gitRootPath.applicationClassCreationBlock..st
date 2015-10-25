@@ -11,7 +11,8 @@ projectNew: projectName projectEntryPath: projectEntryPath packageName: packageN
     baseline: projectName
       repository: 'filetree://' , projectRepoPath
       loads: #('default');
-    status: #(#'active').
+    status: #(#'active');
+    locked: true.
   projectEntry createProjectEntryNode: projectEntryPath topez: self topez.
   mcTool := topez toolInstanceFor: 'mc'.
   wc := mcTool mccreate: 'BaselineOf' , projectName.
