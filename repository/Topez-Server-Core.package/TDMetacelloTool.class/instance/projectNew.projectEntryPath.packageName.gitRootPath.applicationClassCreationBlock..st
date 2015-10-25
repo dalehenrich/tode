@@ -9,8 +9,10 @@ projectNew: projectName projectEntryPath: projectEntryPath packageName: packageN
   projectEntry := TDProjectSpecEntryDefinition new.
   projectEntry
     baseline: projectName
-    repository: 'filetree://' , projectRepoPath
-    loads: #('default').
+      repository: 'filetree://' , projectRepoPath
+      loads: #('default');
+    status: #(#'active');
+    locked: true.
   projectEntry createProjectEntryNode: projectEntryPath topez: self topez.
   mcTool := topez toolInstanceFor: 'mc'.
   wc := mcTool mccreate: 'BaselineOf' , projectName.
