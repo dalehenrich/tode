@@ -8,6 +8,12 @@ printBodyOn: aStream
     nextPutAll: ');';
     cr;
     yourself.
+  gitRemoteName
+    ifNotNil: [ :path | 
+      aStream
+        space: 4;
+        nextPutAll: 'gitRemoteName: ' , self gitRemoteName printString , ';';
+        cr ].
   gitRootPath
     ifNotNil: [ :path | 
       aStream
