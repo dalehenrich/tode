@@ -8,7 +8,6 @@ classMenuActionSpec
       #('browse class' $b #'browseClassDefinitionMenuAction:selectionIndex:' nil #'hasClass' false).
       #('browse class history' nil #'browseClassHistoryMenuAction:selectionIndex:' nil #'hasClass' false).
       #('browse full' $B #'browseFullClassMenuAction:selectionIndex:' nil #'hasClass' false).
-      #('browse protocol' $F #'browseProtocolMenuAction:selectionIndex:' nil #'hasClass' false).
       #('-').
       #('comment' nil #'commentClassMenuAction:selectionIndex:' nil #'hasClass' false).
       #('copy to' nil #'copyClassMenuAction:selectionIndex:' nil #'forClass' false).
