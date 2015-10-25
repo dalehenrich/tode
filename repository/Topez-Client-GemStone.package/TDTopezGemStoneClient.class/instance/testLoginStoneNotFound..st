@@ -28,5 +28,8 @@ testLoginStoneNotFound: ex
 		tab;
 		nextPutAll: 'is associated with GemStone version ' , gemstoneVersion printString , '.';
 		cr;
+		tab;
+		nextPutAll: 'NOTE: netldi log file can be found in the file: ''$GS_HOME/server/stones/', stoneName, '/logs/netldi.log''.';
+		cr;
 		yourself.
 	^ stream contents
