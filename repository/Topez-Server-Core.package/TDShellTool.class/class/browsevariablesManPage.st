@@ -3,6 +3,7 @@ browsevariablesManPage
   | manPage |
   manPage := TDManPage
     commandName: 'variables'
+    sourceMethod: self name asString , '>>browsevariables'
     fromString:
       'NAME
   browse variables - Find and view references to instance, class instance and class variables

@@ -3,6 +3,7 @@ findreferencesManPage
   | manPage |
   manPage := TDManPage
     commandName: 'references'
+    sourceMethod: self name asString , '>>findreferences'
     fromString:
       'NAME
   find references - Find list of method definitions referencing certain artifacts

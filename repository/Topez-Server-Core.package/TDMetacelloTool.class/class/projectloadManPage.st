@@ -3,6 +3,7 @@ projectloadManPage
   | manPage |
   manPage := TDManPage
     commandName: 'load'
+    sourceMethod: self name asString , '>>projectload'
     fromString:
       'NAME
   project load - Load the Metacello project

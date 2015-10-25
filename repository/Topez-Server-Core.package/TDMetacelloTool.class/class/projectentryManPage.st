@@ -5,6 +5,7 @@ projectentryManPage
   | manPage |
   manPage := TDManPage
     commandName: 'entry'
+    sourceMethod: self name asString , '>>projectentry'
     fromString:
       'NAME
   project entry - Create a new project entry

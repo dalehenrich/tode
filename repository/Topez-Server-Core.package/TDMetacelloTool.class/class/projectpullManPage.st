@@ -3,6 +3,7 @@ projectpullManPage
   | manPage |
   manPage := TDManPage
     commandName: 'pull'
+    sourceMethod: self name asString , '>>projectpull'
     fromString:
       'NAME
   project pull - Execute a `git pull` for the project repository (github only)

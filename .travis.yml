@@ -10,7 +10,7 @@ env:
    - ST=GemStone-2.4.6
    - ST=GemStone-3.0.1
    - ST=GemStone-3.1.0.6
-   - ST=GemStone-3.2.8.1
+   - ST=GemStone-3.2.9
 
 notifications:
   webhooks:

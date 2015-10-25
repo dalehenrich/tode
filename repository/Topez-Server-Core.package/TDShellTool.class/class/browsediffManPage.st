@@ -3,6 +3,7 @@ browsediffManPage
   | manPage |
   manPage := TDManPage
     commandName: 'diff'
+    sourceMethod: self name asString , '>>browsediff'
     fromString:
       'NAME
   browse diff - View differences between two methods

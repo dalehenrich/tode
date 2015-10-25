@@ -3,6 +3,7 @@ gsconfigurationManPage
   | manPage |
   manPage := TDManPage
     commandName: 'configuration'
+    sourceMethod: self name asString , '>>gsconfiguration'
     fromString:
       'NAME
   gs configuration - Gem and Stone configuration reports

@@ -3,6 +3,7 @@ clshistoryManPage
   | manPage |
   manPage := TDManPage
     commandName: 'history'
+    sourceMethod: self name asString , '>>clshistory'
     fromString:
       'NAME
   cls history - View class history

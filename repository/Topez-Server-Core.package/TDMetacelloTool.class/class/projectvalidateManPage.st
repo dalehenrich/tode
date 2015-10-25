@@ -3,6 +3,7 @@ projectvalidateManPage
   | manPage |
   manPage := TDManPage
     commandName: 'validate'
+    sourceMethod: self name asString , '>>projectvalidate'
     fromString:
       'NAME
   project validate - Validate the project registrations

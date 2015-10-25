@@ -3,6 +3,7 @@ projectpushManPage
   | manPage |
   manPage := TDManPage
     commandName: 'push'
+    sourceMethod: self name asString , '>>projectpush'
     fromString:
       'NAME
   project push - Execute a `git push` for the project repository (github only)

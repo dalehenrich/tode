@@ -2,6 +2,7 @@ bu
 budirectoryManPage
   ^ TDManPage
     commandName: 'directory'
+    sourceMethod: self name asString , '>>budirectory'
     fromString:
       'NAME
   bu directory - Define default backup directory

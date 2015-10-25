@@ -3,6 +3,7 @@ clscategoryManPage
   | manPage |
   manPage := TDManPage
     commandName: 'category'
+    sourceMethod: self name asString , '>>clscategory'
     fromString:
       'NAME
   cls category - Move class to a new category
