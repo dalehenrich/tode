@@ -8,8 +8,9 @@ testLoginGenericError: ex
 		cr;
 		nextPutAll: ex description printString;
 		cr;
+		cr;
 		tab;
-		nextPutAll: 'NOTE: netldi log file can be found in the file: ''$GS_HOME/server/stones/<stone-name>/logs/netldi.log''.';
+		nextPutAll: 'NOTE: netldi log can be found in the file: ''$GS_HOME/server/stones/<stone-name>/logs/netldi.log''.';
 		cr;
 		yourself.
 	^ stream contents

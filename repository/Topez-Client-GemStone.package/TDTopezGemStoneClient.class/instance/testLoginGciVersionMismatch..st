@@ -34,8 +34,9 @@ testLoginGciVersionMismatch: ex
 		tab;
 		nextPutAll: 'on host ' , stoneHost printString , '.';
 		cr;
+		cr;
 		tab;
-		nextPutAll: 'NOTE: netldi log file can be found in the file: ''$GS_HOME/server/stones/', stoneName, '/logs/netldi.log''.';
+		nextPutAll: 'NOTE: netldi log can be found in the file: ''$GS_HOME/server/stones/', stoneName, '/logs/netldi.log''.';
 		cr;
 		tab;
 		yourself.
