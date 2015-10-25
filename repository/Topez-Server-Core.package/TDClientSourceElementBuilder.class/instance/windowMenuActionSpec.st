@@ -7,4 +7,6 @@ windowMenuActionSpec
   #('-').
   #('history' nil #'clientElementHistoryWindowMenuAction:').
   #('list windows' $L #'listWindowsMenuAction:').
-  #('refresh window' $l #'refreshListMenuAction:')}
+  #('refresh window' $l #'refreshListMenuAction:').
+  #('-').
+  #('go to console' $G #'goToTodeShellConsole:')}
