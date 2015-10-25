@@ -6,6 +6,7 @@ methodMenuActionSpec
   #('-').
   #('move to package' nil #'moveMethodToPackageMenuAction:selectionIndex:' nil #'forMethod' false).
   #('move to protocol' $M #'moveMethodToProtocolMenuAction:selectionIndex:' nil #'forMethod' false).
+  #('remove method' $x #'cutObjectMenuAction:selectionIndex:' nil #'forMethod' false).
   #('-').
   {('Versions'
     ->
