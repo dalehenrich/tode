@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 objectSerializer
   ^ self theEditorSpec topez objectSerializer

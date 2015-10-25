@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 classHierarchy: elementBlock
   self baseClassDefinitionList size = 1
     ifTrue: [ 
