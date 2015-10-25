@@ -10,7 +10,6 @@
 		"projectPath",
 		"baseProjectPath",
 		"projectNodeName",
-		"commandMap",
 		"status",
 		"gitRootPath" ],
 	"name" : "TDProjectEntryDefinition",
