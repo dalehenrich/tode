@@ -20,6 +20,7 @@
 		"enabledMenuCategories" : "dkh 5/12/2014 12:36",
 		"executeLocalMenuAction:" : "dkh 2/23/2014 11:27",
 		"executeLocalMenuAction:keyboardEvent:" : "dkh 6/19/2014 05:55",
+		"goToConsole" : "dkh 10/25/2015 11:49",
 		"handleResponseActions:" : "dkh 8/11/2015 17:29",
 		"hasModelYellowButtonMenuItems" : "dkh 7/30/2013 14:33",
 		"listClientElements" : "dkh 8/17/2015 16:57",
