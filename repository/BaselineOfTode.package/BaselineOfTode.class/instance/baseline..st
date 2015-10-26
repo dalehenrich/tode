@@ -127,11 +127,7 @@ baseline: spec
       spec
         package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
         package: 'Topez-Server-Core'
-          with: [ 
-              spec
-                postLoadDoIt: #'initializeTools';
-                requires:
-                    #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello') ];
+          with: [ spec requires: #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
