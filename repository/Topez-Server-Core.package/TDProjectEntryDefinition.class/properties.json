@@ -12,6 +12,7 @@
 		"projectNodeName",
 		"status",
 		"gitRootPath",
+		"gitCommit",
 		"gitRemoteName" ],
 	"name" : "TDProjectEntryDefinition",
 	"pools" : [
