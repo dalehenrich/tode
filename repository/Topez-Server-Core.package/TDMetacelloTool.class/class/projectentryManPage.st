@@ -16,6 +16,7 @@ SYNOPSIS
           entry --config=<project-name> [--version=<project-version>] \
                 --repo=<project-repo> [--loads=<load-expression>] <project-path>
           entry --git=<project-name> [--repo=<git-repo-path>] <project-path>
+          entry --url=<url-for-project-entry.ston> <project-path>
 
 DESCRIPTION
   The project entry specifies project options used by the `project list` window.
@@ -23,13 +24,17 @@ DESCRIPTION
   A project entry can be created for loaded projects or for projects that have
   yet to be loaded. 
 
-  There are two basic types of project entry: Git and Metacello. 
+  There are three basic types of project entry: Git, Metacello, and HTTP. 
 
+  Git Project Entries
+  -------------------
   For Git project entries you define the name of the project and the location on 
   disk where the git repository is located. For example:
 
-    project entry --git=projectHome --repo=$GS_HOME /home/external
+    project entry --git=projectHome --repo=$GS_HOME /sys/local/server/projects
 
+  Metacello Project Entries
+  -------------------------
   For Metacello project entries you define the name of the project, the type of
   the project (baseline or configuration), the repository where the baseline or
   configuration may be found, and (optionally) the package/project/groups to be loaded.
@@ -39,15 +44,26 @@ DESCRIPTION
                   --version=1.0.0                            \
                   --repo=http://ss3.gemstone.com/ss/external \
                   --loads=`#(''Core'')`                      \
-                  /home/external
+                  /sys/local/server/projects
 
     project entry --baseline=External                                    \
                   --repo=github://dalehenrich/external:master/repository \
-                  /home/external
+                  /sys/local/server/projects
 
   If you don''t specify a `--loads` option, the ''default'' group is loaded. Once you have 
   created a project entry, you may change or add attributes. For example, you may want to 
   change the status to #inactive.
+
+  HTTP Project Entries
+  --------------------
+  For HTTP project entries, you an download an existing project entry from a web-site. For
+  example:
+
+    project entry --url=http://gsdevkit.github.io/GsDevKit_seaside31/Seaside3.ston \
+                  /sys/stone/projects
+
+  Downloads a project entry from http://gsdevkit.github.io/GsDevKit_seaside31/Seaside3.ston
+  into the /sys/stone/projects node.
 
   Once a project is loaded, only changes to the loads specification, locked
   attribute and active attribute may have an effect. The remaining information
@@ -80,12 +96,15 @@ OPTIONS
 
 EXAMPLES
   project entry --config=External --version=1.0.0 --repo=http://ss3.gemstone.com/ss/external \
-               --loads=`#(''Core'')` /home/external
+               --loads=`#(''Core'')` /sys/local/server/projects
 
   project entry --baseline=External --repo=github://dalehenrich/external:master/repository \
-               --loads=`#(''Core'')` /home/external
+               --loads=`#(''Core'')` /sys/stone/projects
 
-  project entry --git=projectHome --repo=$GS_HOME /home/external
+  project entry --git=projectHome --repo=$GS_HOME /sys/stone/projects
+
+  project entry --url=http://gsdevkit.github.io/GsDevKit_seaside31/Seaside3.ston \
+                /sys/stone/projects
 
 SEE ALSO
   browse class --exact --hier TDProjectEntryDefinition

@@ -6,6 +6,7 @@ projectentry
           entry --config=<project-name> [--version=<project-version>] \
                 --repo=<project-repo> [--loads=<load-expression>] <project-path>
           entry --git=<project-name> [--repo=<git-repo-path>] <project-path>
+          entry --url=<url-for-project-entry.ston> <project-path>
 "
 
   | repo projectEntry projectNode projectPath loads |
@@ -16,6 +17,7 @@ projectentry
       #('git' nil #'required').
       #('version' nil #'required').
       #('repo' nil #'required').
+      #('url' nil #'required').
       #('baseline' nil #'required')}.
   projectPath := subArguments at: 1.
   subOptions at: 'repo' ifPresent: [ :arg | repo := arg ].
