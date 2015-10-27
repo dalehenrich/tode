@@ -108,6 +108,7 @@ baseline: spec
   spec
     for: #'gemstone'
     do: [ 
+      spec postLoadDoIt: #'initializeTools'.
       spec
         baseline: 'GLASS1'
           with: [ 
@@ -126,20 +127,26 @@ baseline: spec
         yourself.
       spec
         package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
-        package: 'Topez-Server-Core'
-          with: [ spec requires: #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello') ];
-        package: 'Tode-BatchEdit-Tool'
-          with: [ spec requires: #('Topez-Server-Core') ];
-        package: 'Tode-GemStone-Server-Core'
+        package: 'Tode-GemStone-Server-Base'
           with: [ 
               spec
                 postLoadDoIt: #'initializeTools';
                 requires: #('Topez-Server-Core') ];
+        package: 'Topez-Server-Core'
+          with: [ 
+              spec
+                includes: #('Tode-GemStone-Server-Base');
+                requires:
+                    #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello') ];
+        package: 'Tode-BatchEdit-Tool'
+          with: [ spec requires: #('Topez-Server-Core') ];
+        package: 'Tode-GemStone-Server-Core'
+          with: [ spec requires: #('Tode-GemStone-Server-Base') ];
         package: 'Topez-Server-Tests'
           with: [ 
               spec
                 includes: #('Tode-GemStone-Server-Tests');
-                requires: #('Topez-Server-Core') ];
+                requires: #('Tode-GemStone-Server-Core') ];
         package: 'Tode-GemStone-Server-Tests'
           with: [ spec requires: #('Topez-Server-Tests') ];
         package: 'Topez-Server-CypressTools'
@@ -147,11 +154,11 @@ baseline: spec
         package: 'Topez-Server-TestTools'
           with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Topez-Server-DebugTools'
-          with: [ spec requires: 'Topez-Server-Core' ];
+          with: [ spec requires: 'Tode-GemStone-Server-Core' ];
         package: 'Topez-Server-TestDebugTools'
           with: [ spec requires: #('Topez-Server-DebugTools' 'Topez-Server-Tests') ];
         package: 'Topez-Server-ProcessTools'
-          with: [ spec requires: #('Topez-Server-Core' 'Topez-Server-DebugTools') ];
+          with: [ spec requires: #('Tode-GemStone-Server-Core' 'Topez-Server-DebugTools') ];
         package: 'Topez-Server-TestProcessTools'
           with: [ spec requires: #('Topez-Server-ProcessTools' 'Topez-Server-TestTools') ];
         package: 'Tode-Server-TestTestTools'

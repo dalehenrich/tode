@@ -1,4 +1,4 @@
-(as yet unclassified)
+accessing
 todeServerAPIVersionString
   "Version changes whenever the api between client and server changes:
    Major version changes when incompatible API changes have been made.

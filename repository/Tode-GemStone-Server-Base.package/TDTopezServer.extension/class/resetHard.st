@@ -1,4 +1,4 @@
-*tode-gemstone-server-core
+*tode-gemstone-server-base
 resetHard
   "taking out the rootNode means that all nodeStructure is GONE"
 

@@ -1,4 +1,4 @@
-*tode-gemstone-server-core
+*tode-gemstone-server-base
 instanceMap
   | singleton |
   singleton := SessionTemps current at: #'TDTopezServer_InstanceMap' otherwise: nil.

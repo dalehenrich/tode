@@ -1,4 +1,4 @@
-*tode-gemstone-server-core
+*tode-gemstone-server-base
 createForIndirectAccessFrom: theTodeUserName todeSymbolDictionaryName: todeSymbolDictionaryName shellId: aShellId
   | tode sessionMethodsPackage serverClass symbolDict todePackage stealthSymbolDictionary globalDict |
   tode := AllUsers userWithId: theTodeUserName ifAbsent: [ nil ].
