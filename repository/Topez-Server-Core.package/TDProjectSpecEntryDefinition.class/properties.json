@@ -8,7 +8,8 @@
 	"instvars" : [
 		"projectSpec",
 		"isLocked",
-		"bootstrapBlock" ],
+		"cloneBlock",
+		"loadBlock" ],
 	"name" : "TDProjectSpecEntryDefinition",
 	"pools" : [
 		 ],
