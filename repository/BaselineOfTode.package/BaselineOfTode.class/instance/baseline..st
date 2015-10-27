@@ -128,7 +128,10 @@ baseline: spec
       spec
         package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
         package: 'Tode-GemStone-Server-Base'
-          with: [ spec requires: #('Topez-Server-Core') ];
+          with: [ 
+              spec
+                postLoadDoIt: #'initializeTools';
+                requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Core'
           with: [ 
               spec
