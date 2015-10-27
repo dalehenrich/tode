@@ -128,10 +128,7 @@ baseline: spec
       spec
         package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
         package: 'Tode-GemStone-Server-Base'
-          with: [ 
-              spec
-                postLoadDoIt: #'initializeTools';
-                requires: #('Topez-Server-Core') ];
+          with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Topez-Server-Core'
           with: [ 
               spec
@@ -185,7 +182,10 @@ baseline: spec
         package: 'Tode-GemStone-Server-Base'
           with: [ spec includes: 'Topez-Server-24x-Core' ];
         package: 'Topez-Server-24x-Core'
-          with: [ spec requires: 'Tode-GemStone-Server-Base' ];
+          with: [ 
+              spec
+                postLoadDoIt: #'initializeTools';
+                requires: 'Tode-GemStone-Server-Base' ];
         package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Topez-Server-24x-DebugTools' ];
         package: 'Topez-Server-24x-DebugTools'
@@ -215,7 +215,10 @@ baseline: spec
         package: 'Tode-GemStone-Server-Base'
           with: [ spec includes: 'Topez-Server-3x-Core' ];
         package: 'Topez-Server-3x-Core'
-          with: [ spec requires: 'Tode-GemStone-Server-Base' ];
+          with: [ 
+              spec
+                postLoadDoIt: #'initializeTools';
+                requires: 'Tode-GemStone-Server-Base' ];
         package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Topez-Server-3x-DebugTools' ];
         package: 'Topez-Server-3x-DebugTools'
