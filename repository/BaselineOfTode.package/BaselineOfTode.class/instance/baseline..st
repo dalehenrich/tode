@@ -182,10 +182,10 @@ baseline: spec
     for: #'gs2.4.x'
     do: [ 
       spec
-        package: 'Topez-Server-Core'
+        package: 'Tode-GemStone-Server-Base'
           with: [ spec includes: 'Topez-Server-24x-Core' ];
         package: 'Topez-Server-24x-Core'
-          with: [ spec requires: 'Topez-Server-Core' ];
+          with: [ spec requires: 'Tode-GemStone-Server-Base' ];
         package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Topez-Server-24x-DebugTools' ];
         package: 'Topez-Server-24x-DebugTools'
@@ -211,12 +211,11 @@ baseline: spec
         yourself.
       spec
         package: 'Topez-Server-Core'
-          with: [ 
-              spec
-                requires: 'ZincHTTPComponents';
-                includes: 'Topez-Server-3x-Core' ];
+          with: [ spec requires: 'ZincHTTPComponents' ];
+        package: 'Tode-GemStone-Server-Base'
+          with: [ spec includes: 'Topez-Server-3x-Core' ];
         package: 'Topez-Server-3x-Core'
-          with: [ spec requires: 'Topez-Server-Core' ];
+          with: [ spec requires: 'Tode-GemStone-Server-Base' ];
         package: 'Topez-Server-DebugTools'
           with: [ spec includes: 'Topez-Server-3x-DebugTools' ];
         package: 'Topez-Server-3x-DebugTools'
