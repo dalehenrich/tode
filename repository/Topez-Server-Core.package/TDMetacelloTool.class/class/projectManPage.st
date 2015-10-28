@@ -13,6 +13,7 @@ SYNOPSIS
 DESCRIPTION
 
   Commands:
+    browse   Browse project artifacts
     clone    Clone repository (github only)
     commit   Commit the Metacello project
     compare  View differences between repository versions (git only)
@@ -70,5 +71,6 @@ EXAMPLES
     at: 'push' put: self projectpushManPage;
     at: 'upgrade' put: self projectupgradeManPage;
     at: 'new' put: self projectnewManPage;
+    at: 'browse' put: self projectbrowseManPage;
     yourself.
   ^ manPage
