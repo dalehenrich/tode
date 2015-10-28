@@ -1,17 +1,20 @@
 project api
 projectCloneGitHubUser: githubUser project: githubProject cloneWithSSH: cloneWithSSH gitRootDir: gitRootDir checkout: checkout
-  | cloneUrl response gitTool gitRepoDirectory |
+  | cloneUrl response gitTool gitRepoDirectory cloneOption |
   cloneUrl := cloneWithSSH
     ifTrue: [ 'git@github.com:' ]
     ifFalse: [ 'https://github.com/' ].
   cloneUrl := cloneUrl , githubUser , '/' , githubProject , '.git'.
   gitTool := topez toolInstanceFor: 'git'.
-  response := gitTool gitcloneIn: gitRootDir with: '--no-checkout ' , cloneUrl.
+  cloneOption := ' --no-checkout '.
+  checkout ifNil: [ cloneOption := '' ].
+  response := gitTool gitcloneIn: gitRootDir with: cloneOption , cloneUrl.
   response
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'gitStatus';
         yourself).
+  checkout ifNil: [ ^ nil ].
   gitRepoDirectory := gitRootDir directoryNamed: githubProject.
   gitTool gitcheckoutIn: gitRepoDirectory with: checkout.
   [ gitTool gitsymbolicrefIn: gitRepoDirectory with: 'HEAD' ]

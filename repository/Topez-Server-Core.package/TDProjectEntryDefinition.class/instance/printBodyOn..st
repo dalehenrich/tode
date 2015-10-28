@@ -1,5 +1,12 @@
 printing
 printBodyOn: aStream
+  self comment isEmpty
+    ifFalse: [ 
+      aStream
+        space: 4;
+        nextPutAll: 'comment: ' , self comment printString , ';';
+        cr;
+        yourself ].
   aStream
     space: 4;
     nextPutAll: 'status: #( '.
@@ -25,4 +32,11 @@ printBodyOn: aStream
       aStream
         space: 4;
         nextPutAll: 'gitRootPath: ' , self gitRootPath printString , ';';
-        cr ]
+        cr ].
+  self installScript isEmpty
+    ifFalse: [ 
+      aStream
+        space: 4;
+        nextPutAll: 'installScript: ' , self installScript printString , ';';
+        cr;
+        yourself ]

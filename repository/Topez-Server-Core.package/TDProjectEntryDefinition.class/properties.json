@@ -14,7 +14,8 @@
 		"gitRootPath",
 		"gitCommit",
 		"gitRemoteName",
-		"installScript" ],
+		"installScript",
+		"comment" ],
 	"name" : "TDProjectEntryDefinition",
 	"pools" : [
 		 ],

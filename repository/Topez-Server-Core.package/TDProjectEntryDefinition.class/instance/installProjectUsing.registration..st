@@ -1,4 +1,4 @@
 actions
 installProjectUsing: aProjectTool registration: aProjectRegistration
   self installScript isEmpty
-    ifFalse: [ aProjectTool topez executeCommandString: self installScript ]
+    ifFalse: [ aProjectTool topez evaluateCommandString: self installScript ]

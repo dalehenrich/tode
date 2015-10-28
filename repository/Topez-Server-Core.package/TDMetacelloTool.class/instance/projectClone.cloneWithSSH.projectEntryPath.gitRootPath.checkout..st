@@ -1,14 +1,14 @@
 project api
-projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectEntryPath gitRootPath: gitRootPath checkout: commitishOrNil
-  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response githubUserAndProject gitRepoDirectory gitProjectName cloneUrl checkout gitRepoDir |
+projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectEntryPath gitRootPath: gitRootPath checkout: checkout
+  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response githubUserAndProject gitRepoDirectory gitProjectName cloneUrl gitRepoDir |
   gitRootDir := ServerFileDirectory on: gitRootPath.
   gitTool := topez toolInstanceFor: 'git'.
   registration canBeCloned
     ifFalse: [ 
-      [ 
       registration hasGitRepository
         ifFalse: [ self error: 'Cannot clone a repository that does not use git' ].
       gitRepoDir := registration gitRepoDirectory.
+      [ 
       gitTool gitrevparseShowTopLevelIn: gitRepoDir.	"if this command returns then a git repository is already present in gitRootDir ... which is a good thing"
       self
         inform:
