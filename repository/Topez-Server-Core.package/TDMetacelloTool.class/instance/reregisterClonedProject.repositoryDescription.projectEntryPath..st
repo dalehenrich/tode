@@ -13,5 +13,5 @@ reregisterClonedProject: registration repositoryDescription: repositoryDescripti
     toRepository: newRegistration repository.
   newRegistration
     entry: nil;
-    entryNode: registration projectPath: projectEntryPath topez: self topez.	"force creation of a /sys/stone/projects project entry with cloned information"
+    entryNode: registration projectPath: projectEntryPath topez: self topez.	"force creation of a project entry at projectEntryPath with cloned information"
   ^ newRegistration
