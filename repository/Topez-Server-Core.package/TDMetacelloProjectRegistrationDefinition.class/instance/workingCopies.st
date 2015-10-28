@@ -13,7 +13,12 @@ workingCopies
           ^ #() ].
       configWorkingCopy modified
         ifTrue: [ 
-          | configProject "use the projectSpec from the config, if the config has been modified" |
+          | configProject |
+          "use the projectSpec from the config, if the config has been modified"
+          self projectSpec projectClass
+            ifNil: [ 
+              "project has been unloaded from image"
+              ^ #() ].
           configProject := self projectSpec projectClassProject.
           version := configProject version: version versionString ].
       workingCopies := version packages collect: [ :pkg | pkg workingCopy ] ]
