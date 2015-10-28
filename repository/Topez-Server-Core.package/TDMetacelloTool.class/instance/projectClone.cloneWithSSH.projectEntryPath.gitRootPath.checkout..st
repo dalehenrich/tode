@@ -3,6 +3,10 @@ projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectE
   | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response githubUserAndProject gitRepoDirectory gitProjectName cloneUrl gitRepoDir |
   gitRootDir := ServerFileDirectory on: gitRootPath.
   gitTool := topez toolInstanceFor: 'git'.
+  registration isLocked
+    ifTrue: [ 
+      self inform: 'Registration is locked ... clone not performed'.
+      ^ self ].
   registration canBeCloned
     ifFalse: [ 
       registration hasGitRepository
