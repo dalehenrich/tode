@@ -9,7 +9,7 @@ projectcloneManPage
   project clone - Clone repository (github only)
 
 SYNOPSIS
-  project clone [--https] [--shared|--stone] [--gitRoot=<git-root-dir>] \
+  project clone [--https] [--local|--stone] [--gitRoot=<git-root-dir>] \
                 [--checkout=<branch-tag-SHA>] ( <project-name> | @<project-reference> ) 
   project clone [--https] [--gitRoot=<git-root-dir>] [--checkout=<branch-tag-SHA>]
                 --projects --github=<github-user-name>/<github-repository>
@@ -46,19 +46,19 @@ OPTIONS
 
   Project Entry Options
   ---------------------
-    --stone|--shared
+    --stone|--local
       The `--stone` option is the default. Clone the project into the
       $GS_HOME/gemstone/stones/<stone-name>/git directory and save project entry in
       /sys/stone/projects directory node.
 
-      With the `--shared` option set, save the project entry into the /sys/local/projects 
+      With the `--local` option set, save the project entry into the /sys/local/projects 
       directory node. The repository is cloned into the $GS_HOME/shared/repos directory 
       by default, but the system default can be changed on a stone by stone basis by 
       setting the `serverGitRoot` field in the stone session description.
 
     --gitRoot=<git-root-dir>
       Clone the github repository into the given <git-root-dir>, overriding the default clone 
-      location associated with the --shared or --stone option. The project entry location is
+      location associated with the --local or --stone option. The project entry location is
       not affected.
 
   GitHub Project Options
@@ -79,8 +79,8 @@ EXAMPLES
   project clone Seaside3
   project clone --https Seaside3
   project clone --gitRoot=/opt/git Seaside3
-  project clone --shared Seaside3
-  project clone --shared --checkout=gs_master Seaside3
+  project clone --local Seaside3
+  project clone --local --checkout=gs_master Seaside3
   project clone --stone Seaside3
 
   project clone --https --checkout=master --projects --github=GsDevKit/GsDevKit_seaside31

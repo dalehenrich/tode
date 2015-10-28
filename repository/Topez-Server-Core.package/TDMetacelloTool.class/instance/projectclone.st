@@ -1,7 +1,7 @@
 project
 projectclone
   "
-  project clone [--https] [--shared|--stone] [--gitRoot=<git-root-dir>] \
+  project clone [--https] [--local|--stone] [--gitRoot=<git-root-dir>] \
                 [--checkout=<branch-tag-SHA>] ( <project-name> | @<project-reference> ) 
   project clone [--https] [--gitRoot=<git-root-dir>] [--checkout=<branch-tag-SHA>]
                 --projects --github=<github-user-name>/<github-repository>
@@ -15,7 +15,7 @@ projectclone
       #('checkout' nil #'required').
       #('github' nil #'required').
       #('projects' nil #'none').
-      #('shared' nil #'none').
+      #('local' nil #'none').
       #('stone' nil #'none')}.
   subOptions
     at: 'https'
@@ -45,7 +45,7 @@ projectclone
     ifAbsent: [ 
       | projectName |
       subOptions
-        at: 'shared'
+        at: 'local'
         ifPresent: [ :ignored | 
           projectEntryPath := '/sys/local/server/projects/'.
           gitRootPath := TDProjectEntryDefinition defaultGitRootPath ]
