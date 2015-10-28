@@ -5,9 +5,11 @@ projectclone
                 [--checkout=<branch-tag-SHA>] ( <project-name> | @<project-reference> ) 
   project clone [--https] [--gitRoot=<git-root-dir>] [--checkout=<branch-tag-SHA>]
                 --projects --github=<github-user-name>/<github-repository>
+  project clone [--https] [--shared|--stone] [--gitRoot=<git-root-dir>] \
+                [--checkout=<branch-tag-SHA>] --github=<github-user-name>/<github-repository>
 "
 
-  | registration projectName cloneWithSSH projectEntryPath gitRootPath checkout |
+  | registration cloneWithSSH projectEntryPath gitRootPath checkout githubUserAndProject |
   self
     getSubcommandOptsMixedLongShort:
       {#('https' nil #'none').
@@ -28,7 +30,6 @@ projectclone
   subOptions
     at: 'project'
     ifPresent: [ 
-      | githubUserAndProject |
       subOptions
         at: 'github'
         ifPresent: [ :arg | githubUserAndProject := arg findTokens: '/' ]
@@ -44,8 +45,6 @@ projectclone
         gitRootDir: (ServerFileDirectory on: gitRootPath)
         checkout: checkout ]
     ifAbsent: [ 
-      projectName := subArguments at: 1.
-      registration := self resolveProjectRegistrationReference: projectName.
       subOptions
         at: 'shared'
         ifPresent: [ :ignored | 
@@ -56,9 +55,25 @@ projectclone
           gitRootPath := '$GS_SERVER_STONES/' , self topez serverStoneName
             , '/git' ].
       subOptions at: 'gitRoot' ifPresent: [ :dirPath | gitRootPath := dirPath ].
-      self
-        projectClone: registration
-        cloneWithSSH: cloneWithSSH
-        projectEntryPath: projectEntryPath
-        gitRootPath: gitRootPath
-        checkout: checkout ]
+      subArguments isEmpty
+        ifTrue: [ 
+          subOptions
+            at: 'github'
+            ifPresent: [ :arg | githubUserAndProject := arg findTokens: '/' ]
+            ifAbsent: [ self error: '--github option required with no <project-name> argument' ].
+          self
+            projectCloneGitHubUser: (githubUserAndProject at: 1)
+            project: (githubUserAndProject at: 2)
+            cloneWithSSH: cloneWithSSH
+            gitRootDir: (ServerFileDirectory on: gitRootPath)
+            checkout: checkout ]
+        ifFalse: [ 
+          | projectName |
+          projectName := subArguments at: 1.
+          registration := self resolveProjectRegistrationReference: projectName.
+          self
+            projectClone: registration
+            cloneWithSSH: cloneWithSSH
+            projectEntryPath: projectEntryPath
+            gitRootPath: gitRootPath
+            checkout: checkout ] ]

@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"projectSpec",
-		"isLocked",
-		"installScript",
-		"loadScript" ],
-	"name" : "TDProjectSpecEntryDefinition",
+		 ],
+	"name" : "TDExternalProjectSpecEntryDefinition",
 	"pools" : [
 		 ],
-	"super" : "TDProjectEntryDefinition",
+	"super" : "TDProjectSpecEntryDefinition",
 	"type" : "normal" }

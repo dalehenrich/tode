@@ -9,7 +9,7 @@ projectentry
           entry --url=<url-for-project-entry.ston> <project-path>
 "
 
-  | repo projectEntry projectNode projectPath loads |
+  | repo projectEntry projectNode projectPath loads node |
   self
     getSubcommandOptsMixedLongShort:
       {#('config' nil #'required').
@@ -56,6 +56,18 @@ projectentry
                 projectName: arg;
                 gitRepoDirectoryPath: repo;
                 yourself ]
-            ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ].
+            ifAbsent: [ 
+              subOptions
+                at: 'url'
+                ifPresent: [ :url | 
+                  | projectEntryNode |
+                  projectEntryNode := self projectProjectEntryFromUrl: url.
+                  node := (self topez lookup: projectPath)
+                    addChildLeafNode: projectEntryNode.
+                  node topez: self topez.
+                  ^ node dotSelfObject ]
+                ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ] ].
   projectEntry status: #(#'active').
-  ^ projectEntry createProjectEntryNode: projectPath topez: self topez
+  node := projectEntry createProjectEntryNode: projectPath topez: self topez.
+  node topez: self topez.
+  ^ node dotSelfObject
