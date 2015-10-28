@@ -7,9 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"projectSpec",
-		"isLocked",
-		"installScript",
-		"loadScript" ],
+		"isLocked" ],
 	"name" : "TDProjectSpecEntryDefinition",
 	"pools" : [
 		 ],

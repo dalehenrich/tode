@@ -13,7 +13,8 @@
 		"status",
 		"gitRootPath",
 		"gitCommit",
-		"gitRemoteName" ],
+		"gitRemoteName",
+		"installScript" ],
 	"name" : "TDProjectEntryDefinition",
 	"pools" : [
 		 ],
