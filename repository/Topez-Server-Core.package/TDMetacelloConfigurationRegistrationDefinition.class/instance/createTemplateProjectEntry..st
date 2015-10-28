@@ -1,6 +1,6 @@
 project list
 createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
-  ^ entry := TDProjectSpecEntryDefinition new
+  entry := TDProjectSpecEntryDefinition new
     configuration: self projectName
       className: self configurationClassName
       version: self currentVersionString
@@ -9,5 +9,7 @@ createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
         (self
           templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil
           projectSpec: self projectSpec);
-    locked: anOldTDRegistrationDefinitionOrNil isLocked;
-    yourself
+    yourself.
+  anOldTDRegistrationDefinitionOrNil
+    ifNotNil: [ entry locked: anOldTDRegistrationDefinitionOrNil isLocked ].
+  ^ entry

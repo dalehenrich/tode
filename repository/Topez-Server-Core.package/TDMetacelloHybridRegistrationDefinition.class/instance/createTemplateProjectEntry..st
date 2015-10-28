@@ -10,7 +10,8 @@ createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
         (self
           templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil
           projectSpec: self projectSpec);
-    locked: anOldTDRegistrationDefinitionOrNil isLocked;
     yourself.
   entry := newEntry.
+  anOldTDRegistrationDefinitionOrNil
+    ifNotNil: [ entry locked: anOldTDRegistrationDefinitionOrNil isLocked ].
   ^ entry

@@ -9,7 +9,6 @@ createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
             (self
                 templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil
                 projectSpec: baselineProjectSpec);
-        locked: anOldTDRegistrationDefinitionOrNil isLocked;
         yourself ]
     ifAbsent: [ 
       | configurationProjectSpec |
@@ -23,6 +22,7 @@ createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
             (self
               templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil
               projectSpec: configurationProjectSpec);
-        locked: anOldTDRegistrationDefinitionOrNil isLocked;
         yourself ].
+  anOldTDRegistrationDefinitionOrNil
+    ifNotNil: [ entry locked: anOldTDRegistrationDefinitionOrNil isLocked ].
   ^ entry
