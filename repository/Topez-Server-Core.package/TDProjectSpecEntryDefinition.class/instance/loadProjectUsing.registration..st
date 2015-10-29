@@ -1,6 +1,8 @@
 actions
 loadProjectUsing: aProjectTool registration: aProjectRegistration
-  | loads |
+  | loads result |
+  self preLoadScript isEmpty
+    ifFalse: [ aProjectTool topez evaluateCommandString: self preLoadScript ].
   aProjectRegistration loads
     ifNotNil: [ :loadList | loads := loadList ]
     ifNil: [ loads := {'default'} ].
@@ -9,10 +11,9 @@ loadProjectUsing: aProjectTool registration: aProjectRegistration
       entryLoads isArray
         ifTrue: [ loads := loads , entryLoads ]
         ifFalse: [ loads := loads , {entryLoads} ] ].
-  ^ aProjectTool
-    projectLoad: self projectName
-    selector: aProjectRegistration projectSelector
-    repositoryDescription: aProjectRegistration repositoryDescription
-    className: aProjectRegistration projectSpecClassName
-    loads: loads
-    version: aProjectRegistration configurationVersionString
+  result := self
+    basicLoadProjectUsing: aProjectTool
+    registration: aProjectRegistration.
+  self postLoadScript isEmpty
+    ifFalse: [ aProjectTool topez evaluateCommandString: self postLoadScript ].
+  ^ result

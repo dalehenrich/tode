@@ -7,13 +7,7 @@ printBodyOn: aStream
         nextPutAll: 'comment: ' , self comment printString , ';';
         cr;
         yourself ].
-  self installScript isEmpty
-    ifFalse: [ 
-      aStream
-        space: 4;
-        nextPutAll: 'installScript: ' , self installScript printString , ';';
-        cr;
-        yourself ].
+  self printScriptsOn: aStream.
   gitCommit
     ifNotNil: [ :path | 
       aStream

@@ -1,5 +1,5 @@
 project api
-projectLoadFromSpec: projectLoadSpec
+basicProjectLoadFromSpec: projectLoadSpec
   | metacello onBlock loadBlock |
   metacello := Metacello new.
   metacello

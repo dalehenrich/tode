@@ -126,4 +126,4 @@ projectload
     cacheRepository: cacheRepository;
     repositoryOverrides: repositoryOverrides;
     yourself.
-  ^ self projectLoadFromSpec: projectLoadSpec
+  ^ self projectLoadFromSpec: projectLoadSpec registration: registration

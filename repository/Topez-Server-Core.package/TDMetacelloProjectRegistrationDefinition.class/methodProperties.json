@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"applyVersionStringToMetacello:" : "dkh 06/19/2014 17:48",
+		"basicLoadProjectUsing:" : "dkh 10/28/2015 23:30",
 		"cloneProjectSpec" : "dkh 06/30/2014 20:59",
 		"configurationVersionString" : "dkh 05/16/2014 07:05",
 		"currentBranchName" : "dkh 05/15/2014 18:01",
@@ -26,6 +27,7 @@
 		"loadProjectUsing:" : "dkh 05/16/2014 06:45",
 		"loads" : "dkh 11/21/2014 10:25",
 		"projectClassProject" : "dkh 06/20/2014 10:08",
+		"projectLoadFromSpec:using:" : "dkh 10/28/2015 23:19",
 		"projectPackage" : "dkh 06/20/2014 07:05",
 		"projectSelector" : "dkh 05/16/2014 06:52",
 		"projectSpec" : "dkh 05/15/2014 18:04",

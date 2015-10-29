@@ -32,7 +32,7 @@ revertProjectUsing: aProjectTool registration: aProjectRegistration
     onDowngrade: #'useIncoming';
     onUpgrade: #'useIncoming';
     yourself.
-  ^ aProjectTool projectLoadFromSpec: projectLoadSpec ]
+  ^ aProjectTool basicProjectLoadFromSpec: projectLoadSpec ]
     on: MetacelloIgnorePackageLoaded , MetacelloSkipDirtyPackageLoad , Warning
     do: [ :ex | 
       | spec dirtyVersion dirtyPackage file |

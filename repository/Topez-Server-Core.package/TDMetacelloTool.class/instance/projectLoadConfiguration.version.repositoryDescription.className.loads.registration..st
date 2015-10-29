@@ -1,5 +1,5 @@
 project api
-projectLoadConfiguration: projectName version: version repositoryDescription: repositoryDescription className: className loads: loads
+projectLoadConfiguration: projectName version: version repositoryDescription: repositoryDescription className: className loads: loads registration: registration
   "required args plus reasonable defaults"
 
   | projectLoadSpec |
@@ -11,4 +11,4 @@ projectLoadConfiguration: projectName version: version repositoryDescription: re
     loads: loads;
     version: version;
     yourself.
-  ^ self projectLoadFromSpec: projectLoadSpec
+  ^ self projectLoadFromSpec: projectLoadSpec registration: registration
