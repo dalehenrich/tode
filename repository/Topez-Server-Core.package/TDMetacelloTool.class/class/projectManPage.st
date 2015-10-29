@@ -20,6 +20,7 @@ DESCRIPTION
     diff       View code differences between image and repository
     entry      Create a new project entry
     get        Download configuration or baseline for the given project
+    install    Run the installScript for the given project entry
     list       List Metacello projects
     load       (~/bin/load)
     lock       Lock project registration
@@ -78,5 +79,6 @@ EXAMPLES
     at: 'get' put: self projectgetManPage;
     at: 'unlock' put: self projectunlockManPage;
     at: 'unregister' put: self projectunregisterManPage;
+    at: 'install' put: self projectinstallManPage;
     yourself.
   ^ manPage
