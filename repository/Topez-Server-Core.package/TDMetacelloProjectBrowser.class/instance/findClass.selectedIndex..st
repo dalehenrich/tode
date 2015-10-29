@@ -5,6 +5,7 @@ findClass: listElement selectedIndex: index
   clsNamePattern := (GsTextInteraction
     prompt: 'Class Name Pattern (regex)'
     template: 'Object') signal.
+  clsNamePattern ifNil: [ ^ false ].
   block := [ browseTool findClass: clsNamePattern ].
   browseTool
     browseClassesBlock: block

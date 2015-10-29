@@ -11,7 +11,6 @@ projectbrowse
           browse --tests <project-name>
 "
 
-  | registration cloneWithSSH projectEntryPath gitRootPath checkout githubUserAndProject |
   self
     getSubcommandOptsMixedLongShort:
       {#('entry' nil #'none').
