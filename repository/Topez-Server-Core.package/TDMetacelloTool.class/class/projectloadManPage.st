@@ -22,6 +22,7 @@ SYNOPSIS
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
+               [--basic]
                ( <project-name> | @<project-reference> )
 
 DESCRIPTION
@@ -35,6 +36,7 @@ DESCRIPTION
 
 EXAMPLES
   project load Seaside3
+  project load --basic Seaside3
 
 '.
   ^ manPage

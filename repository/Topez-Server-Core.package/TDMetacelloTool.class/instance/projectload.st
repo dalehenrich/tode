@@ -14,6 +14,7 @@ projectload
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
+               [--basic]
                ( <project-name> | @<project-reference> )
 "
 
@@ -21,6 +22,7 @@ projectload
   self
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
+      #('basic' nil #'none').
       #('cacheRepository' nil #'required').
       #('className' nil #'required').
       #('configuration' nil #'none').
@@ -126,4 +128,9 @@ projectload
     cacheRepository: cacheRepository;
     repositoryOverrides: repositoryOverrides;
     yourself.
-  ^ self projectLoadFromSpec: projectLoadSpec registration: registration
+  ^ subOptions
+    at: 'basic'
+    ifPresent: [ :ignored | self basicProjectLoadFromSpec: projectLoadSpec ]
+    ifAbsent: [ 
+      "run pre/post load scripts for project entry"
+      self projectLoadFromSpec: projectLoadSpec registration: registration ]
