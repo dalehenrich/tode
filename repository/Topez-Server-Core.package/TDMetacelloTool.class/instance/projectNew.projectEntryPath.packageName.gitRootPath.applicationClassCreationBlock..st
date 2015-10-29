@@ -13,7 +13,7 @@ projectNew: projectName projectEntryPath: projectEntryPath packageName: packageN
       loads: #('default');
     status: #(#'active');
     locked: true.
-  projectEntry createProjectEntryNode: projectEntryPath topez: self topez.
+  projectEntry createProjectEntryInNode: projectEntryPath topez: self topez.
   mcTool := topez toolInstanceFor: 'mc'.
   wc := mcTool mccreate: 'BaselineOf' , projectName.
   wc modified: true.

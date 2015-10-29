@@ -8,7 +8,6 @@
 	"instvars" : [
 		"projectName",
 		"projectPath",
-		"baseProjectPath",
 		"projectNodeName",
 		"status",
 		"gitRootPath",

@@ -2,7 +2,8 @@ project list
 createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
   self registration
     baselineProjectSpecIfPresent: [ :baselineProjectSpec | 
-      entry := TDProjectSpecEntryDefinition new
+      entry := anOldTDRegistrationDefinitionOrNil entry copy.
+      entry
         baseline: self projectName
           repository: self repositoryDescription
           loads:
@@ -23,6 +24,5 @@ createTemplateProjectEntry: anOldTDRegistrationDefinitionOrNil
               templateProjectEntryLoads: anOldTDRegistrationDefinitionOrNil
               projectSpec: configurationProjectSpec);
         yourself ].
-  anOldTDRegistrationDefinitionOrNil
-    ifNotNil: [ entry locked: anOldTDRegistrationDefinitionOrNil isLocked ].
+  entry locked: self isLocked.
   ^ entry

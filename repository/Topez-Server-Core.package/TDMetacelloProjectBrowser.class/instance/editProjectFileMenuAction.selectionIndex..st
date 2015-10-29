@@ -13,6 +13,6 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowLabel:
-            entryNode printString , ' (' , entry baseProjectPath , entryNode name , ')';
+            entryNode printString , ' (' , entry projectPath , entryNode name , ')';
         yourself).
   ^ true

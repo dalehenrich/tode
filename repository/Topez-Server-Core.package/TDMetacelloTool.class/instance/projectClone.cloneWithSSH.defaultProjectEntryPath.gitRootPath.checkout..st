@@ -1,5 +1,5 @@
 project api
-projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectEntryPath gitRootPath: gitRootPath checkout: checkout
+projectClone: registration cloneWithSSH: cloneWithSSH defaultProjectEntryPath: defaultProjectEntryPath gitRootPath: gitRootPath checkout: checkout
   | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response githubUserAndProject gitRepoDirectory gitProjectName cloneUrl gitRepoDir |
   gitRootDir := ServerFileDirectory on: gitRootPath.
   gitTool := topez toolInstanceFor: 'git'.
@@ -20,7 +20,7 @@ projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectE
       self
         reregisterClonedProject: registration
         repositoryDescription: registration repositoryDescription
-        projectEntryPath: projectEntryPath.
+        defaultProjectEntryPath: defaultProjectEntryPath.
       ^ self ]
         on: Error
         do: [ :ignored | 
@@ -54,6 +54,6 @@ projectClone: registration cloneWithSSH: cloneWithSSH projectEntryPath: projectE
     reregisterClonedProject: registration
     repositoryDescription:
       'filetree://' , gitRootPath , '/' , gitProjectName , '/' , githubRepo repoPath
-    projectEntryPath: projectEntryPath.
+    defaultProjectEntryPath: defaultProjectEntryPath.
   registration isLoadedInImage
     ifTrue: [ registration versionInfo versionString: githubSha ]

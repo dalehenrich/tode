@@ -1,6 +1,6 @@
 menu actions (baseline)
 cloneProjectMenuAction: listElement selectionIndex: selectionIndex
-  | registration cloneWithSSH projectEntryPath gitRootPath |
+  | registration cloneWithSSH defaultProjectEntryPath gitRootPath |
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
@@ -10,10 +10,10 @@ cloneProjectMenuAction: listElement selectionIndex: selectionIndex
     cancel: '/sys/local') signal
     ifTrue: [ 
       gitRootPath := '$GS_HOME/gemstone/stones/' , self topez serverStoneName , '/git'.
-      projectEntryPath := '/sys/stone/projects/' ]
+      defaultProjectEntryPath := '/sys/stone/projects/' ]
     ifFalse: [ 
       gitRootPath := registration gitRootPath.
-      projectEntryPath := '/sys/local/projects/' ].
+      defaultProjectEntryPath := '/sys/local/projects/' ].
   cloneWithSSH := true.
   cloneWithSSH := (GsConfirmInteraction
     prompt:
@@ -23,7 +23,7 @@ cloneProjectMenuAction: listElement selectionIndex: selectionIndex
   projectTool
     projectClone: registration
     cloneWithSSH: cloneWithSSH
-    projectEntryPath: projectEntryPath
+    defaultProjectEntryPath: defaultProjectEntryPath
     gitRootPath: gitRootPath.
   listElement topez commitTransaction.
   ^ #'refreshView'

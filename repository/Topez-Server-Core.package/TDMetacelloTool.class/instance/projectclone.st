@@ -7,7 +7,7 @@ projectclone
                 --projects --github=<github-user-name>/<github-repository>
 "
 
-  | registration cloneWithSSH projectEntryPath gitRootPath checkout githubUserAndProject |
+  | registration cloneWithSSH defaultProjectEntryPath gitRootPath checkout githubUserAndProject |
   self
     getSubcommandOptsMixedLongShort:
       {#('https' nil #'none').
@@ -47,10 +47,10 @@ projectclone
       subOptions
         at: 'local'
         ifPresent: [ :ignored | 
-          projectEntryPath := '/sys/local/server/projects/'.
+          defaultProjectEntryPath := '/sys/local/server/projects/'.
           gitRootPath := TDProjectEntryDefinition defaultGitRootPath ]
         ifAbsent: [ 
-          projectEntryPath := '/sys/stone/projects/'.
+          defaultProjectEntryPath := '/sys/stone/projects/'.
           gitRootPath := '$GS_SERVER_STONES/' , self topez serverStoneName
             , '/git' ].
       subOptions at: 'gitRoot' ifPresent: [ :dirPath | gitRootPath := dirPath ].
@@ -63,6 +63,6 @@ projectclone
       self
         projectClone: registration
         cloneWithSSH: cloneWithSSH
-        projectEntryPath: projectEntryPath
+        defaultProjectEntryPath: defaultProjectEntryPath
         gitRootPath: gitRootPath
         checkout: checkout ]

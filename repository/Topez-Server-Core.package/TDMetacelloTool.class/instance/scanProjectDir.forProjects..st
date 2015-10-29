@@ -10,8 +10,7 @@ scanProjectDir: projectDirNode forProjects: projectBlock
           | entry |
           entry := projectNode dotSelfObject.
           entry
-            baseProjectPath: composedParentPath;
-            projectPath: projectDirNode printString;
+            projectPath: composedParentPath;
             projectNodeName: projectNode name;
             yourself.
           projectBlock value: entry ] ]

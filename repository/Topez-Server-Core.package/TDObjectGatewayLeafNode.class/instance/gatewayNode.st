@@ -3,6 +3,4 @@ gatewayNode
   ^ (self gateway
     asTDObjectNode: self parent
     topez: self parent topez
-    aspect: self aspect)
-    name: self name;
-    yourself
+    aspect: self aspect) yourself

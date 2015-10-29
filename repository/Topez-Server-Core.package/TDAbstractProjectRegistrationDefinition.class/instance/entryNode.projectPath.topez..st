@@ -4,9 +4,7 @@ entryNode: oldTDRegistrationDefinitionOrNil projectPath: projectPath topez: tope
   (entry isNil or: [ entry projectPath isNil ])
     ifTrue: [ 
       newEntry := self createTemplateProjectEntry: oldTDRegistrationDefinitionOrNil.
-      newEntry createProjectEntryNode: projectPath topez: topez.
-      newEntry
-        projectPath: projectPath;
-        projectNodeName: self projectName.
+      newEntry createProjectEntryInNode: projectPath topez: topez.
+      newEntry projectPath: projectPath.
       entry := newEntry ].
   ^ topez lookup: entry projectPath , entry projectNodeName
