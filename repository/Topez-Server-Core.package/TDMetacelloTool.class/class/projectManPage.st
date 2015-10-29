@@ -41,7 +41,6 @@ DESCRIPTION
     unlock     Unlock project registration
     unregister Unregister the project
     upgrade    Perform a post GsDevKit upgrade installation
-    workdir    Create working directory for project
 
   Use `project --help <command>` to read about a specific subcommand.
 
@@ -61,7 +60,6 @@ EXAMPLES
     at: 'validate' put: self projectvalidateManPage;
     at: 'commit' put: self projectcommitManPage;
     at: 'load' put: self projectloadManPage;
-    at: 'workdir' put: self projectworkdirManPage;
     at: 'diff' put: self projectdiffManPage;
     at: 'compare' put: self projectcompareManPage;
     at: 'log' put: self projectlogManPage;
