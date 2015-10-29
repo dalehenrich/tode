@@ -7,14 +7,13 @@ printBodyOn: aStream
         nextPutAll: 'comment: ' , self comment printString , ';';
         cr;
         yourself ].
-  aStream
-    space: 4;
-    nextPutAll: 'status: #( '.
-  self status do: [ :sym | aStream nextPutAll: sym printString , ' ' ].
-  aStream
-    nextPutAll: ');';
-    cr;
-    yourself.
+  self installScript isEmpty
+    ifFalse: [ 
+      aStream
+        space: 4;
+        nextPutAll: 'installScript: ' , self installScript printString , ';';
+        cr;
+        yourself ].
   gitCommit
     ifNotNil: [ :path | 
       aStream
@@ -33,10 +32,11 @@ printBodyOn: aStream
         space: 4;
         nextPutAll: 'gitRootPath: ' , self gitRootPath printString , ';';
         cr ].
-  self installScript isEmpty
-    ifFalse: [ 
-      aStream
-        space: 4;
-        nextPutAll: 'installScript: ' , self installScript printString , ';';
-        cr;
-        yourself ]
+  aStream
+    space: 4;
+    nextPutAll: 'status: #( '.
+  self status do: [ :sym | aStream nextPutAll: sym printString , ' ' ].
+  aStream
+    nextPutAll: ');';
+    cr;
+    yourself
