@@ -12,7 +12,7 @@ SYNOPSIS
   project clone [--https] [--local|--stone] [--gitRoot=<git-root-dir>] \
                 [--checkout=<branch-tag-SHA>] ( <project-name> | @<project-reference> ) 
   project clone [--https] [--gitRoot=<git-root-dir>] [--checkout=<branch-tag-SHA>]
-                --projects --github=<github-user-name>/<github-repository>
+                --etc --github=<github-user-name>/<github-repository>
 
 DESCRIPTION
   With no options, the github project <project-name> is cloned using an SSH url 
@@ -25,8 +25,8 @@ DESCRIPTION
   If the project was already loaded in the image (from github), the loaded packages 
   are remapped to reference exclusively the new repository.
 
-  If the --projects option is specified, then the github project specified by the 
-  --github option is cloned to $Gs_HOME/projects and no project entries are changed.
+  If the --etc option is specified, then the github project specified by the 
+  --github option is cloned to $Gs_HOME/etc and no project entries are changed.
   This set of options is provided to make it possible to clone generic github 
   projects into $GS_HOME.
 
@@ -68,8 +68,8 @@ OPTIONS
       (https://github.com/<github-user-name>/<github-repository>.git) or an ssh clone url
       (git@github.com:<github-user-name>/<github-repository>.git).
 
-    --projects
-      With the --project option, the github specified project will be cloned into $GS_HOME/projects.
+    --etc
+      With the --project option, the github specified project will be cloned into $GS_HOME/etc.
 
     --gitRoot=<git-root-dir>
       Clone the github project repository into the given <git-root-dir>, overriding the default clone 
@@ -83,6 +83,6 @@ EXAMPLES
   project clone --local --checkout=gs_master Seaside3
   project clone --stone Seaside3
 
-  project clone --https --checkout=master --projects --github=GsDevKit/GsDevKit_seaside31
+  project clone --https --checkout=master --etc --github=GsDevKit/GsDevKit_seaside31
 '.
   ^ manPage

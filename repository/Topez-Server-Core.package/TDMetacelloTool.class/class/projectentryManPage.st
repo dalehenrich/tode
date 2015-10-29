@@ -59,10 +59,10 @@ DESCRIPTION
   For HTTP project entries, you an download an existing project entry from a web-site. For
   example:
 
-    project entry --url=http://gsdevkit.github.io/GsDevKit_seaside31/Seaside3.ston \
+    project entry --url=http://gsdevkit.github.io/GsDevKit_home/Seaside31.ston \
                   /sys/stone/projects
 
-  Downloads a project entry from http://gsdevkit.github.io/GsDevKit_seaside31/Seaside3.ston
+  Downloads a project entry from http://gsdevkit.github.io/GsDevKit_home/Seaside31.ston
   into the /sys/stone/projects node.
 
   Once a project is loaded, only changes to the loads specification, locked
@@ -103,7 +103,7 @@ EXAMPLES
 
   project entry --git=projectHome --repo=$GS_HOME /sys/stone/projects
 
-  project entry --url=http://gsdevkit.github.io/GsDevKit_seaside31/Seaside3.ston \
+  project entry --url=http://gsdevkit.github.io/GsDevKit_home/Seaside31.ston \
                 /sys/stone/projects
 
 SEE ALSO

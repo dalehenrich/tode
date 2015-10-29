@@ -4,7 +4,7 @@ projectclone
   project clone [--https] [--local|--stone] [--gitRoot=<git-root-dir>] \
                 [--checkout=<branch-tag-SHA>] ( <project-name> | @<project-reference> ) 
   project clone [--https] [--gitRoot=<git-root-dir>] [--checkout=<branch-tag-SHA>]
-                --projects --github=<github-user-name>/<github-repository>
+                --etc --github=<github-user-name>/<github-repository>
 "
 
   | registration cloneWithSSH defaultProjectEntryPath gitRootPath checkout githubUserAndProject |
@@ -14,7 +14,7 @@ projectclone
       #('gitRoot' nil #'required').
       #('checkout' nil #'required').
       #('github' nil #'required').
-      #('projects' nil #'none').
+      #('etc' nil #'none').
       #('local' nil #'none').
       #('stone' nil #'none')}.
   subOptions
@@ -22,7 +22,7 @@ projectclone
     ifPresent: [ :ignored | cloneWithSSH := false ]
     ifAbsent: [ cloneWithSSH := true ].
   subOptions
-    at: 'projects'
+    at: 'etc'
     ifPresent: [ 
       subOptions
         at: 'github'
@@ -31,7 +31,7 @@ projectclone
       gitRootPath := subOptions
         at: 'gitRoot'
         ifPresent: [ :dirPath | dirPath ]
-        ifAbsent: [ '$GS_HOME/projects' ].
+        ifAbsent: [ '$GS_HOME/etc' ].
       subOptions
         at: 'checkout'
         ifPresent: [ :commitish | checkout := commitish ]
