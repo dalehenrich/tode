@@ -1,5 +1,5 @@
 tode installation
-installTode: options
+loadTode: options
 	self
 		installTodeBlock: [ :installSession | 
 			| transcriptOop transcriptOopType |

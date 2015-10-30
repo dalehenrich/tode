@@ -2,8 +2,8 @@ built-ins
 executeBuiltIn: command
 	| cmd |
 	cmd := command command.
-	^ cmd = 'installServer'
-		ifTrue: [ self executeInstallServer: command ]
+	^ cmd = 'loadServer'
+		ifTrue: [ self executeLoadServer: command ]
 		ifFalse: [ 
 			cmd = 'restoreBackup'
 				ifTrue: [ self executeRestoreBackup: command ]

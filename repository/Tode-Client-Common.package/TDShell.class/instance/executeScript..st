@@ -50,7 +50,7 @@ executeScript: command
 							^ fileNames contents ] ].
 			^ 'must specify an option or argument:
   script -h
-  script installTode
+  script loadTode
   script --list' ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
@@ -65,7 +65,8 @@ SYNOPSIS
 DESCRIPTION
   Executes scripts stored in a directory on the client. Useful for scripts involving
   installation of tODE or that may do one or more `logout` commands.
-																																					   With no options, the commands in the <script-path> file are executed. If the 
+
+  With no options, the commands in the <script-path> file are executed. If the 
   <<script-path> is a relative path, the path is appended to TDShell 
   class>>clientScriptsHome.
 
@@ -80,7 +81,7 @@ EXAMPLES
   script -h
   script --list
   script --list=/opt/git/todeHome/client/scripts
-  script installTode
-  script --edit installTode
+  script loadTode
+  script --edit loadTode
   script /opt/git/todeHome/client/scripts/installTode
 ') interact ]
