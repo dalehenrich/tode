@@ -19,7 +19,7 @@ projectinstall
         ifAbsent: [ projectPath := '/sys/stone/projects/' ].
       projectEntryNode := self projectProjectEntryFromUrl: url.
       (self topez lookup: projectPath) addChildLeafNode: projectEntryNode.
-      projectName := projectEntryNode name ]
+      projectName := projectEntryNode dotSelfObject projectName ]
     ifAbsent: [ projectName := subArguments at: 1 ].
   registration := self resolveProjectRegistrationReference: projectName.
   ^ registration installProjectUsing: self
