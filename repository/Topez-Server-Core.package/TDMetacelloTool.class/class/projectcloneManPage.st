@@ -47,7 +47,9 @@ OPTIONS
   Project Entry Options
   ---------------------
     --stone|--local
-      The `--stone` option is the default. Clone the project into the
+      The `--local` option is the default. 
+
+      With the --stone option set, clone the project into the
       $GS_HOME/gemstone/stones/<stone-name>/git directory and save project entry in
       /sys/stone/projects directory node.
 
