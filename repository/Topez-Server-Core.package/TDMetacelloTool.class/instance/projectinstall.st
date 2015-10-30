@@ -18,7 +18,7 @@ projectinstall
         at: 'stone'
         ifPresent: [ :ignored | projectPath := '/sys/stone/projects/' ]
         ifAbsent: [ 
-          "--local defalut"
+          "--local default"
           projectPath := '/sys/local/server/projects/' ].
       projectEntryNode := self projectProjectEntryFromUrl: url.
       (self topez lookup: projectPath) addChildLeafNode: projectEntryNode.

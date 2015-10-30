@@ -51,7 +51,7 @@ projectclone
           gitRootPath := '$GS_SERVER_STONES/' , self topez serverStoneName
             , '/git' ]
         ifAbsent: [ 
-          "--local ... fefault"
+          "--local ... default"
           defaultProjectEntryPath := '/sys/local/server/projects/'.
           gitRootPath := TDProjectEntryDefinition defaultGitRootPath ].
       subOptions at: 'gitRoot' ifPresent: [ :dirPath | gitRootPath := dirPath ].

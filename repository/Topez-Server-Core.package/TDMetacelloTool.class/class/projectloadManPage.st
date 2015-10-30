@@ -22,7 +22,7 @@ SYNOPSIS
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
-               [--basic]
+               [--basic] [--install] [--url [--local|--stone]]
                ( <project-name> | @<project-reference> )
 
 DESCRIPTION

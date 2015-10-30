@@ -6,23 +6,27 @@ projectload
                [--no-flush] [--no-get]
                [ (--baseline | --configuration --version=<version> ) ]
                [--repository=<repository-reference>]
-               [--onConflict=useIncoming|useLoaded]
-               [--onDowngrade=useIncoming|useLoaded]
-               [--onLock=break|honor]	
-               [--onUpgrade=useIncoming|useLoaded]
+               [--onConflict=useNew|useExisting]
+               [--onDowngrade=useNew|useExisting]
+               [--onLock=break|honor]
+               [--onUpgrade=useNew|useExisting]
                [--ignoreImage] [--silently]
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
-               [--basic]
+               [--basic] [--install] [--url [--local|--stone]]
                ( <project-name> | @<project-reference> )
 "
 
-  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption repository projectLoadSpec |
+  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption repository projectLoadSpec projectPath |
   self
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
       #('basic' nil #'none').
+      #('url' nil #'none').
+      #('install' nil #'none').
+      #('local' nil #'none').
+      #('stone' nil #'none').
       #('cacheRepository' nil #'required').
       #('className' nil #'required').
       #('configuration' nil #'none').
@@ -39,8 +43,29 @@ projectload
       #('repositoryOverrides' nil #'required').
       #('silently' nil #'none').
       #('version' nil #'required')}.
-  projectName := subArguments at: 1.
-  registration := self resolveProjectRegistrationReference: projectName.
+  ((subOptions includesKey: 'url') or: [ subOptions includesKey: 'install' ])
+    ifTrue: [ 
+      subOptions
+        at: 'url'
+        ifPresent: [ :url | 
+          | projectEntryNode projectPath |
+          subOptions
+            at: 'stone'
+            ifPresent: [ :ignored | projectPath := '/sys/stone/projects/' ]
+            ifAbsent: [ 
+              "--local default"
+              projectPath := '/sys/local/server/projects/' ].
+          projectEntryNode := self projectProjectEntryFromUrl: url.
+          (self topez lookup: projectPath) addChildLeafNode: projectEntryNode.
+          projectName := projectEntryNode dotSelfObject projectName ].
+      subOptions
+        at: 'install'
+        ifPresent: [ :ignored | projectName := subArguments at: 1 ].
+      registration := self resolveProjectRegistrationReference: projectName.
+      registration installProjectUsing: self ]
+    ifFalse: [ 
+      projectName := subArguments at: 1.
+      registration := self resolveProjectRegistrationReference: projectName ].
   subOptions
     at: 'baseline'
     ifPresent: [ projectSelector := #'baseline:' ]
@@ -110,6 +135,12 @@ projectload
     at: 'deploy'
     ifPresent: [ :arg | gsDeployerOption := arg asSymbol ]
     ifAbsent: [ gsDeployerOption := #'bulk' ].
+  subOptions
+    at: 'stone'
+    ifPresent: [ :ignored | projectPath := '/sys/stone/projects/' ]
+    ifAbsent: [ 
+      "--local default"
+      projectPath := '/sys/local/server/projects/' ].
   projectLoadSpec := TDMetacelloToolProjectLoadSpec new
     projectName: registration projectName;
     doGet: doGet;
