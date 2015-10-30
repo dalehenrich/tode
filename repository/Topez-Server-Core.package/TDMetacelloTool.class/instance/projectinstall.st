@@ -13,16 +13,15 @@ projectinstall
   subOptions
     at: 'url'
     ifPresent: [ :url | 
-      | projectEntryNode projectPath |
+      | projectEntry projectPath |
       subOptions
         at: 'stone'
         ifPresent: [ :ignored | projectPath := '/sys/stone/projects/' ]
         ifAbsent: [ 
           "--local default"
           projectPath := '/sys/local/server/projects/' ].
-      projectEntryNode := self projectProjectEntryFromUrl: url.
-      (self topez lookup: projectPath) addChildLeafNode: projectEntryNode.
-      projectName := projectEntryNode dotSelfObject projectName ]
+      projectEntry := self projectEntryObjectFromUrl: url nodePath: projectPath.
+      projectName := projectEntry projectName ]
     ifAbsent: [ projectName := subArguments at: 1 ].
   registration := self resolveProjectRegistrationReference: projectName.
   ^ registration installProjectUsing: self

@@ -59,13 +59,7 @@ projectentry
             ifAbsent: [ 
               subOptions
                 at: 'url'
-                ifPresent: [ :url | 
-                  | projectEntryNode |
-                  projectEntryNode := self projectProjectEntryFromUrl: url.
-                  node := (self topez lookup: projectPath)
-                    addChildLeafNode: projectEntryNode.
-                  node topez: self topez.
-                  ^ node dotSelfObject ]
+                ifPresent: [ :url | ^ self projectEntryObjectFromUrl: url nodePath: projectPath ]
                 ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ] ].
   projectEntry status: #(#'active').
   node := projectEntry createProjectEntryInNode: projectPath topez: self topez.
