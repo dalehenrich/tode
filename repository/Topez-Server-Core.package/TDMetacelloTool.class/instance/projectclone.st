@@ -59,7 +59,7 @@ projectclone
       subOptions
         at: 'checkout'
         ifPresent: [ :commitish | checkout := commitish ]
-        ifAbsent: [ checkout := registration gitCommit ].
+        ifAbsent: [ checkout := registration gitCheckout ].
       self
         projectClone: registration
         cloneWithSSH: cloneWithSSH

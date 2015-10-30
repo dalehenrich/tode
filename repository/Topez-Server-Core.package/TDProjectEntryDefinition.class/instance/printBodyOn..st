@@ -8,11 +8,11 @@ printBodyOn: aStream
         cr;
         yourself ].
   self printScriptsOn: aStream.
-  gitCommit
+  gitCheckout
     ifNotNil: [ :path | 
       aStream
         space: 4;
-        nextPutAll: 'gitCommit: ' , self gitCommit printString , ';';
+        nextPutAll: 'gitCheckout: ' , self gitCheckout printString , ';';
         cr ].
   gitRemoteName
     ifNotNil: [ :path | 

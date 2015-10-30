@@ -12,6 +12,7 @@
 		"status",
 		"gitRootPath",
 		"gitCommit",
+		"gitCheckout",
 		"gitRemoteName",
 		"installScript",
 		"comment" ],
