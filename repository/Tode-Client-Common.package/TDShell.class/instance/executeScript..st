@@ -65,8 +65,7 @@ SYNOPSIS
 DESCRIPTION
   Executes scripts stored in a directory on the client. Useful for scripts involving
   installation of tODE or that may do one or more `logout` commands.
-
-  With no options, the commands in the <script-path> file are executed. If the 
+																																					   With no options, the commands in the <script-path> file are executed. If the 
   <<script-path> is a relative path, the path is appended to TDShell 
   class>>clientScriptsHome.
 
@@ -83,5 +82,5 @@ EXAMPLES
   script --list=/opt/git/todeHome/client/scripts
   script loadTode
   script --edit loadTode
-  script /opt/git/todeHome/client/scripts/installTode
+  script /opt/git/todeHome/client/scripts/loadTode
 ') interact ]

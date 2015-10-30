@@ -8,24 +8,24 @@ executeLoadServer: command
       optionsAndArguments: [ :opts :args | options := opts ].
     options
       at: 'help'
-      ifAbsent: [ ^ self topezClient loadTode: options ]
+      ifAbsent: [ ^ self topezClient installTode: options ]
       ifPresent: [ :ignored | 
         ^ (TDMultiLineText new
           prompt: 'Help for ' , command command;
           template: 'NAME
-    installServer - install tODE on the server
+    loadServer - load tODE onto the server
   
   SYNOPSIS
     loadServer [-h|--help]
     loadServer  [--scriptPath=<script-directory>]
   
   DESCRIPTION
-     Load tODE into a $GEMSTONE/bin/extent0.seaside.dbf extent. The load involves the following steps:
+     Load tODE into a $GEMSTONE/bin/extent0.seaside.dbf extent. The installation involves the following steps:
       1. upgrade GLASS (file name `upgradeGLASS.ws`)
-      2. load Metacello (file name `installMetacello.ws`)
-      3. load GLASS1 (file name `installGLASS1.ws`)
-      4. load Tode (file name `installTode.ws`)
-    If tODE has already been installed, step 1 is skipped and the remaining steps are performed.
+      2. load Metacello (file name `loadMetacello.ws`)
+      3. load GLASS1 (file name `loadGLASS1.ws`)
+      4. load Tode (file name `loadTode.ws`)
+    If tODE has already been loaded, step 1 is skipped and the remaining steps are performed.
   
     For each of the steps, loadServer executes a Smalltalk script that is loaded from a file
     on disk. 

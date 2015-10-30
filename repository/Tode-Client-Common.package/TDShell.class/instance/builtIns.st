@@ -42,9 +42,9 @@ DESCRIPTION
   ----
     tODE help.
 
-  installServer
+  loadServer
   -----------
-    Install tODE on the server. See `installServer -h` for more information.
+    Load tODE onto the server. See `loadServer -h` for more information.
 
   logout
   ------
