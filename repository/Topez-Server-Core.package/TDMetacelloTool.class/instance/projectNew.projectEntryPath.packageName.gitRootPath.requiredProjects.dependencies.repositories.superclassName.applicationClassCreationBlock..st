@@ -38,4 +38,12 @@ projectNew: projectName projectEntryPath: projectEntryPath packageName: packageN
     configCommit: false
     gitCommit: true
     commitMessage: 'initial commit'.
-  registration loadProjectUsing: self
+  MetacelloProjectRegistration
+    registrationForProjectSpec: registration projectSpec
+    ifAbsent: [ :new | self error: 'New project spec unexpectedly unregistered' ]
+    ifPresent: [ :existing :new | 
+      existing
+        copyOnWrite: [ :existingCopy | 
+          existingCopy
+            loadedInImage: true;
+            merge: new ] ]	"register as a loaded project"
