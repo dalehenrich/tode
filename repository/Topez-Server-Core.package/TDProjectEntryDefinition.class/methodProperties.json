@@ -1,7 +1,9 @@
 {
 	"class" : {
 		"defaultGitRootPath" : "dkh 10/17/2015 19:45",
-		"defaultGitRootPath:" : "dkh 03/14/2015 17:13" },
+		"defaultGitRootPath:" : "dkh 03/14/2015 17:13",
+		"sys_local_server_projects" : "dkh 10/31/2015 09:07",
+		"sys_stone_projects" : "dkh 10/31/2015 09:07" },
 	"instance" : {
 		"comment" : "dkh 10/27/2015 20:51",
 		"comment:" : "dkh 10/27/2015 20:50",

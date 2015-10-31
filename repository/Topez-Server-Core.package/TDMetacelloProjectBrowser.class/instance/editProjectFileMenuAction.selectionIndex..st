@@ -6,7 +6,7 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
   registration := self projects at: selectionIndex.
   entryNode := registration
     entryNode: nil
-    projectPath: '/sys/stone/projects/'
+    projectPath: TDProjectEntryDefinition sys_stone_projects
     topez: topez.
   entry := registration entry.
   entryNode

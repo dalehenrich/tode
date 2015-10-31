@@ -47,12 +47,13 @@ projectclone
       subOptions
         at: 'stone'
         ifPresent: [ :ignored | 
-          defaultProjectEntryPath := '/sys/stone/projects/'.
+          defaultProjectEntryPath := TDProjectEntryDefinition sys_stone_projects.
           gitRootPath := '$GS_SERVER_STONES/' , self topez serverStoneName
             , '/git' ]
         ifAbsent: [ 
           "--local ... default"
-          defaultProjectEntryPath := '/sys/local/server/projects/'.
+          defaultProjectEntryPath := TDProjectEntryDefinition
+            sys_local_server_projects.
           gitRootPath := TDProjectEntryDefinition defaultGitRootPath ].
       subOptions at: 'gitRoot' ifPresent: [ :dirPath | gitRootPath := dirPath ].
       projectName := subArguments at: 1.

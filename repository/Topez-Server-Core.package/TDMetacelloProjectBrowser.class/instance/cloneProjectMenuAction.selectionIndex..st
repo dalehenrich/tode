@@ -10,7 +10,7 @@ cloneProjectMenuAction: listElement selectionIndex: selectionIndex
     cancel: '/sys/local') signal
     ifTrue: [ 
       gitRootPath := '$GS_HOME/gemstone/stones/' , self topez serverStoneName , '/git'.
-      defaultProjectEntryPath := '/sys/stone/projects/' ]
+      defaultProjectEntryPath := TDProjectEntryDefinition sys_stone_projects ]
     ifFalse: [ 
       gitRootPath := registration gitRootPath.
       defaultProjectEntryPath := '/sys/local/projects/' ].

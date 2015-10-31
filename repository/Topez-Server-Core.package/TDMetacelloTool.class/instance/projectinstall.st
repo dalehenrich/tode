@@ -16,10 +16,10 @@ projectinstall
       | projectEntry projectPath |
       subOptions
         at: 'stone'
-        ifPresent: [ :ignored | projectPath := '/sys/stone/projects/' ]
+        ifPresent: [ :ignored | projectPath := TDProjectEntryDefinition sys_stone_projects ]
         ifAbsent: [ 
           "--local default"
-          projectPath := '/sys/local/server/projects/' ].
+          projectPath := TDProjectEntryDefinition sys_local_server_projects ].
       projectEntry := self projectEntryObjectFromUrl: url nodePath: projectPath.
       projectName := projectEntry projectName ]
     ifAbsent: [ projectName := subArguments at: 1 ].
