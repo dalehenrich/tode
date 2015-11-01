@@ -16,10 +16,10 @@ projectnew
   subOptions
     at: 'stone'
     ifPresent: [ :ignored | 
-      projectEntryPath := TDMetacelloTool sys_stone_projects.
+      projectEntryPath := TDProjectEntryDefinition sys_stone_projects.
       gitRootPath := '$GS_SERVER_STONES/' , self topez serverStoneName , '/git' ]
     ifAbsent: [ 
-      projectEntryPath := TDMetacelloTool sys_local_server_projects.
+      projectEntryPath := TDProjectEntryDefinition sys_local_server_projects.
       gitRootPath := TDProjectEntryDefinition defaultGitRootPath ].
   subOptions at: 'gitRoot' ifPresent: [ :dirPath | gitRootPath := dirPath ].
   subOptions
