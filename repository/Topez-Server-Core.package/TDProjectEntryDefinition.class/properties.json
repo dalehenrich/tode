@@ -11,11 +11,11 @@
 		"projectNodeName",
 		"status",
 		"gitRootPath",
-		"gitCommit",
 		"gitCheckout",
 		"gitRemoteName",
 		"installScript",
-		"comment" ],
+		"comment",
+		"projectUrl" ],
 	"name" : "TDProjectEntryDefinition",
 	"pools" : [
 		 ],
