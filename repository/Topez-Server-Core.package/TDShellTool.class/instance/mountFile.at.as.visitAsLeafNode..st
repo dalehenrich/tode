@@ -1,7 +1,7 @@
 mount
 mountFile: filePath at: objectPath as: nodeName visitAsLeafNode: visitAsLeafNode
   | gatewayNode root |
-  gatewayNode := TDObjectGatewayNode new
+  gatewayNode := TDObjectGatewayLeafNode new
     name: nodeName;
     contents:
         '|  filename parentDir |

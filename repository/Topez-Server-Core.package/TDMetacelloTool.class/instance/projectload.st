@@ -6,21 +6,27 @@ projectload
                [--no-flush] [--no-get]
                [ (--baseline | --configuration --version=<version> ) ]
                [--repository=<repository-reference>]
-               [--onConflict=useIncoming|useLoaded]
-               [--onDowngrade=useIncoming|useLoaded]
-               [--onLock=break|honor]	
-               [--onUpgrade=useIncoming|useLoaded]
+               [--onConflict=useNew|useExisting]
+               [--onDowngrade=useNew|useExisting]
+               [--onLock=break|honor]
+               [--onUpgrade=useNew|useExisting]
                [--ignoreImage] [--silently]
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
+               [--basic] [--install] [--url [--local|--stone]]
                ( <project-name> | @<project-reference> )
 "
 
-  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption repository projectLoadSpec |
+  | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption repository projectLoadSpec projectPath |
   self
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
+      #('basic' nil #'none').
+      #('url' nil #'none').
+      #('install' nil #'none').
+      #('local' nil #'none').
+      #('stone' nil #'none').
       #('cacheRepository' nil #'required').
       #('className' nil #'required').
       #('configuration' nil #'none').
@@ -37,8 +43,30 @@ projectload
       #('repositoryOverrides' nil #'required').
       #('silently' nil #'none').
       #('version' nil #'required')}.
-  projectName := subArguments at: 1.
-  registration := self resolveProjectRegistrationReference: projectName.
+  ((subOptions includesKey: 'url') or: [ subOptions includesKey: 'install' ])
+    ifTrue: [ 
+      subOptions
+        at: 'url'
+        ifPresent: [ :url | 
+          | projectEntry projectPath |
+          subOptions
+            at: 'stone'
+            ifPresent: [ :ignored | projectPath := TDProjectEntryDefinition sys_stone_projects ]
+            ifAbsent: [ 
+              "--local default"
+              projectPath := TDProjectEntryDefinition sys_local_server_projects ].
+          projectEntry := self
+            projectEntryObjectFromUrl: url
+            nodePath: projectPath.
+          projectName := projectEntry projectName ].
+      subOptions
+        at: 'install'
+        ifPresent: [ :ignored | projectName := subArguments at: 1 ].
+      registration := self resolveProjectRegistrationReference: projectName.
+      registration installProjectUsing: self ]
+    ifFalse: [ 
+      projectName := subArguments at: 1.
+      registration := self resolveProjectRegistrationReference: projectName ].
   subOptions
     at: 'baseline'
     ifPresent: [ projectSelector := #'baseline:' ]
@@ -108,6 +136,12 @@ projectload
     at: 'deploy'
     ifPresent: [ :arg | gsDeployerOption := arg asSymbol ]
     ifAbsent: [ gsDeployerOption := #'bulk' ].
+  subOptions
+    at: 'stone'
+    ifPresent: [ :ignored | projectPath := TDProjectEntryDefinition sys_stone_projects ]
+    ifAbsent: [ 
+      "--local default"
+      projectPath := TDProjectEntryDefinition sys_local_server_projects ].
   projectLoadSpec := TDMetacelloToolProjectLoadSpec new
     projectName: registration projectName;
     doGet: doGet;
@@ -126,4 +160,9 @@ projectload
     cacheRepository: cacheRepository;
     repositoryOverrides: repositoryOverrides;
     yourself.
-  ^ self projectLoadFromSpec: projectLoadSpec
+  ^ subOptions
+    at: 'basic'
+    ifPresent: [ :ignored | self basicProjectLoadFromSpec: projectLoadSpec ]
+    ifAbsent: [ 
+      "run pre/post load scripts for project entry"
+      self projectLoadFromSpec: projectLoadSpec registration: registration ]

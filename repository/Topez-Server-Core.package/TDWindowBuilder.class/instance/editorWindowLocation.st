@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 editorWindowLocation
   theWindowLocation ifNil: [ ^ self defaultEditorWindowLocation ].
   ^ theWindowLocation

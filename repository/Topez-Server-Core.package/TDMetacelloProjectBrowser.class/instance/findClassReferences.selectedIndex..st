@@ -5,6 +5,7 @@ findClassReferences: listElement selectedIndex: index
   clsNamePattern := (GsTextInteraction
     prompt: 'Class Name Pattern (regex):'
     template: 'Object') signal.
+  clsNamePattern ifNil: [ ^ false ].
   list := browseTool findClass: clsNamePattern.
   classNames := list collect: [ :cls | cls className asString ].
   className := (GsChoiceInteraction

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 baseClassDefinitionList
   | classDefs |
   classMap := Dictionary new.

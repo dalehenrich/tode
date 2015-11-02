@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 editorWindowName
   theWindowName ifNil: [ ^ self defaultEditorWindowName ].
   ^ theWindowName

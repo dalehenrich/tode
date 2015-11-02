@@ -16,10 +16,10 @@ projectnew
   subOptions
     at: 'stone'
     ifPresent: [ :ignored | 
-      projectEntryPath := '/sys/stone/projects/'.
+      projectEntryPath := TDProjectEntryDefinition sys_stone_projects.
       gitRootPath := '$GS_SERVER_STONES/' , self topez serverStoneName , '/git' ]
     ifAbsent: [ 
-      projectEntryPath := '/sys/local/server/projects/'.
+      projectEntryPath := TDProjectEntryDefinition sys_local_server_projects.
       gitRootPath := TDProjectEntryDefinition defaultGitRootPath ].
   subOptions at: 'gitRoot' ifPresent: [ :dirPath | gitRootPath := dirPath ].
   subOptions
@@ -33,16 +33,10 @@ projectnew
       clsTool := topez toolInstanceFor: 'cls'.
       [ :superClassName :className :pName | 
       | template |
-      template := superClassName , ' subclass: ' , className printString
-        ,
-          '
-	instVarNames: #()
-	classVars: #()
-	classInstVars: #()
-	poolDictionaries: #()
-	inDictionary: ''''
-	category: '
-        , pName printString.
+      template := self class
+        newClassTemplateFor: superClassName
+        subclass: className
+        category: pName.
       clsTool clsInteractiveCreateSubclassWithTemplate: template ] ]
     ifAbsent: [ [ :superClassName :className :pName |  ] ].
   ^ self

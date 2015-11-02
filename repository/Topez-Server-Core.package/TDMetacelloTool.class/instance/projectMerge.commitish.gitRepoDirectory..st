@@ -23,7 +23,7 @@ projectMerge: registration commitish: commitish gitRepoDirectory: gitRepoDirecto
     template: commitTemplate) signal.
   commitMessage ifNil: [ commitMessage := '' ].
   self gitCommit: registration commitMessage: commitMessage.
-  registration loadProjectUsing: self ].
+  registration basicLoadProjectUsing: self ].
   mergeSucceeded := (gitTool gitlsfiles: gitRepoDirectory) isEmpty.
   mergeSucceeded
     ifTrue: [ doMergeBlock value ]

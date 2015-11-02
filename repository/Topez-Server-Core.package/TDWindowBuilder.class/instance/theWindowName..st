@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 theWindowName: aWindowName
   theWindowName := aWindowName

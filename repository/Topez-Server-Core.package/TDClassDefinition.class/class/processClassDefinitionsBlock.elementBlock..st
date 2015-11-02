@@ -11,7 +11,7 @@ processClassDefinitionsBlock: classDefinitionsBlock elementBlock: elementBlock
       i := 1.
       [ result isNil and: [ i <= max ] ]
         whileTrue: [ 
-          (chain1 at: i) = (chain2 at: i)
+          (chain1 at: i) label = (chain2 at: i) label
             ifTrue: [ i := i + 1 ]
             ifFalse: [ result := (chain1 at: i) label < (chain2 at: i) label ] ].
       result isNil

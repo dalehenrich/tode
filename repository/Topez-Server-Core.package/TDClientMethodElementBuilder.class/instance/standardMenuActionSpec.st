@@ -1,4 +1,4 @@
-menu action specs
+(as yet unclassified)
 standardMenuActionSpec
   "label, shortcut character, actionSymbol"
 
@@ -9,5 +9,6 @@ standardMenuActionSpec
     , {{('Browse' -> self searchMenuActionSpec)}} , {#('-')}
     , self editMenuActionSpec , {#('-')}
     , {{('Text' -> self textMenuActionSpec)}} , {#('-')}
+    , {{('Object' -> self objectMenuActionSpec)}} , {#('-')}
     , {{('Window' -> self windowMenuActionSpec)}} , {#('-')}
     , self saveMenuActionSpec

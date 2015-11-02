@@ -15,12 +15,13 @@ printInstanceCreationOn: aStream
         nextPutAll: 'version: ' , self projectSpec versionString printString;
         cr;
         yourself ].
-  aStream
-    space: 6;
-    nextPutAll:
-        'repository: ' , self projectSpec repositoryDescriptions first printString;
-    cr;
-    yourself.
+  self repositorySpec
+    ifNotNil: [ 
+      aStream
+        space: 6;
+        nextPutAll: 'repository: ' , self repositoryDescription printString;
+        cr;
+        yourself ].
   self projectSpec loads
     ifNil: [ 
       aStream

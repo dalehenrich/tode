@@ -1,6 +1,8 @@
 as yet unclassified
 gatewayNode
-  ^ self gateway
+  ^ (self gateway
     asTDObjectNode: self parent
     topez: self parent topez
-    aspect: self aspect
+    aspect: self aspect)
+    name: self name;
+    yourself

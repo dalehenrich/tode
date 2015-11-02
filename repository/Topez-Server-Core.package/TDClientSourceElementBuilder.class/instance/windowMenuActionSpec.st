@@ -9,4 +9,4 @@ windowMenuActionSpec
   #('list windows' $L #'listWindowsMenuAction:').
   #('refresh window' $l #'refreshListMenuAction:').
   #('-').
-  #('open workspace' 'esc' #'openWorkspaceMenuAction:selectionIndex:')}
+  #('go to console' $G #'goToTodeShellConsole:')}

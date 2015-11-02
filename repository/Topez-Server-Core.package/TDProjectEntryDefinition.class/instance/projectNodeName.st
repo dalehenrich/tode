@@ -1,4 +1,4 @@
 accessing
 projectNodeName
-  projectNodeName ifNil: [ ^ 'project' ].
+  projectNodeName ifNil: [ ^ self projectName ].
   ^ projectNodeName

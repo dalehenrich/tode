@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 theWindowLocation: aWindowLocation
   theWindowLocation := aWindowLocation

@@ -9,9 +9,8 @@ projectnewManPage
   project new - Create a new project: BaselineOf, package, git repository
 
 SYNOPSIS
-  project new [--stone | --gitRoot=<git-root-dir>] \
+  project new [--stone | --local | --gitRoot=<git-root-dir>] \
               [--package=<package-name>] [--class] <project-name>
-
 DESCRIPTION
   With no options, creates a new project entry; a `BaselineOf<project-name>` 
   class in a package of the same name; a package named `<project-name>-Core`; 

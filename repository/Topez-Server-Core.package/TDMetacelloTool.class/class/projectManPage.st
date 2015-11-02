@@ -13,30 +13,34 @@ SYNOPSIS
 DESCRIPTION
 
   Commands:
-    clone    Clone repository (github only)
-    commit   Commit the Metacello project
-    compare  View differences between repository versions (git only)
-    diff     View code differences between image and repository
-    entry    Create a new project entry
-    list     List Metacello projects
-    load     (~/bin/load)
-    lock     Lock project registration
-    log      Browse commit log for the Metacello project (git only)
-    merge    (git only?)
-    new      Create a new project: BaselineOf, package, git repository
-    prime    Prime the project registry
-    pull     Execute a `git pull` for the project repository (github only)
-    push     Execute a `git push` for the project repository (git only)
-    registry Inspect the project registry
-    rehome   Point package repository groups for project to new repository
-    refresh  Refresh project entries in project list
-    revert   (see revert in project tool ... just dirty or reload ALL as options)
+    browse     Browse project artifacts
+    clone      Clone repository (github only)
+    commit     Commit the Metacello project
+    compare    View differences between repository versions (git only)
+    diff       View code differences between image and repository
+    entry      Create a new project entry
+    get        Download configuration or baseline for the given project
+    install    Run the installScript for the given project entry
+    list       List Metacello projects
+    load       (~/bin/load)
+    lock       Lock project registration
+    log        Browse commit log for the Metacello project (git only)
+    merge      (git only?)
+    new        Create a new project: BaselineOf, package, git repository
+    prime      Prime the project registry
+    pull       Execute a `git pull` for the project repository (github only)
+    push       Execute a `git push` for the project repository (git only)
+    registry   Inspect the project registry
+    rehome     Point package repository groups for project to new repository
+    refresh    Refresh project entries in project list
+    revert     (see revert in project tool ... just dirty or reload ALL as options)
     status
-    summary  View report of changed packages and methods
+    summary    View report of changed packages and methods
     test
-    validate Validate the project registrations
-    upgrade  Perform a post GsDevKit upgrade installation
-    workdir  Create working directory for project
+    validate   Validate the project registrations
+    unlock     Unlock project registration
+    unregister Unregister the project
+    upgrade    Perform a post GsDevKit upgrade installation
 
   Use `project --help <command>` to read about a specific subcommand.
 
@@ -56,7 +60,6 @@ EXAMPLES
     at: 'validate' put: self projectvalidateManPage;
     at: 'commit' put: self projectcommitManPage;
     at: 'load' put: self projectloadManPage;
-    at: 'workdir' put: self projectworkdirManPage;
     at: 'diff' put: self projectdiffManPage;
     at: 'compare' put: self projectcompareManPage;
     at: 'log' put: self projectlogManPage;
@@ -70,5 +73,10 @@ EXAMPLES
     at: 'push' put: self projectpushManPage;
     at: 'upgrade' put: self projectupgradeManPage;
     at: 'new' put: self projectnewManPage;
+    at: 'browse' put: self projectbrowseManPage;
+    at: 'get' put: self projectgetManPage;
+    at: 'unlock' put: self projectunlockManPage;
+    at: 'unregister' put: self projectunregisterManPage;
+    at: 'install' put: self projectinstallManPage;
     yourself.
   ^ manPage

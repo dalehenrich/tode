@@ -25,5 +25,9 @@ testLoginNetLDIServiceNotFound: ex
 		tab;
 		nextPutAll: 'from this machine.';
 		cr;
+		cr;
+		tab;
+		nextPutAll: 'NOTE: netldi log can be found in the file: ''$GS_HOME/server/stones/', description stoneName, '/logs/netldi.log''.';
+		cr;
 		yourself.
 	^ stream contents

@@ -9,4 +9,4 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
     loads: loads;
     version: version;
     yourself.
-  ^ self projectLoadFromSpec: projectLoadSpec
+  ^ self basicProjectLoadFromSpec: projectLoadSpec

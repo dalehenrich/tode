@@ -2,9 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"concreteDiffProject:registration:" : "dkh 05/30/2014 08:11",
-		"concreteSaveProject:registration:commitMessage:" : "dkh 05/15/2014 18:51",
 		"createProjectListRegistration" : "dkh 05/15/2014 18:15",
+		"diffProject:registration:" : "dkh 10/25/2015 14:12",
 		"gitRepoDirectoryPath" : "dkh 05/15/2014 17:28",
 		"gitRepoDirectoryPath:" : "dkh 05/15/2014 17:28",
-		"printBodyOn:" : "dkh 07/25/2014 20:53" } }
+		"printBodyOn:" : "dkh 07/25/2014 20:53",
+		"saveProject:registration:commitMessage:" : "dkh 10/25/2015 14:13" } }

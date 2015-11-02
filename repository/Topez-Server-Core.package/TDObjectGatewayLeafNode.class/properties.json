@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDObjectGatewayLeafNode",
+	"pools" : [
+		 ],
+	"super" : "TDObjectGatewayNode",
+	"type" : "normal" }

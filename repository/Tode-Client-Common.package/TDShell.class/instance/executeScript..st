@@ -50,7 +50,7 @@ executeScript: command
 							^ fileNames contents ] ].
 			^ 'must specify an option or argument:
   script -h
-  script installTode
+  script loadTode
   script --list' ]
 		ifPresent: [ :ignored | 
 			^ (TDMultiLineText new
@@ -80,7 +80,7 @@ EXAMPLES
   script -h
   script --list
   script --list=/opt/git/todeHome/client/scripts
-  script installTode
-  script --edit installTode
-  script /opt/git/todeHome/client/scripts/installTode
+  script loadTode
+  script --edit loadTode
+  script /opt/git/todeHome/client/scripts/loadTode
 ') interact ]

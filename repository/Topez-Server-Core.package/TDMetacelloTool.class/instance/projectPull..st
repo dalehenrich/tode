@@ -1,3 +1,3 @@
 project
 projectPull: registration
-  ^ self projectPull: registration remoteName: 'origin'
+  ^ self projectPull: registration remoteName: registration gitRemoteName
