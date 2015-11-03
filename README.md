@@ -3,8 +3,8 @@
 
 ## Installation and Setup
 
-See the [gsDevKitHome project](https://github.com/GsDevKit/gsDevKitHome#open-source-development-kit-for-gemstones-64-bit-)
-for tODE installation instructions.
+See the [GsDevKit_home project](https://github.com/GsDevKit/GsDevKit_home#open-source-development-kit-for-gemstones-64-bit-)
+for tODE and [GemStone/S 64](https://gemtalksystems.com/products/gs64/) installation instructions.
 
 ### Additional Information
 
