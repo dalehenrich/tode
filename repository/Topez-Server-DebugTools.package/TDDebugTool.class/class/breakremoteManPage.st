@@ -3,6 +3,7 @@ breakremoteManPage
   | manPage |
   manPage := TDManPage
     commandName: 'remote'
+    sourceMethod: self name asString , '>>breakremote'
     fromString:
       'NAME
   break remote - Enable/disable remote breakpoints

@@ -8,10 +8,12 @@
 		"toolReadMe" : "dkh 08/14/2013 16:32" },
 	"instance" : {
 		"beditClass:isMeta:regex:replacementString:" : "dkh 08/15/2013 08:38",
-		"beditDefinitions:regex:replacementString:" : "dkh 08/15/2013 07:25",
+		"beditDefinitions:regex:replacementString:" : "dkh 10/22/2015 19:38",
+		"beditDefinitions:regex:replacementString:windowLabel:" : "dkh 10/22/2015 19:38",
 		"beditList:regex:replacementString:" : "dkh 08/15/2013 11:26",
 		"beditMethod:regex:replacementString:" : "dkh 08/15/2013 11:29",
 		"beditReferences:regex:replacementString:" : "dkh 07/08/2014 10:02",
+		"beditReferences:regex:replacementString:windowLabel:" : "dkh 10/22/2015 19:39",
 		"beditRegexMethod:regex:replacementString:" : "dkh 08/15/2013 11:30",
 		"beditRegexSender:regex:replacementString:" : "dkh 08/15/2013 11:32",
 		"beditSender:regex:replacementString:" : "dkh 08/15/2013 11:36",

@@ -10,4 +10,4 @@ windowMenuActionSpec
   #('print window' $P #'printClientListMenuAction:selectionIndex:').
   #('refresh window' $l #'refreshListMenuAction:selectionIndex:').
   #('-').
-  #('open workspace' 'esc' #'openWorkspaceMenuAction:selectionIndex:')}
+  #('go to console' $G #'goToTodeShellConsole:')}

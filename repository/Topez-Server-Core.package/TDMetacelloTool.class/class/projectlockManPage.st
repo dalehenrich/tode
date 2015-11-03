@@ -3,6 +3,7 @@ projectlockManPage
   | manPage |
   manPage := TDManPage
     commandName: 'lock'
+    sourceMethod: self name asString , '>>projectlock'
     fromString:
       'NAME
   project lock - Lock project registration

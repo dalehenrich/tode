@@ -5,6 +5,7 @@ projectrefreshManPage
   | manPage |
   manPage := TDManPage
     commandName: 'refresh'
+    sourceMethod: self name asString , '>>projectrefresh'
     fromString:
       'NAME
   project refresh - Refresh project entries in project list

@@ -12,7 +12,7 @@ batchEditMethodsMenuAction: listElement selectionIndex: selectionIndex
     prompt:
       'Enter string to be used to (conditionally) replace matches for: ' , regex
     template: '') signal.
-  regex isNil
+  replacementString isNil
     ifTrue: [ ^ false ].
   tool
     beditDefinitions: self definitions

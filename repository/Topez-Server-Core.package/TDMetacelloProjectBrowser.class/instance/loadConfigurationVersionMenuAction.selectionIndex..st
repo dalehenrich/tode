@@ -29,6 +29,7 @@ loadConfigurationVersionMenuAction: listElement selectionIndex: selectionIndex
     version: selectedVersion versionString
     repositoryDescription: registration repositoryDescription
     className: projectClassName
-    loads: selectedVersion defaultPackageNamesToLoad.
+    loads: selectedVersion defaultPackageNamesToLoad
+    registration: registration.
   listElement topez commitTransaction.
   ^ #'refreshView'

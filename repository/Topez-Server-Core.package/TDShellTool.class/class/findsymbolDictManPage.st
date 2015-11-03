@@ -3,6 +3,7 @@ findsymbolDictManPage
   | manPage |
   manPage := TDManPage
     commandName: 'symbolDict'
+    sourceMethod: self name asString , '>>findsymbolDict'
     fromString:
       'NAME
   find symbolDict - Find list of class definitions in a symbol dictionary

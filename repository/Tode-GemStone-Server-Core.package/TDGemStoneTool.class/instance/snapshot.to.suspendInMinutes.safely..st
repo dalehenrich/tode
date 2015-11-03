@@ -2,6 +2,8 @@ bu
 snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes safely: safely
   | snapshots |
   [ 
+  System commitTransaction
+    ifFalse: [ self error: 'Commit conflicts: snapshot not taken' ].
   self checkpointsSuspended
     ifTrue: [ self error: 'Checkpoints currently suspended. Please wait and try again.' ].
   System startCheckpointSync
@@ -9,7 +11,11 @@ snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes 
       self
         error:
           'Could not start a checkpoint, See comment in System class>>startCheckpointSync for possible reasons for failure.' ].
-  System suspendCheckpointsForMinutes: suspendInMinutes.
+  (System suspendCheckpointsForMinutes: suspendInMinutes)
+    ifFalse: [ 
+      self
+        error:
+          'Could not suspend checkpoints, See comment in System class>>suspendCheckpointsForMinutes: for possible reasons for failure.' ].
   snapshots := {}.
   SystemRepository fileNames
     do: [ :extentPath | 

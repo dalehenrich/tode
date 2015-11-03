@@ -6,15 +6,18 @@ projectentry
           entry --config=<project-name> [--version=<project-version>] \
                 --repo=<project-repo> [--loads=<load-expression>] <project-path>
           entry --git=<project-name> [--repo=<git-repo-path>] <project-path>
+          entry --url=<url-for-project-entry.ston> <project-path>
 "
 
-  | repo projectEntry projectNode projectPath loads |
+  | repo projectEntry projectNode projectPath loads node |
   self
     getSubcommandOptsMixedLongShort:
       {#('config' nil #'required').
       #('loads' nil #'required').
+      #('git' nil #'required').
       #('version' nil #'required').
       #('repo' nil #'required').
+      #('url' nil #'required').
       #('baseline' nil #'required')}.
   projectPath := subArguments at: 1.
   subOptions at: 'repo' ifPresent: [ :arg | repo := arg ].
@@ -48,8 +51,17 @@ projectentry
           subOptions
             at: 'git'
             ifPresent: [ :arg | 
-              projectEntry := TDGitRepositoryEntryDefinition new.
-              projectEntry projectName: arg ]
-            ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ].
+              repo ifNil: [ self error: '--repo required' ].
+              projectEntry := TDGitRepositoryEntryDefinition new
+                projectName: arg;
+                gitRepoDirectoryPath: repo;
+                yourself ]
+            ifAbsent: [ 
+              subOptions
+                at: 'url'
+                ifPresent: [ :url | ^ self projectEntryObjectFromUrl: url nodePath: projectPath ]
+                ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ] ].
   projectEntry status: #(#'active').
-  ^ projectEntry createProjectEntryNode: projectPath topez: self topez
+  node := projectEntry createProjectEntryInNode: projectPath topez: self topez.
+  node topez: self topez.
+  ^ node dotSelfObject

@@ -28,6 +28,6 @@ testLoginExternalModuleNotFound
 		nextPutAll: 'It may be necessary to download a copy of ' , gciLibraryName printString , ' for';
 		cr;
 		tab;
-		nextPutAll: platformName , ' from http://ftp.gemtalksystems.com/pub/GemStone64/' , gemstoneVersion , '.';
+		nextPutAll: platformName , '. Use `$GS_HOME/bin/downloadGemStone ' , gemstoneVersion , '`.';
 		yourself.
 	^ stream contents

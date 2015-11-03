@@ -6,7 +6,6 @@
 	"instance" : {
 		"baselineClassName" : "dkh 06/20/2014 10:17",
 		"classDefinitions" : "dkh 06/22/2014 11:42",
-		"commitMessageUsing:" : "dkh 05/15/2014 17:41",
 		"configurationClassName" : "dkh 06/20/2014 10:17",
 		"configurationProjectSpec" : "dkh 05/16/2014 07:28",
 		"configurationVersionString" : "dkh 05/16/2014 07:04",
@@ -14,7 +13,7 @@
 		"currentVersionString" : "dkh 08/10/2014 16:37",
 		"diffProjectUsing:" : "dkh 05/15/2014 17:41",
 		"emphasis" : "dkh 05/20/2014 18:49",
-		"entry" : "dkh 05/19/2014 11:52",
+		"entry" : "dkh 10/27/2015 18:04",
 		"hasVersionSkew" : "dkh 05/15/2014 06:34",
 		"isDirty" : "dkh 05/30/2014 07:30",
 		"isLoadedInImage" : "dkh 05/20/2014 18:47",
@@ -25,7 +24,7 @@
 		"registration:" : "dkh 05/08/2014 14:52",
 		"revertProjectUsing:" : "dkh 05/15/2014 17:41",
 		"saveProjectUsing:commitMessage:" : "dkh 05/15/2014 17:41",
-		"unregister" : "dkh 02/18/2015 13:32",
+		"unregister" : "dkh 10/29/2015 10:06",
 		"updateRegistrationVersionInfo:" : "dkh 05/15/2014 21:08",
 		"versionInfo" : "dkh 05/14/2014 21:14",
 		"versionString" : "dkh 08/10/2014 16:46" } }

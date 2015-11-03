@@ -10,6 +10,8 @@ testBuSnapshotCommand
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' snapshot test.dbf';
     evaluateCommandString:
+        'bu --dir=' , backupDirectoryPath , ' snapshot --commit test.dbf';
+    evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' snapshot --safely test.dbf';
     evaluateCommandString:
         'bu --dir=' , backupDirectoryPath , ' snapshot --suspend=30 test.dbf';

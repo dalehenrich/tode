@@ -3,6 +3,7 @@ browsesenderManPage
   | manPage |
   manPage := TDManPage
     commandName: 'sender'
+    sourceMethod: self name asString , '>>browsesender'
     fromString:
       'NAME
   browse sender - Find and view lists of methods sending particular messages

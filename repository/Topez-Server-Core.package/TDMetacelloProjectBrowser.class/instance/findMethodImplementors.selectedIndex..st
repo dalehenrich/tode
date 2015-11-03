@@ -5,6 +5,7 @@ findMethodImplementors: listElement selectedIndex: index
   methodPattern := (GsTextInteraction
     prompt: 'Method Name Fragment:'
     template: '') signal.
+  methodPattern ifNil: [ ^ false ].
   matches := browseTool findMethodNamesMatching: methodPattern.
   selectors := (matches
     asSortedCollection: [ :match1 :match2 | match1 moreRelevantThan: match2 ])

@@ -26,7 +26,8 @@
 		"adornmentColor",
 		"serverGitRoot",
 		"serverTodeRoot",
-		"excludeNetLDIPort" ],
+		"excludeNetLDIPort",
+		"authorId" ],
 	"name" : "TDSessionDescription",
 	"pools" : [
 		 ],

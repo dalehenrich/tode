@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 selectedClass: listElement selectionIndex: selectionIndex
   | def |
   def := self selectedDefinition: listElement selectionIndex: selectionIndex.

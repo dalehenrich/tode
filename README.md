@@ -3,8 +3,8 @@
 
 ## Installation and Setup
 
-See the [gsDevKitHome project](https://github.com/GsDevKit/gsDevKitHome#open-source-development-kit-for-gemstones-64-bit-)
-for tODE installation instructions.
+See the [GsDevKit_home project](https://github.com/GsDevKit/GsDevKit_home#open-source-development-kit-for-gemstones-64-bit-)
+for tODE and [GemStone/S 64](https://gemtalksystems.com/products/gs64/) installation instructions.
 
 ### Additional Information
 
@@ -15,7 +15,7 @@ presentation
 
 Here's a recent screen shot:
 
-<img style="border: 2px solid #000000;" src="https://raw.github.com/dalehenrich/tode/master/docs/screenShot_2014-05-26.png" />
+<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/tode/master/docs/screenShot_2015-11-02.png" />
 
 ## Questions? [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/tode?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 

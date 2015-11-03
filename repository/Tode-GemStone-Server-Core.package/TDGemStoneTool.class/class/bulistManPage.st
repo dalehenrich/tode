@@ -2,6 +2,7 @@ bu
 bulistManPage
   ^ TDManPage
     commandName: 'list'
+    sourceMethod: self name asString , '>>bulist'
     fromString:
       'NAME
   bu list - Display info about all backup and snapshot files

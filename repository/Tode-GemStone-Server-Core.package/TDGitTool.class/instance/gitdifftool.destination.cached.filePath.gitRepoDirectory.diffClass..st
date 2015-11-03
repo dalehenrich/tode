@@ -9,8 +9,6 @@ gitdifftool: source destination: destination cached: cached filePath: filePath g
     in: gitRepoDirectory
     with: cachedArg , '--raw ' , source , ' ' , destination , ' -- ' , filePath
     logging: false.
-  (result beginsWith: 'fatal:')
-    ifTrue: [ self error: 'Error performing diff: ' , result printString ].
   records := self parseRawDiffFiles: result.
   records := records
     reject: [ :ar | 

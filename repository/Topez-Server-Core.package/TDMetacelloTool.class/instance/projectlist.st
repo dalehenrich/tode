@@ -18,8 +18,11 @@ projectlist
       "string out the GLASS configurations"
       list := list
         reject: [ :projectDef | 
-          #('ConfigurationOfGLASS' 'ConfigurationOfGsCore' 'ConfigurationOfGsMisc' 'ConfigurationOfGsMonticello' 'ConfigurationOfGsOB' 'ConfigurationOfGsSqueakCommon' 'ConfigurationOfMetacelloPreview' 'ConfigurationOfGoferProjectLoader')
-            includes: projectDef configurationClassName ] ].
+          projectDef isConfigurationBased
+            ifTrue: [ 
+              #('ConfigurationOfGLASS' 'ConfigurationOfGsCore' 'ConfigurationOfGsMisc' 'ConfigurationOfGsMonticello' 'ConfigurationOfGsOB' 'ConfigurationOfGsSqueakCommon' 'ConfigurationOfMetacelloPreview' 'ConfigurationOfGoferProjectLoader')
+                includes: projectDef configurationClassName ]
+            ifFalse: [ false ] ] ].
   list ].
   subOptions
     at: 'inspect'

@@ -3,6 +3,7 @@ browseconfigurationsManPage
   | manPage |
   manPage := TDManPage
     commandName: 'configurations'
+    sourceMethod: self name asString , '>>browseconfigurations'
     fromString:
       'NAME
   browse configurations - List configurations

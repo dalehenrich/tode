@@ -6,13 +6,13 @@ editProjectFileMenuAction: listElement selectionIndex: selectionIndex
   registration := self projects at: selectionIndex.
   entryNode := registration
     entryNode: nil
-    projectPath: '/sys/stone/projects/'
+    projectPath: TDProjectEntryDefinition sys_stone_projects
     topez: topez.
   entry := registration entry.
   entryNode
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowLabel:
-            entryNode printString , ' (' , entry baseProjectPath , entryNode name , ')';
+            entryNode printString , ' (' , entry projectPath , entryNode name , ')';
         yourself).
   ^ true

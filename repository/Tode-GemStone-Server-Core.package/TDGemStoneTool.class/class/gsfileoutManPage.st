@@ -3,6 +3,7 @@ gsfileoutManPage
   | manPage |
   manPage := TDManPage
     commandName: 'fileout'
+    sourceMethod: self name asString , '>>gsfileout'
     fromString:
       'NAME
   gs fileout - Fileout Classes, Categories or Packages

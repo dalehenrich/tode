@@ -3,6 +3,7 @@ pslistManPage
   | manPage |
   manPage := TDManPage
     commandName: 'list'
+    sourceMethod: self name asString , '>>pslist'
     fromString:
       'NAME
   ps list - Open a process browser on process instances

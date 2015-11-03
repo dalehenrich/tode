@@ -2,12 +2,13 @@ bu
 bubackupManPage
   ^ TDManPage
     commandName: 'backup'
+    sourceMethod: self name asString , '>>bubackup'
     fromString:
       'NAME
   bu backup - Make a GemStone backup
 
 SYNOPSIS
-  bu [--dir=<backup-directory>] backup [--safely] [--uncompressed] <backup-file>
+  bu [--dir=<backup-directory>] backup [--safely] [--commit] [--uncompressed] <backup-file>
 
 DESCRIPTION
   Make a GemStone backup in the specified backup file. By default a compressed 
@@ -27,10 +28,16 @@ DESCRIPTION
   With the --uncompressed option an uncompressed backup is created in the named
   <backup-file>.
 
+  With the --commit option specified a commit is made immediately before checkpoints
+  are suspended. The --commit option should be used when running in batch mode (i.e.,
+  a bash shell script) or when autoCommit has been disabled to ensure that the current
+  state of the gem is included in the snapshot.
+
 EXAMPLES
   bu --help backup
   bu backup --uncompressed sample.dbf
   bu backup sample.dbf
+  bu backup --commit sample.dbf
   bu backup --safely sample.dbf
   bu --dir=/opt/gemstone/backups backup sample.dbf
 

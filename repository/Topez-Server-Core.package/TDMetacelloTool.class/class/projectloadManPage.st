@@ -3,6 +3,7 @@ projectloadManPage
   | manPage |
   manPage := TDManPage
     commandName: 'load'
+    sourceMethod: self name asString , '>>projectload'
     fromString:
       'NAME
   project load - Load the Metacello project
@@ -21,6 +22,7 @@ SYNOPSIS
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
+               [--basic] [--install] [--url [--local|--stone]]
                ( <project-name> | @<project-reference> )
 
 DESCRIPTION
@@ -34,6 +36,7 @@ DESCRIPTION
 
 EXAMPLES
   project load Seaside3
+  project load --basic Seaside3
 
 '.
   ^ manPage

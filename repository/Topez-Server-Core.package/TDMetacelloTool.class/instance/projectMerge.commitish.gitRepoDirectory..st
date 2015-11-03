@@ -2,11 +2,12 @@ project api
 projectMerge: registration commitish: commitish gitRepoDirectory: gitRepoDirectory
   | gitTool commitMessage result mergeSucceeded dotGit doMergeBlock commitTemplate |
   gitTool := self topez toolInstanceFor: 'git'.
+  [ 
   result := gitTool
     gitmergeIn: gitRepoDirectory
-    with: '--no-ff --no-commit ' , commitish.
-  (result beginsWith: 'fatal:')
-    ifTrue: [ ^ false ].
+    with: '--no-ff --no-commit ' , commitish ]
+    on: Error
+    do: [ :ex | ^ false ].
   (result beginsWith: 'Already up-to-date.')
     ifTrue: [ 
       self inform: 'Already up-to-date.'.
@@ -22,7 +23,7 @@ projectMerge: registration commitish: commitish gitRepoDirectory: gitRepoDirecto
     template: commitTemplate) signal.
   commitMessage ifNil: [ commitMessage := '' ].
   self gitCommit: registration commitMessage: commitMessage.
-  registration loadProjectUsing: self ].
+  registration basicLoadProjectUsing: self ].
   mergeSucceeded := (gitTool gitlsfiles: gitRepoDirectory) isEmpty.
   mergeSucceeded
     ifTrue: [ doMergeBlock value ]

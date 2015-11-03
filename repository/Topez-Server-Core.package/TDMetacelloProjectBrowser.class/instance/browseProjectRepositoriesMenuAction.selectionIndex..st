@@ -12,6 +12,7 @@ browseProjectRepositoriesMenuAction: listElement selectionIndex: selectionIndex
       | rg |
       rg := wc repositoryGroup.
       repos addAll: rg repositories ].
+  repos add: registration repository.
   repos asArray sorted: [ :a :b | a description <= b description ] ].
   mcTool := self mcTool.
   mcTool

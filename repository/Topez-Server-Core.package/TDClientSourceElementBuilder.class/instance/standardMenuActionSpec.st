@@ -8,5 +8,6 @@ standardMenuActionSpec
     , {{('Browse' -> self searchMenuActionSpec)}} , {#('-')}
     , self editMenuActionSpec , {#('-')}
     , {{('Text' -> self textMenuActionSpec)}} , {#('-')}
+    , {{('Object' -> self objectMenuActionSpec)}} , {#('-')}
     , {{('Window' -> self windowMenuActionSpec)}} , {#('-')}
     , self saveMenuActionSpec

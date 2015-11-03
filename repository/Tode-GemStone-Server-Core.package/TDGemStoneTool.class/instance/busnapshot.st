@@ -1,7 +1,7 @@
 bu
 busnapshot
   "
-  bu [--dir=<snapshot-directory>] snapshot [--safely] [--suspend=<minutes>] \
+  bu [--dir=<snapshot-directory>] snapshot [--safely] [--commit] [--suspend=<minutes>] \
                                            <snapshot-file-extension>
 "
 
@@ -9,7 +9,13 @@ busnapshot
   self
     getSubcommandOptsMixedLongShort:
       {#('suspend' nil #'required').
+      #('commit' nil #'none').
       #('safely' nil #'none')}.
+  subOptions
+    at: 'commit'
+    ifPresent: [ :ignored | 
+      System commitTransaction
+        ifFalse: [ self error: 'Commit conflicts, snapshot aborted' ] ].
   subOptions
     at: 'suspend'
     ifPresent: [ :arg | suspendInMinutes := arg asNumber ]

@@ -1,13 +1,13 @@
 menu actions
 newMethodTemplateMenuAction: listElement selectionIndex: selectionIndex
-  | def protocol |
+  | def methodProtocol |
   (selectionIndex == 0
     or: [ self isAllProtocolSelected: listElement selection: selectionIndex ])
-    ifTrue: [ protocol := nil ]
-    ifFalse: [ protocol := listElement itemCache at: selectionIndex ].
+    ifTrue: [ methodProtocol := nil ]
+    ifFalse: [ methodProtocol := (listElement itemCache at: selectionIndex) methodProtocol ].
   def := TDMethodTemplateDefinition
     className: self theClass name
-    protocol: protocol methodProtocol
+    protocol: methodProtocol
     isMeta: self isMeta.
   ^ def
     editUsing:

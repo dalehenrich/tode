@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 standardCmdKeyCodePoints
   "
 	CMD-B - browse (full) class - hiearchy, definition, selectors
