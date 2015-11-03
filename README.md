@@ -15,7 +15,7 @@ presentation
 
 Here's a recent screen shot:
 
-<img style="border: 2px solid #000000;" src="https://raw.github.com/dalehenrich/tode/master/docs/screenShot_2015-11-02.png" />
+<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/tode/master/docs/screenShot_2015-11-02.png" />
 
 ## Questions? [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dalehenrich/tode?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
