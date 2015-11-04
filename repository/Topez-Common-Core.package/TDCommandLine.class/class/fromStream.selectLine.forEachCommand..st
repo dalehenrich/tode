@@ -6,22 +6,24 @@ fromStream: aStream selectLine: selectLineBlock forEachCommand: aBlock
   cmdLines := OrderedCollection new.
   escaped := false.
   lastLine := ''.
-  [ 
-  line := aStream nextLine.
-  (line isNil or: [line isEmpty ]) ]
+  [ aStream atEnd ]
     whileFalse: [ 
-      (line isEmpty not and: [ line last == $\ ])
-        ifTrue: [ 
-          escaped := true.
-          lastLine := lastLine , (line copyFrom: 1 to: line size - 1) ]
+      line := aStream nextLine.
+      (line isNil or: [ line isEmpty ])
         ifFalse: [ 
-          escaped
+          (line isEmpty not and: [ line last == $\ ])
             ifTrue: [ 
-              cmdLines add: lastLine , line.
-              escaped := false ]
-            ifFalse: [ cmdLines add: line ] ] ].
+              escaped := true.
+              lastLine := lastLine , (line copyFrom: 1 to: line size - 1) ]
+            ifFalse: [ 
+              escaped
+                ifTrue: [ 
+                  cmdLines add: lastLine , line.
+                  escaped := false ]
+                ifFalse: [ cmdLines add: line ] ] ] ].
   escaped
     ifTrue: [ cmdLines add: lastLine ].
-  cmdLines do: [ :cmdLine | 
-	(selectLineBlock value: cmdLine) ifTrue: [ 
-	self line: cmdLine forEachCommand: aBlock]  ]
+  cmdLines
+    do: [ :cmdLine | 
+      (selectLineBlock value: cmdLine)
+        ifTrue: [ self line: cmdLine forEachCommand: aBlock ] ]
