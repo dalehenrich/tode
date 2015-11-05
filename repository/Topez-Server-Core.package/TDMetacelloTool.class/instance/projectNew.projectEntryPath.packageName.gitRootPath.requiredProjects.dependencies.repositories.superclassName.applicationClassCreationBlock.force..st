@@ -5,7 +5,7 @@ projectNew: projectName projectEntryPath: projectEntryPath packageName: packageN
   gitRepoDir exists
     ifTrue: [ 
       force
-        ifTrue: [ gitRepoDir containingDirectory deleteDirectory: projectName ]
+        ifTrue: [ gitRepoDir recursiveDelete ]
         ifFalse: [ 
           self
             error:
@@ -27,12 +27,12 @@ projectNew: projectName projectEntryPath: projectEntryPath packageName: packageN
   mcTool := topez toolInstanceFor: 'mc'.
   baselinePackageName := 'BaselineOf' , projectName.
   self
-    projectNewCheckForPackage: baselinePackageName
+    projectNewCheckAndCreatePackage: baselinePackageName
     for: projectEntry
     mcTool: mcTool
     force: force.
   self
-    projectNewCheckForPackage: packageName
+    projectNewCheckAndCreatePackage: packageName
     for: projectEntry
     mcTool: mcTool
     force: force.

@@ -22,7 +22,7 @@ projectnew
   subOptions
     at: 'force'
     ifPresent: [ :ignored | force := true ]
-    ifAbsent: [ force := true ].
+    ifAbsent: [ force := false ].
   subOptions
     at: 'stone'
     ifPresent: [ :ignored | 

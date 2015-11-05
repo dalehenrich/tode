@@ -7,5 +7,5 @@ createProjectEntryInNode: nodePath topez: topez
     yourself.
   parentNode := topez ensureChildrenExistIn: nodePath.
   node := parentNode addChildNode: projectNode.
-  node topez: self topez.
+  node topez: topez.
   ^ node

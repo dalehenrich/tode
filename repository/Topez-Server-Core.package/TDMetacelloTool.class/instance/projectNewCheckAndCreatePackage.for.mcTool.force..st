@@ -2,7 +2,7 @@ private
 projectNewCheckAndCreatePackage: packageName for: projectEntry mcTool: mcTool force: force
   | matches wc |
   matches := mcTool findMatchingPackages: packageName topez: topez.
-  (matches detect: [ :wc | wc packageName = packageName ] ifNone: [ #() ])
+  (matches select: [ :wc | wc packageName = packageName ])
     do: [ :pkgName | 
       force
         ifTrue: [ mcTool mcunloadPackageNamed: packageName ]
