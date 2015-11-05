@@ -56,7 +56,12 @@ man
         yourself.
       browser open.
       ^ browser manPages ].
-  command := arguments at: 1.
+  command := arguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument (<command-name> | @<command-path>). See `man man` for details.' ].
   commandNode := (command beginsWith: '@')
     ifTrue: [ self resolveAtPathNodeReference: command ]
     ifFalse: [ topez commands at: (tokens at: 2) ].
