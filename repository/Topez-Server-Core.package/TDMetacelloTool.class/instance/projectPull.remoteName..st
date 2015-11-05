@@ -1,4 +1,4 @@
-project
+project api
 projectPull: registration remoteName: remote
   | gitRepoDirectory gitTool |
   gitRepoDirectory := self gitRepoDirForRegistration: registration.

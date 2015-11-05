@@ -68,5 +68,4 @@ projectentry
                 ifAbsent: [ self error: 'one of --config, --git or --baseline required' ] ] ] ].
   projectEntry status: #(#'active').
   node := projectEntry createProjectEntryInNode: projectPath topez: self topez.
-  node topez: self topez.
   ^ node dotSelfObject
