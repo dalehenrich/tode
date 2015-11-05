@@ -6,6 +6,11 @@ gemtoolbu
 
   | cmd |
   self getSubcommandOptsMixedLongShort: {}.
+  subArguments isEmpty
+    ifTrue: [ 
+      self
+        error:
+          'Missing required argument `( backup | list | restore )`. See `man gemtool bu` for details.' ].
   cmd := subArguments at: 1.
   cmd = 'backup'
     ifTrue: [ ^ self gemtoolbuBackup ].

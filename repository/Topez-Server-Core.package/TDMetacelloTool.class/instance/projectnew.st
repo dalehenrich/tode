@@ -12,7 +12,12 @@ projectnew
       #('package' nil #'required').
       #('class' nil #'none').
       #('stone' nil #'none')}.
-  projectName := subArguments at: 1.
+  projectName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <project-name>. See `man project new` for more details' ].
   subOptions
     at: 'stone'
     ifPresent: [ :ignored | 

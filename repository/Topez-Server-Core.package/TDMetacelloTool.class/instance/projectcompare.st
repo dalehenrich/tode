@@ -6,7 +6,12 @@ projectcompare
 
   | projectName registration source destination gitTool gitRepoDirectory diffs |
   self getSubcommandOptsMixedLongShort: {#('commit' nil #'required')}.
-  projectName := subArguments at: 1.
+  projectName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <project-name>. See `man project compare` for details.' ].
   registration := self projectRegistrationFor: projectName.
   destination := registration currentVersionString.
   subOptions at: 'commit' ifPresent: [ :arg | destination := arg ].

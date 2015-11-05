@@ -17,7 +17,12 @@ browseclass
       | cls clsNamePattern |
       subArguments size > 1
         ifTrue: [ ^ TodeCommandError signal: 'Only one argument allowed when using --full option' ].
-      clsNamePattern := subArguments at: 1.
+      clsNamePattern := subArguments
+        at: 1
+        ifAbsent: [ 
+          self
+            error:
+              'Missing required argument <class-name>. See `man browse class` for more details' ].
       cls := Smalltalk
         at: clsNamePattern
         ifAbsent: [ ^ self browseClasses: {} label: 'No class matching ' , clsNamePattern ].

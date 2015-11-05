@@ -6,7 +6,12 @@ testsuite
 
   | suitePath suite node testNode |
   self getSubcommandOptsMixedLongShort: {}.
-  suitePath := subArguments at: 1.
+  suitePath := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <sunit-suite-file> | @<sunit-suite-path>. See `man test` for details.' ].
   suite := (suitePath beginsWith: '@')
     ifTrue: [ self resolveAtPathReference: suitePath ]
     ifFalse: [ 

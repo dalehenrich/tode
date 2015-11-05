@@ -19,6 +19,11 @@ gsreferences
     ifPresent: [ :arg | inMemory := true ]
     ifAbsent: [ inMemory := false ].
   objectArray := {}.
+  subArguments isEmpty
+    ifTrue: [ 
+      self
+        error:
+          'Missing required argument <object-id>.  See `man gs references` for details.' ].
   subArguments
     do: [ :oopArg | 
       | oop |

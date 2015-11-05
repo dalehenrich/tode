@@ -19,7 +19,12 @@ projectentry
       #('repo' nil #'required').
       #('url' nil #'required').
       #('baseline' nil #'required')}.
-  projectPath := subArguments at: 1.
+  projectPath := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <project-path>. See `man project entry` for more details' ].
   subOptions at: 'repo' ifPresent: [ :arg | repo := arg ].
   subOptions
     at: 'loads'
