@@ -19,7 +19,11 @@ workingCopies
             ifNil: [ 
               "project has been unloaded from image"
               ^ #() ].
-          configProject := self projectSpec projectClassProject.
+          configProject := self projectClassProject.
+          configProject
+            ifNil: [ 
+              "project has been unloaded from image"
+              ^ #() ].
           version := configProject version: version versionString ].
       workingCopies := version packages collect: [ :pkg | pkg workingCopy ] ]
     ifFalse: [ workingCopies := {} ].
