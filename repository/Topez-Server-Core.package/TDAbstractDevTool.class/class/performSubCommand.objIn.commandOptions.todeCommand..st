@@ -8,6 +8,7 @@ performSubCommand: topez objIn: objIn commandOptions: commandOptions todeCommand
   shTool getOptsMixedLongShort: commandOptions.
   cmd := shTool todeCommand command.
   subCmd := shTool subCommandToken.
+  subCmd ifNil: [ ^ shTool man: cmd ].
   shTool options
     at: 'help'
     ifPresent: [ :ignored | 
