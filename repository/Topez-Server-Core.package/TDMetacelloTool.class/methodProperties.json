@@ -42,7 +42,7 @@
 		"createBaselineOf:withPackageNamed:" : "dkh 10/31/2015 09:49",
 		"projectClone:cloneWithSSH:defaultProjectEntryPath:gitRootPath:" : "dkh 10/28/2015 16:16",
 		"projectClone:cloneWithSSH:defaultProjectEntryPath:gitRootPath:checkout:" : "dkh 11/10/2015 17:50",
-		"projectCloneGitHubUser:project:cloneWithSSH:gitRootDir:checkout:" : "dkh 10/27/2015 21:27",
+		"projectCloneGitHubUser:project:cloneWithSSH:gitRootDir:checkout:" : "dkh 11/10/2015 17:59",
 		"projectCommit:commitMessage:" : "dkh 05/16/2014 07:49",
 		"projectCommit:configCommit:gitCommit:commitMessage:" : "dkh 05/20/2014 11:32",
 		"projectCommitConfiguration:configuration:commitMessage:" : "dkh 05/20/2014 11:30",
