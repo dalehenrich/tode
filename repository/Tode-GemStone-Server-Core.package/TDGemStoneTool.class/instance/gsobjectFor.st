@@ -7,6 +7,11 @@ gsobjectFor
   | oops |
   self getSubcommandOptsMixedLongShort: {}.
   oops := {}.
+  subArguments isEmpty
+    ifTrue: [ 
+      self
+        error:
+          'Missing required argument <object-oop>.  See `man gs objectFor` for details.' ].
   subArguments
     do: [ :oopArg | 
       | oop |

@@ -14,7 +14,7 @@ projectload
                [--cacheRepository=@<repository-reference>]
                [--repositoryOverrides=@<repository-reference>]
                [--deploy=auto|bulk|none]
-               [--basic] [--install] [--url [--local|--stone]]
+               [--basic] [--install] [--url=<project-entry-url> [--local|--stone]]
                ( <project-name> | @<project-reference> )
 "
 
@@ -23,7 +23,7 @@ projectload
     getSubcommandOptsMixedLongShort:
       {#('baseline' nil #'none').
       #('basic' nil #'none').
-      #('url' nil #'none').
+      #('url' nil #'required').
       #('install' nil #'none').
       #('local' nil #'none').
       #('stone' nil #'none').
@@ -61,11 +61,22 @@ projectload
           projectName := projectEntry projectName ].
       subOptions
         at: 'install'
-        ifPresent: [ :ignored | projectName := subArguments at: 1 ].
+        ifPresent: [ :ignored | 
+          projectName := subArguments
+            at: 1
+            ifAbsent: [ 
+              self
+                error:
+                  'Missing required argument ( <project-name> | @<project-reference> ). See `man project load` for more details' ] ].
       registration := self resolveProjectRegistrationReference: projectName.
       registration installProjectUsing: self ]
     ifFalse: [ 
-      projectName := subArguments at: 1.
+      projectName := subArguments
+        at: 1
+        ifAbsent: [ 
+          self
+            error:
+              'Missing required argument ( <project-name> | @<project-reference> ). See `man project load` for more details' ].
       registration := self resolveProjectRegistrationReference: projectName ].
   subOptions
     at: 'baseline'

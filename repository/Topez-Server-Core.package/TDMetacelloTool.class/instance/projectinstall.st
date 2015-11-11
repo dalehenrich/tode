@@ -22,6 +22,12 @@ projectinstall
           projectPath := TDProjectEntryDefinition sys_local_server_projects ].
       projectEntry := self projectEntryObjectFromUrl: url nodePath: projectPath.
       projectName := projectEntry projectName ]
-    ifAbsent: [ projectName := subArguments at: 1 ].
+    ifAbsent: [ 
+      projectName := subArguments
+        at: 1
+        ifAbsent: [ 
+          self
+            error:
+              'Missing required argument <project-name>. See `man project install` for more details' ] ].
   registration := self resolveProjectRegistrationReference: projectName.
   ^ registration installProjectUsing: self

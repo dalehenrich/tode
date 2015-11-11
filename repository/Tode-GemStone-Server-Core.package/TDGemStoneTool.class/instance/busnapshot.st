@@ -25,7 +25,12 @@ busnapshot
     ifPresent: [ :ignored | safely := true ]
     ifAbsent: [ safely := false ].
   snapshotPath := self resolveSnapshotPath: ''.
-  snapshotExtension := subArguments at: 1.
+  snapshotExtension := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <snapshot-file-extension>. See `man bu snapshot` for details.' ].
   ^ self
     snapshot: snapshotExtension
     to: snapshotPath

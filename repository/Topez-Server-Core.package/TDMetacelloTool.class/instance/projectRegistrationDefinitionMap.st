@@ -7,13 +7,14 @@ projectRegistrationDefinitionMap
     do: [ :reg | map at: reg projectName put: reg ].
   self
     scanForProjects: [ :projectEntry | 
-      | registration |
       (map at: projectEntry projectName ifAbsent: [  ])
         ifNil: [ 
           | registration |
           registration := projectEntry createProjectListRegistration.
           (projectEntry isLocked
-            and: [ registration isLocked not and: [ registration isValid ] ])
+            and: [ 
+              registration isLocked not
+                and: [ registration isValid and: [ registration isConfigProjectValid ] ] ])
             ifTrue: [ 
               self projectLock: registration.
               registration := findTool

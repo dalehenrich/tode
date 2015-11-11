@@ -13,7 +13,8 @@ importSessionDescriptionFrom: file for: aBuilder
 		action: [ 
 					| window |
 					window := TDShell openOnSessionDescription: sessionDescription.
-					currentShell := window model cliShell ].
+					currentShell := window model cliShell.
+					self ensureTranscriptWindow ].
 	(aBuilder item: sessionDescription name asSymbol)
 		parent: #'Project List';
 		action: [ 
@@ -21,15 +22,17 @@ importSessionDescriptionFrom: file for: aBuilder
 					window := TDShell openOnSessionDescription: sessionDescription.
 					currentShell := window model cliShell.
 					currentShell ifNil: [ ^ self ].
-					currentShell evaluate: 'project list' ].
+					currentShell evaluate: 'project list'.
+					self ensureTranscriptWindow ].
 	(aBuilder item: sessionDescription name asSymbol)
-		parent: #'Workspace';
+		parent: #Workspace;
 		action: [ 
 					| window |
 					window := TDShell openOnSessionDescription: sessionDescription.
 					currentShell := window model cliShell.
 					currentShell ifNil: [ ^ self ].
-					currentShell evaluate: 'ws' ].
+					currentShell evaluate: 'ws'.
+					self ensureTranscriptWindow ].
 	(aBuilder item: sessionDescription name asSymbol)
 		parent: #'Edit Description';
 		action: [ self new openWorkspace: sessionDescription editTemplate styling: true label: sessionDescription name ].

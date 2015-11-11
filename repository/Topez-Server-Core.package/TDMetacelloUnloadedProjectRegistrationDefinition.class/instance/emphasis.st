@@ -1,6 +1,6 @@
 project list
 emphasis
-  self isValid
+  (self isValid and: [ self isConfigProjectValid ])
     ifFalse: [ 
       ^ {(TextEmphasis bold).
       (TextColor red)} ].

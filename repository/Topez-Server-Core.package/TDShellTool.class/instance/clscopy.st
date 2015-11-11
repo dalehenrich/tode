@@ -7,9 +7,19 @@ clscopy
 
   | theClass clsName newName category |
   self getSubcommandOptsMixedLongShort: {#('category' nil #'required')}.
-  clsName := subArguments at: 1.
+  clsName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument ( <class-name> | @<class-path> ). See `man cls copy` for details.' ].
   theClass := self resolveClassReference: clsName.
-  newName := subArguments at: 2.
+  newName := subArguments
+    at: 2
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <new-class-name>. See `man cls copy` for details.' ].
   subOptions
     at: 'category'
     ifPresent: [ :cat | category := cat ]

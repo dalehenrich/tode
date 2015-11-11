@@ -6,7 +6,12 @@ projectdiff
 
   | projectName registration workingCopies stream patches |
   self getSubcommandOptsMixedLongShort: {#('all' nil #'none')}.
-  projectName := subArguments at: 1.
+  projectName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <project-name>. See `man project diff` for details.' ].
   registration := self projectRegistrationFor: projectName.
   workingCopies := registration workingCopies.
   subOptions

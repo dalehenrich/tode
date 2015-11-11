@@ -1,18 +1,28 @@
 project
 projectnew
   "
-  project new [--stone | --gitRoot=<git-root-dir>] \
+  project new [--force] [--stone | --local | --gitRoot=<git-root-dir>] \
               [--package=<package-name>] [--class] <project-name>
 "
 
-  | projectName gitRootPath packageName applicationClassCreationBlock projectEntryPath |
+  | projectName gitRootPath packageName applicationClassCreationBlock projectEntryPath force |
   self
     getSubcommandOptsMixedLongShort:
       {#('gitRoot' nil #'required').
       #('package' nil #'required').
       #('class' nil #'none').
+      #('force' nil #'none').
       #('stone' nil #'none')}.
-  projectName := subArguments at: 1.
+  projectName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <project-name>. See `man project new` for more details' ].
+  subOptions
+    at: 'force'
+    ifPresent: [ :ignored | force := true ]
+    ifAbsent: [ force := false ].
   subOptions
     at: 'stone'
     ifPresent: [ :ignored | 
@@ -45,3 +55,4 @@ projectnew
     packageName: packageName
     gitRootPath: gitRootPath
     applicationClassCreationBlock: applicationClassCreationBlock
+    force: force

@@ -3,4 +3,5 @@ initialize
 	"self initialize"
 
 	Smalltalk addToStartUpList: self.
-	self startUp: true
+	false
+		ifTrue: [ self startUp: true ]

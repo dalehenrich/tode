@@ -6,7 +6,12 @@ projectpush
 
   | remote projectName registration |
   self getSubcommandOptsMixedLongShort: {#('remote' nil #'required')}.
-  projectName := subArguments at: 1.
+  projectName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument ( <project-name> | @<project-reference> ). See `man project push` for more details' ].
   registration := self resolveProjectRegistrationReference: projectName.
   registration hasGitRepository
     ifFalse: [ 

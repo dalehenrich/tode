@@ -5,7 +5,10 @@ projectClone: registration cloneWithSSH: cloneWithSSH defaultProjectEntryPath: d
   gitTool := topez toolInstanceFor: 'git'.
   registration isLocked
     ifTrue: [ 
-      self inform: 'Registration is locked ... clone not performed'.
+      self
+        inform:
+          'Registration is locked ... clone not performed for: '
+            , registration projectName.
       ^ self ].
   registration canBeCloned
     ifFalse: [ 

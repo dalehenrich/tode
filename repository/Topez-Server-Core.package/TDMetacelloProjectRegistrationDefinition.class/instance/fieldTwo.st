@@ -1,6 +1,8 @@
 project list
 fieldTwo
   | vs cvs branch |
+  self isConfigProjectValid
+    ifFalse: [ ^ 'INVALID project spec project' ].
   vs := self versionString.
   cvs := self currentVersionString.
   branch := self currentBranchName.

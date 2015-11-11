@@ -4,8 +4,23 @@ projectCloneGitHubUser: githubUser project: githubProject cloneWithSSH: cloneWit
   cloneUrl := cloneWithSSH
     ifTrue: [ 'git@github.com:' ]
     ifFalse: [ 'https://github.com/' ].
-  cloneUrl := cloneUrl , githubUser , '/' , githubProject , '.git'.
   gitTool := topez toolInstanceFor: 'git'.
+  gitRepoDirectory := gitRootDir directoryNamed: githubProject.
+  gitRepoDirectory exists
+    ifTrue: [ 
+      [ 
+      gitTool gitrevparseShowTopLevelIn: gitRepoDirectory.	"if this command returns then a git repository is already present in gitRootDir ... which is a good thing"
+      self
+        inform:
+          'A git repo is already present at ' , gitRepoDirectory fullName printString.
+      ^ self ]
+        on: Error
+        do: [ :ignored | 
+          self
+            error:
+              'Expected a git repository to present in the directory: '
+                , gitRepoDirectory fullName printString ] ].
+  cloneUrl := cloneUrl , githubUser , '/' , githubProject , '.git'.
   cloneOption := ' --no-checkout '.
   checkout ifNil: [ cloneOption := '' ].
   response := gitTool gitcloneIn: gitRootDir with: cloneOption , cloneUrl.
@@ -15,7 +30,6 @@ projectCloneGitHubUser: githubUser project: githubProject cloneWithSSH: cloneWit
         windowName: #'gitStatus';
         yourself).
   checkout ifNil: [ ^ nil ].
-  gitRepoDirectory := gitRootDir directoryNamed: githubProject.
   gitTool gitcheckoutIn: gitRepoDirectory with: checkout.
   [ gitTool gitsymbolicrefIn: gitRepoDirectory with: 'HEAD' ]
     on: Error

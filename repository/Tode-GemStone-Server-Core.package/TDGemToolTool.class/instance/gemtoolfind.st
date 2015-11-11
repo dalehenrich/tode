@@ -6,6 +6,11 @@ gemtoolfind
 
   | cmd |
   self getSubcommandOptsMixedLongShort: {}.
+  subArguments isEmpty
+    ifTrue: [ 
+      self
+        error:
+          'Missing required argument `( class | hierarchy | references | method | senders | string )`. See `man gemtool find` for details.' ].
   cmd := subArguments at: 1.
   cmd = 'class'
     ifTrue: [ ^ self gemtoolfindClass ].

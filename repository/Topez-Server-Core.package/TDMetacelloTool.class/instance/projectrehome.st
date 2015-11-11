@@ -10,7 +10,12 @@ projectrehome
     getSubcommandOptsMixedLongShort:
       {#('repo' nil #'required').
       #('no-config' nil #'none')}.
-  projectName := subArguments at: 1.
+  projectName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <project-name>. See `man project rehome` for more details' ].
   registration := self projectRegistrationFor: projectName.
   subOptions
     at: 'repo'

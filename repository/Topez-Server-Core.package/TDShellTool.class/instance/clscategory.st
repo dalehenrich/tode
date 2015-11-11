@@ -6,7 +6,12 @@ clscategory
 
   | classes category |
   self getSubcommandOptsMixedLongShort: {}.
-  category := subArguments at: 1.
+  category := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <class-category>. See `man cls category` for details.' ].
   classes := Set new.
   2 to: subArguments size do: [ :index | 
     | clsRef theClass comment |

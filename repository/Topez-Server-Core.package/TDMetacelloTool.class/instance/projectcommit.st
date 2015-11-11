@@ -14,7 +14,12 @@ projectcommit
     at: 'message'
     ifPresent: [ :arg | messageString := self resolveMessageArg: arg ]
     ifAbsent: [ self error: 'Must supply commit message (--message)' ].
-  projectName := subArguments at: 1.
+  projectName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <project-name>. See `man project commit` for details.' ].
   registration := self projectRegistrationFor: projectName.
   subOptions
     at: 'config'
