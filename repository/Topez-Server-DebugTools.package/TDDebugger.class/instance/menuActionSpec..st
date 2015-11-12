@@ -10,4 +10,6 @@ menuActionSpec: miniTool
   #('-').
   #('continue' nil #'dbContinueMenuAction:selectionIndex:' nil #'debuggingProcess' false).
   #('restart' nil #'dbRestartMenuAction:selectionIndex:' nil #'debuggingProcess' false).
+  #('-').
+  #('Store exception in ObjectLog' nil #'dbStoreInObjectLogMenuAction:selectionIndex:' nil #'debuggingProcess' false).
   #('-')} , self methodMenuActionSpec , {#('-')} , self standardMenuActionSpec
