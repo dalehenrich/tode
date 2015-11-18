@@ -33,7 +33,9 @@ projectbrowse
   subOptions
     at: 'classes'
     ifPresent: [ :ignored | ^ self projectBrowseProjectClasses: projectName ].
-  subOptions at: 'dirty' ifPresent: [ :ignored |  ].
+  subOptions
+    at: 'dirty'
+    ifPresent: [ :ignored | ^ self projectBrowseProjectDirtyPackages: projectName ].
   subOptions at: 'packages' ifPresent: [ :ignored |  ].
   subOptions at: 'repositories' ifPresent: [ :ignored |  ].
   subOptions at: 'tests' ifPresent: [ :ignored |  ]
