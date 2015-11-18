@@ -36,6 +36,8 @@ OPTIONS
     Browse the list of packages present in <project-name>.
 
   --repositories
+    Browse the list or repositories used in <project-name>
+
   --tests
 EXAMPLES
   project browse --entry Metacello

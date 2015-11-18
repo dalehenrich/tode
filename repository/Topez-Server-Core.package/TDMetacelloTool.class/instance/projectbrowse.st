@@ -39,5 +39,7 @@ projectbrowse
   subOptions
     at: 'packages'
     ifPresent: [ :ignored | ^ self projectBrowseProjectPackages: projectName ].
-  subOptions at: 'repositories' ifPresent: [ :ignored |  ].
+  subOptions
+    at: 'repositories'
+    ifPresent: [ :ignored | ^ self projectBrowseProjectRepositories: projectName ].
   subOptions at: 'tests' ifPresent: [ :ignored |  ]
