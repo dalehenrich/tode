@@ -2,7 +2,7 @@ project
 projectbrowseManPage
   | manPage |
   manPage := TDManPage
-    commandName: 'clone'
+    commandName: 'browse'
     sourceMethod: self name asString , '>>projectbrowse'
     fromString:
       'NAME
@@ -12,7 +12,7 @@ SYNOPSIS
   project browse [--entry] [--config] [--categories] [--dirty] [--packages] [--repositories] [--tests] <project-name>
 
 DESCRIPTION
-  Browse one or more of the artivacts for <project-name>.
+  Browse one or more of the artifacts for <project-name>.
 
 OPTIONS
   --entry
@@ -24,6 +24,8 @@ OPTIONS
     the image, download the config from the appropriate project repository.
 
   --categories
+    Browse the list categories for the classes present in <project-name>.
+
   --dirty
   --packages
   --repositories
