@@ -33,6 +33,8 @@ OPTIONS
     Browse the list of dirty packages present in <project-name>.
 
   --packages
+    Browse the list of packages present in <project-name>.
+
   --repositories
   --tests
 EXAMPLES
