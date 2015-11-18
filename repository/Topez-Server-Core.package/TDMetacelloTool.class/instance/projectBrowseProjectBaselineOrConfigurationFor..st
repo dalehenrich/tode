@@ -9,7 +9,7 @@ projectBrowseProjectBaselineOrConfigurationFor: registration
     ifAbsent: [ 
       self projectGetFor: registration.
       Smalltalk at: clsName ].
-  self browseTool
+  (self topez toolInstanceFor: 'browse')
     browseClassHierarchy: cls
     label: 'Hierarchy of ' , cls name asString.
   ^ cls

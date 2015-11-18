@@ -12,7 +12,7 @@ projectBrowseProjectCategoriesFor: registration
     definitionList: defs;
     windowLocation: #'classCategories';
     yourself ].
-  self browseTool
+  (self topez toolInstanceFor: 'browse')
     browseDefinitionListBlock: block
     selectedIndex: 0
     label: 'Categories in ' , registration projectName
