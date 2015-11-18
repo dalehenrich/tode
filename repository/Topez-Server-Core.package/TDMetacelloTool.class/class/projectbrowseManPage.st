@@ -26,7 +26,12 @@ OPTIONS
   --categories
     Browse the list categories for the classes present in <project-name>.
 
+  --classes
+    Browse the list of classes present in <project-name>.
+
   --dirty
+    Browse the list of dirty packages present in <project-name>.
+
   --packages
   --repositories
   --tests
