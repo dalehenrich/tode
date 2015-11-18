@@ -34,6 +34,7 @@ DESCRIPTION
     rehome     Point package repository groups for project to new repository
     refresh    Refresh project entries in project list
     revert     (see revert in project tool ... just dirty or reload ALL as options)
+    skew       Compare and repair when SHA of clone does not match SHA loaded in image
     status
     summary    View report of changed packages and methods
     test
@@ -78,5 +79,6 @@ EXAMPLES
     at: 'unlock' put: self projectunlockManPage;
     at: 'unregister' put: self projectunregisterManPage;
     at: 'install' put: self projectinstallManPage;
+    at: 'skew' put: self projectskewManPage;
     yourself.
   ^ manPage
