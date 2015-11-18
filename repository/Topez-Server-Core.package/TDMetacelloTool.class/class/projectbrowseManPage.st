@@ -14,6 +14,8 @@ SYNOPSIS
 DESCRIPTION
   Browse one or more of the artifacts for <project-name>.
 
+  With no options present, browse the list of classes present in <project-name>.
+
 OPTIONS
   --entry
     Browse the project entry for <project-name>. If no project entry exists, a project entry is created in 
@@ -39,6 +41,8 @@ OPTIONS
     Browse the list or repositories used in <project-name>
 
   --tests
+    Browse the tests defined in <project-name>
+
 EXAMPLES
   project browse --entry Metacello
   project browse --config Metacello
@@ -48,5 +52,6 @@ EXAMPLES
   project browse --packages Metacello
   project browse --repositories Metacello
   project browse --tests Metacello
+  project browse Metacello
 '.
   ^ manPage
