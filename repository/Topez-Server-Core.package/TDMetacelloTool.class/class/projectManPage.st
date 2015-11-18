@@ -19,7 +19,7 @@ DESCRIPTION
     compare    View differences between repository versions (git only)
     diff       View code differences between image and repository
     entry      Create a new project entry
-    get        Download configuration or baseline for the given project
+    get        Load the Metacello config for the given project into the image
     install    Run the installScript for the given project entry
     list       List Metacello projects
     load       (~/bin/load)

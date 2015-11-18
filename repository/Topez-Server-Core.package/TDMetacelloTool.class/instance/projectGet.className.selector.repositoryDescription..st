@@ -1,8 +1,9 @@
 project api
 projectGet: projectName className: className selector: projectSelector repositoryDescription: repositoryDescription
-  ^ self
-    projectGet: projectName
-    className: className
-    selector: projectSelector
-    version: nil
-    repositoryDescription: repositoryDescription
+  | metacello |
+  metacello := Metacello new.
+  metacello perform: projectSelector with: projectName.
+  className ifNotNil: [ metacello className: className ].
+  ^ metacello
+    repository: repositoryDescription;
+    get

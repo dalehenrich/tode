@@ -20,6 +20,9 @@ OPTIONS
     /sys/stone/projects.
 
   --config
+    Browse the BaselineOf or ConfigurationOf class for <project-name>. If the config class is not present in
+    the image, download the config from the appropriate project repository.
+
   --categories
   --dirty
   --packages

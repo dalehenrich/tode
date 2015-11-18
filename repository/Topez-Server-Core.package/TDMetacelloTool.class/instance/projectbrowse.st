@@ -24,7 +24,9 @@ projectbrowse
   subOptions
     at: 'entry'
     ifPresent: [ :ignored | ^ self projectBrowseProjectEntry: projectName ].
-  subOptions at: 'config' ifPresent: [ :ignored |  ].
+  subOptions
+    at: 'config'
+    ifPresent: [ :ignored | ^ self projectBrowseProjectBaselineOrConfiguration: projectName ].
   subOptions at: 'categories' ifPresent: [ :ignored |  ].
   subOptions at: 'classes' ifPresent: [ :ignored |  ].
   subOptions at: 'dirty' ifPresent: [ :ignored |  ].
