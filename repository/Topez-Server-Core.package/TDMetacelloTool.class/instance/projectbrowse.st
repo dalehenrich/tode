@@ -1,16 +1,10 @@
 project
 projectbrowse
   "
-  project browse --entry <project-name>
-          browse --config <project-name>
-          browse --categories <project-name>
-          browse --classes <project-name>
-          browse --dirty <project-name>
-          browse --packages <project-name>
-          browse --repositories <project-name>
-          browse --tests <project-name>
+  project browse [--entry] [--config] [--categories] [--dirty] [--packages] [--repositories] [--tests] <project-name>
 "
 
+  | projectName |
   self
     getSubcommandOptsMixedLongShort:
       {#('entry' nil #'none').
@@ -20,4 +14,20 @@ projectbrowse
       #('dirty' nil #'none').
       #('packages' nil #'none').
       #('repositories' nil #'none').
-      #('tests' nil #'none')}
+      #('tests' nil #'none')}.
+  projectName := subArguments
+    at: 1
+    ifAbsent: [ 
+      self
+        error:
+          'Missing required argument <project-name>. See `man project browse` for details.' ].
+  subOptions
+    at: 'entry'
+    ifPresent: [ :ignored | ^ self projectBrowseProjectEntry: projectName ].
+  subOptions at: 'config' ifPresent: [ :ignored |  ].
+  subOptions at: 'categories' ifPresent: [ :ignored |  ].
+  subOptions at: 'classes' ifPresent: [ :ignored |  ].
+  subOptions at: 'dirty' ifPresent: [ :ignored |  ].
+  subOptions at: 'packages' ifPresent: [ :ignored |  ].
+  subOptions at: 'repositories' ifPresent: [ :ignored |  ].
+  subOptions at: 'tests' ifPresent: [ :ignored |  ]

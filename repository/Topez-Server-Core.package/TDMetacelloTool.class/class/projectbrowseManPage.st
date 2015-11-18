@@ -9,19 +9,22 @@ projectbrowseManPage
   project browse - Browse project artifacts
 
 SYNOPSIS
-  project browse --entry <project-name>
-          browse --config <project-name>
-          browse --categories <project-name>
-          browse --classes <project-name>
-          browse --dirty <project-name>
-          browse --packages <project-name>
-          browse --repositories <project-name>
-          browse --tests <project-name>
+  project browse [--entry] [--config] [--categories] [--dirty] [--packages] [--repositories] [--tests] <project-name>
 
 DESCRIPTION
+  Browse one or more of the artivacts for <project-name>.
 
 OPTIONS
+  --entry
+    Browse the project entry for <project-name>. If no project entry exists, a project entry is created in 
+    /sys/stone/projects.
 
+  --config
+  --categories
+  --dirty
+  --packages
+  --repositories
+  --tests
 EXAMPLES
   project browse --entry Metacello
   project browse --config Metacello
