@@ -1,6 +1,6 @@
 menu actions
 browseGitClassHistoryMenuAction: listElement selectionIndex: selectionIndex
-  | itemAttribute classDef configDef gitTool filePath commitish gitDirectory registration gitRepo packageDef packageName classExtension metaDirName methodFilename commitLog |
+  | itemAttribute classDef configDef gitTool filePath commitish gitDirectory registration gitRepo packageDef packageName classExtension metaDirName methodFilename commitLog mcTool wc |
   itemAttribute := listElement itemCache at: selectionIndex.
   classDef := itemAttribute object.
   configDef := classDef configurationOf.
@@ -11,11 +11,13 @@ browseGitClassHistoryMenuAction: listElement selectionIndex: selectionIndex
     ifFalse: [ ^ false ].
   packageDef := classDef packageOf.
   packageName := packageDef packageName.
+  mcTool := listElement topez toolInstanceFor: 'mc'.
   gitTool := listElement topez toolInstanceFor: 'git'.
   gitRepo := registration repository.
+  wc := mcTool resolveWorkingCopyReference: packageName.
   classExtension := '.class'.
-  filePath := 'repository/' , packageName , '.package' , '/'
-    , classDef className asString , classExtension.
+  filePath := 'repository/' , (wc metacelloPackageNameWithBranch at: 2)
+    , '.package' , '/' , classDef className asString , classExtension.
   gitDirectory := registration gitRootDirectory.
   commitLog := gitTool
     gitlogFilePath: filePath
