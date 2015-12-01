@@ -2,4 +2,4 @@ project api
 projectBrowseProjectDirtyPackages: projectName
   | registration |
   registration := self resolveProjectRegistrationReference: projectName.
-  ^ self projectBrowseProjectPackagesFor: registration
+  ^ self projectBrowseProjectDirtyPackagesFor: registration

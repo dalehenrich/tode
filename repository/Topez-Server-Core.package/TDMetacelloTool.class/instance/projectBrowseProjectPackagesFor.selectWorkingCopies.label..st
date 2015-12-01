@@ -1,5 +1,5 @@
 project api
-projectBrowseProjectPackagesFor: registration selectWorkingCopies: selectWorkingCopiesBlock
+projectBrowseProjectPackagesFor: registration selectWorkingCopies: selectWorkingCopiesBlock label: label
   | block mcTool |
   block := [ 
   | wcs |
@@ -11,4 +11,4 @@ projectBrowseProjectPackagesFor: registration selectWorkingCopies: selectWorking
     parentBuilder: nil
     windowLocation: #'app3'
     windowId: nil
-    label: 'Dirty Packages for ' , registration projectName
+    label: label
