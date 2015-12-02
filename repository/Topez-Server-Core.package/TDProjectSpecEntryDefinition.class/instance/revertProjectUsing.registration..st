@@ -12,7 +12,7 @@ revertProjectUsing: aProjectTool registration: aProjectRegistration
             addAll: (wc ancestry ancestors collect: [ :each | each name ]) ] ].
   [ 
   | loads |
-  [ aProjectTool getFor: aProjectRegistration ]
+  [ aProjectTool projectGetFor: aProjectRegistration ]
     on: MetacelloSkipDirtyPackageLoad
     do: [ :ex | 
       "get ends up with different form of projectSpec ... baseline unconditional 
