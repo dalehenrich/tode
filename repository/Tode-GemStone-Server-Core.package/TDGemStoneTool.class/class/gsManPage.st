@@ -29,6 +29,7 @@ DESCRIPTION
     objectFor          Resolve an object from given objectId
     references         Find reference paths to the given objects
     sessionDescription Session information report
+    sslLog             Inspect GsSecureSocket SSL log
     version            OS, hardware and GemStone version attributes for Client, Gem, or Stone
 
   Use `gs --help <command>` to read about a specific subcommand.
@@ -68,6 +69,8 @@ EXAMPLES
   gs sessionDescription 5
   gs sessionDescription --all
 
+  gs sslLog
+
   gs version
   gs version --client
   gs version --gem
@@ -84,5 +87,6 @@ EXAMPLES
     at: 'sessionDescription' put: self gssessionDescriptionManPage;
     at: 'version' put: self gsversionManPage;
     at: 'references' put: self gsreferencesManPage;
+    at: 'sslLog' put: self gssslLogManPage;
     yourself.
   ^ manPage
