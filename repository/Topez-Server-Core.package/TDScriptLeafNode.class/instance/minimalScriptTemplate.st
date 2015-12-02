@@ -21,7 +21,7 @@ opts
   '
     , self name , ' - ' , self name
     ,
-      ' sript utility template
+      ' script utility template
 SYNOPSIS
   ' , self name
     ,
