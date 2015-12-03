@@ -9,7 +9,7 @@ projectbrowseManPage
   project browse - Browse project artifacts
 
 SYNOPSIS
-  project browse [--entry] [--config] [--categories] [--dirty] [--packages] [--repositories] [--tests] <project-name>
+  project browse [--entry] [--baseline] [--configuration] [--categories] [--dirty] [--packages] [--repositories] [--tests] <project-name>
 
 DESCRIPTION
   Browse one or more of the artifacts for <project-name>.
@@ -21,7 +21,12 @@ OPTIONS
     Browse the project entry for <project-name>. If no project entry exists, a project entry is created in 
     /sys/stone/projects.
 
-  --config
+  --baseline
+    Browse the BaselineOf for <project-name>. Behaves similarly to --configuration unless the 
+    project is a hybrid project (a ConfigurationOf that directly references a BaselineOf), then 
+    the baseline variant of the project is browsed.
+
+  --configuration
     Browse the BaselineOf or ConfigurationOf class for <project-name>. If the config class is not present in
     the image, download the config from the appropriate project repository.
 
@@ -45,7 +50,8 @@ OPTIONS
 
 EXAMPLES
   project browse --entry Metacello
-  project browse --config Metacello
+  project browse --baseline Metacello
+  project browse --configuration Metacello
   project browse --categories Metacello
   project browse --classes Metacello
   project browse --dirty Metacello

@@ -1,14 +1,15 @@
 project
 projectbrowse
   "
-  project browse [--entry] [--config] [--categories] [--dirty] [--packages] [--repositories] [--tests] <project-name>
+  project browse [--entry] [--baseline] [--configuration] [--categories] [--dirty] [--packages] [--repositories] [--tests] <project-name>
 "
 
   | projectName |
   self
     getSubcommandOptsMixedLongShort:
       {#('entry' nil #'none').
-      #('config' nil #'none').
+      #('baseline' nil #'none').
+      #('configuration' nil #'none').
       #('categories' nil #'none').
       #('classes' nil #'none').
       #('dirty' nil #'none').
@@ -27,7 +28,10 @@ projectbrowse
     at: 'entry'
     ifPresent: [ :ignored | self projectBrowseProjectEntry: projectName ].
   subOptions
-    at: 'config'
+    at: 'configuration'
+    ifPresent: [ :ignored | self projectBrowseProjectBaseline: projectName ].
+  subOptions
+    at: 'configuration'
     ifPresent: [ :ignored | self projectBrowseProjectBaselineOrConfiguration: projectName ].
   subOptions
     at: 'categories'

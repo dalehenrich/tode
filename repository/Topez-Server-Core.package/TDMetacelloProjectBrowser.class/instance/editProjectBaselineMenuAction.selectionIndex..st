@@ -4,5 +4,5 @@ editProjectBaselineMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  self projectTool projectBrowseProjectBaselineOrConfigurationFor: registration.
+  self projectTool projectBrowseProjectBaselineFor: registration.
   ^ #'refreshView'
