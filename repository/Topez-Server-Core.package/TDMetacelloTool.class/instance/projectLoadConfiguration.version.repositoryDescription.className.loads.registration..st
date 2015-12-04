@@ -9,6 +9,6 @@ projectLoadConfiguration: projectName version: version repositoryDescription: re
     repositoryDescription: repositoryDescription;
     projectClassName: className;
     loads: loads;
-    version: version;
+    configurationVersion: version;
     yourself.
   ^ self projectLoadFromSpec: projectLoadSpec registration: registration

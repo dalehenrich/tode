@@ -28,7 +28,7 @@ revertProjectUsing: aProjectTool registration: aProjectRegistration
     repositoryDescription: aProjectRegistration repositoryDescription;
     projectClassName: projectClassName;
     loads: loads;
-    version: aProjectRegistration configurationVersionString;
+    configurationVersion: aProjectRegistration configurationVersionString;
     onDowngrade: #'useIncoming';
     onUpgrade: #'useIncoming';
     yourself.

@@ -161,7 +161,7 @@ projectload
     repositoryDescription: description;
     projectClassName: projectClassName;
     loads: loads;
-    version: configurationVersion;
+    configurationVersion: configurationVersion;
     onConflict: onConflict;
     onDowngrade: onDowngrade;
     onLock: onLock;
