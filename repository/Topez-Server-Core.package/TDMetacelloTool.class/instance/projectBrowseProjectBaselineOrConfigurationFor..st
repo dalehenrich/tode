@@ -8,6 +8,9 @@ projectBrowseProjectBaselineOrConfigurationFor: registration
     at: clsName
     ifAbsent: [ 
       self projectGetFor: registration.
+      clsName := registration isConfigurationBased
+        ifTrue: [ registration configurationClassName ]
+        ifFalse: [ registration baselineClassName ].
       Smalltalk at: clsName ].
   (self topez toolInstanceFor: 'browse')
     browseClassHierarchy: cls
