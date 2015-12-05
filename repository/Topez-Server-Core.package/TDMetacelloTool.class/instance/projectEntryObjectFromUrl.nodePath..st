@@ -1,7 +1,9 @@
 project
 projectEntryObjectFromUrl: url nodePath: projectPath
-  | projectEntryNode node |
+  | node projectDirNode projectEntryNode |
+  projectDirNode := self topez lookup: projectPath.
   projectEntryNode := self projectProjectEntryFromUrl: url.
-  node := (self topez lookup: projectPath) addChildLeafNode: projectEntryNode.
-  node topez: self topez.
+  node := projectDirNode
+    childNamed: projectEntryNode name
+    ifAbsent: [ projectDirNode addChildLeafNode: projectEntryNode ].
   ^ node dotSelfObject
