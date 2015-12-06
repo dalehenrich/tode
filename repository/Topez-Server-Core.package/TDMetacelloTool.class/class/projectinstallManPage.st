@@ -13,6 +13,9 @@ SYNOPSIS
 
 DESCRIPTION
 
+  If there is already a project with the same project name in your project list, the download
+  will be skipped.
+
 OPTIONS
 
 EXAMPLES

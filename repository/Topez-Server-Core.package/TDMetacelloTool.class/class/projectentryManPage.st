@@ -71,6 +71,9 @@ DESCRIPTION
 
   Any changes you make will take effect after the project list is refreshed.
 
+  If there is already a project with the same project name in your project list, the download
+  will be skipped.
+
 Project Entry Attributes
 
   status

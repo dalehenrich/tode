@@ -34,6 +34,10 @@ DESCRIPTION
     onDowngrade - useNew
     onUpgrade   - useNew
 
+
+  If there is already a project with the same project name in your project list, the download
+  will be skipped.
+
 EXAMPLES
   project load Seaside3
   project load --basic Seaside3
