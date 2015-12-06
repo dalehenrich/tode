@@ -1,6 +1,6 @@
 project
 projectEntryObjectFromUrl: url nodePath: projectPath
-  | node projectDirNode projectEntryNode entry existingNode |
+  | node projectDirNode projectEntryNode entry existingNode theProjectPath |
   projectEntryNode := self projectProjectEntryFromUrl: url.
   projectEntryNode topez: self topez.
   entry := projectEntryNode dotSelfObject.
@@ -13,7 +13,10 @@ projectEntryObjectFromUrl: url nodePath: projectPath
             ,
               ' is already defined in this stones'' /projects node, download skipped.'.
       ^ existing ].
-  projectDirNode := self topez lookup: projectPath.
+  theProjectPath := projectPath.
+  TDProjectEntryOutermostProjectPath signal
+    ifNotNil: [ :outerMostProjectPath | theProjectPath := outerMostProjectPath ].
+  projectDirNode := self topez lookup: theProjectPath.
   existingNode := true.
   node := projectDirNode
     childNamed: projectEntryNode name
@@ -25,6 +28,8 @@ projectEntryObjectFromUrl: url nodePath: projectPath
       self
         error:
           'A node named ' , projectEntryNode name printString , ' already exists in '
-            , projectPath printString ].
+            , theProjectPath printString ].
   node topez: self topez.
   ^ node dotSelfObject
+    projectPath: theProjectPath;
+    yourself

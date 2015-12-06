@@ -38,6 +38,11 @@ DESCRIPTION
   If there is already a project with the same project name in your project list, the download
   will be skipped.
 
+  If the --install option is present and this command is run as a result of a project entry 
+  install script, the project path of the outermost project entry (i.e., the project that 
+  initiated the original install script) is used instead of the path implied by either the 
+  --local or --stone options.
+
 EXAMPLES
   project load Seaside3
   project load --basic Seaside3
