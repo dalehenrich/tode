@@ -203,15 +203,6 @@ baseline: spec
     for: #'gs3.x'
     do: [ 
       spec
-        baseline: 'ZincHTTPComponents'
-          with: [ 
-              spec
-                repository: 'github://GsDevKit/zinc:2.4.3.?/repository';
-                loads: 'Zinc-HTTP' ];
-        yourself.
-      spec
-        package: 'Topez-Server-Core'
-          with: [ spec requires: 'ZincHTTPComponents' ];
         package: 'Tode-GemStone-Server-Base'
           with: [ spec includes: 'Topez-Server-3x-Core' ];
         package: 'Topez-Server-3x-Core'
@@ -271,12 +262,22 @@ baseline: spec
     for: #'gs3.3.x'
     do: [ 
       spec
+        baseline: 'ZincHTTPComponents'
+          with: [ 
+              spec
+                repository: 'github://GsDevKit/zinc:2.4.3.?/repository';
+                loads: #('Zinc-HTTP' 'SSL') ];
+        yourself.
+      spec
         package: 'Tode-GemStone-Server-Core'
           with: [ spec includes: 'Topez-GemStone-Server-33x-Core' ];
         package: 'Topez-GemStone-Server-33x-Core'
           with: [ spec requires: 'Tode-GemStone-Server-Core' ];
         package: 'Topez-Server-Core'
-          with: [ spec includes: 'Topez-Server-33x-Core' ];
+          with: [ 
+              spec
+                requires: 'ZincHTTPComponents';
+                includes: 'Topez-Server-33x-Core' ];
         package: 'Topez-Server-33x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
