@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addMarkerOptions:" : "RicardoJacas 4/21/2014 16:15",
+		"addOn:using:" : "RicardoJacas 4/21/2014 16:08",
+		"addOrientation:" : "RicardoJacas 4/21/2014 16:15",
+		"addPath:" : "RicardoJacas 4/21/2014 16:09",
+		"addRefPosition:" : "RicardoJacas 4/21/2014 16:15",
+		"addSize:" : "RicardoJacas 4/21/2014 16:15",
+		"addViewBox:" : "RicardoJacas 4/21/2014 16:14",
+		"id" : "RicardoJacas 4/21/2014 16:20",
+		"id:fillColor:borderColor:width:size:" : "RicardoJacas 4/21/2014 16:22",
+		"initialize" : "RicardoJacas 4/21/2014 15:26",
+		"openInnerDef:" : "RicardoJacas 4/21/2014 16:00",
+		"size:" : "RicardoJacas 4/21/2014 15:27",
+		"xExtent" : "RicardoJacas 4/21/2014 15:27",
+		"xExtent:" : "RicardoJacas 4/21/2014 15:27",
+		"yExtent" : "RicardoJacas 4/21/2014 15:27",
+		"yExtent:" : "RicardoJacas 4/21/2014 15:27" } }

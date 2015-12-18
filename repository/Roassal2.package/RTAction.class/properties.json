@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTAction",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

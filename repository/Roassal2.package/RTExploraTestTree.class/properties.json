@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-Explora",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"left",
+		"right",
+		"parent" ],
+	"name" : "RTExploraTestTree",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

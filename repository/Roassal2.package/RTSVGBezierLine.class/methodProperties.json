@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addCurves:" : "RicardoJacas 4/21/2014 11:24",
+		"addOn:using:" : "RicardoJacas 4/21/2014 11:27",
+		"addPath:" : "RicardoJacas 4/21/2014 11:22",
+		"element:points:width:color:" : "RicardoJacas 4/21/2014 11:33",
+		"element:points:width:color:decoration:" : "RicardoJacas 4/21/2014 11:29",
+		"initialize" : "RicardoJacas 4/21/2014 11:13",
+		"points" : "RicardoJacas 4/21/2014 11:14",
+		"points:" : "RicardoJacas 4/21/2014 11:14" } }

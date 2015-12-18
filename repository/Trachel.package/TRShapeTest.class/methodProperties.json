@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"shapesForPositionTest" : "akevalion 9/5/2014 17:21",
+		"testAddingNoShape" : "AlexandreBergel 6/10/2014 20:32",
+		"testBitmapIncludesPoint" : "AlexandreBergel 4/16/2014 14:21",
+		"testBitmapWidth" : "AlexandreBergel 8/21/2014 15:40",
+		"testBoxTransformation" : "JurajKubelka 4/8/2014 09:09",
+		"testCenterOnALine" : "AlexandreBergel 4/21/2014 16:57",
+		"testEllipseTransformation" : "JurajKubelka 4/8/2014 10:11",
+		"testHasCallback" : "AlexandreBergel 3/7/2014 11:44",
+		"testNumberOfCallbacks" : "AlexandreBergel 3/23/2015 09:55",
+		"testPosition" : "akevalion 9/5/2014 17:16",
+		"testPositionDefault" : "JurajKubelka 8/18/2014 10:09",
+		"testPositionDefaultCenteredSVGPath" : "akevalion 9/5/2014 17:13",
+		"testPositionDefaultSVGPath" : "akevalion 9/5/2014 17:12",
+		"testPositionWithFloats" : "AlexandreBergel 1/28/2014 17:37",
+		"testRemoving" : "AlexandreBergel 7/12/2014 00:16",
+		"testScaleBox" : "JurajKubelka 6/24/2014 14:01",
+		"testScaleSVG" : "JurajKubelka 6/24/2014 14:09" } }

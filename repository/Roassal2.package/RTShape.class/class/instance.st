@@ -1,0 +1,3 @@
+accessing
+instance
+	^ self new

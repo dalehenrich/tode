@@ -1,0 +1,3 @@
+edges
+testBuild
+	view build

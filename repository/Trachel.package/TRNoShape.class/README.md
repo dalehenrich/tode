@@ -1,0 +1,1 @@
+This implements the Null Pattern for a Trachel shape.

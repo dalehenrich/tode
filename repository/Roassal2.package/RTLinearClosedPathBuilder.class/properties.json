@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 6/4/2015 16:56",
+	"instvars" : [
+		 ],
+	"name" : "RTLinearClosedPathBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTLinePathBuilder",
+	"type" : "normal" }

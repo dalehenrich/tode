@@ -1,0 +1,3 @@
+signalling
+signalUpdate
+	self changed

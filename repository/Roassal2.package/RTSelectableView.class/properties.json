@@ -1,0 +1,20 @@
+{
+	"category" : "Roassal2-Selection",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 5/5/2015 16:35",
+	"instvars" : [
+		"draggingView",
+		"shapeBuilder",
+		"key",
+		"announcer",
+		"group",
+		"color",
+		"view" ],
+	"name" : "RTSelectableView",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

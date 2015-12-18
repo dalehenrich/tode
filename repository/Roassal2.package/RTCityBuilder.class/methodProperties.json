@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addCityNamed:location:" : "AlexandreBergel 3/2/2014 20:36",
+		"buildCities:" : "SergioMaass 1/30/2014 14:30",
+		"currentStep" : "SergioMaass 1/30/2014 15:45",
+		"evolutionPeriod" : "SergioMaass 1/30/2014 15:50",
+		"evolveAt:through:" : "SergioMaass 1/31/2014 11:11",
+		"getCityName:" : "SergioMaass 1/28/2014 14:27",
+		"initialize" : "SergioMaass 1/31/2014 15:11",
+		"initializeCities" : "SergioMaass 1/29/2014 17:37",
+		"mapBuilder:" : "SergioMaass 1/30/2014 14:30",
+		"name:" : "SergioMaass 1/24/2014 16:27",
+		"names" : "SergioMaass 1/27/2014 10:13",
+		"step" : "SergioMaass 1/30/2014 16:26",
+		"stepBack" : "SergioMaass 1/30/2014 16:39",
+		"stepForward" : "SergioMaass 1/30/2014 16:39",
+		"withPopup" : "SergioMaass 1/25/2014 17:57",
+		"withPopup:" : "SergioMaass 1/24/2014 18:01" } }

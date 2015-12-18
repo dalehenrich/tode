@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addCallback:" : "AlexandreBergel 8/21/2014 14:11",
+		"callbacks" : "AlexandreBergel 3/23/2015 10:07",
+		"doWithoutCallbacks:" : "AlexandreBergel 8/21/2014 14:11",
+		"hasCallback" : "AlexandreBergel 3/23/2015 10:08",
+		"numberOfCallbacks" : "AlexandreBergel 3/23/2015 10:04",
+		"removeCallback:ifAbsent:" : "AlexandreBergel 3/23/2015 10:04",
+		"triggerCallbacksForNewExtent:oldExtent:" : "AlexandreBergel 3/23/2015 10:04",
+		"triggerCallbacksForStep:" : "AlexandreBergel 3/23/2015 10:04",
+		"triggerRemoveCallbacks" : "AlexandreBergel 3/23/2015 10:04" } }

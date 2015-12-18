@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addOn:using:" : "PierreChanson 6/9/2015 16:42",
+		"addPosition:" : "PierreChanson 6/9/2015 15:36",
+		"box" : "PierreChanson 6/9/2015 15:36",
+		"box:" : "PierreChanson 6/9/2015 15:36",
+		"element:box:color:borderWidth:borderColor:" : "PierreChanson 6/10/2015 11:56",
+		"initialize" : "PierreChanson 6/9/2015 15:37",
+		"points" : "PierreChanson 6/9/2015 15:38",
+		"points:" : "PierreChanson 6/9/2015 15:38",
+		"setPoints:in:" : "PierreChanson 6/10/2015 11:59" } }

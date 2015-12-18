@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"lastPopup" : "AlexandreBergel 3/24/2015 19:33",
+		"lastPopup:" : "AlexandreBergel 1/15/2014 15:43",
+		"removeLastPopup" : "AlexandreBergel 1/15/2014 15:23",
+		"resetLastPopup" : "AlexandreBergel 1/15/2014 15:23" },
+	"instance" : {
+		"closestPositionOf:from:inView:" : "AlexandreBergel 1/5/2014 19:57",
+		"createAndShowPopupFor:event:" : "AlexandreBergel 1/15/2014 15:37",
+		"createElementFor:" : "AlexandreBergel 1/5/2014 17:28",
+		"createPopupFor:" : "AlexandreBergel 1/5/2014 19:26",
+		"getNewPopupFor:" : "AlexandreBergel 1/15/2014 15:37",
+		"initializeElement:" : "JurajKubelka 1/27/2014 10:07",
+		"lastPopup:" : "AlexandreBergel 6/10/2014 21:24",
+		"popupOffset" : "AlexandreBergel 1/15/2014 14:59",
+		"removeLastPopup" : "AlexandreBergel 1/5/2014 18:26" } }

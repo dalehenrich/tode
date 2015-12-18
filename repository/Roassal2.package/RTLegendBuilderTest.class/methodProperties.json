@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "AlexandreBergel 10/5/2014 17:36",
+		"testAddObjectText" : "AlexandreBergel 3/20/2015 14:52",
+		"testBelow" : "AlexandreBergel 3/20/2015 14:28",
+		"testLayout" : "AlexandreBergel 10/5/2014 17:23",
+		"testLegendElement" : "AlexandreBergel 3/20/2015 14:56",
+		"testNumberOfElements" : "AlexandreBergel 10/5/2014 17:21",
+		"testRight" : "AlexandreBergel 3/20/2015 14:28",
+		"testaddLineColortext" : "AlexandreBergel 3/20/2015 14:55" } }

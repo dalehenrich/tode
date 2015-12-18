@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JurajKubelka 8/21/2014 14:12",
+	"instvars" : [
+		"color" ],
+	"name" : "RTHighlightable",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractHighlightable",
+	"type" : "normal" }

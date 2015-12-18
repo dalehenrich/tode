@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		"lastHighlightedElements",
+		"lastColor" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"connectToElements",
+		"shape" ],
+	"name" : "RTShowEdge",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

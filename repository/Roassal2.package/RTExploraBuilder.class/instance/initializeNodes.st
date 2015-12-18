@@ -1,0 +1,3 @@
+initialization
+initializeNodes
+	self defaultNodeShape.

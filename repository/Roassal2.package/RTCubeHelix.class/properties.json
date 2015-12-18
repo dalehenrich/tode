@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Coefficients" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"hueShift",
+		"rotations",
+		"saturation",
+		"gamma" ],
+	"name" : "RTCubeHelix",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

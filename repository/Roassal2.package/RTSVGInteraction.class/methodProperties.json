@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"on:targets:" : "RicardoJacas 4/2/2014 14:16",
+		"on:targets:generator:" : "RicardoJacas 4/2/2014 14:16" },
+	"instance" : {
+		"addEventHandlers:id:element:center:" : "RicardoJacas 3/24/2014 15:31",
+		"addFunctions:" : "RicardoJacas 3/18/2014 11:44",
+		"addGlobalHandlers:" : "RicardoJacas 3/31/2014 14:12",
+		"contained" : "RicardoJacas 3/18/2014 15:53",
+		"external" : "RicardoJacas 3/18/2014 15:52",
+		"initialize" : "RicardoJacas 3/26/2014 10:00",
+		"target" : "RicardoJacas 3/24/2014 14:53",
+		"target:" : "RicardoJacas 3/24/2014 14:54",
+		"targetColorAttribute" : "AlexandreBergel 1/16/2015 14:30",
+		"targetNameAttribute" : "RicardoJacas 4/4/2014 16:48",
+		"type" : "RicardoJacas 3/26/2014 10:00",
+		"type:" : "RicardoJacas 3/26/2014 10:00" } }

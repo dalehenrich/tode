@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/21/2014 21:01",
+	"instvars" : [
+		"elements",
+		"edges",
+		"trCanvas" ],
+	"name" : "RTView",
+	"pools" : [
+		 ],
+	"super" : "RTAnnounceableObject",
+	"type" : "normal" }

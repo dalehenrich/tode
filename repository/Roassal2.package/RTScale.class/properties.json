@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 6/2/2015 16:17",
+	"instvars" : [
+		"range",
+		"domain",
+		"interpolate",
+		"uninterpolate" ],
+	"name" : "RTScale",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

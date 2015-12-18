@@ -1,0 +1,1 @@
+I decrease camera's zoom by 20%

@@ -1,0 +1,3 @@
+initialization
+defaultNumberOfBars
+	^ 3

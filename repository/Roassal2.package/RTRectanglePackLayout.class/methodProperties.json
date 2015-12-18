@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"bestSpaceFor:" : "YuriyTymchuk 6/3/2014 11:25",
+		"boundingBox" : "YuriyTymchuk 6/3/2014 11:23",
+		"doExecute:" : "YuriyTymchuk 2/19/2015 15:16",
+		"extentByInserting:into:" : "YuriyTymchuk 7/25/2014 17:47",
+		"gap" : "YuriyTymchuk 2/19/2015 15:19",
+		"gap:" : "YuriyTymchuk 2/19/2015 15:18",
+		"initialize" : "YuriyTymchuk 2/19/2015 15:17",
+		"packIn:" : "YuriyTymchuk 6/3/2014 15:14",
+		"padding" : "YuriyTymchuk 2/19/2015 15:07",
+		"padding:" : "YuriyTymchuk 2/19/2015 15:08",
+		"recalculateFreeSpacesWith:" : "YuriyTymchuk 6/3/2014 11:26" } }

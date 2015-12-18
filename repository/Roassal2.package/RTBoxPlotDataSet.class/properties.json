@@ -1,0 +1,20 @@
+{
+	"category" : "Roassal2-Builder-BoxPlot",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 4/20/2015 17:30",
+	"instvars" : [
+		"model",
+		"boxShape",
+		"boxLineShape",
+		"boxWidth",
+		"outlierShape",
+		"showMean",
+		"meanShape" ],
+	"name" : "RTBoxPlotDataSet",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractDataSet",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+A RTSpectrograph is a builder to create spectographs

@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addText:" : "JurajKubelka 1/24/2014 11:35",
+		"addText:model:" : "JurajKubelka 1/27/2014 12:43",
+		"buildText:" : "JurajKubelka 1/27/2014 12:42",
+		"buildText:in:" : "JurajKubelka 11/11/2014 16:06",
+		"buildText:model:" : "JurajKubelka 1/31/2014 12:45",
+		"defaultTokenizer" : "JurajKubelka 11/11/2014 20:35",
+		"hook:" : "JurajKubelka 1/31/2014 12:47",
+		"initialize" : "JurajKubelka 11/11/2014 20:35",
+		"padding" : "JurajKubelka 2/28/2014 11:43",
+		"padding:" : "JurajKubelka 2/28/2014 11:43",
+		"renderIn:" : "JurajKubelka 1/21/2014 17:34",
+		"wordHook:" : "JurajKubelka 1/21/2014 16:34",
+		"wordInteraction" : "JurajKubelka 1/24/2014 11:04",
+		"wordShape" : "JurajKubelka 1/24/2014 11:04" } }

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "YuriyTymchuk 6/20/2014 10:45",
+	"instvars" : [
+		 ],
+	"name" : "RTZoomInMove",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractZoomMove",
+	"type" : "normal" }

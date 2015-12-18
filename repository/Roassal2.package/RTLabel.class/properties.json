@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/4/2015 15:26",
+	"instvars" : [
+		"text",
+		"font",
+		"height",
+		"fontName" ],
+	"name" : "RTLabel",
+	"pools" : [
+		 ],
+	"super" : "RTShape",
+	"type" : "normal" }

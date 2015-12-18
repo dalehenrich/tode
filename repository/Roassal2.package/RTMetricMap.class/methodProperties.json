@@ -1,0 +1,25 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"africanCountries" : "AlexandreBergel 10/12/2014 19:52",
+		"allCountriesColor:" : "AlexandreBergel 3/30/2014 12:39",
+		"convertIntoSVGCountryName:" : "AlexandreBergel 3/30/2014 11:56",
+		"countries:" : "AlexandreBergel 3/30/2014 12:20",
+		"countries:color:" : "AlexandreBergel 3/30/2014 12:20",
+		"countries:named:" : "AlexandreBergel 3/30/2014 12:19",
+		"countries:named:metric:" : "AlexandreBergel 3/30/2014 11:20",
+		"createView" : "AlexandreBergel 3/30/2014 11:27",
+		"example01" : "AlexandreBergel 3/30/2014 11:11",
+		"example02" : "AlexandreBergel 3/30/2014 11:11",
+		"example03" : "AlexandreBergel 3/30/2014 11:11",
+		"example04" : "AlexandreBergel 3/30/2014 11:11",
+		"example05" : "AlexandreBergel 3/30/2014 11:29",
+		"example06DeepIntoPharo" : "AlexandreBergel 3/30/2014 12:21",
+		"example07GrowthAndDevelopmentBridgeIndex" : "AlexandreBergel 3/30/2014 21:56",
+		"fillViewWithCountries:named:metric:" : "akevalion 10/20/2014 15:46",
+		"initialize" : "AlexandreBergel 10/12/2014 20:11",
+		"makeSelectable:as:" : "akevalion 3/27/2015 17:21",
+		"pointShape" : "AlexandreBergel 10/12/2014 20:11",
+		"routes:from:to:" : "AlexandreBergel 10/12/2014 20:15",
+		"translateGeoPositionToPixels:" : "AlexandreBergel 10/12/2014 20:06" } }

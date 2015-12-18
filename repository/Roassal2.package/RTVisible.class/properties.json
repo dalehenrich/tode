@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 8/21/2014 14:23",
+	"instvars" : [
+		"visibleBlock",
+		"invisibleBlock" ],
+	"name" : "RTVisible",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

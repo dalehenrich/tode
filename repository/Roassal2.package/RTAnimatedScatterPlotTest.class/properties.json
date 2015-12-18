@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-AnimatedScatterPlot",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"b" ],
+	"name" : "RTAnimatedScatterPlotTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

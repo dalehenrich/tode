@@ -1,0 +1,22 @@
+{
+	"category" : "Roassal2-Builder-Timeline",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"shapeBuilder",
+		"interactionBuilder",
+		"start",
+		"end",
+		"lineIdentifier",
+		"objects",
+		"globalMin",
+		"globalMax",
+		"elements" ],
+	"name" : "RTTimelineSet",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+testing
+isInverted
+	^ inverted

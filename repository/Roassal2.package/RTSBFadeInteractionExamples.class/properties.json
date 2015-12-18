@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Sunburst",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 6/11/2014 12:35",
+	"instvars" : [
+		 ],
+	"name" : "RTSBFadeInteractionExamples",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

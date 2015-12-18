@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Exporter-HTML5",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTHTML5ExporterTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

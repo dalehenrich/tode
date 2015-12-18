@@ -1,0 +1,3 @@
+testing
+isTop
+	^ position = #top

@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testBasicNegativeRange" : "AlexandreBergel 7/13/2014 15:50",
+		"testBasicNegativeRange2" : "AlexandreBergel 7/13/2014 16:05",
+		"testBasicNegativeRange3" : "AlexandreBergel 7/13/2014 16:12",
+		"testBasicNegativeRange4" : "AlexandreBergel 7/13/2014 16:12",
+		"testBasicNegativeRangeX" : "AlexandreBergel 7/13/2014 16:07",
+		"testBasicPositiveRange" : "AlexandreBergel 7/13/2014 15:49",
+		"testBasicPositiveRangeSize" : "AlexandreBergel 7/13/2014 16:17",
+		"testBasicPositiveRangeWidth" : "AlexandreBergel 9/20/2014 15:22",
+		"testBasicPositiveRangeWidth2" : "AlexandreBergel 9/20/2014 15:22",
+		"testBasicPositiveRangeX" : "AlexandreBergel 7/13/2014 16:09",
+		"testBasicPositiveRangeX2" : "AlexandreBergel 7/31/2014 12:07",
+		"testBasicPositiveRangeX3" : "AlexandreBergel 7/31/2014 12:17" } }

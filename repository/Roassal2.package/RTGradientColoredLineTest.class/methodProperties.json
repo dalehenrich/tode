@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testBasic" : "AlexandreBergel 3/3/2015 11:13",
+		"testBasicWithInitialization" : "AlexandreBergel 3/3/2015 11:15",
+		"testGradientColorShape" : "AlexandreBergel 3/3/2015 11:26",
+		"testGradientColorShape2" : "AlexandreBergel 3/3/2015 11:33",
+		"testPrecision" : "AlexandreBergel 3/3/2015 11:24" } }

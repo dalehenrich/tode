@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 7/30/2014 12:27",
+	"instvars" : [
+		"blockProducingPath" ],
+	"name" : "RTMultiLine",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractLine",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+A RTAxisConfiguration describes an axis configuration

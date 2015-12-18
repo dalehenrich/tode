@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testBeginingAtBlue" : "AlexandreBergel 1/12/2014 16:14",
+		"testBeginingAtRed" : "AlexandreBergel 1/12/2014 16:14",
+		"testExplicitIdentity" : "AlexandreBergel 1/12/2014 16:33",
+		"testExplicitIdentity2" : "AlexandreBergel 1/12/2014 16:15",
+		"testExplicitIdentity3Initialization" : "AlexandreBergel 1/12/2014 16:16",
+		"testGradient" : "AlexandreBergel 1/12/2014 16:16",
+		"testIdentity" : "AlexandreBergel 1/12/2014 16:16",
+		"testIdentityModulo" : "AlexandreBergel 1/12/2014 16:16",
+		"testIdentityWithCommand" : "AlexandreBergel 1/12/2014 16:17",
+		"testMultipleLinearNormalizer" : "AlexandreBergel 1/12/2014 16:18",
+		"testNumberLinearNormalizer" : "AlexandreBergel 1/12/2014 16:21",
+		"testValueLinearNormalizer" : "AlexandreBergel 1/12/2014 16:21" } }

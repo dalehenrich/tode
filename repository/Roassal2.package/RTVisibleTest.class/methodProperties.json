@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testBasic" : "AlexandreBergel 8/20/2014 14:12",
+		"testBasicWithoutInvisibleBlock" : "AlexandreBergel 8/21/2014 12:31",
+		"testInitialization" : "AlexandreBergel 9/4/2014 10:44",
+		"testIsVisible" : "AlexandreBergel 9/4/2014 10:51",
+		"testIsVisible2" : "AlexandreBergel 9/4/2014 10:51",
+		"testVisible" : "AlexandreBergel 9/4/2014 10:50",
+		"testVisible2" : "AlexandreBergel 9/4/2014 10:50" } }

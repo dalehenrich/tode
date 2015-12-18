@@ -1,0 +1,3 @@
+initialization
+initializeInteractionBuilder
+	self interaction popup.

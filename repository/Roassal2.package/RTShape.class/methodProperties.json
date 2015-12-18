@@ -1,0 +1,26 @@
+{
+	"class" : {
+		"color:" : "AlexandreBergel 4/16/2014 16:56",
+		"element" : "AlexandreBergel 12/14/2013 21:58",
+		"elementOn:" : "AlexandreBergel 12/14/2013 21:58",
+		"elementsOn:" : "AlexandreBergel 4/23/2014 17:00",
+		"instance" : "AlexandreBergel 12/14/2013 21:42" },
+	"instance" : {
+		"+" : "AlexandreBergel 12/30/2014 20:30",
+		"color" : "AlexandreBergel 12/16/2013 17:52",
+		"color:" : "AlexandreBergel 1/13/2014 12:31",
+		"colorElement:" : "AlexandreBergel 1/13/2014 12:31",
+		"colorFor:" : "AlexandreBergel 12/16/2013 17:52",
+		"defaultColor" : "AlexandreBergel 12/16/2013 16:18",
+		"element" : "AlexandreBergel 12/14/2013 21:57",
+		"elementOn:" : "AlexandreBergel 12/14/2013 21:57",
+		"elementsOn:" : "AlexandreBergel 12/29/2013 13:53",
+		"fillColor" : "AlexandreBergel 1/13/2014 16:55",
+		"fillColor:" : "AlexandreBergel 1/13/2014 16:55",
+		"fillColorElement:" : "AlexandreBergel 1/17/2014 12:35",
+		"initialize" : "AlexandreBergel 12/16/2013 18:06",
+		"instance" : "AlexandreBergel 12/14/2013 21:42",
+		"trachelShapeClass" : "AlexandreBergel 2/7/2014 01:40",
+		"trachelShapeFor:" : "AlexandreBergel 2/7/2014 01:41",
+		"updateFor:" : "AlexandreBergel 1/28/2014 17:49",
+		"updateFor:trachelShape:" : "AlexandreBergel 1/13/2014 19:19" } }

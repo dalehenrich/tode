@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"fromBuilder:" : "PierreChanson 6/18/2015 15:11" },
+	"instance" : {
+		"addAnimations" : "PierreChanson 6/18/2015 15:20",
+		"defineShapes" : "PierreChanson 5/11/2015 14:46",
+		"initialize" : "PierreChanson 5/11/2015 10:38",
+		"positionOnBorderHorizontal" : "PierreChanson 6/18/2015 12:28",
+		"renderIn:" : "PierreChanson 6/18/2015 15:07",
+		"reverseTranslation:" : "PierreChanson 6/18/2015 15:20",
+		"signalUpdatePosition" : "PierreChanson 5/11/2015 14:54",
+		"signalUpdateSize" : "PierreChanson 6/18/2015 12:29",
+		"translation:" : "PierreChanson 6/18/2015 15:20" } }

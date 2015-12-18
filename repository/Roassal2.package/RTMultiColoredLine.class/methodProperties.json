@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"block:" : "AlexandreBergel 3/3/2015 11:19",
+		"colorShape" : "PierreChanson 3/3/2015 14:28",
+		"colors" : "AlexandreBergel 3/3/2015 11:16",
+		"colors:" : "AlexandreBergel 3/3/2015 11:16",
+		"defaultColors" : "AlexandreBergel 3/3/2015 11:21",
+		"initialize" : "AlexandreBergel 3/3/2015 11:21",
+		"path" : "PierreChanson 2/20/2015 15:17",
+		"straight" : "PierreChanson 10/17/2014 22:15",
+		"trachelShapeFor:" : "AlexandreBergel 3/3/2015 11:20",
+		"updateFor:trachelShape:" : "AlexandreBergel 3/3/2015 11:17" } }

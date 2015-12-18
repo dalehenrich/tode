@@ -1,0 +1,3 @@
+private
+nodeShape
+	^ shapeBuilder shape

@@ -1,0 +1,1 @@
+A RTEditableLabelTest is a test class for testing the behavior of RTEditableLabel

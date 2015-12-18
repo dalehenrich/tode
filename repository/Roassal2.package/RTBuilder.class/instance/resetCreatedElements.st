@@ -1,0 +1,3 @@
+protected
+resetCreatedElements
+	shapeBuilder resetCreatedElements

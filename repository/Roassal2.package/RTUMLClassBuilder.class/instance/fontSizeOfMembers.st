@@ -1,0 +1,3 @@
+private
+fontSizeOfMembers
+	^ 10

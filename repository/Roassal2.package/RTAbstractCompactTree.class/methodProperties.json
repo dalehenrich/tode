@@ -1,0 +1,23 @@
+{
+	"class" : {
+		"horizontalGap:" : "AlexandreBergel 1/13/2014 10:04",
+		"horizontalGap:verticalGap:" : "AlexandreBergel 1/13/2014 10:04",
+		"isAbstract" : "AlexandreBergel 8/11/2014 16:57",
+		"verticalGap:" : "AlexandreBergel 1/13/2014 10:04" },
+	"instance" : {
+		"childrenFor:" : "AlexandreBergel 1/13/2014 10:04",
+		"compareContourOf:with:" : "AlexandreBergel 1/13/2014 10:04",
+		"computePosition:" : "AlexandreBergel 1/13/2014 10:04",
+		"coordinate:withMod:" : "AlexandreBergel 1/13/2014 10:04",
+		"doExecute:" : "AlexandreBergel 1/13/2014 10:04",
+		"draw:withMod:" : "AlexandreBergel 1/13/2014 10:04",
+		"followLeftContour:toLayer:" : "AlexandreBergel 1/13/2014 10:37",
+		"followRightContour:toLayer:" : "AlexandreBergel 1/13/2014 10:32",
+		"getAbcissaOf:inSubtreeFromLayer:" : "AlexandreBergel 1/13/2014 10:36",
+		"greedyCycleRemoval:" : "AlexandreBergel 1/13/2014 10:04",
+		"initialLayout:" : "AlexandreBergel 1/13/2014 10:04",
+		"initialize" : "AlexandreBergel 1/13/2014 10:04",
+		"initialize:whoseFatherIs:" : "AlexandreBergel 1/13/2014 10:22",
+		"leftSiblingOf:" : "AlexandreBergel 1/13/2014 10:16",
+		"nodeAbcissaWithNeighbor:" : "AlexandreBergel 1/13/2014 10:04",
+		"root:" : "AlexandreBergel 1/13/2014 10:04" } }

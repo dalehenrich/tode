@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"with:with:" : "AlexandreBergel 10/5/2014 22:13" },
+	"instance" : {
+		"add:" : "AlexandreBergel 7/13/2014 00:25",
+		"add:translateBy:" : "AlexandreBergel 7/13/2014 00:25",
+		"alignRight" : "AlexandreBergel 10/9/2014 17:21",
+		"allOfSameSize" : "AlexandreBergel 2/27/2015 13:56",
+		"allShapes" : "AlexandreBergel 11/19/2014 14:54",
+		"colorElement:" : "AlexandreBergel 8/16/2014 13:54",
+		"edgeFrom:to:" : "AlexandreBergel 11/19/2014 17:07",
+		"horizontal" : "AlexandreBergel 8/18/2014 09:44",
+		"initialize" : "AlexandreBergel 11/23/2014 16:39",
+		"setAutomaticRelayout" : "AlexandreBergel 3/24/2015 18:29",
+		"setAutomaticUpdateLayoutIfNecessaryFor:and:" : "AlexandreBergel 11/23/2014 18:08",
+		"trachelShapeFor:" : "AlexandreBergel 1/13/2015 14:28",
+		"updateFor:trachelShape:" : "AlexandreBergel 11/23/2014 20:31",
+		"vertical" : "AlexandreBergel 8/18/2014 09:44" } }

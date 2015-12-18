@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"@" : "AlexandreBergel 1/17/2014 10:15",
+		"addInteraction:" : "AlexandreBergel 1/17/2014 10:15",
+		"announce:" : "AlexandreBergel 11/7/2014 14:53",
+		"announcer" : "AlexandreBergel 7/31/2014 19:34",
+		"announcer:" : "AlexandreBergel 7/31/2014 19:34",
+		"attributeAt:" : "AlexandreBergel 3/2/2015 17:17",
+		"attributeAt:ifAbsent:" : "AlexandreBergel 3/2/2015 17:17",
+		"attributeAt:ifAbsentPut:" : "AlexandreBergel 3/2/2015 17:17",
+		"attributeAt:put:" : "AlexandreBergel 3/2/2015 17:17",
+		"attributes" : "AlexandreBergel 3/2/2015 17:17",
+		"getInteractionForClass:" : "akevalion 4/30/2015 19:45",
+		"hasAttribute:" : "AlexandreBergel 3/2/2015 17:17",
+		"hasAttributes" : "AlexandreBergel 3/2/2015 17:17",
+		"hasInteraction:" : "akevalion 4/30/2015 19:37",
+		"removeAttributeAt:" : "AlexandreBergel 3/2/2015 17:17",
+		"removeAttributeAt:ifAbsent:" : "AlexandreBergel 3/2/2015 17:17",
+		"when:do:" : "AlexandreBergel 11/7/2014 14:53" } }

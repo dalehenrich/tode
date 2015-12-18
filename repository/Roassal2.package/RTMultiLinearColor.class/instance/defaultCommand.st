@@ -1,0 +1,3 @@
+initialization
+defaultCommand
+	^ #yourself

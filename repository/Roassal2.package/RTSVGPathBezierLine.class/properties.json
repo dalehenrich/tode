@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 4/30/2015 16:38",
+	"instvars" : [
+		 ],
+	"name" : "RTSVGPathBezierLine",
+	"pools" : [
+		 ],
+	"super" : "RTBezierLine",
+	"type" : "normal" }

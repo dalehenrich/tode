@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"accept:" : "RicardoJacas 3/13/2014 10:27",
+		"alphaAngle" : "RicardoJacas 3/13/2014 17:27",
+		"alphaAngle:betaAngle:innerRadius:externalRadius:" : "AlexandreBergel 1/24/2014 18:13",
+		"betaAngle" : "RicardoJacas 3/13/2014 17:27",
+		"bottomRight" : "akevalion 12/15/2014 15:08",
+		"center" : "akevalion 5/20/2015 15:54",
+		"computePath" : "akevalion 7/28/2014 15:55",
+		"computeRectangle" : "akevalion 11/13/2014 16:18",
+		"drawOn:" : "AlexandreBergel 8/2/2014 20:58",
+		"drawStrokeIfNecessaryOn:" : "SamirSaleh 1/20/2014 17:22",
+		"encompassingRectangle" : "akevalion 11/13/2014 15:49",
+		"externalRadius" : "RicardoJacas 3/13/2014 17:28",
+		"height" : "akevalion 11/13/2014 15:52",
+		"includesPoint:" : "akevalion 5/20/2015 15:54",
+		"initialize" : "akevalion 5/20/2015 15:39",
+		"innerRadius" : "RicardoJacas 3/13/2014 17:28",
+		"topLeft" : "akevalion 12/15/2014 15:07",
+		"width" : "akevalion 11/13/2014 15:53" } }

@@ -1,0 +1,25 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 3/17/2015 15:25",
+	"instvars" : [
+		"qvar",
+		"i",
+		"io",
+		"j",
+		"q",
+		"ss",
+		"ovar",
+		"ssOffMap",
+		"resetRequired",
+		"base",
+		"niceStep",
+		"o" ],
+	"name" : "RTNiceStepSizeGenerator",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

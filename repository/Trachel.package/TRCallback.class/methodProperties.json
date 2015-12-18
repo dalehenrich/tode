@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"block:" : "JurajKubelka 4/9/2014 12:01" },
+	"instance" : {
+		"block" : "JurajKubelka 4/9/2014 12:00",
+		"block:" : "JurajKubelka 4/9/2014 12:00",
+		"initialize" : "JurajKubelka 4/9/2014 14:07",
+		"isCameraScaleCallback" : "AlexandreBergel 11/7/2014 09:54",
+		"isExtentCallback" : "JurajKubelka 4/9/2014 14:19",
+		"isRemoveCallback" : "AlexandreBergel 7/12/2014 00:12",
+		"isTranslationCallback" : "JurajKubelka 4/9/2014 14:06" } }

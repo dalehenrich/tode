@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 3/17/2015 15:34",
+	"instvars" : [
+		"stepSize",
+		"offset",
+		"i",
+		"j" ],
+	"name" : "RTNiceStep",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

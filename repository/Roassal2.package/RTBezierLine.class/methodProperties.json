@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"centerOfElements:" : "AlexandreBergel 4/16/2014 14:03",
+		"centerOfObjects:inView:" : "AlexandreBergel 4/16/2014 18:42",
+		"controllingElements" : "AlexandreBergel 4/16/2014 12:33",
+		"controllingElements:" : "AlexandreBergel 4/16/2014 12:39",
+		"follow:" : "AlexandreBergel 4/17/2014 12:47",
+		"getControllingElementsFromFollowFor:" : "AlexandreBergel 1/11/2014 22:17",
+		"getControllingElementsFromFollowFor:using:" : "AlexandreBergel 1/11/2014 22:59",
+		"getFollowersOf:using:" : "AlexandreBergel 1/11/2014 22:31",
+		"getListOfPointsForTrachel:" : "AlexandreBergel 4/16/2014 12:36",
+		"initialize" : "AlexandreBergel 1/11/2014 21:50",
+		"midPointInCenterOfElements:" : "AlexandreBergel 4/16/2014 18:48",
+		"midPointInCenterOfObjects:inView:" : "AlexandreBergel 4/16/2014 18:47",
+		"setControllingElementsFromFollowFor:" : "AlexandreBergel 12/29/2014 13:16",
+		"trachelShapeFor:" : "AlexandreBergel 11/24/2014 19:51",
+		"updateFor:trachelShape:" : "AlexandreBergel 5/3/2014 07:42" } }

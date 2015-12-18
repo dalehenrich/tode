@@ -1,0 +1,15 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NataliaTymchuk 7/5/2014 19:47",
+	"instvars" : [
+		"vertices",
+		"strokeWidth" ],
+	"name" : "TRPolygonShape",
+	"pools" : [
+		 ],
+	"super" : "TRShape",
+	"type" : "normal" }

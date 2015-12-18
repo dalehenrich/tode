@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTSVGExporterTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

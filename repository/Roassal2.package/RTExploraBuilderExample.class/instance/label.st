@@ -1,0 +1,3 @@
+basic
+label
+	^ 'Explora'

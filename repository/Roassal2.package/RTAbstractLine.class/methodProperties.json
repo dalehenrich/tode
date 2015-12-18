@@ -1,0 +1,23 @@
+{
+	"class" : {
+		"edgeFrom:to:" : "AlexandreBergel 12/16/2013 17:40",
+		"edgesFrom:toAll:" : "AlexandreBergel 6/10/2015 17:59" },
+	"instance" : {
+		"+" : "AlexandreBergel 6/15/2015 17:37",
+		"accept:" : "SamirSaleh 1/13/2014 17:46",
+		"attachPoint" : "AlexandreBergel 10/6/2014 10:27",
+		"attachPoint:" : "JurajKubelka 1/29/2014 10:50",
+		"copyWithSimpleArrow" : "AlexandreBergel 6/6/2014 15:18",
+		"edgeFrom:to:" : "AlexandreBergel 6/15/2015 17:38",
+		"edgesFrom:toAll:" : "AlexandreBergel 6/15/2015 17:38",
+		"endingPointOf:" : "JurajKubelka 1/29/2014 10:49",
+		"initialize" : "SergioMaass 3/7/2014 11:59",
+		"startingPointOf:" : "JurajKubelka 1/29/2014 10:49",
+		"updateFor:trachelShape:" : "AlexandreBergel 4/21/2014 17:02",
+		"width:" : "AlexandreBergel 6/15/2015 17:39",
+		"widthFor:" : "AlexandreBergel 6/15/2015 17:39",
+		"withCenteredAttachPoint" : "AlexandreBergel 12/27/2014 13:13",
+		"withHorizontalAttachPoint" : "JurajKubelka 1/29/2014 10:31",
+		"withOffsetIfMultiple" : "AlexandreBergel 6/15/2015 17:41",
+		"withShorterDistanceAttachPoint" : "JurajKubelka 1/29/2014 10:32",
+		"withVerticallAttachPoint" : "JurajKubelka 1/29/2014 10:32" } }

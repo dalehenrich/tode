@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"convertPointForGraph:" : "AlexandreBergel 5/20/2015 11:11",
+		"createLinesAndLabelsIfNecessary" : "AlexandreBergel 5/20/2015 10:54",
+		"getLabelXValueFor:" : "AlexandreBergel 5/20/2015 11:24",
+		"getLabelYValueFor:" : "AlexandreBergel 5/20/2015 11:24",
+		"getPositionFromPixel:" : "AlexandreBergel 5/20/2015 11:22",
+		"initialize" : "AlexandreBergel 5/20/2015 11:23",
+		"isPointOverTheBuilder:" : "AlexandreBergel 5/20/2015 11:12",
+		"removeLinesAndLabelsIfNecessary" : "AlexandreBergel 5/20/2015 11:21",
+		"render" : "AlexandreBergel 5/20/2015 11:24",
+		"updateCanvas" : "AlexandreBergel 5/20/2015 10:55" } }

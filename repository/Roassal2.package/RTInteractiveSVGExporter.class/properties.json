@@ -1,0 +1,22 @@
+{
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RicardoJacas 3/18/2014 10:20",
+	"instvars" : [
+		"interactions",
+		"marginX",
+		"marginY",
+		"paddingX",
+		"paddingY",
+		"functions",
+		"globals",
+		"buttons",
+		"buttonStart" ],
+	"name" : "RTInteractiveSVGExporter",
+	"pools" : [
+		 ],
+	"super" : "RTSVGExporter",
+	"type" : "normal" }

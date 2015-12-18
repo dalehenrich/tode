@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"deltaFor:" : "AlexandreBergel 12/14/2013 22:07",
+		"doCenter:" : "AlexandreBergel 12/14/2013 22:07",
+		"doStretchHorizontal:" : "AlexandreBergel 12/14/2013 22:07",
+		"doStretchVertical:" : "AlexandreBergel 12/14/2013 22:07",
+		"initialize" : "AlexandreBergel 12/14/2013 22:07",
+		"movePointer:accordingToFigure:" : "AlexandreBergel 1/23/2014 16:34",
+		"positionOriginalPointer:" : "AlexandreBergel 1/23/2014 15:41" } }

@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"linear" : "akevalion 6/2/2015 16:24" },
+	"instance" : {
+		"domain" : "akevalion 6/4/2015 15:02",
+		"domain:" : "akevalion 6/4/2015 15:02",
+		"interpolate" : "akevalion 6/4/2015 15:05",
+		"interpolate:" : "akevalion 6/4/2015 15:05",
+		"invert:" : "akevalion 6/4/2015 15:01",
+		"range" : "akevalion 6/4/2015 15:02",
+		"range:" : "akevalion 6/4/2015 15:02",
+		"rescale" : "akevalion 6/4/2015 15:24",
+		"scale:" : "akevalion 6/4/2015 15:01",
+		"uninterpolate" : "akevalion 6/4/2015 15:27",
+		"uninterpolate:" : "akevalion 6/4/2015 15:26" } }

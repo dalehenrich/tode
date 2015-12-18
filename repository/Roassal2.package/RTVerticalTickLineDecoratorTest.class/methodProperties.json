@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testBasicHorizontal" : "AlexandreBergel 5/19/2015 19:09",
+		"testBasicHorizontalWithNumberOfTicks" : "AlexandreBergel 5/19/2015 19:24",
+		"testBasicHorizontalWithStep" : "AlexandreBergel 5/19/2015 19:18",
+		"testBasicVertical" : "AlexandreBergel 5/19/2015 19:09",
+		"testBasicVerticalWithNumberOfTicks" : "AlexandreBergel 5/19/2015 19:20",
+		"testBasicVerticalWithStep" : "AlexandreBergel 5/19/2015 19:18" } }

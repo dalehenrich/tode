@@ -1,0 +1,3 @@
+hooks
+strokeWidth
+	^ strokeWidth

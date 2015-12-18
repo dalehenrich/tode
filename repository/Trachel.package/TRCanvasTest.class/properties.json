@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"canvas" ],
+	"name" : "TRCanvasTest",
+	"pools" : [
+		 ],
+	"super" : "TRTest",
+	"type" : "normal" }

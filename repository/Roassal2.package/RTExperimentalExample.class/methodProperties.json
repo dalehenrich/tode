@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"bumpLayer:" : "akevalion 5/27/2015 15:59" },
+	"instance" : {
+		"createExampleButton" : "akevalion 6/8/2015 19:27",
+		"dataFor:stack:" : "akevalion 6/8/2015 18:22",
+		"exampleStackExpand" : "akevalion 6/4/2015 19:51",
+		"exampleStackExpandIcon" : "akevalion 6/4/2015 19:51",
+		"exampleStackSilhouette" : "akevalion 6/4/2015 19:57",
+		"exampleStackSilhouetteIcon" : "akevalion 6/4/2015 19:57",
+		"exampleStackWiggle" : "akevalion 6/4/2015 19:49",
+		"exampleStackWiggleIcon" : "akevalion 6/4/2015 19:49",
+		"exampleStackZero" : "akevalion 6/4/2015 19:59",
+		"exampleStackZeroIcon" : "akevalion 6/4/2015 19:59",
+		"helper:colorA:colorB:" : "akevalion 6/8/2015 22:12",
+		"label" : "akevalion 5/26/2015 18:52",
+		"maxYValueFor:and:" : "akevalion 6/8/2015 18:21" } }

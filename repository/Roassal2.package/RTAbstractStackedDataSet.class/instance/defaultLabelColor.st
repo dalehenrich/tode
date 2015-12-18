@@ -1,0 +1,3 @@
+public
+defaultLabelColor
+	^ Color lightGray

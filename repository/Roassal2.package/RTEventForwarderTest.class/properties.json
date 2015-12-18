@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTEventForwarderTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

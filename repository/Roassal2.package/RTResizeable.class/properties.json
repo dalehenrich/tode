@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/9/2015 15:46",
+	"instvars" : [
+		 ],
+	"name" : "RTResizeable",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"left",
+		"right",
+		"end" ],
+	"name" : "TRDiamondShape",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractLineDecoratorShape",
+	"type" : "normal" }

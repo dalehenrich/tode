@@ -1,0 +1,19 @@
+{
+	"category" : "Roassal2-Builder-ScrollBar",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"start",
+		"stop",
+		"margeRectangle",
+		"bar",
+		"surroundingRectangle",
+		"collection" ],
+	"name" : "RTScrollBarShapes",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"announcer" : "akevalion 5/5/2015 18:35",
+		"announcer:" : "akevalion 5/5/2015 20:19",
+		"color" : "akevalion 5/5/2015 18:58",
+		"color:" : "akevalion 5/5/2015 18:58",
+		"dragViewWithEvent:" : "akevalion 5/5/2015 20:24",
+		"getOrCreateShapeForView" : "akevalion 5/5/2015 20:26",
+		"getSelectedElementsWith:" : "akevalion 5/5/2015 20:26",
+		"group" : "akevalion 5/5/2015 18:47",
+		"highlight:" : "akevalion 5/5/2015 18:58",
+		"initialize" : "akevalion 5/5/2015 20:27",
+		"initializeElement:" : "akevalion 5/5/2015 20:27",
+		"key" : "akevalion 4/30/2015 20:45",
+		"key:" : "akevalion 4/30/2015 20:45",
+		"removeDraggableViewInteraction" : "akevalion 5/5/2015 20:16",
+		"removeShape" : "akevalion 5/5/2015 20:33",
+		"selectionEnd" : "akevalion 5/5/2015 20:30",
+		"selectionStart" : "akevalion 5/5/2015 20:17",
+		"shapeBuilder" : "akevalion 4/30/2015 20:44",
+		"unhighlight:" : "akevalion 5/5/2015 20:21",
+		"updateSelectableShapeWithEvent:" : "akevalion 5/5/2015 20:32",
+		"updateShape:with:" : "akevalion 5/4/2015 18:30",
+		"when:do:" : "akevalion 5/5/2015 18:33" } }

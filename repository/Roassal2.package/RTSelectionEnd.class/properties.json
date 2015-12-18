@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Selection",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTSelectionEnd",
+	"pools" : [
+		 ],
+	"super" : "RTSelectionEvent",
+	"type" : "normal" }

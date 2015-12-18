@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"on:name:targets:" : "RicardoJacas 4/4/2014 15:59",
+		"on:name:values:targets:" : "RicardoJacas 4/4/2014 16:12" },
+	"instance" : {
+		"addContribution:" : "RicardoJacas 4/4/2014 16:46",
+		"addEventHandlers:id:element:center:" : "RicardoJacas 4/4/2014 12:01",
+		"addFunctions:" : "RicardoJacas 4/4/2014 15:45",
+		"addGlobalHandlers:" : "RicardoJacas 4/3/2014 17:37",
+		"addSelf:startingPoint:" : "RicardoJacas 4/14/2014 16:44",
+		"changeFunction" : "RicardoJacas 4/4/2014 16:57",
+		"dataAsString:" : "RicardoJacas 4/4/2014 15:25",
+		"fixedName" : "RicardoJacas 4/4/2014 12:37",
+		"getName" : "RicardoJacas 4/4/2014 12:37",
+		"initialize" : "RicardoJacas 4/16/2014 15:17",
+		"name:" : "RicardoJacas 4/4/2014 09:29",
+		"type" : "RicardoJacas 4/4/2014 09:29",
+		"val" : "RicardoJacas 4/4/2014 15:44",
+		"val:" : "RicardoJacas 4/4/2014 15:45" } }

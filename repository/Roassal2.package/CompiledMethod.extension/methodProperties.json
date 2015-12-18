@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"ageInDays" : "AlexandreBergel 5/11/2014 10:00",
+		"ageInDaysAsInteger" : "AlexandreBergel 7/12/2014 17:26",
+		"ageInDaysRounded" : "AlexandreBergel 5/11/2014 10:05",
+		"computeDate" : "AlexandreBergel 5/11/2014 10:18",
+		"date" : "AlexandreBergel 5/11/2014 10:20",
+		"dateSinceEpoch" : "AlexandreBergel 5/11/2014 00:45",
+		"dependentClasses" : "AlexandreBergel 9/25/2014 12:31",
+		"dependentMethods" : "AlexandreBergel 5/12/2014 12:17",
+		"livingInDays" : "AlexandreBergel 5/11/2014 09:20",
+		"numberOfLinesOfCode" : "VanessaPena 12/17/2012 09:57" } }

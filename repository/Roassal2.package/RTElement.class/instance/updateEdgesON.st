@@ -1,0 +1,3 @@
+configuration
+updateEdgesON
+	shouldUpdateEdges := true

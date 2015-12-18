@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"on:link:targets:" : "RicardoJacas 4/2/2014 14:16" },
+	"instance" : {
+		"addEventHandlers:id:element:center:" : "RicardoJacas 3/24/2014 15:32",
+		"addFunctions:" : "RicardoJacas 3/18/2014 16:04",
+		"addGlobalHandlers:" : "RicardoJacas 3/31/2014 14:12",
+		"initialize" : "RicardoJacas 4/3/2014 17:10",
+		"link" : "RicardoJacas 3/18/2014 16:01",
+		"link:" : "RicardoJacas 3/18/2014 16:01" } }

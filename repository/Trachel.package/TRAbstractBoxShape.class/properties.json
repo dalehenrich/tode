@@ -1,0 +1,15 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		"nullRectangle" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rectangle",
+		"strokeWidth" ],
+	"name" : "TRAbstractBoxShape",
+	"pools" : [
+		 ],
+	"super" : "TRShape",
+	"type" : "normal" }

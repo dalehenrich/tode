@@ -1,0 +1,16 @@
+{
+	"category" : "Trachel-Viva",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"evaluator",
+		"timer",
+		"finishCallback" ],
+	"name" : "VIAnimatedValue",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

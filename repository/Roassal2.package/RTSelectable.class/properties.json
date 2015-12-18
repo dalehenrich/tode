@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"selectionCallback" ],
+	"name" : "RTSelectable",
+	"pools" : [
+		 ],
+	"super" : "RTClickStateInteraction",
+	"type" : "normal" }

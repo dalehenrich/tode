@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testAlignRight" : "AlexandreBergel 12/30/2014 20:30",
+		"testAllShapes" : "AlexandreBergel 12/30/2014 20:30",
+		"testBeforeAddingToAView" : "AlexandreBergel 9/3/2014 12:07",
+		"testColor" : "AlexandreBergel 12/30/2014 20:30",
+		"testComposedCompositedShape" : "AlexandreBergel 12/30/2014 20:30",
+		"testExtentCompositedShape" : "AlexandreBergel 12/30/2014 20:30",
+		"testScenario" : "AlexandreBergel 12/30/2014 20:30",
+		"testSetColorOnEmpty" : "AlexandreBergel 12/30/2014 20:30",
+		"testTranslationBy" : "AlexandreBergel 12/30/2014 20:30",
+		"testTranslationTo" : "AlexandreBergel 12/30/2014 20:30",
+		"testVerticalAndChangingElementSize" : "AlexandreBergel 12/30/2014 20:30",
+		"testVerticalAndChangingElementSize2" : "AlexandreBergel 12/30/2014 20:30",
+		"testVerticalLayoutAndTranslation" : "AlexandreBergel 12/30/2014 20:30" } }

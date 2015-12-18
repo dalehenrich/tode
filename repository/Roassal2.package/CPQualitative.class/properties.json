@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 12/14/2014 09:39",
+	"instvars" : [
+		 ],
+	"name" : "CPQualitative",
+	"pools" : [
+		 ],
+	"super" : "ColorPalette",
+	"type" : "normal" }

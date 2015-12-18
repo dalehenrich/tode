@@ -1,0 +1,3 @@
+public
+reset
+	LastCamera := nil

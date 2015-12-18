@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 4/14/2015 16:41",
+	"instvars" : [
+		 ],
+	"name" : "RTShowHide",
+	"pools" : [
+		 ],
+	"super" : "RTHighlightable",
+	"type" : "normal" }

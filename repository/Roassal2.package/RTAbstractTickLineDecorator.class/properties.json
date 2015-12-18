@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"step" ],
+	"name" : "RTAbstractTickLineDecorator",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractGrapherDecorator",
+	"type" : "normal" }

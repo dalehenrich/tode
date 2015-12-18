@@ -1,0 +1,21 @@
+{
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RicardoJacas 5/9/2014 22:52",
+	"instvars" : [
+		"id",
+		"element",
+		"type",
+		"fillColor",
+		"strokeColor",
+		"strokeWidth",
+		"label",
+		"position" ],
+	"name" : "RTSVGEntity",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

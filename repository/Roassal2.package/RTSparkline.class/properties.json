@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Sparkline",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"valueBlock" ],
+	"name" : "RTSparkline",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractElementShape",
+	"type" : "normal" }

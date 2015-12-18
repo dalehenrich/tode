@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"builder" : "AlexandreBergel 11/13/2014 10:28",
+		"builder:" : "AlexandreBergel 11/13/2014 10:28",
+		"cameraPositionNegated" : "akevalion 5/25/2015 16:41",
+		"cameraScale" : "AlexandreBergel 11/13/2014 12:10",
+		"createFormCanvas" : "AlexandreBergel 11/13/2014 12:10",
+		"createSurface" : "AlexandreBergel 11/13/2014 12:09",
+		"encompassingRectangle" : "AlexandreBergel 11/13/2014 12:08",
+		"exportToFile" : "PierreChanson 6/9/2015 12:14",
+		"fileName" : "TudorGirba 9/24/2014 14:42",
+		"fileName:" : "AlexandreBergel 11/13/2014 10:28",
+		"getIFrameDefFromView:label:directory:" : "PierreChanson 2/27/2015 17:35",
+		"initialize" : "AlexandreBergel 11/13/2014 12:41",
+		"insert:named:inPillarStream:" : "PierreChanson 2/27/2015 17:35",
+		"insert:named:inPillarStream:directory:" : "PierreChanson 2/27/2015 17:34",
+		"setDefaultFileName" : "AlexandreBergel 11/13/2014 12:42",
+		"trachelCanvas" : "AlexandreBergel 11/13/2014 12:08",
+		"viewExtent" : "AlexandreBergel 11/13/2014 12:26",
+		"viewHalfExtent" : "AlexandreBergel 11/13/2014 12:24" } }

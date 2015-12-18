@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRExtensibleLabelShape",
+	"pools" : [
+		 ],
+	"super" : "TRLabelShape",
+	"type" : "normal" }

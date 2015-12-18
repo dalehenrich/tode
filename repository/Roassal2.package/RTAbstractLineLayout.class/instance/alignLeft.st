@@ -1,0 +1,4 @@
+accessing
+alignLeft
+	
+	alignment := #left

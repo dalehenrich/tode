@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Sunburst",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 2/25/2015 12:22",
+	"instvars" : [
+		 ],
+	"name" : "RTSunburstBuilderExamples",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractExample",
+	"type" : "normal" }

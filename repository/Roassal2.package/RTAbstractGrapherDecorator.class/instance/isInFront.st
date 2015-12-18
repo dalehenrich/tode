@@ -1,0 +1,3 @@
+configuration
+isInFront
+	^ placedInFront = true

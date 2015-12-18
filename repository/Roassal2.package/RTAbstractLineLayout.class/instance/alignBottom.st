@@ -1,0 +1,4 @@
+accessing
+alignBottom
+	
+	alignment := #bottom

@@ -1,0 +1,4 @@
+configuration
+defaultColor
+
+	^ Color veryVeryLightGray

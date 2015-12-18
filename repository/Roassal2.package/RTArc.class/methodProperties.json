@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"alphaAngle" : "SamirSaleh 1/20/2014 18:07",
+		"alphaAngle:" : "SamirSaleh 1/20/2014 18:08",
+		"alphaAngleElement:" : "SamirSaleh 1/20/2014 18:08",
+		"alphaAngleFor:" : "AlexandreBergel 2/10/2014 09:44",
+		"betaAngle" : "SamirSaleh 1/20/2014 18:07",
+		"betaAngle:" : "SamirSaleh 1/20/2014 18:08",
+		"betaAngleElement:" : "SamirSaleh 1/20/2014 18:09",
+		"betaAngleFor:" : "AlexandreBergel 2/10/2014 09:44",
+		"encompassingRectangle" : "AlexandreBergel 2/10/2014 09:42",
+		"externalRadius" : "SamirSaleh 1/20/2014 18:07",
+		"externalRadius:" : "SamirSaleh 1/20/2014 18:09",
+		"externalRadiusElement:" : "SamirSaleh 1/20/2014 18:10",
+		"externalRadiusFor:" : "AlexandreBergel 2/10/2014 09:44",
+		"initialize" : "AlexandreBergel 1/25/2014 18:29",
+		"innerRadius" : "SamirSaleh 1/20/2014 18:07",
+		"innerRadius:" : "SamirSaleh 1/20/2014 18:10",
+		"innerRadiusElement:" : "SamirSaleh 1/20/2014 18:10",
+		"innerRadiusFor:" : "AlexandreBergel 2/10/2014 09:44",
+		"outerAngle:innerAngle:" : "AlexandreBergel 2/10/2014 09:54",
+		"thickness:" : "AlexandreBergel 1/25/2014 19:22",
+		"trachelShapeClass" : "AlexandreBergel 2/7/2014 02:06",
+		"updateFor:trachelShape:" : "AlexandreBergel 2/7/2014 02:06" } }

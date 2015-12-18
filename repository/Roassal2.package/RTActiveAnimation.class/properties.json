@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"blockToExecute",
+		"view",
+		"intervalInMilliseconds",
+		"lastRefresh" ],
+	"name" : "RTActiveAnimation",
+	"pools" : [
+		 ],
+	"super" : "RTAnimation",
+	"type" : "normal" }

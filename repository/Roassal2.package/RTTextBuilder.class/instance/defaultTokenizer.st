@@ -1,0 +1,3 @@
+initialization
+defaultTokenizer
+	^ RTTextTokenizer new

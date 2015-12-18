@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TREllipseShape",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractBoxShape",
+	"type" : "normal" }

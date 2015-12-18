@@ -1,0 +1,3 @@
+actions
+start
+	animatedValue start

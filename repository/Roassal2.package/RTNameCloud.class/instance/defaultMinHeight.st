@@ -1,0 +1,3 @@
+configuration
+defaultMinHeight
+	^ 8

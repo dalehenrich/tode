@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		"defaultTranslator" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"view" ],
+	"name" : "RTLayoutTranslator",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

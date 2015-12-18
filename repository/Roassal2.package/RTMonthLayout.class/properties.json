@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Calendar",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 5/20/2015 17:15",
+	"instvars" : [
+		"gapSize" ],
+	"name" : "RTMonthLayout",
+	"pools" : [
+		 ],
+	"super" : "RTLayout",
+	"type" : "normal" }

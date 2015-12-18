@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"afterBlock",
+		"groupBlock" ],
+	"name" : "RTExpandable",
+	"pools" : [
+		 ],
+	"super" : "RTClickStateInteraction",
+	"type" : "normal" }

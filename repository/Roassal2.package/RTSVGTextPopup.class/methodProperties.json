@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"on:text:color:font:size:targets:" : "RicardoJacas 4/2/2014 14:17",
+		"on:text:color:size:targets:" : "RicardoJacas 4/2/2014 14:17",
+		"on:text:font:size:targets:" : "RicardoJacas 4/2/2014 14:17",
+		"on:text:targets:" : "RicardoJacas 4/2/2014 14:17",
+		"onClick:text:color:size:targets:" : "RicardoJacas 4/2/2014 14:17",
+		"onClick:text:targets:" : "RicardoJacas 4/2/2014 14:17" },
+	"instance" : {
+		"addEventHandlers:id:element:center:" : "akevalion 4/7/2015 18:19",
+		"defaultFont" : "RicardoJacas 3/24/2014 17:39",
+		"font" : "RicardoJacas 3/24/2014 17:41",
+		"font:" : "RicardoJacas 3/24/2014 17:41",
+		"fontSize" : "RicardoJacas 3/19/2014 09:30",
+		"fontSize:" : "RicardoJacas 3/19/2014 09:30",
+		"initialize" : "RicardoJacas 3/24/2014 17:41",
+		"text" : "RicardoJacas 3/19/2014 09:30",
+		"text:" : "RicardoJacas 3/19/2014 09:30",
+		"yBound" : "RicardoJacas 3/26/2014 10:08" } }

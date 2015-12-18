@@ -1,0 +1,3 @@
+accessing
+maxLatitude
+	^ RTOSM maxLatitude

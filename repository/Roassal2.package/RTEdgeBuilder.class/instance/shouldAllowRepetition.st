@@ -1,0 +1,3 @@
+public repetition
+shouldAllowRepetition
+	^ allowRepetition

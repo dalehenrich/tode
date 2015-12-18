@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"dateTimeStringExample" : "akevalion 10/14/2014 15:45",
+		"setUp" : "AlexandreBergel 3/30/2014 09:34",
+		"testAccessing" : "AlexandreBergel 7/30/2014 20:58",
+		"testAccessing2" : "AlexandreBergel 7/30/2014 20:59",
+		"testCommasInsideQuotes" : "AlexandreBergel 8/6/2014 15:55",
+		"testConvertAsDateAndTime" : "akevalion 10/20/2014 16:25",
+		"testConvertAsFloats" : "AlexandreBergel 7/30/2014 20:49",
+		"testConvertAsInteger" : "AlexandreBergel 7/30/2014 20:51",
+		"testEmptyAndReplaceColumn" : "AlexandreBergel 7/30/2014 20:47",
+		"testEmptyColumn" : "AlexandreBergel 7/30/2014 20:23",
+		"testFiltering" : "AlexandreBergel 7/31/2014 20:49",
+		"testFilteringPerColumn" : "AlexandreBergel 7/31/2014 20:53",
+		"testGathering" : "akevalion 10/20/2014 16:19",
+		"testMassiveConversion" : "AlexandreBergel 3/23/2015 11:27",
+		"testMinimumAndMaximum" : "AlexandreBergel 7/30/2014 20:56",
+		"testProcessing" : "AlexandreBergel 3/30/2014 10:53",
+		"testProcessingWithEmptyLines" : "AlexandreBergel 3/30/2014 10:53",
+		"testRemovingColumn" : "AlexandreBergel 5/10/2014 17:00",
+		"testUsingFirstRow" : "AlexandreBergel 9/5/2014 16:16",
+		"testWithQuote" : "AlexandreBergel 8/6/2014 15:45" } }

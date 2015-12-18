@@ -1,0 +1,16 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"commandKeyPressed",
+		"controlKeyPressed",
+		"shiftKeyPressed" ],
+	"name" : "TRAbstractMouseClick",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractMouseEvent",
+	"type" : "normal" }

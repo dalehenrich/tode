@@ -1,0 +1,3 @@
+public
+httpClientRequestClass
+	self subclassResponsibility 

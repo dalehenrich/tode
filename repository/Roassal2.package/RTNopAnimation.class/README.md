@@ -1,0 +1,1 @@
+A RTNopAnimation simply wait. This is useful to temporize

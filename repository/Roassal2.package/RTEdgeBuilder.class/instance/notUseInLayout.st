@@ -1,0 +1,3 @@
+configuration
+notUseInLayout
+	shouldNotBeUsedInLayout := false

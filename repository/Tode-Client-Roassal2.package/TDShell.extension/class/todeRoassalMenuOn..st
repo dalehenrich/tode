@@ -2,7 +2,7 @@
 todeRoassalMenuOn: aBuilder
 	<todeWorldMenu>
 	| sessionDescriptionDir |
-	sessionDescriptionDir := self todeSysLocalSessionDescriptionPath asFileReference.
+	sessionDescriptionDir := self gsDevKitSessionDescriptionPath asFileReference.
 	sessionDescriptionDir exists
 		ifTrue: [ 
 			(aBuilder item: #Roassal)
@@ -23,10 +23,10 @@ todeRoassalMenuOn: aBuilder
 								action: [ 
 											| bounds window |
 											bounds := TDTopezGemStoneClient windowProperties caculateWindowBounds at: #evaluator.
-											(window := TDServerBlockWorkspace openOnSessionDescription: sessionDescription label: 'Roassal Workspace')
+											(window := TDRoassal2Workspace openOnSessionDescription: sessionDescription label: 'Roassal Workspace')
 												extent: bounds extent;
 												position: bounds origin.
-											currentShell := window model tdShell ] ] ]
+											currentShell := window model tdShell; roassalToolsMenu ] ] ]
 						on: Error
 						do: [ :ex | 
 							Transcript

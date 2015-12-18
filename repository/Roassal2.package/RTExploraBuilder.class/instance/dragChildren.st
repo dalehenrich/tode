@@ -1,0 +1,3 @@
+view
+dragChildren
+	dragChildren := true

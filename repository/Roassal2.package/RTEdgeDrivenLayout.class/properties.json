@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"edges",
+		"userDefinedEdges",
+		"fromPositions",
+		"toPositions" ],
+	"name" : "RTEdgeDrivenLayout",
+	"pools" : [
+		 ],
+	"super" : "RTLayout",
+	"type" : "normal" }

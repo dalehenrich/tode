@@ -1,0 +1,1 @@
+A RTShorterDistanceAttachPointAndCompositeShape assumes that the elements to be connected to or from have a composite shape

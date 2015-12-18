@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 1/15/2015 13:26",
+	"instvars" : [
+		"x",
+		"y",
+		"z" ],
+	"name" : "RTVector",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

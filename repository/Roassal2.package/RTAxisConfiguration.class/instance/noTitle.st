@@ -1,0 +1,3 @@
+configuration
+noTitle
+	self title: ''

@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"view",
+		"ui" ],
+	"name" : "RTInteractionTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

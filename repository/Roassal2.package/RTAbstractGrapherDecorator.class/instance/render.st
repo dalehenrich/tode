@@ -1,0 +1,3 @@
+hooks
+render
+	self subclassResponsibility 

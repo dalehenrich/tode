@@ -1,0 +1,21 @@
+{
+	"category" : "Roassal2-Builder-TreeMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 10/24/2014 18:32",
+	"instvars" : [
+		"extent",
+		"nodes",
+		"elements",
+		"weight",
+		"rectangle",
+		"inset",
+		"popup",
+		"rootNodes" ],
+	"name" : "RTTreeMapBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

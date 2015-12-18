@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"initialize" : "AlexandreBergel 7/18/2014 10:06",
+		"initializeElement:" : "AlexandreBergel 7/18/2014 10:07",
+		"setAlpha:for:" : "AlexandreBergel 4/4/2015 12:39",
+		"setHighAlphaFor:" : "AlexandreBergel 7/18/2014 10:08",
+		"setLowAlphaFor:" : "AlexandreBergel 7/18/2014 10:07" } }

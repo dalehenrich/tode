@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"highAlpha",
+		"lowAlpha" ],
+	"name" : "RTSetEdgeAlpha",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

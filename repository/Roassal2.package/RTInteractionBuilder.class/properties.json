@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"interactions" ],
+	"name" : "RTInteractionBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractBuilder",
+	"type" : "normal" }

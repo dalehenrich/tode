@@ -1,0 +1,21 @@
+{
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RicardoJacas 3/17/2014 11:25",
+	"instvars" : [
+		"view",
+		"stream",
+		"afterStream",
+		"canvas",
+		"interactions",
+		"markers",
+		"center",
+		"count" ],
+	"name" : "RTSVGVisitor",
+	"pools" : [
+		 ],
+	"super" : "RTVisitor",
+	"type" : "normal" }

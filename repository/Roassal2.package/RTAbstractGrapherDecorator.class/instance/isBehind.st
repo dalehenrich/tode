@@ -1,0 +1,3 @@
+configuration
+isBehind
+	^ placedInFront = false

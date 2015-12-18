@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"affectedNodes",
+		"translator",
+		"eventHandler",
+		"currentIteraction" ],
+	"name" : "RTLayout",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

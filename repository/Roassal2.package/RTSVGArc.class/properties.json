@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RicardoJacas 5/9/2014 23:15",
+	"instvars" : [
+		"center",
+		"innerRadius",
+		"outterRadius",
+		"alphaAngle",
+		"betaAngle" ],
+	"name" : "RTSVGArc",
+	"pools" : [
+		 ],
+	"super" : "RTSVGEntity",
+	"type" : "normal" }

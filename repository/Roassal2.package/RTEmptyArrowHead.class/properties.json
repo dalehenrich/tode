@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/4/2015 17:22",
+	"instvars" : [
+		 ],
+	"name" : "RTEmptyArrowHead",
+	"pools" : [
+		 ],
+	"super" : "RTLineDecoration",
+	"type" : "normal" }

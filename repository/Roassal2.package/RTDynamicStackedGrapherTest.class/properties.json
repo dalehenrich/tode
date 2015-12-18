@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "RTDynamicStackedGrapherTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,48 @@
+hook
+doExecute: elements 
+	| x y maxLastLineWidth nextElement maxNextLineWidth|
+	x := self gapSize.
+	y := self gapSize.
+	maxLastLineWidth := 0.
+	maxNextLineWidth := 0.
+	
+	elements do:
+		[ :anElement | 
+		
+		(anElement = elements last) ifFalse:  [nextElement := (elements after: anElement)] ifTrue: [nextElement := anElement].
+		
+		self isAlignBottom ifTrue: [ 
+			translator translate: anElement to: ((x @ y) + ((anElement width / -2) @ (anElement height / 2))).	
+			y := y + anElement height + (self gapSize).
+			((y > (self maxWidth rtValue: elements)) | ((y + nextElement height) > (self maxWidth rtValue: elements) ))ifTrue: 
+				[ y := self gapSize.
+				maxNextLineWidth := self maxNextLineWidthFrom: nextElement for: elements.
+				x := x + (1 * self gapSize) + maxNextLineWidth.
+				maxNextLineWidth := 0.
+				maxLastLineWidth := 0.
+				]
+		].
+	
+	self isAlignCenter ifTrue: [ 
+		translator translate: anElement to: ((x @ y) + (0 @ (anElement width / 2))).
+			y := y + anElement height + (self gapSize).
+			maxLastLineWidth := maxLastLineWidth max: (anElement width).
+			((y > (self maxWidth rtValue: elements)) | ((y + nextElement height) > (self maxWidth rtValue: elements) ))ifTrue: 
+				[ y := self gapSize.
+				maxNextLineWidth := self maxNextLineWidthFrom: nextElement for: elements.
+				x := x + (self gapSize) + (maxNextLineWidth /2) + (maxLastLineWidth /2).
+				maxNextLineWidth := 0.
+				maxLastLineWidth := 0.
+				]
+			].	
+			
+		self isAlignTop ifTrue: [ 
+			translator translateTopLeftOf: anElement to: x @ y.
+			y := y + anElement height + (self gapSize).
+			maxLastLineWidth := maxLastLineWidth max: (anElement width ).
+			((y > (self maxWidth rtValue: elements)) | ((y + nextElement height) > (self maxWidth rtValue: elements) ))ifTrue: 
+				[ y := self gapSize.
+				x := x + (self gapSize) + maxLastLineWidth.
+				maxLastLineWidth := 0 ] 
+			].
+		].

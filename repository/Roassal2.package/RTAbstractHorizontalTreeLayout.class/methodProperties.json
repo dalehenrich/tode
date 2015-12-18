@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"isAbstract" : "TudorGirba 7/27/2014 11:15" },
+	"instance" : {
+		"computeChildrenFor:" : "AlexandreBergel 1/15/2014 10:10",
+		"defaultFromPositions" : "AlexandreBergel 1/15/2014 10:10",
+		"defaultToPositions" : "AlexandreBergel 1/15/2014 10:10",
+		"initialize" : "AlexandreBergel 1/15/2014 10:10",
+		"layout:atPoint:atLayer:" : "JurajKubelka 1/29/2014 17:19",
+		"rearrangeByLayers:" : "JurajKubelka 1/29/2014 17:15" } }

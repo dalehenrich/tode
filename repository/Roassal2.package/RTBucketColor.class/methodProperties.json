@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"example" : "PabloEstefo 4/25/2014 15:51",
+		"example1" : "PabloEstefo 4/25/2014 15:51",
+		"numberOfColors:command:scope:" : "PabloEstefo 4/24/2014 17:31",
+		"numberOfColors:scope:" : "PabloEstefo 4/24/2014 22:28" },
+	"instance" : {
+		"bucketIndexOf:" : "PabloEstefo 4/24/2014 19:12",
+		"buckets" : "PabloEstefo 4/24/2014 19:00",
+		"colorScheme:" : "PabloEstefo 4/24/2014 18:00",
+		"defaultPalette" : "PabloEstefo 4/24/2014 19:15",
+		"initialize" : "PabloEstefo 4/24/2014 18:56",
+		"initializeBuckets" : "akevalion 9/9/2014 17:38",
+		"numberOfBuckets:" : "PabloEstefo 4/24/2014 17:39",
+		"palette" : "PabloEstefo 4/24/2014 23:03",
+		"rtValue:" : "PabloEstefo 4/24/2014 19:13",
+		"scope:" : "PabloEstefo 4/24/2014 17:31" } }

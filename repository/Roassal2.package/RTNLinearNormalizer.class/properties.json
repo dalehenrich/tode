@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"maximumValue",
+		"context",
+		"minimumValue" ],
+	"name" : "RTNLinearNormalizer",
+	"pools" : [
+		 ],
+	"super" : "RTNAbstractNormalizer",
+	"type" : "normal" }

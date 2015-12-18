@@ -1,0 +1,1 @@
+A RTBezier3LineTest is a test class for testing the behavior of RTBezier3Line

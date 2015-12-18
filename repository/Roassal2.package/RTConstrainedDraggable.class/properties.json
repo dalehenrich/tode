@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 12/16/2014 22:01",
+	"instvars" : [
+		"rectangle" ],
+	"name" : "RTConstrainedDraggable",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractDraggable",
+	"type" : "normal" }

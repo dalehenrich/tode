@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-TextBuilder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"builder" ],
+	"name" : "RTTextBuilderTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

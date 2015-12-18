@@ -1,0 +1,3 @@
+accessing
+center
+	^ self position

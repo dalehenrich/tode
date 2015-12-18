@@ -1,0 +1,4 @@
+palettes
+diverging
+
+	^ CPDiverging new

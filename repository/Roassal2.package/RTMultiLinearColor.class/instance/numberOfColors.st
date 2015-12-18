@@ -1,0 +1,3 @@
+accessing
+numberOfColors
+	^ colors size

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "RTHorizontalDraggableView",
+	"pools" : [
+		 ],
+	"super" : "RTConstrainedDraggableView",
+	"type" : "normal" }

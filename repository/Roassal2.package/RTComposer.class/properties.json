@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Builder-Composer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stack",
+		"view",
+		"gap",
+		"mapping",
+		"groups" ],
+	"name" : "RTComposer",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

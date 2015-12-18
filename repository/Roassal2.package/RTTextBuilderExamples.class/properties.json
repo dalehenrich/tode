@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-TextBuilder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JurajKubelka 11/11/2014 22:14",
+	"instvars" : [
+		 ],
+	"name" : "RTTextBuilderExamples",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

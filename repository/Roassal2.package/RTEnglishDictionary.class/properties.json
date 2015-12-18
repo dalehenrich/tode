@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-NameCloud",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTEnglishDictionary",
+	"pools" : [
+		 ],
+	"super" : "RTNameCloudDictionary",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+testing
+isRight
+	^ position = #right

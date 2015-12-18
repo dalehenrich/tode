@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"isAbstract" : "TudorGirba 7/27/2014 11:15" },
+	"instance" : {
+		"atLayer:add:" : "AlexandreBergel 12/27/2013 12:25",
+		"doExecute:" : "AlexandreBergel 12/27/2013 12:25",
+		"initialize" : "AlexandreBergel 12/27/2013 12:25",
+		"isLayered" : "AlexandreBergel 12/27/2013 12:25",
+		"isLayered:" : "AlexandreBergel 12/27/2013 12:25",
+		"layered" : "AlexandreBergel 12/27/2013 12:25",
+		"layout:atPoint:atLayer:" : "AlexandreBergel 12/27/2013 12:25",
+		"leftGap" : "AlexandreBergel 12/27/2013 12:25",
+		"leftGap:" : "AlexandreBergel 12/27/2013 12:25",
+		"rearrangeByLayers:" : "AlexandreBergel 12/27/2013 12:25",
+		"topGap" : "AlexandreBergel 12/27/2013 12:25",
+		"topGap:" : "AlexandreBergel 12/27/2013 12:25" } }

@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"view",
+		"box1",
+		"box2",
+		"edgeBuilder",
+		"line" ],
+	"name" : "RTShorterDistanceWithOffsetAttachPointTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

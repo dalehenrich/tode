@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addedIn:" : "AlexandreBergel 12/29/2013 20:56",
+		"blockToExecute" : "AlexandreBergel 10/29/2014 15:25",
+		"blockToExecute:" : "AlexandreBergel 10/29/2014 15:25",
+		"hasCompleted" : "AlexandreBergel 12/29/2013 18:52",
+		"initialize" : "AlexandreBergel 10/29/2014 15:25",
+		"refresh" : "AlexandreBergel 1/9/2014 18:55",
+		"start" : "AlexandreBergel 2/7/2014 01:17",
+		"waitFor:" : "AlexandreBergel 10/29/2014 15:25",
+		"waitFor:after:" : "AlexandreBergel 2/7/2014 01:16" } }

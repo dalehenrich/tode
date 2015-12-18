@@ -1,0 +1,3 @@
+hooks
+transformDistance: distanceAsPoint forElement: anElement
+	self subclassResponsibility

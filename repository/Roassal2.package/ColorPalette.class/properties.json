@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [
+		"palette" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PabloEstefo 4/24/2014 23:29",
+	"instvars" : [
+		 ],
+	"name" : "ColorPalette",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

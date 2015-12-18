@@ -1,0 +1,1 @@
+A RTConstrainedDraggable is like Draggable, but restraint the element to move within a provided rectangle

@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"isAbstract" : "AlexandreBergel 8/11/2014 16:56",
+		"withMaxWidth:" : "AlexandreBergel 4/3/2014 17:31",
+		"withMaxWidth:withGap:" : "AlexandreBergel 4/3/2014 17:31" },
+	"instance" : {
+		"alignBottom" : "PierreChanson 10/21/2014 17:16",
+		"alignCenter" : "PierreChanson 10/21/2014 17:16",
+		"alignTop" : "PierreChanson 10/21/2014 17:16",
+		"defaultGapSize" : "PierreChanson 10/24/2014 10:52",
+		"defaultMaxWidth" : "PierreChanson 10/22/2014 14:42",
+		"gapSize" : "AlexandreBergel 4/3/2014 17:31",
+		"gapSize:" : "AlexandreBergel 4/3/2014 17:33",
+		"initialize" : "PierreChanson 10/20/2014 16:26",
+		"isAlignBottom" : "PierreChanson 10/21/2014 17:16",
+		"isAlignCenter" : "PierreChanson 10/21/2014 17:16",
+		"isAlignTop" : "PierreChanson 10/21/2014 17:16",
+		"maxWidth" : "AlexandreBergel 4/3/2014 17:31",
+		"maxWidth:" : "AlexandreBergel 4/3/2014 17:33" } }

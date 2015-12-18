@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-MondrianOLD",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"builder" ],
+	"name" : "RTMondrianViewBuilderTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

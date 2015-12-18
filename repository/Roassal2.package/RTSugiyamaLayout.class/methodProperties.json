@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"sortBlock" : "AlexandreBergel 5/21/2014 21:00" },
+	"instance" : {
+		"addDummyNodes" : "AlexandreBergel 3/20/2015 17:14",
+		"assignLabels:" : "AlexandreBergel 5/21/2014 09:48",
+		"buildLayers:" : "AlexandreBergel 5/21/2014 09:48",
+		"cl:u:v:" : "AlexandreBergel 5/21/2014 09:48",
+		"doExecute:" : "AlexandreBergel 5/21/2014 09:48",
+		"layoutAt:" : "AlexandreBergel 5/21/2014 09:48",
+		"maxFloat" : "AlexandreBergel 5/21/2014 09:48",
+		"reduceCrossing" : "AlexandreBergel 7/2/2014 10:01",
+		"sortBlock" : "AlexandreBergel 5/21/2014 09:48" } }

@@ -1,0 +1,3 @@
+default
+current
+	^ TRPharoPlatform new.

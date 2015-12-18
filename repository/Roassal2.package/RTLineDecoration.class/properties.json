@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"width",
+		"size",
+		"attachPoint",
+		"line",
+		"baseSize" ],
+	"name" : "RTLineDecoration",
+	"pools" : [
+		 ],
+	"super" : "RTShape",
+	"type" : "normal" }

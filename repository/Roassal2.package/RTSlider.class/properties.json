@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Builder-UI-Slider",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"callback",
+		"labelled",
+		"position",
+		"sliderElements",
+		"max" ],
+	"name" : "RTSlider",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

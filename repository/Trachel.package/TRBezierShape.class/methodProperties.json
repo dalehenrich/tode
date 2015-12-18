@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"accept:" : "SamirSaleh 1/16/2014 11:00",
+		"accept:with:" : "RicardoJacas 4/10/2014 12:04",
+		"computePath" : "AlexandreBergel 5/8/2015 11:00",
+		"drawOn:" : "AlexandreBergel 5/3/2014 07:45",
+		"encompassingRectangle" : "AlexandreBergel 1/10/2014 17:09",
+		"initialize" : "AlexandreBergel 1/22/2014 15:46",
+		"numberOfPoints" : "AlexandreBergel 4/16/2014 18:17",
+		"points" : "AlexandreBergel 1/16/2014 15:31",
+		"points:" : "AlexandreBergel 1/9/2014 23:06",
+		"points:color:" : "AlexandreBergel 1/12/2014 16:58",
+		"position" : "AlexandreBergel 1/22/2014 16:28",
+		"strokePaint:" : "AlexandreBergel 5/3/2014 07:45",
+		"translateBy:" : "AlexandreBergel 2/26/2014 00:23" } }

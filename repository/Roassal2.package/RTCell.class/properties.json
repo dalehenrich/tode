@@ -1,0 +1,19 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"elements",
+		"columns",
+		"element",
+		"number",
+		"rowHeights",
+		"columnWidths" ],
+	"name" : "RTCell",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

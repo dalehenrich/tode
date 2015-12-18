@@ -1,0 +1,17 @@
+{
+	"category" : "Trachel-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "YuriyTymchuk 6/20/2014 10:43",
+	"instvars" : [
+		"position",
+		"canvas",
+		"scale",
+		"initializer" ],
+	"name" : "TRCamera",
+	"pools" : [
+		 ],
+	"super" : "TRCallableObject",
+	"type" : "normal" }

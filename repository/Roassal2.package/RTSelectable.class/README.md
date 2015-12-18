@@ -1,0 +1,1 @@
+A RTSelectable is an interaction that allows for element contained in a view to be selected and having a callback whenever the selection is changed

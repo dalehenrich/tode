@@ -1,0 +1,3 @@
+hooks
+axis
+	self subclassResponsibility

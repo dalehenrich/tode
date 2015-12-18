@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "AlexandreBergel 7/30/2014 12:29",
+		"testAddedInCanvas" : "AlexandreBergel 11/3/2014 09:47",
+		"testHorizontalOrthogonal" : "AlexandreBergel 7/30/2014 15:08",
+		"testOrthoVerticalLine" : "AlexandreBergel 7/30/2014 13:54",
+		"testStraight" : "AlexandreBergel 7/30/2014 12:34",
+		"testVerticalOrthogonal" : "AlexandreBergel 7/30/2014 12:36" } }

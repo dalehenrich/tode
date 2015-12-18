@@ -1,0 +1,16 @@
+{
+	"category" : "RPointerDetective",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 5/18/2015 18:18",
+	"instvars" : [
+		"shell",
+		"showAllPath",
+		"limitServerObjArray" ],
+	"name" : "RServerPointerDetective",
+	"pools" : [
+		 ],
+	"super" : "RPointerDetective",
+	"type" : "normal" }

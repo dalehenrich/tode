@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTColorInterpolator",
+	"pools" : [
+		 ],
+	"super" : "RTInterpolator",
+	"type" : "normal" }

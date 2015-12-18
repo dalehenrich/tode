@@ -1,0 +1,19 @@
+{
+	"category" : "Roassal2-Builder-TextBuilder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JurajKubelka 11/11/2014 22:13",
+	"instvars" : [
+		"hook",
+		"wordHook",
+		"wordInteractionBuilder",
+		"wordShapeBuilder",
+		"padding",
+		"textTokenizer" ],
+	"name" : "RTTextBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

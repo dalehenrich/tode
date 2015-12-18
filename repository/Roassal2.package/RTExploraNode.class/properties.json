@@ -1,0 +1,23 @@
+{
+	"category" : "Roassal2-Builder-Explora",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"element",
+		"builder",
+		"id",
+		"parentNode",
+		"directions",
+		"expanded",
+		"expansion",
+		"expandedNodes",
+		"iconOpen",
+		"iconClose" ],
+	"name" : "RTExploraNode",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/21/2014 20:58",
+	"instvars" : [
+		"alphaAngle",
+		"betaAngle",
+		"innerRadius",
+		"externalRadius" ],
+	"name" : "RTArc",
+	"pools" : [
+		 ],
+	"super" : "RTShape",
+	"type" : "normal" }

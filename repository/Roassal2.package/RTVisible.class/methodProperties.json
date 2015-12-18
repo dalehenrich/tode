@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"doInvisibleBlockOn:" : "AlexandreBergel 8/20/2014 14:16",
+		"doUpdate:" : "AlexandreBergel 8/20/2014 14:16",
+		"doVisibleBlockOn:" : "AlexandreBergel 8/20/2014 13:48",
+		"initialize" : "AlexandreBergel 9/4/2014 10:44",
+		"initializeElement:" : "AlexandreBergel 8/21/2014 14:24",
+		"invisibleBlock" : "AlexandreBergel 8/20/2014 12:42",
+		"invisibleBlock:" : "AlexandreBergel 8/20/2014 12:43",
+		"prepareElement:" : "AlexandreBergel 8/20/2014 14:07",
+		"visibleBlock" : "AlexandreBergel 8/20/2014 12:43",
+		"visibleBlock:" : "AlexandreBergel 8/20/2014 12:43" } }

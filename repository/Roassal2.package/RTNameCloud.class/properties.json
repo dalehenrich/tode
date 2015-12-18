@@ -1,0 +1,20 @@
+{
+	"category" : "Roassal2-Builder-NameCloud",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"maxHeight",
+		"minHeight",
+		"maxWords",
+		"layout",
+		"tableFrequency",
+		"tableObjects",
+		"dictionary" ],
+	"name" : "RTNameCloud",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

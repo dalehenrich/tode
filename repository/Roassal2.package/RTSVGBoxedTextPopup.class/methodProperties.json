@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addEventHandlers:id:element:center:" : "akevalion 4/7/2015 18:18",
+		"backgroundColor" : "RicardoJacas 4/3/2014 14:19",
+		"backgroundColor:" : "RicardoJacas 4/3/2014 14:19",
+		"borderColor" : "RicardoJacas 4/3/2014 14:19",
+		"borderColor:" : "RicardoJacas 4/3/2014 14:19",
+		"defaultBackgroundColor" : "RicardoJacas 4/3/2014 15:20",
+		"defaultBorderColor" : "RicardoJacas 4/3/2014 14:22",
+		"initialize" : "RicardoJacas 4/3/2014 14:23" } }

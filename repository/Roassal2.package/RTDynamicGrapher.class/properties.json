@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 4/7/2015 19:53",
+	"instvars" : [
+		"x",
+		"y",
+		"allAddedElements" ],
+	"name" : "RTDynamicGrapher",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractGrapher",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+adding
+addGlobalHandlers: aStream
+	self subclassResponsibility

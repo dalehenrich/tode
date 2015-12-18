@@ -1,0 +1,3 @@
+as yet unclassified
+encompassingRectangleFromSpaceToPixel
+	^ encompassingRectangleFromSpaceToPixel

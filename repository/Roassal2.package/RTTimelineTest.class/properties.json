@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Timeline-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTTimelineTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

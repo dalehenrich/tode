@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Timeline",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"identifiers" ],
+	"name" : "RTHorizontalTimelineDecorator",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractLineDecorator",
+	"type" : "normal" }

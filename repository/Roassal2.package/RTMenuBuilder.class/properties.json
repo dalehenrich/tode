@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Builder-Menu",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 12/18/2014 11:47",
+	"instvars" : [
+		"parentMenus",
+		"closingSubmenuFlag" ],
+	"name" : "RTMenuBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

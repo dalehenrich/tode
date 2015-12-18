@@ -1,0 +1,3 @@
+public
+animated
+	animation := true.

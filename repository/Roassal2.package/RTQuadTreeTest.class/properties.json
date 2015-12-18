@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nodes",
+		"quad" ],
+	"name" : "RTQuadTreeTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

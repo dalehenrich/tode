@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "RTDecoratedTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

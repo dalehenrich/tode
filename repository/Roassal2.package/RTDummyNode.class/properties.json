@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"edge" ],
+	"name" : "RTDummyNode",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

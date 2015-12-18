@@ -1,0 +1,25 @@
+{
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 6/2/2015 16:19",
+	"instvars" : [
+		"shape",
+		"dataBlock",
+		"data",
+		"x0",
+		"x1",
+		"y0",
+		"y1",
+		"defined",
+		"interpolate",
+		"interpolateReverse",
+		"lvar",
+		"tension" ],
+	"name" : "RTAreaBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

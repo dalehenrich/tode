@@ -1,0 +1,3 @@
+configuration
+moveInFront
+	placedInFront := true

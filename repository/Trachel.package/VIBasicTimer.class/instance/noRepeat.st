@@ -1,0 +1,3 @@
+accessing
+noRepeat
+	self subclassResponsibility 

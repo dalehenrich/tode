@@ -1,0 +1,3 @@
+dictionaries
+unnecessaryWords
+	^ dictionary unnecessaryWords

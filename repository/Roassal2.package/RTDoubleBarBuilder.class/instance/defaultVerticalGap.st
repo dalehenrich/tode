@@ -1,0 +1,3 @@
+configuration
+defaultVerticalGap
+	^ 5

@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"hosts",
+		"doBlock",
+		"elementBeingDragged" ],
+	"name" : "RTDragAndDroppable",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

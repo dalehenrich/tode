@@ -1,0 +1,3 @@
+testing
+isAlignTop
+	^ alignment = #top

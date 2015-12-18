@@ -1,0 +1,3 @@
+accessing
+height
+	^ trachelShape height

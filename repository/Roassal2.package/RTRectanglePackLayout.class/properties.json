@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "YuriyTymchuk 2/19/2015 15:18",
+	"instvars" : [
+		"freeSpace",
+		"gap",
+		"padding",
+		"bounds" ],
+	"name" : "RTRectanglePackLayout",
+	"pools" : [
+		 ],
+	"super" : "RTLayout",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 10/13/2014 10:35",
+	"instvars" : [
+		 ],
+	"name" : "RTDraggableChildren",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

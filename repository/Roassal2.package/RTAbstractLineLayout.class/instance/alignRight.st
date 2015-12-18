@@ -1,0 +1,4 @@
+accessing
+alignRight
+	
+	alignment := #right

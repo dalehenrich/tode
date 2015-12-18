@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"isAbstract" : "AlexandreBergel 8/11/2014 16:56",
+		"on:withGap:withLineItemsCount:" : "AlexandreBergel 12/14/2013 22:50",
+		"on:withLineItemsCount:" : "AlexandreBergel 12/14/2013 22:50",
+		"withGap:" : "AlexandreBergel 12/14/2013 22:50",
+		"withGap:withLineItemsCount:" : "AlexandreBergel 12/14/2013 22:50",
+		"withLineItemsCount:" : "AlexandreBergel 12/14/2013 22:50" },
+	"instance" : {
+		"defaultGapSize" : "AlexandreBergel 12/14/2013 22:50",
+		"defaultLineItemsCount" : "AlexandreBergel 12/14/2013 22:50",
+		"gapSize" : "AlexandreBergel 1/1/2014 15:21",
+		"gapSize:" : "AlexandreBergel 12/14/2013 22:50",
+		"initialize" : "AlexandreBergel 12/14/2013 22:50",
+		"lineItemsCount:" : "AlexandreBergel 3/20/2015 16:25",
+		"lineItemsCountBlock" : "AlexandreBergel 12/14/2013 22:50" } }

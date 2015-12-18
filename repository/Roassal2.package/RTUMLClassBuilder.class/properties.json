@@ -1,0 +1,25 @@
+{
+	"category" : "Roassal2-Builder-UML",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 9/26/2014 13:58",
+	"instvars" : [
+		"classes",
+		"classesGroup",
+		"classname",
+		"instanceVariables",
+		"methodsNames",
+		"superclass",
+		"methodselector",
+		"methodShapeBuilder",
+		"layout",
+		"attributeselector",
+		"attributeShapeBuilder",
+		"lineShape" ],
+	"name" : "RTUMLClassBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

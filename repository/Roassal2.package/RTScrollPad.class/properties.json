@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-ScrollBar",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 3/9/2015 12:44",
+	"instvars" : [
+		 ],
+	"name" : "RTScrollPad",
+	"pools" : [
+		 ],
+	"super" : "RTScrollBarBuilder",
+	"type" : "normal" }

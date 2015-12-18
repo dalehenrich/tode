@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTStretchBehavior",
+	"pools" : [
+		 ],
+	"super" : "RTNestingBehavior",
+	"type" : "normal" }

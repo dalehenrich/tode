@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clamp:" : "akevalion 6/3/2015 22:19",
+		"domain:" : "akevalion 6/4/2015 15:03",
+		"initialize" : "akevalion 6/4/2015 16:55",
+		"invert:" : "akevalion 6/3/2015 22:19",
+		"range:" : "akevalion 6/4/2015 15:03",
+		"rescale" : "akevalion 6/4/2015 16:55",
+		"scale:" : "akevalion 6/4/2015 17:47" } }

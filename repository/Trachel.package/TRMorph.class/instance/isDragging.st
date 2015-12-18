@@ -1,0 +1,3 @@
+testing
+isDragging
+	^ eventBeginingDragging notNil

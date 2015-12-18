@@ -1,0 +1,3 @@
+accessing
+extent
+	^ rectangle extent.

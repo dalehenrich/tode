@@ -1,0 +1,2 @@
+A RTGroup represents collections of Roassal elements. A RTGroup is not designed to contain other things than Roassal elements. 
+A RTGroup is polymorphic to RTElement. When an RTElement is expected, one can provide an RTGroup.

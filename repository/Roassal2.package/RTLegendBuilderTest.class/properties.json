@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Legend",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"b" ],
+	"name" : "RTLegendBuilderTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

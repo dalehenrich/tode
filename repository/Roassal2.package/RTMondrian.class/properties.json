@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-Mondrian",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 12/29/2014 12:20",
+	"instvars" : [
+		"currentFrame",
+		"edgeBuilder",
+		"rootFrame" ],
+	"name" : "RTMondrian",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

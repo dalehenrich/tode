@@ -1,0 +1,3 @@
+tests
+testResetPath
+	multiShape resetPath

@@ -1,0 +1,3 @@
+accessing
+points
+	^ listOfPoints copy

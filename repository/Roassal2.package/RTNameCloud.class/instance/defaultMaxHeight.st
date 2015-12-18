@@ -1,0 +1,3 @@
+configuration
+defaultMaxHeight
+	^ 30

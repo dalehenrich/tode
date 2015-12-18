@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RicardoJacas 5/9/2014 22:54",
+	"instvars" : [
+		"decoration" ],
+	"name" : "RTSVGAbstractLine",
+	"pools" : [
+		 ],
+	"super" : "RTSVGEntity",
+	"type" : "normal" }

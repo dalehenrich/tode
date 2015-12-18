@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testCountries" : "AlexandreBergel 12/9/2014 19:54",
+		"testIncludesPointBasic" : "SergioMaass 1/21/2014 16:48",
+		"testParseSimple" : "JurajKubelka 8/2/2014 19:23",
+		"testTranslateBy" : "SergioMaass 1/27/2014 18:02",
+		"testTranslateTo" : "JurajKubelka 8/2/2014 23:11",
+		"testTranslateToCentered" : "akevalion 9/5/2014 17:34" } }

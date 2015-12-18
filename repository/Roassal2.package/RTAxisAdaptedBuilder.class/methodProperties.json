@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"axisOrigin" : "PierreChanson 2/16/2015 15:12",
+		"axisXFrom:to:" : "wernerkassens 2/25/2015 12:33",
+		"axisYFrom:to:" : "wernerkassens 2/25/2015 12:34",
+		"configureView:" : "PierreChanson 2/16/2015 14:52",
+		"createAxis" : "PierreChanson 2/16/2015 15:34",
+		"createAxisConfiguration" : "PierreChanson 2/16/2015 16:40",
+		"createView" : "PierreChanson 2/16/2015 14:52",
+		"defaultMargin" : "PierreChanson 2/16/2015 15:03",
+		"initialize" : "wernerkassens 2/25/2015 12:40",
+		"margin" : "PierreChanson 2/16/2015 15:03",
+		"margin:" : "PierreChanson 2/16/2015 15:03",
+		"objects" : "PierreChanson 2/16/2015 14:52",
+		"objects:" : "wernerkassens 2/25/2015 12:20",
+		"renderIn:" : "wernerkassens 2/25/2015 12:19",
+		"setObjectsLimits" : "PierreChanson 2/16/2015 15:11",
+		"xAxisConfiguration" : "PierreChanson 2/16/2015 15:50",
+		"xAxisConfiguration:" : "PierreChanson 2/16/2015 15:51",
+		"xAxisDefaultConfigurationOrigin:toPoint:" : "wernerkassens 2/25/2015 12:10",
+		"xAxisPoint:" : "PierreChanson 2/16/2015 15:16",
+		"yAxisConfiguration" : "PierreChanson 2/16/2015 15:50",
+		"yAxisConfiguration:" : "PierreChanson 2/16/2015 15:50",
+		"yAxisDefaultConfigurationOrigin:toPoint:" : "wernerkassens 2/25/2015 12:09",
+		"yAxisPoint:" : "PierreChanson 2/16/2015 15:16" } }

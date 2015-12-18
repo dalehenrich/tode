@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-BoxPlot",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 4/21/2015 20:43",
+	"instvars" : [
+		 ],
+	"name" : "RTBoxPlotExample",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractExample",
+	"type" : "normal" }

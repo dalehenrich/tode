@@ -1,0 +1,24 @@
+{
+	"category" : "Roassal2-Builder-Menu",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"view",
+		"items",
+		"isOpen",
+		"color",
+		"labelBackground",
+		"label",
+		"savedLabelBackgroundColor",
+		"menuBackgroundColor",
+		"menuBackground",
+		"highlightColor",
+		"isLocked" ],
+	"name" : "RTMenu",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

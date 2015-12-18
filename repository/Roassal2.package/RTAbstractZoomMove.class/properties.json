@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "YuriyTymchuk 6/20/2014 10:45",
+	"instvars" : [
+		"animatedValue",
+		"trachelCanvas" ],
+	"name" : "RTAbstractZoomMove",
+	"pools" : [
+		 ],
+	"super" : "RTAnimation",
+	"type" : "normal" }

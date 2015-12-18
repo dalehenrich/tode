@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-MorphSpecific",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"fieldArea",
+		"editLabelShape",
+		"updateMorphExtent",
+		"events" ],
+	"name" : "RTEditableLabel",
+	"pools" : [
+		 ],
+	"super" : "RTLabel",
+	"type" : "normal" }

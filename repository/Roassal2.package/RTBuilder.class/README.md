@@ -1,0 +1,1 @@
+The class RTBuilder translates a user-defined domain into low level instruction using the Roassal API. A builder essentially wraps a Roassal view and offers dedicated builders, described in the following sections.

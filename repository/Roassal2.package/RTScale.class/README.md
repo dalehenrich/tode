@@ -1,0 +1,1 @@
+A class to have nice scales checks subclasses

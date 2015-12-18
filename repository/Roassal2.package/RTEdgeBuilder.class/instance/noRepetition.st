@@ -1,0 +1,3 @@
+initialization
+noRepetition
+	allowRepetition := false

@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-Map",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/30/2014 09:08",
+	"instvars" : [
+		"countryData",
+		"countryName",
+		"pointShapeBuilder" ],
+	"name" : "RTMetricMap",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

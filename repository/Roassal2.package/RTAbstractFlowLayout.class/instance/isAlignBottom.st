@@ -1,0 +1,3 @@
+testing
+isAlignBottom
+	^ alignment = #bottom

@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "JurajKubelka 4/9/2014 14:07",
+		"testAllCallbacks" : "JurajKubelka 4/15/2014 17:08",
+		"testExtentCallback" : "JurajKubelka 4/15/2014 17:13",
+		"testExtentCallbackWith0" : "AlexandreBergel 4/8/2015 09:57",
+		"testHasCallBack" : "AlexandreBergel 12/29/2013 10:26",
+		"testTranslationCallback" : "JurajKubelka 4/15/2014 17:33" } }

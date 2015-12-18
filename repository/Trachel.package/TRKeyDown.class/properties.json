@@ -1,0 +1,15 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"keyValue",
+		"keyCombination" ],
+	"name" : "TRKeyDown",
+	"pools" : [
+		 ],
+	"super" : "TRShapeEvent",
+	"type" : "normal" }

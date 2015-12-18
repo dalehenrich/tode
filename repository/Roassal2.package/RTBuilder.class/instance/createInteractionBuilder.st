@@ -1,0 +1,3 @@
+hooks
+createInteractionBuilder
+	^ RTInteractionBuilder new

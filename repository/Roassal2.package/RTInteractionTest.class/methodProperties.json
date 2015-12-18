@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "JurajKubelka 4/16/2014 19:38",
+		"tearDown" : "JurajKubelka 4/16/2014 19:42",
+		"testBlockAsInteraction" : "AlexandreBergel 10/9/2014 11:39",
+		"testMouseHoverZoom" : "JurajKubelka 4/16/2014 19:49" } }

@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addAllToView:" : "AlexandreBergel 9/3/2014 19:52",
+		"addTicksFrom:to:" : "PierreChanson 4/29/2015 13:37",
+		"addToView:" : "AlexandreBergel 9/3/2014 19:52",
+		"axisFrom:to:" : "AlexandreBergel 11/6/2014 10:45",
+		"axisFrom:to:width:" : "JurajKubelka 5/29/2015 12:27",
+		"axisLineFrom:to:" : "AlexandreBergel 11/6/2014 10:42",
+		"axisLineFrom:to:width:" : "AlexandreBergel 11/6/2014 10:42",
+		"builder" : "AlexandreBergel 9/3/2014 19:52",
+		"builder:" : "AlexandreBergel 9/3/2014 19:52",
+		"config" : "AlexandreBergel 9/3/2014 19:52",
+		"config:" : "AlexandreBergel 9/3/2014 19:52",
+		"getStringFromNumber:" : "AlexandreBergel 9/3/2014 19:57",
+		"insertTitleIfNecessaryTo:" : "AlexandreBergel 1/14/2015 10:35",
+		"labelFontHeight" : "JurajKubelka 5/29/2015 12:48",
+		"maxValue" : "AlexandreBergel 9/3/2014 19:56",
+		"minValue" : "AlexandreBergel 9/3/2014 19:56",
+		"moveLabel:againstTick:" : "AlexandreBergel 9/3/2014 19:58",
+		"numberOfLabels" : "AlexandreBergel 9/3/2014 19:55",
+		"numberOfTicks" : "AlexandreBergel 9/3/2014 19:55",
+		"positionLabel" : "AlexandreBergel 9/3/2014 19:58",
+		"rotateLabelIfNecessary:" : "AlexandreBergel 9/22/2014 16:29",
+		"tickIntervalForLabel" : "AlexandreBergel 9/3/2014 19:56",
+		"title" : "AlexandreBergel 9/3/2014 19:58" } }

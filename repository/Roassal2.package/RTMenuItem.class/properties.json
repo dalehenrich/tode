@@ -1,0 +1,20 @@
+{
+	"category" : "Roassal2-Builder-Menu",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"callback",
+		"selected",
+		"after",
+		"rawmenu",
+		"color",
+		"background" ],
+	"name" : "RTMenuItem",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

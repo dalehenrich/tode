@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addOn:using:" : "RicardoJacas 4/17/2014 12:41",
+		"addPosition:" : "RicardoJacas 4/17/2014 12:36",
+		"addWidth:height:into:" : "RicardoJacas 4/17/2014 12:38",
+		"box" : "RicardoJacas 4/17/2014 12:35",
+		"box:" : "RicardoJacas 4/17/2014 12:35",
+		"element:box:color:borderWidth:borderColor:" : "RicardoJacas 4/21/2014 08:54",
+		"initialize" : "RicardoJacas 4/17/2014 12:35",
+		"rx" : "RicardoJacas 4/17/2014 12:39",
+		"rx:" : "RicardoJacas 4/17/2014 12:35",
+		"ry" : "RicardoJacas 4/17/2014 12:39",
+		"ry:" : "RicardoJacas 4/17/2014 12:35" } }

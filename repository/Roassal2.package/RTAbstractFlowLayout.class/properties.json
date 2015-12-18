@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		"aBlock",
+		"maxWithBlock" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 10/24/2014 10:27",
+	"instvars" : [
+		"maxWidth",
+		"gapSize",
+		"alignment" ],
+	"name" : "RTAbstractFlowLayout",
+	"pools" : [
+		 ],
+	"super" : "RTLayout",
+	"type" : "normal" }

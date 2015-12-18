@@ -1,0 +1,3 @@
+initialization
+noLabel
+	shouldHaveLabel := false

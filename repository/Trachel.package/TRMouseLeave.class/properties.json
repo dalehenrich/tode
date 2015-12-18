@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRMouseLeave",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractMouseEvent",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+configuration
+nbOfSecondsLightOn
+	^ 1

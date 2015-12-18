@@ -1,0 +1,32 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/3/2014 19:51",
+	"instvars" : [
+		"numberOfTicks",
+		"numberOfLabels",
+		"labelConvertion",
+		"positionLabel",
+		"minValue",
+		"maxValue",
+		"thousandsSeparator",
+		"title",
+		"builder",
+		"color",
+		"titlePosition",
+		"labelRotation",
+		"lineThickness",
+		"fromPoint",
+		"toPoint",
+		"maxValueManuallySet",
+		"minValueManuallySet",
+		"ticksCentered",
+		"labelFontHeight" ],
+	"name" : "RTAxisConfiguration",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

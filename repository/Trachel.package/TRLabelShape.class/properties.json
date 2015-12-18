@@ -1,0 +1,17 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"text",
+		"font",
+		"fontSize",
+		"fontName" ],
+	"name" : "TRLabelShape",
+	"pools" : [
+		 ],
+	"super" : "TRShape",
+	"type" : "normal" }

@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addOn:using:" : "PierreChanson 6/10/2015 16:06",
+		"addPosition:" : "RicardoJacas 4/17/2014 10:46",
+		"angle" : "RicardoJacas 4/17/2014 10:32",
+		"angle:" : "RicardoJacas 4/17/2014 10:32",
+		"content" : "RicardoJacas 4/17/2014 10:34",
+		"content:" : "RicardoJacas 4/17/2014 10:34",
+		"element:text:at:color:" : "RicardoJacas 4/17/2014 11:29",
+		"element:text:at:color:angle:" : "PierreChanson 6/10/2015 16:07",
+		"fontSize" : "PierreChanson 6/10/2015 16:10",
+		"fontSize:" : "PierreChanson 6/10/2015 16:10",
+		"initialize" : "RicardoJacas 4/17/2014 11:44",
+		"x" : "RicardoJacas 4/17/2014 10:31",
+		"x:" : "RicardoJacas 4/17/2014 10:31",
+		"y" : "RicardoJacas 4/17/2014 10:31",
+		"y:" : "RicardoJacas 4/17/2014 10:31" } }

@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"angularSpacing:" : "akevalion 11/17/2014 15:44",
+		"explore:using:" : "akevalion 11/17/2014 18:27",
+		"initialize" : "akevalion 11/17/2014 18:10",
+		"interactions" : "akevalion 11/17/2014 17:29",
+		"maxLevel" : "akevalion 11/17/2014 18:20",
+		"radialSpacing:" : "akevalion 11/17/2014 15:44",
+		"recurse:using:level:" : "akevalion 11/17/2014 18:20",
+		"renderIn:" : "akevalion 11/17/2014 15:26",
+		"strategy" : "akevalion 11/17/2014 15:18",
+		"strategy:" : "akevalion 11/17/2014 15:24",
+		"weight" : "akevalion 11/17/2014 16:40",
+		"weight:" : "akevalion 11/17/2014 16:40" } }

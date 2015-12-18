@@ -1,0 +1,3 @@
+accessing
+encompassingRectangle
+	self subclassReponsibility

@@ -1,0 +1,3 @@
+shapes
+defaultColor
+	^ Color white

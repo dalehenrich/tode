@@ -1,0 +1,3 @@
+frames
+numberOfChildrenFrames
+	^ childrenFrame size

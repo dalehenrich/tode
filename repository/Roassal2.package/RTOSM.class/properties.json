@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-OpenStreetMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"rectangle",
+		"ratio" ],
+	"name" : "RTOSM",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractElementShape",
+	"type" : "normal" }

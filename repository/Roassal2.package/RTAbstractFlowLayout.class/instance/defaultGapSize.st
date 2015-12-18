@@ -1,0 +1,3 @@
+configuration
+defaultGapSize
+ ^ 5

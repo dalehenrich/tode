@@ -1,0 +1,1 @@
+this is a RPointerDetective working for Gemstone server objects 

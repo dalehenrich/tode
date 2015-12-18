@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"width",
+		"attachPoint" ],
+	"name" : "RTAbstractLine",
+	"pools" : [
+		 ],
+	"super" : "RTShape",
+	"type" : "normal" }

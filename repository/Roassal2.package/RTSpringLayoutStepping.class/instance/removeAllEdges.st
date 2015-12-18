@@ -1,0 +1,3 @@
+updating
+removeAllEdges
+	layout removeAllEdges

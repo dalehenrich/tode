@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "AlexandreBergel 12/29/2013 13:21",
+		"testConversion" : "AlexandreBergel 9/5/2014 16:59",
+		"testFocusingCenter" : "AlexandreBergel 12/29/2013 13:21",
+		"testInitialization" : "AlexandreBergel 12/29/2013 11:39",
+		"testIsVisible" : "AlexandreBergel 8/20/2014 12:33",
+		"testIsVisibleWithCameraMoving" : "AlexandreBergel 8/21/2014 13:29",
+		"testScale" : "AlexandreBergel 11/7/2014 10:25",
+		"testTranslateBy" : "AlexandreBergel 8/21/2014 14:17",
+		"testTranslation" : "AlexandreBergel 12/29/2013 11:40" } }

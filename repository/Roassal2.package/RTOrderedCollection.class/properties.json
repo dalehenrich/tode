@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Utility",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"addCallback",
+		"viewToUpdate",
+		"shapeBuilder",
+		"interactionBuilder",
+		"layoutBuilder" ],
+	"name" : "RTOrderedCollection",
+	"pools" : [
+		 ],
+	"super" : "OrderedCollection",
+	"type" : "normal" }

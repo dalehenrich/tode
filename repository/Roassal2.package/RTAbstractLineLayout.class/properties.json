@@ -1,0 +1,21 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"gapSize",
+		"horizontalGap",
+		"verticalGap",
+		"horizontalOutGap",
+		"verticalOutGap",
+		"alignment",
+		"horizontallyStretchable",
+		"verticallyStretchable" ],
+	"name" : "RTAbstractLineLayout",
+	"pools" : [
+		 ],
+	"super" : "RTLayout",
+	"type" : "normal" }

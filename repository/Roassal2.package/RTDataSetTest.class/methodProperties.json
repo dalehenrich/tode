@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testBasic" : "AlexandreBergel 1/6/2015 18:31",
+		"testComputeMinAndMax" : "AlexandreBergel 1/6/2015 18:31",
+		"testConnectColor" : "AlexandreBergel 1/6/2015 18:31",
+		"testDefault" : "AlexandreBergel 10/14/2014 23:33",
+		"testGetValues01" : "AlexandreBergel 1/4/2015 13:25",
+		"testGetValues02" : "AlexandreBergel 1/4/2015 13:26",
+		"testInteraction" : "AlexandreBergel 1/2/2015 17:35",
+		"testNoDot" : "AlexandreBergel 1/6/2015 18:31",
+		"testNonTrivialGraph" : "AlexandreBergel 1/6/2015 18:31",
+		"testlineShape" : "AlexandreBergel 1/2/2015 17:36" } }

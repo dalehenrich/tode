@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"removeLastPopup" : "PierreChanson 6/15/2015 12:02",
+		"text:" : "AlexandreBergel 1/9/2014 19:12" },
+	"instance" : {
+		"accept:with:" : "akevalion 12/19/2014 19:23",
+		"background:group:" : "AlexandreBergel 7/19/2014 18:33",
+		"createAndShowPopupFor:event:" : "AlexandreBergel 1/27/2014 16:17",
+		"createElementFor:" : "AlexandreBergel 1/15/2014 16:23",
+		"getNewPopupFor:" : "AlexandreBergel 1/15/2014 16:23",
+		"group:" : "AlexandreBergel 3/19/2014 16:25",
+		"initialize" : "AlexandreBergel 2/28/2015 15:35",
+		"named:background:group:" : "AlexandreBergel 11/28/2014 17:17",
+		"namedBackground:group:" : "AlexandreBergel 7/19/2014 18:46",
+		"simpleText:" : "AlexandreBergel 1/15/2014 16:26",
+		"text:" : "AlexandreBergel 1/15/2014 16:44",
+		"textColor" : "AlexandreBergel 2/28/2015 15:36",
+		"textColor:" : "AlexandreBergel 2/28/2015 15:36",
+		"textElement:" : "AlexandreBergel 2/28/2015 15:35" } }

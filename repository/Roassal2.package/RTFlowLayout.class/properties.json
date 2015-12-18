@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 10/24/2014 10:28",
+	"instvars" : [
+		 ],
+	"name" : "RTFlowLayout",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractFlowLayout",
+	"type" : "normal" }

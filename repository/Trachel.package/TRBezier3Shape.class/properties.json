@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 4/28/2015 11:04",
+	"instvars" : [
+		"listOfPoints" ],
+	"name" : "TRBezier3Shape",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractLineShape",
+	"type" : "normal" }

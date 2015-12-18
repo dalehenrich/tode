@@ -1,0 +1,3 @@
+configuration
+defaultMaxWords
+	^ 150

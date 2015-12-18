@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-OpenStreetMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTOSMTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

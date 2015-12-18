@@ -1,0 +1,1 @@
+add a simple scroll bar to the view

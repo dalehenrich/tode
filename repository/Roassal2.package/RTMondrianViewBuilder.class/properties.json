@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Builder-MondrianOLD",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"topLevelNodes",
+		"nesting",
+		"topLevelEdges",
+		"layout" ],
+	"name" : "RTMondrianViewBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

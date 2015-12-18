@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addButtons" : "RicardoJacas 4/9/2014 15:07",
+		"addMarginsAndGlobals:" : "RicardoJacas 4/9/2014 14:43",
+		"addScript" : "RicardoJacas 4/9/2014 15:05",
+		"addStart:" : "RicardoJacas 4/11/2014 11:23",
+		"exportOnStream:" : "RicardoJacas 4/4/2014 11:42",
+		"getFinalBounds:" : "akevalion 10/20/2014 15:42",
+		"initialize" : "RicardoJacas 4/4/2014 10:56",
+		"interactions" : "RicardoJacas 3/18/2014 10:20",
+		"interactions:" : "RicardoJacas 3/24/2014 13:31",
+		"selfAddHelperElements" : "RicardoJacas 4/9/2014 15:06" } }

@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-TreeMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 10/31/2014 17:09",
+	"instvars" : [
+		"currentSubrectangle",
+		"subrectangles",
+		"inset" ],
+	"name" : "RTRectangleTreeMap",
+	"pools" : [
+		 ],
+	"super" : "Rectangle",
+	"type" : "normal" }

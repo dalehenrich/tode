@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Utility",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"numbers" ],
+	"name" : "RTDistribution",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

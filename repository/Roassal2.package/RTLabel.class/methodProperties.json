@@ -1,0 +1,21 @@
+{
+	"class" : {
+		"text:" : "AlexandreBergel 3/20/2015 14:43" },
+	"instance" : {
+		"defaultColor" : "AlexandreBergel 1/15/2014 16:52",
+		"defaultText" : "AlexandreBergel 12/29/2013 21:39",
+		"fontName:" : "AlexandreBergel 7/17/2014 09:12",
+		"fontNameElement:" : "AlexandreBergel 7/17/2014 09:14",
+		"fontNameFor:" : "AlexandreBergel 7/17/2014 09:11",
+		"height:" : "AlexandreBergel 4/16/2014 15:37",
+		"heightElement:" : "AlexandreBergel 4/16/2014 15:37",
+		"heightFor:" : "AlexandreBergel 1/6/2014 14:06",
+		"initialize" : "AlexandreBergel 7/17/2014 09:10",
+		"text:" : "AlexandreBergel 1/20/2014 19:09",
+		"textElement:" : "AlexandreBergel 1/20/2014 19:09",
+		"textFor:" : "AlexandreBergel 1/6/2014 14:06",
+		"trachelShapeFor:" : "AlexandreBergel 6/10/2014 20:00",
+		"trachelShapeForMultiLine:" : "AlexandreBergel 1/13/2015 14:28",
+		"trachelShapeForOneLine:" : "AlexandreBergel 7/17/2014 09:10",
+		"updateFor:trachelShape:" : "AlexandreBergel 7/2/2014 16:10",
+		"widthFor:" : "AlexandreBergel 7/17/2014 09:23" } }

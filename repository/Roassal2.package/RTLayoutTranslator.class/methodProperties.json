@@ -1,0 +1,14 @@
+{
+	"class" : {
+		"default" : "AlexandreBergel 1/6/2014 14:10",
+		"defaultClass" : "AlexandreBergel 3/3/2014 10:30",
+		"isDefault" : "AlexandreBergel 9/5/2014 15:24" },
+	"instance" : {
+		"nbCycles:" : "AlexandreBergel 1/6/2014 14:10",
+		"translate:by:" : "AlexandreBergel 5/15/2015 17:36",
+		"translate:to:" : "AlexandreBergel 5/16/2014 08:56",
+		"translateBottomLeftOf:to:" : "PierreChanson 10/27/2014 18:18",
+		"translateCenterLeftOf:to:" : "PierreChanson 10/27/2014 18:18",
+		"translateTopLeftOf:to:" : "AlexandreBergel 5/16/2014 08:56",
+		"view" : "AlexandreBergel 5/21/2014 00:50",
+		"view:" : "AlexandreBergel 6/18/2015 18:34" } }

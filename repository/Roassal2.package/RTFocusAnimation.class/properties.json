@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 1/21/2015 11:36",
+	"instvars" : [
+		"canvas",
+		"anime1",
+		"anime2" ],
+	"name" : "RTFocusAnimation",
+	"pools" : [
+		 ],
+	"super" : "RTAnimation",
+	"type" : "normal" }

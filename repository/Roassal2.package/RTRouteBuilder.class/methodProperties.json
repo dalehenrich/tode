@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"buildRoutesUsingNames:" : "SergioMaass 1/29/2014 17:57",
+		"cityNotFoundError:" : "akevalion 3/30/2015 12:28",
+		"from:toAll:" : "SergioMaass 1/27/2014 10:51",
+		"ifRoute:lineColor:" : "SergioMaass 1/28/2014 14:59",
+		"initialize" : "SergioMaass 1/28/2014 17:57",
+		"mapBuilder:" : "SergioMaass 1/27/2014 12:01",
+		"withPopup" : "SergioMaass 1/28/2014 14:36",
+		"withPopup:" : "SergioMaass 1/28/2014 14:35" } }

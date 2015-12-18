@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-MorphSpecific",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTExampleSelection",
+	"pools" : [
+		 ],
+	"super" : "GTExample",
+	"type" : "normal" }

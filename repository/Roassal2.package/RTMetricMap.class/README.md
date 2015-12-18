@@ -1,0 +1,1 @@
+A RTMapBuilder2 is specialized to display metrics

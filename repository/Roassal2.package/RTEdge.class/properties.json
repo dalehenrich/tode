@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 4/21/2015 17:30",
+	"instvars" : [
+		"from",
+		"to",
+		"shouldBeUsedInLayout" ],
+	"name" : "RTEdge",
+	"pools" : [
+		 ],
+	"super" : "RTShapedObject",
+	"type" : "normal" }

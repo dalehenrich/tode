@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "RTVerticalLineLayout",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractLineLayout",
+	"type" : "normal" }

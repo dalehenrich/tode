@@ -1,0 +1,3 @@
+public - dots
+dotShape
+	^ dotBuilder

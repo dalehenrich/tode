@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/10/2015 11:43",
+	"instvars" : [
+		"names" ],
+	"name" : "RTVisitor",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

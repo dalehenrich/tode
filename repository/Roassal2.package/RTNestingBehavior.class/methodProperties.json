@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"centerOn:elements:" : "AlexandreBergel 10/6/2014 12:04",
+		"centerOnTrachelShape:elements:" : "AlexandreBergel 10/5/2014 20:13",
+		"makeElements:draggableBy:" : "AlexandreBergel 10/6/2014 12:05",
+		"makeElements:draggableByTrachelShape:" : "AlexandreBergel 10/5/2014 18:56",
+		"on:setNested:" : "AlexandreBergel 10/5/2014 20:17",
+		"resize:bounds:" : "AlexandreBergel 10/6/2014 12:05",
+		"resize:for:" : "AlexandreBergel 10/5/2014 20:17" } }

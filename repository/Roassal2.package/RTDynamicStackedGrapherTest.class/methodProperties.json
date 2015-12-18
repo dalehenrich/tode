@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testBarPosition" : "AlexandreBergel 5/15/2015 17:29",
+		"testBarPositionWithoutAnimation" : "AlexandreBergel 5/15/2015 17:36",
+		"testEmbeddedInComposer" : "AlexandreBergel 5/13/2015 08:25",
+		"testGetY" : "AlexandreBergel 5/19/2015 07:55",
+		"testNumberOfBars" : "AlexandreBergel 5/13/2015 08:41",
+		"testUpdateView" : "AlexandreBergel 5/19/2015 07:55" } }

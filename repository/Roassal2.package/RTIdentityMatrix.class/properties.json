@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rows" ],
+	"name" : "RTIdentityMatrix",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

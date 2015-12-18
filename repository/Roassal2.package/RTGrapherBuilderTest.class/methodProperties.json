@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "AlexandreBergel 1/6/2015 18:31",
+		"testCentralPoint" : "AlexandreBergel 1/6/2015 18:31",
+		"testCentralPoint02" : "AlexandreBergel 1/6/2015 18:31",
+		"testDefault" : "AlexandreBergel 12/24/2014 07:22",
+		"testGetMaxNumberOfPoints" : "AlexandreBergel 11/28/2014 16:02",
+		"testIgnoringEmptyDataSets" : "AlexandreBergel 11/28/2014 16:30",
+		"testIsAxisDefined" : "akevalion 3/18/2015 19:35",
+		"testStepOnXAxis" : "akevalion 3/18/2015 19:35",
+		"testWithStrangeValues" : "akevalion 3/18/2015 19:37" } }

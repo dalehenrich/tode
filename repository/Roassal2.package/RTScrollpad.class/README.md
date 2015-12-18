@@ -1,0 +1,1 @@
+add a scroll pad to the view

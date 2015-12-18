@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RicardoJacas 5/9/2014 23:44",
+	"instvars" : [
+		"type",
+		"target",
+		"contained",
+		"external" ],
+	"name" : "RTSVGInteraction",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

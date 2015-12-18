@@ -1,0 +1,3 @@
+hooks
+createShapeBuilder
+	^ RTShapeBuilder new

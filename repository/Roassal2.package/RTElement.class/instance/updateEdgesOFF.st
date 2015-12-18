@@ -1,0 +1,3 @@
+configuration
+updateEdgesOFF
+	shouldUpdateEdges := false

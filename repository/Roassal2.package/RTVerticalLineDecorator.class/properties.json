@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 6/4/2015 11:39",
+	"instvars" : [
+		 ],
+	"name" : "RTVerticalLineDecorator",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractLineDecorator",
+	"type" : "normal" }

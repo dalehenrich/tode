@@ -1,0 +1,1 @@
+An interpolator a way to create lines in SVG

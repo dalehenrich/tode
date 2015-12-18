@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"evaluateCallback:" : "AlexandreBergel 3/2/2015 17:04",
+		"evaluateCallbackForElement:" : "AlexandreBergel 3/2/2015 17:09",
+		"initialize" : "AlexandreBergel 3/2/2015 17:00",
+		"isViewBeenPreparedForDeselection:" : "AlexandreBergel 3/2/2015 17:15",
+		"prepareViewBeenForDeselection:" : "AlexandreBergel 3/3/2015 09:31",
+		"select:" : "AlexandreBergel 3/9/2015 15:53",
+		"selectedElementsFrom:" : "AlexandreBergel 3/2/2015 17:09",
+		"selectionCallback" : "AlexandreBergel 3/2/2015 17:00",
+		"selectionCallback:" : "AlexandreBergel 3/2/2015 17:03",
+		"unselect:" : "AlexandreBergel 3/2/2015 17:13",
+		"unselectNoCallback:" : "AlexandreBergel 3/9/2015 15:54" } }

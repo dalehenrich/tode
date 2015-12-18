@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Selection",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 5/7/2015 17:10",
+	"instvars" : [
+		"group" ],
+	"name" : "RTSelectionEvent",
+	"pools" : [
+		 ],
+	"super" : "Announcement",
+	"type" : "normal" }

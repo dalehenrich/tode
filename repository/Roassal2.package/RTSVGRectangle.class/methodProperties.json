@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addOn:using:" : "RicardoJacas 4/17/2014 12:20",
+		"addPosition:" : "RicardoJacas 4/17/2014 11:57",
+		"box" : "RicardoJacas 4/17/2014 11:57",
+		"box:" : "RicardoJacas 4/17/2014 11:57",
+		"element:box:fillColor:borderWidth:borderColor:" : "RicardoJacas 4/17/2014 12:14",
+		"height" : "RicardoJacas 4/17/2014 12:01",
+		"height:" : "RicardoJacas 4/17/2014 11:52",
+		"initialize" : "RicardoJacas 4/17/2014 11:52",
+		"width" : "RicardoJacas 4/17/2014 12:01",
+		"width:" : "RicardoJacas 4/17/2014 11:51" } }

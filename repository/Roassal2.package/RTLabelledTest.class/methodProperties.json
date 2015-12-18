@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testDefault" : "AlexandreBergel 4/21/2014 17:16",
+		"testDefaultFromNumber" : "AlexandreBergel 4/21/2014 17:17",
+		"testDefaultWithNoLabel" : "AlexandreBergel 4/21/2014 17:16",
+		"testRemovingLabelledElement" : "AlexandreBergel 7/12/2014 00:21" } }

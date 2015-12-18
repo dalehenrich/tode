@@ -1,0 +1,19 @@
+{
+	"category" : "Roassal2-Builder-Map",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"cities",
+		"popup",
+		"mapBuilder",
+		"evolutionPeriod",
+		"step" ],
+	"name" : "RTCityBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

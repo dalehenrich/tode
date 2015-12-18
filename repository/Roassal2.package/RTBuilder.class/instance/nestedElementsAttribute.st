@@ -1,0 +1,3 @@
+accessing
+nestedElementsAttribute
+	^ self class nestedElementsAttribute

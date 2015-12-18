@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"on:color:targets:" : "RicardoJacas 4/2/2014 14:16" },
+	"instance" : {
+		"addEventHandlers:id:element:center:" : "RicardoJacas 3/31/2014 14:25",
+		"addFunctions:" : "RicardoJacas 4/4/2014 15:26",
+		"addGlobalHandlers:" : "RicardoJacas 3/31/2014 14:30",
+		"color" : "RicardoJacas 3/18/2014 09:31",
+		"color:" : "RicardoJacas 3/18/2014 09:31",
+		"initialize" : "RicardoJacas 4/3/2014 17:11" } }

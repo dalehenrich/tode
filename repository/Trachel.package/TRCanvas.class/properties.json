@@ -1,0 +1,23 @@
+{
+	"category" : "Trachel-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"canvas",
+		"shapes",
+		"fixedShapes",
+		"extent",
+		"animations",
+		"morph",
+		"camera",
+		"announcer",
+		"color",
+		"session" ],
+	"name" : "TRCanvas",
+	"pools" : [
+		 ],
+	"super" : "TRCallableObject",
+	"type" : "normal" }

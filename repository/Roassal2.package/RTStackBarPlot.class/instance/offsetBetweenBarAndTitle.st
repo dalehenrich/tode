@@ -1,0 +1,3 @@
+configuration
+offsetBetweenBarAndTitle
+	^ 21

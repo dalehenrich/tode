@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Callbacks",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 4/20/2015 10:00",
+	"instvars" : [
+		 ],
+	"name" : "TRTranslationCallback",
+	"pools" : [
+		 ],
+	"super" : "TRCallback",
+	"type" : "normal" }

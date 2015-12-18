@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Utility",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTIcon",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

@@ -1,0 +1,4 @@
+palettes
+qualitative
+
+	^ CPQualitative new

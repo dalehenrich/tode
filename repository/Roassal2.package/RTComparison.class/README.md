@@ -1,0 +1,1 @@
+A Comparison bundles two entities to be compared in a SimilarityMatrix.

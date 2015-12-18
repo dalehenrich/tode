@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 4/30/2015 12:42",
+	"instvars" : [
+		 ],
+	"name" : "RTHorizontalAverageDecorator",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractAverageDecorator",
+	"type" : "normal" }

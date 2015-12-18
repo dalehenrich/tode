@@ -1,0 +1,26 @@
+{
+	"class" : {
+		"isAbstract" : "AlexandreBergel 8/11/2014 16:57",
+		"on:edges:" : "AlexandreBergel 4/23/2014 21:42",
+		"withEdges:" : "AlexandreBergel 12/27/2013 12:25" },
+	"instance" : {
+		"affectedNodes" : "AlexandreBergel 12/27/2013 12:25",
+		"affectedNodes:" : "AlexandreBergel 12/27/2013 12:25",
+		"affectedNodesOf:" : "AlexandreBergel 12/27/2013 12:25",
+		"defaultFromPositions" : "AlexandreBergel 12/27/2013 12:25",
+		"defaultToPositions" : "AlexandreBergel 12/27/2013 12:25",
+		"doExecute:" : "AlexandreBergel 12/27/2013 12:25",
+		"doIncrementallyExecute:" : "AlexandreBergel 12/27/2013 12:25",
+		"edges" : "AlexandreBergel 12/27/2013 12:25",
+		"edges:" : "AlexandreBergel 12/27/2013 12:25",
+		"edgesDo:" : "AlexandreBergel 12/27/2013 12:25",
+		"executeOnElements:" : "AlexandreBergel 12/26/2014 17:28",
+		"fromPositions" : "AlexandreBergel 12/27/2013 12:25",
+		"fromPositions:" : "AlexandreBergel 12/27/2013 12:25",
+		"initialize" : "AlexandreBergel 12/27/2013 12:25",
+		"isLineLayout" : "AlexandreBergel 12/27/2013 12:25",
+		"setEdgesFromElements:" : "AlexandreBergel 12/26/2014 17:32",
+		"toPositions" : "AlexandreBergel 12/27/2013 12:25",
+		"toPositions:" : "AlexandreBergel 12/27/2013 12:25",
+		"userDefinedEdges" : "AlexandreBergel 12/27/2013 12:25",
+		"userDefinedEdges:" : "AlexandreBergel 12/27/2013 12:25" } }

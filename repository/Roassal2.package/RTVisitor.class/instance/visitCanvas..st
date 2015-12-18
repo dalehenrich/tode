@@ -1,0 +1,2 @@
+visitor
+visitCanvas: aCanvas

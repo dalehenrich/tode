@@ -1,0 +1,28 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"baseradius" : "akevalion 1/16/2015 18:21",
+		"baseradius:" : "akevalion 1/16/2015 18:21",
+		"createElements:using:depth:" : "akevalion 1/21/2015 12:14",
+		"createView" : "akevalion 1/14/2015 17:21",
+		"defaultBase" : "akevalion 1/16/2015 18:19",
+		"elements" : "akevalion 1/14/2015 17:53",
+		"expandCircle:with:" : "akevalion 1/16/2015 18:34",
+		"expandCircles:parent:" : "akevalion 1/16/2015 18:32",
+		"explore:using:" : "akevalion 1/14/2015 17:19",
+		"findBestGapIn:children:index:cbounding:bounds:circles:distance:closest:gap:ncircles:" : "akevalion 1/19/2015 18:20",
+		"from:using:" : "akevalion 1/15/2015 12:05",
+		"initialize" : "akevalion 3/26/2015 19:51",
+		"layout:" : "akevalion 1/16/2015 17:09",
+		"layoutElements" : "AlexandreBergel 6/12/2015 19:37",
+		"layoutNodes:" : "akevalion 1/19/2015 18:20",
+		"popup" : "akevalion 1/14/2015 17:16",
+		"relToAbsCircle:parent:" : "akevalion 1/16/2015 19:18",
+		"renderIn:" : "akevalion 1/19/2015 17:17",
+		"rootNodes" : "akevalion 1/20/2015 18:48",
+		"sortChildren:" : "akevalion 1/20/2015 14:43",
+		"weight" : "akevalion 1/14/2015 17:16",
+		"weight2rad:" : "akevalion 1/15/2015 15:23",
+		"weight:" : "akevalion 1/14/2015 17:17",
+		"weightOf:" : "akevalion 1/19/2015 17:07" } }

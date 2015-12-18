@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Client-Roassal2",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTUserGestionTool",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractTool",
+	"type" : "normal" }

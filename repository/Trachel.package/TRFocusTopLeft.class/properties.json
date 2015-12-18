@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRFocusTopLeft",
+	"pools" : [
+		 ],
+	"super" : "TRFocusing",
+	"type" : "normal" }

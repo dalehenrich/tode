@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Cachetor",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTCache",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

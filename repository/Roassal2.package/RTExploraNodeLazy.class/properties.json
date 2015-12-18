@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Builder-Explora",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isExpanded",
+		"block" ],
+	"name" : "RTExploraNodeLazy",
+	"pools" : [
+		 ],
+	"super" : "RTExploraNode",
+	"type" : "normal" }

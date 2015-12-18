@@ -1,0 +1,3 @@
+drawing
+scaledStrokeWidth
+	^ self strokeWidth 

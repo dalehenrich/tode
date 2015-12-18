@@ -1,0 +1,1 @@
+A simple clase for create Lines in SVG

@@ -1,0 +1,3 @@
+configuration
+useProgressBar
+	shouldUseProgressBar := true	

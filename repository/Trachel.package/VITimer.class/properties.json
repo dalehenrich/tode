@@ -1,0 +1,18 @@
+{
+	"category" : "Trachel-Viva",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"active",
+		"cycleLength",
+		"repeat",
+		"startTime",
+		"elapsedCycles" ],
+	"name" : "VITimer",
+	"pools" : [
+		 ],
+	"super" : "VIBasicTimer",
+	"type" : "normal" }

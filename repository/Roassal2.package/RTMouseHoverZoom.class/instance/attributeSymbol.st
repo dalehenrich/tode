@@ -1,0 +1,3 @@
+private
+attributeSymbol
+	^ #automaticZoomExtent

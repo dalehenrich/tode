@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"comparingMethodSourceCode" : "AlexandreBergel 1/12/2014 16:50",
+		"comparingWordsBetweenText" : "AlexandreBergel 1/12/2014 16:50",
+		"demo1" : "AlexandreBergel 1/5/2014 17:07",
+		"demo2" : "akevalion 3/30/2015 12:41",
+		"demo3" : "AlexandreBergel 1/12/2014 16:55" },
+	"instance" : {
+		"action:" : "AlexandreBergel 1/5/2014 12:12",
+		"colorForElement:" : "AlexandreBergel 1/5/2014 12:12",
+		"defaultExtent" : "AlexandreBergel 1/5/2014 12:12",
+		"elementOn:For:" : "JurajKubelka 1/27/2014 10:07",
+		"elementOn:forView:andStack:" : "JurajKubelka 1/27/2014 10:07",
+		"gridSize" : "AlexandreBergel 1/5/2014 12:12",
+		"gridView" : "AlexandreBergel 1/5/2014 12:16",
+		"on:by:" : "AlexandreBergel 1/5/2014 12:12",
+		"on:by:withAction:" : "AlexandreBergel 1/12/2014 16:56",
+		"popupTextFor:" : "AlexandreBergel 1/5/2014 12:12",
+		"printOn:" : "AlexandreBergel 1/5/2014 12:12",
+		"viewMatrix" : "AlexandreBergel 1/1/2015 21:04" } }

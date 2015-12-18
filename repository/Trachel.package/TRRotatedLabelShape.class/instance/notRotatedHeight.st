@@ -1,0 +1,3 @@
+accessing
+notRotatedHeight
+	^ font height

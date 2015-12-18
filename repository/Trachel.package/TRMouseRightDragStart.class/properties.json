@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRMouseRightDragStart",
+	"pools" : [
+		 ],
+	"super" : "TRMouseDragStart",
+	"type" : "normal" }

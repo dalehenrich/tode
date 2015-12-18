@@ -1,0 +1,3 @@
+testing
+hasCompleted
+	self subclassResponsibility

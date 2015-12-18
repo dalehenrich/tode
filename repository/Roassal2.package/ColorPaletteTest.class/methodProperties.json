@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testDiverging" : "AlexandreBergel 5/8/2014 23:34",
+		"testDivergingError" : "PabloEstefo 4/24/2014 14:33",
+		"testQualitative" : "PabloEstefo 4/24/2014 14:20",
+		"testQualitativeError" : "PabloEstefo 4/24/2014 14:26",
+		"testSequential" : "AlexandreBergel 5/8/2014 23:34" } }

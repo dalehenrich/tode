@@ -1,0 +1,3 @@
+accessing
+currentFrame
+	^ currentFrame

@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"add:" : "AlexandreBergel 5/15/2015 10:52",
+		"elements" : "JurajKubelka 5/18/2015 15:28",
+		"indexOfLineIdentifier:" : "AlexandreBergel 5/15/2015 15:41",
+		"initialize" : "JurajKubelka 5/29/2015 14:40",
+		"label:on:" : "JurajKubelka 5/29/2015 14:38",
+		"lineIdentifierLabels" : "AlexandreBergel 6/4/2015 11:49",
+		"lineIdentifiers" : "AlexandreBergel 5/15/2015 15:44",
+		"numberOfEvents" : "AlexandreBergel 5/15/2015 11:06",
+		"numberOfLines" : "AlexandreBergel 5/15/2015 11:11",
+		"numberOfSets" : "AlexandreBergel 5/15/2015 10:55",
+		"renderIn:" : "JurajKubelka 5/18/2015 15:29",
+		"renderTimeLineLabels" : "AlexandreBergel 6/4/2015 11:49",
+		"setsComputeMinAndMax" : "AlexandreBergel 5/15/2015 11:32",
+		"timelineLabel" : "AlexandreBergel 5/15/2015 16:05",
+		"timelineLabel:" : "AlexandreBergel 5/15/2015 16:29",
+		"timelineLabelBuilder" : "JurajKubelka 5/29/2015 14:39" } }

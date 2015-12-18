@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/4/2015 15:23",
+	"instvars" : [
+		"vertices" ],
+	"name" : "RTPolygon",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractElementShape",
+	"type" : "normal" }

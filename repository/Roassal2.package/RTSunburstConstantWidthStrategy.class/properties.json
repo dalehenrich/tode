@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Sunburst",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"arcWidth" ],
+	"name" : "RTSunburstConstantWidthStrategy",
+	"pools" : [
+		 ],
+	"super" : "RTSunburstStrategy",
+	"type" : "normal" }

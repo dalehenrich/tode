@@ -1,0 +1,19 @@
+{
+	"category" : "Trachel-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"element1",
+		"element2",
+		"view",
+		"canvas",
+		"shape1",
+		"shape2" ],
+	"name" : "TRConstraintTest",
+	"pools" : [
+		 ],
+	"super" : "TRTest",
+	"type" : "normal" }

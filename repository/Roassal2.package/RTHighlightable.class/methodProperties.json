@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"highlightedColor" : "AlexandreBergel 12/16/2013 17:10" },
+	"instance" : {
+		"accept:with:" : "akevalion 12/19/2014 19:28",
+		"doHighlightElement:" : "AlexandreBergel 10/28/2014 12:32",
+		"doUnhighlightElement:" : "AlexandreBergel 10/28/2014 12:32",
+		"highlightColorFor:" : "AlexandreBergel 10/28/2014 11:18",
+		"highlightedColor" : "AlexandreBergel 10/28/2014 11:20",
+		"highlightedColor:" : "AlexandreBergel 10/28/2014 11:20",
+		"initialize" : "AlexandreBergel 10/28/2014 11:19",
+		"recordElement:" : "AlexandreBergel 4/6/2014 20:33" } }

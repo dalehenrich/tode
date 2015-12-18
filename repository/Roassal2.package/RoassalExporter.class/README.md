@@ -1,0 +1,1 @@
+This is a custom class in order to export Roassal2 to VisualWorks

@@ -1,0 +1,3 @@
+configuration
+defaultFontSize
+	^ 12

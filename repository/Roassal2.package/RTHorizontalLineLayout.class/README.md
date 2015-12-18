@@ -1,0 +1,1 @@
+A RTHorizontalLineLayout locates all the elements horizontally

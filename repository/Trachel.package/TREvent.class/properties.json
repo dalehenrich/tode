@@ -1,0 +1,16 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"canvas",
+		"position",
+		"morph" ],
+	"name" : "TREvent",
+	"pools" : [
+		 ],
+	"super" : "Announcement",
+	"type" : "normal" }

@@ -1,0 +1,24 @@
+{
+	"class" : {
+		"diverging" : "PabloEstefo 4/23/2014 17:59",
+		"info" : "PabloEstefo 4/23/2014 15:55",
+		"initializePalette" : "PabloEstefo 4/23/2014 11:25",
+		"palette" : "PabloEstefo 4/23/2014 11:25",
+		"paletteFor:" : "akevalion 9/9/2014 17:38",
+		"paletteName" : "PabloEstefo 4/23/2014 17:32",
+		"qualitative" : "PabloEstefo 4/23/2014 17:59",
+		"rawPalette" : "PabloEstefo 4/24/2014 12:19",
+		"reset" : "PabloEstefo 4/24/2014 12:17",
+		"sequential" : "PabloEstefo 4/23/2014 17:59",
+		"show" : "AlexandreBergel 5/22/2014 12:42" },
+	"instance" : {
+		"addTitleTo:on:" : "PabloEstefo 4/24/2014 12:15",
+		"colors:" : "PabloEstefo 4/24/2014 23:24",
+		"colors:scheme:" : "PabloEstefo 4/25/2014 15:42",
+		"colorsPerScheme" : "PabloEstefo 4/24/2014 23:26",
+		"convertSchemeToColors:" : "PabloEstefo 4/24/2014 14:10",
+		"drawSubPallete:named:on:" : "AlexandreBergel 10/6/2014 19:02",
+		"palette" : "PabloEstefo 4/24/2014 13:33",
+		"scheme:" : "PabloEstefo 4/30/2014 17:24",
+		"show" : "AlexandreBergel 5/22/2014 12:41",
+		"viewOn:" : "TudorGirba 4/25/2014 11:12" } }

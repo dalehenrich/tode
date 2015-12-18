@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Simon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"builder" ],
+	"name" : "RTSimonTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

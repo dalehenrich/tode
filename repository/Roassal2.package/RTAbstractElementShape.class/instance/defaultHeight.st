@@ -1,0 +1,3 @@
+configuration
+defaultHeight
+	^ 5

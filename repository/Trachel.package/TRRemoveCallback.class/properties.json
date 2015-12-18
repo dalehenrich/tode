@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Callbacks",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRRemoveCallback",
+	"pools" : [
+		 ],
+	"super" : "TRCallback",
+	"type" : "normal" }

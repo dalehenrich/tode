@@ -1,0 +1,2 @@
+drawing
+drawStrokeIfNecessaryOn: athensCanvas

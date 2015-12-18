@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"axis" : "AlexandreBergel 5/19/2015 18:52",
+		"fromPoint" : "AlexandreBergel 5/19/2015 18:56",
+		"initialize" : "AlexandreBergel 5/19/2015 19:17",
+		"maxValue" : "AlexandreBergel 5/19/2015 18:56",
+		"minValue" : "AlexandreBergel 5/19/2015 18:56",
+		"numberOfTicks:" : "AlexandreBergel 5/19/2015 19:23",
+		"step" : "AlexandreBergel 5/19/2015 19:18",
+		"step:" : "AlexandreBergel 5/19/2015 19:12",
+		"toPoint" : "AlexandreBergel 5/19/2015 18:56" } }

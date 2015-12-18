@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"compareContourOf:with:" : "AlexandreBergel 1/13/2014 10:35",
+		"computeGap:" : "AlexandreBergel 1/13/2014 10:04",
+		"computePosition:" : "AlexandreBergel 1/13/2014 10:40",
+		"diameterOf:" : "AlexandreBergel 1/22/2014 19:04",
+		"doExecute:" : "AlexandreBergel 1/13/2014 10:10",
+		"gap" : "AlexandreBergel 1/13/2014 10:04",
+		"halfDiameterOf:" : "AlexandreBergel 1/22/2014 19:04",
+		"layoutLayer:radius:from:to:" : "JurajKubelka 1/29/2014 17:35",
+		"moveAllElementsToTopLeft:" : "AlexandreBergel 1/13/2014 10:04",
+		"nodeAbcissaWithNeighbor:" : "AlexandreBergel 1/13/2014 10:04",
+		"radialDraw:" : "JurajKubelka 1/29/2014 17:36",
+		"rotateSubtreeFrom:by:" : "AlexandreBergel 1/13/2014 10:04",
+		"spreadNodes:around:" : "AlexandreBergel 1/13/2014 10:04",
+		"toRadialTree:withMod:" : "AlexandreBergel 1/13/2014 10:43" } }

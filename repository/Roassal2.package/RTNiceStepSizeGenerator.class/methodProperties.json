@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"base" : "akevalion 3/17/2015 16:32",
+		"initialize" : "akevalion 3/17/2015 16:02",
+		"logB:" : "akevalion 3/17/2015 15:27",
+		"next" : "akevalion 3/17/2015 15:58",
+		"offsets:q:" : "akevalion 3/17/2015 15:27",
+		"qat:" : "akevalion 3/17/2015 15:27",
+		"qvar" : "akevalion 3/17/2015 16:13",
+		"reset" : "akevalion 3/26/2015 18:18",
+		"setQ:base:" : "akevalion 3/17/2015 15:27",
+		"stepSize:q:" : "akevalion 3/17/2015 15:27" } }

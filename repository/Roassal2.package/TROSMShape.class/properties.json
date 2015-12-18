@@ -1,0 +1,21 @@
+{
+	"category" : "Roassal2-OpenStreetMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"EmptyTile" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"rectangle",
+		"zoom",
+		"osmZoomLevel",
+		"tiles",
+		"emptyTile",
+		"semaphore",
+		"copyright",
+		"ratio" ],
+	"name" : "TROSMShape",
+	"pools" : [
+		 ],
+	"super" : "TRShape",
+	"type" : "normal" }

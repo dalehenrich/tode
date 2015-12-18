@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-NameCloud",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 7/11/2014 11:42",
+	"instvars" : [
+		 ],
+	"name" : "RTNameCloudExample",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractExample",
+	"type" : "normal" }

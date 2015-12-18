@@ -1,0 +1,3 @@
+util
+encompassingRectangle
+	^ self trachelCanvas encompassingRectangle

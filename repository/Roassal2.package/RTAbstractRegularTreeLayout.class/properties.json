@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"alreadyLayoutedNodes",
+		"topGap",
+		"leftGap",
+		"nodesByLayer",
+		"isLayered" ],
+	"name" : "RTAbstractRegularTreeLayout",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractGraphLayout",
+	"type" : "normal" }

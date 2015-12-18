@@ -1,0 +1,3 @@
+public
+mimeDecodeToBytes: bytes
+	self subclassResponsibility

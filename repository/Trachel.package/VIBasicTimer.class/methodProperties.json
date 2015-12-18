@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"cycleLength" : "IgorStasenko 6/1/2013 08:10",
+		"cycleLength:" : "IgorStasenko 6/1/2013 08:10",
+		"elapsedCycles" : "IgorStasenko 6/1/2013 08:10",
+		"isActive" : "IgorStasenko 6/1/2013 08:09",
+		"isRepeating" : "IgorStasenko 6/1/2013 08:20",
+		"mirrored" : "AlexandreBergel 1/12/2014 16:59",
+		"noRepeat" : "IgorStasenko 6/1/2013 08:20",
+		"pause" : "IgorStasenko 6/1/2013 08:14",
+		"repeat" : "IgorStasenko 6/1/2013 08:20",
+		"reset" : "IgorStasenko 6/1/2013 08:14",
+		"resume" : "IgorStasenko 6/1/2013 08:14",
+		"start" : "IgorStasenko 6/1/2013 08:13",
+		"stop" : "IgorStasenko 6/1/2013 08:14",
+		"value" : "IgorStasenko 6/1/2013 08:12",
+		"withBias:" : "AlexandreBergel 1/12/2014 16:59" } }

@@ -1,0 +1,3 @@
+accessing
+lineThickness
+	^ lineThickness

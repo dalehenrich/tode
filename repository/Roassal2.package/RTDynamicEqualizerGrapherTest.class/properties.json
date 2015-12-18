@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"b" ],
+	"name" : "RTDynamicEqualizerGrapherTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

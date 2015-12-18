@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sortBlock",
+		"labels",
+		"layers",
+		"layerNrs",
+		"connections" ],
+	"name" : "RTSugiyamaLayout",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractGraphLayout",
+	"type" : "normal" }

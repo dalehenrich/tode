@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTScalePolylinear",
+	"pools" : [
+		 ],
+	"super" : "RTScale",
+	"type" : "normal" }

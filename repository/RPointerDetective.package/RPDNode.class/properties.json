@@ -1,0 +1,16 @@
+{
+	"category" : "RPointerDetective",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isTarget",
+		"isOnLimit",
+		"weakWrapper" ],
+	"name" : "RPDNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

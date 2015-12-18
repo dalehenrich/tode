@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/20/2014 15:39",
+	"instvars" : [
+		"animatedValue",
+		"trachelCanvas",
+		"blockToExecute" ],
+	"name" : "RTNopAnimation",
+	"pools" : [
+		 ],
+	"super" : "RTAnimation",
+	"type" : "normal" }

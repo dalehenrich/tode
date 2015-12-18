@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RicardoJacas 5/9/2014 23:51",
+	"instvars" : [
+		"click",
+		"color",
+		"position",
+		"bounds" ],
+	"name" : "RTSVGPopup",
+	"pools" : [
+		 ],
+	"super" : "RTSVGInteraction",
+	"type" : "normal" }

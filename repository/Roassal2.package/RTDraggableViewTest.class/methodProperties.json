@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "AlexandreBergel 12/31/2013 09:03",
+		"testDefault" : "AlexandreBergel 12/31/2013 09:06",
+		"testDraggingOnDraggable" : "AlexandreBergel 9/5/2014 16:57",
+		"testDraggingOnNotDraggable" : "AlexandreBergel 12/31/2013 09:06" } }

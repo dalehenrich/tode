@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"defaultWordSeparators" : "JurajKubelka 11/11/2014 20:36",
+		"initialize" : "JurajKubelka 11/11/2014 20:36",
+		"normalizeString:" : "JurajKubelka 11/11/2014 16:08",
+		"tokenize:" : "JurajKubelka 11/11/2014 20:25",
+		"tokenizeLine:" : "JurajKubelka 11/11/2014 20:30",
+		"wordSeparators" : "JurajKubelka 11/11/2014 20:30" } }

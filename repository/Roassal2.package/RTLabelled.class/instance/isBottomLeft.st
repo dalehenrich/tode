@@ -1,0 +1,3 @@
+testing
+isBottomLeft
+	^ position = #bottomLeft

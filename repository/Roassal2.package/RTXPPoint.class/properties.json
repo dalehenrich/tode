@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 5/28/2015 16:25",
+	"instvars" : [
+		"y0" ],
+	"name" : "RTXPPoint",
+	"pools" : [
+		 ],
+	"super" : "Point",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+configuration
+defaultBorderColor
+	^ Color black.

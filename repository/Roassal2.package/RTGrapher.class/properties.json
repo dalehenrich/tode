@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/23/2015 15:40",
+	"instvars" : [
+		"datasets",
+		"generator",
+		"shouldUseNiceLabelsForX",
+		"shouldUseNiceLabelsForY" ],
+	"name" : "RTGrapher",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractGrapher",
+	"type" : "normal" }

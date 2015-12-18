@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"attachPoint" : "RicardoJacas 4/16/2014 13:45",
+		"attachPoint:" : "RicardoJacas 4/16/2014 13:45",
+		"baseSize:" : "AlexandreBergel 6/6/2014 15:05",
+		"defaultBaseSize" : "AlexandreBergel 6/6/2014 15:07",
+		"initialize" : "AlexandreBergel 6/6/2014 15:06",
+		"line:" : "RicardoJacas 4/8/2014 16:36",
+		"mySize" : "RicardoJacas 4/8/2014 11:03",
+		"size:" : "AlexandreBergel 6/6/2014 15:05",
+		"trachelShapeClass" : "RicardoJacas 4/8/2014 12:49",
+		"trachelShapeFor:" : "AlexandreBergel 6/6/2014 15:06",
+		"updateFor:trachelShape:" : "AlexandreBergel 11/24/2014 10:57",
+		"width:" : "RicardoJacas 4/8/2014 12:06",
+		"widthFor:" : "RicardoJacas 4/8/2014 12:06" } }

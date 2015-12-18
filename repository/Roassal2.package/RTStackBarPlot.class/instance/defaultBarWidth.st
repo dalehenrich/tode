@@ -1,0 +1,3 @@
+configuration
+defaultBarWidth
+	^ 150

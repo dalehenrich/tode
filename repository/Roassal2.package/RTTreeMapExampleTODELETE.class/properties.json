@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-TreeMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 10/24/2014 18:52",
+	"instvars" : [
+		 ],
+	"name" : "RTTreeMapExampleTODELETE",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

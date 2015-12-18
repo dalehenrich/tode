@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"animatedValue" ],
+	"name" : "RTRotationMove",
+	"pools" : [
+		 ],
+	"super" : "RTAnimation",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"max",
+		"scope",
+		"min" ],
+	"name" : "RTGrayLinearColor",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractNormalizer",
+	"type" : "normal" }

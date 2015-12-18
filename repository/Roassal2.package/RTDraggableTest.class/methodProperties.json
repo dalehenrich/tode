@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "AlexandreBergel 4/15/2014 10:25",
+		"testDragAndDropOtherElement" : "AlexandreBergel 4/15/2014 10:26",
+		"testGroupedDragAndDrop" : "AlexandreBergel 9/5/2014 16:56",
+		"testGroupedDragAndDrop2" : "AlexandreBergel 9/5/2014 16:56",
+		"testGroupedDragAndDrop3" : "AlexandreBergel 9/5/2014 16:57",
+		"testGroupedDragAndDrop4" : "AlexandreBergel 9/5/2014 16:57",
+		"testNoDragAndDrop" : "AlexandreBergel 4/15/2014 10:26",
+		"testSimpleDragAndDrop" : "AlexandreBergel 9/5/2014 16:57" } }

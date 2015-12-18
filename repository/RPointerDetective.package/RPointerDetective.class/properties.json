@@ -1,0 +1,18 @@
+{
+	"category" : "RPointerDetective",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 5/19/2015 14:25",
+	"instvars" : [
+		"builder",
+		"nodesMap",
+		"colorConditionBlocks",
+		"legendBuilder",
+		"view" ],
+	"name" : "RPointerDetective",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

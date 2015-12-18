@@ -1,0 +1,16 @@
+icons
+exampleIcon1Icon
+	^ 'iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAACoUlEQVR4XuXbT6tpURiA8TXw
+J1MjJWMjMyVlIDIxMzdWGJOSfAVDZeoDKGYGfAVFik9gJGWg1OverXtup+4599jsba+1n6fW
+nPPL2u9au6NuN346pfh/Aj4IPz4IH4QfH4QPwo8Pwgfhxwfhg/Djg/Djg/BB+PFB+CD8+CB8
+EH58ED4IPz4IPz4IH4QfH4QPwo8Pwgfhxwfhg/DjgzjRbDYTpdTNWsFgUA6Hg/BBvPwCfzA+
+Vjab5YPoBGItPoiHWdvUZ4x6vc7/hXjZ8XiUXC53R2k0GsJ/qPPjg/BBNGyxWEilUvlniyoU
+CvftKxwOCx/kjU2nU4nFYvK/qWswGAgfxONSqdTfqet0OvFBdGg+n8v1euVvWfxgIK1WSyKR
+iHx1Ov9ulctlWa/XwgdxuGazaQvC1OsUYz5prVbjg+iU9ZDOZDK2UQKBgFgPeT6IixWLxYdg
++GPvm7pcLj+CdDod/tj71g/+A0i/3+ePvXwQKMjn9+jfrXQ6zd+y3lWv1xM/jbrGg4RCoYdA
+ttstf8pyu9Vq9fBZ5Kv3JXwQhyuVSrYOh/I7PoiLp3W7J/Vut8sHcSvrttfP91jGgTx7sTge
+j/l3WU43Go2evu2Nx+N8EKeLRqMvXb/vdjvhg3gw6po+Ais/jromj8DKj6OuySOw9iDtdtsx
+EBNGYOXXUdfUEVj5ddQ1dQTWGiSRSDgOovu7dkXarkx4m6gtyHK5FLdA8vk8/xdit/1+7xpI
+tVrlgzxTMpl0BUXnaxStQc7n8/2fcpzEmEwm/Cnr1TabjVgP4lfWcDjk32Xx44PwQfjxQfgg
+/PggfBB+fBB+fBA+CD8+CB+EHx+ED8KPD8IH4ccH4ccH4YPw44PwQfjxQfgg/PggfBB+fBB+
+fBA+CL+H+wX6dsn/L7VWKgAAAABJRU5ErkJggg=='

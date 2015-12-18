@@ -1,0 +1,19 @@
+{
+	"category" : "Roassal2-Builder-Kiviat",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 12/22/2014 09:35",
+	"instvars" : [
+		"maxSize",
+		"modelBlock",
+		"minValue",
+		"maxValue",
+		"named",
+		"block" ],
+	"name" : "RTKiviatMetric",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

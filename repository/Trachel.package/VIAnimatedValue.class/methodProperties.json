@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"+" : "AlexandreBergel 2/10/2014 09:56",
+		"," : "AlexandreBergel 1/12/2014 16:58",
+		"-" : "AlexandreBergel 2/10/2014 09:57",
+		"animatedPoint:" : "MarianoVicente 9/15/2013 23:19",
+		"animatedValue:" : "MarianoVicente 9/15/2013 23:33",
+		"animationDidFinish" : "MarianoVicente 9/16/2013 00:01",
+		"evaluator" : "IgorStasenko 6/1/2013 05:34",
+		"evaluator:" : "MarianoVicente 9/15/2013 23:25",
+		"finishCallback:" : "MarianoVicente 9/16/2013 00:02",
+		"hasCompleted" : "AlexandreBergel 1/1/2014 20:05",
+		"initialize" : "MarianoVicente 9/15/2013 23:22",
+		"reset" : "IgorStasenko 6/1/2013 15:09",
+		"start" : "IgorStasenko 6/1/2013 15:08",
+		"stop" : "IgorStasenko 6/1/2013 15:08",
+		"timer" : "IgorStasenko 6/1/2013 15:08",
+		"timer:" : "IgorStasenko 6/1/2013 15:08",
+		"value" : "AlexandreBergel 2/7/2014 02:17" } }

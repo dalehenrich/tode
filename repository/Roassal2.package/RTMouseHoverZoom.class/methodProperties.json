@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"animated" : "JurajKubelka 4/16/2014 15:44",
+		"animatedDuring:" : "JurajKubelka 4/16/2014 16:21",
+		"attributeSymbol" : "JurajKubelka 4/16/2014 15:29",
+		"defaultRatio" : "AlexandreBergel 5/14/2014 16:41",
+		"desiredExtent:" : "JurajKubelka 4/16/2014 16:35",
+		"doZoomEffect:" : "AlexandreBergel 4/23/2014 15:58",
+		"initialize" : "AlexandreBergel 5/14/2014 16:40",
+		"initializeElement:" : "AlexandreBergel 4/23/2014 16:19",
+		"ratio" : "AlexandreBergel 5/14/2014 16:41",
+		"ratio:" : "AlexandreBergel 5/14/2014 16:41",
+		"setExtent:for:after:" : "JurajKubelka 4/16/2014 16:20",
+		"simple" : "JurajKubelka 4/16/2014 19:59",
+		"undoZoomEffect:" : "AlexandreBergel 4/23/2014 16:01" } }

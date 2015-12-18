@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Spectrograph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"b" ],
+	"name" : "RTSpectrographTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

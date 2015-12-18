@@ -1,0 +1,24 @@
+{
+	"category" : "Tode-Client-Roassal2",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"builder",
+		"shape",
+		"normSize",
+		"normColor",
+		"layout",
+		"colors",
+		"menu",
+		"shapeMenus",
+		"layoutMenus",
+		"colorMetricMenus",
+		"sizeMetricMenus" ],
+	"name" : "ClassesHierarchy",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractTool",
+	"type" : "normal" }

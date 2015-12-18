@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Callbacks",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRCameraScaleCallback",
+	"pools" : [
+		 ],
+	"super" : "TRCallback",
+	"type" : "normal" }

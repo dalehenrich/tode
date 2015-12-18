@@ -1,0 +1,3 @@
+private
+resetPath
+	path := nil

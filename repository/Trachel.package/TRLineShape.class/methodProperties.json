@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"accept:" : "SamirSaleh 1/13/2014 18:15",
+		"accept:with:" : "RicardoJacas 4/10/2014 12:04",
+		"center" : "AlexandreBergel 4/21/2014 16:57",
+		"computePath" : "AlexandreBergel 12/26/2013 10:35",
+		"drawOn:" : "SergioMaass 3/7/2014 12:50",
+		"encompassingRectangle" : "AlexandreBergel 12/28/2013 15:22",
+		"from" : "AlexandreBergel 12/16/2013 19:18",
+		"from:" : "AlexandreBergel 5/19/2015 16:45",
+		"from:to:" : "AlexandreBergel 5/19/2015 16:45",
+		"from:to:color:" : "AlexandreBergel 12/14/2013 18:46",
+		"includesPoint:" : "AlexandreBergel 10/8/2014 15:09",
+		"includesPoint:delta:" : "AlexandreBergel 10/8/2014 15:09",
+		"initialize" : "RicardoJacas 4/7/2014 11:43",
+		"position" : "AlexandreBergel 1/22/2014 16:28",
+		"to" : "AlexandreBergel 12/16/2013 19:18",
+		"to:" : "AlexandreBergel 12/17/2013 16:52",
+		"translateBy:" : "AlexandreBergel 3/9/2015 14:35" } }

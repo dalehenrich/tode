@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"boxFrom:to:" : "AlexandreBergel 1/4/2015 19:16",
+		"builder:" : "AlexandreBergel 12/19/2014 21:43",
+		"datasetValues" : "AlexandreBergel 3/24/2015 18:56",
+		"datasetValuesX" : "AlexandreBergel 3/24/2015 19:08",
+		"initialize" : "AlexandreBergel 1/4/2015 19:31",
+		"isBehind" : "AlexandreBergel 1/4/2015 19:32",
+		"isInFront" : "AlexandreBergel 1/4/2015 19:32",
+		"label:above:" : "AlexandreBergel 3/23/2015 15:45",
+		"label:on:" : "AlexandreBergel 1/14/2015 11:23",
+		"lineFrom:to:" : "AlexandreBergel 1/4/2015 18:49",
+		"moveBehind" : "AlexandreBergel 1/4/2015 19:32",
+		"moveInFront" : "AlexandreBergel 1/4/2015 19:32",
+		"render" : "AlexandreBergel 5/19/2015 19:02",
+		"shape" : "AlexandreBergel 1/4/2015 13:10" } }

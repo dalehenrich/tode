@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"callbacks" ],
+	"name" : "TRCallableObject",
+	"pools" : [
+		 ],
+	"super" : "TRObject",
+	"type" : "normal" }

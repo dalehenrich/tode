@@ -1,0 +1,21 @@
+{
+	"category" : "Roassal2-ExporterVW",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 9/17/2014 18:05",
+	"instvars" : [
+		"dirpath",
+		"namespace",
+		"packages",
+		"namespaces",
+		"packagesInfo",
+		"classes",
+		"methods",
+		"stream" ],
+	"name" : "RoassalExporter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

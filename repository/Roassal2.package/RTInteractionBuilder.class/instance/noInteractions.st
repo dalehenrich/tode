@@ -1,0 +1,3 @@
+public
+noInteractions
+	self initializeInteractions.

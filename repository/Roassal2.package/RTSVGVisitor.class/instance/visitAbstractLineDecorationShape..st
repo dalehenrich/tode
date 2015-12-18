@@ -1,0 +1,4 @@
+visitor
+visitAbstractLineDecorationShape: anAbstractLineDecoration
+	anAbstractLineDecoration accept: anAbstractLineDecoration
+	

@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Exporter-PNG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"view",
+		"fileName" ],
+	"name" : "RTPNGExporter",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

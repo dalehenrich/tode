@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 11/25/2014 12:11",
+	"instvars" : [
+		"precision" ],
+	"name" : "RTGradientColoredLine",
+	"pools" : [
+		 ],
+	"super" : "RTMultiColoredLine",
+	"type" : "normal" }

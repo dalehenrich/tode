@@ -92,18 +92,14 @@ baseline: spec
     for: #(#'pharo3.x' #'pharo4.x')
     do: [ 
       spec
-        configuration: 'Roassal2'
-          with: [ 
-              spec
-                versionString: '1.5.2';
-                repository:
-                    'http://smalltalkhub.com/mc/ObjectProfile/Roassal2/main';
-                loads: #('Trachel' 'Roassal2') ];
-        yourself.
-      spec
         package: 'Tode-Client-Roassal2'
-          with: [ spec requires: #('Tode-Client-ServerBlocks') ];
-        group: 'Visualize' with: #('Tode-Client-Roassal2' 'GemStone');
+          with: [ spec requires: #('Tode-Client-ServerBlocks' 'Roassal2' 'RPointerDetective') ];
+        package: 'RPointerDetective'  with: [ 
+				spec requires: #('Roassal2')];
+        package: 'Roassal2' with: [ 
+				spec requires: #('Trachel')];
+        package: 'Trachel';
+        group: 'Visualize' with: #('Tode-Client-Roassal2' 'Trachel' 'RPointerDetective' 'GemStone');
         yourself ].
   spec
     for: #'gemstone'

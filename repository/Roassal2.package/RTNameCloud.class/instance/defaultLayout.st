@@ -1,0 +1,3 @@
+configuration
+defaultLayout
+	^ RTRectanglePackLayout new

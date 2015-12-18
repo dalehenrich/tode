@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/24/2015 18:30",
+	"instvars" : [
+		"shapes",
+		"layout",
+		"automaticallyUpdateLayout" ],
+	"name" : "RTCompositeShape",
+	"pools" : [
+		 ],
+	"super" : "RTShape",
+	"type" : "normal" }

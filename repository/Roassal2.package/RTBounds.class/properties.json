@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 1/15/2015 14:54",
+	"instvars" : [
+		"circles",
+		"indeces",
+		"maxCircles" ],
+	"name" : "RTBounds",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

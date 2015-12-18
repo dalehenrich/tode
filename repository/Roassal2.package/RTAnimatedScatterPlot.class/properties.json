@@ -1,0 +1,26 @@
+{
+	"category" : "Roassal2-Builder-AnimatedScatterPlot",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tables",
+		"x",
+		"y",
+		"color",
+		"size",
+		"frame",
+		"maxX",
+		"maxY",
+		"sizeMax",
+		"labelShape",
+		"colors",
+		"properties",
+		"columns" ],
+	"name" : "RTAnimatedScatterPlot",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

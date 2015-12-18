@@ -1,0 +1,3 @@
+accessing
+tickIntervalForLabel
+	^ numberOfTicks / numberOfLabels

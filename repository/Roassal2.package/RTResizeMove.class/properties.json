@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"originalExtent",
+		"animatedValue" ],
+	"name" : "RTResizeMove",
+	"pools" : [
+		 ],
+	"super" : "RTAnimation",
+	"type" : "normal" }

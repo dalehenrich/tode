@@ -1,0 +1,23 @@
+{
+	"class" : {
+		"on:" : "akevalion 4/14/2015 14:11" },
+	"instance" : {
+		"addColor:object:text:" : "akevalion 4/14/2015 16:21",
+		"addColor:text:" : "AlexandreBergel 3/20/2015 14:42",
+		"addColoredObject:text:color:" : "AlexandreBergel 3/20/2015 14:46",
+		"addColoredText:color:" : "AlexandreBergel 3/20/2015 14:47",
+		"addLineColor:text:" : "AnneEtien 12/18/2014 11:47",
+		"addObject:text:" : "AlexandreBergel 3/20/2015 14:49",
+		"addText:" : "AlexandreBergel 10/19/2014 13:15",
+		"below" : "AlexandreBergel 12/12/2014 15:59",
+		"defaultOffset" : "AlexandreBergel 12/12/2014 15:57",
+		"initialize" : "AlexandreBergel 12/12/2014 15:59",
+		"isBelow" : "AlexandreBergel 12/12/2014 15:59",
+		"isLeft" : "PierreChanson 5/7/2015 19:23",
+		"isRight" : "AlexandreBergel 12/12/2014 15:59",
+		"left" : "PierreChanson 5/7/2015 19:23",
+		"legendElement" : "AlexandreBergel 10/19/2014 13:15",
+		"offset" : "PierreChanson 5/8/2015 17:32",
+		"offset:" : "PierreChanson 5/8/2015 17:32",
+		"renderIn:" : "PierreChanson 5/7/2015 19:23",
+		"right" : "AlexandreBergel 12/12/2014 15:59" } }

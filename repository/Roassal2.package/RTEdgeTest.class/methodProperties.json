@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "AlexandreBergel 12/16/2013 17:59",
+		"testBasic" : "AlexandreBergel 1/9/2014 19:00",
+		"testBezierColorAndWidth" : "SergioMaass 3/7/2014 14:54",
+		"testBuildingFromAssociations" : "AlexandreBergel 12/26/2014 16:53",
+		"testBuildingFromObjects" : "TudorGirba 10/5/2014 15:36",
+		"testEdgesFromToAll" : "AlexandreBergel 6/10/2015 18:01",
+		"testIncomingAndOutgoingEdges" : "AlexandreBergel 12/16/2013 19:07",
+		"testLineColorAndWidth" : "akevalion 6/30/2014 17:29",
+		"testMoveBehindItsExtremities" : "AlexandreBergel 2/25/2014 10:57",
+		"testMoveBehindItsExtremities2" : "AlexandreBergel 10/2/2014 19:12",
+		"testOnFromTo" : "TudorGirba 10/5/2014 15:45",
+		"testReconnectingEdge" : "JurajKubelka 4/1/2014 15:37",
+		"testRemovingEdge" : "AlexandreBergel 3/28/2014 19:04",
+		"testShouldBeUsedInLayout" : "AlexandreBergel 12/26/2014 16:41",
+		"testShouldBeUsedInLayout02" : "AlexandreBergel 12/26/2014 16:43",
+		"testTrachelShape" : "TudorGirba 10/5/2014 15:56",
+		"testTranslatingNode" : "AlexandreBergel 1/22/2014 16:00",
+		"testromTo" : "TudorGirba 10/5/2014 15:55" } }

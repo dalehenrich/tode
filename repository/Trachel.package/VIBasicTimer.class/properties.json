@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Viva",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "VIBasicTimer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

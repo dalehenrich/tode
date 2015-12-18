@@ -1,0 +1,3 @@
+configuration
+defaultBackgroundColor
+	^ Color veryLightGray.

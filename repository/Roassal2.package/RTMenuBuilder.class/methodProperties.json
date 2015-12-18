@@ -1,0 +1,28 @@
+{
+	"class" : {
+		"setGraphMenuOn:" : "akevalion 3/27/2015 17:16" },
+	"instance" : {
+		"addParentMenu:" : "PierreChanson 12/11/2014 12:08",
+		"configureViewEvents" : "PierreChanson 12/24/2014 10:20",
+		"createParentMenu:" : "PierreChanson 12/11/2014 11:48",
+		"createParentMenu:background:" : "PierreChanson 12/11/2014 11:55",
+		"createParentMenu:background:highlightColor:" : "PierreChanson 12/24/2014 10:16",
+		"createParentMenu:highlight:" : "PierreChanson 12/11/2014 17:08",
+		"createView" : "PierreChanson 12/24/2014 10:09",
+		"enterSubmenuOf:" : "PierreChanson 12/24/2014 10:40",
+		"initialize" : "PierreChanson 12/24/2014 10:14",
+		"leaveSubmenuOf:" : "PierreChanson 12/10/2014 14:59",
+		"menu:background:callback:" : "PierreChanson 12/11/2014 12:37",
+		"menu:background:highlightColor:callback:" : "PierreChanson 12/24/2014 10:36",
+		"menu:callback:" : "AlexandreBergel 1/18/2015 12:11",
+		"menu:highlight:callback:" : "AlexandreBergel 1/18/2015 12:11",
+		"menu:subcheckmenu:background:callback:" : "PierreChanson 12/5/2014 18:44",
+		"menu:subcheckmenu:callback:" : "PierreChanson 12/22/2014 12:19",
+		"menu:subcheckmenus:background:" : "akevalion 6/11/2014 16:29",
+		"menu:submenu:background:callback:" : "PierreChanson 12/11/2014 16:47",
+		"menu:submenu:background:highlightColor:callback:" : "PierreChanson 12/11/2014 16:47",
+		"menu:submenu:callback:" : "PierreChanson 12/11/2014 16:47",
+		"menu:submenus:background:" : "akevalion 7/1/2014 15:57",
+		"parentMenus" : "PierreChanson 12/11/2014 12:09",
+		"showSubmenuOf:" : "akevalion 1/22/2015 18:21",
+		"signalUpdate" : "AlexandreBergel 4/2/2014 17:42" } }

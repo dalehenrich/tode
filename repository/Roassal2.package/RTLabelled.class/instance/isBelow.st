@@ -1,0 +1,3 @@
+testing
+isBelow
+	^ position = #below

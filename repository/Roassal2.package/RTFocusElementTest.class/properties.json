@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTFocusElementTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

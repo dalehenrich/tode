@@ -1,0 +1,3 @@
+accessing
+getAxisX
+	^ axisConfigurationX

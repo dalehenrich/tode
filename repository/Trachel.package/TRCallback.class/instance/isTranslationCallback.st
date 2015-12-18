@@ -1,0 +1,3 @@
+testing
+isTranslationCallback
+	^ false

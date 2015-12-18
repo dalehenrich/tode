@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addOn:using:" : "RicardoJacas 4/21/2014 14:58",
+		"addPath:" : "RicardoJacas 4/21/2014 14:58",
+		"alphaAngle" : "RicardoJacas 4/21/2014 12:54",
+		"alphaAngle:" : "RicardoJacas 4/21/2014 12:54",
+		"betaAngle" : "RicardoJacas 4/21/2014 12:54",
+		"betaAngle:" : "RicardoJacas 4/21/2014 12:54",
+		"center" : "RicardoJacas 4/21/2014 12:54",
+		"center:" : "RicardoJacas 4/21/2014 12:54",
+		"element:center:r1:r2:aAngle:bAngle:color:" : "RicardoJacas 4/21/2014 15:11",
+		"getPointFrom:angle:radius:" : "RicardoJacas 4/21/2014 15:01",
+		"initialize" : "RicardoJacas 4/21/2014 14:59",
+		"innerRadius" : "RicardoJacas 4/21/2014 12:54",
+		"innerRadius:" : "RicardoJacas 4/21/2014 12:54",
+		"makePositive:" : "RicardoJacas 4/21/2014 15:00",
+		"outterRadius" : "RicardoJacas 4/21/2014 12:54",
+		"outterRadius:" : "RicardoJacas 4/21/2014 12:54",
+		"toRadian:" : "RicardoJacas 4/21/2014 15:00" } }

@@ -1,0 +1,17 @@
+{
+	"category" : "Trachel-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"canvas",
+		"circle1",
+		"circle2",
+		"rectangle1" ],
+	"name" : "TRCallbackTest",
+	"pools" : [
+		 ],
+	"super" : "TRTest",
+	"type" : "normal" }

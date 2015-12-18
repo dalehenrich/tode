@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addEdge:" : "AlexandreBergel 6/10/2014 18:30",
+		"addEdges:" : "AlexandreBergel 10/14/2014 10:39",
+		"addNode:" : "AlexandreBergel 6/10/2014 17:23",
+		"addNodes:" : "AlexandreBergel 6/10/2014 18:29",
+		"addStartStopButton" : "AlexandreBergel 9/5/2014 14:37",
+		"afterBlock:" : "AlexandreBergel 5/8/2014 23:23",
+		"hasCompleted" : "AlexandreBergel 1/22/2014 15:00",
+		"initialize" : "AlexandreBergel 5/8/2014 23:11",
+		"layout" : "AlexandreBergel 10/14/2014 10:32",
+		"layout:" : "AlexandreBergel 5/8/2014 22:54",
+		"nodes" : "AlexandreBergel 5/8/2014 22:53",
+		"nodes:" : "AlexandreBergel 6/10/2014 12:44",
+		"prepareLayoutFor:" : "AlexandreBergel 5/8/2014 22:43",
+		"refresh" : "AlexandreBergel 5/8/2014 23:22",
+		"removeAllEdges" : "AlexandreBergel 10/14/2014 10:39",
+		"start" : "AlexandreBergel 1/22/2014 15:03",
+		"view:" : "AlexandreBergel 5/8/2014 22:43" } }

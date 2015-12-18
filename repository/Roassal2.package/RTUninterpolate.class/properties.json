@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"a",
+		"b" ],
+	"name" : "RTUninterpolate",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

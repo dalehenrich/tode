@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Builder-Sunburst",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"strategy",
+		"elements",
+		"weight",
+		"interactions",
+		"maxLevel" ],
+	"name" : "RTSunburstBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

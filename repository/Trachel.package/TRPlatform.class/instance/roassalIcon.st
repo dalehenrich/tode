@@ -1,0 +1,3 @@
+public
+roassalIcon
+	self subclassResponsibility

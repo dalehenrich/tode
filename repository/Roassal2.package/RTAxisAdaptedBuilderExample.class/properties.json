@@ -1,0 +1,21 @@
+{
+	"category" : "Roassal2-Builder-AxisAdapted",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"objects",
+		"minX",
+		"maxX",
+		"minY",
+		"maxY",
+		"margin",
+		"xAxisConfiguration",
+		"yAxisConfiguration" ],
+	"name" : "RTAxisAdaptedBuilderExample",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractExample",
+	"type" : "normal" }

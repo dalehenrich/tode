@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testAttributeAt" : "AlexandreBergel 9/3/2014 10:49",
+		"testAttributeAtPresent" : "AlexandreBergel 9/3/2014 10:50",
+		"testElementFromModel" : "AlexandreBergel 12/29/2013 14:14",
+		"testGroup" : "AlexandreBergel 12/29/2013 13:52",
+		"testGroup2" : "AlexandreBergel 12/29/2013 13:52",
+		"testGroupTranslation" : "AlexandreBergel 12/29/2013 13:55",
+		"testGroupTranslation02" : "AlexandreBergel 3/20/2015 16:36",
+		"testRemovingGroup" : "AlexandreBergel 1/15/2014 15:13",
+		"testResizing" : "AlexandreBergel 9/3/2014 11:03",
+		"testResizingAndMinimumSize" : "AlexandreBergel 9/3/2014 11:16",
+		"testSignalUpdate" : "AlexandreBergel 9/3/2014 10:46",
+		"testView" : "AlexandreBergel 9/3/2014 10:42",
+		"testViewWhenAddedToView" : "AlexandreBergel 9/3/2014 10:42" } }

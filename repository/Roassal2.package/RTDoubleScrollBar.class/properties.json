@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 5/8/2015 17:01",
+	"instvars" : [
+		 ],
+	"name" : "RTDoubleScrollBar",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

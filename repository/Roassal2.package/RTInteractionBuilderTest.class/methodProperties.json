@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "AlexandreBergel 11/8/2014 20:05",
+		"testAddingOneAction" : "AlexandreBergel 11/8/2014 20:07",
+		"testAddingTwoActions" : "AlexandreBergel 11/8/2014 20:25",
+		"testDefault" : "AlexandreBergel 11/8/2014 20:06",
+		"testPopupTextColor" : "AlexandreBergel 2/28/2015 15:34" } }

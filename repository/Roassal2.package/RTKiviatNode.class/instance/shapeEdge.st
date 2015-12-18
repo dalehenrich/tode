@@ -1,0 +1,3 @@
+accessing
+shapeEdge
+	^ shapeEdge.

@@ -1,0 +1,22 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/21/2014 21:06",
+	"instvars" : [
+		"canvas",
+		"color",
+		"highlightable",
+		"lbl",
+		"lowColor",
+		"offsetOnEdge",
+		"position",
+		"text",
+		"fontSize" ],
+	"name" : "RTLabelled",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

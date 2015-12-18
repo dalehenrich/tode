@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-Kiviat",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 2/20/2015 16:55",
+	"instvars" : [
+		"arr",
+		"color",
+		"name" ],
+	"name" : "RTKiviatFruitExample",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+configuration
+noThousandsSeparator
+	thousandsSeparator := false

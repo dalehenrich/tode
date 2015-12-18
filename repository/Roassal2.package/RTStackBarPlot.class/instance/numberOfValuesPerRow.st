@@ -1,0 +1,3 @@
+accessing
+numberOfValuesPerRow
+	^ numberOfValuesPerRow

@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Builder-Sunburst",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"builder",
+		"angularSpacing",
+		"radialSpacing",
+		"hasCenter" ],
+	"name" : "RTSunburstStrategy",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

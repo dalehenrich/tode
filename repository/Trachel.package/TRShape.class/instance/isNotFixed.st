@@ -1,0 +1,4 @@
+testing
+isNotFixed
+
+	^ self isMovable

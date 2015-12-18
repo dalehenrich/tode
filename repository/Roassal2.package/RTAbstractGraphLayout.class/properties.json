@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"verticalGap",
+		"horizontalGap",
+		"cachedChildren",
+		"cachedParents",
+		"cachedParentsWithHighestNestings" ],
+	"name" : "RTAbstractGraphLayout",
+	"pools" : [
+		 ],
+	"super" : "RTEdgeDrivenLayout",
+	"type" : "normal" }

@@ -1,0 +1,7 @@
+{
+	"class" : {
+		"constraint:" : "BenjaminVanRyseghem 1/10/2014 17:14" },
+	"instance" : {
+		"constraint:" : "AlexandreBergel 7/12/2014 17:37",
+		"initialize" : "AlexandreBergel 7/12/2014 17:37",
+		"initializeElement:" : "YuriyTymchuk 9/22/2014 23:02" } }

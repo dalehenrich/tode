@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 3/17/2015 15:23",
+	"instvars" : [
+		"min",
+		"max",
+		"step",
+		"score" ],
+	"name" : "RTGrapherLabel",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

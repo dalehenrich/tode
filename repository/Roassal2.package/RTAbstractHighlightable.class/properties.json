@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		"lastHighlightedElements",
+		"lastColor" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JurajKubelka 8/21/2014 14:11",
+	"instvars" : [
+		"highlightElements" ],
+	"name" : "RTAbstractHighlightable",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"isAbstract" : "AlexandreBergel 8/11/2014 16:55" },
+	"instance" : {
+		"computeIncrementalAngleFor:" : "AlexandreBergel 3/20/2015 16:28",
+		"computeRadiusFor:" : "AlexandreBergel 3/20/2015 16:29",
+		"initialAngle" : "AlexandreBergel 1/13/2014 09:57",
+		"initialAngle:" : "AlexandreBergel 1/13/2014 09:57",
+		"initialAngleInDegree" : "AlexandreBergel 1/13/2014 09:57",
+		"initialAngleInDegree:" : "AlexandreBergel 1/13/2014 09:57",
+		"initialIncrementalAngle" : "AlexandreBergel 1/13/2014 09:57",
+		"initialIncrementalAngle:" : "AlexandreBergel 1/13/2014 09:57",
+		"initialIncrementalAngleInDegree:" : "AlexandreBergel 1/13/2014 09:57",
+		"initialRadius" : "AlexandreBergel 1/13/2014 09:57",
+		"initialRadius:" : "AlexandreBergel 1/13/2014 09:57",
+		"initialize" : "AlexandreBergel 1/13/2014 09:57",
+		"radius:" : "AlexandreBergel 4/17/2014 12:05",
+		"scaleBy:" : "AlexandreBergel 1/13/2014 09:57",
+		"scaleFactor" : "AlexandreBergel 1/13/2014 09:57" } }

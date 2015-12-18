@@ -1,0 +1,25 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"calculateMean" : "akevalion 4/16/2015 17:59",
+		"calculateMedian" : "akevalion 4/23/2015 18:27",
+		"calculateMedianStart:end:" : "akevalion 4/23/2015 18:26",
+		"calculateQ1" : "akevalion 4/22/2015 15:32",
+		"calculateQ3" : "akevalion 4/22/2015 15:33",
+		"emptyValues" : "akevalion 4/22/2015 16:01",
+		"hasOutlier" : "akevalion 4/21/2015 19:56",
+		"iqr" : "akevalion 4/21/2015 18:20",
+		"maxOutlier" : "akevalion 4/21/2015 18:21",
+		"maxRegularValue" : "akevalion 4/22/2015 16:03",
+		"mean" : "akevalion 4/21/2015 18:19",
+		"median" : "akevalion 4/21/2015 18:19",
+		"minOutlier" : "akevalion 4/21/2015 19:04",
+		"minRegularValue" : "akevalion 4/22/2015 16:03",
+		"model" : "akevalion 4/16/2015 16:48",
+		"model:" : "akevalion 4/16/2015 16:47",
+		"outliers" : "akevalion 4/21/2015 18:21",
+		"q1" : "akevalion 4/21/2015 18:20",
+		"q3" : "akevalion 4/21/2015 18:20",
+		"values" : "akevalion 4/16/2015 16:48",
+		"values:" : "akevalion 4/22/2015 17:27" } }

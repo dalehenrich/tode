@@ -1,0 +1,3 @@
+testing
+isAlignCenter
+	^ alignment = #center

@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"angle" ],
+	"name" : "TRRotatedLabelShape",
+	"pools" : [
+		 ],
+	"super" : "TRLabelShape",
+	"type" : "normal" }

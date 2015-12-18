@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"build" : "AlexandreBergel 12/16/2014 19:27",
+		"callback" : "AlexandreBergel 12/16/2014 19:19",
+		"callback:" : "AlexandreBergel 12/16/2014 22:00",
+		"createShapeBuilder" : "AlexandreBergel 12/16/2014 18:57",
+		"example01" : "AlexandreBergel 12/16/2014 19:19",
+		"initialize" : "AlexandreBergel 12/16/2014 21:41",
+		"labelled" : "AlexandreBergel 12/16/2014 19:03",
+		"max" : "AlexandreBergel 12/16/2014 21:43",
+		"max:" : "AlexandreBergel 12/16/2014 21:43",
+		"moveBelow" : "AlexandreBergel 12/16/2014 19:20",
+		"renderIn:" : "AlexandreBergel 12/16/2014 21:48" } }

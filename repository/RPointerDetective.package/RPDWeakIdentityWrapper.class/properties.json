@@ -1,0 +1,18 @@
+{
+	"category" : "RPointerDetective",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"weakWrappedObject",
+		"pointersTo",
+		"stringLabel",
+		"stringName",
+		"deploy" ],
+	"name" : "RPDWeakIdentityWrapper",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "weak" }

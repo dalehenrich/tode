@@ -1,0 +1,3 @@
+hooks
+computePath
+	self subclassResponsibility

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-Common",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/16/2014 17:54",
+	"instvars" : [
+		 ],
+	"name" : "RTBoundedShapeBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTShapeBuilder",
+	"type" : "normal" }

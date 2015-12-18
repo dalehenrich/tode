@@ -1,0 +1,3 @@
+private
+maxLatitude
+	^ RTOSM maxLatitude

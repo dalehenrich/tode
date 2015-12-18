@@ -1,0 +1,3 @@
+configuration
+minimumSize
+	^ 5

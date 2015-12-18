@@ -1,0 +1,3 @@
+accessing
+scale
+	^ matrix scale

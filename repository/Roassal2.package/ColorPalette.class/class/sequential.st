@@ -1,0 +1,4 @@
+palettes
+sequential
+
+	^ CPSequential new

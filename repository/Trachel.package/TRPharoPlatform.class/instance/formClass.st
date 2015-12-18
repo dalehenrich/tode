@@ -1,0 +1,3 @@
+public
+formClass
+	^ Form

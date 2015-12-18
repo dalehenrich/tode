@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"el1",
+		"el2",
+		"edge" ],
+	"name" : "RTEdgeTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

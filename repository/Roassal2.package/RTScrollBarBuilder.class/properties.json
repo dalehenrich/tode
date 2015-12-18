@@ -1,0 +1,24 @@
+{
+	"category" : "Roassal2-Builder-ScrollBar",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PierreChanson 3/11/2015 16:09",
+	"instvars" : [
+		"fixedPosition",
+		"size",
+		"scrollBarType",
+		"movable",
+		"orientation",
+		"width",
+		"shapes",
+		"barShape",
+		"barSpecific",
+		"encompassingRectangleFromSpaceToPixel",
+		"encompassingRectangle" ],
+	"name" : "RTScrollBarBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"inContext:lowColor:highColor:" : "AlexandreBergel 1/12/2014 15:54",
+		"inContext:lowColor:lowThreshold:highColor:highThreshold:" : "AlexandreBergel 1/12/2014 15:54",
+		"inContext:withCommand:lowColor:highColor:" : "AlexandreBergel 1/12/2014 15:54",
+		"inContext:withCommand:lowColor:lowThreshold:highColor:highThreshold:" : "AlexandreBergel 1/12/2014 15:54" },
+	"instance" : {
+		"blend:with:weight:" : "SergioMaass 1/31/2014 15:00",
+		"highColor:" : "AlexandreBergel 1/12/2014 15:54",
+		"highColorFor:" : "AlexandreBergel 1/12/2014 16:33",
+		"initialize" : "AlexandreBergel 1/12/2014 15:54",
+		"lowColor:" : "AlexandreBergel 1/12/2014 15:54",
+		"lowColorFor:" : "AlexandreBergel 1/12/2014 16:33",
+		"maxBrightness:" : "AlexandreBergel 1/12/2014 15:54",
+		"maxBrightnessFor:" : "AlexandreBergel 1/12/2014 16:33",
+		"minBrightness:" : "AlexandreBergel 1/12/2014 15:54",
+		"minBrightnessFor:" : "AlexandreBergel 1/12/2014 16:33",
+		"rtValue:" : "AlexandreBergel 1/12/2014 16:44" } }

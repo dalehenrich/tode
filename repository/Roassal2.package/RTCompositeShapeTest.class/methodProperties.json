@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testCallbacks" : "AlexandreBergel 3/23/2015 10:10",
+		"testCallbacks02" : "AlexandreBergel 3/23/2015 09:57",
+		"testCenter" : "AlexandreBergel 12/30/2014 20:30",
+		"testCenter2" : "AlexandreBergel 12/30/2014 20:30",
+		"testCenter2AndTranslation" : "AlexandreBergel 12/30/2014 20:30",
+		"testCenter3" : "AlexandreBergel 12/30/2014 20:30",
+		"testCenter3AndTranslation" : "AlexandreBergel 12/30/2014 20:30",
+		"testCenterAndTranslation" : "AlexandreBergel 12/30/2014 20:30",
+		"testCenterVerticalLineLayout" : "AlexandreBergel 12/30/2014 20:30",
+		"testCenterVerticalLineLayout2" : "AlexandreBergel 12/30/2014 20:30",
+		"testRemoving" : "AlexandreBergel 12/30/2014 20:30" } }

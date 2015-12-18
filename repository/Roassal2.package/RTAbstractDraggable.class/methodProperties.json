@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"constraintIfNecessary:" : "AlexandreBergel 12/16/2014 18:46",
+		"groupToDrag" : "AlexandreBergel 12/16/2014 18:24",
+		"groupToDrag:" : "AlexandreBergel 12/16/2014 18:24",
+		"initialize" : "AlexandreBergel 12/16/2014 18:24",
+		"initializeElement:" : "AlexandreBergel 12/16/2014 18:55",
+		"transformDistance:forElement:" : "AlexandreBergel 12/16/2014 18:37" } }

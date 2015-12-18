@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-StackBarPlot",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTStackBarPlotTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

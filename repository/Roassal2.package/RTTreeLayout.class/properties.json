@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTTreeLayout",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractVerticalTreeLayout",
+	"type" : "normal" }

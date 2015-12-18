@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"beginingAtBlue" : "TudorGirba 5/18/2014 20:06",
+		"beginingAtRed" : "TudorGirba 5/18/2014 20:06",
+		"withCommand:" : "AlexandreBergel 1/12/2014 15:54" },
+	"instance" : {
+		"colors" : "TudorGirba 5/18/2014 20:05",
+		"initialize" : "TudorGirba 5/18/2014 15:00",
+		"nextColor" : "TudorGirba 5/18/2014 20:05",
+		"rtValue:" : "AlexandreBergel 1/12/2014 16:32",
+		"setIndexTo:" : "TudorGirba 5/18/2014 20:05" } }

@@ -1,0 +1,25 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"-" : "akevalion 1/16/2015 13:09",
+		"add:" : "akevalion 1/15/2015 18:14",
+		"cross:" : "akevalion 1/15/2015 18:07",
+		"dot:" : "akevalion 1/15/2015 18:08",
+		"initialize" : "akevalion 1/15/2015 18:17",
+		"isZero" : "akevalion 1/15/2015 18:02",
+		"lengthenBy:" : "akevalion 1/19/2015 15:24",
+		"magnitude" : "akevalion 1/15/2015 18:01",
+		"normalize" : "akevalion 1/15/2015 18:00",
+		"normalize:" : "akevalion 1/15/2015 17:59",
+		"rotate:angle:" : "akevalion 1/16/2015 19:21",
+		"scaleBy:" : "akevalion 1/15/2015 18:15",
+		"shortenBy:" : "akevalion 1/16/2015 19:22",
+		"x" : "akevalion 1/15/2015 13:26",
+		"x:" : "akevalion 1/15/2015 17:56",
+		"x:y:" : "akevalion 1/15/2015 17:57",
+		"x:y:z:" : "akevalion 1/16/2015 13:10",
+		"y" : "akevalion 1/15/2015 13:26",
+		"y:" : "akevalion 1/15/2015 17:56",
+		"z" : "akevalion 1/15/2015 13:26",
+		"z:" : "akevalion 1/15/2015 17:56" } }

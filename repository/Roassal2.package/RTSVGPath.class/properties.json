@@ -1,0 +1,20 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/21/2014 21:00",
+	"instvars" : [
+		"path",
+		"borderWidth",
+		"borderColor",
+		"curves",
+		"scale",
+		"rotation",
+		"keepInOriginalPosition" ],
+	"name" : "RTSVGPath",
+	"pools" : [
+		 ],
+	"super" : "RTShape",
+	"type" : "normal" }

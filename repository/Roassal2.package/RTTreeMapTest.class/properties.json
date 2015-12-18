@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-TreeMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTTreeMapTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

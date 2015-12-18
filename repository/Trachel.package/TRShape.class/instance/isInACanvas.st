@@ -1,0 +1,3 @@
+testing
+isInACanvas
+	^ canvas notNil

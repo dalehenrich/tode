@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		"lastPopup" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 3/10/2015 11:41",
+	"instvars" : [
+		 ],
+	"name" : "RTAbstractPopup",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

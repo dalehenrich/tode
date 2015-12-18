@@ -1,0 +1,23 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"charge",
+		"x",
+		"y",
+		"leaf",
+		"nodes",
+		"origin",
+		"corner",
+		"node",
+		"cx",
+		"cy" ],
+	"name" : "RTQuadTree",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

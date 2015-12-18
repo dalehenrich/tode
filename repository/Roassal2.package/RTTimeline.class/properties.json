@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Builder-Timeline",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 5/15/2015 17:15",
+	"instvars" : [
+		"sets",
+		"timelineLabel",
+		"elements",
+		"timelineLabelBuilder" ],
+	"name" : "RTTimeline",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractGrapher",
+	"type" : "normal" }

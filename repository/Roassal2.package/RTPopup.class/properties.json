@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"groupBlock",
+		"text",
+		"textColor" ],
+	"name" : "RTPopup",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractPopup",
+	"type" : "normal" }

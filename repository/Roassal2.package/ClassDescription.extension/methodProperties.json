@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"ageInDays" : "AlexandreBergel 5/11/2014 10:24",
+		"ageInDaysRounded" : "AlexandreBergel 5/11/2014 10:07",
+		"classReferences" : "JurajKubelka 8/27/2014 18:05",
+		"commonSuperclassWith:" : "AlexandreBergel 9/27/2014 12:20",
+		"computeOldestMethod" : "AlexandreBergel 5/8/2015 15:50",
+		"computeYoungestMethod" : "AlexandreBergel 5/8/2015 16:00",
+		"gotMethodOnDay:" : "AlexandreBergel 5/11/2014 10:09",
+		"hasAnyMethodProducedAfterDay:" : "AlexandreBergel 5/11/2014 09:21",
+		"isReferencedBy:" : "JurajKubelka 8/27/2014 18:05",
+		"livingInDays" : "AlexandreBergel 5/11/2014 10:22",
+		"numberOfSubclasses" : "AlexandreBergel 5/23/2014 10:55",
+		"numberOfVariables" : "AlexandreBergel 5/23/2014 10:55",
+		"oldestMethod" : "AlexandreBergel 5/11/2014 10:23",
+		"referencedByClasses:" : "JurajKubelka 8/27/2014 18:05",
+		"rtmethods" : "AlexandreBergel 10/29/2014 15:05",
+		"youngestMethod" : "AlexandreBergel 5/8/2015 15:51" } }

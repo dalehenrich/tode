@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addOn:using:" : "akevalion 5/11/2015 18:16",
+		"addPosition:" : "RicardoJacas 4/21/2014 10:54",
+		"element:from:to:width:color:" : "RicardoJacas 4/21/2014 11:40",
+		"element:from:to:width:color:decoration:" : "RicardoJacas 4/21/2014 11:05",
+		"extent" : "RicardoJacas 4/21/2014 10:54",
+		"extent:" : "RicardoJacas 4/21/2014 10:54",
+		"initialize" : "RicardoJacas 4/21/2014 10:30" } }
