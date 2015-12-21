@@ -94,12 +94,12 @@ baseline: spec
       spec
         package: 'Tode-Client-Roassal2'
           with: [ spec requires: #('Tode-Client-ServerBlocks' 'Roassal2' 'RPointerDetective') ];
-        package: 'RPointerDetective'  with: [ 
-				spec requires: #('Roassal2')];
-        package: 'Roassal2' with: [ 
-				spec requires: #('Trachel')];
+        package: 'RPointerDetective' with: [ spec requires: #('Roassal2') ];
+        package: 'Roassal2' with: [ spec requires: #('Trachel') ];
         package: 'Trachel';
-        group: 'Visualize' with: #('Tode-Client-Roassal2' 'Trachel' 'RPointerDetective' 'GemStone');
+        group: 'Visualize'
+          with:
+            #('Tode-Client-Roassal2' 'Trachel' 'RPointerDetective' 'GemStone');
         yourself ].
   spec
     for: #'gemstone'
@@ -255,7 +255,7 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec
-    for: #'gs3.3.x'
+    for: #(#'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         baseline: 'ZincHTTPComponents'
@@ -278,7 +278,7 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec
-    for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x')
+    for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         package: 'Topez-Server-DebugTools'
