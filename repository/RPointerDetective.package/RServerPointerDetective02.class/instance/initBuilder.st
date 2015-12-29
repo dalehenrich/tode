@@ -19,14 +19,13 @@ initBuilder
 				horizontalGap: 80;
 				verticalGap: 15).
 	builder
-		onLeftClickExplore: [ :nde | self showPointersTo: nde ] edges: #From;
-		withPopup: [ :nde | self labelForNode: nde ].
-	builder
+		onLeftClickServerDo: [ :exploraNode | exploraNode element model wrapper inspectOnServer: self shell ]
+			with: [ :nde | self showPointersTo: nde ];
+		withPopup: [ :nde | self labelForNode: nde ];
 		onRightClickMenu:
-			{('inspect' -> [ :nde | nde model wrapper inspectOnServer: self shell ]).
-			('pointers'
-				-> [ :exploraNode | | nde |
-					nde := exploraNode element.
-					
-					exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde  model) ])}.
+				{('pointers'
+						-> [ :exploraNode | 
+							| nde |
+							nde := exploraNode element.
+							exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde model) ])}.
 	builder dragChildren
