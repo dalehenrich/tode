@@ -2,26 +2,31 @@ as yet unclassified
 initBuilder
 	| lineShape |
 	builder view: self view.
-	lineShape := RTArrowedLine new color: (Color lightGray alpha:0.5); width: 1.5. 
+	lineShape := RTArrowedLine new
+		color: (Color lightGray alpha: 0.5);
+		width: 1.5.
 	lineShape withShorterDistanceAttachPoint.
-	lineShape inverted. 
-	
+	lineShape inverted.
 	builder shape circle
 		borderWidth: 0.02;
 		size: 40;
 		color: (Color blue alpha: 0.5).
-	
-	self defaultColorsAndBlocks.	
-		
+	self defaultColorsAndBlocks.
 	builder lineShape: lineShape.
-	
-	builder layout: (RTHorizontalTreeLayout new horizontalGap: 80; verticalGap: 15).	
-	
+	builder
+		layout:
+			(RTHorizontalTreeLayout new
+				horizontalGap: 80;
+				verticalGap: 15).
 	builder
 		onLeftClickExplore: [ :nde | self showPointersTo: nde ] edges: #From;
-		withPopup: [:nde | self labelForNode: nde].
-	
-	builder 
-	   onRightClickMenu: { 'inspect'-> [:e | e model wrapper inspectOnServer: self shell]}.
-	
-	builder dragChildren.	
+		withPopup: [ :nde | self labelForNode: nde ].
+	builder
+		onRightClickMenu:
+			{('inspect' -> [ :nde | nde model wrapper inspectOnServer: self shell ]).
+			('pointers'
+				-> [ :exploraNode | | nde |
+					nde := exploraNode element.
+					
+					exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde  model) ])}.
+	builder dragChildren
