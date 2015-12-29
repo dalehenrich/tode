@@ -20,10 +20,5 @@ strongPointersToWrappedOnServerExcept: anArray withShell: atODEShell
 						].
 					res asArray] )first).
 								
-			result third size > 10 ifTrue: [
-						| size |  
-						size := self popChoice: result third size.
-						result := Array with: (result first) with: (result second) with: (result third first: size).
-					].
 			^ result	
 			].

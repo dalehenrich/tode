@@ -1,3 +1,4 @@
 as yet unclassified
 pointersTo
-	^ pointersTo 
+	pointersTo ifNil: [ pointersTo := IdentitySet new ].
+	^ pointersTo

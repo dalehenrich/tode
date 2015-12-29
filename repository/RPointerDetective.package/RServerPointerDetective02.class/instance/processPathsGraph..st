@@ -9,9 +9,9 @@ processPathsGraph: aNode
 				rt reverse allButFirst allButLast do: [ :n |
 					rtTemp := rtTemp allButFirst.
 					
-					(self nodeFor: n) wrapper pointersTo: {(self nodeFor: (rtTemp first))}  
+					(self nodeFor: n) wrapper addPointersTo: (self nodeFor: (rtTemp first))  
 					].
-				(self nodeFor: (rt allButLast reverse last)) wrapper pointersTo: #().
+				(self nodeFor: (rt allButLast reverse last)) wrapper pointersTo: nil.
 				].
 
-				^ (result third collect: [ :rd | (rd allButLast last) ]).
+				^ (result third collect: [ :rd | (rd allButLast last) ]) asIdentitySet.
