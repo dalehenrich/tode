@@ -10,7 +10,7 @@ baseline: spec
         yourself.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
-        package: 'Tode-Roassal-Core' with: [ spec requires: #('Tode-Common-Core') ];
+        package: 'Tode-Roassal-Core' with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Server-Core'
           with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Common-Tests'
