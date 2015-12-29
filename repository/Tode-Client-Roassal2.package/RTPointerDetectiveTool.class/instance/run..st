@@ -3,7 +3,7 @@ run: oopText
 	|b anim|
 	self assert: (oopText isNotNil) description: 'No oop or not integer'.
 	self view clean.
-	b := RServerPointerDetective new. 
+	b := RServerPointerDetective02 new. 
 	b view: view.
 	b shell: (self workspace tdShell); on:(oopText asInteger).
 		

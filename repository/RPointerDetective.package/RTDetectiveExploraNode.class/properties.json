@@ -1,0 +1,14 @@
+{
+	"category" : "RPointerDetective",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTDetectiveExploraNode",
+	"pools" : [
+		 ],
+	"super" : "RTExploraNodeLazy",
+	"type" : "normal" }

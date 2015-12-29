@@ -3,7 +3,7 @@ run: oopText limitArray: anOopArrayText
 	|b anim |
 	self assert: (oopText isNotNil) description: 'No oop or not integer'.
 	self view clean.
-	b := RServerPointerDetective new. 
+	b := RServerPointerDetective02 new. 
 	b view: view.
 	anOopArrayText isEmpty ifTrue: [
 		b onServerFindAllReferencePathsToObject: (oopText asInteger)  shell: (self workspace tdShell)

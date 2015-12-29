@@ -1,0 +1,23 @@
+{
+	"category" : "RPointerDetective",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nodes",
+		"layout",
+		"lineShape",
+		"nodeListeners",
+		"popUp",
+		"popupText",
+		"nextId",
+		"dragChildren",
+		"icons",
+		"lastAddedNodes" ],
+	"name" : "RTDetectiveExploraBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }
