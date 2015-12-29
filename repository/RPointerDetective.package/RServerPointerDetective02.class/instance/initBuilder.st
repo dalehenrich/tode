@@ -23,7 +23,9 @@ initBuilder
 			with: [ :nde | self showPointersTo: nde ];
 		withPopup: [ :nde | self labelForNode: nde ];
 		onRightClickMenu:
-				{('pointers'
+				{('IN' -> [ :ignored | RTZoomInMove on: self view ]).
+					('OUT' -> [ :ignored | RTZoomOutMove on: self view ]).
+					('pointers'
 						-> [ :exploraNode | 
 							| nde |
 							nde := exploraNode element.
