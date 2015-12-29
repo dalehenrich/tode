@@ -10,6 +10,7 @@ baseline: spec
         yourself.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
+        package: 'Tode-Roassal-Core' with: [ spec requires: #('Tode-Common-Core') ];
         package: 'Topez-Server-Core'
           with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Common-Tests'
@@ -17,7 +18,7 @@ baseline: spec
         yourself.
       spec
         group: 'Common Tests' with: #('Topez-Common-Tests');
-        group: 'Visualize' with: #();
+        group: 'Visualize' with: #('Tode-Roassal-Core');
         yourself ].
   spec
     for: #'squeakCommon'
@@ -94,12 +95,15 @@ baseline: spec
       spec
         package: 'Tode-Client-Roassal2'
           with: [ spec requires: #('Tode-Client-ServerBlocks' 'Roassal2' 'RPointerDetective') ];
-        package: 'RPointerDetective' with: [ spec requires: #('Roassal2') ];
-        package: 'Roassal2' with: [ spec requires: #('Trachel') ];
+        package: 'RPointerDetective'  with: [ 
+				spec requires: #('Roassal2')];
+        package: 'Roassal2' with: [ 
+				spec requires: #('Trachel')];
         package: 'Trachel';
-        group: 'Visualize'
-          with:
-            #('Tode-Client-Roassal2' 'Trachel' 'RPointerDetective' 'GemStone');
+        package: 'Tode-Roassal-Core' with: [ spec requires: #('Roassal2') ];
+        yourself.
+      spec
+        group: 'Visualize' with: #('Tode-Client-Roassal2' 'Trachel' 'RPointerDetective' 'GemStone');
         yourself ].
   spec
     for: #'gemstone'
