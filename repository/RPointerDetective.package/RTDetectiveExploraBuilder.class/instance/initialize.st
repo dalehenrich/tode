@@ -10,4 +10,4 @@ initialize
 	lineShape := self defaultLineShape.
 	self configureView: view.
 	self initializeNodes.
-	self defaultLayout.
+	self radialTreeLayout.
