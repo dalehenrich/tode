@@ -1,0 +1,4 @@
+accessing
+lineShape
+
+   ^lineShape
