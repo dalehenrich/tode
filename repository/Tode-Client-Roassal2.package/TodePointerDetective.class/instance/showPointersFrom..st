@@ -1,3 +1,3 @@
 as yet unclassified
 showPointersFrom: aNode
-	^ aNode wrapper children
+	^ aNode wrapper children collect: [ :o | self nodeFor: o ].

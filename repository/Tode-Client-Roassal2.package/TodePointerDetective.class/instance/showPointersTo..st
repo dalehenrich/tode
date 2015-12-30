@@ -1,3 +1,3 @@
 nodes
 showPointersTo: aNode
-	^ aNode wrapper parents
+	^ aNode wrapper parents collect: [ :o | self nodeFor: o ].
