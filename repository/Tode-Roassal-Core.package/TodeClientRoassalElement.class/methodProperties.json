@@ -2,11 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"edgeDictionary" : "dkh 6/12/2013 06:46",
-		"edgesBlock" : "dkh 6/12/2013 06:23",
-		"edgesBlock:" : "dkh 6/12/2013 06:23",
-		"edgesBlockOop" : "dkh 6/12/2013 06:24",
-		"edgesBlockOop:" : "dkh 6/12/2013 06:24",
-		"edgesBlockOopType" : "dkh 6/12/2013 06:44",
-		"excludedInstVarNames" : "dkh 6/12/2013 06:48",
-		"setBlockOops" : "dkh 6/12/2013 06:52" } }
+		"childrenBlock" : "dkh 12/30/2015 09:22",
+		"childrenBlock:" : "dkh 12/30/2015 09:22",
+		"childrenBlockOop" : "dkh 12/30/2015 09:22",
+		"childrenBlockOop:" : "dkh 12/30/2015 09:22",
+		"excludedInstVarNames" : "dkh 12/30/2015 09:20",
+		"parentsBlock" : "dkh 12/30/2015 09:23",
+		"parentsBlock:" : "dkh 12/30/2015 09:23",
+		"parentsBlockOop" : "dkh 12/30/2015 09:23",
+		"parentsBlockOop:" : "dkh 12/30/2015 09:23",
+		"setBlockOops" : "dkh 12/30/2015 09:22" } }

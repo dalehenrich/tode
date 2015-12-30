@@ -1,6 +1,6 @@
 initialization
 open
-	| window listPane codePane roassalPane buttonBarPane |
+	| window listPane codePane buttonBarPane |
 	label := ''.
 	updating := false.
 	window := TZSystemWindow new model: self.
@@ -13,11 +13,6 @@ open
 	buttonBarPane := self buttonBarEditor buildOverflowMorph.
 	window addMorph: buttonBarPane frame: (0 @ 0 corner: 1 @ 1).
 	buttonBarPane delete.
-	false
-		ifTrue: [ 
-			roassalPane := self roassalEditor buildRoassalMorph.
-			roassalPane delete.
-			window addMorph: roassalPane frame: (0 @ 0 corner: 1 @ 1) ].
 	window minimumExtent: 40 @ 40.
 	window openInWorld.
 	^ window

@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"edgeDictionary",
-		"edgesBlock",
-		"edgesBlockOop" ],
+		"childrenBlock",
+		"childrenBlockOop",
+		"parentsBlock",
+		"parentsBlockOop" ],
 	"name" : "TodeClientRoassalElement",
 	"pools" : [
 		 ],

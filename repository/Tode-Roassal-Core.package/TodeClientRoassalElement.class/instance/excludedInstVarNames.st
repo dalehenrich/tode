@@ -1,3 +1,3 @@
 accessing
 excludedInstVarNames
-  ^ super excludedInstVarNames , #(#'edgesBlock' #'edgeDictionary')
+	^ super excludedInstVarNames , #(#childrenBlock #parentsBlock)

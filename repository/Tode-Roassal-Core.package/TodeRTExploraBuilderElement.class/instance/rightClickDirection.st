@@ -1,4 +1,0 @@
-accessing
-rightClickDirection
-
-   ^rightClickDirection
