@@ -2,8 +2,9 @@ private
 createGraphBuilder
 	| b anim |
 	self roassalView clean.
-	b := TodePointerDetective on: self initialNodes.
-	b view: roassalView.
+	b := TodePointerDetective new
+	  view: roassalView;
+	  on: self initialNodes.
 	b builder
 		addListenerBlock: [ :n | 
 			anim := RTNopAnimation new.
@@ -13,4 +14,5 @@ createGraphBuilder
 					b2 notifyWith: n element.
 					b1 notifyWith: n element ].
 			b builder view addAnimation: anim ].
-	self view signalUpdate
+	roassalView signalUpdate.
+	roassalView open

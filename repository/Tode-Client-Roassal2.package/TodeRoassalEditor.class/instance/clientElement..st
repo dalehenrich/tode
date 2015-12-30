@@ -4,4 +4,3 @@ clientElement: aClientElement
 	super clientElement: aClientElement.
 	view := self roassalView.
 	self graphBuilder.
-	view open
