@@ -15,15 +15,16 @@ ppiview
     editorAspectSelector: #'activateRoassalEditor';
     editorWindowLabel: 'xxx';
     editorWindowLocation: #'method';
+    topez: self topez;
     timestamp;
     yourself.
   clientRoassalElement
     childrenBlock: [ :cre :aTDPPINode | 
-          cre objectSerializer
+          self topez objectSerializer
             toString:
               (self ppiProcessNodes: aTDPPINode children asArray for: clientRoassalElement) ];
     parentsBlock: [ :cre :aTDPPINode | 
-          cre objectSerializer
+          self topez objectSerializer
             toString:
               (self ppiProcessNodes: aTDPPINode parents asArray for: clientRoassalElement) ];
     initialNodes:

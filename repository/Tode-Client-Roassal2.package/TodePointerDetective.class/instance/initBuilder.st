@@ -21,6 +21,7 @@ initBuilder
 		onLeftClickServerDo: [ :exploraNode | 
 					| nde |
 					nde := exploraNode element.
+					
 					exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde model) ]
 			with: [ :nde | self showPointersTo: nde ];
 		withPopup: [ :nde | self labelForNode: nde ];

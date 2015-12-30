@@ -1,11 +1,11 @@
 *tode-client-roassal2
-getChildrenForClientRoassalElement: aClientListElement node: aTDPPINode
+getChildrenForClientRoassalElement: aClientRoassalElement node: aTDPPINode
 	| oopType stonString |
 	oopType := self session
-		rawReceiverNB: aClientListElement childrenBlockOopType
+		rawReceiverNB: aClientRoassalElement childrenBlockOopType
 		perform: #value:value:
 		withArgs:
-			{(aClientListElement clientElementOopType).
-			(aClientListElement session asOopType: aTDPPINode oop)}.
+			{(aClientRoassalElement clientElementOopType).
+			aClientRoassalElement session asOopType: aTDPPINode myOop}.
 	stonString := self session library localFor: oopType.
-	^ self objectSerializer fromString: stonString
+	^ (self objectSerializer fromString: stonString) do: [ :each | each clientElement: aClientRoassalElement ]
