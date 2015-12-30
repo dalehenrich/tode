@@ -290,11 +290,11 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
         package: 'Topez-Server-31x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
-        package: 'Tode-Gemstone-PointerDetective'
-          with: [ spec requires: 'Tode-GemStone-Server-Core' ];
+        package: 'Tode-GemStone-PointerDetective'
+          with: [ spec requires: #('Tode-GemStone-Server-Core' 'Tode-Roassal-Core') ];
         yourself.
       spec
-        group: 'Visualize' with: #('Tode-Gemstone-PointerDetective' 'GemStone');
+        group: 'Visualize' with: #('Tode-GemStone-PointerDetective' 'GemStone');
         yourself ].
   spec
     for: #'maglev'
