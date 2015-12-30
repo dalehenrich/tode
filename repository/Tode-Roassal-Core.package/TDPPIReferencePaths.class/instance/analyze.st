@@ -13,7 +13,7 @@ analyze
           | theNode lastNode nodeRef |
           theNode := lastNode := nil.
           nodeRef := {}.
-          1 to: ar size - 1 do: [ :index | 
+          1 to: ar size do: [ :index | 
             | referenceObject |
             referenceObject := ar at: index.
             theNode := oopToNodeMap
@@ -30,7 +30,6 @@ analyze
                 lastNode addChild: theNode ].
             lastNode := theNode.
             nodeRef add: theNode ].
-          nodeRef add: node.
           (searchNodeMap at: node ifAbsent: [ searchNodeMap at: node put: {} ])
             add: nodeRef.
           self commit ] ].
@@ -47,5 +46,4 @@ analyze
     at: 'total objs' put: oopToNodeMap size;
     at: 'classes' put: classNameMap size;
     yourself.
-  self commit.
-  self halt
+  self commit
