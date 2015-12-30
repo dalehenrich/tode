@@ -10,9 +10,6 @@ ppiview
   ppiRefPath := UserGlobals at: globalName.
   clientRoassalElement := TodeClientRoassalElement new
     theObject: ppiRefPath;
-    childrenBlock: [ :cre :aTDPPINode | cre objectSerializer toString: aTDPPINode children asArray ];
-    parentsBlock: [ :cre :aTDPPINode | cre objectSerializer toString: aTDPPINode parents asArray ];
-    initialNodes: ppiRefPath searchNodeMap keys;
     usePersistentClientElementCache: false;
     windowBuilder: self;
     editorAspectSelector: #'activateRoassalEditor';
@@ -20,4 +17,15 @@ ppiview
     editorWindowLocation: #'method';
     timestamp;
     yourself.
+  clientRoassalElement
+    childrenBlock: [ :cre :aTDPPINode | 
+          cre objectSerializer
+            toString:
+              (self ppiProcessNodes: aTDPPINode children asArray for: clientRoassalElement) ];
+    parentsBlock: [ :cre :aTDPPINode | 
+          cre objectSerializer
+            toString:
+              (self ppiProcessNodes: aTDPPINode parents asArray for: clientRoassalElement) ];
+    initialNodes:
+        (self ppiProcessNodes: ppiRefPath searchNodeMap keys for: clientRoassalElement).
   self topez editElement: clientRoassalElement

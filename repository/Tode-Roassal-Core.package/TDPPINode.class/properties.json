@@ -10,7 +10,8 @@
 		"className",
 		"children",
 		"parents",
-		"clientElement" ],
+		"clientElement",
+		"myOop" ],
 	"name" : "TDPPINode",
 	"pools" : [
 		 ],
