@@ -19,15 +19,16 @@ initBuilder
 				horizontalGap: 80;
 				verticalGap: 15).
 	builder
-		onLeftClickServerDo: [ :exploraNode | exploraNode element model wrapper inspectOnServer: self shell ]
+		onLeftClickServerDo: [ :exploraNode | 
+					| nde |
+					nde := exploraNode element.
+					exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde model) ]
 			with: [ :nde | self showPointersTo: nde ];
 		withPopup: [ :nde | self labelForNode: nde ];
 		onRightClickMenu:
-				{('IN' -> [ :ignored | RTZoomInMove on: self view ]).
-					('OUT' -> [ :ignored | RTZoomOutMove on: self view ]).
-					('pointers'
+				{('center'
 						-> [ :exploraNode | 
-							| nde |
-							nde := exploraNode element.
-							exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde model) ])}.
+							self view canvas camera translateTo: exploraNode element encompassingRectangle center.
+							self view canvas signalUpdate ]).
+					('inspect' -> [ :exploraNode | exploraNode element model wrapper inspectOnServer: self shell ])}.
 	builder dragChildren
