@@ -2,7 +2,7 @@ private
 createGraphBuilder
 	| b anim |
 	self roassalView clean.
-	b := TodePointerDetective new.
+	b := TodePointerDetective on: self initialNodes.
 	b view: roassalView.
 	b builder
 		addListenerBlock: [ :n | 

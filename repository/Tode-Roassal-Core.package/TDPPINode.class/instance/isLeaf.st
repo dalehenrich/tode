@@ -1,3 +1,4 @@
 testing
 isLeaf
-  ^ self children isEmpty
+	children ifNil: [ ^ false ].
+	^ self children isEmpty

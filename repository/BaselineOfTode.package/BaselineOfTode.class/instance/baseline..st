@@ -95,7 +95,7 @@ baseline: spec
     do: [ 
       spec
         package: 'Tode-Client-Roassal2'
-          with: [ spec requires: #('Tode-Client-ServerBlocks' 'Roassal2' 'RPointerDetective') ];
+          with: [ spec requires: #('Topez-Client-GemStone' 'Tode-Client-ServerBlocks' 'Roassal2' 'RPointerDetective') ];
         package: 'RPointerDetective' with: [ spec requires: #('Roassal2') ];
         package: 'Roassal2' with: [ spec requires: #('Trachel') ];
         package: 'Trachel';

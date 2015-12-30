@@ -1,10 +1,23 @@
 {
 	"class" : {
-		 },
+		"on:" : "dkh 12/30/2015 10:42" },
 	"instance" : {
-		"colorConditionBlocks" : "dkh 12/30/2015 09:50",
-		"colorConditions" : "dkh 12/30/2015 09:49",
+		"builder" : "dkh 12/30/2015 10:36",
+		"colorConditions" : "dkh 12/30/2015 10:25",
 		"defaultBuilder" : "dkh 12/30/2015 09:48",
-		"defaultColorsAndBlocks" : "dkh 12/30/2015 09:53",
-		"initBuilder" : "dkh 12/30/2015 09:46",
-		"initialize" : "dkh 12/30/2015 09:47" } }
+		"defaultView" : "dkh 12/30/2015 10:37",
+		"idForWrappedObject:" : "dkh 12/30/2015 10:51",
+		"initBuilder" : "dkh 12/30/2015 10:25",
+		"initialize" : "dkh 12/30/2015 10:54",
+		"labelForNode:" : "dkh 12/30/2015 11:05",
+		"nameForNode:" : "dkh 12/30/2015 11:05",
+		"nodeFor:" : "dkh 12/30/2015 10:49",
+		"nodesMap" : "dkh 12/30/2015 10:53",
+		"nodesMap:" : "dkh 12/30/2015 10:53",
+		"on:" : "dkh 12/30/2015 10:35",
+		"open" : "dkh 12/30/2015 10:43",
+		"setLabels" : "dkh 12/30/2015 10:40",
+		"showPointersFrom:" : "dkh 12/30/2015 11:44",
+		"showPointersTo:" : "dkh 12/30/2015 11:44",
+		"view" : "dkh 12/30/2015 10:39",
+		"view:" : "dkh 12/30/2015 10:40" } }

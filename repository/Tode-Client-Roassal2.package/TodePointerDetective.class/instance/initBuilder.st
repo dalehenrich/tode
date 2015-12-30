@@ -11,7 +11,6 @@ initBuilder
 		borderWidth: 0.02;
 		size: 40;
 		color: (Color blue alpha: 0.5).
-	self defaultColorsAndBlocks.
 	builder lineShape: lineShape.
 	builder
 		layout:

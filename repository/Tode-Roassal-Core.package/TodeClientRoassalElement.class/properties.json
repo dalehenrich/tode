@@ -13,5 +13,5 @@
 	"name" : "TodeClientRoassalElement",
 	"pools" : [
 		 ],
-	"super" : "TodeClientListElement",
+	"super" : "TodeClientElement",
 	"type" : "normal" }
