@@ -1,16 +1,16 @@
 private
 createRoassalView
-	| view builder |
-	view := RTView new @ RTDraggableView.
-	view canvas camera translateTo: 0 @ 0.
-	builder := RTMenuBuilder new view: view.
-	builder menu: 'Zoom in' callback: [ RTZoomInMove on: view ].
-	builder menu: 'Zoom out' callback: [ RTZoomOutMove on: view ].
+	| builder |
+	roassalView := RTView new @ RTDraggableView.
+	roassalView canvas camera translateTo: 0 @ 0.
+	builder := RTMenuBuilder new view: roassalView.
+	builder menu: 'Zoom in' callback: [ RTZoomInMove on: roassalView ].
+	builder menu: 'Zoom out' callback: [ RTZoomOutMove on: roassalView ].
 	builder
 		menu: 'Center'
 		callback: [ 
-			view canvas camera focusOnCenter.
-			view signalUpdate ].
+			roassalView canvas camera focusOnCenter.
+			roassalView signalUpdate ].
 	self setScrollBar.
-	view canvas camera focusOnCenter.
-	view signalUpdate
+	roassalView canvas camera focusOnCenter.
+	roassalView signalUpdate

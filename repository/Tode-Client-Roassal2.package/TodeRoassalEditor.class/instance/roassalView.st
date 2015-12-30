@@ -1,5 +1,5 @@
 accessing
 roassalView
   roassalView
-    ifNil: [ roassalView := self createRoassalView ].
+    ifNil: [ self createRoassalView ].
   ^ roassalView
