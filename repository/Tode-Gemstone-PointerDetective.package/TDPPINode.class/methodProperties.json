@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"for:" : "dkh 12/30/2015 02:14" },
+	"instance" : {
+		"addChild:" : "dkh 12/30/2015 02:40",
+		"addParent:" : "dkh 12/30/2015 02:41",
+		"children" : "dkh 12/30/2015 02:34",
+		"children:" : "dkh 12/30/2015 00:39",
+		"className" : "dkh 12/30/2015 00:40",
+		"className:" : "dkh 12/30/2015 00:40",
+		"isLeaf" : "dkh 12/30/2015 02:32",
+		"isRoot" : "dkh 12/30/2015 02:32",
+		"oop" : "dkh 12/30/2015 00:39",
+		"oop:" : "dkh 12/30/2015 00:39",
+		"parents" : "dkh 12/30/2015 02:34",
+		"parents:" : "dkh 12/30/2015 00:39",
+		"printOn:" : "dkh 12/30/2015 03:42" } }

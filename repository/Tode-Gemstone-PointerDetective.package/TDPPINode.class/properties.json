@@ -1,0 +1,17 @@
+{
+	"category" : "Tode-Gemstone-PointerDetective",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"oop",
+		"className",
+		"children",
+		"parents" ],
+	"name" : "TDPPINode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

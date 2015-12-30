@@ -1,6 +1,7 @@
 {
 	"class" : {
 		"batchInstance" : "dkh 02/07/2015 15:03",
+		"clearPersistentElementCacheStack" : "dkh 12/30/2015 03:24",
 		"commands" : "DataCurator 11/20/2012 09:01",
 		"concreteClass" : "dkh 05/27/2013 20:03",
 		"concreteClassName" : "dkh 06/06/2013 10:19",

@@ -10,7 +10,8 @@ baseline: spec
         yourself.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
-        package: 'Tode-Roassal-Core' with: [ spec requires: #('Topez-Common-Core') ];
+        package: 'Tode-Roassal-Core'
+          with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Server-Core'
           with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Common-Tests'
@@ -95,15 +96,15 @@ baseline: spec
       spec
         package: 'Tode-Client-Roassal2'
           with: [ spec requires: #('Tode-Client-ServerBlocks' 'Roassal2' 'RPointerDetective') ];
-        package: 'RPointerDetective'  with: [ 
-				spec requires: #('Roassal2')];
-        package: 'Roassal2' with: [ 
-				spec requires: #('Trachel')];
+        package: 'RPointerDetective' with: [ spec requires: #('Roassal2') ];
+        package: 'Roassal2' with: [ spec requires: #('Trachel') ];
         package: 'Trachel';
         package: 'Tode-Roassal-Core' with: [ spec requires: #('Roassal2') ];
         yourself.
       spec
-        group: 'Visualize' with: #('Tode-Client-Roassal2' 'Trachel' 'RPointerDetective' 'GemStone');
+        group: 'Visualize'
+          with:
+            #('Tode-Client-Roassal2' 'Trachel' 'RPointerDetective' 'GemStone');
         yourself ].
   spec
     for: #'gemstone'
@@ -289,6 +290,11 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
         package: 'Topez-Server-31x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
+        package: 'Tode-Gemstone-PointerDetective'
+          with: [ spec requires: 'Tode-GemStone-Server-Core' ];
+        yourself.
+      spec
+        group: 'Visualize' with: #('Tode-Gemstone-PointerDetective' 'GemStone');
         yourself ].
   spec
     for: #'maglev'
