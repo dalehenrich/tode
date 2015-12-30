@@ -1,4 +1,4 @@
-as yet unclassified
+convenience
 toolInstanceFor: aCommandName
   | commandNode |
   commandNode := self commands
