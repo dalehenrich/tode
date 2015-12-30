@@ -12,6 +12,7 @@ ppiview
     theObject: ppiRefPath;
     childrenBlock: [ :cre :aTDPPINode | cre objectSerializer toString: aTDPPINode children asArray ];
     parentsBlock: [ :cre :aTDPPINode | cre objectSerializer toString: aTDPPINode parents asArray ];
+    initialNodes: ppiRefPath searchNodeMap keys;
     usePersistentClientElementCache: false;
     windowBuilder: self;
     editorAspectSelector: #'activateRoassalEditor';
