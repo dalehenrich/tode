@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Roassal-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 12/30/2015 15:48",
+	"instvars" : [
+		 ],
+	"name" : "TDPPIRootNode",
+	"pools" : [
+		 ],
+	"super" : "TDPPINode",
+	"type" : "normal" }

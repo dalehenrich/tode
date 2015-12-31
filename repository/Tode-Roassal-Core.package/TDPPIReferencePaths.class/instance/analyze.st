@@ -21,7 +21,9 @@ analyze
               ifPresent: [ :existingNode | existingNode ]
               ifAbsent: [ 
                 | referenceNode |
-                referenceNode := TDPPIReferenceNode for: referenceObject.
+                referenceNode := index == 1
+                  ifTrue: [ TDPPIRootNode for: referenceObject ]
+                  ifFalse: [ TDPPIReferenceNode for: referenceObject ].
                 oopToNodeMap at: referenceObject asOop put: referenceNode.
                 referenceNode ].
             lastNode
