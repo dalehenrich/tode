@@ -21,8 +21,9 @@ initBuilder
 		onLeftClickServerDo: [ :exploraNode | 
 					| nde |
 					nde := exploraNode element.
-					
-					exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde model) ]
+					exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde model).
+					nde model wrapper isNonTerminal
+						ifTrue: [ exploraNode element color: (Color blue alpha: 0.5) ] ]
 			with: [ :nde | self showPointersTo: nde ];
 		withPopup: [ :nde | self labelForNode: nde ];
 		onRightClickMenu:
