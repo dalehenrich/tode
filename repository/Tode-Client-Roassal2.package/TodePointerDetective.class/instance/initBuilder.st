@@ -16,7 +16,7 @@ initBuilder
 		layout:
 			(RTHorizontalTreeLayout new
 				horizontalGap: 80;
-				verticalGap: 15).
+				verticalGap: 20).
 	builder
 		onLeftClickServerDo: [ :exploraNode | 
 					| nde |
