@@ -8,6 +8,11 @@ ppiview
   self getSubcommandOptsMixedLongShort: {#('globalName' nil #'required')}.
   globalName := self ppiGlobalName.
   ppiRefPath := UserGlobals at: globalName.
+  ppiRefPath isCacheValid
+    ifFalse: [ 
+      self
+        error:
+          'the ppi view command must be used in the same session that ppi calc was run.' ].
   clientRoassalElement := TodeClientRoassalElement new
     theObject: ppiRefPath;
     usePersistentClientElementCache: false;
@@ -29,4 +34,5 @@ ppiview
               (self ppiProcessNodes: aTDPPINode parents asArray for: clientRoassalElement) ];
     initialNodes:
         (self ppiProcessNodes: ppiRefPath searchNodeMap keys for: clientRoassalElement).
+  self topez cacheClientElement: clientRoassalElement.
   self topez editElement: clientRoassalElement
