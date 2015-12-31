@@ -10,8 +10,6 @@ baseline: spec
         yourself.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
-        package: 'Tode-Roassal-Core'
-          with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Server-Core'
           with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Common-Tests'
@@ -19,7 +17,7 @@ baseline: spec
         yourself.
       spec
         group: 'Common Tests' with: #('Topez-Common-Tests');
-        group: 'Visualize' with: #('Tode-Roassal-Core');
+        group: 'Visualize' with: #('');
         yourself ].
   spec
     for: #'squeakCommon'
@@ -89,22 +87,6 @@ baseline: spec
       spec
         package: 'Topez-Pharo-Common' with: [ spec includes: 'Tode-Pharo14' ];
         package: 'Tode-Pharo14' with: [ spec requires: 'Topez-Pharo-Common' ];
-        yourself ].
-  spec
-    for: #(#'pharo3.x' #'pharo4.x')
-    do: [ 
-      spec
-        package: 'Tode-Client-Roassal2'
-          with: [ spec requires: #('Topez-Client-GemStone' 'Tode-Client-ServerBlocks' 'Roassal2' 'RPointerDetective') ];
-        package: 'RPointerDetective' with: [ spec requires: #('Roassal2') ];
-        package: 'Roassal2' with: [ spec requires: #('Trachel') ];
-        package: 'Trachel';
-        package: 'Tode-Roassal-Core' with: [ spec requires: #('Roassal2') ];
-        yourself.
-      spec
-        group: 'Visualize'
-          with:
-            #('Tode-Client-Roassal2' 'Trachel' 'RPointerDetective' 'GemStone');
         yourself ].
   spec
     for: #'gemstone'
@@ -290,11 +272,6 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
         package: 'Topez-Server-31x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
-        package: 'Tode-GemStone-PointerDetective'
-          with: [ spec requires: #('Tode-GemStone-Server-Core' 'Tode-Roassal-Core') ];
-        yourself.
-      spec
-        group: 'Visualize' with: #('Tode-GemStone-PointerDetective' 'GemStone');
         yourself ].
   spec
     for: #'maglev'
