@@ -1,4 +1,4 @@
 actions
 inspectRoassalObject
-	Object _objectForOop: self oop.
-	^ nil
+  (Object _objectForOop: self oop) inspect.
+  ^ nil
