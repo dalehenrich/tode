@@ -1,3 +1,3 @@
 ston
 excludedInstVarNames
-  ^ #(#'children' #'parents' #'clientElement')
+  ^ #(#'children' #'parents' #'clientElement' #'referencePaths')

@@ -5,7 +5,7 @@ analyze
   self searchObjects
     do: [ :searchObject | 
       | node |
-      node := TDPPISearchNode for: searchObject.
+      node := TDPPISearchNode for: searchObject in: self.
       oopToNodeMap at: searchObject asOop put: node.
       self commit.
       (self searchObjectMap at: searchObject)
@@ -22,8 +22,8 @@ analyze
               ifAbsent: [ 
                 | referenceNode |
                 referenceNode := index == 1
-                  ifTrue: [ TDPPIRootNode for: referenceObject ]
-                  ifFalse: [ TDPPIReferenceNode for: referenceObject ].
+                  ifTrue: [ TDPPIRootNode for: referenceObject in: self ]
+                  ifFalse: [ TDPPIReferenceNode for: referenceObject in: self ].
                 oopToNodeMap at: referenceObject asOop put: referenceNode.
                 referenceNode ].
             lastNode

@@ -1,3 +1,3 @@
 accessing
 stringName
-	^ self className , ', ' , self oop asString
+  ^ self className , ', ' , self oop asString

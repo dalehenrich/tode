@@ -1,3 +1,3 @@
 accessing
 stringLabel
-	^ self className , ', ' , self oop asString
+  ^ self className , ', ' , self oop asString

@@ -11,7 +11,8 @@
 		"children",
 		"parents",
 		"clientElement",
-		"myOop" ],
+		"myOop",
+		"referencePaths" ],
 	"name" : "TDPPINode",
 	"pools" : [
 		 ],
