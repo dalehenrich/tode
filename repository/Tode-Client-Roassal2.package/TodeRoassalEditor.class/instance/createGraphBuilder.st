@@ -3,7 +3,7 @@ createGraphBuilder
 	| b anim |
 	self roassalView clean.
 	b := TodePointerDetective new
-		topez: self topez;
+		topez: self clientElement topez;
 		view: roassalView;
 		on: self initialNodes.
 	b builder

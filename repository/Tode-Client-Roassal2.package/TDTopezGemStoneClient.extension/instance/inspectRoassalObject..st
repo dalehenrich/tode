@@ -1,3 +1,8 @@
 *tode-client-roassal2
 inspectRoassalObject: aTDPPINode
-	self session rawReceiverNB: (self session asOopType: aTDPPINode myOop) perform: #inspectRoassalObject withArgs: #()
+	| oopType |
+	oopType := self session
+		rawReceiverNB: (self session asOopType: aTDPPINode myOop)
+		perform: #inspectRoassalObject
+		withArgs: #().
+	^ self session library localFor: oopType
