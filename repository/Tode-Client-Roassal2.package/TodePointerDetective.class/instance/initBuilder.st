@@ -31,5 +31,5 @@ initBuilder
 						-> [ :exploraNode | 
 							self view canvas camera translateTo: exploraNode element encompassingRectangle center.
 							self view canvas signalUpdate ]).
-					('inspect' -> [ :exploraNode | exploraNode element model wrapper inspectOnServer: self shell ])}.
+					('inspect' -> [ :exploraNode | self topez inspectRoassalObject: exploraNode element model wrapper ])}.
 	builder dragChildren

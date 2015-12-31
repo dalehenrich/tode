@@ -8,7 +8,8 @@
 	"instvars" : [
 		"builder",
 		"view",
-		"nodesMap" ],
+		"nodesMap",
+		"topez" ],
 	"name" : "TodePointerDetective",
 	"pools" : [
 		 ],

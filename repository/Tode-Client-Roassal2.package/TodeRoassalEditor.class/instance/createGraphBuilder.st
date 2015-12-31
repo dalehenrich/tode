@@ -3,8 +3,9 @@ createGraphBuilder
 	| b anim |
 	self roassalView clean.
 	b := TodePointerDetective new
-	  view: roassalView;
-	  on: self initialNodes.
+		topez: self topez;
+		view: roassalView;
+		on: self initialNodes.
 	b builder
 		addListenerBlock: [ :n | 
 			anim := RTNopAnimation new.
