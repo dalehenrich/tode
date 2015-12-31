@@ -1,1 +1,0 @@
-I am an animation that change the position and the zoom of the camera by the value returned from #step selector

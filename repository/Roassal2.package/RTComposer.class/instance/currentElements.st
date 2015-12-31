@@ -1,3 +1,0 @@
-accessing
-currentElements
-	^ view elements 

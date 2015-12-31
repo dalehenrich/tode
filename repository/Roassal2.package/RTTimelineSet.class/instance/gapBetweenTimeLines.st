@@ -1,3 +1,0 @@
-configuration
-gapBetweenTimeLines
-	^ 3

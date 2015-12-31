@@ -1,3 +1,0 @@
-accessing
-label
-	^ 'Map location'

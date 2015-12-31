@@ -1,3 +1,0 @@
-morphic
-handlesMouseOver: evt
-	^ true

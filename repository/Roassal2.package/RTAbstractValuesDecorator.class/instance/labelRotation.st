@@ -1,3 +1,0 @@
-accessing
-labelRotation
-	^ labelRotation

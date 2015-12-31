@@ -1,1 +1,0 @@
-This is a specific layout for month in RTCalendarBuilder

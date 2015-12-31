@@ -1,3 +1,0 @@
-accessing
-descent
-	^ font descent

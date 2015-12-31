@@ -1,1 +1,0 @@
-A RTDecoratedTest is a test class for testing the behavior of RTDecorated

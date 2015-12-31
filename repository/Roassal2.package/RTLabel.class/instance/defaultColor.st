@@ -1,4 +1,0 @@
-configuration
-defaultColor
-
-	^ Color black

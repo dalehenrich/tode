@@ -1,1 +1,0 @@
-A RTSVGOval is the SVG Ellipse that translates from Roassal's Ellipse.

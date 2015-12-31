@@ -1,4 +1,0 @@
-testing
-isNotFixed
-
-	^ self isMovable

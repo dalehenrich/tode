@@ -1,3 +1,0 @@
-accessing
-invisibleBlock
-	^ invisibleBlock

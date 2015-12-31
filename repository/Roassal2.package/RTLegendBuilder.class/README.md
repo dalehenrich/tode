@@ -1,1 +1,0 @@
-I am an handy class to build legend in a visualization

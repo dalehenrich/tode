@@ -1,3 +1,0 @@
-accessing
-baseradius
-	^ baseradius

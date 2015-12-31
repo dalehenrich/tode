@@ -1,3 +1,0 @@
-public
-withOffsetIfMultiple
-	self attachPoint: RTShorterDistanceWithOffsetAttachPoint new.

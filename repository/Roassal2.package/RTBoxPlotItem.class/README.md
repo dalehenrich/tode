@@ -1,1 +1,0 @@
-I am an utility class to build a Box Plot visualization with RTBoxPlotBuilder

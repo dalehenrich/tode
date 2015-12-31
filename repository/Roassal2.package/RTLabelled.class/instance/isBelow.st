@@ -1,3 +1,0 @@
-testing
-isBelow
-	^ position = #below

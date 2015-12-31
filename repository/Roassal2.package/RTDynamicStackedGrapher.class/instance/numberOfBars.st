@@ -1,3 +1,0 @@
-accessing
-numberOfBars
-	^ numberOfBars

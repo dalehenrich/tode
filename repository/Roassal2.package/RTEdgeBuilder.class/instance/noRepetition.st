@@ -1,3 +1,0 @@
-initialization
-noRepetition
-	allowRepetition := false

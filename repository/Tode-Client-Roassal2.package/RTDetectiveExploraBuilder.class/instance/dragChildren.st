@@ -1,3 +1,0 @@
-view
-dragChildren
-	dragChildren := true

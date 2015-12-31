@@ -1,1 +1,0 @@
-A RTPNGExporter export the view or builder provided as argument as a PNG file

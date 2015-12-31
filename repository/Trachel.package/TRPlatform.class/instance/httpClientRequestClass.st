@@ -1,3 +1,0 @@
-public
-httpClientRequestClass
-	self subclassResponsibility 

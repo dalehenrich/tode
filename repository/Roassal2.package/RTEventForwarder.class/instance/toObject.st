@@ -1,3 +1,0 @@
-accessing
-toObject
-	^ toObject

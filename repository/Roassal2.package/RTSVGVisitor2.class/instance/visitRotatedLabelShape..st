@@ -1,3 +1,0 @@
-visitor
-visitRotatedLabelShape: aRotatedLabel
-	self visitLabelShape: aRotatedLabel

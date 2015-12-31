@@ -1,3 +1,0 @@
-callbacks
-hasCallback
-	^ callbacks notNil

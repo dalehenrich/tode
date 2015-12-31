@@ -1,3 +1,0 @@
-accesing
-arcWidth
-	^ arcWidth

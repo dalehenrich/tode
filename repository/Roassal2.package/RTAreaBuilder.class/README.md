@@ -1,1 +1,0 @@
-A builder for SVG shapes. in area with data.

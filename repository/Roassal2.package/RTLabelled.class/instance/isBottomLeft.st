@@ -1,3 +1,0 @@
-testing
-isBottomLeft
-	^ position = #bottomLeft

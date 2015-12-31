@@ -1,1 +1,0 @@
-I am a new interaction to focus and zoom one element

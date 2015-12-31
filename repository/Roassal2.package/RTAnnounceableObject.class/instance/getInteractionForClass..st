@@ -1,3 +1,0 @@
-testing
-getInteractionForClass: anInteractionClass
-	^ self announcer subscriptions getInteractionForClass: anInteractionClass

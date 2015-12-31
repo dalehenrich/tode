@@ -1,4 +1,0 @@
-accessing
-alignTop
-	
-	alignment := #top

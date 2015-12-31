@@ -1,3 +1,0 @@
-testing
-isCenter
-	^ position = #center		

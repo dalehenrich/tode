@@ -1,3 +1,0 @@
-public
-defaultLabelColor
-	^ Color lightGray

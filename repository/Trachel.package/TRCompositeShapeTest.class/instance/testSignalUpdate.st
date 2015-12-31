@@ -1,4 +1,0 @@
-tests
-testSignalUpdate
-
-	multiShape signalUpdate

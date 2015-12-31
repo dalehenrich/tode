@@ -1,3 +1,0 @@
-public
-formClass
-	self subclassResponsibility 

@@ -1,1 +1,0 @@
-RTTabTable is made to work with CSV file contents.

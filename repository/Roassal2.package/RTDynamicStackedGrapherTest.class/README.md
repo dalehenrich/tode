@@ -1,1 +1,0 @@
-A RTDynamicStackedGrapherTest is a test class for testing the behavior of RTDynamicStackedGrapher

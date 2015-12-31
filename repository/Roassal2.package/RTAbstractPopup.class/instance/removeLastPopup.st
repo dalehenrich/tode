@@ -1,3 +1,0 @@
-utility
-removeLastPopup
-	self class removeLastPopup

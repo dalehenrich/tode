@@ -1,3 +1,0 @@
-private
-defaultBuilder
-	^ RTDetectiveExploraBuilder new

@@ -1,3 +1,0 @@
-adding
-addInteraction: anInteractionClassOrInstance
- 	anInteractionClassOrInstance initializeElement: self

@@ -1,3 +1,0 @@
-testing
-hasOutlier
-	^ outliers notEmpty 

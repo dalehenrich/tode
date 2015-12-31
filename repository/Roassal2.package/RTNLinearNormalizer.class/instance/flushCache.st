@@ -1,4 +1,0 @@
-accessing
-flushCache
-	
-	maximumValue := nil

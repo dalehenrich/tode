@@ -1,1 +1,0 @@
-A RTSVGBezierLine is represents the SVG path of a bezier line, as defined in Roassal.

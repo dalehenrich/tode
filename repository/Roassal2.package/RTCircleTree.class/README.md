@@ -1,1 +1,0 @@
-I am a class helper to do the layout in RTCircularTreeMapBuilder

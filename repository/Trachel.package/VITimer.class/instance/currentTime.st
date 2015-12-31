@@ -1,3 +1,0 @@
-private
-currentTime
-	^ Time millisecondClockValue 

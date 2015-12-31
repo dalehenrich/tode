@@ -1,3 +1,0 @@
-initialization
-defaultNumberOfBars
-	^ 3

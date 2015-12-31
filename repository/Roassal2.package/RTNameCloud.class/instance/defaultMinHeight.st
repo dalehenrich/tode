@@ -1,3 +1,0 @@
-configuration
-defaultMinHeight
-	^ 8

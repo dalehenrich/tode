@@ -1,3 +1,0 @@
-configuration
-nbOfSecondsLightOn
-	^ 1

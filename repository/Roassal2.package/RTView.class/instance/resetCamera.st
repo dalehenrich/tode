@@ -1,3 +1,0 @@
-actions
-resetCamera
-	TRCameraInitializer reset

@@ -1,3 +1,0 @@
-accessing
-click
-	^ click

@@ -1,1 +1,0 @@
-A RONormalizerTest is xxxxxxxxx.

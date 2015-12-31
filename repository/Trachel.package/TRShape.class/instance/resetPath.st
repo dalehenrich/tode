@@ -1,3 +1,0 @@
-private
-resetPath
-	path := nil

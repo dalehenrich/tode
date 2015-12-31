@@ -1,3 +1,0 @@
-actions
-reset
-	timer reset

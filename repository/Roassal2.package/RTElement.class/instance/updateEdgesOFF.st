@@ -1,3 +1,0 @@
-configuration
-updateEdgesOFF
-	shouldUpdateEdges := false

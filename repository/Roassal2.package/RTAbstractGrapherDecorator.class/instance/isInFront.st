@@ -1,3 +1,0 @@
-configuration
-isInFront
-	^ placedInFront = true

@@ -1,3 +1,0 @@
-defaults
-defaultSize
-	^ 10

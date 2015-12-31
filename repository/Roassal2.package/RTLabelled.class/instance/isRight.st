@@ -1,3 +1,0 @@
-testing
-isRight
-	^ position = #right

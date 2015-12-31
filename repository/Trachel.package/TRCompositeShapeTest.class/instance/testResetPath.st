@@ -1,3 +1,0 @@
-tests
-testResetPath
-	multiShape resetPath

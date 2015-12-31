@@ -1,3 +1,0 @@
-accessing
-iconClose
-	^ iconClose

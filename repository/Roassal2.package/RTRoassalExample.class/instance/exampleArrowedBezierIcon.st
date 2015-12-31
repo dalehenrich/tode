@@ -1,8 +1,0 @@
-icons
-exampleArrowedBezierIcon
-	^ 'iVBORw0KGgoAAAANSUhEUgAAAGQAAABjCAYAAABt56XsAAABCUlEQVR4XuXRIQoCURQF0A8i
-DGgSwWCTCTpBTAb34Tp+NAjKiLgBbWYXNGifJVjsyjSxOQyInAMvXG67L/h8Pp/P5/P5fD6f
-z+fz+Xw+n8/n8/l8Pp/P5/P5fD6fz+fz+Xw+n8/n8/l8Pp/P5/P5fD6fz+fz+Xw+n8/n8/lI
-aZpO/BUa0ArtpIlcFMU9y7LZZ+/7wiCMFpt4uMQYt9Wt4vpUN5dl+bwWt8e4M1/6y9aUhG6/
-F4bTJnL1kP3ucH7vfT+U5/nRX8Hn8/l8Pp/P5/P5fD6fz+fz+Xw+n8/n8/l8Pp/P5/P5fD6f
-z+fz+Xw+n8/n8/l8Pp/P5/P5fD6fz+fz+Xw+n+/vvADh2zp6vpL8RAAAAABJRU5ErkJggg=='

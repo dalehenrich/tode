@@ -1,3 +1,0 @@
-public
-dateAndTimeFromString: aString
-	self subclassResponsibility

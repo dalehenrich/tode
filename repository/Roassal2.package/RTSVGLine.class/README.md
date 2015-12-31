@@ -1,1 +1,0 @@
-A RTSVGLine is represents the SVG line of a regular line, as defined in Roassal.

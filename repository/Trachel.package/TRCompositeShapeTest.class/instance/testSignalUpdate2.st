@@ -1,4 +1,0 @@
-tests
-testSignalUpdate2
-
-	TRCompositeShape new signalUpdate

@@ -1,4 +1,0 @@
-interactions
-exampleWithDragAndDropHightlightPopup
-	
-	"self new exampleWithDragAndDropHightlightPopup"

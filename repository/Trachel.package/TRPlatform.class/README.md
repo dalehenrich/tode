@@ -1,1 +1,0 @@
-I have the methods of the default platform(pharo or visualworks)

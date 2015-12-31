@@ -1,1 +1,0 @@
-A RONFontLinearNormalizer is xxxxxxxxx.

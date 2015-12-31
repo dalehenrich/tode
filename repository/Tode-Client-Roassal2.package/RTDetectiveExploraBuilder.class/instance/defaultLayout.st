@@ -1,3 +1,0 @@
-layout
-defaultLayout
-	^ self treeLayout

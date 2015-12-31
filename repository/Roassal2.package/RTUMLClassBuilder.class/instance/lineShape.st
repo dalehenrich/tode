@@ -1,3 +1,0 @@
-edges
-lineShape
-	^ lineShape

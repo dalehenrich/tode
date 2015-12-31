@@ -1,3 +1,0 @@
-private
-commit
-  System commit

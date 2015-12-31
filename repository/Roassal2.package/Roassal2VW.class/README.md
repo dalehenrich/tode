@@ -1,1 +1,0 @@
-A simple class to export Roassal and trachel packages to visualworks

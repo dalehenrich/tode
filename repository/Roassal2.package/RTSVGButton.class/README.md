@@ -1,1 +1,0 @@
-A RTSVGButton represents buttons that changes the elements attributes. Since is defined just like any other interaction, is treated as it.

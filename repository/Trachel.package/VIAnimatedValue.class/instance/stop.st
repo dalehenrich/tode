@@ -1,3 +1,0 @@
-actions
-stop
-	timer stop

@@ -1,3 +1,0 @@
-public
-dateAndTime
-	^ DateAndTime

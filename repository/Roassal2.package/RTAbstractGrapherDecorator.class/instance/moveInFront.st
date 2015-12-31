@@ -1,3 +1,0 @@
-configuration
-moveInFront
-	placedInFront := true

@@ -1,3 +1,0 @@
-accessing-computed
-tickIntervalForLabel
-	^ config tickIntervalForLabel

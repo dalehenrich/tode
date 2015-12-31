@@ -1,3 +1,0 @@
-configuration
-stretchVertically
-	verticallyStretchable := true

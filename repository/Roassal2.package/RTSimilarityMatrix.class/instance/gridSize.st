@@ -1,3 +1,0 @@
-visualization
-gridSize
-	^ elements size

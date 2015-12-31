@@ -1,3 +1,0 @@
-hooks
-render
-	self subclassResponsibility 

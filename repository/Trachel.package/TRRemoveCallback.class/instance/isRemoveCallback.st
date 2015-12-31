@@ -1,3 +1,0 @@
-testing
-isRemoveCallback
-	^ true

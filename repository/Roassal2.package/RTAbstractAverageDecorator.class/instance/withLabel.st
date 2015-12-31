@@ -1,3 +1,0 @@
-configuration
-withLabel
-	shouldHaveLabel := true

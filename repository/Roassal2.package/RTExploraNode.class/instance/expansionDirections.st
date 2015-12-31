@@ -1,3 +1,0 @@
-accessing
-expansionDirections
-	^ directions associations

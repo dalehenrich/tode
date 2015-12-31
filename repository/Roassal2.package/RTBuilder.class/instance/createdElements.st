@@ -1,3 +1,0 @@
-accessing
-createdElements
-	^ shapeBuilder createdElements

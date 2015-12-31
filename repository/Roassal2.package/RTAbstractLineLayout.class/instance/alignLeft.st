@@ -1,4 +1,0 @@
-accessing
-alignLeft
-	
-	alignment := #left

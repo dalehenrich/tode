@@ -1,3 +1,0 @@
-accessing
-elapsedCycles
-	self subclassResponsibility 

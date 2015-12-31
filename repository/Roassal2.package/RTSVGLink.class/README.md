@@ -1,1 +1,0 @@
-A RTSVGLink is a link (to an external browser) when clicking a certain element. 

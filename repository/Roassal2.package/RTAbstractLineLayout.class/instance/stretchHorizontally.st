@@ -1,3 +1,0 @@
-configuration
-stretchHorizontally
-	horizontallyStretchable := true

@@ -1,3 +1,0 @@
-factories
-createNewFrame
-	^ RTMondrianFrame new

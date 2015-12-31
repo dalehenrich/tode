@@ -1,3 +1,0 @@
-shapes
-methodShape
-	^ methodShapeBuilder

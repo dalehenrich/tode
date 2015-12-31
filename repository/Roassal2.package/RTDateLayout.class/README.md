@@ -1,1 +1,0 @@
-I am a layout for elements with model date.

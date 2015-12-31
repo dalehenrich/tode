@@ -1,3 +1,0 @@
-hooks
-createShapeBuilder
-	^ RTShapeBuilder new

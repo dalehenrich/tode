@@ -1,3 +1,0 @@
-configuration
-defaultWidth
-	^ 5

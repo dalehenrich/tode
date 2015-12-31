@@ -1,4 +1,0 @@
-info
-info
-
-	self subclassResponsibility 

@@ -1,3 +1,0 @@
-resetting
-resetInteraction
-	interactionBuilder := self createInteractionBuilder

@@ -1,3 +1,0 @@
-testing
-isAlignTop
-	^ alignment = #top

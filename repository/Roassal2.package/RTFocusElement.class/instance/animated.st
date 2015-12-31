@@ -1,3 +1,0 @@
-public
-animated
-	animation := true.

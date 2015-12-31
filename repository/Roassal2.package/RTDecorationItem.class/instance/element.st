@@ -1,3 +1,0 @@
-accessing
-element
-	^ shape element

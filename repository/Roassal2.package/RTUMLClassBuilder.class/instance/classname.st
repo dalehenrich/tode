@@ -1,4 +1,0 @@
-accessing
-classname
-	^ classname
-	

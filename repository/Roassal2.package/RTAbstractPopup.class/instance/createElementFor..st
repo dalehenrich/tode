@@ -1,3 +1,0 @@
-hooks
-createElementFor: element
-	self subclassResponsibility

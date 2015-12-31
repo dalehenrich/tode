@@ -1,3 +1,0 @@
-public
-materializeFromByteArray: array
-	self subclassResponsibility

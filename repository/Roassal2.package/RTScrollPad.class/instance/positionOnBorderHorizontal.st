@@ -1,7 +1,0 @@
-as yet unclassified
-positionOnBorderHorizontal
-	((self shapes bar position x - (self barWidth / 2)) < (self shapes surroundingRectangle position x - (self size / 2))) ifTrue: [ self shapes bar translateTo: (self shapes surroundingRectangle position x - (self size / 2) + (self barWidth / 2))@(self shapes surroundingRectangle position y)].
-				((self shapes bar position x + (self barWidth / 2)) > (self shapes surroundingRectangle position x + (self size / 2))) ifTrue: [ self shapes bar translateTo: (self shapes surroundingRectangle position x + (self size / 2) - (self barWidth / 2))@(self shapes surroundingRectangle position y)].
-				
-			((self shapes bar position y - (self barHeight / 2)) < (self shapes surroundingRectangle position y - (self size / 2))) ifTrue: [ self shapes bar translateTo: (self shapes surroundingRectangle position x)@(self shapes surroundingRectangle position y - (self size / 2) + (self barHeight / 2))].
-				((self shapes bar position y + (self barHeight / 2)) > (self shapes surroundingRectangle position y + (self size / 2))) ifTrue: [ self shapes bar translateTo: (self shapes surroundingRectangle position x)@(self shapes surroundingRectangle position y + (self size / 2) - (self barHeight / 2))].	

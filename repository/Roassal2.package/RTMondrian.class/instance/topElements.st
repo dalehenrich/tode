@@ -1,3 +1,0 @@
-stack
-topElements
-	^ rootFrame elements

@@ -1,3 +1,0 @@
-lastPopup
-resetLastPopup
-	lastPopup := nil

@@ -1,1 +1,0 @@
-A TRArc is an class that makes all the drawing of arcs

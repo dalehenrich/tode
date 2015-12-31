@@ -1,1 +1,0 @@
-I am a class to visit all the nodes of one RTView

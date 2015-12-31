@@ -1,3 +1,0 @@
-hooks
-createShapeBuilder
-	^ RTMondrianShapeBuilder new

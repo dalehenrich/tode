@@ -1,3 +1,0 @@
-private
-nodeShape
-	^ shapeBuilder shape

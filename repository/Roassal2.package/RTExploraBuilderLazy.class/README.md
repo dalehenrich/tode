@@ -1,1 +1,0 @@
-An Explora builder that do not try to guess what is coming to step before 

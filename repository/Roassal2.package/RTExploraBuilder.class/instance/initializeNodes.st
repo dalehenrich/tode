@@ -1,3 +1,0 @@
-initialization
-initializeNodes
-	self defaultNodeShape.

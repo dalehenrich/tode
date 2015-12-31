@@ -1,3 +1,0 @@
-tests
-testNoLayout
-	multiShape noLayout

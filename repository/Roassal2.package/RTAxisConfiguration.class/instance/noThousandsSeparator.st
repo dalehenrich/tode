@@ -1,3 +1,0 @@
-configuration
-noThousandsSeparator
-	thousandsSeparator := false

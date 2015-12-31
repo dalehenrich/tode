@@ -1,3 +1,0 @@
-accessing
-maxOutlier
-	^ maxOutlier

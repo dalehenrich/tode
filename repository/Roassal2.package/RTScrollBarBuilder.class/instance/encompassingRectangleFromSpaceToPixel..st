@@ -1,3 +1,0 @@
-as yet unclassified
-encompassingRectangleFromSpaceToPixel: aRectangle
-	encompassingRectangleFromSpaceToPixel := aRectangle

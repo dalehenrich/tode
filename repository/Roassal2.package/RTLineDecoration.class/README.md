@@ -1,1 +1,0 @@
-A RTLineDecoration is a shape decoration, intended to be combined with a line.

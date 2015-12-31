@@ -1,1 +1,0 @@
-This implements the Null pattern for a Roassal shape. It is typically used for defaults.

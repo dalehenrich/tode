@@ -1,3 +1,0 @@
-accessing
-angleInDegrees
-	^ rotationAngleDegrees

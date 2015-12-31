@@ -1,3 +1,0 @@
-accessing
-shouldUseProgressBar
-	^ shouldUseProgressBar

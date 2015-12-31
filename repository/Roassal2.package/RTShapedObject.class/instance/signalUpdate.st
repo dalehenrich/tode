@@ -1,3 +1,0 @@
-signalling
-signalUpdate
-	^ trachelShape signalUpdate

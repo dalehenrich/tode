@@ -1,3 +1,0 @@
-private
-fontSizeOfClassname
-	^ 12

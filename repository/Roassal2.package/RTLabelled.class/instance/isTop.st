@@ -1,3 +1,0 @@
-testing
-isTop
-	^ position = #top

@@ -1,3 +1,0 @@
-testing
-isDragging
-	^ eventBeginingDragging notNil

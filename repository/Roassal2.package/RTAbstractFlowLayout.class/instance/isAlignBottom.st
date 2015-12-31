@@ -1,3 +1,0 @@
-testing
-isAlignBottom
-	^ alignment = #bottom

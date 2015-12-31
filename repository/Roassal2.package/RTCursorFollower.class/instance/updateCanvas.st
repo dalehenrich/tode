@@ -1,3 +1,0 @@
-createLinesAndLabels
-updateCanvas
-	canvas signalUpdate

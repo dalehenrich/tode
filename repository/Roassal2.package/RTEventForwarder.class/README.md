@@ -1,1 +1,0 @@
-A RTEventForwarder is used to forward event from one element to other elements

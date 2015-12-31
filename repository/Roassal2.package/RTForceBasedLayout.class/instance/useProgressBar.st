@@ -1,3 +1,0 @@
-configuration
-useProgressBar
-	shouldUseProgressBar := true	

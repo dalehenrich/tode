@@ -1,1 +1,0 @@
-A RODummyNode is used by the sugiyama layout

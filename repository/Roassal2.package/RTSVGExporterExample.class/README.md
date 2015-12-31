@@ -1,1 +1,0 @@
-A RTSVGExporterExample is the example class for RTSVGExporter.

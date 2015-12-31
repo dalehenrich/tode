@@ -1,3 +1,0 @@
-hooks
-axis
-	^ builder getAxisY

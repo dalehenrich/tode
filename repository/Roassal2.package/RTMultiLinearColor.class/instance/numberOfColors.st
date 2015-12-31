@@ -1,3 +1,0 @@
-accessing
-numberOfColors
-	^ colors size

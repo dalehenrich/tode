@@ -1,3 +1,0 @@
-accessing
-interactionBuilder: anRTInteractionBuilder
-	interactionBuilder := anRTInteractionBuilder

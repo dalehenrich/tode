@@ -1,3 +1,0 @@
-public
-pngReadWriterClass
-	self subclassResponsibility 

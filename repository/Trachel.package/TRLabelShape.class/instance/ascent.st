@@ -1,3 +1,0 @@
-accessing
-ascent
-	^ font ascent

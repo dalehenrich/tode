@@ -1,3 +1,0 @@
-layout
-build
-	self applyLayout

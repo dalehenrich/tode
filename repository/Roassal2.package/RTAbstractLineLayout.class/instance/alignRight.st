@@ -1,4 +1,0 @@
-accessing
-alignRight
-	
-	alignment := #right

@@ -1,3 +1,0 @@
-public
-packageNamed: packageName
-	self subclassResponsibility

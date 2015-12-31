@@ -1,3 +1,0 @@
-edges
-testBuild
-	view build

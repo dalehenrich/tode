@@ -1,3 +1,0 @@
-accessing
-lhs
-	^ lhs

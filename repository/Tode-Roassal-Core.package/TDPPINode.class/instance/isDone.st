@@ -1,3 +1,0 @@
-testing
-isDone
-  ^ parents notNil

@@ -1,3 +1,0 @@
-configuration
-defaultColor
-	^ Color red

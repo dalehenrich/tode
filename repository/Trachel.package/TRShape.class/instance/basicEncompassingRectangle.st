@@ -1,3 +1,0 @@
-private
-basicEncompassingRectangle
-	^ self subclassResponsibility

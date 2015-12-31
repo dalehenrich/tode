@@ -1,3 +1,0 @@
-public repetition
-shouldAllowRepetition
-	^ allowRepetition

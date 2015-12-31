@@ -1,3 +1,0 @@
-accessing
-legendElement
-	^ legendElement

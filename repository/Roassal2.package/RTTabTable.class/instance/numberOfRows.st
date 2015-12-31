@@ -1,3 +1,0 @@
-accessing
-numberOfRows
-	^ values size

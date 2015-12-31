@@ -1,1 +1,0 @@
-A RTDoubleBarBuilder render a double bar chart

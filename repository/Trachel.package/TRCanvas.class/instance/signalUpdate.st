@@ -1,3 +1,0 @@
-updating
-signalUpdate
-	morph changed

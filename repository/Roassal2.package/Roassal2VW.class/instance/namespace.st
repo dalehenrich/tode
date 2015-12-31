@@ -1,3 +1,0 @@
-accesing
-namespace
-	^ #Roassal2

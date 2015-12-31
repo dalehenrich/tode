@@ -1,1 +1,0 @@
-A RTLinearMove linearly and at a regular speed move the element on which the animation is invoked on

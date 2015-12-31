@@ -1,3 +1,0 @@
-accessing
-minLatitude
-	^ RTOSM minLatitude

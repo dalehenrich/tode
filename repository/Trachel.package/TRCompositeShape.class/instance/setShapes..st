@@ -1,3 +1,0 @@
-accessing
-setShapes: someShapesWithOffsetAsPoint
-	shapeAndOffsets := someShapesWithOffsetAsPoint

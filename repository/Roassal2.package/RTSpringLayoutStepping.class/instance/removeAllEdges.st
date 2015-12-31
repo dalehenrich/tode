@@ -1,3 +1,0 @@
-updating
-removeAllEdges
-	layout removeAllEdges

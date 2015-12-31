@@ -1,3 +1,0 @@
-public
-workingDirectory
-	self subclassResponsibility 

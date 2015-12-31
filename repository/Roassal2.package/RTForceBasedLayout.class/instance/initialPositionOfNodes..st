@@ -1,3 +1,0 @@
-hook
-initialPositionOfNodes: nodeElements
-	initialLayout executeOnElements: nodeElements

@@ -1,3 +1,0 @@
-private
-computePath
-	self subclassResponsibility

@@ -1,1 +1,0 @@
-I am a class for pharo platform

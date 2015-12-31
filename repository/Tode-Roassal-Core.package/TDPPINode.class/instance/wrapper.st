@@ -1,3 +1,0 @@
-accessing
-wrapper
-	^ self

@@ -1,3 +1,0 @@
-accessing
-positionLabel
-	^ positionLabel

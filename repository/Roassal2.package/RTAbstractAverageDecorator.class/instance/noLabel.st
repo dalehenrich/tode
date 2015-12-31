@@ -1,3 +1,0 @@
-initialization
-noLabel
-	shouldHaveLabel := false

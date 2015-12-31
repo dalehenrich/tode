@@ -1,1 +1,0 @@
-I am a builder to create UML diagrams in Roassal2, see examples

@@ -1,1 +1,0 @@
-I am an utility class for RTLabelGenerator

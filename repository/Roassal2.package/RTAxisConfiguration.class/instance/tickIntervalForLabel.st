@@ -1,3 +1,0 @@
-accessing
-tickIntervalForLabel
-	^ numberOfTicks / numberOfLabels

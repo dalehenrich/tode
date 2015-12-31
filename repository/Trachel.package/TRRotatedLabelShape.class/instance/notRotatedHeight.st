@@ -1,3 +1,0 @@
-accessing
-notRotatedHeight
-	^ font height

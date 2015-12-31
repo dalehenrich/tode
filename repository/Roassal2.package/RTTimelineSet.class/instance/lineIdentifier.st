@@ -1,3 +1,0 @@
-accessing
-lineIdentifier
-	^ lineIdentifier

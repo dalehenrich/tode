@@ -1,3 +1,0 @@
-accessing
-labelBackgroundColor
-	^ labelBackground color

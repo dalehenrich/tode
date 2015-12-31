@@ -1,3 +1,0 @@
-accessing
-maxRegularValue
-	^ maxRegularValue

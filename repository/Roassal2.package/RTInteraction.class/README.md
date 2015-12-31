@@ -1,1 +1,0 @@
-A ROInteraction is xxxxxxxxx.
