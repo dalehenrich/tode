@@ -38,6 +38,9 @@ installOn: aTDTopezServer
     registerBuilderClass: TDDictionaryNodeBuilder
       for: dictionaryClass
       aspect: #'view';
+    registerBuilderClass: TDSymbolDictionaryNodeBuilder
+      for: SymbolDictionary
+      aspect: #'view';
     registerBuilderClass: TDExecBlockNodeBuilder
       for: execBlockClass
       aspect: #'view';
