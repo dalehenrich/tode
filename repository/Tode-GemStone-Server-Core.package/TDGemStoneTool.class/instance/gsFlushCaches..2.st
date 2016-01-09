@@ -6,4 +6,5 @@ gsFlushCaches
   MCMethodDefinition cachedDefinitions
     removeKeys: MCMethodDefinition cachedDefinitions keys.
   MCMethodDefinition shutDown.
-  MethodVersionHistory uniqueInstance cleanUp
+  MethodVersionHistory uniqueInstance cleanUp.
+  TDTopezServer clearPersistentElementCacheStack
