@@ -20,6 +20,7 @@ DESCRIPTION
     configuration      Gem and Stone configuration reports
     fileout            Fileout Classes, Categories or Packages
     fileSizeReport     Report on repository size and amount of free space
+    flushCaches        Flush GLASS/GsDevKit caches
     gemtools           Emulate GemTools Launcher Menus
     halt               Halt on AlmostOutOfMemory exception
     instances
@@ -88,5 +89,6 @@ EXAMPLES
     at: 'version' put: self gsversionManPage;
     at: 'references' put: self gsreferencesManPage;
     at: 'sslLog' put: self gssslLogManPage;
+    at: 'flushCaches' put: self gsflushCachesManPage;
     yourself.
   ^ manPage
