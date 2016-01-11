@@ -28,6 +28,7 @@ DESCRIPTION
     mreferences 
     objectAudit
     objectFor          Resolve an object from given objectId
+    reclaimAll         Initiate Repository>>reclaimAll
     references         Find reference paths to the given objects
     sessionDescription Session information report
     sslLog             Inspect GsSecureSocket SSL log
@@ -90,5 +91,6 @@ EXAMPLES
     at: 'references' put: self gsreferencesManPage;
     at: 'sslLog' put: self gssslLogManPage;
     at: 'flushCaches' put: self gsflushCachesManPage;
+    at: 'reclaimAll' put: self gsreclaimAllManPage;
     yourself.
   ^ manPage
