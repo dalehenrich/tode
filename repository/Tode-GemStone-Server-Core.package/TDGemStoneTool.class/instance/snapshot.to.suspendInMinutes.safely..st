@@ -17,7 +17,7 @@ snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes 
         error:
           'Could not suspend checkpoints, See comment in System class>>suspendCheckpointsForMinutes: for possible reasons for failure.' ].
   snapshots := {}.
-  SystemRepository fileNames
+  self snapshotExtentFilePaths
     do: [ :extentPath | 
       | extent extentName snapshotName snapshotFilePath performCopy |
       extent := ServerFileDirectory on: extentPath.
