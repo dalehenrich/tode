@@ -107,6 +107,11 @@ baseline: spec
                 repository: 'github://dalehenrich/rb:dev/repository' ];
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4_dev/repository' ];
+        baseline: 'ZincHTTPComponents'
+          with: [ 
+              spec
+                repository: 'github://GsDevKit/zinc:2.4.3.?/repository';
+                loads: #('Zinc-HTTP' 'SSL') ];
         yourself.
       spec
         package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
@@ -117,7 +122,7 @@ baseline: spec
               spec
                 includes: #('Tode-GemStone-Server-Base');
                 requires:
-                    #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello') ];
+                    #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello' 'ZincHTTPComponents') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
@@ -186,15 +191,6 @@ baseline: spec
     for: #'gs3.x'
     do: [ 
       spec
-        baseline: 'ZincHTTPComponents'
-          with: [ 
-              spec
-                repository: 'github://GsDevKit/zinc:2.4.3.?/repository';
-                loads: #('Zinc-HTTP' 'SSL') ];
-        yourself.
-      spec
-        package: 'Topez-Server-Core'
-          with: [ spec requires: 'ZincHTTPComponents' ];
         package: 'Tode-GemStone-Server-Base'
           with: [ spec includes: 'Topez-Server-3x-Core' ];
         package: 'Topez-Server-3x-Core'
