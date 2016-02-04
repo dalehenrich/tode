@@ -12,6 +12,7 @@ projectnew
       #('package' nil #'required').
       #('class' nil #'none').
       #('force' nil #'none').
+      #('local' nil #'none').
       #('stone' nil #'none')}.
   projectName := subArguments
     at: 1

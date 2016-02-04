@@ -17,6 +17,7 @@ DESCRIPTION
     clone      Clone repository (github only)
     commit     Commit the Metacello project
     compare    View differences between repository versions (git only)
+    delete     Delete project artifacts from image and disk
     diff       View code differences between image and repository
     entry      Create a new project entry
     get        Load the Metacello config for the given project into the image
@@ -80,5 +81,6 @@ EXAMPLES
     at: 'unregister' put: self projectunregisterManPage;
     at: 'install' put: self projectinstallManPage;
     at: 'skew' put: self projectskewManPage;
+    at: 'delete' put: self projectdeleteManPage;
     yourself.
   ^ manPage
