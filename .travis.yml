@@ -30,13 +30,13 @@ before_script:
 
 script:
   - sudo hostname travis.dev
-  - bash $GS_HOME/bin/private/clone_sys_local -c https # pre-clone /sys/local, for travisCustomize.sh
-  - bash tests/travisCustomize.sh             # no backups on travis and use proposed tODE repo
-  - bash installServer
-  - bash createClient tode
-  - bash createStone travis $GS_VERSION
-  - bash tests/installSmalltalkCI.sh travis
+  - $GS_HOME/bin/private/clone_sys_local -c https # pre-clone /sys/local, for travisCustomize.sh
+  - tests/travisCustomize.sh             # no backups on travis and use proposed tODE repo
+  - installServer
+  - createClient tode
+  - createStone travis $GS_VERSION
+  - tests/installSmalltalkCI.sh travis
 
     # tODE
-  - bash tests/testTode.sh travis
+  - tests/testTode.sh travis
 
