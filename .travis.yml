@@ -1,9 +1,9 @@
 language: erlang
 
 env:
-   - ST=GemStone-2.4.7
-   - ST=GemStone-3.1.0.6
-   - ST=GemStone-3.2.12
+#   - GS_VERSION=2.4.7
+#   - GS_VERSION=3.1.0.6
+   - GS_VERSION=3.2.12
 
 notifications:
   webhooks:
@@ -38,5 +38,5 @@ script:
   - bash tests/installSmalltalkCI.sh travis
 
     # tODE
-  - bash tests/testTode.sh
+  - bash tests/testTode.sh travis
 
