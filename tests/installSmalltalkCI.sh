@@ -2,8 +2,10 @@
 
 set -ex
 
+source ${GS_HOME}/bin/defGsDevKit.env
+
 $GS_HOME/bin/devKitCommandLine todeIt $1 << EOF
-project install --url=http://gsdevkit.github.io/GsDevKit_home/SmalltalkCI.ston
+project clone --https --stone SmalltalkCI
 project load SmalltalkCI
 EOF
 
