@@ -3,5 +3,8 @@
 		 },
 	"instance" : {
 		"setUp" : "dkh 02/03/2016 16:05",
+		"testProjectBrowse" : "dkh 02/08/2016 10:20",
+		"testProjectCompare" : "dkh 02/08/2016 10:50",
+		"testProjectLog" : "dkh 02/08/2016 11:00",
 		"testProjectNew" : "dkh 02/03/2016 17:21",
 		"testProjectNewCreateClass" : "dkh 02/03/2016 17:05" } }

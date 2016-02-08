@@ -12,6 +12,16 @@ SYNOPSIS
   gs flushCaches 
          
 DESCRIPTION
+  Run the following exppressions to clear the "standard gemstone caches":
+
+    ObjectLogEntry initialize.
+    MCRepositoryGroup default repositoriesDo: [ :rep | rep flushCache ].
+    MCDefinition clearInstances.
+    MCMethodDefinition cachedDefinitions
+      removeKeys: MCMethodDefinition cachedDefinitions keys.
+    MCMethodDefinition shutDown.
+    MethodVersionHistory uniqueInstance cleanUp.
+    TDTopezServer clearPersistentElementCacheStack
 
 OPTIONS
 

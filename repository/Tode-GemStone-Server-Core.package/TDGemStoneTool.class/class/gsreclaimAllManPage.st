@@ -12,6 +12,7 @@ SYNOPSIS
   gs reclaimAll 
          
 DESCRIPTION
+  Execute `SystemRepository reclaimAll`.
 
 OPTIONS
 EXAMPLES
