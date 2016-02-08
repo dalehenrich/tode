@@ -10,7 +10,7 @@ if [ "${GS_DEVKIT_HOME_BRANCH}" = "dev" ] ; then
   createClient tode
   createStone travis $GS_VERSION
 else
-  $GS_HOME/utils/installOsPrereqs -X
+  $GS_HOME/bin/utils/installOsPrereqs -X
   installServerClient travis tode $GS_VERSION
 fi
 
