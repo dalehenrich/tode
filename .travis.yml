@@ -3,7 +3,8 @@ language: erlang
 env:
 #   - GS_VERSION=2.4.7
 #   - GS_VERSION=3.1.0.6
-   - GS_VERSION=3.2.12
+   - GS_VERSION=3.2.12 GS_DEVKIT_HOME_BRANCH=master
+   - GS_VERSION=3.2.12 GS_DEVKIT_HOME_BRANCH=dev
 
 notifications:
   webhooks:
@@ -22,7 +23,7 @@ before_script:
   - export BASE="$(pwd)"
   - git clone https://github.com/GsDevKit/GsDevKit_home.git
   - cd GsDevKit_home
-  - git checkout dev
+  - git checkout $GS_DEVKIT_HOME_BRANCH
   - export GS_HOME="$(pwd)"
   - export PATH=$GS_HOME/bin:$PATH
   - export GS_TRAVIS=true
