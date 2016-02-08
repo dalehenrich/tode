@@ -1,7 +1,6 @@
 language: erlang
 
 env:
-   - GS_VERSION=2.4.7 GS_DEVKIT_HOME_BRANCH=master
    - GS_VERSION=3.1.0.6 GS_DEVKIT_HOME_BRANCH=master
    - GS_VERSION=3.2.12 GS_DEVKIT_HOME_BRANCH=master
 
