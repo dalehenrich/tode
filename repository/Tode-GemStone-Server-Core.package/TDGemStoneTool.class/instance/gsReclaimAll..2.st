@@ -1,4 +1,4 @@
 as yet unclassified
 gsReclaimAll
-  System commit.
+  self commitTransaction.
   ^ SystemRepository reclaimAll

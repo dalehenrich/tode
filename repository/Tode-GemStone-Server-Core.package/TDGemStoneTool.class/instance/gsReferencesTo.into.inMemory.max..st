@@ -9,7 +9,7 @@ gsReferencesTo: objectArray into: referencePathsForOop inMemory: inMemory max: m
           refs := obj findReferencesInMemory.
           referencePathsForOop at: obj put: refs ].
       ^ self ].
-  System commit.
+  self commitTransaction.
   limitArray := SystemRepository buildLimitSetForRefPathScan.
   objectArray do: [ :each | limitArray remove: each ifAbsent: [  ] ].
   result := SystemRepository
