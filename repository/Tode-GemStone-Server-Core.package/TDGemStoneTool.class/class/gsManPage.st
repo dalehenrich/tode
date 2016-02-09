@@ -20,6 +20,7 @@ DESCRIPTION
     configuration      Gem and Stone configuration reports
     fileout            Fileout Classes, Categories or Packages
     fileSizeReport     Report on repository size and amount of free space
+    flushCaches        Flush GLASS/GsDevKit caches
     gemtools           Emulate GemTools Launcher Menus
     halt               Halt on AlmostOutOfMemory exception
     instances
@@ -27,8 +28,10 @@ DESCRIPTION
     mreferences 
     objectAudit
     objectFor          Resolve an object from given objectId
+    reclaimAll         Initiate Repository>>reclaimAll
     references         Find reference paths to the given objects
     sessionDescription Session information report
+    sslLog             Inspect GsSecureSocket SSL log
     version            OS, hardware and GemStone version attributes for Client, Gem, or Stone
 
   Use `gs --help <command>` to read about a specific subcommand.
@@ -68,6 +71,8 @@ EXAMPLES
   gs sessionDescription 5
   gs sessionDescription --all
 
+  gs sslLog
+
   gs version
   gs version --client
   gs version --gem
@@ -84,5 +89,8 @@ EXAMPLES
     at: 'sessionDescription' put: self gssessionDescriptionManPage;
     at: 'version' put: self gsversionManPage;
     at: 'references' put: self gsreferencesManPage;
+    at: 'sslLog' put: self gssslLogManPage;
+    at: 'flushCaches' put: self gsflushCachesManPage;
+    at: 'reclaimAll' put: self gsreclaimAllManPage;
     yourself.
   ^ manPage

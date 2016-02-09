@@ -4,7 +4,7 @@ findReferencePathsMenuAction: listElement selectionIndex: selectionIndex
   gs := self gemstoneTool: listElement.
   dict := Dictionary new.
   gs
-    gsReferencesTo: {(self object)}
+    gsReferencesTo: {(self object dotSelfObject)}
     into: dict
     inMemory: false
     max: 5.

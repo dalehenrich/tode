@@ -29,5 +29,4 @@ projectinstall
           self
             error:
               'Missing required argument <project-name>. See `man project install` for more details' ] ].
-  registration := self resolveProjectRegistrationReference: projectName.
-  ^ registration installProjectUsing: self
+  ^ self projectInstall: projectName

@@ -2,15 +2,16 @@ merge
 applyTo: aTDGitMerger
   self selectedSourceRaw
     ifNil: [ 
-      | rfArgs |
-      rfArgs := ''.
+      | rmArgs |
+      rmArgs := ''.
       (self baseDirectory fileExists: self filePath)
         ifTrue: [ 
           "forcibly remove the file"
-          rfArgs := ' -rf ' ].
+          rmArgs := ' -rf ' ]
+        ifFalse: [ rmArgs := ' -f ' ].
       aTDGitMerger gitTool
         gitrmIn: self baseDirectory
-        with: rfArgs , self filePath ]
+        with: rmArgs , self filePath ]
     ifNotNil: [ :src | 
       self baseDirectory
         forceNewFileNamed: self filePath

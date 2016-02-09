@@ -1,0 +1,6 @@
+SmalltalkCISpec {
+  #specName : 'Tode',
+  #testing: {
+    #projects : [ 'Tode' ]
+  }
+}

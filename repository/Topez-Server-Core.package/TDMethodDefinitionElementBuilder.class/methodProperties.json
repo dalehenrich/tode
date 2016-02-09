@@ -12,4 +12,6 @@
 		"methodProtocol" : "dkh 09/22/2013 14:26",
 		"selector" : "DataCurator 02/07/2013 11:47",
 		"theBehavior" : "DataCurator 02/09/2013 10:26",
-		"theClass" : "DataCurator 02/09/2013 10:26" } }
+		"theClass" : "DataCurator 02/09/2013 10:26",
+		"usePersistentClientElementCache" : "dkh 12/03/2015 15:44",
+		"usePersistentClientElementCache:" : "dkh 12/03/2015 15:44" } }

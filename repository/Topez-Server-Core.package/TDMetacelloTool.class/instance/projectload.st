@@ -69,7 +69,7 @@ projectload
                 error:
                   'Missing required argument ( <project-name> | @<project-reference> ). See `man project load` for more details' ] ].
       registration := self resolveProjectRegistrationReference: projectName.
-      registration installProjectUsing: self ]
+      self projectInstallFor: registration ]
     ifFalse: [ 
       projectName := subArguments
         at: 1
@@ -161,7 +161,7 @@ projectload
     repositoryDescription: description;
     projectClassName: projectClassName;
     loads: loads;
-    version: configurationVersion;
+    configurationVersion: configurationVersion;
     onConflict: onConflict;
     onDowngrade: onDowngrade;
     onLock: onLock;

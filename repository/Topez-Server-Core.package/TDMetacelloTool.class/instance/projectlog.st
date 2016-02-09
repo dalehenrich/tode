@@ -9,7 +9,7 @@ projectlog
   subOptions
     at: 'limit'
     ifPresent: [ :limit | logLimit := limit asNumber ]
-    ifAbsent: [ logLimit := 100 ].
+    ifAbsent: [ logLimit := self defaultCommitLogLimit ].
   projectName := subArguments
     at: 1
     ifAbsent: [ 

@@ -1,0 +1,3 @@
+private
+defaultCommitLogLimit
+  ^ 255

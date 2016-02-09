@@ -15,6 +15,7 @@ projectNew: projectName projectEntryPath: projectEntryPath packageName: packageN
   gitRepoDir assureExistence.
   gitRepoDir createDirectory: 'repository'.
   gitTool := topez toolInstanceFor: 'git'.
+  gitTool gitinitIn: gitRepoDir with: ''.
   projectRepoPath := gitRepoDir fullName , '/repository'.
   projectEntry := TDProjectSpecEntryDefinition new.
   projectEntry
@@ -62,7 +63,6 @@ projectNew: projectName projectEntryPath: projectEntryPath packageName: packageN
     value: superclasName
     value: projectName
     value: packageName.
-  gitTool gitinitIn: gitRepoDir with: ''.
   registration := self resolveProjectRegistrationReference: projectName.
   self
     projectCommit: registration

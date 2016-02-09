@@ -4,5 +4,5 @@ testProjectMenuAction: listElement selectionIndex: selectionIndex
   selectionIndex = 0
     ifTrue: [ ^ false ].
   registration := self projects at: selectionIndex.
-  self testTool browseRegistrationTests: registration.
+  self projectTool projectBrowseProjectTestsFor: registration.
   ^ true

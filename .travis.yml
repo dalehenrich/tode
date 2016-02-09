@@ -1,16 +1,12 @@
 language: erlang
 
 env:
-#   - ST=Pharo-1.4 # I do not intend to continue supporting tODE on Pharo-1.4
-#   - ST=Pharo-2.0 # I do not intend to continue supporting tODE on Pharo-2.0
-   - ST=Pharo-3.0
-   - ST=Pharo-4.0        # experimental
-#   - ST=Pharo-5.0        #  see https://github.com/dalehenrich/tode/issues/183
-   - ST=GemStone-2.4.5.3
-   - ST=GemStone-2.4.6
-   - ST=GemStone-3.0.1
-   - ST=GemStone-3.1.0.6
-   - ST=GemStone-3.2.9
+   - GS_VERSION=3.1.0.6 GS_DEVKIT_HOME_BRANCH=master
+   - GS_VERSION=3.2.12 GS_DEVKIT_HOME_BRANCH=master
+
+   - GS_VERSION=2.4.7 GS_DEVKIT_HOME_BRANCH=dev
+   - GS_VERSION=3.1.0.6 GS_DEVKIT_HOME_BRANCH=dev
+   - GS_VERSION=3.2.12 GS_DEVKIT_HOME_BRANCH=dev
 
 notifications:
   webhooks:
@@ -21,14 +17,27 @@ notifications:
     on_failure: always  # options: [always|never|change] default: always
     on_start: false     # default: false
 
-install:
-   - export PROJECT_HOME="$(pwd)"
-   - cd $HOME
-   - wget -q -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
-   - unzip -q builderCI.zip
-   - cd dalehenrich-builderCI*
-   - source build_env_vars
-   - ln -s $PROJECT_HOME $GIT_PATH
-   - ./build_image.sh
+addons:
+  hosts:
+    - travis.dev
 
-script: $BUILDER_CI_HOME/testTravisCI.sh -verbose
+before_script:
+  - export BASE="$(pwd)"
+  - git clone https://github.com/GsDevKit/GsDevKit_home.git
+  - cd GsDevKit_home
+  - git checkout $GS_DEVKIT_HOME_BRANCH
+  - export GS_HOME="$(pwd)"
+  - export PATH=$GS_HOME/bin:$PATH
+  - export GS_TRAVIS=true
+  - cd $BASE
+
+script:
+  - sudo hostname travis.dev
+  - $GS_HOME/bin/private/clone_sys_local -c https # pre-clone /sys/local, for travisCustomize.sh
+  - tests/travisCustomize.sh             # no backups on travis and use proposed tODE repo
+  - tests/installGsDevKit_home.sh
+  - tests/installSmalltalkCI.sh travis
+
+    # tODE
+  - tests/testTode.sh travis
+

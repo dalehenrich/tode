@@ -17,7 +17,7 @@ baseline: spec
         yourself.
       spec
         group: 'Common Tests' with: #('Topez-Common-Tests');
-        group: 'Visualize' with: #();
+        group: 'Visualize' with: #('');
         yourself ].
   spec
     for: #'squeakCommon'
@@ -89,23 +89,6 @@ baseline: spec
         package: 'Tode-Pharo14' with: [ spec requires: 'Topez-Pharo-Common' ];
         yourself ].
   spec
-    for: #(#'pharo3.x' #'pharo4.x')
-    do: [ 
-      spec
-        configuration: 'Roassal2'
-          with: [ 
-              spec
-                versionString: '1.5.2';
-                repository:
-                    'http://smalltalkhub.com/mc/ObjectProfile/Roassal2/main';
-                loads: #('Trachel' 'Roassal2') ];
-        yourself.
-      spec
-        package: 'Tode-Client-Roassal2'
-          with: [ spec requires: #('Tode-Client-ServerBlocks') ];
-        group: 'Visualize' with: #('Tode-Client-Roassal2' 'GemStone');
-        yourself ].
-  spec
     for: #'gemstone'
     do: [ 
       spec postLoadDoIt: #'initializeTools'.
@@ -124,6 +107,11 @@ baseline: spec
                 repository: 'github://dalehenrich/rb:dev/repository' ];
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4_dev/repository' ];
+        baseline: 'ZincHTTPComponents'
+          with: [ 
+              spec
+                repository: 'github://GsDevKit/zinc:2.4.3.?/repository';
+                loads: #('Zinc-HTTP' 'SSL') ];
         yourself.
       spec
         package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
@@ -134,7 +122,7 @@ baseline: spec
               spec
                 includes: #('Tode-GemStone-Server-Base');
                 requires:
-                    #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello') ];
+                    #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello' 'ZincHTTPComponents') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
@@ -203,15 +191,6 @@ baseline: spec
     for: #'gs3.x'
     do: [ 
       spec
-        baseline: 'ZincHTTPComponents'
-          with: [ 
-              spec
-                repository: 'github://GsDevKit/zinc:2.4.3.?/repository';
-                loads: 'Zinc-HTTP' ];
-        yourself.
-      spec
-        package: 'Topez-Server-Core'
-          with: [ spec requires: 'ZincHTTPComponents' ];
         package: 'Tode-GemStone-Server-Base'
           with: [ spec includes: 'Topez-Server-3x-Core' ];
         package: 'Topez-Server-3x-Core'
@@ -231,6 +210,10 @@ baseline: spec
           with: [ spec includes: #('Tode-GemStone-Core3x') ];
         package: 'Tode-GemStone-Core3x'
           with: [ spec requires: #('Tode-GemStone-Server-Core') ];
+        package: 'Tode-GemStone-Server-Tests'
+          with: [ spec includes: #('Tode-GemStone-Server3x-Tests') ];
+        package: 'Tode-GemStone-Server3x-Tests'
+          with: [ spec requires: #('Tode-GemStone-Server-Tests') ];
         yourself ].
   spec
     for: #'gs3.0.x'
@@ -268,7 +251,7 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec
-    for: #'gs3.3.x'
+    for: #(#'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         package: 'Tode-GemStone-Server-Core'
@@ -281,7 +264,7 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec
-    for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x')
+    for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         package: 'Topez-Server-DebugTools'

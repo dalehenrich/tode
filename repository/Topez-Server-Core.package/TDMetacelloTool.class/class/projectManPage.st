@@ -17,9 +17,10 @@ DESCRIPTION
     clone      Clone repository (github only)
     commit     Commit the Metacello project
     compare    View differences between repository versions (git only)
+    delete     Delete project artifacts from image and disk
     diff       View code differences between image and repository
     entry      Create a new project entry
-    get        Download configuration or baseline for the given project
+    get        Load the Metacello config for the given project into the image
     install    Run the installScript for the given project entry
     list       List Metacello projects
     load       (~/bin/load)
@@ -34,6 +35,7 @@ DESCRIPTION
     rehome     Point package repository groups for project to new repository
     refresh    Refresh project entries in project list
     revert     (see revert in project tool ... just dirty or reload ALL as options)
+    skew       Compare and repair when SHA of clone does not match SHA loaded in image
     status
     summary    View report of changed packages and methods
     test
@@ -78,5 +80,7 @@ EXAMPLES
     at: 'unlock' put: self projectunlockManPage;
     at: 'unregister' put: self projectunregisterManPage;
     at: 'install' put: self projectinstallManPage;
+    at: 'skew' put: self projectskewManPage;
+    at: 'delete' put: self projectdeleteManPage;
     yourself.
   ^ manPage

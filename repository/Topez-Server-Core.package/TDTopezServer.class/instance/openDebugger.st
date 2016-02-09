@@ -4,12 +4,13 @@ openDebugger
   false
     ifTrue: [ self evaluateTokens: #('debug') objIn: objIn value ]
     ifFalse: [ 
-      | process debugger |
+      | process debugger exception |
       process := self serverStatus exceptionProcess.
+      exception := self serverStatus exception.
       debugger := TDDebugger new
         topez: self;
-        debugProcess: process exception: self serverStatus exception;
-        windowLabel: process printString;
+        debugProcess: process exception: exception;
+        windowLabel: exception description;
         yourself.
       debugger open ].
   ^ nil

@@ -19,7 +19,6 @@
 		"executeMenuActionForClientSourceElement:action:selectionInterval:dirty:" : "dkh 3/25/2014 12:02",
 		"filePath:fromScriptPathOptions:" : "dkh 3/11/2015 12:27",
 		"flushEventCache" : "dkh 8/31/2015 14:21",
-		"getEdgeDictionaryForClientListElement:" : "dkh 6/25/2015 16:42",
 		"getListForClientListElement:" : "dkh 6/25/2015 16:42",
 		"getSessionDescription" : "dkh 10/19/2015 20:10",
 		"getSourceForClientSourceElement:" : "dkh 5/28/2013 14:53",

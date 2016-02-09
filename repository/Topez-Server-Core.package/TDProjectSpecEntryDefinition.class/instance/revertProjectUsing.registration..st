@@ -12,7 +12,7 @@ revertProjectUsing: aProjectTool registration: aProjectRegistration
             addAll: (wc ancestry ancestors collect: [ :each | each name ]) ] ].
   [ 
   | loads |
-  [ self getProjectUsing: aProjectTool registration: aProjectRegistration ]
+  [ aProjectTool projectGetFor: aProjectRegistration ]
     on: MetacelloSkipDirtyPackageLoad
     do: [ :ex | 
       "get ends up with different form of projectSpec ... baseline unconditional 
@@ -28,7 +28,7 @@ revertProjectUsing: aProjectTool registration: aProjectRegistration
     repositoryDescription: aProjectRegistration repositoryDescription;
     projectClassName: projectClassName;
     loads: loads;
-    version: aProjectRegistration configurationVersionString;
+    configurationVersion: aProjectRegistration configurationVersionString;
     onDowngrade: #'useIncoming';
     onUpgrade: #'useIncoming';
     yourself.

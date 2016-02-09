@@ -7,6 +7,6 @@ projectLoad: projectName selector: projectSelector repositoryDescription: reposi
     repositoryDescription: repositoryDescription;
     projectClassName: className;
     loads: loads;
-    version: version;
+    configurationVersion: version;
     yourself.
   ^ self basicProjectLoadFromSpec: projectLoadSpec

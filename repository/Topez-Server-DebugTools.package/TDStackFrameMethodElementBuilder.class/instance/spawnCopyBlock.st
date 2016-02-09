@@ -13,4 +13,5 @@ spawnCopyBlock
     object: newObject;
     formatOnDisplay: formatOnDisplay;
     formatOnAccept: formatOnAccept;
+    usePersistentClientElementCache: self usePersistentClientElementCache;
     yourself) buildClientElementUsing: self theEditorSpec editorAspect: nil ]

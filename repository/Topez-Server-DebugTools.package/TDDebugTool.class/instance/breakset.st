@@ -15,7 +15,7 @@ breakset
   meth := (methodRef beginsWith: '@')
     ifTrue: [ self resolveAtPathReference: methodRef ]
     ifFalse: [ self methodFromMethodSpec: methodRef ].
-  subArguments size = 2
+  subArguments size < 2
     ifTrue: [ 
       self
         error:

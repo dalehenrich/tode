@@ -1,6 +1,6 @@
 menu actions
 browseGitMethodVersions: clientElement methodDefinition: methodDef
-  | configDef gitTool filePath commitish gitDirectory registration gitRepo packageDef packageName classExtension metaDirName methodFilename commitLog |
+  | configDef gitTool filePath commitish gitDirectory registration gitRepo packageDef packageName classExtension metaDirName methodFilename commitLog mcTool wc |
   configDef := methodDef configurationOf.
   configDef ifNil: [ ^ false ].
   registration := configDef projectRegistrationDef.
@@ -9,8 +9,10 @@ browseGitMethodVersions: clientElement methodDefinition: methodDef
     ifFalse: [ ^ false ].
   packageDef := methodDef packageOf.
   packageName := packageDef packageName.
+  mcTool := clientElement topez toolInstanceFor: 'mc'.
   gitTool := clientElement topez toolInstanceFor: 'git'.
   gitRepo := registration repository.
+  wc := mcTool resolveWorkingCopyReference: packageName.
   classExtension := '.class'.
   (methodDef methodProtocol beginsWith: '*')
     ifTrue: [ classExtension := '.extension' ].
@@ -19,9 +21,9 @@ browseGitMethodVersions: clientElement methodDefinition: methodDef
     ifTrue: [ metaDirName := 'class' ].
   methodFilename := MCFileTreeStCypressWriter
     fileNameForSelector: methodDef selector.
-  filePath := 'repository/' , packageName , '.package' , '/'
-    , methodDef className asString , classExtension , '/' , metaDirName , '/'
-    , methodFilename , '.st'.
+  filePath := 'repository/' , (wc metacelloPackageNameWithBranch at: 2)
+    , '.package' , '/' , methodDef className asString , classExtension , '/'
+    , metaDirName , '/' , methodFilename , '.st'.
   gitDirectory := registration gitRootDirectory.
   commitLog := gitTool
     gitlogFilePath: filePath

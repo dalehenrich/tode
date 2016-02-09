@@ -5,6 +5,7 @@ classMenuActionSpec
       {#('add class ' nil #'addClassMenuAction:selectionIndex:' nil #'hasClass' false).
       #('add subClass' nil #'addSubClassMenuAction:selectionIndex:' nil #'hasClass' false).
       #('-').
+      #('browse category' nil #'browseClassCategoryMenuAction:selectionIndex:' nil #'hasClass' false).
       #('browse class' $b #'browseClassDefinitionMenuAction:selectionIndex:' nil #'hasClass' false).
       #('browse class history' nil #'browseClassHistoryMenuAction:selectionIndex:' nil #'hasClass' false).
       #('browse full' $B #'browseFullClassMenuAction:selectionIndex:' nil #'hasClass' false).
