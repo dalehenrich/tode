@@ -1,4 +1,4 @@
-tests
+*tode-gemstone-server3x-tests
 testGsSslLog
   [ 
   self

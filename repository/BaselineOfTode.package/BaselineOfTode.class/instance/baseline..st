@@ -210,6 +210,10 @@ baseline: spec
           with: [ spec includes: #('Tode-GemStone-Core3x') ];
         package: 'Tode-GemStone-Core3x'
           with: [ spec requires: #('Tode-GemStone-Server-Core') ];
+        package: 'Tode-GemStone-Server-Tests'
+          with: [ spec includes: #('Tode-GemStone-Server3x-Tests') ];
+        package: 'Tode-GemStone-Server3x-Tests'
+          with: [ spec requires: #('Tode-GemStone-Server-Tests') ];
         yourself ].
   spec
     for: #'gs3.0.x'
