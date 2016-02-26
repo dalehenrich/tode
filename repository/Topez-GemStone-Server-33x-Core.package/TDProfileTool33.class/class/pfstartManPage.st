@@ -24,12 +24,12 @@ OPTIONS
     elapsed time measured as cpu or real time. Default is cpu.
 
   --tally=execTime|objFaults|pageFaults|edenUsage|gcTime|objCreation
-    edenUsage
-    execTime   
-    gcTime     
-    objFaults
-    objCreation
-    pageFaults
+    edenUsage   - eden byts used
+    execTime    - execution time (cpu or real)
+    gcTime      - temp obj memory gc time  (cpu or real)
+    objFaults   - object faults
+    objCreation - new object creation
+    pageFaults  - page faults
  
 EXAMPLES
   pf start
