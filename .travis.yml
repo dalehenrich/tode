@@ -14,5 +14,10 @@ smalltalk:
 #  allow_failures:
 #    - os: linux   # requires 3.4.0, but let's see how it goes
 
+before_script:
+  # 'project new' command tests need this
+  - git config --global user.email "you@example.com"
+  - git config --global user.name "Your Name"
+
 #script:
 #  - ./run.sh --debug
