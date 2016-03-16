@@ -2,6 +2,7 @@ SmalltalkCISpec {
   #specName : 'Tode',
   #testing: {
     #projects : [ 'Tode' ],
-    #platforms : [ #gemstone]
+    #directory : 'repository',
+    #platforms : [ #gemstone ]
   }
 }
