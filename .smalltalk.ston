@@ -1,8 +1,13 @@
 SmalltalkCISpec {
   #specName : 'Tode',
-  #testing: {
-    #projects : [ 'Tode' ],
-    #directory : 'repository',
-    #platforms : [ #gemstone ]
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Tode',
+      #directory : 'repository',
+      #platforms : [ #gemstone ]
+    }
+  ],
+  #testing : {
+    #projects : [ 'Tode' ]
   }
 }
