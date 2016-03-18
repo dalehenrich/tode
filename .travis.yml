@@ -1,23 +1,28 @@
 language: smalltalk
 sudo: false
 
-os:
-  - linux
-  - osx
+os: linux
 
 smalltalk:
+  - GemStone-2.4.7
   - GemStone-3.1.0.6
   - GemStone-3.2.12
   - GemStone-3.3.0
-
-#matrix:
-#  allow_failures:
-#    - os: linux   # requires 3.4.0, but let's see how it goes
 
 before_script:
   # 'project new' command tests need this
   - git config --global user.email "you@example.com"
   - git config --global user.name "Your Name"
 
-#script:
-#  - ./run.sh --debug
+script:
+  -  $SMALLTALK_CI_HOME/run.sh # --debug
+
+# Do only one build on osx
+matrix:
+  include:
+    - smalltalk: GemStone-3.3.0
+      os: osx
+
+cache:
+  directories:
+    - $SMALLTALK_CI_HOME/_cache
