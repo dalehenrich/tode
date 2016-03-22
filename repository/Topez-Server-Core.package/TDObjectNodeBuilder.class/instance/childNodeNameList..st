@@ -7,7 +7,7 @@ childNodeNameList: parentNode
     ifTrue: [ parentObj dynamicInstanceVariables ]
     ifFalse: [ #() ].
   moreElements := #().
-  indexableSize := Reflection sizeOf: parentObj.
+  indexableSize := self indexableSizeFor: parentObj.
   indexableSize > self indexableWindowSize
     ifTrue: [ 
       indexableEndIndex := self indexableStartIndex + self indexableWindowSize - 1

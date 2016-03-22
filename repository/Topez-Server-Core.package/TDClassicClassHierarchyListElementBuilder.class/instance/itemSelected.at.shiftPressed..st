@@ -42,9 +42,9 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   stonArray := {#'editStonElement:'.
   classDefClientElement.
   #'editStonElement:'.
-  buttonBarClientElement.
+  classProtocolClientElement.
   #'editStonElement:'.
-  classProtocolClientElement}.
+  buttonBarClientElement}.
   (theWindowName ~~ #'hierarchy' or: [ selectedClass ~~ classDef theClass ])
     ifTrue: [ 
       | hierarchyClientElement |

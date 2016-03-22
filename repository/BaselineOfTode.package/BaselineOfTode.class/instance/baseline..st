@@ -16,6 +16,7 @@ baseline: spec
           with: [ spec requires: #('Topez-Common-Core') ];
         yourself.
       spec
+        group: 'CI' with: #('Common Tests');
         group: 'Common Tests' with: #('Topez-Common-Tests');
         group: 'Visualize' with: #('');
         yourself ].
@@ -162,6 +163,7 @@ baseline: spec
             #('Common Tests' 'Topez-Server-Tests' 'Topez-Server-TestDebugTools' 'Tode-Server-TestTestTools');
         group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
         group: 'Rewrite' with: #('Tode-BatchEdit-Tool');
+        group: 'CI' with: #('GemStone' 'GemStone Tests' 'Rewrite');
         yourself ].
   spec
     for: #'gs2.4.x'
