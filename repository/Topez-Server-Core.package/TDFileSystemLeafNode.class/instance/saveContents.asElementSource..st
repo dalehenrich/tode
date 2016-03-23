@@ -3,6 +3,7 @@ saveContents: anObject asElementSource: asElementSource
   | filename fileContents |
   (self name endsWith: self stonFileExtension)
     ifTrue: [ 
+      [ 
       | aNode |
       aNode := self asTDLeafNode.
       asElementSource
@@ -11,6 +12,10 @@ saveContents: anObject asElementSource: asElementSource
       filename := aNode name , self stonFileExtension.
       STONWriter
         plainTextNewlinesDuring: [ fileContents := self objectSerializer toString: aNode ] ]
+        on: STONReaderError
+        do: [ :ex | 
+          filename := self name.
+          fileContents := anObject withGemstoneLineEndings ] ]
     ifFalse: [ 
       filename := self name.
       fileContents := anObject withGemstoneLineEndings ].

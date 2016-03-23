@@ -2,4 +2,9 @@ visiting
 acceptVisitor: aTDNodeVisitor
   aTDNodeVisitor acceptFileSystemLeafNode: self.
   (self name endsWith: self stonFileExtension)
-    ifTrue: [ self asTDLeafNode acceptVisitor: aTDNodeVisitor proxiedBy: self ]
+    ifTrue: [ 
+      | leaf |
+      [ leaf := self asTDLeafNode ]
+        on: STONReaderError
+        do: [ :ex | ^ self ].
+      leaf acceptVisitor: aTDNodeVisitor proxiedBy: self ]
