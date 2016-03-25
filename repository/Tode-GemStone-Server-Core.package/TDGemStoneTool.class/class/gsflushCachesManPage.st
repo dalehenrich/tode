@@ -9,7 +9,7 @@ gsflushCachesManPage
   gs flushCaches - Flush GLASS/GsDevKit caches
 
 SYNOPSIS
-  gs flushCaches 
+  gs flushCaches [--hard]
          
 DESCRIPTION
   Run the following exppressions to clear the "standard gemstone caches":
@@ -23,9 +23,14 @@ DESCRIPTION
     MethodVersionHistory uniqueInstance cleanUp.
     TDTopezServer clearPersistentElementCacheStack
 
+  With --hard option, a more thorough flus of caches is done, which may cause loss of some (non-critical) data:
+
+    MethodVersionHistory reset  # wipe out persisten method version history
+
 OPTIONS
 
 EXAMPLES
   gs flushCaches
+  gs flushCaches --hard
 '.
   ^ manPage
