@@ -20,9 +20,8 @@ installTestSpecOn: aTDTopezServer
     nextPutAll: '^suite';
     cr.
   (aTDTopezServer ensureChildrenExistIn: path)
-    addChildNode:
-        (TDSmalltalkLeafNode new
-            name: 'testSuite';
-            contents: stream contents;
-            yourself);
-    yourself
+    _addBasicChildNode:
+      (TDSmalltalkLeafNode new
+        name: 'testSuite';
+        contents: stream contents;
+        yourself)

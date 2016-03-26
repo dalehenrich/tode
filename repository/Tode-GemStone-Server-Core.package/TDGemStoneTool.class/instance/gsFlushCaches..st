@@ -8,5 +8,8 @@ gsFlushCaches: hardFlush
   MCMethodDefinition shutDown.
   TDTopezServer clearPersistentElementCacheStack.
   hardFlush
-    ifTrue: [ MethodVersionHistory reset ]
+    ifTrue: [ 
+      MethodVersionHistory reset.
+      TDTopezServer clearStaleTopezReferences.
+      TDStandardTool initializeTools ]
     ifFalse: [ MethodVersionHistory uniqueInstance cleanUp ]
