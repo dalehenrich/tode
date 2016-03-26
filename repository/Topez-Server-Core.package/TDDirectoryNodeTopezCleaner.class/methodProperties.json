@@ -2,7 +2,7 @@
 	"class" : {
 		"cleanDirectoryNodesRootedAt:" : "dkh 03/25/2016 15:00" },
 	"instance" : {
-		"acceptDirectoryNode:" : "dkh 03/25/2016 17:32",
+		"acceptDirectoryNode:" : "dkh 03/25/2016 17:40",
 		"acceptFileSystemDirectoryDirectoryNode:" : "dkh 03/25/2016 15:17",
 		"acceptGatewayNode:" : "dkh 03/25/2016 15:17",
 		"acceptLeafNode:" : "dkh 03/25/2016 17:32",
@@ -14,4 +14,5 @@
 		"acceptStringLeafNode:" : "dkh 03/25/2016 17:19",
 		"acceptTopezLeafNode:" : "dkh 03/25/2016 17:20",
 		"acceptTxtLeafNode:" : "dkh 03/25/2016 17:20",
-		"cleanDirectoryNodesRootedAt:" : "dkh 03/25/2016 15:16" } }
+		"cleanDirectoryNodesRootedAt:" : "dkh 03/25/2016 15:16",
+		"topez:" : "dkh 03/25/2016 17:42" } }

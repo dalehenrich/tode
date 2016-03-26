@@ -1,4 +1,4 @@
 visitor-double dispatching
 acceptDirectoryNode: aTDDirectoryNode
-  super acceptDirectoryNode: aTDDirectoryNode.
+  aTDDirectoryNode childrenDo: [ :child | self visitNode: child ].
   aTDDirectoryNode topez ifNotNil: [ dNodes add: aTDDirectoryNode ]
