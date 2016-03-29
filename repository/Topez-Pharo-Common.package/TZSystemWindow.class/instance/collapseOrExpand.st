@@ -10,7 +10,7 @@ collapseOrExpand
 		ifTrue: [ 
 			"Expand -- restore panes to morphics structure"
 			isCollapsed := false.
-			self activate.	"Bring to frint first"
+			self activate.	"Bring to front first"
 			collapsedFrame := self getBoundsWithFlex.
 			collapseBox ifNotNil: [ collapseBox setBalloonText: 'Collapse this window' ].
 			self setBoundsWithFlex: fullFrame.
