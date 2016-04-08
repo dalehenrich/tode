@@ -8,8 +8,5 @@ SmalltalkCISpec {
       #onWarningLog : true,
       #platforms : [ #gemstone ]
     }
-  ],
-  #testing : {
-    #projects : [ 'Tode' ]
-  }
+  ]
 }

@@ -14,9 +14,6 @@ before_script:
   - git config --global user.email "you@example.com"
   - git config --global user.name "Your Name"
 
-script:
-  -  $SMALLTALK_CI_HOME/run.sh # --debug
-
 # Do only one build on osx
 matrix:
   include:
