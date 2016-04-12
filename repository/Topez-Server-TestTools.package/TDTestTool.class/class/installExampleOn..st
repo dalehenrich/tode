@@ -1,7 +1,7 @@
 as yet unclassified
 installExampleOn: aTDTopezServer
   (aTDTopezServer lookup: '/examples')
-    addChildNode:
+    _addBasicChildNode:
         (TDSmalltalkLeafNode new
             name: 'sunit';
             contents:

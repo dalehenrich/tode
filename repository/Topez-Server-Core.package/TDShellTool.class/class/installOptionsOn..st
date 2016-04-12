@@ -2,26 +2,26 @@ as yet unclassified
 installOptionsOn: aTDTopezServer
   | optionsNode |
   ((aTDTopezServer ensureChildrenExistIn: self commandPath)
-    addChildNode:
+    _addBasicChildNode:
       (optionsNode := TDDirectoryNode new
         name: 'options';
         readMe: 'options for core tools';
         yourself))
-    addChildNode:
+    _addBasicChildNode:
         (TDSmalltalkLeafNode new
             name: 'setListLimit';
             contents:
                 self class theNonMetaClass name asString , ' listLimit: '
                     , self listLimit asString;
             yourself);
-    addChildNode:
+    _addBasicChildNode:
         (TDSmalltalkLeafNode new
             name: 'setDisplayOops';
             contents:
                 self class theNonMetaClass name asString , ' displayOops: '
                     , self displayOops asString;
             yourself);
-    addChildNode:
+    _addBasicChildNode:
         (TDSmalltalkLeafNode new
             name: 'setCharacterLimit';
             contents:

@@ -11,6 +11,7 @@ installOn: aTDTopezServer
         block: block
         vendor: self
         at: self commandPath.
+      node topez: nil.	"avoid keeping the parent topez alive forever"
       pragmaResult := self perform: (pragma argumentAt: 2).
       pragmaResult isString
         ifTrue: [ manPage := TDManPage commandName: commandName fromString: pragmaResult ]

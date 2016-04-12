@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"dNodes" ],
+	"name" : "TDDirectoryNodeTopezCleaner",
+	"pools" : [
+		 ],
+	"super" : "TDNodeVisitor",
+	"type" : "normal" }

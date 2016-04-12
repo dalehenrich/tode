@@ -4,7 +4,7 @@ mcRepositoryNode: aTopez
   | node |
   node := aTopez ensureChildrenExistIn: '/mc'.
   node
-    addChildNode:
+    _addBasicChildNode:
       (TDPluggableNode new
         name: 'repos';
         readMe: self readMeRepos;

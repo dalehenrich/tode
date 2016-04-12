@@ -1,8 +1,8 @@
 as yet unclassified
 gsflushCaches
   "
-  gs flushCaches 
+  gs flushCaches [--hard]
 "
 
-  self getSubcommandOptsMixedLongShort: {}.
-  self gsFlushCaches
+  self getSubcommandOptsMixedLongShort: {#('hard' nil #'none')}.
+  self gsFlushCaches: (subOptions includesKey: 'hard')

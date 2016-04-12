@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"acceptVisitor:" : "dkh 03/25/2016 15:26",
 		"addBlock" : "dkh 11/29/2012 17:59",
 		"addBlock:" : "dkh 11/29/2012 17:59",
 		"basicContents" : "DataCurator 11/30/2012 10:51",

@@ -1,5 +1,8 @@
 accessing
 lookup: aPath with: aTopez
   ^ (self name endsWith: self stonFileExtension)
-    ifTrue: [ self asTDLeafNode lookup: aPath with: aTopez ]
+    ifTrue: [ 
+      [ self asTDLeafNode lookup: aPath with: aTopez ]
+        on: STONReaderError
+        do: [ :ex | super lookup: aPath with: aTopez ] ]
     ifFalse: [ super lookup: aPath with: aTopez ]

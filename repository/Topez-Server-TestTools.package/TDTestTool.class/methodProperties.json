@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"initialize" : "dkh 02/23/2013 14:51",
-		"installExampleOn:" : "dkh 08/14/2013 11:19",
+		"installExampleOn:" : "dkh 03/25/2016 16:59",
 		"installOn:" : "dkh 04/11/2013 20:06",
 		"priority" : "DataCurator 12/21/2012 11:43",
 		"test" : "dkh 02/26/2015 10:15",
