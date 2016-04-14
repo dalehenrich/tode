@@ -6,7 +6,10 @@ baseline: spec
     do: [ 
       spec
         baseline: 'Ston'
-          with: [ spec repository: 'github://GsDevKit/ston:v0.9.4/repository' ];
+          with: [ 
+              spec
+                loads: #('UTF8');
+                repository: 'github://GsDevKit/ston:v0.9.4/repository' ];
         yourself.
       spec
         package: 'Topez-Common-Core' with: [ spec requires: #('Ston') ];
