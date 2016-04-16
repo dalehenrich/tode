@@ -3,11 +3,17 @@ sudo: false
 
 os: linux
 
+smalltalk_config: 
+#  - .smalltalk.ston
+  - .minimal.smalltalk.ston
+
 smalltalk:
 #  - GemStone-2.4.8
 #  - GemStone-3.1.0.6
 #  - GemStone-3.2.14
   - GemStone-3.3.0
+
+env: GSGCI_CLIENTS="Pharo5.0"
 
 before_script:
   # 'project new' command tests need this
@@ -19,10 +25,6 @@ matrix:
 #    Do only one build on osx
 #    - smalltalk: GemStone-3.3.0
 #      os: osx
-#   Testing for https://github.com/dalehenrich/tode/issues/253
-    - smalltalk_config: .minimal.smalltalk.ston 
-      smalltalk: GemStone-3.3.0 
-      env: GSCI_CLIENTS="Pharo-5.0"
 
 cache:
   directories:
