@@ -20,10 +20,10 @@ matrix:
 #    - smalltalk: GemStone-3.3.0
 #      os: osx
 #   Testing for https://github.com/dalehenrich/tode/issues/253
-    - allow_failures:
-      - smalltalk_config: .minimal.smalltalk.ston 
-        smalltalk: GemStone-3.3.0 
-        env: GSCI_CLIENTS="Pharo-5.0"
+  allow_failures:
+    - smalltalk_config: .minimal.smalltalk.ston 
+      smalltalk: GemStone-3.3.0 
+      env: GSCI_CLIENTS="Pharo-5.0"
 
 cache:
   directories:
