@@ -3,9 +3,9 @@ sudo: false
 
 os: linux
 
-smalltalk_config: 
+smalltalk_config: .minimal.smalltalk.ston
 #  - .smalltalk.ston
-  - .minimal.smalltalk.ston
+#  - .minimal.smalltalk.ston
 
 smalltalk:
 #  - GemStone-2.4.8
