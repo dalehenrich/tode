@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Minimal-Client-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"session" ],
+	"name" : "TDMinimalClient",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

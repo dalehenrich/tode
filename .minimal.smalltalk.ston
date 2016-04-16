@@ -1,0 +1,11 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Tode',
+      #load : [ 'Minimal Tests' ],
+      #directory : 'repository',
+      #onWarningLog : true,
+      #platforms : [ #pharo ]
+    }
+  ]
+}

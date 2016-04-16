@@ -1,0 +1,2 @@
+login/logout
+logout
