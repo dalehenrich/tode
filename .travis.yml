@@ -3,9 +3,9 @@ sudo: false
 
 os: linux
 
-smalltalk_config: .minimal.smalltalk.ston
+smalltalk_config: 
 #  - .smalltalk.ston
-#  - .minimal.smalltalk.ston
+  - .minimal.smalltalk.ston
 
 smalltalk:
 #  - GemStone-2.4.8
@@ -13,7 +13,7 @@ smalltalk:
 #  - GemStone-3.2.14
   - GemStone-3.3.0
 
-env: GSGCI_CLIENTS="Pharo5.0"
+env: GSCI_CLIENTS="Pharo5.0"
 
 before_script:
   # 'project new' command tests need this

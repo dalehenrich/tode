@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Tode',
-      #load : [ 'CI' ],
+      #load : [ 'GemStone', 'Rewrite' ],
       #directory : 'repository',
       #onWarningLog : true,
       #platforms : [ #gemstone ]
