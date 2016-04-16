@@ -13,7 +13,7 @@ smalltalk:
 #  - GemStone-3.2.14
   - GemStone-3.3.0
 
-env: GSCI_CLIENTS="Pharo-5.0"
+env: GSCI_CLIENTS="Pharo-5.0" GSCI_DEVKIT_BRANCH="dev"
 
 before_script:
   # 'project new' command tests need this

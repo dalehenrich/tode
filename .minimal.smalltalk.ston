@@ -14,5 +14,10 @@ SmalltalkCISpec {
       #onWarningLog : true,
       #platforms : [ #pharo ]
     }
-  ]
+  ],
+  #testing : {
+    #exclude : {
+      #categories : [ 'Topez-Server-*', 'Tode-GemStone-Server-*' ]
+    }
+  }
 }
