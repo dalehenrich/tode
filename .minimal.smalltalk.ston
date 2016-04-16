@@ -2,6 +2,13 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Tode',
+      #load : [ 'CI' ],
+      #directory : 'repository',
+      #onWarningLog : true,
+      #platforms : [ #gemstone ]
+    },
+    SCIMetacelloLoadSpec {
+      #baseline : 'Tode',
       #load : [ 'Minimal Tests' ],
       #directory : 'repository',
       #onWarningLog : true,
