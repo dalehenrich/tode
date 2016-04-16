@@ -102,7 +102,7 @@ baseline: spec
               repository: 'github://GsDevKit/GemStone-GCI:master/repository' ];
         yourself.
       spec
-        package: 'Tode-Minimal-Client-Core' with: [ spec includes: 'Topez-Common-Core' ];
+        package: 'Tode-Minimal-Client-Core' with: [ spec requires: #( 'Topez-Common-Core' 'GemStoneGCI' )];
         package: 'Tode-Minimal-Client-Tests' with: [ spec requires: 'Tode-Minimal-Client-Core' ];
         yourself.
 	   spec
