@@ -6,7 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"session" ],
+		"session",
+		"objectSerializer",
+		"clientForwarderCache",
+		"serverApiVersion",
+		"effectiveApiVersion",
+		"sessionDescription" ],
 	"name" : "TDMinimalClient",
 	"pools" : [
 		 ],

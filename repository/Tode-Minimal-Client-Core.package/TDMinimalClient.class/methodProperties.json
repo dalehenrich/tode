@@ -2,7 +2,17 @@
 	"class" : {
 		"loginWith:" : "dkh 4/15/2016 21:00" },
 	"instance" : {
-		"loginWith:" : "dkh 4/15/2016 20:59",
+		"clientApiVersion" : "dkh 4/16/2016 19:41",
+		"clientForwarderCache" : "dkh 4/16/2016 19:37",
+		"defaultSessionDescription" : "dkh 4/16/2016 19:48",
+		"effectiveApiVersion" : "dkh 4/16/2016 19:42",
+		"effectiveApiVersion:" : "dkh 4/16/2016 19:43",
+		"loginWith:" : "dkh 4/16/2016 19:48",
 		"logout" : "dkh 4/15/2016 21:02",
+		"objectSerializer" : "dkh 4/16/2016 19:26",
+		"objectSerializer:" : "dkh 4/16/2016 19:39",
+		"serverApiVersion:" : "dkh 4/16/2016 19:40",
 		"session" : "dkh 4/15/2016 20:45",
+		"sessionDescription" : "dkh 4/16/2016 19:47",
+		"sessionDescription:" : "dkh 4/16/2016 19:46",
 		"todeServerCreationStringWithOptions:" : "dkh 4/15/2016 20:53" } }
