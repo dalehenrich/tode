@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"client" ],
+		"client",
+		"generatorOopType" ],
 	"name" : "TDMinimalClientTests",
 	"pools" : [
 		 ],

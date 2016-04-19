@@ -1,5 +1,5 @@
 tests
-testEditCommand
+testEditStonElement_
 	| cmdResult |
 	self client
 		registerService: [ :stonString :aClient | 
