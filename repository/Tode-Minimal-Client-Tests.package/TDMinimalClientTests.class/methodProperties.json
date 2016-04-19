@@ -3,8 +3,9 @@
 		 },
 	"instance" : {
 		"client" : "dkh 4/19/2016 06:06",
+		"debugMode" : "dkh 4/19/2016 09:52",
 		"sessionDescription" : "dkh 4/16/2016 13:34",
-		"setUp" : "dkh 4/19/2016 06:05",
+		"setUp" : "dkh 4/19/2016 09:51",
 		"tearDown" : "dkh 4/19/2016 06:05",
-		"testCommand" : "dkh 4/19/2016 06:08",
+		"testCommand" : "dkh 4/19/2016 10:12",
 		"testLogin" : "dkh 4/19/2016 06:05" } }

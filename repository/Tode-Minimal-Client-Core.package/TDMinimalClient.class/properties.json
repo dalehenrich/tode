@@ -12,7 +12,9 @@
 		"serverApiVersion",
 		"effectiveApiVersion",
 		"sessionDescription",
-		"debugMode" ],
+		"debugMode",
+		"todeClientOopType",
+		"todeServerOopType" ],
 	"name" : "TDMinimalClient",
 	"pools" : [
 		 ],
