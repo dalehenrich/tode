@@ -16,8 +16,8 @@ loginWith: aSessionDescription
 	(resultArray at: 2)
 		ifNotNil: [ :transcriptOop | 
 			transcriptOopType := transcriptOop gciResultToGsOopType: self session.
-			self clientForwarderCache at: transcriptOopType put: Transcript ].
-	self clientForwarderCache at: topezClientOopType put: self.
+			self session registerClientObjectForwarderOopType: transcriptOopType for: Transcript ].
+	self session registerClientObjectForwarderOopType: topezClientOopType for: self.
 	resultArray size > 3
 		ifTrue: [ | protocolSignature objSerializer serverApiVersionString |
 			protocolSignature := resultArray at: 4.
