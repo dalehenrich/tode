@@ -8,13 +8,13 @@
 	"instvars" : [
 		"session",
 		"objectSerializer",
-		"clientForwarderCache",
 		"serverApiVersion",
 		"effectiveApiVersion",
 		"sessionDescription",
 		"debugMode",
 		"todeClientOopType",
-		"todeServerOopType" ],
+		"todeServerOopType",
+		"servicesRegistry" ],
 	"name" : "TDMinimalClient",
 	"pools" : [
 		 ],
