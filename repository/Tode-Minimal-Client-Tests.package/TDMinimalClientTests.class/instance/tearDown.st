@@ -1,4 +1,8 @@
 running
 tearDown
 	super tearDown.
-	session ifNotNil: [ session logout ]
+	client
+		ifNotNil: [ | cl |
+			cl := client.
+			client := nil.
+			cl logout ]

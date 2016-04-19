@@ -1,3 +1,3 @@
 tests
 testLogin
-	self assert: session notNil
+	self assert: self client notNil

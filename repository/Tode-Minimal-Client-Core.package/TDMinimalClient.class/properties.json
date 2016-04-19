@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"DebugMode" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"session",
@@ -11,7 +11,8 @@
 		"clientForwarderCache",
 		"serverApiVersion",
 		"effectiveApiVersion",
-		"sessionDescription" ],
+		"sessionDescription",
+		"debugMode" ],
 	"name" : "TDMinimalClient",
 	"pools" : [
 		 ],

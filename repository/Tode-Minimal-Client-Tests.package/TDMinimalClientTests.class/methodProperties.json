@@ -2,7 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"client" : "dkh 4/19/2016 06:06",
 		"sessionDescription" : "dkh 4/16/2016 13:34",
-		"setUp" : "dkh 4/15/2016 21:01",
-		"tearDown" : "dkh 4/15/2016 21:02",
-		"testLogin" : "dkh 4/15/2016 21:03" } }
+		"setUp" : "dkh 4/19/2016 06:05",
+		"tearDown" : "dkh 4/19/2016 06:05",
+		"testCommand" : "dkh 4/19/2016 06:08",
+		"testLogin" : "dkh 4/19/2016 06:05" } }

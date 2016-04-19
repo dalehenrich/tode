@@ -1,12 +1,18 @@
 {
 	"class" : {
+		"debugMode" : "dkh 4/19/2016 06:38",
+		"debugMode:" : "dkh 4/19/2016 06:39",
 		"loginWith:" : "dkh 4/15/2016 21:00" },
 	"instance" : {
 		"clientApiVersion" : "dkh 4/16/2016 19:41",
 		"clientForwarderCache" : "dkh 4/16/2016 19:37",
+		"debugMode" : "dkh 4/19/2016 06:38",
+		"debugMode:" : "dkh 4/19/2016 06:39",
 		"defaultSessionDescription" : "dkh 4/16/2016 19:48",
 		"effectiveApiVersion" : "dkh 4/16/2016 19:42",
 		"effectiveApiVersion:" : "dkh 4/16/2016 19:43",
+		"evaluate:" : "dkh 4/19/2016 06:10",
+		"evaluateFrom:" : "dkh 4/19/2016 06:36",
 		"getSessionDescription" : "dkh 4/19/2016 05:59",
 		"loginWith:" : "dkh 4/19/2016 05:56",
 		"logout" : "dkh 4/15/2016 21:02",

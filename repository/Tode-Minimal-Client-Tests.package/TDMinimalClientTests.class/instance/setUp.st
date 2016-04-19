@@ -1,4 +1,4 @@
 running
 setUp
 	super setUp.
-	session := TDMinimalClient loginWith: self sessionDescription
+	client := TDMinimalClient loginWith: self sessionDescription
