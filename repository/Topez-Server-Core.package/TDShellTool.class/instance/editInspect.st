@@ -5,11 +5,16 @@ editInspect
   inspect [<path>]...
 "
 
-  | contextObjects |
+  | contextObjects objectsIn |
   contextObjects := arguments isEmpty
-    ifTrue: [ {objIn} ]
-    ifFalse: [ arguments collect: [ :each | topez lookup: each ] ].
-  ^ self
+    ifTrue: [ 
+      objectsIn := objIn.
+      {objIn} ]
+    ifFalse: [ 
+      objectsIn := arguments.
+      arguments collect: [ :each | topez lookup: each ] ].
+  self
     editObjects: contextObjects
     builderAspect: #'inspect'
-    editorAspect: #'navigate'
+    editorAspect: #'navigate'.
+  ^ objectsIn
