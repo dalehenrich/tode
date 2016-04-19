@@ -1,4 +1,4 @@
-tests
+tests - interactions
 testTextInteractionRequestPassword
 	| requestPassword generatorStonString answer |
 	requestPassword := 'Prompt for password'.

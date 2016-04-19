@@ -1,4 +1,4 @@
-tests
+tests - interactions
 testInformInteraction
 	| message generatorStonString answer |
 	message := 'Inform something'.

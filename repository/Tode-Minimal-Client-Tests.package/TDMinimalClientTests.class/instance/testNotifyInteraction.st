@@ -1,4 +1,4 @@
-tests
+tests - interactions
 testNotifyInteraction
 	| prompt confirm cancel abort generatorStonString answer |
 	prompt := 'Notify something'.

@@ -1,4 +1,4 @@
-tests
+tests - interactions
 testTextInteraction
 	| prompt generatorStonString answer template |
 	prompt := 'Prompt something'.

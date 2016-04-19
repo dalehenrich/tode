@@ -1,4 +1,4 @@
-tests
+tests - interactions
 testInspectorInteraction
 	"the same interaction as #testEditStonElement_"
 

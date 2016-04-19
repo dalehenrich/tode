@@ -1,4 +1,4 @@
-tests
+tests - interactions
 testChoiceInteraction
 	| choice prompt labels values lines generatorStonString expectedChoice |
 	prompt := 'Select something'.

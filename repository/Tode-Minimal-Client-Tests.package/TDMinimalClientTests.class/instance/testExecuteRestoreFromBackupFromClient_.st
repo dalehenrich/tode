@@ -1,4 +1,4 @@
-tests
+tests - deferred
 testExecuteRestoreFromBackupFromClient_
 	| cmdResult |
 	true

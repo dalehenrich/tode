@@ -1,9 +1,11 @@
 tests
 testResetAllGlobalNames
-	| cmdResult |
+	| resetAllGlobals |
 	self client
 		registerService: [ :aClient | 
-			self halt.
+			resetAllGlobals := true.
 			nil ]
 		for: #resetAllGlobalNames.
-	cmdResult := self client evaluate: ''.
+	resetAllGlobals := false.
+	self client session send: #resetAllGlobalNames to: self client todeServerOopType.
+	self assert: resetAllGlobals
