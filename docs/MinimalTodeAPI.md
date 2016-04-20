@@ -6,8 +6,9 @@ With Pharo5.0, the FFI api was changed which means that the GemStone/S GCI code 
 With the help of [Mariano Martinez-Peck][2], the [GemStone-GCI project][3] was ported to Pharo5.0 and I built the **Minimal tODE API** on top of the [GemStone-GCI project][3].
 
 ## Installation
-A GemStone/S 64 stone and a standard tODE client is needed for using the **Minimal tODE API**. 
-For that, I recommend installing [GsDevKit_home][5] and using the following steps from the [GsDevKit_home installation instructions][6]:
+A [GemStone/S 64][9] stone and a standard tODE client is needed for using the **Minimal tODE API**.
+Technically you don't need a tODE client, but if you want to look at server-side code, it is necessary.
+I recommend installing [GsDevKit_home][5] and using the following steps from the [GsDevKit_home installation instructions][6]:
 
 ```
 # Install GsDevKit_home
@@ -20,6 +21,10 @@ installServerClient
 # Create tODE client
 #
 createClient tode
+
+# Start tODE client
+#
+startClient tode
 ```
 
 The **Minimal tODE API** is built to run against a standard [tODE][4] stone install, but since both the **Minimal tODE API** and the [GemStone-GCI project][3] are under active development, it is a good idea to create a local clone of the [GemStone-GCI project][3] and load it into the stone being used for **Minimal tODE API** development:
@@ -145,3 +150,4 @@ which you should recognize as the fields visible in the **tODE** inspector windo
 [6]: https://github.com/GsDevKit/GsDevKit_home#installation
 [7]: ./images/minimalClientElementpng
 [8]: ./images/todeInspectorView.png
+[9]: https://gemtalksystems.com/products/gs64/
