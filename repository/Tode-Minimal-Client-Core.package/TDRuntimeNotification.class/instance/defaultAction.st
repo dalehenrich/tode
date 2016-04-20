@@ -2,11 +2,13 @@ actions
 defaultAction
 	| answer |
 	self clientObj
-		ifNotNil: [ :clientObj | clientObj exception: self exceptionOopType context: self contextOopType ].
-	Smalltalk isHeadless
+		exception: self exceptionOopType
+		context: self contextOopType.
+	self clientObj interactive not
 		ifTrue: [ ^ {#logStack.
 			self description} ].
-	answer := (TDInteractiveChooseExceptionHandling message: (self description withNoLineLongerThan: 80)) signal.
+	answer := (TDInteractiveChooseExceptionHandling
+		message: (self description withNoLineLongerThan: 80)) signal.
 	answer
 		ifNil: [ ^ {#debug.
 			self} ].	"Debug -- cancel"

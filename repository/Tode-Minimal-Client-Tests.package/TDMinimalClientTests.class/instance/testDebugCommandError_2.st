@@ -1,7 +1,9 @@
 tests - error handling
 testDebugCommandError_2
 	| cmdResult |
-	self client debugMode: true.
+	self client
+		debugMode: true;
+		interactive: true.
 	self client
 		registerService: [ :stonString :aClient | 
 			| clientElement |
@@ -12,6 +14,6 @@ testDebugCommandError_2
 			1	"windowId" ]
 		for: #editStonElement:.
 	[ cmdResult := self client evaluate: 'foo `3+4`'.
-	self assert: cmdResult asString = 'Unknown command: ''foo''' ]
+	self assert: cmdResult asString equals: 'Unknown command: ''foo''' ]
 		on: TDInteractiveChooseExceptionHandling
 		do: [ :ex | ex debug ]

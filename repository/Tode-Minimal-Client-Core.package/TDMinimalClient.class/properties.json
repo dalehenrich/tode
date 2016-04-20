@@ -11,6 +11,7 @@
 		"serverApiVersion",
 		"effectiveApiVersion",
 		"sessionDescription",
+		"interactive",
 		"debugMode",
 		"todeClientOopType",
 		"todeServerOopType",
