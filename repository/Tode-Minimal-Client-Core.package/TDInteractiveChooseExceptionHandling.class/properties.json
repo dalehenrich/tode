@@ -6,9 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"gciSession",
-		"gci32xErrSType" ],
-	"name" : "TDRuntimeNotification",
+		"message" ],
+	"name" : "TDInteractiveChooseExceptionHandling",
 	"pools" : [
 		 ],
 	"super" : "Notification",

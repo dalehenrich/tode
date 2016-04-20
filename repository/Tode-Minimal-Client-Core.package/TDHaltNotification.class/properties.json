@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"gciSession",
-		"gci32xErrSType" ],
-	"name" : "TDRuntimeNotification",
+		 ],
+	"name" : "TDHaltNotification",
 	"pools" : [
 		 ],
-	"super" : "Notification",
+	"super" : "TDRuntimeNotification",
 	"type" : "normal" }

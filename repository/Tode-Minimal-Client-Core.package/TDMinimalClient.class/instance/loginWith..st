@@ -3,9 +3,10 @@ loginWith: aSessionDescription
 	| todeServerCreationString jsonString resultArray todeServerOop transcriptOopType authorId |
 	self sessionDescription: aSessionDescription.
 	session := (GsDevKitSession new sessionDescription: aSessionDescription) session.
+	session clientObj: self.
 	[ todeServerCreationString := self todeServerCreationStringWithOptions: true.
 	jsonString := self session executeString: todeServerCreationString ]
-		on: GsGciError
+		on: TDErrorNotification
 		do: [ :ex | 
 			self
 				error:
