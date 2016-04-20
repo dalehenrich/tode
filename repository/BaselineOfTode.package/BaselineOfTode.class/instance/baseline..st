@@ -99,7 +99,7 @@ baseline: spec
         baseline: 'GemStoneGCI'
           with: [ 
               spec
-                loads: #('Core');
+                loads: #('Core' 'Tests');
                 repository: 'github://GsDevKit/GemStone-GCI:master/repository' ];
         yourself.
       spec
