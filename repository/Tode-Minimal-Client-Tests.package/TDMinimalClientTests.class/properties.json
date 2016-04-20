@@ -1,0 +1,15 @@
+{
+	"category" : "Tode-Minimal-Client-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"client",
+		"generatorOopType" ],
+	"name" : "TDMinimalClientTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

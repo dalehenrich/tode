@@ -1,0 +1,15 @@
+{
+	"category" : "Tode-Minimal-Client-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"gciSession",
+		"gci32xErrSType" ],
+	"name" : "TDRuntimeNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

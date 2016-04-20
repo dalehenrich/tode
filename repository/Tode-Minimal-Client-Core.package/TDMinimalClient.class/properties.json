@@ -1,0 +1,23 @@
+{
+	"category" : "Tode-Minimal-Client-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"DebugMode" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"session",
+		"objectSerializer",
+		"serverApiVersion",
+		"effectiveApiVersion",
+		"sessionDescription",
+		"interactive",
+		"debugMode",
+		"todeClientOopType",
+		"todeServerOopType",
+		"servicesRegistry" ],
+	"name" : "TDMinimalClient",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

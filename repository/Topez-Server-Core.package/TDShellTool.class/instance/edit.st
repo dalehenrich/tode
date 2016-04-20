@@ -9,10 +9,14 @@ edit
   edit [--editorAspect=<aspect>] [--builderAspect=<aspect>] [<path>]...
 "
 
-  | contextObjects builderAspect editorAspect |
+  | objectsIn contextObjects builderAspect editorAspect |
   contextObjects := arguments isEmpty
-    ifTrue: [ {objIn} ]
-    ifFalse: [ arguments collect: [ :each | topez lookup: each ] ].
+    ifTrue: [ 
+      objectsIn := objIn.
+      {objIn} ]
+    ifFalse: [ 
+      objectsIn := arguments.
+      arguments collect: [ :each | topez lookup: each ] ].
   options
     at: 'print'
     ifPresent: [ :ignored | 
@@ -33,7 +37,8 @@ edit
   options
     at: 'editorAspect'
     ifPresent: [ :aspect | editorAspect := aspect asSymbol ].
-  ^ self
+  self
     editObjects: contextObjects
     builderAspect: builderAspect
-    editorAspect: editorAspect
+    editorAspect: editorAspect.
+  ^ objectsIn

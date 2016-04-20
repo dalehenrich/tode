@@ -93,6 +93,27 @@ baseline: spec
         package: 'Tode-Pharo14' with: [ spec requires: 'Topez-Pharo-Common' ];
         yourself ].
   spec
+    for: #'pharo5.x'
+    do: [ 
+      spec
+        baseline: 'GemStoneGCI'
+          with: [ 
+              spec
+                loads: #('Core' 'Tests');
+                repository: 'github://GsDevKit/GemStone-GCI:master/repository' ];
+        yourself.
+      spec
+        package: 'Tode-Minimal-Client-Core'
+          with: [ spec requires: #('Topez-Common-Core' 'GemStoneGCI') ];
+        package: 'Tode-Minimal-Client-Tests'
+          with: [ spec requires: 'Tode-Minimal-Client-Core' ];
+        yourself.
+      spec
+        group: 'Minimal Client' with: #('Tode-Minimal-Client-Core');
+        group: 'Minimal Tests'
+          with: #('Topez-Common-Tests' 'Tode-Minimal-Client-Tests');
+        yourself ].
+  spec
     for: #'gemstone'
     do: [ 
       spec postLoadDoIt: #'initializeTools'.

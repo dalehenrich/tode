@@ -3,6 +3,8 @@ sudo: false
 
 os: linux
 
+smalltalk_config: .smalltalk.ston
+
 smalltalk:
   - GemStone-2.4.8
   - GemStone-3.1.0.6
@@ -14,11 +16,14 @@ before_script:
   - git config --global user.email "you@example.com"
   - git config --global user.name "Your Name"
 
-# Do only one build on osx
 matrix:
   include:
+#    Do only one build on osx
     - smalltalk: GemStone-3.3.0
       os: osx
+    - smalltalk_config: .minimal.smalltalk.ston
+      smalltalk: GemStone-3.3.0
+      env: GSCI_CLIENTS="Pharo-5.0" GSCI_DEVKIT_BRANCH="dev"
 
 cache:
   directories:

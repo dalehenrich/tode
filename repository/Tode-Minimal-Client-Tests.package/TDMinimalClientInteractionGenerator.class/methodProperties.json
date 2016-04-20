@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"gsClassDefinition" : "dkh 4/19/2016 13:35" },
+	"instance" : {
+		"choiceInteraction:labels:values:lines:" : "dkh 4/19/2016 13:09",
+		"choiceInteractionUsing:" : "dkh 4/19/2016 13:27",
+		"confirmInteraction:confirm:cancel:abort:" : "dkh 4/19/2016 13:54",
+		"confirmInteractionUsing:" : "dkh 4/19/2016 13:53",
+		"informInteraction:" : "dkh 4/19/2016 14:01",
+		"informInteractionUsing:" : "dkh 4/19/2016 14:00",
+		"inspectInteraction:" : "dkh 4/19/2016 14:07",
+		"inspectInteractionUsing:" : "dkh 4/19/2016 14:06",
+		"multiLineTextInteraction:template:" : "dkh 4/19/2016 14:46",
+		"multiLineTextInteractionUsing:" : "dkh 4/19/2016 14:46",
+		"notifyInteraction:confirm:cancel:abort:" : "dkh 4/19/2016 13:56",
+		"notifyInteractionUsing:" : "dkh 4/19/2016 13:55",
+		"textInteraction:template:" : "dkh 4/19/2016 14:38",
+		"textInteractionRequestPassword:" : "dkh 4/19/2016 14:43",
+		"textInteractionRequestPasswordUsing:" : "dkh 4/19/2016 14:43",
+		"textInteractionUsing:" : "dkh 4/19/2016 14:37" } }
