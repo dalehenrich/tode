@@ -4,12 +4,19 @@
 	"instance" : {
 		"client" : "dkh 4/23/2016 17:30",
 		"client:" : "dkh 4/23/2016 17:30",
+		"codeClientElement" : "dkh 4/24/2016 10:37",
+		"codeClientElement:" : "dkh 4/24/2016 10:52",
+		"contextClientElement" : "dkh 4/24/2016 10:42",
+		"contextClientElement:" : "dkh 4/24/2016 10:42",
+		"debugger" : "dkh 4/24/2016 10:50",
+		"debugger:" : "dkh 4/24/2016 10:50",
 		"logout" : "dkh 4/23/2016 17:43",
 		"name" : "dkh 4/23/2016 17:38",
-		"selectFrame" : "dkh 4/23/2016 17:56",
+		"selectFrame" : "dkh 4/24/2016 10:43",
+		"selectedCodeRangeForContext:" : "dkh 4/24/2016 11:22",
 		"selectedFrame" : "dkh 4/23/2016 17:28",
 		"selectedFrameIndex" : "dkh 4/23/2016 17:27",
 		"selectedFrameIndex:" : "dkh 4/23/2016 17:28",
-		"stack" : "dkh 4/23/2016 17:22",
+		"stack" : "dkh 4/24/2016 11:20",
 		"stackClientElement" : "dkh 4/23/2016 17:19",
-		"stackClientElement:" : "dkh 4/23/2016 17:27" } }
+		"stackClientElement:" : "dkh 4/24/2016 11:09" } }

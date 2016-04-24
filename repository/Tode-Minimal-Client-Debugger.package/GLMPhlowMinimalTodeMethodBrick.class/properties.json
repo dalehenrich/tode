@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GLMPhlowMinimalTodeMethodBrick",
+	"pools" : [
+		 ],
+	"super" : "GLMPhlowTextBrick",
+	"type" : "normal" }

@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"debugger",
-		"client",
-		"stackClientElement",
-		"stack",
-		"selectedFrameIndex",
-		"codeClientElement",
-		"contextClientElement" ],
-	"name" : "TDMinimalDebuggerSession",
+		"session",
+		"frameIndex" ],
+	"name" : "TDMinimalDebuggerContext",
 	"pools" : [
 		 ],
 	"super" : "Object",

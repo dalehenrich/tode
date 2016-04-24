@@ -1,6 +1,6 @@
 scripting opening
-openOn: anObject
-	
-	^ (super openOn: anObject)
+openOn: aTDMinimalDebuggerSession
+	aTDMinimalDebuggerSession debugger: self.
+	^ (super openOn: aTDMinimalDebuggerSession)
 		title: self session name;
 		yourself
