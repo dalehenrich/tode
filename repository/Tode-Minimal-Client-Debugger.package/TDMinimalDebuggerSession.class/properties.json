@@ -1,0 +1,17 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stackClientElement",
+		"stack",
+		"selectedFrameIndex",
+		"client" ],
+	"name" : "TDMinimalDebuggerSession",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

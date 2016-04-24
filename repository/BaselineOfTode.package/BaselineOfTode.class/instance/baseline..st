@@ -105,11 +105,13 @@ baseline: spec
       spec
         package: 'Tode-Minimal-Client-Core'
           with: [ spec requires: #('Topez-Common-Core' 'GemStoneGCI') ];
+        package: 'Tode-Minimal-Client-Debugger' 
+          with: [ spec requires:  'Tode-Minimal-Client-Core'];
         package: 'Tode-Minimal-Client-Tests'
           with: [ spec requires: 'Tode-Minimal-Client-Core' ];
         yourself.
       spec
-        group: 'Minimal Client' with: #('Tode-Minimal-Client-Core');
+        group: 'Minimal Client' with: #('Tode-Minimal-Client-Core' 'Tode-Minimal-Client-Debugger');
         group: 'Minimal Tests'
           with: #('Topez-Common-Tests' 'Tode-Minimal-Client-Tests');
         yourself ].

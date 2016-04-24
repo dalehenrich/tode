@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"example" : "dkh 4/23/2016 18:15" },
+	"instance" : {
+		"actOnBrowserClosing:" : "dkh 4/23/2016 17:43",
+		"browser" : "dkh 4/23/2016 17:38",
+		"compose" : "dkh 4/23/2016 17:42",
+		"contextToSelectFrom:" : "dkh 4/23/2016 17:52",
+		"openOn:" : "dkh 4/23/2016 17:37",
+		"session" : "dkh 4/23/2016 17:36",
+		"session:" : "dkh 4/23/2016 17:36",
+		"stackFrameListIn:" : "dkh 4/23/2016 17:24" } }
