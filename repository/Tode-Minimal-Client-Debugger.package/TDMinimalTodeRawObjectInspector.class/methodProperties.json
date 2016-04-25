@@ -2,11 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"compose" : "dkh 4/25/2016 14:21",
+		"clientElementMap" : "dkh 4/25/2016 14:47",
+		"clientElementMap:" : "dkh 4/25/2016 14:46",
+		"compose" : "dkh 4/25/2016 14:51",
 		"debugger" : "dkh 4/24/2016 19:34",
 		"debugger:" : "dkh 4/24/2016 19:34",
 		"evaluatorIn:" : "dkh 4/24/2016 19:33",
-		"fieldsFor:" : "dkh 4/25/2016 10:10",
+		"fieldsFor:" : "dkh 4/25/2016 14:51",
 		"fieldsIn:" : "dkh 4/24/2016 19:38",
 		"iconFor:" : "dkh 4/24/2016 19:33",
 		"iconFor:error:" : "dkh 4/24/2016 19:33",

@@ -4,10 +4,12 @@ fieldsFor: aClientListElement
 	list := aClientListElement firstList key.
 	result := OrderedCollection new.
 	1 to: list size do: [ :index | 
-		result
-			add:
-				(list at: index)
-					->
-						{aClientListElement.
-						index} ].
+		| key |
+		key := (list at: index) asString.
+		self clientElementMap
+			at: key
+			put:
+				{aClientListElement.
+				index}.
+		result add: key ].
 	^ result

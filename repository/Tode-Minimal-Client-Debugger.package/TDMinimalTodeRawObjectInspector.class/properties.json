@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"debugger" ],
+		"debugger",
+		"clientElementMap" ],
 	"name" : "TDMinimalTodeRawObjectInspector",
 	"pools" : [
 		 ],

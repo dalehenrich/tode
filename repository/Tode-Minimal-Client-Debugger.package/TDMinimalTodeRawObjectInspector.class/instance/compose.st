@@ -10,9 +10,9 @@ compose
 			browser transmit
 				from: #fields;
 				toOutsidePort: #selection;
-				transformed: [ :assoc | 
-					assoc
+				transformed: [ :string | 
+					string
 						ifNotNil: [ | ar |
-							ar := assoc value.
+							ar := self clientElementMap at: string.
 							(ar at: 1) itemSelected: (ar at: 2) listSelections: nil.
 							self debugger session contextClientElement ] ] ]
