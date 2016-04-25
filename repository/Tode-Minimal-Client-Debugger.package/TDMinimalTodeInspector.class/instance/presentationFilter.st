@@ -1,4 +1,0 @@
-context
-presentationFilter
-
-	^ presentationFilter
