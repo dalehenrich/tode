@@ -1,3 +1,0 @@
-building actions
-installCodeActionsFor: aPresentation
-	
