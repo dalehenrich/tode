@@ -2,7 +2,8 @@ example
 example
 	"self example"
 
-	| debugger debuggerSession |
+	| debugger debuggerSession windowNameMap |
+	windowNameMap := Dictionary new.
 	(TDMinimalClient
 		loginWith: (GsDevKit_home sessionDescriptionNamed: SCIGemStoneServerConfigSpec defaultSessionName))
 		debugMode: true;
@@ -22,13 +23,20 @@ example
 							(debuggerSession := TDMinimalDebuggerSession new
 								stackClientElement: clientElement;
 								client: aClient;
-								yourself) ]
-				ifFalse: [ windowId := 11.
-					clientElement editorWindowLocation == #method
-						ifTrue: [ debuggerSession codeClientElement: clientElement ]
-						ifFalse: [ clientElement editorWindowLocation == #context
-								ifTrue: [ debuggerSession contextClientElement: clientElement ]
-								ifFalse: [ self error: 'Unknown client element' ] ] ].
+								yourself).
+					windowNameMap at: clientElement editorWindowName put: debuggerSession ]
+				ifFalse: [ (windowNameMap at: clientElement editorWindowName ifAbsent: [  ])
+						ifNil: [ clientElement editorWindowLocation == #method
+								ifTrue: [ windowId := 11.
+									debuggerSession codeClientElement: clientElement ]
+								ifFalse: [ clientElement editorWindowLocation == #context
+										ifTrue: [ windowId := 21.
+											debuggerSession contextClientElement: clientElement ]
+										ifFalse: [ self error: 'Unknown client element' ] ].
+							windowNameMap
+								at: #debuggerSession
+								put: clientElement editorWindowLocation ]
+						ifNotNil: [ :editorWindowName | self halt ] ].
 			windowId ]
 			for: #editClientElement:;
 		registerService: [ :listElement :index :listSelections :aClient | 

@@ -10,4 +10,8 @@ compose
 			browser transmit
 				from: #fields;
 				toOutsidePort: #selection;
-				transformed: [ :assoc | assoc ifNotNil: [ assoc value ] ] ]
+				transformed: [ :assoc | 
+					assoc
+						ifNotNil: [ | ar |
+							ar := assoc value.
+							(ar at: 1) itemSelected: (ar at: 2) listSelections: nil ] ] ]
