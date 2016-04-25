@@ -3,11 +3,14 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"GTNumberOfInspectorPanes",
+		"PreferredExtent",
+		"RememberPreferredExtent",
+		"TDMinimalTodeInspectorEnabledStatus" ],
 	"commentStamp" : "",
 	"instvars" : [
-		"debugger" ],
-	"name" : "TDMinimalTodeObjectInspector",
+		"presentationFilter" ],
+	"name" : "TDMinimalTodeInspector",
 	"pools" : [
 		 ],
 	"super" : "GLMCompositePresentation",

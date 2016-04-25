@@ -2,6 +2,6 @@
 gtConstructMinimalTodeDebuggerInspectorIn: composite for: aDebugger
 	^ composite
 		custom:
-			((Smalltalk at: #TDMinimalTodeObjectInspector) new
+			((Smalltalk at: #TDMinimalTodeRawObjectInspector) new
 				debugger: aDebugger;
 				startOn: self session contextClientElement)
