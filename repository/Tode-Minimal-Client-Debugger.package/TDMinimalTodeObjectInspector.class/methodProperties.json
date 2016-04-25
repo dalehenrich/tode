@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"compose" : "dkh 4/24/2016 19:46",
+		"debugger" : "dkh 4/24/2016 19:34",
+		"debugger:" : "dkh 4/24/2016 19:34",
+		"evaluatorIn:" : "dkh 4/24/2016 19:33",
+		"fieldsFor:" : "dkh 4/24/2016 19:45",
+		"fieldsIn:" : "dkh 4/24/2016 19:38",
+		"iconFor:" : "dkh 4/24/2016 19:33",
+		"iconFor:error:" : "dkh 4/24/2016 19:33",
+		"printStringOf:" : "dkh 4/24/2016 19:33",
+		"stringWithoutInitialCommentFrom:" : "dkh 4/24/2016 19:33",
+		"updateInstanceVariable:from:basedOn:" : "dkh 4/24/2016 19:33",
+		"variableValuePairsFor:" : "dkh 4/24/2016 19:33" } }

@@ -1,6 +1,5 @@
 building presentations
 inspectorIn: aComposite on: anObject
-
-	^ anObject gtConstructDebuggerInspectorIn: aComposite for: self
+	^ anObject gtConstructMinimalTodeDebuggerInspectorIn: aComposite for: self
 	
 	
