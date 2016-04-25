@@ -1,6 +1,6 @@
 building
 compose
-	self when: GLMBrowserClosing send: #'actOnBrowserClosing:' to: self.
+	self when: GLMBrowserClosing send: #actOnBrowserClosing: to: self.
 	self tabulator
 		with: [ :browser | 
 			browser
@@ -22,4 +22,13 @@ compose
 			browser transmit
 				from: #stack port: #selection;
 				to: #inspector;
-				andShow: [ :composite | self inspectorIn: composite ] ]
+				andShow: [ :composite | 
+					composite pager
+						with: [ :b | 
+							b fixedSizePanes: 2.
+							b
+								show: [ :a :each | 
+									a dynamic
+										display: [ :x | 
+											GLMCompositePresentation new
+												with: [ :d | each gtConstructMinimalTodeDebuggerInspectorIn: d for: self ] ] ] ] ] ]
