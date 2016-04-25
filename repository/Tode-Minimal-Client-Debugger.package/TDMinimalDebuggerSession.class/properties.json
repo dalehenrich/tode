@@ -10,7 +10,6 @@
 		"client",
 		"stackClientElement",
 		"stack",
-		"selectedFrameIndex",
 		"codeClientElement",
 		"contextClientElement" ],
 	"name" : "TDMinimalDebuggerSession",

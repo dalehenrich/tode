@@ -4,9 +4,9 @@ compose
 	self tabulator
 		with: [ :browser | 
 			browser
-				row: #stack;
-				row: #code span: 2;
-				row: #inspector.
+				row: #stack span: 5;
+				row: #code span: 6;
+				row: #inspector span: 5.
 			browser transmit
 				to: #stack;
 				andShow: [ :a | self stackFrameListIn: a ].
