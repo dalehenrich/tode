@@ -1,3 +1,3 @@
 accessing
 selectedFrameIndex
-	^ selectedFrameIndex ifNil: [ selectedFrameIndex := 1 ]
+	^ selectedFrameIndex ifNil: [ selectedFrameIndex := stackClientElement firstList value ]

@@ -11,14 +11,10 @@ compose
 				to: #stack;
 				andShow: [ :a | self stackFrameListIn: a ].
 			browser transmit
-				from: #stack port: #entity;
+				from: #stack port: #selection;
 				to: #code port: #selection;
 				when: [ :session | session notNil ];
 				transformed: [ :session | self contextToSelectFrom: session ].
-			browser transmit
-				from: #stack port: #selection;
-				to: #stack port: #action;
-				transformed: [ :context | self selectionChanged: context ].
 			browser transmit
 				from: #stack port: #selection;
 				to: #code;

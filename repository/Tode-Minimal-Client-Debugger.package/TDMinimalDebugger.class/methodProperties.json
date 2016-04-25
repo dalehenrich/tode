@@ -1,21 +1,21 @@
 {
 	"class" : {
-		"example" : "dkh 4/24/2016 13:10" },
+		"example" : "dkh 4/24/2016 17:49" },
 	"instance" : {
 		"actOnBrowserClosing:" : "dkh 4/23/2016 17:43",
 		"browser" : "dkh 4/23/2016 17:38",
-		"compose" : "dkh 4/23/2016 17:42",
-		"contextToSelectFrom:" : "dkh 4/23/2016 17:52",
+		"compose" : "dkh 4/24/2016 15:46",
+		"contextToSelectFrom:" : "dkh 4/24/2016 15:35",
 		"currentContext" : "dkh 4/24/2016 10:58",
 		"inspectorIn:" : "dkh 4/24/2016 13:30",
-		"inspectorIn:on:" : "dkh 4/24/2016 13:31",
+		"inspectorIn:on:" : "dkh 4/24/2016 15:14",
 		"installCodeActionsFor:" : "dkh 4/24/2016 11:16",
-		"methodCodeIn:forContext:" : "dkh 4/24/2016 10:34",
+		"methodCodeIn:forContext:" : "dkh 4/24/2016 15:46",
 		"methodCodeWidgetIn:forContext:" : "dkh 4/24/2016 13:27",
 		"openOn:" : "dkh 4/24/2016 10:53",
 		"selectedContext" : "dkh 4/24/2016 11:15",
 		"selectionChanged:" : "dkh 4/24/2016 10:59",
 		"session" : "dkh 4/23/2016 17:36",
 		"session:" : "dkh 4/23/2016 17:36",
-		"sourceCode:" : "dkh 4/24/2016 10:55",
+		"sourceCode:" : "dkh 4/24/2016 15:46",
 		"stackFrameListIn:" : "dkh 4/23/2016 17:24" } }

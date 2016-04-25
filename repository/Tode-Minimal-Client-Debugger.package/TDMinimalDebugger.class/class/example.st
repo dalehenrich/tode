@@ -8,9 +8,13 @@ example
 		debugMode: true;
 		interactive: true;
 		registerService: [ :stonString :aClient | 
-			| windowId clientElement |
+			| clientElement |
 			clientElement := aClient objectSerializer fromString: stonString.
 			clientElement topez: aClient.
+			aClient editClientElement: clientElement ]
+			for: #editStonElement:;
+		registerService: [ :clientElement :aClient | 
+			| windowId |
 			clientElement editorWindowLocation == #debugger
 				ifTrue: [ windowId := 1.
 					debugger := self
@@ -24,9 +28,9 @@ example
 						ifTrue: [ debuggerSession codeClientElement: clientElement ]
 						ifFalse: [ clientElement editorWindowLocation == #context
 								ifTrue: [ debuggerSession contextClientElement: clientElement ]
-								ifFalse: [ self halt ] ] ].
+								ifFalse: [ self error: 'Unknown client element' ] ] ].
 			windowId ]
-			for: #editStonElement:;
+			for: #editClientElement:;
 		registerService: [ :listElement :index :listSelections :aClient | 
 			aClient session
 				send: #cull:cull:cull:cull:

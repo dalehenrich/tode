@@ -1,3 +1,4 @@
 building
-contextToSelectFrom: session
-	^ session selectFrame
+contextToSelectFrom: context
+
+	^ context selectFrame
