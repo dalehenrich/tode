@@ -14,4 +14,5 @@ compose
 					assoc
 						ifNotNil: [ | ar |
 							ar := assoc value.
-							(ar at: 1) itemSelected: (ar at: 2) listSelections: nil ] ] ]
+							(ar at: 1) itemSelected: (ar at: 2) listSelections: nil.
+							self debugger session contextClientElement ] ] ]

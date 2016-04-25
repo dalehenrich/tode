@@ -33,10 +33,8 @@ example
 										ifTrue: [ windowId := 21.
 											debuggerSession contextClientElement: clientElement ]
 										ifFalse: [ self error: 'Unknown client element' ] ].
-							windowNameMap
-								at: #debuggerSession
-								put: clientElement editorWindowLocation ]
-						ifNotNil: [ :editorWindowName | self halt ] ].
+							windowNameMap at: clientElement editorWindowLocation put: debuggerSession ]
+						ifNotNil: [ :editorWindowName | debuggerSession contextClientElement: clientElement ] ].
 			windowId ]
 			for: #editClientElement:;
 		registerService: [ :listElement :index :listSelections :aClient | 
