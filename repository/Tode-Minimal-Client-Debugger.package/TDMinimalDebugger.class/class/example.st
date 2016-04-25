@@ -24,6 +24,8 @@ example
 								stackClientElement: clientElement;
 								client: aClient;
 								yourself).
+					((debuggerSession debugger browser paneNamed: #stack) port: #selection)
+						value: (debuggerSession stack at: debuggerSession initialStackFrameIndex).
 					windowNameMap at: clientElement editorWindowName put: debuggerSession ]
 				ifFalse: [ (windowNameMap at: clientElement editorWindowName ifAbsent: [  ])
 						ifNil: [ clientElement editorWindowLocation == #method
