@@ -11,7 +11,8 @@
 		"stackClientElement",
 		"stack",
 		"codeClientElement",
-		"contextClientElement" ],
+		"contextClientElement",
+		"selectedFrameIndex" ],
 	"name" : "TDMinimalDebuggerSession",
 	"pools" : [
 		 ],

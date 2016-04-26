@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"example" : "dkh 4/25/2016 18:11" },
+		"example" : "dkh 4/25/2016 19:59" },
 	"instance" : {
 		"actOnBrowserClosing:" : "dkh 4/23/2016 17:43",
 		"browser" : "dkh 4/23/2016 17:38",
@@ -18,4 +18,4 @@
 		"session:" : "dkh 4/23/2016 17:36",
 		"sourceCode:" : "dkh 4/24/2016 15:46",
 		"stackFrameListIn:" : "dkh 4/25/2016 18:23",
-		"updateBrowser" : "dkh 4/25/2016 18:41" } }
+		"updateBrowser" : "dkh 4/25/2016 19:31" } }

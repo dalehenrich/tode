@@ -1,0 +1,3 @@
+accessing
+selectedFrameIndex
+	^ selectedFrameIndex 

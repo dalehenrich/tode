@@ -1,5 +1,5 @@
 response actions
 setList: textList
-self halt.
-self session stackTextList: textList.
-self session debugger updateBrowser
+	self session selectedFrameIndex: (self session stack indexOf: self).
+	self session stackTextList: textList.
+	self session debugger updateBrowser

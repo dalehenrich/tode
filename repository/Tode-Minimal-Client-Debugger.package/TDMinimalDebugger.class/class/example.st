@@ -24,8 +24,7 @@ example
 								stackClientElement: clientElement;
 								client: aClient;
 								yourself).
-					((debuggerSession debugger browser paneNamed: #stack) port: #selection)
-						value: (debuggerSession stack at: debuggerSession initialStackFrameIndex).
+					(debuggerSession stack at: debuggerSession initialStackFrameIndex) selectFrame.
 					windowNameMap at: clientElement editorWindowName put: debuggerSession ]
 				ifFalse: [ (windowNameMap at: clientElement editorWindowName ifAbsent: [  ])
 						ifNil: [ clientElement editorWindowLocation == #method
@@ -52,5 +51,13 @@ example
 		registerService:
 				[ :methodSourceElement :aClient | aClient session send: #value to: methodSourceElement getBlockOopType withArgs: #()	"return result to caller" ]
 			for: #getSourceForClientSourceElement:;
+		registerService: [ :listElement :aClient | 
+			| stonString |
+			stonString := aClient session
+				send: #value:
+				to: listElement listBlockOopType
+				withArgs: {listElement clientElementOopType}.
+			aClient objectSerializer fromString: stonString	"return result to caller" ]
+			for: #getListForClientListElement:;
 		evaluate: 'foo `3+4`';
 		yourself
