@@ -1,0 +1,3 @@
+accessing
+initialStackFrameIndex
+	^ stackClientElement firstList value

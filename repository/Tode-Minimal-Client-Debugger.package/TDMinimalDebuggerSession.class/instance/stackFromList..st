@@ -7,6 +7,7 @@ stackFromList: stackList
 			add:
 				(TDMinimalDebuggerContext new
 					session: self;
+					frameText: (stackList at: frameIndex);
 					frameIndex: frameIndex;
 					yourself) ].
 	^ newStack

@@ -11,6 +11,7 @@ handleResponseActions: action
 			ar := self session client objectSerializer fromString: action.
 			ar isArray
 				ifFalse: [ ^ ar ].
+				self halt.
 			1 to: ar size by: 2 do: [ :index | 
 				| sel |
 				sel := ar at: index.

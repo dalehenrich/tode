@@ -8,6 +8,7 @@ compose
 				row: #code span: 6;
 				row: #inspector span: 5.
 			browser transmit
+				fromOutsideEntityPort;
 				to: #stack;
 				andShow: [ :a | self stackFrameListIn: a ].
 			browser transmit

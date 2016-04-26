@@ -1,6 +1,6 @@
 building
 compose
-	self title: 'Context'.
+	self title: 'Method Context'.
 	self tabulator
 		with: [ :browser | 
 			browser row: #fields.
