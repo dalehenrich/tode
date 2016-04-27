@@ -18,7 +18,7 @@ handleResponseActions: action
 					ifNil: [ result := self perform: sel ]
 					ifNotNil: [ :arg | 
 						(arg isKindOf: TodeClientElement)
-							ifTrue: [ arg topez: self session client ].
+							ifTrue: [ arg topez: self client ].
 						result := self perform: sel with: arg ] ].
 			^ result ].
 	^ action
