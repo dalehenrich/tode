@@ -1,4 +1,5 @@
 building
 stackFrameListIn: a
 	^ a list
-		display: [ :session | session stack]
+		title: 'Stack';
+		display: [ :session | session stack ]

@@ -4,12 +4,14 @@
 	"instance" : {
 		"actOnBrowserClosing:" : "dkh 4/23/2016 17:43",
 		"browser" : "dkh 4/23/2016 17:38",
-		"compose" : "dkh 4/25/2016 18:07",
+		"compose" : "dkh 4/26/2016 18:46",
 		"contextToSelectFrom:" : "dkh 4/25/2016 16:05",
 		"currentContext" : "dkh 4/25/2016 16:43",
+		"dynamicDebuggingActions" : "dkh 4/26/2016 18:54",
 		"initialExtent" : "dkh 4/25/2016 16:41",
 		"inspectorIn:" : "dkh 4/24/2016 13:30",
 		"inspectorIn:on:" : "dkh 4/24/2016 18:37",
+		"installDebuggingActionsIn:" : "dkh 4/26/2016 18:45",
 		"methodCodeIn:forContext:" : "dkh 4/25/2016 15:32",
 		"methodCodeWidgetIn:forContext:" : "dkh 4/25/2016 16:48",
 		"openOn:" : "dkh 4/25/2016 14:02",
@@ -17,5 +19,5 @@
 		"session" : "dkh 4/23/2016 17:36",
 		"session:" : "dkh 4/23/2016 17:36",
 		"sourceCode:" : "dkh 4/24/2016 15:46",
-		"stackFrameListIn:" : "dkh 4/25/2016 18:23",
+		"stackFrameListIn:" : "dkh 4/26/2016 18:47",
 		"updateBrowser" : "dkh 4/25/2016 19:31" } }

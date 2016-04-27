@@ -1,6 +1,7 @@
 building
 compose
 	self when: GLMBrowserClosing send: #actOnBrowserClosing: to: self.
+	self installDebuggingActionsIn: self.
 	self tabulator
 		with: [ :browser | 
 			browser
