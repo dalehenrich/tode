@@ -1,3 +1,3 @@
-accessing
+stack
 selectedFrameIndex: anObject
 	selectedFrameIndex := anObject

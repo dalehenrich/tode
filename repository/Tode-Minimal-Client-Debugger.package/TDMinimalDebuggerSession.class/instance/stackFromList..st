@@ -1,4 +1,4 @@
-accessing
+stack
 stackFromList: stackList
 	| newStack |
 	newStack := OrderedCollection new.

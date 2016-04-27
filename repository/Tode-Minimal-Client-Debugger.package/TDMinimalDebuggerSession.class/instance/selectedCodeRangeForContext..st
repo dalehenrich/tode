@@ -1,3 +1,3 @@
-accessing
+code
 selectedCodeRangeForContext: aTDMinimalDebuggerContext
 	^ self codeClientElement getSelectedSourceInterval

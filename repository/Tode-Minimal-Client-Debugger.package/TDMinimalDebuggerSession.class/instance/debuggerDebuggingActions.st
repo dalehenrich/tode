@@ -1,5 +1,5 @@
-actions
-dynamicDebuggingActions
+debugger
+debuggerDebuggingActions
 	^ {(GLMGenericAction new
 		action: [ self session resume ];
 		icon: GLMUIThemeExtraIcons glamorousPlay;

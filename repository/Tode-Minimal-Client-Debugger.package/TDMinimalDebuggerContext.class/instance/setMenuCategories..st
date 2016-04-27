@@ -1,2 +1,0 @@
-response action stubs
-setMenuCategories: menuCategories

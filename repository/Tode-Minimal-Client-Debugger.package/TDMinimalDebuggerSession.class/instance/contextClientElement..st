@@ -1,3 +1,3 @@
-accessing
+context
 contextClientElement: anObject
 	contextClientElement := anObject

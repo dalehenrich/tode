@@ -8,7 +8,7 @@ handleResponseActions: action
 	action isString
 		ifTrue: [ 
 			| ar |
-			ar := self session client objectSerializer fromString: action.
+			ar := self client objectSerializer fromString: action.
 			ar isArray
 				ifFalse: [ ^ ar ].
 			1 to: ar size by: 2 do: [ :index | 

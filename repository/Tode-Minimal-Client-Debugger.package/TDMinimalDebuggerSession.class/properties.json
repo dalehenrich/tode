@@ -12,7 +12,8 @@
 		"stack",
 		"codeClientElement",
 		"contextClientElement",
-		"selectedFrameIndex" ],
+		"selectedFrameIndex",
+		"stackEnabledMenuCategories" ],
 	"name" : "TDMinimalDebuggerSession",
 	"pools" : [
 		 ],

@@ -1,3 +1,3 @@
-accessing
+stack
 stackClientElement: aClientListElement
 	stackClientElement := aClientListElement.

@@ -1,0 +1,3 @@
+actions
+debuggerDebuggingActions
+	^ self session debuggerDebuggingActions

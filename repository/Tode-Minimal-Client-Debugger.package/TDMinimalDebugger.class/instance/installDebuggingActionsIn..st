@@ -1,3 +1,3 @@
 actions
 installDebuggingActionsIn: aPresentation
-	aPresentation dynamicActions: [ :presentation | self dynamicDebuggingActions ]
+	aPresentation dynamicActions: [ :presentation | self debuggerDebuggingActions ]
