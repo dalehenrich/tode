@@ -1,8 +1,7 @@
 code
 codeDebuggingActions
-	^ {(GLMGenericAction new
-		action: [ self session resume ];
-		icon: GLMUIThemeExtraIcons glamorousPlay;
-		title: 'Proceed';
-		showTitle;
-		yourself).}
+	| menuSpec actions |
+	menuSpec := self codeClientElement menuActionSpec.
+	actions := OrderedCollection new.
+	self constructActionsFrom: menuSpec addTo: actions.
+	^ actions
