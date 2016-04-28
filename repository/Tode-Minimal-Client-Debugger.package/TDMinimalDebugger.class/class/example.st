@@ -80,7 +80,11 @@ example
 				to: listElement listBlockOopType
 				withArgs: {listElement clientElementOopType}.
 			aClient objectSerializer fromString: stonString	"return result to caller" ]
-			for: #getListForClientListElement:.
+			for: #getListForClientListElement:;
+		registerService: [ :windowId :aClient | nil	"noop for now" ] for: #refreshViewFor:;
+		registerService: [ :windowId :aClient | nil	"noop for now" ]
+			for: #clearUserEditFlagFor:;
+		yourself.
 	false
 		ifTrue: [ client session gciGemTrace: 2 ].
 	client evaluate: 'eval `3 halt + 4 halt + 3`'
