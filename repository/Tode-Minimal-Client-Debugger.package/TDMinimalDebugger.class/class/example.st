@@ -87,4 +87,4 @@ example
 		yourself.
 	false
 		ifTrue: [ client session gciGemTrace: 2 ].
-	client evaluate: 'eval `3 halt + 4 halt + 3`'
+	client evaluate: 'eval `3 halt + 4. #(1 2 3) do: [:i | self ifNil: [ 3 + 4] ]`'
