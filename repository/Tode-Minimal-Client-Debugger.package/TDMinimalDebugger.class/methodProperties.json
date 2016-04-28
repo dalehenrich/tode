@@ -4,10 +4,11 @@
 	"instance" : {
 		"actOnBrowserClosing:" : "dkh 4/23/2016 17:43",
 		"browser" : "dkh 4/23/2016 17:38",
+		"close" : "dkh 4/28/2016 16:19",
 		"codeDebuggingActions" : "dkh 4/27/2016 16:06",
 		"compose" : "dkh 4/28/2016 12:43",
 		"contextToSelectFrom:" : "dkh 4/25/2016 16:05",
-		"currentContext" : "dkh 4/25/2016 16:43",
+		"currentContext" : "dkh 4/28/2016 16:20",
 		"debuggerDebuggingActions" : "dkh 4/27/2016 11:05",
 		"initialExtent" : "dkh 4/25/2016 16:41",
 		"inspectorIn:" : "dkh 4/24/2016 13:30",
