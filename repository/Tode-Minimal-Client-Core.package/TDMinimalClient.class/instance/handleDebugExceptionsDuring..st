@@ -7,7 +7,6 @@ handleDebugExceptionsDuring: aBlock
 		on: TDBreakpointNotification , TDHaltNotification , TDErrorNotification
 		do: [ :ex | 
 			| errorNumber |
-			self halt.
 			(ex isKindOf: TDErrorNotification)
 				ifTrue: [ ^ #error ].
 			"error occurred during execution"

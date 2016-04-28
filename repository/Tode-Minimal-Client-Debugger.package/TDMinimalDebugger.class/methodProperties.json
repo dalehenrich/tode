@@ -1,11 +1,11 @@
 {
 	"class" : {
-		"example" : "dkh 4/27/2016 17:39" },
+		"example" : "dkh 4/28/2016 12:06" },
 	"instance" : {
 		"actOnBrowserClosing:" : "dkh 4/23/2016 17:43",
 		"browser" : "dkh 4/23/2016 17:38",
 		"codeDebuggingActions" : "dkh 4/27/2016 16:06",
-		"compose" : "dkh 4/26/2016 18:46",
+		"compose" : "dkh 4/28/2016 12:43",
 		"contextToSelectFrom:" : "dkh 4/25/2016 16:05",
 		"currentContext" : "dkh 4/25/2016 16:43",
 		"debuggerDebuggingActions" : "dkh 4/27/2016 11:05",
@@ -24,4 +24,4 @@
 		"sourceCode:" : "dkh 4/24/2016 15:46",
 		"stackDebuggingActions" : "dkh 4/27/2016 16:08",
 		"stackFrameListIn:" : "dkh 4/27/2016 10:17",
-		"updateBrowser" : "dkh 4/25/2016 19:31" } }
+		"updateBrowser" : "dkh 4/28/2016 12:46" } }
