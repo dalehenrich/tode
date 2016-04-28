@@ -5,9 +5,7 @@ example
 	| client debugger debuggerSession windowNameMap |
 	windowNameMap := Dictionary new.
 	client := (TDMinimalClient
-		loginWith:
-		(GsDevKit_home
-		sessionDescriptionNamed: SCIGemStoneServerConfigSpec defaultSessionName))
+		loginWith: (GsDevKit_home sessionDescriptionNamed: SCIGemStoneServerConfigSpec defaultSessionName))
 		debugMode: true;
 		interactive: true;
 		registerService: [ :stonString :aClient | 
@@ -26,8 +24,7 @@ example
 								stackClientElement: clientElement;
 								client: aClient;
 								yourself).
-					(debuggerSession stack at: debuggerSession initialStackFrameIndex)
-						selectFrame.
+					(debuggerSession stack at: debuggerSession initialStackFrameIndex) selectFrame.
 					windowNameMap at: clientElement editorWindowName put: debuggerSession ]
 				ifFalse: [ (windowNameMap at: clientElement editorWindowName ifAbsent: [  ])
 						ifNil: [ clientElement editorWindowLocation == #method
@@ -37,9 +34,7 @@ example
 										ifTrue: [ windowId := 21.
 											debuggerSession contextClientElement: clientElement ]
 										ifFalse: [ self error: 'Unknown client element' ] ].
-							windowNameMap
-								at: clientElement editorWindowLocation
-								put: debuggerSession ]
+							windowNameMap at: clientElement editorWindowLocation put: debuggerSession ]
 						ifNotNil: [ :editorWindowName | debuggerSession contextClientElement: clientElement ] ].
 			windowId ]
 			for: #editClientElement:;
@@ -53,11 +48,8 @@ example
 					false.
 					nil}	"return result to caller" ]
 			for: #itemSelectedForClientListElement:index:listSelections:;
-		registerService: [ :methodSourceElement :aClient | 
-			aClient session
-				send: #value
-				to: methodSourceElement getBlockOopType
-				withArgs: #()	"return result to caller" ]
+		registerService:
+				[ :methodSourceElement :aClient | aClient session send: #value to: methodSourceElement getBlockOopType withArgs: #()	"return result to caller" ]
 			for: #getSourceForClientSourceElement:;
 		registerService: [ :clientElement :aSymbolOrStringOrSpecial :selectionIndex :aClient | 
 			aClient session
@@ -70,14 +62,17 @@ example
 			for: #executeMenuActionForClientListElement:action:selectionIndex:;
 		registerService: [ :level :processOop :aClient | 
 			[ aClient
-				handleDebugExceptionsDuring:
-					[ aClient session stepOver: (GsGciOopType fromInteger: processOop) level: level ] ]
+				handleDebugExceptionsDuring: [ aClient session stepOver: (GsGciOopType fromInteger: processOop) level: level ] ]
 				on: GsGciClientForwarderSend
 				do: [ :ex | 
 					| result |
 					result := ex performSendNoForwarder: [  ].
 					^ ex resume: (Array with: #resume with: result) ] ]
 			for: #dbStep:forProcessOop:;
+		registerService: [ :processOop :aClient | 
+			aClient
+				handleDebugExceptionsDuring: [ aClient session continueContext: (GsGciOopType fromInteger: processOop) ] ]
+			for: #dbContinue:;
 		registerService: [ :listElement :aClient | 
 			| stonString |
 			stonString := aClient session
@@ -88,4 +83,4 @@ example
 			for: #getListForClientListElement:.
 	false
 		ifTrue: [ client session gciGemTrace: 2 ].
-	client evaluate: 'eval `3 halt +4`'
+	client evaluate: 'eval `3 halt + 4 halt + 3`'
