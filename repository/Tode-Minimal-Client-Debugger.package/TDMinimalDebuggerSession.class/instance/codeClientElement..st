@@ -4,4 +4,5 @@ codeClientElement: aClientSourceElement
 		session: self;
 		clientElement: aClientSourceElement;
 		yourself.
-	debugger sourceCode: minimalCodeClientElement source
+	debugger sourceCode: minimalCodeClientElement source.
+	debugger selectedSourceInterval: minimalCodeClientElement getSelectedSourceInterval

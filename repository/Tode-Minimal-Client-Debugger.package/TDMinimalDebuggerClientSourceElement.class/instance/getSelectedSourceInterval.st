@@ -1,0 +1,3 @@
+accessing
+getSelectedSourceInterval
+	^ self clientElement getSelectedSourceInterval
