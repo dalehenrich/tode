@@ -1,3 +1,3 @@
 actions
 codeDebuggingActions
-	^ self session codeDebuggingActions
+	^ self session codeClientElement codeDebuggingActions

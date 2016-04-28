@@ -1,3 +1,3 @@
 accessing
 name
-	^ self stackClientElement editorWindowLabel
+	^ self stackClientElement clientElement editorWindowLabel

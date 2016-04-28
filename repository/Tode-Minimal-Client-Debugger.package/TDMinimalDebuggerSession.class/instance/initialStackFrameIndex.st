@@ -1,3 +1,3 @@
 stack
 initialStackFrameIndex
-	^ stackClientElement firstList value
+	^ self stackClientElement clientElement firstList value

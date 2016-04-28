@@ -1,3 +1,3 @@
 actions
 stackDebuggingActions
-	^ self session stackDebuggingActions
+	^ self session stackClientElement stackDebuggingActions

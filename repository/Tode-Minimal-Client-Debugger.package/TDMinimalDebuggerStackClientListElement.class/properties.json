@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDMinimalDebuggerStackClientListElement",
+	"pools" : [
+		 ],
+	"super" : "TDMinimalDebuggerClientListElement",
+	"type" : "normal" }

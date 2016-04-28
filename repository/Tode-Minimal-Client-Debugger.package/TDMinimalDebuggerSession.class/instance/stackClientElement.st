@@ -1,3 +1,3 @@
 stack
 stackClientElement
-	^ stackClientElement
+	^ minimalStackClientElement

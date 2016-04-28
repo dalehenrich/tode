@@ -1,4 +1,4 @@
-private
+response actions
 handleResponseActions: action
 	| result |
 	action isSymbol

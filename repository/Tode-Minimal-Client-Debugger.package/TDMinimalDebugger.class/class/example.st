@@ -4,7 +4,7 @@ example
 
 	| debugger debuggerSession windowNameMap |
 	windowNameMap := Dictionary new.
-	(TDMinimalClient
+	^ (TDMinimalClient
 		loginWith: (GsDevKit_home sessionDescriptionNamed: SCIGemStoneServerConfigSpec defaultSessionName))
 		debugMode: true;
 		interactive: true;
@@ -51,6 +51,25 @@ example
 		registerService:
 				[ :methodSourceElement :aClient | aClient session send: #value to: methodSourceElement getBlockOopType withArgs: #()	"return result to caller" ]
 			for: #getSourceForClientSourceElement:;
+		registerService: [ :clientElement :aSymbolOrStringOrSpecial :selectionIndex :aClient | 
+			aClient session
+				send: #value:value:value:
+				to: clientElement menuActionBlockOopType
+				withArgs:
+					{aSymbolOrStringOrSpecial.
+					clientElement clientElementOopType.
+					selectionIndex}	"return result to caller" ]
+			for: #executeMenuActionForClientListElement:action:selectionIndex:;
+		registerService: [ :level :processOop :aClient | 
+			[ aClient
+				handleDebugExceptionsDuring:
+					[ aClient session gciStep: (GsGciOopType fromInteger: processOop) level:level ] ]
+				on: GsGciClientForwarderSend
+				do: [ :ex | 
+					| result |
+					result := ex performSendNoForwarder: [  ].
+					^ ex resume: (Array with: #resume with: result) ] ]
+			for: #dbStep:forProcessOop:;
 		registerService: [ :listElement :aClient | 
 			| stonString |
 			stonString := aClient session
@@ -59,5 +78,4 @@ example
 				withArgs: {listElement clientElementOopType}.
 			aClient objectSerializer fromString: stonString	"return result to caller" ]
 			for: #getListForClientListElement:;
-		evaluate: 'foo `3+4`';
-		yourself
+		evaluate: 'eval `3 halt +4`'

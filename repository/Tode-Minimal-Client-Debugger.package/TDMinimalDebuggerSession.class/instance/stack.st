@@ -1,3 +1,3 @@
 stack
 stack
-	^ stack ifNil: [ stack := self stackFromList: stackClientElement firstList key ]
+	^ stack ifNil: [ stack := self stackFromList: self stackClientElement clientElement firstList key ]

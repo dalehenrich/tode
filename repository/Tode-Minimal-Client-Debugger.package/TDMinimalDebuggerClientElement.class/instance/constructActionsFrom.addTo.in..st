@@ -31,7 +31,7 @@ constructActionsFrom: menuSpec addTo: actions in: category
 											menuCategory := spec at: 5.
 											menuEnabled := spec at: 6.
 											(spec at: 4) ifNotNil: [ sel := (spec at: 4) asSymbol ].	"executeLocalMenuAction:keyboardEvent:?"
-											(self stackEnabledMenuCategories includes: menuCategory)
+											(self enabledMenuCategories includes: menuCategory)
 												ifTrue: [ actionBlock := [ self perform: sel withArguments: {(spec at: 3)} ] ]
 												ifFalse: [ actionBlock := [  ].
 													label := Text string: label attribute: TextColor gray ].

@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"clientElement",
+		"enabledMenuCategories",
+		"session" ],
+	"name" : "TDMinimalDebuggerClientElement",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

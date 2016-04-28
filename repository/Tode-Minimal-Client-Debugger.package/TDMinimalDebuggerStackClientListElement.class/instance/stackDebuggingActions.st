@@ -1,7 +1,7 @@
 stack
 stackDebuggingActions
 	| menuSpec actions |
-	menuSpec := self stackClientElement menuActionSpec.
+	menuSpec := self clientElement menuActionSpec.
 	actions := OrderedCollection new.
 	self constructActionsFrom: menuSpec addTo: actions.
 	^ actions

@@ -8,12 +8,11 @@
 	"instvars" : [
 		"debugger",
 		"client",
-		"stackClientElement",
+		"minimalStackClientElement",
 		"stack",
-		"codeClientElement",
+		"minimalCodeClientElement",
 		"contextClientElement",
-		"selectedFrameIndex",
-		"stackEnabledMenuCategories" ],
+		"selectedFrameIndex" ],
 	"name" : "TDMinimalDebuggerSession",
 	"pools" : [
 		 ],
