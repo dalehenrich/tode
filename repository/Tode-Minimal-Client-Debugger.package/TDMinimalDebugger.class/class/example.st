@@ -95,6 +95,14 @@ example
 			aClient
 				handleDebugExceptionsDuring: [ aClient session continueContext: (GsGciOopType fromInteger: processOop) ] ]
 			for: #dbContinue:;
+		registerService: [ :sourceElement :sourceString :aClient | 
+			aClient session
+				send: #value:value:
+				to: sourceElement setBlockOopType
+				withArgs:
+					{sourceString.
+					sourceElement clientElementOopType}	"return result to caller" ]
+			for: #setSourceForClientSourceElement:source:;
 		registerService: [ :listElement :aClient | 
 			| stonString |
 			stonString := aClient session
@@ -103,8 +111,17 @@ example
 				withArgs: {listElement clientElementOopType}.
 			aClient objectSerializer fromString: stonString	"return result to caller" ]
 			for: #getListForClientListElement:;
-		registerService: [ :windowId :aClient | nil	"noop for now" ] for: #refreshViewFor:;
-		registerService: [ :windowId :aClient | nil	"noop for now" ]
+		registerService: [ :windowId :aClient | 
+			windowId == 1
+				ifTrue: [ debuggerSession debugger refreshView ]
+				ifFalse: [ self halt ].
+			nil ]
+			for: #refreshViewFor:;
+		registerService: [ :windowId :aClient | 
+			windowId == 11
+				ifTrue: [ debuggerSession debugger clearUserEditFlag ]
+				ifFalse: [ self halt ].
+			nil	"noop for now" ]
 			for: #clearUserEditFlagFor:;
 		yourself.
 	false
