@@ -1,15 +1,15 @@
 response actions
 executeMenuAction: actionSymbol
-	| action theEditor numArgs |
+	| action codePresentation numArgs |
 	numArgs := actionSymbol numArgs.
-	theEditor := self theEditor.
+	codePresentation := self debugger codePresentation.
 	action := numArgs == 2
-		ifTrue: [ 
-			theEditor selectLine.
-			self clientElement executeMenuAction: actionSymbol selectedText: theEditor selection asString ]
-		ifFalse: [ 
+		ifTrue: [ codePresentation selectLine.
 			self clientElement
 				executeMenuAction: actionSymbol
-				selectionInterval: theEditor selectionInterval
-				dirty: self morph hasUnacceptedEdits ].
+				selectedText: codePresentation selectedText asString ]
+		ifFalse: [ self clientElement
+				executeMenuAction: actionSymbol
+				selectionInterval: codePresentation selectionInterval
+				dirty: self debugger codePresentation hasUnacceptedEdits ].
 	^ self handleResponseActions: action

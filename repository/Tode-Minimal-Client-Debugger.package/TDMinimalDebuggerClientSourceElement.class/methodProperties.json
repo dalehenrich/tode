@@ -2,7 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
+		"cancel" : "dkh 4/29/2016 11:29",
 		"codeDebuggingActions" : "dkh 4/27/2016 15:48",
-		"executeMenuAction:" : "dkh 4/27/2016 15:44",
+		"copySelection" : "dkh 4/29/2016 11:14",
+		"cutSelection" : "dkh 4/29/2016 11:31",
+		"executeLocalMenuAction:" : "dkh 4/29/2016 11:12",
+		"executeLocalMenuAction:keyboardEvent:" : "dkh 4/29/2016 11:19",
+		"executeMenuAction:" : "dkh 4/29/2016 11:23",
 		"getSelectedSourceInterval" : "dkh 4/28/2016 15:25",
+		"insertAfterSelection:" : "dkh 4/29/2016 11:00",
+		"pasteRecent" : "dkh 4/29/2016 11:32",
+		"pasteSelection" : "dkh 4/29/2016 11:32",
+		"refreshView" : "dkh 4/29/2016 11:38",
 		"source" : "dkh 4/27/2016 15:56" } }

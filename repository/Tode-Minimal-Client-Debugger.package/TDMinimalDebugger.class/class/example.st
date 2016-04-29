@@ -60,6 +60,28 @@ example
 					clientElement clientElementOopType.
 					selectionIndex}	"return result to caller" ]
 			for: #executeMenuActionForClientListElement:action:selectionIndex:;
+		registerService: [ :clientElement :aSymbolOrStringOrSpecial :selectedString :aClient | 
+			aClient session
+				send: #value:value:value:value:value:
+				to: clientElement menuActionBlockOopType
+				withArgs:
+					{aSymbolOrStringOrSpecial.
+					clientElement clientElementOopType.
+					selectedString.
+					nil.
+					nil}	"return result to caller" ]
+			for: #executeMenuActionForClientSourceElement:action:selectedText:;
+		registerService: [ :clientElement :aSymbolOrStringOrSpecial :selectionInterval :dirty :aClient | 
+			aClient session
+				send: #value:value:value:value:value:
+				to: clientElement menuActionBlockOopType
+				withArgs:
+					{aSymbolOrStringOrSpecial.
+					clientElement clientElementOopType.
+					selectionInterval first.
+					selectionInterval last.
+					dirty}	"return result to caller" ]
+			for: #executeMenuActionForClientSourceElement:action:selectionInterval:dirty:;
 		registerService: [ :level :processOop :aClient | 
 			[ aClient
 				handleDebugExceptionsDuring: [ aClient session stepOver: (GsGciOopType fromInteger: processOop) level: level ] ]

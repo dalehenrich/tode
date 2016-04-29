@@ -1,4 +1,4 @@
-protocol
+accessing
 initialExtent
 	"This code was taken from the standard debugger to get the same behavior. Fell free to refactor"
 
