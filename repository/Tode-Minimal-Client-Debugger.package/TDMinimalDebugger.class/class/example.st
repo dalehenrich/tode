@@ -131,6 +131,9 @@ example
 		yourself.
 	false
 		ifTrue: [ client session gciGemTrace: 2 ].
-	answer := client evaluate: 'eval `3 halt + 4. #(1 2 3 4) do: [:i | self ifNil: [ 3 + 4] ]`' ]
+	true
+		ifTrue: [ answer := client
+				evaluate: 'eval `3 halt + 4. #(1 2 3 4) do: [:i | self ifNil: [ 3 + 4] ]`' ]
+		ifFalse: [ answer := client evaluate: 'foo' ] ]
 		ensure: [ client ifNotNil: [ client logout ] ].
 	^ answer

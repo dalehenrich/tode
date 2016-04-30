@@ -1,0 +1,3 @@
+accessing
+convertTDEvaluateTokenResponseToText: objectSerializer
+	^ self convertTDEvaluateTokenResponseToText
