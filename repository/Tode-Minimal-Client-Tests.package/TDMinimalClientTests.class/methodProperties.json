@@ -10,6 +10,7 @@
 		"setUp" : "dkh 4/19/2016 09:51",
 		"tearDown" : "dkh 4/19/2016 06:05",
 		"testChoiceInteraction" : "dkh 4/19/2016 13:47",
+		"testClientListElementMenus" : "dkh 4/20/2016 20:32",
 		"testCommand" : "dkh 4/19/2016 10:12",
 		"testCommandError" : "dkh 4/19/2016 16:29",
 		"testConfirmInteraction" : "dkh 4/19/2016 13:59",

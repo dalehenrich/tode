@@ -5,7 +5,11 @@ dbContinue
   processOop := stack process asOop.
   self topez disableSessionMethods.
   processResult := self topez topezClientForwarder dbContinue: processOop.
-  processTerminated := (self debugExceptionSymbols includes: processResult) not.
+  processResult isString
+    ifTrue: [ 
+      processResult := self objectSerializer fromString: processResult.
+      processTerminated := false ]
+    ifFalse: [ processTerminated := (self debugExceptionSymbols includes: processResult) not ].
   self topez ensureSessionMethodsEnabled.
   stack resetFrames.
   ^ self dbFinishStep

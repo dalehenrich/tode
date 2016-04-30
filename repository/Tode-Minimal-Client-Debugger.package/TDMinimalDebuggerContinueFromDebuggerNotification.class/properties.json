@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger-Exceptions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"returnValue" ],
+	"name" : "TDMinimalDebuggerContinueFromDebuggerNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

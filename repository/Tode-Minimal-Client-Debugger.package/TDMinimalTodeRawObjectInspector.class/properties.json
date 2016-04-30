@@ -1,0 +1,15 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger-Inspector",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"debugger",
+		"clientElementMap" ],
+	"name" : "TDMinimalTodeRawObjectInspector",
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

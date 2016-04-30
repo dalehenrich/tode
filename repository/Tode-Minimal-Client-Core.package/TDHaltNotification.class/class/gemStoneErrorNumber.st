@@ -1,3 +1,3 @@
 private
 gemStoneErrorNumber
-	^ 2318
+	^ 2709

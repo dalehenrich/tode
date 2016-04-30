@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger-Announcements",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"insertion" ],
+	"name" : "TDMinimalDebuggerInsertAfterSelection",
+	"pools" : [
+		 ],
+	"super" : "Announcement",
+	"type" : "normal" }

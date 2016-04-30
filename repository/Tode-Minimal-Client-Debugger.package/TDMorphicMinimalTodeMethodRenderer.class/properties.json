@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger-Renderer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDMorphicMinimalTodeMethodRenderer",
+	"pools" : [
+		 ],
+	"super" : "GLMMorphicPharoCodeRenderer",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+*Tode-Minimal-Client-Debugger
+renderMinimalTodeMethodPresentation: aSmalltalkMethodPresentation 
+	^ TDMorphicMinimalTodeMethodRenderer render: aSmalltalkMethodPresentation from: self

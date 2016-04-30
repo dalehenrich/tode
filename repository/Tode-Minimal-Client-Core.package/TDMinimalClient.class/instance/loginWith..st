@@ -37,4 +37,9 @@ loginWith: aSessionDescription
 	authorId := self sessionDescription authorId.
 	authorId isEmpty
 		ifTrue: [ authorId := Author fullName ].
-	self session send: #authorInitials: to: todeServerOopType withArgs: {authorId}
+	self session send: #authorInitials: to: todeServerOopType withArgs: {authorId}.
+	self effectiveApiVersion >= '1.3.0' asMetacelloVersionNumber
+		ifTrue: [ self session
+				send: #effectiveApiVersion:
+				to: todeServerOopType
+				withArgs: {self effectiveApiVersion asString} ]

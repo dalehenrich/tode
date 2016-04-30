@@ -1,0 +1,17 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"clientProcess",
+		"resuming",
+		"resumeResult",
+		"openedOnUIProcess" ],
+	"name" : "TDMinimalDebugger",
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

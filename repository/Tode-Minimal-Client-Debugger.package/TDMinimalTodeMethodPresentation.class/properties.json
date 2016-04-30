@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Minimal-Client-Debugger-Presentations",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"highlightSmalltalkContext" ],
+	"name" : "TDMinimalTodeMethodPresentation",
+	"pools" : [
+		 ],
+	"super" : "GLMRubricSmalltalkCodePresentation",
+	"type" : "normal" }
