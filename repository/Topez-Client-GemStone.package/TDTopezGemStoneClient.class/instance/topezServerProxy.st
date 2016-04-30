@@ -41,6 +41,12 @@ topezServerProxy
 			authorId isEmpty
 				ifTrue: [ authorId := Author fullName ].
 			self session rawReceiverNB: topezServerProxy perform: #authorInitials: withArgs: {authorId}.
+			self effectiveApiVersion > '1.3.0' asMetacelloVersionNumber
+				ifTrue: [ 
+					self session
+						rawReceiverNB: topezServerProxy
+						perform: #effectiveApiVersion:
+						withArgs: {(self effectiveApiVersion asString)} ].
 			self sessionDescription backupDirectory isEmpty not
 				ifTrue: [ 
 					[ 
