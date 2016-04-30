@@ -8,7 +8,8 @@
 	"instvars" : [
 		"clientProcess",
 		"resuming",
-		"resumeResult" ],
+		"resumeResult",
+		"openedOnUIProcess" ],
 	"name" : "TDMinimalDebugger",
 	"pools" : [
 		 ],

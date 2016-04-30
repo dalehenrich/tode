@@ -3,4 +3,6 @@ closeAndResume: aReturnValue
 	self resuming: true.
 	self close.
 	resumeResult := aReturnValue.
-	clientProcess resume
+	self openedOnUIProcess
+		ifTrue: [ UIManager default resumeUIProcess: clientProcess ]
+		ifFalse: [ clientProcess resume ]

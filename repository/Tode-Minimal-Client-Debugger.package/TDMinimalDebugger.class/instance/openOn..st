@@ -2,7 +2,8 @@ scripting opening
 openOn: aTDMinimalDebuggerSession
 	clientProcess := Processor activeProcess.
 	UIManager default uiProcess == clientProcess
-		ifTrue: [ UIManager default spawnNewProcess ].
+		ifTrue: [ openedOnUIProcess := true.
+			UIManager default spawnNewProcess ].
 	UIManager default
 		defer: [ aTDMinimalDebuggerSession debugger: self.
 			(super openOn: aTDMinimalDebuggerSession)
