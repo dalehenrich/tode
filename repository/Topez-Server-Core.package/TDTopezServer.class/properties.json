@@ -24,7 +24,8 @@
 		"sessionDescription",
 		"serverTodeRoot",
 		"objectSerializer",
-		"persistentElementCache" ],
+		"persistentElementCache",
+		"effectiveApiVersion" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

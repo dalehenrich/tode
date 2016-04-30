@@ -29,7 +29,7 @@
 		"resetForInstall" : "dkh 04/26/2014 09:39",
 		"rootNode" : "DataCurator 11/28/2012 05:40",
 		"select" : "dkh 05/28/2013 06:19",
-		"todeServerAPIVersionString" : "dkh 10/19/2015 20:40",
+		"todeServerAPIVersionString" : "dkh 04/29/2016 20:02",
 		"toolInstanceFor:" : "dkh 12/18/2013 18:55" },
 	"instance" : {
 		"abortTransaction" : "dkh 08/18/2015 11:57",
@@ -68,6 +68,8 @@
 		"editElement:" : "dkh 06/25/2015 16:06",
 		"editorNodeClassNameFor:aspect:do:" : "dkh 12/06/2013 10:33",
 		"editorNodeFor:aspect:do:" : "dkh 05/28/2013 07:37",
+		"effectiveApiVersion" : "dkh 04/29/2016 19:44",
+		"effectiveApiVersion:" : "dkh 04/29/2016 19:42",
 		"enableFormatting" : "dkh 09/15/2013 20:50",
 		"enableFormatting:" : "dkh 09/15/2013 20:57",
 		"enableProtocol" : "dkh 09/22/2013 09:42",
