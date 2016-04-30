@@ -12,5 +12,5 @@ openDebugger
         debugProcess: process exception: exception;
         windowLabel: exception description;
         yourself.
-      debugger open ].
+      ^ debugger open ].
   ^ nil
