@@ -1,3 +1,3 @@
 stack
 initialStackFrameIndex
-	^ self stackClientElement clientElement firstList value
+	^ self stackClientElement clientElement firstList value ifNil: [ 1 ]

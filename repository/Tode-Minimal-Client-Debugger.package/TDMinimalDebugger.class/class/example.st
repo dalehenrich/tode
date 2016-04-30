@@ -2,8 +2,8 @@ example
 example
 	"self example"
 
-	| client debugger debuggerSession windowNameMap |
-	windowNameMap := Dictionary new.
+	| client debuggerSession windowNameMap answer |
+	[ windowNameMap := Dictionary new.
 	client := (TDMinimalClient
 		loginWith: (GsDevKit_home sessionDescriptionNamed: SCIGemStoneServerConfigSpec defaultSessionName))
 		debugMode: true;
@@ -17,15 +17,19 @@ example
 		registerService: [ :clientElement :aClient | 
 			| windowId |
 			clientElement editorWindowLocation == #debugger
-				ifTrue: [ windowId := 1.
-					debugger := self
-						openOn:
-							(debuggerSession := TDMinimalDebuggerSession new
-								stackClientElement: clientElement;
-								client: aClient;
-								yourself).
-					(debuggerSession stack at: debuggerSession initialStackFrameIndex) selectFrame.
-					windowNameMap at: clientElement editorWindowName put: debuggerSession ]
+				ifTrue: [ | result |
+					windowId := 1.
+					debuggerSession := TDMinimalDebuggerSession new
+						stackClientElement: clientElement;
+						client: aClient;
+						yourself.
+					windowNameMap at: clientElement editorWindowName put: debuggerSession.
+					result := self openOn: debuggerSession.
+					result := aClient objectSerializer toString: debuggerSession debugger resumeResult.
+					TDMinimalDebuggerContinueFromDebuggerNotification new
+						returnValue: result;
+						signal.
+					nil	"should only happen when no handler exits" ]
 				ifFalse: [ (windowNameMap at: clientElement editorWindowName ifAbsent: [  ])
 						ifNil: [ clientElement editorWindowLocation == #method
 								ifTrue: [ windowId := 11.
@@ -93,7 +97,8 @@ example
 			for: #dbStep:forProcessOop:;
 		registerService: [ :processOop :aClient | 
 			aClient
-				handleDebugExceptionsDuring: [ aClient session continueContext: (GsGciOopType fromInteger: processOop) ] ]
+				handleDebugExceptionsDuring: [ aClient session continueContext: (GsGciOopType fromInteger: processOop) ]
+			"This should be a serialized object that is the return value for the original call" ]
 			for: #dbContinue:;
 		registerService: [ :sourceElement :sourceString :aClient | 
 			aClient session
@@ -126,4 +131,6 @@ example
 		yourself.
 	false
 		ifTrue: [ client session gciGemTrace: 2 ].
-	client evaluate: 'eval `3 halt + 4. #(1 2 3) do: [:i | self ifNil: [ 3 + 4] ]`'
+	answer := client evaluate: 'eval `3 halt + 4. #(1 2 3 4) do: [:i | self ifNil: [ 3 + 4] ]`' ]
+		ensure: [ client ifNotNil: [ client logout ] ].
+	^ answer

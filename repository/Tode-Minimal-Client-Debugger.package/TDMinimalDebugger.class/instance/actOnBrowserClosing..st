@@ -1,3 +1,4 @@
 callbacks
 actOnBrowserClosing: ann
-	self session logout
+	self resuming
+		ifFalse: [ self session logout ]

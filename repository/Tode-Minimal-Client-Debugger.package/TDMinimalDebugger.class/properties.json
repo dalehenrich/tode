@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"clientProcess",
+		"resuming",
+		"resumeResult" ],
 	"name" : "TDMinimalDebugger",
 	"pools" : [
 		 ],
