@@ -11,6 +11,7 @@ clientApiVersion
 
 	"1.2.0 - add additional instance variables (netLDIPort and netLDIPortRange) to TDSessionDescription"
 
-	"1.3.0 - debugger uses #closeWith: callback when dbContinue runs off the end"
+	"1.3.0 - debugger uses #closeWith: callback when dbContinue runs off the end,
+           server-side effectiveApiVersion"
 
 	^ '1.3.0' asMetacelloVersionNumber
