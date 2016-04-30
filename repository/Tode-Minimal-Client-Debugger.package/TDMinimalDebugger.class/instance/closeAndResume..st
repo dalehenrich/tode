@@ -4,5 +4,6 @@ closeAndResume: aReturnValue
 	self close.
 	resumeResult := aReturnValue.
 	self openedOnUIProcess
-		ifTrue: [ UIManager default resumeUIProcess: clientProcess ]
+		ifTrue: [ UIManager default resumeUIProcess: clientProcess.
+			Processor activeProcess suspend ]
 		ifFalse: [ clientProcess resume ]
