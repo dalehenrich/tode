@@ -1,5 +1,5 @@
 {
-	"category" : "Tode-Minimal-Client-Core",
+	"category" : "Tode-Minimal-Client-Core-Exceptions",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -10,5 +10,5 @@
 	"name" : "TDHaltNotification",
 	"pools" : [
 		 ],
-	"super" : "TDRuntimeNotification",
+	"super" : "TDNotification",
 	"type" : "normal" }
