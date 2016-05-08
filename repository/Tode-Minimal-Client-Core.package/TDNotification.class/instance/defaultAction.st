@@ -4,9 +4,8 @@ defaultAction
 	self clientObj
 		exception: self exceptionOopType
 		context: self contextOopType.
-	self clientObj interactive not
-		ifTrue: [ ^ {#logStack.
-			self description} ].
+	self clientObj interactive
+		ifFalse: [ ^self defaultRuntimeError ].
 	answer := (TDInteractiveChooseExceptionHandling
 		message: (self description withNoLineLongerThan: 80)) signal.
 	answer

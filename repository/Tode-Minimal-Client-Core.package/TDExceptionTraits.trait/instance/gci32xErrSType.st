@@ -1,0 +1,3 @@
+accessing
+gci32xErrSType
+	self explicitRequirement

@@ -1,15 +1,17 @@
 {
-	"category" : "Tode-Minimal-Client-Core",
+	"category" : "Tode-Minimal-Client-Core-Exceptions",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "TDExceptionTraits classTrait",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		"gciSession",
 		"gci32xErrSType" ],
-	"name" : "TDRuntimeNotification",
+	"name" : "TDNotification",
 	"pools" : [
 		 ],
 	"super" : "Notification",
+	"traitcomposition" : "TDExceptionTraits",
 	"type" : "normal" }

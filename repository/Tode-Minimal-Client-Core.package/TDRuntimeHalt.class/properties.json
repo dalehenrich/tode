@@ -1,0 +1,17 @@
+{
+	"category" : "Tode-Minimal-Client-Core-Exceptions",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "TDExceptionTraits classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"gciSession",
+		"gci32xErrSType" ],
+	"name" : "TDRuntimeHalt",
+	"pools" : [
+		 ],
+	"super" : "Halt",
+	"traitcomposition" : "TDExceptionTraits",
+	"type" : "normal" }

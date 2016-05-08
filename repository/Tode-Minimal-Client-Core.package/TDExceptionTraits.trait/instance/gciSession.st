@@ -1,0 +1,3 @@
+accessing
+gciSession
+	self explicitRequirement

@@ -4,7 +4,7 @@ testDebugCommandError_4
 
 	| cmdResult |
 	self client
-		debugMode: true;
+		debugMode: false;
 		interactive: false.
 	cmdResult := self client evaluate: 'foo `3+4`'.
-	self assert: cmdResult asString = 'Error stack logged to Transcript...'
+	self assert: cmdResult asString = 'tODE ERROR: Unknown command: ''foo'''
