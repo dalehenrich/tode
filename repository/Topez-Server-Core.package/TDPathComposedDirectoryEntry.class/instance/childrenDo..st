@@ -1,6 +1,6 @@
 querying
 childrenDo: aBlock
-  self node
+  (self nodeIfNotPresnt: [ ^ self ])
     childrenDo: [ :childNode | 
       (self selectBlock value: childNode)
         ifTrue: [ aBlock value: childNode ] ]
