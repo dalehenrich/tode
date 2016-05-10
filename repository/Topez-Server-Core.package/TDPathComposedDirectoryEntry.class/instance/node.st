@@ -1,3 +1,3 @@
 accessing
 node
-  ^ self topez lookup: self path
+  ^ self nodeIfNotPresnt: [ self error: 'Node not present' ]
