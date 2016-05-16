@@ -1,3 +1,3 @@
-*topez-common-core
+*tode-client-common
 asOopTypeWith: anOopTypeClass
     ^ anOopTypeClass fromInteger: self
