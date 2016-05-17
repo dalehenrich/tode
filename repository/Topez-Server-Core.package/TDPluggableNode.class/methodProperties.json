@@ -40,6 +40,5 @@
 		"rsyncChildNamed:ifAbsent:" : "dkh 11/10/2013 22:30",
 		"rsyncCopyLeafNode:preserveTimes:" : "dkh 11/26/2013 11:11",
 		"rsyncCopyNodeChildrenUsing:" : "dkh 11/26/2013 11:02",
-		"rsyncCopyNodeUsing:" : "dkh 11/26/2013 11:00",
 		"stonExportUsing:to:" : "dkh 09/14/2013 02:03",
 		"stonOn:" : "dkh 05/17/2013 18:23" } }

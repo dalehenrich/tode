@@ -21,5 +21,8 @@ printOn: aStream
     ifTrue: [ 
       aStream
         nextPutAll:
-          ' ' , (self process _localStepPointStringAt: self frameIndex) ]
-    ifFalse: [ aStream nextPutAll: ' ' , (self process _stepPointStringAt: self frameIndex) ]
+          ' ' , (self process perform: #'_localStepPointStringAt:' with: self frameIndex) ]
+    ifFalse: [ 
+      aStream
+        nextPutAll:
+          ' ' , (self process perform: #'_stepPointStringAt:' with: self frameIndex) ]

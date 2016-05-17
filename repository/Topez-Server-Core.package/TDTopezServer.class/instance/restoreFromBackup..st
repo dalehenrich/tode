@@ -9,5 +9,6 @@ restoreFromBackup: backupPath
 
   | status |
   status := self topezClientForwarder
-    executeRestoreFromBackupFromClient: backupPath.
+    perform: #'executeRestoreFromBackupFromClient:'
+    with: backupPath.
   ^ self error: 'Restore from backup failed: ' , status

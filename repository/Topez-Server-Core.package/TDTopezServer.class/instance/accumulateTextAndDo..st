@@ -23,4 +23,6 @@ accumulateTextAndDo: accumulateBlock
   self redirectObjIn: redirectCopy.
   res ].
   self accumulateBlocks add: block.
-  self topezClientForwarder accumulateTextAndServerDo: block asOop
+  self topezClientForwarder
+    perform: #'accumulateTextAndServerDo:'
+    with: block asOop

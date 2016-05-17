@@ -18,5 +18,5 @@ commitTransaction
         cr;
         show: 'AUTOCOMMIT DISABLED'.
       self serverStatus autoCommit: false.
-      self topezClientForwarder autoCommitDisabled.
+      self topezClientForwarder perform: #'autoCommitDisabled'.
       ex pass ]

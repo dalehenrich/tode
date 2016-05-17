@@ -1,5 +1,5 @@
 client forwarder
 spawnWindow
   | topezOop |
-  topezOop := self topezClientForwarder spawnWindowFromServer.
+  topezOop := self topezClientForwarder perform: #'spawnWindowFromServer'.
   ^ Object _objectForOop: topezOop
