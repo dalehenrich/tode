@@ -12,8 +12,10 @@ dbStep: stepDirective
   [ 
   TranscriptProxy registerTranscriptClientForwarder: nil.
   processResult := self topez topezClientForwarder
-    dbStep: level
-    forProcessOop: processOop ]
+    perform: #'dbStep:forProcessOop:'
+    withArguments:
+      {level.
+      processOop} ]
     ensure: [ TranscriptProxy registerTranscriptClientForwarder: transcriptProxy ].
   processTerminated := (self debugExceptionSymbols includes: processResult) not.
   self topez ensureSessionMethodsEnabled.

@@ -4,7 +4,9 @@ dbContinue
   stack := self theStack.
   processOop := stack process asOop.
   self topez disableSessionMethods.
-  processResult := self topez topezClientForwarder dbContinue: processOop.
+  processResult := self topez topezClientForwarder
+    perform: #'dbContinue:'
+    with: processOop.
   processResult isSymbol
     ifTrue: [ processTerminated := (self debugExceptionSymbols includes: processResult) not ]
     ifFalse: [ 
