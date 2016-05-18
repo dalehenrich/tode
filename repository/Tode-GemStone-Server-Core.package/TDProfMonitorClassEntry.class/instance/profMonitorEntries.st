@@ -11,8 +11,10 @@ profMonitorEntries
             valuesDo: [ :d2 | 
               d2
                 valuesDo: [ :e | 
-                  e cclass isNil
-                    ifFalse: [ tallySet add: e ] ] ] ] ].
+                  (e respondsTo: #'cclass')
+                    ifTrue: [ 
+                      (e perform: #'cclass') isNil
+                        ifFalse: [ tallySet add: e ] ] ] ] ] ].
   entries := (tallySet sortDescending: self sortKey)
     collect: [ :each | 
       TDProfMonitorObjectCreationEntry new
