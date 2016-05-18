@@ -51,6 +51,8 @@ baseline: spec
     for: #'pharo'
     do: [ 
       spec
+        package: 'Topez-Common-Core' with: [ spec includes: #('Topez-Common-Pharo-Core') ];
+        package: 'Topez-Common-Pharo-Core' with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Pharo-Common';
         package: 'Tode-Pharo-Server-Core'
           with: [ 
