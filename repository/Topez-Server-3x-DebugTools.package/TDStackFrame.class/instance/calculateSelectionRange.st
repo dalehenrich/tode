@@ -4,7 +4,7 @@ calculateSelectionRange
   method := self method.
   (method respondsTo: #'_stepPointForIp:level:isNative:')
     ifTrue: [ 
-      stepPoint := method gsMethod
+      stepPoint := method
         perform: #'_stepPointForIp:level:isNative:'
         withArguments:
           {(self ipOffset).
