@@ -1,5 +1,4 @@
 SmalltalkCISpec {
-  #specName : 'Tode',
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Tode',
@@ -8,5 +7,10 @@ SmalltalkCISpec {
       #onWarningLog : true,
       #platforms : [ #gemstone, #pharo ]
     }
-  ]
+  ],
+  #testing : {
+    #include : {
+      #classes : [ #SentButNotImplementedTest, #UndefinedSymbolsTest ]
+    }
+  }
 }
