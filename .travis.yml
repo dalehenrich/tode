@@ -26,6 +26,7 @@ matrix:
       env: GSCI_CLIENTS="Pharo-5.0"
   allow-failures:
     - os: osx
+    - smalltalk: GemStone-2.4.8
 
 cache:
   directories:
