@@ -1,6 +1,6 @@
 actions
 createNewPackage: listElement selectedIndex: index
-  | packageName repositoryList repositoryDescriptions repository package |
+  | packageName repositoryList repositoryDescriptions repository package repositoryListIndex |
   index = 0
     ifTrue: [ 
       packageName := 'new package'.
@@ -19,10 +19,11 @@ createNewPackage: listElement selectedIndex: index
     reject: [ :repo | repo = MCCacheRepository default ])
     sort: [ :a :b | a description <= b description ].
   repositoryDescriptions := repositoryList collect: [ :repo | repo description ].
-  repository := (GsChoiceInteraction
+  repositoryListIndex := (GsChoiceInteraction
     prompt: 'Select package repository'
     labels: repositoryDescriptions
-    values: repositoryList) signal.
-  repository ifNil: [ ^ true ].
+    values: nil) signal.
+  repositoryListIndex ifNil: [ ^ true ].
+  repository := repositoryList at: repositoryListIndex.
   package repositoryGroup addRepository: repository.
   ^ true
