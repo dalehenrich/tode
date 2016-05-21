@@ -40,8 +40,8 @@ gsfileout: directoryPath externalMethodMap: externalMethodMap classToFilenameMap
                             (sourceMap at: beh name ifAbsent: [ Dictionary new ])
                               at:
                                 (beh isMeta
-                                  ifTrue: [ '  lastInstanceMethod' ]
-                                  ifFalse: [ '  lastClassMethod' ])
+                                  ifTrue: [ '  lastClassMethod' ]
+                                  ifFalse: [ '  lastInstanceMethod' ])
                               ifAbsent: [ #'append' ] ]
                           ifFalse: [ #'notFound' ] ].
                     ar ~~ #'notFound'
