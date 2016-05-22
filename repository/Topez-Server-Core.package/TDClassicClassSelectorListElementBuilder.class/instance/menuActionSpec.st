@@ -4,5 +4,7 @@ menuActionSpec
 
   "works in concert with menuActionBlock"
 
-  ^ self classMenuActionSpec , {#('-')} , self methodMenuActionSpec , {#('-')}
+  ^ self classMenuActionSpec , {#('-')}
+    , {#('new method' $o #'newMethodTemplateMenuAction:selectionIndex:')}
+    , {#('-')} , self methodMenuActionSpec , {#('-')}
     , self standardMenuActionSpec
