@@ -2,6 +2,10 @@ browse
 browseDefinitionListBlock: definitionsBlock selectedIndex: selectedIndex label: label
   | definitions spec |
   definitions := definitionsBlock value.
+  definitions isEmpty
+    ifTrue: [ 
+      self inform: 'No matching definitions found'.
+      ^ definitions ].
   definitions selectedIndex: selectedIndex.
   spec := (TDEditorSpec topez: topez editorAspect: #'definitionList')
     windowLabel: label;
