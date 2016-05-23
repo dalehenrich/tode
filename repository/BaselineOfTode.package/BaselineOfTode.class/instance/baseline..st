@@ -51,8 +51,10 @@ baseline: spec
     for: #'pharo'
     do: [ 
       spec
-        package: 'Topez-Common-Core' with: [ spec includes: #('Topez-Common-Pharo-Core') ];
-        package: 'Topez-Common-Pharo-Core' with: [ spec requires: #('Topez-Common-Core') ];
+        package: 'Topez-Common-Core'
+          with: [ spec includes: #('Topez-Common-Pharo-Core') ];
+        package: 'Topez-Common-Pharo-Core'
+          with: [ spec requires: #('Topez-Common-Core') ];
         package: 'Topez-Pharo-Common';
         package: 'Tode-Pharo-Server-Core'
           with: [ 
@@ -107,13 +109,14 @@ baseline: spec
       spec
         package: 'Tode-Minimal-Client-Core'
           with: [ spec requires: #('Topez-Common-Core' 'GemStoneGCI') ];
-        package: 'Tode-Minimal-Client-Debugger' 
-          with: [ spec requires:  'Tode-Minimal-Client-Core'];
+        package: 'Tode-Minimal-Client-Debugger'
+          with: [ spec requires: 'Tode-Minimal-Client-Core' ];
         package: 'Tode-Minimal-Client-Tests'
           with: [ spec requires: 'Tode-Minimal-Client-Core' ];
         yourself.
       spec
-        group: 'Minimal Client' with: #('Tode-Minimal-Client-Core' 'Tode-Minimal-Client-Debugger');
+        group: 'Minimal Client'
+          with: #('Tode-Minimal-Client-Core' 'Tode-Minimal-Client-Debugger');
         group: 'Minimal Tests'
           with: #('Topez-Common-Tests' 'Tode-Minimal-Client-Tests');
         yourself ].
@@ -301,6 +304,15 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-31x-DebugTools' ];
         package: 'Topez-Server-31x-DebugTools'
           with: [ spec requires: 'Topez-Server-DebugTools' ];
+        yourself ].
+  spec
+    for: #(#'gs3.3.1.x' #'gs3.3.2.x' #'gs3.3.3.x' #'gs3.4.x')
+    do: [ 
+      spec
+        package: 'Tode-GemStone-Core331x'
+          with: [ spec requires: 'Tode-GemStone-Core3x' ];
+        package: 'Tode-GemStone-Core3x'
+          with: [ spec includes: 'Tode-GemStone-Core331x' ];
         yourself ].
   spec
     for: #'maglev'
