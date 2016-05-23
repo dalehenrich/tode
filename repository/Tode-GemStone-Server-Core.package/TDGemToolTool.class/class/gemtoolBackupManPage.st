@@ -9,7 +9,7 @@ gemtoolBackupManPage
   gemtool bu - Open tODE equivalent of GemTools tools 
 
 SYNOPSIS
-  gemtool [--help] bu ( backup | list | restore )
+  gemtool [--help] bu ( backup | list | restore | validate )
 
 DESCRIPTION
 
