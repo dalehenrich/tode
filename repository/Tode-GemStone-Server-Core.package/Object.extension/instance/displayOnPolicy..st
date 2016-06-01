@@ -24,7 +24,7 @@ displayOnPolicy: displayPolicy
         space ].
   string := [ 
   limit > 0
-    ifTrue: [ self printString truncate: limit ]
+    ifTrue: [ self printStringTodeLimitedTo: limit ]
     ifFalse: [ self printString ] ]
     on: self printExceptionSet
     do: [ :ignored | 'error printing' ].

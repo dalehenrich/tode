@@ -2,4 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"printNonRecursiveRepresentationOn:recursionSet:" : "dkh 03/31/2014 22:00" } }
+		"printNonRecursiveRepresentationOn:recursionSet:" : "dkh 03/31/2014 22:00",
+		"printStringTodeLimitedTo:" : "dkh 06/01/2016 12:36" } }
