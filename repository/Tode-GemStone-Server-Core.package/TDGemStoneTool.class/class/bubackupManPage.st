@@ -8,12 +8,14 @@ bubackupManPage
   bu backup - Make a GemStone backup
 
 SYNOPSIS
-  bu [--dir=<backup-directory>] backup [--safely] [--commit] [--uncompressed] <backup-file>
+  bu [--dir=<backup-directory>] backup [--safely] [--commit] [--novalidate] [--uncompressed] \
+                                       <backup-file>
 
 DESCRIPTION
   Make a GemStone backup in the specified backup file. By default a compressed 
   backup is created and a `.gz` is tacked onto the end of the <backup-file> if 
-  not already present.
+  not already present. By default the backup is validated (`bu validate`) after
+  backup is completed.
 
   With no options specified, the backup file will be located in the directory 
   specified by the `bu directory` command. The default backup directory is named
@@ -27,6 +29,8 @@ DESCRIPTION
 
   With the --uncompressed option an uncompressed backup is created in the named
   <backup-file>.
+
+  With the --novalidate option the default validation is not performed.
 
   With the --commit option specified a commit is made immediately before checkpoints
   are suspended. The --commit option should be used when running in batch mode (i.e.,

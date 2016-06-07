@@ -1,7 +1,7 @@
 bu
 gemtoolbu
   "
-  gemtool [--help] bu ( backup | list | restore )
+  gemtool [--help] bu ( backup | list | restore | validate )
 "
 
   | cmd |
@@ -17,4 +17,6 @@ gemtoolbu
   cmd = 'list'
     ifTrue: [ ^ self gemtoolbuList ].
   cmd = 'restore'
-    ifTrue: [ ^ self gemtoolbuRestore ]
+    ifTrue: [ ^ self gemtoolbuRestore ].
+  cmd = 'validate'
+    ifTrue: [ ^ self gemtoolbuValidate ]

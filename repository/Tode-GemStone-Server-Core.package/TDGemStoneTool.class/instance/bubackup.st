@@ -1,14 +1,16 @@
 bu
 bubackup
   "
-  bu [--dir=<backup-directory>] backup [--safely] [--commit] [--uncompressed] <backup-file>
+  bu [--dir=<backup-directory>] backup [--safely] [--commit] [--novalidate] [--uncompressed] \
+                                       <backup-file>
 "
 
-  | backupFilePath safely uncompressed |
+  | backupFilePath safely uncompressed validate |
   self
     getSubcommandOptsMixedLongShort:
       {#('safely' nil #'none').
       #('commit' nil #'none').
+      #('novalidate' nil #'none').
       #('uncompressed' nil #'none')}.
   backupFilePath := self resolveBackupFilePath.
   subOptions
@@ -24,4 +26,12 @@ bubackup
     at: 'uncompressed'
     ifPresent: [ :ignored | uncompressed := true ]
     ifAbsent: [ uncompressed := false ].
-  ^ self buBackup: backupFilePath safely: safely uncompressed: uncompressed
+  subOptions
+    at: 'novalidate'
+    ifPresent: [ :ignored | validate := false ]
+    ifAbsent: [ validate := true ].
+  ^ self
+    buBackup: backupFilePath
+    safely: safely
+    uncompressed: uncompressed
+    validate: validate
