@@ -10,7 +10,11 @@ reifyExceptionArgsForOopList: oopList exceptionObjAndClassNameFrom: errNum
       each isClass
         ifTrue: [ each name ]
         ifFalse: [ each ] ].
-  exception := (Smalltalk at: #'ExceptionA') gsNumber: errNum arguments: args.
+  exception := (Smalltalk at: #'ExceptionA')
+    perform: #'gsNumber:arguments:'
+    withArguments:
+      {errNum.
+      args}.
   exceptionInfo := {(exception asOop).
   (exception class name)}.
   result := self objectSerializer

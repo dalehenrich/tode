@@ -5,15 +5,19 @@ calculateSelectionRange
   (method respondsTo: #'_stepPointForIp:level:isNative:')
     ifTrue: [ 
       stepPoint := method
-        _stepPointForIp: self ipOffset
-        level: self frameIndex
-        isNative: self process _nativeStack ]
+        perform: #'_stepPointForIp:level:isNative:'
+        withArguments:
+          {(self ipOffset).
+          (self frameIndex).
+          (self process _nativeStack)} ]
     ifFalse: [ 
       "v3.3"
       stepPoint := method
-        _stepPointForIp: self ipOffset
-        level: self frameIndex
-        useNext: self process _nativeStack ].
+        perform: #'_stepPointForIp:level:useNext:'
+        withArguments:
+          {(self ipOffset).
+          (self frameIndex).
+          (self process _nativeStack)} ].
   offsets := method _sourceOffsets.
   begin := offsets at: (stepPoint min: offsets size).
   end := self calculateSourceRangeEnd: begin in: method sourceString.

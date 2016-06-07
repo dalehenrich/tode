@@ -3,7 +3,8 @@ gsfileoutBuildMethodSourceMapFor: behavior filename: filename in: directory
   | map methodStartToken classStartToken categoryStartToken startToken lastInstanceMethod lastClassMethod |
   categoryStartToken := 'category:'.
   startToken := methodStartToken := 'method:'.
-  classStartToken := 'classmethod:' behavior isMeta
+  classStartToken := 'classmethod:'.
+  behavior isMeta
     ifTrue: [ startToken := classStartToken ].
   map := Dictionary new.
   directory

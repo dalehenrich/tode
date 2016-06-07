@@ -43,6 +43,7 @@ gsfileout: methodRef filename: filename range: ar in: directory
                 ifFalse: [ fileStream nextPut: lf ] ]
             ifFalse: [ 
               "append src after the last instance/class method for the class"
+              cat := methodRef category asString printString.
               fileStream
                 nextPut: $%;
                 nextPut: lf.

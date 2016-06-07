@@ -35,7 +35,8 @@ pharo30InstallFullTodeClient
           "Windows"
           monoFontName := 'Consolas' ] ].
   (Smalltalk at: #'StandardFonts')
-    defaultFont:
+    perform: #'defaultFont:'
+    with:
       ((Smalltalk at: #'LogicalFont')
         perform: #'familyName:pointSize:'
         with: monoFontName

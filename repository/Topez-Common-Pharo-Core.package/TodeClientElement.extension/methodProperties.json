@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"apply:forKeyMappingsTo:editor:" : "dkh 8/19/2015 11:40",
+		"apply:to:for:" : "dkh 5/12/2014 12:48",
+		"clientElementOopType" : "dkh 3/29/2013 15:10",
+		"editFrom:windowId:" : "dkh 12/30/2015 12:29",
+		"getMenu:for:" : "dkh 9/29/2013 12:03",
+		"menuActionBlockOopType" : "dkh 9/28/2013 15:04",
+		"windowIsClosing" : "dkh 8/11/2015 17:25",
+		"windowIsClosingBlockOopType" : "dkh 10/20/2013 09:40" } }
