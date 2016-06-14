@@ -8,7 +8,7 @@ git config --global user.name "Your Name"
 
 $GS_HOME/bin/devKitCommandLine serverDoIt $1 << EOF
   | testReport |
-  testReport := SmalltalkCI runCIFor: '$BASE/tests/smalltalkCI.ston'  produceXMLLog: false.
+  testReport := SmalltalkCIGemstone loadAndTest: '$BASE/tests/smalltalkCI.ston' produceXMLLog: false.
   System commitTransaction.
   ((testReport suiteFailures > 0) or: [testReport suiteErrors > 0 ])
     ifTrue: [
