@@ -10,7 +10,7 @@ printStringTodeLimitedTo: limit
   stream nextPutAll: '( '.
   sz := self size.
   1 to: (sz min: limit) do: [ :index | 
-    (self at: index) printOn: stream recursionSet: set.	"prevent infinite recursion when printing cyclic structures, and limit the size of result when printing large collections."
+    (self _at: index) printOn: stream recursionSet: set.	"prevent infinite recursion when printing cyclic structures, and limit the size of result when printing large collections."
     index < sz
       ifTrue: [ stream nextPutAll: ', ' ] ].
   stream nextPut: $).
