@@ -1,5 +1,5 @@
 tests
 testObject
   Object new
-    printStringLimitedTo: 2;
-    printStringLimitedTo: 100
+    printStringTodeLimitedTo: 2;
+    printStringTodeLimitedTo: 100

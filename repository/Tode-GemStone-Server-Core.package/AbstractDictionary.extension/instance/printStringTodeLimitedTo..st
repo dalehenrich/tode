@@ -4,8 +4,6 @@ printStringTodeLimitedTo: limit
 	If you want to print without a character limit, use orintString."
 
   | count sz myCls stream set res |
-  false
-    ifTrue: [ ^ super printStringTodeLimitedTo: limit ].
   stream := WriteStream on: String new.
   set := IdentitySet new.
   myCls := self class.

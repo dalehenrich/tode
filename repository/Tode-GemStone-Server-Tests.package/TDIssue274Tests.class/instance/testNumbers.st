@@ -7,5 +7,5 @@ testNumbers
   (ScaledDecimal for: 0.1234567890 scale: 4)}
     do: [ :coll | 
       coll
-        printStringLimitedTo: 2;
-        printStringLimitedTo: 100 ]
+        printStringTodeLimitedTo: 2;
+        printStringTodeLimitedTo: 100 ]
