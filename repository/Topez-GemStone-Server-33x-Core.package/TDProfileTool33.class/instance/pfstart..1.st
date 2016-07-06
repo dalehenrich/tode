@@ -12,4 +12,4 @@ pfstart
   subOptions at: 'sampling' ifPresent: [ :arg | sampling := arg ].
   subOptions at: 'tally' ifPresent: [ :arg | tally := arg ].
   self pfclean.
-  self class profMonitor: (self pfStart: sampling tally: tally)
+  self pfStart: sampling tally: tally

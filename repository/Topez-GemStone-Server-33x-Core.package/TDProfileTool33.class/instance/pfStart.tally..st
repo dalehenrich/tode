@@ -22,7 +22,9 @@ pfStart: sampling tally: tally
                   '. Should be objCreation, objFaults, pageFaults, edenUsage, gcTime, or execTime.' ].
       tally asSymbol ~= #'execTime'
         ifTrue: [ optionsArray add: tally ] ].
-  ^ ProfMonitor new
-    setOptions: optionsArray;
-    startMonitoring;
-    yourself
+  self
+    profMonitor:
+      (ProfMonitor new
+        setOptions: optionsArray;
+        startMonitoring;
+        yourself)
