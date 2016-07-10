@@ -1,5 +1,5 @@
 smalltalk api
 pfMonitor: aProfMon block: aBlock
-  self pfStart: aProfMon.
+  aProfMon startMonitoring.
   aBlock
     ensure: [ self pfStop: aProfMon ]

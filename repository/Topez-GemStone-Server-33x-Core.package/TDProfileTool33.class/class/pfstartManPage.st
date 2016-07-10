@@ -10,7 +10,8 @@ pfstartManPage
   pf start - Begin sampling data
 
 SYNOPSIS
-  pf start [--sampling=cpu|real] [--tally=[execTime|objFaults|pageFaults|edenUsage|gcTime|objCreation]
+  pf start [--sampling=cpu|real] [--computeInterval=<cpu-time-seconds>] \
+           [--tally=[execTime|objFaults|pageFaults|edenUsage|gcTime|objCreation]
 
 DESCRIPTION
   Note that profiling of page faults and object faults will detect
@@ -30,7 +31,15 @@ OPTIONS
     objFaults   - object faults
     objCreation - new object creation
     pageFaults  - page faults
- 
+
+  --computeInterval=<cpu-time-seconds>
+    Given the cpu time for an unprofiled run, estimate the profiling interval that will
+    yield approximately 100000 samples. GEM_TEMPOBJ_CACHE_SIZE should be set to at least 
+    300MB to avoid AlmostOutOfMemory errors during analysis phase. 
+
+    The default internal is 1 ms and yields approximately 100000 samples over 30 seconds of 
+    cpu time.
+
 EXAMPLES
   pf start
   pf start --sampling=cpu
@@ -41,5 +50,7 @@ EXAMPLES
   pf start --tally=pageFaults
   pf start --tally=edenUsage
   pf start --tally=gcTime
+
+  pf start --computeInterval=720
 '.
   ^ manPage

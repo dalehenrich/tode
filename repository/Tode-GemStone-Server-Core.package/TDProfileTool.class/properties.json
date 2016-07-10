@@ -3,6 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
+		"CpuStart",
 		"ProfMon" ],
 	"commentStamp" : "",
 	"instvars" : [
