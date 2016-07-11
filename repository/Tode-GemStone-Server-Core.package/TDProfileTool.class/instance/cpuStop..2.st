@@ -1,3 +1,3 @@
 cpu
 cpuStop
-  ^ (System readClockNano - CpuStart) // 1000000
+  ^ (System perform: #'_readClock') - CpuStart

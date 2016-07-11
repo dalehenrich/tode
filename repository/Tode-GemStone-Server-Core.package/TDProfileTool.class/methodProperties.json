@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"cpu" : "dkh 07/10/2016 12:21",
-		"cpuManPage" : "dkh 07/10/2016 12:35",
+		"cpuManPage" : "dkh 07/11/2016 10:38",
 		"cpustartManPage" : "dkh 07/10/2016 12:35",
 		"cpustopManPage" : "dkh 07/10/2016 12:35",
 		"installExampleOn:" : "DataCurator 02/07/2013 19:07",
@@ -20,8 +20,8 @@
 		"toolName" : "DataCurator 02/07/2013 19:08",
 		"toolReadMe" : "DataCurator 02/07/2013 19:09" },
 	"instance" : {
-		"cpuStart" : "dkh 07/10/2016 12:30",
-		"cpuStop" : "dkh 07/10/2016 12:30",
+		"cpuStart" : "dkh 07/11/2016 10:41",
+		"cpuStop" : "dkh 07/11/2016 10:41",
 		"cpustart" : "dkh 07/10/2016 12:30",
 		"cpustop" : "dkh 07/10/2016 12:32",
 		"defaultLabel" : "dkh 06/10/2015 11:45",

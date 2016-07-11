@@ -1,9 +1,12 @@
 {
 	"class" : {
+		"cpu" : "dkh 07/11/2016 10:32",
 		"pf" : "dkh 06/10/2015 12:13",
 		"pfstartManPage" : "dkh 07/10/2016 12:12",
 		"priority" : "dkh 06/10/2015 12:12" },
 	"instance" : {
+		"cpuStart" : "dkh 07/11/2016 10:30",
+		"cpuStop" : "dkh 07/11/2016 10:31",
 		"defaultSortKey" : "dkh 07/03/2015 15:52",
 		"pfStart" : "dkh 06/11/2015 09:12",
 		"pfStart:tally:" : "dkh 07/10/2016 12:06",

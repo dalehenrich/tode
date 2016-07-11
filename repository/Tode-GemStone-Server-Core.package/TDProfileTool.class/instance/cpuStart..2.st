@@ -1,3 +1,3 @@
 cpu
 cpuStart
-  ^ CpuStart := System readClockNano
+  ^ CpuStart := System perform: #'_readClock'
