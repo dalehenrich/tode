@@ -14,8 +14,10 @@ enableDisableMenuItems: aTDDefinition
   aTDDefinition hasClassInImage
     ifTrue: [ 
       enable value: #'hasClass'.
-      (aTDDefinition theClass inheritsFrom: TestCase)
-        ifTrue: [ enable value: #'testClass' ] ].
+      (aTDDefinition theClass respondsTo: #'inheritsFrom:')
+        ifTrue: [ 
+          (aTDDefinition theClass inheritsFrom: TestCase)
+            ifTrue: [ enable value: #'testClass' ] ] ].
   aTDDefinition isClassInImage
     ifTrue: [ enable value: #'forClass' ].
   aTDDefinition isMethodInImage
