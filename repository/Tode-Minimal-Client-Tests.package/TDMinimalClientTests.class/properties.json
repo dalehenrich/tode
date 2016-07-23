@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"System",
+		"UserGlobals" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"client",

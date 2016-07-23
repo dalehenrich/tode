@@ -37,6 +37,7 @@
 		"testServicesMechanism" : "dkh 4/19/2016 11:21",
 		"testSetFindText_isRegex_" : "dkh 4/19/2016 14:59",
 		"testSimpleServerBlock" : "TravisCI 7/22/2016 15:28",
+		"testSimpleServerBlockReferencingGemStoneClassesGlobalsAndMethods" : "TravisCI 7/22/2016 17:20",
 		"testSimpleServerBlockReturningArray" : "TravisCI 7/22/2016 15:30",
 		"testSimpleServerBlockWithTempsRef" : "TravisCI 7/22/2016 15:28",
 		"testSpawnDebugger_" : "dkh 4/19/2016 15:00",
