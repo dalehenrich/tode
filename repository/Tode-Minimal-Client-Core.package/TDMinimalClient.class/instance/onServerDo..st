@@ -14,11 +14,19 @@ onServerDo: aBlock
 	blockScope copiedVars
 		do: [ :tempVar | 
 			| val tempName index |
-			tempName := tempVar name.
-			index := outerContext tempNames indexOf: tempName.
-			index > 0
-				ifTrue: [ val := outerContext namedTempAt: index.
-					variableBindings at: tempName put: val ] ].
+			tempVar isStoringTempVector
+				ifTrue: [ tempVar tempVectorForTempStoringIt
+						do: [ :tempVectorVars | 
+							tempName := tempVectorVars name.
+							index := aBlock asContext tempNames indexOf: tempName.
+							index > 0
+								ifTrue: [ val := aBlock asContext namedTempAt: index.
+									variableBindings at: tempName put: val ] ] ]
+				ifFalse: [ tempName := tempVar name.
+					index := outerContext tempNames indexOf: tempName.
+					index > 0
+						ifTrue: [ val := outerContext namedTempAt: index.
+							variableBindings at: tempName put: val ] ] ].
 	serverSource := aBlock sourceNode body formattedCode.
 	stonString := self session
 		send: #evaluateSTONSmalltalk:variableBindings:
