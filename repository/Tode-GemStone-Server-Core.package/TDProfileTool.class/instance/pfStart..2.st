@@ -1,5 +1,3 @@
 smalltalk api
 pfStart
-  ^ ProfMonitor new
-    startMonitoring;
-    yourself
+  self pfStart: nil

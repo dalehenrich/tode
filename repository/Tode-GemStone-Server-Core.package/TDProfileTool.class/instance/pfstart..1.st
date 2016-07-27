@@ -1,6 +1,14 @@
 tode commands
 pfstart
-  "pf start"
+  "
+  pf start [--computeInterval=<cpu-time-seconds>]
+"
 
+  | intervalNs |
+  self getSubcommandOptsMixedLongShort: {#('computeInterval' nil #'required')}.
+  intervalNs := subOptions
+    at: 'computeInterval'
+    ifPresent: [ :arg | ProfMonitor computeInterval: arg asNumber ]
+    ifAbsent: [ ProfMonitor defaultIntervalNs ].
   self pfclean.
-  self class profMonitor: self pfStart
+  self pfStart: intervalNs

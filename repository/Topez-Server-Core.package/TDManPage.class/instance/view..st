@@ -4,4 +4,5 @@ view: topez
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'edit')
         windowName: #'manPage';
+        windowLabel: self summary;
         yourself)

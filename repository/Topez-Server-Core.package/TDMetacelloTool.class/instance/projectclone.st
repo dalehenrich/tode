@@ -23,7 +23,7 @@ projectclone
     ifAbsent: [ cloneWithSSH := true ].
   subOptions
     at: 'etc'
-    ifPresent: [ 
+    ifPresent: [ :ignored | 
       subOptions
         at: 'github'
         ifPresent: [ :arg | githubUserAndProject := arg findTokens: '/' ]

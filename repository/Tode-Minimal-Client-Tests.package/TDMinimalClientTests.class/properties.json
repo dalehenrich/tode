@@ -3,11 +3,13 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"System",
+		"UserGlobals" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"client",
-		"generatorOopType" ],
+		"generatorOopType",
+		"severBlockInstVar" ],
 	"name" : "TDMinimalClientTests",
 	"pools" : [
 		 ],

@@ -6,4 +6,7 @@ tallyMenuActionSpec
       #('sort by class name' nil #'sortByClassNameMenuAction:')} ]
     ifFalse: [ 
       {#('sort by tally' nil #'sortByTallyMenuAction:').
-      #('sort by total' nil #'sortByTotalMenuAction:')} ]
+      #('sort by total' nil #'sortByTotalMenuAction:').
+      #('-').
+      #('sort by sample class name' nil #'sortBySampleClassNameMenuAction:').
+      #('sort by sample method name' nil #'sortBySampleMethodNameMenuAction:')} ]
