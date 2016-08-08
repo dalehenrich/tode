@@ -2,8 +2,9 @@
 	"class" : {
 		"example" : "dkh 4/30/2016 07:58" },
 	"instance" : {
-		"actOnBrowserClosing:" : "dkh 6/11/2016 12:47",
+		"actOnBrowserClosing:" : "dkh 8/7/2016 17:43",
 		"browser" : "dkh 4/23/2016 17:38",
+		"clear" : "dkh 8/7/2016 17:45",
 		"clearUserEditFlag" : "dkh 4/29/2016 14:12",
 		"close" : "dkh 4/28/2016 16:19",
 		"closeAndResume:" : "dkh 4/30/2016 06:54",
@@ -38,4 +39,5 @@
 		"sourceCode:" : "dkh 4/24/2016 15:46",
 		"stackDebuggingActions" : "dkh 4/27/2016 16:08",
 		"stackFrameListIn:" : "dkh 4/27/2016 10:17",
+		"terminate" : "dkh 8/7/2016 17:46",
 		"updateBrowser" : "dkh 4/25/2016 19:31" } }
