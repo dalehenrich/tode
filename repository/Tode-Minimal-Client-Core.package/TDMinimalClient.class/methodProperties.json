@@ -19,6 +19,7 @@
 		"executeRestoreFromBackupFromClient:" : "dkh 4/19/2016 11:57",
 		"getSessionDescription" : "dkh 4/19/2016 05:59",
 		"handleDebugExceptionsDuring:" : "dkh 4/28/2016 11:44",
+		"handleDebugExceptionsExceptErrorsDuring:" : "dkh 8/12/2016 13:00",
 		"interactive" : "dkh 4/19/2016 20:06",
 		"interactive:" : "dkh 4/19/2016 20:04",
 		"logStackRequested:" : "dkh 4/19/2016 15:59",
