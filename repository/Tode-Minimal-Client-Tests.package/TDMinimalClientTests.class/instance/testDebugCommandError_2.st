@@ -13,7 +13,7 @@ testDebugCommandError_2
 				assert: clientElement editorWindowLocation == #debugger.
 			1	"windowId" ]
 		for: #editStonElement:.
-	[ cmdResult := self client evaluate: 'foo `3+4`'.
+	[ cmdResult := self client evaluateCommands: 'foo `3+4`'.
 	self assert: cmdResult asString equals: 'Unknown command: ''foo''' ]
 		on: TDInteractiveChooseExceptionHandling
 		do: [ :ex | ex debug ]

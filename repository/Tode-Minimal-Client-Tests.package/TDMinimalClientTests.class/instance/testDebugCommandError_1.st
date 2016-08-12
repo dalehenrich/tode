@@ -4,7 +4,7 @@ testDebugCommandError_1
 	self client
 		debugMode: true;
 		interactive: true.
-	[ cmdResult := self client evaluate: 'foo `3+4`'.
+	[ cmdResult := self client evaluateCommands: 'foo `3+4`'.
 	self assert: cmdResult = 'Aborted...' ]
 		on: TDInteractiveChooseExceptionHandling
 		do: [ :ex | ex abort ]

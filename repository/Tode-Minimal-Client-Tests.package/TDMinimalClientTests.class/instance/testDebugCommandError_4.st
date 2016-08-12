@@ -6,5 +6,5 @@ testDebugCommandError_4
 	self client
 		debugMode: false;
 		interactive: false.
-	cmdResult := self client evaluate: 'foo `3+4`'.
+	cmdResult := self client evaluateCommands: 'foo `3+4`'.
 	self assert: cmdResult asString = 'tODE ERROR: Unknown command: ''foo'''

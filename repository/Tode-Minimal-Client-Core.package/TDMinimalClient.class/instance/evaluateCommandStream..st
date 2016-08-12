@@ -1,5 +1,5 @@
 commands
-evaluateFrom: aStream
+evaluateCommandStream: aStream
 	[ | result |
 	TDCommandLine
 		fromStream: aStream
