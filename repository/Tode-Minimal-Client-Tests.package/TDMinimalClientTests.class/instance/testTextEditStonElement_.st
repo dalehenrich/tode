@@ -10,7 +10,7 @@ testTextEditStonElement_
 				assert: clientElement firstSource equals: 'hello world'.
 			1	"windowId" ]
 		for: #editStonElement:.
-	cmdResult := self client evaluate: 'limit oops false'.
+	cmdResult := self client evaluateCommands: 'limit oops false'.
 	self assert: cmdResult asString  equals: '[12 sz:0 Boolean] false'.
-	cmdResult := self client evaluate: 'eval `''hello world''`; edit'.
+	cmdResult := self client evaluateCommands: 'eval `''hello world''`; edit'.
 	self assert: (cmdResult asString includesSubstring: ' sz:11 String] ''hello world''')

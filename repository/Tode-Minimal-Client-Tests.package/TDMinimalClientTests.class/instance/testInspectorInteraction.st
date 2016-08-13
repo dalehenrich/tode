@@ -14,10 +14,10 @@ testInspectorInteraction
 							#('.        -> 7' '(class)@ -> SmallInteger' '(oop)@   -> 58' '(hex)@   -> ''16r7''' '(value)@ -> ''7''').
 			1	"windowId" ]
 		for: #editStonElement:.
-	cmdResult := self client evaluate: 'eval `3+4`; inspect'.	"using inspect command"
+	cmdResult := self client evaluateCommands: 'eval `3+4`; inspect'.	"using inspect command"
 	self assert: (cmdResult isKindOf: Text).
 	self assert: cmdResult asString = '[58 sz:0 SmallInteger] 7'.
-	cmdResult := self client evaluate: 'eval `(3+4) inspect`'.	"using inspect message"
+	cmdResult := self client evaluateCommands: 'eval `(3+4) inspect`'.	"using inspect message"
 	self assert: (cmdResult isKindOf: Text).
 	self assert: cmdResult asString = '[58 sz:0 SmallInteger] 7'.
 	object := 7.	"using GsInspectInteraction"

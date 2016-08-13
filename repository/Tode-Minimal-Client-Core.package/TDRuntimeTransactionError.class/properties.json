@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Minimal-Client-Core-Exceptions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDRuntimeTransactionError",
+	"pools" : [
+		 ],
+	"super" : "TDRuntimeError",
+	"type" : "normal" }

@@ -15,7 +15,7 @@ testClientListElementMenus
 			response := 7.
 			aClient objectSerializer toString: response ]
 		for: #interactWith:.
-	cmdResult := self client evaluate: 'eval `3+4`; edit'.
+	cmdResult := self client evaluateCommands: 'eval `3+4`; edit'.
 	self assert: cmdResult asString equals: '[58 sz:0 SmallInteger] 7'.
 	menuSpec := clientElement menuActionSpec.
 	spec := menuSpec at: 3.
