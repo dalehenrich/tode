@@ -1,0 +1,21 @@
+{
+	"category" : "Topez-GemStone-Server-33x-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"session",
+		"stack",
+		"frameIndex",
+		"frameContents",
+		"next",
+		"previous",
+		"argAndTempNames",
+		"selectionRange" ],
+	"name" : "TDRemoteStackFrame",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TDRemoteDebugger",
+		"processOop",
+		"exceptionOop",
+		"session" ],
+	"name" : "TDRemoteStack",
 	"pools" : [
 		 ],
-	"super" : "TDDebugger",
+	"super" : "TDStack",
 	"type" : "normal" }

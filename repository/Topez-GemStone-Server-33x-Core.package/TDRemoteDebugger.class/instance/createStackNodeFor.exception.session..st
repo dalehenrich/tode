@@ -1,14 +1,14 @@
 private
-createStackNodeFor: aGsProcessOop exception: anExceptionOop
+createStackNodeFor: aGsProcessOop exception: anExceptionOop session: aTDGsExternalSession
   | nodePath parentNode variable stack node sessionTempsNode |
   sessionTempsNode := topez sessionTempsNode.
-  nodePath := sessionTempsNode printString , 'debug/'
-    , aGsProcess asOop asString.
+  nodePath := sessionTempsNode printString , 'debug/' , aGsProcessOop asString.
   topez ensureChildrenExistIn: nodePath.
   parentNode := topez lookup: nodePath.
-  stack := TDStack new
-    process: aGsProcess;
-    exception: anException;
+  stack := TDRemoteStack new
+    processOop: aGsProcessOop;
+    exceptionOop: anExceptionOop;
+    session: aTDGsExternalSession;
     debugTool: self;
     yourself.
   node := stack

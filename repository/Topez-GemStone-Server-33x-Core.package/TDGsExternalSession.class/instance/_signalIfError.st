@@ -8,8 +8,9 @@ _signalIfError
     ifTrue: [ gciSessionId := 0 ].
   debugger := TDRemoteDebugger new
     topez: self;
-    session: self;
-    debugProcessOop: gciErrSType context exceptionOop: gciErrSType exceptionObj;
+    debugProcessOop: gciErrSType context
+      exceptionOop: gciErrSType exceptionObj
+      session: self;
     windowLabel: gciErrSType message;
     yourself.
   ^ debugger open

@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"createFrames" : "dkh 09/08/2016 06:46",
+		"currentFrame" : "dkh 09/08/2016 06:47",
+		"exception" : "dkh 09/08/2016 06:53",
+		"exceptionClass" : "dkh 09/08/2016 06:52",
+		"exceptionOop" : "dkh 09/08/2016 06:46",
+		"exceptionOop:" : "dkh 09/08/2016 06:46",
+		"printOn:" : "dkh 09/08/2016 06:47",
+		"process" : "dkh 09/08/2016 06:53",
+		"processOop" : "dkh 09/08/2016 06:46",
+		"processOop:" : "dkh 09/08/2016 06:46",
+		"session" : "dkh 09/08/2016 06:46",
+		"session:" : "dkh 09/08/2016 06:46",
+		"signallerFrame:" : "dkh 09/08/2016 06:49",
+		"terminateProcess" : "dkh 09/08/2016 06:49" } }
