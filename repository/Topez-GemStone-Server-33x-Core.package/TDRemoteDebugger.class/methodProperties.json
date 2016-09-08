@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"createStackNodeFor:exception:" : "dkh 09/07/2016 20:11",
+		"debugProcess:exception:" : "dkh 09/07/2016 20:09",
+		"debugProcessOop:exceptionOop:" : "dkh 09/07/2016 20:10",
+		"exceptionOop" : "dkh 09/07/2016 20:07",
+		"exceptionOop:" : "dkh 09/07/2016 20:07",
+		"processOop" : "dkh 09/07/2016 20:06",
+		"processOop:" : "dkh 09/07/2016 20:06",
+		"session" : "dkh 09/07/2016 20:06",
+		"session:" : "dkh 09/07/2016 20:06" } }
