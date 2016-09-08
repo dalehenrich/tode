@@ -1,3 +1,3 @@
-as yet unclassified
+private
 baseNodeNames
     ^ self baseNodeMap keys

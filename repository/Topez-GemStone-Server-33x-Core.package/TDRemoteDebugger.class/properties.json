@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"receiverOop" ],
 	"name" : "TDRemoteDebugger",
 	"pools" : [
 		 ],

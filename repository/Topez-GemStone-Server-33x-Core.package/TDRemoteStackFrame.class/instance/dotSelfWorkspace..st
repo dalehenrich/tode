@@ -1,4 +1,4 @@
-as yet unclassified
+private
 dotSelfWorkspace: topez
   | strm |
   strm := WriteStream on: String new.

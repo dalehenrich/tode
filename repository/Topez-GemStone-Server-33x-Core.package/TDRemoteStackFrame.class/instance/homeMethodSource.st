@@ -1,3 +1,3 @@
-as yet unclassified
+private
 homeMethodSource
     ^ self homeMethod sourceString

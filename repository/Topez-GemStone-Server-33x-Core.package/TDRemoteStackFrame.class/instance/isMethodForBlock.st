@@ -1,3 +1,4 @@
-as yet unclassified
+private
 isMethodForBlock
-    ^ self method isMethodForBlock
+  self method ifNil: [ ^ true ].
+  ^ self method isMethodForBlock

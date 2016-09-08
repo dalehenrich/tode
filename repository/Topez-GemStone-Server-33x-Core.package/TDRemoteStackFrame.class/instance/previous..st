@@ -1,3 +1,3 @@
-as yet unclassified
+private
 previous: aFrame
     previous := aFrame

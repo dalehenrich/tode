@@ -1,3 +1,3 @@
-as yet unclassified
+private
 inClass
   ^ self homeMethod ifNotNil: [ :hm | hm inClass ]

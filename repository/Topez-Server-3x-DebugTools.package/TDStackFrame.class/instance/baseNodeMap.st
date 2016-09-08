@@ -7,7 +7,7 @@ baseNodeMap
     yourself.
   self isMethodForBlock
     ifTrue: [ 
-      self receiver ~~ self frameSelf
+      self rawReceiver ~~ self frameSelf
         ifTrue: [ 
           map
             add: '(receiver)' -> #'receiver';

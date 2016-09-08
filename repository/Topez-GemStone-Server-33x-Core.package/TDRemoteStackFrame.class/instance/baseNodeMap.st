@@ -1,4 +1,4 @@
-as yet unclassified
+private
 baseNodeMap
   | map |
   map := Dictionary new.
@@ -7,7 +7,7 @@ baseNodeMap
     yourself.
   self isMethodForBlock
     ifTrue: [ 
-      self receiver ~~ self frameSelf
+      self rawReceiverOop ~~ self frameSelfOop
         ifTrue: [ 
           map
             add: '(receiver)' -> #'receiver';

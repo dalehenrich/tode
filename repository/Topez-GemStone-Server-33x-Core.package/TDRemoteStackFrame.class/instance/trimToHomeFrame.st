@@ -1,4 +1,4 @@
-as yet unclassified
+private
 trimToHomeFrame
   "Assume to be sent after successful accept of new version of method"
 

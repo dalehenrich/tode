@@ -1,28 +1,19 @@
-as yet unclassified
+private
 printOn: aStream
-  | frameSelf |
-  self frameContents ifNil: [ ^ aStream nextPutAll: '..bad frame...' ].
+  | frameSelfClass |
   self isMethodForBlock
     ifTrue: [ aStream nextPutAll: '[] in ' ].
   self inClass == nil
     ifTrue: [ 
       aStream nextPutAll: 'Executed Code'.
       ^ self ].
-  frameSelf := self frameSelf.
-  frameSelf class ~= self inClass
+  frameSelfClass := self frameSelfClass.
+  frameSelfClass ~= self inClass
     ifTrue: [ 
       aStream
-        nextPutAll: frameSelf class name asString;
+        nextPutAll: frameSelfClass name asString;
         nextPutAll: '(' , self inClass name asString , ')' ]
     ifFalse: [ aStream nextPutAll: self inClass name asString ].
   aStream nextPutAll: '>>'.
   aStream nextPutAll: self selector.
-  (self process respondsTo: #'_localStepPointStringAt:')
-    ifTrue: [ 
-      aStream
-        nextPutAll:
-          ' ' , (self process perform: #'_localStepPointStringAt:' with: self frameIndex) ]
-    ifFalse: [ 
-      aStream
-        nextPutAll:
-          ' ' , (self process perform: #'_stepPointStringAt:' with: self frameIndex) ]
+  aStream nextPutAll: ' ' , self stepPoint asString

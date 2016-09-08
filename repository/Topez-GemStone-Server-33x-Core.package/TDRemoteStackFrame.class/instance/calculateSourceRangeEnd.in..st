@@ -1,4 +1,4 @@
-as yet unclassified
+private
 calculateSourceRangeEnd: start in: string
     | scan i char characterStack beginners enders |
     i := start.

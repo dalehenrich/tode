@@ -9,7 +9,6 @@
 		"session",
 		"stack",
 		"frameIndex",
-		"frameContents",
 		"next",
 		"previous",
 		"argAndTempNames",

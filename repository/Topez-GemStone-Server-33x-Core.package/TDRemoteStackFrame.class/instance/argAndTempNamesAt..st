@@ -1,3 +1,4 @@
-as yet unclassified
+private
 argAndTempNamesAt: index
-    ^ self frameContents at: 10 + index
+  self halt.
+  ^ self frameContents at: 10 + index

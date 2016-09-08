@@ -1,4 +1,4 @@
-as yet unclassified
+private
 elementNodeNames
   self process == nil
     ifTrue: [ ^ #() ].

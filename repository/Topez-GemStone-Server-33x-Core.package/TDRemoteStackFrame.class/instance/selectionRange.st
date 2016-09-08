@@ -1,4 +1,4 @@
-as yet unclassified
+private
 selectionRange
     selectionRange ifNil: [ selectionRange := self calculateSelectionRange ].
     ^ selectionRange

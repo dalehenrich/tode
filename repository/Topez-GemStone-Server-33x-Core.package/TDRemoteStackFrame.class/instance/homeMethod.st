@@ -1,3 +1,3 @@
-as yet unclassified
+private
 homeMethod
     ^ self method homeMethod
