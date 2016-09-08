@@ -1,6 +1,6 @@
 as yet unclassified
 calculateSelectionRange
-  | method stepPoint offsets begin end |
+  | method stepPoint begin end |
   method := self method.
   (method respondsTo: #'_stepPointForIp:level:isNative:')
     ifTrue: [ 
@@ -18,7 +18,6 @@ calculateSelectionRange
           {(self ipOffset).
           (self frameIndex).
           (self process _nativeStack)} ].
-  offsets := method _sourceOffsets.
-  begin := offsets at: (stepPoint min: offsets size).
+  begin := method _sourceOffsetsAt: stepPoint.
   end := self calculateSourceRangeEnd: begin in: method sourceString.
   ^ begin to: end
