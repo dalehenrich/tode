@@ -1,3 +1,5 @@
 private
 dotSelfObject
-  ^ self frameSelf
+  ^ TDRemoteObjectInspectorReference
+    objectOop: self frameSelfOop
+    session: session
