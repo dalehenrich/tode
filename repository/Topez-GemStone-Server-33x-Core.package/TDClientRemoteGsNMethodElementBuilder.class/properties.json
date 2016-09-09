@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 09/09/2016 15:58",
+	"commentStamp" : "dkh 09/09/2016 16:40",
 	"instvars" : [
 		 ],
-	"name" : "TDRemoteClientMethodElementBuilder",
+	"name" : "TDClientRemoteGsNMethodElementBuilder",
 	"pools" : [
 		 ],
 	"super" : "TDClientCodeElementBuilder",

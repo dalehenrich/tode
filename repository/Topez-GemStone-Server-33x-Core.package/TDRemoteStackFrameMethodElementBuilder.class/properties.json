@@ -10,5 +10,5 @@
 	"name" : "TDRemoteStackFrameMethodElementBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDRemoteClientMethodElementBuilder",
+	"super" : "TDClientRemoteGsNMethodElementBuilder",
 	"type" : "normal" }
