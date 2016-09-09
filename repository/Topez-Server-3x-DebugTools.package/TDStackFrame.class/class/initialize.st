@@ -11,8 +11,8 @@ initialize
 
   TDTopezServer
     registerEditorClass: TDStackFrameContentsClientListElementBuilder
-      for: TDStackFrame
+      for: self
       aspect: #'contents';
     registerEditorClass: TDStackFrameMethodElementBuilder
-      for: TDStackFrame
+      for: self
       aspect: #'source'

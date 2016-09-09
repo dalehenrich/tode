@@ -1,6 +1,6 @@
 tools
 itemSelected: miniTool listElement: listElement selectedIndex: index shiftPressed: shiftPressed
-  | currentFrame sourceEditorSpec sourceClientElement enabled disabled |
+  | currentFrame enabled disabled contextEditorSpec contextClientElement |
   theMiniTool := miniTool.
   index = 0
     ifTrue: [ ^ false ].
@@ -9,9 +9,9 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
   self
     homeMethodOop: currentFrame homeMethodOop;
     receiverOop: currentFrame frameSelfOop.
-  sourceEditorSpec := (TDEditorSpec topez: self topez editorAspect: #'source')
+  contextEditorSpec := (TDEditorSpec topez: self topez editorAspect: #'contents')
     parentObject: listElement parent;
-    windowId: sourceWindowId;
+    windowId: contextWindowId;
     yourself.
   enabled := disabled := {#'debuggingProcess'}.
   debuggingProcess
@@ -19,7 +19,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
     ifFalse: [ enabled := {} ].
   ^ sourceWindowId
     ifNil: [ 
-      sourceWindowId := currentFrame editUsing: sourceEditorSpec.
+      contextWindowId := currentFrame editUsing: contextEditorSpec.
       self objectSerializer
         toString:
           {#'setMenuCategories:'.
@@ -29,7 +29,7 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
           #'refreshList'.
           nil} ]
     ifNotNil: [ 
-      sourceClientElement := currentFrame clientElementUsing: sourceEditorSpec.
+      contextClientElement := currentFrame clientElementUsing: contextEditorSpec.
       self objectSerializer
         toString:
           {#'setMenuCategories:'.
@@ -37,6 +37,6 @@ itemSelected: miniTool listElement: listElement selectedIndex: index shiftPresse
           #'clearMenuCategories:'.
           disabled.
           #'editStonElement:'.
-          sourceClientElement.
+          contextClientElement.
           #'setList:'.
           (self frameList)} ]

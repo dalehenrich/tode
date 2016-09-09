@@ -10,9 +10,9 @@ initialize
 	 CUSTOM    - custom names for specialized window access"
 
   TDTopezServer
-    registerEditorClass: TDStackFrameContentsClientListElementBuilder
-      for: TDStackFrame
+    registerEditorClass: TDRemoteStackFrameContentsClientListElementBuilder
+      for: self
       aspect: #'contents';
-    registerEditorClass: TDStackFrameMethodElementBuilder
-      for: TDStackFrame
+    registerEditorClass: TDRemoteStackFrameMethodElementBuilder
+      for: self
       aspect: #'source'

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-GemStone-Server-33x-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 09/09/2016 10:14",
+	"instvars" : [
+		 ],
+	"name" : "TDRemoteStackFrameMethodElementBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDClientMethodElementBuilder",
+	"type" : "normal" }

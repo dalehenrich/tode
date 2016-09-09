@@ -1,5 +1,5 @@
 private
 elementNodeNames
-  self process == nil
+  self processOop == nil
     ifTrue: [ ^ #() ].
   ^ self baseNodeNames sorted , self argAndTempNames

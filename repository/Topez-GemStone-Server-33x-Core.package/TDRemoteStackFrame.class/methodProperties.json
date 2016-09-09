@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"initialize" : "dkh 09/08/2016 06:22" },
+		"initialize" : "dkh 09/09/2016 10:16" },
 	"instance" : {
 		"argAndTempNames" : "dkh 09/08/2016 16:02",
 		"argAndTempNamesAt:" : "dkh 09/08/2016 10:20",
@@ -11,7 +11,7 @@
 		"dotSelfLiteralArray" : "dkh 09/08/2016 06:22",
 		"dotSelfObject" : "dkh 09/08/2016 06:22",
 		"dotSelfWorkspace:" : "dkh 09/08/2016 06:22",
-		"elementNodeNames" : "dkh 09/08/2016 06:22",
+		"elementNodeNames" : "dkh 09/09/2016 10:34",
 		"findFrameSuchThat:" : "dkh 09/08/2016 13:16",
 		"frameDict" : "dkh 09/09/2016 07:02",
 		"frameIndex" : "dkh 09/08/2016 06:22",
