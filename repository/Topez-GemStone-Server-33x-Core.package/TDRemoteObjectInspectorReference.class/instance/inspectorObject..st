@@ -4,10 +4,10 @@ inspectorObject: dispayLimit
     ifNil: [ 
       | stonString attributeDict |
       stonString := self session
-        executeBlock: [ :objectOop :limit | 
+        executeBlock: [ :anOop :limit | 
           | frameContents stream |
           frameContents := TDRemoteInspectorObject
-            forObjectWithOop: objectOop
+            forObjectWithOop: anOop
             limit: limit.
           stream := WriteStream on: String new.
           frameContents printJsonOn: stream.

@@ -12,16 +12,17 @@ displayOnPolicy: displayPolicy
       displayOops
         ifTrue: [ 
           aStream
-            nextPutAll: inspectorObject oopOf printString;
+            nextPutAll: (inspectorObject at: 'oopOf') printString;
             nextPutAll: ' sz:';
-            nextPutAll: inspectorObject sizeOf printString;
+            nextPutAll: (inspectorObject at: 'sizeOf') printString;
             space ].
       aStream
         nextPutAll:
-            (Text string: inspectorObject classOfName attribute: TextEmphasis bold);
+            (Text string: (inspectorObject at: 'classNameOf') attribute: TextEmphasis bold);
         nextPutAll: ']';
         space ].
-  string := inspectorObject printString.
+  string := inspectorObject at: 'displayString'.
+  string ifNil: [ string := inspectorObject printString ].
   compacted
     ifTrue: [ string := string withSeparatorsCompacted ].
   aStream

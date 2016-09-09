@@ -9,7 +9,7 @@
 		"oopOf",
 		"sizeOf",
 		"classOfName",
-		"printString" ],
+		"displayString" ],
 	"name" : "TDRemoteInspectorObject",
 	"pools" : [
 		 ],

@@ -6,7 +6,7 @@ forObjectWithOop: anObjectOop limit: limit
   sizeOf := Reflection sizeOf: object.
   classOfName := (Reflection classOf: object) name.
   [ 
-  printString := limit > 0
+  displayString := limit > 0
     ifTrue: [ object printStringLimitedTo: limit ]
     ifFalse: [ object printString ] ]
     on: Error , AlmostOutOfStack
