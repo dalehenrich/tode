@@ -4,9 +4,14 @@
 	"instance" : {
 		"createStackNodeFor:exception:session:" : "dkh 09/08/2016 06:51",
 		"debugProcessOop:exceptionOop:session:" : "dkh 09/08/2016 06:35",
+		"exception" : "dkh 09/09/2016 12:07",
+		"exceptionDescription" : "dkh 09/09/2016 12:07",
 		"frameList" : "dkh 09/08/2016 16:43",
 		"homeMethodOop" : "dkh 09/08/2016 16:44",
 		"homeMethodOop:" : "dkh 09/08/2016 16:44",
 		"itemSelected:listElement:selectedIndex:shiftPressed:" : "dkh 09/09/2016 10:34",
+		"printOn:" : "dkh 09/09/2016 12:08",
 		"receiverOop" : "dkh 09/08/2016 14:22",
-		"receiverOop:" : "dkh 09/08/2016 14:22" } }
+		"receiverOop:" : "dkh 09/08/2016 14:22",
+		"session" : "dkh 09/09/2016 13:28",
+		"windowIsClosing:" : "dkh 09/09/2016 13:27" } }
