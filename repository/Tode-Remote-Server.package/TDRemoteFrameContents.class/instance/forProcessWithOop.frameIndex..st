@@ -19,7 +19,7 @@ forProcessWithOop: processOop frameIndex: frameIndex
   frameSelf := fc at: 8.
   frameSelfOop := frameSelf asOop.
   frameSelfClassOop := frameSelf class asOop.
-  frameSelfClassName fraemSelf class name.
+  frameSelfClassName := frameSelf class name.
   rawReceiver := fc at: 10.
   rawReceiverOop := rawReceiver asOop.
   receiver := frameSelf ifNil: [ rawReceiver ].
