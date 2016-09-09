@@ -1,10 +1,11 @@
 initialization
 forObjectWithOop: anObjectOop limit: limit
-  | object |
+  | object objectClass |
   object := Object _objectForOop: anObjectOop.
   oopOf := anObjectOop.
   sizeOf := Reflection sizeOf: object.
-  classOfName := (Reflection classOf: object) name.
+  objectClass := Reflection classOf: object.
+  classOfName := objectClass name.
   displayString := [ 
   limit > 0
     ifTrue: [ 
@@ -14,4 +15,5 @@ forObjectWithOop: anObjectOop limit: limit
       ws contents ]
     ifFalse: [ object printString ] ]
     on: Error , AlmostOutOfStack
-    do: [ :ex | 'error printing: ' , ex description ]
+    do: [ :ex | 'error printing: ' , ex description ].
+  self populateChildNodesFor: object ofClass: objectClass

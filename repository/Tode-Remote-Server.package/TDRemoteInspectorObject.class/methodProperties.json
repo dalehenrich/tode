@@ -2,8 +2,13 @@
 	"class" : {
 		"forObjectWithOop:limit:" : "dkh 09/09/2016 11:17" },
 	"instance" : {
+		"childNodeIndexableOops" : "dkh 09/09/2016 14:43",
+		"childNodeNamedOops" : "dkh 09/09/2016 14:42",
+		"childNodeNames" : "dkh 09/09/2016 14:18",
 		"classOfName" : "dkh 09/09/2016 11:14",
 		"displayString" : "dkh 09/09/2016 11:43",
-		"forObjectWithOop:limit:" : "dkh 09/09/2016 11:55",
+		"forObjectWithOop:limit:" : "dkh 09/09/2016 14:17",
+		"indexableWindowSize" : "dkh 09/09/2016 14:29",
 		"oopOf" : "dkh 09/09/2016 11:14",
+		"populateChildNodesFor:ofClass:" : "dkh 09/09/2016 14:44",
 		"sizeOf" : "dkh 09/09/2016 11:14" } }

@@ -1,8 +1,13 @@
 {
 	"class" : {
+		"initialize" : "dkh 09/09/2016 13:58",
 		"objectOop:session:" : "dkh 09/09/2016 10:49" },
 	"instance" : {
+		"childNodeIndexableOops" : "dkh 09/09/2016 14:48",
+		"childNodeNamedOops" : "dkh 09/09/2016 14:48",
+		"childNodeNames" : "dkh 09/09/2016 14:48",
 		"displayOnPolicy:" : "dkh 09/09/2016 11:44",
+		"inspectorObject" : "dkh 09/09/2016 14:36",
 		"inspectorObject:" : "dkh 09/09/2016 11:33",
 		"objectOop" : "dkh 09/09/2016 10:49",
 		"objectOop:" : "dkh 09/09/2016 10:49",

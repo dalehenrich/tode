@@ -9,7 +9,10 @@
 		"oopOf",
 		"sizeOf",
 		"classOfName",
-		"displayString" ],
+		"displayString",
+		"childNodeNames",
+		"childNodeNamedOops",
+		"childNodeIndexableOops" ],
 	"name" : "TDRemoteInspectorObject",
 	"pools" : [
 		 ],
