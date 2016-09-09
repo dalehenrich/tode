@@ -2,7 +2,7 @@ initialization
 populateChildNodesFor: object ofClass: objectClass
   | specialChildNames indexableSize indexableEndIndex moreElements ivs dvs |
   childNodeNamedOops := Dictionary new.
-  specialChildNames := #('(className)' '(oop)' '<<more>>').
+  specialChildNames := #('(className)' '(oop)').
   childNodeNamedOops
     at: '(className)' put: objectClass name asOop;
     at: '(oop)' put: object asOop;
@@ -21,7 +21,9 @@ populateChildNodesFor: object ofClass: objectClass
     ifTrue: [ 
       indexableEndIndex := self indexableWindowSize min: indexableSize.
       indexableEndIndex < indexableSize
-        ifTrue: [ moreElements := #('<<more>>') ] ]
+        ifTrue: [ 
+          specialChildNames add: '<<more>>'.
+          moreElements := #('<<more>>') ] ]
     ifFalse: [ indexableEndIndex := indexableSize - ivs size ].
   childNodeIndexableOops := Array new: indexableEndIndex.
   (1 to: indexableEndIndex)
