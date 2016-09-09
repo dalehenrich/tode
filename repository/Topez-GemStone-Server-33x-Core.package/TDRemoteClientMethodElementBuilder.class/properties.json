@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 09/09/2016 15:58",
 	"instvars" : [
 		 ],
-	"name" : "TDRemoteStackFrameMethodElementBuilder",
+	"name" : "TDRemoteClientMethodElementBuilder",
 	"pools" : [
 		 ],
-	"super" : "TDRemoteClientMethodElementBuilder",
+	"super" : "TDClientCodeElementBuilder",
 	"type" : "normal" }
