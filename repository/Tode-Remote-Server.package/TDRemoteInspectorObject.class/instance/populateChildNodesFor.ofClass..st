@@ -2,7 +2,8 @@ initialization
 populateChildNodesFor: object ofClass: objectClass
   | specialChildNames indexableSize indexableEndIndex moreElements ivs dvs |
   childNodeNamedOops := Dictionary new.
-  specialChildNames := #('(className)' '(oop)').
+  specialChildNames := {'(className)'.
+  '(oop)'}.
   childNodeNamedOops
     at: '(className)' put: objectClass name asOop;
     at: '(oop)' put: object asOop;
