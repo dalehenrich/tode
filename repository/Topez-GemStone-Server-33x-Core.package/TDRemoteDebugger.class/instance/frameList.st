@@ -8,7 +8,7 @@ frameList
       | str attributes |
       attributes := {}.
       str := index asString , '. ' , frame printString.
-      frame homeMethod == self homeMethod
+      frame homeMethodOop == self homeMethodOop
         ifTrue: [ attributes add: TextEmphasis bold ].
       frame frameSelfOop == self receiverOop
         ifTrue: [ 

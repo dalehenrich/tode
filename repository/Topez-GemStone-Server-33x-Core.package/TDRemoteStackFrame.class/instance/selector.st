@@ -1,3 +1,3 @@
 private
 selector
-    ^ self homeMethod selector
+  ^ self frameDict at: 'selector'

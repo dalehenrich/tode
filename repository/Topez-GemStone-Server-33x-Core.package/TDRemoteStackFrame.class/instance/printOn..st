@@ -1,19 +1,19 @@
 private
 printOn: aStream
-  | frameSelfClass |
+  | frameSelfClassOop |
   self isMethodForBlock
     ifTrue: [ aStream nextPutAll: '[] in ' ].
-  self inClass == nil
+  self inClassOop == 20
     ifTrue: [ 
       aStream nextPutAll: 'Executed Code'.
       ^ self ].
-  frameSelfClass := self frameSelfClass.
-  frameSelfClass ~= self inClass
+  frameSelfClassOop := self frameSelfClassOop.
+  frameSelfClassOop ~= self inClassOop
     ifTrue: [ 
       aStream
-        nextPutAll: frameSelfClass name asString;
-        nextPutAll: '(' , self inClass name asString , ')' ]
-    ifFalse: [ aStream nextPutAll: self inClass name asString ].
+        nextPutAll: self frameSelfClassName asString;
+        nextPutAll: '(' , self inClassName asString , ')' ]
+    ifFalse: [ aStream nextPutAll: self inClassName asString ].
   aStream nextPutAll: '>>'.
   aStream nextPutAll: self selector.
   aStream nextPutAll: ' ' , self stepPoint asString

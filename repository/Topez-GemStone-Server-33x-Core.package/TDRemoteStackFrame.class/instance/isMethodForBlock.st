@@ -1,4 +1,3 @@
 private
 isMethodForBlock
-  self method ifNil: [ ^ true ].
-  ^ self method isMethodForBlock
+  ^ self frameDict at: 'isMethodForBlock'

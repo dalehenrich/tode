@@ -1,3 +1,3 @@
 private
 homeMethodSource
-    ^ self homeMethod sourceString
+  ^ self frameDict at: 'homeMethodSourceString'

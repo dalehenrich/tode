@@ -1,3 +1,3 @@
 private
 frameSelfOop
-  ^ self receiverOop
+  ^ self frameDict at: 'frameSelfOop'
