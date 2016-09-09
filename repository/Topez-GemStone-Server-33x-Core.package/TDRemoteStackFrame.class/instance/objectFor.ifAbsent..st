@@ -1,7 +1,6 @@
 private
 objectFor: elementName ifAbsent: absentBlock
   | index |
-  self halt.
   (self baseNodeNames includes: elementName)
     ifTrue: [ ^ self perform: (self baseNodeMap at: elementName) ].
   index := self argAndTempNames indexOf: elementName.

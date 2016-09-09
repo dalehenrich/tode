@@ -1,4 +1,5 @@
 private
 argAndTempNamesAt: index
-  self halt.
-  ^ self frameContents at: 10 + index
+  | oop |
+  oop := (self frameDict at: 'argAndTempOops') at: index.
+  ^ TDRemoteObjectInspectorReference objectOop: oop session: session

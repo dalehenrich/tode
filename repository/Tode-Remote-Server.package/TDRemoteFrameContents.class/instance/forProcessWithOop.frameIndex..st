@@ -25,6 +25,8 @@ forProcessWithOop: processOop frameIndex: frameIndex
   receiver := frameSelf ifNil: [ rawReceiver ].
   receiverOop := receiver asOop.
   argAndTempNames := fc at: 9.
+  argAndTempOops := {}.
+  1 to: argAndTempNames size do: [ :i | argAndTempOops add: ((fc at: 10) + i) asOop ].
   homeMethod := method homeMethod.
   homeMethodOop := homeMethodOop.
   homeMethodSourceString := homeMethod sourceString.

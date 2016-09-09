@@ -1,0 +1,4 @@
+accessing
+objectOop
+
+   ^objectOop
