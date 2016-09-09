@@ -7,7 +7,11 @@ forObjectWithOop: anObjectOop limit: limit
   classOfName := (Reflection classOf: object) name.
   displayString := [ 
   limit > 0
-    ifTrue: [ object printStringLimitedTo: limit ]
+    ifTrue: [ 
+      | ws |
+      ws := PrintStream printingOn: String new maxSize: limit.
+      object printOn: ws.
+      ws contents ]
     ifFalse: [ object printString ] ]
     on: Error , AlmostOutOfStack
     do: [ :ex | 'error printing: ' , ex description ]
