@@ -3,7 +3,7 @@ printOn: aStream
   | frameSelfClassOop |
   self isMethodForBlock
     ifTrue: [ aStream nextPutAll: '[] in ' ].
-  self inClassOop == 20
+  self inClassOop == nil
     ifTrue: [ 
       aStream nextPutAll: 'Executed Code'.
       ^ self ].
