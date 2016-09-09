@@ -1,15 +1,16 @@
 {
-	"category" : "Topez-GemStone-Server-33x-Core",
+	"category" : "Tode-Remote-Server",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"inspectorObject",
-		"session",
-		"objectOop" ],
-	"name" : "TDRemoteObjectInspectorReference",
+		"oopOf",
+		"sizeOf",
+		"classOfName",
+		"printString" ],
+	"name" : "TDRemoteInspectorObject",
 	"pools" : [
 		 ],
 	"super" : "Object",
