@@ -27,7 +27,7 @@ displayOnPolicy: displayPolicy
     ifTrue: [ self printStringTodeLimitedTo: limit ]
     ifFalse: [ self printString ] ]
     on: self printExceptionSet
-    do: [ :ignored | 'error printing' ].
+    do: [ :ex | 'error printing: ' , ex description ].
   compacted
     ifTrue: [ string := string withSeparatorsCompacted ].
   aStream
