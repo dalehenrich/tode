@@ -195,6 +195,7 @@ baseline: spec
         group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
         group: 'Rewrite' with: #('Tode-BatchEdit-Tool');
         group: 'CI' with: #('GemStone' 'GemStone Tests' 'Rewrite');
+        group: 'Remote Server' with: #();
         yourself ].
   spec
     for: #'gs2.4.x'
@@ -295,6 +296,11 @@ baseline: spec
           with: [ spec includes: 'Topez-Server-33x-Core' ];
         package: 'Topez-Server-33x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
+        package: 'Tode-Remote-Server';
+        yourself.
+      spec
+        group: 'GemStone' with: #('Tode-Remote-Server');
+        group: 'Remote Server' with: #('Tode-Remote-Server');
         yourself ].
   spec
     for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x')

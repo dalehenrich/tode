@@ -1,0 +1,4 @@
+accessing
+inClassOop
+
+   ^inClassOop

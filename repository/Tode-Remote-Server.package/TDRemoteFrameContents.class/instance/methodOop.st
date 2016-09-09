@@ -1,0 +1,4 @@
+accessing
+methodOop
+
+   ^methodOop

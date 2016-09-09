@@ -1,0 +1,30 @@
+{
+	"category" : "Tode-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 09/09/2016 06:45",
+	"instvars" : [
+		"argAndTempNames",
+		"frameSelfOop",
+		"frameSelfClassOop",
+		"frameSelfClassName",
+		"homeMethodOop",
+		"homeMethodSourceString",
+		"inClassName",
+		"inClassOop",
+		"ipOffset",
+		"isMethodForBlock",
+		"methodOop",
+		"rawReceiverOop",
+		"receiverOop",
+		"selector",
+		"sourceOffsetAtStepPoint",
+		"sourceString",
+		"stepPoint" ],
+	"name" : "TDRemoteFrameContents",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
