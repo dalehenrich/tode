@@ -297,9 +297,12 @@ baseline: spec
         package: 'Topez-Server-33x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
         package: 'Tode-Remote-Server';
+        package: 'Tode-GemStone-Remote-Server'
+          with: [ spec requires: 'Topez-GemStone-Server-33x-Core' ];
         yourself.
       spec
-        group: 'GemStone' with: #('Tode-Remote-Server');
+        group: 'GemStone'
+          with: #('Tode-Remote-Server' 'Tode-GemStone-Remote-Server');
         group: 'Remote Server' with: #('Tode-Remote-Server');
         yourself ].
   spec
