@@ -1,4 +1,0 @@
-accessing
-isMethodForBlock
-
-   ^isMethodForBlock

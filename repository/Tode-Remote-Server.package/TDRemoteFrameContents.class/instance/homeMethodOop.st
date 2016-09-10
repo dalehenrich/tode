@@ -1,4 +1,0 @@
-accessing
-homeMethodOop
-
-   ^homeMethodOop

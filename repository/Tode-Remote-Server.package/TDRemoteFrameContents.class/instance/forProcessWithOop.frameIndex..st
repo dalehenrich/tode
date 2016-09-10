@@ -15,7 +15,7 @@ forProcessWithOop: processOop frameIndex: frameIndex
   homeMethod := method homeMethod.
   selector := homeMethod selector.
   methodProtocol := 'as yet unclassified'.
-  allSharedPoolNames := allInstVarNames := #().
+  allClassVarNames := allSharedPoolNames := allInstVarNames := #().
   inClass
     ifNotNil: [ :cl | 
       inClassName := cl name asString.
@@ -23,6 +23,7 @@ forProcessWithOop: processOop frameIndex: frameIndex
       (inClass categoryOfSelector: selector asSymbol)
         ifNotNil: [ :protocol | methodProtocol := protocol ].
       allInstVarNames := inClass allInstVarNames.
+      allClassVarNames := inClass allClassVarNames.
       allSharedPoolNames := IdentitySet new.
       inClass allSharedPools
         do: [ :poolDict | allSharedPoolNames addAll: poolDict keys ] ].

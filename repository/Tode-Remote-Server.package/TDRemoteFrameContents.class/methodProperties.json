@@ -2,24 +2,4 @@
 	"class" : {
 		"forProcessWithOop:frameIndex:" : "dkh 09/09/2016 06:45" },
 	"instance" : {
-		"allInstVarNames" : "dkh 09/09/2016 17:07",
-		"argAndTempNames" : "dkh 09/09/2016 06:45",
-		"argAndTempOops" : "dkh 09/09/2016 10:51",
-		"forProcessWithOop:frameIndex:" : "dkh 09/09/2016 17:10",
-		"frameSelfClassName" : "dkh 09/09/2016 06:45",
-		"frameSelfClassOop" : "dkh 09/09/2016 06:45",
-		"frameSelfOop" : "dkh 09/09/2016 06:45",
-		"homeMethodOop" : "dkh 09/09/2016 06:45",
-		"homeMethodSourceString" : "dkh 09/09/2016 06:45",
-		"inClassName" : "dkh 09/09/2016 06:45",
-		"inClassOop" : "dkh 09/09/2016 06:45",
-		"ipOffset" : "dkh 09/09/2016 06:45",
-		"isMethodForBlock" : "dkh 09/09/2016 06:45",
-		"methodOop" : "dkh 09/09/2016 06:45",
-		"methodProtocol" : "dkh 09/09/2016 17:01",
-		"rawReceiverOop" : "dkh 09/09/2016 06:45",
-		"receiverOop" : "dkh 09/09/2016 06:45",
-		"selector" : "dkh 09/09/2016 06:45",
-		"sourceOffsetAtStepPoint" : "dkh 09/09/2016 06:45",
-		"sourceString" : "dkh 09/09/2016 06:45",
-		"stepPoint" : "dkh 09/09/2016 06:45" } }
+		"forProcessWithOop:frameIndex:" : "dkh 09/09/2016 20:29" } }

@@ -1,4 +1,0 @@
-accessing
-stepPoint
-
-   ^stepPoint

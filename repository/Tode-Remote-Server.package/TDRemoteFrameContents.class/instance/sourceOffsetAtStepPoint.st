@@ -1,4 +1,0 @@
-accessing
-sourceOffsetAtStepPoint
-
-   ^sourceOffsetAtStepPoint
