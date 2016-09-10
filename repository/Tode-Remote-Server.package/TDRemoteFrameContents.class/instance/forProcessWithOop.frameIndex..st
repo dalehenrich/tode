@@ -12,10 +12,20 @@ forProcessWithOop: processOop frameIndex: frameIndex
     useNext: process _nativeStack.
   sourceOffsetAtStepPoint := method _sourceOffsetsAt: stepPoint.
   inClass := method inClass.
+  homeMethod := method homeMethod.
+  selector := homeMethod selector.
+  methodProtocol := 'as yet unclassified'.
+  allSharedPoolNames := allInstVarNames := #().
   inClass
     ifNotNil: [ :cl | 
       inClassName := cl name asString.
-      inClassOop := inClass asOop ].
+      inClassOop := inClass asOop.
+      (inClass categoryOfSelector: selector asSymbol)
+        ifNotNil: [ :protocol | methodProtocol := protocol ].
+      allInstVarNames := inClass allInstVarNames.
+      allSharedPoolNames := IdentitySet new.
+      inClass allSharedPools
+        do: [ :poolDict | allSharedPoolNames addAll: poolDict keys ] ].
   frameSelf := fc at: 8.
   frameSelfOop := frameSelf asOop.
   frameSelfClassOop := frameSelf class asOop.
@@ -27,9 +37,7 @@ forProcessWithOop: processOop frameIndex: frameIndex
   argAndTempNames := fc at: 9.
   argAndTempOops := {}.
   1 to: argAndTempNames size do: [ :i | argAndTempOops add: (fc at: 10 + i) asOop ].
-  homeMethod := method homeMethod.
   homeMethodOop := homeMethodOop.
   homeMethodSourceString := homeMethod sourceString.
   sourceString := method sourceString.
-  selector := homeMethod selector.
   isMethodForBlock := method isMethodForBlock
