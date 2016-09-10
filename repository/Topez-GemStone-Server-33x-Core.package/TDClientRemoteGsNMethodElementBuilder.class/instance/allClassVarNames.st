@@ -1,3 +1,3 @@
 as yet unclassified
 allClassVarNames
-  self object allClassVarNames
+  ^ self object allClassVarNames

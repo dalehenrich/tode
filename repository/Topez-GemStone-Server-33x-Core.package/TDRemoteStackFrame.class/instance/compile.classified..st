@@ -9,8 +9,8 @@ compile: sourceString classified: methodProtocol
         using: GsSession currentSession symbolList
         environmentId: 0 ]
     withArguments:
-      {(self processOop).
-      (self frameIndex).
+      {(self inClassOop).
+      sourceString.
       methodProtocol}.
   ^ (Object _objectForOop: self inClassOop)
     ifNotNil: [ :theClass | 
