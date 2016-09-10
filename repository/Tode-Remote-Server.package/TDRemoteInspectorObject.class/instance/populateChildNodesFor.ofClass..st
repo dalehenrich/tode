@@ -12,10 +12,7 @@ populateChildNodesFor: object ofClass: objectClass
   1 to: ivs size do: [ :i | childNodeNamedOops at: (ivs at: i) put: (object instVarAt: i) asOop ].
   dvs := object dynamicInstanceVariables collect: [ :each | each asString ].
   dvs
-    do: [ :name | 
-      childNodeNamedOops
-        at: name
-        put: (object dynamicInstanceVariableAt: name asSymbol) asOop ].
+    do: [ :name | childNodeNamedOops at: name put: (object dynamicInstVarAt: name asSymbol) asOop ].
   moreElements := #().
   indexableSize := Reflection sizeOf: object.
   indexableSize > self indexableWindowSize

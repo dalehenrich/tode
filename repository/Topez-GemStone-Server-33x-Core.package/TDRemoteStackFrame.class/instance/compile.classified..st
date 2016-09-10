@@ -8,9 +8,10 @@ compile: sourceString classified: methodProtocol
         category: protocol
         using: GsSession currentSession symbolList
         environmentId: 0 ]
-    with: self processOop
-    with: self frameIndex
-    with: methodProtocol.
+    withArguments:
+      {(self processOop).
+      (self frameIndex).
+      methodProtocol}.
   ^ (Object _objectForOop: self inClassOop)
     ifNotNil: [ :theClass | 
       (Behavior parseSelector: sourceString for: theClass)
