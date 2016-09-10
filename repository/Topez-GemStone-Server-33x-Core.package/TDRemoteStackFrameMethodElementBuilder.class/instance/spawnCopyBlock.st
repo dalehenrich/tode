@@ -2,7 +2,7 @@ as yet unclassified
 spawnCopyBlock
   "explicit direct reference to formatOnDisplay and formatOnAccept - nil should stay nil"
 
-  self inClass ifNil: [ ^ nil ].
+  self inClassOop ifNil: [ ^ nil ].
   ^ [ 
   | newObject |
   newObject := TDMethodDefinition
