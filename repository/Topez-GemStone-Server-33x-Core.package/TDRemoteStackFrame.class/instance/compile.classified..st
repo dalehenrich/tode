@@ -1,18 +1,16 @@
 accessing
 compile: sourceString classified: methodProtocol
-  self session
+  | selector |
+  ^ self session
     executeBlock: [ :classOop :source :protocol | 
-      | frameContents stream |
-      (Object _objectForOop: classOop)
+      | gsNMethod |
+      gsNMethod := (Object _objectForOop: classOop)
         compileMethod: source
+        dictionaries: GsSession currentSession symbolList
         category: protocol
-        using: GsSession currentSession symbolList
-        environmentId: 0 ]
+        environmentId: 0.
+      gsNMethod selector ]
     withArguments:
       {(self inClassOop).
       sourceString.
-      methodProtocol}.
-  ^ (Object _objectForOop: self inClassOop)
-    ifNotNil: [ :theClass | 
-      (Behavior parseSelector: sourceString for: theClass)
-        ifNotNil: [ :s | s asSymbol ] ]
+      methodProtocol}

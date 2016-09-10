@@ -38,7 +38,7 @@ forProcessWithOop: processOop frameIndex: frameIndex
   argAndTempNames := fc at: 9.
   argAndTempOops := {}.
   1 to: argAndTempNames size do: [ :i | argAndTempOops add: (fc at: 10 + i) asOop ].
-  homeMethodOop := homeMethodOop.
+  homeMethodOop := homeMethod asOop.
   homeMethodSourceString := homeMethod sourceString.
   sourceString := method sourceString.
   isMethodForBlock := method isMethodForBlock
