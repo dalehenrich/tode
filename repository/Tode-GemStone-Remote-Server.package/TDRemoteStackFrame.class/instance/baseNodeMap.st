@@ -3,22 +3,22 @@ baseNodeMap
   | map |
   map := Dictionary new.
   map
-    add: '(context)' -> #'method';
+    add: '(context)' -> #'methodOop';
     yourself.
   self isMethodForBlock
     ifTrue: [ 
       self rawReceiverOop ~~ self frameSelfOop
         ifTrue: [ 
           map
-            add: '(receiver)' -> #'receiver';
-            add: '(self)' -> #'frameSelf';
+            add: '(receiver)' -> #'receiverOop';
+            add: '(self)' -> #'frameSelfOop';
             yourself ]
-        ifFalse: [ map add: '(self)' -> #'frameSelf' ].
+        ifFalse: [ map add: '(self)' -> #'frameSelfOop' ].
       map
-        add: '(home)' -> #'homeMethod';
+        add: '(home)' -> #'homeMethodOop';
         yourself ]
     ifFalse: [ 
       map
-        add: '(self)' -> #'receiver';
+        add: '(self)' -> #'receiverOop';
         yourself ].
   ^ map
