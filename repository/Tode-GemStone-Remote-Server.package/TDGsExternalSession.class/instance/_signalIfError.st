@@ -5,9 +5,9 @@ _signalIfError
     ifTrue: [ ^ super _signalIfError ].
   (self _gciLibrary GciErr_: gciErrSType) == 1
     ifFalse: [ ^ self ].
-  handlingError := true.
   (gciErrSType number between: 4000 and: 4999)
-    ifTrue: [ gciSessionId := 0 ].
+    ifTrue: [ ^ super _signalIfError ].
+  handlingError := true.
   debugger := TDRemoteDebugger new
     topez: self topez;
     debugProcessOop: gciErrSType context
