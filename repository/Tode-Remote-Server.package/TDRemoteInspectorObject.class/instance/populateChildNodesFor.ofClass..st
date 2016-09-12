@@ -5,10 +5,13 @@ populateChildNodesFor: object ofClass: objectClass
   specialChildNames := {'(className)'.
   '(oop)'}.
   childNodeNamedOops
-    at: '(className)' put: objectClass name asOop;
     at: '(oop)' put: object asOop;
     yourself.
-  ivs := objectClass allInstVarNames collect: [ :each | each asString ].
+  objectClass
+    ifNil: [ ivs := #() ]
+    ifNotNil: [ 
+      childNodeNamedOops at: '(className)' put: objectClass name asOop.
+      ivs := objectClass allInstVarNames collect: [ :each | each asString ] ].
   1 to: ivs size do: [ :i | childNodeNamedOops at: (ivs at: i) put: (object instVarAt: i) asOop ].
   dvs := object dynamicInstanceVariables collect: [ :each | each asString ].
   dvs

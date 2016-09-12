@@ -2,7 +2,7 @@ debug ops
 dbStep: stepDirective
   | level stepId processOop stack transcriptProxy |
   stack := self theStack.
-  processOop := stack process asOop.
+  processOop := self processOop.
   stepId := #(#'into' #'over') indexOf: stepDirective.
   stepId == 1
     ifTrue: [ level := 0 ]
