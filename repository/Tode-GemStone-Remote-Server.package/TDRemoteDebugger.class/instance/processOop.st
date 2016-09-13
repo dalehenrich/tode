@@ -1,3 +1,3 @@
 accessing
 processOop
-  ^ self process asOop
+  ^ self theStack processOop
