@@ -11,9 +11,9 @@ dbStep: stepDirective
       stepDirective == #'thru'
         ifTrue: [ through := 1 ] ].
   self topez disableSessionMethods.
+  processResult := nil.
   [ self session step: processOop level: level through: through ]
     on: TDExceptionDuringStep
-    do: [ :ex | 
-      processTerminated := (self debugExceptionSymbols includes: ex breakpointKind)
-        not ].
-  ^ true
+    do: [ :ex | processResult := ex breakpointKind ].
+  processTerminated := (self debugExceptionSymbols includes: processResult) not.
+  stack resetFrames
