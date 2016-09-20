@@ -1,3 +1,3 @@
-accessing
+public
 resetHandlingError
   ^ handlingError := false

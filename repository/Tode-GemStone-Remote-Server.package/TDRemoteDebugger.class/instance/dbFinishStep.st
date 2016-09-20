@@ -5,10 +5,7 @@ dbFinishStep
   stack := self theStack.
   stack navigateFrame: frameIndex.
   currentFrame := stack currentFrame.
-  (currentFrame frameContents == nil
-    or: [ 
-      "needed for G/S 2.4 to recognize when process is no longer active .. may be nil"
-      processTerminated == true ])
+  currentFrame frameContents == nil
     ifTrue: [ 
       self topez effectiveApiVersion < '1.3.0' asMetacelloVersionNumber
         ifTrue: [ ^ #'close' ]

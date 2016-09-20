@@ -1,4 +1,4 @@
-Private
+private
 continue: contextOop replacingTopOfStackWithOop: valueOop
 	"Continue execution in the external Gem following an exception,
 	 replacing the top of the stack with the specified object.

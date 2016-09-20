@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-GemStone-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 09/20/2016 11:44",
+	"instvars" : [
+		"breakpointKind" ],
+	"name" : "TDExceptionDuringStep",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }
