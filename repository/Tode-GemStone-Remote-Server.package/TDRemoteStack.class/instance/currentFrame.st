@@ -11,6 +11,7 @@ currentFrame
           ^ TDRemoteStackFrame new
             stack: self;
             session: self session;
+            dynamicInstVarAt: #'frameDict' put: Dictionary new;
             yourself ].
       currentFrame := self frames at: 1 ].
   ^ currentFrame

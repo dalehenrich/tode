@@ -5,7 +5,7 @@ dbFinishStep
   stack := self theStack.
   stack navigateFrame: frameIndex.
   currentFrame := stack currentFrame.
-  currentFrame frameContents == nil
+  currentFrame frameDict isEmpty
     ifTrue: [ 
       self topez effectiveApiVersion < '1.3.0' asMetacelloVersionNumber
         ifTrue: [ ^ #'close' ]
