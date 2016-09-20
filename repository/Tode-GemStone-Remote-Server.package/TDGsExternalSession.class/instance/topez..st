@@ -1,4 +1,3 @@
 accessing
 topez: anObject
-
-   topez := anObject
+  topez := anObject

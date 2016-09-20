@@ -1,6 +1,6 @@
 signaling
-signal: errorNumber
-  breakpointKind := errorNumber = 6002
+setBreakpointKindFromErrorNumber: errorNumber
+  ^ breakpointKind := errorNumber = 6002
     ifTrue: [ 
       "single step breakpoint ... as expected"
       #'singleStep' ]
@@ -19,5 +19,4 @@ signal: errorNumber
                 ifTrue: [ 
                   "halt occurred during execution"
                   #'halt' ]
-                ifFalse: [ #'error' ] ] ] ].
-  ^ self _signalWith: nil
+                ifFalse: [ #'error' ] ] ] ]

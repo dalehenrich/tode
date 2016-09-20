@@ -1,0 +1,3 @@
+actions
+defaultAction
+  ^ self openDebugger

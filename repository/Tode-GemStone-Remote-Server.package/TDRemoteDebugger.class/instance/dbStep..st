@@ -30,6 +30,11 @@ dbStep: stepDirective
           nil ] ] ].
   self session executeBlock: remoteBlock with: self processOop with: level ]
     on: TDExceptionDuringStep
-    do: [ :ex | processResult := ex breakpointKind ].
+    do: [ :ex | 
+      ex processOop ~~ self processOop
+        ifTrue: [ 
+          "An error for another process -- open another debugger"
+          ^ ex pass ].
+      processResult := ex breakpointKind ].
   processTerminated := (self debugExceptionSymbols includes: processResult) not.
   stack resetFrames
