@@ -1,11 +1,7 @@
 debug ops
 dbFinishStep
   | frameIndex stack currentFrame |
-  frameIndex := 1.
-  stack := self theStack.
-  stack navigateFrame: frameIndex.
-  currentFrame := stack currentFrame.
-  (currentFrame frameDict isEmpty or: [ processTerminated == true ])
+  processTerminated
     ifTrue: [ 
       self topez effectiveApiVersion < '1.3.0' asMetacelloVersionNumber
         ifTrue: [ ^ #'close' ]
@@ -14,6 +10,10 @@ dbFinishStep
             toString:
               {#'closeWith:'.
               processResult} ] ].
+  frameIndex := 1.
+  stack := self theStack.
+  stack navigateFrame: frameIndex.
+  currentFrame := stack currentFrame.
   ^ self objectSerializer
     toString:
       {#'listIndex:'.
