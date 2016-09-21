@@ -1,4 +1,4 @@
-debug ops
+*tode-gemstone-remote340-server
 dbStep: stepDirective
   | level stack through |
   stack := self theStack.

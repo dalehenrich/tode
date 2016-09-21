@@ -285,6 +285,24 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec
+    for: #(#'gs3.3.x')
+    do: [ 
+      spec
+        package: 'Tode-GemStone-Remote-Server'
+          with: [ spec includes: 'Tode-GemStone-Remote330-Server' ];
+        package: 'Tode-GemStone-Remote330-Server'
+          with: [ spec requires: 'Tode-GemStone-Remote-Server' ];
+        yourself ].
+  spec
+    for: #(#'gs3.4.x')
+    do: [ 
+      spec
+        package: 'Tode-GemStone-Remote-Server'
+          with: [ spec includes: 'Tode-GemStone-Remote340-Server' ];
+        package: 'Tode-GemStone-Remote340-Server'
+          with: [ spec requires: 'Tode-GemStone-Remote-Server' ];
+        yourself ].
+  spec
     for: #(#'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
