@@ -4,4 +4,5 @@ debugProcessOop: aGsProcessOop exceptionOop: anExceptionOop session: aTDGsExtern
   stackNode := self
     createStackNodeFor: aGsProcessOop
     exception: anExceptionOop
-    session: aTDGsExternalSession
+    session: aTDGsExternalSession.
+  processTerminated := false

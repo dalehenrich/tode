@@ -19,7 +19,8 @@ printOn: aStream
     ifFalse: [ aStream nextPutAll: self inClassName asString ].
   aStream nextPutAll: '>>'.
   aStream nextPutAll: self selector.
-  aStream
-    nextPutAll: ' ' , self stepPoint asString;
-    tab: 2.
+  aStream nextPutAll: ' @' , self stepPoint asString.
+  self lineNumberForStepPoint
+    ifNotNil: [ :num | aStream nextPutAll: ' line ' , num asString ].
+  aStream tab: 2.
   self session minPrintOn: aStream
