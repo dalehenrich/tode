@@ -5,6 +5,7 @@ theClass
   cl
     ifNil: [ 
       | nm |
+      self halt.	"not surre that this clause is a good idea"
       nm := self theClassName.
       cl := ClassOrganizer cachedOrganizer classes
         detect: [ :cl | cl name = nm ]
