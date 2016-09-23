@@ -1,3 +1,5 @@
 converting
 asTDBehaviorDefinition
-  ^ (TDBehaviorReferenceDefinition behavior: self theBehavior) yourself
+  ^ (TDBehaviorReferenceDefinition behavior: self theBehavior)
+    username: self username;
+    yourself
