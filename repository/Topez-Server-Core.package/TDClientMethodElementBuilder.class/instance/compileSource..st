@@ -5,6 +5,6 @@ compileSource: theSource
   newSelector := self object
     compile: theSource withGemstoneLineEndings
     classified: self methodProtocol.
-  selector asSymbol ~~ newSelector
+  (selector asSymbol ~~ newSelector or: [ self object username notNil ])
     ifTrue: [ self differentMethodCreated: newSelector ].
   ^ newSelector
