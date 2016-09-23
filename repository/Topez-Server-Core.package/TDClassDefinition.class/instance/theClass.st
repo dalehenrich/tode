@@ -4,12 +4,8 @@ theClass
   cl := self symbolList objectNamed: self theClassName.
   cl
     ifNil: [ 
-      | nm |
-      self halt.	"not surre that this clause is a good idea"
-      nm := self theClassName.
-      cl := ClassOrganizer cachedOrganizer classes
-        detect: [ :cl | cl name = nm ]
-        ifNone: [ nil ] ].
+      self halt.	"removed check in class organizer ... logic moved to TDClassHistoryDefinition>>theClass"
+      ^ nil ].
   cl isBehavior
     ifFalse: [ ^ nil ].
   ^ cl
