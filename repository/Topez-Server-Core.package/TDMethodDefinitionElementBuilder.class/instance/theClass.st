@@ -1,3 +1,3 @@
 as yet unclassified
 theClass
-  ^ Smalltalk classNamed: self theBehavior theNonMetaClass name
+  ^ self theBehavior theNonMetaClass
