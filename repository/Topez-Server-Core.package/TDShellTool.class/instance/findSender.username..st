@@ -7,10 +7,7 @@ findSender: selectorToken username: username
   selector := self resolveSelector: selectorToken.
   methodRefs := (((TDBehaviorReferenceDefinition classOrganizerFor: username)
     sendersOf: selector) at: 1)
-    collect: [ :gsNMethod | 
-      MethodReference new
-        setStandardClass: gsNMethod inClass
-        methodSymbol: gsNMethod selector ].
+    collect: [ :gsNMethod | self methodReferenceForGsNMethod: gsNMethod username: username ].
   ^ self
     methodDefinitionsFor: methodRefs asArray
     messagePattern: selector
