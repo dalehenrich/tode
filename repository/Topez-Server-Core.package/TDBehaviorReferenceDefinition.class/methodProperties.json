@@ -2,7 +2,10 @@
 	"class" : {
 		"behavior:" : "dkh 09/12/2015 08:04",
 		"className:" : "dkh 09/12/2015 08:04",
-		"className:isMeta:" : "dkh 09/12/2015 08:05" },
+		"className:isMeta:" : "dkh 09/12/2015 08:05",
+		"classOrganizerFor:" : "dkh 09/24/2016 07:25",
+		"classOrganizerSessionTempsName" : "dkh 09/24/2016 07:05",
+		"clearClassOrganizers" : "dkh 09/24/2016 07:06" },
 	"instance" : {
 		"=" : "dkh 09/12/2015 07:48",
 		"asTDClassDefinition" : "dkh 09/12/2015 08:28",
@@ -12,6 +15,7 @@
 		"browseInstanceProtocol:" : "dkh 09/23/2016 06:06",
 		"className" : "dkh 09/12/2015 07:55",
 		"className:" : "dkh 09/12/2015 07:55",
+		"classOrganizer" : "dkh 09/24/2016 07:11",
 		"hash" : "dkh 09/12/2015 07:55",
 		"isMeta" : "dkh 09/12/2015 07:56",
 		"isMeta:" : "dkh 09/12/2015 07:49",
@@ -20,5 +24,5 @@
 		"removeFromSystem:" : "dkh 09/12/2015 07:58",
 		"theBehavior" : "dkh 09/12/2015 07:50",
 		"theClass" : "dkh 09/12/2015 07:54",
-		"theClassLabel" : "dkh 09/12/2015 08:00",
+		"theClassLabel" : "dkh 09/24/2016 07:39",
 		"theClassName:" : "dkh 09/12/2015 07:59" } }

@@ -29,7 +29,7 @@ processClassDefinitionsBlock: classDefinitionsBlock elementBlock: elementBlock
       supersChain := {classDef}.
       classDef theClass
         ifNotNil: [ :cls | 
-          supersChain := ({cls} , cls allSuperClasses) reversed.
+          supersChain := ({cls} , classDef allSuperclasses) reversed.
           supersChain
             removeAllSuchThat: [ :class | (classes includes: class) not ].
           supersChain := supersChain

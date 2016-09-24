@@ -4,9 +4,9 @@ browseHierarchyImplementorsMenuAction: listElement selectionIndex: selectionInde
   itemAttribute := listElement itemCache at: selectionIndex.
   def := itemAttribute object.
   theClass := def theClass.
-  classes := theClass allSuperClasses.
+  classes := def allSuperclasses.
   classes add: theClass.
-  classes addAll: theClass allSubclasses.
+  classes addAll: def allSubclasses.
   findTool := self findTool: listElement.
   block := [ 
   (findTool findMethod: def selector asString)

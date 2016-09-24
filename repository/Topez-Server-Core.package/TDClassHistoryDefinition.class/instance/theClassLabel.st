@@ -1,3 +1,3 @@
 accessing
 theClassLabel
-  ^ self theClassName , '[' , self classHistoryIndex printString , ']'
+  ^ self theClassName , ' [' , self classHistoryIndex printString , ']'
