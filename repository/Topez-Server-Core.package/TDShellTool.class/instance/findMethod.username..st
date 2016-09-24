@@ -5,7 +5,7 @@ findMethod: selectorToken username: username
   | selector methodRefs |
   username ifNil: [ ^ self findMethod: selectorToken ].
   selector := (self resolveSelector: selectorToken) asSymbol.
-  methodRefs := ((ClassOrganizer newWithRoot: Object forUserId: username)
+  methodRefs := ((TDBehaviorReferenceDefinition classOrganizerFor: username)
     implementorsOf: selector)
     collect: [ :gsNMethod | 
       MethodReference new

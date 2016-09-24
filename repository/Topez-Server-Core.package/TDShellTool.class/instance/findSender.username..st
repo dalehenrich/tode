@@ -5,7 +5,7 @@ findSender: selectorToken username: username
   | selector methodRefs |
   username ifNil: [ ^ self findSender: selectorToken ].
   selector := self resolveSelector: selectorToken.
-  methodRefs := (((ClassOrganizer newWithRoot: Object forUserId: username)
+  methodRefs := (((TDBehaviorReferenceDefinition classOrganizerFor: username)
     sendersOf: selector) at: 1)
     collect: [ :gsNMethod | 
       MethodReference new
