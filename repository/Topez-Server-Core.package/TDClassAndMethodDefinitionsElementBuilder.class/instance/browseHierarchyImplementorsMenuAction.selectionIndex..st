@@ -9,7 +9,7 @@ browseHierarchyImplementorsMenuAction: listElement selectionIndex: selectionInde
   classes addAll: def allSubclasses.
   findTool := self findTool: listElement.
   block := [ 
-  (findTool findMethod: def selector asString)
+  (findTool findMethod: def selector asString username: def username)
     select: [ :each | classes includes: each theClass ] ].
   browseTool := self browseTool: listElement.
   browseTool browseMethodsBlock: block label: 'Implementors of ' , def selector.
