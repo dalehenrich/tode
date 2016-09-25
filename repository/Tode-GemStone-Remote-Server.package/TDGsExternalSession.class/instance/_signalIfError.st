@@ -5,6 +5,7 @@ _signalIfError
     ifFalse: [ ^ self ].
   (gciErrSType number between: 4000 and: 4999)
     ifTrue: [ ^ super _signalIfError ].
+  self inDebugger: true.
   exception := TDExceptionDuringStep new
     session: self;
     gciErrSType: gciErrSType;

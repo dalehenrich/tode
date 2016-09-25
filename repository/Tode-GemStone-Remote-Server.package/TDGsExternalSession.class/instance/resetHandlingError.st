@@ -1,3 +1,0 @@
-public
-resetHandlingError
-  ^ handlingError := false

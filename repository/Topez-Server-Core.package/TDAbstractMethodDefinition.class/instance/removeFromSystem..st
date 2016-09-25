@@ -18,9 +18,11 @@ removeFromSystem: topez
                     with: topez sessionDescription stoneName
                     with: self username
                     with: self pass.
+                  session topez: topez.
                   [ 
                   session perform: #'login'.
                   session abort.
+                  session perform: #'logoutOnClose:' with: true.
                   session
                     perform: #'executeBlock:with:with:'
                     with: [ :behaviorOop :selector | 

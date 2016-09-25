@@ -1,6 +1,5 @@
 compilation
 compile: sourceString inClassOop: aClassOop classified: methodProtocol
-  | selector |
   ^ self
     executeBlock: [ :behaviorOop :source :protocol | 
       | gsNMethod |

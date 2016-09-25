@@ -17,9 +17,11 @@ compile: source classified: methodProtocol
                     with: topez sessionDescription stoneName
                     with: self username
                     with: self pass.
+                  session topez: topez.
                   [ 
                   session perform: #'login'.
                   session abort.
+                  session perform: #'logoutOnClose:' with: true.
                   selector := session
                     perform: #'compile:inClass:classified:'
                     with: source
