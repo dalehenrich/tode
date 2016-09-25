@@ -13,16 +13,18 @@ compile: source classified: methodProtocol
                   | session selector |
                   "perhaps we should have a sessionDescription, too?"
                   session := cls
-                    sessionForStone: topez sessionDescription stoneName
-                    userName: self username
-                    password: self pass.
+                    perform: #'sessionForStone:userName:password:'
+                    with: topez sessionDescription stoneName
+                    with: self username
+                    with: self pass.
                   [ 
-                  session login.
+                  session perform: #'login'.
                   session abort.
                   selector := session
-                    compile: source
-                    inClass: self theBehavior
-                    classified: methodProtocol.
+                    perform: #'compile:inClass:classified:'
+                    with: source
+                    with: self theBehavior
+                    with: methodProtocol.
                   session commit ]
                     ensure: [ session logout ].
                   (self theBehavior transientMethodDictForEnv: 0)

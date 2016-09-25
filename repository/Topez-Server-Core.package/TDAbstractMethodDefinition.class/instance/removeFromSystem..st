@@ -14,14 +14,16 @@ removeFromSystem: topez
                   | session selector |
                   "perhaps we should have a sessionDescription, too?"
                   session := cls
-                    sessionForStone: topez sessionDescription stoneName
-                    userName: self username
-                    password: self pass.
+                    perform: #'sessionForStone:userName:password:'
+                    with: topez sessionDescription stoneName
+                    with: self username
+                    with: self pass.
                   [ 
-                  session login.
+                  session perform: #'login'.
                   session abort.
                   session
-                    executeBlock: [ :behaviorOop :selector | 
+                    perform: #'executeBlock:with:with:'
+                    with: [ :behaviorOop :selector | 
                       (Object _objectForOop: behaviorOop) removeSelector: selector.
                       true ]
                     with: self theBehavior asOop
