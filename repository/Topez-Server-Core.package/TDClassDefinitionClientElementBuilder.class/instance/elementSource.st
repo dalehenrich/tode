@@ -1,7 +1,7 @@
 as yet unclassified
 elementSource
-  self object username
-    ifNotNil: [ 
+  ((self object isKindOf: TDDefinition) and: [ self object username notNil ])
+    ifTrue: [ 
       Smalltalk
         at: #'TDGsExternalSession'
         ifPresent: [ :cls | 

@@ -1,6 +1,6 @@
 as yet unclassified
 elementSource: classDefinition clientSourceElement: clientSourceElement
-  self object username
+  ((self object isKindOf: TDDefinition) and: [ self object username notNil ])
     ifNotNil: [ 
       Smalltalk
         at: #'TDGsExternalSession'
