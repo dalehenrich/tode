@@ -11,7 +11,7 @@ sendersOfItMenuAction: clientSourceElement selectedText: selectedString
             ,
               '. Either the selector does not exist, or a $: character in the selected string is confusing the parser.' ].
   findTool := self findTool: clientSourceElement.
-  (self object isKindOf: TDDefinition)
+  (self object respondsTo: #'username')
     ifTrue: [ username := self object username ].
   block := [ findTool findSender: selector username: username ].
   browseTool := self browseTool: clientSourceElement.

@@ -2,15 +2,22 @@
 	"class" : {
 		 },
 	"instance" : {
+		"allClassVarNames" : "dkh 09/26/2016 10:03",
+		"allInstVarNames" : "dkh 09/26/2016 10:03",
+		"allSharedPoolNames" : "dkh 09/26/2016 10:03",
 		"defaultEditorWindowName" : "dkh 09/09/2016 10:14",
 		"differentMethodCreated:" : "dkh 09/09/2016 10:14",
 		"doItContext" : "dkh 09/09/2016 10:14",
 		"doItLiteralArray" : "dkh 09/09/2016 10:14",
+		"editorWindowLabel" : "dkh 09/26/2016 10:09",
 		"elementSource" : "dkh 09/09/2016 10:14",
 		"elementSource:clientSourceElement:" : "dkh 09/09/2016 10:18",
+		"findStepPoint:" : "dkh 09/26/2016 10:04",
 		"formatOnDisplay" : "dkh 09/09/2016 10:14",
+		"inClassOop" : "dkh 09/26/2016 10:05",
 		"methodOop" : "dkh 09/09/2016 10:18",
+		"methodProtocol" : "dkh 09/26/2016 10:05",
 		"selector" : "dkh 09/09/2016 10:14",
 		"sourceRange" : "dkh 09/09/2016 10:14",
-		"spawnCopyBlock" : "dkh 09/09/2016 17:29",
+		"spawnCopyBlock" : "dkh 09/26/2016 10:08",
 		"usePersistentClientElementCache" : "dkh 09/09/2016 10:14" } }

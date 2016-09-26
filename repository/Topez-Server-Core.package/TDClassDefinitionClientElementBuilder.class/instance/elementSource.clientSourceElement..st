@@ -1,7 +1,7 @@
 as yet unclassified
 elementSource: classDefinition clientSourceElement: clientSourceElement
   ((self object isKindOf: TDDefinition) and: [ self object username notNil ])
-    ifNotNil: [ 
+    ifTrue: [ 
       Smalltalk
         at: #'TDGsExternalSession'
         ifPresent: [ :cls | 
@@ -25,6 +25,6 @@ elementSource: classDefinition clientSourceElement: clientSourceElement
                   session commit.
                   ^ true ]
                     ensure: [ session logout ] ] ] ] ]
-    ifNil: [ GsDeployer bulkMigrate: [ classDefinition evaluate ] ].
+    ifFalse: [ GsDeployer bulkMigrate: [ classDefinition evaluate ] ].
   clientSourceElement topez resetAllGlobalNames.
   ^ true
