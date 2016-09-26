@@ -21,7 +21,7 @@ elementSource: classDefinition clientSourceElement: clientSourceElement
                   session perform: #'login'.
                   session abort.
                   session perform: #'logoutOnClose:' with: true.
-                  session executeString: classDefinition.
+                  session perform: #'executeString:' with: classDefinition.
                   session commit.
                   ^ true ]
                     ensure: [ session logout ] ] ] ] ]
