@@ -10,6 +10,6 @@ methodReferenceForGsNMethod: gsNMethod username: username
       symDictAr := (symbolList := (AllUsers
         userWithId: username
         ifAbsent: [ System myUserProfile ]) symbolList)
-        dictionariesAndSymbolsOf: gsNMethod inClass.
+        dictionariesAndSymbolsOf: gsNMethod inClass theNonMetaClass.
       methodRef symbolDictionary: ((symDictAr at: 1) at: 1) ].
   ^ methodRef
