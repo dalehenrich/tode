@@ -1,10 +1,8 @@
 *tode-gemstone-remote340-server
 dbStep: stepDirective
-  | stack |
+  | stack remoteBlock level |
   stack := self theStack.
   processResult := nil.
-  [ 
-  | remoteBlock level |
   level := stack currentFrame frameIndex.
   stepDirective == #'into'
     ifTrue: [ 
@@ -27,6 +25,8 @@ dbStep: stepDirective
           process := Object _objectForOop: processOop.
           process gciStepOverFromLevel: aLevel.
           nil ] ] ].
+  [ 
+  processResult := nil.
   self session executeBlock: remoteBlock with: self processOop with: level ]
     on: TDExceptionDuringStep
     do: [ :ex | 
