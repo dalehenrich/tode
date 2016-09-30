@@ -5,6 +5,10 @@ createFrames
   self processOop == nil
     ifTrue: [ ^ frames ].
   previous := nil.
+  (self session
+    executeBlock: [ :aProcessOop | (Object _objectForOop: aProcessOop) isNil ]
+    with: self processOop)
+    ifTrue: [ ^ frames ].
   stackDepth := self session
     executeBlock: [ :aProcessOop | (Object _objectForOop: aProcessOop) stackDepth ]
     with: self processOop.
