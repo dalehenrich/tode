@@ -1,6 +1,10 @@
 class organizer
 classOrganizerFor: username
   | organizers |
+  username
+    ifNil: [ 
+      "nil username indicates current user and that means use the standard cached ClassOrganizer"
+      ^ ClassOrganizer cachedOrganizer ].
   organizers := (SessionTemps current
     at: self classOrganizerSessionTempsName
     otherwise: nil)
