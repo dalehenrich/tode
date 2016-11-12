@@ -12,6 +12,7 @@ Here's a video of my
 [Smalltalks 2013](http://www.youtube.com/watch?v=m4LcZ4_1Yic&list=PLCGAAdUizzH027lLWKXh_44cGuEsay7-R&index=16) 
 presentation 
 **tODE: And Now For Something Completely Different**.
+Smalltalks 2015: **Announcing GsDevKit_home And tODE** ([video](https://www.youtube.com/watch?v=QshDlH1ADZQ), [slides](http://fast.org.ar/live/wp-content/uploads/2015/10/DaleHenrichs-TheLightAtTheEndOfTheTunnel.pdf))
 
 Here's a recent screen shot:
 
