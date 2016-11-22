@@ -6,7 +6,7 @@ testSimpleTemp
   innermostBlock := [ self haltMethod ].
   innermostBlock value ].
   stack := self runTestBlockReturnStack: outermostBlock.
-  haltMethodFrame := self findHaltMethodFrameFrom: stack.
+  haltMethodFrame := self findHaltMethodFrameFrom: stack value.
   baseNodeMap := haltMethodFrame baseNodeMap.
   self assert: baseNodeMap size == 2.
   self assert: (baseNodeMap includesKey: '(context)').

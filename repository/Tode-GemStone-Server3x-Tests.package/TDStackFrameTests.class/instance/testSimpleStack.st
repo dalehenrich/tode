@@ -2,7 +2,7 @@ tests
 testSimpleStack
   | stack haltMethod haltMethodFrame x argAndTempNames |
   stack := self runTestBlockReturnStack: [ self haltMethod ].
-  haltMethodFrame := self findHaltMethodFrameFrom: stack.
+  haltMethodFrame := self findHaltMethodFrameFrom: stack value.
   argAndTempNames := haltMethodFrame argAndTempNames.
   self assert: argAndTempNames size == 1.
   self assert: (argAndTempNames at: 1) = '.t1'.

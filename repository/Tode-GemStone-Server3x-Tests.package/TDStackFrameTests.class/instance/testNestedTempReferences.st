@@ -3,7 +3,7 @@ testNestedTempReferences
   | stack haltMethodFrame baseNodeMap argAndTempNames x block haltMethodCallFrame nestedBlockFrame |
   block := [ self nestedBlockMethodWithArgs: 1 b: 2 ].
   stack := self runTestBlockReturnStack: block.
-  haltMethodFrame := self findHaltMethodFrameFrom: stack.
+  haltMethodFrame := self findHaltMethodFrameFrom: stack value.
   haltMethodCallFrame := haltMethodFrame next.
   baseNodeMap := haltMethodCallFrame baseNodeMap.
   argAndTempNames := haltMethodCallFrame argAndTempNames.

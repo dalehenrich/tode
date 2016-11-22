@@ -12,8 +12,8 @@ runTestBlockReturnStack: aBlock
       sem signal.
       sem2 wait ] ] fork.
   sem wait.
-  ^ TDStack new
-    process: process;
-    exception: exception;
-    createFrames;
-    yourself
+  ^ TransientValue value: (TDStack new
+        process: process;
+        exception: exception;
+        createFrames;
+        yourself)
