@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"findHaltMethodFrameFrom:" : "dkh 11/21/2016 16:16",
+		"haltMethod" : "dkh 11/21/2016 15:47",
+		"nestedBlockMethodWithArgs:b:" : "dkh 11/21/2016 17:01",
+		"runTestBlockReturnStack:" : "dkh 11/21/2016 16:13",
+		"testNestedTempReferences" : "dkh 11/21/2016 17:14",
+		"testSimpleStack" : "dkh 11/21/2016 16:41",
+		"testSimpleTemp" : "dkh 11/21/2016 16:53",
+		"theHaltMethod" : "dkh 11/21/2016 16:16" } }
