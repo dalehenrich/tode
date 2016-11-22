@@ -15,9 +15,6 @@ testSimpleTemp
   baseNodeMap := haltBlockFrame baseNodeMap.
   argAndTempNames := haltBlockFrame argAndTempNames.
   self assert: baseNodeMap size == 3.
-  self assert: (baseNodeMap includesKey: '(context)').
-  self assert: (baseNodeMap includesKey: '(home)').
-  self assert: (baseNodeMap includesKey: '(receiver)').
   self
     assert:
       (x := haltBlockFrame objectFor: '(home)' ifAbsent: [ self assert: false ])
@@ -40,9 +37,6 @@ testSimpleTemp
   argAndTempNames := tempFrame argAndTempNames.
   self assert: baseNodeMap size == 4.
   self assert: (baseNodeMap includesKey: '(context)').
-  self assert: (baseNodeMap includesKey: '(home)').
-  self assert: (baseNodeMap includesKey: '(receiver)').
-  self assert: (baseNodeMap includesKey: '(self)').
   self
     assert:
       (x := tempFrame objectFor: '(home)' ifAbsent: [ self assert: false ])

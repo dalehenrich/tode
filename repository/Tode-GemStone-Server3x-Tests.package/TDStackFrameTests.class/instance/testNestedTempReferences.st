@@ -9,7 +9,6 @@ testNestedTempReferences
   argAndTempNames := haltMethodCallFrame argAndTempNames.
   self assert: baseNodeMap size == 3.
   self assert: (baseNodeMap includesKey: '(context)').
-  self assert: (baseNodeMap includesKey: '(home)').
   self assert: (baseNodeMap includesKey: '(receiver)').
   self
     assert:
@@ -29,8 +28,6 @@ testNestedTempReferences
   baseNodeMap := nestedBlockFrame baseNodeMap.
   argAndTempNames := nestedBlockFrame argAndTempNames.
   self assert: baseNodeMap size == 2.
-  self assert: (baseNodeMap includesKey: '(context)').
-  self assert: (baseNodeMap includesKey: '(self)').
   self
     assert:
       (x := nestedBlockFrame objectFor: '(self)' ifAbsent: [ self assert: false ])
