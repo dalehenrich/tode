@@ -1,3 +1,0 @@
-private
-haltMethod
-  self halt
