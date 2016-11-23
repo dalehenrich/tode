@@ -5,7 +5,7 @@ testFactoryComplexSelfBlockCompileInContextObjectEvaluateInBaseNodeMap
   evalContext := 1.
   [ 
   (self
-    factoryBlockCompile: '[self halt]'
+    factoryBlockCompile: '[self halt. self]'
     inContext: compileContext
     evaluateIn: evalContext) value ]
     on: Halt

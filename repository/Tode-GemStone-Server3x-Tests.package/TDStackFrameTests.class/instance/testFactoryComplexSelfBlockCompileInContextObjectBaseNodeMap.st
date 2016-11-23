@@ -2,7 +2,7 @@ tests
 testFactoryComplexSelfBlockCompileInContextObjectBaseNodeMap
   | homeMethod blockFrame baseNodeMap x y compileContext |
   compileContext := Object new.
-  [ (self factoryBlockCompile: '[self halt]' inContext: compileContext) value ]
+  [ (self factoryBlockCompile: '[self halt. self]' inContext: compileContext) value ]
     on: Halt
     do: [ :ex | 
       self

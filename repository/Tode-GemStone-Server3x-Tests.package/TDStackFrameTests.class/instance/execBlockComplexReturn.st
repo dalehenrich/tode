@@ -1,3 +1,5 @@
 block methods
 execBlockComplexReturn
-  ^ [ ^ self ]
+  ^ [ 
+  self halt.
+  ^ self ]

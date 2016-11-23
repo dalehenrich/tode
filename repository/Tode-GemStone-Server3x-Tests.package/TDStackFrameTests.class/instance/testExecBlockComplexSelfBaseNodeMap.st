@@ -26,6 +26,6 @@ testExecBlockComplexSelfBaseNodeMap
   [ 
   | blockReturn |
   blockReturn := self execBlockComplexSelf value.
-  self assert: blockReturn == (blockFrame argOrTempNamed: 'self') ]
+  self assert: blockReturn == (x := blockFrame argOrTempNamed: 'self') ]
     on: Halt
     do: [ :ex | ex resume ]
