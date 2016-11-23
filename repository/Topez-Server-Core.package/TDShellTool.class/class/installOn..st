@@ -76,6 +76,9 @@ installOn: aTDTopezServer
     registerBuilderClass: TDCharacterCollectionNodeBuilder
       for: stringClass
       aspect: #'inspect';
+    registerBuilderClass: TDGsNMethodNodeBuilder
+      for: compiledMethodClass
+      aspect: #'view';
     registerBuilderClass: TDCollectionNodeBuilder
       for: Collection
       aspect: #'view';
