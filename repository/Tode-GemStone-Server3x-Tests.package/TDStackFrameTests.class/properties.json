@@ -6,7 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"blockFactory",
+		"factoryBlock0",
+		"factoryBlockComplexSelf",
+		"factoryBlockCompileInContext",
+		"factoryBlockCompileInContextEvaluateIn" ],
 	"name" : "TDStackFrameTests",
 	"pools" : [
 		 ],

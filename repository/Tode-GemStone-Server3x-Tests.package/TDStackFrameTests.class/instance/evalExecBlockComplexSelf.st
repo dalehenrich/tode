@@ -1,3 +1,3 @@
 block methods
-blockComplexSelf
+evalExecBlockComplexSelf
   ^ self execBlockComplexSelf value
