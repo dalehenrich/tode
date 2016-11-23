@@ -1,3 +1,0 @@
-block methods
-evalFactoryBlockCompileInContext
-  ^ self factoryBlockCompileInContext value

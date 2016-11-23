@@ -2,7 +2,7 @@ tests
 testExecBlockComplexSelfBaseNodeMap
   | frames homeMethod blockFrame baseNodeMap x y |
   homeMethod := self class compiledMethodAt: #'execBlockComplexSelf'.
-  [ self evalExecBlockComplexSelf ]
+  [ self execBlockComplexSelf value ]
     on: Halt
     do: [ :ex | frames := self createFrames ].
   blockFrame := frames first
@@ -25,7 +25,7 @@ testExecBlockComplexSelfBaseNodeMap
   self assert: (blockFrame argOrTempNamed: 'self') == self.
   [ 
   | blockReturn |
-  blockReturn := self evalExecBlockComplexSelf.
+  blockReturn := self execBlockComplexSelf value.
   self assert: blockReturn == (blockFrame argOrTempNamed: 'self') ]
     on: Halt
     do: [ :ex | ex resume ]

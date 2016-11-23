@@ -1,3 +1,5 @@
 block methods
 execBlockSimple
-  ^ [ 1 ]
+  | block1 |
+  block1 := [ 1 halt ].
+  ^ block1

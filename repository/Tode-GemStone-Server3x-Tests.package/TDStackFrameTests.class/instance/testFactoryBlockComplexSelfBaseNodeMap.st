@@ -3,7 +3,7 @@ testFactoryBlockComplexSelfBaseNodeMap
   | frames homeMethod blockFrame baseNodeMap x y |
   homeMethod := self blockFactory class
     compiledMethodAt: #'execBlockComplexSelf'.
-  [ self evalFactoryBlockComplexSelf ]
+  [ self factoryBlockComplexSelf value ]
     on: Halt
     do: [ :ex | frames := self createFrames ].
   blockFrame := frames first
@@ -22,11 +22,11 @@ testFactoryBlockComplexSelfBaseNodeMap
   self
     assert:
       (x := blockFrame objectFor: '(receiver)' ifAbsent: [ self assert: false ])
-        method == (y := self factoryBlockComplexSelf) method.	"it's complicated"
+        method == (y := self factoryBlock) method.	"it's complicated"
   self assert: (blockFrame argOrTempNamed: 'self') == self blockFactory.
   [ 
   | blockReturn |
-  blockReturn := self evalFactoryBlockComplexSelf.
+  blockReturn := self factoryBlock value.
   self assert: blockReturn == (blockFrame argOrTempNamed: 'self') ]
     on: Halt
     do: [ :ex | ex resume ]

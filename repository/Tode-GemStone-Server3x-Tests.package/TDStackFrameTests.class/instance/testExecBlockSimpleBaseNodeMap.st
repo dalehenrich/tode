@@ -1,8 +1,8 @@
 tests
-testExecBlock0BaseNodeMap
+testExecBlockSimpleBaseNodeMap
   | frames homeMethod blockFrame baseNodeMap x |
-  homeMethod := self class compiledMethodAt: #'execBlock0'.
-  [ self evalExecBlock0 ]
+  homeMethod := self class compiledMethodAt: #'execBlockSimple'.
+  [ self execBlockSimple value ]
     on: Halt
     do: [ :ex | frames := self createFrames ].
   blockFrame := frames first
@@ -21,7 +21,7 @@ testExecBlock0BaseNodeMap
   self
     assert:
       (x := blockFrame objectFor: '(receiver)' ifAbsent: [ self assert: false ])
-        == self execBlock0.
+        == self execBlockSimple.
   self
     assert:
       (x := blockFrame objectFor: '(self)' ifAbsent: [ self assert: false ]) == nil

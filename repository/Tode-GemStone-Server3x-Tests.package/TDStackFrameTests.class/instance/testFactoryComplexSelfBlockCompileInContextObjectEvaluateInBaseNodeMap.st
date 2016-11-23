@@ -1,27 +1,20 @@
 tests
-testFactoryBlockCompileInObjectNewEvaluateInBaseNodeMap
+testFactoryComplexSelfBlockCompileInContextObjectEvaluateInBaseNodeMap
   | homeMethod blockFrame baseNodeMap x y compileContext evalContext |
   compileContext := Object new.
   evalContext := 1.
-  [ self evalFactoryBlockCompileInContext: compileContext evaluateIn: evalContext ]
+  [ 
+  (self
+    factoryBlockCompile: '[self halt]'
+    inContext: compileContext
+    evaluateIn: evalContext) value ]
     on: Halt
     do: [ :ex | 
-      | stack process sem frames |
-      process := GsProcess _current.
-      sem := TransientSemaphore new.
-      [ 
-      stack := TDStack new
-        process: process;
-        exception: ex;
-        createFrames;
-        yourself.
-      frames := stack frames.
-      blockFrame := frames
-        detect: [ :frame | frame printString = '[] in Executed Code' ].
-      baseNodeMap := blockFrame baseNodeMap.
-      sem signal ]
-        fork.
-      sem wait ].
+      self
+        createFramesinFork: [ :frame :nodeMap | 
+          blockFrame := frame.
+          baseNodeMap := nodeMap ]
+        exception: ex ].
   self assert: baseNodeMap size == 4.
   self assert: (baseNodeMap includesKey: '(context)').
   homeMethod := blockFrame
@@ -35,13 +28,11 @@ testFactoryBlockCompileInObjectNewEvaluateInBaseNodeMap
   self
     assert:
       (x := blockFrame objectFor: '(receiver)' ifAbsent: [ self assert: false ])
-        method == (y := self factoryBlockCompileInContextEvaluateIn) method.	"it's complicated"
+        method == (y := self factoryBlock) method.	"it's complicated"
   self assert: (blockFrame argOrTempNamed: 'self') == evalContext.
   [ 
   | blockReturn |
-  blockReturn := self
-    evalFactoryBlockCompileInContext: compileContext
-    evaluateIn: evalContext.
+  blockReturn := self factoryBlock value.
   self assert: blockReturn == (blockFrame argOrTempNamed: 'self') ]
     on: Halt
     do: [ :ex | ex resume ]
