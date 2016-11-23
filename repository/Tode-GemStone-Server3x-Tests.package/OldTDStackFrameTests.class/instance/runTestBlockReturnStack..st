@@ -1,13 +1,13 @@
 private
 runTestBlockReturnStack: aBlock
   | sem sem2 process exception |
-  false
+  true
     ifTrue: [ "bring up real debugger on the block"
       [ ^ aBlock value ] value ].
   sem := TransientSemaphore new.
   sem2 := TransientSemaphore new.
   process := [ aBlock
-    on: Halt
+    on: Halt , Error
     do: [ :ex | exception := ex.
       sem signal.
       sem2 wait ] ] fork.

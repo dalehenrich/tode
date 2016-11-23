@@ -7,12 +7,12 @@ testNestedTempReferences
   haltMethodCallFrame := haltMethodFrame next.
   baseNodeMap := haltMethodCallFrame baseNodeMap.
   argAndTempNames := haltMethodCallFrame argAndTempNames.
-  self assert: baseNodeMap size == 3.
+  self assert: baseNodeMap size == 2.
   self assert: (baseNodeMap includesKey: '(context)').
-  self assert: (baseNodeMap includesKey: '(receiver)').
-  self
-    assert:
-      (x := haltMethodCallFrame objectFor: '(home)' ifAbsent: [ self assert: false ])
+  self assert: (baseNodeMap includesKey: '(homeContext)').
+  self assert: (x := haltMethodCallFrame
+        objectFor: '(homeContext)'
+        ifAbsent: [ self assert: false ])
         == (self class compiledMethodAt: #'nestedBlockMethodWithArgs:b:').
   self assert: argAndTempNames size == 5.
   self assert: (argAndTempNames at: 1) = 'temp3'.

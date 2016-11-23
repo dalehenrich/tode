@@ -14,15 +14,11 @@ testSimpleTemp
   haltBlockFrame := haltMethodFrame next.
   baseNodeMap := haltBlockFrame baseNodeMap.
   argAndTempNames := haltBlockFrame argAndTempNames.
-  self assert: baseNodeMap size == 3.
+  self assert: baseNodeMap size == 2.
   self
     assert:
-      (x := haltBlockFrame objectFor: '(home)' ifAbsent: [ self assert: false ])
+      (x := haltBlockFrame objectFor: '(homeContext)' ifAbsent: [ self assert: false ])
         == (self class compiledMethodAt: #'testSimpleTemp').
-  self
-    assert:
-      (x := haltBlockFrame objectFor: '(receiver)' ifAbsent: [ self assert: false ])
-        == innermostBlock.
   self
     assert:
       (x := haltBlockFrame objectFor: '(context)' ifAbsent: [ self assert: false ])
@@ -35,16 +31,12 @@ testSimpleTemp
   tempFrame := haltBlockFrame next.
   baseNodeMap := tempFrame baseNodeMap.
   argAndTempNames := tempFrame argAndTempNames.
-  self assert: baseNodeMap size == 4.
+  self assert: baseNodeMap size == 3.
   self assert: (baseNodeMap includesKey: '(context)').
   self
     assert:
-      (x := tempFrame objectFor: '(home)' ifAbsent: [ self assert: false ])
+      (x := tempFrame objectFor: '(homeContext)' ifAbsent: [ self assert: false ])
         == (self class compiledMethodAt: #'testSimpleTemp').
-  self
-    assert:
-      (x := tempFrame objectFor: '(receiver)' ifAbsent: [ self assert: false ])
-        == outermostBlock.
   self
     assert:
       (x := tempFrame objectFor: '(self)' ifAbsent: [ self assert: false ]) == self.

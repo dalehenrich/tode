@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-GemStone-Server3x-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 11/22/2016 16:52",
+	"instvars" : [
+		 ],
+	"name" : "OldTDStackFrameTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

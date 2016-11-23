@@ -1,3 +1,4 @@
 as yet unclassified
 selector
-    ^ self homeMethod selector
+  self method ifNil: [ ^ #'' ].
+  ^ self homeMethod selector

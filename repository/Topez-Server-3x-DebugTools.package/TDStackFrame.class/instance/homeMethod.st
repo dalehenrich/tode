@@ -1,3 +1,3 @@
 as yet unclassified
 homeMethod
-    ^ self method homeMethod
+  ^ (self frameContents at: 7) ifNil: [ self method homeMethod ]
