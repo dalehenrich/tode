@@ -8,4 +8,6 @@ objectValueForSpecialElementName: elementName for: anObject
     ifTrue: [ ^ anObject pragmas ].
   elementName = '(homeMethod)'
     ifTrue: [ ^ anObject homeMethod ].
+  elementName = '(argsAndTemps)'
+    ifTrue: [ ^ anObject argsAndTemps ].
   ^ super objectValueForSpecialElementName: elementName for: anObject

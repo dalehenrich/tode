@@ -1,3 +1,3 @@
 accessing
 specialNames
-  ^ #('(homeMethod)' '(pragmas)' '(source)' '(selector)')
+  ^ #('(argsAndTemps)' '(homeMethod)' '(pragmas)' '(source)' '(selector)')

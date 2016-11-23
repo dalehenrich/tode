@@ -1,7 +1,7 @@
 accessing
 specialChildNodeNameList: parentNode
   | specials |
-  specials := {}.
+  specials := {'(argsAndTemps)'}.
   parentNode basicContents isMethodForBlock
     ifTrue: [ specials add: '(homeMethod)' ].
   parentNode basicContents pragmas isEmpty
