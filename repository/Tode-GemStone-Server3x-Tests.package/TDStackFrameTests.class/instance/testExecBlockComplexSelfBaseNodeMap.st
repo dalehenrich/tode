@@ -22,7 +22,7 @@ testExecBlockComplexSelfBaseNodeMap
     assert:
       (x := blockFrame objectFor: '(receiver)' ifAbsent: [ self assert: false ])
         method == (y := self execBlockComplexSelf) method.	"it's complicated"
-  self assert: (blockFrame argOrTempNamed: 'self') == self.
+  self assert: (x := blockFrame argOrTempNamed: 'self') == self.
   [ 
   | blockReturn |
   blockReturn := self execBlockComplexSelf value.
