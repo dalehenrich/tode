@@ -8,7 +8,7 @@
 	"instvars" : [
 		"stackNode",
 		"homeMethod",
-		"receiver",
+		"theSelf",
 		"sourceWindowId",
 		"contextWindowId",
 		"terminateProcessOnClose",

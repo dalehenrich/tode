@@ -10,7 +10,7 @@ frameList
       str := index asString , '. ' , frame printString.
       frame homeMethod == self homeMethod
         ifTrue: [ attributes add: TextEmphasis bold ].
-      frame frameSelf == self receiver
+      frame theSelf == self theSelf
         ifTrue: [ 
           attributes
             add: TextEmphasis underlined;
