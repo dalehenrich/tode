@@ -1,8 +1,10 @@
 tests
 testExecBlockComplexTempsBaseNodeMap
-  | frames homeMethod blockFrame baseNodeMap x |
+  | frames homeMethod blockFrame baseNodeMap x block |
   homeMethod := self class compiledMethodAt: #'execBlockComplexTemps'.
-  [ self execBlockComplexTemps value ]
+  [ 
+  block := self execBlockComplexTemps.
+  block value ]
     on: Halt
     do: [ :ex | frames := self createFrames ].
   blockFrame := frames first
@@ -17,11 +19,11 @@ testExecBlockComplexTempsBaseNodeMap
   self
     assert:
       (x := blockFrame objectFor: '(varContext)' ifAbsent: [ self assert: false ])
-        == nil.
+        class == VariableContext.
   self
     assert:
       (x := blockFrame objectFor: '(receiver)' ifAbsent: [ self assert: false ])
-        == self execBlockSimpleWithTemps.
+        == block.
   self
     assert:
       (x := blockFrame objectFor: '(self)' ifAbsent: [ self assert: false ]) == nil
