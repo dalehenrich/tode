@@ -5,6 +5,9 @@ os: linux
 
 smalltalk_config: .smalltalk.ston
 
+smalltalk_edge:
+  branch: dev
+
 smalltalk:
   - GemStone-2.4.8
   - GemStone-3.1.0.6
