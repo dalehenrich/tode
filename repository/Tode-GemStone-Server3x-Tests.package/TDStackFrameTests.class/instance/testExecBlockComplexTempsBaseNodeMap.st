@@ -12,6 +12,7 @@ testExecBlockComplexTempsBaseNodeMap
   baseNodeMap := blockFrame baseNodeMap.
   self assert: baseNodeMap size == 5.
   self assert: (baseNodeMap includesKey: '(context)').
+  self assert: false.	"force a simple test failure for https://github.com/hpi-swa/smalltalkCI/issues/245"
   self
     assert:
       (x := blockFrame objectFor: '(homeMethod)' ifAbsent: [ self assert: false ])
