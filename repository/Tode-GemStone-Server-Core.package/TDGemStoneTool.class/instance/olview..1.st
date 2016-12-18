@@ -2,22 +2,19 @@ ol
 olview
   "
   ol view  [--inverse] [--reverse|-r] [--age=<duration>] [--pid=<pid>] [--continuation] \
-           [ <priority>... ]
-"
+           [--tag=<tag-block>] [ <priority>... ]"
 
-  | args priorities reversed age pid continuations |
-  self
-    getSubcommandOptsMixedLongShort:
-      {#('age' nil #'required').
+  | args priorities reversed age pid continuations tagBlock |
+  self getSubcommandOptsMixedLongShort: {#('age' nil #'required').
       #('continuation' nil #'none').
       #('inverse' nil #'none').
       #('pid' nil #'required').
+      #('tag' nil #'required').
       #('reverse' $r #'none')}.
   args := subArguments collect: [ :priorityName | priorityName asSymbol ].
   subOptions
     at: 'inverse'
-    ifPresent: [ :ignored | 
-      priorities := self olPriorities copy.
+    ifPresent: [ :ignored | priorities := self olPriorities copy.
       priorities removeAll: args ]
     ifAbsent: [ priorities := args ].
   subOptions
@@ -33,10 +30,11 @@ olview
   subOptions
     at: 'age'
     ifPresent: [ :durationExpression | age := DateAndTime now - durationExpression evaluate ].
+  subOptions
+    at: 'tag'
+    ifPresent: [ :tagBlockArg | tagBlock := tagBlockArg evaluate ].
   subOptions at: 'pid' ifPresent: [ :arg | pid := arg asNumber ].
-  self
-    olView: [ 
-      | objectLog |
+  self olView: [ | objectLog |
       System commitTransaction.
       objectLog := ObjectLogEntry objectLog.
       pid
@@ -47,6 +45,7 @@ olview
         ifFalse: [ objectLog := objectLog select: [ :each | priorities includes: each priority ] ].
       continuations
         ifTrue: [ objectLog := objectLog select: [ :each | each hasContinuation ] ].
-      objectLog ]
-    reversed: reversed
-    label: 'Object log ' , subCommand commandLine printString
+      tagBlock
+        ifNotNil: [ objectLog := objectLog select: [ :each | tagBlock value: each tag ] ].
+      objectLog ] reversed: reversed label:
+    'Object log ' , subCommand commandLine printString
