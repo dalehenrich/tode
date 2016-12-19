@@ -13,6 +13,8 @@ Here's a video of my
 presentation 
 **tODE: And Now For Something Completely Different**.
 
+[Smalltalks 2015: **Announcing GsDevKit_home And tODE**](http://fast.org.ar/talks/the-light-at-the-end-of-the-tunnel-announcing-the-release-of-gsdevkit_home-and-tode) ([video](https://www.youtube.com/watch?v=QshDlH1ADZQ), [slides](http://fast.org.ar/live/wp-content/uploads/2015/10/DaleHenrichs-TheLightAtTheEndOfTheTunnel.pdf))
+
 Here's a recent screen shot:
 
 <img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/tode/master/docs/screenShot_2015-11-02.png" />
