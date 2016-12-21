@@ -4,7 +4,7 @@
 		"debugMode:" : "dkh 4/19/2016 06:39",
 		"loginWith:" : "dkh 4/15/2016 21:00" },
 	"instance" : {
-		"clientApiVersion" : "dkh 4/29/2016 20:03",
+		"clientApiVersion" : "smalltalkCI 12/21/2016 14:38",
 		"debugMode" : "dkh 4/19/2016 06:38",
 		"debugMode:" : "dkh 4/19/2016 06:39",
 		"debuggerRequested:" : "dkh 4/30/2016 07:58",
@@ -31,7 +31,7 @@
 		"onServerDo:serializeBlock:" : "dkh 7/26/2016 18:45",
 		"onServerDo:serializeBlock:serverSelector:" : "dkh 8/9/2016 19:48",
 		"onServerDo:serializeBlock:serverSelector:variableBindings:" : "dkh 8/9/2016 19:46",
-		"registerDefaultServices" : "TravisCI 7/22/2016 15:38",
+		"registerDefaultServices" : "smalltalkCI 12/21/2016 14:24",
 		"registerService:for:" : "dkh 4/19/2016 11:20",
 		"serverApiVersion:" : "dkh 4/16/2016 19:40",
 		"servicesRegistry" : "dkh 4/19/2016 10:26",
