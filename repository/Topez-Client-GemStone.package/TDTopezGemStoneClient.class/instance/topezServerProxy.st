@@ -65,8 +65,10 @@ topezServerProxy
 						withArgs: {(self sessionDescription snapshotDirectory)} ]
 						on: Error
 						do: [ :ignored |  ] ].
-			TZGemStoneProxyBehavior new
-				topez: self;
-				allGlobalNames;
-				yourself ].
+			self serverType == #standard
+				ifTrue: [ 
+					TZGemStoneProxyBehavior new
+						topez: self;
+						allGlobalNames;
+						yourself ] ].
 	^ topezServerProxy

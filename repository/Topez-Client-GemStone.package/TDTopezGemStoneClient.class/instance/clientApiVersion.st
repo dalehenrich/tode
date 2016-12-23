@@ -16,4 +16,6 @@ clientApiVersion
 
 	"1.4.0 - use client callback #dbStepThrough:forProcessOop: for debugger step thru ... GemStone3.2 and greater"
 
-	^ '1.4.0' asMetacelloVersionNumber
+	"1.5.0 - external tode server supported"
+
+	^ '1.5.0' asMetacelloVersionNumber
