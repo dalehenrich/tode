@@ -27,7 +27,9 @@
 		"serverGitRoot",
 		"serverTodeRoot",
 		"excludeNetLDIPort",
-		"authorId" ],
+		"authorId",
+		"environmentId",
+		"todeUserId" ],
 	"name" : "TDSessionDescription",
 	"pools" : [
 		 ],

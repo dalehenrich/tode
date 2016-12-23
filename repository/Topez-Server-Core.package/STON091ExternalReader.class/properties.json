@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"todeUserId" ],
+	"name" : "STON091ExternalReader",
+	"pools" : [
+		 ],
+	"super" : "STON091Reader",
+	"type" : "normal" }

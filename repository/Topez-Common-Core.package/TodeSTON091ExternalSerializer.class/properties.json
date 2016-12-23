@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Common-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"todeUserId" ],
+	"name" : "TodeSTON091ExternalSerializer",
+	"pools" : [
+		 ],
+	"super" : "TodeSTON091Serializer",
+	"type" : "normal" }
