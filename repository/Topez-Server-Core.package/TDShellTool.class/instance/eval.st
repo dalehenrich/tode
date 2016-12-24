@@ -6,12 +6,10 @@ eval
 
   | contextObject result |
   contextObject := objIn.
-  arguments
-    do: [ :expression | 
-      | litArray |
+  arguments do: [ :expression | | litArray |
       litArray := self doItLiteralArrayFor: contextObject.
       result := expression
         evaluateIn: contextObject
-        symbolList: GsSession currentSession symbolList
+        symbolList: self topez symbolList
         literalVars: litArray ].
   ^ result

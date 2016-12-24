@@ -4,7 +4,7 @@ evaluateString: aString inContext: anObject withTempSymbolList: tempSymbolList
   self disableSessionMethods.
   result := aString
     evaluateInContext: anObject
-    symbolList: GsSession currentSession symbolList , tempSymbolList.
+    symbolList: self symbolList , tempSymbolList.
   self ensureSessionMethodsEnabled.
   self serverStatus
     evaluateString: aString;

@@ -2,9 +2,7 @@ accessing
 evaluateSmalltalk: smalltalkSource variableBindings: variableBindings
   | result litVarArray |
   litVarArray := {}.
-  variableBindings
-    keysAndValuesDo: [ :key :value | 
-      litVarArray
+  variableBindings keysAndValuesDo: [ :key :value | litVarArray
         add: key asSymbol;
         add: (SymbolAssociation key: key asSymbol value: value) ].
   litVarArray isEmpty
@@ -12,7 +10,7 @@ evaluateSmalltalk: smalltalkSource variableBindings: variableBindings
   self ensureSessionMethodsEnabled.
   result := smalltalkSource
     evaluateIn: nil
-    symbolList: GsSession currentSession symbolList
+    symbolList: self symbolList
     literalVars: litVarArray.
   self ensureSessionMethodsEnabled.
   ^ result

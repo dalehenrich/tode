@@ -1,9 +1,8 @@
 as yet unclassified
 createBlockFromSource: blockSource silently: silently
   | compileBlock theSymbolList |
-  theSymbolList := GsSession currentSession symbolList.
-  compileBlock := [ :aSymbolList | 
-  | meth |
+  theSymbolList := self topez devSymbolList.
+  compileBlock := [ :aSymbolList | | meth |
   meth := blockSource _compileInContext: nil symbolList: aSymbolList.
   meth _executeInContext: nil ].
   silently
