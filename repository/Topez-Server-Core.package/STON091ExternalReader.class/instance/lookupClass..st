@@ -1,6 +1,5 @@
 private
 lookupClass: name
-  self halt.
   (System myUserProfile symbolList objectNamed: name)
     ifNotNil: [ :global | global isBehavior
         ifTrue: [ "it's one of my classes"

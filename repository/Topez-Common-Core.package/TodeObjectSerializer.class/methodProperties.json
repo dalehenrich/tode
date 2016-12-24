@@ -11,7 +11,7 @@
 		"protocolSignatureArray" : "dkh 06/25/2015 15:03",
 		"protocolVersion" : "dkh 06/25/2015 15:03",
 		"protocolVersionString" : "dkh 06/29/2015 14:41",
-		"serializeExternalUsing:" : "dkh 12/23/2016 15:11",
+		"serializeExternalUsing:todeUserId:" : "dkh 12/23/2016 16:59",
 		"serializeUsing:" : "dkh 06/25/2015 15:04" },
 	"instance" : {
 		"fromString:" : "dkh 06/29/2015 10:50",
