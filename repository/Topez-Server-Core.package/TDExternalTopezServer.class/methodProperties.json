@@ -1,6 +1,10 @@
 {
 	"class" : {
-		 },
+		"commands" : "dkh 12/23/2016 17:11",
+		"nodeBuilders" : "dkh 12/23/2016 17:10",
+		"nodeEditors" : "dkh 12/23/2016 17:11",
+		"nodePrinters" : "dkh 12/23/2016 17:11",
+		"rootNode" : "dkh 12/23/2016 17:10" },
 	"instance" : {
 		"objectSerializer" : "dkh 12/23/2016 13:19",
 		"postLogin" : "dkh 12/23/2016 17:04",
