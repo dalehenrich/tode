@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"classLookupEnvironmentId",
+		"classLookupSymbolList",
+		"methodCompilationEnvironmentId",
+		"methodComiliationSymbolList" ],
+	"name" : "TDCustomEnvironment",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractEnvironment",
+	"type" : "normal" }

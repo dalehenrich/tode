@@ -1,0 +1,3 @@
+accessing
+methodCompilationEnvironmentId
+  self subclassResponsibility

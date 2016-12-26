@@ -25,7 +25,9 @@
 		"serverTodeRoot",
 		"objectSerializer",
 		"persistentElementCache",
-		"effectiveApiVersion" ],
+		"effectiveApiVersion",
+		"todeEnvironment",
+		"todeDevEnvironment" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

@@ -1,0 +1,3 @@
+accessing
+classLookupEnvironmentId
+  ^ self standardEnvironment

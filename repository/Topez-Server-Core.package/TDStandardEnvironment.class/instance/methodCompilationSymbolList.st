@@ -1,0 +1,3 @@
+accessing
+methodCompilationSymbolList
+  ^ self standardSymbolList
