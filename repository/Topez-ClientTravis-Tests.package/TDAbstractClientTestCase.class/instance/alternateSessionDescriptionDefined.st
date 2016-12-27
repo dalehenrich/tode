@@ -1,0 +1,3 @@
+testing
+alternateSessionDescriptionDefined
+	^ self class alternateSessionDescription notNil

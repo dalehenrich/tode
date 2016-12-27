@@ -88,6 +88,7 @@ baseline: spec
           with: #('GemStone' 'Common Tests' 'GemStone Tests');
         group: 'Common-Core' with: #('Topez-Common-Core');
         group: 'Pharo Dev' with: #('Pharo' 'Common Tests');
+        group: 'CI' with: #('GemStone Tests');
         yourself ].
   spec
     for: #'pharo1.4.x'

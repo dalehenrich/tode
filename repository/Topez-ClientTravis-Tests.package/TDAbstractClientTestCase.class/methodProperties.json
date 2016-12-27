@@ -1,5 +1,13 @@
 {
 	"class" : {
-		 },
+		"alternateSessionDescription" : "dkh 12/27/2016 14:05",
+		"alternateSessionDescription:" : "dkh 12/27/2016 14:06",
+		"alternateSessionDescriptionFor:" : "dkh 12/27/2016 14:10",
+		"initialize" : "dkh 12/27/2016 14:04",
+		"startUp:" : "dkh 12/27/2016 14:04" },
 	"instance" : {
-		"testSessionDescriptionFor:" : "dkh 5/28/2014 06:37" } }
+		"alternateSessionDescriptionDefined" : "dkh 12/27/2016 14:10",
+		"canRunTests" : "dkh 12/27/2016 14:01",
+		"isSmalltalkCIInstalled" : "dkh 12/27/2016 14:18",
+		"sessionDescription" : "dkh 12/27/2016 14:13",
+		"setUp" : "dkh 12/27/2016 14:12" } }
