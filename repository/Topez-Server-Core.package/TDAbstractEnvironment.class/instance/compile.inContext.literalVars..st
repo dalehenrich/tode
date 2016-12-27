@@ -1,7 +1,7 @@
 compilation
-compile: aString inContext: compilationContext
+compile: aString inContext: compilationContext literalVars: litVarArrayOrNil
   ^ self
     _compile: aString
     inContext: compilationContext
-    literalVars: nil
+    literalVars: litVarArrayOrNil
     tempSymbolList: SymbolList new

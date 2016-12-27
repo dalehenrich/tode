@@ -1,4 +1,4 @@
 evaluation
-evaluate: aString in: evalContext
-  ^ (self compile: aString inContext: evalContext)
-    _executeInContext: evalContext
+evaluate: aString in: compilationContext
+  ^ (self compile: aString inContext: compilationContext)
+    _executeInContext: compilationContext
