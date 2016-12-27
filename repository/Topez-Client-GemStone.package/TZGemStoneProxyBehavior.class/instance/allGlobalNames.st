@@ -10,6 +10,10 @@ allGlobalNames
 				receiver: self topez topezServerProxy;
 				selector: 'stonAllGlobalNames';
 				arguments: #();
-				transform: #ston -> 1.
-			self critical: [ AllGlobalNames := messageSend value ] ].
+				transform: #native -> 1.
+			self
+				critical: [ 
+					| stonString |
+					stonString := messageSend value.
+					AllGlobalNames := (STONReader on: stonString readStream) next ] ].
 	^ AllGlobalNames
