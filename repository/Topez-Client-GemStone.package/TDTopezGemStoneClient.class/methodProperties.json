@@ -7,6 +7,7 @@
 	"instance" : {
 		"clientApiVersion" : "dkh 12/23/2016 13:13",
 		"cmdKeyPressedForClientSourceElement:keyChar:editorSource:selectionInterval:" : "dkh 5/28/2013 14:45",
+		"debugSTONSmalltalk:batchMode:" : "dkh 12/27/2016 15:02",
 		"effectiveApiVersion" : "dkh 8/12/2015 12:21",
 		"effectiveApiVersion:" : "dkh 8/12/2015 11:14",
 		"environmentId" : "dkh 12/23/2016 11:14",
