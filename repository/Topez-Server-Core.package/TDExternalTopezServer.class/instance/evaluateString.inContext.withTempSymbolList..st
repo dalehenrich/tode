@@ -4,7 +4,9 @@ evaluateString: aString inContext: anObject withTempSymbolList: tempSymbolList
   self disableSessionMethods.
   symList := self symbolList.
   altSymList := self devSymbolList.
-  anObject ifNotNil: [ anObject class userId = self todeUserId
+  anObject
+    ifNil: [ self halt ]
+    ifNotNil: [ anObject class userId = self todeUserId
         ifTrue: [ altSymList := self symbolList.
           symList := self devSymbolList ] ].
   result := aString

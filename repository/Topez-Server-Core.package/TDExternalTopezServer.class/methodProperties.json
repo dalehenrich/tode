@@ -6,8 +6,11 @@
 		"nodePrinters" : "dkh 12/23/2016 17:11",
 		"rootNode" : "dkh 12/23/2016 17:10" },
 	"instance" : {
+		"applicationEnvironment" : "dkh 12/26/2016 15:11",
+		"defaultApplicationEnvironment" : "dkh 12/26/2016 15:14",
+		"defaultTodeEnvironment" : "dkh 12/26/2016 15:14",
 		"devSymbolList" : "dkh 12/23/2016 18:52",
-		"evaluateString:inContext:withTempSymbolList:" : "dkh 12/23/2016 19:18",
+		"evaluateString:inContext:withTempSymbolList:" : "dkh 12/26/2016 15:28",
 		"globalNamed:" : "dkh 12/23/2016 19:00",
 		"objectSerializer" : "dkh 12/23/2016 13:19",
 		"postLogin" : "dkh 12/23/2016 17:04",
