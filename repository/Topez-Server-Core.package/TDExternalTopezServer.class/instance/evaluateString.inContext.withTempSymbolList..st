@@ -12,10 +12,15 @@ evaluateString: aString inContext: anObject withTempSymbolList: tempSymbolList
           ex undefinedGlobals
             do: [ :globalName | (altEnvironment globalName: globalName) ifNil: [ undefined := true ].
               undefined
-                ifTrue: [ ex resume: false ] ].
-          ex resume: true ] ]
+                ifTrue: [ "looks like globals are available in altEnvironment"
+                  ex resume: false ] ].
+          ex resume: true	"declare in applicationEnvironment" ] ]
         on: environment compilerExceptionSet
-        do: [ :ex | altEnvironment evaluate: aString in: anObject tempSymbolList: tempSymbolList ] ]
+        do: [ :ex | "all globals should be available in todeEnvironment -- may want an error handler here to explain the situation"
+          altEnvironment
+            evaluate: aString
+            in: anObject
+            tempSymbolList: tempSymbolList ] ]
     ifNotNil: [ anObject class userId = self todeUserId
         ifTrue: [ environment := altEnvironment ].
       environment

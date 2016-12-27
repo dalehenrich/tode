@@ -1,3 +1,3 @@
 environment
 todeEnvironment: aTDEnvironment
-  ^ todeEnvironment aTDEnvironment
+  ^ todeEnvironment := aTDEnvironment
