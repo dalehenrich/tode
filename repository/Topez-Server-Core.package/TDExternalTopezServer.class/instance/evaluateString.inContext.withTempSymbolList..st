@@ -4,29 +4,33 @@ evaluateString: aString inContext: anObject withTempSymbolList: tempSymbolList
   environment := self applicationEnvironment.
   altEnvironment := self todeEnvironment.
   result := anObject
-    ifNil: [ "try environment and if there are undefined globals, then try altEnvironment"
-      [ [ environment evaluate: aString in: anObject tempSymbolList: tempSymbolList ]
+    ifNil: [ 
+      "try environment and if there are undefined globals, then try altEnvironment"
+      [ 
+      [ environment evaluate: aString in: anObject tempSymbolList: tempSymbolList ]
         on: TDUndefinedGlobalNotification
-        do: [ :ex | | undefined |
+        do: [ :ex | 
+          | undefined |
           undefined := false.
           ex undefinedGlobals
-            do: [ :globalName | (altEnvironment globalName: globalName) ifNil: [ undefined := true ].
+            do: [ :globalName | 
+              (altEnvironment globalNamed: globalName) ifNil: [ undefined := true ].
               undefined
-                ifTrue: [ "looks like globals are available in altEnvironment"
+                ifTrue: [ 
+                  "looks like globals are available in altEnvironment"
                   ex resume: false ] ].
           ex resume: true	"declare in applicationEnvironment" ] ]
         on: environment compilerExceptionSet
-        do: [ :ex | "all globals should be available in todeEnvironment -- may want an error handler here to explain the situation"
+        do: [ :ex | 
+          "all globals should be available in todeEnvironment -- may want an error handler here to explain the situation"
           altEnvironment
             evaluate: aString
             in: anObject
             tempSymbolList: tempSymbolList ] ]
-    ifNotNil: [ anObject class userId = self todeUserId
+    ifNotNil: [ 
+      anObject class userId = self todeUserId
         ifTrue: [ environment := altEnvironment ].
-      environment
-        evaluate: aString
-        inContext: anObject
-        tempSymbolList: tempSymbolList ].
+      environment evaluate: aString in: anObject tempSymbolList: tempSymbolList ].
   self serverStatus
     evaluateString: aString;
     evaluateStringResult: result.
