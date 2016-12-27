@@ -24,7 +24,8 @@ matrix:
     - smalltalk_config: .minimal.smalltalk.ston
       smalltalk: GemStone-3.3.3
       env: GSCI_CLIENTS="Pharo-5.0"
-    - smalltalk: GemStone-3.3.3
+    - smalltalk_config: .client.smalltalk.ston
+      smalltalk: GemStone-3.3.3
       env: GSCI_CLIENTS="Pharo-3.0"
   allow_failures:
     - os: osx
