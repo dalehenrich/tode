@@ -19,4 +19,6 @@ excludedInstVarNames
 				ifTrue: [ excluded add: #authorId ] ].
 	self snapshotDirectory isEmpty
 		ifTrue: [ excluded add: #snapshotDirectory ].
+	environmentId ifNil: [ excluded add: #environmentId ].
+	todeUserId ifNil: [ excluded add: #todeUserId ].
 	^ excluded
