@@ -8,8 +8,8 @@ smalltalk_config: .smalltalk.ston
 smalltalk:
   - GemStone-2.4.8
   - GemStone-3.1.0.6
-  - GemStone-3.2.14
-  - GemStone-3.3.0
+  - GemStone-3.2.15
+  - GemStone-3.3.3
 
 before_script:
   # 'project new' command tests need this
@@ -19,10 +19,10 @@ before_script:
 matrix:
   include:
 #    Do only one build on osx
-    - smalltalk: GemStone-3.3.0
+    - smalltalk: GemStone-3.3.3
       os: osx
     - smalltalk_config: .minimal.smalltalk.ston
-      smalltalk: GemStone-3.3.0
+      smalltalk: GemStone-3.3.3
       env: GSCI_CLIENTS="Pharo-5.0"
   allow_failures:
     - os: osx
