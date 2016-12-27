@@ -2,14 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
-		"_compileBlock:" : "dkh 12/26/2016 16:11",
+		"_compileBlock:" : "dkh 12/26/2016 16:48",
 		"classLookupEnvironmentId" : "dkh 12/26/2016 05:15",
 		"classLookupSymbolList" : "dkh 12/26/2016 05:15",
-		"compile:inContext:" : "dkh 12/26/2016 15:53",
+		"compile:inContext:" : "dkh 12/26/2016 17:01",
+		"compile:inContext:tempSymbolList:" : "dkh 12/26/2016 17:00",
 		"currentUserId" : "dkh 12/26/2016 15:23",
-		"declareUndefinedSymbols:" : "dkh 12/26/2016 15:53",
+		"declareUndefinedGlobals:" : "dkh 12/26/2016 16:48",
 		"evaluate:in:" : "dkh 12/26/2016 06:29",
 		"evaluate:in:compilationContext:" : "dkh 12/26/2016 06:29",
+		"evaluate:in:tempSymbolList:" : "dkh 12/26/2016 16:59",
 		"methodCompilationEnvironmentId" : "dkh 12/26/2016 05:14",
 		"methodCompilationSymbolList" : "dkh 12/26/2016 05:15",
 		"userId" : "dkh 12/26/2016 15:23" } }

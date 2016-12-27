@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TDAbstractEnvironment",
+		"undefinedGlobals" ],
+	"name" : "TDUndefinedGlobalNotification",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "Notification",
 	"type" : "normal" }

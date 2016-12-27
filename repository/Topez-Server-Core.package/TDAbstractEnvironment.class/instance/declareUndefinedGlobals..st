@@ -1,5 +1,5 @@
 compilation
-declareUndefinedSymbols: symbols
+declareUndefinedGlobals: symbols
   | undefinedSymbols |
   undefinedSymbols := self compilationSymbolList
     objectNamed: #'UndefinedSymbols' symbols
