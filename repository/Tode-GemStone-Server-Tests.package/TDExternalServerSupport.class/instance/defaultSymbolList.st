@@ -1,3 +1,3 @@
 accessing
 defaultSymbolList
-  ^ self pharoGsUser symbolList
+  ^ self externalGsUser symbolList
