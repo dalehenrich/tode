@@ -9,6 +9,6 @@ postLogin
   self todeUserId: (self objectSerializer fromString: ston).
   objectSerializer := TodeObjectSerializer
     serializeExternalUsing: self objectSerializer protocolSignatureArray
-    todeUserId: self todeUserId.
+    topez: self.
   System commit.
   super postLogin

@@ -1,0 +1,17 @@
+{
+	"category" : "Tode-GemStone-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"globals",
+		"userGlobals",
+		"externalGsUser",
+		"undefinedGlobals" ],
+	"name" : "TDExternalServerSupport",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
