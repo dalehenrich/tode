@@ -1,6 +1,9 @@
 tests
 testAllGlobalNames
 	| allGlobalNames |
+	Transcript
+		cr;
+		show: self class name, '>>testAllGlobalNames '.
 	self
 		todeShellDo: [ :shell | 
 			allGlobalNames := TZGemStoneProxyBehavior new

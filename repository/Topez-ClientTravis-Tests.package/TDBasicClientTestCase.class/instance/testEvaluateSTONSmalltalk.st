@@ -1,6 +1,9 @@
 tests
 testEvaluateSTONSmalltalk
 	| stonString objectSerializer |
+	Transcript
+		cr;
+		show: self class name, '>>testEvaluateSTONSmalltalk '.
 	self
 		todeShellDo: [ :shell | 
 			shell session.	"login"

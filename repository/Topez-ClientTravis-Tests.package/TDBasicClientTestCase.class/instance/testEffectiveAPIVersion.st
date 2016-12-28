@@ -1,6 +1,9 @@
 tests
 testEffectiveAPIVersion
 	| x |
+	Transcript
+		cr;
+		show: self class name, '>>testEffectiveAPIVersion '.
 	self
 		todeShellDo: [ :shell | 
 			shell session.	"login"
