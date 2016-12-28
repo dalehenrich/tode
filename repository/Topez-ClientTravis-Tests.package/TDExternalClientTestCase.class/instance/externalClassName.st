@@ -1,0 +1,3 @@
+accessing
+externalClassName
+	^ 'UniqueExternalClass'

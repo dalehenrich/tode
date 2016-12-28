@@ -1,0 +1,3 @@
+private
+applicationExpressionResult
+	^ 1

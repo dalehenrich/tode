@@ -1,0 +1,3 @@
+private
+applicationExpression
+	self subclassResponsibility
