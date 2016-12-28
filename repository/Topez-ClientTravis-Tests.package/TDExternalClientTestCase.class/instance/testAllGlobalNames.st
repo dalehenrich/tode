@@ -6,6 +6,7 @@ testAllGlobalNames
 		show: self class name, '>>testAllGlobalNames '.
 	self
 		todeShellDo: [ :shell | 
+			shell session.	"login"
 			allGlobalNames := TZGemStoneProxyBehavior new
 				topez: shell topez;
 				allGlobalNames ].
