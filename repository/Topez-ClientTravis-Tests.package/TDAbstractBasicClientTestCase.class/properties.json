@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TDExternalClientTestCase",
+	"name" : "TDAbstractBasicClientTestCase",
 	"pools" : [
 		 ],
-	"super" : "TDAbstractBasicClientTestCase",
+	"super" : "TDAbstractClientTestCase",
 	"type" : "normal" }

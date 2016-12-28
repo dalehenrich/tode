@@ -1,9 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"testAllGlobalNames" : "dkh 12/28/2016 10:26",
-		"testDebugSTONSmalltalk" : "dkh 12/27/2016 16:56",
-		"testEffectiveAPIVersion" : "dkh 12/27/2016 16:55",
-		"testEvaluateSTONSmalltalk" : "dkh 12/27/2016 16:56",
-		"testLogin" : "dkh 12/28/2016 10:26" } }

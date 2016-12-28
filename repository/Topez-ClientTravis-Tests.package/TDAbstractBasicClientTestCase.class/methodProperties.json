@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"isAbstract" : "dkh 12/28/2016 11:00" },
+	"instance" : {
+		"isExternalClient" : "dkh 12/28/2016 11:06",
+		"testAllGlobalNames" : "dkh 12/28/2016 11:02",
+		"testDebugSTONSmalltalk" : "dkh 12/28/2016 11:03",
+		"testEffectiveAPIVersion" : "dkh 12/28/2016 11:03",
+		"testEvaluateSTONSmalltalk" : "dkh 12/28/2016 11:03",
+		"testLogin" : "dkh 12/28/2016 10:59" } }
