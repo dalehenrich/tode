@@ -1,5 +1,5 @@
 instance creation
-defaultExternalSerializer: todeUserId
+defaultExternalSerializer: aTDTopezServer
   ^ TodeSTON091ExternalSerializer new
-    todeUserId: todeUserId;
+    topez: aTDTopezServer;
     yourself

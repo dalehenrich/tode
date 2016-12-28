@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"checkCompatibilityWith:" : "dkh 06/25/2015 15:03",
-		"defaultExternalSerializer:" : "dkh 12/23/2016 13:23",
+		"defaultExternalSerializer:" : "dkh 12/27/2016 16:40",
 		"defaultProtocolSignatureArray" : "dkh 06/25/2015 15:03",
 		"defaultProtocolVersion" : "dkh 06/25/2015 15:03",
 		"defaultProtocolVersionString" : "dkh 06/25/2015 15:03",
@@ -11,7 +11,7 @@
 		"protocolSignatureArray" : "dkh 06/25/2015 15:03",
 		"protocolVersion" : "dkh 06/25/2015 15:03",
 		"protocolVersionString" : "dkh 06/29/2015 14:41",
-		"serializeExternalUsing:todeUserId:" : "dkh 12/23/2016 16:59",
+		"serializeExternalUsing:topez:" : "dkh 12/27/2016 16:40",
 		"serializeUsing:" : "dkh 06/25/2015 15:04" },
 	"instance" : {
 		"fromString:" : "dkh 06/29/2015 10:50",

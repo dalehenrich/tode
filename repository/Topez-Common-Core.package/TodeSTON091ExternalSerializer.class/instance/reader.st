@@ -1,5 +1,5 @@
 private
 reader
   ^ STON091ExternalReader new
-    todeUserId: self todeUserId;
+    topez: self topez;
     yourself
