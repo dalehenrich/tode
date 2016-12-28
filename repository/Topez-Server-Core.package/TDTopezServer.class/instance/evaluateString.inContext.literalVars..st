@@ -1,7 +1,7 @@
 accessing
-evaluateString: aString inContext: anObject
+evaluateString: aString inContext: anObject literalVars: litVarArrayOrNil
   ^ self
     evaluateString: aString
     inContext: anObject
-    literalVars: nil
+    literalVars: litVarArrayOrNil
     withTempSymbolList: SymbolList new

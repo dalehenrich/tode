@@ -10,4 +10,5 @@ _compileBlock: compilationBlock
       (TDUndefinedGlobalNotification undefinedGlobals: undefinedGlobals) signal
         ifFalse: [ ex outer ].
       recompileSymbolList := self declareUndefinedGlobals: undefinedGlobals.
+      recompileSymbolList ifNil: [ ex outer ].
       ^ compilationBlock value: recompileSymbolList ]

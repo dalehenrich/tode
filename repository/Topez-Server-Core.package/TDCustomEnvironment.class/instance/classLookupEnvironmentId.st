@@ -1,4 +1,4 @@
 accessing
 classLookupEnvironmentId
-
-   ^classLookupEnvironmentId
+  ^ classLookupEnvironmentId
+    ifNil: [ classLookupEnvironmentId := self defaultClassLookupEnvironmentId ]

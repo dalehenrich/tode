@@ -1,4 +1,4 @@
 accessing
 methodCompilationEnvironmentId
-
-   ^methodCompilationEnvironmentId
+  ^ methodCompilationEnvironmentId
+    ifNil: [ methodCompilationEnvironmentId := self defaultMethodCompilationEnvironmentId ]

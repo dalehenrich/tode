@@ -10,6 +10,10 @@ getNewExternalGsUser
     addLast: self undefinedGlobals;
     addLast: self userGlobals;
     yourself.
+  self
+    createExternalClassNamed: 'UniqueExternalClass'
+    superclass: (self globals at: #'Object')
+    inDictionary: self userGlobals.
   newExternalGsUser := (AllUsers
     addNewUserWithId: 'ExternalGsUser'
     password: 'swordfish'

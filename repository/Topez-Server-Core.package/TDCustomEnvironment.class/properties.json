@@ -9,7 +9,7 @@
 		"classLookupEnvironmentId",
 		"classLookupSymbolList",
 		"methodCompilationEnvironmentId",
-		"methodComiliationSymbolList" ],
+		"methodCompilationSymbolList" ],
 	"name" : "TDCustomEnvironment",
 	"pools" : [
 		 ],

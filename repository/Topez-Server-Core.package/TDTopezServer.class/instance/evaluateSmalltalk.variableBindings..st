@@ -8,9 +8,9 @@ evaluateSmalltalk: smalltalkSource variableBindings: variableBindings
   litVarArray isEmpty
     ifTrue: [ litVarArray := nil ].
   self ensureSessionMethodsEnabled.
-  result := smalltalkSource
-    evaluateIn: nil
-    symbolList: self symbolList
+  result := self
+    evaluateString: smalltalkSource
+    inContext: nil
     literalVars: litVarArray.
   self ensureSessionMethodsEnabled.
   ^ result

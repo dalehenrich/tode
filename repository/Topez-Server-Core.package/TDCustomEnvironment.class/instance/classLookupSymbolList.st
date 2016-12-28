@@ -1,4 +1,4 @@
 accessing
 classLookupSymbolList
-
-   ^classLookupSymbolList
+  ^ classLookupSymbolList
+    ifNil: [ classLookupSymbolList := self defaultClassLookupSymbolList ]

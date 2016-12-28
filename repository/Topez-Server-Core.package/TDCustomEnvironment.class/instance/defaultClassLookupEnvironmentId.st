@@ -1,0 +1,3 @@
+defaults
+defaultClassLookupEnvironmentId
+  ^ 0

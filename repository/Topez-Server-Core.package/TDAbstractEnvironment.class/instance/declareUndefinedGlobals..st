@@ -1,9 +1,3 @@
 compilation
 declareUndefinedGlobals: symbols
-  | undefinedSymbols |
-  undefinedSymbols := self methodCompilationSymbolList
-    objectNamed: #'UndefinedSymbols'.
-  symbols do: [ :sym | | s |
-      (s := undefinedSymbols at: sym otherwise: nil) ifNil: [ s := Set new.
-          undefinedSymbols at: sym put: s ] ].
-  ^ self methodCompilationSymbolList objectNamed: #'UndefinedSymbolList'
+  self subclassResponsibility
