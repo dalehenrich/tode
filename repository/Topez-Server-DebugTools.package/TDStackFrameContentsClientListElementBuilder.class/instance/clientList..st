@@ -1,42 +1,44 @@
 as yet unclassified
 clientList: listElement
-  | max ar items elementNames specialNames displayPolicy |
+  | max ar items elementNames specialNames displayPolicy frameElementNames |
   items := OrderedCollection new.
   max := 0.
   specialNames := #('.').
-  elementNames := specialNames , self object elementNodeNames.
+  frameElementNames := self object elementNodeNames asOrderedCollection.
+  (frameElementNames includes: 'self')
+    ifTrue: [ frameElementNames remove: 'self'.
+      frameElementNames addFirst: 'self' ]
+    ifFalse: [ (frameElementNames includes: '(self)')
+        ifTrue: [ frameElementNames remove: '(self)'.
+          frameElementNames addFirst: '(self)' ] ].
+  elementNames := specialNames , frameElementNames.
   elementNames do: [ :elementName | max := max max: elementName size ].
   ar := OrderedCollection new.
   max := max + 1.
   displayPolicy := listElement displayPolicy.
   elementNames
-    do: [ :elementName | 
-      | object parentObject itemObject stream label |
+    do: [ :elementName | | object parentObject itemObject stream label editorAspect |
       stream := TextStream on: Text new.
       stream
         nextPutAll: elementName;
         space: max - elementName size;
         nextPutAll: '-> '.
+      editorAspect := listElement aspect.
       (specialNames includes: elementName)
-        ifTrue: [ 
-          label := elementName.
+        ifTrue: [ label := elementName.
           parentObject := nil.
           itemObject := object := self object ]
-        ifFalse: [ 
-          parentObject := self object.
+        ifFalse: [ parentObject := self object.
           object := self object
             objectFor: elementName
             ifAbsent: [ self error: 'missing element' ].
-          itemObject := object
-            asTDObjectNode: parentObject
-            topez: listElement topez
-            aspect: #'view' ].
-      items
-        add:
-          ((TDClientListItemAttributes
+          itemObject := object.
+          elementName = '(sender)'
+            ifTrue: [ editorAspect := #'contents' ] ].
+      items add: ((TDClientListItemAttributes
             object: itemObject
             parent: parentObject
-            aspect: listElement aspect)
+            aspect: editorAspect)
             label: label;
             yourself).
       displayPolicy stream: stream.

@@ -5,8 +5,7 @@ createFramesinFork: contextBlock exception: ex
   | stack process sem frames blockFrame baseNodeMap |
   process := GsProcess _current.
   sem := TransientSemaphore new.
-  [ 
-  stack := TDStack new
+  [ stack := self stackClass new
     process: process;
     exception: ex;
     createFrames;
@@ -15,7 +14,6 @@ createFramesinFork: contextBlock exception: ex
   blockFrame := frames
     detect: [ :frame | frame printString = '[] in Executed Code' ].
   baseNodeMap := blockFrame baseNodeMap.
-  sem signal ]
-    fork.
+  sem signal ] fork.
   sem wait.
   contextBlock value: blockFrame value: baseNodeMap

@@ -4,4 +4,7 @@ menuActionSpec
 
   "works in concert with menuActionBlock"
 
-  ^ self basicMenuActionSpec
+  | menuSpec |
+  menuSpec := #('inspect' nil #'setInspectBuilderAspectMenuAction:selectionIndex:').
+  ^ {menuSpec.
+  #('-')} , self basicMenuActionSpec

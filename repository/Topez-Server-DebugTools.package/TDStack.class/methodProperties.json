@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createFrames" : "dkh 03/20/2014 14:41",
+		"createFrames" : "dkh 12/29/2016 09:10",
 		"currentFrame" : "DataCurator 01/23/2013 15:50",
 		"debugTool" : "dkh 07/14/2013 15:40",
 		"debugTool:" : "dkh 07/14/2013 15:41",
@@ -13,7 +13,7 @@
 		"frames:" : "dkh 11/22/2016 19:01",
 		"navigateFrame:" : "DataCurator 12/16/2012 14:10",
 		"navigateStack:" : "DataCurator 12/16/2012 14:10",
-		"printOn:" : "dkh 03/30/2013 08:56",
+		"printOn:" : "dkh 12/29/2016 09:40",
 		"process" : "DataCurator 12/16/2012 10:04",
 		"process:" : "DataCurator 12/16/2012 10:04",
 		"processOop" : "dkh 09/12/2016 11:04",
@@ -21,6 +21,7 @@
 		"resetFrames" : "DataCurator 12/19/2012 14:13",
 		"signallerFrame:" : "dkh 11/23/2016 16:04",
 		"stack" : "DataCurator 12/16/2012 14:04",
+		"stackFrameClass" : "dkh 12/29/2016 09:10",
 		"terminateProcess" : "dkh 01/06/2014 20:17",
 		"trimStackTo:" : "dkh 08/31/2015 16:57",
 		"trimmed" : "dkh 03/20/2014 14:39",

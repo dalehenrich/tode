@@ -7,33 +7,25 @@ itemSelected: listElement at: index shiftPressed: shiftPressed
   parent := itemAttribute parent.
   editorAspect := itemAttribute aspect.
   editorAspect == #'edit'
-    ifTrue: [ 
-      "navigator window always navigates"
+    ifTrue: [ "navigator window always navigates"
       editorAspect := #'navigate' ].
   parentList := itemAttribute list copy.
   itemAttribute label = '.'
-    ifTrue: [ 
-      "place holder"
+    ifTrue: [ "place holder"
       obj := obj dotSelfObject
         asTDObjectNode: obj
         topez: listElement topez
         aspect: nil.
       objName := self object displayWith: listElement displayPolicy.
       obj name: objName ]
-    ifFalse: [ 
-      itemAttribute label = '..'
-        ifTrue: [ 
-          "lets highlight ourselves in the .. list ..."
+    ifFalse: [ itemAttribute label = '..'
+        ifTrue: [ "lets highlight ourselves in the .. list ..."
           parentList isEmpty not
-            ifTrue: [ 
-              | ar |
+            ifTrue: [ | ar |
               ar := parentList removeLast.
               highlightIndex := ar at: 1.
               editorAspect := ar at: 2 ] ]
-        ifFalse: [ 
-          parentList
-            add:
-              {index.
+        ifFalse: [ parentList add: {index.
               (itemAttribute aspect)	"use original aspect"} ] ].
   windowName := listElement editorWindowName.
   obj

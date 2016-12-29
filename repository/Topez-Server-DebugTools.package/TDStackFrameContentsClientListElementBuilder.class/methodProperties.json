@@ -4,11 +4,12 @@
 	"instance" : {
 		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 09/12/2015 08:36",
 		"browseFullClassMenuAction:selectionIndex:" : "dkh 06/28/2014 13:19",
-		"clientList:" : "dkh 03/20/2014 20:37",
+		"clientList:" : "dkh 12/29/2016 12:21",
 		"defaultEditorWindowLocation" : "dkh 09/27/2013 18:28",
 		"defaultEditorWindowName" : "DataCurator 01/24/2013 13:44",
-		"menuActionSpec" : "dkh 02/19/2014 17:37",
+		"menuActionSpec" : "dkh 12/29/2016 12:27",
 		"selectedClass:selectionIndex:" : "dkh 06/28/2014 13:19",
+		"setInspectBuilderAspectMenuAction:selectionIndex:" : "dkh 12/29/2016 12:28",
 		"theBehavior" : "dkh 06/28/2014 13:18",
 		"theClass" : "dkh 06/28/2014 13:18",
 		"usePersistentClientElementCache" : "dkh 08/18/2015 11:18" } }

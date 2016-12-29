@@ -6,8 +6,7 @@ createFrames
     ifTrue: [ ^ frames ].
   previous := nil.
   stackDepth := self process stackDepth.
-  1 to: stackDepth do: [ :frameIndex | 
-    stackFrame := TDStackFrame new
+  1 to: stackDepth do: [ :frameIndex | stackFrame := self stackFrameClass new
       stack: self;
       frameIndex: frameIndex;
       yourself.
@@ -16,11 +15,9 @@ createFrames
     stackFrame previous: previous.
     previous := stackFrame ].
   stackDepth > 0
-    ifTrue: [ 
-      self trimmed
+    ifTrue: [ self trimmed
         ifTrue: [ currentFrame := frames at: 1 ]
-        ifFalse: [ 
-          currentFrame := self signallerFrame: (frames at: 1).
+        ifFalse: [ currentFrame := self signallerFrame: (frames at: 1).
           (currentFrame ~~ nil and: [ currentFrame frameIndex ~~ 1 ])
             ifTrue: [ currentFrame := currentFrame next ] ] ].
   ^ frames

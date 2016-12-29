@@ -1,7 +1,7 @@
 tests
 testExecBlockComplexTempsBaseNodeMap
   | frames homeMethod blockFrame baseNodeMap x block |
-  homeMethod := self class compiledMethodAt: #'execBlockComplexTemps'.
+  homeMethod := self compiledMethodAt: #'execBlockComplexTemps'.
   [ block := self execBlockComplexTemps.
   block value ]
     on: Halt

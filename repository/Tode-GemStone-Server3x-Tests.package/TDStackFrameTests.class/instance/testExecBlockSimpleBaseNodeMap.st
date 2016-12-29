@@ -1,7 +1,7 @@
 tests
 testExecBlockSimpleBaseNodeMap
   | frames homeMethod blockFrame baseNodeMap x |
-  homeMethod := self class compiledMethodAt: #'execBlockSimple'.
+  homeMethod := self compiledMethodAt: #'execBlockSimple'.
   [ self execBlockSimple value ]
     on: Halt
     do: [ :ex | frames := self createFrames ].
