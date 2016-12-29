@@ -9,6 +9,9 @@ _compileBlock: compilationBlock
             ifFalse: [ ex outer ] ].
       (TDUndefinedGlobalNotification undefinedGlobals: undefinedGlobals) signal
         ifFalse: [ ex outer ].
-      recompileSymbolList := self declareUndefinedGlobals: undefinedGlobals.
+      recompileSymbolList := [ self declareUndefinedGlobals: undefinedGlobals ]
+        on: Error
+        do: [ :ignored | "if we cannot declare globals pass the buck"
+          ex outer ].
       recompileSymbolList ifNil: [ ex outer ].
       ^ compilationBlock value: recompileSymbolList ]

@@ -4,7 +4,7 @@ editorNodeFor: anObject aspect: anAspect do: aBlock
     editorNodeClassNameFor: anObject
     aspect: anAspect
     do: [ :className :finalAspect | | editorClass |
-      editorClass := self globalNamed: className.
+      editorClass := self todeEnvironment globalNamed: className.
       aBlock value: (editorClass new
             object: anObject;
             yourself) value: finalAspect ]

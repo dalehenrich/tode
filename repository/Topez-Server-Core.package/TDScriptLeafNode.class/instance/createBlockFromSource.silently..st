@@ -1,10 +1,7 @@
 as yet unclassified
 createBlockFromSource: blockSource silently: silently
-  | compileBlock theSymbolList |
-  theSymbolList := self topez devSymbolList.
-  compileBlock := [ :aSymbolList | | meth |
-  meth := blockSource _compileInContext: nil symbolList: aSymbolList.
-  meth _executeInContext: nil ].
+  "not sure if silently == false makes any sense"
+
   silently
-    ifTrue: [ ^ self compileHandlingUndeclaredSymbols: compileBlock with: theSymbolList ]
-    ifFalse: [ ^ compileBlock value: theSymbolList ]
+    ifTrue: [ ^ self topez evaluateString: blockSource ]
+    ifFalse: [ ^ self topez evaluateString: blockSource ]

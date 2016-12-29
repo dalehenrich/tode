@@ -4,7 +4,7 @@ builderFor: anObject aspect: anAspect do: aBlock
     builderClassNameFor: anObject
     aspect: anAspect
     do: [ :className :finalAspect | | builderClass |
-      builderClass := self globalNamed: className.
+      builderClass := self todeEnvironment globalNamed: className.
       aBlock value: (builderClass new
             object: anObject;
             yourself) value: finalAspect ]

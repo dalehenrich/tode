@@ -2,15 +2,11 @@ as yet unclassified
 elementSource: methodSource clientSourceElement: clientSourceElement
   "compile to check for errors"
 
-  | theFormattedSource symbolList |
-  symbolList := (clientSourceElement topez
-    applicationEnvironmentFor:
-      clientSourceElement theObject sourceCompilationContext)
-    methodCompilationSymbolList.
+  | theFormattedSource |
   theFormattedSource := self formattedElementSource: methodSource.
-  theFormattedSource
-    _compileInContext: clientSourceElement theObject sourceCompilationContext
-    symbolList: symbolList.
+  clientSourceElement topaz
+    evaluateString: theFormattedSource
+    inContext: clientSourceElement theObject sourceCompilationContext.
   ^ super
     elementSource: theFormattedSource
     clientSourceElement: clientSourceElement
