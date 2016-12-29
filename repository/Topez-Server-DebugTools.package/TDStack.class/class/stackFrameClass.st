@@ -1,3 +1,3 @@
 as yet unclassified
 stackFrameClass
-  ^ self class stackFrameClass
+  ^ TDStackFrame

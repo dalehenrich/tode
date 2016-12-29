@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"stackClass" : "dkh 12/29/2016 13:45" },
 	"instance" : {
 		"attachProcess:" : "dkh 06/03/2014 07:46",
 		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 09/12/2015 08:30",
@@ -11,7 +11,7 @@
 		"browseSendersMenuAction:selectionIndex:" : "dkh 05/09/2014 15:19",
 		"clientList:listElement:" : "dkh 03/20/2014 20:38",
 		"createStackNodeFor:" : "dkh 01/08/2014 07:43",
-		"createStackNodeFor:exception:" : "dkh 01/10/2014 13:23",
+		"createStackNodeFor:exception:" : "dkh 12/29/2016 13:45",
 		"dbContinue" : "dkh 09/10/2016 08:46",
 		"dbContinueMenuAction:selectionIndex:" : "dkh 01/12/2014 14:40",
 		"dbDownMenuAction:selectionIndex:" : "dkh 01/07/2014 07:54",

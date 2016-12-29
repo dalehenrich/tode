@@ -1,3 +1,3 @@
 private
 stackFrameClass
-  ^ TDStackFrame
+  ^ self stackClass stackFrameClass

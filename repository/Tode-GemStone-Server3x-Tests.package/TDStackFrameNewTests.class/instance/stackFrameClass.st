@@ -1,3 +1,0 @@
-private
-stackFrameClass
-  ^ TDStackFrameNew
