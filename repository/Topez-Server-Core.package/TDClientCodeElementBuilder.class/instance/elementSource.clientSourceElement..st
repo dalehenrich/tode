@@ -4,7 +4,7 @@ elementSource: methodSource clientSourceElement: clientSourceElement
 
   | theFormattedSource |
   theFormattedSource := self formattedElementSource: methodSource.
-  clientSourceElement topaz
+  clientSourceElement topez
     evaluateString: theFormattedSource
     inContext: clientSourceElement theObject sourceCompilationContext.
   ^ super
