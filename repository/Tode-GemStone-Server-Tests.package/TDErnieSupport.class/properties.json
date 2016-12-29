@@ -1,0 +1,18 @@
+{
+	"category" : "Tode-GemStone-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"globals",
+		"ernie",
+		"userGlobals",
+		"ernieUser",
+		"undefinedGlobals" ],
+	"name" : "TDErnieSupport",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
