@@ -1,6 +1,6 @@
 accessing
-evaluateString: aString
+evaluateString: aString topez: aTopez
   ^ aString
     evaluateIn: self doItContext
-    symbolList: self doItSymbolList
+    symbolList: (self doItSymbolList: aTopez)
     literalVars: self doItLiteralArray

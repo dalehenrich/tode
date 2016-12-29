@@ -8,8 +8,8 @@ eval
   contextObject := objIn.
   arguments do: [ :expression | | litArray |
       litArray := self doItLiteralArrayFor: contextObject.
-      result := expression
-        evaluateIn: contextObject
-        symbolList: self topez symbolList
+      result := self topez
+        evaluateString: expression
+        inContext: contextObject
         literalVars: litArray ].
   ^ result

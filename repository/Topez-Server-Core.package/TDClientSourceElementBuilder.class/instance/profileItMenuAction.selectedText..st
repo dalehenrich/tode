@@ -9,6 +9,6 @@ profileItMenuAction: listElement selectedText: selectedString
   tpz := listElement topez.
   pfTool := tpz toolInstanceFor: 'pf'.
   pfTool
-    pfmonitor: [ self evaluateString: selectedString ];
+    pfmonitor: [ self evaluateString: selectedString topez: listElement topez ];
     pfview.
   ^ true

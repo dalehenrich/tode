@@ -10,7 +10,9 @@ clscopy: theClass to: newName category: category
         ifFalse: [ theClass superClass name ]).
   newClass := self topez createClassFrom: definition.
   newClass
-    copyMethodsFrom: theClass dictionaries: GsSession currentSession symbolList;
+    copyMethodsFrom: theClass
+      dictionaries:
+        self topez applicationEnvironment methodCompilationSymbolList;
     classComment: theClass classComment;
     category: category.
   ^ newClass

@@ -1,6 +1,6 @@
 environment
 applicationEnvironmentFor: anObject
   anObject ifNil: [ ^ self applicationEnvironment ].
-  anObject class userId = self todeUserId
+  anObject class theNonMetaClass userId = self todeUserId
     ifTrue: [ ^ self todeEnvironment ].
   ^ self applicationEnvironment

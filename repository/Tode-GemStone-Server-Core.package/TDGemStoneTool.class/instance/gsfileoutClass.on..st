@@ -7,17 +7,16 @@ gsfileoutClass: aClass on: aStream
     nextPutAll: 'doit';
     nextPut: Character lf;
     nextPut: $(;
-    nextPutAll:
-        (aClass
-            _definitionInContext: GsSession currentSession symbolList
+    nextPutAll: (aClass
+            _definitionInContext:
+              (self topez applicationEnvironmentFor: aClass) methodCompilationSymbolList
             withConstraints: false);
     nextPutAll: ') definition.';
     nextPut: Character lf;
     nextPut: $%;
     nextPut: Character lf.
   aClass comment isEmpty not
-    ifTrue: [ 
-      aStream
+    ifTrue: [ aStream
         lf;
         nextPutAll: 'expectvalue %Boolean';
         lf;
