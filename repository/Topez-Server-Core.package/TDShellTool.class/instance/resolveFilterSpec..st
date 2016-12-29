@@ -2,4 +2,4 @@ as yet unclassified
 resolveFilterSpec: filterSpec
   ^ (filterSpec beginsWith: '@')
     ifTrue: [ self resolveAtPathReference: filterSpec ]
-    ifFalse: [ filterSpec evaluate ]
+    ifFalse: [ self topez todeEnvironment evaluate: filterSpec ]

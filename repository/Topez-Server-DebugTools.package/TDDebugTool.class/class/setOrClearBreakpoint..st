@@ -2,18 +2,15 @@ remote breakpoints
 setOrClearBreakpoint: aGemToGemAnnouncement
   "Session received a Gem to Gem signal"
 
-  [ aGemToGemAnnouncement signalMessage evaluate ]
+  [ self topez todeEnvironment evaluate: aGemToGemAnnouncement signalMessage ]
     on: Error
-    do: [ :ex | 
-      | stdout |
+    do: [ :ex | | stdout |
       (ObjectLogEntry
         error:
           'ERROR during: ' , aGemToGemAnnouncement signalMessage printString
         object: ex) addToLog.	"Cannot count on being in a transaction when exception is signalled, so dump info to stdout"
       stdout := GsFile stdoutServer.
-      stdout
-        nextPutAll:
-          '----------- Remote Breakpoint ERROR Encountered: '
+      stdout nextPutAll: '----------- Remote Breakpoint ERROR Encountered: '
             , DateAndTime now printString.
       stdout cr.
       stdout nextPutAll: ex description.

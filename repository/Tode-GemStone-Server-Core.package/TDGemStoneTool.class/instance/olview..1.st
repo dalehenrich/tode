@@ -29,10 +29,11 @@ olview
     collect: [ :priorityName | ObjectLogEntry perform: priorityName ].
   subOptions
     at: 'age'
-    ifPresent: [ :durationExpression | age := DateAndTime now - durationExpression evaluate ].
+    ifPresent: [ :durationExpression | age := DateAndTime now
+        - (self topez todeEnvironment evaluate: durationExpression) ].
   subOptions
     at: 'tag'
-    ifPresent: [ :tagBlockArg | tagBlock := tagBlockArg evaluate ].
+    ifPresent: [ :tagBlockArg | tagBlock := self topez todeEnvironment evaluate: tagBlockArg ].
   subOptions at: 'pid' ifPresent: [ :arg | pid := arg asNumber ].
   self olView: [ | objectLog |
       System commitTransaction.
