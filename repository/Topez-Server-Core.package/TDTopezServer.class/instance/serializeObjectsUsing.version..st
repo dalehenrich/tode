@@ -1,7 +1,5 @@
 client callbacks
 serializeObjectsUsing: protocol version: protocolVersionString
-  objectSerializer := TodeObjectSerializer
-    serializeUsing:
-      {protocol.
-      protocolVersionString}.
+  self objectSerializer: (TodeObjectSerializer serializeUsing: {protocol.
+          protocolVersionString}).
   ^ nil

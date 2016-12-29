@@ -1,4 +1,4 @@
 accessing
 objectSerializer
-  self topez ifNil: [ ^ TodeObjectSerializer preferredSerializer ].
+  self topez ifNil: [ ^ TDTopezServer preferredObjectSerializer ].
   ^ self topez objectSerializer

@@ -1,5 +1,5 @@
 accessing
 objectSerializer
   objectSerializer
-    ifNil: [ objectSerializer := TodeObjectSerializer defaultExternalSerializer: self ].
+    ifNil: [ self objectSerializer: (TodeObjectSerializer defaultExternalSerializer: self) ].
   ^ objectSerializer

@@ -2,6 +2,8 @@
 	"class" : {
 		"createForIndirectAccessFrom:todeSymbolDictionaryName:shellId:" : "dkh 02/23/2013 16:32",
 		"instanceMap" : "DataCurator 12/21/2012 09:31",
+		"preferredObjectSerializer" : "dkh 12/29/2016 06:44",
+		"preferredObjectSerializer:" : "dkh 12/29/2016 06:44",
 		"resetHard" : "dkh 04/06/2013 09:45",
 		"todeSymbolList" : "dkh 12/23/2016 17:57",
 		"todeSymbolList:" : "dkh 02/23/2013 16:32" },

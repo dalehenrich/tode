@@ -6,10 +6,8 @@ directoryEntry: aDirectoryEntry
     directoryEntry: aDirectoryEntry;
     yourself.
   ^ (aDirectoryEntry name endsWith: self stonFileExtension)
-    ifTrue: [ 
-      [ self fileSystemProxy: fsNode ]
+    ifTrue: [ [ self fileSystemProxy: fsNode ]
         on: STONReaderError
-        do: [ :ex | 
-          "punt"
+        do: [ :ex | "punt"
           fsNode ] ]
     ifFalse: [ fsNode ]
