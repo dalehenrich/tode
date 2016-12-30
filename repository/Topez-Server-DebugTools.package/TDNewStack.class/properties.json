@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 12/30/2016 04:19",
 	"instvars" : [
 		 ],
-	"name" : "TDStackNew",
+	"name" : "TDNewStack",
 	"pools" : [
 		 ],
 	"super" : "TDStack",

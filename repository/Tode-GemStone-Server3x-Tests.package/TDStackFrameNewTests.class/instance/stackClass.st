@@ -1,3 +1,3 @@
 private
 stackClass
-  ^ TDStackNew
+  ^ TDNewStack

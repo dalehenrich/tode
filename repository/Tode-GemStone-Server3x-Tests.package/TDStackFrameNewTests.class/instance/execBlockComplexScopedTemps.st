@@ -3,4 +3,6 @@ execBlockComplexScopedTemps
   | a b |
   a := 1.
   b := 2.
-  ^ [ a halt ]
+  ^ [ | c |
+  c := 3.
+  [ a halt ] value ]

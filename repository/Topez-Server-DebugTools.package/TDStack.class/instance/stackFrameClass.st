@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 stackFrameClass
-  ^ self class stackFrameClass
+  ^ stackFrameClass ifNil: [ stackFrameClass := self class stackFrameClass ]

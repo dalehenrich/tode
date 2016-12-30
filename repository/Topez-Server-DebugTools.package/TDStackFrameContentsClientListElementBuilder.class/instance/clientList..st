@@ -1,17 +1,10 @@
 as yet unclassified
 clientList: listElement
-  | max ar items elementNames specialNames displayPolicy frameElementNames |
+  | max ar items elementNames specialNames displayPolicy |
   items := OrderedCollection new.
   max := 0.
   specialNames := #('.').
-  frameElementNames := self object elementNodeNames asOrderedCollection.
-  (frameElementNames includes: 'self')
-    ifTrue: [ frameElementNames remove: 'self'.
-      frameElementNames addFirst: 'self' ]
-    ifFalse: [ (frameElementNames includes: '(self)')
-        ifTrue: [ frameElementNames remove: '(self)'.
-          frameElementNames addFirst: '(self)' ] ].
-  elementNames := specialNames , frameElementNames.
+  elementNames := specialNames , self object elementNodeNames.
   elementNames do: [ :elementName | max := max max: elementName size ].
   ar := OrderedCollection new.
   max := max + 1.

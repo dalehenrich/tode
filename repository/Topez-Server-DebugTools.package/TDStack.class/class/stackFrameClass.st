@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 stackFrameClass
-  ^ TDStackFrame
+  ^ StackFrameClass ifNil: [ StackFrameClass := TDStackFrame ]

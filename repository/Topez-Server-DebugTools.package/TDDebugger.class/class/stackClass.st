@@ -1,3 +1,3 @@
 accessing
 stackClass
-  ^ TDStackNew
+  ^ TDNewStack
