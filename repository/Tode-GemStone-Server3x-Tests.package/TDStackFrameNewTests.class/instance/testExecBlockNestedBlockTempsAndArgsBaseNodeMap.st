@@ -5,7 +5,8 @@ testExecBlockNestedBlockTempsAndArgsBaseNodeMap
   [ block := self execBlockNestedBlockTempsAndArgs: 3.
   block value ]
     on: Halt
-    do: [ :ex | frames := self createFrames ].
+    do: [ :ex | self halt.
+      frames := self createFrames ].
   blockFrame := frames first
     findFrameSuchThat: [ :frame | frame homeMethod == homeMethod ].
   theContext := blockFrame thisContext.
@@ -24,7 +25,7 @@ testExecBlockNestedBlockTempsAndArgsBaseNodeMap
   self
     assert:
       (x := blockFrame nestedArgOrTempNamed: 'b' ifAbsent: [ self assert: false ])
-        == blockFrame class noValueMarker.
+        == 2.
   self
     assert:
       (x := blockFrame nestedArgOrTempNamed: 'c' ifAbsent: [ self assert: false ])

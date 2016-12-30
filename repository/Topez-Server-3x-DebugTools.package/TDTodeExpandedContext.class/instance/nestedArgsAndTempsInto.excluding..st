@@ -22,8 +22,7 @@ nestedArgsAndTempsInto: map excluding: excludedNames
           (excluded includes: name)
             ifFalse: [ | val |
               val := noValueMarker.
-              frame homeContext
-                ifNotNil: [ :homeContext | val := homeContext argOrTempNamed: name ifAbsent: [ noValueMarker ] ].
+              val := frame argOrTempNamed: name ifAbsent: [ noValueMarker ].
               (map at: name ifAbsent: [ noValueMarker ]) == noValueMarker
                 ifTrue: [ map at: name put: val ].
               val ~~ noValueMarker
