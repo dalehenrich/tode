@@ -1,8 +1,8 @@
 tests
-testExecBlockComplexScopedTempsBaseNodeMap
+testExecBlockComplexScopedTempsAndArgsBaseNodeMap
   | frames homeMethod blockFrame baseNodeMap x block |
-  homeMethod := self compiledMethodAt: #'execBlockComplexScopedTemps'.
-  [ block := self execBlockComplexScopedTemps.
+  homeMethod := self compiledMethodAt: #'execBlockComplexScopedTempsAndArgs:'.
+  [ block := self execBlockComplexScopedTempsAndArgs: 3.
   block value ]
     on: Halt
     do: [ :ex | frames := self createFrames ].
@@ -11,6 +11,9 @@ testExecBlockComplexScopedTempsBaseNodeMap
   baseNodeMap := blockFrame baseNodeMap.
   self assert: blockFrame argAndTempNames size = 2.
   self assert: baseNodeMap size == 6.
+  self
+    assert:
+      (x := blockFrame argOrTempNamed: 'args1' ifAbsent: [ self assert: false ]) == 1.
   self
     assert:
       (x := blockFrame argOrTempNamed: 'a' ifAbsent: [ self assert: false ]) == 1.

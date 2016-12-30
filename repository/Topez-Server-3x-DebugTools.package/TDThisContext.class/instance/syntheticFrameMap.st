@@ -10,10 +10,9 @@ syntheticFrameMap
         ifFalse: [ map add: 'self' -> #'frameSelf' ] ].
   self isMethodForBlock
     ifTrue: [ map add: '(homeMethod)' -> #'homeMethod'.
-      map add: '(receiver)' -> #'nilValue'.
-      map add: '(closureOrNil)' -> #'receiver' ]
-    ifFalse: [ map add: '(receiver)' -> #'receiver'.
-      map add: '(closureOrNil)' -> #'nilValue' ].
+      map add: '(receiver)' -> #'nilValue' ]
+    ifFalse: [ map add: '(receiver)' -> #'receiver' ].
   self varContext ifNotNil: [ map add: '(varContext)' -> #'varContext' ].
   map add: '(ipOffset)' -> #'ipOffset'.
+  map add: '(closureOrNil)' -> #'closureOrNil'.
   ^ map

@@ -4,8 +4,13 @@
 	"instance" : {
 		"createFrames" : "dkh 12/29/2016 10:16",
 		"execBlockComplexScopedTemps" : "dkh 12/29/2016 18:20",
+		"execBlockComplexScopedTempsAndArgs:" : "dkh 12/30/2016 09:09",
+		"execBlockNestedBlockTempsAndArgs:" : "dkh 12/30/2016 11:14",
 		"stackClass" : "dkh 12/30/2016 04:19",
-		"testExecBlockComplexScopedTempsBaseNodeMap" : "dkh 12/30/2016 05:49",
+		"stackFrameClass" : "dkh 12/30/2016 10:30",
+		"testExecBlockComplexScopedTempsAndArgsBaseNodeMap" : "dkh 12/30/2016 12:56",
+		"testExecBlockComplexScopedTempsBaseNodeMap" : "dkh 12/30/2016 11:12",
 		"testExecBlockComplexTempsBaseNodeMap" : "dkh 12/30/2016 08:01",
+		"testExecBlockNestedBlockTempsAndArgsBaseNodeMap" : "dkh 12/30/2016 12:57",
 		"testExecBlockSimpleBaseNodeMap" : "dkh 12/30/2016 08:03",
 		"testExecBlockSimpleWithTempsBaseNodeMap" : "dkh 12/30/2016 08:08" } }

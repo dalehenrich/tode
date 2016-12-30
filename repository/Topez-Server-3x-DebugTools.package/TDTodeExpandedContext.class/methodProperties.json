@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"argAndTempNames" : "dkh 12/30/2016 11:11",
+		"dotSelfLiteralArray" : "dkh 12/30/2016 12:03",
+		"elementNodeNames" : "dkh 12/30/2016 10:39",
+		"homeContext" : "dkh 12/30/2016 12:18",
+		"nestedArgAndTempVarNames" : "dkh 12/30/2016 11:53",
+		"nestedArgAndTempVarNamesMap" : "dkh 12/30/2016 10:36",
+		"nestedArgOrTempNamed:" : "dkh 12/30/2016 11:39",
+		"nestedArgOrTempNamed:ifAbsent:" : "dkh 12/30/2016 12:13",
+		"nestedArgsAndTempsInto:excluding:" : "dkh 12/30/2016 12:55",
+		"next:" : "dkh 12/30/2016 09:54",
+		"objectFor:ifAbsent:" : "dkh 12/30/2016 10:45",
+		"thisContextClass" : "dkh 12/30/2016 11:21" } }
