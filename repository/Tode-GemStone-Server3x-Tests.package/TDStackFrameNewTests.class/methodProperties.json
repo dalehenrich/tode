@@ -3,7 +3,9 @@
 		"shouldInheritSelectors" : "dkh 12/29/2016 17:27" },
 	"instance" : {
 		"createFrames" : "dkh 12/29/2016 10:16",
+		"execBlockComplexScopedTemps" : "dkh 12/29/2016 18:04",
 		"stackClass" : "dkh 12/29/2016 09:13",
+		"testExecBlockComplexScopedTempsBaseNodeMap" : "dkh 12/29/2016 18:06",
 		"testExecBlockComplexTempsBaseNodeMap" : "dkh 12/29/2016 18:01",
 		"testExecBlockSimpleBaseNodeMap" : "dkh 12/29/2016 17:44",
 		"testExecBlockSimpleWithTempsBaseNodeMap" : "dkh 12/29/2016 17:54" } }
