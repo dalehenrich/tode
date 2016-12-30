@@ -6,9 +6,5 @@ reorderElementNodeNames: elementNames
   (frameElementNames includes: 'self')
     ifTrue: [ hasSelf := true.
       frameElementNames remove: 'self'.
-      frameElementNames addFirst: 'self' ]
-    ifFalse: [ (frameElementNames includes: '(self)')
-        ifTrue: [ hasSelf := true.
-          frameElementNames remove: '(self)'.
-          frameElementNames addFirst: '(self)' ] ].
+      frameElementNames addFirst: 'self' ].
   ^ frameElementNames
