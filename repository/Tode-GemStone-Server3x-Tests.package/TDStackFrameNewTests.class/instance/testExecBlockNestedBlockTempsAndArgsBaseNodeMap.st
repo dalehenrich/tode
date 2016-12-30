@@ -10,13 +10,13 @@ testExecBlockNestedBlockTempsAndArgsBaseNodeMap
     findFrameSuchThat: [ :frame | frame homeMethod == homeMethod ].
   theContext := blockFrame thisContext.
   frameMap := blockFrame syntheticFrameMap.
-  self assert: blockFrame nestedArgAndTempVarNamesMap size = 0.
-  self assert: blockFrame argAndTempNames size = 0.
+  self assert: blockFrame nestedArgAndTempVarNamesMap size = 2.
+  self assert: blockFrame argAndTempNames size = 1.
   self assert: frameMap size == 2.
   self
     assert:
-      (x := blockFrame nestedArgOrTempNamed: 'args1' ifAbsent: [ self assert: false ])
-        == 1.
+      (x := blockFrame nestedArgOrTempNamed: 'arg1' ifAbsent: [ self assert: false ])
+        == blockFrame class noValueMarker.
   self
     assert:
       (x := blockFrame nestedArgOrTempNamed: 'a' ifAbsent: [ self assert: false ])
@@ -24,11 +24,11 @@ testExecBlockNestedBlockTempsAndArgsBaseNodeMap
   self
     assert:
       (x := blockFrame nestedArgOrTempNamed: 'b' ifAbsent: [ self assert: false ])
-        == 2.
+        == blockFrame class noValueMarker.
   self
     assert:
       (x := blockFrame nestedArgOrTempNamed: 'c' ifAbsent: [ self assert: false ])
-        == 2.
+        == blockFrame class noValueMarker.
   self
     assert:
       (x := blockFrame objectFor: 'self' ifAbsent: [ self assert: false ]) == nil.
@@ -61,4 +61,4 @@ testExecBlockNestedBlockTempsAndArgsBaseNodeMap
   self
     assert:
       (x := theContext objectFor: '(sender)' ifAbsent: [ self assert: false ]) class
-        == TDThisContext
+        == blockFrame thisContextClass

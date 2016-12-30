@@ -1,6 +1,6 @@
 tests
 testExecBlockComplexScopedTempsBaseNodeMap
-  | frames homeMethod blockFrame baseNodeMap x block |
+  | frames homeMethod blockFrame theContext frameMap x block |
   homeMethod := self compiledMethodAt: #'execBlockComplexScopedTemps'.
   [ block := self execBlockComplexScopedTemps.
   block value ]
@@ -8,38 +8,53 @@ testExecBlockComplexScopedTempsBaseNodeMap
     do: [ :ex | frames := self createFrames ].
   blockFrame := frames first
     findFrameSuchThat: [ :frame | frame homeMethod == homeMethod ].
-  baseNodeMap := blockFrame baseNodeMap.
-  self assert: blockFrame argAndTempNames size = 2.
-  self assert: baseNodeMap size == 6.
+  theContext := blockFrame thisContext.
+  frameMap := blockFrame syntheticFrameMap.
+  self assert: blockFrame nestedArgAndTempVarNamesMap size = 1.
+  self assert: blockFrame argAndTempNames size = 1.
+  self assert: frameMap size == 2.
   self
     assert:
-      (x := blockFrame argOrTempNamed: 'a' ifAbsent: [ self assert: false ]) == 1.
+      (x := blockFrame nestedArgOrTempNamed: 'a' ifAbsent: [ self assert: false ])
+        == 1.
   self
     assert:
-      (x := blockFrame argOrTempNamed: 'b' ifAbsent: [ self assert: false ]) == 2.
+      (x := blockFrame nestedArgOrTempNamed: 'b' ifAbsent: [ self assert: false ])
+        == blockFrame class noValueMarker.
   self
     assert:
-      (x := blockFrame argOrTempNamed: 'c' ifAbsent: [ self assert: false ]) == 2.
+      (x := blockFrame nestedArgOrTempNamed: 'c' ifAbsent: [ self assert: false ])
+        == 2.
   self
     assert:
       (x := blockFrame objectFor: 'self' ifAbsent: [ self assert: false ]) == nil.
   self
     assert:
-      (x := blockFrame objectFor: '(closureOrNil)' ifAbsent: [ self assert: false ])
+      (x := blockFrame objectFor: '(thisContext)' ifAbsent: [ self assert: false ])
+        == theContext.
+  frameMap := theContext syntheticFrameMap.
+  self assert: frameMap size == 7.
+  self
+    assert:
+      (x := theContext objectFor: '(closureOrNil)' ifAbsent: [ self assert: false ])
         == block.
   self
     assert:
-      (x := blockFrame objectFor: '(homeMethod)' ifAbsent: [ self assert: false ])
+      (x := theContext objectFor: '(homeMethod)' ifAbsent: [ self assert: false ])
         == homeMethod.
   self
     assert:
-      (x := blockFrame objectFor: '(method)' ifAbsent: [ self assert: false ])
+      (x := theContext objectFor: '(method)' ifAbsent: [ self assert: false ])
         == block method.
   self
     assert:
-      (x := blockFrame objectFor: '(receiver)' ifAbsent: [ self assert: false ])
+      (x := theContext objectFor: '(receiver)' ifAbsent: [ self assert: false ])
         == nil.
   self
     assert:
-      (x := blockFrame objectFor: '(sender)' ifAbsent: [ self assert: false ])
-        == blockFrame next
+      (x := theContext objectFor: '(ipOffset)' ifAbsent: [ self assert: false ]) class
+        == SmallInteger.
+  self
+    assert:
+      (x := theContext objectFor: '(sender)' ifAbsent: [ self assert: false ]) class
+        == blockFrame thisContextClass

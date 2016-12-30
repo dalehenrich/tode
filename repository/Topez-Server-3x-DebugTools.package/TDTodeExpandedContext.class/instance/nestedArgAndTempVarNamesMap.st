@@ -1,6 +1,10 @@
 client list element
 nestedArgAndTempVarNamesMap
-  | map |
+  | map exclusions |
   map := Dictionary new.
-  self nestedArgsAndTempsInto: map excluding: self argAndTempNames , #('self').
+  exclusions := self argAndTempNames , #('self').
+  true
+    ifTrue: [ self homeMethodArgsAndTempsInto: map excluding: exclusions ].
+  true
+    ifTrue: [ self nestedArgsAndTempsInto: map excluding: exclusions ].
   ^ map

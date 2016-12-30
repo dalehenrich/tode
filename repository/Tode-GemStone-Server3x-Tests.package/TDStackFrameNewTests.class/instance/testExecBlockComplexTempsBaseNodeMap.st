@@ -47,7 +47,7 @@ testExecBlockComplexTempsBaseNodeMap
   self
     assert:
       (x := theContext objectFor: '(sender)' ifAbsent: [ self assert: false ]) class
-        == TDThisContext.
+        == blockFrame thisContextClass.
   self
     assert:
       (x := theContext objectFor: '(varContext)' ifAbsent: [ self assert: false ])

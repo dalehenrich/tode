@@ -9,6 +9,7 @@ testExecBlockSimpleWithTempsBaseNodeMap
     findFrameSuchThat: [ :frame | frame homeMethod == homeMethod ].
   theContext := blockFrame thisContext.
   frameMap := blockFrame syntheticFrameMap.
+  self assert: blockFrame nestedArgAndTempVarNamesMap size = 0.
   self assert: blockFrame argAndTempNames size = 1.
   self assert: frameMap size == 2.
   self
@@ -46,4 +47,4 @@ testExecBlockSimpleWithTempsBaseNodeMap
   self
     assert:
       (x := theContext objectFor: '(sender)' ifAbsent: [ self assert: false ]) class
-        == TDThisContext
+        == blockFrame thisContextClass
