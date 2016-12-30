@@ -1,3 +1,3 @@
 private
 stackClass
-  ^ TDDebugger stackClass
+  ^ TDStack
