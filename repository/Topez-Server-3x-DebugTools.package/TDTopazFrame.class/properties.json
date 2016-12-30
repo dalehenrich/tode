@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 12/30/2016 04:51",
+	"commentStamp" : "dkh 12/30/2016 05:53",
 	"instvars" : [
 		"selectionRange" ],
-	"name" : "TDTopazContext",
+	"name" : "TDTopazFrame",
 	"pools" : [
 		 ],
 	"super" : "TDRawStackFrame",

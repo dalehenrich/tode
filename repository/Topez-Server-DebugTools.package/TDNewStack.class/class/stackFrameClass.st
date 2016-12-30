@@ -1,3 +1,3 @@
 accessing
 stackFrameClass
-  ^ TDTopazContext
+  ^ TDTopazFrame
