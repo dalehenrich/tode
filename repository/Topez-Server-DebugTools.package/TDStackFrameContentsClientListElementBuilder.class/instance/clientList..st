@@ -25,20 +25,23 @@ clientList: listElement
         nextPutAll: '-> '.
       editorAspect := listElement aspect.
       (specialNames includes: elementName)
-        ifTrue: [ label := elementName.
-          parentObject := nil.
-          itemObject := object := self object ]
+        ifTrue: [ elementName = '.'
+            ifTrue: [ label := elementName.
+              parentObject := nil.
+              itemObject := object := self object ].
+          elementName = '..'
+            ifTrue: [  ] ]
         ifFalse: [ parentObject := self object.
-          object := self object
+          itemObject := object := self object
             objectFor: elementName
             ifAbsent: [ self error: 'missing element' ].
-          itemObject := object.
           elementName = '(sender)'
             ifTrue: [ editorAspect := #'contents' ] ].
       items add: ((TDClientListItemAttributes
             object: itemObject
             parent: parentObject
-            aspect: editorAspect)
+            aspect: editorAspect
+            list: listElement parentList)
             label: label;
             yourself).
       displayPolicy stream: stream.

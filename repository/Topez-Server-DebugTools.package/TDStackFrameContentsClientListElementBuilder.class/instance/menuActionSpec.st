@@ -7,4 +7,4 @@ menuActionSpec
   | menuSpec |
   menuSpec := #('inspect' nil #'setInspectBuilderAspectMenuAction:selectionIndex:').
   ^ {menuSpec.
-  #('-')} , self basicMenuActionSpec
+  #('-')} , self parentsMenuActionSpec , #(#('-')) , self basicMenuActionSpec

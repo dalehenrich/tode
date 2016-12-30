@@ -4,7 +4,8 @@ testExecBlockSimpleBaseNodeMap
   homeMethod := self compiledMethodAt: #'execBlockSimple'.
   [ self execBlockSimple value ]
     on: Halt
-    do: [ :ex | frames := self createFrames ].
+    do: [ :ex | self halt.
+      frames := self createFrames ].
   blockFrame := frames first
     findFrameSuchThat: [ :frame | frame homeMethod == homeMethod ].
   baseNodeMap := blockFrame baseNodeMap.

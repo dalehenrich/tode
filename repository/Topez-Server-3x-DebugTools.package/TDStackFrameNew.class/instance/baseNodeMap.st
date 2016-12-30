@@ -11,6 +11,7 @@ baseNodeMap
             ifNil: [ self varContext ifNil: [ (self rawReceiver isKindOf: ExecBlock)
                     ifTrue: [ map add: 'self' -> #'blockSelfValue' ] ] ifNotNil: [ map add: 'self' -> #'rawSelf' ] ]
             ifNotNil: [ map add: 'self' -> #'rawSelf' ] ].
+      map add: '(homeMethod)' -> #'homeMethod'.
       map add: '(receiver)' -> #'nilValue'.
       map add: '(closureOrNil)' -> #'rawReceiver' ]
     ifFalse: [ hasSelf

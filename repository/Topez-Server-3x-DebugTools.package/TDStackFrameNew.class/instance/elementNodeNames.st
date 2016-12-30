@@ -2,4 +2,5 @@ client element
 elementNodeNames
   self process == nil
     ifTrue: [ ^ #() ].
-  ^ self baseNodeNames sorted , self argAndTempNames , self frameNames
+  ^ self argAndTempNames , self instVarNames sorted , self baseNodeNames sorted
+    , self frameNames

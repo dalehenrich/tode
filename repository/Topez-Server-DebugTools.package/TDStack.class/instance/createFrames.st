@@ -1,4 +1,4 @@
-as yet unclassified
+private
 createFrames
   | previous stackFrame stackDepth |
   frames := OrderedCollection new.

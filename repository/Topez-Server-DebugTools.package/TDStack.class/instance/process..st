@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 process: aGsProcess
     process := aGsProcess

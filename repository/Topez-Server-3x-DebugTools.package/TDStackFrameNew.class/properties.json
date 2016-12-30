@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 12/29/2016 09:06",
+	"commentStamp" : "",
 	"instvars" : [
 		"stack",
 		"frameIndex",
@@ -12,7 +12,8 @@
 		"next",
 		"previous",
 		"argAndTempNames",
-		"selectionRange" ],
+		"selectionRange",
+		"parent" ],
 	"name" : "TDStackFrameNew",
 	"pools" : [
 		 ],
