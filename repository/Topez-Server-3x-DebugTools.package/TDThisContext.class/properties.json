@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-3x-DebugTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parentFrame" ],
+	"name" : "TDThisContext",
+	"pools" : [
+		 ],
+	"super" : "TDTopazContext",
+	"type" : "normal" }

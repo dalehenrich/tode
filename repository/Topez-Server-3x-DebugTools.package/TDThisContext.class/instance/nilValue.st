@@ -1,0 +1,3 @@
+synthetic fields
+nilValue
+  ^ nil
