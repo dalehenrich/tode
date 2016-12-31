@@ -1,3 +1,3 @@
 accessing
 specialNames
-  ^ #('(argAndTempNames)' '(receiver)' '(source)')
+  ^ #('(argAndTempNames)' '(receiver)' '(source)' '(vcTempNames)')

@@ -6,4 +6,6 @@ objectValueForSpecialElementName: elementName for: anObject
     ifTrue: [ ^ anObject argAndTempNames ].
   elementName = '(receiver)'
     ifTrue: [ ^ anObject receiver ].
+  elementName = '(vcTempNames)'
+    ifTrue: [ ^ anObject vcTempNames ].
   ^ super objectValueForSpecialElementName: elementName for: anObject

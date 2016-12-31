@@ -1,19 +1,22 @@
 synthetic fields
 nestedArgsAndTempsInto: map excluding: excludedNames
-  | noValueMarker homeFrame excluded candidateFrames |
+  | noValueMarker homeFrame excluded candidateFrames homeMethod varContext closure |
   self next ifNil: [ ^ self ].
   candidateFrames := OrderedCollection new.
-  self homeMethod
-    ifNil: [ ^ self ]
-    ifNotNil: [ :homeMethod | self nextDo: [ :frame | frame gsMethod == homeMethod
-            ifTrue: [ candidateFrames addLast: frame ] ] ].
+  homeMethod := self homeMethod.
+  varContext := self varContext.
+  closure := self closureOrNil.
+  false
+    ifTrue: [ self frameIndex == 6
+        ifTrue: [ self halt ] ].
+  self
+    nextDo: [ :frame | ((homeMethod notNil and: [ frame gsMethod == homeMethod
+            or: [ frame gsMethod ifNil: [ false ] ifNotNil: [ :m | m homeMethod == homeMethod ] ] ])
+        or: [ (varContext notNil and: [ frame varContext == varContext ])
+            or: [ closure notNil and: [ frame closureOrNil == closure ] ] ])
+        ifTrue: [ candidateFrames addLast: frame ] ].
   candidateFrames isEmpty
-    ifTrue: [ self varContext
-        ifNil: [ ^ self ]
-        ifNotNil: [ :varContext | self nextDo: [ :frame | frame varContext == varContext
-                ifTrue: [ candidateFrames addLast: frame ] ] ].
-      candidateFrames isEmpty
-        ifTrue: [ ^ self ] ].
+    ifTrue: [ ^ self ].
   noValueMarker := self noValueMarker.
   excluded := excludedNames copy.
   candidateFrames
