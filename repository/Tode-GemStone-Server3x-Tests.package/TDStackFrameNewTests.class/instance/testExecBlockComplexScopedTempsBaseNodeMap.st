@@ -10,7 +10,7 @@ testExecBlockComplexScopedTempsBaseNodeMap
     findFrameSuchThat: [ :frame | frame homeMethod == homeMethod ].
   theContext := blockFrame thisContext.
   frameMap := blockFrame syntheticFrameMap.
-  self assert: blockFrame nestedArgAndTempVarNamesMap size = 1.
+  self assert: blockFrame nestedArgAndTempVarNamesMap size = 2.
   self assert: blockFrame argAndTempNames size = 1.
   self assert: frameMap size == 2.
   self
@@ -24,7 +24,7 @@ testExecBlockComplexScopedTempsBaseNodeMap
   self
     assert:
       (x := blockFrame nestedArgOrTempNamed: 'c' ifAbsent: [ self assert: false ])
-        == 2.
+        == 3.
   self
     assert:
       (x := blockFrame objectFor: 'self' ifAbsent: [ self assert: false ]) == nil.
@@ -33,19 +33,22 @@ testExecBlockComplexScopedTempsBaseNodeMap
       (x := blockFrame objectFor: '(thisContext)' ifAbsent: [ self assert: false ])
         == theContext.
   frameMap := theContext syntheticFrameMap.
-  self assert: frameMap size == 7.
+  self assert: frameMap size == 8.
+  self
+    assert:
+      (x := theContext objectFor: 'self' ifAbsent: [ self assert: false ]) == nil.
   self
     assert:
       (x := theContext objectFor: '(closureOrNil)' ifAbsent: [ self assert: false ])
-        == block.
+        class == ExecBlock0.
   self
     assert:
       (x := theContext objectFor: '(homeMethod)' ifAbsent: [ self assert: false ])
         == homeMethod.
   self
     assert:
-      (x := theContext objectFor: '(method)' ifAbsent: [ self assert: false ])
-        == block method.
+      (x := theContext objectFor: '(method)' ifAbsent: [ self assert: false ]) class
+        == GsNMethod.
   self
     assert:
       (x := theContext objectFor: '(receiver)' ifAbsent: [ self assert: false ])
@@ -57,4 +60,8 @@ testExecBlockComplexScopedTempsBaseNodeMap
   self
     assert:
       (x := theContext objectFor: '(sender)' ifAbsent: [ self assert: false ]) class
-        == blockFrame thisContextClass
+        == blockFrame thisContextClass.
+  self
+    assert:
+      (x := theContext objectFor: '(varContext)' ifAbsent: [ self assert: false ])
+        class == VariableContext
