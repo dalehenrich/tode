@@ -1,11 +1,8 @@
 private
-validateThisContext: theContext forComplexBlock: aBlock frame: blockFrame home: homeMethod
+validateThisContext: theContext forComplexBlockNoSelf: aBlock frame: blockFrame home: homeMethod
   | frameMap x |
   frameMap := theContext syntheticFrameMap.
-  self assert: frameMap size == 8.
-  self
-    assert:
-      (x := theContext objectFor: 'self' ifAbsent: [ self assert: false ]) == nil.
+  self assert: frameMap size == 7.
   self
     assert:
       (x := theContext objectFor: '(closureOrNil)' ifAbsent: [ self assert: false ])

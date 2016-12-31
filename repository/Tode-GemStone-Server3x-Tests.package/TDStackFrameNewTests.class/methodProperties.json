@@ -10,9 +10,11 @@
 		"stackFrameClass" : "dkh 12/30/2016 10:30",
 		"testExecBlockComplexScopedTempsAndArgsBaseNodeMap" : "dkh 12/30/2016 18:16",
 		"testExecBlockComplexScopedTempsBaseNodeMap" : "dkh 12/30/2016 18:16",
+		"testExecBlockComplexSelfBaseNodeMap" : "dkh 12/30/2016 18:39",
 		"testExecBlockComplexTempsBaseNodeMap" : "dkh 12/30/2016 18:17",
 		"testExecBlockNestedBlockTempsAndArgsBaseNodeMap" : "dkh 12/30/2016 18:17",
 		"testExecBlockSimpleBaseNodeMap" : "dkh 12/30/2016 18:13",
 		"testExecBlockSimpleWithTempsBaseNodeMap" : "dkh 12/30/2016 18:13",
-		"validateThisContext:forComplexBlock:frame:home:" : "dkh 12/30/2016 18:16",
+		"validateThisContext:forComplexBlock:frame:home:" : "dkh 12/30/2016 18:26",
+		"validateThisContext:forComplexBlockNoSelf:frame:home:" : "dkh 12/30/2016 18:36",
 		"validateThisContext:forSimpleBlock:frame:home:" : "dkh 12/30/2016 18:13" } }
