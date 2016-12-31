@@ -1,5 +1,7 @@
 synthetic fields
 homeMethodArgsAndTempsInto: map excluding: excludedNames
+  "get and resolve args and temps from homeMethod"
+
   | noValueMarker |
   noValueMarker := self noValueMarker.
   self homeMethod ifNil: [ ^ self ].

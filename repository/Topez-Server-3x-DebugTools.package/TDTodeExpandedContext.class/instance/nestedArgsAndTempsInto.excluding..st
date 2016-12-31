@@ -1,15 +1,14 @@
 synthetic fields
 nestedArgsAndTempsInto: map excluding: excludedNames
+  "scan all frames on stack that share a common homeMethod with receiver, including the homeMethod itself. extract arg and temps names and values from each of the methods."
+
   | noValueMarker homeFrame excluded candidateFrames homeMethod |
   self next ifNil: [ ^ self ].
   candidateFrames := OrderedCollection new.
   homeMethod := self homeMethod.
-  false
-    ifTrue: [ self frameIndex == 6
-        ifTrue: [ self halt ] ].
-  self
-    nextDo: [ :frame | (homeMethod notNil and: [ frame gsMethod == homeMethod
-            or: [ frame gsMethod ifNil: [ false ] ifNotNil: [ :m | m homeMethod == homeMethod ] ] ])
+  homeMethod ifNil: [ ^ self ].
+  self nextDo: [ :frame | (frame gsMethod == homeMethod
+        or: [ frame gsMethod ifNil: [ false ] ifNotNil: [ :m | m homeMethod == homeMethod ] ])
         ifTrue: [ candidateFrames addLast: frame ] ].
   candidateFrames isEmpty
     ifTrue: [ ^ self ].

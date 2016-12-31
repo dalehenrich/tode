@@ -2,9 +2,9 @@ client list element
 nestedArgAndTempVarNamesMap
   | map exclusions |
   map := Dictionary new.
+  self homeMethod ifNil: [ ^ map ].
   exclusions := self argAndTempNames , #('self').
-  true
-    ifTrue: [ self homeMethodArgsAndTempsInto: map excluding: exclusions ].
-  true
-    ifTrue: [ self nestedArgsAndTempsInto: map excluding: exclusions ].
+  self
+    homeMethodArgsAndTempsInto: map excluding: exclusions;
+    nestedArgsAndTempsInto: map excluding: exclusions.
   ^ map
