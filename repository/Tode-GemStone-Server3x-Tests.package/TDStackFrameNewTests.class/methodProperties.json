@@ -15,6 +15,9 @@
 		"testExecBlockNestedBlockTempsAndArgsBaseNodeMap" : "dkh 12/30/2016 18:17",
 		"testExecBlockSimpleBaseNodeMap" : "dkh 12/30/2016 18:13",
 		"testExecBlockSimpleWithTempsBaseNodeMap" : "dkh 12/30/2016 18:13",
+		"testFactoryBlockComplexSelfBaseNodeMap" : "dkh 12/30/2016 18:55",
+		"testFactoryBlockSimpleBaseNodeMap" : "dkh 12/30/2016 18:57",
 		"validateThisContext:forComplexBlock:frame:home:" : "dkh 12/30/2016 18:26",
 		"validateThisContext:forComplexBlockNoSelf:frame:home:" : "dkh 12/30/2016 18:36",
+		"validateThisContext:forComplexBlockNoSelfNoVarContext:frame:home:" : "dkh 12/30/2016 18:54",
 		"validateThisContext:forSimpleBlock:frame:home:" : "dkh 12/30/2016 18:13" } }
