@@ -5,13 +5,12 @@ testExecBlockNestedBlockTempsAndArgsBaseNodeMap
   [ block := self execBlockNestedBlockTempsAndArgs: 3.
   block value ]
     on: Halt
-    do: [ :ex | self halt.
-      frames := self createFrames ].
+    do: [ :ex | frames := self createFrames ].
   blockFrame := frames first
     findFrameSuchThat: [ :frame | frame homeMethod == homeMethod ].
   theContext := blockFrame thisContext.
   frameMap := blockFrame syntheticFrameMap.
-  self assert: blockFrame nestedArgAndTempVarNamesMap size = 2.
+  self assert: blockFrame nestedArgAndTempVarNamesMap size = 3.
   self assert: blockFrame argAndTempNames size = 1.
   self assert: frameMap size == 2.
   self
@@ -29,7 +28,7 @@ testExecBlockNestedBlockTempsAndArgsBaseNodeMap
   self
     assert:
       (x := blockFrame nestedArgOrTempNamed: 'c' ifAbsent: [ self assert: false ])
-        == blockFrame class noValueMarker.
+        == 3.
   self
     assert:
       (x := blockFrame objectFor: 'self' ifAbsent: [ self assert: false ]) == nil.
@@ -38,19 +37,22 @@ testExecBlockNestedBlockTempsAndArgsBaseNodeMap
       (x := blockFrame objectFor: '(thisContext)' ifAbsent: [ self assert: false ])
         == theContext.
   frameMap := theContext syntheticFrameMap.
-  self assert: frameMap size == 7.
+  self assert: frameMap size == 8.
+  self
+    assert:
+      (x := theContext objectFor: 'self' ifAbsent: [ self assert: false ]) == nil.
   self
     assert:
       (x := theContext objectFor: '(closureOrNil)' ifAbsent: [ self assert: false ])
-        == block.
+        class == ExecBlock0.
   self
     assert:
       (x := theContext objectFor: '(homeMethod)' ifAbsent: [ self assert: false ])
         == homeMethod.
   self
     assert:
-      (x := theContext objectFor: '(method)' ifAbsent: [ self assert: false ])
-        == block method.
+      (x := theContext objectFor: '(method)' ifAbsent: [ self assert: false ]) class
+        == GsNMethod.
   self
     assert:
       (x := theContext objectFor: '(receiver)' ifAbsent: [ self assert: false ])
