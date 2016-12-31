@@ -26,29 +26,8 @@ testExecBlockSimpleWithTempsBaseNodeMap
     assert:
       (x := blockFrame objectFor: '(thisContext)' ifAbsent: [ self assert: false ])
         == theContext.
-  frameMap := theContext syntheticFrameMap.
-  self assert: frameMap size == 7.
   self
-    assert:
-      (x := theContext objectFor: '(closureOrNil)' ifAbsent: [ self assert: false ])
-        == self execBlockSimpleWithTemps.
-  self
-    assert:
-      (x := theContext objectFor: '(homeMethod)' ifAbsent: [ self assert: false ])
-        == homeMethod.
-  self
-    assert:
-      (x := theContext objectFor: '(method)' ifAbsent: [ self assert: false ])
-        == self execBlockSimpleWithTemps method.
-  self
-    assert:
-      (x := theContext objectFor: '(receiver)' ifAbsent: [ self assert: false ])
-        == nil.
-  self
-    assert:
-      (x := theContext objectFor: '(ipOffset)' ifAbsent: [ self assert: false ]) class
-        == SmallInteger.
-  self
-    assert:
-      (x := theContext objectFor: '(sender)' ifAbsent: [ self assert: false ]) class
-        == blockFrame thisContextClass
+    validateThisContext: theContext
+    forSimpleBlock: self execBlockSimpleWithTemps
+    frame: blockFrame
+    home: homeMethod
