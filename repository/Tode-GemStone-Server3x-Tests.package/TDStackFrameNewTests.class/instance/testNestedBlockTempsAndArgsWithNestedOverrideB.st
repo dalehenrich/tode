@@ -1,9 +1,9 @@
 tests
-testNestedBlockTempsAndArgsWithNestedOverride
+testNestedBlockTempsAndArgsWithNestedOverrideB
   | frames homeMethod blockFrame theContext frameMap x |
   homeMethod := self
-    compiledMethodAt: #'nestedBlockTempsAndArgsWithNestedOverride:'.
-  [ self nestedBlockTempsAndArgsWithNestedOverride: 3 ]
+    compiledMethodAt: #'nestedBlockTempsAndArgsWithNestedOverrideB:'.
+  [ self nestedBlockTempsAndArgsWithNestedOverrideB: 3 ]
     on: Halt
     do: [ :ex | frames := self createFrames ].
   blockFrame := frames first

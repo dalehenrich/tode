@@ -1,5 +1,5 @@
 block methods
-nestedBlockTempsAndArgsWithNestedOverride: arg1
+nestedBlockTempsAndArgsWithNestedOverrideA: arg1
   | a b |
   a := 1.
   b := 2.
