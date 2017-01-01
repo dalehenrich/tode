@@ -9,7 +9,6 @@ nestedBlockTempsAndArgsWithComplexOverride: arg1
   f := 6.
   block := [ | c d |
   c := 13.
-  d := 14.
   1 to: 3 do: [ :index | f := index ].
   [ | d e |
   e := 25.

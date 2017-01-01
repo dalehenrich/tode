@@ -15,11 +15,13 @@ printOn: aStream
     ifFalse: [ aStream nextPutAll: self inClass name asString ].
   aStream nextPutAll: '>>'.
   aStream nextPutAll: self selector.
-  (self process respondsTo: #'_localStepPointStringAt:')
+  [ (self process respondsTo: #'_localStepPointStringAt:')
     ifTrue: [ aStream
         nextPutAll:
           ' ' , (self process perform: #'_localStepPointStringAt:' with: self frameIndex) ]
     ifFalse: [ (self process respondsTo: #'_stepPointStringAt:')
         ifTrue: [ aStream
             nextPutAll:
-              ' ' , (self process perform: #'_stepPointStringAt:' with: self frameIndex) ] ]
+              ' ' , (self process perform: #'_stepPointStringAt:' with: self frameIndex) ] ] ]
+    on: Error
+    do: [ :ignored |  ]

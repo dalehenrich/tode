@@ -4,7 +4,7 @@ nestedArgAndTempVarNamesMap
   map := Dictionary new.
   self homeMethod ifNil: [ ^ map ].
   exclusions := self argAndTempNames , #('self').
-  self
-    homeMethodArgsAndTempsInto: map excluding: exclusions;
-    nestedArgsAndTempsInto: map excluding: exclusions.
+  false
+    ifTrue: [ self homeMethodArgsAndTempsInto: map excluding: exclusions ].
+  self nestedArgsAndTempsInto: map excluding: exclusions.
   ^ map

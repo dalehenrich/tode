@@ -8,7 +8,7 @@
 		"execBlockComplexScopedTempsAndArgs:" : "dkh 12/30/2016 09:09",
 		"execBlockNestedBlockTempsAndArgs:" : "dkh 12/30/2016 11:14",
 		"nestedBlockTempsAndArgs:" : "dkh 12/31/2016 05:55",
-		"nestedBlockTempsAndArgsWithComplexOverride:" : "dkh 01/01/2017 10:51",
+		"nestedBlockTempsAndArgsWithComplexOverride:" : "dkh 01/01/2017 14:16",
 		"nestedBlockTempsAndArgsWithNestedOverride:" : "dkh 01/01/2017 10:25",
 		"nestedBlockTempsAndArgsWithNestedOverride:nestedValueMap:" : "dkh 01/01/2017 11:03",
 		"nestedBlockTempsAndArgsWithNestedOverrideA:" : "dkh 12/31/2016 06:31",
@@ -40,7 +40,7 @@
 		"testFactorySimpleBlockCompileInContextBaseNodeMap" : "dkh 12/31/2016 05:46",
 		"testFactorySimpleBlockCompileInContextObjectEvaluateInBaseNodeMap" : "dkh 12/31/2016 05:49",
 		"testNestedBlockTempsAndArgs" : "dkh 12/31/2016 06:08",
-		"testNestedBlockTempsAndArgsWithComplexOverride" : "dkh 01/01/2017 12:08",
+		"testNestedBlockTempsAndArgsWithComplexOverride" : "dkh 01/01/2017 14:26",
 		"testNestedBlockTempsAndArgsWithNestedOverrideA" : "dkh 12/31/2016 07:13",
 		"testNestedBlockTempsAndArgsWithNestedOverrideB1" : "dkh 01/01/2017 10:27",
 		"testNestedBlockTempsAndArgsWithNestedOverrideB2" : "dkh 01/01/2017 10:27",
@@ -58,4 +58,5 @@
 		"validateThisContext:forComplexBlockNoSelf:frame:home:" : "dkh 12/30/2016 18:36",
 		"validateThisContext:forComplexBlockNoSelfNoVarContext:frame:home:" : "dkh 12/30/2016 18:54",
 		"validateThisContext:forSimpleBlock:frame:home:" : "dkh 12/30/2016 18:13",
-		"validateThisContextWithHomeContext:frame:home:" : "dkh 12/31/2016 06:10" } }
+		"validateThisContextWithHomeContext:frame:home:" : "dkh 12/31/2016 06:10",
+		"validateThisContextWithHomeContextNoSelf:frame:home:" : "dkh 01/01/2017 14:25" } }
