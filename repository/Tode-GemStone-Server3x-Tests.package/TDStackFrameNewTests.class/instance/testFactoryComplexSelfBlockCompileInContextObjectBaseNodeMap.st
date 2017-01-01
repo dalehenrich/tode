@@ -12,7 +12,7 @@ testFactoryComplexSelfBlockCompileInContextObjectBaseNodeMap
           argsNTemps := args.
           theContext := context ]
         exception: ex ].
-  self assert: nestedMap size = 0.
+  self assert: nestedMap size = 1.
   self assert: argsNTemps size = 1.
   self assert: frameMap size == 1.
   self

@@ -4,5 +4,5 @@ elementNodeNames
     ifTrue: [ ^ #() ].
   ^ self
     reorderElementNodeNames:
-      (self nestedArgAndTempVarNames , self argAndTempNames) sorted
-        , self instVarNames sorted , self syntheticFrameNames sorted
+      self nestedArgAndTempVarNames sorted , self instVarNames sorted
+        , self syntheticFrameNames sorted
