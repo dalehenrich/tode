@@ -3,12 +3,17 @@ testFactoryComplexSelfBlockCompileInContextBaseNodeMap
   | homeMethod blockFrame theContext frameMap nestedMap argsNTemps x block |
   (System stoneVersionReport at: 'gsVersion') asMetacelloVersionNumber
     <= '3.1.0.6' asMetacelloVersionNumber
-    ifTrue: [ ^ self ].
-  [ block := self factoryBlockCompile: '[self halt]'.
+    ifTrue: [ 
+      "in 3.1.0.6, cannot compile a string the uses `self` in an anonymous method using a nil compilationContext"
+      ^ self ].
+  [ 
+  block := self factoryBlockCompile: '[self halt]'.
   block value ]
     on: Halt
-    do: [ :ex | self
-        createFramesinFork: [ :frame :map :nested :args :context | blockFrame := frame.
+    do: [ :ex | 
+      self
+        createFramesinFork: [ :frame :map :nested :args :context | 
+          blockFrame := frame.
           frameMap := map.
           nestedMap := nested.
           argsNTemps := args.

@@ -1,8 +1,14 @@
 tests
 testExecBlockNestedBlockTempsAndArgsBaseNodeMap
   | frames homeMethod blockFrame theContext frameMap x block |
+  (System stoneVersionReport at: 'gsVersion') asMetacelloVersionNumber
+    <= '3.3.0' asMetacelloVersionNumber
+    ifTrue: [ 
+      "expected variable context not produced pre-3.3.0"
+      ^ self ].
   homeMethod := self compiledMethodAt: #'execBlockNestedBlockTempsAndArgs:'.
-  [ block := self execBlockNestedBlockTempsAndArgs: 3.
+  [ 
+  block := self execBlockNestedBlockTempsAndArgs: 3.
   block value ]
     on: Halt
     do: [ :ex | frames := self createFrames ].
