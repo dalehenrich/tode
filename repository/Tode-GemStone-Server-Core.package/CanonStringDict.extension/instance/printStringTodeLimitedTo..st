@@ -10,9 +10,13 @@ printStringTodeLimitedTo: limit
   stream nextPutAll: '( '.
   sz := self size.
   count := 0.
-  self
-    keysDo: [ :aKey | 
-      aKey printOn: stream.
+  self keysDo: [ :aKey | stream position > limit
+        ifTrue: [ stream nextPutAll: '...)'.
+          res := stream contents.
+          res size <= limit
+            ifTrue: [ ^ res ].
+          ^ (res copyFrom: 1 to: limit - 3) , '...' ].
+      stream nextPutAll: (aKey printStringTodeLimitedTo: limit).
       count := count + 1.
       count < sz
         ifTrue: [ stream nextPutAll: ', ' ] ].
