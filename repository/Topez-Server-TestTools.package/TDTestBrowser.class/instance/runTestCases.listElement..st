@@ -2,13 +2,11 @@ private
 runTestCases: testCases listElement: listElement
   self resetResultsBeforeRun: testCases.
   self currentTestCase: 'running...'.
-  listElement topez refreshViewFor: self windowId.
   self
     runTestSuite: (self testSuiteFor: testCases)
     with: testResults
-    refreshing: [ 
-      self applyTestResults.
-      listElement topez refreshViewFor: self windowId ].
+    refreshing: [ self applyTestResults.
+      self refreshViewOn: listElement ].
   self finishedTestResults.
-  listElement topez refreshViewFor: self windowId.
+  self forceRefreshViewOn: listElement.
   ^ true

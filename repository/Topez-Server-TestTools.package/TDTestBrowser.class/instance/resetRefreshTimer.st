@@ -1,0 +1,3 @@
+refreshing
+resetRefreshTimer
+  lastRefresh := nil

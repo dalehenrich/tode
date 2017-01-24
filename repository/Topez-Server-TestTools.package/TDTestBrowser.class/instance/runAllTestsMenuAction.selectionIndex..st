@@ -3,13 +3,11 @@ runAllTestsMenuAction: listElement selectionIndex: selectionIndex
   self log: '================Run ALL tests================'.
   self initResults.
   self currentTestCase: 'running...'.
-  listElement topez refreshViewFor: self windowId.
   self
     runTestSuite: self testSuite
     with: testResults
-    refreshing: [ 
-      self applyTestResults.
-      listElement topez refreshViewFor: self windowId ].
+    refreshing: [ self applyTestResults.
+      self refreshViewOn: listElement ].
   self finishedTestResults.
-  listElement topez refreshViewFor: self windowId.
+  self forceRefreshViewOn: listElement.
   ^ true
