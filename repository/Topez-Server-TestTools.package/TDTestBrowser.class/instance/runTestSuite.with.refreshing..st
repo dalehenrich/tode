@@ -2,7 +2,7 @@ private
 runTestSuite: aTestSuite with: aTestResult refreshing: refreshBlock
   | testBlock |
   self resetRefreshTimer.
-  testBlock := [ aTestSuite tests do: [ :each | aTestSuite sunitChanged: each.
+  testBlock := [ aTestSuite tests do: [ :each | self currentTestCase: each.
       refreshBlock value.
       each run: aTestResult ] ].
   testBlock value.

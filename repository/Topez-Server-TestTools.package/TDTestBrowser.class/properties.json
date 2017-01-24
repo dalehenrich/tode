@@ -18,7 +18,8 @@
 		"unexpectedFailures",
 		"unexpectedErrors",
 		"unexpectedPasses",
-		"lastRefresh" ],
+		"lastRefresh",
+		"currentTestCase" ],
 	"name" : "TDTestBrowser",
 	"pools" : [
 		 ],

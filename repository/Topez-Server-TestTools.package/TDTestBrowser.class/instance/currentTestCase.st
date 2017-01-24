@@ -1,3 +1,3 @@
 accessing
 currentTestCase
-  ^ self class currentTestCase
+  ^ currentTestCase ifNil: [ 'running...' ]
