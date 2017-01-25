@@ -3,6 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
+		"DoLogging",
 		"UseUpdateThread" ],
 	"commentStamp" : "",
 	"instvars" : [
@@ -19,7 +20,8 @@
 		"unexpectedErrors",
 		"unexpectedPasses",
 		"lastRefresh",
-		"currentTestCase" ],
+		"currentTestCase",
+		"doLogging" ],
 	"name" : "TDTestBrowser",
 	"pools" : [
 		 ],

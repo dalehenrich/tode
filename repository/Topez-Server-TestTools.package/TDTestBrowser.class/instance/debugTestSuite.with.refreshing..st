@@ -2,8 +2,12 @@ private
 debugTestSuite: aTestSuite with: aTestResult refreshing: refreshBlock
   | testBlock |
   self resetRefreshTimer.
-  testBlock := [ aTestSuite tests do: [ :each | self currentTestCase: each.
+  testBlock := [ aTestSuite tests do: [ :testCase | self doLogging
+        ifTrue: [ Transcript
+            cr;
+            show: testCase printString ].
+      self currentTestCase: testCase.
       refreshBlock value.
-      each debug: aTestResult ] ].
+      testCase debug: aTestResult ] ].
   testBlock value.
   self inform: 'finished with tests'
