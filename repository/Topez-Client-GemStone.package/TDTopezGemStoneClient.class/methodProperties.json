@@ -41,7 +41,8 @@
 		"remapTranscriptClientForwarderFrom:to:" : "dkh 4/4/2015 16:59",
 		"resetAllGlobalNames" : "dkh 5/28/2013 13:36",
 		"restoreBackupFrom:" : "dkh 1/20/2014 15:12",
-		"restoreFromBackupFromClient:" : "dkh 4/1/2015 07:24",
+		"restoreFromBackupFromClient:" : "dkh 1/28/2017 16:54",
+		"restoreFromBackupFromClient:restoreSessionDescription:commitRestoreSessionDescription:" : "dkh 1/28/2017 16:53",
 		"restoreStopOtherSessions:" : "dkh 1/5/2014 14:40",
 		"serverApiVersion:" : "dkh 8/12/2015 11:12",
 		"serverEventCache:" : "dkh 8/12/2015 12:34",
@@ -66,5 +67,5 @@
 		"todeSessionClass" : "dkh 5/26/2013 21:00",
 		"todeUserId" : "dkh 12/23/2016 13:05",
 		"topezServerOop" : "dkh 5/26/2013 21:00",
-		"topezServerProxy" : "dkh 12/27/2016 10:10",
+		"topezServerProxy" : "dkh 4/29/2016 20:09",
 		"windowIsClosingFor:" : "dkh 5/7/2014 07:28" } }
