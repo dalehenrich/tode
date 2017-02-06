@@ -8,8 +8,8 @@ bubackupManPage
   bu backup - Make a GemStone backup
 
 SYNOPSIS
-  bu [--dir=<backup-directory>] backup [--safely] [--commit] [--novalidate] [--uncompressed] \
-                                       <backup-file>
+  bu [--dir=<backup-directory>] backup [--safely] [--commit] [--novalidate] \
+     [--uncompressed] [--wait] <backup-file>
 
 DESCRIPTION
   Make a GemStone backup in the specified backup file. By default a compressed 
@@ -37,10 +37,16 @@ DESCRIPTION
   a bash shell script) or when autoCommit has been disabled to ensure that the current
   state of the gem is included in the snapshot.
 
+  With the --wait option, the command will block until voting is complete instead of
+  issuing a waring message and returning. If the gc lock is still held after voting
+  is complete, an error is signalled. This option should also be used when in batch
+  mode.
+
 EXAMPLES
   bu --help backup
   bu backup --uncompressed sample.dbf
   bu backup sample.dbf
+  bu backup --wait sample.dbf
   bu backup --commit sample.dbf
   bu backup --safely sample.dbf
   bu --dir=/opt/gemstone/backups backup sample.dbf

@@ -2,5 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"checkGcLock:" : "dkh 02/06/2017 09:36",
+		"checkSystemIsVoting:" : "dkh 02/06/2017 09:05",
 		"gssslLog" : "dkh 12/02/2015 13:42",
 		"systemIsVoting" : "dkh 09/16/2015 14:56" } }
