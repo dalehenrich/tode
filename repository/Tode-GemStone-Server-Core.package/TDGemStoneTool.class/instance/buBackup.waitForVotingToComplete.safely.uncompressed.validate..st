@@ -14,7 +14,8 @@ buBackup: backupPath waitForVotingToComplete: waitForVotingToComplete safely: sa
     ifFalse: [ self
         checkSystemIsVoting: [ :sessionHoldingGcLock :voteState | ^ 'Please wait until system is no longer voting and try again (voteState: '
             , voteState printString , ' gc session id: '
-            , sessionHoldingGcLock printString , ')' ] ].
+            , sessionHoldingGcLock printString
+            , '). Use --wait option to delay backup until voting is complete.' ] ].
   theBackupPath := uncompressed
     ifTrue: [ backupPath ]
     ifFalse: [ | postFix |
