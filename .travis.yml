@@ -3,6 +3,9 @@ sudo: false
 
 os: linux
 
+install:
+  - pip install --user benchupload
+
 smalltalk_config: .smalltalk.ston
 
 smalltalk:
@@ -31,3 +34,9 @@ matrix:
 cache:
   directories:
     - $SMALLTALK_CI_CACHE
+
+# bob-bench xUnit file analysis
+after_success:
+  - benchupload --dir=$SMALLTALK_CI_BUILD
+after_failure:
+  - benchupload --dir=$SMALLTALK_CI_BUILD
