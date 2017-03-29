@@ -7,5 +7,5 @@ objectValueForSpecialElementName: elementName for: anObject
   elementName = '(receiver)'
     ifTrue: [ ^ anObject receiver ].
   elementName = '(vcTempNames)'
-    ifTrue: [ ^ anObject vcTempNames ].
+    ifTrue: [ ^ anObject perform: #'vcTempNames' ].
   ^ super objectValueForSpecialElementName: elementName for: anObject

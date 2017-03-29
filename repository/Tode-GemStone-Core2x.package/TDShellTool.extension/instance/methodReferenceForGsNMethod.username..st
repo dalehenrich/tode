@@ -1,4 +1,4 @@
-find
+*tode-gemstone-core2x-commands
 methodReferenceForGsNMethod: gsNMethod username: username
   | methodRef |
   methodRef := MethodReference new
@@ -7,9 +7,9 @@ methodReferenceForGsNMethod: gsNMethod username: username
   username
     ifNotNil: [ 
       | symDictAr symbolList |
-      symDictAr := (symbolList := (AllUsers
+      symDictAr := {(symbolList := (AllUsers
         userWithId: username
         ifAbsent: [ System myUserProfile ]) symbolList)
-        dictionariesAndSymbolsOf: gsNMethod inClass theNonMetaClass.
+        dictionaryAndSymbolOf: gsNMethod inClass theNonMetaClass}.
       methodRef symbolDictionary: ((symDictAr at: 1) at: 1) ].
   ^ methodRef

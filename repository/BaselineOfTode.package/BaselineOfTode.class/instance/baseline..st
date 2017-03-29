@@ -246,7 +246,7 @@ baseline: spec
         package: 'Tode-GemStone-Core3x'
           with: [ spec requires: #('Tode-GemStone-Server-Core') ];
         package: 'Topez-GemStone-Server-3x-Core'
-          with: [ spec requires: 'Tode-GemStone-Server-Core' ];
+          with: [ spec requires: #('Topez-Server-Core' 'Tode-GemStone-Server-Core') ];
         package: 'Tode-GemStone-Server-Tests'
           with: [ spec includes: #('Tode-GemStone-Server3x-Tests') ];
         package: 'Tode-GemStone-Server3x-Tests'

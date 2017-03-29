@@ -3,7 +3,10 @@ projectProjectEntryFromUrl: projectEntryUrl
   | response client entryNodeSource node url |
   url := projectEntryUrl asZnUrl.
   url scheme = #'https'
-    ifTrue: [ GsSecureSocket disableCertificateVerificationOnClient ].
+    ifTrue: [ 
+      Smalltalk
+        at: #'GsSecureSocket'
+        ifPresent: [ :class | class perform: #'disableCertificateVerificationOnClient' ] ].
   client := ZnClient new.
   response := client
     beOneShot;

@@ -1,5 +1,5 @@
 {
-	"category" : "Tode-GemStone-Server-Tests",
+	"category" : "Topez-Server-31x-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,10 +7,11 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"globals",
+		"ernie",
 		"userGlobals",
-		"externalGsUser",
+		"ernieUser",
 		"undefinedGlobals" ],
-	"name" : "TDExternalServerSupport",
+	"name" : "TDErnieSupport",
 	"pools" : [
 		 ],
 	"super" : "Object",

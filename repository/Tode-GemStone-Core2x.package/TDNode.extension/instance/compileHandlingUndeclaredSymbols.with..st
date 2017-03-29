@@ -1,4 +1,4 @@
-as yet unclassified
+*tode-gemstone-core2x-as yet unclassified
 compileHandlingUndeclaredSymbols: compileBlock with: aSymbolList
   [ 
   [ ^ compileBlock value: aSymbolList ]
@@ -15,7 +15,7 @@ compileHandlingUndeclaredSymbols: compileBlock with: aSymbolList
       undefSymbol
         ifTrue: [ 
           (UndefinedSymbolNotification new
-            args: ex gsArguments;
+            gsArguments: ex gsArguments;
             signal)
             ifTrue: [ 
               "attempt auto-define of undefined symbols"

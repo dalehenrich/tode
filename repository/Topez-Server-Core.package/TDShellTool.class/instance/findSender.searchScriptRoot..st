@@ -18,7 +18,10 @@ findSender: selectorToken searchScriptRoot: path
       srcOffset ~~ nil
         ifTrue: [ leafNodes add: leafNode ]
         ifFalse: [ 
-          (gsMethod _literalsIncludesSymbol: selector value: selector)
+          (gsMethod
+            perform: #'_literalsIncludesSymbol:value:'
+            with: selector
+            with: selector)
             ifTrue: [ leafNodes add: leafNode ]
             ifFalse: [ 
               (gsMethod literals asArray refersToLiteral: selector)
