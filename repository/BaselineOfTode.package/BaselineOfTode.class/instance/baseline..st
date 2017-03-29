@@ -242,9 +242,11 @@ baseline: spec
         package: 'Topez-Server-31x-Tests'
           with: [ spec requires: 'Topez-Server-Tests' ];
         package: 'Tode-GemStone-Server-Core'
-          with: [ spec includes: #('Tode-GemStone-Core3x') ];
+          with: [ spec includes: #('Tode-GemStone-Core3x' 'Topez-GemStone-Server-3x-Core') ];
         package: 'Tode-GemStone-Core3x'
           with: [ spec requires: #('Tode-GemStone-Server-Core') ];
+        package: 'Topez-GemStone-Server-3x-Core'
+          with: [ spec requires: 'Tode-GemStone-Server-Core' ];
         package: 'Tode-GemStone-Server-Tests'
           with: [ spec includes: #('Tode-GemStone-Server3x-Tests') ];
         package: 'Tode-GemStone-Server3x-Tests'
@@ -310,7 +312,7 @@ baseline: spec
         package: 'Tode-GemStone-Server-Core'
           with: [ spec includes: 'Topez-GemStone-Server-33x-Core' ];
         package: 'Topez-GemStone-Server-33x-Core'
-          with: [ spec requires: 'Tode-GemStone-Server-Core' ];
+          with: [ spec requires: #('Tode-GemStone-Server-Core' 'Topez-GemStone-Server-3x-Core') ];
         package: 'Topez-Server-Core'
           with: [ spec includes: 'Topez-Server-33x-Core' ];
         package: 'Topez-Server-33x-Core'
