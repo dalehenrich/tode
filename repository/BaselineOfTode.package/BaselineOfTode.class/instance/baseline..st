@@ -98,7 +98,7 @@ baseline: spec
         package: 'Tode-Pharo14' with: [ spec requires: 'Topez-Pharo-Common' ];
         yourself ].
   spec
-    for: #'pharo5.x'
+    for: #(#'pharo5.x' #'pharo6.x')
     do: [ 
       spec
         baseline: 'GemStoneGCI'
