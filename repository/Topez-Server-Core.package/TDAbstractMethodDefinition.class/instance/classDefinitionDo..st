@@ -1,0 +1,2 @@
+enumeration
+classDefinitionDo: classDefinitionBlock

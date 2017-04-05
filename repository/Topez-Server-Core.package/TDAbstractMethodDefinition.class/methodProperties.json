@@ -2,12 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
+		"classDefinitionDo:" : "dkh 04/04/2017 16:49",
 		"compile:classified:" : "dkh 09/25/2016 14:03",
 		"deletedMethod:" : "dkh 09/23/2016 10:44",
 		"isClassInImage" : "dkh 06/24/2014 07:58",
 		"label" : "dkh 09/09/2015 16:27",
 		"messagePattern" : "dkh 02/10/2013 20:00",
 		"messagePatternIsRegex" : "dkh 02/10/2013 20:00",
+		"methodDefinitionDo:" : "dkh 04/04/2017 16:46",
 		"methodProtocol" : "dkh 09/22/2013 14:23",
 		"removeFromSystem:" : "dkh 09/25/2016 14:03",
 		"selector" : "DataCurator 02/09/2013 11:07",

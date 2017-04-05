@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 clientList: listElement
   | items ar selectedIndex |
   items := OrderedCollection new.
