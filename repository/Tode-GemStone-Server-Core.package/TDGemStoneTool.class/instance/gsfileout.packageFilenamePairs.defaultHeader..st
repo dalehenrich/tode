@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileout: directoryPath packageFilenamePairs: packageFilenamePairs defaultHeader: defaultHeader
   | directory mcTool |
   directory := ServerFileDirectory on: directoryPath.

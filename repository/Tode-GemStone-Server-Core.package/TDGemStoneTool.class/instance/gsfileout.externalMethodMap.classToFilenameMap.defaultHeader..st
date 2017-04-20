@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileout: directoryPath externalMethodMap: externalMethodMap classToFilenameMap: classToFilenameMap defaultHeader: defaultHeader
   externalMethodMap
     keysAndValuesDo: [ :cls :methodRefs | 
@@ -36,7 +36,7 @@ gsfileout: directoryPath externalMethodMap: externalMethodMap classToFilenameMap
                       ifAbsent: [ 
                         lastFile
                           ifTrue: [ 
-                            self halt: 'Needs an append at position marker'.
+                            Transcript cr; show: 'Needs an append at position marker (maybe)'.
                             (sourceMap at: beh name ifAbsent: [ Dictionary new ])
                               at:
                                 (beh isMeta

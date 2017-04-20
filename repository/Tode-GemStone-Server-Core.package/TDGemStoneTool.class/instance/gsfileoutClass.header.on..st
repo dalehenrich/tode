@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileoutClass: clsName header: header on: aStream
   | cls |
   header isEmpty

@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsconfiguration
   "
   gs configuration [--gem|--stone]

@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsobjectFor
   "
   gs objectFor <object-oop>...

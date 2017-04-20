@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsversion
   "
   gs version [--client|--gem|--stone]

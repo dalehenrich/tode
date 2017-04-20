@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileoutBuildMethodSourceMapFor: behavior filename: filename in: directory
   | map methodStartToken classStartToken categoryStartToken startToken lastInstanceMethod lastClassMethod |
   categoryStartToken := 'category:'.

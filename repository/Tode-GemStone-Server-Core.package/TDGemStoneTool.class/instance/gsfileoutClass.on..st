@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileoutClass: aClass on: aStream
   aStream
     nextPut: Character lf;

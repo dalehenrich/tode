@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsFileSizeReportOn: aStream
   "
   gs fileSizeReport

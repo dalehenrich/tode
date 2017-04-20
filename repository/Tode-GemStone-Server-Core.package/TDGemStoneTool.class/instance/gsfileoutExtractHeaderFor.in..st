@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileoutExtractHeaderFor: filename in: directory
   | header |
   (directory fileExists: filename)

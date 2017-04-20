@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileout: directoryPath classnameFilenamePairs: classnameFilenamePairs defaultHeader: defaultHeader
   | directory |
   directory := ServerFileDirectory on: directoryPath.

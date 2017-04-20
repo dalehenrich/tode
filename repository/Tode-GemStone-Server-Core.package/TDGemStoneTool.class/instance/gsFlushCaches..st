@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsFlushCaches: hardFlush
   ObjectLogEntry initialize.
   MCRepositoryGroup default repositoriesDo: [ :rep | rep flushCache ].

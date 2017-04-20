@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsgemtools
   "
   gs gemtools

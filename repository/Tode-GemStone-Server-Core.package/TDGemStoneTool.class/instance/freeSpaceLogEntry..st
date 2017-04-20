@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 freeSpaceLogEntry: exception
   | fileSize freeSpace used fileUnit freeUnit usedUnit |
   fileSize := SystemRepository fileSize / 1024.0.

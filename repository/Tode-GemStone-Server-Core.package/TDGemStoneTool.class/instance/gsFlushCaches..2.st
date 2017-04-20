@@ -1,3 +1,3 @@
-as yet unclassified
+commands
 gsFlushCaches
   ^ self gsFlushCaches: false

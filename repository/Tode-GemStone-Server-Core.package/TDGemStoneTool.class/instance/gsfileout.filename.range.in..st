@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileout: methodRef filename: filename range: ar in: directory
   | originalSource lf |
   lf := Character lf.

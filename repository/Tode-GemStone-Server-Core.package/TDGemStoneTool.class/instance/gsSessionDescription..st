@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsSessionDescription: aSessionId
   | ar |
   ar := System descriptionOfSession: aSessionId.

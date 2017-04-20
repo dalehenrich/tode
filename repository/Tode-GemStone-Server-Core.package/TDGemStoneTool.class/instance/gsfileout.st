@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileout
   "
   gs fileout --directory=<filesystem-path> [--class|--package|--category] <fileout-pair>...

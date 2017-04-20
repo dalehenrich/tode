@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileOutMethods: cls on: aStream
   | nm sels cat |
   nm := cls name asString.
