@@ -1,3 +1,5 @@
 accessing
 theBehavior
-  self subclassResponsibility
+  ^ self object isBehavior
+    ifTrue: [ self object ]
+    ifFalse: [ self object class ]
