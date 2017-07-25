@@ -307,7 +307,7 @@ baseline: spec
         yourself ].
   spec
     for:
-      #(#'gs3.3.1.x' #'gs3.3.2.x' #'gs3.3.3.x' #'gs3.3.4.x' #'gs3.3.5.x' #'gs3.4.x')
+      #(#'gs3.3.1.x' #'gs3.3.2.x' #'gs3.3.3.x' #'gs3.3.4.x' #'gs3.3.5.x' #'gs3.3.6.x' #'gs3.3.7.x' #'gs3.4.x')
     do: [ 
       spec
         package: 'Tode-GemStone-Core331x'
