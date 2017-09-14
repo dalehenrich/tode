@@ -297,7 +297,7 @@ baseline: spec
           with: [ spec requires: 'Tode-GemStone-Remote-Server' ];
         yourself ].
   spec
-    for: #(#'gs3.4.x')
+    for: #(#'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         package: 'Tode-GemStone-Remote-Server'
@@ -306,7 +306,7 @@ baseline: spec
           with: [ spec requires: 'Tode-GemStone-Remote-Server' ];
         yourself ].
   spec
-    for: #(#'gs3.3.x' #'gs3.4.x')
+    for: #(#'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         package: 'Tode-GemStone-Server-Core'
@@ -327,7 +327,7 @@ baseline: spec
         group: 'Remote Server' with: #('Tode-Remote-Server');
         yourself ].
   spec
-    for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x')
+    for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         package: 'Topez-Server-DebugTools'
@@ -337,7 +337,7 @@ baseline: spec
         yourself ].
   spec
     for:
-      #(#'gs3.3.1.x' #'gs3.3.2.x' #'gs3.3.3.x' #'gs3.3.4.x' #'gs3.3.5.x' #'gs3.3.6.x' #'gs3.3.7.x' #'gs3.4.x')
+      #(#'gs3.3.1.x' #'gs3.3.2.x' #'gs3.3.3.x' #'gs3.3.4.x' #'gs3.3.5.x' #'gs3.3.6.x' #'gs3.3.7.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         package: 'Tode-GemStone-Core331x'
