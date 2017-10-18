@@ -14,5 +14,7 @@ frameDict
           stream contents ]
         with: self processOop
         with: self frameIndex.
-      frameDict := STON fromString: stonString.
+      frameDict := [ STON fromString: stonString ]
+        on: Error
+        do: [ :ignored | Dictionary new ].
       self dynamicInstVarAt: #'frameDict' put: frameDict ]
