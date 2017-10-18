@@ -2,9 +2,12 @@ initialization
 pharo30InstallTodeClient
   "setup paths"
 
-  Deprecation
-    perform: #'showWarning:' with: false;
-    perform: #'raiseWarning:' with: false.
+  Smalltalk
+    at: #'Deprecation'
+    ifPresent: [ :cls | 
+      cls
+        perform: #'showWarning:' with: false;
+        perform: #'raiseWarning:' with: false ].
   (Smalltalk os environment
     at: 'GS_HOME'
     ifAbsent: [ 
@@ -14,6 +17,4 @@ pharo30InstallTodeClient
   (Smalltalk os environment at: 'GS_HOME' ifAbsent: [  ])
     ifNotNil: [ :todeRoot | 
       "support for GsDevKit_home"
-      (Smalltalk at: #'TDShell')
-        perform: #'todeRoot:'
-        with: todeRoot ]
+      (Smalltalk at: #'TDShell') perform: #'todeRoot:' with: todeRoot ]
