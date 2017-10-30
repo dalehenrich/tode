@@ -10,7 +10,7 @@ todeServerAccessString
 	^ '
 	[ | todeUserProfile |
 	todeUserProfile := GS_AllUsers userWithId: ' , todeUserId printString, '.
-	(todeUserPfofile objectNamed: ''TODE_ExternalTopezServer_CLASS'')
+	(todeUserProfile objectNamed: ''TODE_ExternalTopezServer_CLASS'')
 	  ifNotNil: [:cls | cls ]
-	  ifNil: [ todeUserPfofile objectNamed: ''TDExternalTopezServer'' ] ] value'
+	  ifNil: [ todeUserProfile objectNamed: ''TDExternalTopezServer'' ] ] value'
 	
