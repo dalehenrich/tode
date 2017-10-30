@@ -5,14 +5,14 @@ clscopy: theClass to: newName category: category
     ifTrue: [ ^ self error: newName , ' already exists' ].
   definition := theClass
     definitionWithClassName: newName
-    superClassName: (theClass superClass == nil
+    superClassName:
+      (theClass superClass == nil
         ifTrue: [ 'nil' ]
         ifFalse: [ theClass superClass name ]).
   newClass := self topez createClassFrom: definition.
   newClass
     copyMethodsFrom: theClass
-      dictionaries:
-        self topez applicationEnvironment methodCompilationSymbolList;
+      dictionaries: self applicationEnvironment methodCompilationSymbolList;
     classComment: theClass classComment;
     category: category.
   ^ newClass
