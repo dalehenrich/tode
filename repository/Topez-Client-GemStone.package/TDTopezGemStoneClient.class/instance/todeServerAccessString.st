@@ -7,4 +7,10 @@ todeServerAccessString
 			self serverType: #standard.
 			^ 'TDTopezServer' ].
 	self serverType: #external.
-	^ '((GS_AllUsers userWithId: ' , todeUserId printString , ') objectNamed: ''TDExternalTopezServer'')'
+	^ '
+	[ | todeUserProfile |
+	todeUserProfile := GS_AllUsers userWithId: ' , todeUserId printString, '.
+	(todeUserPfofile objectNamed: ''TODE_ExternalTopezServer_CLASS'')
+	  ifNotNil: [:cls | cls ]
+	  ifNil: [ todeUserPfofile objectNamed: ''TDExternalTopezServer'' ] ] value'
+	
