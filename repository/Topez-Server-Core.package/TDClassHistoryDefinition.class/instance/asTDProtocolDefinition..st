@@ -5,5 +5,5 @@ asTDProtocolDefinition: protocol
     isMeta: self isMeta
     protocol: protocol
     classHistoryIndex: self classHistoryIndex)
-    appEnv: self username;
+    appEnv: self appEnv;
     yourself

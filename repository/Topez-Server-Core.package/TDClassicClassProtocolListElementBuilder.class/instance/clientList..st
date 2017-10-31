@@ -1,15 +1,19 @@
 accessing
 clientList: listElement
-  | items ar className isMeta selectors |
+  | appEnv items ar className isMeta selectors |
+  listElement ifNotNil: [ appEnv := listElement topez applicationEnvironment ].
   ar := {(self allProtocol)}
     ,
-      (self object theBehavior categoryNames do: [ :each | each asString ]) sorted.
+      ((appEnv categoryNamesFor: self object theBehavior)
+        collect: [ :each | each asString ]) sorted.
   className := self object className.
   isMeta := self object isMeta.
   items := ar
     collect: [ :protocol | 
       | def |
-      def := self object asTDProtocolDefinition: protocol.
+      def := (self object asTDProtocolDefinition: protocol)
+        appEnv: appEnv;
+        yourself.
       protocol = self allProtocol
         ifTrue: [ def syntheticProtocol: true ].
       def ].

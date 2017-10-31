@@ -7,4 +7,5 @@ asBatchEditorDefinitionFor: aBatchEditor
     messagePattern: self messagePattern
     messagePatternIsRegex: self messagePatternIsRegex)
     batchEditor: aBatchEditor;
+    appEnv: self appEnv;
     yourself
