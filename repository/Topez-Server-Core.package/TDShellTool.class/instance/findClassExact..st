@@ -1,5 +1,10 @@
 find
 findClassExact: className
-  (Smalltalk classNamed: className)
+  | appEnv |
+  appEnv := self applicationEnvironment.
+  (appEnv globalNamed: className)
     ifNil: [ ^ #() ]
-    ifNotNil: [ :cls | ^ {(cls asTDClassDefinition)} ]
+    ifNotNil: [ :cls | 
+      ^ {(cls asTDClassDefinition
+        appEnv: appEnv;
+        yourself)} ]

@@ -23,8 +23,8 @@ browseclass
           self
             error:
               'Missing required argument <class-name>. See `man browse class` for more details' ].
-      cls := Smalltalk
-        at: clsNamePattern
+      cls := self applicationEnvironment
+        globalNamed: clsNamePattern
         ifAbsent: [ ^ self browseClasses: {} label: 'No class matching ' , clsNamePattern ].
       ^ self browseClassHierarchy: cls label: 'Hierarchy for ' , clsNamePattern ].
   pattern := ''.
