@@ -4,5 +4,5 @@ asTDBehaviorDefinition
     className: self className
     isMeta: self isMeta
     classHistoryIndex: self classHistoryIndex)
-    username: self username;
+    appEnv: self appEnv;
     yourself

@@ -1,0 +1,3 @@
+definitions
+definitionFromClassDefinition: aClassDefinition
+  ^ aClassDefinition theClass definition

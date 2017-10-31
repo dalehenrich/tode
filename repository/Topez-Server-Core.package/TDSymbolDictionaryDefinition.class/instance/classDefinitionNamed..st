@@ -1,6 +1,6 @@
 accessing
 classDefinitionNamed: aClassName
   ^ TDClassDefinition new
-    username: self username;
+    appEnv: self appEnv;
     className: aClassName;
     yourself

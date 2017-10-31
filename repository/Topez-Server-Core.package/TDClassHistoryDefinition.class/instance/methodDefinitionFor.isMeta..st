@@ -5,5 +5,5 @@ methodDefinitionFor: selector isMeta: isMeta
     isMeta: isMeta
     selector: selector
     classHistoryIndex: self classHistoryIndex)
-    username: self username;
+    appEnv: self appEnv;
     yourself

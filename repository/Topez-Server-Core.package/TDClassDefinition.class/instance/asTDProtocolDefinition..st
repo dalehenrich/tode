@@ -4,5 +4,5 @@ asTDProtocolDefinition: protocol
     className: self className
     isMeta: self isMeta
     protocol: protocol)
-    username: self username;
+    appEnv: self appEnv;
     yourself

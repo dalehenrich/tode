@@ -1,17 +1,15 @@
 {
 	"category" : "Topez-Server-Core",
 	"classinstvars" : [
-		"selectedDefinition" ],
+		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"appEnv",
-		"applicationEnvironment",
 		"username",
 		"pass" ],
-	"name" : "TDDefinition",
+	"name" : "TDStandardRemoteEnvironment",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TDStandardEnvironment",
 	"type" : "normal" }

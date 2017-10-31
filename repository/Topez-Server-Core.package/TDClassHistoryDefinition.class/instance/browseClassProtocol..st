@@ -4,7 +4,7 @@ browseClassProtocol: buttonBarClientElement
     className: self className
     isMeta: true
     classHistoryIndex: self classHistoryIndex)
-    username: self username;
+    appEnv: self appEnv;
     yourself)
     editUsing:
       ((TDEditorSpec

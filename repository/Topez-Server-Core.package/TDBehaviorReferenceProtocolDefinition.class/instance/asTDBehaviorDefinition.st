@@ -1,5 +1,5 @@
 converting
 asTDBehaviorDefinition
   ^ (TDBehaviorReferenceDefinition behavior: self theBehavior)
-    username: self username;
+    appEnv: self appEnv;
     yourself

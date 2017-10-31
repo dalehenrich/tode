@@ -5,6 +5,7 @@
 		"_compileBlock:" : "dkh 12/29/2016 05:34",
 		"classLookupEnvironmentId" : "dkh 12/26/2016 05:15",
 		"classLookupSymbolList" : "dkh 12/26/2016 05:15",
+		"compile:inBehavior:classified:" : "DataCurator 10/30/2017 17:58",
 		"compile:inContext:" : "dkh 12/27/2016 11:41",
 		"compile:inContext:literalVars:" : "dkh 12/27/2016 11:46",
 		"compile:inContext:literalVars:tempSymbolList:" : "dkh 12/27/2016 11:47",
@@ -12,6 +13,7 @@
 		"currentUserId" : "dkh 12/26/2016 15:23",
 		"debug:in:literalVars:" : "dkh 12/27/2016 11:56",
 		"declareUndefinedGlobals:" : "dkh 12/28/2016 12:28",
+		"definitionFromClassDefinition:" : "dkh 10/30/2017 18:21",
 		"evaluate:" : "dkh 12/28/2016 15:57",
 		"evaluate:in:" : "dkh 12/27/2016 11:50",
 		"evaluate:in:literalVars:" : "dkh 12/27/2016 11:52",
@@ -21,4 +23,5 @@
 		"globalNamed:" : "dkh 12/27/2016 10:33",
 		"methodCompilationEnvironmentId" : "dkh 12/26/2016 05:14",
 		"methodCompilationSymbolList" : "dkh 12/26/2016 05:15",
+		"removeMethodDefinitionFromSystem:topez:" : "dkh 10/30/2017 18:06",
 		"userId" : "dkh 12/26/2016 15:23" } }

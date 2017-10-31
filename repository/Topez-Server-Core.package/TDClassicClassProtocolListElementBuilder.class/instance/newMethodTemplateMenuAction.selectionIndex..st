@@ -9,7 +9,7 @@ newMethodTemplateMenuAction: listElement selectionIndex: selectionIndex
     className: self theClass name
     protocol: methodProtocol
     isMeta: self isMeta)
-    username: self object username;
+    appEnv: self object appEnv;
     yourself.
   ^ def
     editUsing:

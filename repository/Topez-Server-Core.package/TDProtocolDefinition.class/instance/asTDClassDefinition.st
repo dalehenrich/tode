@@ -1,5 +1,5 @@
 converting
 asTDClassDefinition
   ^ self theClass asTDClassDefinition
-    username: self username;
+    appEnv: self appEnv;
     yourself

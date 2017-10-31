@@ -5,6 +5,6 @@ differentMethodCreated: selector
     className: self theClass name
     isMeta: self theBehavior isMeta
     selector: selector asSymbol)
-    username: self object username;
+    appEnv: self object appEnv;
     yourself.
   self object: newDef

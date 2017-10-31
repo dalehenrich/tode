@@ -5,5 +5,5 @@ methodDefinitionFor: selector isMeta: aBool
     theBehavior: self theBehavior;
     isMeta: self theBehavior isMeta;
     selector: selector)
-    username: self username;
+    appEnv: self appEnv;
     yourself

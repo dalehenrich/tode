@@ -3,5 +3,5 @@ asTDClassDefinition
   ^ (TDClassHistoryDefinition
     className: self className
     classHistoryIndex: self classHistoryIndex)
-    username: self username;
+    appEnv: self appEnv;
     yourself

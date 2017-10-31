@@ -1,7 +1,7 @@
 instance/class button bar support
 browseInstanceProtocol: buttonBarClientElement
   ((TDBehaviorReferenceDefinition behavior: self theBehavior theNonMetaClass)
-    username: self username;
+    appEnv: self appEnv;
     yourself)
     editUsing:
       ((TDEditorSpec

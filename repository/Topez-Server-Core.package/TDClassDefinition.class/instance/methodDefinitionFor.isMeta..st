@@ -4,5 +4,5 @@ methodDefinitionFor: selector isMeta: isMeta
     className: self className
     isMeta: isMeta
     selector: selector)
-    username: self username;
+    appEnv: self appEnv;
     yourself
