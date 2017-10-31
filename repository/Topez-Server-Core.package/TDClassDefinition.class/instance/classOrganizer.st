@@ -1,3 +1,3 @@
 accessing
 classOrganizer
-  ^ ClassOrganizer cachedOrganizer
+  ^ self appEnv classOrganizer

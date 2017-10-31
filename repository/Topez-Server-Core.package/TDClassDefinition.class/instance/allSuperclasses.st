@@ -1,3 +1,3 @@
 accessing
 allSuperclasses
-  ^ self theClass allSuperClasses
+  ^ (self classOrganizer allSuperclassesOf: self theClass) reversed

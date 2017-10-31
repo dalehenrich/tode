@@ -5,3 +5,4 @@ compile: aString inContext: compilationContext
     inContext: compilationContext
     literalVars: nil
     tempSymbolList: SymbolList new
+    environmentId: self methodCompilationEnvironmentId

@@ -1,12 +1,14 @@
 commands
 eval
   "
-  eval [--help] <smalltalk-expression>...
+  eval [--help] [--env=<environmentId>] <smalltalk-expression>...
 "
 
   | contextObject result |
   contextObject := objIn.
-  arguments do: [ :expression | | litArray |
+  arguments
+    do: [ :expression | 
+      | litArray |
       litArray := self doItLiteralArrayFor: contextObject.
       result := self topez
         evaluateString: expression

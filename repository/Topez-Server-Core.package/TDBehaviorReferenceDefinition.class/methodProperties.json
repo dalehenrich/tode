@@ -2,10 +2,7 @@
 	"class" : {
 		"behavior:" : "dkh 09/12/2015 08:04",
 		"className:" : "dkh 09/12/2015 08:04",
-		"className:isMeta:" : "dkh 09/12/2015 08:05",
-		"classOrganizerFor:" : "dkh 10/13/2016 12:26",
-		"classOrganizerSessionTempsName" : "dkh 09/24/2016 07:05",
-		"clearClassOrganizers" : "dkh 09/24/2016 07:06" },
+		"className:isMeta:" : "dkh 09/12/2015 08:05" },
 	"instance" : {
 		"=" : "dkh 09/12/2015 07:48",
 		"asTDClassDefinition" : "dkh 10/30/2017 17:14",
@@ -15,7 +12,6 @@
 		"browseInstanceProtocol:" : "dkh 10/30/2017 17:15",
 		"className" : "dkh 09/12/2015 07:55",
 		"className:" : "dkh 09/12/2015 07:55",
-		"classOrganizer" : "dkh 09/24/2016 07:11",
 		"hash" : "dkh 09/12/2015 07:55",
 		"isMeta" : "dkh 09/12/2015 07:56",
 		"isMeta:" : "dkh 09/12/2015 07:49",

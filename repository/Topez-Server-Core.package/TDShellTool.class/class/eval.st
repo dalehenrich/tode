@@ -5,5 +5,7 @@ eval
   self
     performCommand: topez
     objIn: objIn
-    commandOptions: {#('help' $h #'none')}
+    commandOptions:
+      {#('help' $h #'none').
+      #('env' nil #'required')}
     todeCommand: command ]
