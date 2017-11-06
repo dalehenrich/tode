@@ -13,5 +13,4 @@ postLogin
         serializeExternalUsing: self objectSerializer protocolSignatureArray
         topez: self).
   System commit.
-  self installTodeSessionMethods.
   super postLogin
