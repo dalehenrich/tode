@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"source" ],
+	"name" : "TDStaticMethodDefinition",
+	"pools" : [
+		 ],
+	"super" : "TDMethodDefinition",
+	"type" : "normal" }
