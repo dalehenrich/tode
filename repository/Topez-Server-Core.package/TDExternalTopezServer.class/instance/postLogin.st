@@ -7,8 +7,11 @@ postLogin
   | ston id |
   ston := self topezClientForwarder perform: #'getTodeUserId'.
   self todeUserId: (self objectSerializer fromString: ston).
-  self objectSerializer: (TodeObjectSerializer
+  self
+    objectSerializer:
+      (TodeObjectSerializer
         serializeExternalUsing: self objectSerializer protocolSignatureArray
         topez: self).
   System commit.
+  self installTodeSessionMethods.
   super postLogin
