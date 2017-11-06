@@ -14,4 +14,5 @@ installTodeSessionMethods
       put: (todeUserGlobals at: GsPackagePolicy globalName);
     at: GsPackage globalName put: (todeUserGlobals at: GsPackage globalName);
     yourself.
+  GsPackagePolicy current refreshSessionMethodDictionary.
   System commitTransaction
