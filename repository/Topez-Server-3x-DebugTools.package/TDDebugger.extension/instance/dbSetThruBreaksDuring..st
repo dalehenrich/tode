@@ -1,5 +1,7 @@
 *topez-server-3x-debugtools
 dbSetThruBreaksDuring: aBlock
+  "only used when effectiveApiVersion is less that 1.4.0"
+
   | stack allBreakpointsSourceOffsets srcOffsets frame method ipMarkerArray stepIps thruStepPoints |
   stack := self theStack.
   frame := stack currentFrame.

@@ -1,0 +1,3 @@
+testing
+isExternalClient
+	^ true

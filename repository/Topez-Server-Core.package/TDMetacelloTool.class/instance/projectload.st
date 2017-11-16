@@ -19,9 +19,7 @@ projectload
 "
 
   | projectName projectClassName registration description loads loaded projectSelector metacello configurationVersion onConflict onDowngrade onLock onUpgrade ignoreImage silently cacheRepository repositoryOverrides doGet gsDeployerOption repository projectLoadSpec projectPath |
-  self
-    getSubcommandOptsMixedLongShort:
-      {#('baseline' nil #'none').
+  self getSubcommandOptsMixedLongShort: {#('baseline' nil #'none').
       #('basic' nil #'none').
       #('url' nil #'required').
       #('install' nil #'none').
@@ -44,16 +42,11 @@ projectload
       #('silently' nil #'none').
       #('version' nil #'required')}.
   ((subOptions includesKey: 'url') or: [ subOptions includesKey: 'install' ])
-    ifTrue: [ 
-      subOptions
-        at: 'url'
-        ifPresent: [ :url | 
-          | projectEntry projectPath |
+    ifTrue: [ subOptions at: 'url' ifPresent: [ :url | | projectEntry projectPath |
           subOptions
             at: 'stone'
             ifPresent: [ :ignored | projectPath := TDProjectEntryDefinition sys_stone_projects ]
-            ifAbsent: [ 
-              "--local default"
+            ifAbsent: [ "--local default"
               projectPath := TDProjectEntryDefinition sys_local_server_projects ].
           projectEntry := self
             projectEntryObjectFromUrl: url
@@ -61,48 +54,31 @@ projectload
           projectName := projectEntry projectName ].
       subOptions
         at: 'install'
-        ifPresent: [ :ignored | 
-          projectName := subArguments
-            at: 1
-            ifAbsent: [ 
-              self
+        ifPresent: [ :ignored | projectName := subArguments at: 1 ifAbsent: [ self
                 error:
                   'Missing required argument ( <project-name> | @<project-reference> ). See `man project load` for more details' ] ].
       registration := self resolveProjectRegistrationReference: projectName.
       self projectInstallFor: registration ]
-    ifFalse: [ 
-      projectName := subArguments
-        at: 1
-        ifAbsent: [ 
-          self
+    ifFalse: [ projectName := subArguments at: 1 ifAbsent: [ self
             error:
               'Missing required argument ( <project-name> | @<project-reference> ). See `man project load` for more details' ].
       registration := self resolveProjectRegistrationReference: projectName ].
   subOptions
     at: 'baseline'
     ifPresent: [ projectSelector := #'baseline:' ]
-    ifAbsent: [ 
-      subOptions
+    ifAbsent: [ subOptions
         at: 'configuration'
-        ifPresent: [ 
-          projectSelector := #'configuration:'.
-          subOptions
-            at: 'version'
-            ifPresent: [ :arg | 
-              (arg beginsWith: '#')
-                ifTrue: [ 
-                  "handle symbolic versions"
+        ifPresent: [ projectSelector := #'configuration:'.
+          subOptions at: 'version' ifPresent: [ :arg | (arg beginsWith: '#')
+                ifTrue: [ "handle symbolic versions"
                   configurationVersion := arg copyFrom: 2 to: arg size.
                   (configurationVersion beginsWith: '''')
-                    ifTrue: [ 
-                      configurationVersion := configurationVersion
+                    ifTrue: [ configurationVersion := configurationVersion
                         copyFrom: 2
                         to: configurationVersion size - 1 ].
                   configurationVersion := configurationVersion asSymbol ]
-                ifFalse: [ configurationVersion := arg ] ]
-            ifAbsent: [ configurationVersion := registration configurationVersionString ] ]
-        ifAbsent: [ 
-          projectSelector := registration projectSelector.
+                ifFalse: [ configurationVersion := arg ] ] ifAbsent: [ configurationVersion := registration configurationVersionString ] ]
+        ifAbsent: [ projectSelector := registration projectSelector.
           configurationVersion := registration configurationVersionString ] ].
   subOptions
     at: 'repository'
@@ -132,13 +108,12 @@ projectload
     at: 'className'
     ifPresent: [ :arg | projectClassName := arg ]
     ifAbsent: [ projectClassName := nil ].
-  registration loads
-    ifNotNil: [ :loadList | 
-      loads := loadList.
+  registration loads ifNotNil: [ :loadList | loads := loadList.
       loads isArray
-        ifFalse: [ loads := loads asArray ] ]
-    ifNil: [ loads := {'default'} ].
-  subOptions at: 'loads' ifPresent: [ :arg | loads := loads , arg evaluate ].
+        ifFalse: [ loads := loads asArray ] ] ifNil: [ loads := {'default'} ].
+  subOptions
+    at: 'loads'
+    ifPresent: [ :arg | loads := loads , (self topez todeEnvironment evaluate: arg) ].
   subOptions
     at: 'no-get'
     ifPresent: [ :ignored | doGet := false ]
@@ -150,8 +125,7 @@ projectload
   subOptions
     at: 'stone'
     ifPresent: [ :ignored | projectPath := TDProjectEntryDefinition sys_stone_projects ]
-    ifAbsent: [ 
-      "--local default"
+    ifAbsent: [ "--local default"
       projectPath := TDProjectEntryDefinition sys_local_server_projects ].
   projectLoadSpec := TDMetacelloToolProjectLoadSpec new
     projectName: registration projectName;
@@ -174,6 +148,5 @@ projectload
   ^ subOptions
     at: 'basic'
     ifPresent: [ :ignored | self basicProjectLoadFromSpec: projectLoadSpec ]
-    ifAbsent: [ 
-      "run pre/post load scripts for project entry"
+    ifAbsent: [ "run pre/post load scripts for project entry"
       self projectLoadFromSpec: projectLoadSpec registration: registration ]

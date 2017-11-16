@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileout: directoryPath classnameFilenamePairs: classnameFilenamePairs
   ^ self
     gsfileout: directoryPath

@@ -1,0 +1,3 @@
+accessing
+userId
+  ^ self currentUserId

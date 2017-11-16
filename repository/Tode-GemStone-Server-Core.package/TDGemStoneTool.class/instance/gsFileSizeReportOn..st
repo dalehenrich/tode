@@ -1,10 +1,10 @@
-as yet unclassified
+commands
 gsFileSizeReportOn: aStream
   "
   gs fileSizeReport
 "
 
-  | repositoryFiles stats |
+  | repositoryFiles stats totalSize availableSize |
   repositoryFiles := SystemRepository fileNames.
   stats := SystemRepository _extentStatistics: -1.
   1 to: SystemRepository numberOfExtents do: [ :i | 
@@ -17,11 +17,17 @@ gsFileSizeReportOn: aStream
       cr;
       nextPutAll:
           '   File size =       '
-              , (SystemRepository numToMByteString: ((stats at: i) at: 1));
+              ,
+                (SystemRepository numToMByteString: (totalSize := (stats at: i) at: 1));
       cr;
       nextPutAll:
           '   Space available = '
-              , (SystemRepository numToMByteString: ((stats at: i) at: 2));
+              ,
+                (SystemRepository numToMByteString: (availableSize := (stats at: i) at: 2));
+      cr;
+      nextPutAll:
+          '   Space Used =      '
+              , (SystemRepository numToMByteString: totalSize - availableSize);
       cr;
       yourself ].
   aStream
@@ -29,10 +35,17 @@ gsFileSizeReportOn: aStream
     cr;
     nextPutAll:
         '   Repository size = '
-            , (SystemRepository numToMByteString: SystemRepository fileSize);
+            ,
+              (SystemRepository numToMByteString: (totalSize := SystemRepository fileSize));
     cr;
     nextPutAll:
         '   Free Space =      '
-            , (SystemRepository numToMByteString: SystemRepository freeSpace);
+            ,
+              (SystemRepository
+                numToMByteString: (availableSize := SystemRepository freeSpace));
+    cr;
+    nextPutAll:
+        '   Used Space =      '
+            , (SystemRepository numToMByteString: totalSize - availableSize);
     cr;
     yourself

@@ -1,16 +1,19 @@
 as yet unclassified
 allGlobalNames
-  AllGlobalNames
-    ifNil: [ 
-      | block |
-      block := TZGsBlockSend new
-        topez: self topez;
-        blockSource:
-            '[| globalNames |
-globalNames := IdentitySet new.
-System myUserProfile symbolList do: [:symbolDict |
-	globalNames addAll: symbolDict keys].
-globalNames asArray]';
-        transform: #'ston' -> 1.
-      self critical: [ AllGlobalNames := block value ] ].
-  ^ AllGlobalNames
+	self topez effectiveApiVersion < '1.5.0' asMetacelloVersionNumber
+		ifTrue: [ ^ self oldAllGlobalNames ].
+	AllGlobalNames
+		ifNil: [ 
+			| messageSend |
+			messageSend := TZGsMessageSend new
+				topez: self topez;
+				receiver: self topez topezServerProxy;
+				selector: 'stonAllGlobalNames';
+				arguments: #();
+				transform: #native -> 1.
+			self
+				critical: [ 
+					| stonString |
+					stonString := messageSend value.
+					AllGlobalNames := (STONReader on: stonString readStream) next ] ].
+	^ AllGlobalNames

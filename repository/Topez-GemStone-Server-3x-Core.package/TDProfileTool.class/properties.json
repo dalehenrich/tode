@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-GemStone-Server-3x-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"CpuStart",
+		"ProfMon" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDProfileTool",
+	"pools" : [
+		 ],
+	"super" : "TDStandardTool",
+	"type" : "normal" }

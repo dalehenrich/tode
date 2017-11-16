@@ -9,7 +9,7 @@ projectbrowseManPage
   project browse - Browse project artifacts
 
 SYNOPSIS
-  project browse [--entry] [--baseline] [--configuration] [--categories] [--dirty] [--packages] [--repositories] [--tests] <project-name>
+  project browse [--entry] [--baseline] [--configuration] [--categories] [--classes] [--dirty] [--packages] [--repositories] [--tests] <project-name>
 
 DESCRIPTION
   Browse one or more of the artifacts for <project-name>.

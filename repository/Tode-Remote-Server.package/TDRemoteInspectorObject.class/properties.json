@@ -1,0 +1,20 @@
+{
+	"category" : "Tode-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"oopOf",
+		"sizeOf",
+		"classOfName",
+		"displayString",
+		"childNodeNames",
+		"childNodeNamedOops",
+		"childNodeIndexableOops" ],
+	"name" : "TDRemoteInspectorObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

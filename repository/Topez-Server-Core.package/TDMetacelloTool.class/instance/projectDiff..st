@@ -4,7 +4,7 @@ projectDiff: registration
   workingCopies := registration workingCopies.
   subOptions
     at: 'all'
-    ifAbsent: [ workingCopies := workingCopies select: [ :wc | wc modified ] ].
+    ifAbsent: [ workingCopies := workingCopies select: [ :wc | wc modified == true ] ].
   stream := TextStream on: Text new.
   stream
     nextPutAll:

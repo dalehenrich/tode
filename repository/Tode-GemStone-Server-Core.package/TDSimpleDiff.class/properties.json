@@ -9,7 +9,8 @@
 		"label",
 		"source",
 		"destination",
-		"filePath" ],
+		"filePath",
+		"selectionAttribute" ],
 	"name" : "TDSimpleDiff",
 	"pools" : [
 		 ],

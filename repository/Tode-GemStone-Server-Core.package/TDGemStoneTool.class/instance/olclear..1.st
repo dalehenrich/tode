@@ -5,21 +5,19 @@ olclear
 "
 
   | args priorities age objectLog continuations |
-  self
-    getSubcommandOptsMixedLongShort:
-      {#('age' nil #'required').
+  self getSubcommandOptsMixedLongShort: {#('age' nil #'required').
       #('continuation' nil #'none').
       #('inverse' nil #'none')}.
   args := subArguments collect: [ :priorityName | priorityName asSymbol ].
   subOptions
     at: 'inverse'
-    ifPresent: [ :ignored | 
-      priorities := self olPriorities copy.
+    ifPresent: [ :ignored | priorities := self olPriorities copy.
       priorities removeAll: args ]
     ifAbsent: [ priorities := args ].
   subOptions
     at: 'age'
-    ifPresent: [ :durationExpression | age := DateAndTime now - durationExpression evaluate ].
+    ifPresent: [ :durationExpression | age := DateAndTime now
+        - (self topez todeEnvironment evaluate: durationExpression) ].
   subOptions
     at: 'continuation'
     ifPresent: [ :ignored | continuations := true ]

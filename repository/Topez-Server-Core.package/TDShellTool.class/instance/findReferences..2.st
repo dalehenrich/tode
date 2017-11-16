@@ -15,14 +15,10 @@ findReferences
     at: 'class'
     ifPresent: [ :className | cls := self resolveClassReference: className ].
   subArguments
-    do: [ :arg | 
-      subOptions
-        at: 'literal'
-        ifPresent: [ :literalType | 
-          | literal |
-          literal := arg evaluate.
+    do: [ :arg | subOptions at: 'literal' ifPresent: [ :literalType | | literal |
+          literal := self topez todeEnvironment evaluate: arg.
           list
             addAll:
               (self findReferencesToLiteral: literal inClass: cls pattern: arg) ]
-        ifAbsent: [ list addAll: (self findReferences: arg inClass: cls searchScriptRoot: path) ] ].
+      ifAbsent: [ list addAll: (self findReferences: arg inClass: cls searchScriptRoot: path) ] ].
   ^ self filterSelectList: list

@@ -95,6 +95,15 @@ example
 					result := ex performSendNoForwarder: [  ].
 					^ ex resume: (Array with: #resume with: result) ] ]
 			for: #dbStep:forProcessOop:;
+		registerService: [ :level :processOop :aClient | 
+			[ aClient
+				handleDebugExceptionsDuring: [ aClient session stepThrough: (GsGciOopType fromInteger: processOop) level: level ] ]
+				on: GsGciClientForwarderSend
+				do: [ :ex | 
+					| result |
+					result := ex performSendNoForwarder: [  ].
+					^ ex resume: (Array with: #resume with: result) ] ]
+			for: #dbStepThrough:forProcessOop:;
 		registerService: [ :processOop :aClient | 
 			aClient
 				handleDebugExceptionsDuring: [ aClient session continueContext: (GsGciOopType fromInteger: processOop) ]

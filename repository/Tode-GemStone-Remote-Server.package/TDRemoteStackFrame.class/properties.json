@@ -1,0 +1,20 @@
+{
+	"category" : "Tode-GemStone-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"session",
+		"stack",
+		"frameIndex",
+		"next",
+		"previous",
+		"argAndTempNames",
+		"selectionRange" ],
+	"name" : "TDRemoteStackFrame",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

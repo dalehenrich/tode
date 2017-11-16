@@ -3,8 +3,8 @@
 		"allSelectorsProtocol" : "dkh 08/20/2015 16:11",
 		"className:isMeta:protocol:" : "dkh 08/20/2015 16:11" },
 	"instance" : {
-		"asTDBehaviorDefinition" : "dkh 09/10/2015 10:12",
-		"asTDClassDefinition" : "dkh 09/12/2015 08:32",
+		"asTDBehaviorDefinition" : "dkh 10/30/2017 17:17",
+		"asTDClassDefinition" : "dkh 10/30/2017 17:17",
 		"categoryName" : "dkh 09/22/2013 10:28",
 		"categoryName:" : "dkh 09/22/2013 10:28",
 		"className" : "dkh 09/22/2013 10:28",
@@ -24,4 +24,4 @@
 		"syntheticProtocol" : "dkh 08/20/2015 16:44",
 		"syntheticProtocol:" : "dkh 08/20/2015 16:44",
 		"theBehavior" : "dkh 09/22/2013 11:03",
-		"theClass" : "dkh 09/22/2013 11:59" } }
+		"theClass" : "dkh 09/22/2016 17:04" } }

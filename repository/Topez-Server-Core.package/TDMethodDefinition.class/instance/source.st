@@ -1,3 +1,6 @@
 as yet unclassified
 source
-  ^ self theBehavior sourceCodeAt: self selector
+  ^ self appEnv
+    sourceCodeAt: selector
+    for: self theBehavior
+    ifAbsent: [ self error: 'Source for method: ' , self selector printString , ' not found.' ]

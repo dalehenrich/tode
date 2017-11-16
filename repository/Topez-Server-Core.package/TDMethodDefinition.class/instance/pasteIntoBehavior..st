@@ -6,5 +6,5 @@ pasteIntoBehavior: aBehavior
   method := self method.
   source := method sourceString.
   category := self methodCategory.
-  aBehavior compile: source withGemstoneLineEndings classified: category.
+  self compile: source withGemstoneLineEndings classified: category.
   ^ true

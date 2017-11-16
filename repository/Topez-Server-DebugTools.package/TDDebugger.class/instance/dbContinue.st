@@ -2,7 +2,7 @@ debug ops
 dbContinue
   | processOop stack |
   stack := self theStack.
-  processOop := stack process asOop.
+  processOop := stack processOop.
   self topez disableSessionMethods.
   processResult := self topez topezClientForwarder
     perform: #'dbContinue:'

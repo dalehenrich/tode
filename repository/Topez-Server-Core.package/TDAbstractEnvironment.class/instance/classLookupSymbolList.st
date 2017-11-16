@@ -1,0 +1,3 @@
+accessing
+classLookupSymbolList
+  self subclassResponsibility

@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 exception: anException
     exception := anException

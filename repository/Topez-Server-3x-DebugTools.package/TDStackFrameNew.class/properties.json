@@ -1,0 +1,21 @@
+{
+	"category" : "Topez-Server-3x-DebugTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stack",
+		"frameIndex",
+		"frameContents",
+		"next",
+		"previous",
+		"argAndTempNames",
+		"selectionRange",
+		"parent" ],
+	"name" : "TDStackFrameNew",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

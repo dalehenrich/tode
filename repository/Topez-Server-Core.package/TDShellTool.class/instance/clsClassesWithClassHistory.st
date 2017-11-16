@@ -1,7 +1,7 @@
 cls
 clsClassesWithClassHistory
   | classes symbolList |
-  symbolList := System myUserProfile symbolList.
+  symbolList := self applicationEnvironment methodCompilationSymbolList.
   classes := IdentitySet new.
   symbolList
     do: [ :symbolDict | 

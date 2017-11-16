@@ -3,4 +3,9 @@
 		 },
 	"instance" : {
 		"baseClassDefinitionList" : "dkh 10/05/2013 11:26",
-		"clientList:" : "dkh 03/20/2014 20:36" } }
+		"browseLooseMethodImageDiff:" : "dkh 04/04/2017 17:55",
+		"browseLooseMethodSessionMethoDiff:" : "dkh 04/04/2017 17:53",
+		"clientList:" : "dkh 03/20/2014 20:36",
+		"looseMethodDefinitions:" : "dkh 04/04/2017 16:56",
+		"looseMethodMenuActionSpec" : "dkh 04/04/2017 12:11",
+		"menuActionSpec" : "dkh 04/04/2017 12:07" } }

@@ -1,10 +1,9 @@
 cls
 clsInteractiveCreateSubclassWithTemplate: classCreationTemplate
-  | newClass classDefinition |
-  classDefinition := (GsMultiLineTextInteraction
+  | newClass classDefinitionString |
+  classDefinitionString := (GsMultiLineTextInteraction
     prompt: 'Define class: '
     template: classCreationTemplate) signal.
-  classDefinition ifNil: [ ^ nil ].
-  GsDeployer bulkMigrate: [ newClass := classDefinition evaluate ].
-  self topez resetAllGlobalNames.
+  classDefinitionString ifNil: [ ^ nil ].
+  newClass := self topez createClassFrom: classDefinitionString.
   ^ newClass

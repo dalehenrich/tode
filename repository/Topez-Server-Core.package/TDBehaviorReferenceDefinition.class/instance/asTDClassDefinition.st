@@ -1,5 +1,5 @@
 as yet unclassified
 asTDClassDefinition
   ^ (TDBehaviorReferenceDefinition behavior: self theClass)
-    username: self username;
+    appEnv: self appEnv;
     yourself

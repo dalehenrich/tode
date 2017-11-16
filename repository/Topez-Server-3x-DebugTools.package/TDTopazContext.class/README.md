@@ -1,0 +1,1 @@
+display the same frame context fields as topaz

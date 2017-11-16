@@ -1,3 +1,3 @@
 as yet unclassified
 dotSelfObject
-  ^ self frameSelf
+  ^ self theSelf

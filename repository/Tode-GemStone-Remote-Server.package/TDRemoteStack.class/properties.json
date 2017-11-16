@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-GemStone-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"processOop",
+		"exceptionOop",
+		"session" ],
+	"name" : "TDRemoteStack",
+	"pools" : [
+		 ],
+	"super" : "TDStack",
+	"type" : "normal" }

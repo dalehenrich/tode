@@ -2,9 +2,13 @@ find
 findClass: regexPattern
   "find class <regex-pattern>"
 
-  | regex |
+  | regex appEnv |
   regex := self findRegex: regexPattern.
   regex ifNil: [ ^ #() ].
-  ^ (Smalltalk systemNavigation allClasses asArray
+  appEnv := self applicationEnvironment.
+  ^ (self classOrganizer classes asArray
     select: [ :cls | regex search: cls name asString ])
-    collect: [ :cls | cls asTDClassDefinition ]
+    collect: [ :cls | 
+      cls asTDClassDefinition
+        appEnv: appEnv;
+        yourself ]

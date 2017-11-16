@@ -1,0 +1,15 @@
+{
+	"category" : "Tode-GemStone-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"receiverOop",
+		"homeMethodOop" ],
+	"name" : "TDRemoteDebugger",
+	"pools" : [
+		 ],
+	"super" : "TDDebugger",
+	"type" : "normal" }

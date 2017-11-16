@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsflushCaches
   "
   gs flushCaches [--hard]

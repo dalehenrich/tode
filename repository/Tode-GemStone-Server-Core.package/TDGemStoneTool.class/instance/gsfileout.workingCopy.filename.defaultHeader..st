@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileout: directoryPath workingCopy: workingCopy filename: filename defaultHeader: defaultHeader
   | directory header |
   directory := ServerFileDirectory on: directoryPath.

@@ -7,7 +7,7 @@ browseImplementorsMenuAction: listElement selectionIndex: selectionIndex
   def := itemAttribute object.
   selector := def selector asString.
   findTool := self findTool: listElement.
-  block := [ findTool findMethod: selector ].
+  block := [ findTool findMethod: selector username: def username ].
   browseTool := self browseTool: listElement.
   browseTool browseMethodsBlock: block label: 'Implementors of ' , selector.
   ^ true

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-DebugTools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 12/30/2016 04:19",
+	"instvars" : [
+		 ],
+	"name" : "TDNewStack",
+	"pools" : [
+		 ],
+	"super" : "TDStack",
+	"type" : "normal" }

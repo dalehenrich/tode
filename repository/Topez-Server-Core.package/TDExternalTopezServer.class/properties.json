@@ -1,0 +1,15 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 12/28/2016 15:00",
+	"instvars" : [
+		"todeUserId",
+		"applicationEnvironment" ],
+	"name" : "TDExternalTopezServer",
+	"pools" : [
+		 ],
+	"super" : "TDTopezServer",
+	"type" : "normal" }

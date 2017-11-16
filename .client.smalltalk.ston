@@ -1,0 +1,23 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Tode',
+      #load : [ 'GemStone', 'Rewrite' ],
+      #directory : 'repository',
+      #onWarningLog : true,
+      #platforms : [ #gemstone ]
+    },
+    SCIMetacelloLoadSpec {
+      #baseline : 'Tode',
+      #load : [ 'CI' ],
+      #directory : 'repository',
+      #onWarningLog : true,
+      #platforms : [ #pharo ]
+    }
+  ],
+  #testing : {
+    #exclude : {
+      #categories : [ 'Tode-Server-*', 'Topez-Server-*', 'Tode-GemStone-Server-*' ]
+    }
+  }
+}

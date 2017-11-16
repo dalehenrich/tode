@@ -6,7 +6,8 @@ pasteIntoClassDefinition: aTDClassDefinition
   method := self method.
   source := method sourceString.
   category := self methodCategory.
-  aTDClassDefinition theClass
+  self appEnv
     compile: source withGemstoneLineEndings
+    inBehavior: aTDClassDefinition theClass
     classified: category.
   ^ true

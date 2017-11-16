@@ -1,7 +1,6 @@
-as yet unclassified
+printing
 printOn: aStream
-  [ 
-  aStream
+  [ aStream
     nextPutAll: process class name;
     nextPutAll: '(oop=';
     nextPutAll: process asOop printString;
@@ -15,5 +14,5 @@ printOn: aStream
     nextPutAll: ', ' ]
     on: Error
     do: [ :ex | aStream nextPutAll: '...problem printing process' ].
-  aStream nextPut: ')'.
+  aStream nextPutAll: ')'.
   ^ aStream contents

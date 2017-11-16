@@ -1,5 +1,4 @@
 as yet unclassified
-elementSource: classDefinition clientSourceElement: clientSourceElement
-  GsDeployer bulkMigrate: [ classDefinition evaluate ].
-  clientSourceElement topez resetAllGlobalNames.
+elementSource: classDefinitionString clientSourceElement: clientSourceElement
+  clientSourceElement topez createClassFrom: classDefinitionString.
   ^ true

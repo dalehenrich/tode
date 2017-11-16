@@ -16,7 +16,7 @@ edit
       {objIn} ]
     ifFalse: [ 
       objectsIn := arguments.
-      arguments collect: [ :each | topez lookup: each ] ].
+      arguments collect: [ :each | (topez lookup: each) basicTodeEditObject ] ].
   options
     at: 'print'
     ifPresent: [ :ignored | 

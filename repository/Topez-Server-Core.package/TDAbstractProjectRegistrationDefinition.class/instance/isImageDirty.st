@@ -5,7 +5,7 @@ isImageDirty
       self isLoadedInImage
         ifFalse: [ ^ isImageDirty := false ].
       self workingCopies
-        detect: [ :wc | wc modified ]
+        detect: [ :wc | wc modified == true ]
         ifNone: [ ^ isImageDirty := false ].
       ^ isImageDirty := true ].
   ^ isImageDirty

@@ -11,7 +11,8 @@
 		"frames",
 		"currentFrame",
 		"debugTool",
-		"trimmed" ],
+		"trimmed",
+		"stackFrameClass" ],
 	"name" : "TDStack",
 	"pools" : [
 		 ],

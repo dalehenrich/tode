@@ -4,9 +4,9 @@ elementSource: methodSource clientSourceElement: clientSourceElement
 
   | theFormattedSource |
   theFormattedSource := self formattedElementSource: methodSource.
-  theFormattedSource
-    _compileInContext: clientSourceElement theObject sourceCompilationContext
-    symbolList: GsSession currentSession symbolList.
+  clientSourceElement topez
+    evaluateString: theFormattedSource
+    inContext: clientSourceElement theObject sourceCompilationContext.
   ^ super
     elementSource: theFormattedSource
     clientSourceElement: clientSourceElement

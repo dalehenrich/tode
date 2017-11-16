@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDRemoteGsNMethod",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

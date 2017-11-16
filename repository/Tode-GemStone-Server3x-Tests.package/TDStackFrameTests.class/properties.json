@@ -1,0 +1,15 @@
+{
+	"category" : "Tode-GemStone-Server3x-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"blockFactory",
+		"factoryBlock" ],
+	"name" : "TDStackFrameTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

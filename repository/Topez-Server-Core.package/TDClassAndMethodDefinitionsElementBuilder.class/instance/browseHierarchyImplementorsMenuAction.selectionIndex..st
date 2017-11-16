@@ -4,12 +4,12 @@ browseHierarchyImplementorsMenuAction: listElement selectionIndex: selectionInde
   itemAttribute := listElement itemCache at: selectionIndex.
   def := itemAttribute object.
   theClass := def theClass.
-  classes := theClass allSuperClasses.
+  classes := def allSuperclasses.
   classes add: theClass.
-  classes addAll: theClass allSubclasses.
+  classes addAll: def allSubclasses.
   findTool := self findTool: listElement.
   block := [ 
-  (findTool findMethod: def selector asString)
+  (findTool findMethod: def selector asString username: def username)
     select: [ :each | classes includes: each theClass ] ].
   browseTool := self browseTool: listElement.
   browseTool browseMethodsBlock: block label: 'Implementors of ' , def selector.

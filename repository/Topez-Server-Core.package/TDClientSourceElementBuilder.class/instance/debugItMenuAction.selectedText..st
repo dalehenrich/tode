@@ -1,4 +1,7 @@
 menu actions
 debugItMenuAction: listElement selectedText: selectedString
-  self debugString: selectedString.
+  (listElement topez applicationEnvironmentFor: self doItContext)
+    debug: selectedString
+    in: self doItContext
+    literalVars: self doItLiteralArray.
   ^ true

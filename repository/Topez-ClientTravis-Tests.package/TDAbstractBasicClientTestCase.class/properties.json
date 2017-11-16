@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-ClientTravis-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDAbstractBasicClientTestCase",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractClientTestCase",
+	"type" : "normal" }

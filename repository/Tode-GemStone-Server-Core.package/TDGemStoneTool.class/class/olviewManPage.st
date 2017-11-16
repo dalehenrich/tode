@@ -10,7 +10,7 @@ olviewManPage
 
 SYNOPSIS
   ol view  [--inverse] [--reverse|-r] [--age=<duration>] [--pid=<pid>] [--continuation] \
-           [ <priority>... ]
+           [--tag=<tag-block>] [ <priority>... ]
 
 DESCRIPTION
   The `ol view` command brings up a window on the object log entries that match the
@@ -44,6 +44,9 @@ OPTIONS
   --reverse
     The list is displayed in reverse order.
 
+  --tag=<tag-block>
+    The <tag-block> is applied as a select block on the tag field of the ObjectLogEntry.
+
 EXAMPLES
   ol view error
   ol view --inverse transcript
@@ -51,5 +54,6 @@ EXAMPLES
   ol view --age=`1 day` -r --pid=15292 transcript
   ol view --continuation
   ol view --continuation --age=`1 month` error
+  ol view --tag=`[:tag | tag = #tag]`
 '.
   ^ manPage

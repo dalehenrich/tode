@@ -1,0 +1,3 @@
+accessing
+externalClassSignature
+	^ 2

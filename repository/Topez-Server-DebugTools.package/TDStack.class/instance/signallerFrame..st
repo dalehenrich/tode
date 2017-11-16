@@ -5,5 +5,5 @@ signallerFrame: startingFrame
   self exception ifNil: [ ^ nil ].
   ^ startingFrame
     findFrameSuchThat: [ :frame | 
-      (frame receiver == self exception or: [ frame receiver == self exception class ])
+      (frame theSelf == self exception or: [ frame theSelf == self exception class ])
         not ]

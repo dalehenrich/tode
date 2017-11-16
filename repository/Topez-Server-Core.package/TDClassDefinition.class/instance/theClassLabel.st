@@ -7,5 +7,5 @@ theClassLabel
       tc classHistory
         ifNotNil: [ :classHistory | 
           classHistory size > 1
-            ifTrue: [ ch := '[' , (classHistory indexOf: tc) printString , ']' ] ] ].
+            ifTrue: [ ch := ' [' , (classHistory indexOf: tc) printString , ']' ] ] ].
   ^ self theClassName , ch

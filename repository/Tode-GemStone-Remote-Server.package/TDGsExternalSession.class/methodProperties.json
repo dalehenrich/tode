@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"sessionClass" : "dkh 09/07/2016 17:00",
+		"sessionForStone:userName:password:" : "dkh 09/23/2016 10:09" },
+	"instance" : {
+		"_signalIfError" : "dkh 09/25/2016 14:00",
+		"classDefinitionCreationStringFor:" : "dkh 09/25/2016 15:42",
+		"compile:inClass:classified:" : "dkh 09/23/2016 10:26",
+		"compile:inClassOop:classified:" : "dkh 09/25/2016 13:27",
+		"continue:replacingTopOfStackWithOop:" : "dkh 09/10/2016 10:30",
+		"inDebugger" : "dkh 09/25/2016 13:51",
+		"inDebugger:" : "dkh 09/25/2016 13:52",
+		"logout" : "dkh 09/25/2016 13:54",
+		"logoutOnClose" : "dkh 09/25/2016 13:50",
+		"logoutOnClose:" : "dkh 09/25/2016 13:50",
+		"minPrintOn:" : "dkh 09/20/2016 15:53",
+		"topez" : "dkh 09/20/2016 15:20",
+		"topez:" : "dkh 09/20/2016 15:19",
+		"windowIsClosing" : "dkh 09/25/2016 13:57" } }

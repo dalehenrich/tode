@@ -5,11 +5,12 @@ platformInitialize
   (Warning respondsTo: #'addDefaultHandler:')
     ifTrue: [ 
       "3.x only"
-      GsInteractionRequest defaultHandlers isEmpty
+      (GsInteractionRequest perform: #'defaultHandlers') isEmpty
         ifTrue: [ 
           "signalled from GemStone base interactions"
           GsInteractionRequest
-            addDefaultHandler: [ :ex | 
+            perform: #'addDefaultHandler:'
+            with: [ :ex | 
               | result handler |
               handler := GsInteractionHandler new
                 defaultBlock: [ :interaction | 
@@ -21,7 +22,7 @@ platformInitialize
                       interaction theObject
                         editUsing:
                           ((TDEditorSpec topez: self editorAspect: #'inspect')
-                            builderAspect: #'inspect';
+                            builderAspect: #'view';
                             yourself).
                       ex response: interaction theObject ];
                 yourself.

@@ -1,0 +1,14 @@
+{
+	"category" : "Topez-Server-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"undefinedGlobals" ],
+	"name" : "TDUndefinedGlobalNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

@@ -88,6 +88,7 @@ baseline: spec
           with: #('GemStone' 'Common Tests' 'GemStone Tests');
         group: 'Common-Core' with: #('Topez-Common-Core');
         group: 'Pharo Dev' with: #('Pharo' 'Common Tests');
+        group: 'CI' with: #('GemStone Tests');
         yourself ].
   spec
     for: #'pharo1.4.x'
@@ -97,7 +98,7 @@ baseline: spec
         package: 'Tode-Pharo14' with: [ spec requires: 'Topez-Pharo-Common' ];
         yourself ].
   spec
-    for: #'pharo5.x'
+    for: #(#'pharo5.x' #'pharo6.x')
     do: [ 
       spec
         baseline: 'GemStoneGCI'
@@ -195,6 +196,7 @@ baseline: spec
         group: 'GemStone Dev' with: #('GemStone' 'GemStone Tests');
         group: 'Rewrite' with: #('Tode-BatchEdit-Tool');
         group: 'CI' with: #('GemStone' 'GemStone Tests' 'Rewrite');
+        group: 'Remote Server' with: #();
         yourself ].
   spec
     for: #'gs2.4.x'
@@ -240,9 +242,11 @@ baseline: spec
         package: 'Topez-Server-31x-Tests'
           with: [ spec requires: 'Topez-Server-Tests' ];
         package: 'Tode-GemStone-Server-Core'
-          with: [ spec includes: #('Tode-GemStone-Core3x') ];
+          with: [ spec includes: #('Tode-GemStone-Core3x' 'Topez-GemStone-Server-3x-Core') ];
         package: 'Tode-GemStone-Core3x'
           with: [ spec requires: #('Tode-GemStone-Server-Core') ];
+        package: 'Topez-GemStone-Server-3x-Core'
+          with: [ spec requires: #('Topez-Server-Core' 'Tode-GemStone-Server-Core') ];
         package: 'Tode-GemStone-Server-Tests'
           with: [ spec includes: #('Tode-GemStone-Server3x-Tests') ];
         package: 'Tode-GemStone-Server3x-Tests'
@@ -284,20 +288,52 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-Core' ];
         yourself ].
   spec
-    for: #(#'gs3.3.x' #'gs3.4.x')
+    for: #(#'gs3.3.x')
+    do: [ 
+      spec
+        package: 'Tode-GemStone-Remote-Server'
+          with: [ spec includes: 'Tode-GemStone-Remote330-Server' ];
+        package: 'Tode-GemStone-Remote330-Server'
+          with: [ spec requires: 'Tode-GemStone-Remote-Server' ];
+        yourself ].
+  spec
+    for: #(#'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
+    do: [ 
+      spec
+        package: 'Tode-GemStone-Remote-Server'
+          with: [ spec includes: 'Tode-GemStone-Remote340-Server' ];
+        package: 'Tode-GemStone-Remote340-Server'
+          with: [ spec requires: 'Tode-GemStone-Remote-Server' ];
+        yourself ].
+  spec
+    for: #(#'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         package: 'Tode-GemStone-Server-Core'
           with: [ spec includes: 'Topez-GemStone-Server-33x-Core' ];
         package: 'Topez-GemStone-Server-33x-Core'
-          with: [ spec requires: 'Tode-GemStone-Server-Core' ];
+          with: [ spec requires: #('Tode-GemStone-Server-Core' 'Topez-GemStone-Server-3x-Core') ];
         package: 'Topez-Server-Core'
           with: [ spec includes: 'Topez-Server-33x-Core' ];
         package: 'Topez-Server-33x-Core'
           with: [ spec requires: 'Topez-Server-Core' ];
+        package: 'Tode-Remote-Server';
+        package: 'Tode-GemStone-Remote-Server'
+          with: [ spec requires: #('Topez-Server-DebugTools' 'Topez-GemStone-Server-33x-Core') ];
+        yourself.
+      spec
+        group: 'GemStone'
+          with: #('Tode-Remote-Server' 'Tode-GemStone-Remote-Server');
+        group: 'Remote Server' with: #('Tode-Remote-Server');
         yourself ].
   spec
-    for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x')
+    for: #(#'gs643.4.x' #'gs643.5.x' #'gs643.6.x')
+    do: [ 
+      spec
+        package: 'Tode-Remote-Server';
+        yourself ].
+  spec
+    for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         package: 'Topez-Server-DebugTools'
@@ -307,7 +343,7 @@ baseline: spec
         yourself ].
   spec
     for:
-      #(#'gs3.3.1.x' #'gs3.3.2.x' #'gs3.3.3.x' #'gs3.3.4.x' #'gs3.3.5.x' #'gs3.3.6.x' #'gs3.3.7.x' #'gs3.4.x')
+      #(#'gs3.3.1.x' #'gs3.3.2.x' #'gs3.3.3.x' #'gs3.3.4.x' #'gs3.3.5.x' #'gs3.3.6.x' #'gs3.3.7.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         package: 'Tode-GemStone-Core331x'

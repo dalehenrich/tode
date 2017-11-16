@@ -1,0 +1,3 @@
+private
+frameIndex
+    ^ frameIndex

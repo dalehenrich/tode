@@ -1,0 +1,14 @@
+{
+	"category" : "Tode-GemStone-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDRemoteStackFrameContentsClientListElementBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDDirectoryNodeClientListElementBuilder",
+	"type" : "normal" }

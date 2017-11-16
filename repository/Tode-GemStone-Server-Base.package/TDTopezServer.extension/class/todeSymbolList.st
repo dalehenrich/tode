@@ -4,4 +4,4 @@ todeSymbolList
 
   ^ SessionTemps current
     at: #'TDTopezServer_TodeSymbolList'
-    otherwise: GsSession currentSession symbolList
+    otherwise: GsCurrentSession currentSession symbolList

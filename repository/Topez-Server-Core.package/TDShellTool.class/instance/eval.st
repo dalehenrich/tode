@@ -1,17 +1,21 @@
 commands
 eval
   "
-  eval [--help] <smalltalk-expression>...
+  eval [--help] [--env=<environmentId>] <smalltalk-expression>...
 "
 
-  | contextObject result |
+  | contextObject result environmentId |
   contextObject := objIn.
+  environmentId := 0.
+  options at: 'env' ifPresent: [ :envId | environmentId := envId asNumber ].
   arguments
     do: [ :expression | 
       | litArray |
       litArray := self doItLiteralArrayFor: contextObject.
-      result := expression
-        evaluateIn: contextObject
-        symbolList: GsSession currentSession symbolList
-        literalVars: litArray ].
+      result := self topez
+        evaluateString: expression
+        inContext: contextObject
+        literalVars: litArray
+        withTempSymbolList: SymbolList new
+        environmentId: environmentId ].
   ^ result

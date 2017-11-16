@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsversion: reportType
   reportType == #'client'
     ifTrue: [ ^ System clientVersionReport ].

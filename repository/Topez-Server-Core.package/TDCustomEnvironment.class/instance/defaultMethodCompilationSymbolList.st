@@ -1,0 +1,3 @@
+defaults
+defaultMethodCompilationSymbolList
+  ^ GsSession currentSession symbolList

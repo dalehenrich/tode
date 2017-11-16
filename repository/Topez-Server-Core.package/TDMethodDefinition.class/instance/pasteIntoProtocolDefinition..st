@@ -6,17 +6,20 @@ pasteIntoProtocolDefinition: aProtocolDefinition
   method := self method.
   source := method sourceString.
   category := aProtocolDefinition categoryName.
-  (aProtocolDefinition theBehavior
-    compiledMethodAt: method selector
+  (self appEnv
+    method: method selector
+    for: aProtocolDefinition theBehavior
     ifAbsent: [  ]) == method
     ifTrue: [ 
       "moving method to different category"
-      aProtocolDefinition theBehavior
+      self appEnv
         moveMethod: method selector
-        toCategory: category ]
+        toCategory: category
+        for: aProtocolDefinition theBehavior ]
     ifFalse: [ 
       "adding method to behavior"
-      aProtocolDefinition theBehavior
+      self appEnv
         compile: source withGemstoneLineEndings
+        inBehavior: aProtocolDefinition theBehavior
         classified: category ].
   ^ true

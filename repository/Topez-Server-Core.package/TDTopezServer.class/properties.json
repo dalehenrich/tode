@@ -9,7 +9,7 @@
 	"classvars" : [
 		"ConcreteClassName",
 		"PersistentElementCacheStack" ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 12/28/2016 14:58",
 	"instvars" : [
 		"topezClientForwarder",
 		"serverStatus",
@@ -25,7 +25,8 @@
 		"serverTodeRoot",
 		"objectSerializer",
 		"persistentElementCache",
-		"effectiveApiVersion" ],
+		"effectiveApiVersion",
+		"todeEnvironment" ],
 	"name" : "TDTopezServer",
 	"pools" : [
 		 ],

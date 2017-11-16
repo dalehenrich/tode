@@ -6,7 +6,7 @@ createStackNodeFor: aGsProcess exception: anException
     , aGsProcess asOop asString.
   topez ensureChildrenExistIn: nodePath.
   parentNode := topez lookup: nodePath.
-  stack := TDStack new
+  stack := self class stackClass new
     process: aGsProcess;
     exception: anException;
     debugTool: self;

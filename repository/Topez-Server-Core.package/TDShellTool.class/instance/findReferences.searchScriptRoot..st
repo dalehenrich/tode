@@ -16,7 +16,7 @@ findReferences: variableOrGlobalNameOrPathRef searchScriptRoot: path
       [ 
       | gsMethod srcOffset |
       gsMethod := leafNode method.
-      (gsMethod _literalsIncludesValue: literal)
+      (gsMethod perform: #'_literalsIncludesValue:' with: literal)
         ifTrue: [ leafNodes add: leafNode ] ]
         on: self compilerExceptionSet
         do: [ :ex | 

@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"buildClientElementUsing:editorAspect:" : "dkh 04/11/2013 14:36",
-		"differentMethodCreated:" : "DataCurator 02/09/2013 10:11",
+		"differentMethodCreated:" : "dkh 10/30/2017 17:17",
 		"doItContext" : "dkh 03/30/2014 07:58",
 		"doItLiteralArray" : "dkh 04/28/2014 17:42",
 		"elementSource" : "DataCurator 02/09/2013 10:32",
@@ -12,6 +12,6 @@
 		"methodProtocol" : "dkh 09/22/2013 14:26",
 		"selector" : "DataCurator 02/07/2013 11:47",
 		"theBehavior" : "DataCurator 02/09/2013 10:26",
-		"theClass" : "DataCurator 02/09/2013 10:26",
+		"theClass" : "dkh 09/24/2016 11:42",
 		"usePersistentClientElementCache" : "dkh 12/03/2015 15:44",
 		"usePersistentClientElementCache:" : "dkh 12/03/2015 15:44" } }

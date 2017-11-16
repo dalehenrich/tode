@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-GemStone-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"inspectorObject",
+		"session",
+		"objectOop" ],
+	"name" : "TDRemoteObjectInspectorReference",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

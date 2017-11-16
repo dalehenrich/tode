@@ -1,19 +1,23 @@
 accessing
 clientList: listElement
-  | items ar beh selectors |
+  | items ar beh selectors appEnv |
+  appEnv := listElement topez applicationEnvironment.
   items := OrderedCollection new.
   ar := OrderedCollection new.
   beh := self theBehavior.
   selectors := self object protocol = TDProtocolDefinition allSelectorsProtocol
-    ifTrue: [ beh selectors ]
-    ifFalse: [ beh selectorsIn: self object protocol ].
+    ifTrue: [ appEnv selectorsFor: beh ]
+    ifFalse: [ appEnv selectorsFor: beh in: self object protocol ].
   selectors sorted
     do: [ :selector | 
       ar add: selector asString.
       items
         add:
           (TDClientListItemAttributes
-            object: (self methodDefinitionFor: selector)
+            object:
+              ((self methodDefinitionFor: selector)
+                appEnv: appEnv;
+                yourself)
             parent: nil
             aspect: listElement aspect) ].
   listElement ~~ nil

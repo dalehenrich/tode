@@ -10,33 +10,31 @@ clientList: listElement
   max := max + 1.
   displayPolicy := listElement displayPolicy.
   elementNames
-    do: [ :elementName | 
-      | object parentObject itemObject stream label |
+    do: [ :elementName | | object parentObject itemObject stream label editorAspect |
       stream := TextStream on: Text new.
       stream
         nextPutAll: elementName;
         space: max - elementName size;
         nextPutAll: '-> '.
+      editorAspect := listElement aspect.
       (specialNames includes: elementName)
-        ifTrue: [ 
-          label := elementName.
-          parentObject := nil.
-          itemObject := object := self object ]
-        ifFalse: [ 
-          parentObject := self object.
-          object := self object
+        ifTrue: [ elementName = '.'
+            ifTrue: [ label := elementName.
+              parentObject := nil.
+              itemObject := object := self object ].
+          elementName = '..'
+            ifTrue: [  ] ]
+        ifFalse: [ parentObject := self object.
+          itemObject := object := self object
             objectFor: elementName
             ifAbsent: [ self error: 'missing element' ].
-          itemObject := object
-            asTDObjectNode: parentObject
-            topez: listElement topez
-            aspect: #'view' ].
-      items
-        add:
-          ((TDClientListItemAttributes
+          elementName = '(sender)'
+            ifTrue: [ editorAspect := #'contents' ] ].
+      items add: ((TDClientListItemAttributes
             object: itemObject
             parent: parentObject
-            aspect: listElement aspect)
+            aspect: editorAspect
+            list: listElement parentList)
             label: label;
             yourself).
       displayPolicy stream: stream.

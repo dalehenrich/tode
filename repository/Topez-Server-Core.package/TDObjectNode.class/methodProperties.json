@@ -5,12 +5,14 @@
 		"acceptVisitor:" : "dkh 01/30/2014 12:30",
 		"acceptVisitor:proxiedBy:" : "dkh 01/31/2014 10:57",
 		"addAsChildOfFileSystemDirectoryNode:" : "dkh 12/06/2013 19:04",
-		"addChildNode:" : "DataCurator 11/28/2012 06:58",
+		"addChildNode:" : "dkh 01/08/2017 10:48",
 		"asTDObjectNode:topez:aspect:" : "dkh 06/05/2013 23:54",
+		"basicTodeEditObject" : "dkh 01/08/2017 11:20",
 		"cat" : "DataCurator 02/02/2013 09:02",
 		"dotSelfObject" : "DataCurator 11/28/2012 16:31",
 		"elementExtension:" : "dkh 12/27/2012 16:41",
 		"elementRenderNameTextAttributes:" : "dkh 12/27/2012 16:41",
 		"extension" : "dkh 12/27/2012 16:41",
 		"readMe" : "dkh 12/27/2012 16:42",
-		"renderNameTextAttributes" : "dkh 12/27/2012 16:42" } }
+		"renderNameTextAttributes" : "dkh 12/27/2012 16:42",
+		"stonOn:" : "dkh 01/08/2017 10:53" } }

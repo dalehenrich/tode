@@ -1,11 +1,10 @@
 as yet unclassified
 compileSource: theSource
-  | beh selector newSelector |
-  beh := self theBehavior.
+  | selector newSelector |
   selector := self selector.
-  newSelector := beh
+  newSelector := self object
     compile: theSource withGemstoneLineEndings
     classified: self methodProtocol.
-  selector asSymbol ~~ newSelector
+  (selector asSymbol ~~ newSelector or: [ self object username notNil ])
     ifTrue: [ self differentMethodCreated: newSelector ].
   ^ newSelector

@@ -7,6 +7,7 @@ printStringTodeLimitedTo: limit
   stream := WriteStream on: String new.
   set := IdentitySet new.
   stream nextPutAll: self class name describeClassName.
+  stream nextPutAll: '[', self asOop asString, ']'.
   stream nextPutAll: '( '.
   sz := self size.
   1 to: (sz min: limit) do: [ :index | 

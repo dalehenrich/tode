@@ -14,4 +14,8 @@ clientApiVersion
 	"1.3.0 - debugger uses #closeWith: callback when dbContinue runs off the end,
            server-side effectiveApiVersion"
 
-	^ '1.3.0' asMetacelloVersionNumber
+	"1.4.0 - use client callback #dbStepThrough:forProcessOop: for debugger step thru ... GemStone3.2 and greater"
+
+	"1.5.0 - external tode server supported"
+
+	^ '1.5.0' asMetacelloVersionNumber

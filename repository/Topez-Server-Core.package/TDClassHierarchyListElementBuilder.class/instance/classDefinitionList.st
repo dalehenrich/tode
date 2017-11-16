@@ -10,17 +10,17 @@ classDefinitionList
         ifNotNil: [ 
           classDefs
             addAll:
-              (cl allSuperclasses
+              (classDef allSuperclasses
                 collect: [ :each | 
                   each asTDClassDefinition
-                    username: classDef username;
+                    appEnv: classDef appEnv;
                     yourself ]).
           classDefs add: classDef.
           classDefs
             addAll:
-              (cl allSubclasses
+              (classDef allSubclasses
                 collect: [ :each | 
                   each asTDClassDefinition
-                    username: classDef username;
+                    appEnv: classDef appEnv;
                     yourself ]) ] ].
   ^ classDefs

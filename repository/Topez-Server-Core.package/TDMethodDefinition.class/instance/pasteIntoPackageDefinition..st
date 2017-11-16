@@ -2,7 +2,8 @@ as yet unclassified
 pasteIntoPackageDefinition: aTDPackageDefinition
   "add method to package"
 
-  self theBehavior
+  self appEnv
     classify: self selector
-    under: aTDPackageDefinition methodCategoryName.
+    under: aTDPackageDefinition methodCategoryName
+    for: self theBehavior.
   ^ true

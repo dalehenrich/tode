@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gsconfiguration: reportType
   reportType == #'gem'
     ifTrue: [ ^ System gemConfigurationReport ].

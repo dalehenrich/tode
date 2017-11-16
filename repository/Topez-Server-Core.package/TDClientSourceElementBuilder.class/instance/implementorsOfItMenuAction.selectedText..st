@@ -1,6 +1,6 @@
 menu actions - Search
 implementorsOfItMenuAction: clientSourceElement selectedText: selectedString
-  | selector block findTool browseTool |
+  | selector block findTool browseTool username |
   selector := selectedString findSelector.
   selector
     ifNil: [ 
@@ -11,7 +11,9 @@ implementorsOfItMenuAction: clientSourceElement selectedText: selectedString
             ,
               '. Either the selector does not exist, or a $: character in the selected string is confusing the parser.' ].
   findTool := self findTool: clientSourceElement.
-  block := [ findTool findMethod: selector asString ].
+  (self object respondsTo: #'username')
+    ifTrue: [ username := self object username ].
+  block := [ findTool findMethod: selector asString username: username ].
   browseTool := self browseTool: clientSourceElement.
   browseTool browseMethodsBlock: block label: 'Implementors of ' , selector.
   ^ true

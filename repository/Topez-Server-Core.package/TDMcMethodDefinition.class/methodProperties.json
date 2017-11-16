@@ -5,6 +5,7 @@
 		"=" : "dkh 06/04/2013 11:21",
 		"addToClientListFor:names:items:indents:aspect:" : "dkh 10/05/2013 11:47",
 		"className" : "dkh 08/30/2013 17:17",
+		"compile:classified:" : "dkh 09/23/2016 10:10",
 		"configurationOf" : "dkh 03/24/2013 06:59",
 		"hasClassInImage" : "dkh 06/24/2014 07:59",
 		"hash" : "dkh 06/04/2013 11:05",
@@ -15,6 +16,4 @@
 		"packageOf" : "dkh 03/24/2013 06:59",
 		"selector" : "dkh 03/24/2013 06:56",
 		"source" : "dkh 03/24/2013 06:56",
-		"theBehavior" : "dkh 03/24/2013 11:38",
-		"theClass" : "dkh 03/24/2013 11:39",
 		"theClassName" : "dkh 08/30/2013 17:17" } }

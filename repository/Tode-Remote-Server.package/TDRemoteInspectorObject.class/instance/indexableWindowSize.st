@@ -1,0 +1,3 @@
+private
+indexableWindowSize
+  ^ 100

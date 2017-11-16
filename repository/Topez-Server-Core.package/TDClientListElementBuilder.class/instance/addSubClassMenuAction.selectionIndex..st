@@ -1,13 +1,12 @@
 menu actions
 addSubClassMenuAction: listElement selectionIndex: selectionIndex
-  | cls classDefinition |
+  | cls classDefinitionString |
   cls := self selectedClass: listElement selectionIndex: selectionIndex.
-  classDefinition := (GsMultiLineTextInteraction
+  classDefinitionString := (GsMultiLineTextInteraction
     prompt: 'Define class: '
     template:
       (Class templateForSubclassOf: cls name asString category: cls category))
     signal.
-  classDefinition ifNil: [ ^ false ].
-  GsDeployer bulkMigrate: [ classDefinition evaluate ].
-  listElement topez resetAllGlobalNames.
+  classDefinitionString ifNil: [ ^ false ].
+  listElement topez createClassFrom: classDefinitionString.
   ^ #'refreshView'

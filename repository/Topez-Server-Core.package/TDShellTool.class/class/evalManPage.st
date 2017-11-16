@@ -4,7 +4,7 @@ evalManPage
   eval - Evaluate Smalltalk expression
 
 SYNOPSIS
-  eval [--help] <smalltalk-expression>...
+  eval [--help] [--env=<environmentId>] <smalltalk-expression>...
 
 DESCRIPTION
   The `eval` command evaluates the given Smalltalk expression and returns the result
@@ -19,4 +19,6 @@ OPTIONS
 EXAMPLES
   eval --help
   eval `3+4`
+
+  eval --env=7 `3+4`
 '

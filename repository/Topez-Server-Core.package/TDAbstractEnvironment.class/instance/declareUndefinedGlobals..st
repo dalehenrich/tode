@@ -1,0 +1,3 @@
+compilation
+declareUndefinedGlobals: symbols
+  self subclassResponsibility

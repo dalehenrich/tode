@@ -1,0 +1,16 @@
+{
+	"category" : "Tode-GemStone-Remote-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"topez",
+		"inDebugger",
+		"logoutOnClose" ],
+	"name" : "TDGsExternalSession",
+	"pools" : [
+		 ],
+	"super" : "GsExternalSession",
+	"type" : "normal" }

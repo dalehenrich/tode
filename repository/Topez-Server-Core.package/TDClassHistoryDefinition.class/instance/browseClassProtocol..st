@@ -1,9 +1,11 @@
 instance/class button bar support
 browseClassProtocol: buttonBarClientElement
-  (TDBehaviorHistoryDefinition
+  ((TDBehaviorHistoryDefinition
     className: self className
     isMeta: true
     classHistoryIndex: self classHistoryIndex)
+    appEnv: self appEnv;
+    yourself)
     editUsing:
       ((TDEditorSpec
         topez: buttonBarClientElement topez

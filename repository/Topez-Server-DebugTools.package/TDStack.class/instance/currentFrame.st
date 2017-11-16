@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 currentFrame
   frames
     ifNil: [ 

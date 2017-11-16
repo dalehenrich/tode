@@ -1,11 +1,13 @@
 private
 runTestSuite: aTestSuite with: aTestResult refreshing: refreshBlock
   | testBlock |
-  testBlock := [ 
-  refreshBlock value.
-  aTestSuite run: aTestResult.
-  refreshBlock value ].
-  self class useUpdateThread
-    ifTrue: [ self runUpdateThreadFor: testBlock refreshing: refreshBlock ]
-    ifFalse: [ testBlock value ].
+  self resetRefreshTimer.
+  testBlock := [ aTestSuite tests do: [ :testCase | self doLogging
+        ifTrue: [ Transcript
+            cr;
+            show: testCase printString ].
+      self currentTestCase: testCase.
+      refreshBlock value.
+      testCase run: aTestResult ] ].
+  testBlock value.
   self inform: 'finished with tests'

@@ -6,7 +6,8 @@ pasteIntoBehaviorDefinition: aBehaviorDefinition
   method := self method.
   source := method sourceString.
   category := self methodCategory.
-  aBehaviorDefinition theBehavior
+  self appEnv
     compile: source withGemstoneLineEndings
+    inBehavior: aBehaviorDefinition theBehavior
     classified: category.
   ^ true

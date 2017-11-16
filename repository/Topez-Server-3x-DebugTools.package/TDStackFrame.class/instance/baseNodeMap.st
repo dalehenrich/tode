@@ -1,24 +1,32 @@
 as yet unclassified
 baseNodeMap
-  | map |
+  | map hasSelf |
   map := Dictionary new.
   map
     add: '(context)' -> #'method';
+    add: '(receiver)' -> #'rawReceiver';
+    add: '(varContext)' -> #'varContext';
     yourself.
+  hasSelf := self argAndTempNames includes: 'self'.
   self isMethodForBlock
     ifTrue: [ 
-      self receiver ~~ self frameSelf
-        ifTrue: [ 
-          map
-            add: '(receiver)' -> #'receiver';
-            add: '(self)' -> #'frameSelf';
-            yourself ]
-        ifFalse: [ map add: '(self)' -> #'frameSelf' ].
+      hasSelf
+        ifFalse: [ 
+          self rawSelf
+            ifNil: [ 
+              self varContext
+                ifNil: [ 
+                  (self rawReceiver isKindOf: ExecBlock)
+                    ifTrue: [ map add: '(self)' -> #'blockSelfValue' ] ]
+                ifNotNil: [ map add: '(self)' -> #'rawSelf' ] ]
+            ifNotNil: [ map add: '(self)' -> #'rawSelf' ] ].
       map
-        add: '(home)' -> #'homeMethod';
+        add: '(homeMethod)' -> #'homeMethod';
         yourself ]
     ifFalse: [ 
-      map
-        add: '(self)' -> #'receiver';
-        yourself ].
+      hasSelf
+        ifFalse: [ 
+          map
+            add: '(self)' -> #'rawSelf';
+            yourself ] ].
   ^ map

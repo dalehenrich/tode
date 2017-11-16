@@ -1,4 +1,4 @@
-as yet unclassified
+fileout
 gsfileout: directoryPath categoryFilenamePairs: categoryFilenamePairs defaultHeader: defaultHeader
   | directory findTool |
   directory := ServerFileDirectory on: directoryPath.

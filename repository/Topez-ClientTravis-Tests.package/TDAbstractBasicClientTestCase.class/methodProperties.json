@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"isAbstract" : "dkh 12/28/2016 11:00" },
+	"instance" : {
+		"applicationExpression" : "dkh 12/28/2016 12:04",
+		"applicationExpressionResult" : "dkh 12/28/2016 12:05",
+		"isExternalClient" : "dkh 12/28/2016 11:06",
+		"testAllGlobalNames" : "dkh 12/28/2016 11:02",
+		"testApplicationEnvironment" : "dkh 12/28/2016 13:16",
+		"testDebugSTONSmalltalk" : "dkh 12/28/2016 11:03",
+		"testEffectiveAPIVersion" : "dkh 12/28/2016 11:03",
+		"testEvaluateSTONSmalltalk" : "dkh 12/28/2016 11:03",
+		"testLogin" : "dkh 12/28/2016 10:59",
+		"testTodeEnvironment" : "dkh 12/28/2016 12:02",
+		"testUndeclaredGlobals" : "dkh 12/28/2016 13:39",
+		"undeclaredGlobalReferenceClassName" : "dkh 12/28/2016 13:41" } }

@@ -9,7 +9,7 @@ dotSelfWorkspace: topez
     nextPutAll: 'self';
     cr;
     cr.
-  self argAndTempNames
+  self theSelf class allInstVarNames
     do: [ :name | 
       strm
         nextPutAll: name;
@@ -18,7 +18,7 @@ dotSelfWorkspace: topez
   ^ strm contents
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'workspace')
-        windowLabel: 'Workspace on ' , self printString;
+        windowLabel: 'Workspace on ' , self theSelf printString;
         windowName: #'workspace';
         yourself)
-    objectBlock: [ self ]
+    objectBlock: [ self theSelf ]

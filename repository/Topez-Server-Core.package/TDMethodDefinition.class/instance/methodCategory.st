@@ -4,6 +4,8 @@ methodCategory
     ifNil: [ 
       | method category |
       method := self method.
-      methodCategory := method inClass categoryOfSelector: self selector.
+      methodCategory := self appEnv
+        categoryOfSelector: self selector
+        for: method inClass.
       methodCategory ifNil: [ category := ClassOrganizer default ] ].
   ^ methodCategory

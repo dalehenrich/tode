@@ -1,0 +1,2 @@
+removal
+deletedMethod: ignored

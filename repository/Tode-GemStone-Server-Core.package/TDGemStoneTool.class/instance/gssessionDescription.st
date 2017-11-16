@@ -1,4 +1,4 @@
-as yet unclassified
+commands
 gssessionDescription
   "
   gs sessionDescription [--all]|[<session-id>]

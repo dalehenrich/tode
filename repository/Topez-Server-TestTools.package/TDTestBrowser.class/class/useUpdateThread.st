@@ -1,4 +1,4 @@
 accessing
 useUpdateThread
-  UseUpdateThread ifNil: [ UseUpdateThread := true ].
+  UseUpdateThread ifNil: [ UseUpdateThread := false ].
   ^ UseUpdateThread

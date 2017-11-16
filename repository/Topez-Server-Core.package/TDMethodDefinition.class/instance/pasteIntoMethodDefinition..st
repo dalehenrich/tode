@@ -6,7 +6,7 @@ pasteIntoMethodDefinition: aTDMethodDefinition
   method := self method.
   source := method sourceString.
   category := self methodCategory.
-  aTDMethodDefinition theBehavior
+  aTDMethodDefinition
     compile: source withGemstoneLineEndings
     classified: category.
   ^ true
