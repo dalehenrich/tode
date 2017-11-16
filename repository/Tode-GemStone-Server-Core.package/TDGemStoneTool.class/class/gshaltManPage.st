@@ -21,6 +21,6 @@ OPTIONS
 
 EXAMPLES
   gs halt -m 65
-  gs halt -almostOutOfMemory=65
+  gs halt --almostOutOfMemory=65
 '.
   ^ manPage
