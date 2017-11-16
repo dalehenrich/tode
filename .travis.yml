@@ -13,6 +13,7 @@ smalltalk:
   - GemStone-3.1.0.6
   - GemStone-3.2.17
   - GemStone-3.3.6
+  - GemStone-3.4.0
 
 env:
   - GSCI_CLIENTS="Pharo-3.0"
@@ -25,10 +26,10 @@ before_script:
 matrix:
   include:
 #    Do only one build on osx
-    - smalltalk: GemStone-3.3.3
+    - smalltalk: GemStone-3.4.0
       os: osx
     - smalltalk_config: .minimal.smalltalk.ston
-      smalltalk: GemStone-3.3.3
+      smalltalk: GemStone-3.4.0
       env: GSCI_CLIENTS="Pharo-5.0"
   allow_failures:
     - os: osx
