@@ -36,7 +36,7 @@ installInteractionGenerator
 				tab;
 				nextPutAll: 'category: ''category''] on: Warning do: [:ex | ex resume ].';
 				cr;
-				nextPutAll: 'result ~~ nil ifTrue: [ ^GsMethod _sourceWithErrors: result fromString: source ].';
+				nextPutAll: 'result ~~ nil ifTrue: [ ^GsNMethod _sourceWithErrors: result fromString: source ].';
 				cr;
 				yourself.
 			result := self client session executeString: stream contents.
