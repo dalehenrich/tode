@@ -1,3 +1,3 @@
 environment
 symbolList
-  ^ GsSession currentSession symbolList
+  ^ self applicationEnvironment symbolList

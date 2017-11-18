@@ -1,7 +1,5 @@
 as yet unclassified
-createBlockFromSource: blockSource silently: silently
-  "not sure if silently == false makes any sense"
+createBlockFromSource: blockSource silently: ignored
+  "endefined globals/variables automatically handled during #evaluateString:"
 
-  silently
-    ifTrue: [ ^ self topez evaluateString: blockSource ]
-    ifFalse: [ ^ self topez evaluateString: blockSource ]
+  ^ self topez evaluateString: blockSource
