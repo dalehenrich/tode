@@ -18,6 +18,7 @@ SmalltalkCISpec {
   #testing : {
     #exclude : {
       #categories : [ 'Tode-Server-*', 'Topez-Server-*', 'Tode-GemStone-Server-*' ]
-    }
+    },
+    #failOnSCIDeprecationWarnings : false
   }
 }

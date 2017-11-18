@@ -11,6 +11,7 @@ SmalltalkCISpec {
   #testing : {
     #include : {
       #classes : [ #SentButNotImplementedTest, #UndefinedSymbolsTest ]
-    }
+    },
+    #failOnSCIDeprecationWarnings : false
   }
 }
