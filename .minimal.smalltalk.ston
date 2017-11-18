@@ -19,6 +19,6 @@ SmalltalkCISpec {
     #exclude : {
       #categories : [ 'Tode-Server-*', 'Topez-Server-*', 'Tode-GemStone-Server-*' ]
     },
-    #failOnSCIDeprecationWarnings : false
+    #failOnSCIDeprecationWarnings : true
   }
 }
