@@ -15,6 +15,10 @@ smalltalk:
   - GemStone-3.3.6
   - GemStone-3.4.0
 
+smalltalk_edge:
+  source: hpi-swa/smalltalkCI
+  branch: dev
+
 env:
   - GSCI_CLIENTS="Pharo-3.0"
 
