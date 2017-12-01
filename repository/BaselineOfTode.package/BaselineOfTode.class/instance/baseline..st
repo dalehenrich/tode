@@ -327,7 +327,7 @@ baseline: spec
         group: 'Remote Server' with: #('Tode-Remote-Server');
         yourself ].
   spec
-    for: #(#'gs643.4.x' #'gs643.5.x' #'gs643.6.x')
+    for: #(#'gs64_3.4.x' #'gs64_3.5.x' #'gs64_3.6.x')
     do: [ 
       spec
         package: 'Tode-Remote-Server';
