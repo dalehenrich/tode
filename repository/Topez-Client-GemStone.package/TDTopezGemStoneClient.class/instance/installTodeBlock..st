@@ -5,7 +5,7 @@ installTodeBlock: installBlock
 	installSession := self loginUsing: TodeInstallSession.
 	[ 
 	glassNotInstalled := installSession
-		executeStringNB: '((System myUserProfile symbolList objectNamed: #ConfigurationOfGLASS) == nil) or: [(System myUserProfile symbolList objectNamed: #BaselineOfGsDevKit) == ni]'
+		executeStringNB: '((System myUserProfile symbolList objectNamed: #ConfigurationOfGLASS) == nil) or: [(System myUserProfile symbolList objectNamed: #BaselineOfGsDevKit) == nil]'
 		envId: self environmentId ]
 		ensure: [ installSession logout ].
 	glassNotInstalled
