@@ -122,9 +122,8 @@ baseline: spec
           with: #('Topez-Common-Tests' 'Tode-Minimal-Client-Tests');
         yourself ].
   spec
-    for: #'gemstone'
+    for: #'glass'
     do: [ 
-      spec postLoadDoIt: #'initializeTools'.
       spec
         baseline: 'GLASS1'
           with: [ 
@@ -133,11 +132,6 @@ baseline: spec
                 repository: 'github://glassdb/glass:master/repository' ];
         baseline: 'Metacello'
           with: [ spec repository: 'github://dalehenrich/metacello-work:master/repository' ];
-        baseline: 'RB'
-          with: [ 
-              spec
-                loads: #('AST-Core');
-                repository: 'github://dalehenrich/rb:dev/repository' ];
         baseline: 'FileTree'
           with: [ spec repository: 'github://dalehenrich/filetree:gemstone2.4_dev/repository' ];
         baseline: 'ZincHTTPComponents'
@@ -147,6 +141,25 @@ baseline: spec
                 loads: #('Zinc-HTTP' 'SSL') ];
         yourself.
       spec
+        package: 'Topez-Server-Core'
+          with: [ 
+              spec
+                includes: #('Tode-GemStone-Server-Base');
+                requires:
+                    #('FileTree' 'GLASS1' 'Metacello' 'ZincHTTPComponents') ];
+        yourself ].
+  spec
+    for: #'gemstone'
+    do: [ 
+      spec postLoadDoIt: #'initializeTools'.
+      spec
+        baseline: 'RB'
+          with: [ 
+              spec
+                loads: #('AST-Core');
+                repository: 'github://dalehenrich/rb:dev/repository' ];
+        yourself.
+      spec
         package: 'Tode-AST-Extensions' with: [ spec requires: #('RB') ];
         package: 'Tode-GemStone-Server-Base'
           with: [ spec requires: #('Topez-Server-Core') ];
@@ -154,8 +167,7 @@ baseline: spec
           with: [ 
               spec
                 includes: #('Tode-GemStone-Server-Base');
-                requires:
-                    #('Tode-AST-Extensions' 'FileTree' 'GLASS1' 'Metacello' 'ZincHTTPComponents') ];
+                requires: #('Tode-AST-Extensions') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
