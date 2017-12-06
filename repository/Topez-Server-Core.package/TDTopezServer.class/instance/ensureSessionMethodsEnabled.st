@@ -1,7 +1,9 @@
 accessing
 ensureSessionMethodsEnabled
-  GsPackagePolicy current enabled
-    ifFalse: [ 
-      GsPackagePolicy current enable.
-      ^ true ].
+  self class indirectAccess
+    ifTrue: [ 
+      GsPackagePolicy current enabled
+        ifFalse: [ 
+          GsPackagePolicy current enable.
+          ^ true ] ].
   ^ false
