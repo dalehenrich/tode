@@ -122,14 +122,9 @@ baseline: spec
           with: #('Topez-Common-Tests' 'Tode-Minimal-Client-Tests');
         yourself ].
   spec
-    for: #'glass'
+    for: #'gemstoneCommon'
     do: [ 
       spec
-        baseline: 'GLASS1'
-          with: [ 
-              spec
-                loads: #('Base');
-                repository: 'github://glassdb/glass:master/repository' ];
         baseline: 'Metacello'
           with: [ spec repository: 'github://dalehenrich/metacello-work:master/repository' ];
         baseline: 'FileTree'
@@ -145,8 +140,41 @@ baseline: spec
           with: [ 
               spec
                 includes: #('Tode-GemStone-Server-Base');
-                requires:
-                    #('FileTree' 'GLASS1' 'Metacello' 'ZincHTTPComponents') ];
+                requires: #('FileTree' 'Metacello' 'ZincHTTPComponents') ];
+        yourself ].
+  spec
+    for: #'glass'
+    do: [ 
+      spec
+        baseline: 'GLASS1'
+          with: [ 
+              spec
+                loads: #('Base');
+                repository: 'github://glassdb/glass:master/repository' ];
+        yourself.
+      spec
+        package: 'Topez-Server-Core'
+          with: [ 
+              spec
+                includes: #('Tode-GemStone-Server-Base');
+                requires: #('GLASS1') ];
+        yourself ].
+  spec
+    for: #'gsdevkit'
+    do: [ 
+      spec
+        baseline: 'GsDevKit'
+          with: [ 
+              spec
+                loads: #('Base');
+                repository: 'github://GsDevKit/GsDevKit:master/repository' ];
+        yourself.
+      spec
+        package: 'Topez-Server-Core'
+          with: [ 
+              spec
+                includes: #('Tode-GemStone-Server-Base');
+                requires: #('GsDevKit') ];
         yourself ].
   spec
     for: #'gemstone'
