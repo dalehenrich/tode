@@ -1,15 +1,15 @@
 tode installation
 installTodeBlock: installBlock
 	[ 
-	| installSession glassNotInstalled |
+	| installSession glassInstalled |
 	installSession := self loginUsing: TodeInstallSession.
 	[ 
-	glassNotInstalled := installSession
-		executeStringNB: '(System myUserProfile symbolList objectNamed: #ConfigurationOfGLASS) == nil'
+	glassInstalled := installSession
+		executeStringNB: '((System myUserProfile symbolList objectNamed: #ConfigurationOfGLASS) ~~ nil) or: [(System myUserProfile symbolList objectNamed: #BaselineOfGsDevKit) ~~ nil]'
 		envId: self environmentId ]
 		ensure: [ installSession logout ].
-	glassNotInstalled
-		ifTrue: [ 
+	glassInstalled
+		ifFalse: [ 
 			"for now we will not attempt to install GLASS over GCI"
 			self
 				error:
