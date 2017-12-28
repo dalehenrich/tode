@@ -8,7 +8,8 @@
 	"instvars" : [
 		"batchEditor",
 		"matchingRanges",
-		"matchIndex" ],
+		"matchIndex",
+		"useFormatter" ],
 	"name" : "TDBatchEditMethodDefinition",
 	"pools" : [
 		 ],

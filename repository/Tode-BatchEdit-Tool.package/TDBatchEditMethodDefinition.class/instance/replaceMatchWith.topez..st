@@ -3,6 +3,8 @@ replaceMatchWith: replacementString topez: topez
   "answer true if an item was selected"
 
   | matchingRange newSource |
+  matchingRanges := nil.
+  useFormatter := topez enableFormatting.
   self matchIndex <= 0
     ifTrue: [ ^ false ].
   matchingRange := self matchingRange.
