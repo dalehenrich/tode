@@ -1,7 +1,8 @@
 as yet unclassified
 childNamed: elementName parent: parentNode ifAbsent: absentBlock
   | obj |
-  (self basicChildNameListDisplayOops includes: elementName)
+  ((self basicChildNameListDisplayOops includes: elementName)
+    or: [ elementName = '<<more>>' ])
     ifTrue: [ 
       obj := self
         objectValueForSpecialElementName: elementName
