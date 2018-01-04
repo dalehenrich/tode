@@ -4,7 +4,7 @@ performGitCommand: gitCommand in: gitRepoDirectory worktree: workTreePath with: 
 
   | commandBase command gitPath |
   gitPath := gitRepoDirectory fullName.
-  commandBase := 'cd ' , workTreePath , '; git --git-dir ' , gitPath
+  commandBase := 'set -e; cd ' , workTreePath , '; git --git-dir ' , gitPath
     , '/.git --work-tree ' , workTreePath , ' ' , gitCommand , ' '.
   command := commandBase , gitArgs.
   ^ self performOnServer: command logging: logging
