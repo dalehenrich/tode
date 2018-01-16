@@ -3,9 +3,11 @@ gemNRS
   Smalltalk
     at: #'GsNetworkResourceString'
     ifPresent: [ :cl | 
-      ^ GsNetworkResourceString
-        gemNRSForNetLDI: self netLDIOrNetLDIPort
-        onHost: self gemHost
-        gemService: self gemTask ].
+      ^ cl
+        perform: #'gemNRSForNetLDI:onHost:gemService:'
+        withArguments:
+          {(self netLDIOrNetLDIPort).
+          (self gemHost).
+          (self gemTask)} ].
   ^ '!tcp@' , self gemHost , '#netldi:' , self netLDIOrNetLDIPort , '#task!'
     , self gemTask
