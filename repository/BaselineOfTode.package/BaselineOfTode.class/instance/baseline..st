@@ -377,13 +377,19 @@ baseline: spec
       #(#'gs64_3.0.x' #'gs64_3.1.x' #'gs64_3.2.x' #'gs64_3.3.x' #'gs64_3.4.x' #'gs3.0.x' #'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
-        package: 'Tode-GemStone-Core30x';
+        package: 'Tode-GemStone-Core30x'
+          with: [ spec requires: 'Tode-GemStone-Core3x' ];
+        package: 'Tode-GemStone-Core3x'
+          with: [ spec includes: 'Tode-GemStone-Core30x' ];
         yourself ].
   spec
     for: #(#'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
-        package: 'Tode-GemStone-Core35x';
+        package: 'Tode-GemStone-Core35x'
+          with: [ spec requires: 'Tode-GemStone-Core3x' ];
+        package: 'Tode-GemStone-Core3x'
+          with: [ spec includes: 'Tode-GemStone-Core35x' ];
         yourself ].
   spec
     for: #(#'gs3.1.x' #'gs3.2.x' #'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
