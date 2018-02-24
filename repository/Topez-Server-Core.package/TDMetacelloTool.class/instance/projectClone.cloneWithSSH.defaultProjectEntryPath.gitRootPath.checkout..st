@@ -1,6 +1,6 @@
 project api
 projectClone: registration cloneWithSSH: cloneWithSSH defaultProjectEntryPath: defaultProjectEntryPath gitRootPath: gitRootPath checkout: checkout
-  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response githubUserAndProject gitRepoDirectory gitProjectName cloneUrl gitRepoDir |
+  | gitRootDir githubRepo repositoryDirPath projectDir projectDirPath githubPath pathElements versionElement versionComponents githubSha gitTool response githubUserAndProject gitRepoDirectory gitProjectName cloneUrl gitRepoDir githubProjectVersion |
   gitRootDir := ServerFileDirectory on: gitRootPath.
   gitTool := topez toolInstanceFor: 'git'.
   registration isLocked
@@ -47,12 +47,15 @@ projectClone: registration cloneWithSSH: cloneWithSSH defaultProjectEntryPath: d
   githubSha := versionComponents last.
   githubUserAndProject := githubRepo projectPath findTokens: '/'.
   gitProjectName := githubUserAndProject at: 2.
+  githubProjectVersion := checkout.
+  githubProjectVersion
+    ifNil: [ githubProjectVersion := githubRepo projectVersion ].
   self
     projectCloneGitHubUser: (githubUserAndProject at: 1)
     project: gitProjectName
     cloneWithSSH: cloneWithSSH
     gitRootDir: (ServerFileDirectory on: gitRootPath)
-    checkout: checkout.
+    checkout: githubProjectVersion.
   self
     reregisterClonedProject: registration
     repositoryDescription:
