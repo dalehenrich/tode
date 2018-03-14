@@ -1,4 +1,5 @@
 accessing
 emphasis
 
-	^ {(TextEmphasis italic)}
+	^ {(TextEmphasis italic).
+	(TextEmphasis underlined)}
