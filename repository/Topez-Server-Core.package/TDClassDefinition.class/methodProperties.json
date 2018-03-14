@@ -13,7 +13,7 @@
 		"updatePackageAndConfigFor:topez:" : "dkh 05/24/2014 08:26" },
 	"instance" : {
 		"=" : "dkh 09/10/2015 17:31",
-		"addToClientListFor:names:items:indents:aspect:" : "dkh 09/09/2015 16:23",
+		"addToClientListFor:names:items:indents:aspect:" : "dkh 03/13/2018 15:51",
 		"allSubclasses" : "dkh 09/24/2016 07:14",
 		"allSuperclasses" : "dkh 10/31/2017 11:49",
 		"asTDBehaviorDefinition" : "dkh 10/30/2017 17:11",
@@ -29,6 +29,7 @@
 		"className:" : "DataCurator 02/05/2013 09:26",
 		"classOrganizer" : "dkh 10/31/2017 10:07",
 		"configurationOf" : "dkh 11/22/2014 13:05",
+		"emphasis" : "dkh 03/13/2018 15:45",
 		"hasClassInImage" : "dkh 06/24/2014 07:56",
 		"hash" : "dkh 09/09/2015 18:21",
 		"isClassInImage" : "dkh 06/24/2014 07:56",
