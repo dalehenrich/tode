@@ -136,11 +136,7 @@ baseline: spec
                 loads: #('Zinc-HTTP' 'SSL') ];
         yourself.
       spec
-        package: 'Topez-Server-Core'
-          with: [ 
-              spec
-                includes: #('Tode-GemStone-Server-Base');
-                requires: #('FileTree' 'Metacello' 'ZincHTTPComponents') ];
+        package: 'Topez-Server-Core';
         yourself ].
   spec
     for: #'glass'
@@ -195,7 +191,8 @@ baseline: spec
           with: [ 
               spec
                 includes: #('Tode-GemStone-Server-Base');
-                requires: #('Tode-AST-Extensions') ];
+                requires:
+                    #('Tode-AST-Extensions' 'FileTree' 'Metacello' 'ZincHTTPComponents') ];
         package: 'Tode-BatchEdit-Tool'
           with: [ spec requires: #('Topez-Server-Core') ];
         package: 'Tode-GemStone-Server-Core'
