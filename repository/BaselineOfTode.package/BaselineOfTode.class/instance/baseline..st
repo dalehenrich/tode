@@ -342,8 +342,7 @@ baseline: spec
           with: [ spec requires: 'Topez-Server-DebugTools' ];
         yourself ].
   spec
-    for:
-      #(#'gs3.3.0.x')
+    for: #(#'gs3.3.0.x')
     do: [ 
       spec
         package: 'Tode-GemStone-Core330x'
