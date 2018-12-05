@@ -343,6 +343,16 @@ baseline: spec
         yourself ].
   spec
     for:
+      #(#'gs3.3.0.x')
+    do: [ 
+      spec
+        package: 'Tode-GemStone-Core330x'
+          with: [ spec requires: 'Tode-GemStone-Core3x' ];
+        package: 'Tode-GemStone-Core3x'
+          with: [ spec includes: 'Tode-GemStone-Core330x' ];
+        yourself ].
+  spec
+    for:
       #(#'gs3.3.1.x' #'gs3.3.2.x' #'gs3.3.3.x' #'gs3.3.4.x' #'gs3.3.5.x' #'gs3.3.6.x' #'gs3.3.7.x' #'gs3.3.8.x' #'gs3.3.9.x' #'gs3.3.10.x' #'gs3.3.11.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
