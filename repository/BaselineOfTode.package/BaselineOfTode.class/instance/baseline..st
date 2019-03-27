@@ -143,7 +143,7 @@ baseline: spec
         baseline: 'ZincHTTPComponents'
           with: [ 
               spec
-                repository: 'github://GsDevKit/zinc:2.4.3.?/repository';
+                repository: 'github://GsDevKit/zinc:gs_masterrepository';
                 loads: #('Zinc-HTTP' 'SSL') ];
         yourself.
       spec
