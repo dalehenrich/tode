@@ -1,7 +1,7 @@
 tests
 testGsReclaimAll
 	(System gemEnvironmentVariable: 'GS_TRAVIS')
-		ifTrue: [ 
+		ifNotNil: [ 
 			"skip running this test on travis ... fails too often"
 			^ self ].
 	self
