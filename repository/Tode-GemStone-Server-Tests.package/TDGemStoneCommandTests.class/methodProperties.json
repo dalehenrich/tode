@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"expectedFailures" : "dkh 04/15/2019 14:21",
 		"testBuBackupCommand" : "dkh 10/17/2015 16:42",
 		"testBuDirectoryCommand" : "dkh 03/19/2015 16:42",
 		"testBuInfoCommand" : "dkh 09/29/2015 16:05",
