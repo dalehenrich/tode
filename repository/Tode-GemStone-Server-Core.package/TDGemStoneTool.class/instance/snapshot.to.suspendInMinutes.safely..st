@@ -8,7 +8,7 @@ snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes 
     ifTrue: [ self error: 'Checkpoints currently suspended. Please wait and try again.' ].
   Transcript
     cr;
-    show: 'Before startCheckpointSync: ' , DateAndTime now printstring.
+    show: 'Before startCheckpointSync: ' , DateAndTime now printString.
   System startCheckpointSync
     ifFalse: [ 
       self
@@ -16,7 +16,7 @@ snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes 
           'Could not start a checkpoint, See comment in System class>>startCheckpointSync for possible reasons for failure.' ].
   Transcript
     cr;
-    show: 'Before suspendCheckpointsForMinutes: ' , DateAndTime now printstring.
+    show: 'Before suspendCheckpointsForMinutes: ' , DateAndTime now printString.
   (System suspendCheckpointsForMinutes: suspendInMinutes)
     ifFalse: [ 
       self
@@ -24,7 +24,7 @@ snapshot: snapshotExtension to: snapshotPath suspendInMinutes: suspendInMinutes 
           'Could not suspend checkpoints, See comment in System class>>suspendCheckpointsForMinutes: for possible reasons for failure.' ].
   Transcript
     cr;
-    show: 'After suspendCheckpointsForMinutes: ' , DateAndTime now printstring.
+    show: 'After suspendCheckpointsForMinutes: ' , DateAndTime now printString.
   snapshots := {}.
   self snapshotExtentFilePaths
     do: [ :extentPath | 
