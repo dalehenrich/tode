@@ -32,5 +32,5 @@ findSymbolDict
     ifPresent: [ :ignored | 
       | classNames |
       classNames := list collect: [ :cls | cls className asString ].
-      list := self findClassHierarchy: classNames ].
+      list := self findClassHierarchy: classNames username: username ].
   ^ self filterSelectList: list
