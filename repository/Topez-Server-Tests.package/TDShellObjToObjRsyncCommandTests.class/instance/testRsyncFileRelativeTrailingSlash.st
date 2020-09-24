@@ -12,7 +12,7 @@ testRsyncFileRelativeTrailingSlash
     do: [ :childNode | 
       childNode
         modificationTime:
-          (childNode modificationTime - (Duration seconds: 5)) beRounded.
+          (self roundedDateAndTime: childNode modificationTime - (Duration seconds: 5)).
       srcNode addChildNode: childNode.
       self
         should: [ 

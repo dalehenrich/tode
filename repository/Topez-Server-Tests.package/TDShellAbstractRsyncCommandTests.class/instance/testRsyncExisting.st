@@ -4,8 +4,10 @@ testRsyncExisting
   rootPath := self rootNodePath.
   srcNode := self lookupSrcNode: rootPath , 'src'.
   destNode := self lookupDestNode: rootPath , 'dest'.
-  srcModificationTime := (DateAndTime now - (Duration seconds: 5)) beRounded.
-  destModificationTime := (DateAndTime now - (Duration seconds: 10)) beRounded.
+  srcModificationTime := self
+    roundedDateAndTime: DateAndTime now - (Duration seconds: 5).
+  destModificationTime := self
+    roundedDateAndTime: DateAndTime now - (Duration seconds: 10).
   self smallSetLeafNodes
     do: [ :childNode | 
       "pack destNode with nodes with older timestamps"
