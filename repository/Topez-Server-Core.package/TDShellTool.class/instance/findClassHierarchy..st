@@ -8,11 +8,12 @@ findClassHierarchy: classNameList
   classOrganizer := appEnv classOrganizer.
   classNameList
     do: [ :className | 
-      | cls |
-      cls := appEnv globalNamed: className.
-      classes
-        addAll:
-          (TDClassDefinition fullHierarchyOf: cls classOrganizer: classOrganizer) ].
+      (appEnv globalNamed: className)
+        ifNil: [ self notify: 'No class found for ' , className printString ]
+        ifNotNil: [ :cls | 
+          classes
+            addAll:
+              (TDClassDefinition fullHierarchyOf: cls classOrganizer: classOrganizer) ] ].
   defs := classes
     collect: [ :each | 
       each asTDClassDefinition
