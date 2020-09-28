@@ -2,6 +2,7 @@
 	"class" : {
 		"stackClass" : "dkh 12/30/2016 04:25" },
 	"instance" : {
+		"_is360OrLater" : "",
 		"attachProcess:" : "dkh 06/03/2014 07:46",
 		"browseClassDefinitionMenuAction:selectionIndex:" : "dkh 09/12/2015 08:30",
 		"browseFullClassMenuAction:selectionIndex:" : "dkh 03/30/2014 15:18",
