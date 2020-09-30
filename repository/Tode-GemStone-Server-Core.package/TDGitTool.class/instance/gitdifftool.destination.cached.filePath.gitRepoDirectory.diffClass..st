@@ -13,10 +13,10 @@ gitdifftool: source destination: destination cached: cached filePath: filePath g
   records := records
     reject: [ :ar | 
       | operations op |
-      "ignore unmerged records for diff"
+      "ignore unmerged records (U) and rename records (Rxxx) and anything funky for diff"
       operations := ar at: 5.
       op := operations at: 1.
-      op = 'U' ].
+      #('M' 'D' 'A') includes: (op at: 1) ].
   records isEmpty
     ifTrue: [ ^ #() ].
   diffs := records

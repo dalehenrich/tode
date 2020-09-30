@@ -1,4 +1,6 @@
 menu actions
 dbStepIntoMenuAction: listElement selectionIndex: selectionIndex
+  | ans |
   self dbStep: #'into'.
-  ^ self dbFinishStep
+  ans := self dbFinishStep.
+  ^ ans

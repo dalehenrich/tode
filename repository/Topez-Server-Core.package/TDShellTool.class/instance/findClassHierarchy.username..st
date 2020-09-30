@@ -1,19 +1,20 @@
 find
-findClassHierarchy: classNameList
+findClassHierarchy: classNameList username: username
   "find hierarchy <class-name>"
 
   | classes defs appEnv classOrganizer |
   classes := Set new.
-  appEnv := self applicationEnvironment.
+  appEnv := TDStandardUserEnvironment new
+    userId: username;
+    yourself.
   classOrganizer := appEnv classOrganizer.
   classNameList
     do: [ :className | 
-      (appEnv globalNamed: className)
-        ifNil: [ self notify: 'No class found for ' , className printString ]
-        ifNotNil: [ :cls | 
-          classes
-            addAll:
-              (TDClassDefinition fullHierarchyOf: cls classOrganizer: classOrganizer) ] ].
+      | cls |
+      cls := appEnv globalNamed: className.
+      classes
+        addAll:
+          (TDClassDefinition fullHierarchyOf: cls classOrganizer: classOrganizer) ].
   defs := classes
     collect: [ :each | 
       each asTDClassDefinition

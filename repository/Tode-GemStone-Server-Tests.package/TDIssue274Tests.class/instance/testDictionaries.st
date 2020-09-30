@@ -2,7 +2,6 @@ tests
 testDictionaries
   {KeyValueDictionary.
   StringKeyValueDictionary.
-  CanonicalStringDictionary.
   IdentityKeyValueDictionary.
   GsMethodDictionary.
   FastIdentityKeyValueDictionary.

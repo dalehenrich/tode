@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"tearDown" : "",
 		"testFindCategory" : "dkh 05/06/2014 08:17",
 		"testFindClass" : "dkh 08/10/2015 11:17",
 		"testFindConfigurations" : "dkh 08/10/2015 11:17",

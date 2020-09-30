@@ -6,7 +6,7 @@ validateRsyncMatchForNode: sourceNode
   destNode := sourceNode copy.
   sourceNode
     modificationTime:
-      (destNode modificationTime - (Duration seconds: 5)) beRounded.
+      (self roundedDateAndTime: destNode modificationTime - (Duration seconds: 5)).
   self deny: (sourceNode rsyncMatches: destNode with: rsync).
   rsync setOption: 'modify-window' value: 6.
   self assert: (sourceNode rsyncMatches: destNode with: rsync)

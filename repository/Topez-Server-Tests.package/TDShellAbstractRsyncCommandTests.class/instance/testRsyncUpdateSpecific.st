@@ -4,9 +4,12 @@ testRsyncUpdateSpecific
   rootPath := self rootNodePath.
   srcNode := self lookupSrcNode: rootPath , 'src'.
   destNode := self lookupDestNode: rootPath , 'dest'.
-  newestModificationTime := (DateAndTime now + (Duration days: 5)) beRounded.
-  oldestModificationTime := (DateAndTime now - (Duration days: 10)) beRounded.
-  srcModificationTime := (DateAndTime now - (Duration days: 5)) beRounded.
+  newestModificationTime := self
+    roundedDateAndTime: DateAndTime now + (Duration days: 5).
+  oldestModificationTime := self
+    roundedDateAndTime: DateAndTime now - (Duration days: 10).
+  srcModificationTime := self
+    roundedDateAndTime: DateAndTime now - (Duration days: 5).
   nodes := self differentLeafNodes.
   newest := nodes atRandom.	"pick one of the nodes to be newer and therefore WILL NOT be UPDATED"
   nodes

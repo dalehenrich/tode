@@ -12,10 +12,10 @@ smalltalk:
   - GemStone-2.4.8
   - GemStone-3.1.0.6
   - GemStone-3.2.17
-  - GemStone-3.3.0  # keep in lineup because GsDevKit_home docs reference it
   - GemStone-3.3.9
-  - GemStone-3.4.3
-  - GemStone-3.5.0
+  - GemStone-3.4.3  # keep in lineup because GsDevKit_home docs reference it
+  - GemStone-3.4.5
+  - GemStone-3.5.3
 
 env:
   - GSCI_CLIENTS="Pharo-3.0"
@@ -51,3 +51,6 @@ after_success:
   - benchupload --dir=$SMALLTALK_CI_BUILD
 after_failure:
   - benchupload --dir=$SMALLTALK_CI_BUILD
+
+notifications:
+  slack: gemtalksystems:4YWbzy6sJN9cE0FhxvUPP8nS

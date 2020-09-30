@@ -1,6 +1,6 @@
 debug ops
 dbContinue
-  | processOop stack |
+  | processOop stack ans |
   stack := self theStack.
   processOop := stack processOop.
   self topez disableSessionMethods.
@@ -14,4 +14,5 @@ dbContinue
       processTerminated := false ].
   self topez ensureSessionMethodsEnabled.
   stack resetFrames.
-  ^ self dbFinishStep
+  ans := self dbFinishStep.
+  ^ ans

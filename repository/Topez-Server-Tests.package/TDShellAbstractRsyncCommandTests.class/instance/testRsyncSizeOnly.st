@@ -4,7 +4,8 @@ testRsyncSizeOnly
   rootPath := self rootNodePath.
   srcNode := self lookupSrcNode: rootPath , 'src'.
   destNode := self lookupDestNode: rootPath , 'dest'.
-  oldestModificationTime := (DateAndTime now + (Duration minutes: 6)) beRounded.
+  oldestModificationTime := self
+    roundedDateAndTime: DateAndTime now + (Duration minutes: 6).
   srcModificationTime := oldestModificationTime - (Duration minutes: 6).
   self standardLeafNodes
     do: [ :childNode | 

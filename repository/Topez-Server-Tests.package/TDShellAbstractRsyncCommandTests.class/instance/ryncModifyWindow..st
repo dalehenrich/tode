@@ -4,7 +4,8 @@ ryncModifyWindow: windowTestMode
   rootPath := self rootNodePath.
   srcNode := self lookupSrcNode: rootPath , 'src'.
   destNode := self lookupDestNode: rootPath , 'dest'.
-  newestModificationTime := (DateAndTime now + (Duration minutes: 6)) beRounded.
+  newestModificationTime := self
+    roundedDateAndTime: DateAndTime now + (Duration minutes: 6).
   oldestModificationTime := newestModificationTime - (Duration minutes: 10).
   srcModificationTime := newestModificationTime - (Duration minutes: 6).
   nodes := windowTestMode == #'differentSizes'
