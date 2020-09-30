@@ -15,7 +15,7 @@ smalltalk:
   - GemStone-3.3.9
   - GemStone-3.4.3  # keep in lineup because GsDevKit_home docs reference it
   - GemStone-3.4.5
-  - GemStone-3.5.2
+  - GemStone-3.5.3
 
 env:
   - GSCI_CLIENTS="Pharo-3.0"

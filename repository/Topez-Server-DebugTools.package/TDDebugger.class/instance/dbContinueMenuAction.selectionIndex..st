@@ -1,3 +1,5 @@
 menu actions
 dbContinueMenuAction: listElement selectionIndex: selectionIndex
-  ^ self dbContinue
+  | ans |
+  ans := self dbContinue.
+  ^ ans
