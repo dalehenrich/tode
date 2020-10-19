@@ -8,9 +8,10 @@ rawReceiverNB: receiver perform: aSymbol withArgs: argsArray envId: envId
           lib apiGciSetSessionId: self getSessionNumber.
           address := lib addressOfArrayOfOopsForObjects: argsArray.
           lib
-            apiGciNbPerform: (self asOopType: (lib oopFor: receiver))
+            apiGciNbPerformNoDebug: (self asOopType: (lib oopFor: receiver))
             a: aSymbol asString
             a: address asInteger
             a: argsArray size
+            a: 1 "GCI_PERFORM_FLAG_ENABLE_DEBUG"
             a: envId ].
       ^ self getNbResultAsOop ]
