@@ -15,7 +15,7 @@ dbStep: stepDirective
   transcriptProxy := TranscriptProxy proxyTranscript.
   is360
     ifTrue: [ 
-      clientMessage := #'dbStep_36x:forProcessOop:'.
+      clientMessage := #'dbStepInto_36x:forProcessOop:'.
       stepId == 2
         ifTrue: [ clientMessage := #'dbStepOver_36x:forProcessOop:' ].
       stepId == 3

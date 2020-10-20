@@ -1,6 +1,6 @@
 public gci calls
-stepWith_36x: processObj level: level
-  "send messages to processObj, instead of gci calls --- #apiGciNbStep:asOopType: is failing for unknown reason against 3.6.0 gci library --- rest of calls are working fine???"
+stepIntoWith_36x: processObj level: level
+  "step into from level"
 
   | result |
   self class gsCursor
@@ -10,6 +10,6 @@ stepWith_36x: processObj level: level
 	      | argsArrayAddress |
           lib apiGciSetSessionId: self getSessionNumber.
           argsArrayAddress := lib addressOfArrayOfOopsForObjects: { level }.
-          lib apiGciNbPerform: (self asOopType: processObj) a: 'gciStepOverFromLevel:' a: argsArrayAddress asInteger a: 1 ].
+          lib apiGciNbPerform: (self asOopType: processObj) a: 'gciStepIntoFromLevel:' a: argsArrayAddress asInteger a: 1 ].
       result := self getNbResultAsOop.
       ^ self library localFor: result ]
