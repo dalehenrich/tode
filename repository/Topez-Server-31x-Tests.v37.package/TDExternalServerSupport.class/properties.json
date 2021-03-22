@@ -1,0 +1,17 @@
+{
+	"category" : "Topez-Server-31x-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"globals",
+		"userGlobals",
+		"externalGsUser",
+		"undefinedGlobals" ],
+	"name" : "TDExternalServerSupport",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -362,6 +362,15 @@ baseline: spec
 					with: [ spec includes: 'Tode-GemStone-Core331x' ];
 				yourself ].
 	spec
+		for: #(#'gs3.7.x' #'gs3.8.x' #'gs3.9.x')
+		do: [ 
+			spec
+				package: 'Topez-Server-TestDebugTools'
+					with: [ spec file: 'Topez-Server-TestDebugTools.v37' ];
+				package: 'Topez-Server-31x-Tests'
+					with: [ spec file: 'Topez-Server-31x-Tests.v37' ];
+				yourself ].
+	spec
 		for: #'maglev'
 		do: [ 
 			spec

@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"breakpointMethod" : "dkh 05/01/2014 02:48",
+		"testBreakClearCommand" : "dkh 05/01/2014 03:35",
+		"testBreakDisableCommand" : "dkh 05/01/2014 14:27",
+		"testBreakEnableCommand" : "dkh 05/01/2014 14:26",
+		"testBreakListCommand" : "dkh 05/01/2014 03:10",
+		"testBreakSetCommand" : "dkh 05/01/2014 03:37",
+		"testBreakStepsCommand" : "dkh 05/01/2014 03:13" } }
