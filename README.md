@@ -1,4 +1,4 @@
-# tODE: the Object-centric Development Environment [![Build Status](https://travis-ci.org/dalehenrich/tode.png?branch=master)](https://travis-ci.org/dalehenrich/tode) [![Test Status](https://api.bob-bench.org/v1/badgeByUrl?branch=master&hosting=github&ci=travis-ci&repo=dalehenrich%2Ftode)](https://bob-bench.org/r/gh/dalehenrich/tode)
+# tODE: the Object-centric Development Environment [![Build Status](https://github.com/dalehenrich/tode/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/dalehenrich/tode/actions/workflows/ci.yml)
 
 
 ## Installation and Setup
