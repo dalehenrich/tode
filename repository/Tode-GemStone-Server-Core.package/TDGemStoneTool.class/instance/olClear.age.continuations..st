@@ -28,5 +28,5 @@ olClear: priorities age: aDateAndTimeOrNil continuations: continuations
               aDateAndTimeOrNil
                 ifNil: [ objectLog remove: entry ]
                 ifNotNil: [ 
-                  objectLog stamp < aDateAndTimeOrNil
+                  entry stamp < aDateAndTimeOrNil
                     ifTrue: [ objectLog remove: entry ] ] ] ] ]
