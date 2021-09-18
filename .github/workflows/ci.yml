@@ -3,6 +3,8 @@ name: smalltalkCI
 on: 
   push:
   pull_request:
+    branches:
+      - master
   schedule:
     - cron: "15 2 10 * *" #run job on the 10th day of every month on the 15th minute of the 2nd hour
 
