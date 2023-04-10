@@ -10,17 +10,16 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
     strategy:
       fail-fast: false
       matrix:
-        smalltalk: [ GemStone64-3.6.5, GemStone64-3.5.8, GemStone64-3.4.5, GemStone64-3.3.9, GemStone64-3.2.17, GemStone64-3.1.0.6  ]
-        experimental: [ false ]
-    continue-on-error: ${{ matrix.experimental }}
+        os: [ ubuntu-20.04, macos-latest ]
+        smalltalk: [ GemStone64-3.6.5, GemStone64-3.6.0, GemStone64-3.5.8, GemStone64-3.5.3 ]
+    runs-on: ${{ matrix.os }}
     name: ${{ matrix.smalltalk }}
     steps:
       - uses: actions/checkout@v2
-      - uses: hpi-swa/setup-smalltalkCI@v1
+      - uses: dalehenrich/setup-smalltalkCI@solo
         with:
           smalltalk-image: ${{ matrix.smalltalk }}
       - name: Prepare for project new tests
@@ -29,15 +28,13 @@ jobs:
       - name: Run tests
         run: smalltalkci -s ${{ matrix.smalltalk }}
         shell: bash
-        env: 
-          GSCI_CLIENTS: Pharo-3.0
         timeout-minutes: 20
   slack-workflow-status:
     if: always()
     name: Post Workflow Status To Slack
     needs:
       - build
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
        - name: Slack Workflow Notification
          uses: Gamesight/slack-workflow-status@master
