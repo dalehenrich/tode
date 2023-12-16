@@ -1,3 +1,3 @@
 testing
-setUp
-  super expectedFailures , #( testProjectNew )
+expectedFailures
+  super expectedFailures , #( testProjectNew testProjectNewCreateClass )
