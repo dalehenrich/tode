@@ -4,6 +4,7 @@ testProjectNew
 
   | gitRootPath |
 true ifTrue: [ ^self]. "bypass tests for issue #322"
+Transcript cr; show: 'how did we get here?'.
   self
     evaluateCommandString: 'project --help new';
     evaluateCommandString: 'project new --force Foo';
