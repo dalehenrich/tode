@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-20.04, macos-latest ]
-        smalltalk: [ GemStone64-3.6.5, GemStone64-3.5.8  ]
+        smalltalk: [ GemStone64-3.7.0, GemStone64-3.6.7, GemStone64-3.5.8  ]
         experimental: [ false ]
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.smalltalk }}
