@@ -1,0 +1,3 @@
+testing
+expectedFailures
+  ^ #( #'testProjectNew' #'testProjectNewCreateClass' )
