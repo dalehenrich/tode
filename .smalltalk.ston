@@ -5,8 +5,6 @@ SmalltalkCISpec {
       #load : [ 'CI' ],
       #directory : 'repository',
       #onWarningLog : true,
-			#onConflict : #useIncoming,
-			#onUpgrade : #useIncoming,
       #platforms : [ #gemstone, #pharo ]
     }
   ],
